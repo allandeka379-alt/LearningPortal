@@ -339,6 +339,12 @@ revision 2) and smoke-tested as students of both boards:
 
 ## Maintenance
 
+- **MCQ answer positions (2026-10-08):** the correct option was at A in 712 of the 768 four-option MCQs, and the
+  player shows options in stored order. `.scratch/tools/rebalance-files.mjs mathematics-o --write` moved 524 keys
+  (now A 194, B 200, C 188, D 186; sorted numeric options and items whose text names a letter were left as they
+  were) and reordered 16 multi-select or 5–7-option MCQs; `content:validate --strict --no-cache` stays 0/0. The DEV
+  database still has the old order until the family is re-imported and the conflict copies are published.
+
 - The files in this directory are the source of truth. The writers' and reviewers' generator scripts (in the
   untracked `.scratch/` folder) predate the review fixes: do not re-run them.
 - The topic tests and mocks were generated from a compact spec with a pool check per rule; edit the JSON directly and

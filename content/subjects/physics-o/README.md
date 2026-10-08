@@ -236,6 +236,13 @@ every rule has enough candidates after the earlier rules have taken theirs (the 
 - **Lessons are shorter than in the other families** (median about 710 words against about 1,200 in biology), though
   each covers its syllabus statements with definitions, worked examples, mistakes and tips.
 
+- **Answer positions fixed, length cue remains (2026-10-08).** The key was almost always option A, and the player shows
+  options in stored order. `.scratch/physics/build-content.mjs` now balances key positions before writing (469 keys
+  moved; four-option keys A 167, B 169, C 169, D 168), and text fill-in blanks ignore punctuation (7 files changed).
+  The DEV database has the old order until the family is re-imported and published. Still open: in 243 of the 589
+  single-answer MCQs the key is at least 1.3 times and 12 characters longer than every distractor, so a student can
+  often guess by length; many rationales are only "Correct." Both need an editing pass of the slices.
+
 ## Needs a specialist teacher's check
 
 - **ZIMSEC syllabus alignment.** The ZIMSEC tree was transcribed from the official 2015-2022 syllabus (competency

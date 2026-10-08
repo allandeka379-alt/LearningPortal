@@ -48,3 +48,20 @@ OWNER 2026-10-08 11:35: "I Approve" -> launched english-language-o: run wf_7e68f
 - Combined Science (combined-science-o, written directly): syllabus + registry from `node .scratch/combined-science/build-syllabus.mjs` (ZIMSEC 2015-2022, conceptFamilies bio/chem/phys/maths, 83 nodes, 182 objectives, 7 cs.* concepts). Done: lessons + question slices for cs.health.hygiene-and-transmission, cs.health.ebola, cs.industry.peanut-processing, cs.physics.fluid-systems, cs.physics.gears (5 lessons, 102 Q, 46 cards; validate --strict 0/0). TODO: content:check flags physics.gears.q14 (shares 14 and 42 with the lesson's bicycle section: change the gear numbers); lessons + slices for cs.physics.solar-heating (7.3.4.5) and cs.physics.telecommunication (7.3.4.6); assessments (topic tests per section drawing on borrowed families, Paper 1-style 40 x 1-mark MCQ mock, Paper 2-style mock); README; then on the owner's PC: import combined-science-o and RE-IMPORT biology-o, chemistry-o, physics-o, mathematics-o (retags them to Combined Science), DEV publish, smoke.
 - Cloud notes: no Postgres / dev data in the cloud (scripts/db-local.ps1 is Windows-only), so do only DB-free work there (generators, content:validate, content:check, typecheck/tests that skip the DB with VITEST_SKIP_DB_SETUP=1). `npm ci` first; `npm run db:generate` before typecheck.
 - After that: waveB subjects from content-subjects.json, one at a time, directly (no Workflow fan-outs unless the owner asks).
+
+## CLOUD SESSION 2026-10-08 (branch main-uma1fn) — done, and the queue for the owner's PC
+Done (DB-free, all pushed to origin/main-uma1fn):
+- chemistry-o README (content/subjects/chemistry-o/README.md) + row in content/README.md; family stats tool .scratch/tools/family-stats.mjs.
+- MCQ answer-position balance: physics-o + combined-science-o generators call rebalanceQuestions() before writing; mathematics-o (524 keys moved, was A 712/768) and biology-o (224 moved) rebalanced once in place with .scratch/tools/rebalance-files.mjs (do NOT re-run it on those families: multi-select reorder is not idempotent). Text fill-in blanks in the physics/CS generators now strip punctuation (7 physics files changed).
+- combined-science-o: gears q14 fixed; new cs.physics.solar-heating + cs.physics.telecommunication (lessons, 22 Q + 10 cards each); 24 old CS MCQs de-cued (key no longer clearly longest); 19 topic tests + Paper 1/Paper 2 mocks (.scratch/combined-science/build-assessments.mjs, inventory.ts, coverage.ts, stats.mjs, alt-check.ts); README written.
+- Validate the CS blueprints only with all five families loaded: npm run content:validate -- combined-science-o biology-o chemistry-o physics-o mathematics-o --strict --no-cache -> 0/0.
+
+QUEUE FOR THE OWNER'S PC (needs the DB), in order:
+1. git pull (branch main-uma1fn, or main after merge); npm run db:generate.
+2. npm run content:import -- --family combined-science-o
+3. Re-import (CONFLICT drafts expected for rebalanced MCQs; also tags borrowed items to Combined Science topics):
+   npm run content:import -- --family mathematics-o ; biology-o ; physics-o ; chemistry-o (chemistry only for the CS tags).
+4. DEV publish each of the five families: npm run content:publish -- --approver demo.admin@example.test --family <family> (with the usual DEV PREVIEW ONLY note).
+5. Smoke: npx tsx --conditions=react-server .scratch/physics/smoke.ts ; a Combined Science smoke script is still to be written (model: .scratch/chem-assemble2/smoke.ts).
+
+Next content work (cloud or PC): waveB subjects from .scratch/content-subjects.json, starting with english-language-o. Quality follow-ups: length-cue editing pass for physics-o/biology-o/chemistry-o MCQs; physics-o deepening (exam-style) and independent review.
