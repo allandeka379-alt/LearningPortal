@@ -344,6 +344,12 @@ revision 2) and smoke-tested as students of both boards:
   (now A 194, B 200, C 188, D 186; sorted numeric options and items whose text names a letter were left as they
   were) and reordered 16 multi-select or 5–7-option MCQs; `content:validate --strict --no-cache` stays 0/0. The DEV
   database still has the old order until the family is re-imported and the conflict copies are published.
+- **MCQ length cue (2026-10-08):** in 55 single-answer MCQs and MCQ parts (mostly reasoning items in statistics, loci,
+  congruence and circle theorems) the key was at least 1.3 times and 12 characters longer than every distractor.
+  Each was edited (tighter keys with any lost detail moved to the rationale, longer distractors that stay clearly
+  wrong; answers, keys and marks unchanged); `node .scratch/tools/length-cue.mjs mathematics-o` now reports 0. The key
+  is the single longest option in 94 of 605 single-answer MCQs (16 %). The DEV database has the old wording until the
+  family is re-imported and published.
 
 - The files in this directory are the source of truth. The writers' and reviewers' generator scripts (in the
   untracked `.scratch/` folder) predate the review fixes: do not re-run them.

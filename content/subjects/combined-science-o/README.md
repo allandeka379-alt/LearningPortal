@@ -208,8 +208,10 @@ Not done yet (no database in the cloud session). On the owner's PC, in this orde
    rendering; check every heading, objective and the assessment section against a clean copy. The subject code is
    not printed (commonly cited as 4003). Under the Heritage-Based Curriculum (2024-2030) November 2026 and later
    candidates may sit a new syllabus.
-8. **Answer cues in borrowed banks.** In many borrowed single-answer MCQs the key is clearly the longest option
-   (biology-o 342 of 997); the own Combined Science items, physics-o and chemistry-o were fixed on 2026-10-08.
+8. **Answer cues in borrowed banks (fixed 2026-10-08).** Single-answer MCQs whose key was clearly the longest option
+   were edited in the own Combined Science items and in every family it borrows from (biology-o, chemistry-o,
+   physics-o, mathematics-o); a milder cue remains (the key is still the single longest option in 43–50 % of the
+   science banks' single-answer MCQs, against about 25 % by chance).
 
 ## Needs a specialist teacher's check
 

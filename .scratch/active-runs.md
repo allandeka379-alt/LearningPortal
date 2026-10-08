@@ -54,14 +54,15 @@ Done (DB-free, all pushed to origin/main-uma1fn):
 - chemistry-o README (content/subjects/chemistry-o/README.md) + row in content/README.md; family stats tool .scratch/tools/family-stats.mjs.
 - MCQ answer-position balance: physics-o + combined-science-o generators call rebalanceQuestions() before writing; mathematics-o (524 keys moved, was A 712/768) and biology-o (224 moved) rebalanced once in place with .scratch/tools/rebalance-files.mjs (do NOT re-run it on those families: multi-select reorder is not idempotent). Text fill-in blanks in the physics/CS generators now strip punctuation (7 physics files changed).
 - combined-science-o: gears q14 fixed; new cs.physics.solar-heating + cs.physics.telecommunication (lessons, 22 Q + 10 cards each); 24 old CS MCQs de-cued (key no longer clearly longest); 19 topic tests + Paper 1/Paper 2 mocks (.scratch/combined-science/build-assessments.mjs, inventory.ts, coverage.ts, stats.mjs, alt-check.ts); README written.
+- MCQ length cue (key at least 1.3x and 12 chars longer than every distractor) removed by editing the JSON/generators: physics-o 275, chemistry-o 286, biology-o 382, mathematics-o 55, combined-science-o 24 items; `node .scratch/tools/length-cue.mjs <family>` reports 0 for all five. Edits: .scratch/tools/apply-option-edits.mjs (spec of [old, new, rationale]).
 - Validate the CS blueprints only with all five families loaded: npm run content:validate -- combined-science-o biology-o chemistry-o physics-o mathematics-o --strict --no-cache -> 0/0.
 
 QUEUE FOR THE OWNER'S PC (needs the DB), in order:
 1. git pull (branch main-uma1fn, or main after merge); npm run db:generate.
 2. npm run content:import -- --family combined-science-o
 3. Re-import (CONFLICT drafts expected for rebalanced MCQs; also tags borrowed items to Combined Science topics):
-   npm run content:import -- --family mathematics-o ; biology-o ; physics-o ; chemistry-o (chemistry only for the CS tags).
+   npm run content:import -- --family mathematics-o ; biology-o ; physics-o ; chemistry-o (all four also carry the length-cue wording edits).
 4. DEV publish each of the five families: npm run content:publish -- --approver demo.admin@example.test --family <family> (with the usual DEV PREVIEW ONLY note).
 5. Smoke: npx tsx --conditions=react-server .scratch/physics/smoke.ts ; a Combined Science smoke script is still to be written (model: .scratch/chem-assemble2/smoke.ts).
 
-Next content work (cloud or PC): waveB subjects from .scratch/content-subjects.json, starting with english-language-o. Quality follow-ups: length-cue editing pass for physics-o/biology-o/chemistry-o MCQs; physics-o deepening (exam-style) and independent review.
+Next content work (cloud or PC): waveB subjects from .scratch/content-subjects.json, starting with english-language-o. Quality follow-ups: milder length cue (key still the single longest option in 43-50% of science single-answer MCQs); physics-o deepening (exam-style) and independent review.
