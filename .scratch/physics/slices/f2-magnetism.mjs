@@ -25,7 +25,7 @@ concept("phys.magnetism.magnets", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "What is induced magnetism?",
-    options: [["A magnetic material becoming a magnet when it is near or touching a magnet", "Correct."], ["A magnet losing its magnetism when heated", "That is demagnetisation."], ["The attraction of copper to a magnet", "Copper is not attracted."], ["The force between two charged objects", "That is electrostatics."]],
+    options: [["A magnetic material becoming a magnet near or touching one", "Correct."], ["A magnet losing its magnetism when it is heated", "That is demagnetisation."], ["The attraction of copper to a nearby magnet", "Copper is not attracted."], ["The force between two electrically charged objects", "That is electrostatics."]],
     answer: "A", explanation: "A magnetic material placed in a magnet's field becomes magnetised itself: induced magnetism." });
 
   q.mcq({ d: 2, skill: "APPLICATION", daily: true,
@@ -35,7 +35,7 @@ concept("phys.magnetism.magnets", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why is soft iron, rather than steel, used for the core of an electromagnet?",
-    options: [["It is easily magnetised and loses its magnetism when the current is switched off.", "Correct."], ["It keeps its magnetism permanently.", "That is steel."], ["It is non-magnetic.", "Soft iron is magnetic."], ["It is a better electrical conductor.", "The core does not carry the current."]],
+    options: [["It magnetises easily and loses it when the current stops.", "Correct."], ["It keeps its magnetism permanently after use.", "That is steel."], ["It is non-magnetic, so it does not interfere.", "Soft iron is magnetic."], ["It is a better electrical conductor than steel.", "The core does not carry the current."]],
     answer: "A", explanation: "Soft iron makes a temporary magnet; steel would stay magnetised after switching off." });
 
   q.mcq({ d: 2, skill: "RECALL",
@@ -66,13 +66,13 @@ concept("phys.magnetism.magnets", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Which method makes the strongest permanent magnet from a steel bar?",
-    options: [["Placing it in a solenoid and passing a large direct current", "Correct."], ["Stroking it once with a weak magnet", "One stroke gives very weak magnetism."], ["Hammering it", "Hammering tends to demagnetise."], ["Heating it strongly", "Heating demagnetises."]],
+    options: [["Putting it in a solenoid carrying a large d.c.", "Correct."], ["Stroking it once with a weak magnet", "One stroke gives very weak magnetism."], ["Hammering it while it points north–south", "Hammering tends to demagnetise a magnet, and it is not the strongest method."], ["Heating it strongly and letting it cool", "Heating demagnetises."]],
     answer: "A", explanation: "The electrical method, a large d.c. in a solenoid, magnetises steel most strongly.",
     hints: ["Which methods destroy magnetism instead of creating it?"] });
 
   q.mcq({ d: 2, skill: "RECALL", applies: Z,
     stem: "Which of these would demagnetise a magnet?",
-    options: [["Placing it in a solenoid carrying a.c. and slowly pulling it out", "Correct."], ["Placing it in a solenoid carrying d.c.", "That magnetises it."], ["Storing it with soft-iron keepers", "Keepers help it keep its magnetism."], ["Stroking it with another magnet in one direction", "That magnetises it."]],
+    options: [["Pulling it slowly out of a solenoid carrying a.c.", "Correct."], ["Placing it in a solenoid carrying d.c.", "That magnetises it."], ["Storing it with soft-iron keepers", "Keepers help it keep its magnetism."], ["Stroking it with another magnet one way", "That magnetises it."]],
     answer: "A", explanation: "Heating, hammering, or slowly withdrawing it from a coil carrying alternating current all demagnetise a magnet." });
 
   q.mcq({ d: 3, skill: "APPLICATION", applies: Z,
@@ -83,7 +83,7 @@ concept("phys.magnetism.magnets", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "Two bar magnets are placed in a line with their north poles facing each other. What does the combined field pattern show?",
-    options: [["The field lines from each magnet push away from each other, with a neutral point between them: the magnets repel.", "Correct."], ["Field lines run straight across from one pole to the other: the magnets attract.", "That happens with unlike poles facing."], ["There is no field anywhere near the magnets.", "Each magnet still has its field."], ["The two fields form a single loop around both magnets.", "Not with like poles facing."]],
+    options: [["The lines push apart, with a neutral point between: they repel.", "Correct."], ["Lines run straight across from pole to pole: they attract.", "That happens with unlike poles facing."], ["There is no field anywhere near the two magnets.", "Each magnet still has its field."], ["The two fields form a single loop around both magnets.", "Not with like poles facing."]],
     answer: "A", explanation: "With like poles facing, the fields oppose between the magnets, giving a neutral point; the interaction of the fields is a repulsion.",
     hints: ["Field lines never cross."] });
 
@@ -140,13 +140,13 @@ concept("phys.magnetism.uses-of-magnets", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "In an electric bell, why does the armature keep moving back and forth while the bell push is pressed?",
-    options: [["When the armature is attracted it breaks the contact, switching off the electromagnet; a spring then pulls it back and remakes the contact.", "Correct."], ["The current is alternating, so the magnet reverses.", "Bells usually run on d.c.; the make-and-break contact does the switching."], ["The hammer bounces off the gong.", "Not the main cause."], ["The gong pushes the armature back with a magnetic force.", "The gong is not a magnet."]],
+    options: [["Pulling the armature breaks the circuit; a spring then remakes it.", "Correct."], ["The current is alternating, so the magnet keeps reversing.", "Bells usually run on d.c.; the make-and-break contact does the switching."], ["The hammer bounces off the gong and back again.", "Not the main cause."], ["The gong pushes the armature back with a magnetic force.", "The gong is not a magnet."]],
     answer: "A", explanation: "The make-and-break contact switches the electromagnet off each time the armature moves, so the cycle repeats.",
     hints: ["What happens to the circuit when the armature moves towards the electromagnet?"] });
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "What is the main purpose of a relay?",
-    options: [["To let a small current switch on a separate circuit that carries a large current", "Correct."], ["To increase the voltage of a supply", "That is a transformer."], ["To store electrical energy", "No."], ["To change a.c. into d.c.", "That is a rectifier."]],
+    options: [["To let a small current switch a separate large-current circuit", "Correct."], ["To increase the voltage of a supply for a large load", "That is a transformer."], ["To store electrical energy until the circuit needs it", "A relay is a switch, not a store."], ["To change a.c. into d.c. for the circuit it switches", "That is a rectifier."]],
     answer: "A", explanation: "A relay uses a small current in its coil to close (or open) contacts in another circuit." });
 
   q.mcq({ d: 2, skill: "APPLICATION",
@@ -156,7 +156,7 @@ concept("phys.magnetism.uses-of-magnets", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "Why is the armature of an electric bell made of soft iron?",
-    options: [["It is magnetised and demagnetised quickly, so it is released as soon as the current stops.", "Correct."], ["It is a good electrical conductor.", "Not the reason."], ["It is a permanent magnet.", "Soft iron makes temporary magnets."], ["It is non-magnetic.", "It must be attracted by the electromagnet."]],
+    options: [["It demagnetises at once, so it is released when current stops.", "Correct."], ["It is a good electrical conductor for the contacts.", "Not the reason."], ["It is a permanent magnet that keeps its strength.", "Soft iron makes temporary magnets."], ["It is non-magnetic, so it springs back freely each time.", "It must be attracted by the electromagnet."]],
     answer: "A", explanation: "A steel armature would stay magnetised and stick to the electromagnet; soft iron lets go at once.",
     hints: ["What must happen to the armature when the current stops?"] });
 
@@ -174,7 +174,7 @@ concept("phys.magnetism.uses-of-magnets", {
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,
     stem: "A car's key switch operates the starter motor through a relay.",
     parts: [
-      P.mcq({ label: "(a)", stem: "Why is a relay used instead of a key switch that carries the starter current directly?", options: [["The key switch and its thin wires carry only a small current; the very large starter current flows in a short, thick-cabled circuit.", "Correct."], ["A relay increases the current to the starter motor.", "It switches the current; it does not increase it."], ["The starter motor needs a.c.", "Car circuits are d.c."], ["Relays are cheaper than wires.", "Not the reason."]], answer: "A",
+      P.mcq({ label: "(a)", stem: "Why is a relay used instead of a key switch that carries the starter current directly?", options: [["The key carries a small current; the huge current uses thick cables.", "Correct."], ["A relay increases the current reaching the starter motor.", "It switches the current; it does not increase it."], ["The starter motor needs a.c., which the relay supplies.", "Car circuits are d.c."], ["Relays are cheaper than long lengths of thick copper cable.", "Not the reason."]], answer: "A",
         explanation: "The relay keeps the large current out of the dashboard switch and its thin wiring." }),
       P.manual({ label: "(b)", marks: 2, stem: "Describe what happens inside the relay when the key switch is turned.",
         points: ["A small current flows through the relay coil and magnetises its soft-iron core", "The core attracts the armature, which closes the contacts and completes the starter-motor circuit"] }),

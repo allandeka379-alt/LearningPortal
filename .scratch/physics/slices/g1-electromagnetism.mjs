@@ -52,12 +52,12 @@ concept("phys.em.magnetic-effect", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "In a relay, what does the current in the coil do?",
-    options: [["It magnetises an iron core, which attracts an armature that closes (or opens) a separate pair of contacts.", "Correct."], ["It heats a metal strip that bends.", "That describes a thermostat."], ["It flows directly through the second circuit.", "The two circuits are separate."], ["It charges a capacitor.", "No."]],
+    options: [["It magnetises a core, which pulls an armature to switch other contacts.", "Correct."], ["It heats a metal strip that bends and closes the contacts.", "That describes a thermostat."], ["It flows directly through the second circuit as well.", "The two circuits are separate."], ["It charges a capacitor that switches the second circuit.", "A relay uses an electromagnet, not a capacitor."]],
     answer: "A", explanation: "A relay uses the magnetic effect of a small coil current to operate a switch in another circuit." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why does the cone of a loudspeaker vibrate?",
-    options: [["The alternating current in the coil makes a changing field that interacts with the permanent magnet's field, pushing the coil back and forth.", "Correct."], ["The permanent magnet vibrates on its own.", "The magnet is fixed."], ["Sound waves travel down the wire into the cone.", "The wire carries an electrical signal."], ["Static charge on the cone attracts it.", "Not the mechanism."]],
+    options: [["The coil's changing current makes it push to and fro against the magnet.", "Correct."], ["The permanent magnet vibrates on its own as current flows.", "The magnet is fixed."], ["Sound waves travel down the wire into the cone.", "The wire carries an electrical signal."], ["Static charge on the cone attracts and repels it.", "Not the mechanism."]],
     answer: "A", explanation: "The current in the coil, sitting in the magnet's field, feels a force that reverses as the current reverses, so the coil and cone vibrate.",
     hints: ["The coil carries a current and sits in a magnetic field."] });
 
@@ -85,7 +85,7 @@ concept("phys.em.magnetic-effect", {
     parts: [
       P.manual({ label: "(a)", marks: 3, stem: "Describe how the learner could show the shape and direction of the field.",
         points: ["Pass the wire vertically through a horizontal card and connect it to a supply that gives a large current", "Sprinkle iron filings on the card and tap it gently: they form circles around the wire", "Place plotting compasses around the wire to show the direction of the field (and reverse the current to see them turn round)"] }),
-      P.mcq({ label: "(b)", stem: "Why must the current be large?", options: [["So the field is strong enough to move the iron filings", "Correct."], ["To heat the wire", "Heating is a side effect, not the aim."], ["To make the field uniform", "The field is not uniform."], ["To reverse the field", "No."]], answer: "A",
+      P.mcq({ label: "(b)", stem: "Why must the current be large?", options: [["So the field is strong enough to move the filings", "Correct."], ["To heat the wire so the filings stick", "Heating is a side effect, not the aim."], ["To make the field uniform around the wire", "The field is not uniform."], ["To reverse the field every few seconds", "A steady d.c. current gives a steady field."]], answer: "A",
         explanation: "The field of a straight wire is weak, so a large current is needed to see the pattern." }),
       P.mcq({ label: "(c)", stem: "Seen from above, the compasses point clockwise around the wire. In which direction is the current?", options: [["Downwards, away from the viewer", "Correct."], ["Upwards, towards the viewer", "That gives an anticlockwise field."], ["Horizontally", "The wire is vertical."], ["It cannot be found.", "The grip rule gives it."]], answer: "A",
         explanation: "A clockwise field seen from above means the thumb, and so the current, points away from the viewer: downwards." }),
@@ -158,7 +158,7 @@ concept("phys.em.motor-effect", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
     stem: "Why does a beam of charged particles move in a curve in a magnetic field?",
-    options: [["The force on the particles is always at right angles to their motion.", "Correct."], ["The field slows the particles down.", "A magnetic force at right angles does not change their speed."], ["Gravity pulls them down.", "Negligible for such particles."], ["The particles become heavier.", "No."]],
+    options: [["The force on them is always at right angles to their motion.", "Correct."], ["The field slows the particles down as they move.", "A magnetic force at right angles does not change their speed."], ["Gravity pulls them down into a curved path.", "Negligible for such particles."], ["The particles become heavier in the magnetic field.", "Their mass does not change."]],
     answer: "A", explanation: "A force always at right angles to the motion changes its direction continuously, giving a circular path." });
 
   q.mcq({ d: 2, skill: "RECALL", applies: Z,
@@ -168,7 +168,7 @@ concept("phys.em.motor-effect", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Two parallel wires carry currents in opposite directions. Which explanation of the force between them is correct?",
-    options: [["Between the wires their fields add, giving a strong field that pushes the wires apart.", "Correct."], ["Between the wires their fields cancel, so the wires attract.", "That happens for currents in the same direction."], ["There is no field between the wires.", "Each wire has a field around it."], ["The fields cancel everywhere, so there is no force.", "No."]],
+    options: [["Between the wires the fields add, so the wires are pushed apart.", "Correct."], ["Between the wires their fields cancel, so the wires attract.", "That happens for currents in the same direction."], ["There is no field in the gap between the wires.", "Each wire has a field around it."], ["The fields cancel everywhere, so there is no force.", "They do not cancel everywhere; each wire has its own field."]],
     answer: "A", explanation: "With opposite currents, the circular fields point the same way between the wires, so the field there is strong and the wires are pushed apart.",
     hints: ["Use the grip rule to find each wire's field in the region between them."] });
 
@@ -181,7 +181,7 @@ concept("phys.em.motor-effect", {
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,
     stem: "A learner rests a light copper rod across two horizontal copper rails that pass between the poles of a U-shaped magnet. The rails are connected to a battery and a switch.",
     parts: [
-      P.mcq({ label: "(a)", stem: "When the switch is closed, the rod rolls along the rails. Why?", options: [["The rod carries a current in a magnetic field, so there is a force on it.", "Correct."], ["The rod is magnetised and attracted to the magnet.", "Copper is not magnetic."], ["The current heats the rod and it expands.", "Not the cause of rolling."], ["Static charge pushes the rod.", "No."]], answer: "A",
+      P.mcq({ label: "(a)", stem: "When the switch is closed, the rod rolls along the rails. Why?", options: [["It carries a current in a magnetic field, so a force acts on it.", "Correct."], ["The rod is magnetised and attracted to the magnet.", "Copper is not magnetic."], ["The current heats the rod and it expands along the rails.", "Not the cause of rolling."], ["Static charge on the rails pushes the rod along.", "The rails are connected to a supply, not charged statically."]], answer: "A",
         explanation: "This is the motor effect." }),
       P.manual({ label: "(b)", marks: 2, stem: "State two different ways of making the rod roll the other way.",
         points: ["Reverse the current (swap the battery connections)", "Reverse the magnetic field (turn the magnet over)"] }),
@@ -218,12 +218,12 @@ concept("phys.em.dc-motor", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "What is the job of the split-ring commutator in a d.c. motor?",
-    options: [["To reverse the current in the coil every half turn, so it keeps turning the same way", "Correct."], ["To change the a.c. supply into d.c.", "The supply is already d.c."], ["To increase the current in the coil", "No."], ["To hold the magnets in place", "No."]],
+    options: [["To reverse the coil current each half turn so it keeps turning", "Correct."], ["To change the a.c. supply into d.c. for the coil", "The supply is already d.c."], ["To increase the current in the coil as it turns faster", "It only switches the current's direction."], ["To hold the curved magnets in place around the turning coil", "The commutator is on the axle, not on the magnets."]],
     answer: "A", explanation: "The commutator reverses the coil current every half turn, keeping the turning effect in the same direction." });
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "What are the brushes in a d.c. motor?",
-    options: [["Contacts that press on the commutator and carry current to the rotating coil", "Correct."], ["Parts that clean dust out of the motor", "No."], ["The magnets that provide the field", "No."], ["The axle on which the coil turns", "No."]],
+    options: [["Contacts pressing on the commutator to carry current to the coil", "Correct."], ["Parts that sweep dust out of the motor as it spins", "They carry current, despite the name."], ["The permanent magnets that provide the field", "The field comes from the magnets, not the brushes."], ["The steel axle on which the coil turns", "The axle supports the coil; brushes carry current."]],
     answer: "A", explanation: "Springy carbon brushes keep electrical contact with the spinning commutator." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -232,13 +232,13 @@ concept("phys.em.dc-motor", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "A rectangular coil is placed in a magnetic field and connected straight to a battery, with no commutator. What happens when the current is switched on?",
-    options: [["It turns until its plane is at right angles to the field, then rocks to a stop.", "Correct."], ["It spins continuously.", "Without a commutator the forces stop helping after half a turn."], ["It does not move at all.", "It turns until it reaches the vertical position."], ["It spins faster and faster.", "No."]],
+    options: [["It turns until its plane is at 90° to the field, then stops.", "Correct."], ["It spins continuously in the same direction, like a motor.", "Without a commutator the forces stop helping after half a turn."], ["It does not move at all, as the two forces cancel out.", "It turns until it reaches the vertical position."], ["It spins faster and faster until it burns out.", "Without a commutator it cannot keep turning."]],
     answer: "A", explanation: "Without a commutator the current never reverses, so after the coil passes the vertical the forces turn it back: it settles at right angles to the field.",
     hints: ["What do the forces on the sides do once the coil has passed the vertical position?"] });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "In a d.c. motor, there is no turning effect when the coil is vertical. Why does the coil not stop there?",
-    options: [["Its momentum carries it past the vertical, and the reversed current then keeps it turning.", "Correct."], ["The brushes push it round.", "Brushes only carry current."], ["Gravity pulls it round.", "No."], ["The commutator stores energy to drive it.", "No."]],
+    options: [["Momentum carries it past, and the reversed current turns it on.", "Correct."], ["The brushes give it a small push round at that point.", "Brushes only carry current."], ["Gravity pulls the heavier side of the coil round.", "The coil is balanced; gravity does not turn it."], ["The commutator stores energy and releases it there.", "A commutator only switches the current."]],
     answer: "A", explanation: "The coil's momentum carries it through the vertical position; the commutator has reversed the current, so the forces keep turning it the same way.",
     hints: ["What keeps a moving object moving when no force acts?"] });
 
@@ -317,12 +317,12 @@ concept("phys.em.induction", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A straight wire is moved along the direction of the magnetic field lines between the poles of a magnet. What is induced in it?",
-    options: [["No e.m.f., because the wire does not cut any field lines", "Correct."], ["The largest possible e.m.f.", "That needs motion across the field."], ["An alternating e.m.f.", "No."], ["A steady current", "No."]],
+    options: [["No e.m.f., because the wire cuts no field lines", "Correct."], ["The largest e.m.f., as it moves along the field", "That needs motion across the field."], ["An alternating e.m.f. that changes direction", "There is no e.m.f. at all without cutting field lines."], ["A small steady current along the wire", "No field lines are cut, so nothing is induced."]],
     answer: "A", explanation: "An e.m.f. is induced only when the wire cuts across field lines." });
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which statement is Lenz's law?",
-    options: [["The induced current always flows in a direction that opposes the change producing it.", "Correct."], ["The induced current always helps the change producing it.", "That would create energy from nothing."], ["The induced current always flows clockwise.", "Its direction depends on the change."], ["The induced e.m.f. is always equal to the battery e.m.f.", "No."]],
+    options: [["The induced current always opposes the change producing it.", "Correct."], ["The induced current always helps the change producing it.", "That would create energy from nothing."], ["The induced current always flows clockwise in a coil.", "Its direction depends on the change."], ["The induced e.m.f. always equals the battery e.m.f.", "A battery is not needed for induction."]],
     answer: "A", explanation: "Lenz's law: the induced e.m.f. and current oppose the change that causes them." });
 
   q.mcq({ d: 3, skill: "APPLICATION",
@@ -333,7 +333,7 @@ concept("phys.em.induction", {
 
   q.mcq({ d: 3, skill: "APPLICATION",
     stem: "The south pole of a magnet is pulled away from one end of a coil in a closed circuit. Which pole forms at that end of the coil?",
-    options: [["A north pole, which attracts the magnet and opposes its removal", "Correct."], ["A south pole, which repels the magnet", "That would help it move away."], ["No pole", "A current is induced."], ["A south pole, which attracts the magnet", "Like poles repel."]],
+    options: [["A north pole, attracting the magnet to oppose its removal", "Correct."], ["A south pole, which repels the magnet as it leaves", "That would help it move away."], ["No pole, because the magnet is moving away from it", "A current is induced."], ["A south pole, which attracts the magnet", "Like poles repel."]],
     answer: "A", explanation: "The change is a south pole moving away; to oppose it, the coil end becomes a north pole and pulls the magnet back.",
     hints: ["The induced pole must try to stop the magnet leaving."] });
 
@@ -368,7 +368,7 @@ concept("phys.em.induction", {
     parts: [
       P.manual({ label: "(a)", marks: 3, stem: "Describe an experiment to show electromagnetic induction, and what is observed.",
         points: ["Connect the coil to the meter and push the magnet into the coil: the needle deflects", "Hold the magnet still: no deflection; pull it out: the needle deflects the opposite way", "Move the magnet faster: the deflection is larger"] }),
-      P.mcq({ label: "(b)", stem: "Why is a centre-zero meter used?", options: [["The induced current can flow either way, and the needle can show both directions.", "Correct."], ["It can measure very large currents.", "The currents are small."], ["It never needs zeroing.", "Not the reason."], ["It works only with a.c.", "No."]], answer: "A",
+      P.mcq({ label: "(b)", stem: "Why is a centre-zero meter used?", options: [["The induced current flows either way; the needle shows both.", "Correct."], ["It can measure very large currents.", "The currents are small."], ["It never needs zeroing before use.", "Not the reason."], ["It works only with a.c., like the induced current", "It shows d.c. in either direction."]], answer: "A",
         explanation: "The current reverses between pushing in and pulling out, so the needle must be able to move either way." }),
       P.mcq({ label: "(c)", stem: "The magnet is replaced by a stronger one, moved at the same speed. What happens to the deflection?", options: [["It is larger.", "Correct."], ["It is smaller.", "No."], ["It is the same.", "A stronger field gives a larger e.m.f."], ["It reverses.", "Only the direction of motion or the pole reverses it."]], answer: "A",
         explanation: "A stronger magnet gives a faster change of field, so a larger e.m.f." }),
@@ -397,17 +397,17 @@ concept("phys.em.generators", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "What is the purpose of the slip rings in an a.c. generator?",
-    options: [["To connect the rotating coil to the outside circuit without the wires twisting", "Correct."], ["To reverse the current every half turn", "That is what a commutator does."], ["To increase the voltage", "No."], ["To change a.c. into d.c.", "Slip rings keep the output alternating."]],
+    options: [["To connect the turning coil to the circuit without twisting wires", "Correct."], ["To reverse the current in the circuit every half turn", "That is what a commutator does."], ["To increase the voltage produced by the coil", "The voltage depends on the coil, field and speed."], ["To change the coil's a.c. into d.c. for the circuit", "Slip rings keep the output alternating."]],
     answer: "A", explanation: "Each end of the coil is joined to its own slip ring; brushes pressing on the rings connect the spinning coil to the circuit." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "In which position of a generator coil is the induced e.m.f. zero?",
-    options: [["When the plane of the coil is at right angles to the field, so its sides move along the field lines", "Correct."], ["When the plane of the coil is parallel to the field", "Then the e.m.f. is largest."], ["At every position, once it is turning", "The e.m.f. varies."], ["Only when the coil is stopped", "It also passes through zero twice each turn."]],
+    options: [["When the coil's plane is at 90° to the field (sides move along it)", "Correct."], ["When the plane of the coil is parallel to the field", "Then the e.m.f. is largest."], ["At every position, once it is turning steadily", "The e.m.f. varies."], ["Only when the coil has stopped turning", "It also passes through zero twice each turn."]],
     answer: "A", explanation: "When the coil is perpendicular to the field, its sides move parallel to the field lines and cut none, so the e.m.f. is zero." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "When is the e.m.f. from a rotating generator coil at its maximum?",
-    options: [["When the plane of the coil is parallel to the field, so its sides cut field lines fastest", "Correct."], ["When the plane of the coil is at right angles to the field", "Then it is zero."], ["When the coil is stationary", "No movement, no e.m.f."], ["Halfway between those positions", "Not the maximum."]],
+    options: [["When the coil's plane is parallel to the field (cuts lines fastest)", "Correct."], ["When the plane of the coil is at right angles to the field", "Then it is zero."], ["When the coil is stationary between turns", "No movement, no e.m.f."], ["Halfway between those two positions, at 45°", "Not the maximum."]],
     answer: "A", explanation: "The sides cut field lines at the greatest rate when moving straight across the field." });
 
   q.num({ d: 2, skill: "APPLICATION",
@@ -423,7 +423,7 @@ concept("phys.em.generators", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "The coil of an a.c. generator is turned twice as fast. How does the e.m.f.–time graph change?",
-    options: [["The peaks are twice as high and there are twice as many cycles in the same time.", "Correct."], ["The peaks are higher, but the frequency is unchanged.", "Faster rotation also raises the frequency."], ["There are more cycles, but the peaks are the same height.", "Faster cutting also increases the e.m.f."], ["The graph does not change.", "No."]],
+    options: [["Twice the peak e.m.f., and twice as many cycles in the same time.", "Correct."], ["The peaks are higher, but the frequency is unchanged.", "Faster rotation also raises the frequency."], ["There are more cycles, but the peaks are the same height.", "Faster cutting also increases the e.m.f."], ["The graph does not change: only the coil speeds up.", "Faster turning changes both the peaks and the frequency."]],
     answer: "A", explanation: "Faster rotation cuts field lines faster (larger e.m.f.) and completes more turns per second (higher frequency).",
     hints: ["Think about both the size and the frequency of the e.m.f."] });
 
@@ -434,12 +434,12 @@ concept("phys.em.generators", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: Z,
     stem: "What is the main difference between a simple a.c. generator and a simple d.c. generator?",
-    options: [["The a.c. generator uses slip rings; the d.c. generator uses a split-ring commutator.", "Correct."], ["Only the a.c. generator has a magnet.", "Both have magnets."], ["The d.c. generator uses slip rings.", "It is the other way round."], ["The a.c. generator has no brushes.", "Both use brushes."]],
+    options: [["A.c. uses slip rings; d.c. uses a split-ring commutator.", "Correct."], ["Only the a.c. generator has a permanent magnet inside.", "Both have magnets."], ["The d.c. generator uses slip rings instead of a commutator.", "It is the other way round."], ["The a.c. generator has no brushes touching its rings.", "Both use brushes."]],
     answer: "A", explanation: "Slip rings give alternating output; a commutator reverses the connections each half turn, giving direct output." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Which best describes the output of a simple d.c. generator with one coil?",
-    options: [["A current in one direction that rises and falls, dropping to zero twice each turn", "Correct."], ["A perfectly steady current", "The output still varies in size."], ["An alternating current", "The commutator stops it reversing."], ["No current at all", "No."]],
+    options: [["A one-way current that rises and falls to zero twice a turn", "Correct."], ["A perfectly steady current, just like a battery gives", "The output still varies in size."], ["An alternating current, reversing each half turn", "The commutator stops it reversing."], ["No current at all, as the commutator blocks it", "A d.c. generator does produce a current."]],
     answer: "A", explanation: "The commutator keeps the output in one direction, but its size still varies, giving humps on the graph.",
     hints: ["The commutator fixes the direction, not the size."] });
 
@@ -488,7 +488,7 @@ concept("phys.em.transformers", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why does a transformer not work with a steady d.c. supply?",
-    options: [["A steady current gives a constant field, which induces no e.m.f. in the secondary.", "Correct."], ["D.c. is too small to pass through the coil.", "No."], ["D.c. would melt the core.", "No."], ["D.c. flows only in the secondary coil.", "No."]],
+    options: [["A steady current gives a steady field, which induces no e.m.f.", "Correct."], ["D.c. is too small to pass through the thick primary coil.", "D.c. passes through a coil easily."], ["D.c. would heat the iron core until it melted.", "The core does not carry the current."], ["D.c. would flow only in the secondary coil.", "The supply is connected to the primary."]],
     answer: "A", explanation: "Induction needs a changing field; only an alternating current gives a continuously changing field." });
 
   q.num({ d: 2, skill: "APPLICATION", daily: true,
@@ -521,7 +521,7 @@ concept("phys.em.transformers", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "Why is electricity transmitted over long distances at a very high voltage?",
-    options: [["The current is smaller, so less energy is wasted heating the cables.", "Correct."], ["Electricity travels faster at high voltage.", "No."], ["High voltage is safer near homes.", "It is more dangerous, which is why it is stepped down."], ["Transformers only work at high voltage.", "They work at any a.c. voltage."]],
+    options: [["The current is smaller, so less energy heats the cables.", "Correct."], ["Electricity travels faster along cables at high voltage.", "The speed of the signal does not depend on the voltage."], ["High voltage is safer near homes and schools.", "It is more dangerous, which is why it is stepped down."], ["Transformers only work at a very high voltage.", "They work at any a.c. voltage."]],
     answer: "A", explanation: "For the same power, P = IV, a higher voltage means a smaller current and much smaller heating losses." });
 
   q.num({ d: 3, skill: "APPLICATION", applies: C,
@@ -538,7 +538,7 @@ concept("phys.em.transformers", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Why is the core of a transformer laminated (made of thin, insulated sheets)?",
-    options: [["To reduce eddy currents, which waste energy by heating the core", "Correct."], ["To make the transformer lighter", "Not the reason."], ["To increase the voltage", "The turns ratio sets the voltage."], ["To stop the coils touching the core", "The coils are insulated anyway."]],
+    options: [["To reduce eddy currents, which heat the core and waste energy", "Correct."], ["To make the transformer lighter and easier to move", "Not the reason."], ["To increase the voltage induced in the secondary", "The turns ratio sets the voltage."], ["To stop the coils touching the core directly", "The coils are insulated anyway."]],
     answer: "A", explanation: "The changing field induces eddy currents in the core; insulated laminations cut them down, reducing heating.",
     hints: ["The changing field induces currents in any conductor, including the core."] });
 
@@ -550,7 +550,7 @@ concept("phys.em.transformers", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Which sequence describes how a transformer works?",
-    options: [["Alternating current in the primary → changing magnetic field in the core → alternating e.m.f. induced in the secondary", "Correct."], ["Current flows from the primary coil through the core into the secondary coil", "The coils are not connected electrically."], ["The core stores charge and releases it into the secondary", "No."], ["The secondary is joined to the primary by a wire", "There is no electrical connection."]],
+    options: [["A.c. in primary → changing field in core → a.c. e.m.f. in secondary", "Correct."], ["Current flows from the primary through the core to the secondary", "The coils are not connected electrically."], ["The core stores charge and then releases it into the secondary", "The core carries a magnetic field, not stored charge."], ["A wire joins the secondary to the primary inside the core", "There is no electrical connection."]],
     answer: "A", explanation: "The two coils are linked only by the changing magnetic field in the iron core." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING",

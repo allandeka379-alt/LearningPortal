@@ -36,7 +36,7 @@ concept("phys.electricity.electrostatics", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "A negatively charged polythene rod attracts a light metal-coated ball hanging from a thread. What can you conclude about the ball?",
-    options: [["It is either positively charged or uncharged.", "Correct."], ["It must be negatively charged.", "Like charges would repel."], ["It must be positively charged.", "An uncharged ball would also be attracted."], ["It must be uncharged.", "A positive ball would also be attracted."]],
+    options: [["It is either positively charged or uncharged.", "Correct."], ["It must be negatively charged, like the rod.", "Like charges would repel."], ["It must be positively charged, opposite to the rod.", "An uncharged ball would also be attracted."], ["It must be uncharged, with no charge at all.", "A positive ball would also be attracted."]],
     answer: "A", explanation: "Attraction happens between unlike charges and also between a charged object and an uncharged one, so the ball could be positive or uncharged.",
     hints: ["Which kinds of object does a charged rod attract?"] });
 
@@ -51,7 +51,7 @@ concept("phys.electricity.electrostatics", {
 
   q.mcq({ d: 2, skill: "APPLICATION",
     stem: "On a dry winter day, a learner walks across a nylon carpet and then gets a small shock on touching a metal door handle. What causes the shock?",
-    options: [["Charge built up on the learner by friction flows through the metal handle to earth.", "Correct."], ["The door handle is connected to the mains supply.", "It is not."], ["The carpet stores electricity like a battery.", "The carpet is an insulator that charged the learner by friction."], ["The metal handle produces electricity.", "Metal conducts charge; it does not produce it."]],
+    options: [["Charge built up on the learner by friction flows to earth.", "Correct."], ["The door handle is connected to the mains supply.", "It is not: the charge came from the learner."], ["The carpet stores electricity like a battery.", "The carpet is an insulator that charged the learner by friction."], ["The metal handle produces electricity.", "Metal conducts charge; it does not produce it."]],
     answer: "A", explanation: "Friction between shoes and carpet transfers electrons, charging the learner. Touching a conductor lets the charge flow away suddenly as a small spark." });
 
   q.short({ d: 1, skill: "RECALL", applies: C,
@@ -78,13 +78,13 @@ concept("phys.electricity.electrostatics", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "When charging a sphere by induction, why must the earth connection be removed before the charged rod is taken away?",
-    options: [["Otherwise electrons would flow back from earth and leave the sphere uncharged.", "Correct."], ["Otherwise the rod would lose its charge.", "The rod does not touch the sphere."], ["Otherwise the sphere would become negatively charged.", "It would become neutral."], ["To stop a spark jumping from the rod.", "Not the reason."]],
+    options: [["Electrons would flow back from earth and cancel the charge.", "Correct."], ["Otherwise the rod would lose its charge to earth.", "The rod does not touch the sphere."], ["Otherwise the sphere would become negatively charged.", "It would become neutral."], ["To stop a spark jumping from the rod to the sphere.", "Not the reason."]],
     answer: "A", explanation: "While the sphere is still earthed, removing the rod lets electrons flow back, cancelling the induced charge.",
     hints: ["What holds the induced charge in place while the rod is near?"] });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "What does a lightning conductor on a tall building do?",
-    options: [["It gives charge a low-resistance path to flow safely to earth.", "Correct."], ["It stores the charge from a lightning strike.", "It does not store charge."], ["It repels lightning away from the building.", "It does not repel lightning."], ["It insulates the building from the ground.", "It connects the building to the ground."]],
+    options: [["It gives charge a low-resistance path to flow to earth.", "Correct."], ["It stores the charge from a lightning strike.", "It does not store charge."], ["It repels lightning away from the building.", "It does not repel lightning."], ["It insulates the building from the ground.", "It connects the building to the ground."]],
     answer: "A", explanation: "A pointed metal rod joined by a thick copper strip to an earth plate carries a strike's charge safely into the ground instead of through the building." });
 
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,
@@ -153,7 +153,7 @@ concept("phys.electricity.cells", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why are the solar panels of a home system usually used together with rechargeable batteries?",
-    options: [["The panels give no output at night, so batteries store energy for later use.", "Correct."], ["The panels need a battery to start working.", "They work whenever light falls on them."], ["The batteries make the panels more efficient.", "No."], ["The batteries change the panels' output to a.c.", "That is the job of an inverter."]],
+    options: [["Panels give nothing at night, so batteries store energy for later.", "Correct."], ["The panels need a battery's current to start them working.", "They work whenever light falls on them."], ["The batteries make the panels convert sunlight more efficiently.", "Batteries store energy; they do not change the panels' efficiency."], ["The batteries change the panels' d.c. output into a.c.", "That is the job of an inverter."]],
     answer: "A", explanation: "Batteries are charged by the panels during the day and supply the lights and phones at night or on cloudy days." });
 
   q.match({ d: 2, skill: "UNDERSTANDING", applies: Z,
@@ -163,7 +163,7 @@ concept("phys.electricity.cells", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "How should a secondary cell be connected to a d.c. charger?",
-    options: [["Positive to positive and negative to negative, so current is driven through the cell in reverse", "Correct."], ["Positive to negative and negative to positive", "This would discharge the cell through the charger."], ["To an a.c. supply directly", "Charging needs direct current."], ["Either way round", "The polarity matters."]],
+    options: [["Positive to positive and negative to negative, driving current in reverse", "Correct."], ["Positive to negative and negative to positive, like cells in series", "This would discharge the cell through the charger."], ["Straight to the a.c. mains, with no charger in between", "Charging needs direct current."], ["Either way round, because a charger works in both directions", "The polarity matters."]],
     answer: "A", explanation: "The charger's slightly higher p.d. drives current backwards through the cell, reversing the chemical changes." });
 
   q.mcq({ d: 3, skill: "EVALUATION", applies: Z, multiple: true,
@@ -174,7 +174,7 @@ concept("phys.electricity.cells", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why do cars use lead–acid batteries rather than dry cells?",
-    options: [["They can supply the very large current a starter motor needs and are recharged as the car runs.", "Correct."], ["They are lighter than dry cells.", "They are heavy."], ["They contain no acid.", "They contain sulfuric acid."], ["They give a.c. for the engine.", "Batteries give d.c."]],
+    options: [["They give the huge starter current and are recharged as the car runs.", "Correct."], ["They are lighter than dry cells of the same energy.", "They are heavy."], ["They contain no acid, so they are safer in a crash.", "They contain sulfuric acid."], ["They give the a.c. that the engine's spark plugs need.", "Batteries give d.c."]],
     answer: "A", explanation: "Lead–acid batteries deliver large currents and are rechargeable, so the car's generator keeps them charged." });
 
   q.struct({ d: 3, skill: "APPLICATION", applies: Z, examStyle: true,
@@ -184,7 +184,7 @@ concept("phys.electricity.cells", {
         explanation: t`$\dfrac{48}{2.0} = 24$ cells.` }),
       P.manual({ label: "(b)", marks: 2, stem: "State two advantages of using solar panels at the clinic.",
         points: ["One advantage: sunlight is a free, renewable energy source", "A second advantage: it works without a grid connection or during power cuts, with no fuel cost or pollution"] }),
-      P.mcq({ label: "(c)", stem: "Why must the battery room be well ventilated?", options: [["Gases given off while charging must not build up.", "Correct."], ["The batteries need oxygen to work.", "No."], ["To cool the solar panels.", "The panels are outside."], ["To stop the acid freezing.", "Not a risk in a clinic."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Why must the battery room be well ventilated?", options: [["Gases given off while charging must not build up.", "Correct."], ["The batteries need fresh oxygen to work.", "Lead–acid batteries do not use oxygen from the air."], ["To cool the solar panels.", "The panels are outside."], ["To stop the acid freezing.", "Not a risk in a clinic."]], answer: "A",
         explanation: "Lead–acid batteries can give off gases while charging, so ventilation is needed." }),
     ],
     explanation: "Cells in series add: 24 × 2.0 V = 48 V. Solar energy is free and works off-grid; charging rooms need ventilation.",
@@ -227,7 +227,7 @@ concept("phys.electricity.current", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A metal wire is connected across a cell. In which direction do the free electrons in the wire drift?",
-    options: [["From the negative terminal, round the circuit, to the positive terminal", "Correct."], ["From the positive terminal to the negative terminal", "That is the conventional current direction."], ["They vibrate on the spot without drifting", "They drift slowly along the wire."], ["Equally in both directions", "There is an overall drift one way."]],
+    options: [["From the negative terminal round to the positive terminal", "Correct."], ["From the positive terminal round to the negative terminal", "That is the conventional current direction."], ["They vibrate on the spot without drifting at all", "They drift slowly along the wire."], ["Equally in both directions along the wire", "There is an overall drift one way."]],
     answer: "A", explanation: "Electrons are negative, so they are attracted towards the positive terminal: they flow from negative to positive, opposite to conventional current." });
 
   q.tf({ d: 2, skill: "RECALL", daily: true,
@@ -236,7 +236,7 @@ concept("phys.electricity.current", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "What is the difference between direct current and alternating current?",
-    options: [["Direct current flows one way only; alternating current keeps reversing direction.", "Correct."], ["Direct current is always larger.", "Size is not the difference."], ["Alternating current comes only from batteries.", "Batteries give d.c."], ["Direct current reverses 50 times a second.", "That describes the a.c. mains."]],
+    options: [["D.c. flows one way only; a.c. keeps reversing direction.", "Correct."], ["D.c. is always larger than a.c. from the same source.", "Size is not the difference."], ["A.c. comes only from batteries and solar cells.", "Batteries give d.c."], ["D.c. reverses direction 50 times every second.", "That describes the a.c. mains."]],
     answer: "A", explanation: "D.c. (from cells) flows in one direction; a.c. (from the mains, 50 Hz in Zimbabwe) reverses direction repeatedly." });
 
   q.mcq({ d: 1, skill: "RECALL",
@@ -309,7 +309,7 @@ concept("phys.electricity.emf-pd", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which statement defines the e.m.f. of a source?",
-    options: [["The electrical work done by the source in moving unit charge around a complete circuit", "Correct."], ["The work done by unit charge passing through a component", "That defines potential difference."], ["The rate of flow of charge from the source", "That is current."], ["The total energy stored in the source", "E.m.f. is energy per unit charge."]],
+    options: [["Work done by the source moving unit charge round a circuit", "Correct."], ["The work done by unit charge passing through a component", "That defines potential difference."], ["The rate of flow of charge from the source", "That is current."], ["The total energy stored in the source", "E.m.f. is energy per unit charge."]],
     answer: "A", explanation: "E.m.f. is the work done by the source per unit charge moved round the complete circuit." });
 
   q.tf({ d: 2, skill: "RECALL", daily: true,
@@ -334,12 +334,12 @@ concept("phys.electricity.emf-pd", {
 
   q.mcq({ d: 1, skill: "RECALL",
     stem: "How should a voltmeter be connected to measure the p.d. across a resistor?",
-    options: [["In parallel, with one lead on each side of the resistor", "Correct."], ["In series with the resistor", "That is how an ammeter is connected."], ["In series with the cell", "No."], ["Anywhere in the circuit", "It must be across the resistor."]],
+    options: [["In parallel, with one lead on each side of the resistor", "Correct."], ["In series with the resistor, next to it", "That is how an ammeter is connected."], ["In series with the cell, between it and the switch", "A voltmeter in series blocks the current; it must go across the resistor."], ["Anywhere in the circuit, as long as it is connected", "It must be across the resistor."]],
     answer: "A", explanation: "A voltmeter measures the p.d. between two points, so it is connected across (in parallel with) the component." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "Which statement correctly compares e.m.f. and potential difference?",
-    options: [["E.m.f. is the energy a source gives each coulomb; p.d. is the energy each coulomb transfers in a component.", "Correct."], ["E.m.f. is measured in amperes; p.d. in volts.", "Both are measured in volts."], ["E.m.f. applies to components; p.d. applies to sources.", "It is the other way round."], ["E.m.f. and p.d. mean exactly the same thing.", "They describe energy given to and taken from the charge."]],
+    options: [["E.m.f.: energy given to each coulomb; p.d.: energy it transfers in a part.", "Correct."], ["E.m.f. is measured in amperes, while p.d. is measured in volts.", "Both are measured in volts."], ["E.m.f. applies to components, while p.d. applies to sources.", "It is the other way round."], ["E.m.f. and p.d. mean exactly the same thing in every circuit.", "They describe energy given to and taken from the charge."]],
     answer: "A", explanation: "A source does work on the charge (e.m.f.); in a component, the charge does work and transfers energy (p.d.).",
     hints: ["Is energy given to the charge or taken from it?"] });
 
@@ -379,7 +379,7 @@ concept("phys.electricity.emf-pd", {
         explanation: t`$Q = It = 4.0 \times 600 = 2400\ \text{C}$.` }),
       P.num({ label: "(b)", marks: 2, stem: "Calculate the energy transferred by the battery.", value: 28800, unit: "J", wrong: [200, 480],
         explanation: t`$W = EQ = 12 \times 2400 = 28\,800\ \text{J}$.` }),
-      P.mcq({ label: "(c)", stem: "The p.d. across the headlamp is 11.4 V, slightly less than the battery's e.m.f. What is the best explanation?", options: [["Some of the energy given to each coulomb is transferred in other parts of the circuit, such as the cables.", "Correct."], ["The headlamp creates extra energy.", "Energy cannot be created."], ["Current is used up in the headlamp.", "Current is not used up."], ["The voltmeter adds energy to the circuit.", "No."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "The p.d. across the headlamp is 11.4 V, slightly less than the battery's e.m.f. What is the best explanation?", options: [["Some energy per coulomb is transferred elsewhere, e.g. in the cables.", "Correct."], ["The headlamp creates a little extra energy of its own.", "Energy cannot be created."], ["Some of the current is used up before reaching the headlamp.", "Current is not used up."], ["The voltmeter adds a little energy to the circuit.", "A voltmeter takes a tiny current; it adds no energy."]], answer: "A",
         explanation: "The p.d.s around the circuit add up to the e.m.f.; a little is transferred in the cables and connections." }),
     ],
     explanation: "Q = It; W = EQ; the p.d.s in a circuit add up to the e.m.f.",
@@ -422,12 +422,12 @@ concept("phys.electricity.resistance", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which statement is Ohm's law?",
-    options: [["The current through a metallic conductor is directly proportional to the p.d. across it, provided its temperature stays constant.", "Correct."], ["Resistance equals p.d. multiplied by current.", "R = V/I, not V × I."], ["The current through any component is inversely proportional to the p.d. across it.", "No."], ["The p.d. across a conductor always equals the current through it.", "No."]],
+    options: [["Current in a metal conductor ∝ p.d., at constant temperature.", "Correct."], ["Resistance equals p.d. multiplied by current.", "R = V/I, not V × I."], ["Current in any component is inversely proportional to p.d.", "Doubling the p.d. across a resistor doubles the current."], ["The p.d. across a conductor equals the current through it.", "They are different quantities: V = IR."]],
     answer: "A", explanation: "Ohm's law: I ∝ V for a metallic conductor at constant temperature." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Which component has a current–voltage graph that is a straight line through the origin?",
-    options: [["A fixed resistor at constant temperature", "Correct."], ["A filament lamp", "Its graph curves as it heats up."], ["A diode", "It conducts in one direction only."], ["A thermistor being warmed", "Its resistance changes with temperature."]],
+    options: [["A fixed resistor at constant temperature", "Correct."], ["A filament lamp that warms up", "Its graph curves as it heats up."], ["A diode in forward bias", "It conducts in one direction only."], ["A thermistor being warmed", "Its resistance changes with temperature."]],
     answer: "A", explanation: "A fixed resistor at constant temperature obeys Ohm's law: current is proportional to p.d." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
@@ -475,9 +475,9 @@ concept("phys.electricity.resistance", {
         points: ["The ammeter in series with the wire", "The voltmeter in parallel across the wire"] }),
       P.num({ label: "(b)", marks: 2, stem: "Use the reading at 4.0 V to calculate the resistance of the wire.", value: 5.0, answer: "5.0", unit: "Ω", wrong: [3.2, 0.2],
         explanation: t`$R = \dfrac{V}{I} = \dfrac{4.0}{0.80} = 5.0\ \Omega$.` }),
-      P.mcq({ label: "(c)", stem: "How do the readings show that the wire obeys Ohm's law?", options: [["The current is (very nearly) proportional to the p.d.: doubling the p.d. doubles the current.", "Correct."], ["The current decreases as the p.d. increases.", "It increases."], ["The current is the same for every p.d.", "It changes."], ["The p.d. is always larger than the current.", "That proves nothing."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "How do the readings show that the wire obeys Ohm's law?", options: [["Doubling the p.d. (very nearly) doubles the current.", "Correct."], ["The current decreases as the p.d. increases.", "It increases."], ["The current is the same for every value of p.d.", "It changes."], ["The p.d. is always larger than the current.", "That proves nothing."]], answer: "A",
         explanation: "V/I is about 5 Ω for every reading, so I ∝ V." }),
-      P.mcq({ label: "(d)", stem: "Why should the current be switched off between readings?", options: [["So the wire does not heat up and change its resistance", "Correct."], ["To reset the ammeter to zero", "Not needed."], ["Because the voltmeter needs time to cool", "No."], ["To avoid parallax errors", "Not related."]], answer: "A",
+      P.mcq({ label: "(d)", stem: "Why should the current be switched off between readings?", options: [["So the wire does not heat up and change its resistance", "Correct."], ["To reset the ammeter to zero between readings", "Not needed."], ["Because the voltmeter needs time to cool down", "The voltmeter does not heat up noticeably."], ["To avoid parallax errors when reading the scales", "Not related."]], answer: "A",
         explanation: "Heating raises the wire's resistance; switching off keeps its temperature steady." }),
     ],
     explanation: "Ammeter in series, voltmeter in parallel; R = V/I = 5.0 Ω; a constant V/I shows Ohm's law is obeyed.",
@@ -563,7 +563,7 @@ concept("phys.electricity.energy-power", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A cell lights a lamp. Where does the energy transferred by the cell end up?",
-    options: [["Mostly in the surroundings, as light and thermal energy", "Correct."], ["Stored in the connecting wires", "Wires do not store energy."], ["Back in the cell", "The cell's chemical store is used up."], ["It is destroyed in the lamp", "Energy cannot be destroyed."]],
+    options: [["Mostly in the surroundings, as light and thermal energy", "Correct."], ["Stored in the connecting wires of the circuit", "Wires do not store energy."], ["Back in the cell's chemical store, ready to reuse", "The cell's chemical store is used up."], ["It is destroyed in the lamp's hot filament", "Energy cannot be destroyed."]],
     answer: "A", explanation: "Circuits transfer energy from the source to the components and then to the surroundings." });
 
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,
@@ -573,7 +573,7 @@ concept("phys.electricity.energy-power", {
         explanation: t`$4 \times 1.5 + 2.0 = 8.0\ \text{kW}$.` }),
       P.num({ label: "(b)", marks: 2, stem: "Calculate the current taken from the supply when everything is on.", value: 8000 / 230, unit: "A", wrong: [0.035, 1840000],
         explanation: t`$I = \dfrac{P}{V} = \dfrac{8000}{230} = 35\ \text{A}$.` }),
-      P.mcq({ label: "(c)", stem: "Why is a stove given its own circuit with thick cables?", options: [["It draws a large current that would overheat thinner cables.", "Correct."], ["It needs a.c. instead of d.c.", "All household circuits are a.c."], ["Thick cables make it cook faster.", "No."], ["Because its case is earthed.", "Not the reason."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Why is a stove given its own circuit with thick cables?", options: [["It draws a large current that would overheat thin cables.", "Correct."], ["It needs a.c., while other circuits carry d.c.", "All household circuits are a.c."], ["Thick cables carry the energy faster, so it cooks faster.", "The plates' power is fixed; thick cables only stop overheating."], ["Because its metal case is earthed through the cable.", "Not the reason."]], answer: "A",
         explanation: "A large current heats a cable; thick cables have low resistance, so they stay cool." }),
     ],
     explanation: "Add the powers; I = P/V; large currents need thick cables.",
@@ -605,7 +605,7 @@ concept("phys.electricity.circuit-diagrams", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which component's resistance decreases when the light falling on it gets brighter?",
-    options: [["A light-dependent resistor (LDR)", "Correct."], ["A thermistor", "It responds to temperature."], ["A fuse", "No."], ["A diode", "No."]],
+    options: [["A light-dependent resistor", "Correct."], ["A thermistor (NTC)", "It responds to temperature."], ["A fuse in the circuit", "A fuse's resistance does not depend on light."], ["A silicon diode", "A diode's resistance depends on the direction of the current, not on light."]],
     answer: "A", explanation: "An LDR's resistance falls as the light intensity rises." });
 
   q.match({ d: 2, skill: "RECALL",
@@ -620,7 +620,7 @@ concept("phys.electricity.circuit-diagrams", {
 
   q.mcq({ d: 2, skill: "APPLICATION", daily: true,
     stem: "A learner wants to measure the current through a lamp and the p.d. across it. How should the meters be connected?",
-    options: [["Ammeter in series with the lamp; voltmeter in parallel across the lamp", "Correct."], ["Both meters in series with the lamp", "The voltmeter must be in parallel."], ["Both meters in parallel with the lamp", "The ammeter must be in series."], ["Ammeter in parallel; voltmeter in series", "This is the wrong way round."]],
+    options: [["Ammeter in series; voltmeter in parallel across the lamp", "Correct."], ["Both meters in series with the lamp and the cell", "The voltmeter must be in parallel."], ["Both meters in parallel across the lamp", "The ammeter must be in series."], ["Ammeter in parallel across the lamp; voltmeter in series", "This is the wrong way round."]],
     answer: "A", explanation: "Ammeters go in series; voltmeters go in parallel." });
 
   q.tf({ d: 2, skill: "RECALL",
@@ -629,7 +629,7 @@ concept("phys.electricity.circuit-diagrams", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "A cell, a switch, a lamp and a buzzer are all connected in one loop. The lamp's filament breaks. What happens to the buzzer?",
-    options: [["It stops, because the only path for the current is broken.", "Correct."], ["It gets louder.", "No current can flow."], ["It carries on as before.", "In a single loop the circuit is now incomplete."], ["The switch opens by itself.", "No."]],
+    options: [["It stops, because the only current path is broken.", "Correct."], ["It gets louder, because it now takes all the energy.", "No current can flow in a broken single loop."], ["It carries on as before, using the cell's energy.", "In a single loop the circuit is now incomplete."], ["It buzzes more quietly, sharing less energy.", "With the loop broken there is no current at all."]],
     answer: "A", explanation: "All the components are in series, so a break anywhere stops the current everywhere.",
     hints: ["Is there any other path for the current?"] });
 
@@ -640,13 +640,13 @@ concept("phys.electricity.circuit-diagrams", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "An LED and a suitable resistor are connected in series to a battery, but the LED does not light. The LED and battery are known to work. What is the most likely reason?",
-    options: [["The LED is connected the wrong way round (reverse biased).", "Correct."], ["LEDs only work on a.c.", "LEDs work on d.c."], ["The resistor is in series with the LED.", "A series resistor is needed to protect the LED."], ["LEDs need a magnetic field to light.", "No."]],
+    options: [["The LED is the wrong way round (reverse biased).", "Correct."], ["LEDs only light up when they are given a.c.", "LEDs work on d.c."], ["The resistor is in series with the LED.", "A series resistor is needed to protect the LED."], ["LEDs need a strong magnetic field to light.", "An LED needs current in its forward direction, not a magnetic field."]],
     answer: "A", explanation: "An LED conducts and lights only when forward biased; reversed, almost no current flows.",
     hints: ["A diode conducts in one direction only."] });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
     stem: "Why is a resistor connected in series with an LED?",
-    options: [["To limit the current so the LED is not damaged", "Correct."], ["To increase the current", "It reduces it."], ["To make the LED reverse biased", "No."], ["To make the LED flash", "No."]],
+    options: [["To limit the current so the LED is not damaged", "Correct."], ["To increase the current through the LED", "It reduces it."], ["To make the LED reverse biased", "The resistor does not change the LED's direction."], ["To make the LED flash on and off", "A plain resistor gives a steady current."]],
     answer: "A", explanation: "Without a series resistor the forward current could be large enough to destroy the LED." });
 
   q.short({ d: 1, skill: "RECALL",
@@ -670,7 +670,7 @@ concept("phys.electricity.circuit-diagrams", {
         points: ["The battery, switch, heater and ammeter are connected in one series loop", "The ammeter is in series so that the whole heater current passes through it", "The switch is in the same loop, so opening it breaks the circuit"] }),
       P.mcq({ label: "(b)", stem: "A voltmeter is added to measure the p.d. across the heater. Where is it connected?", options: [["Across the heater's two terminals", "Correct."], ["In series between the battery and the switch", "A voltmeter is not connected in series."], ["Across the ammeter", "That would measure the tiny p.d. across the ammeter."], ["Across the switch", "That reads zero when the switch is closed."]], answer: "A",
         explanation: "A voltmeter is connected in parallel with the component whose p.d. it measures." }),
-      P.mcq({ label: "(c)", stem: "Which description matches the circuit symbol for a heater?", options: [["A rectangle divided into sections by short lines", "Correct."], ["A circle with a cross inside", "That is a lamp."], ["A circle with M inside", "That is a motor."], ["A triangle pointing at a short bar", "That is a diode."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Which description matches the circuit symbol for a heater?", options: [["A rectangle split into sections by lines", "Correct."], ["A circle with a cross drawn inside", "That is a lamp."], ["A circle with the letter M inside", "That is a motor."], ["A triangle pointing at a short bar", "That is a diode."]], answer: "A",
         explanation: "The heater symbol is a rectangle divided into sections." }),
     ],
     explanation: "Series loop with the ammeter; voltmeter across the heater; heater symbol is a divided rectangle.",
@@ -735,7 +735,7 @@ concept("phys.electricity.series-parallel", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why is the total current flowing into a junction equal to the total current flowing out?",
-    options: [["Charge is conserved: it cannot be created, destroyed or pile up at the junction.", "Correct."], ["Energy is conserved at the junction.", "The rule is about charge."], ["The branches always have equal resistance.", "Not needed."], ["The p.d. is the same in each branch.", "That is a different rule."]],
+    options: [["Charge is conserved: it cannot pile up at the junction.", "Correct."], ["Energy is conserved at the junction, so current is too.", "The rule is about charge."], ["The branches always have equal resistance to the current.", "Not needed."], ["The p.d. is the same in each branch of the junction.", "That is a different rule."]],
     answer: "A", explanation: "The junction rule follows from the conservation of charge.",
     hints: ["What is current a flow of?"] });
 
@@ -845,7 +845,7 @@ concept("phys.electricity.potential-divider", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "What is the advantage of using a potentiometer (variable potential divider) to control the p.d. across a lamp, instead of a variable resistor in series?",
-    options: [["The p.d. can be varied all the way from zero to the full supply p.d.", "Correct."], ["It uses no energy at all.", "It does use some energy."], ["It gives a larger current than the supply can.", "No."], ["It has no resistance.", "It is a resistance track."]],
+    options: [["The p.d. can be varied from zero up to the full supply p.d.", "Correct."], ["It uses no energy at all, unlike a variable resistor.", "It does use some energy."], ["It gives a larger current than the supply alone can.", "It cannot give more current than the supply."], ["It has no resistance, so nothing is wasted.", "It is a resistance track."]],
     answer: "A", explanation: "A potentiometer's slider can select any output from zero up to the supply p.d.; a series variable resistor cannot reduce the p.d. to zero." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -897,7 +897,7 @@ concept("phys.electricity.mains-safety", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "Why is the switch for an appliance placed in the live wire?",
-    options: [["So that when it is off, the appliance is disconnected from the high voltage", "Correct."], ["So the switch lasts longer", "Not the reason."], ["So that less current flows when it is on", "The switch does not reduce the current."], ["Because the neutral wire carries no current", "The neutral carries the current back."]],
+    options: [["So that, when off, the appliance is cut off from the high voltage", "Correct."], ["So the switch lasts longer and sparks less", "Not the reason."], ["So that less current flows through it when it is on", "The switch does not reduce the current."], ["Because the neutral wire carries no current at all", "The neutral carries the current back."]],
     answer: "A", explanation: "With the switch in the live wire, opening it cuts the appliance off from the high voltage, making it safe to touch." });
 
   q.mcq({ d: 1, skill: "RECALL",
@@ -918,7 +918,7 @@ concept("phys.electricity.mains-safety", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why must the metal case of an electric kettle be earthed?",
-    options: [["If a fault makes the case live, a large current flows to earth, the fuse melts and the case is made safe.", "Correct."], ["To stop static charge building up", "Not the main reason."], ["To make it heat the water faster", "No."], ["So that it uses less electricity", "No."]],
+    options: [["A live case sends a large current to earth, which blows the fuse.", "Correct."], ["To stop static charge building up on the metal case", "Not the main reason."], ["To make the element heat the water faster and more evenly", "Earthing does not change the heating power."], ["So that the kettle uses less electricity for each boil", "Earthing does not change the energy used."]],
     answer: "A", explanation: "The earth wire gives fault current a low-resistance path; the large current blows the fuse and disconnects the kettle." });
 
   q.tf({ d: 2, skill: "RECALL", daily: true,
@@ -927,7 +927,7 @@ concept("phys.electricity.mains-safety", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "A double-insulated appliance has no earth wire. What is the purpose of the fuse in its plug?",
-    options: [["To protect the cable and circuit from overheating if too much current flows", "Correct."], ["To earth the casing", "There is no earth connection."], ["It has no purpose and can be removed.", "It is still needed."], ["To stop shocks from the casing", "The insulated casing does that."]],
+    options: [["To protect the cable from overheating if too much current flows", "Correct."], ["To earth the plastic casing of the appliance", "There is no earth connection."], ["It has no purpose and can safely be removed.", "It is still needed."], ["To stop shocks from the casing if a wire comes loose", "The insulated casing does that."]],
     answer: "A", explanation: "Even without an earth wire, a fault could draw too much current; the fuse protects the cable from overheating.",
     hints: ["What can still overheat if the current is too large?"] });
 
@@ -939,7 +939,7 @@ concept("phys.electricity.mains-safety", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "What is an advantage of a trip switch (circuit breaker) over a fuse?",
-    options: [["It can be reset once the fault is fixed, and it acts faster.", "Correct."], ["It works without any electricity.", "No."], ["It never switches off.", "It switches off when the current is too large."], ["It must be replaced after every fault.", "That is a fuse."]],
+    options: [["It can be reset after the fault is fixed, and acts faster.", "Correct."], ["It works without any electricity in the circuit.", "It works by sensing the current in the circuit."], ["It never switches off, so appliances keep working.", "It switches off when the current is too large."], ["It must be replaced after every fault, like a fuse.", "That is a fuse."]],
     answer: "A", explanation: "A trip switch opens quickly when the current is too large and can simply be reset." });
 
   q.match({ d: 2, skill: "RECALL", applies: Z,
@@ -949,12 +949,12 @@ concept("phys.electricity.mains-safety", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "What is the purpose of the cable grip in a three-pin plug?",
-    options: [["To hold the outer sheath firmly so a pull on the cable does not pull the wires out of the terminals", "Correct."], ["To connect the earth wire", "No."], ["To hold the fuse in place", "No."], ["To insulate the pins", "No."]],
+    options: [["To grip the sheath so a tug cannot pull wires off the pins", "Correct."], ["To make the earth wire connect firmly to the earth pin", "The earth wire is screwed to its own terminal."], ["To hold the fuse firmly in place between its clips", "The fuse sits in its own holder."], ["To insulate the brass pins from the user's fingers", "The plug's plastic body and pin sleeves do that."]],
     answer: "A", explanation: "The grip clamps the outer sheath, so any tug is taken by the sheath, not the wire connections." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why is it dangerous to plug many appliances into one socket with an adaptor?",
-    options: [["The total current is large and can overheat the wiring, causing a fire.", "Correct."], ["It lowers the mains voltage to zero.", "No."], ["It makes appliances run too fast.", "No."], ["It stops the fuse from working.", "The danger is overheating."]],
+    options: [["The total current is large and can overheat the wiring.", "Correct."], ["It lowers the mains voltage at the socket to zero.", "The voltage stays at the mains value."], ["It makes all the appliances run too fast.", "Appliances run as usual; the wiring overheats."], ["It stops the fuse in the plug from working.", "The danger is overheating."]],
     answer: "A", explanation: "Overloading draws more current than the socket and cable are designed for, so they overheat." });
 
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,
