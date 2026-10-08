@@ -1,0 +1,618 @@
+[
+ {
+  "key": "exam.w4a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "econ.development.meaning-indicators",
+   "econ.development.international-differences",
+   "econ.development.poverty"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1260,
+  "stem": "Country R and Country S are fictional neighbouring countries in southern Africa with populations of about 14 million each. Country R's economy depends on oil, which was discovered twenty years ago and is extracted by a small number of large firms using imported machinery and skilled foreign workers. Oil provides most of the country's exports and government revenue. Outside the oil industry, most people work in small-scale farming and informal trading.\n\nCountry S has no oil. Its income comes from commercial and small-scale farming, a growing manufacturing sector and tourism. For many years its government has spent a large share of its budget on primary health care, clean water and free primary and secondary education, paid for by a progressive income tax and by taxes on tourism.\n\nTable 1 shows indicators of living standards for the two countries. The Human Development Index (HDI) combines measures of health, education and income into a single number between 0 and 1.\n\nA government minister in Country R recently said that her country's people are much better off than those of Country S, because its GDP per head is far higher. An economist replied that the figures tell a more complicated story. She pointed out that a large share of Country R's income goes to the richest households, that many rural children leave school early, and that clinics outside the capital are short of staff and medicines. She argued that Country R should spend more of its oil revenue on health and education, while Country S needs to raise its income if it is to continue improving its services.\n\n**Table 1: Indicators of living standards, 2026**\n\n| Indicator | Country R | Country S |\n| --- | ---: | ---: |\n| GDP (US\\$ million) | 59,220 | 40,470 |\n| Population (million) | 14.1 | 14.2 |\n| Life expectancy at birth (years) | 61.4 | 68.9 |\n| Mean years of schooling (adults) | 6.2 | 8.8 |\n| HDI | 0.587 | 0.648 |\n| Share of income received by the richest 10% of households (%) | 52 | 34 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the definition.",
+    "payload": {
+     "template": "Real GDP per head is the total output of a country, adjusted for {{blank:a}}, divided by its {{blank:b}}.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "inflation",
+        "exports",
+        "taxation"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "population",
+        "labour force",
+        "land area"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "inflation"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "population"
+       ]
+      }
+     ]
+    },
+    "explanation": "Real = adjusted for price changes; per head = divided by the population."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate GDP per head in Country R, in US\\$.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 4200
+    },
+    "explanation": "59,220 million ÷ 14.1 million = US\\$4,200.",
+    "workedSolution": "1. 59,220 million ÷ 14.1 million = US\\$4,200."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Calculate by what percentage Country R's GDP per head is higher than Country S's. Give your answer to one decimal place.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 47.368421052631575,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "S: 40,470 ÷ 14.2 = US\\$2,850. Difference = (4,200 − 2,850) ÷ 2,850 × 100 = 47.4%. Dividing by R's figure (32.1%) uses the wrong base.",
+    "workedSolution": "1. S: 40,470 ÷ 14.2 = US\\$2,850. Difference = (4,200 − 2,850) ÷ 2,850 × 100 = 47.4%. Dividing by R's figure (32.1%) uses the wrong base."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Using the information, explain **two** reasons why Country S has a higher HDI than Country R, even though its GDP per head is lower.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Identifies: S has better health: life expectancy 68.9 against 61.4 years.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Explains: S's government spent heavily on primary health care and clean water.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Identifies: S has more education: 8.8 against 6.2 mean years of schooling.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Explains: free primary and secondary education in S; rural children in R leave school early.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: First, people in Country S live longer: life expectancy is 68.9 years compared with 61.4 in R, because S's government has spent heavily on primary health care and clean water, while R's rural clinics lack staff and medicines. Second, adults in S have had more schooling, 8.8 years against 6.2, because S provides free primary and secondary education, while many rural children in R leave school early. The HDI includes health and education as well as income, so S's lead in these two dimensions outweighs R's higher income."
+    },
+    "explanation": "Each reason: identify with data (1) + explain using the passage (1)."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why GDP per head may overstate the living standards of most people in Country R.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It is an average; the richest 10% receive 52% of income, so most households have far less than the average.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Oil income goes largely to a few firms, foreign workers and the government, not to ordinary households.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "It ignores health and education, which are poor in rural R.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: GDP per head is an average, but in Country R the richest 10% of households receive 52% of income, so most households earn far less than US\\$4,200. Much of the oil income goes to a few large firms, to foreign workers and to the government rather than to ordinary families, and the figure says nothing about the poor health and schooling in rural areas."
+    },
+    "explanation": "One mark per point."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Discuss whether the HDI is a better indicator of living standards than GDP per head for comparing Countries R and S.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "HDI better: includes health (life expectancy) and education (schooling), so it captures welfare that GDP per head misses; here it ranks S above R.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "HDI better: uses income adjusted for purchasing power, so it allows for differences in the cost of living.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "GDP per head: simple, widely available, shows the income available to spend; R's income could finance future improvements.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "HDI limits: ignores income distribution (R's richest 10% receive 52%), poverty, freedom, environment; years of schooling ignore quality; averages.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Use of several indicators (HDI plus inequality and poverty measures) gives the best comparison.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Justified conclusion, e.g. HDI better here, but still incomplete.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "Simple points, little explanation."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 4,
+        "descriptor": "Some analysis of both sides or one side well developed, limited conclusion."
+       },
+       {
+        "level": 3,
+        "minMarks": 5,
+        "maxMarks": 6,
+        "descriptor": "Two-sided analysis, developed, with a justified conclusion."
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The HDI is broader than GDP per head because it includes life expectancy and years of schooling as well as income. For R and S it gives a fuller picture: S's people live longer and have more education, so the HDI ranks S above R even though R's GDP per head is about 47% higher. The HDI also adjusts income for differences in the cost of living. On the other hand, GDP per head is simple, widely available and shows the income R has available, which could pay for better services in future. The HDI also has limits: it ignores how income is shared, and R's richest 10% receive over half of all income; it leaves out poverty, freedom and the environment, and years of schooling say nothing about quality. Overall the HDI is a better indicator than GDP per head for comparing these two countries, because their differences lie mainly in health and education, but it should be used with measures of inequality and poverty."
+    },
+    "explanation": "Weigh the HDI's breadth against its limits and GDP per head's simplicity; conclude."
+   }
+  ],
+  "explanation": "GDP per head: R US\\$4,200, S US\\$2,850 (R 47.4% higher). S has higher life expectancy, schooling and HDI, and a more equal income distribution.",
+  "hints": [
+   "GDP per head = GDP ÷ population.",
+   "The HDI combines health, education and income."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "inflation"
+      },
+      {
+       "blankId": "b",
+       "text": "population"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4200"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "47.4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "exports"
+       },
+       {
+        "blankId": "b",
+        "text": "labour force"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.0002380952380952381"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "32.142857142857146"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/economics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2 Section A"
+ },
+ {
+  "key": "exam.w4a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "econ.growth.recession-policies",
+   "econ.growth.economic-growth"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1260,
+  "stem": "A fictional country that exports copper and cut flowers has entered a recession. Its main trading partners are in recession, world copper prices have fallen, and consumer confidence is low. Unemployment is rising and the government's budget deficit has widened. The government is considering a programme of spending on roads, railways and electricity, while the central bank is considering a cut in interest rates.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Which definition of a recession is correct?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A fall in real GDP, commonly over two consecutive quarters",
+      "correct": true,
+      "rationale": "Correct: a period of negative economic growth."
+     },
+     {
+      "key": "B",
+      "content": "A fall in the rate of inflation over two consecutive quarters",
+      "rationale": "That is disinflation."
+     },
+     {
+      "key": "C",
+      "content": "A rise in unemployment above a set level over two quarters",
+      "rationale": "Unemployment usually rises in a recession, but that is not the definition."
+     },
+     {
+      "key": "D",
+      "content": "A fall in the growth rate of real GDP for two consecutive quarters",
+      "rationale": "Slower growth still means rising output."
+     }
+    ],
+    "explanation": "A recession is a period of negative economic growth."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Explain why the government's budget deficit has widened. Complete the explanation.",
+    "payload": {
+     "template": "In a recession incomes, spending and profits {{blank:a}}, so the government collects {{blank:b}} tax revenue. At the same time more people need support, so government spending on benefits {{blank:c}}. The gap between spending and revenue therefore {{blank:d}}.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "fall",
+        "rise"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "less",
+        "more"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "rises",
+        "falls"
+       ]
+      },
+      {
+       "id": "d",
+       "input": "select",
+       "choices": [
+        "widens",
+        "narrows"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "fall"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "less"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "rises"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "widens"
+       ]
+      }
+     ]
+    },
+    "explanation": "Lower tax revenue and higher spending on support widen the deficit."
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Use the information above.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Real GDP fell from US\\$26,400 million in the first quarter of the year to US\\$26,004 million in the second and US\\$25,770 million in the third. Calculate the total percentage fall from the first to the third quarter. Give your answer to one decimal place and include the minus sign.",
+      "payload": {
+       "unitHint": "%"
+      },
+      "answerSpec": {
+       "value": -2.3863636363636367,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       }
+      },
+      "explanation": "(25,770 − 26,400) ÷ 26,400 × 100 = −630 ÷ 26,400 × 100 = −2.4%. Adding the two quarterly changes (−2.40%) gives a slightly different, incorrect figure.",
+      "workedSolution": "1. (25,770 − 26,400) ÷ 26,400 × 100 = −630 ÷ 26,400 × 100 = −2.4%. Adding the two quarterly changes (−2.40%) gives a slightly different, incorrect figure."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 4,
+      "markingMode": "MANUAL",
+      "stem": "Analyse how the recession is likely to affect workers and firms in the country.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Firms' sales fall, so they cut output and need fewer workers.",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "Cyclical unemployment rises; those in work get fewer hours and smaller pay rises.",
+          "marks": 1
+         },
+         {
+          "id": "p3",
+          "description": "Lower incomes reduce spending further, so other firms' sales and profits fall (knock-on effect).",
+          "marks": 1
+         },
+         {
+          "id": "p4",
+          "description": "Firms postpone investment and some close; the unemployed lose skills, lowering future productivity.",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: As demand falls, firms sell less, so they cut output and need fewer workers: cyclical unemployment rises, and those still in work get fewer hours and smaller pay rises. The workers who lose their jobs spend less, so other firms' sales and profits also fall. Firms postpone investment in new machinery and some close. People who stay unemployed for a long time lose skills, which lowers the economy's productivity in the future."
+      }
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Discuss whether government spending on infrastructure is the best way for this country to end its recession and promote growth.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "For: adds directly to total demand, creating jobs in construction and orders for suppliers, which is needed when consumers and exports are weak.",
+        "marks": 2
+       },
+       {
+        "id": "p2",
+        "description": "For: roads, railways and electricity also raise productive capacity (supply-side effect), lowering costs for exporters.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Against: time lags in planning and building; widens the deficit further and adds to debt; some spending leaks into imports of machinery and materials.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Alternative: a cut in interest rates is quicker and cheaper for the government, may weaken the exchange rate and help exports; but low confidence may stop people borrowing.",
+        "marks": 2
+       },
+       {
+        "id": "p5",
+        "description": "The cause is external (trading partners' recession, copper prices): neither policy can raise world demand directly; diversification of exports matters.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Justified conclusion, e.g. infrastructure spending combined with lower interest rates is best, as it raises demand now and capacity later.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple points, little explanation."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some analysis of both sides or one side well developed, limited conclusion."
+       },
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Two-sided analysis, developed, with a justified conclusion."
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Spending on roads, railways and electricity adds directly to total demand at a time when consumer spending and exports are weak: construction firms hire workers and buy materials, and their workers spend their wages, so output rises. The projects also raise the country's productive capacity, cutting transport and energy costs for copper and flower exporters and supporting long-term growth. However, large projects take time to plan and start, so the effect may come after the recession is over; the spending widens an already larger deficit and adds to debt; and some of the money will be spent on imported machinery and materials. A cut in interest rates would act more quickly and cost the government nothing, and a weaker exchange rate would help exporters, but with confidence low, households and firms may not borrow more. Neither policy can raise world copper prices or demand from trading partners, so diversifying exports also matters. The best approach is to combine well-chosen infrastructure projects that can start quickly with lower interest rates: together they raise demand now and capacity in the future."
+    },
+    "explanation": "Weigh how infrastructure spending raises demand and capacity against time lags, debt and import leakage; compare with interest rates; conclude."
+   }
+  ],
+  "explanation": "Real GDP fell −1.5% and then −0.9%: two consecutive quarters of negative growth, a total fall of −2.4%.",
+  "hints": [
+   "A recession means real GDP falls.",
+   "Think about what happens to tax revenue and to benefit spending."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "fall"
+      },
+      {
+       "blankId": "b",
+       "text": "less"
+      },
+      {
+       "blankId": "c",
+       "text": "rises"
+      },
+      {
+       "blankId": "d",
+       "text": "widens"
+      }
+     ]
+    },
+    "(c)(i)": {
+     "type": "NUMERICAL",
+     "value": "-2.4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "rise"
+       },
+       {
+        "blankId": "b",
+        "text": "more"
+       },
+       {
+        "blankId": "c",
+        "text": "falls"
+       },
+       {
+        "blankId": "d",
+        "text": "narrows"
+       }
+      ]
+     },
+     "(c)(i)": {
+      "type": "NUMERICAL",
+      "value": "-2.399861559760037"
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/economics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2 Section B"
+ }
+]

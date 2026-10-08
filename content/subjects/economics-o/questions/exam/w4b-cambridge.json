@@ -1,0 +1,990 @@
+[
+ {
+  "key": "exam.w4b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "econ.forex.exchange-rates",
+   "econ.bop.current-account",
+   "econ.bop.imbalances-policies",
+   "econ.trade.international-trade"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1260,
+  "stem": "Country M is a fictional lower-middle-income country in southern Africa. Its currency, the dala, has a floating exchange rate. Copper makes up more than half of its exports, and it also exports coffee and earns foreign currency from tourism. It imports almost all of its fuel, most of its machinery and many medicines.\n\nBetween 2024 and 2026 the world price of copper fell sharply as demand from manufacturing countries slowed. At the same time a credit boom raised consumer spending at home, much of it on imported cars, phones and household goods. Inflation in Country M rose well above the rates in its main trading partners.\n\nAs the current account deficit widened, the dala depreciated against the US dollar. Copper mining companies, which are paid in US dollars, welcomed the fall, because each dollar they earn is now worth more dala. Coffee farmers reported more orders from foreign buyers. However, the price of fuel at the pump rose, transport companies raised fares, and hospitals warned that imported medicines had become much more expensive.\n\nThe central bank has so far allowed the dala to float freely. Some economists argue that a further depreciation would make exports more competitive and reduce imports, closing the deficit. Others argue that because most imports are essentials and copper prices are set in world markets, a weaker dala would mainly raise inflation, and that the government should instead cut its own spending, raise interest rates to end the credit boom, and invest in training and roads so that new export industries can grow.\n\n**Table 1: Economic data for Country M**\n\n|  | 2024 | 2025 | 2026 |\n| --- | ---: | ---: | ---: |\n| Exchange rate (dala per US\\$1) | 20 | 22 | 26 |\n| World copper price index (2024 = 100) | 100 | 86 | 78 |\n| Inflation rate (%) | 6 | 9 | 13 |\n| Current account balance (US\\$ billion) | −0.9 | −1.6 | −2.4 |\n| GDP (US\\$ billion) | 30 | 31 | 32 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the definition.",
+    "payload": {
+     "template": "A foreign exchange rate is the {{blank:a}} of one currency in terms of {{blank:b}}.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "price",
+        "quantity",
+        "interest"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "another currency",
+        "gold",
+        "goods"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "price"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "another currency"
+       ]
+      }
+     ]
+    },
+    "explanation": "An exchange rate is the price of one currency expressed in another currency."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the current account balance in 2026 as a percentage of GDP. Give a deficit as a negative number, to one decimal place.",
+    "answerSpec": {
+     "value": -7.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "−2.4 ÷ 32 × 100 = −7.5%.",
+    "workedSolution": "1. −2.4 ÷ 32 × 100 = −7.5%."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the percentage change in the value of the dala against the US dollar between 2024 and 2026. Give a fall as a negative number, to one decimal place.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": -23.076923076923077,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "One dala was worth 1 ÷ 20 = US\\$0.05 in 2024 and 1 ÷ 26 = US\\$0.0385 in 2026: (0.0385 − 0.05) ÷ 0.05 × 100 = −23.1% (equivalently 20 ÷ 26 × 100 − 100). The number of dala per dollar rose by 30%, but that is the rise in the dollar's value, not the change in the dala's.",
+    "workedSolution": "1. One dala was worth 1 ÷ 20 = US\\$0.05 in 2024 and 1 ÷ 26 = US\\$0.0385 in 2026: (0.0385 − 0.05) ÷ 0.05 × 100 = −23.1% (equivalently 20 ÷ 26 × 100 − 100). The number of dala per dollar rose by 30%, but that is the rise in the dollar's value, not the change in the dala's."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "A mining company sells one tonne of copper for US\\$8,000. Calculate how many more dala it receives for this tonne at the 2026 exchange rate than at the 2024 rate, assuming the dollar price is unchanged.",
+    "answerSpec": {
+     "value": 48000
+    },
+    "explanation": "8,000 × 20 = 160,000 dala; 8,000 × 26 = 208,000 dala; difference = 48,000 dala.",
+    "workedSolution": "1. 8,000 × 20 = 160,000 dala; 8,000 × 26 = 208,000 dala; difference = 48,000 dala."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Analyse why Country M's current account deficit widened between 2024 and 2026, even though the dala depreciated.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The world copper price fell 22% (index 100 → 78); copper is over half of exports, so export earnings fell.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The credit boom raised consumer spending, much of it on imports (cars, phones), raising import spending.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Inflation rose to 13%, above trading partners, so exports became less competitive and imports relatively cheaper, offsetting the depreciation.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Imports are mainly essentials (fuel, machinery, medicines) with price inelastic demand, so the depreciation raised the cost of imports in dala without cutting volumes much.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Copper's price is set in world markets, so a cheaper dala does little to raise copper sales.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Uses data: the deficit widened from −0.9 to −2.4 (US\\$ billion), i.e. to 7.5% of GDP.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Copper makes up more than half of Country M's exports, and its world price fell by 22% between 2024 and 2026, so export earnings fell sharply. At the same time the credit boom raised consumer spending, much of it on imported cars, phones and household goods, so spending on imports rose. Inflation rose to 13%, well above that of trading partners, which made Country M's goods less competitive and offset much of the effect of the depreciation. The depreciation also raised the dala cost of essential imports such as fuel, machinery and medicines, for which demand is price inelastic, so import spending did not fall much. Because copper's price is set in world markets, a cheaper dala did little to increase copper sales. As a result, the deficit widened from US\\$0.9 billion to US\\$2.4 billion, or 7.5% of GDP."
+    },
+    "explanation": "Copper price, credit boom, relative inflation, inelastic essential imports; use the data."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Discuss whether a further depreciation of the dala would reduce Country M's current account deficit.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Would help: exports (coffee, tourism) cheaper for foreigners; exporters earn more dala; imports dearer so consumers switch to local goods; evidence of more coffee orders.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Would not help much: imports are essentials with inelastic demand; copper price set in world markets; time lags.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Would not help: dearer imports (fuel, medicines) raise inflation, already 13%, which erodes competitiveness and could cause further depreciation.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Alternatives: cut government spending; higher interest rates to end the credit boom; supply-side investment to build new export industries.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Effect depends on price elasticity of demand for exports and imports and on the cause of the deficit.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Justified conclusion.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "Simple points, little explanation."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 4,
+        "descriptor": "Some analysis of both sides or one side well developed, limited conclusion."
+       },
+       {
+        "level": 3,
+        "minMarks": 5,
+        "maxMarks": 6,
+        "descriptor": "Two-sided analysis, developed, with a justified conclusion."
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A further depreciation would make Country M's coffee and tourism cheaper for foreigners, and exporters would receive more dala for each dollar, as coffee farmers' extra orders already suggest. Imports would become dearer, so consumers might switch from imported cars and phones to local goods. However, most imports are essentials such as fuel, machinery and medicines, for which demand is price inelastic, so the import bill in dala could rise, and copper's price is set in world markets, so the main export would hardly respond. Dearer imports would also push inflation, already 13%, even higher, which would erode the competitiveness gained and might lead to further depreciation. The deficit was caused mainly by falling copper prices and a credit boom, so policies that cut the credit boom, such as higher interest rates or lower government spending, and supply-side investment in new export industries would deal more directly with the causes. A further depreciation on its own is therefore unlikely to close the deficit; it would help only if combined with policies to control inflation and demand."
+    },
+    "explanation": "Price effects on exports and imports versus elasticity, inflation and the causes; conclude."
+   }
+  ],
+  "explanation": "Deficit −7.5% of GDP in 2026; dala fell 23.1% against the dollar; a copper exporter gains 48,000 dala per tonne.",
+  "hints": [
+   "The value of one dala in dollars is 1 ÷ (dala per dollar).",
+   "Balance as % of GDP = balance ÷ GDP × 100.",
+   "Think about elasticity of demand for essential imports."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "price"
+      },
+      {
+       "blankId": "b",
+       "text": "another currency"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-7.5"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "-23.1"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "48000"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "quantity"
+       },
+       {
+        "blankId": "b",
+        "text": "goods"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "7.5"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "30"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "208000"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/economics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2 Section A"
+ },
+ {
+  "key": "exam.w4b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "econ.trade.protection",
+   "econ.trade.free-trade"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1260,
+  "stem": "A fictional developing country has imposed a 25% tariff on imported clothing to protect its new clothing factories, which employ several thousand workers. Consumers have complained about higher prices, and a major trading partner has threatened to retaliate. Some economists argue the country should remove all trade restrictions.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the definitions.",
+    "payload": {
+     "template": "A tariff is a {{blank:a}} on imported goods, while an import quota is a limit on the {{blank:b}} of a good that may be imported.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "tax",
+        "subsidy",
+        "ban"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "quantity",
+        "quality",
+        "price"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "tax"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "quantity"
+       ]
+      }
+     ]
+    },
+    "explanation": "Tariff: a tax on imports. Quota: a limit on the quantity (or value) of imports."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Explain how the tariff protects the clothing factories. Complete the explanation.",
+    "payload": {
+     "template": "The tariff {{blank:a}} the price of imported clothing, so consumers buy {{blank:b}} imports and switch to local clothing. Local factories sell {{blank:c}} and employ more workers, while the government {{blank:d}} revenue.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "raises",
+        "lowers"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "fewer",
+        "more"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "more",
+        "less"
+       ]
+      },
+      {
+       "id": "d",
+       "input": "select",
+       "choices": [
+        "gains",
+        "loses"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "raises"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "fewer"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "more"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "gains"
+       ]
+      }
+     ]
+    },
+    "explanation": "Dearer imports switch demand to local producers; the tariff also raises revenue."
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Use the information above.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Imported shirts cost US\\$12 each. After a 25% tariff is imposed, 150,000 shirts a year are still imported. Calculate the government's yearly tariff revenue, in US\\$.",
+      "payload": {
+       "answerPrefix": "US$"
+      },
+      "answerSpec": {
+       "value": 450000
+      },
+      "explanation": "Tariff per shirt = 25% × 12 = US\\$3; revenue = 3 × 150,000 = US\\$450,000.",
+      "workedSolution": "1. Tariff per shirt = 25% × 12 = US\\$3; revenue = 3 × 150,000 = US\\$450,000."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 4,
+      "markingMode": "MANUAL",
+      "stem": "Analyse how the tariff could harm the country's exporters.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Trading partners may retaliate with tariffs on the country's exports…",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "…so its exports become dearer abroad and sales and jobs in export industries fall.",
+          "marks": 1
+         },
+         {
+          "id": "p3",
+          "description": "Exporters that use imported inputs (e.g. fabric, machinery) face higher costs if inputs are taxed…",
+          "marks": 1
+         },
+         {
+          "id": "p4",
+          "description": "…reducing their competitiveness in world markets.",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: Trading partners whose clothing sales fall may retaliate by placing tariffs on the country's own exports, such as its coffee or cotton, making them dearer abroad, so export sales and jobs fall. In addition, if the tariff raises the price of inputs, such as fabric used by local manufacturers that also export, their costs rise and they become less competitive in world markets."
+      }
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Discuss whether the country would benefit from removing all trade restrictions.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "For free trade: lower prices and wider choice for consumers; cheaper imported inputs; resources move to industries with comparative advantage, raising output.",
+        "marks": 2
+       },
+       {
+        "id": "p2",
+        "description": "For: avoids retaliation, keeps access to export markets; competition improves efficiency.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Against: infant clothing industry may collapse, thousands of jobs lost (structural unemployment); dependence on primary exports.",
+        "marks": 2
+       },
+       {
+        "id": "p4",
+        "description": "Against: loss of tariff revenue; risk of dumping; current account may worsen.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Justified conclusion, e.g. phase out protection gradually with support for workers, or keep temporary, time-limited protection.",
+        "marks": 2
+       }
+      ],
+      "levels": [
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple points, little explanation."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some analysis of both sides or one side well developed, limited conclusion."
+       },
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Two-sided analysis, developed, with a justified conclusion."
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Removing all trade restrictions would lower the price of clothing and other imports, widening choice and raising consumers' real incomes, and firms would pay less for imported inputs. Resources would move into industries where the country has a comparative advantage, raising total output, competition would push local firms to become more efficient, and the threat of retaliation against the country's exports would disappear. However, the new clothing factories are an infant industry: without protection they may close before they can gain economies of scale, and several thousand workers could become structurally unemployed, leaving the country dependent on primary exports. The government would also lose tariff revenue, and local firms could be harmed by dumping. On balance the country would benefit from moving towards free trade, but it should phase out the tariff gradually over a fixed period, giving the factories time to become competitive and helping workers to retrain, rather than removing all restrictions at once."
+    },
+    "explanation": "Gains from free trade versus infant industry, jobs and revenue; conclude."
+   }
+  ],
+  "explanation": "Tariff revenue US\\$450,000 a year; the tariff protects jobs but raises prices and risks retaliation.",
+  "hints": [
+   "A tariff is a tax; a quota limits quantity.",
+   "Who gains and who loses from protection?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "tax"
+      },
+      {
+       "blankId": "b",
+       "text": "quantity"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "raises"
+      },
+      {
+       "blankId": "b",
+       "text": "fewer"
+      },
+      {
+       "blankId": "c",
+       "text": "more"
+      },
+      {
+       "blankId": "d",
+       "text": "gains"
+      }
+     ]
+    },
+    "(c)(i)": {
+     "type": "NUMERICAL",
+     "value": "450000"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "subsidy"
+       },
+       {
+        "blankId": "b",
+        "text": "price"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "lowers"
+       },
+       {
+        "blankId": "b",
+        "text": "more"
+       },
+       {
+        "blankId": "c",
+        "text": "less"
+       },
+       {
+        "blankId": "d",
+        "text": "loses"
+       }
+      ]
+     },
+     "(c)(i)": {
+      "type": "NUMERICAL",
+      "value": "45000000"
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/economics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2 Section B"
+ },
+ {
+  "key": "exam.w4b-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "econ.trade.globalisation",
+   "econ.firms.multinationals",
+   "econ.bop.current-account"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1260,
+  "stem": "Falling transport and communication costs have encouraged a large car-parts multinational company (MNC) to open a factory in a fictional developing country. The factory will employ 2,000 local workers and supply car makers around the world. The government offered the MNC a ten-year tax holiday to attract it.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the definition.",
+    "payload": {
+     "template": "A multinational company is a firm that {{blank:a}} goods or services in {{blank:b}} country.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "produces",
+        "only sells",
+        "imports"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "more than one",
+        "only one",
+        "its home"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "produces"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "more than one"
+       ]
+      }
+     ]
+    },
+    "explanation": "An MNC produces (not just sells) in more than one country."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Explain how changes in costs have encouraged globalisation. Complete the explanation.",
+    "payload": {
+     "template": "Lower {{blank:a}} costs make it cheaper to move components between countries, and lower {{blank:b}} costs let firms manage factories in many countries. Lower trade {{blank:c}} also reduce the cost of crossing borders, so firms build global {{blank:d}} chains.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "transport",
+        "labour"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "communication",
+        "advertising"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "barriers",
+        "surpluses"
+       ]
+      },
+      {
+       "id": "d",
+       "input": "select",
+       "choices": [
+        "supply",
+        "retail"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "transport"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "communication"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "barriers"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "supply"
+       ]
+      }
+     ]
+    },
+    "explanation": "Lower transport, communication and trade-barrier costs make global supply chains worthwhile."
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Use the information above.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "The new factory exports car parts worth US\\$450 million a year and imports components worth US\\$180 million a year. Calculate its net effect on the host country's balance of trade in goods, in US\\$ million.",
+      "payload": {
+       "answerPrefix": "US$"
+      },
+      "answerSpec": {
+       "value": 270
+      },
+      "explanation": "450 − 180 = +US\\$270 million: the factory improves the trade in goods balance.",
+      "workedSolution": "1. 450 − 180 = +US\\$270 million: the factory improves the trade in goods balance."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 4,
+      "markingMode": "MANUAL",
+      "stem": "Analyse how the MNC's operations could worsen another part of the host country's current account.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "The MNC sends its profits (and dividends) to shareholders in its home country…",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "…which are debits in primary income, reducing the current account balance.",
+          "marks": 1
+         },
+         {
+          "id": "p3",
+          "description": "Payments for services such as foreign management, royalties or licence fees for technology…",
+          "marks": 1
+         },
+         {
+          "id": "p4",
+          "description": "…are debits in trade in services, offsetting part of the gain in trade in goods.",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: The MNC will send much of its profit to shareholders in its home country; these profit and dividend payments are primary income debits, which reduce the host country's current account balance. It may also pay its parent company for management services and royalties for using its technology, which are debits in trade in services. These outflows offset part of the improvement in trade in goods."
+      }
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Discuss whether the arrival of the MNC will benefit the developing country.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Benefits: 2,000 jobs, incomes and training; technology transfer and management skills; local suppliers may grow.",
+        "marks": 2
+       },
+       {
+        "id": "p2",
+        "description": "Benefits: exports raise foreign currency and improve trade in goods (+US\\$270m a year); part of a global supply chain; growth.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Costs: ten-year tax holiday means little tax revenue; profits repatriated; local firms may lose workers or markets.",
+        "marks": 2
+       },
+       {
+        "id": "p4",
+        "description": "Costs: footloose — may leave when the tax holiday ends or if demand for cars falls; environmental impact; dependence on one firm and world demand.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Justified conclusion, e.g. likely net benefit if the government secures local purchasing and training.",
+        "marks": 2
+       }
+      ],
+      "levels": [
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple points, little explanation."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some analysis of both sides or one side well developed, limited conclusion."
+       },
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Two-sided analysis, developed, with a justified conclusion."
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The factory will create 2,000 jobs, raising incomes, and workers will gain skills and experience of modern technology and management; local firms may become suppliers. Its exports will bring in foreign currency and improve the trade in goods balance by about US\\$270 million a year, and joining a global supply chain can support growth. However, the ten-year tax holiday means the government will collect little tax, and much of the profit will be sent abroad, offsetting part of the current account gain. The MNC may be footloose: it could leave when the tax holiday ends or if world demand for cars falls, and the country becomes more exposed to events abroad. There may also be environmental costs. Overall the country is likely to benefit, because the jobs, skills and exports are substantial, but the government should require local training and purchasing so that the benefits last even if the MNC eventually moves on."
+    },
+    "explanation": "Jobs, skills and exports versus lost tax, profit outflows and footloose risk; conclude."
+   }
+  ],
+  "explanation": "The factory adds US\\$270 million a year to trade in goods; profit outflows and service payments offset part of this.",
+  "hints": [
+   "An MNC produces in more than one country.",
+   "Profits paid abroad are primary income debits."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "produces"
+      },
+      {
+       "blankId": "b",
+       "text": "more than one"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "transport"
+      },
+      {
+       "blankId": "b",
+       "text": "communication"
+      },
+      {
+       "blankId": "c",
+       "text": "barriers"
+      },
+      {
+       "blankId": "d",
+       "text": "supply"
+      }
+     ]
+    },
+    "(c)(i)": {
+     "type": "NUMERICAL",
+     "value": "270"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "only sells"
+       },
+       {
+        "blankId": "b",
+        "text": "only one"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "labour"
+       },
+       {
+        "blankId": "b",
+        "text": "advertising"
+       },
+       {
+        "blankId": "c",
+        "text": "surpluses"
+       },
+       {
+        "blankId": "d",
+        "text": "retail"
+       }
+      ]
+     },
+     "(c)(i)": {
+      "type": "NUMERICAL",
+      "value": "630"
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/economics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2 Section B"
+ }
+]
