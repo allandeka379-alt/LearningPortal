@@ -1,0 +1,204 @@
+# Continuous integration (docs/DEPLOYMENT.md "CI", ARCHITECTURE §10.4).
+#
+#   verify: install -> prisma generate -> databases (migrate as owner, app_rw grants, drift check, catalogue seed)
+#           -> typecheck -> lint -> tests (PostgreSQL 18 service) -> next build -> worker bundle -> bundle budgets
+#   image:  builds the tools and runtime images, runs the migrate job (section D) from the tools image, then smoke-tests
+#           web (/api/health, /api/ready) and the worker from the runtime image against a production-configured DB.
+#
+# The database is a throwaway service container with trust authentication (like the local dev cluster); the app and
+# tests still connect as the restricted app_rw role, so row-level security and append-only privileges are exercised.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+env:
+  NEXT_TELEMETRY_DISABLED: "1"
+  # App role (app_rw) for the app and the tests; owner (postgres) for migrations and grants.
+  DATABASE_URL: postgresql://app_rw@localhost:5432/zimstudy
+  MIGRATION_DATABASE_URL: postgresql://postgres@localhost:5432/zimstudy
+  DATABASE_URL_TEST: postgresql://app_rw@localhost:5432/zimstudy_test
+  MIGRATION_DATABASE_URL_TEST: postgresql://postgres@localhost:5432/zimstudy_test
+  PGHOST: localhost
+  PGPORT: "5432"
+  PGUSER: postgres
+
+jobs:
+  verify:
+    name: Typecheck, lint, test, build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: zimstudy_test
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Generate Prisma client
+        run: npm run db:generate
+
+      - name: Create the build database
+        run: psql -v ON_ERROR_STOP=1 -d postgres -c "CREATE DATABASE zimstudy"
+
+      - name: Migrate (owner), create app_rw and apply grants
+        run: |
+          npx prisma migrate deploy
+          MIGRATION_DATABASE_URL="$MIGRATION_DATABASE_URL_TEST" npx prisma migrate deploy
+          # scripts/sql/app-role-grants.sql: creates app_rw when missing (password-less: trust auth in CI only),
+          # grants, append-only revokes, the _prisma_migrations column grant and TimeZone=UTC, on both databases.
+          npm run db:grants
+
+      - name: Schema drift check (migrations vs schema.prisma)
+        run: npx prisma migrate diff --from-config-datasource --to-schema prisma/schema.prisma --exit-code
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Seed the catalogue into the build database
+        # Prerendered public pages read the catalogue at build time. ALWAYS data only, never --demo.
+        run: npm run db:seed
+
+      - name: Build
+        env:
+          NODE_ENV: production
+          APP_URL: https://ci.dzidza.invalid
+          SESSION_SECRET: ci-build-only-secret-not-used-at-runtime-0123456789
+          NEXT_DEPLOYMENT_ID: ${{ github.sha }}
+        run: npm run build
+
+      - name: Bundle the worker
+        run: node scripts/build-worker.mjs
+
+      - name: Bundle budgets (report only)
+        # Report-only until the budgets in ARCHITECTURE §9.9 are re-baselined: the measured framework floor
+        # (~144 kB gzip) already exceeds the 110 kB public budget.
+        continue-on-error: true
+        run: |
+          status=0
+          node scripts/bundle-budgets.mjs --markdown bundle-budgets.md || status=$?
+          cat bundle-budgets.md >> "$GITHUB_STEP_SUMMARY" || true
+          exit $status
+
+  image:
+    name: Container images and smoke test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    needs: verify
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: zimstudy
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      TOOLS_IMAGE: dzidza-tools:ci
+      RUNTIME_IMAGE: dzidza:ci
+      # Runtime configuration for the smoke test: production rules apply, so messaging must name real adapters with
+      # their keys (fake values here: the smoke test sends nothing).
+      SMOKE_ENV: >-
+        -e NODE_ENV=production
+        -e APP_URL=https://ci.dzidza.invalid
+        -e SESSION_SECRET=ci-smoke-only-secret-not-used-anywhere-else-0123456789
+        -e EMAIL_PROVIDER=resend
+        -e RESEND_API_KEY=re_ci_smoke_not_a_real_key
+        -e EMAIL_FROM=no-reply@ci.dzidza.invalid
+        -e SMS_PROVIDER=africastalking
+        -e AFRICASTALKING_USERNAME=ci-smoke
+        -e AFRICASTALKING_API_KEY=ci-smoke-not-a-real-key
+        -e TRUSTED_PROXY_HOPS=1
+        -e DATABASE_URL=postgresql://app_rw@localhost:5432/zimstudy
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build the tools image
+        run: docker build --target tools -t "$TOOLS_IMAGE" .
+
+      - name: Create app_rw (operator step in real environments)
+        run: psql -v ON_ERROR_STOP=1 -d postgres -c "CREATE ROLE app_rw LOGIN NOSUPERUSER NOBYPASSRLS NOCREATEDB NOCREATEROLE"
+
+      - name: Migrate job (tools image) - migrations, grants, section D defaults and checks
+        run: >-
+          docker run --rm --network host
+          -e MIGRATION_DATABASE_URL=postgresql://postgres@localhost:5432/zimstudy
+          -e DB_APP_ENVIRONMENT=production
+          "$TOOLS_IMAGE"
+
+      - name: Catalogue seed (tools image)
+        # Same runtime configuration as production (SMOKE_ENV includes the app-role DATABASE_URL).
+        run: docker run --rm --network host $SMOKE_ENV "$TOOLS_IMAGE" npm run db:seed
+
+      - name: Build the runtime image
+        env:
+          BUILD_DATABASE_URL: postgresql://app_rw@localhost:5432/zimstudy
+        run: >-
+          docker build --network host
+          --secret id=build_database_url,env=BUILD_DATABASE_URL
+          --build-arg APP_URL=https://ci.dzidza.invalid
+          --build-arg GIT_SHA=${{ github.sha }}
+          -t "$RUNTIME_IMAGE" .
+
+      - name: Smoke test web (liveness, readiness, a public page)
+        run: |
+          docker run -d --name web --network host $SMOKE_ENV -e PORT=3000 "$RUNTIME_IMAGE"
+          for i in $(seq 1 60); do curl -fsS http://127.0.0.1:3000/api/health && break; sleep 1; done
+          curl -fsS http://127.0.0.1:3000/api/health | tee health.json
+          curl -fsS http://127.0.0.1:3000/api/ready | tee ready.json
+          grep -q '"status":"ready"' ready.json
+          grep -q '"enforced":true' ready.json
+          curl -fsS -o /dev/null http://127.0.0.1:3000/pricing
+          docker inspect --format '{{.Config.User}}' "$RUNTIME_IMAGE" | grep -qx node
+
+      - name: Smoke test the worker (drain due jobs and exit)
+        run: docker run --rm --network host $SMOKE_ENV "$RUNTIME_IMAGE" node --enable-source-maps worker/index.mjs --drain --no-listen
+
+      - name: Graceful stop of web (SIGTERM)
+        run: |
+          docker stop --time 30 web
+          test "$(docker inspect --format '{{.State.ExitCode}}' web)" = "143" || test "$(docker inspect --format '{{.State.ExitCode}}' web)" = "0"
+
+      - name: Server logs
+        if: failure()
+        run: docker logs web || true

@@ -1,0 +1,40 @@
+# Build context for the Dockerfile. Keep it small and free of secrets and local state.
+
+# Secrets and local configuration: Next.js would COPY any .env* present at build time into the standalone output.
+.env
+.env.*
+
+# Dependencies and build output (rebuilt inside the image)
+node_modules
+.next
+.next*
+build
+out
+*.tsbuildinfo
+next-env.d.ts
+
+# Local database cluster, uploads, scratch space, agent/editor state
+.data
+storage
+.scratch
+.claude
+.vscode
+.idea
+
+# Test and coverage output
+coverage
+playwright-report
+test-results
+
+# VCS, CI and container files
+.git
+.gitignore
+.github
+Dockerfile
+.dockerignore
+docker-compose*.yml
+deploy/compose
+
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,1353 @@
+[
+  {
+    "key": "atoms.config.q01",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "What is the maximum number of electrons the **first** shell of an atom can hold?",
+    "options": [
+      {
+        "key": "A",
+        "content": "2",
+        "correct": true,
+        "rationale": "The first shell is full with 2 electrons."
+      },
+      {
+        "key": "B",
+        "content": "8",
+        "rationale": "8 is the capacity of the second shell."
+      },
+      {
+        "key": "C",
+        "content": "18",
+        "rationale": "No shell in the first 20 elements holds 18 electrons."
+      },
+      {
+        "key": "D",
+        "content": "1",
+        "rationale": "Helium has 2 electrons in its first shell, so it holds more than 1."
+      }
+    ],
+    "explanation": "The first shell holds a maximum of 2 electrons; the second holds 8.",
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "RECALL"
+  },
+  {
+    "key": "atoms.config.q02",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 40,
+    "stem": "What is the electronic configuration of a nitrogen atom (proton number 7)?",
+    "options": [
+      {
+        "key": "A",
+        "content": "2,5",
+        "correct": true,
+        "rationale": "2 in the first shell and the remaining 5 in the second."
+      },
+      {
+        "key": "B",
+        "content": "5,2",
+        "rationale": "The innermost shell is written first and fills first."
+      },
+      {
+        "key": "C",
+        "content": "2,4,1",
+        "rationale": "The second shell can hold up to 8, so all 5 remaining electrons go into it."
+      },
+      {
+        "key": "D",
+        "content": "7",
+        "rationale": "The first shell holds only 2 electrons."
+      }
+    ],
+    "explanation": "Nitrogen has 7 electrons: 2 fill the first shell and the other 5 go into the second shell, giving 2,5.",
+    "hints": [
+      "Fill the first shell (2) before the second."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "D"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true
+  },
+  {
+    "key": "atoms.config.q03",
+    "type": "SHORT_ANSWER",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "Write the electronic configuration of a sulfur atom (proton number 16), for example in the form 2,8,1.",
+    "payload": {
+      "maxLength": 30
+    },
+    "answerSpec": {
+      "accepted": [
+        {
+          "value": "2,8,6"
+        }
+      ],
+      "patterns": [
+        "^\\(?2[ ,.;:/\\-]*8[ ,.;:/\\-]*6\\)?\\.?$"
+      ],
+      "rejected": [
+        {
+          "value": "2,6,8",
+          "feedback": "Write the shells from the innermost outwards, and fill each shell before the next: 2,8,6."
+        }
+      ],
+      "normalise": [
+        "remove_whitespace"
+      ]
+    },
+    "explanation": "16 electrons: 2 in the first shell, 8 in the second and the remaining 6 in the third: 2,8,6.",
+    "hints": [
+      "$2 + 8 = 10$, so how many electrons go into the third shell?"
+    ],
+    "modelResponse": {
+      "type": "SHORT_ANSWER",
+      "text": "2,8,6"
+    },
+    "wrongResponses": [
+      {
+        "type": "SHORT_ANSWER",
+        "text": "2,8,8"
+      },
+      {
+        "type": "SHORT_ANSWER",
+        "text": "2,6,8"
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true
+  },
+  {
+    "key": "atoms.config.q04",
+    "type": "TRUE_FALSE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 40,
+    "stem": "True or false: an atom with the electronic configuration 2,8,3 is in Group III and Period 3 of the Periodic Table.",
+    "answerSpec": {
+      "correct": true,
+      "feedbackTrue": "Correct: 3 outer electrons give Group III, and 3 occupied shells give Period 3. The element is aluminium.",
+      "feedbackFalse": "It is true: 3 outer-shell electrons mean Group III, and 3 occupied shells mean Period 3."
+    },
+    "explanation": "The number of outer-shell electrons gives the group (3, so Group III) and the number of occupied shells gives the period (3, so Period 3). This is aluminium.",
+    "modelResponse": {
+      "type": "TRUE_FALSE",
+      "value": true
+    },
+    "wrongResponses": [
+      {
+        "type": "TRUE_FALSE",
+        "value": false
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true
+  },
+  {
+    "key": "atoms.config.q05",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "Proton numbers: Na = 11, Ar = 18, K = 19, Ca = 20. Which element has the electronic configuration 2,8,8,1?",
+    "options": [
+      {
+        "key": "A",
+        "content": "Potassium",
+        "correct": true,
+        "rationale": "$2 + 8 + 8 + 1 = 19$ electrons."
+      },
+      {
+        "key": "B",
+        "content": "Sodium",
+        "rationale": "Sodium (11 electrons) is 2,8,1."
+      },
+      {
+        "key": "C",
+        "content": "Argon",
+        "rationale": "Argon (18 electrons) is 2,8,8."
+      },
+      {
+        "key": "D",
+        "content": "Calcium",
+        "rationale": "Calcium (20 electrons) is 2,8,8,2."
+      }
+    ],
+    "explanation": "Add up the electrons: $2 + 8 + 8 + 1 = 19$, which is the proton number of potassium.",
+    "hints": [
+      "Add the numbers to find the proton number."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true
+  },
+  {
+    "key": "atoms.config.q06",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "Proton numbers: Li = 3, O = 8, Cl = 17, K = 19. Which ion has the electronic configuration 2,8?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$\\ce{Cl-}$",
+        "rationale": "$17 + 1 = 18$ electrons: 2,8,8."
+      },
+      {
+        "key": "B",
+        "content": "$\\ce{K+}$",
+        "rationale": "$19 - 1 = 18$ electrons: 2,8,8."
+      },
+      {
+        "key": "C",
+        "content": "$\\ce{Li+}$",
+        "rationale": "$3 - 1 = 2$ electrons: 2."
+      },
+      {
+        "key": "D",
+        "content": "$\\ce{O^2-}$",
+        "correct": true,
+        "rationale": "$8 + 2 = 10$ electrons: 2,8."
+      }
+    ],
+    "explanation": "2,8 means 10 electrons. Only the oxide ion has 10 electrons ($8 + 2$).",
+    "hints": [
+      "Work out the number of electrons in each ion first."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "D"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "A"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true
+  },
+  {
+    "key": "atoms.config.q07",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 2,
+    "marks": 3,
+    "estimatedSeconds": 60,
+    "stem": "Silicon has proton number 14. Complete its electronic configuration.",
+    "payload": {
+      "template": "First shell: {{blank:s1}} electrons. Second shell: {{blank:s2}} electrons. Third shell: {{blank:s3}} electrons.",
+      "blanks": [
+        {
+          "id": "s1",
+          "input": "number"
+        },
+        {
+          "id": "s2",
+          "input": "number"
+        },
+        {
+          "id": "s3",
+          "input": "number"
+        }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        {
+          "id": "s1",
+          "accepted": [
+            "2"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "s2",
+          "accepted": [
+            "8"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "s3",
+          "accepted": [
+            "4"
+          ],
+          "marks": 1
+        }
+      ]
+    },
+    "explanation": "14 electrons: 2, then 8, then the remaining 4. Silicon is 2,8,4.",
+    "modelResponse": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+        {
+          "blankId": "s1",
+          "text": "2"
+        },
+        {
+          "blankId": "s2",
+          "text": "8"
+        },
+        {
+          "blankId": "s3",
+          "text": "4"
+        }
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "s1",
+            "text": "8"
+          },
+          {
+            "blankId": "s2",
+            "text": "4"
+          },
+          {
+            "blankId": "s3",
+            "text": "2"
+          }
+        ]
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "atoms.config.q08",
+    "type": "MATCHING",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 2,
+    "marks": 4,
+    "estimatedSeconds": 100,
+    "stem": "Match each atom with its electronic configuration. One configuration is not used.",
+    "payload": {
+      "left": [
+        {
+          "id": "li",
+          "content": "Lithium (Z = 3)"
+        },
+        {
+          "id": "f",
+          "content": "Fluorine (Z = 9)"
+        },
+        {
+          "id": "mg",
+          "content": "Magnesium (Z = 12)"
+        },
+        {
+          "id": "ar",
+          "content": "Argon (Z = 18)"
+        }
+      ],
+      "right": [
+        {
+          "id": "c1",
+          "content": "2,1"
+        },
+        {
+          "id": "c2",
+          "content": "2,7"
+        },
+        {
+          "id": "c3",
+          "content": "2,8,2"
+        },
+        {
+          "id": "c4",
+          "content": "2,8,8"
+        },
+        {
+          "id": "c5",
+          "content": "2,8,8,2"
+        }
+      ],
+      "shuffle": true
+    },
+    "answerSpec": {
+      "pairs": [
+        {
+          "leftId": "li",
+          "rightId": "c1"
+        },
+        {
+          "leftId": "f",
+          "rightId": "c2"
+        },
+        {
+          "leftId": "mg",
+          "rightId": "c3"
+        },
+        {
+          "leftId": "ar",
+          "rightId": "c4"
+        }
+      ],
+      "marksPerPair": 1
+    },
+    "explanation": "Li 2,1; F 2,7; Mg 2,8,2; Ar 2,8,8. The unused configuration, 2,8,8,2, is calcium (Z = 20).",
+    "hints": [
+      "The numbers in a configuration add up to the proton number."
+    ],
+    "modelResponse": {
+      "type": "MATCHING",
+      "pairs": [
+        {
+          "leftId": "li",
+          "rightId": "c1"
+        },
+        {
+          "leftId": "f",
+          "rightId": "c2"
+        },
+        {
+          "leftId": "mg",
+          "rightId": "c3"
+        },
+        {
+          "leftId": "ar",
+          "rightId": "c4"
+        }
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MATCHING",
+        "pairs": [
+          {
+            "leftId": "li",
+            "rightId": "c1"
+          },
+          {
+            "leftId": "f",
+            "rightId": "c2"
+          },
+          {
+            "leftId": "mg",
+            "rightId": "c5"
+          },
+          {
+            "leftId": "ar",
+            "rightId": "c4"
+          }
+        ]
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "atoms.config.q09",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "An atom of element X has three occupied electron shells and six electrons in its outer shell. Which statement about X is correct?",
+    "options": [
+      {
+        "key": "A",
+        "content": "X is in Period 6 and Group III.",
+        "rationale": "The period and group have been swapped."
+      },
+      {
+        "key": "B",
+        "content": "X is in Period 3 and Group III.",
+        "rationale": "The group number equals the number of outer electrons, 6."
+      },
+      {
+        "key": "C",
+        "content": "X is in Period 3 and Group VI.",
+        "correct": true,
+        "rationale": "Shells give the period; outer electrons give the group. X is sulfur, 2,8,6."
+      },
+      {
+        "key": "D",
+        "content": "X is in Period 6 and Group VI.",
+        "rationale": "The period equals the number of occupied shells, 3."
+      }
+    ],
+    "explanation": "Three occupied shells place X in Period 3; six outer-shell electrons place it in Group VI. X is 2,8,6, sulfur.",
+    "hints": [
+      "Which number gives the period and which gives the group?"
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "C"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "A"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true
+  },
+  {
+    "key": "atoms.config.q10",
+    "type": "NUMERICAL",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "Calcium has proton number 20. How many electrons are in the **outer** shell of a calcium ion, $\\ce{Ca^2+}$?",
+    "answerSpec": {
+      "value": 8
+    },
+    "explanation": "A calcium atom is 2,8,8,2. It loses its two outer electrons to form $\\ce{Ca^2+}$, which is 2,8,8, so its outer shell now holds 8 electrons.",
+    "workedSolution": "1. Ca atom: 20 electrons, 2,8,8,2.\n2. $\\ce{Ca^2+}$: $20 - 2 = 18$ electrons, 2,8,8.\n3. Outer shell: 8 electrons.",
+    "hints": [
+      "The ion has lost its two outer electrons, so the shell underneath becomes the outer shell."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "8"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "2"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "0"
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "atoms.config.q11",
+    "type": "SHORT_ANSWER",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "Nitrogen has proton number 7. Write the electronic configuration of the nitride ion, $\\ce{N^3-}$.",
+    "payload": {
+      "maxLength": 30
+    },
+    "answerSpec": {
+      "accepted": [
+        {
+          "value": "2,8"
+        }
+      ],
+      "patterns": [
+        "^\\(?2[ ,.;:/\\-]*8\\)?\\.?$"
+      ],
+      "rejected": [
+        {
+          "value": "2,5",
+          "feedback": "2,5 is the nitrogen **atom**. The nitride ion has gained three electrons: 2,8."
+        },
+        {
+          "value": "2,2",
+          "feedback": "A negative ion has **gained** electrons: $7 + 3 = 10$ electrons, 2,8."
+        }
+      ],
+      "normalise": [
+        "remove_whitespace"
+      ]
+    },
+    "explanation": "A nitrogen atom (2,5) gains three electrons to form $\\ce{N^3-}$, which has $7 + 3 = 10$ electrons: 2,8, the same as neon.",
+    "hints": [
+      "A $3-$ ion has three more electrons than the atom."
+    ],
+    "modelResponse": {
+      "type": "SHORT_ANSWER",
+      "text": "2,8"
+    },
+    "wrongResponses": [
+      {
+        "type": "SHORT_ANSWER",
+        "text": "2,5"
+      },
+      {
+        "type": "SHORT_ANSWER",
+        "text": "2,2"
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "atoms.config.q12",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "Proton numbers: O = 8, F = 9, Ne = 10, Na = 11. Which of these atoms has a **full** outer shell?",
+    "options": [
+      {
+        "key": "A",
+        "content": "Fluorine",
+        "rationale": "Fluorine is 2,7: one electron short of a full outer shell."
+      },
+      {
+        "key": "B",
+        "content": "Sodium",
+        "rationale": "Sodium is 2,8,1: it has one electron in a new shell."
+      },
+      {
+        "key": "C",
+        "content": "Neon",
+        "correct": true,
+        "rationale": "Neon is 2,8: its outer shell is full."
+      },
+      {
+        "key": "D",
+        "content": "Oxygen",
+        "rationale": "Oxygen is 2,6: two electrons short of a full outer shell."
+      }
+    ],
+    "explanation": "Neon, a noble gas, has the configuration 2,8. Its second shell holds the maximum of 8 electrons, so its outer shell is full.",
+    "hints": [
+      "Write each configuration and look at the outer shell."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "C"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "atoms.config.q13",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 50,
+    "stem": "Lithium (2,1), sodium (2,8,1) and potassium (2,8,8,1) have similar chemical properties. Why?",
+    "options": [
+      {
+        "key": "A",
+        "content": "Their atoms all have the same number of shells.",
+        "rationale": "They have 2, 3 and 4 shells respectively."
+      },
+      {
+        "key": "B",
+        "content": "Their atoms all have one electron in the outer shell.",
+        "correct": true,
+        "rationale": "Reactions involve the outer electrons, so the same number of outer electrons gives similar reactions."
+      },
+      {
+        "key": "C",
+        "content": "Their atoms all have the same number of protons.",
+        "rationale": "They have 3, 11 and 19 protons: different elements."
+      },
+      {
+        "key": "D",
+        "content": "Their atoms all have the same mass number.",
+        "rationale": "Their mass numbers are very different, and mass does not decide chemical properties."
+      }
+    ],
+    "explanation": "Chemical reactions involve the outer-shell electrons. Elements in the same group have the same number of outer electrons (here, one), so they react in similar ways.",
+    "hints": [
+      "Look at the last number in each configuration."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "B"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "A"
+        ]
+      }
+    ],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "atoms.config.q14",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 4,
+    "marks": 1,
+    "estimatedSeconds": 75,
+    "stem": "An ion $\\ce{X^2-}$ has the electronic configuration 2,8,8. What is the proton number of X?",
+    "options": [
+      {
+        "key": "A",
+        "content": "18",
+        "rationale": "18 is the number of electrons in the ion, not the number of protons."
+      },
+      {
+        "key": "B",
+        "content": "20",
+        "rationale": "Adding 2 would be right for a $2+$ ion, which has lost electrons; this ion has gained them."
+      },
+      {
+        "key": "C",
+        "content": "16",
+        "correct": true,
+        "rationale": "The ion has 18 electrons after gaining 2, so the atom has 16 electrons and 16 protons."
+      },
+      {
+        "key": "D",
+        "content": "8",
+        "rationale": "8 is the number of outer-shell electrons."
+      }
+    ],
+    "explanation": "2,8,8 is 18 electrons. A $2-$ ion has gained 2 electrons, so the neutral atom had $18 - 2 = 16$ electrons, and therefore 16 protons. X is sulfur.",
+    "hints": [
+      "How many electrons did the atom have before it gained two?"
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "C"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "atoms.config.q15",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 50,
+    "stem": "Which statement about the electronic configurations of the noble gases helium, neon and argon is correct?",
+    "options": [
+      {
+        "key": "A",
+        "content": "All three have 8 outer electrons.",
+        "rationale": "Helium has only 2 electrons in total."
+      },
+      {
+        "key": "B",
+        "content": "Helium has 8 outer electrons.",
+        "rationale": "Helium has only 2 electrons, which fill its only shell."
+      },
+      {
+        "key": "C",
+        "content": "Noble gases have empty outer shells.",
+        "rationale": "Their outer shells are full, not empty."
+      },
+      {
+        "key": "D",
+        "content": "Helium has 2 outer electrons and neon and argon have 8; all have full outer shells.",
+        "correct": true,
+        "rationale": "He 2; Ne 2,8; Ar 2,8,8."
+      }
+    ],
+    "explanation": "Helium (2) fills its first and only shell with 2 electrons; neon (2,8) and argon (2,8,8) have 8 in their outer shells. A full outer shell is what makes the noble gases unreactive.",
+    "hints": [
+      "Write out the configurations of He, Ne and Ar."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "D"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "A"
+        ]
+      }
+    ],
+    "skill": "UNDERSTANDING"
+  },
+  {
+    "key": "atoms.config.q16",
+    "type": "STRUCTURED",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 4,
+    "marks": 5,
+    "estimatedSeconds": 300,
+    "stem": "A shell diagram of an atom shows a nucleus surrounded by three shells. The first shell has 2 electrons, the second has 8 and the third has 5.\n\nProton numbers: N = 7, P = 15, S = 16, Cl = 17.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "How many protons does this atom have?",
+        "answerSpec": {
+          "value": 15
+        },
+        "explanation": "$2 + 8 + 5 = 15$ electrons, and a neutral atom has as many protons as electrons."
+      },
+      {
+        "label": "(b)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "Name the element.",
+        "answerSpec": {
+          "accepted": [
+            {
+              "value": "phosphorus"
+            },
+            {
+              "value": "phosphorous"
+            },
+            {
+              "value": "P"
+            }
+          ],
+          "rejected": [
+            {
+              "value": "nitrogen",
+              "feedback": "Nitrogen (2,5) is in the same group but has only two shells."
+            }
+          ],
+          "normalise": [
+            "strip_punctuation",
+            "strip_articles"
+          ]
+        },
+        "explanation": "Proton number 15 is phosphorus."
+      },
+      {
+        "label": "(c)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "In which group of the Periodic Table is this element?",
+        "options": [
+          {
+            "key": "A",
+            "content": "Group III",
+            "rationale": "The group is the number of outer electrons, 5, not the number of shells."
+          },
+          {
+            "key": "B",
+            "content": "Group V",
+            "correct": true,
+            "rationale": "Five outer-shell electrons."
+          },
+          {
+            "key": "C",
+            "content": "Group VII",
+            "rationale": "Group VII elements have 7 outer electrons."
+          },
+          {
+            "key": "D",
+            "content": "Group II",
+            "rationale": "Group II elements have 2 outer electrons."
+          }
+        ],
+        "explanation": "Five outer-shell electrons: Group V."
+      },
+      {
+        "label": "(d)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "In which period is this element? Give the period number.",
+        "answerSpec": {
+          "value": 3
+        },
+        "explanation": "Three occupied shells: Period 3."
+      },
+      {
+        "label": "(e)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "The atom can gain three electrons to form an ion. Write the electronic configuration of this ion.",
+        "payload": {
+          "maxLength": 30
+        },
+        "answerSpec": {
+          "accepted": [
+            {
+              "value": "2,8,8"
+            }
+          ],
+          "patterns": [
+            "^\\(?2[ ,.;:/\\-]*8[ ,.;:/\\-]*8\\)?\\.?$"
+          ],
+          "normalise": [
+            "remove_whitespace"
+          ]
+        },
+        "explanation": "$15 + 3 = 18$ electrons: 2,8,8."
+      }
+    ],
+    "explanation": "The atom has $2 + 8 + 5 = 15$ electrons and therefore 15 protons: phosphorus. Five outer electrons put it in Group V and three shells in Period 3. Gaining three electrons gives $\\ce{P^3-}$, with 18 electrons, 2,8,8.",
+    "workedSolution": "**(a)** $2 + 8 + 5 = 15$\n\n**(b)** Phosphorus\n\n**(c)** Group V (5 outer electrons)\n\n**(d)** Period 3 (3 shells)\n\n**(e)** $15 + 3 = 18$ electrons: 2,8,8",
+    "hints": [
+      "Add up the electrons to find the proton number.",
+      "Shells give the period; outer electrons give the group."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "NUMERICAL",
+          "value": "15"
+        },
+        "(b)": {
+          "type": "SHORT_ANSWER",
+          "text": "phosphorus"
+        },
+        "(c)": {
+          "type": "MULTIPLE_CHOICE",
+          "optionKeys": [
+            "B"
+          ]
+        },
+        "(d)": {
+          "type": "NUMERICAL",
+          "value": "3"
+        },
+        "(e)": {
+          "type": "SHORT_ANSWER",
+          "text": "2,8,8"
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "NUMERICAL",
+            "value": "5"
+          },
+          "(b)": {
+            "type": "SHORT_ANSWER",
+            "text": "nitrogen"
+          },
+          "(c)": {
+            "type": "MULTIPLE_CHOICE",
+            "optionKeys": [
+              "A"
+            ]
+          },
+          "(d)": {
+            "type": "NUMERICAL",
+            "value": "5"
+          },
+          "(e)": {
+            "type": "SHORT_ANSWER",
+            "text": "2,8,2"
+          }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true
+  },
+  {
+    "key": "atoms.config.q17",
+    "type": "STRUCTURED",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 4,
+    "marks": 5,
+    "estimatedSeconds": 300,
+    "stem": "The electronic configurations of five elements, V, W, X, Y and Z, are shown. (The letters are not the elements' symbols.)\n\n| Element | Configuration |\n| --- | --- |\n| V | 2,1 |\n| W | 2,8,1 |\n| X | 2,8,7 |\n| Y | 2,8,8 |\n| Z | 2,4 |",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "Which element is a noble gas? Give its letter.",
+        "payload": {
+          "maxLength": 10
+        },
+        "answerSpec": {
+          "accepted": [
+            {
+              "value": "Y"
+            }
+          ],
+          "normalise": [
+            "strip_punctuation"
+          ]
+        },
+        "explanation": "Y (2,8,8) has a full outer shell."
+      },
+      {
+        "label": "(b)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "Which element is in Group IV? Give its letter.",
+        "payload": {
+          "maxLength": 10
+        },
+        "answerSpec": {
+          "accepted": [
+            {
+              "value": "Z"
+            }
+          ],
+          "normalise": [
+            "strip_punctuation"
+          ]
+        },
+        "explanation": "Z has 4 outer-shell electrons."
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "Which element is in Period 2 **and** Group I? Give its letter.",
+        "payload": {
+          "maxLength": 10
+        },
+        "answerSpec": {
+          "accepted": [
+            {
+              "value": "V"
+            }
+          ],
+          "normalise": [
+            "strip_punctuation"
+          ]
+        },
+        "explanation": "V has 2 shells (Period 2) and 1 outer electron (Group I)."
+      },
+      {
+        "label": "(d)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "Which element is in Group VII? Give its letter.",
+        "payload": {
+          "maxLength": 10
+        },
+        "answerSpec": {
+          "accepted": [
+            {
+              "value": "X"
+            }
+          ],
+          "normalise": [
+            "strip_punctuation"
+          ]
+        },
+        "explanation": "X has 7 outer-shell electrons."
+      },
+      {
+        "label": "(e)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 1,
+        "stem": "Explain why V and W have similar chemical properties.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              {
+                "id": "E1",
+                "description": "They have the same number of outer-shell electrons (one each) / they are in the same group",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        "explanation": "Chemical properties depend on the outer electrons."
+      }
+    ],
+    "explanation": "The last number of a configuration is the number of outer electrons, which gives the group; the count of numbers is the number of shells, which gives the period. A full outer shell marks a noble gas.",
+    "workedSolution": "**(a)** Y (full outer shell, 2,8,8)\n\n**(b)** Z (4 outer electrons)\n\n**(c)** V (2 shells, 1 outer electron)\n\n**(d)** X (7 outer electrons)\n\n**(e)** V and W both have one outer-shell electron, so they are in Group I and react similarly.",
+    "hints": [
+      "Outer electrons give the group; the number of shells gives the period."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "SHORT_ANSWER",
+          "text": "Y"
+        },
+        "(b)": {
+          "type": "SHORT_ANSWER",
+          "text": "Z"
+        },
+        "(c)": {
+          "type": "SHORT_ANSWER",
+          "text": "V"
+        },
+        "(d)": {
+          "type": "SHORT_ANSWER",
+          "text": "X"
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "SHORT_ANSWER",
+            "text": "X"
+          },
+          "(b)": {
+            "type": "SHORT_ANSWER",
+            "text": "Z"
+          },
+          "(c)": {
+            "type": "SHORT_ANSWER",
+            "text": "W"
+          },
+          "(d)": {
+            "type": "SHORT_ANSWER",
+            "text": "Y"
+          }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "atoms.config.q18",
+    "type": "TRUE_FALSE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 40,
+    "stem": "True or false: the third shell of a potassium atom (proton number 19) contains 9 electrons.",
+    "answerSpec": {
+      "correct": false,
+      "feedbackTrue": "Not quite: potassium is 2,8,8,1. After 8 electrons in the third shell, the next electron goes into the fourth shell.",
+      "feedbackFalse": "Correct: potassium is 2,8,8,1, with 8 electrons in the third shell."
+    },
+    "explanation": "For the first 20 elements, the fourth shell starts after the third shell holds 8 electrons. Potassium is 2,8,8,1.",
+    "modelResponse": {
+      "type": "TRUE_FALSE",
+      "value": false
+    },
+    "wrongResponses": [
+      {
+        "type": "TRUE_FALSE",
+        "value": true
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "atoms.config.q19",
+    "type": "EXTENDED_RESPONSE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 4,
+    "marks": 6,
+    "estimatedSeconds": 480,
+    "stem": "Magnesium has proton number 12 and argon has proton number 18.\n\nUse their electronic configurations to explain how you can find the position of each element in the Periodic Table, and explain why argon is unreactive. [6]",
+    "payload": {
+      "wordLimit": {
+        "max": 220
+      }
+    },
+    "answerSpec": {
+      "markScheme": {
+        "points": [
+          {
+            "id": "P1",
+            "description": "Magnesium is 2,8,2",
+            "marks": 1
+          },
+          {
+            "id": "P2",
+            "description": "Magnesium has 3 occupied shells, so it is in Period 3",
+            "marks": 1
+          },
+          {
+            "id": "P3",
+            "description": "Magnesium has 2 outer-shell electrons, so it is in Group II",
+            "marks": 1
+          },
+          {
+            "id": "P4",
+            "description": "Argon is 2,8,8: Period 3, in Group VIII (Group 0), the noble gases",
+            "marks": 1
+          },
+          {
+            "id": "P5",
+            "description": "Argon has a full outer shell (8 electrons)",
+            "marks": 1
+          },
+          {
+            "id": "P6",
+            "description": "So it does not need to lose, gain or share electrons: its configuration is stable and it is unreactive",
+            "marks": 1
+          }
+        ]
+      },
+      "modelAnswer": "Magnesium has 12 electrons arranged **2,8,2**. It has three occupied shells, so it is in **Period 3**, and two outer-shell electrons, so it is in **Group II**.\n\nArgon has 18 electrons arranged **2,8,8**. It also has three shells, so it is in Period 3, and its outer shell is **full**, which places it in Group VIII (Group 0) with the other noble gases. Because its outer shell is full, argon has a stable electronic configuration: it does not need to lose, gain or share electrons, so it is unreactive."
+    },
+    "explanation": "Configurations give the position directly: shells give the period, outer electrons the group. A full outer shell is a stable arrangement, which is why noble gases are unreactive.",
+    "hints": [
+      "Write both configurations first.",
+      "Link the number of shells to the period and the outer electrons to the group."
+    ],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "atoms.config.q20",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "chem.atoms.electronic-configuration"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 40,
+    "stem": "How many occupied electron shells does a sodium atom (proton number 11) have?",
+    "options": [
+      {
+        "key": "A",
+        "content": "1",
+        "rationale": "1 is the number of outer-shell electrons, not the number of shells."
+      },
+      {
+        "key": "B",
+        "content": "2",
+        "rationale": "The first two shells hold only 10 electrons, so an eleventh needs a third shell."
+      },
+      {
+        "key": "C",
+        "content": "11",
+        "rationale": "11 is the number of electrons."
+      },
+      {
+        "key": "D",
+        "content": "3",
+        "correct": true,
+        "rationale": "Sodium is 2,8,1: three shells are occupied."
+      }
+    ],
+    "explanation": "Sodium has 11 electrons: 2,8,1. Three shells are occupied, which is why sodium is in Period 3.",
+    "hints": [
+      "Write the configuration first."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "D"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "A"
+        ]
+      }
+    ],
+    "skill": "APPLICATION"
+  }
+]

@@ -1,0 +1,211 @@
+# EXAMPLE single-host production stack (docs/DEPLOYMENT.md). Copy it, adapt it, and keep secrets out of git.
+#
+#   edge (Caddy, TLS) -> web x2 (Next.js standalone) -> pgbouncer (transaction pooling) -> postgres 18
+#                        worker x1 (same image, direct DB connection for LISTEN/NOTIFY)
+#                        migrate (one-shot: prisma migrate deploy as the owner + section D grants and checks)
+#
+# The recommended production topology is managed PostgreSQL with PITR + S3 + a CDN (docs/DEPLOYMENT.md "Topology");
+# this file is the self-hosted equivalent for a pilot, staging, or a disaster-recovery fallback. It was written
+# against Docker Compose v2.23+ (inline `configs.content`) and has NOT been run end to end in CI.
+#
+# Usage:
+#   1. Build and push the images (Dockerfile header): dzidza:<sha> (runtime) and dzidza-tools:<sha> (--target tools).
+#   2. cp .env.example .env.production and fill it in (NODE_ENV=production, APP_URL, SESSION_SECRET, providers ...).
+#      DATABASE_URL is set below per service; leave it out of .env.production.
+#   3. Export the variables this file interpolates (or put them in a `.env` next to it, which Compose reads):
+#        DZIDZA_IMAGE=registry.example.com/dzidza:<sha>
+#        DZIDZA_TOOLS_IMAGE=registry.example.com/dzidza-tools:<sha>
+#        SITE_ADDRESS=learn.example.com
+#        POSTGRES_SUPERUSER_PASSWORD, OWNER_DB_PASSWORD, APP_DB_PASSWORD   (URL-safe: hex, e.g. openssl rand -hex 24)
+#   4. docker compose -f docker-compose.prod.example.yml up -d
+#      (first boot: postgres initialises roles -> migrate runs -> web and worker start)
+#   5. Catalogue seed, once: docker compose -f docker-compose.prod.example.yml --profile ops run --rm seed
+#      NEVER run the demo seed (db:seed:demo / --demo) against this stack.
+#
+# Deploying a new release: set the new image tags and run `up -d` again. Compose recreates migrate first (it must
+# exit 0) and then replaces web/worker. Compose itself does not do zero-downtime rolling updates; use an orchestrator
+# (ECS, Kubernetes, Nomad) for that, with /api/ready as the readiness check.
+
+name: dzidza
+
+x-app: &app
+  image: ${DZIDZA_IMAGE:?set DZIDZA_IMAGE (runtime image)}
+  restart: unless-stopped
+  env_file:
+    - .env.production
+  volumes:
+    # STORAGE_DRIVER=local: uploads shared by every web replica and the worker on THIS host. Multi-host deployments
+    # must use STORAGE_DRIVER=s3 instead (and drop this volume).
+    - storage:/app/storage
+  logging:
+    driver: json-file
+    options: { max-size: "20m", max-file: "5" }
+
+services:
+  postgres:
+    # PostgreSQL 18 images keep data under /var/lib/postgresql/18/docker; mount the parent directory.
+    image: postgres:18-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_SUPERUSER_PASSWORD:?set POSTGRES_SUPERUSER_PASSWORD}
+      POSTGRES_DB: postgres
+      # Read only by deploy/compose/postgres-init/10-roles.sh on the FIRST start with an empty volume.
+      DZ_OWNER_PASSWORD: ${OWNER_DB_PASSWORD:?set OWNER_DB_PASSWORD}
+      DZ_APP_PASSWORD: ${APP_DB_PASSWORD:?set APP_DB_PASSWORD}
+      DZ_DB_NAME: dzidza
+      DZ_APP_ENVIRONMENT: ${DB_APP_ENVIRONMENT:-production}
+    command:
+      - postgres
+      - -c
+      - timezone=UTC
+      - -c
+      - max_connections=200
+      - -c
+      - shared_buffers=512MB
+      - -c
+      - shared_preload_libraries=pg_stat_statements
+      - -c
+      - log_min_duration_statement=200
+    shm_size: 256mb
+    volumes:
+      - pgdata:/var/lib/postgresql
+      - ./deploy/compose/postgres-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d dzidza"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    # Not published: only the stack's own network reaches the database.
+
+  pgbouncer:
+    # Pin a tag or digest you have tested. This image builds pgbouncer.ini from the variables below.
+    image: ${PGBOUNCER_IMAGE:-edoburu/pgbouncer:latest}
+    restart: unless-stopped
+    environment:
+      DB_HOST: postgres
+      DB_PORT: "5432"
+      DB_NAME: dzidza
+      DB_USER: app_rw
+      DB_PASSWORD: ${APP_DB_PASSWORD:?set APP_DB_PASSWORD}
+      AUTH_TYPE: scram-sha-256
+      # Transaction pooling (ARCHITECTURE §9.5): every app setting is transaction-local (set_config(..., true)), and
+      # the job scheduler uses transaction-level advisory locks, so this is safe for web traffic. LISTEN/NOTIFY and
+      # migrations bypass the pooler (worker and migrate connect to postgres directly).
+      POOL_MODE: transaction
+      MAX_CLIENT_CONN: "1000"
+      DEFAULT_POOL_SIZE: "40"
+      # The pg adapter sends `-c TimeZone=UTC` as a startup option; the pooler drops it and the role default
+      # (ALTER ROLE app_rw SET TimeZone = 'UTC', scripts/sql/app-role-grants.sql) plus timezone=UTC above apply.
+      IGNORE_STARTUP_PARAMETERS: extra_float_digits,options
+    depends_on:
+      postgres: { condition: service_healthy }
+
+  migrate:
+    # One-shot: prisma migrate deploy as the OWNER over a direct connection, app_rw grants, section D checks.
+    image: ${DZIDZA_TOOLS_IMAGE:?set DZIDZA_TOOLS_IMAGE (tools image)}
+    restart: "no"
+    environment:
+      NODE_ENV: production
+      MIGRATION_DATABASE_URL: postgresql://dzidza_owner:${OWNER_DB_PASSWORD}@postgres:5432/dzidza
+      DB_APP_ENVIRONMENT: ${DB_APP_ENVIRONMENT:-production}
+    depends_on:
+      postgres: { condition: service_healthy }
+
+  web:
+    <<: *app
+    environment:
+      DATABASE_URL: postgresql://app_rw:${APP_DB_PASSWORD}@pgbouncer:5432/dzidza
+      DATABASE_POOL_MAX: "10"
+      # Caddy (edge) is the only proxy in front and appends X-Forwarded-For. Behind a CDN as well: 2, or
+      # CLIENT_IP_HEADER (e.g. cf-connecting-ip) when the origin only accepts traffic from the CDN.
+      TRUSTED_PROXY_HOPS: "1"
+      # Longer than the edge's upstream keep-alive (55 s below), so the proxy never reuses a socket Node just closed.
+      KEEP_ALIVE_TIMEOUT: "65000"
+    deploy:
+      replicas: 2
+      resources:
+        limits: { memory: 1g }
+    # Next.js stops accepting connections on SIGTERM and finishes in-flight requests before exiting.
+    stop_grace_period: 30s
+    expose: ["3000"]
+    # HEALTHCHECK (liveness, /api/health) comes from the image.
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      pgbouncer: { condition: service_started }
+
+  worker:
+    <<: *app
+    command: ["node", "--enable-source-maps", "worker/index.mjs"]
+    environment:
+      # DIRECT connection: LISTEN/NOTIFY wake-ups do not work through transaction pooling.
+      DATABASE_URL: postgresql://app_rw:${APP_DB_PASSWORD}@postgres:5432/dzidza
+      DATABASE_POOL_MAX: "5"
+      WORKER_CONCURRENCY: "2"
+    deploy:
+      replicas: 1
+      resources:
+        limits: { memory: 768m }
+    # SIGTERM: stop claiming, give in-flight jobs 30 s, abort, 5 s grace (src/worker/shutdown.ts).
+    stop_grace_period: 45s
+    healthcheck:
+      disable: true
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      postgres: { condition: service_healthy }
+
+  edge:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:?set SITE_ADDRESS (public host name, e.g. learn.example.com)}
+    configs:
+      - source: caddyfile
+        target: /etc/caddy/Caddyfile
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+
+  seed:
+    # Catalogue ("ALWAYS") data only. Run on demand: --profile ops run --rm seed
+    image: ${DZIDZA_TOOLS_IMAGE:?set DZIDZA_TOOLS_IMAGE (tools image)}
+    profiles: ["ops"]
+    restart: "no"
+    command: ["npm", "run", "db:seed"]
+    env_file:
+      - .env.production
+    environment:
+      DATABASE_URL: postgresql://app_rw:${APP_DB_PASSWORD}@postgres:5432/dzidza
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+
+configs:
+  caddyfile:
+    content: |
+      {$$SITE_ADDRESS} {
+        encode zstd gzip
+        reverse_proxy {
+          # Every web replica (Docker DNS returns one A record per container).
+          dynamic a web 3000 {
+            refresh 10s
+          }
+          lb_policy round_robin
+          lb_try_duration 5s
+          fail_duration 30s
+          transport http {
+            keepalive 55s
+          }
+        }
+      }
+
+volumes:
+  pgdata:
+  storage:
+  caddy_data:
+  caddy_config:

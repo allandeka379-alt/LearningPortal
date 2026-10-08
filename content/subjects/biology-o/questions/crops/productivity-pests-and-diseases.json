@@ -1,0 +1,691 @@
+[
+  {
+    "key": "crops.productivity-pests-diseases.q01",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 40,
+    "stem": "Which statement best describes the **productivity** of a crop?",
+    "options": [
+      { "key": "A", "content": "The rate at which new biomass is produced per unit area", "correct": true, "rationale": "Productivity is a rate: biomass produced per unit area per unit time." },
+      { "key": "B", "content": "The total mass of living material in a field at one moment", "rationale": "That is biomass, not the rate of producing it." },
+      { "key": "C", "content": "The number of plants growing in one hectare", "rationale": "That is plant population density." },
+      { "key": "D", "content": "The amount of fertiliser applied per hectare", "rationale": "Fertiliser is an input that may raise productivity; it is not productivity itself." }
+    ],
+    "explanation": "Productivity is the rate of production of new biomass, for example tonnes per hectare per year. Biomass is the amount of living material present at one time.",
+    "hints": ["Productivity is a rate."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "RECALL",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q02",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "Which of these crop pests is a **sap-sucking** pest?",
+    "options": [
+      { "key": "A", "content": "Aphid", "correct": true, "rationale": "Aphids pierce the plant and suck phloem sap." },
+      { "key": "B", "content": "Maize stalk borer", "rationale": "Stalk borer caterpillars chew leaves and tunnel through stems." },
+      { "key": "C", "content": "Cutworm", "rationale": "Cutworms chew through seedlings at ground level." },
+      { "key": "D", "content": "Locust", "rationale": "Locusts chew and eat leaves." }
+    ],
+    "explanation": "Aphids have piercing, sucking mouthparts and feed on phloem sap. Stalk borers, cutworms and locusts all have biting mouthparts and chew plant tissue.",
+    "hints": ["Which one feeds through needle-like mouthparts?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "RECALL",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q03",
+    "type": "SHORT_ANSWER",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "Common rust of maize forms reddish-brown, powdery pustules on the leaves. What type of organism causes rust?",
+    "payload": { "maxLength": 60 },
+    "answerSpec": {
+      "keywords": { "any": ["fung*"] },
+      "rejected": [
+        { "value": "bacteria", "feedback": "Rust is caused by fungi; the powder in the pustules is fungal spores." },
+        { "value": "virus", "feedback": "Rust is caused by fungi; the powder in the pustules is fungal spores." }
+      ],
+      "normalise": ["strip_punctuation", "strip_articles"]
+    },
+    "explanation": "Rusts are fungal diseases. The powdery pustules release huge numbers of spores, which the wind carries to other plants.",
+    "hints": ["The powder is made of spores."],
+    "modelResponse": { "type": "SHORT_ANSWER", "text": "a fungus" },
+    "wrongResponses": [{ "type": "SHORT_ANSWER", "text": "bacteria" }],
+    "skill": "RECALL",
+    "dailyEligible": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q04",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "A farmer finds ragged holes in the young leaves of her maize and sawdust-like droppings in the funnel of the plants. Which pest is most likely to be responsible?",
+    "options": [
+      { "key": "A", "content": "Fall armyworm caterpillars", "correct": true, "rationale": "These chewing caterpillars feed in the funnel and leave ragged holes and droppings." },
+      { "key": "B", "content": "Aphids", "rationale": "Aphids suck sap; they do not chew holes in leaves." },
+      { "key": "C", "content": "Red spider mites", "rationale": "Mites suck cell contents, leaving speckled leaves and webbing, not ragged holes." },
+      { "key": "D", "content": "Bacterial wilt", "rationale": "Bacterial wilt is a disease that causes wilting; it does not leave droppings." }
+    ],
+    "explanation": "Ragged holes and sawdust-like droppings (frass) in the funnel are signs of a chewing caterpillar such as the fall armyworm, which has damaged maize in Zimbabwe since 2016.",
+    "hints": ["Droppings mean an animal has been eating the leaves."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "dailyEligible": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q05",
+    "type": "TRUE_FALSE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "True or false: red spider mites, which damage cotton and tomatoes, are insects.",
+    "answerSpec": {
+      "correct": false,
+      "feedbackTrue": "Not so: red spider mites have eight legs, so they are arachnids, related to spiders. Insects have six legs.",
+      "feedbackFalse": "Correct: red spider mites have eight legs and are arachnids, not insects."
+    },
+    "explanation": "Red spider mites are tiny arachnids with eight legs. They suck the contents of leaf cells, leaving speckled, bronzed leaves and fine webbing. Insects such as aphids have six legs.",
+    "hints": ["Count the legs."],
+    "modelResponse": { "type": "TRUE_FALSE", "value": false },
+    "wrongResponses": [{ "type": "TRUE_FALSE", "value": true }],
+    "skill": "RECALL",
+    "dailyEligible": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q06",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "Which is a typical sign of bacterial wilt in tobacco?",
+    "options": [
+      { "key": "A", "content": "The plant wilts even though the soil is moist", "correct": true, "rationale": "The bacteria block the xylem, so water cannot reach the leaves." },
+      { "key": "B", "content": "Powdery orange pustules appear on the leaves", "rationale": "Powdery pustules are a sign of rust, a fungal disease." },
+      { "key": "C", "content": "The leaves have rows of small holes", "rationale": "Holes are made by chewing pests such as caterpillars." },
+      { "key": "D", "content": "Fine webbing covers the undersides of the leaves", "rationale": "Webbing is a sign of red spider mites." }
+    ],
+    "explanation": "Bacterial wilt bacteria multiply in the xylem and block it. Water cannot reach the leaves, so the plant wilts even in moist soil; cut stems show brown streaks in the xylem.",
+    "hints": ["The bacteria live in the water-carrying tissue."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "RECALL",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q07",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 50,
+    "stem": "Farmers are advised to plough in, burn or feed to cattle the old maize stalks after harvest. How does this help to control maize stalk borer?",
+    "options": [
+      { "key": "A", "content": "It kills the caterpillars that survive the dry season inside the old stalks", "correct": true, "rationale": "Without these survivors, fewer moths emerge to lay eggs on the next crop." },
+      { "key": "B", "content": "It adds nitrate to the soil, which poisons the caterpillars", "rationale": "Nitrate does not poison caterpillars." },
+      { "key": "C", "content": "It attracts birds that eat the adult moths", "rationale": "Removing stalks does not attract birds; it removes the pest's shelter." },
+      { "key": "D", "content": "It makes the next maize crop resistant to the pest", "rationale": "Resistance comes from the variety's alleles, not from destroying old stalks." }
+    ],
+    "explanation": "Stalk borer caterpillars survive the dry season inside old maize stalks and become the moths that attack the next crop. Destroying the stalks breaks this life cycle: a cultural control method.",
+    "hints": ["Where does the pest spend the dry season?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["D"] }],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q08",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 50,
+    "stem": "A tobacco farmer whose field had bacterial wilt grows maize there for the next two seasons before planting tobacco again. Why does this reduce the disease?",
+    "options": [
+      { "key": "A", "content": "Maize is not a host of the bacteria, so their numbers in the soil fall without tobacco to infect", "correct": true, "rationale": "Rotation starves the pathogen of its host plant." },
+      { "key": "B", "content": "Maize roots release an antibiotic that kills all soil bacteria", "rationale": "Maize does not sterilise the soil; most soil bacteria are useful." },
+      { "key": "C", "content": "Maize plants absorb the bacteria and store them in their grains", "rationale": "Maize does not take up and store the wilt bacteria." },
+      { "key": "D", "content": "Growing maize makes the next tobacco crop genetically resistant", "rationale": "The genes of the tobacco are not changed by the previous crop." }
+    ],
+    "explanation": "Bacterial wilt bacteria survive in the soil and infect host plants such as tobacco and tomatoes. Growing non-host crops such as maize or grasses for a few seasons lets the bacterial population decline, so the next tobacco crop is less likely to be infected.",
+    "hints": ["The bacteria need a host plant."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["D"] }],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q09",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "A farmer sprays a broad-spectrum insecticide on his cotton to kill bollworms. A few weeks later, aphid numbers on the cotton are much higher than before. What is the most likely explanation?",
+    "options": [
+      { "key": "A", "content": "The insecticide killed the ladybirds and other natural enemies that had been eating the aphids", "correct": true, "rationale": "With their predators gone, the surviving aphids multiplied quickly." },
+      { "key": "B", "content": "The insecticide is a food for aphids", "rationale": "Insecticides are poisons, not food." },
+      { "key": "C", "content": "The insecticide turned bollworms into aphids", "rationale": "One species cannot change into another." },
+      { "key": "D", "content": "Spraying made the cotton plants produce more sap", "rationale": "There is no reason spraying would increase sap; the change is in the predators." }
+    ],
+    "explanation": "Broad-spectrum insecticides kill useful insects as well as pests. If natural enemies such as ladybirds are killed, aphids that survive or arrive later can multiply without being eaten. This is one disadvantage of chemical control.",
+    "hints": ["Which animals normally keep aphid numbers down?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["D"] }],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q10",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "An insecticide killed 98% of the bollworms on a cotton farm when first used. After several seasons of using it, it kills far fewer. Which explanation is correct?",
+    "options": [
+      { "key": "A", "content": "A few bollworms had alleles for resistance; they survived and reproduced, so resistant bollworms became more common", "correct": true, "rationale": "This is natural selection for resistance." },
+      { "key": "B", "content": "Each bollworm became immune after being sprayed several times", "rationale": "Individual insects do not become immune; the population changes through selection." },
+      { "key": "C", "content": "The insecticide became weaker after it was sprayed", "rationale": "A fresh supply of insecticide is just as strong; the pests have changed." },
+      { "key": "D", "content": "The bollworms learned to hide from the spray", "rationale": "Resistance is inherited, not learned." }
+    ],
+    "explanation": "In any large pest population a few individuals carry alleles that let them survive the insecticide. Spraying kills the others, so the survivors breed and pass on their resistance alleles. Over several generations most of the population becomes resistant.",
+    "hints": ["Think about natural selection."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q11",
+    "type": "MATCHING",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 2,
+    "marks": 4,
+    "estimatedSeconds": 100,
+    "stem": "Match each crop pest with the damage it causes.",
+    "payload": {
+      "left": [
+        { "id": "borer", "content": "Maize stalk borer" },
+        { "id": "aphid", "content": "Aphid" },
+        { "id": "cutworm", "content": "Cutworm" },
+        { "id": "locust", "content": "Locust" }
+      ],
+      "right": [
+        { "id": "d1", "content": "Caterpillars tunnel inside stems, sometimes killing the growing point" },
+        { "id": "d2", "content": "Sucks phloem sap and leaves sticky honeydew on the leaves" },
+        { "id": "d3", "content": "Seedlings are cut off at ground level at night" },
+        { "id": "d4", "content": "Swarms strip the leaves from crops and grasses" },
+        { "id": "d5", "content": "Bacteria block the xylem, so the plant wilts" }
+      ],
+      "shuffle": true
+    },
+    "answerSpec": {
+      "pairs": [
+        { "leftId": "borer", "rightId": "d1" },
+        { "leftId": "aphid", "rightId": "d2" },
+        { "leftId": "cutworm", "rightId": "d3" },
+        { "leftId": "locust", "rightId": "d4" }
+      ],
+      "marksPerPair": 1
+    },
+    "explanation": "Stalk borers tunnel in stems (dead heart); aphids suck sap and excrete honeydew; cutworms cut seedlings at soil level; locust swarms eat leaves. Xylem blocked by bacteria describes bacterial wilt, a disease, not a pest.",
+    "hints": ["One description is of a disease, not a pest."],
+    "modelResponse": { "type": "MATCHING", "pairs": [{ "leftId": "borer", "rightId": "d1" }, { "leftId": "aphid", "rightId": "d2" }, { "leftId": "cutworm", "rightId": "d3" }, { "leftId": "locust", "rightId": "d4" }] },
+    "wrongResponses": [{ "type": "MATCHING", "pairs": [{ "leftId": "borer", "rightId": "d3" }, { "leftId": "aphid", "rightId": "d2" }, { "leftId": "cutworm", "rightId": "d1" }, { "leftId": "locust", "rightId": "d4" }] }],
+    "skill": "RECALL"
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q12",
+    "type": "NUMERICAL",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 2,
+    "marks": 2,
+    "estimatedSeconds": 90,
+    "stem": "A farmer near Bindura harvests 7.2 tonnes of maize grain from a field of 2.4 hectares. Calculate the yield in tonnes per hectare.",
+    "payload": { "unitHint": "t/ha" },
+    "answerSpec": {
+      "value": 3,
+      "tolerance": { "kind": "absolute", "amount": 0.005 },
+      "units": { "required": false, "accepted": ["t/ha", "tonnes per hectare", "tonnes/ha", "t per ha", "t/hectare", "tonnes per ha", "tonne/ha", "tonne per hectare", "tons/ha", "tons per hectare", "ton/ha", "ton per hectare"], "conversions": [{ "unit": "kg/ha", "factor": 0.001 }, { "unit": "kg per hectare", "factor": 0.001 }] }
+    },
+    "explanation": "Yield per hectare = 7.2 ÷ 2.4 = 3.0 tonnes per hectare.",
+    "workedSolution": "1. Yield per hectare = total harvest ÷ area.\n2. 7.2 t ÷ 2.4 ha = 3.0 t/ha.",
+    "hints": ["Divide the harvest by the area."],
+    "modelResponse": { "type": "NUMERICAL", "value": "3.0", "unit": "t/ha" },
+    "wrongResponses": [{ "type": "NUMERICAL", "value": "17.28" }, { "type": "NUMERICAL", "value": "0.33" }],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q13",
+    "type": "NUMERICAL",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 3,
+    "marks": 2,
+    "estimatedSeconds": 120,
+    "stem": "In a trial, cotton sprayed against bollworms yielded 5.0 t/ha of seed cotton. Unsprayed cotton beside it yielded 3.4 t/ha. Calculate the yield lost in the unsprayed cotton as a percentage of the sprayed yield.",
+    "payload": { "unitHint": "%" },
+    "answerSpec": { "value": 32, "tolerance": { "kind": "absolute", "amount": 0.5 } },
+    "explanation": "The loss is 5.0 − 3.4 = 1.6 t/ha, and 1.6 ÷ 5.0 × 100 = 32%.",
+    "workedSolution": "1. Loss = 5.0 − 3.4 = 1.6 t/ha.\n2. Percentage of the sprayed yield = 1.6 ÷ 5.0 × 100 = 32%.",
+    "hints": ["Find the difference first, then divide by the sprayed yield."],
+    "modelResponse": { "type": "NUMERICAL", "value": "32" },
+    "wrongResponses": [{ "type": "NUMERICAL", "value": "47" }, { "type": "NUMERICAL", "value": "68" }],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q14",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 2,
+    "marks": 3,
+    "estimatedSeconds": 60,
+    "stem": "Name the type of control in each example.",
+    "payload": {
+      "template": "Releasing ladybirds to eat aphids is {{blank:ladybird}} control. Rotating tobacco with maize is {{blank:rotation}} control. Spraying a miticide on cotton is {{blank:spray}} control.",
+      "blanks": [
+        { "id": "ladybird", "input": "select", "choices": ["biological", "cultural", "chemical"] },
+        { "id": "rotation", "input": "select", "choices": ["biological", "cultural", "chemical"] },
+        { "id": "spray", "input": "select", "choices": ["biological", "cultural", "chemical"] }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        { "id": "ladybird", "accepted": ["biological"], "marks": 1 },
+        { "id": "rotation", "accepted": ["cultural"], "marks": 1 },
+        { "id": "spray", "accepted": ["chemical"], "marks": 1 }
+      ]
+    },
+    "explanation": "Using a natural enemy is biological control; changing farming practice (rotation, timing, hygiene, varieties) is cultural control; using pesticides is chemical control.",
+    "hints": ["Which method uses another living organism?"],
+    "modelResponse": { "type": "FILL_IN_THE_BLANK", "blanks": [{ "blankId": "ladybird", "text": "biological" }, { "blankId": "rotation", "text": "cultural" }, { "blankId": "spray", "text": "chemical" }] },
+    "wrongResponses": [{ "type": "FILL_IN_THE_BLANK", "blanks": [{ "blankId": "ladybird", "text": "cultural" }, { "blankId": "rotation", "text": "biological" }, { "blankId": "spray", "text": "chemical" }] }],
+    "skill": "UNDERSTANDING"
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q15",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 50,
+    "stem": "Which is a disadvantage of biological control compared with chemical control?",
+    "options": [
+      { "key": "A", "content": "It acts slowly and reduces the pest population rather than wiping it out", "correct": true, "rationale": "Natural enemies take time to build up and only keep pests at a low level." },
+      { "key": "B", "content": "It leaves poisonous residues on the crop", "rationale": "Residues are a problem of chemical pesticides, not natural enemies." },
+      { "key": "C", "content": "The pests quickly become resistant to it", "rationale": "Resistance is a common problem with pesticides; it rarely develops against predators." },
+      { "key": "D", "content": "It kills pollinating insects such as bees", "rationale": "Specific natural enemies do not harm bees; broad-spectrum insecticides can." }
+    ],
+    "explanation": "Biological control is specific, leaves no residues and seldom leads to resistance, but it is slow and only keeps the pest at a low level. Chemical control acts fast but has the disadvantages listed in options B, C and D.",
+    "hints": ["Three of the options are problems with pesticides."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["C"] }],
+    "skill": "EVALUATION",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q16",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 50,
+    "stem": "How does common rust reduce the yield of a maize crop?",
+    "options": [
+      { "key": "A", "content": "The pustules cover and kill leaf tissue, so less photosynthesis takes place", "correct": true, "rationale": "Less green leaf area means less glucose for growth and grain filling." },
+      { "key": "B", "content": "The fungus blocks the xylem in the roots", "rationale": "Blocking the xylem is how bacterial wilt works; rust attacks the leaves." },
+      { "key": "C", "content": "The spores eat the grains on the cob", "rationale": "Spores do not eat grains; they spread the disease to new leaves." },
+      { "key": "D", "content": "The fungus removes nitrate from the soil", "rationale": "Rust grows on the leaves; it does not take nitrate from the soil." }
+    ],
+    "explanation": "Rust fungi grow in the leaves and form pustules of spores. The infected leaf area cannot photosynthesise properly, so the plant makes less glucose and fills fewer, smaller grains.",
+    "hints": ["Where on the plant do the pustules form?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q17",
+    "type": "SHORT_ANSWER",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "What term is used for the total mass of living material in an area, usually measured as dry mass?",
+    "payload": { "maxLength": 60 },
+    "answerSpec": {
+      "accepted": [{ "value": "biomass" }, { "value": "bio mass" }, { "value": "dry biomass" }, { "value": "total biomass" }],
+      "rejected": [{ "value": "productivity", "feedback": "Productivity is the rate at which biomass is produced; the mass present is the biomass." }],
+      "normalise": ["strip_punctuation", "strip_articles"]
+    },
+    "explanation": "Biomass is the mass of living material in an area. It is usually measured as dry mass because the water content of plants varies.",
+    "hints": ["Bio- means life."],
+    "modelResponse": { "type": "SHORT_ANSWER", "text": "biomass" },
+    "wrongResponses": [{ "type": "SHORT_ANSWER", "text": "productivity" }],
+    "skill": "RECALL"
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q18",
+    "type": "STRUCTURED",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 4,
+    "marks": 8,
+    "estimatedSeconds": 600,
+    "stem": "A cotton farmer in Gokwe finds three pests on her crop: aphids on the young leaves, red spider mites on the undersides of older leaves, and bollworms in the bolls.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "Which of these three pests is a chewing pest?",
+        "options": [
+          { "key": "A", "content": "Bollworms", "correct": true, "rationale": "Bollworms are caterpillars with biting mouthparts that eat the bolls." },
+          { "key": "B", "content": "Aphids", "rationale": "Aphids suck phloem sap." },
+          { "key": "C", "content": "Red spider mites", "rationale": "Mites suck out the contents of leaf cells." },
+          { "key": "D", "content": "All three of them", "rationale": "Aphids and mites are sap-sucking pests, not chewing pests." }
+        ]
+      },
+      {
+        "label": "(b)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Explain how aphids reduce the yield or quality of the cotton crop.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "B1", "description": "They suck phloem sap, removing sugars and amino acids the plant needs for growth (weak, curled leaves)", "marks": 1 },
+              { "id": "B2", "description": "Any one: honeydew makes the lint sticky / sooty mould grows on it and blocks light for photosynthesis; they spread plant viruses", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "State two safety precautions she should take when spraying pesticides.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "C1", "description": "First precaution, e.g. wear protective clothing (gloves, mask, overalls, boots)", "marks": 1 },
+              { "id": "C2", "description": "Second precaution, e.g. read and follow the label; do not spray in windy weather or towards people and water; do not eat, drink or smoke while spraying; wash afterwards; store chemicals locked away; never reuse containers for food or water", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(d)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "She has sprayed the same miticide against red spider mites every season, and it now works less well. Explain why.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "D1", "description": "Some mites had (alleles for) resistance and survived the spraying", "marks": 1 },
+              { "id": "D2", "description": "They reproduced and passed on resistance, so resistant mites became more common in the population (natural selection)", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(e)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 1,
+        "stem": "An extension officer advises her to scout her field and spray only when pest numbers pass a threshold. Suggest one advantage of this advice.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "E1", "description": "Any one: less money spent on pesticides; natural enemies survive; slower development of resistance; less pollution / residues", "marks": 1 }
+            ]
+          }
+        }
+      }
+    ],
+    "explanation": "Bollworms chew; aphids and mites suck. Aphids weaken plants, spoil lint with honeydew and spread viruses. Repeated use of one pesticide selects for resistant pests. Integrated pest management (scouting and spraying only when needed) saves money and protects natural enemies.",
+    "workedSolution": "**(a)** Bollworms.\n\n**(b)** They remove phloem sap (sugars), weakening the plants; honeydew makes lint sticky and sooty mould reduces photosynthesis; they spread viruses.\n\n**(c)** For example: wear gloves and a mask; do not spray in wind.\n\n**(d)** Resistant mites survived each spraying and bred, so the population became mostly resistant.\n\n**(e)** For example: fewer sprays, so lower costs and natural enemies survive.",
+    "hints": ["Think about how each pest feeds.", "Resistance develops by natural selection."],
+    "modelResponse": { "type": "STRUCTURED", "parts": { "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] } } },
+    "wrongResponses": [{ "type": "STRUCTURED", "parts": { "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] } } }],
+    "skill": "APPLICATION",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q19",
+    "type": "STRUCTURED",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 4,
+    "marks": 7,
+    "estimatedSeconds": 540,
+    "stem": "At a demonstration plot, maize was planted at two dates in the same season. The percentage of plants damaged by maize stalk borer and the grain yield were recorded.\n\n| Planting | Plants damaged by stalk borer / % | Grain yield / t per ha |\n| --- | --- | --- |\n| Early (with the first good rains) | 12 | 4.1 |\n| Late (five weeks later) | 46 | 2.9 |",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Calculate the difference in yield between the early and late plantings, in t per ha.",
+        "payload": { "unitHint": "t/ha" },
+        "answerSpec": { "value": 1.2, "tolerance": { "kind": "absolute", "amount": 0.005 } }
+      },
+      {
+        "label": "(b)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Express this difference as a percentage of the early-planting yield. Give your answer to 3 significant figures.",
+        "payload": { "unitHint": "%" },
+        "answerSpec": { "value": 29.3, "tolerance": { "kind": "absolute", "amount": 0.05 }, "sigFigs": { "min": 3, "max": 3 } }
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Suggest why the late-planted maize was more badly damaged by stalk borer.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "C1", "description": "By the time the late maize was young, the pest population (moths laying eggs) had built up / a new generation of moths had emerged", "marks": 1 },
+              { "id": "C2", "description": "Young, small plants are the most easily damaged, whereas the early maize was already tall and strong when pest numbers were high", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(d)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Explain how stalk borer damage reduces the yield of maize.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "D1", "description": "Tunnelling damages the xylem and phloem, so less water and fewer sugars reach the leaves and cob; OR stems break (lodging)", "marks": 1 },
+              { "id": "D2", "description": "Feeding on leaves reduces the area for photosynthesis, OR the growing point is killed (dead heart), OR the larvae damage the cobs", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(e)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "Planting early is a cultural method of control. Which of these is also a cultural method?",
+        "options": [
+          { "key": "A", "content": "Destroying old maize stalks after harvest", "correct": true, "rationale": "Changing farm practice to break the pest's life cycle is cultural control." },
+          { "key": "B", "content": "Spraying insecticide into the funnel of each plant", "rationale": "Using pesticides is chemical control." },
+          { "key": "C", "content": "Releasing parasitic wasps that lay eggs in the caterpillars", "rationale": "Using a natural enemy is biological control." },
+          { "key": "D", "content": "Dusting the plants with insecticide granules", "rationale": "Insecticide granules are chemical control." }
+        ]
+      }
+    ],
+    "explanation": "The early planting yielded 4.1 − 2.9 = 1.2 t/ha more, which is 1.2 ÷ 4.1 × 100 = 29.3% of the early yield. Late maize was young when stalk borer numbers were high, so more plants were damaged; damaged stems carry less water and sugar and may break.",
+    "workedSolution": "**(a)** 4.1 − 2.9 = 1.2 t/ha.\n\n**(b)** 1.2 ÷ 4.1 × 100 = 29.268…% = 29.3% (3 s.f.).\n\n**(c)** Pest numbers had built up by the time the late maize was young and easily damaged.\n\n**(d)** Tunnels damage xylem and phloem and weaken the stem; leaf damage reduces photosynthesis.\n\n**(e)** A: destroying old stalks.",
+    "hints": ["For (b), divide by the early yield, not the late yield.", "Think about when the moths lay their eggs."],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": { "type": "NUMERICAL", "value": "1.2" },
+        "(b)": { "type": "NUMERICAL", "value": "29.3" },
+        "(e)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": { "type": "NUMERICAL", "value": "34" },
+          "(b)": { "type": "NUMERICAL", "value": "41.4" },
+          "(e)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["C"] }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q20",
+    "type": "STRUCTURED",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 4,
+    "marks": 8,
+    "estimatedSeconds": 600,
+    "stem": "Several tobacco plants in a field near Karoi suddenly wilt during the day, although the soil is still moist after rain. When a stem is cut, the xylem shows brown streaks. An extension officer diagnoses bacterial wilt.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "What causes bacterial wilt?",
+        "options": [
+          { "key": "A", "content": "A bacterium that lives in the soil and infects the roots", "correct": true, "rationale": "The bacteria enter through the roots and multiply in the xylem." },
+          { "key": "B", "content": "A fungus whose spores are blown onto the leaves", "rationale": "Wind-blown fungal spores cause rust, not bacterial wilt." },
+          { "key": "C", "content": "Aphids sucking sap from the leaves", "rationale": "Aphids are pests; bacterial wilt is a disease caused by bacteria." },
+          { "key": "D", "content": "A shortage of potassium in the soil", "rationale": "A deficiency does not produce brown streaks in the xylem or kill plants suddenly in moist soil." }
+        ]
+      },
+      {
+        "label": "(b)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "Name the tissue that the bacteria block.",
+        "answerSpec": {
+          "keywords": { "all": ["xylem"] },
+          "rejected": [{ "value": "phloem", "feedback": "The bacteria multiply in the water-carrying tissue, the xylem." }],
+          "normalise": ["strip_punctuation"]
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Explain why the infected plants wilt even though the soil is moist.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "C1", "description": "The bacteria (and their slime) block the xylem, so water cannot be carried up to the leaves", "marks": 1 },
+              { "id": "C2", "description": "Water is still lost by transpiration, so the leaf cells lose water and turgor (become flaccid) and the leaves droop", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(d)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "The officer advises growing maize in this field for the next two seasons. Explain how this helps.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "D1", "description": "Maize is not a host of the bacteria (it is not infected)", "marks": 1 },
+              { "id": "D2", "description": "Without a host, the number of bacteria in the soil falls, so the next tobacco crop is less likely to be infected (the disease cycle is broken)", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(e)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Suggest two other measures that would reduce the spread of bacterial wilt.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "E1", "description": "First measure, e.g. plant resistant varieties", "marks": 1 },
+              { "id": "E2", "description": "Second measure, e.g. use disease-free seedlings; uproot and destroy infected plants; clean tools and boots; avoid moving soil or water from infected fields; avoid waterlogging", "marks": 1 }
+            ]
+          }
+        }
+      }
+    ],
+    "explanation": "Bacterial wilt is caused by soil bacteria that multiply in the xylem and block it, so water lost by transpiration is not replaced and the plant wilts in moist soil. There is no cure, so control is cultural: rotation with non-hosts such as maize, resistant varieties, clean seedlings and removal of infected plants.",
+    "workedSolution": "**(a)** A: a soil bacterium.\n\n**(b)** Xylem.\n\n**(c)** Blocked xylem cannot supply water, but water is still lost by transpiration, so the cells lose turgor.\n\n**(d)** Maize is not a host, so the number of bacteria in the soil falls over two seasons.\n\n**(e)** For example: resistant varieties; destroying infected plants.",
+    "hints": ["Which tissue carries water up the stem?", "What happens to bacteria with no plant to infect?"],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+        "(b)": { "type": "SHORT_ANSWER", "text": "xylem" }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] },
+          "(b)": { "type": "SHORT_ANSWER", "text": "phloem" }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true
+  },
+  {
+    "key": "crops.productivity-pests-diseases.q21",
+    "type": "EXTENDED_RESPONSE",
+    "concepts": ["bio.crops.productivity-pests-and-diseases"],
+    "difficulty": 5,
+    "marks": 6,
+    "estimatedSeconds": 600,
+    "stem": "Discuss the advantages and disadvantages of chemical control and biological control of aphids on a cotton farm, and suggest how the farmer could combine methods. [6]",
+    "payload": { "wordLimit": { "max": 350 } },
+    "answerSpec": {
+      "markScheme": {
+        "points": [
+          { "id": "P1", "description": "Chemical advantage: fast-acting and effective; easy to apply over large areas", "marks": 1 },
+          { "id": "P2", "description": "Chemical disadvantage: kills non-target species such as pollinators and natural enemies (ladybirds), which can lead to pest resurgence", "marks": 1 },
+          { "id": "P3", "description": "Chemical disadvantage: aphids become resistant (natural selection); costly; residues / pollution of water; danger to the sprayer", "marks": 1 },
+          { "id": "P4", "description": "Biological advantage: specific to the pest; no residues or pollution; self-sustaining; resistance rarely develops", "marks": 1 },
+          { "id": "P5", "description": "Biological disadvantage: slow; reduces but does not eliminate the pest; the control organism might harm other species or become a pest", "marks": 1 },
+          { "id": "P6", "description": "Integrated pest management: scout regularly, encourage natural enemies, and spray (preferably a selective pesticide) only when aphid numbers pass a threshold", "marks": 1 }
+        ]
+      },
+      "modelAnswer": "**Chemical control** with an insecticide works quickly and can protect a large field in one day. However, broad-spectrum sprays also kill bees and the ladybirds that eat aphids, so aphid numbers can bounce back. Aphids that survive because they carry resistance alleles breed, so the spray becomes less effective over the years. Sprays are expensive, leave residues, can pollute rivers and can poison the person spraying.\n\n**Biological control**, such as encouraging or releasing ladybirds, is specific to the pest, leaves no residues and keeps working without repeated cost, and resistance seldom develops. But it is slow and only keeps aphids at a low level; an introduced predator might also harm other species.\n\nThe farmer could use **integrated pest management**: scout the crop each week, protect natural enemies, and spray a selective insecticide only when aphid numbers pass the recommended threshold."
+    },
+    "explanation": "A good answer balances the speed of chemical control against its costs (resistance, harm to useful insects, pollution, safety) and the safety of biological control against its slowness, and concludes with a combined (IPM) approach.",
+    "hints": ["Give at least one advantage and one disadvantage of each method.", "End with a sensible combination."],
+    "skill": "EVALUATION",
+    "examStyle": true
+  }
+]

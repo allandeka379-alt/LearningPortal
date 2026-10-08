@@ -1,0 +1,1641 @@
+[
+  {
+    "key": "probability.conditional.q01",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "A question asks for a probability \"given that the learner is a girl\". What should you do?",
+    "options": [
+      {
+        "key": "A",
+        "content": "Consider only the girls, and divide by the number of girls",
+        "correct": true,
+        "rationale": "\"Given that\" restricts the outcomes to the given group."
+      },
+      {
+        "key": "B",
+        "content": "Divide by the total number of learners",
+        "rationale": "The information means only the girls are possible, so the denominator is the number of girls."
+      },
+      {
+        "key": "C",
+        "content": "Ignore the information: it does not change the probability",
+        "rationale": "Extra information can change a probability."
+      },
+      {
+        "key": "D",
+        "content": "Multiply by the probability of choosing a girl",
+        "rationale": "That gives the probability of \"girl and …\", not a probability given a girl."
+      }
+    ],
+    "explanation": "\"Given that\" tells you which outcomes are still possible. Restrict to that group: the conditional probability is the number in the group who satisfy the event divided by the number in the group.",
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "RECALL",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q02",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "A fair dice is rolled. Given that the score is even, what is the probability that it is a 6?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$\\frac{1}{3}$",
+        "correct": true,
+        "rationale": "The even scores are 2, 4 and 6; one of the three is a 6."
+      },
+      {
+        "key": "B",
+        "content": "$\\frac{1}{6}$",
+        "rationale": "This ignores the information that the score is even."
+      },
+      {
+        "key": "C",
+        "content": "$\\frac{1}{2}$",
+        "rationale": "This is the probability that the score is even."
+      },
+      {
+        "key": "D",
+        "content": "$\\frac{2}{3}$",
+        "rationale": "This is the probability that the even score is **not** a 6 (it is 2 or 4)."
+      }
+    ],
+    "explanation": "Given that the score is even, the only possible outcomes are 2, 4 and 6, which are equally likely. One of them is a 6, so the probability is $\\frac{1}{3}$.",
+    "hints": [
+      "List the outcomes that are still possible."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true,
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q03",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "In a class of 50 learners there are 25 boys and 25 girls. 3 of the boys and 5 of the girls wear glasses. A learner is chosen at random. Given that the learner is a girl, find the probability that she wears glasses.",
+    "answerSpec": {
+      "value": 0.2,
+      "units": {
+        "required": false,
+        "accepted": [
+          "(or 20%)"
+        ],
+        "conversions": [
+          {
+            "unit": "%",
+            "factor": 0.01
+          },
+          {
+            "unit": "percent",
+            "factor": 0.01
+          }
+        ],
+        "penaltyMarks": 0
+      }
+    },
+    "explanation": "Only the 25 girls are possible. 5 of them wear glasses, so the probability is $\\dfrac{5}{25} = \\dfrac{1}{5} = 0.2$.",
+    "workedSolution": "1. Given group: girls, 25.\n2. Girls with glasses: 5.\n3. Probability $= \\dfrac{5}{25} = 0.2$.",
+    "hints": [
+      "The denominator is the number of girls, not the whole class."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "1/5"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "5/50"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "5/8"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "8/50"
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true,
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q04",
+    "type": "TRUE_FALSE",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "True or false: the probability of $A$ given $B$ is always equal to the probability of $B$ given $A$.",
+    "answerSpec": {
+      "correct": false,
+      "feedbackTrue": "The two are usually different because the denominators are different groups. For example, in a school every Form 4 boy is a learner, but most learners are not Form 4 boys.",
+      "feedbackFalse": "Correct: they are generally different, because \"given $B$\" divides by the size of $B$ and \"given $A$\" divides by the size of $A$."
+    },
+    "explanation": "The probability of $A$ given $B$ is (number in both) ÷ (number in $B$); the probability of $B$ given $A$ is (number in both) ÷ (number in $A$). They are equal only in special cases, for example when $A$ and $B$ contain the same number of outcomes.",
+    "modelResponse": {
+      "type": "TRUE_FALSE",
+      "value": false
+    },
+    "wrongResponses": [
+      {
+        "type": "TRUE_FALSE",
+        "value": true
+      }
+    ],
+    "skill": "UNDERSTANDING",
+    "dailyEligible": true,
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q05",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 3,
+    "marks": 4,
+    "estimatedSeconds": 300,
+    "stem": "In a village near Gokwe, 60 households were surveyed. 35 own a radio, 28 own a television and 12 own both. A household is chosen at random.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Given that the household owns a television, find the probability that it owns a radio. Give your answer as a fraction, or as a decimal correct to 3 significant figures.",
+        "payload": {
+          "template": "Probability = {{blank:p}}",
+          "blanks": [
+            {
+              "id": "p",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "p",
+              "accepted": [
+                "3/7"
+              ],
+              "tolerance": 0.0005,
+              "normalise": [
+                "remove_whitespace"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "Given that the household does **not** own a television, find the probability that it owns a radio.",
+        "answerSpec": {
+          "value": 0.71875,
+          "tolerance": {
+            "kind": "absolute",
+            "amount": 0.0005
+          },
+          "units": {
+            "required": false,
+            "accepted": [
+              "(or 71.875%)"
+            ],
+            "conversions": [
+              {
+                "unit": "%",
+                "factor": 0.01
+              },
+              {
+                "unit": "percent",
+                "factor": 0.01
+              }
+            ],
+            "penaltyMarks": 0
+          }
+        }
+      }
+    ],
+    "explanation": "Regions: radio only $35 - 12 = 23$, both 12, television only $28 - 12 = 16$, neither $60 - 51 = 9$. (a) The 28 television owners include 12 with a radio: $\\frac{12}{28} = \\frac{3}{7} \\approx 0.429$. (b) The households without a television are $23 + 9 = 32$; 23 of them own a radio: $\\frac{23}{32} \\approx 0.719$.",
+    "workedSolution": "1. Fill the Venn diagram: 23, 12, 16 and 9 outside.\n2. (a) Given television: $\\frac{12}{28} = \\frac{3}{7}$.\n3. (b) Not television: $23 + 9 = 32$ households; radio among them: 23; $\\frac{23}{32} \\approx 0.719$ (3 s.f.).",
+    "hints": [
+      "Fill in the Venn diagram first, starting with the overlap.",
+      "\"Not a television\" means everything outside the television circle."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "p",
+              "text": "3/7"
+            }
+          ]
+        },
+        "(b)": {
+          "type": "NUMERICAL",
+          "value": "23/32"
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "p",
+                "text": "12/60"
+              }
+            ]
+          },
+          "(b)": {
+            "type": "NUMERICAL",
+            "value": "23/60"
+          }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q06",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 75,
+    "stem": "The table shows information about 80 learners.\n\n|  | Owns a bicycle | No bicycle | Total |\n| --- | --- | --- | --- |\n| Lives in town | 12 | 28 | 40 |\n| Lives in a rural area | 22 | 18 | 40 |\n| Total | 34 | 46 | 80 |\n\nA learner is chosen at random. Given that the learner owns a bicycle, find the probability that the learner lives in a rural area. Give your answer as a fraction, or as a decimal correct to 3 significant figures.",
+    "payload": {
+      "template": "Probability = {{blank:p}}",
+      "blanks": [
+        {
+          "id": "p",
+          "input": "number"
+        }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        {
+          "id": "p",
+          "accepted": [
+            "11/17"
+          ],
+          "tolerance": 0.0005,
+          "normalise": [
+            "remove_whitespace"
+          ]
+        }
+      ]
+    },
+    "explanation": "Restrict to the 34 learners who own a bicycle. 22 of them live in a rural area, so the probability is $\\dfrac{22}{34} = \\dfrac{11}{17} \\approx 0.647$.",
+    "workedSolution": "1. Given group: bicycle owners, column total 34.\n2. Rural bicycle owners: 22.\n3. $\\dfrac{22}{34} = \\dfrac{11}{17} \\approx 0.647$.",
+    "hints": [
+      "Use the \"Owns a bicycle\" column total as the denominator."
+    ],
+    "modelResponse": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+        {
+          "blankId": "p",
+          "text": "11/17"
+        }
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "p",
+            "text": "22/40"
+          }
+        ]
+      },
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "p",
+            "text": "22/80"
+          }
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q07",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "Two fair dice are rolled. Given that the total score is 10, what is the probability that both dice show the same number?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$\\frac{1}{3}$",
+        "correct": true,
+        "rationale": "Totals of 10: $(4, 6)$, $(5, 5)$, $(6, 4)$; one of the three is a double."
+      },
+      {
+        "key": "B",
+        "content": "$\\frac{1}{6}$",
+        "rationale": "This is the probability of a double when nothing is known about the total."
+      },
+      {
+        "key": "C",
+        "content": "$\\frac{1}{36}$",
+        "rationale": "This is the probability of $(5, 5)$ out of all 36 outcomes."
+      },
+      {
+        "key": "D",
+        "content": "$\\frac{1}{12}$",
+        "rationale": "This is $\\frac{3}{36}$, the probability of a total of 10."
+      }
+    ],
+    "explanation": "Only the outcomes with total 10 are possible: $(4, 6)$, $(5, 5)$ and $(6, 4)$, which are equally likely. One of them is a double, so the probability is $\\frac{1}{3}$.",
+    "hints": [
+      "List every pair of scores that adds up to 10."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q08",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "Twenty cards are numbered 1 to 20. A card is chosen at random. Given that the number is a multiple of 4, find the probability that it is also a multiple of 3.",
+    "answerSpec": {
+      "value": 0.2,
+      "units": {
+        "required": false,
+        "accepted": [
+          "(or 20%)"
+        ],
+        "conversions": [
+          {
+            "unit": "%",
+            "factor": 0.01
+          },
+          {
+            "unit": "percent",
+            "factor": 0.01
+          }
+        ],
+        "penaltyMarks": 0
+      }
+    },
+    "explanation": "The multiples of 4 up to 20 are 4, 8, 12, 16 and 20. Only 12 is also a multiple of 3, so the probability is $\\dfrac{1}{5}$. (Without the information, the probability of a multiple of 3 would be $\\frac{6}{20} = 0.3$: the condition changes it.)",
+    "workedSolution": "1. Given group: 4, 8, 12, 16, 20 (5 cards).\n2. Also a multiple of 3: 12 (1 card).\n3. $\\dfrac{1}{5} = 0.2$.",
+    "hints": [
+      "List the multiples of 4 from 1 to 20 first."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "1/5"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "6/20"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "1/20"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "5/20"
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q09",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "A bag contains 5 green and 4 yellow balls. Two balls are taken at random without replacement. Given that the first ball is yellow, find the probability that the second ball is green.",
+    "answerSpec": {
+      "value": 0.625,
+      "units": {
+        "required": false,
+        "accepted": [
+          "(or 62.5%)"
+        ],
+        "conversions": [
+          {
+            "unit": "%",
+            "factor": 0.01
+          },
+          {
+            "unit": "percent",
+            "factor": 0.01
+          }
+        ],
+        "penaltyMarks": 0
+      }
+    },
+    "explanation": "After a yellow ball is removed, 8 balls remain and 5 of them are green, so the probability is $\\dfrac{5}{8}$. This is the probability on the second-stage branch after \"yellow\" in the tree diagram.",
+    "workedSolution": "1. Remaining after one yellow: 5 green, 3 yellow (8 balls).\n2. Probability $= \\dfrac{5}{8} = 0.625$.",
+    "hints": [
+      "How many balls of each colour are left after a yellow ball is taken?"
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "5/8"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "5/9"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "4/8"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "20/72"
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q10",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "In a Venn diagram, $n(A \\cap B)$ is the number of outcomes in both $A$ and $B$. Which expression gives the probability of $A$ **given** $B$ (all outcomes equally likely)?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$\\dfrac{n(A \\cap B)}{n(B)}$",
+        "correct": true,
+        "rationale": "Restrict to $B$, then count the outcomes that are also in $A$."
+      },
+      {
+        "key": "B",
+        "content": "$\\dfrac{n(A \\cap B)}{n(A)}$",
+        "rationale": "This is the probability of $B$ given $A$."
+      },
+      {
+        "key": "C",
+        "content": "$\\dfrac{n(A \\cap B)}{n(\\mathscr{E})}$",
+        "rationale": "This is the probability of $A$ and $B$, with no condition."
+      },
+      {
+        "key": "D",
+        "content": "$\\dfrac{n(B)}{n(\\mathscr{E})}$",
+        "rationale": "This is the probability of $B$."
+      }
+    ],
+    "explanation": "Given $B$, only the outcomes inside $B$ are possible, so the denominator is $n(B)$. The favourable outcomes are those in both $A$ and $B$: $n(A \\cap B)$.",
+    "hints": [
+      "Which circle are you told the outcome is in?"
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "UNDERSTANDING",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q11",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 4,
+    "marks": 4,
+    "estimatedSeconds": 360,
+    "stem": "200 learners were asked for their favourite subject. The results are shown in the table.\n\n|  | Mathematics | Science | English | Total |\n| --- | --- | --- | --- | --- |\n| Form 3 | 36 | 24 | 40 | 100 |\n| Form 4 | 30 | 45 | 25 | 100 |\n| Total | 66 | 69 | 65 | 200 |\n\nOne learner is chosen at random.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Find the probability that the learner is in Form 4 and chose Science.",
+        "answerSpec": {
+          "value": 0.225,
+          "units": {
+            "required": false,
+            "accepted": [
+              "(or 22.5%)"
+            ],
+            "conversions": [
+              {
+                "unit": "%",
+                "factor": 0.01
+              },
+              {
+                "unit": "percent",
+                "factor": 0.01
+              }
+            ],
+            "penaltyMarks": 0
+          }
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Given that the learner is in Form 4, find the probability that the learner chose Science.",
+        "answerSpec": {
+          "value": 0.45,
+          "units": {
+            "required": false,
+            "accepted": [
+              "(or 45%)"
+            ],
+            "conversions": [
+              {
+                "unit": "%",
+                "factor": 0.01
+              },
+              {
+                "unit": "percent",
+                "factor": 0.01
+              }
+            ],
+            "penaltyMarks": 0
+          }
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Given that the learner chose Science, find the probability that the learner is in Form 4. Give your answer as a fraction, or as a decimal correct to 3 significant figures.",
+        "payload": {
+          "template": "Probability = {{blank:p}}",
+          "blanks": [
+            {
+              "id": "p",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "p",
+              "accepted": [
+                "15/23"
+              ],
+              "tolerance": 0.0005,
+              "normalise": [
+                "remove_whitespace"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "explanation": "(a) No condition: $\\frac{45}{200} = 0.225$. (b) Given Form 4, use the Form 4 row total: $\\frac{45}{100} = 0.45$. (c) Given Science, use the Science column total: $\\frac{45}{69} = \\frac{15}{23} \\approx 0.652$. Parts (b) and (c) use the same cell but different denominators.",
+    "workedSolution": "1. (a) $\\frac{45}{200}$.\n2. (b) Form 4 row total 100: $\\frac{45}{100}$.\n3. (c) Science column total $24 + 45 = 69$: $\\frac{45}{69} = \\frac{15}{23} \\approx 0.652$ (3 s.f.).",
+    "hints": [
+      "Each part has a different denominator. Which group are you restricted to?"
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "NUMERICAL",
+          "value": "9/40"
+        },
+        "(b)": {
+          "type": "NUMERICAL",
+          "value": "9/20"
+        },
+        "(c)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "p",
+              "text": "15/23"
+            }
+          ]
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "NUMERICAL",
+            "value": "45/100"
+          },
+          "(b)": {
+            "type": "NUMERICAL",
+            "value": "45/200"
+          },
+          "(c)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "p",
+                "text": "45/100"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q12",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 4,
+    "marks": 5,
+    "estimatedSeconds": 420,
+    "stem": "A bag contains 3 red and 5 blue counters. Two counters are taken at random without replacement.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 3,
+        "stem": "Find the probability that the two counters are the same colour. Give your answer as a fraction, or as a decimal correct to 3 significant figures.",
+        "payload": {
+          "template": "P(same colour) = {{blank:p}}",
+          "blanks": [
+            {
+              "id": "p",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "p",
+              "accepted": [
+                "13/28"
+              ],
+              "tolerance": 0.0005,
+              "normalise": [
+                "remove_whitespace"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Given that the two counters are the same colour, find the probability that they are both red. Give your answer as a fraction, or as a decimal correct to 3 significant figures.",
+        "payload": {
+          "template": "Probability = {{blank:p}}",
+          "blanks": [
+            {
+              "id": "p",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "p",
+              "accepted": [
+                "3/13"
+              ],
+              "tolerance": 0.0005,
+              "normalise": [
+                "remove_whitespace"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "explanation": "P(RR) $= \\frac{3}{8} \\times \\frac{2}{7} = \\frac{6}{56}$ and P(BB) $= \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56}$, so P(same colour) $= \\frac{26}{56} = \\frac{13}{28}$. Given the same colour, the probability of two reds is $\\frac{6}{56} \\div \\frac{26}{56} = \\frac{6}{26} = \\frac{3}{13} \\approx 0.231$.",
+    "workedSolution": "1. P(RR) $= \\frac{6}{56}$, P(BB) $= \\frac{20}{56}$. **(M1 M1)**\n2. P(same) $= \\frac{26}{56} = \\frac{13}{28}$. **(A1)**\n3. Given same colour: $\\frac{6}{56} \\div \\frac{26}{56} = \\frac{6}{26} = \\frac{3}{13}$. **(M1 A1)**",
+    "hints": [
+      "Two paths give the same colour: RR and BB.",
+      "Divide P(RR) by P(same colour)."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "p",
+              "text": "13/28"
+            }
+          ]
+        },
+        "(b)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "p",
+              "text": "3/13"
+            }
+          ]
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "p",
+                "text": "6/56"
+              }
+            ]
+          },
+          "(b)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "p",
+                "text": "6/56"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q13",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 4,
+    "marks": 5,
+    "estimatedSeconds": 420,
+    "stem": "A factory in Bulawayo makes torches. 5% of the torches are faulty. A quality check rejects 90% of the faulty torches, but it also wrongly rejects 2% of the torches that are not faulty. A torch is chosen at random.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Find the probability that the torch is faulty and is rejected.",
+        "answerSpec": {
+          "value": 0.045,
+          "units": {
+            "required": false,
+            "accepted": [
+              "(or 4.5%)"
+            ],
+            "conversions": [
+              {
+                "unit": "%",
+                "factor": 0.01
+              },
+              {
+                "unit": "percent",
+                "factor": 0.01
+              }
+            ],
+            "penaltyMarks": 0
+          }
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "Find the probability that the torch is rejected.",
+        "answerSpec": {
+          "value": 0.064,
+          "units": {
+            "required": false,
+            "accepted": [
+              "(or 6.4%)"
+            ],
+            "conversions": [
+              {
+                "unit": "%",
+                "factor": 0.01
+              },
+              {
+                "unit": "percent",
+                "factor": 0.01
+              }
+            ],
+            "penaltyMarks": 0
+          }
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "Given that the torch is rejected, find the probability that it is faulty.",
+        "answerSpec": {
+          "value": 0.703125,
+          "tolerance": {
+            "kind": "absolute",
+            "amount": 0.0005
+          },
+          "units": {
+            "required": false,
+            "accepted": [
+              "(or 70.3125%)"
+            ],
+            "conversions": [
+              {
+                "unit": "%",
+                "factor": 0.01
+              },
+              {
+                "unit": "percent",
+                "factor": 0.01
+              }
+            ],
+            "penaltyMarks": 0
+          }
+        }
+      }
+    ],
+    "explanation": "(a) $0.05 \\times 0.9 = 0.045$. (b) Rejected torches come from two paths: faulty and rejected ($0.045$) and not faulty but rejected ($0.95 \\times 0.02 = 0.019$), total $0.064$. (c) $\\dfrac{0.045}{0.064} = \\dfrac{45}{64} \\approx 0.703$. So about 30% of the rejected torches are actually fine.",
+    "workedSolution": "1. (a) $0.05 \\times 0.9 = 0.045$.\n2. (b) $0.045 + 0.95 \\times 0.02 = 0.045 + 0.019 = 0.064$.\n3. (c) $\\dfrac{0.045}{0.064} \\approx 0.703$ (3 s.f.).",
+    "hints": [
+      "Draw a tree: faulty or not, then rejected or not.",
+      "For (c), divide the probability in (a) by the probability in (b)."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "NUMERICAL",
+          "value": "0.045"
+        },
+        "(b)": {
+          "type": "NUMERICAL",
+          "value": "0.064"
+        },
+        "(c)": {
+          "type": "NUMERICAL",
+          "value": "45/64"
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "NUMERICAL",
+            "value": "0.9"
+          },
+          "(b)": {
+            "type": "NUMERICAL",
+            "value": "0.045"
+          },
+          "(c)": {
+            "type": "NUMERICAL",
+            "value": "0.9"
+          }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true,
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q14",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 5,
+    "marks": 5,
+    "estimatedSeconds": 420,
+    "stem": "A fair dice is rolled twice. Give each answer as a fraction, or as a decimal correct to 3 significant figures.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Find the probability of getting at least one six.",
+        "payload": {
+          "template": "P(at least one six) = {{blank:p}}",
+          "blanks": [
+            {
+              "id": "p",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "p",
+              "accepted": [
+                "11/36"
+              ],
+              "tolerance": 0.0005,
+              "normalise": [
+                "remove_whitespace"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Given that there is at least one six, find the probability that both rolls are sixes.",
+        "payload": {
+          "template": "Probability = {{blank:p}}",
+          "blanks": [
+            {
+              "id": "p",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "p",
+              "accepted": [
+                "1/11"
+              ],
+              "tolerance": 0.00005,
+              "normalise": [
+                "remove_whitespace"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 1,
+        "stem": "Given that the **first** roll is a six, find the probability that both rolls are sixes.",
+        "payload": {
+          "template": "Probability = {{blank:p}}",
+          "blanks": [
+            {
+              "id": "p",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "p",
+              "accepted": [
+                "1/6"
+              ],
+              "tolerance": 0.0005,
+              "normalise": [
+                "remove_whitespace"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "explanation": "(a) $1 - \\left(\\frac{5}{6}\\right)^2 = \\frac{11}{36}$. (b) Of the 11 outcomes with at least one six, only $(6, 6)$ is a double six: $\\frac{1}{11} \\approx 0.0909$. (c) Given the first roll is a six, only the second roll matters: $\\frac{1}{6}$. The two conditions sound similar but give different answers because they restrict to different groups (11 outcomes and 6 outcomes).",
+    "workedSolution": "1. (a) Outcomes with at least one six: $6 + 6 - 1 = 11$, so $\\frac{11}{36}$.\n2. (b) Restrict to those 11; one is $(6, 6)$: $\\frac{1}{11}$.\n3. (c) Restrict to $(6, 1), \\ldots, (6, 6)$: 6 outcomes, one is $(6, 6)$: $\\frac{1}{6}$.",
+    "hints": [
+      "Draw the $6 \\times 6$ grid and circle the outcomes in the given group each time."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "p",
+              "text": "11/36"
+            }
+          ]
+        },
+        "(b)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "p",
+              "text": "1/11"
+            }
+          ]
+        },
+        "(c)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "p",
+              "text": "1/6"
+            }
+          ]
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "p",
+                "text": "1/3"
+              }
+            ]
+          },
+          "(b)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "p",
+                "text": "1/36"
+              }
+            ]
+          },
+          "(c)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "p",
+                "text": "1/36"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true,
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q15",
+    "type": "TRUE_FALSE",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "True or false: in a tree diagram for choosing two counters **without replacement**, the probabilities on the second set of branches are conditional probabilities.",
+    "answerSpec": {
+      "correct": true,
+      "feedbackTrue": "Correct: each second-stage branch gives the probability for the second counter given what the first counter was.",
+      "feedbackFalse": "It is true: the second branches depend on the first outcome, so each is a probability given that outcome."
+    },
+    "explanation": "After the first counter is chosen (and not replaced), the contents of the bag depend on its colour. The branches that follow \"red\" show probabilities given that the first counter was red, and so on.",
+    "hints": [
+      "What do you have to know before you can write the second-stage probabilities?"
+    ],
+    "modelResponse": {
+      "type": "TRUE_FALSE",
+      "value": true
+    },
+    "wrongResponses": [
+      {
+        "type": "TRUE_FALSE",
+        "value": false
+      }
+    ],
+    "skill": "UNDERSTANDING",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q16",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 4,
+    "marks": 4,
+    "estimatedSeconds": 300,
+    "stem": "In a class of 40 learners, 23 sing in the choir ($C$), 15 belong to the drama club ($D$) and 5 do neither.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "Find the number of learners who do both.",
+        "answerSpec": {
+          "value": 3
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "A learner is chosen at random. Given that the learner belongs to the drama club, find the probability that the learner also sings in the choir.",
+        "answerSpec": {
+          "value": 0.2,
+          "units": {
+            "required": false,
+            "accepted": [
+              "(or 20%)"
+            ],
+            "conversions": [
+              {
+                "unit": "%",
+                "factor": 0.01
+              },
+              {
+                "unit": "percent",
+                "factor": 0.01
+              }
+            ],
+            "penaltyMarks": 0
+          }
+        }
+      }
+    ],
+    "explanation": "With $x$ in both: $(23 - x) + x + (15 - x) + 5 = 40$, so $43 - x = 40$ and $x = 3$. Given drama, restrict to the 15 drama learners; 3 of them sing in the choir: $\\frac{3}{15} = \\frac{1}{5}$.",
+    "workedSolution": "1. $(23 - x) + x + (15 - x) + 5 = 40$ gives $x = 3$.\n2. Given drama: $\\frac{3}{15} = \\frac{1}{5} = 0.2$.",
+    "hints": [
+      "Write the Venn diagram regions in terms of $x$."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "NUMERICAL",
+          "value": "3"
+        },
+        "(b)": {
+          "type": "NUMERICAL",
+          "value": "1/5"
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "NUMERICAL",
+            "value": "5"
+          },
+          "(b)": {
+            "type": "NUMERICAL",
+            "value": "3/40"
+          }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q17",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "Ten cards are numbered 1 to 10. A card is chosen at random. Given that the number is greater than 6, find the probability that it is a prime number.",
+    "answerSpec": {
+      "value": 0.25,
+      "units": {
+        "required": false,
+        "accepted": [
+          "(or 25%)"
+        ],
+        "conversions": [
+          {
+            "unit": "%",
+            "factor": 0.01
+          },
+          {
+            "unit": "percent",
+            "factor": 0.01
+          }
+        ],
+        "penaltyMarks": 0
+      }
+    },
+    "explanation": "The numbers greater than 6 are 7, 8, 9 and 10. Only 7 is prime, so the probability is $\\dfrac{1}{4}$.",
+    "workedSolution": "1. Given group: 7, 8, 9, 10.\n2. Prime: 7 only.\n3. $\\dfrac{1}{4} = 0.25$.",
+    "hints": [
+      "List the numbers greater than 6 and pick out the primes."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "1/4"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "4/10"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "1/10"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "2/4"
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q18",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "A survey asks: \"What fraction of the girls in the school own a phone?\" Which probability does this describe, for a learner chosen at random?",
+    "options": [
+      {
+        "key": "A",
+        "content": "The probability that the learner owns a phone, given that the learner is a girl",
+        "correct": true,
+        "rationale": "The group is restricted to girls."
+      },
+      {
+        "key": "B",
+        "content": "The probability that the learner is a girl, given that the learner owns a phone",
+        "rationale": "This restricts to phone owners instead."
+      },
+      {
+        "key": "C",
+        "content": "The probability that the learner is a girl and owns a phone",
+        "rationale": "This divides by all learners, not by the number of girls."
+      },
+      {
+        "key": "D",
+        "content": "The probability that the learner owns a phone",
+        "rationale": "This ignores the restriction to girls."
+      }
+    ],
+    "explanation": "\"What fraction of the girls own a phone\" divides the number of girls with phones by the number of girls, which is the probability of owning a phone given that the learner is a girl.",
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "UNDERSTANDING",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q19",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 4,
+    "marks": 4,
+    "estimatedSeconds": 360,
+    "stem": "Rudo travels to school by bus with probability $0.6$; otherwise she walks. If she takes the bus, the probability that she is late is $0.15$. If she walks, the probability that she is late is $0.05$.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "Find the probability that Rudo is late.",
+        "answerSpec": {
+          "value": 0.11,
+          "units": {
+            "required": false,
+            "accepted": [
+              "(or 11%)"
+            ],
+            "conversions": [
+              {
+                "unit": "%",
+                "factor": 0.01
+              },
+              {
+                "unit": "percent",
+                "factor": 0.01
+              }
+            ],
+            "penaltyMarks": 0
+          }
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Given that Rudo is late, find the probability that she took the bus. Give your answer as a fraction, or as a decimal correct to 3 significant figures.",
+        "payload": {
+          "template": "Probability = {{blank:p}}",
+          "blanks": [
+            {
+              "id": "p",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "p",
+              "accepted": [
+                "9/11"
+              ],
+              "tolerance": 0.0005,
+              "normalise": [
+                "remove_whitespace"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "explanation": "(a) $0.6 \\times 0.15 + 0.4 \\times 0.05 = 0.09 + 0.02 = 0.11$. (b) $\\dfrac{0.09}{0.11} = \\dfrac{9}{11} \\approx 0.818$: most late days happen when she takes the bus.",
+    "workedSolution": "1. (a) P(bus, late) $= 0.09$; P(walk, late) $= 0.02$; P(late) $= 0.11$.\n2. (b) $\\dfrac{\\text{P(bus and late)}}{\\text{P(late)}} = \\dfrac{0.09}{0.11} = \\dfrac{9}{11} \\approx 0.818$ (3 s.f.).",
+    "hints": [
+      "Add the two paths that end in \"late\".",
+      "Then find what fraction of the \"late\" probability comes from the bus path."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "NUMERICAL",
+          "value": "0.11"
+        },
+        "(b)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "p",
+              "text": "9/11"
+            }
+          ]
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "NUMERICAL",
+            "value": "0.2"
+          },
+          "(b)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "p",
+                "text": "0.15"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  },
+  {
+    "key": "probability.conditional.q20",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": [
+      "math.probability.conditional"
+    ],
+    "difficulty": 4,
+    "marks": 2,
+    "estimatedSeconds": 120,
+    "stem": "Two fair coins are tossed. Given that **at least one** coin shows a head, find the probability that both coins show heads. Give your answer as a fraction, or as a decimal correct to 3 significant figures.",
+    "payload": {
+      "template": "Probability = {{blank:p}}",
+      "blanks": [
+        {
+          "id": "p",
+          "input": "number"
+        }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        {
+          "id": "p",
+          "accepted": [
+            "1/3"
+          ],
+          "tolerance": 0.0005,
+          "normalise": [
+            "remove_whitespace"
+          ]
+        }
+      ]
+    },
+    "explanation": "The outcomes with at least one head are HH, HT and TH, which are equally likely. Only HH has two heads, so the probability is $\\frac{1}{3}$. (It is not $\\frac{1}{2}$: the information \"at least one head\" leaves three outcomes, not two.)",
+    "workedSolution": "1. Sample space: HH, HT, TH, TT.\n2. Given at least one head: HH, HT, TH.\n3. Probability $= \\frac{1}{3}$.",
+    "hints": [
+      "List all four outcomes, then cross out the ones that do not fit the given information."
+    ],
+    "modelResponse": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+        {
+          "blankId": "p",
+          "text": "1/3"
+        }
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "p",
+            "text": "1/2"
+          }
+        ]
+      },
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "p",
+            "text": "1/4"
+          }
+        ]
+      }
+    ],
+    "skill": "ANALYSIS",
+    "objectives": [
+      "cambridge/igcse/mathematics:8.4.1"
+    ]
+  }
+]

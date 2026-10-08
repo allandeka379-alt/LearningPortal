@@ -1,0 +1,1438 @@
+[
+  {
+    "key": "coordinate.length-midpoint.q01",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "Which expression gives the midpoint of the line segment joining $(x_1, y_1)$ and $(x_2, y_2)$?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$\\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$",
+        "correct": true,
+        "rationale": "The midpoint is the mean of the $x$-coordinates and the mean of the $y$-coordinates."
+      },
+      {
+        "key": "B",
+        "content": "$\\left(\\frac{x_2 - x_1}{2}, \\frac{y_2 - y_1}{2}\\right)$",
+        "rationale": "Halving the differences gives half the horizontal and vertical changes, not a position."
+      },
+      {
+        "key": "C",
+        "content": "$\\left(\\frac{x_1 + y_1}{2}, \\frac{x_2 + y_2}{2}\\right)$",
+        "rationale": "This mixes $x$- and $y$-coordinates of the same point."
+      },
+      {
+        "key": "D",
+        "content": "$(x_1 + x_2, y_1 + y_2)$",
+        "rationale": "The sums must be divided by 2."
+      }
+    ],
+    "explanation": "Halfway between two numbers is their mean, so the midpoint is $\\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$.",
+    "hints": [
+      "Halfway between two numbers is their average."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "RECALL"
+  },
+  {
+    "key": "coordinate.length-midpoint.q02",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "Which expression gives the length of the line segment joining $(x_1, y_1)$ and $(x_2, y_2)$?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$",
+        "correct": true,
+        "rationale": "Pythagoras' theorem with the horizontal and vertical changes as the shorter sides."
+      },
+      {
+        "key": "B",
+        "content": "$(x_2 - x_1) + (y_2 - y_1)$",
+        "rationale": "Adding the two changes gives the distance along the grid lines, not the straight-line distance."
+      },
+      {
+        "key": "C",
+        "content": "$(x_2 - x_1)^2 + (y_2 - y_1)^2$",
+        "rationale": "This is the length **squared**: take the square root."
+      },
+      {
+        "key": "D",
+        "content": "$\\dfrac{y_2 - y_1}{x_2 - x_1}$",
+        "rationale": "This is the gradient, not the length."
+      }
+    ],
+    "explanation": "The horizontal and vertical changes are the two shorter sides of a right-angled triangle whose hypotenuse is the segment, so by Pythagoras the length is $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+    "hints": [
+      "Think of Pythagoras' theorem."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "RECALL"
+  },
+  {
+    "key": "coordinate.length-midpoint.q03",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 2,
+    "marks": 2,
+    "estimatedSeconds": 75,
+    "stem": "Calculate the length of the line segment joining $A(1, 2)$ and $B(6, 14)$.",
+    "payload": {
+      "unitHint": "units"
+    },
+    "answerSpec": {
+      "value": 13
+    },
+    "explanation": "$AB = \\sqrt{(6 - 1)^2 + (14 - 2)^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$ units.",
+    "workedSolution": "1. Change in $x$: $5$; change in $y$: $12$.\n2. $AB^2 = 5^2 + 12^2 = 169$.\n3. $AB = 13$.",
+    "hints": [
+      "Square the changes in $x$ and $y$, add, then square root."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "13"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "17"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "169"
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true
+  },
+  {
+    "key": "coordinate.length-midpoint.q04",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 2,
+    "marks": 2,
+    "estimatedSeconds": 60,
+    "stem": "Find the midpoint of the line segment joining $(-5, 2)$ and $(3, -8)$.",
+    "payload": {
+      "template": "The midpoint is ( {{blank:x}} , {{blank:y}} ).",
+      "blanks": [
+        {
+          "id": "x",
+          "input": "number"
+        },
+        {
+          "id": "y",
+          "input": "number"
+        }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        {
+          "id": "x",
+          "accepted": [
+            "-1"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "y",
+          "accepted": [
+            "-3"
+          ],
+          "marks": 1
+        }
+      ]
+    },
+    "explanation": "$\\left(\\frac{-5 + 3}{2}, \\frac{2 + (-8)}{2}\\right) = \\left(\\frac{-2}{2}, \\frac{-6}{2}\\right) = (-1, -3)$.",
+    "workedSolution": "1. $x$: $\\frac{-5 + 3}{2} = -1$.\n2. $y$: $\\frac{2 - 8}{2} = -3$.",
+    "hints": [
+      "Add the $x$-coordinates and halve; then do the same for the $y$-coordinates."
+    ],
+    "modelResponse": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+        {
+          "blankId": "x",
+          "text": "-1"
+        },
+        {
+          "blankId": "y",
+          "text": "-3"
+        }
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "x",
+            "text": "4"
+          },
+          {
+            "blankId": "y",
+            "text": "-5"
+          }
+        ]
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "coordinate.length-midpoint.q05",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "What is the midpoint of the segment joining $(2, -3)$ and $(8, 5)$?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$(5, 1)$",
+        "correct": true,
+        "rationale": "$\\frac{2 + 8}{2} = 5$ and $\\frac{-3 + 5}{2} = 1$."
+      },
+      {
+        "key": "B",
+        "content": "$(3, 4)$",
+        "rationale": "These are half the differences, $\\frac{8 - 2}{2}$ and $\\frac{5 - (-3)}{2}$, not the averages."
+      },
+      {
+        "key": "C",
+        "content": "$(10, 2)$",
+        "rationale": "These are the sums: divide each by 2."
+      },
+      {
+        "key": "D",
+        "content": "$(5, 4)$",
+        "rationale": "The $y$-coordinate should be $\\frac{-3 + 5}{2} = 1$; the sign of $-3$ was dropped."
+      }
+    ],
+    "explanation": "Midpoint $= \\left(\\frac{2 + 8}{2}, \\frac{-3 + 5}{2}\\right) = (5, 1)$.",
+    "hints": [
+      "Average the $x$-coordinates and average the $y$-coordinates."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true
+  },
+  {
+    "key": "coordinate.length-midpoint.q06",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 2,
+    "marks": 2,
+    "estimatedSeconds": 90,
+    "stem": "Calculate the length of $PQ$ where $P$ is $(-2, 5)$ and $Q$ is $(4, -2)$. Give your answer correct to 3 significant figures.",
+    "payload": {
+      "unitHint": "units"
+    },
+    "answerSpec": {
+      "value": 9.219544457292887,
+      "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+      },
+      "sigFigs": {
+        "min": 3
+      },
+      "precisionPenaltyMarks": 1
+    },
+    "explanation": "$PQ = \\sqrt{6^2 + (-7)^2} = \\sqrt{85} = 9.2195\\ldots = 9.22$ (3 s.f.).",
+    "workedSolution": "1. Change in $x$: $4 - (-2) = 6$.\n2. Change in $y$: $-2 - 5 = -7$.\n3. $PQ^2 = 36 + 49 = 85$.\n4. $PQ = \\sqrt{85} = 9.22$ (3 s.f.).",
+    "hints": [
+      "$(-7)^2 = +49$."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "9.22"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "13"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "85"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "9.2"
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "coordinate.length-midpoint.q07",
+    "type": "SHORT_ANSWER",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 3,
+    "marks": 2,
+    "estimatedSeconds": 90,
+    "stem": "Find the **exact** length of the line segment joining $(-2, 3)$ and $(4, -3)$. Give your answer as a surd in its simplest form. (Type $\\sqrt{\\ }$ as √ or sqrt.)",
+    "payload": {
+      "maxLength": 30
+    },
+    "answerSpec": {
+      "accepted": [
+        {
+          "value": "6√2"
+        },
+        {
+          "value": "6sqrt2"
+        },
+        {
+          "value": "6sqrt(2)"
+        },
+        {
+          "value": "6√(2)"
+        },
+        {
+          "value": "6root2"
+        },
+        {
+          "value": "6*√2"
+        },
+        {
+          "value": "6×√2"
+        },
+        {
+          "value": "6*sqrt(2)"
+        },
+        {
+          "value": "6*sqrt2"
+        },
+        {
+          "value": "√72",
+          "marks": 1,
+          "feedback": "Correct value, but not in its simplest form: $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+        },
+        {
+          "value": "sqrt72",
+          "marks": 1,
+          "feedback": "Correct value, but not in its simplest form: $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+        },
+        {
+          "value": "sqrt(72)",
+          "marks": 1,
+          "feedback": "Correct value, but not in its simplest form: $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+        },
+        {
+          "value": "√(72)",
+          "marks": 1,
+          "feedback": "Correct value, but not in its simplest form: $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+        },
+        {
+          "value": "2√18",
+          "marks": 1,
+          "feedback": "Correct value, but not in its simplest form: $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+        },
+        {
+          "value": "2sqrt18",
+          "marks": 1,
+          "feedback": "Correct value, but not in its simplest form: $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+        },
+        {
+          "value": "2sqrt(18)",
+          "marks": 1,
+          "feedback": "Correct value, but not in its simplest form: $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+        },
+        {
+          "value": "3√8",
+          "marks": 1,
+          "feedback": "Correct value, but not in its simplest form: $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+        },
+        {
+          "value": "3sqrt8",
+          "marks": 1,
+          "feedback": "Correct value, but not in its simplest form: $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+        },
+        {
+          "value": "3sqrt(8)",
+          "marks": 1,
+          "feedback": "Correct value, but not in its simplest form: $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+        }
+      ],
+      "rejected": [
+        {
+          "value": "8.49",
+          "feedback": "$8.49$ is a rounded decimal. The question asks for the exact value as a surd."
+        }
+      ],
+      "normalise": [
+        "remove_whitespace"
+      ]
+    },
+    "explanation": "The length is $\\sqrt{6^2 + (-6)^2} = \\sqrt{72}$. The largest square factor of 72 is 36, so $\\sqrt{72} = \\sqrt{36} \\times \\sqrt{2} = 6\\sqrt{2}$.",
+    "workedSolution": "1. Changes: $4 - (-2) = 6$ and $-3 - 3 = -6$.\n2. Length$^2 = 6^2 + (-6)^2 = 72$.\n3. $\\sqrt{72} = \\sqrt{36}\\sqrt{2} = 6\\sqrt{2}$.",
+    "hints": [
+      "Find the largest square number that divides 72."
+    ],
+    "modelResponse": {
+      "type": "SHORT_ANSWER",
+      "text": "6√2"
+    },
+    "wrongResponses": [
+      {
+        "type": "SHORT_ANSWER",
+        "text": "8.49"
+      },
+      {
+        "type": "SHORT_ANSWER",
+        "text": "36√2"
+      },
+      {
+        "type": "SHORT_ANSWER",
+        "text": "2√18"
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "coordinate.length-midpoint.q08",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 3,
+    "marks": 2,
+    "estimatedSeconds": 90,
+    "stem": "$M(1, -2)$ is the midpoint of the line segment $AB$. $A$ is the point $(-3, 4)$. Find the coordinates of $B$.",
+    "payload": {
+      "template": "$B$ is ( {{blank:x}} , {{blank:y}} ).",
+      "blanks": [
+        {
+          "id": "x",
+          "input": "number"
+        },
+        {
+          "id": "y",
+          "input": "number"
+        }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        {
+          "id": "x",
+          "accepted": [
+            "5"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "y",
+          "accepted": [
+            "-8"
+          ],
+          "marks": 1
+        }
+      ]
+    },
+    "explanation": "From $A$ to $M$ is $+4$ in $x$ and $-6$ in $y$. The same step again from $M$ gives $B = (5, -8)$. Check: the midpoint of $(-3, 4)$ and $(5, -8)$ is $(1, -2)$.",
+    "workedSolution": "1. $\\frac{-3 + x}{2} = 1 \\Rightarrow x = 5$.\n2. $\\frac{4 + y}{2} = -2 \\Rightarrow y = -8$.",
+    "hints": [
+      "$M$ is halfway, so $B$ is as far beyond $M$ as $A$ is before it."
+    ],
+    "modelResponse": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+        {
+          "blankId": "x",
+          "text": "5"
+        },
+        {
+          "blankId": "y",
+          "text": "-8"
+        }
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "x",
+            "text": "-1"
+          },
+          {
+            "blankId": "y",
+            "text": "1"
+          }
+        ]
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "coordinate.length-midpoint.q09",
+    "type": "TRUE_FALSE",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "True or false: the midpoint of the segment joining $(0, 0)$ and $(6, 10)$ is $(3, 5)$.",
+    "answerSpec": {
+      "correct": true,
+      "feedbackTrue": "Correct: $\\frac{0 + 6}{2} = 3$ and $\\frac{0 + 10}{2} = 5$.",
+      "feedbackFalse": "Average the coordinates: $\\frac{0 + 6}{2} = 3$ and $\\frac{0 + 10}{2} = 5$, so the midpoint is $(3, 5)$."
+    },
+    "explanation": "Midpoint $= \\left(\\frac{0 + 6}{2}, \\frac{0 + 10}{2}\\right) = (3, 5)$.",
+    "hints": [
+      "Halve each coordinate sum."
+    ],
+    "modelResponse": {
+      "type": "TRUE_FALSE",
+      "value": true
+    },
+    "wrongResponses": [
+      {
+        "type": "TRUE_FALSE",
+        "value": false
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true
+  },
+  {
+    "key": "coordinate.length-midpoint.q10",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "What is the distance between $(1, 1)$ and $(4, 5)$?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$5$",
+        "correct": true,
+        "rationale": "$\\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$."
+      },
+      {
+        "key": "B",
+        "content": "$7$",
+        "rationale": "$3 + 4 = 7$ adds the changes instead of using Pythagoras."
+      },
+      {
+        "key": "C",
+        "content": "$25$",
+        "rationale": "$25$ is the distance squared: take the square root."
+      },
+      {
+        "key": "D",
+        "content": "$\\sqrt{7}$",
+        "rationale": "The changes must be squared before adding: $3^2 + 4^2 = 25$."
+      }
+    ],
+    "explanation": "The changes are $4 - 1 = 3$ and $5 - 1 = 4$, so the distance is $\\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+    "hints": [
+      "Use Pythagoras with sides 3 and 4."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "coordinate.length-midpoint.q11",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 4,
+    "marks": 6,
+    "estimatedSeconds": 360,
+    "stem": "$AB$ is a diameter of a circle, where $A$ is $(-2, 1)$ and $B$ is $(4, 9)$.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Find the coordinates of the centre of the circle.",
+        "payload": {
+          "template": "The centre is ( {{blank:x}} , {{blank:y}} ).",
+          "blanks": [
+            {
+              "id": "x",
+              "input": "number"
+            },
+            {
+              "id": "y",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "x",
+              "accepted": [
+                "1"
+              ],
+              "marks": 1
+            },
+            {
+              "id": "y",
+              "accepted": [
+                "5"
+              ],
+              "marks": 1
+            }
+          ]
+        },
+        "explanation": "The centre is the midpoint of the diameter: $\\left(\\frac{-2 + 4}{2}, \\frac{1 + 9}{2}\\right) = (1, 5)$."
+      },
+      {
+        "label": "(b)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "Find the radius of the circle.",
+        "payload": {
+          "unitHint": "units"
+        },
+        "answerSpec": {
+          "value": 5
+        },
+        "explanation": "$AB = \\sqrt{6^2 + 8^2} = 10$, so the radius is $5$."
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Show that the point $(4, 1)$ lies on the circle.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              {
+                "id": "M1",
+                "description": "Calculates the distance from the centre $(1, 5)$ to $(4, 1)$: $\\sqrt{3^2 + (-4)^2}$",
+                "marks": 1
+              },
+              {
+                "id": "A1",
+                "description": "Obtains $5$, equal to the radius, and concludes that the point is on the circle",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        "explanation": "The distance from $(1, 5)$ to $(4, 1)$ is $\\sqrt{9 + 16} = 5$, which equals the radius."
+      }
+    ],
+    "explanation": "The centre is the midpoint $(1, 5)$ of the diameter; $AB = 10$, so the radius is $5$. The point $(4, 1)$ is $\\sqrt{3^2 + 4^2} = 5$ from the centre, so it is on the circle.",
+    "workedSolution": "1. **(a)** $\\left(\\frac{-2 + 4}{2}, \\frac{1 + 9}{2}\\right) = (1, 5)$.\n2. **(b)** $AB = \\sqrt{6^2 + 8^2} = \\sqrt{100} = 10$; radius $= 5$.\n3. **(c)** $\\sqrt{(4 - 1)^2 + (1 - 5)^2} = \\sqrt{25} = 5 =$ radius, so $(4, 1)$ is on the circle.",
+    "hints": [
+      "The centre of a circle is the midpoint of any diameter.",
+      "A point is on the circle if its distance from the centre equals the radius."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "x",
+              "text": "1"
+            },
+            {
+              "blankId": "y",
+              "text": "5"
+            }
+          ]
+        },
+        "(b)": {
+          "type": "NUMERICAL",
+          "value": "5"
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "x",
+                "text": "3"
+              },
+              {
+                "blankId": "y",
+                "text": "4"
+              }
+            ]
+          },
+          "(b)": {
+            "type": "NUMERICAL",
+            "value": "10"
+          }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "coordinate.length-midpoint.q12",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 4,
+    "marks": 7,
+    "estimatedSeconds": 420,
+    "stem": "Triangle $ABC$ has vertices $A(-1, -2)$, $B(3, 4)$ and $C(7, -2)$.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 3,
+        "stem": "Show that triangle $ABC$ is isosceles.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              {
+                "id": "M1",
+                "description": "Uses the length formula for $AB$ or $BC$",
+                "marks": 1
+              },
+              {
+                "id": "A1",
+                "description": "$AB = \\sqrt{52}$ and $BC = \\sqrt{52}$ (or $AB^2 = BC^2 = 52$)",
+                "marks": 1
+              },
+              {
+                "id": "A2",
+                "description": "Concludes that two sides are equal, so the triangle is isosceles",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        "explanation": "$AB = \\sqrt{4^2 + 6^2} = \\sqrt{52}$ and $BC = \\sqrt{4^2 + (-6)^2} = \\sqrt{52}$, so $AB = BC$."
+      },
+      {
+        "label": "(b)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 1,
+        "stem": "Find the coordinates of $M$, the midpoint of $AC$.",
+        "payload": {
+          "template": "$M$ is ( {{blank:x}} , {{blank:y}} ).",
+          "blanks": [
+            {
+              "id": "x",
+              "input": "number"
+            },
+            {
+              "id": "y",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "x",
+              "accepted": [
+                "3"
+              ]
+            },
+            {
+              "id": "y",
+              "accepted": [
+                "-2"
+              ]
+            }
+          ]
+        },
+        "explanation": "$\\left(\\frac{-1 + 7}{2}, \\frac{-2 + (-2)}{2}\\right) = (3, -2)$."
+      },
+      {
+        "label": "(c)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Find the length $BM$.",
+        "payload": {
+          "unitHint": "units"
+        },
+        "answerSpec": {
+          "value": 6
+        },
+        "explanation": "$B(3, 4)$ and $M(3, -2)$ have the same $x$-coordinate, so $BM = 4 - (-2) = 6$."
+      },
+      {
+        "label": "(d)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "Hence find the area of triangle $ABC$.",
+        "payload": {
+          "unitHint": "square units"
+        },
+        "answerSpec": {
+          "value": 24
+        },
+        "explanation": "In an isosceles triangle the line from the apex to the midpoint of the base is perpendicular to the base. Area $= \\frac{1}{2} \\times AC \\times BM = \\frac{1}{2} \\times 8 \\times 6 = 24$."
+      }
+    ],
+    "explanation": "$AB = BC = \\sqrt{52}$, so the triangle is isosceles with base $AC = 8$. The midpoint of the base is $M(3, -2)$, and $BM = 6$ is the height, so the area is $\\frac{1}{2} \\times 8 \\times 6 = 24$ square units.",
+    "workedSolution": "1. **(a)** $AB^2 = 4^2 + 6^2 = 52$, $BC^2 = 4^2 + (-6)^2 = 52$, so $AB = BC$: isosceles.\n2. **(b)** $M = (3, -2)$.\n3. **(c)** $BM = 4 - (-2) = 6$.\n4. **(d)** Area $= \\frac{1}{2} \\times 8 \\times 6 = 24$ square units.",
+    "hints": [
+      "Compare the lengths of $AB$ and $BC$.",
+      "$AC$ is horizontal, and $BM$ is vertical."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(b)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "x",
+              "text": "3"
+            },
+            {
+              "blankId": "y",
+              "text": "-2"
+            }
+          ]
+        },
+        "(c)": {
+          "type": "NUMERICAL",
+          "value": "6"
+        },
+        "(d)": {
+          "type": "NUMERICAL",
+          "value": "24"
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(b)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "x",
+                "text": "4"
+              },
+              {
+                "blankId": "y",
+                "text": "0"
+              }
+            ]
+          },
+          "(c)": {
+            "type": "NUMERICAL",
+            "value": "2"
+          },
+          "(d)": {
+            "type": "NUMERICAL",
+            "value": "48"
+          }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "coordinate.length-midpoint.q13",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 4,
+    "marks": 3,
+    "estimatedSeconds": 180,
+    "stem": "The distance from the point $(k, 2)$ to the point $(5, -4)$ is $10$ units, and $k < 0$. Find the value of $k$.",
+    "payload": {
+      "answerPrefix": "k ="
+    },
+    "answerSpec": {
+      "value": -3
+    },
+    "explanation": "$(5 - k)^2 + (-4 - 2)^2 = 100$, so $(5 - k)^2 = 64$ and $5 - k = \\pm 8$. This gives $k = -3$ or $k = 13$; since $k < 0$, $k = -3$.",
+    "workedSolution": "1. $(5 - k)^2 + (-6)^2 = 10^2$ **(M1)**\n2. $(5 - k)^2 = 64$, so $5 - k = 8$ or $5 - k = -8$ **(M1)**\n3. $k = -3$ or $k = 13$; $k < 0$ gives $k = -3$ **(A1)**.",
+    "hints": [
+      "Write the distance formula with $k$ in it and square both sides.",
+      "Remember a square root can be positive or negative."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "-3"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "13"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "-13"
+      }
+    ],
+    "skill": "ANALYSIS"
+  },
+  {
+    "key": "coordinate.length-midpoint.q14",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 75,
+    "stem": "The midpoint of $AB$ is $M(3, -1)$, and $A$ is $(7, 2)$. What are the coordinates of $B$?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$(-1, -4)$",
+        "correct": true,
+        "rationale": "$\\frac{7 + x}{2} = 3$ gives $x = -1$; $\\frac{2 + y}{2} = -1$ gives $y = -4$."
+      },
+      {
+        "key": "B",
+        "content": "$(5, 0.5)$",
+        "rationale": "This is the midpoint of $A$ and $M$, not the other end of the segment."
+      },
+      {
+        "key": "C",
+        "content": "$(11, 5)$",
+        "rationale": "This steps away from $A$ in the wrong direction (from $M$ through $A$)."
+      },
+      {
+        "key": "D",
+        "content": "$(-4, -3)$",
+        "rationale": "This is the step from $A$ to $M$, not a point."
+      }
+    ],
+    "explanation": "From $A(7, 2)$ to $M(3, -1)$ is $-4$ in $x$ and $-3$ in $y$. Repeating the step from $M$ gives $B = (3 - 4, -1 - 3) = (-1, -4)$.",
+    "hints": [
+      "$B$ is as far past $M$ as $A$ is before it."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "coordinate.length-midpoint.q15",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 3,
+    "marks": 4,
+    "estimatedSeconds": 240,
+    "stem": "On a surveyor's map, one unit represents one kilometre. A new borehole is at $(3, 1)$ and a clinic at $(15, 6)$.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "Calculate the length of a straight pipe from the borehole to the clinic.",
+        "payload": {
+          "unitHint": "km"
+        },
+        "answerSpec": {
+          "value": 13,
+          "units": {
+            "required": false,
+            "accepted": [
+              "km",
+              "kilometres",
+              "kilometers"
+            ]
+          }
+        },
+        "explanation": "$\\sqrt{12^2 + 5^2} = \\sqrt{169} = 13$ km."
+      },
+      {
+        "label": "(b)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "A pump station is to be built halfway along the pipe. Find its coordinates.",
+        "payload": {
+          "template": "The pump station is at ( {{blank:x}} , {{blank:y}} ).",
+          "blanks": [
+            {
+              "id": "x",
+              "input": "number"
+            },
+            {
+              "id": "y",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "x",
+              "accepted": [
+                "9"
+              ],
+              "marks": 1
+            },
+            {
+              "id": "y",
+              "accepted": [
+                "3.5"
+              ],
+              "marks": 1
+            }
+          ]
+        },
+        "explanation": "$\\left(\\frac{3 + 15}{2}, \\frac{1 + 6}{2}\\right) = (9, 3.5)$."
+      }
+    ],
+    "explanation": "The pipe is the hypotenuse of a right-angled triangle with sides 12 km and 5 km, so it is 13 km long. Its midpoint is $(9, 3.5)$.",
+    "workedSolution": "1. **(a)** $\\sqrt{(15 - 3)^2 + (6 - 1)^2} = \\sqrt{144 + 25} = 13$ km.\n2. **(b)** $\\left(\\frac{18}{2}, \\frac{7}{2}\\right) = (9, 3.5)$.",
+    "hints": [
+      "Use the length formula, then the midpoint formula."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "NUMERICAL",
+          "value": "13"
+        },
+        "(b)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "x",
+              "text": "9"
+            },
+            {
+              "blankId": "y",
+              "text": "3.5"
+            }
+          ]
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "NUMERICAL",
+            "value": "17"
+          },
+          "(b)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "x",
+                "text": "6"
+              },
+              {
+                "blankId": "y",
+                "text": "2.5"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true
+  },
+  {
+    "key": "coordinate.length-midpoint.q16",
+    "type": "TRUE_FALSE",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "True or false: the distance between $(-1, -2)$ and $(2, 2)$ is $7$ units.",
+    "answerSpec": {
+      "correct": false,
+      "feedbackTrue": "$7 = 3 + 4$ adds the changes. By Pythagoras the distance is $\\sqrt{3^2 + 4^2} = 5$.",
+      "feedbackFalse": "Correct: the distance is $\\sqrt{3^2 + 4^2} = 5$, not $7$."
+    },
+    "explanation": "The changes are $2 - (-1) = 3$ and $2 - (-2) = 4$, so the distance is $\\sqrt{9 + 16} = 5$ units. Adding the changes ($3 + 4 = 7$) gives the distance along the grid lines, not the straight-line distance.",
+    "hints": [
+      "Use Pythagoras."
+    ],
+    "modelResponse": {
+      "type": "TRUE_FALSE",
+      "value": false
+    },
+    "wrongResponses": [
+      {
+        "type": "TRUE_FALSE",
+        "value": true
+      }
+    ],
+    "skill": "UNDERSTANDING"
+  },
+  {
+    "key": "coordinate.length-midpoint.q17",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 4,
+    "marks": 1,
+    "estimatedSeconds": 90,
+    "stem": "$B$ is the point $(5, 12)$. Which of these points is the same distance from the origin as $B$?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$(12, -5)$",
+        "correct": true,
+        "rationale": "$\\sqrt{144 + 25} = 13$, the same as $OB = \\sqrt{25 + 144} = 13$."
+      },
+      {
+        "key": "B",
+        "content": "$(10, 3)$",
+        "rationale": "$\\sqrt{100 + 9} = \\sqrt{109} \\approx 10.4$: the sums $10 + 3$ and $5 + 12$ do not decide distance."
+      },
+      {
+        "key": "C",
+        "content": "$(8, 7)$",
+        "rationale": "$\\sqrt{64 + 49} = \\sqrt{113} \\approx 10.6$, not $13$."
+      },
+      {
+        "key": "D",
+        "content": "$(17, 0)$",
+        "rationale": "This is $17$ from the origin: $5 + 12 = 17$ adds the coordinates instead of using Pythagoras."
+      }
+    ],
+    "explanation": "$OB = \\sqrt{5^2 + 12^2} = \\sqrt{169} = 13$. For $(12, -5)$: $\\sqrt{12^2 + (-5)^2} = \\sqrt{169} = 13$. The other points are $\\sqrt{109}$, $\\sqrt{113}$ and $17$ from the origin.",
+    "hints": [
+      "Work out the distance of each point from $(0, 0)$."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "ANALYSIS"
+  },
+  {
+    "key": "coordinate.length-midpoint.q18",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 3,
+    "marks": 3,
+    "estimatedSeconds": 150,
+    "stem": "A triangle has vertices $(0, 0)$, $(6, 0)$ and $(6, 8)$. Calculate its perimeter.",
+    "payload": {
+      "unitHint": "units"
+    },
+    "answerSpec": {
+      "value": 24
+    },
+    "explanation": "The sides are $6$ (horizontal), $8$ (vertical) and $\\sqrt{6^2 + 8^2} = 10$ (from $(0, 0)$ to $(6, 8)$). Perimeter $= 6 + 8 + 10 = 24$ units.",
+    "workedSolution": "1. Horizontal side: $6 - 0 = 6$.\n2. Vertical side: $8 - 0 = 8$.\n3. Third side: $\\sqrt{6^2 + 8^2} = 10$.\n4. Perimeter $= 24$ units.",
+    "hints": [
+      "Two sides are along grid lines; use Pythagoras for the third."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "24"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "14"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "28"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "24.5"
+      }
+    ],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "coordinate.length-midpoint.q19",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 5,
+    "marks": 7,
+    "estimatedSeconds": 480,
+    "stem": "The points $P(-1, 1)$, $Q(3, 4)$ and $R(6, 0)$ are the vertices of a triangle.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Find $PQ$.",
+        "payload": {
+          "unitHint": "units"
+        },
+        "answerSpec": {
+          "value": 5
+        },
+        "explanation": "$\\sqrt{4^2 + 3^2} = 5$."
+      },
+      {
+        "label": "(b)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Find $QR$.",
+        "payload": {
+          "unitHint": "units"
+        },
+        "answerSpec": {
+          "value": 5
+        },
+        "explanation": "$\\sqrt{3^2 + (-4)^2} = 5$."
+      },
+      {
+        "label": "(c)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Find $PR^2$.",
+        "answerSpec": {
+          "value": 50
+        },
+        "explanation": "$7^2 + (-1)^2 = 50$."
+      },
+      {
+        "label": "(d)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Show that triangle $PQR$ has a right angle, and state at which vertex.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              {
+                "id": "M1",
+                "description": "Uses the converse of Pythagoras: $PQ^2 + QR^2 = 25 + 25 = 50 = PR^2$",
+                "marks": 1
+              },
+              {
+                "id": "A1",
+                "description": "Concludes the right angle is at $Q$ (opposite the longest side $PR$)",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        "explanation": "$PQ^2 + QR^2 = 50 = PR^2$, so the angle opposite $PR$, at $Q$, is $90^\\circ$."
+      },
+      {
+        "label": "(e)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "Calculate the area of the triangle.",
+        "payload": {
+          "unitHint": "square units"
+        },
+        "answerSpec": {
+          "value": 12.5
+        },
+        "explanation": "The right angle is at $Q$, so $PQ$ and $QR$ are perpendicular: area $= \\frac{1}{2} \\times 5 \\times 5 = 12.5$."
+      }
+    ],
+    "explanation": "$PQ = QR = 5$ and $PR^2 = 50$. Since $5^2 + 5^2 = 50$, the converse of Pythagoras' theorem shows the angle at $Q$ is a right angle, so the area is $\\frac{1}{2} \\times 5 \\times 5 = 12.5$ square units.",
+    "workedSolution": "1. **(a)** $PQ = \\sqrt{16 + 9} = 5$.\n2. **(b)** $QR = \\sqrt{9 + 16} = 5$.\n3. **(c)** $PR^2 = 49 + 1 = 50$.\n4. **(d)** $25 + 25 = 50$, so $\\angle PQR = 90^\\circ$.\n5. **(e)** $\\frac{1}{2} \\times 5 \\times 5 = 12.5$ square units.",
+    "hints": [
+      "If $a^2 + b^2 = c^2$ for the three sides, the triangle is right-angled.",
+      "The right angle is opposite the longest side."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "NUMERICAL",
+          "value": "5"
+        },
+        "(b)": {
+          "type": "NUMERICAL",
+          "value": "5"
+        },
+        "(c)": {
+          "type": "NUMERICAL",
+          "value": "50"
+        },
+        "(e)": {
+          "type": "NUMERICAL",
+          "value": "12.5"
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "NUMERICAL",
+            "value": "7"
+          },
+          "(b)": {
+            "type": "NUMERICAL",
+            "value": "1"
+          },
+          "(c)": {
+            "type": "NUMERICAL",
+            "value": "48"
+          },
+          "(e)": {
+            "type": "NUMERICAL",
+            "value": "25"
+          }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "coordinate.length-midpoint.q20",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.coordinate.length-and-midpoint"
+    ],
+    "difficulty": 3,
+    "marks": 2,
+    "estimatedSeconds": 90,
+    "stem": "$M(4, -2)$ is the midpoint of the line segment joining $(k, 3)$ and $(10, -7)$. Find the value of $k$.",
+    "payload": {
+      "answerPrefix": "k ="
+    },
+    "answerSpec": {
+      "value": -2
+    },
+    "explanation": "$\\frac{k + 10}{2} = 4$, so $k + 10 = 8$ and $k = -2$. (The $y$-coordinates check: $\\frac{3 + (-7)}{2} = -2$.)",
+    "workedSolution": "1. $\\frac{k + 10}{2} = 4$.\n2. $k + 10 = 8$.\n3. $k = -2$.",
+    "hints": [
+      "Use the $x$-coordinate part of the midpoint formula."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "-2"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "7"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "-6"
+      }
+    ],
+    "skill": "APPLICATION"
+  }
+]

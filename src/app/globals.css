@@ -1,0 +1,498 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens (§37 design, §29 mobile-first, §43 accessibility).
+ *
+ * Layers of tokens:
+ *   1. Brand ramps: Zambezi (primary, deep teal-blue), Msasa (accent, warm amber/copper), Granite (warm neutrals).
+ *      Only these colours exist; Tailwind's default palette is removed so nobody can reach for `bg-blue-500`.
+ *   2. Semantic tokens that switch per theme: bg, surface, text, muted, border, primary, accent, success, warning,
+ *      danger, info, focus, mastery-1…5. COMPONENTS USE SEMANTIC TOKENS ONLY (`bg-surface`, `text-muted`,
+ *      `border-border`, `bg-primary text-on-primary`, `text-danger-text`, ...).
+ *
+ * Theme: <html data-theme="system|light|dark">. "system" follows prefers-color-scheme. The root layout sets the
+ * attribute server-side from the `dz_theme` cookie, so there is no flash of the wrong theme. Use the `dark:`
+ * variant only for the rare case a semantic token can't express; it honours both the explicit and system modes.
+ * Font scaling: <html data-font-scale="sm|md|lg|xl"> scales the root font-size; all sizing is in rem.
+ *
+ * WCAG contrast (computed with the WCAG 2.x relative-luminance formula; AA = 4.5 text, 3.0 UI/large text):
+ *   LIGHT                                          DARK
+ *   text      #25221F on bg #F8F6F3     14.67      text      #F8F6F3 on bg #1C1A17          16.10
+ *   text      #25221F on surface #FFF   15.82      text      #F8F6F3 on surface #25221F     14.67
+ *   muted     #696661 on bg              5.30      muted     #A4A19C on bg                   6.74
+ *   muted     #696661 on surface         5.72      muted     #A4A19C on surface              6.15
+ *   muted     #696661 on subtle #F0EDE9  4.90      muted     #A4A19C on raised #2E2B27       5.47
+ *   border-strong #83807B on surface     3.93 UI   border-strong #83807B on surface        4.02 UI
+ *   on-primary #FFF on primary #135568   8.31      on-primary #051D25 on primary #91CCDF   9.85
+ *   primary (as text) on bg              7.70      primary (as text) on bg                 9.84
+ *   on-accent #1C1A17 on accent #D9822A  5.93      on-accent #1C1A17 on accent #ED9D49     7.87
+ *   accent-text #9F501C on surface       5.77      accent-text #F8B975 on surface          9.18
+ *   success-text #1E7F4F on soft #E7F9ED 4.56      success-text #69D094 on soft #152C1E    7.83
+ *   danger-text #B42318 on soft #FFEFED  5.89      danger-text #F7857D on soft #3B1C1A     6.30
+ *   warning-text #B54708 on soft #FFF3DF 4.95      warning-text #F7A062 on soft #3A2312    7.11
+ *   on-danger #FFF on danger #B42318     6.57      on-danger #FFF on danger #C9302D        5.32
+ *   focus ring #117089 on bg             5.26 UI   focus ring #91CCDF on bg                9.84 UI
+ *   mastery 1-5 label on fill: 10.49 / 9.85 / 4.59 / 5.67 / 11.75   (dark: 10.09 / 8.31 / 4.59 / 9.85 / 14.92)
+ * Rule of thumb: `text-accent` is NOT AA as body text in light mode — use `text-accent-text` for amber text.
+ */
+
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where([data-theme="system"], [data-theme="system"] *) {
+      @slot;
+    }
+  }
+}
+
+/* Brand ramps — static (always emitted) because semantic tokens reference them. */
+@theme static {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Zambezi — primary. 600 #117089 and 800 #0C3D4C are the brand anchors. */
+  --color-zambezi-50: #eef9fc;
+  --color-zambezi-100: #daf2f8;
+  --color-zambezi-200: #bae3f0;
+  --color-zambezi-300: #91ccdf;
+  --color-zambezi-400: #65adc5;
+  --color-zambezi-500: #3b8da7;
+  --color-zambezi-600: #117089;
+  --color-zambezi-700: #135568;
+  --color-zambezi-800: #0c3d4c;
+  --color-zambezi-900: #092e39;
+  --color-zambezi-950: #051d25;
+
+  /* Msasa — accent (spring msasa leaves). Use sparingly: highlights, streaks, one CTA per view. */
+  --color-msasa-50: #fef6ea;
+  --color-msasa-100: #feeace;
+  --color-msasa-200: #fdd5a4;
+  --color-msasa-300: #f8b975;
+  --color-msasa-400: #ed9d49;
+  --color-msasa-500: #d9822a;
+  --color-msasa-600: #bc661e;
+  --color-msasa-700: #9f501c;
+  --color-msasa-800: #803f1b;
+  --color-msasa-900: #643118;
+  --color-msasa-950: #3c1c0f;
+
+  /* Granite — warm neutrals. */
+  --color-granite-50: #f8f6f3;
+  --color-granite-100: #f0ede9;
+  --color-granite-200: #e2dfdb;
+  --color-granite-300: #cdcac5;
+  --color-granite-400: #a4a19c;
+  --color-granite-500: #83807b;
+  --color-granite-600: #696661;
+  --color-granite-700: #4f4d48;
+  --color-granite-800: #393632;
+  --color-granite-850: #2e2b27;
+  --color-granite-900: #25221f;
+  --color-granite-950: #1c1a17;
+}
+
+/* Semantic colours — light values. Static so `var(--color-*)` in inline styles (e.g. SVG strokes) always resolves. */
+@theme static {
+  --color-bg: var(--color-granite-50);
+  --color-surface: var(--color-white);
+  --color-surface-raised: var(--color-white);
+  --color-subtle: var(--color-granite-100);
+  --color-track: var(--color-granite-200);
+  --color-text: var(--color-granite-900);
+  --color-muted: var(--color-granite-600);
+  --color-border: var(--color-granite-200);
+  --color-border-strong: var(--color-granite-500);
+  --color-overlay: rgb(28 26 23 / 0.5);
+  --color-focus: var(--color-zambezi-600);
+
+  --color-primary: var(--color-zambezi-700);
+  --color-primary-hover: var(--color-zambezi-800);
+  --color-on-primary: var(--color-white);
+  --color-primary-soft: var(--color-zambezi-50);
+  --color-primary-soft-hover: var(--color-zambezi-100);
+  --color-on-primary-soft: var(--color-zambezi-800);
+
+  --color-accent: var(--color-msasa-500);
+  --color-accent-hover: var(--color-msasa-400);
+  --color-on-accent: var(--color-granite-950);
+  --color-accent-soft: var(--color-msasa-50);
+  --color-accent-text: var(--color-msasa-700);
+  --color-on-accent-soft: var(--color-msasa-800);
+
+  /* Feedback colours are reserved for marking results and status. */
+  --color-success: #1e7f4f;
+  --color-on-success: var(--color-white);
+  --color-success-soft: #e7f9ed;
+  --color-success-text: #1e7f4f;
+  --color-warning: #b54708;
+  --color-on-warning: var(--color-white);
+  --color-warning-soft: #fff3df;
+  --color-warning-text: #b54708;
+  --color-danger: #b42318;
+  --color-danger-hover: #912018;
+  --color-on-danger: var(--color-white);
+  --color-danger-soft: #ffefed;
+  --color-danger-text: #b42318;
+  --color-info: var(--color-zambezi-600);
+  --color-info-soft: var(--color-zambezi-50);
+  --color-info-text: var(--color-zambezi-800);
+
+  /* Mastery ramp (§11): sequential primary hue, weakest → strongest. ALWAYS paired with the band label. */
+  --color-mastery-1: var(--color-zambezi-200);
+  --color-mastery-2: var(--color-zambezi-300);
+  --color-mastery-3: var(--color-zambezi-500);
+  --color-mastery-4: var(--color-zambezi-600);
+  --color-mastery-5: var(--color-zambezi-800);
+  --color-on-mastery-1: var(--color-zambezi-900);
+  --color-on-mastery-2: var(--color-zambezi-950);
+  --color-on-mastery-3: var(--color-zambezi-950);
+  --color-on-mastery-4: var(--color-white);
+  --color-on-mastery-5: var(--color-white);
+  --color-mastery-marker: var(--color-msasa-600);
+}
+
+@theme {
+  /* ---- Typography: Plus Jakarta Sans (next/font variable --font-jakarta) with a system fallback ---- */
+  --font-sans:
+    var(--font-jakarta, ui-sans-serif), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  /* Tailwind's default rem scale (xs 0.75 … 6xl 3.75) with tightened tracking/leading on display sizes. */
+  --text-2xl--letter-spacing: -0.01em;
+  --text-3xl--letter-spacing: -0.015em;
+  --text-4xl--line-height: 1.15;
+  --text-4xl--letter-spacing: -0.02em;
+  --text-5xl--line-height: 1.08;
+  --text-5xl--letter-spacing: -0.025em;
+  --text-6xl--line-height: 1.04;
+  --text-6xl--letter-spacing: -0.03em;
+
+  /* ---- Shape & depth (subtle, warm-tinted) ---- */
+  --radius-control: 0.625rem;
+  --radius-card: 1rem;
+  --shadow-xs: 0 1px 2px 0 rgb(28 26 23 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(28 26 23 / 0.07), 0 1px 2px -1px rgb(28 26 23 / 0.05);
+  --shadow-md: 0 4px 12px -2px rgb(28 26 23 / 0.08), 0 2px 4px -2px rgb(28 26 23 / 0.05);
+  --shadow-lg: 0 16px 40px -12px rgb(28 26 23 / 0.18), 0 4px 10px -4px rgb(28 26 23 / 0.08);
+
+  /* ---- Layout ---- */
+  --container-reading: 42rem;
+  --container-page: 76rem;
+
+  /* ---- Motion (all neutralised under prefers-reduced-motion) ---- */
+  --animate-fade-in: dz-fade-in 160ms var(--ease-out) both;
+  --animate-dialog-in: dz-dialog-in 180ms var(--ease-out) both;
+  --animate-sheet-up: dz-sheet-up 220ms var(--ease-out) both;
+  --animate-sheet-left: dz-sheet-left 220ms var(--ease-out) both;
+  --animate-sheet-right: dz-sheet-right 220ms var(--ease-out) both;
+
+  @keyframes dz-fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes dz-dialog-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.5rem) scale(0.98);
+    }
+  }
+  @keyframes dz-sheet-up {
+    from {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes dz-sheet-left {
+    from {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes dz-sheet-right {
+    from {
+      transform: translateX(100%);
+    }
+  }
+}
+
+/*
+ * Theme switching. Token lists are written out per selector on purpose: flat selectors work in every browser
+ * without relying on CSS nesting being lowered by the build. KEEP THE THREE DARK/LIGHT LISTS IN SYNC.
+ *
+ * `[data-theme]` also works on any element as a "theme island", e.g. a dark call-to-action band:
+ *   <section data-theme="dark" class="bg-bg text-text">…</section>
+ * (Prefer tokens over the `dark:` variant inside islands; `dark:` follows the nearest dark ancestor only.)
+ */
+@layer base {
+  :root,
+  [data-theme="light"] {
+    color-scheme: light;
+  }
+
+  /* Light island inside a dark page (the :root defaults come from @theme above). */
+  [data-theme="light"] {
+    --color-bg: var(--color-granite-50);
+    --color-surface: var(--color-white);
+    --color-surface-raised: var(--color-white);
+    --color-subtle: var(--color-granite-100);
+    --color-track: var(--color-granite-200);
+    --color-text: var(--color-granite-900);
+    --color-muted: var(--color-granite-600);
+    --color-border: var(--color-granite-200);
+    --color-border-strong: var(--color-granite-500);
+    --color-overlay: rgb(28 26 23 / 0.5);
+    --color-focus: var(--color-zambezi-600);
+    --color-primary: var(--color-zambezi-700);
+    --color-primary-hover: var(--color-zambezi-800);
+    --color-on-primary: var(--color-white);
+    --color-primary-soft: var(--color-zambezi-50);
+    --color-primary-soft-hover: var(--color-zambezi-100);
+    --color-on-primary-soft: var(--color-zambezi-800);
+    --color-accent: var(--color-msasa-500);
+    --color-accent-hover: var(--color-msasa-400);
+    --color-on-accent: var(--color-granite-950);
+    --color-accent-soft: var(--color-msasa-50);
+    --color-accent-text: var(--color-msasa-700);
+    --color-on-accent-soft: var(--color-msasa-800);
+    --color-success: #1e7f4f;
+    --color-on-success: var(--color-white);
+    --color-success-soft: #e7f9ed;
+    --color-success-text: #1e7f4f;
+    --color-warning: #b54708;
+    --color-on-warning: var(--color-white);
+    --color-warning-soft: #fff3df;
+    --color-warning-text: #b54708;
+    --color-danger: #b42318;
+    --color-danger-hover: #912018;
+    --color-on-danger: var(--color-white);
+    --color-danger-soft: #ffefed;
+    --color-danger-text: #b42318;
+    --color-info: var(--color-zambezi-600);
+    --color-info-soft: var(--color-zambezi-50);
+    --color-info-text: var(--color-zambezi-800);
+    --color-mastery-1: var(--color-zambezi-200);
+    --color-mastery-2: var(--color-zambezi-300);
+    --color-mastery-3: var(--color-zambezi-500);
+    --color-mastery-4: var(--color-zambezi-600);
+    --color-mastery-5: var(--color-zambezi-800);
+    --color-on-mastery-1: var(--color-zambezi-900);
+    --color-on-mastery-2: var(--color-zambezi-950);
+    --color-on-mastery-3: var(--color-zambezi-950);
+    --color-on-mastery-4: var(--color-white);
+    --color-on-mastery-5: var(--color-white);
+    --color-mastery-marker: var(--color-msasa-600);
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --color-bg: var(--color-granite-950);
+    --color-surface: var(--color-granite-900);
+    --color-surface-raised: var(--color-granite-850);
+    --color-subtle: var(--color-granite-850);
+    --color-track: var(--color-granite-800);
+    --color-text: var(--color-granite-50);
+    --color-muted: var(--color-granite-400);
+    --color-border: var(--color-granite-800);
+    --color-border-strong: var(--color-granite-500);
+    --color-overlay: rgb(0 0 0 / 0.6);
+    --color-focus: var(--color-zambezi-300);
+    --color-primary: var(--color-zambezi-300);
+    --color-primary-hover: var(--color-zambezi-200);
+    --color-on-primary: var(--color-zambezi-950);
+    --color-primary-soft: var(--color-zambezi-900);
+    --color-primary-soft-hover: var(--color-zambezi-800);
+    --color-on-primary-soft: var(--color-zambezi-100);
+    --color-accent: var(--color-msasa-400);
+    --color-accent-hover: var(--color-msasa-300);
+    --color-on-accent: var(--color-granite-950);
+    --color-accent-soft: var(--color-msasa-950);
+    --color-accent-text: var(--color-msasa-300);
+    --color-on-accent-soft: var(--color-msasa-200);
+    --color-success: #69d094;
+    --color-on-success: var(--color-granite-950);
+    --color-success-soft: #152c1e;
+    --color-success-text: #69d094;
+    --color-warning: #f7a062;
+    --color-on-warning: var(--color-granite-950);
+    --color-warning-soft: #3a2312;
+    --color-warning-text: #f7a062;
+    --color-danger: #c9302d;
+    --color-danger-hover: #b42318;
+    --color-on-danger: var(--color-white);
+    --color-danger-soft: #3b1c1a;
+    --color-danger-text: #f7857d;
+    --color-info: var(--color-zambezi-300);
+    --color-info-soft: var(--color-zambezi-900);
+    --color-info-text: var(--color-zambezi-200);
+    /* Reversed so stronger mastery stays the more salient (lighter) colour on dark surfaces. */
+    --color-mastery-1: var(--color-zambezi-800);
+    --color-mastery-2: var(--color-zambezi-700);
+    --color-mastery-3: var(--color-zambezi-500);
+    --color-mastery-4: var(--color-zambezi-300);
+    --color-mastery-5: var(--color-zambezi-100);
+    --color-on-mastery-1: var(--color-zambezi-100);
+    --color-on-mastery-2: var(--color-white);
+    --color-on-mastery-3: var(--color-zambezi-950);
+    --color-on-mastery-4: var(--color-zambezi-950);
+    --color-on-mastery-5: var(--color-zambezi-950);
+    --color-mastery-marker: var(--color-msasa-400);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root[data-theme="system"] {
+      color-scheme: dark;
+      --color-bg: var(--color-granite-950);
+      --color-surface: var(--color-granite-900);
+      --color-surface-raised: var(--color-granite-850);
+      --color-subtle: var(--color-granite-850);
+      --color-track: var(--color-granite-800);
+      --color-text: var(--color-granite-50);
+      --color-muted: var(--color-granite-400);
+      --color-border: var(--color-granite-800);
+      --color-border-strong: var(--color-granite-500);
+      --color-overlay: rgb(0 0 0 / 0.6);
+      --color-focus: var(--color-zambezi-300);
+      --color-primary: var(--color-zambezi-300);
+      --color-primary-hover: var(--color-zambezi-200);
+      --color-on-primary: var(--color-zambezi-950);
+      --color-primary-soft: var(--color-zambezi-900);
+      --color-primary-soft-hover: var(--color-zambezi-800);
+      --color-on-primary-soft: var(--color-zambezi-100);
+      --color-accent: var(--color-msasa-400);
+      --color-accent-hover: var(--color-msasa-300);
+      --color-on-accent: var(--color-granite-950);
+      --color-accent-soft: var(--color-msasa-950);
+      --color-accent-text: var(--color-msasa-300);
+      --color-on-accent-soft: var(--color-msasa-200);
+      --color-success: #69d094;
+      --color-on-success: var(--color-granite-950);
+      --color-success-soft: #152c1e;
+      --color-success-text: #69d094;
+      --color-warning: #f7a062;
+      --color-on-warning: var(--color-granite-950);
+      --color-warning-soft: #3a2312;
+      --color-warning-text: #f7a062;
+      --color-danger: #c9302d;
+      --color-danger-hover: #b42318;
+      --color-on-danger: var(--color-white);
+      --color-danger-soft: #3b1c1a;
+      --color-danger-text: #f7857d;
+      --color-info: var(--color-zambezi-300);
+      --color-info-soft: var(--color-zambezi-900);
+      --color-info-text: var(--color-zambezi-200);
+      --color-mastery-1: var(--color-zambezi-800);
+      --color-mastery-2: var(--color-zambezi-700);
+      --color-mastery-3: var(--color-zambezi-500);
+      --color-mastery-4: var(--color-zambezi-300);
+      --color-mastery-5: var(--color-zambezi-100);
+      --color-on-mastery-1: var(--color-zambezi-100);
+      --color-on-mastery-2: var(--color-white);
+      --color-on-mastery-3: var(--color-zambezi-950);
+      --color-on-mastery-4: var(--color-zambezi-950);
+      --color-on-mastery-5: var(--color-zambezi-950);
+      --color-mastery-marker: var(--color-msasa-400);
+    }
+  }
+
+  /* Font scaling (§43). Percentages keep the user's browser font-size preference in the calculation. */
+  html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  html[data-font-scale="sm"] {
+    font-size: 93.75%;
+  }
+  html[data-font-scale="lg"] {
+    font-size: 112.5%;
+  }
+  html[data-font-scale="xl"] {
+    font-size: 125%;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+
+  ::placeholder {
+    color: var(--color-muted);
+    opacity: 1;
+  }
+  ::selection {
+    background-color: var(--color-primary-soft-hover);
+  }
+
+  /* One focus style everywhere; outline (not box-shadow) so it survives Windows High Contrast / forced colours. */
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+  /* The skip-link target (<main tabindex="-1">) shouldn't draw a ring around the whole page. Deliberately narrow:
+     roving-tabindex widgets (tabs, menus) also use tabindex="-1" and must keep their focus ring. */
+  main[tabindex="-1"]:focus {
+    outline: none;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary {
+    cursor: pointer;
+  }
+
+  /* Anchor targets land below sticky headers. */
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+
+  /* Lift toasts above the mobile bottom tab bar (AppShell marks it with data-tabbar; hidden from lg up). */
+  :root:has([data-tabbar]) {
+    --toast-offset: 4rem;
+  }
+  @media (min-width: 64rem) {
+    :root:has([data-tabbar]) {
+      --toast-offset: 0px;
+    }
+  }
+}
+
+/* Respect reduced motion globally (§29). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Hide scrollbars on intentionally scrollable strips (tab lists) while keeping them scrollable (incl. old Safari). */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

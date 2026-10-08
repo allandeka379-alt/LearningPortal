@@ -1,0 +1,793 @@
+[
+  {
+    "key": "plant-nutrition.photosynthesis.q01",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "Which gas is released by a leaf as a by-product of photosynthesis?",
+    "options": [
+      { "key": "A", "content": "Carbon dioxide", "rationale": "Carbon dioxide is a raw material: it is taken in, not released, during photosynthesis." },
+      { "key": "B", "content": "Oxygen", "correct": true, "rationale": "Oxygen is released when carbon dioxide and water are converted into glucose." },
+      { "key": "C", "content": "Nitrogen", "rationale": "Nitrogen gas is neither used nor produced in photosynthesis." },
+      { "key": "D", "content": "Water vapour", "rationale": "Water vapour leaves the leaf by transpiration; it is not a product of photosynthesis." }
+    ],
+    "explanation": "In photosynthesis carbon dioxide and water are converted into glucose, and oxygen is released as a by-product. The oxygen diffuses out of the leaf through the stomata.",
+    "hints": ["Write out the word equation. What is made besides glucose?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] }],
+    "skill": "RECALL",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q02",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "In which part of a palisade mesophyll cell does photosynthesis take place?",
+    "options": [
+      { "key": "A", "content": "Chloroplast", "correct": true, "rationale": "Chloroplasts contain chlorophyll, which absorbs the light energy for photosynthesis." },
+      { "key": "B", "content": "Mitochondrion", "rationale": "Mitochondria are where aerobic respiration releases energy, not where glucose is made." },
+      { "key": "C", "content": "Nucleus", "rationale": "The nucleus contains the genetic material that controls the cell; it does not trap light." },
+      { "key": "D", "content": "Vacuole", "rationale": "The vacuole stores cell sap and keeps the cell turgid; it has no chlorophyll." }
+    ],
+    "explanation": "Photosynthesis happens in the chloroplasts. They contain chlorophyll, which absorbs light energy and transfers it into chemical energy in glucose.",
+    "hints": ["Which organelle contains the green pigment?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "RECALL",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q03",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "A leaf that contains starch is decolourised and then covered with iodine solution. What colour does the leaf turn?",
+    "options": [
+      { "key": "A", "content": "Blue-black", "correct": true, "rationale": "Iodine solution turns blue-black when starch is present." },
+      { "key": "B", "content": "Orange-brown", "rationale": "Orange-brown is the colour of the iodine solution itself, so it means that no starch is present." },
+      { "key": "C", "content": "Brick-red", "rationale": "A brick-red precipitate is a positive Benedict's test for reducing sugars, not the iodine test." },
+      { "key": "D", "content": "Purple", "rationale": "Purple is a positive biuret test for protein." }
+    ],
+    "explanation": "Iodine solution is orange-brown. It turns blue-black when it reacts with starch, so a blue-black leaf contains starch.",
+    "hints": ["Orange-brown is the colour of iodine solution before it reacts."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "RECALL"
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q04",
+    "type": "SHORT_ANSWER",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "Name the gas that diffuses into a leaf through the stomata and is used as a raw material in photosynthesis.",
+    "payload": { "maxLength": 60 },
+    "answerSpec": {
+      "accepted": [{ "value": "carbon dioxide" }, { "value": "CO2" }, { "value": "carbondioxide" }],
+      "patterns": ["^(?:gas )?(?:carbon ?dioxide|co2)(?: gas)?(?: co2)?$"],
+      "rejected": [
+        { "value": "oxygen", "feedback": "Oxygen is released by photosynthesis. The gas taken in is carbon dioxide." },
+        { "value": "carbon monoxide", "feedback": "Carbon monoxide is a poisonous gas. Photosynthesis uses carbon dioxide." }
+      ],
+      "normalise": ["strip_punctuation", "strip_articles"]
+    },
+    "explanation": "Carbon dioxide diffuses from the air into the leaf through the stomata and then through the air spaces to the mesophyll cells, where it is combined with water to make glucose.",
+    "hints": ["Plants take this gas in during the day and animals breathe it out."],
+    "modelResponse": { "type": "SHORT_ANSWER", "text": "Carbon dioxide" },
+    "wrongResponses": [{ "type": "SHORT_ANSWER", "text": "oxygen" }, { "type": "SHORT_ANSWER", "text": "carbon monoxide" }],
+    "skill": "RECALL"
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q05",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 2,
+    "marks": 2,
+    "estimatedSeconds": 75,
+    "stem": "Complete the description of photosynthesis. Write one word in each gap.",
+    "payload": {
+      "template": "Photosynthesis is driven by {{blank:energy}} energy, which is absorbed by a green pigment called {{blank:pigment}}. The plant combines carbon dioxide with {{blank:raw}} to make glucose and releases {{blank:gas}} as a by-product.",
+      "blanks": [
+        { "id": "energy", "input": "text" },
+        { "id": "pigment", "input": "text" },
+        { "id": "raw", "input": "text" },
+        { "id": "gas", "input": "text" }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        { "id": "energy", "accepted": ["light", "sunlight", "light energy", "solar"] },
+        { "id": "pigment", "accepted": ["chlorophyll", "chlorophyl"] },
+        { "id": "raw", "accepted": ["water", "H2O"] },
+        { "id": "gas", "accepted": ["oxygen", "O2", "oxygen gas"] }
+      ]
+    },
+    "explanation": "Light energy is absorbed by chlorophyll in the chloroplasts and used to combine carbon dioxide and water into glucose. Oxygen is released as a by-product.",
+    "hints": ["The word equation is carbon dioxide + water → glucose + oxygen."],
+    "modelResponse": { "type": "FILL_IN_THE_BLANK", "blanks": [{ "blankId": "energy", "text": "light" }, { "blankId": "pigment", "text": "chlorophyll" }, { "blankId": "raw", "text": "water" }, { "blankId": "gas", "text": "oxygen" }] },
+    "wrongResponses": [{ "type": "FILL_IN_THE_BLANK", "blanks": [{ "blankId": "energy", "text": "heat" }, { "blankId": "pigment", "text": "chloroplast" }, { "blankId": "raw", "text": "oxygen" }, { "blankId": "gas", "text": "carbon dioxide" }] }],
+    "skill": "RECALL"
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q06",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "During the starch test on a leaf, the leaf is placed in hot ethanol. What is the purpose of this step?",
+    "options": [
+      { "key": "A", "content": "To dissolve the chlorophyll so that the colour change with iodine can be seen", "correct": true, "rationale": "Hot ethanol removes the green colour, which would otherwise hide a blue-black or orange-brown result." },
+      { "key": "B", "content": "To soften the leaf so that it can be spread flat", "rationale": "Ethanol makes the leaf brittle. The leaf is softened afterwards by dipping it in warm water." },
+      { "key": "C", "content": "To break the starch down into glucose so that iodine can detect it", "rationale": "Iodine detects starch itself, and ethanol does not digest starch." },
+      { "key": "D", "content": "To test whether the leaf contains glucose", "rationale": "Ethanol is not a test reagent here; glucose is tested with Benedict's solution." }
+    ],
+    "explanation": "Chlorophyll dissolves in hot ethanol, so the leaf turns white. Without this step the dark green colour of the leaf would hide the colour of the iodine test.",
+    "hints": ["Think about what makes it hard to see a colour change on a green leaf."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "UNDERSTANDING",
+    "examStyle": true,
+    "dailyEligible": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q07",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 40,
+    "stem": "A plant converts some of the glucose it makes into another carbohydrate to build the walls of new cells. Which carbohydrate is this?",
+    "options": [
+      { "key": "A", "content": "Cellulose", "correct": true, "rationale": "Cellulose fibres make up plant cell walls." },
+      { "key": "B", "content": "Starch", "rationale": "Starch is an energy store, not a building material for cell walls." },
+      { "key": "C", "content": "Sucrose", "rationale": "Sucrose is the soluble sugar carried in the phloem." },
+      { "key": "D", "content": "Glycogen", "rationale": "Glycogen is the storage carbohydrate of animals and fungi, not plants." }
+    ],
+    "explanation": "Glucose is converted into cellulose, which forms the strong fibres of plant cell walls. Starch is for storage and sucrose is for transport.",
+    "hints": ["Which carbohydrate gives plant cell walls their strength?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "RECALL",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q08",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 50,
+    "stem": "Before an experiment on photosynthesis, a potted bean plant is kept in a dark cupboard for 48 hours. Why is this done?",
+    "options": [
+      { "key": "A", "content": "So that the plant uses up the starch already in its leaves", "correct": true, "rationale": "This destarches the leaves, so any starch found later was made during the experiment." },
+      { "key": "B", "content": "So that the stomata open fully before the experiment", "rationale": "Stomata close in the dark; they open in the light." },
+      { "key": "C", "content": "So that the leaves make extra chlorophyll", "rationale": "Plants need light to make chlorophyll; darkness does not increase it." },
+      { "key": "D", "content": "So that the leaves store extra carbon dioxide for the experiment", "rationale": "In the dark the plant only respires, so it gives out carbon dioxide rather than storing it." }
+    ],
+    "explanation": "In the dark the plant cannot photosynthesise, so it uses up the starch in its leaves. This is called destarching. If starch is found at the end of the experiment, it must have been made during the experiment.",
+    "hints": ["What does a plant use when it cannot photosynthesise?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "UNDERSTANDING",
+    "examStyle": true,
+    "dailyEligible": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q09",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "A variegated plant has leaves with green areas and white areas. The plant is destarched, placed in bright light for six hours, and then one leaf is tested with iodine solution. Which result is expected?",
+    "options": [
+      { "key": "A", "content": "The green areas turn blue-black and the white areas stay orange-brown", "correct": true, "rationale": "Only the green areas have chlorophyll, so only they make starch." },
+      { "key": "B", "content": "The whole leaf turns blue-black", "rationale": "The white areas have no chlorophyll, so they cannot photosynthesise and make starch." },
+      { "key": "C", "content": "The whole leaf stays orange-brown", "rationale": "The green areas were in bright light with chlorophyll, so they made starch." },
+      { "key": "D", "content": "The white areas turn blue-black and the green areas stay orange-brown", "rationale": "This is the wrong way round: starch is made where chlorophyll is present." }
+    ],
+    "explanation": "Chlorophyll is needed to absorb light energy. The green areas photosynthesise and store starch (blue-black); the white areas have no chlorophyll, so they stay the orange-brown colour of the iodine solution.",
+    "hints": ["Which areas of the leaf contain chlorophyll?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["D"] }],
+    "skill": "APPLICATION",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q10",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "Which is the balanced chemical equation for photosynthesis?",
+    "options": [
+      { "key": "A", "content": "$\\ce{6CO2 + 6H2O -> C6H12O6 + 6O2}$", "correct": true, "rationale": "Six carbon, twelve hydrogen and eighteen oxygen atoms on each side." },
+      { "key": "B", "content": "$\\ce{C6H12O6 + 6O2 -> 6CO2 + 6H2O}$", "rationale": "This is the equation for aerobic respiration, the reverse process." },
+      { "key": "C", "content": "$\\ce{6CO2 + 6H2O -> C6H12O6 + 3O2}$", "rationale": "Not balanced: there are 18 oxygen atoms on the left but only 12 on the right." },
+      { "key": "D", "content": "$\\ce{CO2 + H2O -> C6H12O6 + O2}$", "rationale": "Not balanced: there is one carbon atom on the left and six on the right." }
+    ],
+    "explanation": "Six molecules of carbon dioxide react with six molecules of water to form one molecule of glucose and six molecules of oxygen. Check: carbon 6 = 6; hydrogen 12 = 12; oxygen 12 + 6 = 18 on the left and 6 + 12 = 18 on the right. (Cambridge Supplement.)",
+    "hints": ["Count the oxygen atoms on each side of the arrow.", "Respiration is the reverse of photosynthesis."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }, { "type": "MULTIPLE_CHOICE", "optionKeys": ["C"] }],
+    "skill": "RECALL",
+    "examStyle": true,
+    "applies": ["cambridge"]
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q11",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "In which form is most carbohydrate carried from the leaves of a maize plant to the grains developing in its cob?",
+    "options": [
+      { "key": "A", "content": "Sucrose", "correct": true, "rationale": "Sucrose is soluble and is the main sugar transported in the phloem." },
+      { "key": "B", "content": "Starch", "rationale": "Starch is insoluble, so it cannot be carried in solution; it is the storage form in the grain." },
+      { "key": "C", "content": "Cellulose", "rationale": "Cellulose is an insoluble structural carbohydrate in cell walls." },
+      { "key": "D", "content": "Glycogen", "rationale": "Plants do not make glycogen; it is the storage carbohydrate of animals and fungi." }
+    ],
+    "explanation": "Glucose made in the leaves is converted to sucrose, which is carried in the phloem to the grains. There it is converted to starch for storage.",
+    "hints": ["The transported form must be soluble."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q12",
+    "type": "MATCHING",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 2,
+    "marks": 4,
+    "estimatedSeconds": 100,
+    "stem": "Match each substance made from the products of photosynthesis with its use in the plant.",
+    "payload": {
+      "left": [
+        { "id": "starch", "content": "Starch" },
+        { "id": "cellulose", "content": "Cellulose" },
+        { "id": "sucrose", "content": "Sucrose" },
+        { "id": "nectar", "content": "Nectar" }
+      ],
+      "right": [
+        { "id": "u1", "content": "An insoluble energy store in leaves and seeds" },
+        { "id": "u2", "content": "Builds the walls of new cells" },
+        { "id": "u3", "content": "Carried in the phloem to other parts of the plant" },
+        { "id": "u4", "content": "Attracts insects to flowers" },
+        { "id": "u5", "content": "Supplies the magnesium needed to make chlorophyll" }
+      ],
+      "shuffle": true
+    },
+    "answerSpec": {
+      "pairs": [
+        { "leftId": "starch", "rightId": "u1" },
+        { "leftId": "cellulose", "rightId": "u2" },
+        { "leftId": "sucrose", "rightId": "u3" },
+        { "leftId": "nectar", "rightId": "u4" }
+      ],
+      "marksPerPair": 1
+    },
+    "explanation": "Starch is the insoluble store, cellulose builds cell walls, sucrose is the transport sugar in the phloem and sugary nectar attracts pollinating insects. Magnesium is a mineral ion absorbed from the soil; it is not made from glucose.",
+    "hints": ["Which of these is the form carried around the plant, and which is the store?"],
+    "modelResponse": { "type": "MATCHING", "pairs": [{ "leftId": "starch", "rightId": "u1" }, { "leftId": "cellulose", "rightId": "u2" }, { "leftId": "sucrose", "rightId": "u3" }, { "leftId": "nectar", "rightId": "u4" }] },
+    "wrongResponses": [{ "type": "MATCHING", "pairs": [{ "leftId": "starch", "rightId": "u3" }, { "leftId": "cellulose", "rightId": "u2" }, { "leftId": "sucrose", "rightId": "u1" }, { "leftId": "nectar", "rightId": "u4" }] }],
+    "skill": "RECALL"
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q13",
+    "type": "TRUE_FALSE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "True or false: plants carry out photosynthesis during the day and respiration only at night.",
+    "answerSpec": {
+      "correct": false,
+      "feedbackTrue": "Not quite: plants respire all the time, day and night. In bright light they photosynthesise faster than they respire, which hides their respiration.",
+      "feedbackFalse": "Correct: plants respire all the time. Photosynthesis happens only in the light, but respiration never stops."
+    },
+    "explanation": "Every living cell respires all the time to release energy. A plant photosynthesises only in the light; in bright light photosynthesis is faster than respiration, so the plant takes in carbon dioxide overall.",
+    "hints": ["Do plant cells need energy at midday as well as at midnight?"],
+    "modelResponse": { "type": "TRUE_FALSE", "value": false },
+    "wrongResponses": [{ "type": "TRUE_FALSE", "value": true }],
+    "skill": "UNDERSTANDING",
+    "dailyEligible": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q14",
+    "type": "TRUE_FALSE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 40,
+    "stem": "True or false: one reason why plants store starch rather than glucose is that starch is insoluble, so it does not draw water into cells by osmosis.",
+    "answerSpec": {
+      "correct": true,
+      "feedbackTrue": "Correct: insoluble starch has no osmotic effect, whereas a large amount of dissolved glucose would draw water into the cell.",
+      "feedbackFalse": "The statement is true. Starch is insoluble, so storing it does not change the concentration of the cell sap or cause water to enter by osmosis."
+    },
+    "explanation": "Glucose is soluble: storing large amounts would make the cell sap very concentrated and water would enter by osmosis. Starch is insoluble, compact and cannot diffuse out of the cell, so it is a better store.",
+    "hints": ["Which of the two dissolves in water?"],
+    "modelResponse": { "type": "TRUE_FALSE", "value": true },
+    "wrongResponses": [{ "type": "TRUE_FALSE", "value": false }],
+    "skill": "UNDERSTANDING"
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q15",
+    "type": "NUMERICAL",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 2,
+    "marks": 2,
+    "estimatedSeconds": 90,
+    "stem": "A leaf from a variegated plant has a total area of 60 cm². The white parts of the leaf have an area of 15 cm². The plant was destarched and then left in bright light for six hours before the leaf was tested with iodine solution.\n\nWhat percentage of the leaf area would you expect to turn blue-black?",
+    "payload": { "unitHint": "%" },
+    "answerSpec": { "value": 75, "tolerance": { "kind": "absolute", "amount": 0.5 } },
+    "explanation": "Only the green parts contain chlorophyll, so only they make starch. The green area is 60 − 15 = 45 cm², which is 75% of the leaf.",
+    "workedSolution": "1. Only green areas photosynthesise, so only they turn blue-black.\n2. Green area = 60 − 15 = 45 cm².\n3. Percentage = 45 ÷ 60 × 100 = 75%.",
+    "hints": ["Which areas of the leaf can make starch?", "Work out the green area first."],
+    "modelResponse": { "type": "NUMERICAL", "value": "75" },
+    "wrongResponses": [{ "type": "NUMERICAL", "value": "25" }, { "type": "NUMERICAL", "value": "45" }],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q16",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 4,
+    "marks": 1,
+    "estimatedSeconds": 90,
+    "stem": "Four leaves on destarched plants were each enclosed in a clear bag and treated as shown. The plants were left in bright light for six hours, then each leaf was tested for starch.\n\n| Leaf | Leaf colour | Light | Inside the bag |\n| --- | --- | --- | --- |\n| W | green | uncovered | a dish of water |\n| X | green | covered with foil | a dish of water |\n| Y | green | uncovered | a dish of soda lime |\n| Z | white (no chlorophyll) | uncovered | a dish of water |\n\nWhich two leaves should be compared to show that carbon dioxide is needed for photosynthesis?",
+    "options": [
+      { "key": "A", "content": "W and Y", "correct": true, "rationale": "These differ only in carbon dioxide: soda lime removes it from the bag around Y." },
+      { "key": "B", "content": "X and Y", "rationale": "These differ in two factors (light and carbon dioxide), so the result could not be explained by carbon dioxide alone." },
+      { "key": "C", "content": "W and X", "rationale": "These differ only in light, so they show that light is needed." },
+      { "key": "D", "content": "Y and Z", "rationale": "These differ in both chlorophyll and carbon dioxide." }
+    ],
+    "explanation": "A fair comparison changes only one factor. W and Y are both green, both uncovered and both in bags; the only difference is the soda lime, which absorbs carbon dioxide. W is the control.",
+    "hints": ["Find the pair that differs in only one factor.", "Soda lime absorbs carbon dioxide."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q17",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 4,
+    "marks": 1,
+    "estimatedSeconds": 75,
+    "stem": "A strip of foil was clipped over both surfaces of a variegated leaf on a destarched plant, covering some green and some white areas. After six hours in bright light the leaf was tested with iodine solution. Which areas turned blue-black?",
+    "options": [
+      { "key": "A", "content": "Only the green areas that were not covered", "correct": true, "rationale": "These are the only areas with both chlorophyll and light." },
+      { "key": "B", "content": "All the green areas, whether covered or not", "rationale": "The covered green areas received no light, so they could not photosynthesise." },
+      { "key": "C", "content": "All the uncovered areas, whether green or white", "rationale": "The white areas have no chlorophyll, so they cannot photosynthesise even in light." },
+      { "key": "D", "content": "Only the white areas that were covered", "rationale": "These areas had neither light nor chlorophyll." }
+    ],
+    "explanation": "Photosynthesis needs both chlorophyll and light. Only the uncovered green areas had both, so only they made starch and turned blue-black.",
+    "hints": ["An area needs two things to make starch here."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }, { "type": "MULTIPLE_CHOICE", "optionKeys": ["C"] }],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q18",
+    "type": "STRUCTURED",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 3,
+    "marks": 6,
+    "estimatedSeconds": 420,
+    "stem": "Rudo tests a leaf from a bean plant for starch. She uses boiling water, ethanol, warm water and iodine solution.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "In which order should Rudo use the four liquids?",
+        "options": [
+          { "key": "A", "content": "boiling water, ethanol, warm water, iodine solution", "correct": true, "rationale": "Kill the cells, remove the chlorophyll, soften the leaf, then test." },
+          { "key": "B", "content": "ethanol, boiling water, iodine solution, warm water", "rationale": "The cells are killed in boiling water first, and iodine is always added last." },
+          { "key": "C", "content": "boiling water, iodine solution, ethanol, warm water", "rationale": "Adding iodine before removing the chlorophyll means the green colour hides the result." },
+          { "key": "D", "content": "iodine solution, boiling water, ethanol, warm water", "rationale": "Iodine cannot reach the starch inside living cells, and the later steps would wash it off." }
+        ]
+      },
+      {
+        "label": "(b)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 1,
+        "stem": "Explain why the leaf is placed in boiling water first.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "B1", "description": "Kills the cells / stops all reactions (enzymes denatured), OR breaks down the cell membranes so that iodine solution can reach the starch", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Rudo turns off the Bunsen burner before she stands the tube of ethanol in the hot water. Explain why.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "C1", "description": "Ethanol is flammable / catches fire easily", "marks": 1 },
+              { "id": "C2", "description": "A naked flame could ignite the ethanol (vapour); the hot water heats the ethanol safely without a flame", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(d)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "State the colour of the leaf after adding iodine solution if starch is present.",
+        "answerSpec": {
+          "keywords": { "any": ["black", "blueblack", "dark blue"] },
+          "rejected": [{ "value": "blue", "feedback": "Starch gives a blue-black (very dark) colour: write blue-black." }],
+          "normalise": ["strip_punctuation"]
+        }
+      },
+      {
+        "label": "(e)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "State the colour of the leaf after adding iodine solution if starch is absent.",
+        "answerSpec": {
+          "keywords": { "any": ["orange", "brown", "yellow", "orangebrown", "yellowbrown", "redbrown", "reddishbrown", "amber"] },
+          "normalise": ["strip_punctuation"]
+        }
+      }
+    ],
+    "explanation": "The order is boiling water (kills cells and breaks membranes), hot ethanol in a water bath (removes chlorophyll), warm water (softens the brittle leaf), then iodine solution: blue-black if starch is present, orange-brown if not. Ethanol is flammable, so it is heated in hot water with the flame turned off.",
+    "workedSolution": "**(a)** A: boiling water, ethanol, warm water, iodine solution.\n\n**(b)** To kill the cells and break down their membranes so that iodine can reach the starch.\n\n**(c)** Ethanol is flammable; with no flame nearby the hot water heats it safely.\n\n**(d)** Blue-black.\n\n**(e)** Orange-brown (the colour of iodine solution).",
+    "hints": ["Think about the reason for each step, not just its name.", "Which liquid in the list catches fire easily?"],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+        "(d)": { "type": "SHORT_ANSWER", "text": "blue-black" },
+        "(e)": { "type": "SHORT_ANSWER", "text": "orange-brown" }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["C"] },
+          "(d)": { "type": "SHORT_ANSWER", "text": "brown" },
+          "(e)": { "type": "SHORT_ANSWER", "text": "blue-black" }
+        }
+      }
+    ],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q19",
+    "type": "STRUCTURED",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 4,
+    "marks": 7,
+    "estimatedSeconds": 540,
+    "stem": "Tatenda wants to show that light is needed for photosynthesis. He keeps a potted bean plant in a dark cupboard for 48 hours. He then folds a piece of aluminium foil over both surfaces of one leaf. A T-shape has been cut out of the foil on the upper surface, so light can reach the leaf only through the T. He places the plant in bright sunlight for six hours and then tests that leaf for starch.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Explain why Tatenda kept the plant in the dark for 48 hours before the experiment.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "A1", "description": "To destarch the leaves / so that the plant uses up the starch already stored in them", "marks": 1 },
+              { "id": "A2", "description": "So that any starch found at the end must have been made during the experiment (in the light)", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "Which result is expected when the leaf is tested?",
+        "options": [
+          { "key": "A", "content": "Only the T-shaped area turns blue-black; the rest of the leaf stays orange-brown", "correct": true, "rationale": "Only the T-shaped area received light, so only it made starch." },
+          { "key": "B", "content": "The T-shaped area stays orange-brown and the rest of the leaf turns blue-black", "rationale": "This is reversed: the covered parts had no light, so they could not make starch." },
+          { "key": "C", "content": "The whole leaf turns blue-black", "rationale": "The foil stopped light reaching most of the leaf, so no starch was made there." },
+          { "key": "D", "content": "The whole leaf stays orange-brown", "rationale": "The T-shaped area was in bright light and has chlorophyll, so it made starch." }
+        ]
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "Name the independent variable in Tatenda's experiment.",
+        "answerSpec": {
+          "keywords": { "any": ["light", "sunlight", "foil"] },
+          "normalise": ["strip_punctuation"]
+        }
+      },
+      {
+        "label": "(d)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Identify the control in this experiment and explain why it is needed.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "D1", "description": "The T-shaped area of the same leaf, which received light (or an uncovered leaf on the same plant)", "marks": 1 },
+              { "id": "D2", "description": "For comparison: it shows that the leaf can make starch when light is present, so the lack of starch under the foil is caused by the lack of light", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(e)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 1,
+        "stem": "Suggest why the foil covered both surfaces of the leaf, not just the upper surface.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "E1", "description": "Light could reach the covered area through the lower surface, so some photosynthesis (and starch) could still occur there", "marks": 1 }
+            ]
+          }
+        }
+      }
+    ],
+    "explanation": "Destarching makes sure that any starch found was made during the experiment. Light is the only factor changed (the independent variable): only the T-shaped area received light, so only it made starch and turned blue-black, while the covered parts stayed orange-brown. The lit T-shaped area is the control for the covered parts.",
+    "workedSolution": "**(a)** The plant uses up its stored starch in the dark, so any starch present at the end was made in the light during the experiment.\n\n**(b)** A.\n\n**(c)** Light (whether or not light reaches that part of the leaf).\n\n**(d)** The T-shaped area that received light (or an uncovered leaf); comparing with it shows that the missing starch under the foil is due to the lack of light.\n\n**(e)** Light could otherwise enter through the lower surface and the covered parts could still photosynthesise.",
+    "hints": ["A control is identical except for the factor being tested.", "What would happen to light falling on the lower surface?"],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(b)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+        "(c)": { "type": "SHORT_ANSWER", "text": "light" }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(b)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] },
+          "(c)": { "type": "SHORT_ANSWER", "text": "starch" }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q20",
+    "type": "STRUCTURED",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 4,
+    "marks": 7,
+    "estimatedSeconds": 540,
+    "stem": "Two destarched potted plants, A and B, are each enclosed in a clear polythene bag and placed in bright light for six hours. Bag A also contains a dish of potassium hydroxide solution. Bag B contains a dish of sodium hydrogencarbonate solution instead. A leaf from each plant is then tested for starch.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "What is the purpose of the potassium hydroxide solution?",
+        "options": [
+          { "key": "A", "content": "It absorbs carbon dioxide from the air in the bag", "correct": true, "rationale": "Removing carbon dioxide tests whether it is needed for photosynthesis." },
+          { "key": "B", "content": "It absorbs oxygen from the air in the bag", "rationale": "Potassium hydroxide solution absorbs carbon dioxide, not oxygen." },
+          { "key": "C", "content": "It releases carbon dioxide for the plant to use", "rationale": "That is the job of the sodium hydrogencarbonate solution in bag B; potassium hydroxide does the opposite and removes carbon dioxide." },
+          { "key": "D", "content": "It keeps the air in the bag warm", "rationale": "The solution does not heat the bag; temperature is kept the same for both plants." }
+        ]
+      },
+      {
+        "label": "(b)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "Which leaf or leaves will turn blue-black with iodine solution?",
+        "options": [
+          { "key": "A", "content": "The leaf from plant B only", "correct": true, "rationale": "Only plant B had carbon dioxide, so only it could photosynthesise and make starch." },
+          { "key": "B", "content": "The leaf from plant A only", "rationale": "Plant A had no carbon dioxide, so it could not make starch." },
+          { "key": "C", "content": "The leaves from both plants", "rationale": "Plant A lacked carbon dioxide and was destarched, so its leaf has no starch." },
+          { "key": "D", "content": "Neither leaf", "rationale": "Plant B had light, water, chlorophyll and carbon dioxide, so it made starch." }
+        ]
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Explain why plant B was also enclosed in a polythene bag.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "C1", "description": "So that the only difference between A and B is the presence of carbon dioxide (a fair test, B is the control)", "marks": 1 },
+              { "id": "C2", "description": "The bag itself may change other conditions (such as humidity, temperature or light reaching the leaves), so these must be the same for both plants", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(d)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Explain the result for the leaf from plant A.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "D1", "description": "The potassium hydroxide solution absorbed the carbon dioxide, so plant A could not photosynthesise", "marks": 1 },
+              { "id": "D2", "description": "So no glucose was made to convert into starch, and the leaf had no starch at the start because it was destarched", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(e)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 1,
+        "stem": "Potassium hydroxide solution is corrosive. State one safety precaution when handling it.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "E1", "description": "Any one: wear eye protection (goggles); wear gloves; avoid skin contact and wash any splashes off with plenty of water; wash hands after use", "marks": 1 }
+            ]
+          }
+        }
+      }
+    ],
+    "explanation": "Potassium hydroxide solution absorbs carbon dioxide, so plant A cannot photosynthesise and its destarched leaf stays orange-brown. Plant B is the control: it is in an identical bag, and the sodium hydrogencarbonate solution makes sure it has carbon dioxide, so its leaf turns blue-black. Carbon dioxide is therefore needed for photosynthesis.",
+    "workedSolution": "**(a)** A: it absorbs carbon dioxide.\n\n**(b)** A: only plant B's leaf turns blue-black.\n\n**(c)** So that the only difference between the two plants is the carbon dioxide; any effect of the bag (humidity, temperature, light) is the same for both.\n\n**(d)** The potassium hydroxide absorbed the carbon dioxide, so no photosynthesis, no glucose and no starch; the leaf had been destarched.\n\n**(e)** For example, wear eye protection.",
+    "hints": ["What does potassium hydroxide solution remove from the air?", "A control should differ in one factor only."],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+        "(b)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] },
+          "(b)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["C"] }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q21",
+    "type": "STRUCTURED",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 3,
+    "marks": 5,
+    "estimatedSeconds": 330,
+    "stem": "A maize plant makes glucose in its leaves by photosynthesis. Some of this glucose is later stored in the grains on the cob.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "Name the carbohydrate that is stored in maize grains.",
+        "answerSpec": {
+          "accepted": [{ "value": "starch" }],
+          "rejected": [
+            { "value": "glucose", "feedback": "Glucose is soluble and is converted to another carbohydrate for storage." },
+            { "value": "sucrose", "feedback": "Sucrose is the form carried in the phloem, not the store in the grain." }
+          ],
+          "normalise": ["strip_punctuation", "strip_articles"]
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Explain two advantages to the plant of storing carbohydrate in this form rather than as glucose.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "B1", "description": "Starch is insoluble, so it does not affect osmosis / does not draw water into the cells", "marks": 1 },
+              { "id": "B2", "description": "Starch is compact (a lot is stored in a small space) OR cannot diffuse out of the cells OR is unreactive, so it stays in the store", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "marks": 1,
+        "stem": "To make amino acids, the plant combines sugars with nitrogen absorbed from the soil. In what form does the plant absorb this nitrogen?",
+        "answerSpec": {
+          "keywords": { "any": ["nitrate*", "no3*", "ammonium*", "nh4*"] },
+          "rejected": [
+            { "value": "nitrogen", "feedback": "Plants cannot use nitrogen gas: they absorb nitrogen as nitrate ions." },
+            { "value": "nitrogen gas", "feedback": "Plants cannot use nitrogen gas: they absorb nitrogen as nitrate ions." }
+          ],
+          "normalise": ["strip_punctuation"]
+        }
+      },
+      {
+        "label": "(d)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "Which process in the cells of the maize plant breaks down glucose to release energy?",
+        "options": [
+          { "key": "A", "content": "Respiration", "correct": true, "rationale": "Respiration releases energy from glucose in every living cell." },
+          { "key": "B", "content": "Photosynthesis", "rationale": "Photosynthesis makes glucose; it does not break it down." },
+          { "key": "C", "content": "Transpiration", "rationale": "Transpiration is the loss of water vapour from the leaves." },
+          { "key": "D", "content": "Translocation", "rationale": "Translocation moves sucrose and amino acids in the phloem; it does not release energy from glucose." }
+        ]
+      }
+    ],
+    "explanation": "Maize stores starch in its grains. Starch is insoluble (no osmotic effect), compact and stays in the store. Nitrogen is absorbed mainly as nitrate ions (ammonium ions are also taken up) and combined with sugars to make amino acids. Respiration breaks glucose down to release energy.",
+    "workedSolution": "**(a)** Starch.\n\n**(b)** It is insoluble, so it does not affect osmosis; it is compact and cannot diffuse out of the cells.\n\n**(c)** Nitrate ions.\n\n**(d)** A: respiration.",
+    "hints": ["Which carbohydrate gives a blue-black colour with iodine?", "Plants absorb nitrogen as an ion."],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": { "type": "SHORT_ANSWER", "text": "starch" },
+        "(c)": { "type": "SHORT_ANSWER", "text": "nitrate ions" },
+        "(d)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": { "type": "SHORT_ANSWER", "text": "glucose" },
+          "(c)": { "type": "SHORT_ANSWER", "text": "nitrogen" },
+          "(d)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }
+        }
+      }
+    ],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.photosynthesis.q22",
+    "type": "EXTENDED_RESPONSE",
+    "concepts": ["bio.plant-nutrition.photosynthesis"],
+    "difficulty": 4,
+    "marks": 4,
+    "estimatedSeconds": 360,
+    "stem": "Explain why photosynthesis by trees and grasses is important for the animals living in a msasa woodland, even though the animals themselves cannot photosynthesise. [4]",
+    "payload": { "wordLimit": { "max": 200 } },
+    "answerSpec": {
+      "markScheme": {
+        "points": [
+          { "id": "P1", "description": "Trees and grasses are producers: they make carbohydrates (food) by photosynthesis", "marks": 1 },
+          { "id": "P2", "description": "Light energy is stored as chemical energy in this food and passes along food chains to herbivores and then carnivores (e.g. leaves → caterpillars → birds)", "marks": 1 },
+          { "id": "P3", "description": "Photosynthesis releases oxygen, which the animals use for (aerobic) respiration", "marks": 1 },
+          { "id": "P4", "description": "Photosynthesis removes carbon dioxide (produced by the animals' respiration) from the air / recycles carbon", "marks": 1 }
+        ]
+      },
+      "modelAnswer": "The trees and grasses are **producers**: they use light energy to make carbohydrates by photosynthesis. This food, and the chemical energy stored in it, passes along food chains when herbivores such as caterpillars and kudu eat the leaves and are then eaten by carnivores. Photosynthesis also releases **oxygen**, which the animals need for aerobic respiration, and it removes the **carbon dioxide** that the animals breathe out, recycling the carbon."
+    },
+    "explanation": "Animals depend on photosynthesis for their food energy (through food chains that start with producers), for the oxygen they respire with, and for the removal of the carbon dioxide they produce.",
+    "hints": ["Think about food, oxygen and carbon dioxide.", "Where does every food chain start?"],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  }
+]

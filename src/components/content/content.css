@@ -1,0 +1,452 @@
+/*
+ * Typography for rendered educational content (<RichContent>, §8 lessons, §37 design, §43 accessibility).
+ *
+ * - Scoped under .rich-content; markup comes from src/server/content (class names: cb/cb-* for pedagogical blocks,
+ *   cx-* for other pipeline-generated wrappers).
+ * - Semantic colour tokens only (globals.css), so dark mode and future palette changes need no edits here. Block
+ *   label colours use the *-text / on-*-soft tokens that are AA-contrast on their soft backgrounds.
+ * - In the `components` cascade layer: beats Tailwind's preflight (base) yet a utility class passed to
+ *   <RichContent className> (e.g. `max-w-none`) still wins. The KaTeX overrides at the end are the exception (see there).
+ * - Sizes in em so the content scales with the reader's font-scale setting and with the container's font size.
+ * - Mobile first: tables and display maths scroll horizontally inside their own box; the page never does.
+ * - No animations or transitions.
+ */
+@layer components {
+  .rich-content {
+    --rc-space: 1em;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+  }
+
+  /* Readable measure for long-form content (≈ 70 characters per line). */
+  .rich-content:not(.rich-content--inline) {
+    max-width: 70ch;
+  }
+
+  .rich-content--inline {
+    line-height: inherit;
+  }
+
+  /* ---- Vertical rhythm ---- */
+  .rich-content :where(p, ul, ol, blockquote, pre, figure, .cx-table-wrap) {
+    margin-block: 0 var(--rc-space);
+  }
+
+  /* ---- Headings ---- */
+  .rich-content :where(h2, h3, h4, h5, h6) {
+    margin-block: 1.75em 0.5em;
+    color: var(--color-text);
+    font-weight: 650;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .rich-content h2 {
+    font-size: 1.375em;
+  }
+
+  .rich-content h3 {
+    font-size: 1.1875em;
+  }
+
+  .rich-content h4 {
+    font-size: 1.0625em;
+  }
+
+  .rich-content :where(h5, h6) {
+    font-size: 1em;
+  }
+
+  /* ---- Inline text ---- */
+  .rich-content strong {
+    font-weight: 650;
+  }
+
+  .rich-content em {
+    font-style: italic;
+  }
+
+  .rich-content del {
+    color: var(--color-muted);
+  }
+
+  .rich-content dfn {
+    font-style: normal;
+  }
+
+  .rich-content sup {
+    line-height: 0;
+  }
+
+  .rich-content a {
+    color: var(--color-primary);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+
+  .rich-content a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  .rich-content a:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  /* ---- Lists ---- */
+  .rich-content ul {
+    padding-inline-start: 1.5em;
+    list-style-type: disc;
+  }
+
+  .rich-content ol {
+    padding-inline-start: 1.5em;
+    list-style-type: decimal;
+  }
+
+  .rich-content ul ul {
+    list-style-type: circle;
+  }
+
+  .rich-content li > :where(ul, ol) {
+    margin-block: 0.375em 0;
+  }
+
+  .rich-content li + li {
+    margin-block-start: 0.375em;
+  }
+
+  .rich-content li::marker {
+    color: var(--color-muted);
+  }
+
+  .rich-content .contains-task-list {
+    padding-inline-start: 0.25em;
+    list-style-type: none;
+  }
+
+  .rich-content .task-list-item input {
+    margin-inline-end: 0.5em;
+    vertical-align: -0.1em;
+    accent-color: var(--color-primary);
+  }
+
+  /* ---- Code ---- */
+  .rich-content :not(pre) > code {
+    padding: 0.1em 0.35em;
+    border: 1px solid var(--color-border);
+    border-radius: 0.3em;
+    background-color: var(--color-subtle);
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+  }
+
+  .rich-content pre {
+    padding: 0.875em 1em;
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background-color: var(--color-subtle);
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    line-height: 1.55;
+    tab-size: 2;
+  }
+
+  .rich-content pre code {
+    font: inherit;
+  }
+
+  /* ---- Quotes and rules ---- */
+  .rich-content blockquote {
+    padding-inline-start: 1em;
+    border-inline-start: 3px solid var(--color-border-strong);
+    color: var(--color-muted);
+  }
+
+  .rich-content hr {
+    margin-block: 2em;
+    border: 0;
+    border-block-start: 1px solid var(--color-border);
+  }
+
+  /* ---- Images ---- */
+  /* Preflight makes images block-level; inside running text and MCQ options they must stay inline. */
+  .rich-content img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .rich-content .cx-figure {
+    margin-inline: 0;
+  }
+
+  .rich-content .cx-figure img {
+    display: block;
+    margin-inline: auto;
+  }
+
+  .rich-content figcaption {
+    margin-block-start: 0.5em;
+    color: var(--color-muted);
+    font-size: 0.875em;
+    text-align: center;
+  }
+
+  /* Placeholder for an image that cannot be shown (external URL, missing asset). */
+  .rich-content .cx-media-note {
+    display: inline-block;
+    padding: 0.125em 0.5em;
+    border: 1px dashed var(--color-border-strong);
+    border-radius: 0.375rem;
+    color: var(--color-muted);
+    font-size: 0.875em;
+  }
+
+  /* ---- Tables: scroll inside their own box on small screens ---- */
+  .rich-content .cx-table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: 0.625rem;
+    background-color: var(--color-surface);
+  }
+
+  .rich-content .cx-table-wrap:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  .rich-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rich-content :where(th, td) {
+    padding: 0.5em 0.75em;
+    border-block-end: 1px solid var(--color-border);
+    overflow-wrap: normal;
+    text-align: start;
+    vertical-align: top;
+  }
+
+  .rich-content :where(th, td) + :where(th, td) {
+    border-inline-start: 1px solid var(--color-border);
+  }
+
+  .rich-content thead th {
+    background-color: var(--color-subtle);
+    font-weight: 600;
+  }
+
+  .rich-content tbody tr:last-child > * {
+    border-block-end: 0;
+  }
+
+  .rich-content :where(th, td)[align="center"] {
+    text-align: center;
+  }
+
+  .rich-content :where(th, td)[align="right"] {
+    text-align: right;
+  }
+
+  /* ---- Pedagogical blocks ---- */
+  .rich-content .cb {
+    --cb-accent: var(--color-primary);
+    --cb-label: var(--color-primary);
+    --cb-bg: var(--color-surface);
+    margin-block: 1.5em;
+    padding: 1em 1.125em;
+    border: 1px solid var(--color-border);
+    border-inline-start: 4px solid var(--cb-accent);
+    border-radius: 0.625rem;
+    background-color: var(--cb-bg);
+  }
+
+  .rich-content .cb .cb {
+    margin-block: 1em;
+  }
+
+  .rich-content .cb-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.125em 0.5em;
+    margin: 0 0 0.625em;
+    color: var(--color-text);
+    font-size: 1em;
+    font-weight: 650;
+    line-height: 1.35;
+    letter-spacing: normal;
+  }
+
+  .rich-content .cb-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    color: var(--cb-label);
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .rich-content .cb-icon {
+    flex: none;
+    width: 1.4em;
+    height: 1.4em;
+  }
+
+  .rich-content .cb-title {
+    flex-basis: 100%;
+    font-size: 1.0625em;
+  }
+
+  .rich-content .cb-definition,
+  .rich-content .cb-worked-solution,
+  .rich-content .cb-formula {
+    --cb-bg: var(--color-surface);
+  }
+
+  .rich-content .cb-keyfact,
+  .rich-content .cb-summary {
+    --cb-bg: var(--color-primary-soft);
+    --cb-label: var(--color-on-primary-soft);
+  }
+
+  .rich-content .cb-example {
+    --cb-accent: var(--color-border-strong);
+    --cb-label: var(--color-text);
+  }
+
+  .rich-content .cb-note {
+    --cb-accent: var(--color-border-strong);
+    --cb-label: var(--color-muted);
+    --cb-bg: var(--color-subtle);
+  }
+
+  .rich-content .cb-mistake {
+    --cb-accent: var(--color-danger);
+    --cb-label: var(--color-danger-text);
+    --cb-bg: var(--color-danger-soft);
+  }
+
+  .rich-content .cb-exam-tip {
+    --cb-accent: var(--color-accent);
+    --cb-label: var(--color-accent-text);
+    --cb-bg: var(--color-accent-soft);
+  }
+
+  /* Worked solutions: ordered lists read as numbered steps (native numbering kept for screen readers). */
+  .rich-content .cb-steps {
+    padding-inline-start: 1.75em;
+  }
+
+  .rich-content .cb-steps > li {
+    padding-block: 0.5em;
+    padding-inline-start: 0.25em;
+  }
+
+  .rich-content .cb-steps > li + li {
+    margin-block-start: 0;
+    border-block-start: 1px dashed var(--color-border);
+  }
+
+  .rich-content .cb-steps > li::marker {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  /* ---- Footnotes ---- */
+  .rich-content .footnotes {
+    margin-block-start: 2.5em;
+    padding-block-start: 1em;
+    border-block-start: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font-size: 0.875em;
+  }
+
+  .rich-content [data-footnote-ref] {
+    text-decoration-line: none;
+  }
+
+  /* ---- Screen-reader-only text generated by the pipeline ---- */
+  .rich-content .cx-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    border: 0;
+    white-space: nowrap;
+  }
+
+  /* ---- Edge margins (after the block rules so they win) ---- */
+  .rich-content > :first-child,
+  .rich-content .cb-body > :first-child {
+    margin-block-start: 0;
+  }
+
+  .rich-content > :last-child,
+  .rich-content .cb-body > :last-child,
+  .rich-content li > :last-child {
+    margin-block-end: 0;
+  }
+
+  @media print {
+    .rich-content .cx-table-wrap {
+      overflow: visible;
+    }
+
+    .rich-content :where(.cb, figure, tr) {
+      break-inside: avoid;
+    }
+  }
+}
+
+/*
+ * ---- Maths (KaTeX) ----
+ * Deliberately NOT in a cascade layer: katex.min.css is unlayered, and unlayered rules beat every layered rule
+ * regardless of specificity. Out here, the higher specificity of `.rich-content …` wins over KaTeX's own rules.
+ */
+.rich-content .katex {
+  font-size: 1.1em;
+}
+
+/* Long equations scroll sideways instead of overflowing the page on phones. */
+.rich-content .katex-display {
+  max-width: 100%;
+  margin-block: 0 var(--rc-space);
+  padding-block: 0.25em;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.rich-content > .katex-display:first-child {
+  margin-block-start: 0;
+}
+
+.rich-content > .katex-display:last-child,
+.rich-content .cb-body > .katex-display:last-child {
+  margin-block-end: 0;
+}
+
+.rich-content .cb-formula .katex-display {
+  margin-block: 0.25em;
+}
+
+@media print {
+  .rich-content .katex-display {
+    overflow: visible;
+  }
+}

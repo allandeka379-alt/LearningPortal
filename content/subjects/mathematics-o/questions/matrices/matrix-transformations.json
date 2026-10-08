@@ -1,0 +1,2112 @@
+[
+  {
+    "key": "matrices.transformations.q01",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 40,
+    "stem": "Which matrix represents a reflection in the $x$-axis?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
+        "correct": true,
+        "rationale": "It maps $(x, y)$ to $(x, -y)$."
+      },
+      {
+        "key": "B",
+        "content": "$\\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+        "rationale": "This maps $(x, y)$ to $(-x, y)$: the reflection in the $y$-axis."
+      },
+      {
+        "key": "C",
+        "content": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
+        "rationale": "This swaps the coordinates: the reflection in $y = x$."
+      },
+      {
+        "key": "D",
+        "content": "$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
+        "rationale": "This maps $(x, y)$ to $(-x, -y)$: a rotation of $180^\\circ$ about $O$."
+      }
+    ],
+    "explanation": "Reflection in the $x$-axis keeps $I(1, 0)$ fixed and sends $J(0, 1)$ to $(0, -1)$. These images are the columns, giving $\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$.",
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "RECALL",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q02",
+    "type": "TRUE_FALSE",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "True or false: every translation can be represented by a $2 \\times 2$ matrix.",
+    "answerSpec": {
+      "correct": false,
+      "feedbackTrue": "A $2 \\times 2$ matrix always maps the origin onto itself, but a translation moves the origin, so no $2 \\times 2$ matrix can represent a translation.",
+      "feedbackFalse": "Correct: $M\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}$ for every matrix, but a translation moves the origin."
+    },
+    "explanation": "Multiplying the zero vector by any matrix gives the zero vector, so a matrix transformation always keeps the origin fixed. A translation by a non-zero vector moves every point, including the origin, so it is described by a column vector instead.",
+    "modelResponse": {
+      "type": "TRUE_FALSE",
+      "value": false
+    },
+    "wrongResponses": [
+      {
+        "type": "TRUE_FALSE",
+        "value": true
+      }
+    ],
+    "skill": "RECALL",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q03",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 2,
+    "marks": 2,
+    "estimatedSeconds": 75,
+    "stem": "Find the image of the point $(3, -1)$ under the transformation with matrix $\\begin{pmatrix} 2 & 1 \\\\ 0 & 3 \\end{pmatrix}$.",
+    "payload": {
+      "template": "( {{blank:x}} , {{blank:y}} )",
+      "blanks": [
+        {
+          "id": "x",
+          "input": "number"
+        },
+        {
+          "id": "y",
+          "input": "number"
+        }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        {
+          "id": "x",
+          "accepted": [
+            "5"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "y",
+          "accepted": [
+            "-3"
+          ],
+          "marks": 1
+        }
+      ]
+    },
+    "explanation": "$\\begin{pmatrix} 2 & 1 \\\\ 0 & 3 \\end{pmatrix}\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2 \\times 3 + 1 \\times (-1) \\\\ 0 \\times 3 + 3 \\times (-1) \\end{pmatrix} = \\begin{pmatrix} 5 \\\\ -3 \\end{pmatrix}$, so the image is $(5, -3)$.",
+    "workedSolution": "1. Top: $2 \\times 3 + 1 \\times (-1) = 5$.\n2. Bottom: $0 \\times 3 + 3 \\times (-1) = -3$.\n3. Image $(5, -3)$.",
+    "hints": [
+      "Write the point as a column vector and multiply: row by column."
+    ],
+    "modelResponse": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+        {
+          "blankId": "x",
+          "text": "5"
+        },
+        {
+          "blankId": "y",
+          "text": "-3"
+        }
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "x",
+            "text": "6"
+          },
+          {
+            "blankId": "y",
+            "text": "-3"
+          }
+        ]
+      },
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "x",
+            "text": "7"
+          },
+          {
+            "blankId": "y",
+            "text": "3"
+          }
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q04",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "Which transformation is represented by the matrix $\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$?",
+    "options": [
+      {
+        "key": "A",
+        "content": "Rotation of $90^\\circ$ anticlockwise about the origin",
+        "correct": true,
+        "rationale": "$I(1, 0) \\to (0, 1)$ and $J(0, 1) \\to (-1, 0)$: a quarter turn anticlockwise."
+      },
+      {
+        "key": "B",
+        "content": "Rotation of $90^\\circ$ clockwise about the origin",
+        "rationale": "Clockwise would send $I(1, 0)$ to $(0, -1)$."
+      },
+      {
+        "key": "C",
+        "content": "Reflection in the line $y = -x$",
+        "rationale": "That matrix is $\\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$; it sends $I$ to $(0, -1)$."
+      },
+      {
+        "key": "D",
+        "content": "Reflection in the line $y = x$",
+        "rationale": "That matrix is $\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$."
+      }
+    ],
+    "explanation": "The columns are the images of $I(1, 0)$ and $J(0, 1)$: $I \\to (0, 1)$ and $J \\to (-1, 0)$. Both have been turned a quarter turn anticlockwise about $O$. The determinant is $0 - (-1) = 1$, so the orientation is kept, which rules out a reflection.",
+    "hints": [
+      "Read the columns: where do $(1, 0)$ and $(0, 1)$ go?"
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true,
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q05",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 2,
+    "marks": 2,
+    "estimatedSeconds": 75,
+    "stem": "A triangle of area $2.5\\ \\text{cm}^2$ is transformed by the matrix $\\begin{pmatrix} 4 & 1 \\\\ 2 & 3 \\end{pmatrix}$. Find the area of its image.",
+    "payload": {
+      "unitHint": "cm²"
+    },
+    "answerSpec": {
+      "value": 25,
+      "units": {
+        "required": false,
+        "accepted": [
+          "cm^2",
+          "cm2",
+          "cm²",
+          "square centimetres",
+          "sq cm"
+        ]
+      }
+    },
+    "explanation": "The determinant is $4 \\times 3 - 1 \\times 2 = 10$, so areas are multiplied by 10: the image has area $2.5 \\times 10 = 25\\ \\text{cm}^2$.",
+    "workedSolution": "1. $\\det = 4 \\times 3 - 1 \\times 2 = 10$. **(M1)**\n2. Image area $= 10 \\times 2.5 = 25\\ \\text{cm}^2$. **(A1)**",
+    "hints": [
+      "The area scale factor is the determinant of the matrix."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "25"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "35"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "12.5"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "10"
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true,
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q06",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "Which matrix represents an enlargement with centre the origin and scale factor $3$?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}$",
+        "correct": true,
+        "rationale": "Both coordinates are multiplied by 3: $(x, y) \\to (3x, 3y)$."
+      },
+      {
+        "key": "B",
+        "content": "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+        "rationale": "This multiplies only $x$ by 3: a one-way stretch."
+      },
+      {
+        "key": "C",
+        "content": "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 3 \\end{pmatrix}$",
+        "rationale": "This multiplies only $y$ by 3: a one-way stretch."
+      },
+      {
+        "key": "D",
+        "content": "$\\begin{pmatrix} 3 & 3 \\\\ 3 & 3 \\end{pmatrix}$",
+        "rationale": "This maps $(1, 0)$ to $(3, 3)$, which is not an enlargement of $(1, 0)$."
+      }
+    ],
+    "explanation": "An enlargement with centre $O$ and scale factor 3 sends $I(1, 0)$ to $(3, 0)$ and $J(0, 1)$ to $(0, 3)$, giving the matrix $\\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}$.",
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q07",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 75,
+    "stem": "Describe the transformation with matrix $\\begin{pmatrix} 1 & 0 \\\\ 2 & 1 \\end{pmatrix}$.",
+    "options": [
+      {
+        "key": "A",
+        "content": "Shear with the $y$-axis invariant, shear factor $2$",
+        "correct": true,
+        "rationale": "$(x, y) \\to (x, y + 2x)$: points move parallel to the $y$-axis by $2x$."
+      },
+      {
+        "key": "B",
+        "content": "Shear with the $x$-axis invariant, shear factor $2$",
+        "rationale": "That matrix is $\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$."
+      },
+      {
+        "key": "C",
+        "content": "Stretch with the $x$-axis invariant, factor $2$",
+        "rationale": "That matrix is $\\begin{pmatrix} 1 & 0 \\\\ 0 & 2 \\end{pmatrix}$."
+      },
+      {
+        "key": "D",
+        "content": "Enlargement, centre the origin, scale factor $2$",
+        "rationale": "That matrix is $\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}$."
+      }
+    ],
+    "explanation": "The matrix sends $(x, y)$ to $(x, 2x + y)$. Points on the $y$-axis ($x = 0$) do not move, and every other point moves parallel to the $y$-axis by $2x$, twice its distance from the $y$-axis. This is a shear with the $y$-axis invariant and shear factor 2.",
+    "hints": [
+      "Find the images of $(1, 0)$ and $(0, 1)$. Which one does not move?"
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "dailyEligible": true,
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q08",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 3,
+    "marks": 2,
+    "estimatedSeconds": 90,
+    "stem": "A transformation maps $I(1, 0)$ onto $(3, 0)$ and $J(0, 1)$ onto itself. Write down its matrix.",
+    "payload": {
+      "template": "Top row: {{blank:a}} and {{blank:b}}. Bottom row: {{blank:c}} and {{blank:d}}.",
+      "blanks": [
+        {
+          "id": "a",
+          "input": "number"
+        },
+        {
+          "id": "b",
+          "input": "number"
+        },
+        {
+          "id": "c",
+          "input": "number"
+        },
+        {
+          "id": "d",
+          "input": "number"
+        }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        {
+          "id": "a",
+          "accepted": [
+            "3"
+          ]
+        },
+        {
+          "id": "b",
+          "accepted": [
+            "0"
+          ]
+        },
+        {
+          "id": "c",
+          "accepted": [
+            "0"
+          ]
+        },
+        {
+          "id": "d",
+          "accepted": [
+            "1"
+          ]
+        }
+      ]
+    },
+    "explanation": "The columns of the matrix are the images of $I$ and $J$: $\\begin{pmatrix} 3 \\\\ 0 \\end{pmatrix}$ and $\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$, so the matrix is $\\begin{pmatrix} 3 & 0 \\\\ 0 & 1 \\end{pmatrix}$. It is a stretch with the $y$-axis invariant and stretch factor 3.",
+    "workedSolution": "1. First column $=$ image of $I$ $= \\begin{pmatrix} 3 \\\\ 0 \\end{pmatrix}$.\n2. Second column $=$ image of $J$ $= \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$.\n3. Matrix $\\begin{pmatrix} 3 & 0 \\\\ 0 & 1 \\end{pmatrix}$.",
+    "hints": [
+      "The image of $(1, 0)$ is the first column; the image of $(0, 1)$ is the second column."
+    ],
+    "modelResponse": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+        {
+          "blankId": "a",
+          "text": "3"
+        },
+        {
+          "blankId": "b",
+          "text": "0"
+        },
+        {
+          "blankId": "c",
+          "text": "0"
+        },
+        {
+          "blankId": "d",
+          "text": "1"
+        }
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "a",
+            "text": "3"
+          },
+          {
+            "blankId": "b",
+            "text": "0"
+          },
+          {
+            "blankId": "c",
+            "text": "0"
+          },
+          {
+            "blankId": "d",
+            "text": "3"
+          }
+        ]
+      },
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "a",
+            "text": "1"
+          },
+          {
+            "blankId": "b",
+            "text": "0"
+          },
+          {
+            "blankId": "c",
+            "text": "0"
+          },
+          {
+            "blankId": "d",
+            "text": "3"
+          }
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q09",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "Which matrix represents a rotation of $90^\\circ$ **clockwise** about the origin?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$\\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}$",
+        "correct": true,
+        "rationale": "$I(1, 0) \\to (0, -1)$ and $J(0, 1) \\to (1, 0)$: a quarter turn clockwise."
+      },
+      {
+        "key": "B",
+        "content": "$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$",
+        "rationale": "This is the quarter turn anticlockwise."
+      },
+      {
+        "key": "C",
+        "content": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
+        "rationale": "This is the reflection in $y = x$."
+      },
+      {
+        "key": "D",
+        "content": "$\\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$",
+        "rationale": "This is the reflection in $y = -x$."
+      }
+    ],
+    "explanation": "A quarter turn clockwise sends $I(1, 0)$ to $(0, -1)$ and $J(0, 1)$ to $(1, 0)$. Writing these as columns gives $\\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}$.",
+    "hints": [
+      "Sketch $(1, 0)$ and turn it a quarter turn clockwise. Where does it land?"
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q10",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 3,
+    "marks": 2,
+    "estimatedSeconds": 120,
+    "stem": "$X = \\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$ is the reflection in the $x$-axis and $E = \\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}$ is the enlargement with centre $O$ and scale factor 2. Find the single matrix for the reflection **followed by** the enlargement.",
+    "payload": {
+      "template": "Top row: {{blank:a}} and {{blank:b}}. Bottom row: {{blank:c}} and {{blank:d}}.",
+      "blanks": [
+        {
+          "id": "a",
+          "input": "number"
+        },
+        {
+          "id": "b",
+          "input": "number"
+        },
+        {
+          "id": "c",
+          "input": "number"
+        },
+        {
+          "id": "d",
+          "input": "number"
+        }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        {
+          "id": "a",
+          "accepted": [
+            "2"
+          ]
+        },
+        {
+          "id": "b",
+          "accepted": [
+            "0"
+          ]
+        },
+        {
+          "id": "c",
+          "accepted": [
+            "0"
+          ]
+        },
+        {
+          "id": "d",
+          "accepted": [
+            "-2"
+          ]
+        }
+      ]
+    },
+    "explanation": "\"$X$ followed by $E$\" is $EX = \\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix} = \\begin{pmatrix} 2 & 0 \\\\ 0 & -2 \\end{pmatrix}$. (Here $XE$ happens to give the same matrix, because an enlargement with centre $O$ commutes with every matrix.)",
+    "workedSolution": "1. The first transformation goes on the right: $EX$.\n2. $EX = \\begin{pmatrix} 2 \\times 1 + 0 & 0 + 0 \\\\ 0 + 0 & 0 + 2 \\times (-1) \\end{pmatrix} = \\begin{pmatrix} 2 & 0 \\\\ 0 & -2 \\end{pmatrix}$.",
+    "hints": [
+      "\"$X$ followed by $E$\" is the product $EX$."
+    ],
+    "modelResponse": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+        {
+          "blankId": "a",
+          "text": "2"
+        },
+        {
+          "blankId": "b",
+          "text": "0"
+        },
+        {
+          "blankId": "c",
+          "text": "0"
+        },
+        {
+          "blankId": "d",
+          "text": "-2"
+        }
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "a",
+            "text": "3"
+          },
+          {
+            "blankId": "b",
+            "text": "0"
+          },
+          {
+            "blankId": "c",
+            "text": "0"
+          },
+          {
+            "blankId": "d",
+            "text": "1"
+          }
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q11",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "Transformation $A$ is followed by transformation $B$. Which matrix represents the combined transformation?",
+    "options": [
+      {
+        "key": "A",
+        "content": "$BA$",
+        "correct": true,
+        "rationale": "$B(AX) = (BA)X$: the transformation done first is on the right."
+      },
+      {
+        "key": "B",
+        "content": "$AB$",
+        "rationale": "$ABX$ applies $B$ first, then $A$."
+      },
+      {
+        "key": "C",
+        "content": "$A + B$",
+        "rationale": "Adding matrices does not combine transformations."
+      },
+      {
+        "key": "D",
+        "content": "$A^{-1}B$",
+        "rationale": "The inverse of $A$ would undo $A$, not apply it."
+      }
+    ],
+    "explanation": "The point $X$ is first mapped to $AX$, and then $B$ is applied to that: $B(AX) = (BA)X$. So \"$A$ followed by $B$\" has matrix $BA$.",
+    "hints": [
+      "Apply $A$ to the column $X$ first, then apply $B$ to the result."
+    ],
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "UNDERSTANDING",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q12",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 60,
+    "stem": "A shape of area $7\\ \\text{cm}^2$ is transformed by the matrix $\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$. What is the area of the image?",
+    "payload": {
+      "unitHint": "cm²"
+    },
+    "answerSpec": {
+      "value": 7,
+      "units": {
+        "required": false,
+        "accepted": [
+          "cm^2",
+          "cm2",
+          "cm²",
+          "square centimetres",
+          "sq cm"
+        ]
+      }
+    },
+    "explanation": "The determinant is $1 \\times 1 - 4 \\times 0 = 1$, so the area is unchanged: $7\\ \\text{cm}^2$. The matrix is a shear with the $x$-axis invariant, and shears never change area.",
+    "workedSolution": "1. $\\det = 1 \\times 1 - 4 \\times 0 = 1$.\n2. Image area $= 1 \\times 7 = 7\\ \\text{cm}^2$.",
+    "hints": [
+      "Find the determinant of the matrix."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "7"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "28"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "35"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "0"
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q13",
+    "type": "TRUE_FALSE",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "True or false: the matrix $\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$ represents a rotation of $180^\\circ$ about the origin.",
+    "answerSpec": {
+      "correct": true,
+      "feedbackTrue": "Correct: it maps $(x, y)$ to $(-x, -y)$, a half turn about $O$. (It is also the enlargement with centre $O$ and scale factor $-1$.)",
+      "feedbackFalse": "It is true: $(x, y) \\to (-x, -y)$ is a half turn about the origin."
+    },
+    "explanation": "The matrix sends $I(1, 0)$ to $(-1, 0)$ and $J(0, 1)$ to $(0, -1)$: every point goes to the opposite side of the origin at the same distance, which is a rotation of $180^\\circ$ about $O$.",
+    "hints": [
+      "Find the image of $(3, 2)$."
+    ],
+    "modelResponse": {
+      "type": "TRUE_FALSE",
+      "value": true
+    },
+    "wrongResponses": [
+      {
+        "type": "TRUE_FALSE",
+        "value": false
+      }
+    ],
+    "skill": "UNDERSTANDING",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q14",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 3,
+    "marks": 2,
+    "estimatedSeconds": 90,
+    "stem": "$R = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$ is the rotation of $90^\\circ$ anticlockwise about the origin. Find the matrix of the inverse transformation $R^{-1}$.",
+    "payload": {
+      "template": "Top row: {{blank:a}} and {{blank:b}}. Bottom row: {{blank:c}} and {{blank:d}}.",
+      "blanks": [
+        {
+          "id": "a",
+          "input": "number"
+        },
+        {
+          "id": "b",
+          "input": "number"
+        },
+        {
+          "id": "c",
+          "input": "number"
+        },
+        {
+          "id": "d",
+          "input": "number"
+        }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        {
+          "id": "a",
+          "accepted": [
+            "0"
+          ]
+        },
+        {
+          "id": "b",
+          "accepted": [
+            "1"
+          ]
+        },
+        {
+          "id": "c",
+          "accepted": [
+            "-1"
+          ]
+        },
+        {
+          "id": "d",
+          "accepted": [
+            "0"
+          ]
+        }
+      ]
+    },
+    "explanation": "$\\det R = 0 \\times 0 - (-1)(1) = 1$, so $R^{-1} = \\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}$. This is the rotation of $90^\\circ$ clockwise about $O$, which undoes the anticlockwise quarter turn.",
+    "workedSolution": "1. $\\det R = 0 - (-1) = 1$.\n2. Swap the leading diagonal and change the signs of the other two: $\\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}$.\n3. Divide by $\\det R = 1$: no change.",
+    "hints": [
+      "Which rotation undoes a quarter turn anticlockwise?",
+      "Or use $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}^{-1} = \\frac{1}{ad - bc}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$."
+    ],
+    "modelResponse": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+        {
+          "blankId": "a",
+          "text": "0"
+        },
+        {
+          "blankId": "b",
+          "text": "1"
+        },
+        {
+          "blankId": "c",
+          "text": "-1"
+        },
+        {
+          "blankId": "d",
+          "text": "0"
+        }
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "a",
+            "text": "0"
+          },
+          {
+            "blankId": "b",
+            "text": "-1"
+          },
+          {
+            "blankId": "c",
+            "text": "1"
+          },
+          {
+            "blankId": "d",
+            "text": "0"
+          }
+        ]
+      },
+      {
+        "type": "FILL_IN_THE_BLANK",
+        "blanks": [
+          {
+            "blankId": "a",
+            "text": "0"
+          },
+          {
+            "blankId": "b",
+            "text": "-1"
+          },
+          {
+            "blankId": "c",
+            "text": "-1"
+          },
+          {
+            "blankId": "d",
+            "text": "0"
+          }
+        ]
+      }
+    ],
+    "skill": "APPLICATION",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q15",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 4,
+    "marks": 7,
+    "estimatedSeconds": 480,
+    "stem": "The matrix $M = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ maps the point $(2, 1)$ onto $(3, 5)$ and the point $(1, 1)$ onto $(2, 3)$.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Find $a$ and $b$.",
+        "payload": {
+          "template": "$a$ = {{blank:a}} and $b$ = {{blank:b}}",
+          "blanks": [
+            {
+              "id": "a",
+              "input": "number"
+            },
+            {
+              "id": "b",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "a",
+              "accepted": [
+                "1"
+              ],
+              "marks": 1
+            },
+            {
+              "id": "b",
+              "accepted": [
+                "1"
+              ],
+              "marks": 1
+            }
+          ]
+        },
+        "hints": [
+          "The top row gives $2a + b = 3$ and $a + b = 2$."
+        ]
+      },
+      {
+        "label": "(b)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Find $c$ and $d$.",
+        "payload": {
+          "template": "$c$ = {{blank:c}} and $d$ = {{blank:d}}",
+          "blanks": [
+            {
+              "id": "c",
+              "input": "number"
+            },
+            {
+              "id": "d",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "c",
+              "accepted": [
+                "2"
+              ],
+              "marks": 1
+            },
+            {
+              "id": "d",
+              "accepted": [
+                "1"
+              ],
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Find the determinant of $M$.",
+        "answerSpec": {
+          "value": -1
+        }
+      },
+      {
+        "label": "(d)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Find the image of the point $(-1, 4)$ under $M$.",
+        "payload": {
+          "template": "( {{blank:x}} , {{blank:y}} )",
+          "blanks": [
+            {
+              "id": "x",
+              "input": "number"
+            },
+            {
+              "id": "y",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "x",
+              "accepted": [
+                "3"
+              ],
+              "marks": 1
+            },
+            {
+              "id": "y",
+              "accepted": [
+                "2"
+              ],
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "explanation": "From the top rows, $2a + b = 3$ and $a + b = 2$, so $a = 1$, $b = 1$. From the bottom rows, $2c + d = 5$ and $c + d = 3$, so $c = 2$, $d = 1$. Then $\\det M = 1 \\times 1 - 1 \\times 2 = -1$ (areas are unchanged and the orientation is reversed), and $M\\begin{pmatrix} -1 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$.",
+    "workedSolution": "1. $M\\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 2a + b \\\\ 2c + d \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 5 \\end{pmatrix}$ and $M\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} a + b \\\\ c + d \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$.\n2. $2a + b = 3$, $a + b = 2$: subtract to get $a = 1$, so $b = 1$.\n3. $2c + d = 5$, $c + d = 3$: subtract to get $c = 2$, so $d = 1$.\n4. $\\det M = 1 \\times 1 - 1 \\times 2 = -1$.\n5. $\\begin{pmatrix} 1 & 1 \\\\ 2 & 1 \\end{pmatrix}\\begin{pmatrix} -1 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} -1 + 4 \\\\ -2 + 4 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$.",
+    "hints": [
+      "Multiply $M$ by each column and compare with the image."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "a",
+              "text": "1"
+            },
+            {
+              "blankId": "b",
+              "text": "1"
+            }
+          ]
+        },
+        "(b)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "c",
+              "text": "2"
+            },
+            {
+              "blankId": "d",
+              "text": "1"
+            }
+          ]
+        },
+        "(c)": {
+          "type": "NUMERICAL",
+          "value": "-1"
+        },
+        "(d)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "x",
+              "text": "3"
+            },
+            {
+              "blankId": "y",
+              "text": "2"
+            }
+          ]
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "a",
+                "text": "2"
+              },
+              {
+                "blankId": "b",
+                "text": "-1"
+              }
+            ]
+          },
+          "(b)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "c",
+                "text": "1"
+              },
+              {
+                "blankId": "d",
+                "text": "2"
+              }
+            ]
+          },
+          "(c)": {
+            "type": "NUMERICAL",
+            "value": "3"
+          },
+          "(d)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "x",
+                "text": "-1"
+              },
+              {
+                "blankId": "y",
+                "text": "4"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q16",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 4,
+    "marks": 5,
+    "estimatedSeconds": 480,
+    "stem": "$M = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$ and $N = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$. Triangle $ABC$ has vertices $A(1, 1)$, $B(3, 1)$ and $C(1, 2)$. It is transformed by $M$, and then its image is transformed by $N$.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Find the single matrix that represents $M$ followed by $N$.",
+        "payload": {
+          "template": "Top row: {{blank:a}} and {{blank:b}}. Bottom row: {{blank:c}} and {{blank:d}}.",
+          "blanks": [
+            {
+              "id": "a",
+              "input": "number"
+            },
+            {
+              "id": "b",
+              "input": "number"
+            },
+            {
+              "id": "c",
+              "input": "number"
+            },
+            {
+              "id": "d",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "a",
+              "accepted": [
+                "0"
+              ]
+            },
+            {
+              "id": "b",
+              "accepted": [
+                "-1"
+              ]
+            },
+            {
+              "id": "c",
+              "accepted": [
+                "1"
+              ]
+            },
+            {
+              "id": "d",
+              "accepted": [
+                "2"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Find the final image of $C$.",
+        "payload": {
+          "template": "( {{blank:x}} , {{blank:y}} )",
+          "blanks": [
+            {
+              "id": "x",
+              "input": "number"
+            },
+            {
+              "id": "y",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "x",
+              "accepted": [
+                "-2"
+              ],
+              "marks": 1
+            },
+            {
+              "id": "y",
+              "accepted": [
+                "5"
+              ],
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Triangle $ABC$ has area 1 square unit. Find the area of the final image.",
+        "payload": {
+          "unitHint": "square units"
+        },
+        "answerSpec": {
+          "value": 1,
+          "units": {
+            "required": false,
+            "accepted": [
+              "square units",
+              "units^2",
+              "units²",
+              "sq units",
+              "units2"
+            ]
+          }
+        }
+      }
+    ],
+    "explanation": "\"$M$ followed by $N$\" is $NM = \\begin{pmatrix} 0 & -1 \\\\ 1 & 2 \\end{pmatrix}$. Then $NM\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ 5 \\end{pmatrix}$. Check: $M$ sends $C(1, 2)$ to $(5, 2)$ and $N$ sends $(5, 2)$ to $(-2, 5)$. $\\det NM = 0 \\times 2 - (-1)(1) = 1$, so the area stays 1 square unit.",
+    "workedSolution": "1. $NM = \\begin{pmatrix} 0 \\times 1 + (-1) \\times 0 & 0 \\times 2 + (-1) \\times 1 \\\\ 1 \\times 1 + 0 \\times 0 & 1 \\times 2 + 0 \\times 1 \\end{pmatrix} = \\begin{pmatrix} 0 & -1 \\\\ 1 & 2 \\end{pmatrix}$.\n2. $C'' = \\begin{pmatrix} 0 & -1 \\\\ 1 & 2 \\end{pmatrix}\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ 5 \\end{pmatrix}$.\n3. $\\det NM = 1$: area $= 1 \\times 1 = 1$ square unit (a shear and a rotation both keep area).",
+    "hints": [
+      "The first transformation goes on the right of the product."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "a",
+              "text": "0"
+            },
+            {
+              "blankId": "b",
+              "text": "-1"
+            },
+            {
+              "blankId": "c",
+              "text": "1"
+            },
+            {
+              "blankId": "d",
+              "text": "2"
+            }
+          ]
+        },
+        "(b)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "x",
+              "text": "-2"
+            },
+            {
+              "blankId": "y",
+              "text": "5"
+            }
+          ]
+        },
+        "(c)": {
+          "type": "NUMERICAL",
+          "value": "1"
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "a",
+                "text": "2"
+              },
+              {
+                "blankId": "b",
+                "text": "-1"
+              },
+              {
+                "blankId": "c",
+                "text": "1"
+              },
+              {
+                "blankId": "d",
+                "text": "0"
+              }
+            ]
+          },
+          "(b)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "x",
+                "text": "5"
+              },
+              {
+                "blankId": "y",
+                "text": "2"
+              }
+            ]
+          },
+          "(c)": {
+            "type": "NUMERICAL",
+            "value": "2"
+          }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q17",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 4,
+    "marks": 5,
+    "estimatedSeconds": 420,
+    "stem": "A transformation $T$ maps the unit square $OIKJ$, with $O(0, 0)$, $I(1, 0)$, $K(1, 1)$ and $J(0, 1)$, so that $I$ is mapped onto $(0, -1)$ and $J$ is mapped onto $(-1, 0)$.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Write down the matrix of $T$.",
+        "payload": {
+          "template": "Top row: {{blank:a}} and {{blank:b}}. Bottom row: {{blank:c}} and {{blank:d}}.",
+          "blanks": [
+            {
+              "id": "a",
+              "input": "number"
+            },
+            {
+              "id": "b",
+              "input": "number"
+            },
+            {
+              "id": "c",
+              "input": "number"
+            },
+            {
+              "id": "d",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "a",
+              "accepted": [
+                "0"
+              ]
+            },
+            {
+              "id": "b",
+              "accepted": [
+                "-1"
+              ]
+            },
+            {
+              "id": "c",
+              "accepted": [
+                "-1"
+              ]
+            },
+            {
+              "id": "d",
+              "accepted": [
+                "0"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 1,
+        "stem": "Find the image of $K$.",
+        "payload": {
+          "template": "( {{blank:x}} , {{blank:y}} )",
+          "blanks": [
+            {
+              "id": "x",
+              "input": "number"
+            },
+            {
+              "id": "y",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "x",
+              "accepted": [
+                "-1"
+              ]
+            },
+            {
+              "id": "y",
+              "accepted": [
+                "-1"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "Describe $T$ fully.",
+        "options": [
+          {
+            "key": "A",
+            "content": "Reflection in the line $y = -x$",
+            "correct": true,
+            "rationale": "Every point $(x, y)$ goes to $(-y, -x)$; points on $y = -x$, such as $(1, -1)$, do not move."
+          },
+          {
+            "key": "B",
+            "content": "Reflection in the line $y = x$",
+            "rationale": "That would send $I$ to $(0, 1)$."
+          },
+          {
+            "key": "C",
+            "content": "Rotation of $90^\\circ$ clockwise about $O$",
+            "rationale": "That would send $J$ to $(1, 0)$, not $(-1, 0)$."
+          },
+          {
+            "key": "D",
+            "content": "Rotation of $180^\\circ$ about $O$",
+            "rationale": "That would send $I$ to $(-1, 0)$."
+          }
+        ]
+      },
+      {
+        "label": "(d)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "The determinant of the matrix is $-1$. What does this tell you?",
+        "options": [
+          {
+            "key": "A",
+            "content": "Areas are unchanged and the orientation is reversed",
+            "correct": true,
+            "rationale": "$|\\det| = 1$ keeps area; the negative sign shows a flip, as in every reflection."
+          },
+          {
+            "key": "B",
+            "content": "Every area becomes negative",
+            "rationale": "Areas cannot be negative: use the absolute value of the determinant."
+          },
+          {
+            "key": "C",
+            "content": "The transformation has no inverse",
+            "rationale": "Only a determinant of 0 means there is no inverse."
+          },
+          {
+            "key": "D",
+            "content": "Areas are halved",
+            "rationale": "$|\\det| = 1$, so areas are unchanged."
+          }
+        ]
+      }
+    ],
+    "explanation": "The columns of the matrix are the images of $I$ and $J$: $\\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$. It sends $K(1, 1)$ to $(-1, -1)$ and, in general, $(x, y)$ to $(-y, -x)$: the reflection in $y = -x$. Its determinant $-1$ shows that areas are unchanged and the shape is flipped over.",
+    "workedSolution": "1. Columns: image of $I$ $= \\begin{pmatrix} 0 \\\\ -1 \\end{pmatrix}$, image of $J$ $= \\begin{pmatrix} -1 \\\\ 0 \\end{pmatrix}$.\n2. $K$: $\\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} -1 \\\\ -1 \\end{pmatrix}$.\n3. $(x, y) \\to (-y, -x)$: reflection in $y = -x$.\n4. $\\det = 0 \\times 0 - (-1)(-1) = -1$: area unchanged, orientation reversed.",
+    "hints": [
+      "The images of $I$ and $J$ are the columns of the matrix."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "a",
+              "text": "0"
+            },
+            {
+              "blankId": "b",
+              "text": "-1"
+            },
+            {
+              "blankId": "c",
+              "text": "-1"
+            },
+            {
+              "blankId": "d",
+              "text": "0"
+            }
+          ]
+        },
+        "(b)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "x",
+              "text": "-1"
+            },
+            {
+              "blankId": "y",
+              "text": "-1"
+            }
+          ]
+        },
+        "(c)": {
+          "type": "MULTIPLE_CHOICE",
+          "optionKeys": [
+            "A"
+          ]
+        },
+        "(d)": {
+          "type": "MULTIPLE_CHOICE",
+          "optionKeys": [
+            "A"
+          ]
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "a",
+                "text": "0"
+              },
+              {
+                "blankId": "b",
+                "text": "-1"
+              },
+              {
+                "blankId": "c",
+                "text": "1"
+              },
+              {
+                "blankId": "d",
+                "text": "0"
+              }
+            ]
+          },
+          "(b)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "x",
+                "text": "1"
+              },
+              {
+                "blankId": "y",
+                "text": "1"
+              }
+            ]
+          },
+          "(c)": {
+            "type": "MULTIPLE_CHOICE",
+            "optionKeys": [
+              "C"
+            ]
+          },
+          "(d)": {
+            "type": "MULTIPLE_CHOICE",
+            "optionKeys": [
+              "B"
+            ]
+          }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q18",
+    "type": "STRUCTURED",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 5,
+    "marks": 7,
+    "estimatedSeconds": 540,
+    "stem": "$P = \\begin{pmatrix} 2 & 0 \\\\ 0 & 1 \\end{pmatrix}$ is a stretch with the $y$-axis invariant and stretch factor 2. $Q = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$ is the reflection in the line $y = x$. A transformation $T$ consists of $P$ followed by $Q$.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 2,
+        "stem": "Find the matrix of $T$.",
+        "payload": {
+          "template": "Top row: {{blank:a}} and {{blank:b}}. Bottom row: {{blank:c}} and {{blank:d}}.",
+          "blanks": [
+            {
+              "id": "a",
+              "input": "number"
+            },
+            {
+              "id": "b",
+              "input": "number"
+            },
+            {
+              "id": "c",
+              "input": "number"
+            },
+            {
+              "id": "d",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "a",
+              "accepted": [
+                "0"
+              ]
+            },
+            {
+              "id": "b",
+              "accepted": [
+                "1"
+              ]
+            },
+            {
+              "id": "c",
+              "accepted": [
+                "2"
+              ]
+            },
+            {
+              "id": "d",
+              "accepted": [
+                "0"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "label": "(b)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 1,
+        "stem": "Find the image of the point $(3, 4)$ under $T$.",
+        "payload": {
+          "template": "( {{blank:x}} , {{blank:y}} )",
+          "blanks": [
+            {
+              "id": "x",
+              "input": "number"
+            },
+            {
+              "id": "y",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "x",
+              "accepted": [
+                "4"
+              ]
+            },
+            {
+              "id": "y",
+              "accepted": [
+                "6"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "FILL_IN_THE_BLANK",
+        "marks": 3,
+        "stem": "$T$ maps a point $S$ onto $(8, 2)$. Use the inverse of the matrix of $T$ to find $S$.",
+        "payload": {
+          "template": "$S$ = ( {{blank:x}} , {{blank:y}} )",
+          "blanks": [
+            {
+              "id": "x",
+              "input": "number"
+            },
+            {
+              "id": "y",
+              "input": "number"
+            }
+          ]
+        },
+        "answerSpec": {
+          "blanks": [
+            {
+              "id": "x",
+              "accepted": [
+                "1"
+              ]
+            },
+            {
+              "id": "y",
+              "accepted": [
+                "8"
+              ]
+            }
+          ]
+        },
+        "hints": [
+          "$S = T^{-1}\\begin{pmatrix} 8 \\\\ 2 \\end{pmatrix}$."
+        ]
+      },
+      {
+        "label": "(d)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "A shape of area $5\\ \\text{cm}^2$ is transformed by $T$. Find the area of its image.",
+        "payload": {
+          "unitHint": "cm²"
+        },
+        "answerSpec": {
+          "value": 10,
+          "units": {
+            "required": false,
+            "accepted": [
+              "cm^2",
+              "cm2",
+              "cm²",
+              "square centimetres",
+              "sq cm"
+            ]
+          }
+        }
+      }
+    ],
+    "explanation": "\"$P$ followed by $Q$\" is $QP = \\begin{pmatrix} 0 & 1 \\\\ 2 & 0 \\end{pmatrix}$, which maps $(3, 4)$ to $(4, 6)$. Its determinant is $0 \\times 0 - 1 \\times 2 = -2$, so $(QP)^{-1} = -\\frac{1}{2}\\begin{pmatrix} 0 & -1 \\\\ -2 & 0 \\end{pmatrix} = \\begin{pmatrix} 0 & \\frac{1}{2} \\\\ 1 & 0 \\end{pmatrix}$, and $S = (1, 8)$. Areas are multiplied by $|-2| = 2$, giving $10\\ \\text{cm}^2$.",
+    "workedSolution": "1. $QP = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 2 & 0 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 0 & 1 \\\\ 2 & 0 \\end{pmatrix}$.\n2. $QP\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ 6 \\end{pmatrix}$. (Check: $P$ gives $(6, 4)$, then $Q$ swaps to $(4, 6)$.)\n3. $\\det(QP) = -2$, so $(QP)^{-1} = \\frac{1}{-2}\\begin{pmatrix} 0 & -1 \\\\ -2 & 0 \\end{pmatrix} = \\begin{pmatrix} 0 & 0.5 \\\\ 1 & 0 \\end{pmatrix}$.\n4. $S = \\begin{pmatrix} 0 & 0.5 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 8 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 8 \\end{pmatrix}$. Check: $QP\\begin{pmatrix} 1 \\\\ 8 \\end{pmatrix} = \\begin{pmatrix} 8 \\\\ 2 \\end{pmatrix}$.\n5. Area $= |-2| \\times 5 = 10\\ \\text{cm}^2$.",
+    "hints": [
+      "\"$P$ followed by $Q$\" is $QP$.",
+      "Use the absolute value of the determinant for areas."
+    ],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "a",
+              "text": "0"
+            },
+            {
+              "blankId": "b",
+              "text": "1"
+            },
+            {
+              "blankId": "c",
+              "text": "2"
+            },
+            {
+              "blankId": "d",
+              "text": "0"
+            }
+          ]
+        },
+        "(b)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "x",
+              "text": "4"
+            },
+            {
+              "blankId": "y",
+              "text": "6"
+            }
+          ]
+        },
+        "(c)": {
+          "type": "FILL_IN_THE_BLANK",
+          "blanks": [
+            {
+              "blankId": "x",
+              "text": "1"
+            },
+            {
+              "blankId": "y",
+              "text": "8"
+            }
+          ]
+        },
+        "(d)": {
+          "type": "NUMERICAL",
+          "value": "10"
+        }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "a",
+                "text": "0"
+              },
+              {
+                "blankId": "b",
+                "text": "2"
+              },
+              {
+                "blankId": "c",
+                "text": "1"
+              },
+              {
+                "blankId": "d",
+                "text": "0"
+              }
+            ]
+          },
+          "(b)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "x",
+                "text": "8"
+              },
+              {
+                "blankId": "y",
+                "text": "3"
+              }
+            ]
+          },
+          "(c)": {
+            "type": "FILL_IN_THE_BLANK",
+            "blanks": [
+              {
+                "blankId": "x",
+                "text": "2"
+              },
+              {
+                "blankId": "y",
+                "text": "16"
+              }
+            ]
+          },
+          "(d)": {
+            "type": "NUMERICAL",
+            "value": "-10"
+          }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true,
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q19",
+    "type": "NUMERICAL",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 4,
+    "marks": 3,
+    "estimatedSeconds": 240,
+    "stem": "The matrix $\\begin{pmatrix} k & 3 \\\\ 2 & k \\end{pmatrix}$, where $k > 0$, maps a square of area $3\\ \\text{cm}^2$ onto a shape of area $30\\ \\text{cm}^2$. Find $k$.",
+    "payload": {
+      "answerPrefix": "k ="
+    },
+    "answerSpec": {
+      "value": 4
+    },
+    "explanation": "The area factor is $30 \\div 3 = 10$, so $|k^2 - 6| = 10$. Either $k^2 - 6 = 10$, giving $k^2 = 16$ and $k = 4$, or $k^2 - 6 = -10$, giving $k^2 = -4$, which is impossible. So $k = 4$.",
+    "workedSolution": "1. Area factor $= \\dfrac{30}{3} = 10 = |\\det|$. **(M1)**\n2. $\\det = k^2 - 6$, so $k^2 - 6 = 10$ (the case $k^2 - 6 = -10$ has no real solution). **(M1)**\n3. $k^2 = 16$, $k = 4$ (since $k > 0$). **(A1)**",
+    "hints": [
+      "The determinant is the area scale factor.",
+      "$\\det = k \\times k - 3 \\times 2$."
+    ],
+    "modelResponse": {
+      "type": "NUMERICAL",
+      "value": "4"
+    },
+    "wrongResponses": [
+      {
+        "type": "NUMERICAL",
+        "value": "-4"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "6"
+      },
+      {
+        "type": "NUMERICAL",
+        "value": "16"
+      }
+    ],
+    "skill": "ANALYSIS",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  },
+  {
+    "key": "matrices.transformations.q20",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": [
+      "math.matrices.transformations"
+    ],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 40,
+    "stem": "What does the **first column** of a $2 \\times 2$ transformation matrix tell you?",
+    "options": [
+      {
+        "key": "A",
+        "content": "The image of the point $(1, 0)$",
+        "correct": true,
+        "rationale": "$\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} a \\\\ c \\end{pmatrix}$, the first column."
+      },
+      {
+        "key": "B",
+        "content": "The image of the point $(0, 1)$",
+        "rationale": "The image of $(0, 1)$ is the second column."
+      },
+      {
+        "key": "C",
+        "content": "The image of the origin",
+        "rationale": "The origin always maps to itself."
+      },
+      {
+        "key": "D",
+        "content": "The image of the point $(1, 1)$",
+        "rationale": "The image of $(1, 1)$ is the sum of the two columns."
+      }
+    ],
+    "explanation": "Multiplying the matrix by $\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$ picks out the first column, so the first column is the image of $(1, 0)$. Similarly, the second column is the image of $(0, 1)$.",
+    "modelResponse": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+        "A"
+      ]
+    },
+    "wrongResponses": [
+      {
+        "type": "MULTIPLE_CHOICE",
+        "optionKeys": [
+          "B"
+        ]
+      }
+    ],
+    "skill": "RECALL",
+    "objectives": [
+      "zimsec/o-level/mathematics:13.0.3"
+    ]
+  }
+]

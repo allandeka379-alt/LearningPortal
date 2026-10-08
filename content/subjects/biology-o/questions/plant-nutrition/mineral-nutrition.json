@@ -1,0 +1,629 @@
+[
+  {
+    "key": "plant-nutrition.mineral-nutrition.q01",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "Which of these mineral ions forms part of the chlorophyll molecule?",
+    "options": [
+      { "key": "A", "content": "Magnesium", "correct": true, "rationale": "Magnesium is part of the chlorophyll molecule." },
+      { "key": "B", "content": "Calcium", "rationale": "Calcium is used in plant cell walls; it is not part of the chlorophyll molecule." },
+      { "key": "C", "content": "Sodium", "rationale": "Sodium is not part of the chlorophyll molecule." },
+      { "key": "D", "content": "Iron", "rationale": "Iron is at the centre of haemoglobin in blood. Plants need a little iron to make chlorophyll, but the metal built into the chlorophyll molecule is magnesium." }
+    ],
+    "explanation": "Magnesium is part of the chlorophyll molecule, so plants need magnesium ions to make chlorophyll. Without them the plant cannot absorb enough light for photosynthesis.",
+    "hints": ["Think about the green pigment."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["D"] }],
+    "skill": "RECALL",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q02",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 1,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "Why do plants need nitrate ions?",
+    "options": [
+      { "key": "A", "content": "To make amino acids and proteins", "correct": true, "rationale": "Nitrogen from nitrate is combined with sugars to make amino acids, which form proteins." },
+      { "key": "B", "content": "To make starch", "rationale": "Starch contains only carbon, hydrogen and oxygen, so no nitrogen is needed." },
+      { "key": "C", "content": "To make cellulose for cell walls", "rationale": "Cellulose is a carbohydrate made from glucose; it contains no nitrogen." },
+      { "key": "D", "content": "To provide energy for respiration", "rationale": "Mineral ions provide no energy; glucose is respired for energy." }
+    ],
+    "explanation": "Nitrate ions supply the nitrogen needed to make amino acids, which are joined into proteins for growth. Carbohydrates such as starch and cellulose contain no nitrogen.",
+    "hints": ["Which of these substances contains nitrogen?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["D"] }],
+    "skill": "RECALL",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q03",
+    "type": "SHORT_ANSWER",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "Leaves of a tomato plant are yellow between the veins, while the veins stay green. Name the mineral ion that is most likely to be lacking.",
+    "payload": { "maxLength": 60 },
+    "answerSpec": {
+      "accepted": [{ "value": "magnesium" }, { "value": "Mg" }, { "value": "magnesium ions" }, { "value": "magnesium ion" }, { "value": "Mg2+" }],
+      "patterns": ["^(?:magnesium|mg)(?: ?\\^?2\\+?)?(?: ions?)?$"],
+      "rejected": [
+        { "value": "nitrogen", "feedback": "Nitrogen deficiency makes leaves yellow all over and the plant stunted. Yellowing between the veins points to magnesium." },
+        { "value": "nitrate", "feedback": "Nitrate deficiency makes leaves yellow all over and the plant stunted. Yellowing between the veins points to magnesium." }
+      ],
+      "normalise": ["strip_punctuation", "strip_articles"]
+    },
+    "explanation": "Magnesium is part of chlorophyll. When it is in short supply, the leaf tissue between the veins loses its chlorophyll and turns yellow first.",
+    "hints": ["Which ion is part of the chlorophyll molecule?"],
+    "modelResponse": { "type": "SHORT_ANSWER", "text": "magnesium" },
+    "wrongResponses": [{ "type": "SHORT_ANSWER", "text": "nitrate" }],
+    "skill": "APPLICATION",
+    "dailyEligible": true
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q04",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "A maize plant growing in poor sandy soil is short and has weak stems, and its lower leaves have turned yellow all over. Which mineral ion is most likely to be in short supply?",
+    "options": [
+      { "key": "A", "content": "Nitrate", "correct": true, "rationale": "Without nitrate the plant cannot make enough protein for growth, and the leaves turn yellow." },
+      { "key": "B", "content": "Magnesium", "rationale": "Magnesium deficiency typically causes yellowing between the veins rather than stunted growth with leaves yellow all over." },
+      { "key": "C", "content": "Sodium", "rationale": "Sodium is not one of the main mineral ions plants need." },
+      { "key": "D", "content": "Chloride", "rationale": "Chloride deficiency is rare and is not linked to these symptoms." }
+    ],
+    "explanation": "Stunted growth and general yellowing of the older leaves are typical of nitrogen (nitrate) deficiency: without nitrate the plant cannot make enough amino acids and proteins for new cells, or enough chlorophyll.",
+    "hints": ["Which ion is needed to make proteins for growth?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "dailyEligible": true
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q05",
+    "type": "TRUE_FALSE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "True or false: most plants absorb nitrogen gas from the air through their stomata and use it to make proteins.",
+    "answerSpec": {
+      "correct": false,
+      "feedbackTrue": "Not so: most plants cannot use nitrogen gas at all. They absorb nitrogen from the soil as nitrate ions, through their root hairs.",
+      "feedbackFalse": "Correct: most plants cannot use nitrogen gas. They absorb nitrate ions from the soil through their root hair cells."
+    },
+    "explanation": "Although air is about 78% nitrogen, most plants cannot use nitrogen gas. They absorb nitrogen from the soil water as nitrate ions and use it to make amino acids and proteins.",
+    "hints": ["In what form do plants take in nitrogen, and through which organ?"],
+    "modelResponse": { "type": "TRUE_FALSE", "value": false },
+    "wrongResponses": [{ "type": "TRUE_FALSE", "value": true }],
+    "skill": "UNDERSTANDING",
+    "dailyEligible": true
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q06",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "Root hair cells often absorb nitrate ions even when the concentration of nitrate inside the cells is higher than in the soil water. By which process?",
+    "options": [
+      { "key": "A", "content": "Active transport", "correct": true, "rationale": "Active transport moves ions against a concentration gradient, using energy from respiration." },
+      { "key": "B", "content": "Diffusion", "rationale": "Diffusion only moves particles down a concentration gradient, from high to low." },
+      { "key": "C", "content": "Osmosis", "rationale": "Osmosis is the movement of water, not of mineral ions." },
+      { "key": "D", "content": "Transpiration", "rationale": "Transpiration is the loss of water vapour from leaves." }
+    ],
+    "explanation": "Moving ions from a low concentration (soil water) to a higher concentration (inside the cell) requires active transport, which uses energy released by respiration.",
+    "hints": ["Movement against a concentration gradient needs energy."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q07",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 50,
+    "stem": "Select **all** the substances in a plant that contain nitrogen.",
+    "payload": { "selectMode": "multiple", "shuffleOptions": true },
+    "answerSpec": { "scoring": "all_or_nothing" },
+    "options": [
+      { "key": "A", "content": "Amino acids", "correct": true, "rationale": "Every amino acid contains nitrogen." },
+      { "key": "B", "content": "Proteins", "correct": true, "rationale": "Proteins are made of amino acids, so they contain nitrogen." },
+      { "key": "C", "content": "Glucose", "rationale": "Glucose contains only carbon, hydrogen and oxygen." },
+      { "key": "D", "content": "Starch", "rationale": "Starch is made of glucose units, so it contains no nitrogen." },
+      { "key": "E", "content": "Cellulose", "rationale": "Cellulose is also made of glucose units and contains no nitrogen." }
+    ],
+    "explanation": "Carbohydrates (glucose, starch, cellulose) contain only carbon, hydrogen and oxygen. Amino acids and the proteins made from them contain nitrogen, which is why plants need nitrate ions.",
+    "hints": ["Carbohydrates contain only three elements."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A", "B"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] }, { "type": "MULTIPLE_CHOICE", "optionKeys": ["A", "B", "D"] }],
+    "skill": "UNDERSTANDING"
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q08",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "Which group of symptoms is typical of phosphorus deficiency in a young maize plant?",
+    "options": [
+      { "key": "A", "content": "Poor root growth, stunted growth and purplish leaves", "correct": true, "rationale": "Phosphorus is needed for ATP and DNA, especially in growing roots." },
+      { "key": "B", "content": "Yellowing between the veins of the older leaves", "rationale": "This is typical of magnesium deficiency." },
+      { "key": "C", "content": "Brown, scorched leaf edges and poor flowering", "rationale": "This is typical of potassium deficiency." },
+      { "key": "D", "content": "Wilting on hot afternoons, recovering at night", "rationale": "Temporary wilting is caused by water loss, not a mineral deficiency." }
+    ],
+    "explanation": "Phosphorus (absorbed as phosphate) is used to make ATP and nucleic acids, so it is vital where cells divide rapidly, as in roots. Deficient plants have poor roots, grow slowly and often have dull purplish leaves.",
+    "hints": ["Phosphorus is especially important for roots."],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "RECALL",
+    "examStyle": true,
+    "applies": ["zimsec"]
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q09",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 45,
+    "stem": "A farmer's tomato plants have leaves with yellow and brown, dried-out edges, and they produce few flowers and fruits. Which mineral ion is most likely to be lacking?",
+    "options": [
+      { "key": "A", "content": "Potassium", "correct": true, "rationale": "Potassium deficiency causes scorched leaf margins and poor flowering and fruiting." },
+      { "key": "B", "content": "Magnesium", "rationale": "Magnesium deficiency causes yellowing between the veins." },
+      { "key": "C", "content": "Nitrate", "rationale": "Nitrate deficiency causes stunted growth with leaves yellow all over." },
+      { "key": "D", "content": "Phosphate", "rationale": "Phosphate deficiency causes poor roots and purplish leaves." }
+    ],
+    "explanation": "Potassium helps keep the ion and water balance of cells and activates enzymes. When it is lacking, leaf margins turn yellow then brown and flowering and fruiting are poor.",
+    "hints": ["Which ion is linked with flowering and fruiting?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "applies": ["zimsec"]
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q10",
+    "type": "MATCHING",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 3,
+    "marks": 4,
+    "estimatedSeconds": 100,
+    "stem": "Match each mineral ion with the deficiency symptoms it causes.",
+    "payload": {
+      "left": [
+        { "id": "n", "content": "Nitrate" },
+        { "id": "mg", "content": "Magnesium" },
+        { "id": "p", "content": "Phosphate" },
+        { "id": "k", "content": "Potassium" }
+      ],
+      "right": [
+        { "id": "s1", "content": "Stunted growth and leaves yellow all over" },
+        { "id": "s2", "content": "Yellowing between the veins of the leaves" },
+        { "id": "s3", "content": "Poor root growth and purplish leaves" },
+        { "id": "s4", "content": "Brown, scorched leaf margins and poor flowering" },
+        { "id": "s5", "content": "Leaves droop on hot afternoons but recover overnight" }
+      ],
+      "shuffle": true
+    },
+    "answerSpec": {
+      "pairs": [
+        { "leftId": "n", "rightId": "s1" },
+        { "leftId": "mg", "rightId": "s2" },
+        { "leftId": "p", "rightId": "s3" },
+        { "leftId": "k", "rightId": "s4" }
+      ],
+      "marksPerPair": 1
+    },
+    "explanation": "Nitrate: stunting and general yellowing (no proteins). Magnesium: yellowing between the veins (no chlorophyll). Phosphate: poor roots and purplish leaves. Potassium: scorched leaf margins and poor flowering. Drooping that recovers overnight is temporary wilting, caused by water loss.",
+    "hints": ["One symptom is caused by water loss, not a mineral deficiency."],
+    "modelResponse": { "type": "MATCHING", "pairs": [{ "leftId": "n", "rightId": "s1" }, { "leftId": "mg", "rightId": "s2" }, { "leftId": "p", "rightId": "s3" }, { "leftId": "k", "rightId": "s4" }] },
+    "wrongResponses": [{ "type": "MATCHING", "pairs": [{ "leftId": "n", "rightId": "s2" }, { "leftId": "mg", "rightId": "s1" }, { "leftId": "p", "rightId": "s3" }, { "leftId": "k", "rightId": "s4" }] }],
+    "skill": "RECALL",
+    "applies": ["zimsec"]
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q11",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 2,
+    "marks": 1,
+    "estimatedSeconds": 50,
+    "stem": "Why does a plant grow slowly when it is short of magnesium ions?",
+    "options": [
+      { "key": "A", "content": "It makes less chlorophyll, so it absorbs less light and makes less glucose", "correct": true, "rationale": "Magnesium is needed for chlorophyll; less chlorophyll means less photosynthesis." },
+      { "key": "B", "content": "It cannot make amino acids, so it cannot make proteins", "rationale": "Amino acids need nitrogen from nitrate, not magnesium." },
+      { "key": "C", "content": "It cannot absorb water by osmosis", "rationale": "Magnesium shortage does not stop osmosis." },
+      { "key": "D", "content": "Its stomata stay closed all the time", "rationale": "Magnesium is not what opens the stomata." }
+    ],
+    "explanation": "Magnesium is part of the chlorophyll molecule. With less chlorophyll the leaves absorb less light energy, photosynthesis slows, and less glucose is available for growth.",
+    "hints": ["Magnesium is part of which molecule?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] }],
+    "skill": "UNDERSTANDING",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q12",
+    "type": "NUMERICAL",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 3,
+    "marks": 2,
+    "estimatedSeconds": 90,
+    "stem": "A 25 kg bag of urea fertiliser contains 46% nitrogen by mass. Calculate the mass of nitrogen in the bag, in kg.",
+    "payload": { "unitHint": "kg" },
+    "answerSpec": {
+      "value": 11.5,
+      "tolerance": { "kind": "absolute", "amount": 0.05 },
+      "units": { "required": false, "accepted": ["kg", "kilograms", "kilogram", "kgs", "kilogrammes"], "conversions": [{ "unit": "g", "factor": 0.001 }] }
+    },
+    "explanation": "46% of 25 kg is 0.46 × 25 = 11.5 kg of nitrogen.",
+    "workedSolution": "1. Write the percentage as a decimal: 46% = 0.46.\n2. Mass of nitrogen = 25 × 0.46 = 11.5 kg.",
+    "hints": ["Find 46% of 25 kg."],
+    "modelResponse": { "type": "NUMERICAL", "value": "11.5", "unit": "kg" },
+    "wrongResponses": [{ "type": "NUMERICAL", "value": "1150" }, { "type": "NUMERICAL", "value": "54.3" }],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q13",
+    "type": "NUMERICAL",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 3,
+    "marks": 2,
+    "estimatedSeconds": 120,
+    "stem": "Sipho is advised to apply 150 kg of ammonium nitrate per hectare as a top dressing. His maize field is 0.8 hectares. The fertiliser is sold only in full 50 kg bags.\n\nHow many bags must he buy?",
+    "payload": { "unitHint": "bags" },
+    "answerSpec": { "value": 3 },
+    "explanation": "He needs 150 × 0.8 = 120 kg. That is 120 ÷ 50 = 2.4 bags, so he must buy 3 full bags.",
+    "workedSolution": "1. Mass needed = 150 kg/ha × 0.8 ha = 120 kg.\n2. Bags = 120 ÷ 50 = 2.4.\n3. Round up to whole bags: 3 bags (2 bags would give only 100 kg).",
+    "hints": ["Work out the total mass first.", "You cannot buy part of a bag."],
+    "modelResponse": { "type": "NUMERICAL", "value": "3" },
+    "wrongResponses": [{ "type": "NUMERICAL", "value": "2" }, { "type": "NUMERICAL", "value": "2.4" }],
+    "skill": "APPLICATION"
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q14",
+    "type": "FILL_IN_THE_BLANK",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 2,
+    "marks": 3,
+    "estimatedSeconds": 60,
+    "stem": "Complete the sentences about the uses of mineral ions.",
+    "payload": {
+      "template": "Nitrate ions are used to make {{blank:aa}}, which are joined together to make {{blank:prot}}. Magnesium ions are used to make {{blank:chl}}.",
+      "blanks": [
+        { "id": "aa", "input": "text" },
+        { "id": "prot", "input": "text" },
+        { "id": "chl", "input": "text" }
+      ]
+    },
+    "answerSpec": {
+      "blanks": [
+        { "id": "aa", "accepted": ["amino acids", "amino acid", "aminoacids"], "marks": 1 },
+        { "id": "prot", "accepted": ["proteins", "protein"], "marks": 1 },
+        { "id": "chl", "accepted": ["chlorophyll", "chlorophyl"], "marks": 1 }
+      ]
+    },
+    "explanation": "Nitrogen from nitrate is built into amino acids, which are linked to form proteins. Magnesium is part of chlorophyll.",
+    "hints": ["Proteins are made of smaller units."],
+    "modelResponse": { "type": "FILL_IN_THE_BLANK", "blanks": [{ "blankId": "aa", "text": "amino acids" }, { "blankId": "prot", "text": "proteins" }, { "blankId": "chl", "text": "chlorophyll" }] },
+    "wrongResponses": [{ "type": "FILL_IN_THE_BLANK", "blanks": [{ "blankId": "aa", "text": "glucose" }, { "blankId": "prot", "text": "starch" }, { "blankId": "chl", "text": "chlorophyll" }] }],
+    "skill": "RECALL"
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q15",
+    "type": "STRUCTURED",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 4,
+    "marks": 8,
+    "estimatedSeconds": 600,
+    "stem": "Four similar maize seedlings were grown with their roots in jars of solution made with distilled water. Air was bubbled through each solution and the jars were wrapped in black paper. After four weeks the seedlings were measured.\n\n| Seedling | Solution | Height after 4 weeks / cm | Appearance of leaves |\n| --- | --- | --- | --- |\n| A | complete nutrient solution | 40 | dark green |\n| B | all nutrients except nitrate | 14 | small, pale yellow |\n| C | all nutrients except magnesium | 30 | yellow between the veins |\n| D | distilled water only | 8 | very small and yellow |",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "Which seedling is the control?",
+        "options": [
+          { "key": "A", "content": "Seedling A", "correct": true, "rationale": "It has every nutrient, so the other seedlings can be compared with it." },
+          { "key": "B", "content": "Seedling B", "rationale": "B lacks nitrate; it tests the effect of nitrate." },
+          { "key": "C", "content": "Seedling C", "rationale": "C lacks magnesium; it tests the effect of magnesium." },
+          { "key": "D", "content": "Seedling D", "rationale": "D lacks every nutrient; it is not the comparison for a single missing ion." }
+        ]
+      },
+      {
+        "label": "(b)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Explain why seedling B was short with pale yellow leaves.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "B1", "description": "Without nitrate the seedling could not make (enough) amino acids / proteins, so it could not make new cells and grow", "marks": 1 },
+              { "id": "B2", "description": "Nitrogen is also needed for chlorophyll, so the leaves were pale / yellow", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Explain the appearance and height of seedling C.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "C1", "description": "Without magnesium it could not make (enough) chlorophyll, so the leaves were yellow between the veins", "marks": 1 },
+              { "id": "C2", "description": "Less chlorophyll means less light absorbed and less photosynthesis, so less glucose for growth (shorter than A)", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(d)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 1,
+        "stem": "Explain why air was bubbled through the solutions.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "D1", "description": "To supply oxygen to the roots for (aerobic) respiration, releasing energy for the active uptake of mineral ions", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(e)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 1,
+        "stem": "Suggest why the jars were wrapped in black paper.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "E1", "description": "To stop algae growing in the solutions (which would use up mineral ions), OR to keep the roots in the dark as they would be in soil", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(f)",
+        "type": "NUMERICAL",
+        "marks": 1,
+        "stem": "Calculate the height of seedling B as a percentage of the height of seedling A.",
+        "payload": { "unitHint": "%" },
+        "answerSpec": { "value": 35, "tolerance": { "kind": "absolute", "amount": 0.5 } }
+      }
+    ],
+    "explanation": "A (complete solution) is the control. Without nitrate (B) the seedling cannot make proteins for growth and is short and pale; without magnesium (C) it cannot make chlorophyll, so the leaves yellow between the veins and photosynthesis falls. Aeration supplies oxygen for root respiration, needed for active uptake. B reached 14 ÷ 40 × 100 = 35% of the control's height.",
+    "workedSolution": "**(a)** Seedling A.\n\n**(b)** No nitrate, so no amino acids or proteins for new cells; less chlorophyll, so yellow.\n\n**(c)** No magnesium, so less chlorophyll (yellow between veins), less photosynthesis and less glucose for growth.\n\n**(d)** Oxygen for respiration in the roots, giving energy for active uptake of ions.\n\n**(e)** To prevent algae growing.\n\n**(f)** 14 ÷ 40 × 100 = 35%.",
+    "hints": ["A control contains everything.", "Link each missing ion to the substance it is used to make."],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+        "(f)": { "type": "NUMERICAL", "value": "35" }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["D"] },
+          "(f)": { "type": "NUMERICAL", "value": "286" }
+        }
+      }
+    ],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q16",
+    "type": "STRUCTURED",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 4,
+    "marks": 9,
+    "estimatedSeconds": 660,
+    "stem": "Farai grows maize near Chinhoyi. At planting he applies Compound D (N:P:K ratio 7:14:7) as a basal dressing. About six weeks later, when the maize is knee-high, he applies ammonium nitrate (34.5% N) as a top dressing.",
+    "parts": [
+      {
+        "label": "(a)",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 1,
+        "stem": "Which nutrient does Compound D supply in the largest proportion?",
+        "options": [
+          { "key": "A", "content": "Phosphorus", "correct": true, "rationale": "The middle number (14) of N:P:K is the largest." },
+          { "key": "B", "content": "Nitrogen", "rationale": "Nitrogen is the first number, 7." },
+          { "key": "C", "content": "Potassium", "rationale": "Potassium is the last number, 7." },
+          { "key": "D", "content": "Magnesium", "rationale": "Magnesium is not one of the three numbers on an N:P:K label." }
+        ]
+      },
+      {
+        "label": "(b)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Suggest why a fertiliser rich in phosphorus is applied at planting.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "B1", "description": "Phosphorus is needed for root growth / cell division (making DNA)", "marks": 1 },
+              { "id": "B2", "description": "Young seedlings must establish a good root system quickly, and phosphorus is needed for ATP / energy transfer in the growing cells", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(c)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "Explain why most of the nitrogen is applied as a top dressing about six weeks after planting, rather than all at planting.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "C1", "description": "Nitrate is soluble and is easily leached (washed below the roots) by rain, so nitrogen applied early may be lost before the plant can use it", "marks": 1 },
+              { "id": "C2", "description": "The maize needs most nitrogen during its period of rapid leaf and stem growth, to make proteins (and chlorophyll)", "marks": 1 }
+            ]
+          }
+        }
+      },
+      {
+        "label": "(d)",
+        "type": "NUMERICAL",
+        "marks": 2,
+        "stem": "Farai applies 150 kg of ammonium nitrate. Calculate the mass of nitrogen this supplies, in kg.",
+        "payload": { "unitHint": "kg" },
+        "answerSpec": {
+          "value": 51.75,
+          "tolerance": { "kind": "absolute", "amount": 0.25 },
+          "units": { "required": false, "accepted": ["kg", "kilograms", "kilogram", "kgs", "kilogrammes"], "conversions": [{ "unit": "g", "factor": 0.001 }] }
+        }
+      },
+      {
+        "label": "(e)",
+        "type": "SHORT_ANSWER",
+        "markingMode": "MANUAL",
+        "marks": 2,
+        "stem": "State two disadvantages of applying much more fertiliser than the crop needs.",
+        "answerSpec": {
+          "markScheme": {
+            "points": [
+              { "id": "E1", "description": "First disadvantage, e.g. wastes money", "marks": 1 },
+              { "id": "E2", "description": "Second disadvantage, e.g. leached nitrate and phosphate pollute rivers and dams, causing algal blooms (eutrophication); OR a very concentrated soil solution can draw water out of the roots by osmosis and damage them", "marks": 1 }
+            ]
+          }
+        }
+      }
+    ],
+    "explanation": "Compound D (7:14:7) is rich in phosphorus, which young plants need for root growth and for ATP and DNA in dividing cells. Nitrogen is given later because nitrate is easily leached and the plant needs most of it during rapid growth. 150 kg of 34.5% N fertiliser supplies 150 × 0.345 = 51.75 kg of nitrogen. Excess fertiliser wastes money and pollutes water.",
+    "workedSolution": "**(a)** Phosphorus (14 is the largest number).\n\n**(b)** Phosphorus is needed for root growth and cell division; seedlings need a strong root system quickly.\n\n**(c)** Nitrate is easily leached by rain; the plant needs most nitrogen during rapid growth a few weeks after emergence.\n\n**(d)** 150 × 0.345 = 51.75 kg (about 52 kg).\n\n**(e)** Wasted money; eutrophication of rivers from leached nitrate and phosphate.",
+    "hints": ["The three numbers are N, P and K in that order.", "Which ions dissolve easily and wash away?"],
+    "modelResponse": {
+      "type": "STRUCTURED",
+      "parts": {
+        "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+        "(d)": { "type": "NUMERICAL", "value": "51.75", "unit": "kg" }
+      }
+    },
+    "wrongResponses": [
+      {
+        "type": "STRUCTURED",
+        "parts": {
+          "(a)": { "type": "MULTIPLE_CHOICE", "optionKeys": ["B"] },
+          "(d)": { "type": "NUMERICAL", "value": "434.8" }
+        }
+      }
+    ],
+    "skill": "APPLICATION",
+    "examStyle": true,
+    "applies": ["zimsec"]
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q17",
+    "type": "EXTENDED_RESPONSE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 4,
+    "marks": 6,
+    "estimatedSeconds": 540,
+    "stem": "Describe the roles of nitrogen, phosphorus and potassium in plant growth, and the signs that a plant is short of each one. [6]",
+    "payload": { "wordLimit": { "max": 300 } },
+    "answerSpec": {
+      "markScheme": {
+        "points": [
+          { "id": "P1", "description": "Nitrogen (as nitrate) is used to make amino acids and proteins (and chlorophyll) for growth", "marks": 1 },
+          { "id": "P2", "description": "Nitrogen deficiency: stunted growth with yellow leaves (older leaves first)", "marks": 1 },
+          { "id": "P3", "description": "Phosphorus is used to make ATP and DNA / RNA, and is important for root growth and cell division", "marks": 1 },
+          { "id": "P4", "description": "Phosphorus deficiency: poor root growth, stunted plants and purplish leaves", "marks": 1 },
+          { "id": "P5", "description": "Potassium maintains the ion and water balance of cells / helps open and close stomata / activates enzymes; needed for flowering and fruiting", "marks": 1 },
+          { "id": "P6", "description": "Potassium deficiency: yellow or brown (scorched) leaf margins and poor flowering and fruiting", "marks": 1 }
+        ]
+      },
+      "modelAnswer": "**Nitrogen** is absorbed as nitrate ions and used to make amino acids, proteins and chlorophyll, so it is needed for growth. A plant short of nitrogen is stunted and its leaves turn yellow, starting with the older leaves. **Phosphorus** is used to make ATP and the nucleic acids DNA and RNA, so it is important wherever cells divide, especially in roots. A deficient plant has poor roots, grows slowly and has purplish leaves. **Potassium** keeps the ion and water balance of cells, helps the guard cells open and close the stomata and activates enzymes; it is important for flowering and fruiting. A deficient plant has yellow or brown, scorched leaf margins and flowers and fruits poorly."
+    },
+    "explanation": "Each nutrient has a role and a typical deficiency sign: nitrogen (proteins; stunting and yellow leaves), phosphorus (ATP, DNA, roots; poor roots and purple leaves) and potassium (ion balance, stomata, enzymes; scorched leaf margins and poor flowering).",
+    "hints": ["For each element give one role and one symptom."],
+    "skill": "RECALL",
+    "examStyle": true,
+    "applies": ["zimsec"]
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q18",
+    "type": "MULTIPLE_CHOICE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 4,
+    "marks": 1,
+    "estimatedSeconds": 75,
+    "stem": "After heavy rain, the maize growing in a waterlogged part of a field turns yellow and grows poorly, even though the whole field received the same fertiliser. Which is the best explanation?",
+    "options": [
+      { "key": "A", "content": "The waterlogged roots are short of oxygen, so they release less energy by respiration for the active uptake of mineral ions", "correct": true, "rationale": "Water fills the air spaces in the soil; without oxygen the roots cannot absorb ions actively." },
+      { "key": "B", "content": "The roots absorb too much nitrate from the wet soil", "rationale": "Too much nitrate would not cause yellowing; the problem is poor uptake." },
+      { "key": "C", "content": "Waterlogged soil contains no mineral ions at all", "rationale": "The same fertiliser was applied; the ions are present but are not taken up well." },
+      { "key": "D", "content": "The leaves cannot carry out photosynthesis when it rains", "rationale": "Rain does not stop photosynthesis, and the rest of the field is fine." }
+    ],
+    "explanation": "Mineral ions are absorbed mainly by active transport, which needs energy from aerobic respiration in the root cells. In waterlogged soil the air spaces are filled with water, so the roots are short of oxygen and absorb fewer ions. (Leaching in the heavy rain may also remove some nitrate.)",
+    "hints": ["What do the root cells need to absorb ions against a concentration gradient?"],
+    "modelResponse": { "type": "MULTIPLE_CHOICE", "optionKeys": ["A"] },
+    "wrongResponses": [{ "type": "MULTIPLE_CHOICE", "optionKeys": ["C"] }],
+    "skill": "ANALYSIS",
+    "examStyle": true
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q19",
+    "type": "TRUE_FALSE",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "True or false: mineral ions absorbed from the soil are a source of energy for plants.",
+    "answerSpec": {
+      "correct": false,
+      "feedbackTrue": "Not so: mineral ions supply elements such as nitrogen and magnesium, but no energy. Plants get their energy by respiring the glucose made in photosynthesis.",
+      "feedbackFalse": "Correct: mineral ions supply elements for making substances such as proteins and chlorophyll, but they release no energy."
+    },
+    "explanation": "Mineral ions are raw materials for building molecules such as proteins (nitrogen) and chlorophyll (magnesium). Energy comes from respiring glucose made by photosynthesis.",
+    "hints": ["Where does a plant's energy ultimately come from?"],
+    "modelResponse": { "type": "TRUE_FALSE", "value": false },
+    "wrongResponses": [{ "type": "TRUE_FALSE", "value": true }],
+    "skill": "UNDERSTANDING"
+  },
+  {
+    "key": "plant-nutrition.mineral-nutrition.q20",
+    "type": "SHORT_ANSWER",
+    "concepts": ["bio.plant-nutrition.mineral-nutrition"],
+    "difficulty": 3,
+    "marks": 1,
+    "estimatedSeconds": 30,
+    "stem": "Name the mineral element that plants need to make ATP and DNA, and that is especially important for root growth.",
+    "payload": { "maxLength": 60 },
+    "answerSpec": {
+      "accepted": [{ "value": "phosphorus" }, { "value": "phosphate" }, { "value": "phosphates" }, { "value": "phosphate ions" }, { "value": "phosphorous" }, { "value": "P" }],
+      "keywords": { "any": ["phosph*"] },
+      "rejected": [{ "value": "potassium", "feedback": "Potassium is important for ion balance and flowering. ATP and DNA need phosphorus." }],
+      "normalise": ["strip_punctuation", "strip_articles"]
+    },
+    "explanation": "Phosphorus, absorbed as phosphate ions, is part of ATP and of the nucleic acids DNA and RNA. It is especially important in roots and other places where cells divide rapidly.",
+    "hints": ["The middle letter of N:P:K."],
+    "modelResponse": { "type": "SHORT_ANSWER", "text": "phosphorus" },
+    "wrongResponses": [{ "type": "SHORT_ANSWER", "text": "potassium" }],
+    "skill": "RECALL",
+    "applies": ["zimsec"]
+  }
+]
