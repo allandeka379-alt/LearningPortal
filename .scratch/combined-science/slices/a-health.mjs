@@ -37,19 +37,19 @@ concept("cs.health.hygiene-and-transmission", {
     stem: "When is it most important to wash your hands with soap and water?",
     options: [
       ["After using the toilet and before handling food", "Correct: this stops germs from faeces reaching food and the mouth."],
-      ["Only when they look dirty", "Germs are too small to see, so clean-looking hands can still carry them."],
-      ["Only after playing sport", "Hands must be washed after the toilet and before eating."],
-      ["Only before going to bed", "The key times are after the toilet and before handling food."],
+      ["Only when your hands look or feel dirty", "Germs are too small to see, so clean-looking hands can still carry them."],
+      ["After playing sport and before going to class", "Hands must be washed after the toilet and before eating."],
+      ["Before going to bed and after waking up", "The key times are after the toilet and before handling food."],
     ],
     answer: "A", explanation: "Washing hands with soap after using the toilet and before handling or eating food removes pathogens before they can reach food or the mouth." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true, objectives: O("7.1.7.1.2", "7.1.7.1.4"),
     stem: "Why should cooked food at a market stall be kept covered?",
     options: [
-      ["Houseflies that have landed on faeces or rubbish can leave bacteria on uncovered food.", "Correct."],
-      ["Covering food makes it cook faster.", "The food is already cooked; covering it is about keeping flies away."],
-      ["Covering food stops the vitamins from evaporating.", "Vitamins do not evaporate from food; the reason is hygiene."],
-      ["Uncovered food becomes poisonous in sunlight.", "Sunlight does not make food poisonous; flies carry bacteria to it."],
+      ["Flies that have been on faeces or rubbish can leave bacteria on it.", "Correct."],
+      ["Covering food keeps it warm, which stops bacteria growing.", "Warm food lets bacteria multiply faster; the cover is there to keep flies off."],
+      ["Covering food stops its vitamins from evaporating into the air.", "Vitamins do not evaporate from food; the reason is hygiene."],
+      ["Sunlight falling on uncovered food turns it poisonous.", "Sunlight does not make food poisonous; flies carry bacteria to it."],
     ],
     answer: "A", explanation: "Houseflies carry bacteria on their feet and mouthparts from faeces and rubbish to food. Covering food breaks this route of transmission." });
 
@@ -79,10 +79,10 @@ concept("cs.health.hygiene-and-transmission", {
   q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: O("7.1.7.1.2", "7.1.7.1.4"),
     stem: "Learners clear rubbish out of a blocked drain and then pour disinfectant into it. How does this help to prevent disease?",
     options: [
-      ["Water no longer stands in the drain, so mosquitoes cannot breed there, and the disinfectant kills pathogens.", "Correct."],
-      ["The disinfectant makes the water safe to drink.", "Drain water is never safe to drink."],
+      ["No standing water is left for mosquitoes, and pathogens are killed.", "Correct."],
+      ["The disinfectant makes the drain water safe to drink.", "Drain water is never safe to drink."],
       ["It stops the drain smelling, which is the main cause of disease.", "Smells do not cause disease; pathogens and vectors do."],
-      ["The rubbish removed from the drain can be eaten by livestock.", "Rubbish is harmful to livestock."],
+      ["The cleared rubbish can now be burnt to make the air cleaner.", "Burning rubbish pollutes the air; the benefit is removing breeding sites and killing pathogens."],
     ],
     answer: "A", explanation: "A clear drain carries water away instead of letting it stand where mosquitoes breed, and the disinfectant kills germs that multiply in the dirty water." });
 
@@ -99,10 +99,10 @@ concept("cs.health.hygiene-and-transmission", {
   q.mcq({ d: 3, skill: "APPLICATION", objectives: O("7.1.7.1.3"),
     stem: "A family plans to dig a refuse pit next to their shallow well because it is close to the kitchen. What is the main danger?",
     options: [
-      ["Substances and pathogens from the rotting waste may soak through the soil into the well water.", "Correct."],
-      ["The pit will fill up more quickly near a well.", "The distance from the well does not change how fast the pit fills."],
-      ["Waste cannot rot in damp soil.", "Waste rots well in damp soil; that is not the danger."],
-      ["Smoke from the pit will reach the kitchen.", "Burying does not produce smoke."],
+      ["Pathogens and harmful substances may seep into the well water.", "Correct."],
+      ["The pit will fill up with water more quickly near a well.", "The distance from the well does not change how fast the pit fills."],
+      ["Waste cannot rot properly in the damp soil near a well.", "Waste rots well in damp soil; that is not the danger."],
+      ["Smoke from burning the pit's waste will reach the kitchen.", "Smoke may be a nuisance, but the main danger is pathogens reaching the well water."],
     ],
     answer: "A", explanation: "Liquid from rotting waste can carry chemicals and pathogens down through the soil into underground water, so refuse pits must be dug well away from wells and boreholes.",
     hints: ["Think about where rainwater goes after it falls on the waste in the pit."] });
@@ -140,10 +140,10 @@ concept("cs.health.hygiene-and-transmission", {
   q.mcq({ d: 3, skill: "UNDERSTANDING", objectives: O("7.1.7.1.4"),
     stem: "How does the way a housefly spreads disease differ from the way a mosquito spreads malaria?",
     options: [
-      ["The fly carries bacteria on the outside of its body to food; the mosquito carries the parasite inside its body and injects it when it bites.", "Correct."],
+      ["Flies carry bacteria on their bodies to food; mosquitoes inject parasites.", "Correct."],
       ["The fly injects bacteria when it bites; the mosquito leaves parasites on food.", "This is the wrong way round."],
-      ["Both inject pathogens into the blood when they bite.", "Houseflies do not bite people to feed on blood."],
-      ["Neither spreads disease; they are only a nuisance.", "Both spread disease."],
+      ["Both carry pathogens on their legs and leave them on food or skin.", "Houseflies do not bite people to feed on blood."],
+      ["Flies spread malaria parasites; mosquitoes spread cholera bacteria.", "This swaps the diseases: flies carry cholera bacteria to food, and mosquitoes inject malaria parasites."],
     ],
     answer: "A", explanation: "A housefly picks up bacteria on its feet and mouthparts from faeces and leaves them on food. The female Anopheles mosquito carries Plasmodium in its body and injects it into the blood when it feeds.",
     hints: ["Does a housefly bite people? Where on its body are the germs it carries?"] });
@@ -230,9 +230,9 @@ concept("cs.health.ebola", {
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "How is Ebola usually spread from one person to another?",
     options: [
-      ["By direct contact with the blood or body fluids of a sick or dead person", "Correct."],
-      ["By the bite of an infected mosquito", "That is how malaria spreads."],
-      ["By drinking water contaminated with faeces", "That is how cholera mainly spreads."],
+      ["By contact with blood or body fluids of a sick or dead person", "Correct."],
+      ["By the bite of an infected mosquito, like malaria", "That is how malaria spreads."],
+      ["By drinking water contaminated with faeces, like cholera", "That is how cholera mainly spreads."],
       ["By breathing in droplets from the air in the same room", "Ebola is not spread through the air."],
     ],
     answer: "A", explanation: "Ebola spreads through direct contact, via broken skin or the eyes, nose and mouth, with the blood and body fluids of an infected person or with objects soiled by them." });
@@ -293,9 +293,9 @@ concept("cs.health.ebola", {
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "During an Ebola outbreak, trained teams carry out burials instead of families. Why?",
     options: [
-      ["The bodies of people who died of Ebola contain large amounts of virus, and mourners who wash or touch them can be infected.", "Correct."],
-      ["The virus spreads through the air from the grave.", "Ebola does not spread through the air."],
-      ["Burial teams can bring the dead person back to life with medicines.", "This is not possible."],
+      ["Bodies of Ebola victims carry much virus, so touching them can infect mourners.", "Correct."],
+      ["The virus escapes from the soil of the grave and spreads through the air.", "Ebola does not spread through the air."],
+      ["Trained teams can give the body a vaccine that kills the virus.", "Vaccines protect living people; they cannot make a body safe."],
       ["Families might bury the body too close to a borehole and spread the virus in water.", "Water is not the main way Ebola spreads; touching the body is."],
     ],
     answer: "A", explanation: "Virus levels are very high late in the illness and after death. Washing and touching the body at funerals has spread Ebola, so trained teams with protective clothing carry out safe burials.",
@@ -304,10 +304,10 @@ concept("cs.health.ebola", {
   q.mcq({ d: 3, skill: "APPLICATION",
     stem: "A health worker checks the temperature of everyone who had contact with an Ebola patient every day for 21 days. Why 21 days?",
     options: [
-      ["21 days is the longest incubation period, so anyone still well after 21 days was not infected.", "Correct."],
-      ["The vaccine takes 21 days to work.", "That is not the reason for the 21-day check."],
-      ["Ebola patients always die within 21 days.", "This is not the reason, and many patients survive."],
-      ["Fever only appears on day 21.", "Symptoms can appear on any day from day 2 to day 21."],
+      ["21 days is the longest incubation period for Ebola.", "Correct."],
+      ["The Ebola vaccine takes 21 days to give protection.", "That is not the reason for the 21-day check."],
+      ["Ebola patients always recover or die within 21 days.", "This is not the reason, and many patients survive."],
+      ["Fever always appears on exactly the 21st day.", "Symptoms can appear on any day from day 2 to day 21."],
     ],
     answer: "A", explanation: "The incubation period is 2 to 21 days. Checking contacts for 21 days means anyone who falls ill is isolated at once, and those still well afterwards were not infected.",
     hints: ["Link the number to the incubation period of Ebola."] });

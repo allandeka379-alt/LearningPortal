@@ -367,7 +367,7 @@ concept("cs.physics.telecommunication", {
   q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: MEDIA,
     stem: "A coaxial cable has a woven metal layer (the screen) around the insulated central wire. What does the screen do?",
     options: [
-      ["It shields the signal in the central wire from electrical interference.", "The earthed screen keeps outside disturbances away from the signal."],
+      ["It shields the central wire from electrical interference.", "The earthed screen keeps outside disturbances away from the signal."],
       ["It carries the light pulses that hold the information.", "Coaxial cables carry electrical signals, not light."],
       ["It insulates the cable so that it does not overheat.", "The plastic layers insulate; the screen is metal."],
       ["It makes the cable waterproof when buried underground.", "The outer plastic sheath keeps water out."],

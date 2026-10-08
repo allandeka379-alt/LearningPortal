@@ -37,10 +37,10 @@ concept("cs.industry.peanut-processing", {
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true, objectives: BUTTER,
     stem: "Why are shelled groundnuts roasted before they are ground into peanut butter?",
     options: [
-      ["To develop the flavour and colour, drive off moisture and loosen the skins", "Correct."],
-      ["To remove the shells from the kernels", "The shells are removed before roasting."],
-      ["To turn the kernels into oil", "Grinding releases the oil; roasting does not turn kernels into oil."],
-      ["To make the kernels heavier", "Roasting drives off water, so the kernels become lighter."],
+      ["To develop flavour, dry the nuts and loosen the skins", "Correct."],
+      ["To soften the kernels so that they need no grinding", "Roasting dries the kernels and makes them brittle; they still have to be ground."],
+      ["To drive the oil out so the butter is not greasy", "The oil stays in the kernels and gives peanut butter its smooth texture."],
+      ["To destroy any aflatoxins in mouldy kernels", "Roasting does not reliably destroy aflatoxins, which is why mouldy kernels are sorted out first."],
     ],
     answer: "A", explanation: "Roasting develops the roasted flavour and brown colour, drives off moisture so the nuts grind easily and keep well, loosens the skins and kills many microorganisms." });
 
@@ -57,20 +57,20 @@ concept("cs.industry.peanut-processing", {
   q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: BUTTER,
     stem: "A worker tosses a mixture of groundnut kernels and pieces of shell in a winnowing basket in a breeze. Why does this separate them?",
     options: [
-      ["The light pieces of shell are blown away, while the heavier kernels fall back into the basket.", "Correct."],
-      ["The kernels dissolve in the air, leaving the shells behind.", "Solids do not dissolve in air."],
-      ["The shells are magnetic and stick to the basket.", "Shells are not magnetic."],
-      ["The kernels are blown away and the shells stay in the basket.", "This is the wrong way round: the shells are lighter."],
+      ["Light shell pieces blow away; heavier kernels fall back.", "Correct."],
+      ["Heavier kernels blow away; light shell pieces fall back.", "The breeze carries away the lighter pieces, not the heavier ones."],
+      ["Shells stick to the basket while kernels are tossed out.", "Nothing makes the shells stick: the separation depends on how heavy the pieces are."],
+      ["Kernels fall through the gaps in the basket's weave.", "A winnowing basket is tightly woven; the breeze does the separating."],
     ],
     answer: "A", explanation: "Winnowing separates materials by how easily they are carried by moving air: light shells and skins are blown aside, heavier kernels drop straight back." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", objectives: BUTTER,
     stem: "Why must mouldy groundnut kernels be removed before roasting?",
     options: [
-      ["They may contain aflatoxins, poisons that roasting does not destroy completely.", "Correct."],
-      ["They make the roaster dirty.", "The real problem is the poison in the nuts."],
-      ["Mouldy kernels burn and set the roaster on fire.", "This is not the reason."],
-      ["Mould turns the peanut butter a lighter colour.", "The danger is to health, not to the colour."],
+      ["They may contain aflatoxins, which roasting does not fully destroy.", "Correct."],
+      ["Mould makes the kernels too hard to grind smoothly.", "The danger is the poison in mouldy kernels, not their texture."],
+      ["Mouldy kernels give off smoke that taints the batch.", "The real danger is aflatoxin, a poison that can damage the liver."],
+      ["Mould spores would grow again inside the sealed jars.", "Roasting kills the mould itself; the problem is the poison it has already made."],
     ],
     answer: "A", explanation: "Moulds on damp or damaged groundnuts can make aflatoxins, which damage the liver. Roasting does not remove them completely, so the kernels must be sorted out before processing.",
     hints: ["Does heating always make a poisonous substance safe?"] });
@@ -147,9 +147,9 @@ concept("cs.industry.peanut-processing", {
     stem: "Why is peanut butter warmed slightly before it is pressed to extract oil?",
     options: [
       ["Warm oil is runnier, so it flows out through the cloth more easily.", "Correct."],
-      ["Warming turns the protein into oil.", "Heating does not turn protein into oil."],
-      ["Warming kills the aflatoxins.", "Aflatoxins are not destroyed completely by heat, and that is not why it is warmed."],
-      ["Warming makes the peanut butter set hard.", "Warming makes it softer and runnier."],
+      ["Warming turns some of the protein in the paste into oil.", "Heating does not change protein into oil; it only makes the oil runnier."],
+      ["Warming destroys any aflatoxins left in the paste.", "Gentle warming does not destroy aflatoxins; that is why mouldy kernels are removed."],
+      ["Warm paste sets harder, so it is easier to squeeze.", "Warming makes the paste and oil softer, not harder."],
     ],
     answer: "A", explanation: "Oil flows more easily when warm (it is less viscous), so more of it is squeezed out through the cloth in the same time.",
     hints: ["Think about how cooking oil pours on a cold morning compared with a hot day."] });
@@ -158,9 +158,9 @@ concept("cs.industry.peanut-processing", {
     stem: "After oil has been pressed out of peanut butter, a solid is left in the cloth bag. What is it called, and what is it mainly used for?",
     options: [
       ["Groundnut cake, used as a protein-rich animal feed", "Correct."],
-      ["Groundnut shells, used as firewood", "The shells were removed before roasting."],
-      ["Slag, used to build roads", "Slag comes from the blast furnace."],
-      ["Margarine, used as a spread", "Margarine is made from the oil, not from the solid."],
+      ["Groundnut shells, burnt as fuel in the roaster", "The shells were removed before grinding, so they are not in the bag."],
+      ["Slag, crushed and used as road-building material", "Slag is a waste product of the blast furnace, not of oil pressing."],
+      ["Hardened groundnut fat, sold as margarine", "Margarine is made from oil; the solid left in the bag is the protein-rich cake."],
     ],
     answer: "A", explanation: "The solid left is groundnut cake. It is rich in protein and is used in animal feed and as food." });
 

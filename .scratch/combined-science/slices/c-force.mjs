@@ -14,10 +14,10 @@ concept("cs.physics.fluid-systems", {
   q.mcq({ d: 1, skill: "RECALL", objectives: SIPHON_HYD,
     stem: "What is a siphon?",
     options: [
-      ["A tube full of liquid that carries liquid from a container up over its edge and down to a lower level", "Correct."],
-      ["A pump that lifts water from a deep borehole", "A siphon needs no pump."],
-      ["A cylinder that multiplies a force using oil", "That is a hydraulic system."],
-      ["A valve that lets liquid flow one way only", "That is a valve."],
+      ["A liquid-filled tube that carries liquid over a barrier to a lower level", "Correct."],
+      ["A hand pump that lifts water from a well or a deep borehole", "A siphon needs no pump."],
+      ["A system of oil-filled cylinders that multiplies a force", "That is a hydraulic system."],
+      ["A valve that lets a liquid flow through a pipe one way only", "That is a valve."],
     ],
     answer: "A", explanation: "A siphon is a tube, full of liquid, that carries liquid over a barrier to a lower level without a pump." });
 
@@ -50,9 +50,9 @@ concept("cs.physics.fluid-systems", {
   q.mcq({ d: 3, skill: "ANALYSIS", objectives: SIPHON_HYD,
     stem: "A siphon carries water out of a tank and pours it onto the ground well below the tank. The inlet end of the tube is held near the bottom of the tank. When will the flow stop?",
     options: [
-      ["When the water level in the tank falls to the inlet, so that air enters the tube", "Correct."],
+      ["When the water falls to the inlet and air enters the tube", "Correct."],
       ["When the tank is half empty, because the pressure has halved", "The flow continues as long as the tube stays full and the outlet is below the water surface."],
-      ["After a fixed time of about one minute", "There is no fixed time."],
+      ["When the water surface in the tank falls below the bend", "The surface is below the bend from the start; the flow stops when air enters at the inlet."],
       ["Never: it will also empty the water below the inlet", "Once air enters the tube, the siphon stops."],
     ],
     answer: "A", explanation: "The siphon keeps flowing while the tube is full of water and the outlet is below the water surface. When the water level reaches the inlet, air enters and the column of water breaks.",
@@ -82,10 +82,10 @@ concept("cs.physics.fluid-systems", {
   q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: SIPHON_HYD,
     stem: "Why do hydraulic systems use a liquid such as oil rather than air?",
     options: [
-      ["Liquids are almost incompressible, so pressure is passed on instead of squashing the fluid.", "Correct."],
-      ["Liquids are lighter than air.", "Liquids are much denser than air."],
-      ["Air cannot exert pressure.", "Air does exert pressure, but it is easily compressed."],
-      ["Oil makes the pistons rust.", "Oil prevents rust, but that is not the main reason."],
+      ["Liquids are almost incompressible, so they pass on pressure.", "Correct."],
+      ["Liquids weigh less than air, so the pedal feels lighter.", "Liquids are far denser than air; the reason is that they cannot be squashed."],
+      ["Air cannot exert pressure on a piston inside a closed pipe.", "Air can exert pressure, but it is squashed instead of passing the pressure on."],
+      ["Oil flows through narrow brake pipes faster than air does.", "Air flows more easily than oil; speed of flow is not the reason."],
     ],
     answer: "A", explanation: "A liquid hardly changes volume when squeezed, so pushing one piston moves the other at once. Air would just be compressed." });
 
@@ -127,17 +127,17 @@ concept("cs.physics.fluid-systems", {
     stem: "In a car braking system, what does the brake pedal push on directly?",
     options: [
       ["A piston in the master cylinder", "Correct."],
-      ["The brake pads", "The pads are pushed by the wheel cylinders."],
-      ["The wheel cylinders", "Brake fluid carries the pressure to the wheel cylinders."],
-      ["The brake discs", "The discs turn with the wheels."],
+      ["The pads that press on the brake discs", "The pads are pushed by the wheel cylinders."],
+      ["The pistons in the wheel cylinders", "Brake fluid carries the pressure to the wheel cylinders."],
+      ["The brake discs fixed to the wheels", "The discs turn with the wheels."],
     ],
     answer: "A", explanation: "The pedal pushes a piston into the master cylinder; the brake fluid passes the pressure to the wheel cylinders, which push the pads against the discs." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", objectives: SIPHON_HYD,
     stem: "A mechanic finds air bubbles in the brake fluid of a car. Why do they make the brakes weak and the pedal feel spongy?",
     options: [
-      ["Air is easily compressed, so pressing the pedal squashes the air instead of moving the wheel pistons.", "Correct."],
-      ["Air makes the brake fluid freeze.", "Air does not freeze brake fluid."],
+      ["Air compresses, so pushing the pedal squashes the air instead.", "Correct."],
+      ["Air bubbles make the brake fluid freeze in cold weather.", "Air does not make brake fluid freeze; the problem is that air can be squashed."],
       ["Air is denser than brake fluid and blocks the pipes.", "Air is much less dense than the fluid."],
       ["Air bubbles increase the friction between the pads and discs.", "The problem is in the fluid, not at the pads."],
     ],
@@ -165,9 +165,9 @@ concept("cs.physics.fluid-systems", {
     stem: "During the upstroke of a lift pump, what makes water from the well flow into the barrel below the piston?",
     options: [
       ["Atmospheric pressure acting on the water surface in the well", "Correct."],
-      ["Suction pulling the water up", "Suction is not a force; the atmosphere pushes the water."],
-      ["The weight of the piston", "The piston is rising; its weight does not push water up."],
-      ["Water pressure from the spout", "The spout is open to the air and is where water leaves."],
+      ["Suction from the rising piston pulling the water up", "Suction is not a force; the atmosphere pushes the water."],
+      ["The weight of the piston forcing water through the valve", "The piston is rising; its weight does not push water up."],
+      ["Water above the piston pressing down through the spout", "The spout is open to the air and is where water leaves."],
     ],
     answer: "A", explanation: "As the piston rises, the pressure in the barrel below it falls. The greater atmospheric pressure on the water in the well pushes water up the pipe and through the inlet valve." });
 
@@ -191,20 +191,20 @@ concept("cs.physics.fluid-systems", {
   q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: PUMPS,
     stem: "When the handle of a bicycle pump is pushed in, when does the tyre valve open?",
     options: [
-      ["When the pressure of the air in the barrel becomes greater than the pressure in the tyre", "Correct."],
-      ["As soon as the handle starts to move", "The barrel air must first be compressed above tyre pressure."],
+      ["When the barrel air pressure exceeds the tyre pressure", "Correct."],
+      ["As soon as the handle starts to move inwards", "The barrel air must first be compressed above tyre pressure."],
       ["When the air in the barrel reaches atmospheric pressure", "Atmospheric pressure is lower than the tyre pressure."],
-      ["Only when the handle is pulled out", "On the pull stroke the tyre valve closes."],
+      ["Only when the handle is pulled back out again", "On the pull stroke the tyre valve closes."],
     ],
     answer: "A", explanation: "The air in the barrel is compressed until its pressure exceeds the tyre pressure; then the tyre valve opens and air is forced into the tyre." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", objectives: PUMPS,
     stem: "How does air get into the barrel of a bicycle pump when the handle is pulled out?",
     options: [
-      ["Atmospheric pressure pushes outside air past the flexible edges of the washer, because the pressure in the barrel has fallen.", "Correct."],
+      ["Outside air pushes past the washer's flexible edges into the barrel.", "Correct."],
       ["Air flows back out of the tyre through the tyre valve.", "The tyre valve closes on the pull stroke."],
-      ["Air passes through tiny holes in the barrel wall.", "The barrel is airtight."],
-      ["The washer makes air.", "Air comes from outside."],
+      ["Air is drawn in through small holes along the barrel wall.", "The barrel is airtight."],
+      ["The moving handle carries fresh air into the barrel with it.", "The handle carries no air: atmospheric pressure pushes air past the washer."],
     ],
     answer: "A", explanation: "Pulling the handle increases the volume and lowers the pressure in the barrel. The tyre valve closes, and the higher atmospheric pressure pushes air past the flexible washer into the barrel.",
     hints: ["Compare the pressure inside the barrel with atmospheric pressure during the pull stroke."] });
@@ -212,10 +212,10 @@ concept("cs.physics.fluid-systems", {
   q.mcq({ d: 3, skill: "ANALYSIS", objectives: PUMPS,
     stem: "After pumping up a tyre, a cyclist notices that the barrel of the bicycle pump is warm. What is the main reason?",
     options: [
-      ["Work done compressing the air raises its temperature, and there is friction between the washer and the barrel.", "Correct."],
-      ["The tyre is hot and heats the pump.", "The heat is produced in the pump itself."],
-      ["Air expanding in the barrel heats it.", "Expanding air cools; compressing it warms it."],
-      ["The sun heats the metal barrel.", "The warming happens even in the shade."],
+      ["Compressing the air does work on it, and the washer rubs the barrel.", "Correct."],
+      ["Hot air flows back from the tyre into the pump barrel.", "The tyre valve stops air flowing back into the pump."],
+      ["Air expanding in the barrel on each pull heats the metal.", "Expanding air cools; it is compressing the air that warms it."],
+      ["Sunlight shining on the metal barrel while pumping heats it.", "The barrel warms even indoors: the work done compressing the air is the main cause."],
     ],
     answer: "A", explanation: "Pushing the piston does work on the air, increasing its internal energy and temperature, and friction between the washer and the barrel wall also produces heat.",
     hints: ["Think about the energy transferred when you squash the air."] });
@@ -281,10 +281,10 @@ concept("cs.physics.gears", {
   q.mcq({ d: 1, skill: "RECALL", objectives: USES,
     stem: "What is a gear?",
     options: [
-      ["A wheel with teeth around its edge that meshes with another gear to pass on turning", "Correct."],
-      ["A wheel with a groove that carries a rope", "That is a pulley."],
-      ["A rigid bar that turns about a pivot", "That is a lever."],
-      ["A sloping surface used to raise loads", "That is an inclined plane."],
+      ["A toothed wheel that meshes with another to pass on turning", "Correct."],
+      ["A grooved wheel that carries a rope or belt to lift loads", "That is a pulley."],
+      ["A rigid bar that turns about a pivot to move a load", "That is a lever."],
+      ["A sloping surface used to raise heavy loads gradually", "That is an inclined plane."],
     ],
     answer: "A", explanation: "A gear is a toothed wheel; meshing gears pass on turning from one shaft to another." });
 
@@ -411,10 +411,10 @@ concept("cs.physics.gears", {
   q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: LOSS,
     stem: "Why is the efficiency of a gear system always less than 100%?",
     options: [
-      ["Some work is wasted against friction between the teeth and in the bearings.", "Correct."],
+      ["Some work is wasted against friction in the teeth and bearings.", "Correct."],
       ["The driven gear always has more teeth than the driver.", "This is not true, and it is not the reason."],
-      ["Gears create extra energy that is lost as sound.", "Machines cannot create energy."],
-      ["The velocity ratio is always less than 1.", "VR can be greater or less than 1."],
+      ["Energy is used up making the gears turn in opposite directions.", "Changing the direction of turning costs no energy; friction is what wastes it."],
+      ["The velocity ratio is always less than 1, so less work comes out.", "VR can be greater or less than 1."],
     ],
     answer: "A", explanation: "Friction between the meshing teeth and in the bearings turns some of the work input into heat (and sound), so the useful work output is less than the work input." });
 
