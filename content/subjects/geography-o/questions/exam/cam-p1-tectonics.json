@@ -1,0 +1,761 @@
+[
+ {
+  "key": "exam.cam-p1-tectonics.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "geo.tectonics.earthquakes",
+   "geo.tectonics.hazard-impacts",
+   "geo.tectonics.hazard-management"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2100,
+  "stem": "Table 1 compares two fictional earthquakes that happened in the same year (fictional data).\n\n| | Country A (LIC) | Country B (HIC) |\n| --- | --- | --- |\n| Magnitude | 7.2 | 6.9 |\n| Depth of focus (km) | 10 | 22 |\n| Local time | 16:50 | 04:30 |\n| Deaths | 3,240 | 45 |\n| People made homeless | 410,000 | 6,500 |\n| Cost of damage (US\\$ billion) | 2.7 | 12.0 |\n| Annual GDP (US\\$ billion) | 9 | 400 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the point underground where an earthquake starts.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "focus"
+      },
+      {
+       "value": "the focus"
+      },
+      {
+       "value": "hypocentre"
+      },
+      {
+       "value": "the hypocentre"
+      },
+      {
+       "value": "hypocenter"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The focus (hypocentre); the epicentre is on the surface above it."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which scale measures the **effects** of an earthquake at a particular place?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Richter",
+      "rationale": "Richter measures magnitude (energy), not effects."
+     },
+     {
+      "key": "B",
+      "content": "Mercalli",
+      "correct": true,
+      "rationale": "Correct: intensity from I to XII."
+     },
+     {
+      "key": "C",
+      "content": "Moment magnitude",
+      "rationale": "Moment magnitude measures energy released at the source."
+     },
+     {
+      "key": "D",
+      "content": "Volcanic Explosivity Index",
+      "rationale": "The VEI measures the size of eruptions."
+     }
+    ],
+    "explanation": "The Modified Mercalli scale measures intensity."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "How many times more deaths were there in Country A than in Country B?",
+    "answerSpec": {
+     "value": 72
+    },
+    "explanation": "3,240 ÷ 45 = 72 times.",
+    "workedSolution": "1. Deaths in A ÷ deaths in B = 3,240 ÷ 45.\n2. = 72."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the cost of damage in Country A as a percentage of its annual GDP.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 30,
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "2.7 ÷ 9 × 100 = 30 %.",
+    "workedSolution": "1. 2.7 ÷ 9 × 100 = 30 %."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Using Table 1, compare the impacts of the two earthquakes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Far more deaths and homeless in A (3,240 and 410,000) than in B (45 and 6,500)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "B had the higher total cost of damage (US\\$12.0 billion against US\\$2.7 billion)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "But the cost was a much larger share of GDP in A (30 %) than in B (3 %)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Country A suffered far more human losses: 3,240 deaths and 410,000 homeless compared with 45 and 6,500 in B. B's damage cost more in total (US\\$12.0 billion against US\\$2.7 billion), but A's loss was 30 % of its GDP, against only 3 % in B, so it was much harder for A to recover."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Suggest reasons why the earthquake in Country A caused far more deaths than the one in Country B.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Poorer building quality / weak or unenforced building codes in an LIC",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Shallower focus (10 km against 22 km), so stronger shaking at the surface",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Weaker emergency services and less preparedness, so slower rescue",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Time of day: 16:50 when many people were in schools, offices and markets that may collapse (accept other reasoned points about time of day)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: As an LIC, Country A probably has many poorly built concrete and brick buildings and weakly enforced building codes, so more buildings collapsed. Its focus was shallower (10 km against 22 km), giving stronger shaking. Emergency services and preparedness are likely weaker, so trapped people were rescued more slowly. The earthquake struck at 16:50, when many people were in crowded schools, offices and markets."
+    }
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why people continue to live in areas at risk from earthquakes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Jobs and services in large cities on fault zones",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Attachment to place / family land / cannot afford to move (poverty)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Confidence in building codes and warnings, or large earthquakes are rare so the risk seems small",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Many fault zones contain large cities with jobs and services. People have homes, land and family there, and the poor cannot afford to move. Others trust strong buildings and warnings, or feel that a large earthquake is unlikely in their lifetime."
+    }
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how buildings can be designed to reduce earthquake damage.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Deep foundations / base isolators to absorb shaking",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Steel or reinforced frame with cross-bracing so the building sways without collapsing",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Another feature, e.g. counterweight damper / shatterproof glass / automatic gas shut-off / lighter roofs",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Buildings can sit on rubber base isolators above deep foundations to absorb shaking, have reinforced steel frames with cross-bracing so they sway without breaking, and use shatterproof glass and automatic gas shut-off to reduce injuries and fires."
+    }
+   },
+   {
+    "label": "(i)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 7,
+    "markingMode": "MANUAL",
+    "stem": "For a named earthquake you have studied, describe its causes and impacts and evaluate the responses to it.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Named earthquake with place and date",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Cause linked to a named plate boundary and the plates involved",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Specific social impacts with figures",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Specific economic or environmental impacts",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Primary responses described",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Secondary responses described",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Evaluation of the responses with a judgement",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 7,
+        "descriptor": "Developed, accurate explanation of several relevant points, supported by a located example or the resource, with a clear judgement or conclusion where the question asks for one."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 5,
+        "descriptor": "Some explanation of relevant points, partly developed; an example or resource evidence is used in general terms; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "Simple statements or a list of points with little explanation; no example or only a name."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     },
+     "modelAnswer": "On 25 April 2015 a magnitude 7.8 earthquake struck Nepal, with its epicentre in Gorkha district between Kathmandu and Pokhara. It was caused by the release of stress on a fault at the collision boundary where the Indo-Australian plate pushes north into the Eurasian plate. About 9,000 people died and hundreds of thousands of homes were destroyed, especially stone and brick houses in villages; historic temples in Kathmandu collapsed. Landslides blocked mountain roads, an avalanche hit Everest base camp and tourism fell sharply. Primary responses included search and rescue by the Nepali army and international teams, field hospitals, and helicopters carrying aid to cut-off villages, but some remote communities waited days. In the longer term a national reconstruction programme gave grants for rebuilding with earthquake-resistant designs, although progress was slow because of the steep terrain, cost and organisational problems. The immediate response saved many lives given Nepal's poverty and relief, but slow rebuilding left people exposed, which shows that safer buildings before an earthquake matter more than aid afterwards."
+    }
+   }
+  ],
+  "explanation": "A Cambridge Paper 1 topic 4 question on earthquake impacts, vulnerability and management, ending with a detailed specific example.",
+  "hints": [
+   "Use figures from both columns of Table 1.",
+   "Consider physical and human factors."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "focus"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "72"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "30"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "epicentre"
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "3195"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/geography"
+  ],
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.cam-p1-tectonics.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "geo.tectonics.volcanoes",
+   "geo.tectonics.hazard-impacts",
+   "geo.tectonics.hazard-management"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2100,
+  "stem": "Read the description of a fictional volcano and study Table 1.\n\n'Mount Kesa is a tall, steep cone built of layers of ash and lava. Its magma is thick and gas-rich. It last erupted in 1990. About 60,000 people live within 15 km: farmers grow coffee and vegetables on its fertile lower slopes, and a geothermal power station lies on its eastern side. The town of Lusi lies 10 km from the crater, beside a river valley that drains the volcano.'\n\nTable 1: hazards recorded in past eruptions of Mount Kesa (fictional data).\n\n| Hazard | Typical speed | Furthest distance reached (km) |\n| --- | --- | --- |\n| Lava flow | 1-5 km/h | 6 |\n| Pyroclastic flow | 120 km/h | 12 |\n| Lahar (along river valleys) | 30 km/h | 45 |\n| Ash fall | carried by wind | over 200 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the type of volcano described.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "strato-volcano"
+      },
+      {
+       "value": "stratovolcano"
+      },
+      {
+       "value": "strato volcano"
+      },
+      {
+       "value": "composite cone"
+      },
+      {
+       "value": "composite volcano"
+      },
+      {
+       "value": "a strato-volcano"
+      },
+      {
+       "value": "a stratovolcano"
+      },
+      {
+       "value": "a composite cone"
+      },
+      {
+       "value": "a composite volcano"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "A tall, steep cone of ash and lava layers with viscous magma: a strato-volcano (composite cone)."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "How should Mount Kesa be classified?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Extinct",
+      "rationale": "Extinct volcanoes are not expected ever to erupt again."
+     },
+     {
+      "key": "B",
+      "content": "Dormant for thousands of years",
+      "rationale": "It erupted in 1990, which is recent."
+     },
+     {
+      "key": "C",
+      "content": "Active",
+      "correct": true,
+      "rationale": "Correct: it erupted in recent times (1990) and could erupt again."
+     },
+     {
+      "key": "D",
+      "content": "A hot-spot shield volcano",
+      "rationale": "Its steep shape and thick magma do not fit a shield volcano."
+     }
+    ],
+    "explanation": "A recent eruption makes it active."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "A pyroclastic flow travels at 120 km/h. How many minutes would it take to reach Lusi, 10 km from the crater?",
+    "payload": {
+     "unitHint": "min"
+    },
+    "answerSpec": {
+     "value": 5,
+     "units": {
+      "required": false,
+      "accepted": [
+       "min",
+       "minutes",
+       "mins"
+      ]
+     }
+    },
+    "explanation": "10 ÷ 120 = 0.0833 h; × 60 = 5 minutes.",
+    "workedSolution": "1. 10 ÷ 120 = 0.0833 h; × 60 = 5 minutes."
+   },
+   {
+    "label": "(d)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "A lahar travels 45 km down a river valley at 30 km/h. How long, in hours, does it take to reach the end of its path?",
+    "payload": {
+     "unitHint": "h"
+    },
+    "answerSpec": {
+     "value": 1.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "h",
+       "hours",
+       "hour",
+       "hrs",
+       "hr"
+      ]
+     }
+    },
+    "explanation": "45 ÷ 30 = 1.5 hours.",
+    "workedSolution": "1. Time = distance ÷ speed.\n2. = 45 ÷ 30 = 1.5 hours."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Using Table 1, suggest which hazard is the greatest threat to the people of Lusi. Justify your answer.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Choice of a hazard, e.g. pyroclastic flow or lahar",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Justified by speed: e.g. 120 km/h gives about 5 minutes to escape / lahars move at 30 km/h",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Justified by distance reached: pyroclastic flows reach 12 km (beyond Lusi at 10 km) / lahars travel 45 km along valleys and Lusi is beside a river valley; lava reaches only 6 km",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Pyroclastic flows are the greatest threat. They travel at 120 km/h, so they would reach Lusi in about 5 minutes, leaving no time to escape, and they have reached 12 km from the crater, beyond Lusi's 10 km. Lava flows are slow and reach only 6 km, so they would not reach the town."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Describe the main features of a strato-volcano such as Mount Kesa.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Magma chamber deep below the volcano",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Main vent (pipe) leading up to a crater at the summit",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Alternate layers of ash and lava forming a steep cone",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Another feature, e.g. secondary (parasitic) cone on a side vent / caldera / ash cloud",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Deep below is a magma chamber. A main vent leads up from it to a crater at the summit. The steep cone is built of alternating layers of ash and lava from many eruptions, and side vents feed smaller secondary cones on the flanks."
+    }
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Using the description, explain why about 60,000 people live within 15 km of Mount Kesa.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Fertile volcanic soils on the lower slopes support coffee and vegetables, giving food and income",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The geothermal power station provides jobs and electricity",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The last eruption was in 1990, so people may feel the risk is low / they trust warnings / family ties",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Weathered ash has made the lower slopes fertile, so farmers earn a living from coffee and vegetables. The geothermal power station gives jobs and cheap electricity. As the last eruption was in 1990, many people feel safe or trust that warnings will give them time to leave."
+    }
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain how monitoring could reduce the risk to people living near Mount Kesa.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Seismometers detect increasing small earthquakes as magma rises",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Tiltmeters / GPS / gas sampling detect swelling and rising sulphur dioxide",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Warnings and alert levels allow evacuation before an eruption, e.g. of Lusi and the river valley",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Seismometers would record swarms of small earthquakes as magma rises, while tiltmeters and gas sampling would show the cone swelling and more sulphur dioxide escaping. Scientists could then raise the alert level so people in Lusi and the river valley are evacuated before pyroclastic flows or lahars arrive."
+    }
+   },
+   {
+    "label": "(i)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 7,
+    "markingMode": "MANUAL",
+    "stem": "For a named volcanic eruption you have studied, describe its causes and impacts and evaluate how successfully it was managed.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Named volcano and date of the eruption",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Cause linked to a plate boundary or hot spot and the type of magma",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Specific social impacts with figures",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Specific economic or environmental impacts, short or long term",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Monitoring, prediction and evacuation described",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Other responses, e.g. relief, lahar defences, rebuilding",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Evaluation of success with a judgement",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 7,
+        "descriptor": "Developed, accurate explanation of several relevant points, supported by a located example or the resource, with a clear judgement or conclusion where the question asks for one."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 5,
+        "descriptor": "Some explanation of relevant points, partly developed; an example or resource evidence is used in general terms; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "Simple statements or a list of points with little explanation; no example or only a name."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     },
+     "modelAnswer": "Mount Pinatubo in the Philippines erupted on 15 June 1991, one of the largest eruptions of the twentieth century (VEI 6). It lies on a destructive boundary where oceanic crust is subducted beneath the Philippine islands; the melting produced thick, gas-rich magma. After centuries of quiet, earthquakes and steam explosions began in early 1991. Philippine and United States scientists installed seismometers and measured gas and ground swelling, and used alert levels to evacuate tens of thousands of people and a nearby air base before the climax. About 800-900 people died, many when roofs collapsed under ash soaked by the rain of a typhoon that struck at the same time. Ash buried farmland, and lahars swept down river valleys in the rainy seasons of the following years, burying villages. The eruption also cooled global temperatures by roughly 0.5 °C for about a year. Management was largely successful, because monitoring and evacuation are thought to have saved many thousands of lives, but the long-lasting lahars and the slow recovery of farming show that the impacts continued long after the eruption."
+    }
+   }
+  ],
+  "explanation": "A Cambridge Paper 1 topic 4 question on volcanoes, hazards and management, ending with a detailed specific example.",
+  "hints": [
+   "Use speed and distance from Table 1.",
+   "Think of what draws people to volcanoes and how scientists watch them."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "strato-volcano"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(d)": {
+     "type": "CALCULATION",
+     "value": "1.5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "shield volcano"
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "12"
+     },
+     "(d)": {
+      "type": "CALCULATION",
+      "value": "0.67"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/geography"
+  ],
+  "paper": "Paper 1"
+ }
+]

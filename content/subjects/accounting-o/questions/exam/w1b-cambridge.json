@@ -1,0 +1,738 @@
+[
+ {
+  "key": "exam.w1b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acc.ledger.double-entry",
+   "acc.ledger.posting-balancing",
+   "acc.ledger.divisions"
+  ],
+  "difficulty": 4,
+  "marks": 20,
+  "estimatedSeconds": 1260,
+  "stem": "Sipho Ndlovu runs an electrical repairs business in Bulawayo. On 1 June 2025 his bank account had a debit balance of US\\$1,520 and Rudo Banda, a credit customer, owed him US\\$1,640. His transactions for June 2025 included:\n\n| Date | Transaction | US\\$ |\n| --- | --- | ---: |\n| 4 Jun | Bought spare parts for resale, paying by bank transfer | 1,735 |\n| 8 Jun | Fees for repairs received by bank transfer | 2,290 |\n| 10 Jun | Repaired Rudo Banda's equipment on credit | 715 |\n| 12 Jun | Paid rent by bank transfer | 680 |\n| 15 Jun | Received a bank transfer from Rudo Banda | 980 |\n| 20 Jun | Bought testing tools, paying by bank transfer | 2,475 |\n| 25 Jun | Sipho transferred money to his personal account | 400 |\n| 30 Jun | Fees for repairs received by bank transfer | 615 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 6,
+    "stem": "Name the account debited and the account credited for each transaction.",
+    "payload": {
+     "template": "10 June: debit {{blank:a}}, credit {{blank:b}}. 20 June: debit {{blank:c}}, credit {{blank:d}}. 25 June: debit {{blank:e}}, credit {{blank:f}}.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Bank",
+        "Purchases",
+        "Fees received",
+        "Rent",
+        "Rudo Banda",
+        "Tools and equipment",
+        "Drawings",
+        "Capital"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Bank",
+        "Purchases",
+        "Fees received",
+        "Rent",
+        "Rudo Banda",
+        "Tools and equipment",
+        "Drawings",
+        "Capital"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "Bank",
+        "Purchases",
+        "Fees received",
+        "Rent",
+        "Rudo Banda",
+        "Tools and equipment",
+        "Drawings",
+        "Capital"
+       ]
+      },
+      {
+       "id": "d",
+       "input": "select",
+       "choices": [
+        "Bank",
+        "Purchases",
+        "Fees received",
+        "Rent",
+        "Rudo Banda",
+        "Tools and equipment",
+        "Drawings",
+        "Capital"
+       ]
+      },
+      {
+       "id": "e",
+       "input": "select",
+       "choices": [
+        "Bank",
+        "Purchases",
+        "Fees received",
+        "Rent",
+        "Rudo Banda",
+        "Tools and equipment",
+        "Drawings",
+        "Capital"
+       ]
+      },
+      {
+       "id": "f",
+       "input": "select",
+       "choices": [
+        "Bank",
+        "Purchases",
+        "Fees received",
+        "Rent",
+        "Rudo Banda",
+        "Tools and equipment",
+        "Drawings",
+        "Capital"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Rudo Banda"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Fees received"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "Tools and equipment"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "Bank"
+       ]
+      },
+      {
+       "id": "e",
+       "accepted": [
+        "Drawings"
+       ]
+      },
+      {
+       "id": "f",
+       "accepted": [
+        "Bank"
+       ]
+      }
+     ]
+    },
+    "explanation": "10 June: a credit customer owes more (debit Rudo Banda) and income increases (credit fees received). 20 June: a non-current asset is bought (debit tools and equipment, credit bank). 25 June: money taken by the owner (debit drawings, credit bank)."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the amount owed by Rudo Banda at 30 June 2025.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 1375
+    },
+    "explanation": "$1,640 + 715 - 980 = 1,375$ (debit balance). Forgetting the 10 June work gives US\\$660.",
+    "workedSolution": "**Rudo Banda account**\n\n| Date | Details | US\\$ | Date | Details | US\\$ |\n| --- | --- | ---: | --- | --- | ---: |\n| 1 Jun | Balance b/d | 1,640 | 15 Jun | Bank | 980 |\n| 10 Jun | Fees received | 715 | 30 Jun | Balance c/d | 1,375 |\n|  |  | **2,355** |  |  | **2,355** |\n| 1 Jul | Balance b/d | 1,375 |  |  |  |"
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Prepare Sipho's bank account for June 2025 using the three-column running balance format.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Columns: Date, Details, Debit, Credit, Balance",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Opening balance 1,520 Dr",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Receipts (fees received 2,290 and 615, Rudo Banda 980) in the debit column",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Payments (purchases 1,735, rent 680, tools and equipment 2,475, drawings 400) in the credit column",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Balances after each entry, labelled Dr or Cr (own figures)",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Closing balance 115 Dr",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "**Bank account**\n\n| Date | Details | Debit US\\$ | Credit US\\$ | Balance US\\$ |\n| --- | --- | ---: | ---: | ---: |\n| 1 Jun | Balance | 1,520 |  | 1,520 Dr |\n| 4 Jun | Purchases |  | 1,735 | 215 Cr |\n| 8 Jun | Fees received | 2,290 |  | 2,075 Dr |\n| 12 Jun | Rent |  | 680 | 1,395 Dr |\n| 15 Jun | Rudo Banda | 980 |  | 2,375 Dr |\n| 20 Jun | Tools and equipment |  | 2,475 | 100 Cr |\n| 25 Jun | Drawings |  | 400 | 500 Cr |\n| 30 Jun | Fees received | 615 |  | 115 Dr |"
+    },
+    "explanation": "Each balance is the previous one plus debits or minus credits."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "State the largest overdraft on the bank account during June (amount only).",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 500
+    },
+    "explanation": "Running balance: $1,520 \\rightarrow -215 \\rightarrow 2,075 \\rightarrow 1,395 \\rightarrow 2,375 \\rightarrow -100 \\rightarrow -500 \\rightarrow 115$. The largest overdraft is US\\$500 Cr, after the drawings on 25 June. The US\\$100 overdraft after the tools on 20 June is smaller.",
+    "workedSolution": "1. Running balance: $1,520 \\rightarrow -215 \\rightarrow 2,075 \\rightarrow 1,395 \\rightarrow 2,375 \\rightarrow -100 \\rightarrow -500 \\rightarrow 115$. The largest overdraft is US\\$500 Cr, after the drawings on 25 June. The US\\$100 overdraft after the tools on 20 June is smaller."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "In which division of the ledger is Rudo Banda's account kept?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Sales ledger",
+      "correct": true,
+      "rationale": "Correct: she is a credit customer."
+     },
+     {
+      "key": "B",
+      "content": "Purchases ledger",
+      "rationale": "That holds credit suppliers' accounts."
+     },
+     {
+      "key": "C",
+      "content": "Nominal (general) ledger",
+      "rationale": "That holds income, expense, asset and capital accounts."
+     },
+     {
+      "key": "D",
+      "content": "Cash book",
+      "rationale": "The cash book records cash and bank only."
+     }
+    ],
+    "explanation": "Credit customers' accounts are kept in the sales ledger."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Sipho paid for the testing tools from his bank account, which made it overdrawn. Advise him whether he should have used a different method of finance. Justify your answer.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "An overdraft is short-term and expensive (interest) and the bank can demand repayment",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Tools are a non-current asset used for years, so long-term finance (a loan, or buying on credit / paying from savings as capital) matches their life better",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Conclusion: he should have used a loan or credit terms, keeping the overdraft for short-term needs",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: He should have used longer-term finance. An overdraft is meant for short-term needs, carries high interest and can be withdrawn. The tools will be used for several years, so a bank loan or credit terms from the supplier would match their life and keep the bank account in credit for running costs."
+    },
+    "explanation": "Advise questions need a recommendation supported by reasons."
+   }
+  ],
+  "explanation": "This question tests double entry from transactions, the running balance format, ledger divisions and evaluation of the result.",
+  "hints": [
+   "Money in is debited to bank; money out is credited.",
+   "Keep a running total line by line; a negative total is a credit (overdraft)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Rudo Banda"
+      },
+      {
+       "blankId": "b",
+       "text": "Fees received"
+      },
+      {
+       "blankId": "c",
+       "text": "Tools and equipment"
+      },
+      {
+       "blankId": "d",
+       "text": "Bank"
+      },
+      {
+       "blankId": "e",
+       "text": "Drawings"
+      },
+      {
+       "blankId": "f",
+       "text": "Bank"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1375"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "500"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Fees received"
+       },
+       {
+        "blankId": "b",
+        "text": "Rudo Banda"
+       },
+       {
+        "blankId": "c",
+        "text": "Purchases"
+       },
+       {
+        "blankId": "d",
+        "text": "Bank"
+       },
+       {
+        "blankId": "e",
+        "text": "Capital"
+       },
+       {
+        "blankId": "f",
+        "text": "Bank"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "660"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "100"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/accounting"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "exam.w1b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acc.concepts.foundation-concepts",
+   "acc.concepts.applied-concepts",
+   "acc.ethics.professional-ethics"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1260,
+  "stem": "Thandeka owns a bakery in Mutare. She has applied for a bank loan and asked her accountant, Farai, to \"finalise the accounts quickly without changing anything\". The draft profit for the year ended 31 December 2025 is US\\$24,360. Farai finds:\n\n1. A deposit of US\\$1,390 received on 29 December for a wedding cake to be delivered in February 2026 is included in revenue.\n2. Rent of US\\$2,250 for Thandeka's own house was paid from the business bank account and charged as rent expense.\n3. A set of measuring spoons costing US\\$34 was recorded as a non-current asset.\n4. The premises, bought for US\\$65,000, were valued at US\\$74,000; the increase of US\\$9,000 was added to profit.\n5. Insurance expense includes US\\$525 paid for January to March 2026.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 5,
+    "stem": "Match each item with the accounting concept that has **not** been applied.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Item 1"
+      },
+      {
+       "id": "L2",
+       "content": "Item 2"
+      },
+      {
+       "id": "L3",
+       "content": "Item 3"
+      },
+      {
+       "id": "L4",
+       "content": "Item 4"
+      },
+      {
+       "id": "L5",
+       "content": "Item 5"
+      }
+     ],
+     "right": [
+      {
+       "id": "R1",
+       "content": "Realisation"
+      },
+      {
+       "id": "R2",
+       "content": "Business entity"
+      },
+      {
+       "id": "R3",
+       "content": "Materiality"
+      },
+      {
+       "id": "R4",
+       "content": "Historic cost"
+      },
+      {
+       "id": "R5",
+       "content": "Matching"
+      },
+      {
+       "id": "R6",
+       "content": "Going concern"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      },
+      {
+       "leftId": "L5",
+       "rightId": "R5"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Deposit: realisation. Owner's rent: business entity. Measuring spoons: materiality. Premises gain: historic cost (and prudence). Insurance in advance: matching."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 5,
+    "stem": "Calculate the corrected profit for the year ended 31 December 2025.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 16711
+    },
+    "explanation": "$24,360 + 2,250 + 525 - 1,390 - 34 - 9,000 = 16,711$. Items 2 and 5 **increase** profit; deducting the owner's rent instead of adding it back gives US\\$12,211.",
+    "workedSolution": "**Thandeka's Bakery: corrected profit for the year ended 31 December 2025**\n\n|  | US\\$ | US\\$ |\n| --- | ---: | ---: |\n| Draft profit for the year |  | 24,360 |\n| Add: owner's home rent charged as an expense | 2,250 |  |\n| Add: insurance paid in advance | 525 |  |\n|  |  | 2,775 |\n|  |  | 27,135 |\n| Less: customer's deposit included in revenue | 1,390 |  |\n| Less: mixer spoon set recorded as a non-current asset | 34 |  |\n| Less: unrealised gain on premises | 9,000 |  |\n|  |  | (10,424) |\n| **Corrected profit for the year** |  | 16,711 |"
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the amount at which the premises should be shown in the statement of financial position (ignore depreciation).",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 65000
+    },
+    "explanation": "Historic cost: US\\$65,000.",
+    "workedSolution": "1. Historic cost: US\\$65,000."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the amount by which Thandeka's drawings must be increased.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 2250
+    },
+    "explanation": "The US\\$2,250 rent for her house is drawings, not a business expense.",
+    "workedSolution": "1. The US\\$2,250 rent for her house is drawings, not a business expense."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which fundamental ethical principle would Farai breach if he finalised the accounts without the corrections, knowing the bank will rely on them?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Confidentiality",
+      "rationale": "Nothing private is being disclosed."
+     },
+     {
+      "key": "B",
+      "content": "Integrity",
+      "correct": true,
+      "rationale": "Correct: he would knowingly be associated with misleading information."
+     },
+     {
+      "key": "C",
+      "content": "Professional competence and due care",
+      "rationale": "He has the skill; the issue is honesty."
+     },
+     {
+      "key": "D",
+      "content": "Materiality",
+      "rationale": "Materiality is an accounting concept, not an ethical principle."
+     }
+    ],
+    "explanation": "Integrity: an accountant must not be associated with information he knows is false or misleading."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the bank needs Farai to apply the accounting concepts correctly.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The bank relies on the profit and assets to judge whether Thandeka can repay / it cannot check the records itself",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The draft profit and the premises are overstated (by own figures), so the business looks stronger than it is",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A loan based on false figures may not be repaid; the bank and the business both suffer",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The bank uses the accounts to decide whether the bakery can repay a loan, but it cannot check the records. The draft profit is overstated by US\\$7,649 and the premises by US\\$9,000, so the bakery looks stronger than it is; a loan based on these figures might not be repaid."
+    },
+    "explanation": "Link the concepts to the users' decisions."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Evaluate how Farai should respond to Thandeka's request to finalise the accounts without changes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Explain the errors and their effect to Thandeka; recommend the corrections",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Objectivity: he must not let pressure from the client affect his judgement",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Professional behaviour / integrity: he must not give the bank misleading accounts",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Conclusion: make the corrections; if she refuses, decline to sign / withdraw from the work",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Farai should explain each error and show Thandeka the corrected profit. Pressure from a client must not affect his objectivity, and giving a bank figures he knows are misleading would breach integrity and professional behaviour. He should insist on the corrections; if she refuses, he should not finalise the accounts and should withdraw from the work, even though he may lose the client."
+    },
+    "explanation": "A strong evaluation reaches a clear, justified conclusion."
+   }
+  ],
+  "explanation": "This question applies the accounting concepts and the fundamental ethical principles to one case.",
+  "hints": [
+   "Decide for each item whether profit rises or falls.",
+   "Private expenses and prepayments removed from expenses increase profit."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      },
+      {
+       "leftId": "L5",
+       "rightId": "R5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "16711"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "65000"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2250"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R4"
+       },
+       {
+        "leftId": "L4",
+        "rightId": "R5"
+       },
+       {
+        "leftId": "L5",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "15661"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "74000"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/accounting"
+  ],
+  "calculator": true
+ }
+]

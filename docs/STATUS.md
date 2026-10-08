@@ -74,8 +74,13 @@ AVAILABLE (2,146 items published, 0 failed); smoke tests: physics-o 30/30, combi
 (`.scratch/combined-science/smoke.ts`). english-language-o (ZIMSEC English Language 2015-2022, Cambridge 0500 and 0510
 2027-2029) is complete and DEV-published the same day: 60 lessons, 1,047 questions (writing is self-marked: 67% of
 marks), 533 flashcards, 16 topic tests and 5 mocks, written by eight AI writer agents (Opus, medium effort) to a shared
-brief; smoke test 69/69 (`.scratch/english/smoke.ts`). Syllabus files and registries for geography-o, accounting-o,
-business-commerce-o, economics-o and computer-science-o are being prepared from the official documents.
+brief; smoke test 69/69 (`.scratch/english/smoke.ts`). geography-o (ZIMSEC Geography 2015-2022, Cambridge 0460
+2027-2029) followed the same way: 111 lessons, 2,253 questions, 986 flashcards, 23 topic tests and 5 mocks,
+DEV-published, smoke 74/74 (`.scratch/tools/smoke-family.ts`), and so did accounting-o (ZIMSEC Principles of
+Accounting 2015-2022, Cambridge 0452 2027-2029: 66 lessons, 1,268 questions, 573 flashcards, 13 topic tests and 4 mocks,
+smoke 52/52). Syllabus files and registries for
+business-commerce-o, economics-o and computer-science-o are in the repository (from the official documents); their
+content is being written.
 Hand-off notes: `.scratch/active-runs.md`. Each family's `content/subjects/<family>/README.md` lists coverage, tests, known gaps and specialist checks;
 `content/README.md` has the overview. Marking fix the same day: a numerical answer typed with the text the answer box
 already shows ("US$16.20", "x = 5", "×400", "pH 7", "12:1" when ": 1" follows the box) was unreadable and scored 0;

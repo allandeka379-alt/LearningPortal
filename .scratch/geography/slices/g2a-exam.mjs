@@ -1,0 +1,323 @@
+// Slice G2a: exam-format items — ZIMSEC Paper 2 Section A (landforms) x1; Cambridge Paper 1 topic 4 (Tectonic
+// hazards) x2. Types, marks and applies are fixed by the brief: STRUCTURED, 25 marks.
+import { concept, P, geographyLevels, ZIM, CAM } from "../lib.mjs";
+
+concept("geo.landforms.weathering-mass-wasting", { file: "exam/zim-p2-a-landforms", keyPrefix: "exam.zim-p2-a-landforms", applies: ZIM }, (b) => {
+  b.struct({
+    d: 4, skill: "ANALYSIS", secs: 2100, examStyle: true, paper: "Paper 2", applies: ZIM,
+    concepts: ["geo.landforms.weathering-mass-wasting", "geo.landforms.rocks", "geo.landforms.landscapes"],
+    stem: "A Form 3 class studied a granite area on the plateau of southern Zimbabwe. They recorded the climate at a nearby station (fictional data, Table 1) and described the landforms they saw.\n\nTable 1: climate at the station.\n\n| Month | January | April | July | October |\n| --- | --- | --- | --- | --- |\n| Mean daily maximum temperature (°C) | 28 | 26 | 23 | 32 |\n| Mean daily minimum temperature (°C) | 16 | 12 | 6 | 13 |\n| Mean monthly rainfall (mm) | 150 | 30 | 2 | 25 |\n\nField notes: 'Large bare domes of smooth rock with curved sheets peeling off their surfaces. Piles of rounded boulders on low hills. In places one boulder rests on another at a tiny point of contact. Some hills are made of square blocks stacked like walls. Sandy soils with red colouring between the hills.'",
+    parts: [
+      P.mcq({
+        label: "(a)",
+        stem: "Granite belongs to which group of rocks?",
+        options: [
+          ["Intrusive igneous", "Correct: magma cooled slowly underground, giving large crystals."],
+          ["Extrusive igneous", "Extrusive rocks such as basalt cool at the surface and have small crystals."],
+          ["Sedimentary", "Sedimentary rocks are laid down in layers from sediment."],
+          ["Metamorphic", "Metamorphic rocks are changed by heat and pressure; granite crystallised from magma."],
+        ],
+        answer: "A",
+        explanation: "Granite is an intrusive (plutonic) igneous rock.",
+      }),
+      P.num({
+        label: "(b)",
+        marks: 2,
+        type: "CALCULATION",
+        stem: "Calculate the mean daily temperature range for the four months shown. Give your answer to two decimal places.",
+        value: 15.5, tol: 0.005, unit: "°C", answer: "15.50",
+        explanation: "Ranges: January 28 − 16 = 12; April 26 − 12 = 14; July 23 − 6 = 17; October 32 − 13 = 19. Mean = (12 + 14 + 17 + 19) ÷ 4 = 62 ÷ 4 = 15.50 °C.",
+        workedSolution: "1. Daily ranges: 12, 14, 17 and 19 °C.\n2. Total = 62.\n3. Mean = 62 ÷ 4 = 15.50 °C.",
+      }),
+      P.short({
+        label: "(c)",
+        stem: "Name the month in Table 1 when conditions most favour chemical weathering.",
+        accepted: ["January", "Jan"],
+        wrong: ["July"],
+        explanation: "January is both warm and wet (150 mm), so reactions such as hydrolysis are fastest.",
+      }),
+      P.manual({
+        label: "(d)",
+        marks: 4,
+        stem: "Explain why chemical weathering of granite is faster in January than in July.",
+        points: [
+          "January is wet (150 mm) while July is almost dry (2 mm)",
+          "Hydrolysis needs water to react with feldspar, turning it into clay",
+          "January is warmer (mean maximum 28 °C compared with 23 °C)",
+          "Higher temperatures speed up chemical reactions",
+        ],
+        modelAnswer: "In January the station receives 150 mm of rain but in July only 2 mm. Hydrolysis needs water to react with the feldspar in granite and turn it into clay, so it can only work well in the wet season. January is also warmer (28 °C maximum against 23 °C), and chemical reactions are faster at higher temperatures.",
+      }),
+      P.match({
+        label: "(e)",
+        stem: "Match each landform in the field notes to its name.",
+        pairs: [
+          ["Large bare dome of smooth rock with curved sheets peeling off", "Dwala (bornhardt)"],
+          ["One boulder resting on another at a tiny point of contact", "Balancing rocks"],
+          ["Square blocks stacked like walls", "Castle kopje"],
+        ],
+        explanation: "Dwalas have few joints; balancing rocks are corestones left perched; castle kopjes form where vertical and horizontal joints cross.",
+      }),
+      P.manual({
+        label: "(f)",
+        marks: 4,
+        stem: "Describe the formation of the piles of rounded boulders (kopjes) mentioned in the field notes. You may describe a sequence of diagrams in words.",
+        points: [
+          "Granite is cut by joints, some closely spaced and some widely spaced",
+          "Water moves down joints; chemical weathering (hydrolysis) rots the granite below the surface",
+          "Where joints are widely spaced, solid rounded corestones remain within the weathered regolith",
+          "The regolith is removed by rain and running water, exposing the corestones as a kopje",
+        ],
+        modelAnswer: "Granite has joints at different spacings. Water seeps down the joints and hydrolysis rots the rock below ground, producing a deep regolith of clay and sand. Where joints are far apart, solid blocks survive and are rounded into corestones. Over a long time rain and streams wash the regolith away, leaving the corestones piled on solid rock as a kopje.",
+      }),
+      P.fib({
+        label: "(g)",
+        stem: "Complete the sentences about physical weathering in the granite area.",
+        template: "The curved sheets peeling off the domes are caused by {{blank:a}}. Grains loosening because dark and light minerals expand by different amounts is called {{blank:b}} disintegration.",
+        blanks: [
+          { id: "a", accepted: ["exfoliation", "onion-skin weathering", "onion skin weathering", "pressure release", "sheeting"], wrong: "carbonation" },
+          { id: "b", accepted: ["granular"], wrong: "block" },
+        ],
+        explanation: "Exfoliation (with pressure release) forms the curved sheets; granular disintegration loosens individual grains.",
+      }),
+      P.manual({
+        label: "(h)",
+        type: "EXTENDED_RESPONSE",
+        marks: 8,
+        stem: "With reference to a named granite area of Zimbabwe, explain how weathering has shaped the landscape and evaluate the value of this landscape to people.",
+        points: [
+          "Named area, e.g. Matobo Hills / Epworth / Domboshava / Masvingo district",
+          "Chemical weathering along joints (hydrolysis) and stripping produce kopjes and balancing rocks",
+          "Exfoliation and pressure release produce dwalas; joint pattern explains castle kopjes",
+          "Weathered granite gives sandy, often infertile soils between the hills",
+          "Value: tourism and heritage (e.g. Matobo World Heritage Site, rock art, Epworth balancing rocks)",
+          "Value: building stone and quarrying, water catchment and small dams between hills",
+          "Limitations: thin sandy soils limit farming; steep bare rock unusable for crops; quarrying damages scenery",
+          "Judgement on overall value",
+        ],
+        levels: geographyLevels(8),
+        modelAnswer: "The Matobo Hills south of Bulawayo are a granite landscape shaped by weathering. Water moving down joints rotted the granite by hydrolysis below the surface; where joints were widely spaced, corestones survived and, once the regolith was stripped away, they were left as kopjes and balancing rocks. Large unjointed masses shed curved sheets by exfoliation and pressure release, forming dwalas, while crossing joints produced castle kopjes. Between the hills the weathered granite gives sandy soils. The landscape is valuable: the Matobo Hills are a World Heritage Site with rock art and wildlife, attracting tourists; granite is quarried for building stone; and rain running off bare rock fills small dams. However, the sandy soils are low in nutrients, the bare rock cannot be farmed, and quarrying can spoil the scenery. Overall the landscape is more valuable for tourism, heritage and water than for farming, so careful protection brings the greatest benefit.",
+      }),
+    ],
+    hints: ["Use the figures in Table 1.", "Link each landform in the field notes to joint spacing and a weathering process."],
+    explanation: "The question links rocks, weathering processes and granite landforms to a Zimbabwean landscape, as in ZIMSEC Paper 2 Section A.",
+  });
+});
+
+concept("geo.tectonics.earthquakes", { file: "exam/cam-p1-tectonics", keyPrefix: "exam.cam-p1-tectonics", applies: CAM }, (b) => {
+  b.struct({
+    d: 4, skill: "ANALYSIS", secs: 2100, examStyle: true, paper: "Paper 1", applies: CAM,
+    concepts: ["geo.tectonics.earthquakes", "geo.tectonics.hazard-impacts", "geo.tectonics.hazard-management"],
+    stem: "Table 1 compares two fictional earthquakes that happened in the same year (fictional data).\n\n| | Country A (LIC) | Country B (HIC) |\n| --- | --- | --- |\n| Magnitude | 7.2 | 6.9 |\n| Depth of focus (km) | 10 | 22 |\n| Local time | 16:50 | 04:30 |\n| Deaths | 3,240 | 45 |\n| People made homeless | 410,000 | 6,500 |\n| Cost of damage (US\\$ billion) | 2.7 | 12.0 |\n| Annual GDP (US\\$ billion) | 9 | 400 |",
+    parts: [
+      P.short({
+        label: "(a)",
+        stem: "Name the point underground where an earthquake starts.",
+        accepted: ["focus", "the focus", "hypocentre", "the hypocentre", "hypocenter"],
+        wrong: ["epicentre"],
+        explanation: "The focus (hypocentre); the epicentre is on the surface above it.",
+      }),
+      P.mcq({
+        label: "(b)",
+        stem: "Which scale measures the **effects** of an earthquake at a particular place?",
+        options: [
+          ["Mercalli", "Correct: intensity from I to XII."],
+          ["Richter", "Richter measures magnitude (energy), not effects."],
+          ["Moment magnitude", "Moment magnitude measures energy released at the source."],
+          ["Volcanic Explosivity Index", "The VEI measures the size of eruptions."],
+        ],
+        answer: "A",
+        explanation: "The Modified Mercalli scale measures intensity.",
+      }),
+      P.num({
+        label: "(c)",
+        marks: 2,
+        type: "CALCULATION",
+        stem: "How many times more deaths were there in Country A than in Country B?",
+        value: 72,
+        wrong: [3195],
+        explanation: "3,240 ÷ 45 = 72 times.",
+        workedSolution: "1. Deaths in A ÷ deaths in B = 3,240 ÷ 45.\n2. = 72.",
+      }),
+      P.num({
+        label: "(d)",
+        stem: "Calculate the cost of damage in Country A as a percentage of its annual GDP.",
+        value: 30, unit: "%",
+        wrong: [3, 0.3],
+        explanation: "2.7 ÷ 9 × 100 = 30 %.",
+      }),
+      P.manual({
+        label: "(e)",
+        marks: 3,
+        stem: "Using Table 1, compare the impacts of the two earthquakes.",
+        points: [
+          "Far more deaths and homeless in A (3,240 and 410,000) than in B (45 and 6,500)",
+          "B had the higher total cost of damage (US\\$12.0 billion against US\\$2.7 billion)",
+          "But the cost was a much larger share of GDP in A (30 %) than in B (3 %)",
+        ],
+        modelAnswer: "Country A suffered far more human losses: 3,240 deaths and 410,000 homeless compared with 45 and 6,500 in B. B's damage cost more in total (US\\$12.0 billion against US\\$2.7 billion), but A's loss was 30 % of its GDP, against only 3 % in B, so it was much harder for A to recover.",
+      }),
+      P.manual({
+        label: "(f)",
+        marks: 4,
+        stem: "Suggest reasons why the earthquake in Country A caused far more deaths than the one in Country B.",
+        points: [
+          "Poorer building quality / weak or unenforced building codes in an LIC",
+          "Shallower focus (10 km against 22 km), so stronger shaking at the surface",
+          "Weaker emergency services and less preparedness, so slower rescue",
+          "Time of day: 16:50 when many people were in schools, offices and markets that may collapse (accept other reasoned points about time of day)",
+        ],
+        modelAnswer: "As an LIC, Country A probably has many poorly built concrete and brick buildings and weakly enforced building codes, so more buildings collapsed. Its focus was shallower (10 km against 22 km), giving stronger shaking. Emergency services and preparedness are likely weaker, so trapped people were rescued more slowly. The earthquake struck at 16:50, when many people were in crowded schools, offices and markets.",
+      }),
+      P.manual({
+        label: "(g)",
+        marks: 3,
+        stem: "Explain why people continue to live in areas at risk from earthquakes.",
+        points: [
+          "Jobs and services in large cities on fault zones",
+          "Attachment to place / family land / cannot afford to move (poverty)",
+          "Confidence in building codes and warnings, or large earthquakes are rare so the risk seems small",
+        ],
+        modelAnswer: "Many fault zones contain large cities with jobs and services. People have homes, land and family there, and the poor cannot afford to move. Others trust strong buildings and warnings, or feel that a large earthquake is unlikely in their lifetime.",
+      }),
+      P.manual({
+        label: "(h)",
+        marks: 3,
+        stem: "Describe how buildings can be designed to reduce earthquake damage.",
+        points: [
+          "Deep foundations / base isolators to absorb shaking",
+          "Steel or reinforced frame with cross-bracing so the building sways without collapsing",
+          "Another feature, e.g. counterweight damper / shatterproof glass / automatic gas shut-off / lighter roofs",
+        ],
+        modelAnswer: "Buildings can sit on rubber base isolators above deep foundations to absorb shaking, have reinforced steel frames with cross-bracing so they sway without breaking, and use shatterproof glass and automatic gas shut-off to reduce injuries and fires.",
+      }),
+      P.manual({
+        label: "(i)",
+        type: "EXTENDED_RESPONSE",
+        marks: 7,
+        stem: "For a named earthquake you have studied, describe its causes and impacts and evaluate the responses to it.",
+        points: [
+          "Named earthquake with place and date",
+          "Cause linked to a named plate boundary and the plates involved",
+          "Specific social impacts with figures",
+          "Specific economic or environmental impacts",
+          "Primary responses described",
+          "Secondary responses described",
+          "Evaluation of the responses with a judgement",
+        ],
+        levels: geographyLevels(7),
+        modelAnswer: "On 25 April 2015 a magnitude 7.8 earthquake struck Nepal, with its epicentre in Gorkha district between Kathmandu and Pokhara. It was caused by the release of stress on a fault at the collision boundary where the Indo-Australian plate pushes north into the Eurasian plate. About 9,000 people died and hundreds of thousands of homes were destroyed, especially stone and brick houses in villages; historic temples in Kathmandu collapsed. Landslides blocked mountain roads, an avalanche hit Everest base camp and tourism fell sharply. Primary responses included search and rescue by the Nepali army and international teams, field hospitals, and helicopters carrying aid to cut-off villages, but some remote communities waited days. In the longer term a national reconstruction programme gave grants for rebuilding with earthquake-resistant designs, although progress was slow because of the steep terrain, cost and organisational problems. The immediate response saved many lives given Nepal's poverty and relief, but slow rebuilding left people exposed, which shows that safer buildings before an earthquake matter more than aid afterwards.",
+      }),
+    ],
+    hints: ["Use figures from both columns of Table 1.", "Consider physical and human factors."],
+    explanation: "A Cambridge Paper 1 topic 4 question on earthquake impacts, vulnerability and management, ending with a detailed specific example.",
+  });
+
+  b.struct({
+    d: 4, skill: "ANALYSIS", secs: 2100, examStyle: true, paper: "Paper 1", applies: CAM,
+    concepts: ["geo.tectonics.volcanoes", "geo.tectonics.hazard-impacts", "geo.tectonics.hazard-management"],
+    stem: "Read the description of a fictional volcano and study Table 1.\n\n'Mount Kesa is a tall, steep cone built of layers of ash and lava. Its magma is thick and gas-rich. It last erupted in 1990. About 60,000 people live within 15 km: farmers grow coffee and vegetables on its fertile lower slopes, and a geothermal power station lies on its eastern side. The town of Lusi lies 10 km from the crater, beside a river valley that drains the volcano.'\n\nTable 1: hazards recorded in past eruptions of Mount Kesa (fictional data).\n\n| Hazard | Typical speed | Furthest distance reached (km) |\n| --- | --- | --- |\n| Lava flow | 1-5 km/h | 6 |\n| Pyroclastic flow | 120 km/h | 12 |\n| Lahar (along river valleys) | 30 km/h | 45 |\n| Ash fall | carried by wind | over 200 |",
+    parts: [
+      P.short({
+        label: "(a)",
+        stem: "Name the type of volcano described.",
+        accepted: ["strato-volcano", "stratovolcano", "strato volcano", "composite cone", "composite volcano", "a strato-volcano", "a stratovolcano", "a composite cone", "a composite volcano"],
+        wrong: ["shield volcano"],
+        explanation: "A tall, steep cone of ash and lava layers with viscous magma: a strato-volcano (composite cone).",
+      }),
+      P.mcq({
+        label: "(b)",
+        stem: "How should Mount Kesa be classified?",
+        options: [
+          ["Active", "Correct: it erupted in recent times (1990) and could erupt again."],
+          ["Extinct", "Extinct volcanoes are not expected ever to erupt again."],
+          ["Dormant for thousands of years", "It erupted in 1990, which is recent."],
+          ["A hot-spot shield volcano", "Its steep shape and thick magma do not fit a shield volcano."],
+        ],
+        answer: "A",
+        explanation: "A recent eruption makes it active.",
+      }),
+      P.num({
+        label: "(c)",
+        stem: "A pyroclastic flow travels at 120 km/h. How many minutes would it take to reach Lusi, 10 km from the crater?",
+        value: 5, unit: "min",
+        wrong: [12, 0.083],
+        explanation: "10 ÷ 120 = 0.0833 h; × 60 = 5 minutes.",
+      }),
+      P.num({
+        label: "(d)",
+        marks: 2,
+        type: "CALCULATION",
+        stem: "A lahar travels 45 km down a river valley at 30 km/h. How long, in hours, does it take to reach the end of its path?",
+        value: 1.5, unit: "h", tol: 0.05,
+        wrong: [0.67, 15],
+        explanation: "45 ÷ 30 = 1.5 hours.",
+        workedSolution: "1. Time = distance ÷ speed.\n2. = 45 ÷ 30 = 1.5 hours.",
+      }),
+      P.manual({
+        label: "(e)",
+        marks: 3,
+        stem: "Using Table 1, suggest which hazard is the greatest threat to the people of Lusi. Justify your answer.",
+        points: [
+          "Choice of a hazard, e.g. pyroclastic flow or lahar",
+          "Justified by speed: e.g. 120 km/h gives about 5 minutes to escape / lahars move at 30 km/h",
+          "Justified by distance reached: pyroclastic flows reach 12 km (beyond Lusi at 10 km) / lahars travel 45 km along valleys and Lusi is beside a river valley; lava reaches only 6 km",
+        ],
+        modelAnswer: "Pyroclastic flows are the greatest threat. They travel at 120 km/h, so they would reach Lusi in about 5 minutes, leaving no time to escape, and they have reached 12 km from the crater, beyond Lusi's 10 km. Lava flows are slow and reach only 6 km, so they would not reach the town.",
+      }),
+      P.manual({
+        label: "(f)",
+        marks: 4,
+        stem: "Describe the main features of a strato-volcano such as Mount Kesa.",
+        points: [
+          "Magma chamber deep below the volcano",
+          "Main vent (pipe) leading up to a crater at the summit",
+          "Alternate layers of ash and lava forming a steep cone",
+          "Another feature, e.g. secondary (parasitic) cone on a side vent / caldera / ash cloud",
+        ],
+        modelAnswer: "Deep below is a magma chamber. A main vent leads up from it to a crater at the summit. The steep cone is built of alternating layers of ash and lava from many eruptions, and side vents feed smaller secondary cones on the flanks.",
+      }),
+      P.manual({
+        label: "(g)",
+        marks: 3,
+        stem: "Using the description, explain why about 60,000 people live within 15 km of Mount Kesa.",
+        points: [
+          "Fertile volcanic soils on the lower slopes support coffee and vegetables, giving food and income",
+          "The geothermal power station provides jobs and electricity",
+          "The last eruption was in 1990, so people may feel the risk is low / they trust warnings / family ties",
+        ],
+        modelAnswer: "Weathered ash has made the lower slopes fertile, so farmers earn a living from coffee and vegetables. The geothermal power station gives jobs and cheap electricity. As the last eruption was in 1990, many people feel safe or trust that warnings will give them time to leave.",
+      }),
+      P.manual({
+        label: "(h)",
+        marks: 3,
+        stem: "Explain how monitoring could reduce the risk to people living near Mount Kesa.",
+        points: [
+          "Seismometers detect increasing small earthquakes as magma rises",
+          "Tiltmeters / GPS / gas sampling detect swelling and rising sulphur dioxide",
+          "Warnings and alert levels allow evacuation before an eruption, e.g. of Lusi and the river valley",
+        ],
+        modelAnswer: "Seismometers would record swarms of small earthquakes as magma rises, while tiltmeters and gas sampling would show the cone swelling and more sulphur dioxide escaping. Scientists could then raise the alert level so people in Lusi and the river valley are evacuated before pyroclastic flows or lahars arrive.",
+      }),
+      P.manual({
+        label: "(i)",
+        type: "EXTENDED_RESPONSE",
+        marks: 7,
+        stem: "For a named volcanic eruption you have studied, describe its causes and impacts and evaluate how successfully it was managed.",
+        points: [
+          "Named volcano and date of the eruption",
+          "Cause linked to a plate boundary or hot spot and the type of magma",
+          "Specific social impacts with figures",
+          "Specific economic or environmental impacts, short or long term",
+          "Monitoring, prediction and evacuation described",
+          "Other responses, e.g. relief, lahar defences, rebuilding",
+          "Evaluation of success with a judgement",
+        ],
+        levels: geographyLevels(7),
+        modelAnswer: "Mount Pinatubo in the Philippines erupted on 15 June 1991, one of the largest eruptions of the twentieth century (VEI 6). It lies on a destructive boundary where oceanic crust is subducted beneath the Philippine islands; the melting produced thick, gas-rich magma. After centuries of quiet, earthquakes and steam explosions began in early 1991. Philippine and United States scientists installed seismometers and measured gas and ground swelling, and used alert levels to evacuate tens of thousands of people and a nearby air base before the climax. About 800-900 people died, many when roofs collapsed under ash soaked by the rain of a typhoon that struck at the same time. Ash buried farmland, and lahars swept down river valleys in the rainy seasons of the following years, burying villages. The eruption also cooled global temperatures by roughly 0.5 °C for about a year. Management was largely successful, because monitoring and evacuation are thought to have saved many thousands of lives, but the long-lasting lahars and the slow recovery of farming show that the impacts continued long after the eruption.",
+      }),
+    ],
+    hints: ["Use speed and distance from Table 1.", "Think of what draws people to volcanoes and how scientists watch them."],
+    explanation: "A Cambridge Paper 1 topic 4 question on volcanoes, hazards and management, ending with a detailed specific example.",
+  });
+});

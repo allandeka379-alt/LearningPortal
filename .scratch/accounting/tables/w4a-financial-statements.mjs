@@ -1,0 +1,13 @@
+import { companyIncome, companyPosition, soce, r2, sum, check } from "./w4a-lib.mjs";
+const deb = 60000, debRate = 8;
+const is = companyIncome({ name: "Mutare Timber Products Limited", revenue: 384000, cos: 236500, expenses: [["Wages and salaries", 52300], ["General expenses", 18450], ["Depreciation", 14200]], finance: [["Finance costs: debenture interest", r2(deb * debRate / 100)]] });
+console.log(is.md); console.log(is);
+const finalDiv = r2(400000 * 0.04), interim = r2(500000 * 0.03);
+const s = soce("Mutare Timber Products Limited", ["Ordinary share capital", "General reserve", "Retained earnings"], [200000, 25000, 38900], [["Issue of ordinary shares", [50000, null, null]], ["Profit for the year", [null, null, is.profit]], ["Dividends paid", [null, null, -r2(finalDiv + interim)]], ["Transfer to general reserve", [null, 15000, -15000]]]);
+console.log(s.md); console.log(s.closing, s.totalClose, finalDiv, interim);
+const nca = [["Premises", 210000, null], ["Machinery", 120000, 38600], ["Motor vehicles", 45000, 18000]];
+const equity = [["Ordinary shares of US\$0.50 each", s.closing[0]], ["General reserve", s.closing[1]], ["Retained earnings", s.closing[2]]];
+const ncl = [["8% debentures (repayable 2033)", deb]]; const cl = [["Trade payables", 21380], ["Other payables (debenture interest owing)", 2400]];
+const totEL = r2(s.totalClose + deb + 21380 + 2400); const totNbv = 210000 + 81400 + 27000; const bank = r2(totEL - totNbv - 34720 - 28910);
+const p = companyPosition({ name: "Mutare Timber Products Limited", nca, ca: [["Inventory", 34720], ["Trade receivables", 28910], ["Bank", bank]], equity, ncl, cl });
+console.log(p.md); console.log(bank, p.totAssets);

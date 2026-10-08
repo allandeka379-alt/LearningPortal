@@ -1,0 +1,12 @@
+import { tAccount, journal, statement, check, r2 } from "../lib.mjs";
+const rec = 6600, inc = 600 * 12, acc = r2(inc - rec); check("acc", acc, 600);
+console.log(tAccount("Rent receivable account", [["31 Dec 2025", "Income statement", inc]], [["Various", "Bank", rec]], { cdDate: "31 Dec 2025", bdDate: "1 Jan 2026", cd: "Accrued c/d", bd: "Accrued b/d" }));
+console.log();
+console.log(journal([{ date: "31 Dec 2025", lines: [["Other receivables (rent receivable accrued)", acc, null], ["Rent receivable", null, acc]], narrative: "Rent earned for December 2025 not yet received" }]));
+const o = 320, r = 4150, adv = 280, ci = r2(r - o - adv); check("ci", ci, 3550);
+console.log();
+console.log(tAccount("Commission receivable account", [["1 Jan 2025", "Accrued b/d", o], ["31 Dec 2025", "Income statement", ci], ["31 Dec 2025", "Received in advance c/d", adv]], [["Various", "Bank", r]]));
+console.log();
+console.log(statement("for the year ended 31 December 2025", [["Gross profit", null, 31800], ["Add: Rent receivable", null, inc], ["Add: Commission receivable", null, ci], [null, null, r2(31800 + inc + ci)]], { checks: [["t", 31800 + inc + ci, 42550]] }));
+console.log();
+console.log(statement("at 31 December 2025", [["**Current assets**", null, null], ["Other receivables (rent receivable accrued)", null, acc], [null, null, null], ["**Current liabilities**", null, null], ["Other payables (commission received in advance)", null, adv]]));

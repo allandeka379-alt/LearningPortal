@@ -1,0 +1,11 @@
+import { statementOfAffairs, capitalCalc } from "./w4b-lib.mjs";
+const o1 = statementOfAffairs({ name: "Rudo's Tuck Shop", date: "1 January 2025", nca: [["Shop equipment", 2400]], ca: [["Inventory", 1850], ["Trade receivables", 620], ["Bank", 1340], ["Cash", 180]], cl: [["Trade payables", 970], ["Expenses owing (accrued)", 90]] });
+const c1 = statementOfAffairs({ name: "Rudo's Tuck Shop", date: "31 December 2025", nca: [["Shop equipment", 2160]], ca: [["Inventory", 2430], ["Trade receivables", 810], ["Bank", 2275], ["Cash", 240]], cl: [["Trade payables", 1180], ["Expenses owing (accrued)", 130]] });
+console.log(o1.md, "\n\n", c1.md);
+const p1 = capitalCalc({ name: "Rudo's Tuck Shop", opening: o1.capital, closing: c1.capital, drawings: 3600 });
+console.log("\n", p1.md, "\n", o1.capital, c1.capital, p1.profit);
+const o2 = statementOfAffairs({ name: "Farai's Poultry Project", date: "1 January 2025", nca: [["Fowl runs and equipment", 7800]], ca: [["Inventory of feed and birds", 2650], ["Trade receivables", 1420], ["Bank", 930]], cl: [["Trade payables", 1760]] });
+const c2 = statementOfAffairs({ name: "Farai's Poultry Project", date: "31 December 2025", nca: [["Fowl runs and equipment", 10900]], ca: [["Inventory of feed and birds", 3140], ["Trade receivables", 1980], ["Cash", 210]], cl: [["Trade payables", 2240], ["Bank overdraft", 860]], ncl: [["Loan (repayable 2029)", 4000]] });
+console.log(o2.md, "\n\n", c2.md);
+const p2 = capitalCalc({ name: "Farai's Poultry Project", opening: o2.capital, closing: c2.capital, drawings: 4150, introduced: 2500 });
+console.log("\n", p2.md, "\n", o2.capital, c2.capital, p2.profit);

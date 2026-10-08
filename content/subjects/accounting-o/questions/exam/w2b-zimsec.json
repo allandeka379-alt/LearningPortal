@@ -1,0 +1,510 @@
+[
+ {
+  "key": "exam.w2b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acc.verification.suspense-account",
+   "acc.verification.correcting-errors",
+   "acc.verification.errors-effect-on-profit"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1260,
+  "stem": "Rudo Chikore owns a hardware shop in Kwekwe. Her trial balance at 30 June 2025 did not agree and the difference was entered in a suspense account. Her draft income statement showed a net profit of US\\$13,742. The following errors were then found:\n\n| No. | Error |\n| --- | --- |\n| 1 | The sales journal was undercast by US\\$1,100. |\n| 2 | Repairs to the delivery van, US\\$386, were debited to the motor vehicles account. |\n| 3 | Discount received of US\\$157 in the cash book was not posted to the discount received account. |\n| 4 | Wages of US\\$1,245 paid by bank were posted to the wages account as US\\$1,425. |\n| 5 | A cheque for US\\$694 received from Mlambo, a debtor, was credited to his account as US\\$649. |\n| 6 | Goods of US\\$238 returned to Zhou, a creditor, were correctly debited to Zhou's account and also debited to the returns outwards account. |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which error did **not** affect the agreement of the trial balance?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Error 2",
+      "correct": true,
+      "rationale": "Correct: an error of principle with equal debit and credit."
+     },
+     {
+      "key": "B",
+      "content": "Error 4",
+      "rationale": "Wages were debited 180 too much: the totals disagreed."
+     },
+     {
+      "key": "C",
+      "content": "Error 5",
+      "rationale": "Mlambo was credited 45 too little: the totals disagreed."
+     },
+     {
+      "key": "D",
+      "content": "Error 6",
+      "rationale": "Two debits and no credit: the totals disagreed."
+     }
+    ],
+    "explanation": "Error 2 put the right amount on each side, in the wrong class of account."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Calculate the difference in books that was entered in the suspense account. (It was entered on the credit side.)",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 1958
+    },
+    "explanation": "Suspense entries needed: debit 1,100 (sales) + 157 (discount received) + 180 (wages) + 45 (Mlambo) + 476 (returns outwards, twice 238) = 1,958. No suspense entries are credits, so the account was opened with a credit of 1,958: the debit side of the trial balance was larger. Using 238 instead of 476 for error 6 gives 1,720.",
+    "workedSolution": "1. Suspense entries needed: debit 1,100 (sales) + 157 (discount received) + 180 (wages) + 45 (Mlambo) + 476 (returns outwards, twice 238) = 1,958. No suspense entries are credits, so the account was opened with a credit of 1,958: the debit side of the trial balance was larger. Using 238 instead of 476 for error 6 gives 1,720."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "Prepare journal entries to correct errors 1, 2, 3, 4 and 6. Narratives are not required.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Error 1: debit suspense 1,100; credit sales 1,100",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Error 2: debit motor repairs 386; credit motor vehicles 386",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Error 3: debit suspense 157; credit discount received 157",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Error 4: debit suspense 180; credit wages 180",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Error 6: debit suspense 476; credit returns outwards 476",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "**Journal**\n\n| Date | Details | Debit US\\$ | Credit US\\$ |\n| --- | --- | ---: | ---: |\n| 30 Jun | Suspense | 1,100 |  |\n|  | Sales |  | 1,100 |\n|  | *Sales journal undercast* |  |  |\n| 30 Jun | Motor repairs | 386 |  |\n|  | Motor vehicles |  | 386 |\n|  | *Repairs wrongly debited to motor vehicles* |  |  |\n| 30 Jun | Suspense | 157 |  |\n|  | Discount received |  | 157 |\n|  | *Discount received not posted* |  |  |\n| 30 Jun | Suspense | 180 |  |\n|  | Wages |  | 180 |\n|  | *Wages over-posted (1,425 instead of 1,245)* |  |  |\n| 30 Jun | Suspense | 45 |  |\n|  | Mlambo |  | 45 |\n|  | *Receipt from Mlambo under-posted* |  |  |\n| 30 Jun | Suspense | 476 |  |\n|  | Returns outwards |  | 476 |\n|  | *Returns outwards debited instead of credited* |  |  |"
+    },
+    "explanation": "One side to the wrong account, the other to suspense (except error 2)."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the journal entry to correct error 5, and the amount of the correction for error 6.",
+    "payload": {
+     "template": "Error 5: debit {{blank:a}} US\\$45; credit {{blank:b}} US\\$45. Error 6: returns outwards is credited with US\\$ {{blank:c}}.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Suspense",
+        "Mlambo",
+        "Bank",
+        "Sales"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Suspense",
+        "Mlambo",
+        "Bank",
+        "Sales"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "238",
+        "476",
+        "714"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Suspense"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Mlambo"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "476"
+       ]
+      }
+     ]
+    },
+    "explanation": "Mlambo was credited 649 instead of 694: credit Mlambo 45 more; the other side is suspense. Returns outwards was debited 238 instead of credited, so it needs a credit of $2 \\times 238 = 476$."
+   },
+   {
+    "label": "(e)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Prepare the suspense account, showing the difference in books.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Difference in books 1,958 on the credit side",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Sales 1,100, Discount received 157, Wages 180, Mlambo 45 and Returns outwards 476 on the debit side",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Totals 1,958 on each side; no balance remains",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "**Suspense account**\n\n| Date | Details | US\\$ | Date | Details | US\\$ |\n| --- | --- | ---: | --- | --- | ---: |\n| 30 Jun | Sales | 1,100 | 30 Jun | Difference in books | 1,958 |\n| 30 Jun | Discount received | 157 |  |  |  |\n| 30 Jun | Wages | 180 |  |  |  |\n| 30 Jun | Mlambo | 45 |  |  |  |\n| 30 Jun | Returns outwards | 476 |  |  |  |\n|  |  | **1,958** |  |  | **1,958** |"
+    },
+    "explanation": "The account clears once all suspense errors are corrected."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 5,
+    "stem": "Calculate Rudo's corrected net profit for the year ended 30 June 2025.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 15269
+    },
+    "explanation": "13,742 + 1,100 (sales) + 157 (discount received) + 180 (wages) + 476 (returns outwards) − 386 (motor repairs) = 15,269. Error 5 has no effect on profit.",
+    "workedSolution": "1. 13,742 + 1,100 (sales) + 157 (discount received) + 180 (wages) + 476 (returns outwards) − 386 (motor repairs) = 15,269. Error 5 has no effect on profit."
+   }
+  ],
+  "explanation": "This item tests the suspense account, journal corrections and the corrected net profit (ZIMSEC Paper 2 style).",
+  "hints": [
+   "For each error write: done, should have been, correction.",
+   "Suspense takes the other side whenever only one side was wrong."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1958"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Suspense"
+      },
+      {
+       "blankId": "b",
+       "text": "Mlambo"
+      },
+      {
+       "blankId": "c",
+       "text": "476"
+      }
+     ]
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "15269"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1720"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Mlambo"
+       },
+       {
+        "blankId": "b",
+        "text": "Suspense"
+       },
+       {
+        "blankId": "c",
+        "text": "238"
+       }
+      ]
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "16041"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "exam.w2b-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acc.verification.updating-cash-book",
+   "acc.verification.bank-reconciliation"
+  ],
+  "difficulty": 4,
+  "marks": 20,
+  "estimatedSeconds": 1260,
+  "stem": "Sipho Dube runs a printing business in Bulawayo. On 30 November 2025 his cash book showed a debit bank balance of US\\$3,184. When he received his bank statement for November he found:\n\n| No. | Item |\n| --- | --- |\n| 1 | Bank charges of US\\$57 had not been entered in the cash book |\n| 2 | A standing order for rent of US\\$725 had not been entered in the cash book |\n| 3 | Lobengula School, a debtor, had paid US\\$1,860 directly into the bank by credit transfer |\n| 4 | A cheque for US\\$412 from N. Sibanda, a debtor, had been dishonoured |\n| 5 | A direct debit of US\\$136 for insurance had not been entered in the cash book |\n| 6 | A cheque for US\\$529 paid to Ncube Paper had been entered in the cash book as US\\$592 |\n| 7 | Interest of US\\$19 had been added to the account by the bank |\n| 8 | Cheques to Mzilikazi Inks (US\\$1,147) and Tshabalala Motors (US\\$388) had not been presented for payment |\n| 9 | Takings of US\\$2,265 deposited on 30 November did not appear on the statement |\n| 10 | The bank had credited Sipho's account with a deposit of US\\$240 belonging to another customer |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which items are **not** entered in the updated cash book?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Items 1, 2 and 5",
+      "rationale": "Charges, standing orders and direct debits must be entered."
+     },
+     {
+      "key": "B",
+      "content": "Items 3, 4 and 7",
+      "rationale": "These were unknown to Sipho and must be entered."
+     },
+     {
+      "key": "C",
+      "content": "Items 8, 9 and 10",
+      "correct": true,
+      "rationale": "Correct: timing differences and a bank error belong in the reconciliation."
+     },
+     {
+      "key": "D",
+      "content": "Items 6, 9 and 10",
+      "rationale": "Item 6 is Sipho's own error and must be corrected in the cash book."
+     }
+    ],
+    "explanation": "Only items the business did not know about and its own errors are entered in the cash book."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 5,
+    "stem": "Calculate the updated cash book balance at 30 November 2025.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 3796
+    },
+    "explanation": "Item 6: the payment was overstated by 592 − 529 = 63, so 63 is debited. Debits: 3,184 + 1,860 + 63 + 19 = 5,126. Credits: 57 + 725 + 412 + 136 = 1,330. Balance = 5,126 − 1,330 = 3,796 debit.",
+    "workedSolution": "1. Item 6: the payment was overstated by 592 − 529 = 63, so 63 is debited. Debits: 3,184 + 1,860 + 63 + 19 = 5,126. Credits: 57 + 725 + 412 + 136 = 1,330. Balance = 5,126 − 1,330 = 3,796 debit."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Prepare Sipho's updated cash book (bank columns) and bring down the balance on 1 December 2025.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Balance b/d 3,184, credit transfer 1,860, error 63 and interest 19 on the debit side",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Bank charges 57, rent 725, dishonoured cheque 412 and insurance 136 on the credit side",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Balance c/d 3,796 dated 30 Nov; totals 5,126 on both sides",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Balance b/d 3,796 on the debit side dated 1 Dec",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "**Cash book (bank columns) of Sipho Dube**\n\n| Date | Details | US\\$ | Date | Details | US\\$ |\n| --- | --- | ---: | --- | --- | ---: |\n| 30 Nov | Balance b/d | 3,184 | 30 Nov | Bank charges | 57 |\n| 30 Nov | Lobengula School (credit transfer) | 1,860 | 30 Nov | Rent (standing order) | 725 |\n| 30 Nov | Ncube Paper (error: 592 − 529) | 63 | 30 Nov | N. Sibanda (dishonoured cheque) | 412 |\n| 30 Nov | Interest received | 19 | 30 Nov | Insurance (direct debit) | 136 |\n|  |  |  | 30 Nov | Balance c/d | 3,796 |\n|  |  | **5,126** |  |  | **5,126** |\n| 1 Dec | Balance b/d | 3,796 |  |  |  |"
+    },
+    "explanation": "Items 8 to 10 are left for the reconciliation."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Calculate the balance shown on the bank statement at 30 November 2025.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 3306
+    },
+    "explanation": "3,796 + 1,147 + 388 (unpresented cheques) − 2,265 (uncredited deposit) + 240 (bank error: the bank shows more than it should) = 3,306.",
+    "workedSolution": "1. 3,796 + 1,147 + 388 (unpresented cheques) − 2,265 (uncredited deposit) + 240 (bank error: the bank shows more than it should) = 3,306."
+   },
+   {
+    "label": "(e)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Prepare Sipho's bank reconciliation statement at 30 November 2025, starting with the updated cash book balance.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Heading and starting balance 3,796",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Add unpresented cheques 1,147 and 388",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Add bank error 240; less uncredited deposit 2,265",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Balance as per bank statement 3,306",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "**Sipho Dube: Bank reconciliation statement at 30 November 2025**\n\n|  | US\\$ | US\\$ |\n| --- | ---: | ---: |\n| Balance as per updated cash book |  | 3,796 |\n| **Add:** |  |  |\n| Unpresented cheque: Mzilikazi Inks | 1,147 |  |\n| Unpresented cheque: Tshabalala Motors | 388 |  |\n| Bank error: deposit of another customer | 240 |  |\n|  |  | 1,775 |\n| **Less:** Uncredited deposit |  | (2,265) |\n| **Balance as per bank statement** |  | **3,306** |"
+    },
+    "explanation": "Every remaining difference is explained."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** reasons why Sipho should prepare a bank reconciliation statement every month.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "One reason: to check the cash book balance is correct / detect errors by the business or the bank",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Second reason: to detect fraud / identify old unpresented cheques / keep records up to date",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: To check that his cash book balance is correct and find errors (such as the bank's 240 error), and to detect fraud or cheques that have been unpresented for a long time."
+    },
+    "explanation": "Purposes of bank reconciliation."
+   }
+  ],
+  "explanation": "This item tests the updated cash book and the bank reconciliation statement (ZIMSEC Paper 2 style).",
+  "hints": [
+   "Update the cash book first; leave timing differences and bank errors for the reconciliation."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3796"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "3306"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3670"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2826"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true
+ }
+]

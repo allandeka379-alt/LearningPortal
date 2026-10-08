@@ -1,0 +1,14 @@
+import { tAccount, check, sum } from "../lib.mjs";
+import { dayBook, net } from "./w2a-lib.mjs";
+const s = [["3 May", "Tatenda Builders", "INV 041", net(2400, 25)], ["10 May", "Farai Ncube", "INV 042", 860], ["18 May", "Mutare Construction", "INV 043", net(3200, 20)], ["27 May", "Tatenda Builders", "INV 044", net(1140, 25)]];
+const sj = dayBook("Sales journal (May 2025)", s, { nameCol: "Customer", refCol: "Invoice no.", totalLabel: "Transferred to sales account", totalDate: "31 May" });
+console.log(s.map(x=>x[3]).join(", "), sj.total);
+console.log(sj.md + "\n");
+console.log(tAccount("Tatenda Builders account", [["3 May", "Sales", s[0][3]], ["27 May", "Sales", s[3][3]]], [], { balance: false }) + "\n");
+console.log(tAccount("Sales account", [], [["31 May", "Sundry trade receivables (sales journal)", sj.total]], { balance: false }) + "\n");
+const p = [["2 Jun", "Harare Wholesalers", "H 2210", net(1500, 10)], ["9 Jun", "Bulawayo Foods", "BF 381", 720], ["16 Jun", "Harare Wholesalers", "H 2264", net(2000, 10)], ["24 Jun", "Mashonaland Millers", "MM 77", 940]];
+const pj = dayBook("Purchases journal (June 2025)", p, { nameCol: "Supplier", refCol: "Invoice no.", totalLabel: "Transferred to purchases account", totalDate: "30 Jun" });
+console.log(p.map(x=>x[3]).join(", "), pj.total);
+console.log(pj.md + "\n");
+console.log(tAccount("Harare Wholesalers account", [], [["2 Jun", "Purchases", p[0][3]], ["16 Jun", "Purchases", p[2][3]]], { balance: false }) + "\n");
+console.log(tAccount("Purchases account", [["30 Jun", "Sundry trade payables (purchases journal)", pj.total]], [], { balance: false }));

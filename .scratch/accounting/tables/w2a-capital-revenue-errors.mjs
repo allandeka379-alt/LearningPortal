@@ -1,0 +1,10 @@
+import { statement, r2, check } from "../lib.mjs";
+const U = String.raw`US\$`;
+const draft = 18750;
+const adj = [["(i) Van repairs wrongly capitalised", -650], ["(ii) Computer wrongly charged to office expenses", 1800], ["(ii) Depreciation on the computer (20%)", -360], ["(iii) Delivery of new machine charged to carriage inwards", 320], ["(iii) Depreciation on the delivery cost (10%)", -32], ["(iv) Own staff's wages for building the storeroom", 2100]];
+const corrected = r2(draft + adj.reduce((s, a) => s + a[1], 0));
+check("c", corrected, 21928);
+console.log("**Sipho's Engineering**\n\n**Statement of corrected profit**\n");
+console.log(statement("for the year ended 31 December 2025", [["Draft profit for the year", null, draft], ...adj.map(([l, v]) => [v > 0 ? `Add: ${l}` : `Less: ${l}`, null, v]), ["**Corrected profit for the year**", null, `**${corrected.toLocaleString("en-GB")}**`]]));
+const nca = r2(-650 + 1800 - 360 + 320 - 32 + 2100);
+console.log(nca);
