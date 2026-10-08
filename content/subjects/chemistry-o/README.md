@@ -319,9 +319,11 @@ answer keys are now A 280, B 236, C 228, D 231.
    aluminium cell, rate graphs, titration curves and displayed formulae of organic molecules.
 2. **Self-marked written answers.** With AI marking switched off, 25 % of the bank's marks are marked by students
    against our mark-scheme points. Automatic marking covers multiple choice, numbers and keyed short answers.
-3. **Length cue in MCQs.** In 233 of the 975 single-answer MCQs (24 %) the key is at least 1.3 times and 12
-   characters longer than every distractor, so a student could often guess by length. Slice 5 was fixed by its
-   reviewer; the other slices need the same pass (lengthen distractors or trim keys).
+3. **Length cue in MCQs (mostly fixed 2026-10-08).** In 286 single-answer MCQs and MCQ parts the key was at least
+   1.3 times and 12 characters longer than every distractor, so a student could guess by length. All were edited in
+   the JSON (tighter keys, distractors of comparable length; the reviewed rationales kept). A milder cue remains:
+   the key is still the single longest option in 419 of 975 single-answer MCQs (43 %, against about 25 % by chance).
+   The DEV database has the old wording until the family is re-imported and published.
 4. **Mock question length.** The bank's exam-style questions are mostly 4–7 marks (only 21 are worth 8–10), so the
    theory mocks use more, shorter questions than the real papers (see Assessments).
 5. **Thin topics** (fewer than 20 questions): Cambridge 8.5 Noble gases (8), 9.2 Uses of metals (12), 11.2 Naming

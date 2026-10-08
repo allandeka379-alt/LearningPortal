@@ -209,8 +209,7 @@ Not done yet (no database in the cloud session). On the owner's PC, in this orde
    not printed (commonly cited as 4003). Under the Heritage-Based Curriculum (2024-2030) November 2026 and later
    candidates may sit a new syllabus.
 8. **Answer cues in borrowed banks.** In many borrowed single-answer MCQs the key is clearly the longest option
-   (biology-o 342 of 997, chemistry-o 233 of 975); the own Combined Science items and physics-o were fixed on
-   2026-10-08.
+   (biology-o 342 of 997); the own Combined Science items, physics-o and chemistry-o were fixed on 2026-10-08.
 
 ## Needs a specialist teacher's check
 

@@ -68,8 +68,8 @@ combined-science-o (ZIMSEC Combined Science) is complete in the files: 7 lessons
 borrows from the other four families through `conceptFamilies` (2,996 questions in all), 19 topic tests and Paper 1 /
 Paper 2 mocks; its import is queued for the owner's PC. MCQ answer positions are now balanced in every family (the
 player shows options in stored order; mathematics-o had the key at A in 712 of 768 MCQs); mathematics-o, biology-o and
-physics-o need a re-import and DEV publish for that. The key-is-clearly-longest cue is fixed in physics-o and combined-science-o; still open in biology-o (342
-of 997 single-answer MCQs) and chemistry-o (233 of 975). Hand-off notes: `.scratch/active-runs.md`. Each family's `content/subjects/<family>/README.md` lists coverage, tests, known gaps and specialist checks;
+physics-o need a re-import and DEV publish for that. The key-is-clearly-longest cue is fixed in physics-o, chemistry-o and combined-science-o; still open in
+biology-o (342 of 997 single-answer MCQs). Hand-off notes: `.scratch/active-runs.md`. Each family's `content/subjects/<family>/README.md` lists coverage, tests, known gaps and specialist checks;
 `content/README.md` has the overview. Marking fix the same day: a numerical answer typed with the text the answer box
 already shows ("US$16.20", "x = 5", "×400", "pH 7", "12:1" when ": 1" follows the box) was unreadable and scored 0;
 `stripAnswerAffixes` (`src/lib/questions/number.ts`) now removes it before reading, for NUMERICAL and CALCULATION
