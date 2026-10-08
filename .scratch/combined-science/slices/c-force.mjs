@@ -381,9 +381,9 @@ concept("cs.physics.gears", {
     hints: ["Rearrange efficiency = MA ÷ VR, using the efficiency as a decimal."] });
 
   q.num({ d: 4, skill: "APPLICATION", objectives: CALC,
-    stem: "In a compound gear train, a 14-tooth driver meshes with a 42-tooth gear. A 16-tooth gear fixed to the same shaft as the 42-tooth gear meshes with an 80-tooth output gear. What is the overall velocity ratio?",
-    value: 15, wrong: [8, 5.6, 0.067],
-    explanation: "First pair: 42 ÷ 14 = 3. Second pair: 80 ÷ 16 = 5. Gears on the same shaft turn together, so the overall VR = 3 × 5 = 15.",
+    stem: "In a compound gear train, an 18-tooth driver meshes with a 72-tooth gear. A 20-tooth gear fixed to the same shaft as the 72-tooth gear meshes with a 100-tooth output gear. What is the overall velocity ratio?",
+    value: 20, wrong: [9, 5.56, 0.05],
+    explanation: "First pair: 72 ÷ 18 = 4. Second pair: 100 ÷ 20 = 5. Gears on the same shaft turn together, so the overall VR = 4 × 5 = 20.",
     hints: ["Work out the VR of each meshing pair.", "Multiply the VRs of the pairs (do not add them)."] });
 
   q.mcq({ d: 3, skill: "ANALYSIS", objectives: USES,

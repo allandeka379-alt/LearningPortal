@@ -299,6 +299,13 @@ export function concept(conceptKey, { file, keyPrefix, objectives = {}, extraCon
     short: (o) => finish(null, P.short(o), o),
     fib: (o) => finish(null, P.fib(o), o),
     match: (o) => finish(null, P.match(o), o),
+    /** Extended response, self-marked against points: { stem, marks, points, modelAnswer, wordLimit }. */
+    ext(o) {
+      const built = P.manual({ ...o, label: undefined, type: "EXTENDED_RESPONSE" });
+      built.part.payload = { wordLimit: { max: o.wordLimit ?? 200 } };
+      built.part.answerSpec.modelAnswer = o.modelAnswer;
+      return finish(null, built, o);
+    },
     /** Structured: parts = [P.xxx({...label...}), ...]; marks = sum of parts. */
     struct(o) {
       const parts = o.parts;
