@@ -17,17 +17,17 @@ concept("phys.thermal.changes-of-state", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "A pot of water is boiling on a stove. The heat is turned up. What happens to the temperature of the boiling water?",
-    options: [["It stays at the boiling point; the water just boils faster.", "Correct."], ["It rises steadily.", "Boiling water stays at its boiling point."], ["It falls.", "Energy is still being supplied."], ["It rises to 200 °C.", "Water cannot be heated above its boiling point in an open pot."]],
+    options: [["It stays at the boiling point; the water just boils faster.", "Correct."], ["It rises steadily as more energy is supplied each second.", "Boiling water stays at its boiling point."], ["It falls, because more water evaporates and cools it.", "Energy is still being supplied."], ["It rises well above 100 °C because the stove is hotter.", "Water cannot be heated above its boiling point in an open pot."]],
     answer: "A", explanation: "While boiling, the extra energy turns more water into steam; the temperature stays at the boiling point." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why does the temperature of ice stay at 0 °C while it melts, even though it is being heated?",
-    options: [["The energy breaks the bonds between particles rather than making them move faster.", "Correct."], ["The ice loses energy to the room.", "It gains energy."], ["Thermometers cannot read inside ice.", "Not the reason."], ["Energy is destroyed during melting.", "Energy cannot be destroyed."]],
+    options: [["The energy breaks bonds between particles instead of speeding them up.", "Correct."], ["The ice loses as much energy to the room as it gains.", "It gains energy."], ["Thermometers cannot read correctly inside melting ice.", "Not the reason."], ["The energy supplied is destroyed as the solid turns to liquid.", "Energy cannot be destroyed."]],
     answer: "A", explanation: "During a change of state, energy is used to overcome the forces between particles, so their kinetic energy (temperature) does not rise." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why does sweating help to cool you down?",
-    options: [["The most energetic water particles evaporate, lowering the average energy of those left on the skin.", "Correct."], ["Sweat is colder than the body when it comes out.", "Sweat starts at body temperature."], ["Sweat reflects sunlight.", "Not the reason."], ["Sweat stops blood flowing to the skin.", "No."]],
+    options: [["The most energetic particles evaporate, so the rest are cooler.", "Correct."], ["Sweat is colder than the body when it comes out.", "Sweat starts at body temperature."], ["Sweat on the skin reflects sunlight away from the body.", "Not the reason."], ["Sweat stops warm blood from flowing near the skin.", "Sweating does not stop blood flow."]],
     answer: "A", explanation: "Evaporation removes the fastest particles, so the remaining liquid, and the skin under it, cools." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -53,7 +53,7 @@ concept("phys.thermal.changes-of-state", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "Water in an open pot boils at about 95 °C in a town high above sea level. Why?",
-    options: [["The atmospheric pressure is lower, which lowers the boiling point.", "Correct."], ["The air is colder.", "Air temperature does not set the boiling point."], ["The water contains more salt.", "Salt would raise the boiling point."], ["Thermometers read low at altitude.", "Not the reason."]],
+    options: [["The atmospheric pressure is lower, which lowers the boiling point.", "Correct."], ["The air is colder, so the pot loses energy faster to it.", "Air temperature does not set the boiling point."], ["The water there contains more salt from the local rocks.", "Salt would raise the boiling point."], ["Thermometers read about 5 °C too low at high altitude.", "Not the reason."]],
     answer: "A", explanation: "Boiling point depends on pressure; lower pressure at altitude means water boils below 100 °C.",
     hints: ["How does air pressure change with height?"] });
 
@@ -85,7 +85,7 @@ concept("phys.thermal.latent-heat", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What is the specific latent heat of fusion?",
-    options: [["The energy needed to melt 1 kg of a solid without a change in temperature", "Correct."], ["The energy needed to boil 1 kg of a liquid", "That is vaporisation."], ["The energy needed to raise 1 kg by 1 °C", "That is specific heat capacity."], ["The temperature at which a solid melts", "That is the melting point."]],
+    options: [["Energy to melt 1 kg of a solid with no change in temperature", "Correct."], ["Energy to boil 1 kg of a liquid with no change in temperature", "That is vaporisation."], ["Energy to raise the temperature of 1 kg of a solid by 1 °C", "That is specific heat capacity."], ["The temperature at which 1 kg of a solid starts to melt", "That is the melting point."]],
     answer: "A", explanation: "Specific latent heat of fusion: energy per kg to change solid to liquid at constant temperature." });
 
   q.num({ d: 2, skill: "APPLICATION", applies: Z, daily: true,
@@ -106,12 +106,12 @@ concept("phys.thermal.latent-heat", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why is a scald from steam at 100 °C worse than one from boiling water at 100 °C?",
-    options: [["Steam gives out its latent heat of vaporisation as it condenses on the skin, as well as cooling down.", "Correct."], ["Steam is hotter than 100 °C.", "Both are at 100 °C here."], ["Water conducts heat better than steam.", "That would make water worse."], ["Steam contains more mass.", "Not the reason."]],
+    options: [["Steam also gives out its latent heat as it condenses on the skin.", "Correct."], ["Steam is always hotter than 100 °C, even at the spout.", "Both are at 100 °C here."], ["Water conducts heat better than steam, so steam stays longer.", "That would make water worse."], ["Steam contains more mass than the same volume of water.", "Steam is far less dense than water."]],
     answer: "A", explanation: "Condensing steam releases a large amount of latent heat onto the skin before it even starts cooling." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Why is the specific latent heat of vaporisation of water much larger than its specific latent heat of fusion?",
-    options: [["Boiling separates the particles completely, which needs far more energy than loosening them in melting.", "Correct."], ["Steam is hotter than ice.", "Latent heat is not about temperature."], ["There is more water in steam.", "The comparison is per kg."], ["Melting releases energy.", "Melting absorbs energy."]],
+    options: [["Boiling separates the particles completely; melting only loosens them.", "Correct."], ["Steam is hotter than ice, so it holds more energy per kg.", "Latent heat is not about temperature."], ["There are more particles in 1 kg of steam than of ice.", "1 kg is 1 kg: the number of particles is the same."], ["Melting releases energy, which lowers its latent heat.", "Melting absorbs energy."]],
     answer: "A", explanation: "In vaporisation the particles must be pulled completely apart (and push back the atmosphere), which takes much more energy than melting.",
     hints: ["Compare what happens to the particles in each change."] });
 
@@ -128,7 +128,7 @@ concept("phys.thermal.latent-heat", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "In an experiment to find the specific latent heat of fusion of ice, a second funnel of ice without a heater is set up beside the first. Why?",
-    options: [["To find how much ice is melted by energy from the room, so it can be subtracted", "Correct: it is a control."], ["To keep the heater cool", "Not its purpose."], ["To double the mass of water collected", "That would spoil the result."], ["To measure the room temperature", "A thermometer does that."]],
+    options: [["To find how much ice the room melts, so it can be subtracted", "Correct: it is a control."], ["To keep the heater in the first funnel from overheating", "Not its purpose."], ["To double the mass of water collected for weighing", "That would spoil the result."], ["To measure the room temperature during the experiment", "A thermometer does that."]],
     answer: "A", explanation: "The control funnel shows the mass melted by the surroundings; subtracting it leaves the mass melted by the heater alone.",
     hints: ["What else, apart from the heater, could melt the ice?"] });
 
@@ -168,12 +168,12 @@ concept("phys.thermal.conduction", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "A metal bench and a wooden bench have been in the same shade all day. Why does the metal one feel colder to touch?",
-    options: [["Metal conducts energy away from your hand faster.", "Correct."], ["The metal is at a lower temperature.", "Both are at the same temperature."], ["Wood produces heat.", "Wood does not produce heat."], ["Metal reflects body heat.", "Not the reason."]],
+    options: [["Metal conducts energy away from your hand faster.", "Correct."], ["The metal is at a lower temperature than the wood.", "Both are at the same temperature."], ["Wood produces a little heat of its own.", "Wood does not produce heat."], ["Metal reflects the body heat away from your hand.", "Not the reason."]],
     answer: "A", explanation: "Both are at the same temperature; the metal is a better conductor, so it takes energy from your hand faster." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why do cooking pots have metal bases but plastic or wooden handles?",
-    options: [["Metal conducts energy to the food; plastic and wood are insulators, so the handles stay cool.", "Correct."], ["Plastic is a better conductor than metal.", "It is a worse conductor."], ["Metal handles would melt.", "Not the reason."], ["Wooden handles conduct energy to the food.", "They are insulators."]],
+    options: [["Metal conducts heat to the food; plastic and wood insulate the handle.", "Correct."], ["Plastic is a better conductor than metal, so it cools the pan.", "It is a worse conductor."], ["Metal handles would melt and bend at normal cooking temperatures.", "Not the reason."], ["Wooden handles conduct energy into the food from the hand.", "They are insulators."]],
     answer: "A", explanation: "The metal base conducts energy well into the food; insulating handles protect the cook's hand." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -182,13 +182,13 @@ concept("phys.thermal.conduction", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "Why are metals much better thermal conductors than non-metals?",
-    options: [["Metals contain free electrons that carry energy quickly through the metal.", "Correct."], ["Metal atoms do not vibrate.", "They vibrate too."], ["Metals have a lower density.", "Not the reason; many are dense."], ["Non-metals have no particles.", "They do."]],
+    options: [["Metals have free electrons that carry energy quickly through them.", "Correct."], ["Metal atoms do not vibrate, so they waste no energy on the way.", "They vibrate too."], ["Metals have a lower density, so energy moves through faster.", "Not the reason; many are dense."], ["Non-metals have no particles to pass the energy along.", "They do."]],
     answer: "A", explanation: "As well as lattice vibrations, metals have free (delocalised) electrons that move quickly and transfer energy in collisions.",
     hints: ["What do metals contain that non-metals do not?"] });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why are gases very poor thermal conductors?",
-    options: [["Their particles are far apart, so collisions that pass energy along are rare.", "Correct."], ["Gas particles do not move.", "They move fast."], ["Gases are too hot.", "Not the reason."], ["Gases contain free electrons.", "They do not."]],
+    options: [["Their particles are far apart, so energy-passing collisions are rare.", "Correct."], ["Gas particles do not move, so they cannot pass energy on.", "They move fast."], ["Gas particles are too small to carry energy from one to the next.", "Particle size is not the reason; the large spacing is."], ["Gases contain free electrons that carry the energy away.", "They do not; metals do."]],
     answer: "A", explanation: "With particles far apart, energy is passed on only in occasional collisions.",
     hints: ["Think about the spacing of gas particles."] });
 
@@ -204,7 +204,7 @@ concept("phys.thermal.conduction", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why do woollen jumpers and blankets keep people warm?",
-    options: [["They trap air, which is a poor conductor.", "Correct."], ["Wool produces heat.", "Wool does not produce energy."], ["Wool is a good conductor.", "It is a poor conductor."], ["Wool reflects cold.", "Cold is not reflected."]],
+    options: [["They trap air, which is a poor conductor.", "Correct."], ["Wool produces a little heat of its own.", "Wool does not produce energy."], ["Wool is a good conductor of body heat.", "It is a poor conductor."], ["Wool reflects the cold back outwards.", "Cold is not reflected."]],
     answer: "A", explanation: "Wool fibres trap still air, a very poor conductor, so energy escapes from the body slowly." });
 
   q.short({ d: 2, skill: "RECALL",
@@ -234,12 +234,12 @@ concept("phys.thermal.convection", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "Why does warm air rise?",
-    options: [["It expands, becomes less dense and is pushed up by the denser cooler air.", "Correct."], ["Heat always rises.", "It is the warm, less dense air that rises."], ["Warm air has fewer particles in total.", "The same air expands."], ["Warm air is attracted by the Sun.", "Not the reason."]],
+    options: [["It expands, becomes less dense and is pushed up by cooler air.", "Correct."], ["Heat always rises, carrying the warm air up with it.", "It is the warm, less dense air that rises."], ["Warm air has fewer particles in total, so it weighs less.", "The same air expands."], ["Warm air is attracted upwards by the heat of the Sun.", "Not the reason."]],
     answer: "A", explanation: "Heated air expands, so its density decreases; cooler, denser air sinks around it and pushes it upwards." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why is the heating element of an electric kettle at the bottom?",
-    options: [["Heated water rises, setting up a convection current that heats all the water.", "Correct."], ["So the element stays cool.", "Not the reason."], ["Because heat sinks.", "Warm water rises."], ["So that the water conducts the heat upwards.", "Water is a poor conductor; convection does the job."]],
+    options: [["Heated water rises, so a convection current heats all the water.", "Correct."], ["So that the element itself stays cool in the water.", "Not the reason."], ["Because heat sinks, so it would not reach the bottom water.", "Warm water rises."], ["So that the water can conduct the heat upwards quickly.", "Water is a poor conductor; convection does the job."]],
     answer: "A", explanation: "Warm water rises from the element and cooler water sinks to be heated: convection circulates all the water." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -259,7 +259,7 @@ concept("phys.thermal.convection", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "Where should the cooling unit of an old-style refrigerator be placed, and why?",
-    options: [["At the top: cooled air sinks, and warmer air rises to be cooled.", "Correct."], ["At the bottom: cold air rises.", "Cold air sinks."], ["In the middle: it does not matter.", "Position matters for convection."], ["Outside the fridge", "It must cool the inside."]],
+    options: [["At the top: cooled air sinks, and warmer air rises to be cooled.", "Correct."], ["At the bottom: cold air rises and cools the whole fridge.", "Cold air sinks."], ["In the middle: the position does not matter for cooling.", "Position matters for convection."], ["Outside the fridge, so its heat does not warm the food", "It must cool the inside."]],
     answer: "A", explanation: "Air cooled at the top becomes denser and sinks, while warmer air rises to the cooling unit: a convection current cools the whole interior.",
     hints: ["Does cold air rise or sink?"] });
 
@@ -309,7 +309,7 @@ concept("phys.thermal.radiation", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why are many houses in hot countries painted white?",
-    options: [["White surfaces reflect radiation, so the house absorbs less energy from the Sun.", "Correct."], ["White paint conducts heat out.", "Not the reason."], ["White surfaces emit more radiation.", "They are poor emitters."], ["White paint is cheaper.", "Not the physics reason."]],
+    options: [["White surfaces reflect sunlight, so the house absorbs less energy.", "Correct."], ["White paint conducts heat out of the walls more quickly.", "Not the reason."], ["White surfaces emit more radiation, so they lose heat faster.", "They are poor emitters."], ["White paint is cheaper than other colours of paint.", "Not the physics reason."]],
     answer: "A", explanation: "Light, shiny surfaces reflect most of the radiation and are poor absorbers, keeping the house cooler." });
 
   q.struct({ d: 3, skill: "EVALUATION", examStyle: true,
@@ -324,19 +324,19 @@ concept("phys.thermal.radiation", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "An object receives energy faster than it transfers energy away. What happens to it?",
-    options: [["Its temperature rises until it emits energy as fast as it receives it.", "Correct."], ["Its temperature falls.", "It is gaining energy overall."], ["Its temperature stays the same.", "Only if the rates were equal."], ["It stops emitting radiation.", "It always emits."]],
+    options: [["Its temperature rises until it emits energy as fast as it receives it.", "Correct."], ["Its temperature falls until it stops receiving energy.", "It is gaining energy overall."], ["Its temperature stays the same, as energy is conserved.", "Only if the rates were equal."], ["It stops emitting radiation until it has cooled down again.", "It always emits."]],
     answer: "A", explanation: "Net energy gain raises the temperature; hotter objects emit more, so it warms until the rates balance.",
     hints: ["What happens to emission as an object gets hotter?"] });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Two identical cups of tea, one in a narrow mug and one spread out in a wide shallow dish, start at the same temperature. Which cools faster by radiation, and why?",
-    options: [["The wide dish: a larger surface area emits radiation faster.", "Correct."], ["The narrow mug: it is taller.", "Height is not the factor."], ["Both the same: same temperature.", "Surface area also matters."], ["The narrow mug: smaller area emits more.", "Larger area emits more."]],
+    options: [["The wide dish: a larger surface area emits radiation faster.", "Correct."], ["The narrow mug: its taller sides emit more radiation.", "Height is not the factor."], ["Both the same: they start at the same temperature.", "Surface area also matters."], ["The narrow mug: a smaller surface area emits radiation faster.", "Larger area emits more."]],
     answer: "A", explanation: "The rate of emission increases with surface area (and surface temperature).",
     hints: ["Which factor besides temperature affects the rate of emission?"] });
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "How do greenhouse gases such as carbon dioxide raise the Earth's average temperature?",
-    options: [["They absorb some of the infrared emitted by the Earth's surface and re-emit some of it back towards the ground.", "Correct."], ["They produce heat by burning.", "They do not burn in the atmosphere."], ["They block sunlight from reaching the Earth.", "That would cool it."], ["They reflect cold away.", "Cold is not reflected."]],
+    options: [["They absorb infrared from the ground and re-emit some back down.", "Correct."], ["They produce heat by burning slowly in the atmosphere.", "They do not burn in the atmosphere."], ["They block sunlight, trapping it between the gas and the ground.", "Blocking sunlight would cool the Earth."], ["They reflect cold radiation from space away from the Earth.", "Cold is not a form of radiation."]],
     answer: "A", explanation: "Less infrared escapes to space, so the balance between incoming and outgoing radiation is reached at a higher temperature.",
     hints: ["Think about the balance between incoming and outgoing radiation."] });
 
@@ -367,7 +367,7 @@ concept("phys.thermal.transfer-applications", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why are the inner walls of a vacuum flask silvered?",
-    options: [["To reduce energy transfer by radiation", "Correct: shiny surfaces are poor emitters and reflect radiation."], ["To stop convection", "The vacuum does that."], ["To make it look attractive", "Not the physics reason."], ["To conduct heat away", "That would make it worse."]],
+    options: [["To reduce energy transfer by radiation", "Correct: shiny surfaces are poor emitters and reflect radiation."], ["To stop energy transfer by convection", "The vacuum does that."], ["To make the inside look clean and attractive", "Not the physics reason."], ["To conduct energy away from the drink faster", "That would make it worse."]],
     answer: "A", explanation: "Silvered surfaces are poor emitters and good reflectors of infrared, reducing radiation losses." });
 
   q.match({ d: 3, skill: "UNDERSTANDING",
@@ -383,13 +383,13 @@ concept("phys.thermal.transfer-applications", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "In a solar water heater without a pump, why must the storage tank be placed above the collector panel?",
-    options: [["Hot water rises by convection into the tank, and cooler water sinks back to the panel.", "Correct."], ["So the tank receives more sunlight.", "Not the main reason."], ["Hot water sinks.", "Hot water rises."], ["To make the system lighter.", "Not the reason."]],
+    options: [["Hot water rises into the tank; cooler water sinks back to the panel.", "Correct."], ["So the tank receives more sunlight on the roof than the panel.", "Not the main reason."], ["Hot water is denser, so it must be lifted into the tank.", "Hot water is less dense; it rises."], ["To make the whole system lighter and easier to fix on the roof.", "Not the reason."]],
     answer: "A", explanation: "The circulation depends on convection: heated, less dense water rises to the tank above.",
     hints: ["Does heated water rise or sink?"] });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "On a sunny afternoon by Lake Kariba, a breeze blows from the lake towards the land. Why?",
-    options: [["The land heats up faster than the water; air over the land rises and cooler air from over the lake moves in.", "Correct: a lake (sea) breeze."], ["The water is hotter than the land.", "By day the land is hotter."], ["Wind always blows from water to land.", "At night it reverses."], ["The lake gives out cold radiation.", "Cold is not radiated."]],
+    options: [["Land heats faster than water; air over it rises and lake air moves in.", "Correct: a lake (sea) breeze."], ["The water is hotter than the land, so air flows from it.", "By day the land is hotter."], ["Wind always blows from water towards land, day and night.", "At night it reverses."], ["The lake gives out cold radiation that pushes the air inland.", "Cold is not radiated."]],
     answer: "A", explanation: "Land has a lower specific heat capacity and warms faster; warm air rises over the land and air from over the water replaces it." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING",
@@ -411,13 +411,13 @@ concept("phys.thermal.transfer-applications", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "In a car's cooling system, how is energy carried from the engine to the radiator?",
-    options: [["The hot water is pumped round, carrying the energy by (forced) convection", "Correct."], ["By radiation through the air", "Radiation is a small part."], ["By conduction along the rubber pipes", "Rubber is an insulator."], ["It is not carried; it is destroyed in the engine", "Energy cannot be destroyed."]],
+    options: [["Pumped hot water carries the energy round by (forced) convection", "Correct."], ["By radiation through the air between engine and radiator", "Radiation is a small part."], ["By conduction along the walls of the rubber pipes to the front", "Rubber is an insulator."], ["It is not carried: it is destroyed in the hot engine block", "Energy cannot be destroyed."]],
     answer: "A", explanation: "Water heated by conduction in the engine is pumped to the radiator: the moving water carries the energy (forced convection).",
     hints: ["The water moves round the system."] });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why do thatched roofs keep huts cool in the day and warm at night?",
-    options: [["The thatch traps air, which is a poor conductor.", "Correct."], ["Thatch is a good conductor.", "It is a poor conductor."], ["Thatch reflects all radiation.", "Not the main reason."], ["Thatch produces heat at night.", "It does not."]],
+    options: [["The thatch traps air, which is a poor conductor.", "Correct."], ["Thatch is a good conductor, so heat passes out.", "It is a poor conductor."], ["Thatch reflects all the radiation that falls on it.", "Not the main reason."], ["Thatch produces a little heat at night as it dries.", "It does not."]],
     answer: "A", explanation: "The many air pockets in thatch reduce conduction in both directions." });
 
   q.card("CONCEPT", "How does a vacuum flask reduce energy transfer?", "Vacuum: no conduction/convection. Silvering: less radiation. Stopper: less convection and evaporation.");

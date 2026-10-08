@@ -16,7 +16,7 @@ concept("phys.machines.simple-machines", {
 
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What is the velocity ratio (VR) of a machine?",
-    options: [["load ÷ effort", "That is the MA."], ["distance moved by effort ÷ distance moved by load", "Correct."], ["MA ÷ efficiency", "Not a definition."], ["effort × distance", "That is work input."]],
+    options: [["load force ÷ effort force needed to lift it", "That is the MA."], ["distance moved by effort ÷ distance moved by load", "Correct."], ["efficiency ÷ mechanical advantage of the machine", "Efficiency = MA ÷ VR, so this is upside down: VR = MA ÷ efficiency."], ["effort × distance the effort moves through", "That is work input."]],
     answer: "B", explanation: "VR = distance moved by effort ÷ distance moved by load." });
 
   q.num({ d: 2, skill: "APPLICATION", applies: Z, daily: true,
@@ -68,7 +68,7 @@ concept("phys.machines.simple-machines", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "For a pulley system, why is the mechanical advantage always less than the velocity ratio?",
-    options: [["Extra effort is needed to overcome friction and lift the moving block.", "Correct."], ["The velocity ratio changes with the load.", "VR depends only on the design."], ["The load moves further than the effort.", "The effort moves further."], ["Mechanical advantage has no unit.", "Neither has a unit; that is not the reason."]],
+    options: [["Friction and the weight of the moving block need extra effort.", "Correct."], ["The velocity ratio falls as the load becomes heavier.", "VR depends only on the design."], ["The load moves further than the effort in a pulley system.", "The effort moves further."], ["Mechanical advantage has no unit but velocity ratio does.", "Neither has a unit; that is not the reason."]],
     answer: "A", explanation: "Ideally MA = VR. In practice part of the effort overcomes friction and lifts the moving parts, so the MA is smaller.",
     hints: ["What would MA equal for a perfect, frictionless, weightless machine?"] });
 
@@ -111,7 +111,7 @@ concept("phys.structures.beams", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What is a beam?",
-    options: [["A long rigid member that carries loads across a span between supports", "Correct."], ["A rope that carries a pulling force", "That is a cable or tie."], ["A vertical column carrying a roof", "That is a column or pillar."], ["A joint between two plates", "Not a beam."]],
+    options: [["A rigid member carrying loads across a span between supports", "Correct."], ["A rope or cable that carries a pulling force only", "That is a cable or tie."], ["A vertical column that carries a roof down to the ground", "That is a column or pillar."], ["A riveted joint that holds two steel plates together", "Not a beam."]],
     answer: "A", explanation: "A beam is a long rigid member, usually horizontal, carrying loads across a span." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z, daily: true,
@@ -131,7 +131,7 @@ concept("phys.structures.beams", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "Why are steel roof beams often made with an I-shaped cross-section?",
-    options: [["Most material is in the top and bottom flanges where the stress is greatest, giving high strength for low mass.", "Correct."], ["I-sections are the cheapest shape to make.", "Cost is not the main reason."], ["The thin web carries most of the load.", "The flanges carry most of the bending stress."], ["I-sections never bend.", "They bend, but very little."]],
+    options: [["Most material sits in the flanges, where the stress is greatest.", "Correct."], ["I-sections are the cheapest and quickest shape to make.", "Cost is not the main reason."], ["The thin web in the middle carries most of the bending load.", "The flanges carry most of the bending stress."], ["I-sections never bend, however large the load on them.", "They bend, but very little."]],
     answer: "A", explanation: "Material near the neutral axis does little work; the I-section moves it to the flanges, far from the axis, where it is most effective.",
     hints: ["Where in a bending beam are the stresses largest?"] });
 
@@ -189,12 +189,12 @@ concept("phys.structures.trusses", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What is a truss?",
-    options: [["A framework of members joined to form triangles", "Correct."], ["A solid steel beam", "A truss is an open framework."], ["A single cable in tension", "That is a tie or cable."], ["A curved arch", "Not a truss."]],
+    options: [["A framework of members joined to form triangles", "Correct."], ["A solid steel beam with an I-shaped cross-section", "A truss is an open framework."], ["A single cable in tension holding up a bridge", "That is a tie or cable."], ["A curved arch of stone blocks in compression", "Not a truss."]],
     answer: "A", explanation: "A truss is a framework of members joined at their ends to form triangles." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z, daily: true,
     stem: "Why are trusses built from triangles?",
-    options: [["A triangle cannot change shape unless one of its sides changes length, so it is rigid.", "Correct."], ["Triangles use the most material.", "They use little material."], ["Triangles look attractive.", "Not the engineering reason."], ["Triangles have no joints.", "They have three joints."]],
+    options: [["A triangle cannot change shape unless a side changes length.", "Correct."], ["Triangles use the most material, so they are strongest.", "They use little material."], ["Triangles look attractive and are easy to paint.", "Not the engineering reason."], ["Triangles have no joints that could fail under load.", "They have three joints."]],
     answer: "A", explanation: "A pin-jointed triangle is rigid; a square can fold into a parallelogram without any member changing length." });
 
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
@@ -213,7 +213,7 @@ concept("phys.structures.trusses", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "In a triangular roof truss, what is the main job of the horizontal tie beam at the bottom?",
-    options: [["It stops the rafters pushing the tops of the walls outwards; it is in tension.", "Correct."], ["It holds up the roof sheets directly.", "The rafters carry the roof sheets."], ["It is in compression and pushes the walls apart.", "It pulls the rafter ends together."], ["It has no force in it.", "It carries a large tension."]],
+    options: [["It stops the rafters pushing the walls out; it is in tension.", "Correct."], ["It holds up the roof sheets directly; it is in compression.", "The rafters carry the roof sheets."], ["It is in compression and pushes the walls apart.", "It pulls the rafter ends together."], ["It has no force in it and is only for hanging a ceiling.", "It carries a large tension."]],
     answer: "A", explanation: "The loaded rafters try to spread outwards at their feet; the tie beam pulls the feet together, so it is in tension." });
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
@@ -280,7 +280,7 @@ concept("phys.structures.joining-materials", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Two pieces of wood are glued together. Which change would make the joint stronger?",
-    options: [["Increasing the area of the glued surfaces, for example with a tongue-and-groove joint", "Correct."], ["Using a thicker layer of glue on a small area", "Contact area matters, not glue thickness."], ["Making the surfaces rough and badly fitting", "Gaps weaken the joint."], ["Using less glue", "Too little glue weakens the joint."]],
+    options: [["Increasing the glued area, e.g. with a tongue-and-groove joint", "Correct."], ["Using a thicker layer of glue on a small area", "Contact area matters, not glue thickness."], ["Making the surfaces badly fitting so glue fills the gaps", "Gaps weaken the joint."], ["Using less glue so that the joint dries harder and faster", "Too little glue weakens the joint."]],
     answer: "A", explanation: "A glued joint's strength depends mainly on the area of good contact between the surfaces." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", applies: Z, daily: true,
@@ -300,7 +300,7 @@ concept("phys.structures.joining-materials", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: Z,
     stem: "How is a plastic joint made by 'plastic welding'?",
-    options: [["The surfaces are heated until they soften and fuse together.", "Correct."], ["Molten metal is poured between them.", "That is not plastic welding."], ["They are bolted together.", "That is pinning."], ["They are stitched with thread.", "Not a structural joining method here."]],
+    options: [["The surfaces are heated until they soften and fuse together.", "Correct."], ["Molten metal is poured between the plastic surfaces.", "That is not plastic welding."], ["They are bolted together through drilled holes.", "That is bolting, not welding."], ["They are stitched together with strong nylon thread.", "Not a structural joining method here."]],
     answer: "A", explanation: "Thermoplastics soften when heated, so their surfaces can be fused together." });
 
   q.short({ d: 2, skill: "RECALL", applies: Z,
@@ -344,7 +344,7 @@ concept("phys.structures.large-structures", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why are stone and brick suitable for building arches?",
-    options: [["An arch carries its load in compression, and these materials are strong in compression.", "Correct."], ["Arches are in tension, which suits stone.", "Stone is weak in tension."], ["Stone is light.", "Stone is heavy."], ["Arches carry no load.", "Arches carry large loads."]],
+    options: [["An arch carries its load in compression, where stone is strong.", "Correct."], ["Arches are in tension, which suits stone and brick well.", "Stone is weak in tension."], ["Stone and brick are light, so the arch carries little weight.", "Stone is heavy."], ["Arches carry no load because the weight goes to the ends.", "Arches carry large loads."]],
     answer: "A", explanation: "The curve of an arch turns the load into compression along the arch, which stone and brick resist well." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
@@ -354,7 +354,7 @@ concept("phys.structures.large-structures", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "Kariba Dam is a thin curved concrete arch dam. Which way does its curve face, and why?",
-    options: [["It bows upstream, so water pressure compresses the arch and pushes it into the rock walls of the gorge.", "Correct."], ["It bows downstream, so the water pulls it into shape.", "Concrete must be kept in compression."], ["It bows upstream, so the water flows over it more easily.", "Not the reason."], ["The curve does not matter.", "The curve is essential to an arch dam."]],
+    options: [["Upstream, so water pressure squeezes the arch into the gorge walls.", "Correct."], ["Downstream, so the water pulls the arch into its shape.", "Concrete must be kept in compression."], ["Upstream, so the water flows over the top more easily.", "Not the reason."], ["Either way: the curve is only there to make it look graceful.", "The curve is essential to an arch dam."]],
     answer: "A", explanation: "With the arch curving towards the water, the water's push becomes compression along the arch, carried into the strong rock of the gorge.",
     hints: ["Concrete is strong in compression."] });
 
@@ -391,7 +391,7 @@ concept("phys.structures.large-structures", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why does an earth dam have a very wide base?",
-    options: [["Its great weight and width resist the water pressure, which is greatest at the bottom.", "Correct."], ["Earth is strong in tension.", "Earth is weak in tension."], ["So that water can seep through it.", "Seepage is a danger, not a purpose."], ["Because earth is light.", "It is heavy."]],
+    options: [["Water pressure is greatest at the bottom, so the base must be widest.", "Correct."], ["Earth is strong in tension, so a wide base stretches less.", "Earth is weak in tension."], ["So that water can seep through it and relieve the pressure.", "Seepage is a danger, not a purpose."], ["Because earth is light and would blow away if narrow.", "It is heavy."]],
     answer: "A", explanation: "An earth dam relies on its mass and a wide, triangular cross-section to hold back water whose pressure increases with depth." });
 
   q.card("FACT", "Which materials are strong in compression but weak in tension?", "Stone, brick and concrete.", undefined, { applies: Z });

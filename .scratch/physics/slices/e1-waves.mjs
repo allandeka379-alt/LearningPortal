@@ -155,7 +155,7 @@ concept("phys.waves.wave-behaviour", {
 
   q.mcq({ d: 1, skill: "RECALL",
     stem: "How can water waves in a ripple tank be made to refract?",
-    options: [["Place a glass plate in the tank to make a region of shallower water", "Correct: waves slow down over the plate."], ["Put a barrier with a narrow gap across the tank", "That shows diffraction."], ["Place a straight barrier in the path of the waves", "That shows reflection."], ["Make the vibrator vibrate faster", "That shortens the wavelength everywhere but causes no bending."]],
+    options: [["Place a glass plate in the tank to make a region of shallower water", "Correct: waves slow down over the plate."], ["Put a barrier with a narrow gap across the middle of the tank", "That shows diffraction."], ["Place a straight barrier across the path of the oncoming waves", "That shows reflection."], ["Make the vibrator vibrate faster so the waves bend as they travel", "That shortens the wavelength everywhere but causes no bending."]],
     answer: "A", explanation: "Refraction needs a change of speed: waves slow down where the water is shallower." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
@@ -169,7 +169,7 @@ concept("phys.waves.wave-behaviour", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "A house in a valley receives long-wave radio signals from a transmitter behind a hill, but it cannot receive a signal of much shorter wavelength from the same transmitter. What is the best explanation?",
-    options: [["Longer wavelengths diffract more around the edge of the hill.", "Correct."], ["Long waves travel faster than short waves.", "All electromagnetic waves travel at the same speed in air."], ["Short waves are absorbed completely by air.", "Not the reason."], ["Short waves are sound waves, not radio waves.", "Both are electromagnetic waves."]],
+    options: [["Longer wavelengths diffract more around the edge of the hill.", "Correct."], ["Long waves travel faster than short waves, so they reach further.", "All electromagnetic waves travel at the same speed in air."], ["Short waves are absorbed completely by the air above the valley.", "Not the reason."], ["Short waves are sound waves, which cannot reach the valley.", "Both are electromagnetic waves."]],
     answer: "A", explanation: "Diffraction at an edge increases with wavelength, so long waves bend around the hilltop into the valley while short waves do not.",
     hints: ["How does wavelength affect diffraction at an edge?"] });
 
@@ -229,7 +229,7 @@ concept("phys.waves.sound", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why can two astronauts on a spacewalk not hear each other shout, even when they are close together?",
-    options: [["There is no air in space to carry the sound.", "Correct: sound needs a medium."], ["Sound travels too fast in space.", "Sound cannot travel in space at all."], ["Space is too cold for sound.", "Temperature is not the reason."], ["Their helmets reflect light.", "Not relevant."]],
+    options: [["There is no air in space to carry the sound.", "Correct: sound needs a medium."], ["Sound travels too fast in space to be heard.", "Sound cannot travel in space at all."], ["Space is too cold for sound waves to form.", "Temperature is not the reason."], ["Their helmets reflect the sound back to them.", "Without air there is no sound to reflect."]],
     answer: "A", explanation: "Sound is passed on by vibrating particles; space is a near vacuum, so there is no medium to carry it." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -275,12 +275,12 @@ concept("phys.waves.sound", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "A guitar and a flute play the same note equally loudly, yet they sound different. Which property of the sound is different?",
-    options: [["Its quality (timbre), which depends on the shape of the waveform", "Correct."], ["Its pitch", "The same note has the same pitch."], ["Its frequency", "The same note has the same frequency."], ["Its amplitude", "They are equally loud."]],
+    options: [["Its quality (timbre), set by the shape of the waveform", "Correct."], ["Its pitch, set by how high or low the note is", "The same note has the same pitch."], ["Its frequency, the number of vibrations per second", "The same note has the same frequency."], ["Its amplitude, the size of each vibration of the air", "They are equally loud."]],
     answer: "A", explanation: "Quality (timbre) depends on the waveform shape, which differs between instruments playing the same note." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why does sound generally travel faster in solids than in gases?",
-    options: [["The particles are closer together and more strongly linked, so vibrations are passed on more quickly.", "Correct."], ["Solids are colder than gases.", "Temperature is not the main reason."], ["Sound is a transverse wave in solids.", "Sound in a solid can be longitudinal; that is not the reason."], ["Solids have no particles to slow the sound down.", "Solids are made of particles."]],
+    options: [["Closer, strongly linked particles pass vibrations on faster.", "Correct."], ["Solids are colder than gases, so sound loses less energy.", "Temperature is not the main reason."], ["Sound becomes a transverse wave in solids, which travels faster.", "Sound in a solid can be longitudinal; that is not the reason."], ["Solids have no air in them to slow the sound down.", "Sound needs particles; air is not what slows it."]],
     answer: "A", explanation: "In a solid, closely packed, strongly bonded particles pass vibrations on quickly, so sound travels faster.",
     hints: ["Think about how far apart the particles are and how strongly they are linked."] });
 
@@ -291,7 +291,7 @@ concept("phys.waves.sound", {
         points: ["Measure a large distance between them (several hundred metres) with a long tape or trundle wheel", "One makes a sound that can also be seen, such as banging two blocks together or firing a starting pistol", "The other starts a stopwatch on seeing the action and stops it on hearing the sound", "Repeat, find the mean time and calculate speed = distance ÷ time"] }),
       P.mcq({ label: "(b)", stem: "Why should the distance be large?", options: [["So the time is long compared with the observer's reaction time", "Correct: this reduces the percentage error."], ["So the sound is louder", "A larger distance makes it quieter."], ["Because sound travels faster over long distances", "The speed does not depend on distance."], ["So the light arrives first", "Light always arrives first."]], answer: "A",
         explanation: "A longer time makes the reaction-time error a smaller fraction of the measurement." }),
-      P.mcq({ label: "(c)", stem: "Why can the time taken by the light be ignored?", options: [["Light travels about a million times faster than sound.", "Correct."], ["Light has no speed.", "Light travels at a finite speed."], ["Light travels more slowly than sound.", "It is far faster."], ["Light cannot travel through air.", "It can."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Why can the time taken by the light be ignored?", options: [["Light travels about a million times faster than sound.", "Correct."], ["Light has no speed: it arrives everywhere instantly.", "Light travels at a finite speed."], ["Light travels more slowly than sound over short distances.", "It is far faster."], ["Light cannot travel through air, so it is not timed.", "It can."]], answer: "A",
         explanation: "Light crosses a few hundred metres in about a microsecond, which is negligible." }),
     ],
     explanation: "Use a large measured distance, time from seeing to hearing, repeat and average, then speed = distance ÷ time.",
@@ -456,7 +456,7 @@ concept("phys.waves.em-spectrum", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why are X-rays used to produce images of broken bones?",
-    options: [["X-rays pass through soft tissue but are absorbed by bone.", "Correct."], ["X-rays are reflected by the skin.", "No."], ["Bones give out X-rays.", "Bones do not emit X-rays."], ["X-rays are completely harmless.", "X-rays are ionising, so doses are kept low."]],
+    options: [["X-rays pass through soft tissue but are absorbed by bone.", "Correct."], ["X-rays are reflected by the skin and show its outline.", "X-rays pass through skin."], ["Bones give out X-rays, which the film detects.", "Bones do not emit X-rays."], ["X-rays are completely harmless, so any dose can be used.", "X-rays are ionising, so doses are kept low."]],
     answer: "A", explanation: "Bone absorbs X-rays much more than soft tissue does, so bones show up as shadows on the detector." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
@@ -514,7 +514,7 @@ concept("phys.waves.communication", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
     stem: "Why can a satellite TV dish on a house stay pointed in one fixed direction?",
-    options: [["The satellite is geostationary: it stays above the same point on the Earth.", "Correct."], ["The satellite does not move at all.", "It orbits, but in step with the Earth's rotation."], ["The Earth does not rotate.", "The Earth rotates once a day."], ["The signal fills the whole sky equally.", "The dish must point at the satellite."]],
+    options: [["It is geostationary: it stays above the same point on the Earth.", "Correct."], ["The satellite does not move at all; it hangs still in space.", "It orbits, but in step with the Earth's rotation."], ["The Earth does not rotate under the satellite's orbit.", "The Earth rotates once a day."], ["The signal fills the whole sky equally, so any direction works.", "The dish must point at the satellite."]],
     answer: "A", explanation: "A geostationary satellite orbits above the equator once every 24 hours, so it stays above the same point and the dish can be fixed." });
 
   q.tf({ d: 2, skill: "RECALL", applies: C, daily: true,
@@ -528,17 +528,17 @@ concept("phys.waves.communication", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
     stem: "Why are microwaves used for mobile phones and wireless internet?",
-    options: [["They can pass through some walls and need only a short aerial.", "Correct."], ["They are completely absorbed by buildings.", "Then signals would not reach indoors."], ["They are ionising.", "Microwaves are not ionising."], ["They travel faster than other EM waves.", "All EM waves travel at the same speed."]],
+    options: [["They can pass through some walls and need only a short aerial.", "Correct."], ["They are completely absorbed by buildings, so they are safe.", "Then signals would not reach indoors."], ["They are ionising, so they carry more energy and data.", "Microwaves are not ionising."], ["They travel faster than other electromagnetic waves in air.", "All EM waves travel at the same speed."]],
     answer: "A", explanation: "Microwaves penetrate some walls and only need short aerials for transmitting and receiving." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
     stem: "Why are optical fibres used for high-speed broadband?",
-    options: [["Glass is transparent to visible light and some infrared, which can carry data at very high rates.", "Correct."], ["The fibres carry an electric current.", "They carry light."], ["Light in glass travels faster than in a vacuum.", "Light is slower in glass."], ["The light leaks out to nearby homes.", "Total internal reflection keeps it inside."]],
+    options: [["Glass is transparent to light and infrared, which carry data very fast.", "Correct."], ["The glass fibres carry an electric current that holds the data.", "They carry light."], ["Light in glass travels faster than in a vacuum or in copper wire.", "Light is slower in glass."], ["The light leaks out along the way to reach nearby homes.", "Total internal reflection keeps it inside."]],
     answer: "A", explanation: "Visible light and short-wavelength infrared pass along glass with little loss and carry very high data rates." });
 
   q.mcq({ d: 1, skill: "RECALL", applies: C,
     stem: "What is a digital signal?",
-    options: [["A signal with only a few values, usually two (1 and 0)", "Correct."], ["A signal that varies continuously", "That is an analogue signal."], ["A signal that can only be sent by radio", "Digital signals can travel by fibre, cable or radio."], ["A signal that cannot carry sound", "Sound is often sent digitally."]],
+    options: [["A signal with only a few values, usually two (1 and 0)", "Correct."], ["A signal that varies continuously, like a sound wave", "That is an analogue signal."], ["A signal that can only be sent by radio waves", "Digital signals can travel by fibre, cable or radio."], ["A signal that cannot carry sound, only text", "Sound is often sent digitally."]],
     answer: "A", explanation: "A digital signal takes only a few values, usually two: on and off, 1 and 0." });
 
   q.tf({ d: 2, skill: "RECALL", applies: C,
@@ -547,7 +547,7 @@ concept("phys.waves.communication", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why can a digital signal travel a long distance with very little loss of quality?",
-    options: [["Regenerators recognise each pulse as 1 or 0 and send out a clean copy, removing the noise.", "Correct."], ["Digital signals do not pick up noise.", "They do; the noise can be removed."], ["Digital signals travel faster than analogue signals.", "Speed is not the reason."], ["Digital signals do not get weaker as they travel.", "All signals weaken."]],
+    options: [["Regenerators read each pulse as 1 or 0 and send a clean copy.", "Correct."], ["Digital signals do not pick up any noise along the way.", "They do; the noise can be removed."], ["Digital signals travel faster than analogue signals.", "Speed is not the reason."], ["Digital signals do not get weaker as they travel.", "All signals weaken."]],
     answer: "A", explanation: "Each regenerator rebuilds a perfect digital signal, so noise does not build up as it does when analogue signals are amplified.",
     hints: ["What happens to noise when an analogue signal is amplified?"] });
 

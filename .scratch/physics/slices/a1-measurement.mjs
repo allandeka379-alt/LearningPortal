@@ -113,10 +113,10 @@ concept("phys.measurement.length-volume-time", {
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "When timing a swinging pendulum, why is it best to start and stop the watch as the bob passes the centre of its swing?",
     options: [
-      ["The bob is moving fastest there, so the moment it passes is easiest to judge.", "Correct."],
-      ["The bob stops there for a moment.", "The bob is momentarily at rest at the ends of the swing, not the centre."],
-      ["The period is shorter at the centre.", "The period does not depend on where you time from."],
-      ["It makes the pendulum swing for longer.", "Where you time from has no effect on the pendulum."],
+      ["It moves fastest there, so the moment it passes is easy to judge.", "Correct."],
+      ["The bob stops there for a moment, so it is easy to see.", "The bob is momentarily at rest at the ends of the swing, not the centre."],
+      ["The period is shorter when you time it from the centre point.", "The period does not depend on where you time from."],
+      ["Starting there makes the pendulum swing for longer.", "Where you time from has no effect on the pendulum."],
     ], answer: "A",
     explanation: "At the centre the bob moves fastest, so the instant it passes a fixed marker is sharp. At the ends it slows and lingers, making the turning point hard to judge." });
 
@@ -128,7 +128,7 @@ concept("phys.measurement.length-volume-time", {
         explanation: "Measure many sheets together, count the sheets (not pages), and divide." }),
       P.num({ label: "(b)", marks: 2, stem: "The block of pages is $1.8\\ \\text{cm}$ thick. Calculate the thickness of one sheet in millimetres.", value: 0.12, answer: "0.12", unit: "mm", wrong: [0.06, 0.006, 0.012],
         explanation: t`$1.8\ \text{cm} = 18\ \text{mm}$; 300 pages are 150 sheets; $\dfrac{18}{150} = 0.12\ \text{mm}$.` }),
-      P.mcq({ label: "(c)", stem: "Why can she not measure one sheet directly with the ruler?", options: [["The ruler's smallest division (1 mm) is much larger than the thickness of one sheet.", "Correct."], ["Paper is transparent.", "This does not stop a measurement."], ["The ruler has a zero error.", "A zero error can be corrected; the problem is the precision."], ["A sheet is too long.", "Its length is not the problem."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Why can she not measure one sheet directly with the ruler?", options: [["Its smallest division (1 mm) is far larger than one sheet.", "Correct."], ["Paper is too transparent to line up with the ruler.", "This does not stop a measurement."], ["The ruler has a zero error that cannot be corrected.", "A zero error can be corrected; the problem is the precision."], ["A sheet is too long and floppy to hold against the ruler.", "Its length is not the problem."]], answer: "A",
         explanation: "One sheet is about a tenth of a millimetre thick, far smaller than the ruler's 1 mm divisions." }),
     ],
     explanation: t`Measuring the block of 150 sheets ($18\ \text{mm}$) and dividing gives $0.12\ \text{mm}$ per sheet. A common trap is dividing by 300: pages are numbered on both sides of each sheet.`,
@@ -454,7 +454,7 @@ concept("phys.matter.density", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which method finds the volume of an irregularly shaped stone?",
-    options: [["Measure its length, width and height with a ruler", "This works only for regular shapes."], ["Lower it into water in a measuring cylinder and find the rise in level", "Correct: displacement."], ["Weigh it on a balance", "This gives its mass, not its volume."], ["Drop it from a height and time its fall", "This has nothing to do with volume."]],
+    options: [["Measure its length, width and height with a ruler", "This works only for regular shapes."], ["Lower it into water in a measuring cylinder; read the rise", "Correct: displacement."], ["Weigh it on a balance and use the reading as its volume", "This gives its mass, not its volume."], ["Drop it from a height and time how long it takes to fall", "This has nothing to do with volume."]],
     answer: "B", explanation: "The stone displaces its own volume of water, so the rise in level is its volume." });
 
   q.fib({ d: 1, skill: "RECALL",
@@ -476,7 +476,7 @@ concept("phys.matter.density", {
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "A ship is made of steel (7800 kg/m³), yet it floats. Why?",
     hints: ["Think about what fills most of the inside of the hull."],
-    options: [["Steel becomes less dense in water.", "The density of steel does not change."], ["The average density of the ship, including the air inside, is less than that of water.", "Correct."], ["The engines push it up.", "Engines push it forwards."], ["Sea water is denser than steel.", "Sea water is about 1030 kg/m³."]],
+    options: [["Steel becomes less dense when it is in cold sea water.", "The density of steel does not change."], ["Its average density, with the air inside, is less than water's.", "Correct."], ["The engines and propellers push the ship upwards.", "Engines push it forwards."], ["Sea water is denser than steel, so steel always floats.", "Sea water is about 1030 kg/m³."]],
     answer: "B", explanation: "The hull encloses a large volume of air, so the whole ship's mass ÷ volume is less than the density of water." });
 
   const vol = 0.36 / 2500;

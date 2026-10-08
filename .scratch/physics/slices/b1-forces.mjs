@@ -87,7 +87,7 @@ concept("phys.forces.mass-weight", {
 
   q.mcq({ d: 4, skill: "ANALYSIS",
     stem: "A learner says, 'My weight is 55 kg.' Which correction is best?",
-    options: [["Your mass is 55 kg; your weight is about 540 N.", "Correct: W = 55 × 9.8 ≈ 540 N."], ["Your weight is 55 N.", "This confuses the units the other way."], ["Your weight is 5.6 kg.", "Dividing by g gives nothing meaningful here."], ["The statement is correct.", "Weight is a force, in newtons."]],
+    options: [["Your mass is 55 kg; your weight is about 540 N.", "Correct: W = 55 × 9.8 ≈ 540 N."], ["Your weight is 55 N; your mass is 55 kg.", "This confuses the units the other way."], ["Your weight is about 5.6 kg on the Earth.", "Dividing by g gives nothing meaningful here."], ["The statement is correct: weight is in kg.", "Weight is a force, in newtons."]],
     answer: "A", explanation: "Kilograms measure mass. The weight is mg = 55 × 9.8 ≈ 540 N.",
     hints: ["Weight is a force; what unit do forces use?"] });
 
@@ -109,7 +109,7 @@ concept("phys.forces.elasticity", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is the extension of a spring?",
-    options: [["Its stretched length", "The extension is the increase in length."], ["The increase in its length when a load is added", "Correct."], ["The load on it", "That is the force."], ["Its original length", "That is the starting length."]],
+    options: [["Its total length while it carries the load", "The extension is the increase in length."], ["The increase in its length when a load is added", "Correct."], ["The load that is hung on the end of it", "That is the force."], ["Its original length before any load is added", "That is the starting length."]],
     answer: "B", explanation: "Extension = stretched length − original length." });
 
   q.num({ d: 2, skill: "APPLICATION", daily: true,
@@ -139,7 +139,7 @@ concept("phys.forces.elasticity", {
     parts: [
       P.num({ label: "(a)", marks: 1, stem: "Calculate the extension when the load is 4.5 N.", value: 7.5, answer: "7.5", unit: "cm", tol: 0.05, wrong: [27.5, 2.5], explanation: "27.5 − 20.0 = 7.5 cm." }),
       P.num({ label: "(b)", marks: 2, stem: "Calculate the spring constant in N/cm, using the readings up to 6.0 N.", value: 0.6, answer: "0.60", unit: "N/cm", wrong: [1.67, 0.4], explanation: "Each 1.5 N adds 2.5 cm, so k = 1.5/2.5 = 0.60 N/cm." }),
-      P.mcq({ label: "(c)", stem: "What happens between 6.0 N and 7.5 N?", options: [["The spring has passed its limit of proportionality: the extension is no longer proportional to the load.", "Correct: 1.5 N gives 3.8 cm instead of 2.5 cm."], ["The spring obeys Hooke's law more closely.", "The extension has jumped."], ["The spring has broken.", "It still has a length."], ["The learner made no error and nothing changed.", "The increase is larger than before."]], answer: "A", explanation: "Up to 6.0 N each 1.5 N adds 2.5 cm; the last 1.5 N adds 3.8 cm, so the spring is beyond its limit of proportionality." }),
+      P.mcq({ label: "(c)", stem: "What happens between 6.0 N and 7.5 N?", options: [["It has passed its limit of proportionality.", "Correct: 1.5 N gives 3.8 cm instead of 2.5 cm."], ["The spring obeys Hooke's law more closely.", "The extension has jumped."], ["The spring has snapped and lost all its strength.", "It still has a length."], ["The learner made no error and nothing changed.", "The increase is larger than before."]], answer: "A", explanation: "Up to 6.0 N each 1.5 N adds 2.5 cm; the last 1.5 N adds 3.8 cm, so the spring is beyond its limit of proportionality." }),
     ],
     explanation: "Extensions 0, 2.5, 5.0, 7.5, 10.0 cm are proportional to the load (k = 0.60 N/cm) up to 6.0 N; the jump to 13.8 cm at 7.5 N shows the limit of proportionality has been passed.",
     hints: ["Subtract the original length (20.0 cm) from each length.", "Look for where the equal steps stop."] });
@@ -173,7 +173,7 @@ concept("phys.forces.elasticity", {
     parts: [
       P.manual({ label: "(a)", marks: 3, stem: "Describe how she should carry out the experiment.",
         points: ["Hangs the spring from a clamp beside a vertical metre rule and records its unloaded length (reading at eye level)", "Adds known loads (e.g. 1 N masses) one at a time and records the length each time", "Calculates each extension (length − original length) and plots extension against load"] }),
-      P.mcq({ label: "(b)", stem: "Why should she check the spring's length again after removing all the loads?", options: [["To see whether it has gone beyond its elastic behaviour and stayed stretched", "Correct."], ["To measure the spring constant", "That needs loads."], ["To make the spring stiffer", "Removing loads does not change stiffness."], ["To find the weight of the spring", "It is not about the spring's weight."]], answer: "A", explanation: "If it does not return to its original length, it has been permanently stretched." }),
+      P.mcq({ label: "(b)", stem: "Why should she check the spring's length again after removing all the loads?", options: [["To see if it has stayed stretched (gone past its elastic limit)", "Correct."], ["To measure the spring constant with no load on it", "That needs loads."], ["To let the spring become stiffer again before the next run", "Removing loads does not change stiffness."], ["To find the weight of the spring itself from its length", "It is not about the spring's weight."]], answer: "A", explanation: "If it does not return to its original length, it has been permanently stretched." }),
     ],
     explanation: "Measure the original length, add loads in steps, find extensions by subtraction, plot extension against load and check the spring returns to its original length.",
     hints: ["What must be subtracted to get the extension?"] });
@@ -206,7 +206,7 @@ concept("phys.forces.resultant-newton", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "An object has no resultant force acting on it. Which statement is correct?",
-    options: [["It must be at rest.", "It could also be moving at constant velocity."], ["It is at rest or moving at constant velocity.", "Correct: Newton's first law."], ["It must be accelerating.", "Acceleration needs a resultant force."], ["It must be slowing down.", "Slowing down needs a resultant force."]],
+    options: [["It must be at rest and cannot be moving.", "It could also be moving at constant velocity."], ["It is at rest or moving at constant velocity.", "Correct: Newton's first law."], ["It must be accelerating at a steady rate.", "Acceleration needs a resultant force."], ["It must be slowing down until it stops.", "Slowing down needs a resultant force."]],
     answer: "B", explanation: "Newton's first law: with no resultant force an object stays at rest or keeps moving in a straight line at constant speed." });
 
   q.num({ d: 2, skill: "APPLICATION", daily: true,
@@ -239,7 +239,7 @@ concept("phys.forces.resultant-newton", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which statement is Newton's third law?",
-    options: [["F = ma", "That is the second law."], ["An object stays at rest unless a force acts.", "That is the first law."], ["If A pushes on B, B pushes on A with an equal and opposite force.", "Correct."], ["Force equals rate of change of momentum.", "Another form of the second law."]],
+    options: [["Resultant force equals mass × acceleration (F = ma).", "That is the second law."], ["An object stays at rest or moves steadily unless a force acts.", "That is the first law."], ["If A pushes on B, B pushes on A with an equal and opposite force.", "Correct."], ["Resultant force equals the rate of change of momentum.", "Another form of the second law."]],
     answer: "C", explanation: "Newton's third law: forces come in equal and opposite pairs acting on different objects." });
 
   q.mcq({ d: 3, skill: "ANALYSIS",
@@ -340,7 +340,7 @@ concept("phys.forces.friction-drag", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why do engineers put oil between the moving parts of an engine?",
-    options: [["To increase friction so the parts grip", "Oil reduces friction."], ["To reduce friction, so less energy is wasted as heat and the parts wear less", "Correct."], ["To make the engine heavier", "Oil does not do this usefully."], ["To stop the engine overheating by insulating it", "Oil lubricates; it does not insulate."]],
+    options: [["To increase friction so the moving parts grip each other", "Oil reduces friction."], ["To reduce friction, so less energy is wasted and parts wear less", "Correct."], ["To make the engine heavier and so more stable on the road", "Oil does not do this usefully."], ["To stop the engine overheating by insulating the hot parts", "Oil lubricates; it does not insulate."]],
     answer: "B", explanation: "Lubrication lets the surfaces slide past each other easily, reducing friction, heating and wear." });
 
   q.short({ d: 2, skill: "RECALL", applies: ["zimsec"],
@@ -407,7 +407,7 @@ concept("phys.forces.circular-motion", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "What provides the centripetal force for the Moon orbiting the Earth?",
-    options: [["Friction", "There is no surface contact."], ["The gravitational pull of the Earth", "Correct."], ["Air resistance", "There is almost no air in space."], ["The Moon's engines", "The Moon has none."]],
+    options: [["Friction with the thin gas in space", "There is no surface contact."], ["The gravitational pull of the Earth", "Correct."], ["Air resistance from the Earth's atmosphere", "There is almost no air at the Moon's distance."], ["The Moon's own spin about its axis", "Spin does not pull the Moon towards the Earth."]],
     answer: "B", explanation: "The Earth's gravitational attraction pulls the Moon towards the centre of its orbit." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
@@ -453,7 +453,7 @@ concept("phys.forces.circular-motion", {
     parts: [
       P.manual({ label: "(a)", marks: 2, stem: "Explain why there must be a resultant force on the minibus as it goes round the bend at a constant speed.",
         points: ["Its direction of motion is changing, so its velocity is changing (it is accelerating)", "A change in velocity needs a resultant force, which acts towards the centre of the bend"] }),
-      P.mcq({ label: "(b)", stem: "Which force provides this resultant force?", options: [["Friction between the tyres and the road", "Correct."], ["The weight of the minibus", "Weight acts downwards."], ["Air resistance", "Air resistance acts against the motion."], ["The engine's driving force", "That acts forwards."]], answer: "A", explanation: "Sideways friction on the tyres pushes the minibus towards the centre of the bend." }),
+      P.mcq({ label: "(b)", stem: "Which force provides this resultant force?", options: [["Friction between the tyres and the road", "Correct."], ["The weight of the minibus pressing down", "Weight acts downwards."], ["Air resistance on the side of the minibus", "Air resistance acts against the motion."], ["The engine's driving force on the wheels", "That acts forwards."]], answer: "A", explanation: "Sideways friction on the tyres pushes the minibus towards the centre of the bend." }),
       P.manual({ label: "(c)", marks: 2, stem: "Suggest why the minibus may skid if the driver takes the bend too fast on loose gravel.",
         points: ["A higher speed needs a larger centripetal (friction) force", "Loose gravel can provide only a small friction force, so it is not enough and the minibus slides off in a straighter line (outwards from the curve)"] }),
     ],
@@ -462,7 +462,7 @@ concept("phys.forces.circular-motion", {
 
   q.mcq({ d: 4, skill: "EVALUATION",
     stem: "A passenger in a minibus going round a bend says, 'I am thrown outwards by a force pushing me away from the centre.' Which is the best explanation?",
-    options: [["Her body tends to keep moving in a straight line (inertia) while the minibus turns towards the centre.", "Correct."], ["An outward centrifugal force pushes her.", "No real outward force acts on her."], ["Air resistance pushes her outwards.", "Air resistance acts against motion."], ["Her weight increases on the bend.", "Her weight does not change."]],
+    options: [["Her body keeps going straight (inertia) while the bus turns.", "Correct."], ["An outward centrifugal force pushes her away from the centre.", "No real outward force acts on her."], ["Air rushing in through the windows pushes her outwards.", "Air resistance acts against motion; it does not push her outwards."], ["Her weight increases on the bend and pulls her sideways.", "Her weight does not change."]],
     answer: "A", explanation: "She keeps going straight until the door or seat pushes her inwards; the minibus turns under her, so she seems to be thrown outwards.",
     hints: ["Think about Newton's first law."] });
 

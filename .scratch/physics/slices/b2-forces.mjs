@@ -12,7 +12,7 @@ concept("phys.forces.moments", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is the moment of a force about a pivot?",
-    options: [["Force × perpendicular distance from the pivot to the line of the force", "Correct."], ["Force ÷ distance from the pivot", "Multiply, do not divide."], ["Force × time", "That is impulse."], ["Mass × velocity", "That is momentum."]],
+    options: [["Force × perpendicular distance from pivot to the force's line", "Correct."], ["Force ÷ perpendicular distance from the pivot to the force", "Multiply, do not divide."], ["Force × time for which the force acts on the pivot", "That is impulse."], ["Mass × velocity of the object turning about the pivot", "That is momentum."]],
     answer: "A", explanation: "Moment = force × perpendicular distance from the pivot; it measures the turning effect." });
 
   q.mcq({ d: 1, skill: "RECALL",
@@ -87,7 +87,7 @@ concept("phys.forces.moments", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A wheelbarrow full of sand is lifted at the handles. The wheel is the pivot. Why is it easier to lift when the load is placed nearer the wheel?",
-    options: [["The load's moment about the wheel is smaller, so less force is needed at the handles.", "Correct."], ["The load becomes lighter.", "Its weight does not change."], ["The handles become longer.", "The handles are the same length."], ["Friction on the wheel decreases.", "Friction is not the reason."]],
+    options: [["Its moment about the wheel is smaller, so less effort is needed.", "Correct."], ["The load becomes lighter when it is near the wheel.", "Its weight does not change."], ["The handles become effectively longer for the lifter.", "The handles are the same length."], ["Friction between the wheel and the ground decreases.", "Friction is not the reason."]],
     answer: "A", explanation: "Moving the load nearer the pivot reduces its perpendicular distance, so its moment is smaller and a smaller lifting moment balances it." });
 
   q.short({ d: 2, skill: "RECALL",
@@ -113,12 +113,12 @@ concept("phys.forces.centre-of-gravity", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is the centre of gravity of an object?",
-    options: [["The point through which its whole weight can be taken to act", "Correct."], ["The heaviest part of the object", "Not a definition."], ["The point where it is thickest", "Not a definition."], ["The middle of its base", "Not in general."]],
+    options: [["The point where its whole weight can be taken to act", "Correct."], ["The heaviest part of the object, where most mass is", "The centre of gravity is a single point, not the heaviest part."], ["The point where the object is thickest and strongest", "Not a definition."], ["The middle of the base on which the object stands", "Not in general."]],
     answer: "A", explanation: "The centre of gravity is the point where the whole weight seems to act." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "Where is the centre of gravity of a thin uniform ring (like a bangle)?",
-    options: [["At the centre of the ring, in the empty space", "Correct."], ["At the top of the ring", "The ring is symmetrical."], ["Spread around the ring", "It is a single point."], ["At the bottom of the ring", "The ring is symmetrical."]],
+    options: [["At the centre of the ring, in the empty space", "Correct."], ["At the top of the ring, where it hangs from", "The ring is symmetrical."], ["Spread evenly all the way around the ring", "It is a single point."], ["At the bottom of the ring, its lowest point", "The ring is symmetrical."]],
     answer: "A", explanation: "By symmetry it is at the geometric centre, which is in the empty space inside the ring." });
 
   q.struct({ d: 3, skill: "UNDERSTANDING", examStyle: true,
@@ -126,14 +126,14 @@ concept("phys.forces.centre-of-gravity", {
     parts: [
       P.manual({ label: "(a)", marks: 3, stem: "Describe the method, including the apparatus used.",
         points: ["Makes a hole near the edge and hangs the card freely from a pin in a clamp, with a plumb line from the same pin", "Marks the line of the plumb line on the card when everything is still", "Repeats from another hole; the centre of gravity is where the lines cross"] }),
-      P.mcq({ label: "(b)", stem: "How can she check her result?", options: [["Hang the card from a third hole: the third line should pass through the same point.", "Correct."], ["Weigh the card.", "Weighing does not locate the centre of gravity."], ["Measure the card's perimeter.", "Not relevant."], ["Cut the card in half.", "That changes the object."]], answer: "A", explanation: "All lines drawn this way pass through the centre of gravity, so a third line is a check." }),
+      P.mcq({ label: "(b)", stem: "How can she check her result?", options: [["Hang it from a third hole and check the line passes through it.", "Correct."], ["Weigh the card on a balance and compare the two halves.", "Weighing does not locate the centre of gravity."], ["Measure the card's perimeter and find its midpoint.", "Not relevant."], ["Cut the card along one line and weigh both parts.", "Cutting destroys the card, and the two parts need not have equal weights."]], answer: "A", explanation: "All lines drawn this way pass through the centre of gravity, so a third line is a check." }),
     ],
     explanation: "A freely hanging card rests with its centre of gravity directly below the pin; two plumb lines cross at it and a third checks it.",
     hints: ["Where does the centre of gravity lie when the card hangs freely?"] });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Which change makes a lorry less likely to topple on a sharp bend?",
-    options: [["Loading heavy goods low down rather than high up", "Correct: lowers the centre of gravity."], ["Loading heavy goods on the roof", "Raises the centre of gravity."], ["Using narrower axles", "A narrower base is less stable."], ["Driving faster", "That makes toppling more likely."]],
+    options: [["Loading heavy goods low down rather than high up", "Correct: lowers the centre of gravity."], ["Loading heavy goods on a roof rack on top", "Raises the centre of gravity."], ["Using narrower axles to make the lorry slimmer", "A narrower base is less stable."], ["Driving faster so it spends less time on the bend", "That makes toppling more likely."]],
     answer: "A", explanation: "A lower centre of gravity (and a wider base) makes an object more stable." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -148,7 +148,7 @@ concept("phys.forces.centre-of-gravity", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "Racing cars are built low and wide. Why?",
-    options: [["A low centre of gravity and a wide base make them very stable on bends.", "Correct."], ["It makes them lighter.", "Shape does not reduce mass by itself."], ["It increases air resistance.", "That is not the aim."], ["It makes the engine more efficient.", "Not related to stability."]],
+    options: [["A low centre of gravity and wide base make them stable on bends.", "Correct."], ["Low, wide bodies are lighter than tall, narrow ones.", "Shape does not reduce mass by itself."], ["It increases air resistance, which holds them on the road.", "More air resistance would slow them; the aim is stability."], ["It lets the engine run more efficiently at high speed.", "Not related to stability."]],
     answer: "A", explanation: "A low centre of gravity and wide wheelbase mean the car must tilt a long way before its weight acts outside its base.",
     hints: ["Think about when an object topples."] });
 
@@ -158,9 +158,9 @@ concept("phys.forces.centre-of-gravity", {
     explanation: "A plumb line hangs vertically and is used to mark vertical lines through the pivot." });
 
   q.mcq({ d: 3, skill: "ANALYSIS",
-    stem: "A full bottle and an empty bottle of the same shape are tilted by the same small angle and released. Which statement is correct?",
-    options: [["The full bottle is more stable: its centre of gravity is lower than the empty bottle's.", "Correct: water fills the bottom."], ["The empty bottle is more stable: it is lighter.", "Lighter does not mean more stable."], ["They are equally stable.", "Their centres of gravity are at different heights."], ["Neither will return upright.", "A small tilt keeps the weight over the base."]],
-    answer: "A", explanation: "A full bottle has much of its mass near the bottom (and a heavy base), so its centre of gravity is low and it is harder to topple.",
+    stem: "Two identical bottles stand on a table: one is empty and the other has a little water in the bottom. Both are tilted by the same small angle and released. Which statement is correct?",
+    options: [["The one with water: its centre of gravity is lower.", "Correct: the water adds mass low down."], ["The empty one: it is lighter, so it tips less easily.", "Lighter does not mean more stable."], ["Equally stable: they have the same base.", "Same base, but their centres of gravity are at different heights."], ["Neither: any tilt makes a bottle fall over.", "A small tilt keeps the weight over the base."]],
+    answer: "A", explanation: "The water adds mass at the bottom of the bottle, so its centre of gravity is lower than the empty bottle's and it is harder to topple. (A completely full bottle would not help: its centre of gravity is near the middle again.)",
     hints: ["Where is most of the mass in each bottle?"] });
 
   q.mcq({ d: 2, skill: "RECALL", applies: Z,
@@ -243,7 +243,7 @@ concept("phys.forces.momentum", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why does a car's crumple zone reduce the force on the passengers in a crash?",
-    options: [["It increases the time taken for the car to stop, so the rate of change of momentum is smaller.", "Correct."], ["It reduces the passengers' mass.", "Mass does not change."], ["It increases the car's momentum.", "It does not."], ["It stops the car instantly.", "That would increase the force."]],
+    options: [["It makes the stop take longer, so momentum changes more slowly.", "Correct."], ["It reduces the mass of the passengers during the crash.", "Mass does not change."], ["It increases the car's momentum so that it stops sooner.", "It does not."], ["It stops the car instantly so the crash is over quickly.", "That would increase the force."]],
     answer: "A", explanation: "The change in momentum is fixed; spreading it over a longer time reduces F = Δp/Δt.",
     hints: ["F = Δp/Δt: which part does a crumple zone change?"] });
 
@@ -297,7 +297,7 @@ concept("phys.forces.pressure", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "Why does a sharp knife cut better than a blunt one?",
-    options: [["The edge has a smaller area, so the same force gives a greater pressure.", "Correct."], ["A sharp knife is heavier.", "Sharpness does not add mass."], ["A sharp edge has a larger area.", "It is a smaller area."], ["Sharp knives have less friction only.", "The main reason is pressure."]],
+    options: [["Its edge has a smaller area, so the same force gives more pressure.", "Correct."], ["A sharp knife is heavier, so it presses down harder.", "Sharpness does not add mass."], ["A sharp edge has a larger area, which spreads the force out.", "It is a smaller area."], ["A sharp knife has less friction, so it slides through easily.", "The main reason is pressure."]],
     answer: "A", explanation: "Pressure = force ÷ area: a smaller area gives a larger pressure for the same force." });
 
   q.num({ d: 3, skill: "APPLICATION",
@@ -377,7 +377,7 @@ concept("phys.forces.atmospheric-pressure", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What causes atmospheric pressure?",
-    options: [["The weight of the air above a surface", "Correct."], ["The heat of the Sun", "Heating affects it, but weight is the cause."], ["The rotation of the Earth", "Not the cause."], ["Clouds pushing down", "Clouds are not the cause."]],
+    options: [["The weight of the air above a surface", "Correct."], ["The heat of the Sun warming the air", "Heating affects it, but weight is the cause."], ["The rotation of the Earth on its axis", "Not the cause."], ["Clouds pressing down on the air below", "Clouds are not the cause."]],
     answer: "A", explanation: "Atmospheric pressure is caused by the weight of the air above pressing on surfaces." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z, daily: true,
@@ -428,7 +428,7 @@ concept("phys.forces.atmospheric-pressure", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Why does food cook faster in a pressure cooker?",
-    options: [["The higher pressure raises the boiling point of water, so the food is cooked at a higher temperature.", "Correct."], ["The pressure squeezes heat into the food.", "Not the reason."], ["Steam is colder at high pressure.", "It is hotter."], ["The pot is thicker.", "Thickness is not the reason."]],
+    options: [["Higher pressure raises water's boiling point, so it cooks hotter.", "Correct."], ["The high pressure squeezes extra heat into the food.", "Pressure does not squeeze heat; it raises the boiling point."], ["Steam at high pressure is colder, so it condenses on the food.", "Steam in a pressure cooker is hotter than 100 °C."], ["The thick pot walls conduct heat into the food faster.", "Thickness is not the reason."]],
     answer: "A", explanation: "Trapped steam raises the pressure, so water boils above 100 °C and the food cooks at a higher temperature.",
     hints: ["How does pressure affect the boiling point of water?"] });
 
@@ -444,7 +444,7 @@ concept("phys.forces.atmospheric-pressure", {
 
   q.mcq({ d: 4, skill: "ANALYSIS", applies: Z,
     stem: "A little water is boiled in a metal can, the cap is screwed on and the heating stopped. As the can cools, it collapses. What is the best explanation?",
-    options: [["The steam condenses, so the pressure inside falls and the larger atmospheric pressure outside crushes the can.", "Correct."], ["The metal shrinks as it cools.", "Thermal contraction is far too small to crush it."], ["The water inside pulls the walls in.", "Water does not pull on the walls."], ["The steam inside expands and bends the can.", "Expansion would push outwards."]],
+    options: [["The steam condenses, so the outside air pressure crushes the can.", "Correct."], ["The metal walls contract strongly as the can cools down.", "Thermal contraction is far too small to crush it."], ["The cooling water inside pulls the thin walls inwards.", "Water does not pull on the walls."], ["The steam inside expands as it cools and bends the can.", "Cooling steam contracts and condenses; expansion would push outwards."]],
     answer: "A", explanation: "Condensing steam leaves a low pressure inside; the atmosphere outside now pushes harder than the gas inside.",
     hints: ["What happens to steam when it cools?"] });
 

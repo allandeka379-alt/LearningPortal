@@ -36,13 +36,13 @@ concept("phys.energy.stores-transfers", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A solar panel charges a battery that later powers an LED lamp. Which sequence of stores and transfers is correct?",
-    options: [["Sun (nuclear) → light → electrical → chemical store of the battery → electrical → light", "Correct."], ["Chemical → kinetic → nuclear → light", "Wrong order."], ["Light → kinetic store of the battery → sound", "Batteries store chemical energy."], ["Electrical store → light → chemical", "Electricity is a transfer, not a store."]],
+    options: [["Nuclear → light → electrical → chemical → electrical → light", "Correct."], ["Chemical → kinetic → nuclear → electrical → light", "The Sun's energy comes from its nuclear store, and nothing here is kinetic."], ["Light → electrical → kinetic store of the battery → light", "A battery stores energy in its chemical store."], ["Nuclear → light → electrical store → thermal → light", "Electricity is a transfer, not a store, and the battery stores chemical energy."]],
     answer: "A", explanation: "Nuclear fusion in the Sun releases energy carried by light; the panel transfers it electrically to the battery's chemical store; later the current carries it to the lamp, which emits light." });
 
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,
     stem: "A learner drops a ball from a high window onto a concrete path below.",
     parts: [
-      P.mcq({ label: "(a)", stem: "As the ball falls, which energy store decreases?", options: [["Gravitational potential", "Correct: it gets lower."], ["Kinetic", "Kinetic increases as it speeds up."], ["Chemical", "No chemical change."], ["Elastic", "It is not deformed while falling."]], answer: "A", explanation: "The ball loses height, so its gravitational potential energy decreases." }),
+      P.mcq({ label: "(a)", stem: "As the ball falls, which energy store decreases?", options: [["Gravitational potential", "Correct: it gets lower."], ["Kinetic store", "Kinetic increases as it speeds up."], ["Chemical store", "No chemical change."], ["Elastic potential", "It is not deformed while falling."]], answer: "A", explanation: "The ball loses height, so its gravitational potential energy decreases." }),
       P.mcq({ label: "(b)", stem: "At the moment the ball is most squashed against the path, most of its energy is in which store?", options: [["Elastic (strain)", "Correct."], ["Kinetic", "It is momentarily at rest."], ["Gravitational potential", "It is at its lowest point."], ["Nuclear", "No nuclear change."]], answer: "A", explanation: "Squashed, momentarily stopped: the energy is in the elastic store." }),
       P.manual({ label: "(c)", marks: 2, stem: "The ball does not bounce back to the height it was dropped from. Explain this, using the idea of conservation of energy.",
         points: ["Some energy is transferred to the surroundings by heating (and sound) during the fall and the bounce", "so less energy is in the ball's kinetic and gravitational potential stores; energy is not destroyed, it is spread into the surroundings"] }),
@@ -65,7 +65,7 @@ concept("phys.energy.stores-transfers", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "A car brakes to a stop on a level road. Where does its kinetic energy go?",
-    options: [["Mostly to the internal (thermal) store of the brakes, tyres and surroundings", "Correct."], ["It is destroyed.", "Energy cannot be destroyed."], ["Into the car's gravitational potential store", "The road is level."], ["Back into the fuel tank", "Ordinary cars cannot do this."]],
+    options: [["Mostly to the thermal store of the brakes and surroundings", "Correct."], ["It is destroyed by friction between the brake pads and discs", "Energy cannot be destroyed; friction transfers it to thermal stores."], ["Into the car's gravitational potential store as it stops", "The road is level."], ["Back into the chemical store of the fuel in the tank", "Ordinary cars cannot do this."]],
     answer: "A", explanation: "Friction in the brakes does work, transferring the kinetic energy to the internal store of the brakes and surroundings (some as sound).",
     hints: ["What happens to the brakes when a car stops?"] });
 
@@ -118,7 +118,7 @@ concept("phys.energy.ke-gpe", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A car doubles its speed. What happens to its kinetic energy?",
-    options: [["It doubles.", "Ek depends on v², not v."], ["It becomes four times as large.", "Correct: (2v)² = 4v²."], ["It halves.", "It increases."], ["It stays the same.", "It depends on speed."]],
+    options: [["It doubles, like the speed.", "Ek depends on v², not v."], ["It becomes four times as large.", "Correct: (2v)² = 4v²."], ["It becomes half as large.", "Kinetic energy increases when speed increases."], ["It stays the same as before.", "Kinetic energy depends on speed."]],
     answer: "B", explanation: "Ek ∝ v², so doubling v multiplies Ek by 4." });
 
   q.num({ d: 3, skill: "APPLICATION",
@@ -188,7 +188,7 @@ concept("phys.energy.work", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "Work done is defined as:",
-    options: [["force × distance moved in the direction of the force", "Correct."], ["force × time", "That is impulse."], ["mass × acceleration", "That is force."], ["energy ÷ time", "That is power."]],
+    options: [["force × distance moved in the direction of the force", "Correct."], ["force × time for which the force is acting", "That is impulse (the change of momentum)."], ["mass × acceleration of the object being moved", "That is the resultant force."], ["energy transferred ÷ time taken to transfer it", "That is power."]],
     answer: "A", explanation: "W = Fd, with d the distance moved in the direction of the force." });
 
   q.num({ d: 2, skill: "APPLICATION", daily: true,
@@ -218,7 +218,7 @@ concept("phys.energy.work", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "A waiter carries a tray at a steady speed across a level floor. How much work does his upward supporting force do on the tray?",
-    options: [["None, because the force is at right angles to the motion", "Correct."], ["A lot, because the tray is heavy", "Weight does not matter here."], ["Work equal to the tray's weight", "Work is not a force."], ["Work equal to weight × distance walked", "The distance moved is not in the direction of the force."]],
+    options: [["None, because the force is at right angles to the motion", "Correct."], ["A lot, because the tray is heavy and he walks far", "Weight does not matter here."], ["Work equal to the weight of the tray, in joules", "Work is force × distance moved in the direction of the force, not a force."], ["Work equal to the weight × the distance he walks", "The distance moved is not in the direction of the force."]],
     answer: "A", explanation: "Work needs movement in the direction of the force; the upward force and horizontal motion are perpendicular, so no work is done.",
     hints: ["Is there any movement in the direction of the supporting force?"] });
 
@@ -263,7 +263,7 @@ concept("phys.energy.power", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is power?",
-    options: [["Energy transferred per unit time", "Correct."], ["Force × distance", "That is work."], ["Force per unit area", "That is pressure."], ["Energy × time", "Divide, do not multiply."]],
+    options: [["Energy transferred per unit time", "Correct."], ["Force × distance moved by the force", "That is work done."], ["Force acting per unit area of surface", "That is pressure."], ["Energy transferred multiplied by time", "Power is energy divided by time."]],
     answer: "A", explanation: "Power = work done (or energy transferred) ÷ time taken." });
 
   q.mcq({ d: 1, skill: "RECALL",
@@ -309,7 +309,7 @@ concept("phys.energy.power", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "To measure your own power by running up stairs, which measurements are needed?",
-    options: [["Your weight (or mass), the vertical height of the stairs and the time taken", "Correct."], ["Your height, the number of steps and your speed", "Your own height is not needed."], ["The length of the staircase and your mass only", "Time is needed for power."], ["Only the time taken", "The work done is also needed."]],
+    options: [["Your mass, the stairs' vertical height and the time taken", "Correct."], ["Your height, the number of steps and your speed", "Your own height is not needed."], ["The length of the staircase and your mass only", "Time is needed for power."], ["Only the time taken to reach the top of the stairs", "The work done is also needed."]],
     answer: "A", explanation: "Power = work ÷ time = (weight × vertical height) ÷ time.",
     hints: ["Power = work ÷ time; what do you need to find the work?"] });
 
@@ -368,7 +368,7 @@ concept("phys.energy.efficiency", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Where does most of the wasted energy from a car engine go?",
-    options: [["Heating the exhaust gases, the engine and the surroundings", "Correct."], ["It is destroyed.", "Energy is never destroyed."], ["Into the fuel tank", "No."], ["Into the car's kinetic store", "That is the useful output."]],
+    options: [["Heating the exhaust, the engine and the surroundings", "Correct: most of the fuel's energy ends up in thermal stores."], ["It is destroyed in the engine as the fuel burns", "Energy is never destroyed; it is transferred to thermal stores."], ["Back into the fuel tank as unburnt petrol vapour", "Wasted energy is not returned to the fuel."], ["Into the kinetic store that keeps the car moving", "That is the useful output, not the waste."]],
     answer: "A", explanation: "Most wasted energy is transferred by heating to the exhaust gases, cooling system and surroundings." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING",
@@ -388,7 +388,7 @@ concept("phys.energy.efficiency", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "A family replaces a 60 W filament bulb with a 9 W LED bulb that gives the same amount of light. Why does this save money?",
-    options: [["The LED is more efficient: it wastes much less energy heating the room for the same light.", "Correct."], ["The LED gives more light.", "The same amount of light is produced."], ["LEDs do not use electricity.", "They use 9 W."], ["The filament bulb gives no light.", "It gives light, but inefficiently."]],
+    options: [["The LED wastes far less energy as heat for the same light.", "Correct."], ["The LED gives much more light, so fewer bulbs are needed.", "The stem says both bulbs give the same amount of light."], ["LEDs run on stored solar energy, not mains electricity.", "An LED bulb uses mains electricity: 9 W."], ["The filament bulb gives no useful light at all, only heat.", "It gives light, but most of its input energy heats the room."]],
     answer: "A", explanation: "Both give the same useful light output, but the LED needs far less input power, so less energy is paid for.",
     hints: ["Compare the input powers for the same useful output."] });
 
@@ -431,7 +431,7 @@ concept("phys.energy.resources", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "What is the main disadvantage of hydroelectric power in a country with frequent droughts?",
-    options: [["Output falls when rainfall is low and the dam level drops.", "Correct."], ["It produces a lot of smoke.", "It produces none while running."], ["It is non-renewable.", "It is renewable."], ["It cannot be switched on quickly.", "It can start quickly."]],
+    options: [["Output falls when rainfall is low and the dam level drops.", "Correct."], ["It produces a lot of smoke and carbon dioxide while running.", "Hydroelectric stations burn nothing while running."], ["It is non-renewable, so the water will eventually run out.", "Rain refills the dam: it is renewable."], ["It cannot be switched on quickly when demand rises.", "Hydro turbines can start within minutes."]],
     answer: "A", explanation: "Hydroelectric output depends on the water stored behind the dam, which depends on rainfall." });
 
   q.match({ d: 2, skill: "UNDERSTANDING",
@@ -463,14 +463,14 @@ concept("phys.energy.resources", {
         points: ["It is reliable: it can generate whatever the rainfall", "Its output can be kept high or increased on demand while coal is available"] }),
       P.manual({ label: "(b)", marks: 2, stem: "Give two environmental disadvantages of the coal-fired station.",
         points: ["Burning coal releases carbon dioxide, a greenhouse gas linked to global warming", "It releases sulfur dioxide (acid rain), smoke and ash, and coal is non-renewable"] }),
-      P.mcq({ label: "(c)", stem: "Which energy store does the water behind the dam provide?", options: [["Gravitational potential", "Correct."], ["Chemical", "The water is not a fuel."], ["Nuclear", "No nuclear change."], ["Elastic", "The water is not stretched."]], answer: "A", explanation: "Water held at a height has gravitational potential energy." }),
+      P.mcq({ label: "(c)", stem: "Which energy store does the water behind the dam provide?", options: [["Gravitational potential", "Correct."], ["Chemical store", "The water is not a fuel."], ["Nuclear store", "No nuclear change."], ["Elastic potential", "The water is not stretched."]], answer: "A", explanation: "Water held at a height has gravitational potential energy." }),
     ],
     explanation: "Coal is reliable but polluting and non-renewable; hydroelectric power is renewable and clean but depends on rainfall.",
     hints: ["Think about reliability versus environmental impact."] });
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "What is a biofuel?",
-    options: [["A fuel made from living or recently living material, such as wood or ethanol from sugar cane", "Correct."], ["A fuel made from coal", "Coal is a fossil fuel."], ["Any fuel that does not burn", "Biofuels burn."], ["Uranium used in reactors", "That is nuclear fuel."]],
+    options: [["A fuel made from recently living material, e.g. wood or ethanol", "Correct."], ["A fuel made from coal, which formed from ancient plants", "Coal is a fossil fuel, formed over millions of years."], ["Any fuel that gives off no carbon dioxide when it burns", "Biofuels do release carbon dioxide when they burn."], ["A fuel such as uranium that is used in nuclear reactors", "That is nuclear fuel."]],
     answer: "A", explanation: "Biofuels come from plants or animal waste: wood, ethanol, biogas." });
 
   q.card("DEFINITION", "What is a **renewable** resource?", "One that is replaced naturally as fast as it is used (sun, wind, water, biofuels).");
@@ -526,13 +526,13 @@ concept("phys.engines.four-stroke", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "Why do car engines usually have four or more cylinders?",
-    options: [["Power strokes happen more often, so the engine runs more smoothly and gives more power.", "Correct."], ["So that every stroke is a power stroke.", "Each cylinder still has one power stroke in four."], ["To use less fuel per cylinder.", "Not the main reason."], ["Because one cylinder cannot have a spark plug.", "It can."]],
+    options: [["Power strokes come more often, so it runs smoother and stronger.", "Correct."], ["So that every stroke of each piston becomes a power stroke.", "Each cylinder still has one power stroke in four."], ["So that each cylinder burns less fuel and runs cooler.", "Not the main reason: smoothness and power are."], ["Because a single cylinder cannot hold a spark plug and valves.", "A single cylinder can have both, as in small motorcycle engines."]],
     answer: "A", explanation: "With several cylinders firing at different times there is an even series of power strokes: smoother running and more power.",
     hints: ["How often does a single cylinder produce a power stroke?"] });
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "A car's air filter becomes blocked. What is the most likely result?",
-    options: [["Incomplete combustion, producing black soot and carbon monoxide", "Correct: too little air."], ["The engine runs cooler and cleaner", "It runs worse."], ["The fuel economy improves", "It gets worse."], ["The spark plug stops working", "The spark plug is not affected directly."]],
+    options: [["Incomplete combustion, producing black soot and carbon monoxide", "Correct: too little air."], ["The engine runs cooler and its exhaust becomes cleaner", "It runs worse."], ["Fuel economy improves because less air is drawn in", "Too little air wastes fuel: economy gets worse."], ["The spark plug stops working and the engine cuts out", "The spark plug is not affected directly."]],
     answer: "A", explanation: "Too little air for the fuel means incomplete burning: soot, carbon monoxide and wasted fuel.",
     hints: ["What does fuel need to burn completely?"] });
 
@@ -549,7 +549,7 @@ concept("phys.engines.four-stroke", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "What does the choke do when a cold petrol engine is started?",
-    options: [["Reduces the air supply to give a richer, easier-to-ignite mixture", "Correct."], ["Cools the engine", "No."], ["Stops all fuel reaching the engine", "It enriches the mixture."], ["Removes the exhaust gases", "That is the exhaust valve."]],
+    options: [["Cuts the air supply to give a richer, easier-to-light mixture", "Correct."], ["Cools the engine while it warms up after starting", "The choke does nothing to cool the engine."], ["Stops fuel reaching the engine until it is warm enough", "It enriches the mixture."], ["Opens the exhaust valve to clear out burnt gases", "That is the exhaust valve's job."]],
     answer: "A", explanation: "The choke restricts air so the mixture has more petrol, making a cold start easier." });
 
   q.card("FACT", "Four strokes in order?", "Induction, compression, power, exhaust.", undefined, { applies: Z });
@@ -575,7 +575,7 @@ concept("phys.engines.fuels", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z, daily: true,
     stem: "Why is a charcoal brazier dangerous in a closed bedroom at night?",
-    options: [["Incomplete burning produces carbon monoxide, a poisonous gas that cannot be smelled.", "Correct."], ["It produces too much oxygen.", "It uses up oxygen."], ["Charcoal releases radiation.", "No."], ["It makes the room too cold.", "It heats the room."]],
+    options: [["Incomplete burning makes carbon monoxide, an odourless poison.", "Correct."], ["It produces too much oxygen, which is harmful to breathe.", "Burning uses up oxygen; it does not produce it."], ["Burning charcoal gives off dangerous nuclear radiation.", "Charcoal is not radioactive."], ["It dries the air so much that sleepers become dehydrated.", "Dry air is uncomfortable, but the deadly danger is carbon monoxide."]],
     answer: "A", explanation: "With little fresh air, charcoal burns incompletely and fills the room with odourless, poisonous carbon monoxide." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", applies: Z,
@@ -584,7 +584,7 @@ concept("phys.engines.fuels", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Which is an environmental effect of cutting down woodland for firewood and charcoal?",
-    options: [["Soil erosion and silting of rivers and dams", "Correct."], ["More rainfall everywhere", "Not a direct effect."], ["Cleaner air", "Burning wood makes smoke."], ["Lower carbon dioxide levels", "Fewer trees take up less CO₂."]],
+    options: [["Soil erosion and silting of rivers and dams", "Correct."], ["More rainfall in the cleared areas", "Not a direct effect."], ["Cleaner air, because fewer trees decay", "Burning wood makes smoke; clearing woodland does not clean the air."], ["Lower carbon dioxide levels in the air", "Fewer trees take up less CO₂."]],
     answer: "A", explanation: "Without tree roots and cover, soil washes away into rivers and dams." });
 
   q.match({ d: 2, skill: "UNDERSTANDING", applies: Z,
@@ -594,7 +594,7 @@ concept("phys.engines.fuels", {
 
   q.mcq({ d: 3, skill: "EVALUATION", applies: Z,
     stem: "Blending locally made ethanol with imported petrol has which economic advantage?",
-    options: [["Less petrol has to be imported, saving foreign currency.", "Correct."], ["It makes petrol non-renewable.", "Ethanol is renewable."], ["It removes all pollution.", "Burning ethanol still releases CO₂."], ["It stops engines needing fuel.", "Engines still need fuel."]],
+    options: [["Less petrol has to be imported, saving foreign currency.", "Correct."], ["It makes the blended petrol fully renewable.", "Only the ethanol part is renewable; the petrol is still a fossil fuel."], ["It removes all air pollution from car exhausts.", "Burning ethanol still releases CO₂."], ["It lets engines run on less fuel for the same distance.", "Ethanol stores less energy per litre, so fuel use does not fall."]],
     answer: "A", explanation: "Each litre of local ethanol replaces imported petrol, saving foreign currency and supporting local jobs.",
     hints: ["Where does petrol come from?"] });
 

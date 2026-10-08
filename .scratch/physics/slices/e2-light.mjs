@@ -14,7 +14,7 @@ concept("phys.light.reflection", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "In ray diagrams, what is the normal?",
-    options: [["A line at 90° to the surface at the point where the ray strikes it", "Correct."], ["A line drawn along the surface of the mirror", "That is the mirror line itself."], ["The reflected ray", "No."], ["A line at 45° to the surface", "The normal is perpendicular to the surface."]],
+    options: [["A line at 90° to the surface where the ray strikes it", "Correct."], ["A line drawn along the surface of the mirror", "That is the mirror line itself."], ["The reflected ray drawn back from the mirror", "The normal is a construction line at 90° to the surface."], ["A line at 45° to the surface where the ray strikes it", "The normal is perpendicular to the surface."]],
     answer: "A", explanation: "The normal is a line drawn at right angles to the surface at the point of incidence; angles are measured from it." });
 
   q.num({ d: 1, skill: "APPLICATION",
@@ -33,7 +33,7 @@ concept("phys.light.reflection", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which description of the image in a plane mirror is correct?",
-    options: [["Upright, virtual, the same size and laterally inverted", "Correct."], ["Inverted, real and the same size", "The image is upright and virtual."], ["Upright, virtual and enlarged", "It is the same size as the object."], ["Upright, real and the same size", "A plane-mirror image is virtual."]],
+    options: [["Upright, virtual, the same size and laterally inverted", "Correct."], ["Inverted, real, the same size and behind the mirror", "The image is upright and virtual."], ["Upright, virtual, enlarged and laterally inverted", "It is the same size as the object."], ["Upright, real, the same size and laterally inverted", "A plane-mirror image is virtual."]],
     answer: "A", explanation: "A plane mirror gives an upright, virtual, same-size, laterally inverted image as far behind the mirror as the object is in front." });
 
   q.num({ d: 2, skill: "APPLICATION",
@@ -71,7 +71,7 @@ concept("phys.light.reflection", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "In a ray diagram that locates the image of a point object in a plane mirror, how are the reflected rays used?",
-    options: [["They are extended backwards behind the mirror, as dashed lines, until they meet at the image.", "Correct."], ["They are extended forwards in front of the mirror until they meet.", "Reflected rays diverge in front of the mirror."], ["They are drawn parallel to the mirror.", "No."], ["They are drawn through the centre of the mirror.", "There is no special centre for a plane mirror."]],
+    options: [["They are extended back behind the mirror, as dashed lines, to meet.", "Correct."], ["They are extended forwards in front of the mirror until they meet.", "Reflected rays diverge in front of the mirror."], ["They are drawn parallel to the mirror and the image lies between them.", "Reflected rays are not drawn parallel to the mirror."], ["They are all drawn through the centre point of the mirror's surface.", "There is no special centre for a plane mirror."]],
     answer: "A", explanation: "The reflected rays diverge; traced back behind the mirror they meet at the virtual image, which lies on the normal through the object, as far behind as the object is in front.",
     hints: ["Where do the reflected rays appear to come from?"] });
 
@@ -86,7 +86,7 @@ concept("phys.light.reflection", {
     parts: [
       P.manual({ label: "(a)", marks: 4, stem: "Describe how the experiment should be done.",
         points: ["Draw a line on the paper, stand the mirror along it and draw a normal to it", "Shine a narrow ray along a line at a measured angle of incidence to the normal", "Mark the reflected ray (with crosses or pins), draw it and measure the angle of reflection with the protractor", "Repeat for several angles of incidence and compare: the two angles are equal each time"] }),
-      P.mcq({ label: "(b)", stem: "Why should the room be darkened?", options: [["So the narrow ray is clearly visible and can be marked accurately", "Correct."], ["So the mirror does not get hot", "Not the reason."], ["Because light only reflects in the dark", "Light reflects in any conditions."], ["To make the angles larger", "Darkness does not change the angles."]], answer: "A",
+      P.mcq({ label: "(b)", stem: "Why should the room be darkened?", options: [["So the narrow ray shows clearly and can be marked accurately", "Correct."], ["So the ray box and mirror do not overheat during the experiment", "Not the reason."], ["Because a mirror reflects light properly only in the dark", "Light reflects in any conditions."], ["To make the angles of reflection larger and easier to read", "Darkness does not change the angles."]], answer: "A",
         explanation: "A dim room makes the narrow ray easy to see and mark accurately." }),
     ],
     explanation: "Measure angles from a drawn normal for several angles of incidence and show the reflected angles are equal.",
@@ -149,7 +149,7 @@ concept("phys.light.refraction", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why does a swimming pool look shallower than it really is?",
-    options: [["Light from the bottom bends away from the normal as it leaves the water, so the bottom appears higher.", "Correct."], ["Light bends towards the normal as it leaves the water.", "Leaving water for air, light speeds up and bends away from the normal."], ["Water magnifies everything.", "Not the reason."], ["Light reflects from the bottom of the pool.", "Reflection does not explain apparent depth."]],
+    options: [["Light bends away from the normal as it leaves, so the bottom looks higher.", "Correct."], ["Light bends towards the normal as it leaves the water, raising the image.", "Leaving water for air, light speeds up and bends away from the normal."], ["Water acts as a magnifying glass, making the bottom look closer.", "Not the reason."], ["Light reflects from the bottom of the pool and from the surface.", "Reflection does not explain apparent depth."]],
     answer: "A", explanation: "Rays from the bottom refract away from the normal at the surface; traced back by the eye, they seem to come from a point above the real bottom (apparent depth)." });
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
@@ -160,7 +160,7 @@ concept("phys.light.refraction", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which statement is one of the laws of refraction?",
-    options: [["The incident ray, the refracted ray and the normal all lie in the same plane.", "Correct."], ["The angle of incidence equals the angle of refraction.", "That is not true for refraction."], ["Light always bends towards the normal.", "Leaving a denser medium, it bends away."], ["The refractive index changes with the angle of incidence.", "For two given media, sin i / sin r is constant."]],
+    options: [["The incident ray, the refracted ray and the normal all lie in the same plane.", "Correct."], ["The angle of incidence always equals the angle of refraction.", "That is not true for refraction."], ["Light always bends towards the normal when it crosses a boundary.", "Leaving a denser medium, it bends away."], ["The refractive index changes as the angle of incidence changes.", "For two given media, sin i / sin r is constant."]],
     answer: "A", explanation: "Laws of refraction: the rays and the normal lie in one plane, and sin i / sin r is constant for two given media (Snell's law)." });
 
   q.mcq({ d: 2, skill: "RECALL",
@@ -239,12 +239,12 @@ concept("phys.light.total-internal-reflection", {
 
   q.mcq({ d: 2, skill: "APPLICATION",
     stem: "Light inside a glass block (critical angle 42°) strikes the glass–air surface with an angle of incidence of 30°. What happens?",
-    options: [["Most of it refracts into the air, bending away from the normal; a little is reflected.", "Correct."], ["It is totally internally reflected.", "30° is less than the critical angle."], ["It is all absorbed by the glass.", "No."], ["It refracts into the air, bending towards the normal.", "Speeding up into air, it bends away from the normal."]],
+    options: [["Most refracts out, bending away from the normal; a little reflects.", "Correct."], ["It is totally internally reflected back into the glass.", "30° is less than the critical angle."], ["It is all absorbed by the glass at the glass–air surface.", "Clear glass absorbs very little light."], ["It refracts into the air, bending towards the normal.", "Speeding up into air, it bends away from the normal."]],
     answer: "A", explanation: "Below the critical angle, light mostly refracts out (bending away from the normal), with weak partial internal reflection." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why are 45° glass prisms often used instead of plane mirrors in periscopes and binoculars?",
-    options: [["They reflect all the light by total internal reflection, giving a bright, single, sharp image.", "Correct."], ["They magnify the image.", "A prism used this way does not magnify."], ["Mirrors cannot reflect light through 90°.", "They can, but less completely."], ["Prisms split the light into colours.", "Not in this arrangement."]],
+    options: [["They reflect all the light by TIR, giving one bright, sharp image.", "Correct."], ["They magnify the image as well as turning the light through 90°.", "A prism used this way does not magnify."], ["Plane mirrors cannot turn a ray of light through a right angle.", "They can, but less completely."], ["Prisms split the light into colours, which makes it brighter.", "Not in this arrangement."]],
     answer: "A", explanation: "45° is greater than the critical angle of glass, so the light is totally reflected; a silvered mirror absorbs some light and can give faint double images." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
@@ -259,7 +259,7 @@ concept("phys.light.total-internal-reflection", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "On a hot day, a tarred road far ahead seems to be covered by a pool of water. What causes this?",
-    options: [["Light from the sky bends through layers of hot air near the road and is finally totally internally reflected upwards.", "Correct: a mirage."], ["Water evaporating from the road", "The road is dry."], ["Light reflected by oil spilled on the road", "Not the cause."], ["Light given out by the hot tar", "The tar does not glow."]],
+    options: [["Sky light bends in hot air near the road and is totally reflected up.", "Correct: a mirage."], ["Water evaporating from the hot road surface into the air", "The road is dry."], ["Light reflected by thin films of oil spilled on the road", "Not the cause."], ["Light given out by the hot tar, which glows faintly in the heat", "The tar does not glow."]],
     answer: "A", explanation: "Hot, less dense air near the road refracts light from the sky until it is totally reflected upwards, so the sky appears on the road like water: a mirage.",
     hints: ["Hot air near the road is less dense than the air above it."] });
 
@@ -284,7 +284,7 @@ concept("phys.light.total-internal-reflection", {
         explanation: t`$\sin c = \dfrac{1}{1.48} = 0.676$, so $c = 42.5^\circ$.` }),
       P.manual({ label: "(b)", marks: 2, stem: "Explain why light that enters one end of the fibre stays inside it, even where the fibre bends gently.",
         points: ["The light strikes the walls at angles of incidence greater than the critical angle", "so it is totally internally reflected each time instead of refracting out"] }),
-      P.mcq({ label: "(c)", stem: "Which is a use of optical fibres?", options: [["Carrying telephone and internet signals", "Correct."], ["Heating food", "No."], ["Producing X-ray images", "No."], ["Measuring air pressure", "No."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Which is a use of optical fibres?", options: [["Carrying telephone and internet signals", "Correct."], ["Heating food quickly in an oven", "Microwaves or infrared heat food."], ["Producing X-ray images of bones", "X-rays are not carried by optical fibres."], ["Measuring air pressure in tyres", "Pressure gauges do that."]], answer: "A",
         explanation: "Optical fibres carry telecommunication signals (and are used in endoscopes)." }),
     ],
     explanation: "c = sin⁻¹(1/n); light hitting the walls above the critical angle is totally internally reflected along the fibre.",
@@ -307,7 +307,7 @@ concept("phys.light.lenses", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is the principal focus of a converging lens?",
-    options: [["The point where rays parallel to the principal axis meet after passing through the lens", "Correct."], ["The centre of the lens", "That is the optical centre."], ["The point where every image forms", "Image positions depend on the object distance."], ["The edge of the lens", "No."]],
+    options: [["Where rays parallel to the axis meet after passing through the lens", "Correct."], ["The centre of the lens, through which rays pass straight", "That is the optical centre."], ["The point where every image forms, whatever the object distance", "Image positions depend on the object distance."], ["The point on the axis at twice the focal length from the lens", "That is 2F, not the principal focus."]],
     answer: "A", explanation: "Rays parallel to the principal axis converge to the principal focus (focal point) after refraction by the lens." });
 
   q.mcq({ d: 1, skill: "RECALL",
@@ -317,7 +317,7 @@ concept("phys.light.lenses", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "What does a diverging lens do to a parallel beam of light?",
-    options: [["It spreads the beam out so that the rays seem to come from a focal point on the same side as the incoming light.", "Correct."], ["It brings the rays to a focus behind the lens.", "That is a converging lens."], ["It reflects the beam back.", "Lenses refract light."], ["It leaves the beam parallel.", "It makes the rays diverge."]],
+    options: [["It spreads the rays out as if they came from a focus in front of it.", "Correct."], ["It brings the rays together to a focus behind the lens.", "That is a converging lens."], ["It reflects the beam back towards where it came from.", "Lenses refract light."], ["It keeps the rays parallel but moves them closer together.", "It makes the rays diverge."]],
     answer: "A", explanation: "A diverging lens spreads parallel rays out; traced back, they appear to come from its principal focus." });
 
   q.mcq({ d: 2, skill: "APPLICATION", daily: true,
@@ -341,7 +341,7 @@ concept("phys.light.lenses", {
 
   q.mcq({ d: 3, skill: "APPLICATION",
     stem: "An object is placed 4 cm from a converging lens of focal length 6 cm. Which describes the image?",
-    options: [["Virtual, upright and enlarged, on the same side as the object", "Correct: the object is inside F."], ["Real, inverted and enlarged, on the other side", "That needs the object between F and 2F."], ["Real, inverted and diminished", "That needs the object beyond 2F."], ["Virtual, inverted and diminished", "No."]],
+    options: [["Virtual, upright and enlarged, on the same side as the object", "Correct: the object is inside F."], ["Real, inverted and enlarged, on the far side of the lens", "That needs the object between F and 2F."], ["Real, inverted and diminished, on the far side of the lens", "That needs the object beyond 2F."], ["Virtual, inverted and diminished, on the same side", "A converging lens never forms a virtual inverted image."]],
     answer: "A", explanation: "The object is closer than the focal length, so the rays leave the lens diverging; traced back, they form a virtual, upright, enlarged image: the lens acts as a magnifying glass.",
     hints: ["Compare the object distance with the focal length."] });
 
@@ -352,7 +352,7 @@ concept("phys.light.lenses", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "Why does a long-sighted person need spectacles with converging lenses?",
-    options: [["Their eye would focus light from near objects behind the retina; the converging lens starts the rays converging so they focus on the retina.", "Correct."], ["Their eye focuses light in front of the retina; the converging lens spreads the rays out.", "That describes short sight, and it needs a diverging lens."], ["The converging lens turns the image the right way up.", "Not the purpose."], ["The converging lens reduces the light entering the eye.", "No."]],
+    options: [["Near objects would focus behind the retina; the lens adds convergence.", "Correct."], ["Their eye focuses in front of the retina; the lens spreads rays out.", "That describes short sight, and it needs a diverging lens."], ["The converging lens turns the image the right way up.", "Not the purpose."], ["The converging lens reduces the light entering the eye.", "Spectacle lenses correct focusing, not brightness."]],
     answer: "A", explanation: "In long sight, near objects would focus behind the retina; a converging lens adds focusing power so the image forms on the retina.",
     hints: ["Where does the eye of a long-sighted person try to focus light from a near object?"] });
 
@@ -407,7 +407,7 @@ concept("phys.light.dispersion", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is dispersion of light?",
-    options: [["The splitting of white light into its separate colours", "Correct."], ["The bending of light at a boundary", "That is refraction in general."], ["The reflection of light inside a prism", "No."], ["The spreading of waves through a gap", "That is diffraction."]],
+    options: [["The splitting of white light into its separate colours", "Correct."], ["The bending of light as it crosses a boundary", "That is refraction in general."], ["The reflection of white light back inside a prism", "Dispersion is caused by refraction, not reflection."], ["The spreading of light waves as they pass through a gap", "That is diffraction."]],
     answer: "A", explanation: "Dispersion is the splitting of white light into colours because each colour is refracted by a different amount." });
 
   q.mcq({ d: 1, skill: "RECALL",
@@ -445,7 +445,7 @@ concept("phys.light.dispersion", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "Why does a glass prism separate white light into colours?",
-    options: [["Each colour travels at a slightly different speed in glass, so each is refracted by a different amount.", "Correct."], ["Each colour travels at a different speed in a vacuum.", "All colours travel at the same speed in a vacuum."], ["The prism absorbs some colours and lets the others through.", "The colours are separated, not removed."], ["Each colour is reflected at a different angle.", "Dispersion is a refraction effect."]],
+    options: [["Each colour slows by a different amount in glass, so bends differently.", "Correct."], ["Each colour travels at its own different speed even in a vacuum.", "All colours travel at the same speed in a vacuum."], ["The prism absorbs some colours and lets the others through.", "The colours are separated, not removed."], ["Each colour is reflected at a different angle inside the prism.", "Dispersion is a refraction effect."]],
     answer: "A", explanation: "In glass, violet light slows down most and red least, so violet is refracted most and the colours spread out.",
     hints: ["Refraction depends on the change of speed."] });
 
@@ -456,7 +456,7 @@ concept("phys.light.dispersion", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Rainbows form when sunlight passes through raindrops. Which process separates the colours?",
-    options: [["Refraction of the light entering and leaving the drops, by a different amount for each colour", "Correct."], ["Diffraction of the light around the drops", "Not the main cause."], ["Absorption of colours by the clouds", "No."], ["Reflection alone, at the back of each drop", "Reflection helps send the light back, but refraction separates the colours."]],
+    options: [["Refraction in and out of each drop, by a different amount per colour", "Correct."], ["Diffraction of the light as it bends around the drops", "Not the main cause."], ["Absorption of some colours by the clouds above the drops", "Clouds do not separate the colours."], ["Reflection alone, at the back surface inside each raindrop", "Reflection helps send the light back, but refraction separates the colours."]],
     answer: "A", explanation: "Each colour is refracted by a different amount as light enters and leaves the drops, so the colours separate (dispersion)." });
 
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,

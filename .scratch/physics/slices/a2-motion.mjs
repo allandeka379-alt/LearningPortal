@@ -163,7 +163,7 @@ concept("phys.motion.acceleration", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "A car has a steady acceleration of 5 m/s². What does this mean?",
-    options: [["It travels 5 m every second.", "That would be a speed of 5 m/s."], ["Its velocity increases by 5 m/s every second.", "Correct."], ["Its velocity is 5 m/s.", "Acceleration is not a velocity."], ["It takes 5 s to reach full speed.", "Acceleration does not say this."]],
+    options: [["It travels 5 m in every second of its motion.", "That would be a speed of 5 m/s."], ["Its velocity increases by 5 m/s every second.", "Correct."], ["Its velocity is always 5 m/s while it accelerates.", "Acceleration is not a velocity."], ["It takes 5 s to reach its full speed from rest.", "Acceleration does not say this."]],
     answer: "B", explanation: "An acceleration of 5 m/s² means the velocity changes by 5 m/s in each second." });
 
   q.struct({ d: 4, skill: "APPLICATION", examStyle: true,
@@ -401,7 +401,7 @@ concept("phys.motion.graphs", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: ["cambridge"],
     stem: "A speed-time graph is a curve that rises steeply at first and then gets less and less steep. What does this show?",
-    options: [["Constant acceleration", "That would be a straight line."], ["An acceleration that is decreasing", "Correct: the gradient is decreasing."], ["A deceleration", "The speed is still increasing."], ["Constant speed", "The speed is changing."]],
+    options: [["A constant acceleration", "That would be a straight line."], ["An acceleration that is decreasing", "Correct: the gradient is decreasing."], ["A deceleration (slowing down)", "The speed is still increasing."], ["A constant speed throughout", "The speed is changing."]],
     answer: "B", explanation: "The speed keeps rising but the gradient (acceleration) gets smaller: a decreasing (changing) acceleration, as for a falling object approaching terminal velocity.",
     hints: ["Look at what happens to the gradient."] });
 
@@ -434,7 +434,7 @@ concept("phys.motion.graphs", {
 
   q.mcq({ d: 4, skill: "ANALYSIS",
     stem: "A ball is thrown straight up and caught again at the same height. Which describes its SPEED-time graph (speed, not velocity)?",
-    options: [["A straight line falling to zero, then a straight line rising again", "Correct: speed decreases uniformly to zero at the top, then increases uniformly."], ["A horizontal line", "The speed changes."], ["A straight line rising throughout", "It slows down on the way up."], ["A curve rising to a maximum at the top", "The speed is smallest (zero) at the top."]],
+    options: [["A straight line down to zero, then a straight line back up", "Correct: speed decreases uniformly to zero at the top, then increases uniformly."], ["A horizontal line, because gravity is constant", "The speed changes."], ["A straight line rising all the way from throw to catch", "It slows down on the way up."], ["A curve rising to a maximum when the ball is at the top", "The speed is smallest (zero) at the top."]],
     answer: "A", explanation: "Ignoring air resistance, the ball decelerates uniformly at g to zero speed at the top, then accelerates uniformly at g on the way down: a V shape.",
     hints: ["What is the speed at the highest point?"] });
 
@@ -483,13 +483,13 @@ concept("phys.motion.free-fall", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "Why does the acceleration of a skydiver decrease as she falls before opening her parachute?",
-    options: [["Her weight decreases as she falls.", "Her weight stays the same."], ["Air resistance increases with speed, so the resultant force decreases.", "Correct."], ["Gravity is weaker closer to the ground.", "The change over a few kilometres is tiny."], ["Her mass increases.", "Mass does not change."]],
+    options: [["Her weight decreases as she falls closer to the ground.", "Her weight stays the same."], ["Air resistance grows with speed, so the resultant force falls.", "Correct."], ["Gravity becomes weaker as she gets closer to the ground.", "Gravity hardly changes over a few kilometres (it is very slightly stronger lower down)."], ["Her mass increases as she gathers speed through the air.", "Mass does not change."]],
     answer: "B", explanation: "As her speed rises, air resistance rises, so weight − air resistance (the resultant force) gets smaller, and so does her acceleration.",
     hints: ["Think about how the resultant force changes."] });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "A skydiver at terminal velocity opens her parachute. What happens immediately afterwards?",
-    options: [["She moves upwards.", "She still moves down; she slows down."], ["She slows down because air resistance is now greater than her weight.", "Correct."], ["She speeds up.", "The extra air resistance acts upwards."], ["Her speed stays the same.", "The forces are no longer balanced."]],
+    options: [["She moves upwards, as films often seem to show.", "She still moves down; she slows down."], ["She slows down: air resistance is now bigger than her weight.", "Correct."], ["She speeds up because the parachute catches the wind.", "The extra air resistance acts upwards."], ["Her speed stays the same because she is at terminal velocity.", "The forces are no longer balanced."]],
     answer: "B", explanation: "The large parachute suddenly increases air resistance above her weight; the resultant force is upwards, so she decelerates until a new, lower terminal velocity is reached.",
     hints: ["Compare the air resistance with the weight just after the parachute opens."] });
 
@@ -531,7 +531,7 @@ concept("phys.motion.free-fall", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "Which describes the speed-time graph of a skydiver from jumping until she reaches terminal velocity (parachute still closed)?",
-    options: [["A straight line sloping upwards", "That would be constant acceleration all the way."], ["A curve that starts steep and levels off to a horizontal line", "Correct."], ["A horizontal line", "She starts from rest."], ["A curve that gets steeper and steeper", "Her acceleration decreases, not increases."]],
+    options: [["A straight line sloping upwards at a steady gradient", "That would be constant acceleration all the way."], ["A curve that starts steep and levels off to a horizontal line", "Correct."], ["A horizontal line from the start, at constant speed", "She starts from rest."], ["A curve that gets steeper and steeper as she falls", "Her acceleration decreases, not increases."]],
     answer: "B", explanation: "The gradient (acceleration) starts at about 9.8 m/s² and decreases to zero as air resistance grows, so the curve levels off at terminal velocity.",
     hints: ["The gradient of a speed-time graph is the acceleration."] });
 

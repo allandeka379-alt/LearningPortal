@@ -31,12 +31,12 @@ concept("phys.thermal.states-of-matter", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "Which property belongs to a gas but NOT to a liquid?",
-    options: [["It can flow.", "Liquids flow too."], ["It fills the whole of any container it is put in.", "Correct."], ["It has a fixed volume.", "Only solids and liquids do."], ["It has a fixed shape.", "Only solids do."]],
+    options: [["It can flow and take the shape of its container.", "Liquids also flow and take the shape of their container."], ["It fills the whole of any container it is put in.", "Correct."], ["It has a fixed volume, whatever its container.", "Only solids and liquids do."], ["It has a fixed shape, whatever its container.", "Only solids do."]],
     answer: "B", explanation: "A gas spreads out to fill any container; a liquid keeps its volume." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "The white 'steam' seen above a boiling kettle is:",
-    options: [["Water vapour, an invisible gas", "Water vapour is invisible; what you see has condensed."], ["Tiny droplets of liquid water that have condensed in the cooler air", "Correct."], ["Smoke from the element", "It is water."], ["Air that has been heated", "Hot air is invisible."]],
+    options: [["Water vapour, the invisible gas that leaves the boiling water", "Water vapour is invisible; what you see has condensed."], ["Tiny droplets of liquid water that have condensed in the cooler air", "Correct."], ["Smoke from dust burning on the hot element inside the kettle", "It is water, not smoke."], ["Air that has been heated by the kettle and glows faintly", "Hot air is invisible."]],
     answer: "B", explanation: "Water vapour is invisible; the white cloud is vapour that has condensed into tiny liquid droplets." });
 
   q.short({ d: 2, skill: "RECALL", applies: Z,
@@ -58,7 +58,7 @@ concept("phys.thermal.states-of-matter", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "On a cold night, dew forms on grass. Which description is correct?",
-    options: [["Water vapour in the air condenses on the cold grass.", "Correct."], ["The grass gives out water that freezes.", "Dew is liquid, formed from the air."], ["Rain falls without clouds.", "Dew is not rain."], ["Ice on the grass melts.", "No ice is needed for dew."]],
+    options: [["Water vapour in the air condenses on the cold grass.", "Correct."], ["The grass gives out water from its leaves, which then freezes.", "Dew is liquid, formed from the air."], ["A fine rain falls from a clear sky without clouds.", "Dew is not rain."], ["Ice that formed on the grass earlier melts.", "No ice is needed for dew."]],
     answer: "A", explanation: "Air cools against the cold grass; its water vapour condenses into liquid droplets.",
     hints: ["Where does the water come from?"] });
 
@@ -79,7 +79,7 @@ concept("phys.thermal.particle-model", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "How are the particles arranged in a solid?",
-    options: [["Close together in a regular pattern, vibrating about fixed positions", "Correct."], ["Far apart, moving randomly at high speed", "That is a gas."], ["Close together but free to slide past each other", "That is a liquid."], ["Far apart in a regular pattern", "Solid particles are close together."]],
+    options: [["Close together in a regular pattern, vibrating about fixed positions", "Correct."], ["Far apart, moving randomly and quickly in all directions", "That is a gas."], ["Close together but free to slide past one another at random", "That is a liquid."], ["Far apart in a regular pattern, vibrating about fixed points", "Solid particles are close together."]],
     answer: "A", explanation: "Solid particles are packed in a regular lattice and vibrate about fixed positions." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -94,7 +94,7 @@ concept("phys.thermal.particle-model", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Smoke particles in a glass cell are viewed through a microscope. They move about randomly in tiny jerks. What causes this?",
-    options: [["Collisions with fast-moving, invisible air molecules", "Correct: Brownian motion."], ["Convection currents in the cell", "The random jerky motion is not a steady current."], ["The smoke particles are alive.", "Smoke is not alive."], ["The light pushes them.", "Not the cause."]],
+    options: [["Collisions with fast-moving, invisible air molecules", "Correct: Brownian motion."], ["Convection currents in the air inside the cell", "The random jerky motion is not a steady current."], ["The smoke particles are alive and swim about.", "Smoke is not alive."], ["The light from the microscope pushes them about.", "Not the cause."]],
     answer: "A", explanation: "Air molecules hit each smoke particle unevenly from different sides, jostling it randomly: Brownian motion." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING",
@@ -108,7 +108,7 @@ concept("phys.thermal.particle-model", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "Why can light, fast-moving air molecules move much heavier smoke particles?",
-    options: [["Huge numbers of collisions every instant, unequal on different sides, give a resultant push", "Correct."], ["Air molecules are heavier than smoke particles.", "They are much lighter."], ["The smoke particles are weightless.", "They have mass."], ["Air molecules attract smoke particles strongly.", "The cause is collisions."]],
+    options: [["Many unequal collisions on different sides give a resultant push", "Correct."], ["Air molecules are heavier than the smoke particles they hit.", "They are much lighter."], ["The smoke particles are weightless, so any touch moves them.", "They have mass."], ["Air molecules attract the smoke particles strongly towards them.", "The cause is collisions."]],
     answer: "A", explanation: "Each collision is tiny, but there are enormous numbers, and at any moment more hit one side than another, so the particle jerks about.",
     hints: ["Think about the number of collisions per second."] });
 
@@ -119,7 +119,7 @@ concept("phys.thermal.particle-model", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "Why can a gas be compressed easily but a solid cannot?",
-    options: [["Gas particles are far apart with empty space between them; solid particles are already touching.", "Correct."], ["Gas particles are smaller.", "Particle size is not the reason."], ["Gas particles do not move.", "They move fast."], ["Solids have no particles.", "All matter is made of particles."]],
+    options: [["Gas particles have empty space between them; solid particles touch.", "Correct."], ["Gas particles are smaller and softer, so they can be squeezed.", "Particle size is not the reason."], ["Gas particles do not move, so they can be pushed together.", "They move fast."], ["Solids have no particles, so there is nothing to squeeze.", "All matter is made of particles."]],
     answer: "A", explanation: "Compression pushes particles closer; only gases have large gaps to close.",
     hints: ["Compare the spacing of particles in each state."] });
 
@@ -167,12 +167,12 @@ concept("phys.thermal.gas-laws", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A sealed can of gas is heated. Its volume cannot change. What happens to the pressure, and why?",
-    options: [["It increases: the particles move faster and hit the walls harder and more often.", "Correct."], ["It decreases: the particles spread out.", "They cannot spread out; the volume is fixed."], ["It stays the same: the volume is fixed.", "Temperature also affects pressure."], ["It increases: the particles get bigger.", "Particles do not grow."]],
+    options: [["It increases: faster particles hit the walls harder and more often.", "Correct."], ["It decreases: the particles spread out as they speed up.", "They cannot spread out; the volume is fixed."], ["It stays the same: the volume and the gas are both fixed.", "Temperature also affects pressure."], ["It increases: the particles get bigger and fill more space.", "Particles do not grow."]],
     answer: "A", explanation: "Faster particles collide with the walls more frequently and with more force, so the pressure rises." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A gas is squashed into a smaller volume at constant temperature. Why does its pressure increase?",
-    options: [["The particles hit each unit area of wall more often.", "Correct."], ["The particles move faster.", "At constant temperature their speed is unchanged."], ["The particles get heavier.", "Their mass is unchanged."], ["There are more particles.", "The number of particles is fixed."]],
+    options: [["The particles hit each unit area of wall more often.", "Correct."], ["The particles move faster in the smaller space.", "At constant temperature their speed is unchanged."], ["The particles get heavier as they are squeezed.", "Their mass is unchanged."], ["There are more particles in the container now.", "The number of particles is fixed."]],
     answer: "A", explanation: "In a smaller space the same particles at the same speed hit the walls more often." });
 
   q.num({ d: 3, skill: "APPLICATION",
@@ -234,7 +234,7 @@ concept("phys.thermal.expansion", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "Why are small gaps left between sections of a railway line?",
-    options: [["To allow the rails to expand on hot days without buckling", "Correct."], ["To let rainwater drain away", "Not the main reason."], ["To make the train quieter", "The gaps make it noisier."], ["To save steel", "The saving is tiny."]],
+    options: [["To allow the rails to expand on hot days without buckling", "Correct."], ["To let rainwater drain away from under the rails", "Not the main reason."], ["To make the wheels run more quietly over the rails", "The gaps make it noisier."], ["To save steel on very long stretches of track", "The saving is tiny."]],
     answer: "A", explanation: "Rails expand in hot weather; without gaps they would push against each other and buckle." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
@@ -248,7 +248,7 @@ concept("phys.thermal.expansion", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "Why do gases expand much more than solids for the same rise in temperature?",
-    options: [["The forces between gas particles are very weak, so they can move much further apart.", "Correct."], ["Gas particles are bigger.", "Size is not the reason."], ["Solids do not have particles.", "They do."], ["Gas particles stop moving when heated.", "They speed up."]],
+    options: [["The forces between gas particles are very weak, so they spread easily.", "Correct."], ["Gas particles grow bigger when heated, so they push apart.", "Size is not the reason."], ["Solids do not have particles that can move further apart.", "They do."], ["Gas particles stop moving when heated, leaving bigger gaps.", "They speed up."]],
     answer: "A", explanation: "Strong forces hold solid particles together, limiting expansion; the very weak forces in a gas allow large expansion.",
     hints: ["Compare the forces between particles in each state."] });
 
@@ -259,13 +259,13 @@ concept("phys.thermal.expansion", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "A metal lid is stuck tightly on a glass jar. Why does holding the lid under hot water help to open it?",
-    options: [["The metal lid expands more than the glass, so it loosens.", "Correct."], ["The glass expands more than the metal.", "Metals usually expand more than glass."], ["Hot water lubricates the lid.", "Not the reason."], ["The air inside the jar contracts.", "Heating would make it expand, not contract."]],
+    options: [["The metal lid expands more than the glass, so it loosens.", "Correct."], ["The glass expands more than the metal, so it slides free.", "Metals usually expand more than glass."], ["Hot water seeps in and lubricates the thread of the lid.", "Not the reason."], ["The air inside the jar contracts and pulls the lid free.", "Heating would make it expand, not contract."]],
     answer: "A", explanation: "The metal lid expands more than the glass jar for the same temperature rise, so the fit becomes looser.",
     hints: ["Which expands more, metal or glass?"] });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why can boiling water crack a thick glass tumbler?",
-    options: [["The inside heats and expands before the outside, causing strain", "Correct."], ["Water is heavier when hot", "Not the reason."], ["Glass melts at 100 °C", "Glass melts at a much higher temperature."], ["Hot water contracts the glass", "It expands it."]],
+    options: [["The inside heats and expands before the outside, causing strain", "Correct."], ["Hot water is heavier and presses harder on the glass", "Not the reason."], ["Thick glass starts to soften and melt at about 100 °C", "Glass melts at a much higher temperature."], ["Hot water makes the glass contract and pull itself apart", "It expands it."]],
     answer: "A", explanation: "Glass is a poor conductor, so the inner surface expands while the outer is still cool; the uneven expansion can crack it." });
 
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,
@@ -311,7 +311,7 @@ concept("phys.thermal.thermometers", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why does a clinical thermometer have a constriction (narrow kink) just above the bulb?",
-    options: [["So the liquid thread stays in place after the thermometer is removed from the patient", "Correct."], ["To make it more sensitive", "Sensitivity comes from the narrow bore."], ["To stop the liquid expanding", "It does not stop expansion."], ["To make the range wider", "The range is deliberately small."]],
+    options: [["So the liquid thread stays put after it is taken from the patient", "Correct."], ["To make it more sensitive to small changes in temperature", "Sensitivity comes from the narrow bore."], ["To stop the liquid expanding past the top of the scale", "It does not stop expansion."], ["To make the range of temperatures it can measure wider", "The range is deliberately small."]],
     answer: "A", explanation: "The constriction breaks the thread when the liquid contracts, so the highest reading can be read later." });
 
   q.mcq({ d: 3, skill: "EVALUATION", applies: Z,
@@ -322,7 +322,7 @@ concept("phys.thermal.thermometers", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why is alcohol, not mercury, used in thermometers for very cold places?",
-    options: [["Alcohol freezes at a much lower temperature than mercury.", "Correct."], ["Alcohol is easier to see.", "It is dyed, but that is not the reason."], ["Alcohol boils at a higher temperature.", "It boils lower."], ["Mercury expands too much.", "Not the reason."]],
+    options: [["Alcohol freezes at a much lower temperature than mercury.", "Correct."], ["Alcohol is easier to see in the cold because it is dyed.", "It is dyed, but that is not the reason."], ["Alcohol boils at a higher temperature than mercury does.", "It boils lower."], ["Mercury expands too much in very cold weather.", "Not the reason."]],
     answer: "A", explanation: "Mercury freezes at −39 °C; alcohol stays liquid down to about −115 °C." });
 
   q.match({ d: 2, skill: "UNDERSTANDING", applies: Z,
@@ -366,7 +366,7 @@ concept("phys.thermal.specific-heat-capacity", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is specific heat capacity?",
-    options: [["The energy needed to raise the temperature of 1 kg of a substance by 1 °C", "Correct."], ["The energy needed to melt 1 kg of a substance", "That is latent heat of fusion."], ["The temperature of 1 kg of a substance", "Not an energy."], ["The energy stored in 1 kg of fuel", "Not a definition."]],
+    options: [["Energy to raise the temperature of 1 kg of a substance by 1 °C", "Correct."], ["Energy needed to melt 1 kg of the substance at its melting point", "That is latent heat of fusion."], ["The temperature reached by 1 kg of a substance when heated", "Not an energy."], ["The energy released when 1 kg of a fuel is burnt completely", "That is the energy content of a fuel."]],
     answer: "A", explanation: "c = energy per unit mass per unit temperature rise." });
 
   q.num({ d: 2, skill: "APPLICATION", daily: true,
@@ -388,12 +388,12 @@ concept("phys.thermal.specific-heat-capacity", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "In the midday sun the sand on a lake shore becomes much hotter than the water. Why?",
-    options: [["Sand has a much lower specific heat capacity than water.", "Correct."], ["Sand receives more sunlight.", "Both receive the same sunlight."], ["Water has a lower specific heat capacity.", "Water's is much higher."], ["Sand is a better conductor.", "Not the main reason."]],
+    options: [["Sand has a much lower specific heat capacity than water.", "Correct."], ["Sand receives more sunlight than the water surface does.", "Both receive the same sunlight."], ["Water has a lower specific heat capacity than the sand.", "Water's is much higher."], ["Sand is a better conductor, so it collects more heat.", "Not the main reason."]],
     answer: "A", explanation: "The same energy raises the temperature of sand much more because sand needs less energy per kg per °C." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
     stem: "What happens to the particles of an object when its temperature rises?",
-    options: [["Their average kinetic energy increases.", "Correct."], ["They lose energy.", "They gain energy."], ["Their number increases.", "The number of particles is fixed."], ["They become heavier.", "Their mass is unchanged."]],
+    options: [["Their average kinetic energy increases.", "Correct."], ["They lose energy to their surroundings.", "They gain energy."], ["Their number increases as they split.", "The number of particles is fixed."], ["They become heavier as they gain energy.", "Their mass is unchanged."]],
     answer: "A", explanation: "A temperature rise means the particles move faster on average: their average kinetic energy increases." });
 
   q.struct({ d: 4, skill: "ANALYSIS", examStyle: true,
@@ -415,7 +415,7 @@ concept("phys.thermal.specific-heat-capacity", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "Why is water used in car cooling systems and hot-water bottles?",
-    options: [["It has a high specific heat capacity, so it carries or stores a lot of energy for each degree of temperature change.", "Correct."], ["It has a low specific heat capacity.", "It is high."], ["It boils at a low temperature.", "Not the reason."], ["It is a good electrical conductor.", "Not relevant."]],
+    options: [["Its high specific heat capacity lets it carry a lot of energy per degree.", "Correct."], ["Its low specific heat capacity lets it heat up and cool quickly.", "It is high."], ["It boils at a low temperature, so it carries steam to the radiator.", "Not the reason."], ["It is a good electrical conductor, which helps carry the energy.", "Not relevant."]],
     answer: "A", explanation: "A high specific heat capacity means water can absorb or release lots of energy with only a small temperature change.",
     hints: ["Think about how much energy each kilogram can carry."] });
 
