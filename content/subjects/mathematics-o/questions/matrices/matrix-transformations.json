@@ -300,14 +300,14 @@
     "options": [
       {
         "key": "A",
-        "content": "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}$",
-        "correct": true,
-        "rationale": "Both coordinates are multiplied by 3: $(x, y) \\to (3x, 3y)$."
+        "content": "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+        "rationale": "This multiplies only $x$ by 3: a one-way stretch."
       },
       {
         "key": "B",
-        "content": "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
-        "rationale": "This multiplies only $x$ by 3: a one-way stretch."
+        "content": "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}$",
+        "correct": true,
+        "rationale": "Both coordinates are multiplied by 3: $(x, y) \\to (3x, 3y)$."
       },
       {
         "key": "C",
@@ -324,14 +324,14 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "B"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       }
     ],
@@ -353,19 +353,19 @@
     "options": [
       {
         "key": "A",
-        "content": "Shear with the $y$-axis invariant, shear factor $2$",
-        "correct": true,
-        "rationale": "$(x, y) \\to (x, y + 2x)$: points move parallel to the $y$-axis by $2x$."
-      },
-      {
-        "key": "B",
         "content": "Shear with the $x$-axis invariant, shear factor $2$",
         "rationale": "That matrix is $\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "Stretch with the $x$-axis invariant, factor $2$",
         "rationale": "That matrix is $\\begin{pmatrix} 1 & 0 \\\\ 0 & 2 \\end{pmatrix}$."
+      },
+      {
+        "key": "C",
+        "content": "Shear with the $y$-axis invariant, shear factor $2$",
+        "correct": true,
+        "rationale": "$(x, y) \\to (x, y + 2x)$: points move parallel to the $y$-axis by $2x$."
       },
       {
         "key": "D",
@@ -380,14 +380,14 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "C"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       }
     ],
@@ -544,19 +544,19 @@
     "options": [
       {
         "key": "A",
-        "content": "$\\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}$",
-        "correct": true,
-        "rationale": "$I(1, 0) \\to (0, -1)$ and $J(0, 1) \\to (1, 0)$: a quarter turn clockwise."
-      },
-      {
-        "key": "B",
         "content": "$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$",
         "rationale": "This is the quarter turn anticlockwise."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
         "rationale": "This is the reflection in $y = x$."
+      },
+      {
+        "key": "C",
+        "content": "$\\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}$",
+        "correct": true,
+        "rationale": "$I(1, 0) \\to (0, -1)$ and $J(0, 1) \\to (1, 0)$: a quarter turn clockwise."
       },
       {
         "key": "D",
@@ -571,14 +571,14 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "C"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       }
     ],
@@ -713,24 +713,24 @@
     "options": [
       {
         "key": "A",
-        "content": "$BA$",
-        "correct": true,
-        "rationale": "$B(AX) = (BA)X$: the transformation done first is on the right."
-      },
-      {
-        "key": "B",
         "content": "$AB$",
         "rationale": "$ABX$ applies $B$ first, then $A$."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "$A + B$",
         "rationale": "Adding matrices does not combine transformations."
       },
       {
-        "key": "D",
+        "key": "C",
         "content": "$A^{-1}B$",
         "rationale": "The inverse of $A$ would undo $A$, not apply it."
+      },
+      {
+        "key": "D",
+        "content": "$BA$",
+        "correct": true,
+        "rationale": "$B(AX) = (BA)X$: the transformation done first is on the right."
       }
     ],
     "explanation": "The point $X$ is first mapped to $AX$, and then $B$ is applied to that: $B(AX) = (BA)X$. So \"$A$ followed by $B$\" has matrix $BA$.",
@@ -740,14 +740,14 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "D"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       }
     ],
@@ -1557,14 +1557,14 @@
         "options": [
           {
             "key": "A",
-            "content": "Reflection in the line $y = -x$",
-            "correct": true,
-            "rationale": "Every point $(x, y)$ goes to $(-y, -x)$; points on $y = -x$, such as $(1, -1)$, do not move."
+            "content": "Reflection in the line $y = x$",
+            "rationale": "That would send $I$ to $(0, 1)$."
           },
           {
             "key": "B",
-            "content": "Reflection in the line $y = x$",
-            "rationale": "That would send $I$ to $(0, 1)$."
+            "content": "Reflection in the line $y = -x$",
+            "correct": true,
+            "rationale": "Every point $(x, y)$ goes to $(-y, -x)$; points on $y = -x$, such as $(1, -1)$, do not move."
           },
           {
             "key": "C",
@@ -1586,19 +1586,19 @@
         "options": [
           {
             "key": "A",
-            "content": "Areas are unchanged and the orientation is reversed",
-            "correct": true,
-            "rationale": "$|\\det| = 1$ keeps area; the negative sign shows a flip, as in every reflection."
-          },
-          {
-            "key": "B",
             "content": "Every area becomes negative",
             "rationale": "Areas cannot be negative: use the absolute value of the determinant."
           },
           {
-            "key": "C",
+            "key": "B",
             "content": "The transformation has no inverse",
             "rationale": "Only a determinant of 0 means there is no inverse."
+          },
+          {
+            "key": "C",
+            "content": "Areas are unchanged and the orientation is reversed",
+            "correct": true,
+            "rationale": "$|\\det| = 1$ keeps area; the negative sign shows a flip, as in every reflection."
           },
           {
             "key": "D",
@@ -1653,13 +1653,13 @@
         "(c)": {
           "type": "MULTIPLE_CHOICE",
           "optionKeys": [
-            "A"
+            "B"
           ]
         },
         "(d)": {
           "type": "MULTIPLE_CHOICE",
           "optionKeys": [
-            "A"
+            "C"
           ]
         }
       }
@@ -1711,7 +1711,7 @@
           "(d)": {
             "type": "MULTIPLE_CHOICE",
             "optionKeys": [
-              "B"
+              "A"
             ]
           }
         }
@@ -2069,38 +2069,38 @@
     "options": [
       {
         "key": "A",
-        "content": "The image of the point $(1, 0)$",
-        "correct": true,
-        "rationale": "$\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} a \\\\ c \\end{pmatrix}$, the first column."
-      },
-      {
-        "key": "B",
         "content": "The image of the point $(0, 1)$",
         "rationale": "The image of $(0, 1)$ is the second column."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "The image of the origin",
         "rationale": "The origin always maps to itself."
       },
       {
-        "key": "D",
+        "key": "C",
         "content": "The image of the point $(1, 1)$",
         "rationale": "The image of $(1, 1)$ is the sum of the two columns."
+      },
+      {
+        "key": "D",
+        "content": "The image of the point $(1, 0)$",
+        "correct": true,
+        "rationale": "$\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} a \\\\ c \\end{pmatrix}$, the first column."
       }
     ],
     "explanation": "Multiplying the matrix by $\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$ picks out the first column, so the first column is the image of $(1, 0)$. Similarly, the second column is the image of $(0, 1)$.",
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "D"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       }
     ],

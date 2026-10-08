@@ -323,14 +323,14 @@
     "options": [
       {
         "key": "A",
-        "content": "$2 \\times 1$",
-        "correct": true,
-        "rationale": "$(2 \\times 3)(3 \\times 1)$: the inner numbers match and the outer numbers give the order."
+        "content": "$3 \\times 3$",
+        "rationale": "The order of the product is given by the outer numbers, not the inner ones."
       },
       {
         "key": "B",
-        "content": "$3 \\times 3$",
-        "rationale": "The order of the product is given by the outer numbers, not the inner ones."
+        "content": "$2 \\times 1$",
+        "correct": true,
+        "rationale": "$(2 \\times 3)(3 \\times 1)$: the inner numbers match and the outer numbers give the order."
       },
       {
         "key": "C",
@@ -350,14 +350,14 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "B"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       },
       {
@@ -587,24 +587,24 @@
     "options": [
       {
         "key": "A",
-        "content": "$BA$",
-        "correct": true,
-        "rationale": "$(2 \\times 1)(2 \\times 2)$: $B$ has 1 column but $A$ has 2 rows."
-      },
-      {
-        "key": "B",
         "content": "$AB$",
         "rationale": "$(2 \\times 2)(2 \\times 1)$ is possible, giving a $2 \\times 1$ matrix."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "$CA$",
         "rationale": "$(1 \\times 2)(2 \\times 2)$ is possible, giving a $1 \\times 2$ matrix."
       },
       {
-        "key": "D",
+        "key": "C",
         "content": "$BC$",
         "rationale": "$(2 \\times 1)(1 \\times 2)$ is possible, giving a $2 \\times 2$ matrix."
+      },
+      {
+        "key": "D",
+        "content": "$BA$",
+        "correct": true,
+        "rationale": "$(2 \\times 1)(2 \\times 2)$: $B$ has 1 column but $A$ has 2 rows."
       }
     ],
     "explanation": "A product $PQ$ exists only when the number of columns of $P$ equals the number of rows of $Q$. For $BA$: $B$ is $2 \\times 1$ (1 column) and $A$ is $2 \\times 2$ (2 rows), so $BA$ cannot be calculated.",
@@ -614,20 +614,20 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "D"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       },
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "C"
+          "B"
         ]
       }
     ],
@@ -1010,14 +1010,14 @@
         "options": [
           {
             "key": "A",
-            "content": "$2 \\times 2$",
-            "correct": true,
-            "rationale": "2 rows (vendors) and 2 columns (items)."
+            "content": "$2 \\times 1$",
+            "rationale": "That is the order of $P$."
           },
           {
             "key": "B",
-            "content": "$2 \\times 1$",
-            "rationale": "That is the order of $P$."
+            "content": "$2 \\times 2$",
+            "correct": true,
+            "rationale": "2 rows (vendors) and 2 columns (items)."
           },
           {
             "key": "C",
@@ -1076,24 +1076,24 @@
         "options": [
           {
             "key": "A",
-            "content": "The money taken by vendor Y on Monday, in dollars",
-            "correct": true,
-            "rationale": "Row 2 is vendor Y: cabbages × price + groundnuts × price."
-          },
-          {
-            "key": "B",
             "content": "The money taken by vendor X on Monday, in dollars",
             "rationale": "Row 1 of $S$ is vendor X; the bottom element comes from row 2."
           },
           {
-            "key": "C",
+            "key": "B",
             "content": "The number of items sold by vendor Y",
             "rationale": "The products include prices, so the result is money."
           },
           {
-            "key": "D",
+            "key": "C",
             "content": "The total money taken by both vendors",
             "rationale": "Each element of $SP$ is for one vendor only."
+          },
+          {
+            "key": "D",
+            "content": "The money taken by vendor Y on Monday, in dollars",
+            "correct": true,
+            "rationale": "Row 2 is vendor Y: cabbages × price + groundnuts × price."
           }
         ]
       },
@@ -1125,7 +1125,7 @@
         "(a)": {
           "type": "MULTIPLE_CHOICE",
           "optionKeys": [
-            "A"
+            "B"
           ]
         },
         "(b)": {
@@ -1144,7 +1144,7 @@
         "(c)": {
           "type": "MULTIPLE_CHOICE",
           "optionKeys": [
-            "A"
+            "D"
           ]
         },
         "(d)": {
@@ -1160,7 +1160,7 @@
           "(a)": {
             "type": "MULTIPLE_CHOICE",
             "optionKeys": [
-              "A"
+              "B"
             ]
           },
           "(b)": {
@@ -1179,7 +1179,7 @@
           "(c)": {
             "type": "MULTIPLE_CHOICE",
             "optionKeys": [
-              "A"
+              "D"
             ]
           },
           "(d)": {
@@ -1474,19 +1474,19 @@
     "options": [
       {
         "key": "A",
-        "content": "$\\begin{pmatrix} 6 & -2 \\\\ 8 & 10 \\end{pmatrix}$",
-        "correct": true,
-        "rationale": "Row by column; the result is twice the second matrix."
-      },
-      {
-        "key": "B",
         "content": "$\\begin{pmatrix} 6 & 0 \\\\ 0 & 10 \\end{pmatrix}$",
         "rationale": "Matrices are not multiplied element by element."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "$\\begin{pmatrix} 5 & -1 \\\\ 4 & 7 \\end{pmatrix}$",
         "rationale": "This is the sum of the matrices, not the product."
+      },
+      {
+        "key": "C",
+        "content": "$\\begin{pmatrix} 6 & -2 \\\\ 8 & 10 \\end{pmatrix}$",
+        "correct": true,
+        "rationale": "Row by column; the result is twice the second matrix."
       },
       {
         "key": "D",
@@ -1501,20 +1501,20 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "C"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       },
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "C"
+          "B"
         ]
       }
     ],
@@ -1627,19 +1627,19 @@
     "options": [
       {
         "key": "A",
-        "content": "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 2 \\end{pmatrix}$",
-        "correct": true,
-        "rationale": "Rows of $B$ times columns of $A$."
-      },
-      {
-        "key": "B",
         "content": "$\\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}$",
         "rationale": "This is $AB$: the order of multiplication matters."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "$\\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$",
         "rationale": "This is $A + B$."
+      },
+      {
+        "key": "C",
+        "content": "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 2 \\end{pmatrix}$",
+        "correct": true,
+        "rationale": "Rows of $B$ times columns of $A$."
       },
       {
         "key": "D",
@@ -1654,20 +1654,20 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "C"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       },
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "C"
+          "B"
         ]
       }
     ],

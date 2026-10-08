@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { allModules } from "./lib.mjs";
+import { rebalanceQuestions } from "../tools/rebalance-mcq.mjs";
 
 const SLICES_DIR = fileURLToPath(new URL("./slices/", import.meta.url));
 const only = process.argv.slice(2);
@@ -13,6 +14,7 @@ for (const f of files) await import(pathToFileURL(join(SLICES_DIR, f)).href);
 const ROOT = "content/subjects/combined-science-o";
 let qCount = 0;
 let cCount = 0;
+const balance = { moved: 0, reordered: 0, skipped: {}, after: {} };
 const seenKeys = new Set();
 for (const m of allModules()) {
   for (const item of [...m.questions, ...m.cards]) {
@@ -22,6 +24,12 @@ for (const m of allModules()) {
   if (m.questions.length) {
     const path = join(ROOT, "questions", `${m.file}.json`);
     mkdirSync(dirname(path), { recursive: true });
+    // Balance MCQ answer positions (the player shows options in stored order).
+    const r = rebalanceQuestions(m.questions, m.file);
+    balance.moved += r.moved;
+    balance.reordered += r.reordered;
+    for (const [k, v] of Object.entries(r.skipped)) balance.skipped[k] = (balance.skipped[k] ?? 0) + v;
+    for (const [k, v] of Object.entries(r.after)) balance.after[k] = (balance.after[k] ?? 0) + v;
     writeFileSync(path, JSON.stringify(m.questions, null, 1) + "\n");
     qCount += m.questions.length;
   }
@@ -33,4 +41,5 @@ for (const m of allModules()) {
   }
   console.log(`${m.conceptKey.padEnd(42)} ${String(m.questions.length).padStart(3)} questions ${String(m.cards.length).padStart(3)} cards  -> ${m.file}`);
 }
+console.log(`MCQ balance: ${balance.moved} keys moved, ${balance.reordered} reordered, skipped ${JSON.stringify(balance.skipped)}, 4-option keys ${JSON.stringify(balance.after)}`);
 console.log(`\n${files.length} slice file(s): ${qCount} questions, ${cCount} flashcards.`);

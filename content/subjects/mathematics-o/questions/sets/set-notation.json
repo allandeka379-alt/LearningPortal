@@ -379,14 +379,14 @@
     "options": [
       {
         "key": "A",
-        "content": "$\\{-3, -2, -1, 0, 1\\}$",
-        "correct": true,
-        "rationale": "$-3$ is included ($\\leq$) and 2 is excluded ($<$)."
+        "content": "$\\{-2, -1, 0, 1\\}$",
+        "rationale": "$-3 \\leq x$ means $x$ can equal $-3$, so $-3$ is included."
       },
       {
         "key": "B",
-        "content": "$\\{-2, -1, 0, 1\\}$",
-        "rationale": "$-3 \\leq x$ means $x$ can equal $-3$, so $-3$ is included."
+        "content": "$\\{-3, -2, -1, 0, 1\\}$",
+        "correct": true,
+        "rationale": "$-3$ is included ($\\leq$) and 2 is excluded ($<$)."
       },
       {
         "key": "C",
@@ -406,14 +406,14 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "B"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       },
       {
@@ -443,19 +443,19 @@
     "options": [
       {
         "key": "A",
-        "content": "$\\{x : x \\text{ is an even number}, 2 \\leq x \\leq 10\\}$",
-        "correct": true,
-        "rationale": "Every even number from 2 to 10 inclusive."
-      },
-      {
-        "key": "B",
         "content": "$\\{x : x \\text{ is an even number}, 2 < x < 10\\}$",
         "rationale": "This excludes 2 and 10."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "$\\{x : x \\text{ is a multiple of } 4, x \\leq 10\\}$",
         "rationale": "This gives only {4, 8}."
+      },
+      {
+        "key": "C",
+        "content": "$\\{x : x \\text{ is an even number}, 2 \\leq x \\leq 10\\}$",
+        "correct": true,
+        "rationale": "Every even number from 2 to 10 inclusive."
       },
       {
         "key": "D",
@@ -470,20 +470,20 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "C"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       },
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "C"
+          "B"
         ]
       }
     ],
@@ -672,19 +672,19 @@
     "options": [
       {
         "key": "A",
-        "content": "$A \\subseteq B$",
-        "correct": true,
-        "rationale": "Every element of A is also in B."
-      },
-      {
-        "key": "B",
         "content": "$B \\subseteq A$",
         "rationale": "8 is in B but not in A."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "$8 \\in A$",
         "rationale": "8 is not an element of A."
+      },
+      {
+        "key": "C",
+        "content": "$A \\subseteq B$",
+        "correct": true,
+        "rationale": "Every element of A is also in B."
       },
       {
         "key": "D",
@@ -699,20 +699,20 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "C"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       },
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "C"
+          "B"
         ]
       }
     ],
@@ -743,9 +743,8 @@
     "options": [
       {
         "key": "A",
-        "content": "$\\varnothing$",
-        "correct": true,
-        "rationale": "The empty set is a subset of every set."
+        "content": "$\\{4\\}$",
+        "rationale": "4 is not in {1, 2, 3}."
       },
       {
         "key": "B",
@@ -755,25 +754,26 @@
       },
       {
         "key": "C",
-        "content": "$\\{1, 3\\}$",
-        "correct": true,
-        "rationale": "Both 1 and 3 are in {1, 2, 3}."
-      },
-      {
-        "key": "D",
         "content": "$\\{1, 2, 3\\}$",
         "correct": true,
         "rationale": "Every set is a subset of itself."
       },
       {
+        "key": "D",
+        "content": "$\\{0, 1\\}$",
+        "rationale": "0 is not in {1, 2, 3}."
+      },
+      {
         "key": "E",
-        "content": "$\\{4\\}$",
-        "rationale": "4 is not in {1, 2, 3}."
+        "content": "$\\varnothing$",
+        "correct": true,
+        "rationale": "The empty set is a subset of every set."
       },
       {
         "key": "F",
-        "content": "$\\{0, 1\\}$",
-        "rationale": "0 is not in {1, 2, 3}."
+        "content": "$\\{1, 3\\}$",
+        "correct": true,
+        "rationale": "Both 1 and 3 are in {1, 2, 3}."
       },
       {
         "key": "G",
@@ -788,10 +788,10 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A",
+        "E",
         "B",
-        "C",
-        "D"
+        "F",
+        "C"
       ]
     },
     "wrongResponses": [
@@ -799,17 +799,17 @@
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
           "B",
-          "C"
+          "F"
         ]
       },
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "A",
+          "E",
           "B",
+          "F",
           "C",
-          "D",
-          "E"
+          "A"
         ]
       }
     ],
@@ -878,14 +878,14 @@
     "options": [
       {
         "key": "A",
-        "content": "$A \\subset B$",
-        "correct": true,
-        "rationale": "Every element of A is in B, and A is not equal to B."
+        "content": "$B \\subset A$",
+        "rationale": "2 and 6 are in B but not in A."
       },
       {
         "key": "B",
-        "content": "$B \\subset A$",
-        "rationale": "2 and 6 are in B but not in A."
+        "content": "$A \\subset B$",
+        "correct": true,
+        "rationale": "Every element of A is in B, and A is not equal to B."
       },
       {
         "key": "C",
@@ -905,14 +905,14 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "B"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       },
       {
@@ -950,24 +950,24 @@
         "options": [
           {
             "key": "A",
-            "content": "$\\{3, 6, 12\\}$",
-            "correct": true,
-            "rationale": "These are multiples of 3 that are also factors of 12."
-          },
-          {
-            "key": "B",
             "content": "$\\{3, 6, 9, 12, 15\\}$",
             "rationale": "This is A."
           },
           {
-            "key": "C",
+            "key": "B",
             "content": "$\\{1, 2, 3, 4, 6, 12\\}$",
             "rationale": "This is B."
           },
           {
-            "key": "D",
+            "key": "C",
             "content": "$\\{3, 6\\}$",
             "rationale": "12 is a multiple of 3 and a factor of 12."
+          },
+          {
+            "key": "D",
+            "content": "$\\{3, 6, 12\\}$",
+            "correct": true,
+            "rationale": "These are multiples of 3 that are also factors of 12."
           }
         ]
       },
@@ -1011,7 +1011,7 @@
         "(a)": {
           "type": "MULTIPLE_CHOICE",
           "optionKeys": [
-            "A"
+            "D"
           ]
         },
         "(b)": {
@@ -1035,7 +1035,7 @@
           "(a)": {
             "type": "MULTIPLE_CHOICE",
             "optionKeys": [
-              "D"
+              "C"
             ]
           },
           "(b)": {
@@ -1058,7 +1058,7 @@
           "(a)": {
             "type": "MULTIPLE_CHOICE",
             "optionKeys": [
-              "A"
+              "D"
             ]
           },
           "(b)": {
@@ -1121,14 +1121,14 @@
         "options": [
           {
             "key": "A",
-            "content": "$\\{M, R, N, D\\}$",
-            "correct": true,
-            "rationale": "The consonants, each listed once."
+            "content": "$\\{A, O, E\\}$",
+            "rationale": "These are the vowels, the elements of V."
           },
           {
             "key": "B",
-            "content": "$\\{A, O, E\\}$",
-            "rationale": "These are the vowels, the elements of V."
+            "content": "$\\{M, R, N, D\\}$",
+            "correct": true,
+            "rationale": "The consonants, each listed once."
           },
           {
             "key": "C",
@@ -1162,7 +1162,7 @@
         "(c)": {
           "type": "MULTIPLE_CHOICE",
           "optionKeys": [
-            "A"
+            "B"
           ]
         }
       }
@@ -1182,7 +1182,7 @@
           "(c)": {
             "type": "MULTIPLE_CHOICE",
             "optionKeys": [
-              "A"
+              "B"
             ]
           }
         }
@@ -1229,24 +1229,24 @@
     "options": [
       {
         "key": "A",
-        "content": "$\\{2\\}$",
-        "correct": true,
-        "rationale": "B′ is the even numbers; the only even prime is 2."
-      },
-      {
-        "key": "B",
         "content": "$\\varnothing$",
         "rationale": "2 is prime and not odd, so it is in A ∩ B′."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "$\\{3, 5, 7, 11, 13, 17, 19\\}$",
         "rationale": "This is A ∩ B: the odd primes."
       },
       {
-        "key": "D",
+        "key": "C",
         "content": "$\\{1, 9, 15\\}$",
         "rationale": "These are odd numbers that are not prime, A′ ∩ B."
+      },
+      {
+        "key": "D",
+        "content": "$\\{2\\}$",
+        "correct": true,
+        "rationale": "B′ is the even numbers; the only even prime is 2."
       }
     ],
     "explanation": "$B'$ is the set of even numbers in $\\mathscr{E}$. $A \\cap B'$ is the set of primes that are even, which is $\\{2\\}$.",
@@ -1256,20 +1256,20 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "D"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       },
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "C"
+          "B"
         ]
       }
     ],
@@ -1293,24 +1293,24 @@
     "options": [
       {
         "key": "A",
-        "content": "$A \\cap B = A$",
-        "correct": true,
-        "rationale": "Every element of A is in B, so the overlap is all of A."
-      },
-      {
-        "key": "B",
         "content": "$A \\cup B = A$",
         "rationale": "$A \\cup B = B$; it equals $A$ only if the sets are equal."
       },
       {
-        "key": "C",
+        "key": "B",
         "content": "$n(A) > n(B)$",
         "rationale": "A subset cannot have more elements than the set."
       },
       {
-        "key": "D",
+        "key": "C",
         "content": "$B \\subseteq A$",
         "rationale": "Only true when A = B."
+      },
+      {
+        "key": "D",
+        "content": "$A \\cap B = A$",
+        "correct": true,
+        "rationale": "Every element of A is in B, so the overlap is all of A."
       }
     ],
     "explanation": "If every element of $A$ is in $B$, the elements in both are exactly the elements of $A$, so $A \\cap B = A$. Also $A \\cup B = B$ and $n(A) \\leq n(B)$.",
@@ -1320,20 +1320,20 @@
     "modelResponse": {
       "type": "MULTIPLE_CHOICE",
       "optionKeys": [
-        "A"
+        "D"
       ]
     },
     "wrongResponses": [
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "B"
+          "A"
         ]
       },
       {
         "type": "MULTIPLE_CHOICE",
         "optionKeys": [
-          "C"
+          "B"
         ]
       }
     ],

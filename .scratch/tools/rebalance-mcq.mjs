@@ -7,13 +7,14 @@
 // - Single-answer MCQs with 4 options (top level and parts of structured questions): per question FILE each letter
 //   gets a quota of floor(n/4) or ceil(n/4) keys; MCQs at an under-quota letter keep their order, the others move the
 //   correct option to a letter with spare quota (seeded by the question key, so the result is reproducible).
-// - Single-answer MCQs with 3, 5 or 6 options, and multi-select MCQs: the options are put in a seeded order.
+// - Single-answer MCQs with 3 or 5+ options, and multi-select MCQs: the options are put in a seeded order (seeded by the
+//   question key, applied to the given order: run it on freshly generated questions, or once on hand-kept files).
 // - Skipped (left as authored): options that are all numbers in ascending or descending order, options that refer to
 //   other options ("all of the above", "both", "A and B"), and MCQs whose text names an option letter.
 //
 // Distractors keep their authored relative order when only the key moves. Keys are re-lettered A, B, C... in the new
 // order, and optionKeys in modelResponse and wrongResponses (top level and STRUCTURED parts) are remapped.
-const LETTERS = ["A", "B", "C", "D", "E", "F"];
+const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
 function hash(s) {
   let h = 0x811c9dc5;
@@ -54,9 +55,9 @@ function skipReason(mcq) {
     const desc = nums.every((n, i) => i === 0 || n <= nums[i - 1]);
     if (asc || desc) return "sorted numbers";
   }
-  if (mcq.options.some((o) => /\b(of the above|of these|both [A-F]\b|neither [A-F]\b|[A-F] and [A-F]\b)/i.test(o.content))) return "refers to other options";
+  if (mcq.options.some((o) => /\b(of the above|of these|both [A-J]\b|neither [A-J]\b|[A-J] and [A-J]\b)/i.test(o.content))) return "refers to other options";
   const texts = [mcq.stem, mcq.explanation, mcq.workedSolution, ...(mcq.hints ?? []), ...mcq.options.map((o) => o.rationale)].filter(Boolean).join(" ");
-  if (/\b(option|options|answer|choice)s?\s+\(?[A-F]\)?(?![a-z])|\banswer is \(?[A-F]\)?\b/i.test(texts)) return "text names an option letter";
+  if (/\b(option|options|answer|choice)s?\s+\(?[A-J]\)?(?![a-z])|\banswer is \(?[A-J]\)?\b/i.test(texts)) return "text names an option letter";
   return null;
 }
 
