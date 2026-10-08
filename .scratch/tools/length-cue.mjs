@@ -6,9 +6,19 @@
 // Prints each flagged item (* = key) with its rationales, then "# N flagged". Fix flagged items with
 // .scratch/tools/apply-option-edits.mjs and re-run until it reports 0.
 import fs from "node:fs";
-import { execSync } from "node:child_process";
+import path from "node:path";
 const [family, ...filters] = process.argv.slice(2);
-const files = execSync(`find content/subjects/${family}/questions -name "*.json"`).toString().trim().split("\n").sort();
+// Portable listing (Windows' find.exe is not POSIX find).
+const files = [];
+const walk = (dir) => {
+  for (const name of fs.readdirSync(dir)) {
+    const p = path.posix.join(dir, name);
+    if (fs.statSync(p).isDirectory()) walk(p);
+    else if (name.endsWith(".json")) files.push(p);
+  }
+};
+walk(`content/subjects/${family}/questions`);
+files.sort();
 let n = 0;
 for (const f of files) {
   if (filters.length && !filters.some((x) => f.includes(x))) continue;

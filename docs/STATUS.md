@@ -62,15 +62,20 @@ HTTP only) and the security residual fixes (§20, §39 rows). All of it passed t
 this file (typecheck, ESLint, 506 test files / 5,302 tests, production build, dev-server smoke); none of it has run
 against a live provider or a deployed worker.
 
-**Content (2026-10-08):** five subject families are in the repository. mathematics-o, biology-o, chemistry-o and
-physics-o are complete and published in the **DEV database for preview only** (none human-reviewed, §41).
-combined-science-o (ZIMSEC Combined Science) is complete in the files: 7 lessons written for it plus the content it
-borrows from the other four families through `conceptFamilies` (2,996 questions in all), 19 topic tests and Paper 1 /
-Paper 2 mocks; its import is queued for the owner's PC. MCQ answer positions are now balanced in every family (the
-player shows options in stored order; mathematics-o had the key at A in 712 of 768 MCQs); mathematics-o, biology-o and
-physics-o need a re-import and DEV publish for that. The key-is-clearly-longest cue (key at least 1.3 times and 12
-characters longer than every distractor) is fixed in all five families (`node .scratch/tools/length-cue.mjs <family>`
-reports 0); every family except combined-science-o needs a re-import and DEV publish for the new wording.
+**Content (2026-10-08):** five subject families are complete and published in the **DEV database for preview only**
+(none human-reviewed, §41): mathematics-o, biology-o, chemistry-o, physics-o and combined-science-o (ZIMSEC Combined
+Science: 7 lessons written for it plus the content it borrows from the other four families through `conceptFamilies`,
+2,996 questions in all, 19 topic tests and Paper 1 / Paper 2 mocks). MCQ answer positions are balanced in every family
+(the player shows options in stored order; mathematics-o had the key at A in 712 of 768 MCQs) and the
+key-is-clearly-longest cue is fixed in all five (`node .scratch/tools/length-cue.mjs <family>` reports 0). On the
+owner's PC the same afternoon the five families were imported together (Combined Science's blueprints draw on the
+borrowed banks, so it cannot be imported alone), 1,906 changed questions were re-published and Combined Science became
+AVAILABLE (2,146 items published, 0 failed); smoke tests: physics-o 30/30, combined-science-o 57/57
+(`.scratch/combined-science/smoke.ts`). english-language-o (ZIMSEC English Language 2015-2022, Cambridge 0500 and 0510
+2027-2029) is complete and DEV-published the same day: 60 lessons, 1,047 questions (writing is self-marked: 67% of
+marks), 533 flashcards, 16 topic tests and 5 mocks, written by eight AI writer agents (Opus, medium effort) to a shared
+brief; smoke test 69/69 (`.scratch/english/smoke.ts`). Syllabus files and registries for geography-o, accounting-o,
+business-commerce-o, economics-o and computer-science-o are being prepared from the official documents.
 Hand-off notes: `.scratch/active-runs.md`. Each family's `content/subjects/<family>/README.md` lists coverage, tests, known gaps and specialist checks;
 `content/README.md` has the overview. Marking fix the same day: a numerical answer typed with the text the answer box
 already shows ("US$16.20", "x = 5", "×400", "pH 7", "12:1" when ": 1" follows the box) was unreadable and scored 0;

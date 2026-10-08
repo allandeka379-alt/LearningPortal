@@ -1,0 +1,120 @@
+// Slice EXM1: Cambridge 0510 Exercise 2 (multiple matching, 9 marks). Original texts.
+import { concept, ESL } from "../lib.mjs";
+
+const C = ["eng.reading.multiple-matching", "eng.reading.explicit-meaning", "eng.reading.inference"];
+
+const JOBS = `Read the article in which five young people describe their first job. Then answer the question that follows.
+
+**My first job**
+
+**A  Tawanda**
+Last December I worked in my uncle's hardware shop in Masvingo. At first I only swept the floor and counted nails into paper bags, but by the end of the month I knew the names of hundreds of tools. My uncle is very strict about time. In my second week I arrived twenty minutes late and he made me stay an hour after closing to pack shelves. I was never late again. Many customers were builders in a hurry who expected me to find things quickly, so I spent my lunch breaks learning where everything was kept. With my wages I bought new school shoes and a scientific calculator. The most useful thing I learned was to listen carefully to what customers need before suggesting anything.
+
+**B  Chiedza**
+I spent last August as a waitress at a busy restaurant in Victoria Falls. Most of our customers were tourists, and I worried that I would not understand their accents. On my very first morning I dropped a whole tray of glasses in front of a full room. I wanted to disappear, but the other waiters just laughed kindly and helped me clean up. The chef was impatient with new staff, but he showed me how to carry three plates at once, which I practised at home with plastic plates until I could do it without thinking. The tips were shared equally among all the staff, and I gave most of mine to my mother. The job showed me how much I enjoy meeting new people.
+
+**C  Blessing**
+For the whole of last December I helped our neighbour with his poultry project in Domboshava. I fed the chickens at five every morning, cleaned the runs and kept the records of food and eggs. I also learned to spot when a bird was sick, because one sick chicken can quickly infect the others, and I wrote everything down in a notebook that he checked every Sunday. He could not afford to pay me, so he gave me two trays of eggs every week instead, which my family was very happy with. One night a storm cut the electricity and the young chicks began to get cold. We sat up until dawn keeping them warm with paraffin lamps. I hope to start my own small project one day.
+
+**D  Nokuthula**
+I work at a phone repair shop in Bulawayo every Saturday, and I still go to school during the week. I began by watching the technician, and now I can replace a cracked screen by myself. At first my boss only let me work on cheap phones. Some customers did not believe a girl of seventeen could fix their phone and asked for "the real technician". Now several of them ask for me by name. On busy Saturdays I repair more than ten phones, and I have learned to explain each problem to customers in simple words, which they appreciate. The money helps my mother with the rent, and I fit my homework into the evenings.
+
+**E  Farai**
+During the April holidays I tutored four younger children in maths at our community centre in Kadoma. Their parents paid me a small fee. I thought it would be easy, because maths is my best subject, but I soon found that there were topics I had never really understood. I had to go back to my old exercise books every night before the lessons. One girl was much quicker than the others and got bored, so I prepared extra puzzles for her, while a shy boy would not ask questions until I sat next to him. The hardest part was keeping the children's attention after lunch. I now have much more respect for my own teachers.`;
+
+const MUSIC = `Read the article in which four people talk about learning a musical instrument. Then answer the question that follows.
+
+**Learning to play**
+
+**A  Tatenda**
+My grandfather made my first mbira from a block of mukwa wood and metal keys that he hammered flat himself. I was nine. He never used written music: he played a pattern, I copied it, and we repeated it until it was right. Learning by ear was slow. Some days we practised the same short pattern for an hour, and my grandfather would only nod when I finally got it right. He believes that a song must live in your hands before it can live in your head, and I now think he is right. For the first few months my thumbs were so sore that I could hardly hold a pen at school. My grandfather is now too old to play for long, so when relatives visit, they ask me to play instead. Now I play at every family gathering, and I am teaching two of my younger cousins the songs he taught me. When I play, I feel close to the generations who played these songs before us.
+
+**B  Rufaro**
+I taught myself the guitar using videos on my phone, which meant saving every cent for data. My guitar was second-hand and had a string missing when I bought it. Twice I gave up completely, because I could not make the chords sound clean and nobody was there to tell me what I was doing wrong. At one point I played a chord wrongly for two weeks without realising it. What kept me going in the end was joining the youth band at our church in Chitungwiza, where the others needed a guitarist. An older player corrected my hand position in a minute, and suddenly my playing sounded much better. I wish I had found other musicians earlier. My advice is to practise for fifteen minutes every day rather than for three hours once a week.
+
+**C  Sipho**
+I learned the marimba in our school band in Bulawayo. The marimba is not really an instrument you play alone. There are bass, tenor and soprano marimbas, and if you stop listening to the others for even a moment, the whole piece falls apart. Our teacher, Mrs Ndlovu, chooses the music carefully so that every player has something interesting to do, even the bass players, who often have the simplest parts. Last year our band came second at a schools music festival in Gweru, which was the proudest moment of my school life. We had rehearsed three afternoons a week for two months, and by the end we could almost play the pieces in our sleep. The only thing I do not enjoy is waiting at rehearsals while our teacher works with the other sections, but even then I learn a lot by listening. Playing in a group has also made me far more patient with people.
+
+**D  Grace**
+I started piano lessons at fifty-two, after my children had left home. I had wanted to play since I was a girl, but there was never enough money or time. My teacher is younger than my own daughter, which amused us both at first. The hardest part for me has been learning to read music: all those notes and signs seemed like a foreign language. I still get nervous when I play in front of anyone, even my husband. I bought a second-hand keyboard with my savings so that I could practise at home, and the neighbours have been very patient with my mistakes. Every small piece I master feels like a victory, and my teacher says my progress has surprised her, because adult beginners often give up within a few months. But I play every evening, and I tell my friends that it is never too late to start something new.`;
+
+const CLUBS = `Read the article in which five students describe a school club they belong to. Then answer the question that follows.
+
+**Why I joined**
+
+**A  Kuda**
+I joined the debate club because my sister said I would be too scared to speak. She was nearly right. In my first debate I forgot everything I had planned to say, and our team only won because my partners were brilliant. Our teacher often makes us argue for the side we disagree with, which I hated at first. Now I think it is the most useful thing I have learned, because it makes me understand other people's views. Preparing is hard work: before each debate we spend hours in the library finding examples, and we practise in front of the younger members, who are never shy about telling us when we are boring. This year I am the captain, and we travelled to Gweru for the inter-schools competition.
+
+**B  Tafadzwa**
+The chess club meets in the library every Tuesday at lunchtime. When I joined, I lost every single game for a month, even against Form 1 students. I almost left, but our teacher, Mr Gumbo, showed me how to study my mistakes after each game. Chess has taught me to slow down and think several moves ahead, and I am sure it is the reason my Mathematics marks have improved this year. Once a term Mr Gumbo plays against all of us at the same time, and he still wins almost every game. I now play my father at home every weekend, and last month I beat him for the first time, which he says he allowed, although I know he did not.
+
+**C  Ropafadzo**
+Most people think the drama club is only about acting, but I prefer the work that the audience never sees. I help to write the scripts, and I make costumes from old curtains and clothes that parents give us. Last term we performed a play about a family moving from the village to Harare. Rehearsals were sometimes stressful, because some actors did not learn their lines on time, and I had to rewrite a whole scene the night before the first performance. All the ticket money went to help a classmate whose family had lost their home in a fire. Standing backstage and hearing the audience laugh at a line I had written was a wonderful feeling.
+
+**D  Simbarashe**
+Our first aid club is run by a nurse from the clinic near our school. She taught us how to treat burns, stop bleeding and put someone in the recovery position. We practised on each other on Thursday afternoons, which caused a lot of laughter when someone had to be bandaged from head to foot. At the end of the year we sat a practical test, and everyone who passed received a certificate from a national first aid organisation. Only a month later my little brother cut his hand badly on a broken bottle at home. I pressed a clean cloth on the wound and raised his arm, and I stayed calm until our mother came. I felt very proud.
+
+**E  Vimbai**
+I write for our school newspaper, which comes out twice a term. I love interviewing people: teachers, the groundsman, even the head girl. Our team of six meets every Friday to plan each issue, and the hardest part is finding stories that students actually want to read. The most important lesson I have learned is to check every fact before printing it, after an embarrassing mistake with a teacher's name in my first article. Once the head teacher refused to allow a story I had written about the school toilets to appear, which made me angry at the time. Now I understand that a newspaper needs to be fair to everyone. I definitely want to become a journalist.`;
+
+concept("eng.reading.multiple-matching", { file: "exam/esl-ex2", keyPrefix: "exam.esl-ex2", applies: ESL }, (b) => {
+  b.match({
+    d: 3, skill: "UNDERSTANDING", examStyle: true, secs: 1080, concepts: C, shuffle: false, marksPerPair: 1,
+    stem: JOBS + "\n\nFor each statement, choose the person (**A–E**) it refers to. Each person may be chosen more than once.",
+    pairs: [
+      "was paid with something other than money",
+      "was punished for arriving late",
+      "discovered gaps in their own knowledge",
+      "had to overcome customers' doubts about their ability",
+      "made an embarrassing mistake on the first day",
+      "does the job during the school term",
+      "spent their earnings on things for school",
+      "had to deal with a problem during the night",
+      "was worried about understanding visitors from other countries",
+    ],
+    right: ["A  Tawanda", "B  Chiedza", "C  Blessing", "D  Nokuthula", "E  Farai"],
+    rightIndex: [2, 0, 4, 3, 1, 3, 0, 2, 1],
+    hints: ["Underline the key idea in each statement, then look for the same idea in different words in the texts.", "Watch for traps: several people mention money, but only one was not paid in cash."],
+    explanation: "Blessing was paid in eggs; Tawanda had to stay late after arriving late and bought shoes and a calculator; Farai found topics he had never understood; Nokuthula's customers asked for \"the real technician\" and she works on Saturdays in term time; Chiedza dropped a tray on her first morning and worried about tourists' accents; Blessing and the chicks sat up through a storm at night.",
+  });
+
+  b.match({
+    d: 3, skill: "UNDERSTANDING", examStyle: true, secs: 1080, concepts: C, shuffle: false, marksPerPair: 1,
+    stem: MUSIC + "\n\nFor each statement, choose the person (**A–D**) it refers to. Each person may be chosen more than once.",
+    pairs: [
+      "learned without a teacher, using the internet",
+      "was given an instrument made by a family member",
+      "began learning much later in life than most people",
+      "says that playing well depends on listening to other players",
+      "stopped trying to learn more than once",
+      "now teaches what they have learned to younger relatives",
+      "found reading music hard",
+      "took part in a competition",
+      "suffered physical discomfort while learning",
+    ],
+    right: ["A  Tatenda", "B  Rufaro", "C  Sipho", "D  Grace"],
+    rightIndex: [1, 0, 3, 2, 1, 0, 3, 2, 0],
+    hints: ["Several people found something difficult: decide exactly what each person's difficulty was.", "A festival where bands came second is a kind of competition."],
+    explanation: "Rufaro used phone videos and gave up twice; Tatenda's grandfather made the mbira, Tatenda now teaches cousins and had sore thumbs; Grace began at fifty-two and found written music like a foreign language; Sipho says the piece falls apart if you stop listening, and his band came second at a festival.",
+  });
+
+  b.match({
+    d: 4, skill: "UNDERSTANDING", examStyle: true, secs: 1080, concepts: C, shuffle: false, marksPerPair: 1,
+    stem: CLUBS + "\n\nFor each statement, choose the person (**A–E**) it refers to. Each person may be chosen more than once.",
+    pairs: [
+      "used a skill from the club in an emergency at home",
+      "has to argue for opinions they do not hold",
+      "believes the club has helped them in another school subject",
+      "helped to raise money for someone in difficulty",
+      "had a piece of work stopped from appearing",
+      "lost repeatedly when they first joined",
+      "enjoys work that is done out of sight of the audience",
+      "received a certificate after passing a test",
+      "learned to check information carefully after making an error",
+    ],
+    right: ["A  Kuda", "B  Tafadzwa", "C  Ropafadzo", "D  Simbarashe", "E  Vimbai"],
+    rightIndex: [3, 0, 1, 2, 4, 1, 2, 3, 4],
+    hints: ["Kuda's team won its first debate, so think carefully about who lost repeatedly.", "Look for the same meaning in different words: 'refused to allow a story to appear' means work was stopped."],
+    explanation: "Simbarashe treated his brother's cut and received a certificate; Kuda is made to argue for the side they disagree with; Tafadzwa links chess to better Mathematics marks and lost every game for a month; Ropafadzo's play raised money for a classmate and she prefers backstage work; Vimbai's story was refused and she checks facts after a mistake.",
+  });
+});

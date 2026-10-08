@@ -16,7 +16,7 @@ const cards = walk(path.join(root, "flashcards")).filter((f) => f.endsWith(".jso
 const lessons = walk(path.join(root, "lessons"))
   .filter((f) => f.endsWith(".md"))
   .map((f) => {
-    const txt = fs.readFileSync(f, "utf8");
+    const txt = fs.readFileSync(f, "utf8").replace(/\r\n/g, "\n");
     const m = txt.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
     const meta = JSON.parse(m[1]);
     const words = m[2].replace(/:::[^\n]*/g, "").split(/\s+/).filter(Boolean).length;

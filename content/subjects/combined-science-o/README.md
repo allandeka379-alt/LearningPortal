@@ -11,8 +11,8 @@ Formats, quality bar and workflow: `docs/CONTENT_PIPELINE.md`.
 > **Review status.** The seven Combined Science lessons and their questions were written by AI directly in the main
 > session (2026-10-08) and checked by the automated validator, `content:check` and a marking harness, **but not by an
 > independent AI review or by a human**. The borrowed content carries the review status of its own family (see each
-> family's README; physics-o has had no independent AI review yet). Nothing of this family has been imported yet: the
-> import, DEV preview publish and smoke test are queued for the owner's PC (see "DEV preview"). Production publishing
+> family's README; physics-o has had no independent AI review yet). Imported and published in the DEV database for
+> preview on 2026-10-08; smoke test 57/57 (see "DEV preview"). Production publishing
 > requires a human reviewer (§41).
 
 ## At a glance
@@ -173,19 +173,21 @@ each); the bank has very few questions of 10 marks, so the mock keeps the time, 
 
 ## DEV preview
 
-Not done yet (no database in the cloud session). On the owner's PC, in this order:
+Done on the owner's PC on 2026-10-08 (DEV database only, for preview):
 
-1. `npm run content:import -- --family combined-science-o` (creates the syllabus version, the 7 lessons, 146
-   questions, 66 flashcards and 21 tests).
-2. Re-import the four borrowed families so that their items are tagged to the Combined Science topics:
-   `npm run content:import -- --family biology-o`, then `chemistry-o`, `physics-o` and `mathematics-o`. Their MCQ
-   answer positions were rebalanced on 2026-10-08, so mathematics-o, biology-o and physics-o report changed
-   questions as conflicts (draft copies of published items).
-3. DEV publish with the DEV-preview note and `--approver demo.admin@example.test`, for each of the five families.
-4. Smoke test: a fresh full-access Combined Science student (enrolment pins 2015-2022; topic tree of 83 nodes; own
-   and borrowed lessons open; practice on a borrowed and an own topic; all 19 topic tests listed; both mocks start with
-   their full blueprint; Paper 1 draws only MCQs). A script modelled on `.scratch/chem-assemble2/smoke.ts` is still
-   to be written.
+1. Imported together with the four borrowed families, `npm run content:import -- --family
+   combined-science-o,mathematics-o,biology-o,physics-o,chemistry-o`: the Combined Science blueprints draw on the
+   borrowed banks, so the family fails validation when it is imported alone. Created the syllabus version (83
+   topics), 7 lessons, 146 questions, 66 flashcards and 21 tests; the borrowed families' items were retagged, and the
+   questions edited by the MCQ rebalance and length-cue fixes became 1,906 draft copies (conflicts) for review.
+2. DEV publish of the five families with the DEV-preview note (`--approver demo.admin@example.test`): 2,146 items
+   published, 0 failed; Combined Science became AVAILABLE.
+3. Smoke test `npx tsx --conditions=react-server .scratch/combined-science/smoke.ts`: **57/57 checks passed**. A fresh
+   full-access student is enrolled (pins 2015-2022), sees the 83-node topic tree, opens all 163 lessons tagged in the
+   syllabus (54 Biology, 54 Chemistry, 43 Physics, 5 Mathematics, 7 own), practises four topics (every model response
+   marked correct), and sits all 19 topic tests and both mocks (each with a fresh student, because one student
+   submitting 21 papers in seconds trips the answer-rate throttle): every paper draws its full blueprint (Paper 1: 40
+   MCQs; Paper 2: 21 questions, 100 marks) and every auto-marked mark is earned.
 
 ## Known gaps
 
