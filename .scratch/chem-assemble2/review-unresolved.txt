@@ -1,0 +1,81 @@
+
+######## review:chemistry-o:2 2026-10-08T02:51 found 14
+UNRESOLVED:
+  - Rounding policy (left unchanged): numeric answers accept 3 s.f. (as the lessons teach) but some reject 2 s.f. roundings even when all raw data are 2 s.f. (e.g. exo-endo q18(b) 32.5 vs 33, fuels q10 23.6 vs 24, yield q12 7.75 vs 7.8). Cambridge 0620's practical-skills rule ('calculated quantities to the least s.f. of the raw data') would allow 2 s.f.; a family-wide decision is better than per-item patches.
+  - Display only: the 'correct answer' shown after marking uses the stored unrounded value for some items, e.g. '10666.67 kJ' (fuels q15(c)), '17.325 kJ' (calorimetry q11(c)), '12.25 g' where the stem asks for 3 s.f. (reacting-masses q17).
+  - The-mole lesson explains the Avogadro constant as 'the number of atoms in exactly 12 g of carbon-12' (pre-2019 SI definition); standard at this level, so left as is.
+  - Generators in .scratch/chem-slice2 are updated (c01, c04, c05, c06, c08, c09, c10, c11, c12, c15, c17, c21 and lib.js labelSupplement); regenerating reproduces the fixed files. Pre-review backup of the 63 slice files: scratchpad chem-s2-review/orig.
+  - Another writer was active in chemistry-o during the review (the family grew from 2841 to 2871 items); no files outside this slice were touched.
+
+######## review:chemistry-o:1 2026-10-08T03:15 found 59
+UNRESOLVED:
+  - Left as written (judgement calls): heating-curves q13 follows the same layout as lesson Example 1, with different temperatures; group-ii q16 repeats the lesson's paragraph describing the magnesium and steam apparatus; giant q12 (CO2 vs SiO2) and metallic q09 (copper wiring) test the same idea as a lesson example. A human reviewer may want to vary them.
+  - Writer's reviewer flags checked and accepted: Cr3+(aq) given as green (the usual O-Level answer), ethanol limited to about 96% by distillation, steam distillation below 100 °C, Harare at about 1 500 m with water boiling at about 95 °C, Sable Chemicals (Kwekwe) fertiliser, and ethanol from Lowveld sugar cane.
+  - Isotope relative-atomic-mass calculations remain applies ['cambridge/igcse'] as the writer set them. Someone should confirm whether ZIMSEC Forms 3-4 examine Ar from isotope abundances.
+  - Not edited: content/README.md 'Current families' still lists only mathematics-o (shared file).
+  - Other slices are being added at the same time. The whole family (3150 items at the last run) validated clean when this review finished.
+
+######## review:chemistry-o:4 2026-10-08T03:42 found 57
+UNRESOLVED:
+  - Platform-wide (outside this slice, not edited): the same correct-answer-at-A bias exists in other generated content. Across the whole chemistry-o family, 943 of 1397 MCQ correct options were at A, including this slice before the fix. In mathematics-o it is 726 of 785. Because the player labels options by their stored key, either the other generators need the same reorder step or the player needs to label options by display position and shuffle by default.
+  - The writer's reviewer flags remain as hidden HTML comments for a human to confirm: ZiG = 'Zimbabwe Gold' (RBZ, April 2024) is still current; ZISCO/Redcliff is cited only historically; Morton Jaffray is named as context only; the Great Dyke is about 550 km long with lithium pegmatites at Bikita; and the general statements on ferrochrome smelting and lithium/PGM beneficiation policy.
+  - ZIMSEC tagging of chem.metals.aluminium-extraction is still 'to confirm' in the concept registry. I did not edit the registry because it is a shared file.
+  - Advisory content:check findings left as they are: the LESSON_REUSE / QUESTION_REUSE flags in mineral-ores, extraction-and-iron, aluminium-extraction and acids-and-bases only share relative atomic masses (16, 27, 56, 64…), which cannot be avoided. mineral-ores.q18 deliberately compares four minerals, two of which are the lesson's worked results.
+  - Policy point, not changed: numerical answers expect 3 significant figures when the data are given to 3 significant figures, but most stems do not say so. For example, 2.3 g is not accepted for 2.33 g. This matches the other slices; adding 'give your answer to 3 significant figures' to stems would be a family-wide decision.
+
+######## review:chemistry-o:3 2026-10-08T04:00 found 30
+UNRESOLVED:
+  - Do not run .scratch/chem-slice3/run.sh: it rebuilds the question JSON from the writer's generator scripts and would undo these fixes. If the files are ever rebuilt, run node .scratch/chem-slice3-review/fix-questions.js afterwards (safe to run more than once). The writer's own files were not edited.
+  - The writer's answer check (.scratch/chem-slice3/check.ts) now reports one failure, for kinetics.measuring-rates.q19 '0.42 g/min'. This is expected: the item asks for grams per second.
+  - Kept on purpose: choosing-conditions q05 to q07 use one data table for three different tasks, and cells-and-batteries q08/q09 share another.
+  - Writer's flagged facts: checked against the official 0620 2026-2028 syllabus PDF (tangent gradients are Extended only) and standard data (the ammonia yields at 50/100/300/600 atm and the ΔH values are correct). The simple-cell voltages are illustrative and now labelled as typical results.
+
+######## review:chemistry-o:5 2026-10-08T04:08 found 97
+UNRESOLVED:
+  - Shared file not edited: the concept registry (content/concepts/chemistry-o.json) describes chem.organic.carboxylic-acids-and-esters as 'Ethanoic acid as a weak acid ... (Cambridge Core)'. Weak acids are Cambridge Supplement 7.1.12, so the registry wording needs fixing by its owner.
+  - Family-wide question, left unchanged: mole-calculation items in shared concepts (reacting masses, gas volumes, percentage yield) carry no Cambridge Supplement label, although 3.3 mole calculations are Supplement. The other chemistry slices follow the same practice, so the coordinator should decide on one convention.
+  - Three content:check advisory findings kept on purpose. fuels.crude-oil.q11 uses the standard fraction carbon ranges also given in the lesson table. industry.coal-diamond.q12 uses coal and rock densities (data, different task). fuels.crude-oil.q11 and q19 share hexadecane's boiling point of 287 °C but ask different things.
+  - Human approver to confirm: the herbs lesson keeps the writer's hidden reviewer comment. I checked the plant names, local names and uses and found them correct (zumbani/umsuzwane Lippia javanica, aloe gavakava/inhlaba, moringa, lemon grass/citronella, neem azadirachtin, Tephrosia vogelii rotenoids, capsaicin, garlic, aspirin/willow, quinine/cinchona, artemisinin). A local speaker should also confirm the Ndebele and Shona grain names I added to organic.making-ethanol.q15 (chibage, amabele, uphoko, umumbu).
+  - Outside this slice: other chemistry-o files show many \ce{} hyphens rendered as charges. A quick scan suggests these are intended (ions and electrons such as Cl-, e-, OH-). I did not inspect them or a few odd ones (O-, S-, ^{23}_{11}Na-) because they belong to other slices.
+
+######## review:chemistry-o:1 2026-10-08T07:43 found 20
+UNRESOLVED:
+  - Kept on purpose: 12 LESSON_REUSE and 5 QUESTION_REUSE findings from 'npm run content:check' remain. They share real data (proton numbers, Ar values, halogen and noble-gas boiling points, isotope masses, round distances) but set different tasks. Isotopes q06 deliberately uses the standard chlorine-35/37 pair in a recall question.
+  - Curves q17 (boiling point falls at high altitude) goes slightly beyond both syllabuses. It rests on the heating-curves lesson's altitude note and is a d4 'suggest' question; the human approver should confirm it is wanted.
+  - Shared file not touched: content/README.md 'Current families' still lists only mathematics-o (the writer flagged this too).
+  - Scratch files I did not create were modified, all under .scratch and never published: the writer's generators g02, g04 and g08 (edits ported so regeneration keeps the fixes) and run.sh (a header note, plus a line that runs the review checks).
+
+######## review:chemistry-o:2 2026-10-08T07:43 found 23
+UNRESOLVED:
+  - Left deliberately: 2-s.f. answers are rejected where the lessons teach a 3-s.f. default; mean titres and burette readings require 2 d.p.
+  - Inconsistent but defensible: calorimetry questions penalise 'kJ' where kJ/mol is expected, while energy-profile and bond-energy questions accept 'kJ' for kJ/mol.
+  - purity q18 is keyword-marked ('raise*', 'increase*', 'higher', 'rise*'), so odd answers containing those words are credited; low risk, left as is.
+  - Stoichiometry has two free-preview lessons (chemical formulae and the mole); left as is because they sit in different ZIMSEC top-level topics.
+  - One-mark items at 120 s per mark in stoichiometry were left at 1 mark (borderline, reviewed by the earlier pass).
+  - Generators changed so regeneration reproduces the fixes: lib.js and c01, c02, c03, c04, c07, c09, c10, c11, c13, c14, c16, c17, c19, c20, c21 in .scratch/chem-slice2. Lessons were edited directly.
+  - Another writer is editing other chemistry-o files concurrently (fractional distillation, atomic structure); those files were not touched.
+  - Platform suggestion, not made: when units are optional, default the unrecognised-unit penalty to 0 instead of 1 mark; this would make content-side spelling lists much less critical.
+
+######## review:chemistry-o:3 2026-10-08T08:26 found 22
+UNRESOLVED:
+  - The writer's alternative-answer harness (.scratch/chem-slice3/checks/questions__kinetics__measuring-rates.json) still expects '0.42 g/min' to score full marks on kinetics.measuring-rates.q19. The first review deliberately removed that conversion because the item asks for grams per second, so `bash .scratch/chem-slice3/run.sh` (check.ts) reports 1 failure. I did not edit the other author's scratch file; that entry should be deleted.
+  - The generator modules in .scratch/chem-slice3/s*.js do not include either review's fixes. Running run.sh would overwrite the reviewed JSON in content/, so do not regenerate. The JSON in content/ is the source of truth.
+  - Shared data sets were kept on purpose because each question asks something different: cells-and-batteries q08/q09 use the same voltage table, and choosing-conditions q05/q06/q07 use the same ammonia-yield table. content:check still lists them, along with reuse of Ar values, boiling points and standard conditions, which is expected.
+  - Not errors, left as they are: redox.card.ox-dichromate (ZIMSEC-only content, labelled as such in its note) has no applies restriction, unlike the chromate items, and haber-process.q17 (hazards) is not restricted to ZIMSEC.
+
+######## review:chemistry-o:4 2026-10-08T08:26 found 43
+UNRESOLVED:
+  - metals.mineral-ores.q18 uses magnetite (72.4%) and chalcopyrite (34.8%), whose metal percentages the lesson works out, as two of its four options. Kept deliberately because the task is a comparison that also needs new calculations; reviewer may want to replace them.
+  - The writer's five hidden reviewer comments in the lessons (ZiG as 'Zimbabwe Gold' from April 2024, Redcliff/ZISCO as history only, Morton Jaffray and Lake Chivero, Great Dyke about 550 km with lithium at Bikita, ferrochrome and lithium/PGM beneficiation policy) checked out and were left in for confirmation at publish time.
+  - Aluminium-extraction is tagged to ZIMSEC through the electrolytic-purification topic, but its explanations carry Cambridge Supplement notes. The concept registry marks the ZIMSEC tagging 'to confirm'; it is a shared file, so it was not changed.
+  - Three single-answer MCQs at difficulty 5 (tests-for-cations.q20, reactivity-series.q20, corrosion.q21) could arguably be difficulty 4; left unchanged.
+  - Generators overwrite the JSON: fixes were made in .scratch/chem-slice4/s*.js and the JSON regenerated. The new stress test .scratch/chem-slice4/review-stress.ts now runs at the end of run.sh.
+
+######## review:chemistry-o:5 2026-10-08T08:53 found 96
+UNRESOLVED:
+  - The question JSON is generated from the scripts in C:/Users/Lenovo/Downloads/Learning Platform/.scratch/chem-slice5 (g01–g20). I made every question and flashcard fix in those generators and regenerated with run.sh, so the JSON and the generators match. If someone hand-edits the JSON, running run.sh again will overwrite it. I edited 7 lesson .md files directly: addition-polymers, coal-wood-and-biofuels, naming, ethanol, alkanes, making-ethanol and carboxylic-acids-and-esters.
+  - A milder length cue remains: the key is still the single longest option in 95 of 259 single-answer MCQs (about 37%, against about 25% by chance). None of them is now 1.3 times longer than every distractor and at least 12 characters longer.
+  - Multi-step mole calculations are mostly 1-mark NUMERICAL items, for example organic.cracking.q13 at difficulty 4 and 1 mark. The rest of the chemistry-o family does the same, so I left them.
+  - A few calculations accept 3 s.f. answers but not 2 s.f. ones, e.g. fuels.coal-wood.q19(c) does not accept 1.3×10⁵ kJ and organic.alkanes.q15(b) does not accept 13 kg. Widening them would also credit nearby wrong values, so this is a judgement call left as it is.
+  - npm run content:check still lists 8 findings for the slice. All are harmless: shared formula subscripts, Ar values, the 24 dm³ molar volume, typical densities, or the real 287 °C boiling point of hexadecane used as data in two different tasks.
+  - The herbs lesson keeps the writer's hidden comment asking a human reviewer to verify the plant names and uses. I checked them all: they are correct, and every health use is worded 'traditionally used for'. A human still has to sign off (content:publish attestation).
