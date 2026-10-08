@@ -11,7 +11,7 @@ concept("phys.space.earth-moon", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL", applies: C,
     stem: "What causes day and night?",
-    options: [["The Earth spinning on its axis about once every 24 hours", "Correct."], ["The Earth orbiting the Sun once a year", "That causes the year."], ["The Moon blocking the Sun's light", "That would be an eclipse."], ["The Sun moving around the Earth", "The Sun only appears to move."]],
+    options: [["The Earth spinning on its axis once every 24 hours", "Correct."], ["The Earth orbiting the Sun once every year", "That causes the year."], ["The Moon blocking the Sun's light each evening", "That would be an eclipse."], ["The Sun moving around the Earth once a day", "The Sun only appears to move."]],
     answer: "A", explanation: "As the Earth spins, each place turns into sunlight (day) and then out of it (night)." });
 
   q.mcq({ d: 1, skill: "RECALL", applies: C,
@@ -31,7 +31,7 @@ concept("phys.space.earth-moon", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
     stem: "Why does the Moon show phases?",
-    options: [["As it orbits the Earth, we see different amounts of its sunlit half.", "Correct."], ["The Earth's shadow covers different parts of it.", "That happens only during a lunar eclipse."], ["The Moon gives out less light on some nights.", "The Moon gives out no light of its own."], ["Clouds hide parts of it.", "No."]],
+    options: [["As it orbits, we see different amounts of its sunlit half.", "Correct."], ["The Earth's shadow covers different parts of it.", "That happens only during a lunar eclipse."], ["The Moon gives out less light on some nights.", "The Moon gives out no light of its own."], ["Clouds in space hide different parts of it each night.", "Phases follow a regular monthly cycle, whatever the weather."]],
     answer: "A", explanation: "Half the Moon is always lit by the Sun; its position in its orbit decides how much of that half faces us." });
 
   q.mcq({ d: 2, skill: "APPLICATION", applies: C,
@@ -79,7 +79,7 @@ concept("phys.space.earth-moon", {
         points: ["In December the southern hemisphere is tilted towards the Sun, so the Sun is higher in the sky and its energy is concentrated on a smaller area", "and the days are longer, giving more hours of sunshine"] }),
       P.mcq({ label: "(b)", stem: "What season is it in London, in the northern hemisphere, in December?", options: [["Winter", "Correct."], ["Summer", "The northern hemisphere is tilted away from the Sun in December."], ["The same season as Bulawayo", "The hemispheres have opposite seasons."], ["There are no seasons in London.", "There are."]], answer: "A",
         explanation: "When the southern hemisphere has summer, the northern hemisphere has winter." }),
-      P.mcq({ label: "(c)", stem: "Which statement about the Earth's distance from the Sun is correct?", options: [["It changes only slightly during the year and does not cause the seasons.", "Correct."], ["The Earth is closest to the Sun in June.", "It is closest in early January."], ["The changing distance causes the seasons.", "The tilt causes them."], ["The distance never changes at all.", "The orbit is very slightly elliptical."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Which statement about the Earth's distance from the Sun is correct?", options: [["It changes only slightly and does not cause the seasons.", "Correct."], ["The Earth is closest to the Sun in June each year.", "It is closest in early January."], ["The changing distance is what causes the seasons.", "The tilt causes them."], ["The distance stays exactly the same all year.", "The orbit is very slightly elliptical."]], answer: "A",
         explanation: "The Earth is actually slightly closer to the Sun in January, during the southern summer but the northern winter." }),
     ],
     explanation: "The tilt of the axis, not the distance from the Sun, causes opposite seasons in the two hemispheres.",
@@ -115,12 +115,12 @@ concept("phys.space.solar-system", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: C,
     stem: "What is a comet?",
-    options: [["A small body of ice and dust in a very elongated orbit, which forms a tail near the Sun", "Correct."], ["A rock burning up in the Earth's atmosphere", "That is a meteor."], ["A moon of Jupiter", "No."], ["A small star", "No."]],
+    options: [["An icy, dusty body in a long thin orbit, forming a tail near the Sun", "Correct."], ["A rock burning up as it falls through the Earth's atmosphere", "That is a meteor."], ["One of the large moons that orbit Jupiter", "Moons orbit planets; comets orbit the Sun."], ["A small, faint star far beyond the Solar System", "A comet is a body of ice and dust in the Solar System, not a star."]],
     answer: "A", explanation: "Near the Sun a comet's ice evaporates, forming a glowing head and a tail pointing away from the Sun." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C, daily: true,
     stem: "According to the accretion model, why are the inner planets rocky and the outer planets large and gaseous?",
-    options: [["Near the hot young Sun only rocky and metallic materials stayed solid; further out it was cold enough for ices and gas to collect.", "Correct."], ["The outer planets formed long before the inner planets.", "They formed at about the same time."], ["The Sun's gravity pulled all the gas inwards.", "The inner planets have little gas."], ["The inner planets lost their rocks to the Sun.", "No."]],
+    options: [["Near the Sun only rock and metal stayed solid; ice and gas collected further out.", "Correct."], ["The outer planets formed billions of years before the inner planets did.", "They formed at about the same time."], ["The Sun's gravity pulled all the gas inwards to the inner planets.", "The inner planets have little gas."], ["The inner planets lost their gas and ice to the outer planets.", "Material did not move between planets like this."]],
     answer: "A", explanation: "Temperature in the early disc decided what could condense: rock close in, rock plus ice and gas further out." });
 
   q.mcq({ d: 2, skill: "RECALL", applies: C,
@@ -145,7 +145,7 @@ concept("phys.space.solar-system", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
     stem: "Why is the gravitational field strength at the surface of the Moon (about 1.6 N/kg) much smaller than at the surface of the Earth?",
-    options: [["The Moon has a much smaller mass than the Earth.", "Correct."], ["The Moon has no atmosphere.", "Air does not affect gravity."], ["The Moon is further from the Sun.", "Not the reason."], ["The Moon does not spin.", "It does spin, slowly; that is not the reason."]],
+    options: [["The Moon has a much smaller mass than the Earth.", "Correct."], ["The Moon has no atmosphere to press down.", "Air does not affect gravity."], ["The Moon is further from the Sun than the Earth is.", "Not the reason."], ["The Moon does not spin on its own axis.", "It does spin, slowly; that is not the reason."]],
     answer: "A", explanation: "Surface field strength depends mainly on the mass of the planet or moon." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
@@ -156,13 +156,13 @@ concept("phys.space.solar-system", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why does a comet speed up as it approaches the Sun?",
-    options: [["It loses gravitational potential energy and gains an equal amount of kinetic energy.", "Correct."], ["The Sun's light pushes it forwards.", "Not the main effect."], ["It loses mass, so it becomes lighter.", "Not the reason."], ["The solar wind blows it faster.", "Not the reason."]],
+    options: [["It loses gravitational potential energy and gains kinetic energy.", "Correct."], ["The Sun's light pushes it forwards along its orbit.", "Not the main effect."], ["It loses mass in its tail, so it becomes lighter.", "Not the reason."], ["The solar wind blows it faster towards the Sun.", "Not the reason."]],
     answer: "A", explanation: "Energy is conserved: the decrease in gravitational potential energy appears as an increase in kinetic energy.",
     hints: ["Total energy stays the same."] });
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "Which statement about the planets' orbits is supported by planetary data?",
-    options: [["Planets further from the Sun take longer to complete their orbits and move more slowly.", "Correct."], ["Planets further from the Sun orbit faster.", "The Sun's field is weaker further out, so they move more slowly."], ["All planets take one year to orbit the Sun.", "Only the Earth does."], ["Orbital period depends only on a planet's density.", "It depends on distance from the Sun."]],
+    options: [["Planets further out take longer to orbit and move more slowly.", "Correct."], ["Planets further from the Sun orbit faster than inner ones.", "The Sun's field is weaker further out, so they move more slowly."], ["All planets take one year to orbit the Sun.", "Only the Earth does."], ["Orbital period depends only on a planet's density.", "It depends on distance from the Sun."]],
     answer: "A", explanation: "The Sun's gravitational field weakens with distance, so outer planets move more slowly and have much longer years.",
     hints: ["How does the Sun's pull change with distance?"] });
 
@@ -231,7 +231,7 @@ concept("phys.space.sun", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "In a stable star such as the Sun, what balances the inward pull of gravity?",
-    options: [["The outward pressure produced by the energy released in fusion", "Correct."], ["Magnetic forces", "No."], ["The star's rotation", "Not the main balance."], ["Nothing: the star is slowly collapsing.", "A stable star keeps the same size."]],
+    options: [["Outward pressure from the energy released by fusion", "Correct."], ["Magnetic forces from its spinning hot core", "Magnetic forces are not what holds a star up."], ["The star's fast rotation about its own axis", "Not the main balance."], ["Nothing: the star is slowly collapsing.", "A stable star keeps the same size."]],
     answer: "A", explanation: "Fusion heats the gas, creating outward pressure that balances gravity.",
     hints: ["Something must push outwards."] });
 
@@ -277,7 +277,7 @@ concept("phys.space.stars", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL", applies: C,
     stem: "What is a galaxy?",
-    options: [["A huge group of billions of stars held together by gravity", "Correct."], ["A group of planets orbiting a star", "That is a planetary system."], ["A single very large star", "No."], ["A cloud of gas around the Sun", "No."]],
+    options: [["A huge group of billions of stars held together by gravity", "Correct."], ["A group of planets and moons orbiting one star", "That is a planetary system."], ["A single very large star with many planets", "A galaxy contains billions of stars."], ["A cloud of gas and dust around the Sun", "A galaxy is far larger than the Solar System."]],
     answer: "A", explanation: "A galaxy contains many billions of stars, with gas and dust." });
 
   q.mcq({ d: 1, skill: "RECALL", applies: C,
@@ -304,12 +304,12 @@ concept("phys.space.stars", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: C,
     stem: "How does a star begin to form?",
-    options: [["An interstellar cloud of gas and dust collapses under its own gravity.", "Correct."], ["A red giant cools down.", "That is near the end of a star's life."], ["A white dwarf heats up.", "No."], ["A supernova contracts.", "No."]],
+    options: [["A cloud of gas and dust collapses under its own gravity.", "Correct."], ["A red giant cools down and shrinks to a new star.", "That is near the end of a star's life."], ["A white dwarf heats up again and starts to fuse.", "White dwarfs are the cooling remains of stars."], ["A supernova contracts back into a smaller star.", "A supernova is the explosion at the end of a large star's life."]],
     answer: "A", explanation: "Gravity pulls a cloud of gas and dust together; it heats up to form a protostar." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
     stem: "What happens when a protostar becomes a stable star?",
-    options: [["Its core becomes hot enough for hydrogen nuclei to fuse into helium.", "Correct."], ["It explodes.", "No."], ["It cools and shrinks.", "No."], ["It becomes a black hole.", "No."]],
+    options: [["Its core gets hot enough for hydrogen to fuse into helium.", "Correct."], ["It explodes and scatters its outer layers into space.", "Explosion (supernova) comes at the end of a massive star's life."], ["It cools down and shrinks to become a white dwarf.", "That happens at the end of a low-mass star's life."], ["It collapses inwards to become a small black hole.", "Black holes form only after very massive stars explode."]],
     answer: "A", explanation: "Fusion starts, and its outward pressure balances gravity." });
 
   q.mcq({ d: 3, skill: "RECALL", applies: C,
@@ -320,7 +320,7 @@ concept("phys.space.stars", {
 
   q.mcq({ d: 3, skill: "RECALL", applies: C,
     stem: "What can be left behind after a supernova?",
-    options: [["A neutron star or a black hole", "Correct."], ["A white dwarf", "White dwarfs come from low-mass stars without supernovae."], ["A protostar", "That is the start of a star's life."], ["A red giant", "No."]],
+    options: [["A neutron star or a black hole", "Correct."], ["A white dwarf with a gas cloud", "White dwarfs come from low-mass stars without supernovae."], ["A new protostar", "That is the start of a star's life."], ["A red giant", "No."]],
     answer: "A", explanation: "The collapsed core of a massive star becomes a neutron star or, for the most massive, a black hole.",
     hints: ["Supernovae happen to the most massive stars."] });
 
@@ -340,7 +340,7 @@ concept("phys.space.stars", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why are supernovae important for forming new stars and planets?",
-    options: [["They scatter elements made in stars, including heavy elements, into space, where they form new nebulae.", "Correct."], ["They make the hydrogen that new stars need.", "Hydrogen came from the early Universe."], ["They create whole new galaxies.", "No."], ["They cool down nearby stars.", "No."]],
+    options: [["They scatter heavy elements made in stars into new nebulae.", "Correct."], ["They make the hydrogen that new stars need.", "Hydrogen came from the early Universe."], ["They create whole new galaxies around them.", "A supernova is one star; galaxies hold billions."], ["They cool down nearby stars so they can form planets.", "A supernova does not cool its neighbours."]],
     answer: "A", explanation: "The debris of a supernova enriches clouds of gas and dust from which new stars and planets form.",
     hints: ["Where did the heavy elements in the Earth come from?"] });
 
@@ -351,7 +351,7 @@ concept("phys.space.stars", {
         points: ["Gravity makes a cloud of gas and dust collapse; it heats up and becomes a protostar", "When the core is hot enough, hydrogen fusion starts and the star becomes stable"] }),
       P.mcq({ label: "(b)", stem: "A star much more massive than the Sun runs out of hydrogen in its core. What does it become next?", options: [["A red supergiant", "Correct."], ["A white dwarf", "That follows a red giant for low-mass stars."], ["A protostar", "That comes before the stable stage."], ["A planetary nebula", "No."]], answer: "A",
         explanation: "Massive stars expand into red supergiants." }),
-      P.mcq({ label: "(c)", stem: "During which stage does a star stay the same size for millions or billions of years?", options: [["The stable star stage, when gravity is balanced by pressure from fusion", "Correct."], ["The protostar stage", "It is still collapsing."], ["The supernova stage", "That is an explosion."], ["The red giant stage", "It has expanded."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "During which stage does a star stay the same size for millions or billions of years?", options: [["The stable star stage, with gravity balanced by fusion", "Correct."], ["The protostar stage, as gas and dust collect", "It is still collapsing."], ["The supernova stage, after the core collapses", "That is an explosion."], ["The red giant stage, when its outer layers swell", "It has expanded."]], answer: "A",
         explanation: "As long as hydrogen fusion continues steadily, the forces balance." }),
     ],
     explanation: "Cloud → protostar → stable star; then the path depends on mass.",
@@ -382,7 +382,7 @@ concept("phys.space.universe", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C, daily: true,
     stem: "What does the redshift of light from distant galaxies show?",
-    options: [["The galaxies are moving away from us: the Universe is expanding.", "Correct."], ["The galaxies are moving towards us.", "That would give a blueshift."], ["The galaxies are made of red stars.", "No."], ["The Universe is shrinking.", "No."]],
+    options: [["They are moving away from us: the Universe is expanding.", "Correct."], ["They are moving towards us, and will collide with us.", "That would give a blueshift."], ["They are made mostly of cool red stars.", "Redshift is a shift of the whole spectrum, not a colour of stars."], ["The Universe is shrinking towards a point.", "A shrinking Universe would give blueshift."]],
     answer: "A", explanation: "Redshift from almost all galaxies shows they are receding, so the Universe is expanding." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
@@ -396,7 +396,7 @@ concept("phys.space.universe", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: C,
     stem: "What is the cosmic microwave background radiation (CMBR)?",
-    options: [["Microwave radiation reaching us almost equally from every direction, left over from shortly after the Big Bang", "Correct."], ["Radiation from microwave ovens", "No."], ["Radio waves from the Sun", "No."], ["X-rays from black holes", "No."]],
+    options: [["Microwaves from every direction, left over from the early Universe", "Correct."], ["Radiation leaking from microwave ovens and phone masts", "It comes from space, equally from every direction."], ["Radio waves given out by the Sun and all the planets", "It comes from every direction, not from the Sun."], ["X-rays from black holes at the centres of galaxies", "It is microwave radiation from the early Universe."]],
     answer: "A", explanation: "The CMBR is radiation from the early Universe, now detected as microwaves from every direction." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
@@ -412,7 +412,7 @@ concept("phys.space.universe", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: C,
     stem: "How can astronomers find the distance to a very distant galaxy?",
-    options: [["From the observed brightness of a supernova in it", "Correct."], ["By timing radar echoes from it", "Far too distant."], ["By measuring its temperature", "No."], ["By counting its stars", "No."]],
+    options: [["From the brightness of a supernova seen in it", "Correct."], ["By timing radar echoes bounced back from it", "Far too distant."], ["By measuring the temperature of its stars", "Temperature does not give distance."], ["By counting the stars that can be seen in it", "Star counts do not give distance."]],
     answer: "A", explanation: "Supernovae of a particular type have the same peak brightness, so how bright one looks tells us how far away it is." });
 
   q.num({ d: 3, skill: "APPLICATION", applies: C,

@@ -10,17 +10,17 @@ concept("phys.electronics.thermionic-emission", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What is thermionic emission?",
-    options: [["The release of electrons from the surface of a heated metal", "Correct."], ["The release of light from a hot metal", "That is incandescence."], ["The release of heat by moving electrons", "No."], ["The release of positive ions from a gas", "No."]],
+    options: [["The release of electrons from a heated metal surface", "Correct."], ["The release of light from a very hot metal", "That is incandescence."], ["The release of heat by electrons moving in a wire", "That is heating by a current, not emission."], ["The release of positive ions from a heated gas", "Thermionic emission releases electrons, not ions."]],
     answer: "A", explanation: "When a metal is heated strongly, some free electrons gain enough energy to escape from its surface." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why must a cathode-ray tube contain a vacuum?",
-    options: [["So the electrons do not collide with gas molecules and lose energy or scatter", "Correct."], ["To keep the filament cool", "The filament must be hot."], ["To make the screen glow", "The screen glows where electrons hit it."], ["To give the electrons their negative charge", "Electrons are always negative."]],
+    options: [["So electrons do not hit gas molecules and scatter or slow down", "Correct."], ["To keep the filament cool so it lasts much longer", "The filament must be hot."], ["To make the fluorescent screen glow more brightly", "The screen glows where electrons hit it."], ["To give the electrons their negative charge as they leave", "Electrons are always negative."]],
     answer: "A", explanation: "Gas molecules would stop and scatter the electrons, so the tube is evacuated." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "What is the job of the anode in an electron gun?",
-    options: [["To attract and accelerate the electrons, which pass through a hole in it as a beam", "Correct."], ["To emit the electrons", "The hot cathode emits them."], ["To heat the filament", "A separate low-voltage supply does that."], ["To deflect the beam sideways", "Deflecting plates or coils do that."]],
+    options: [["To attract and speed up electrons, which pass through as a beam", "Correct."], ["To emit the electrons that go on to form the beam", "The hot cathode emits them."], ["To heat the cathode filament up to a high temperature", "A separate low-voltage supply does that."], ["To deflect the beam sideways and up and down on the screen", "Deflecting plates or coils do that."]],
     answer: "A", explanation: "The anode is held at a high positive p.d.; it accelerates the electrons, and its central hole lets a narrow beam through." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", applies: Z, daily: true,
@@ -41,7 +41,7 @@ concept("phys.electronics.thermionic-emission", {
 
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What makes the spot on the screen of a cathode-ray oscilloscope visible?",
-    options: [["The fluorescent coating on the screen glows where the electrons strike it.", "Correct."], ["The electrons themselves are hot and glow.", "No."], ["The vacuum glows.", "A vacuum cannot glow."], ["The deflecting plates give out light.", "No."]],
+    options: [["The screen's fluorescent coating glows where electrons hit it.", "Correct."], ["The electrons themselves are hot and glow as they fly.", "Electrons are not seen; the coating glows."], ["The vacuum inside the tube glows faintly.", "A vacuum cannot glow."], ["The deflecting plates give out light as they charge.", "The plates steer the beam; they do not glow."]],
     answer: "A", explanation: "A fluorescent material on the inside of the screen gives out light where the beam hits it." });
 
   q.num({ d: 3, skill: "APPLICATION", applies: Z,
@@ -63,7 +63,7 @@ concept("phys.electronics.thermionic-emission", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "A steady d.c. p.d. is connected to the Y-input of a CRO with the time-base switched on. What is seen on the screen?",
-    options: [["A horizontal line moved up or down from the centre", "Correct."], ["A wave", "A wave needs a changing p.d."], ["A vertical line", "That is an a.c. input with the time-base off."], ["Nothing at all", "The spot is still visible."]],
+    options: [["A horizontal line moved up or down from the centre", "Correct."], ["A wave moving across the screen", "A wave needs a changing p.d."], ["A vertical line through the centre", "That is an a.c. input with the time-base off."], ["Nothing at all, as d.c. cannot be shown", "The spot is still visible."]],
     answer: "A", explanation: "The steady p.d. shifts the spot a fixed distance up (or down) while the time-base sweeps it across, drawing a horizontal line.",
     hints: ["The p.d. does not change, but the spot still moves across the screen."] });
 
@@ -122,7 +122,7 @@ concept("phys.electronics.diodes", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why might a diode be connected in series with the battery connection of a radio?",
-    options: [["To stop current flowing if the batteries are put in the wrong way round, protecting the circuit", "Correct."], ["To increase the battery voltage", "A diode does not increase voltage."], ["To smooth the current", "That is a capacitor's job."], ["To store charge", "No."]],
+    options: [["To block current if the batteries are put in the wrong way round", "Correct."], ["To increase the voltage that the batteries supply to the radio", "A diode does not increase voltage."], ["To smooth out the changes in the current from the batteries", "That is a capacitor's job."], ["To store charge for when the batteries begin to run low", "A diode does not store charge."]],
     answer: "A", explanation: "A series diode only conducts when the batteries are the right way round, so reversed batteries cannot damage the circuit." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
@@ -144,7 +144,7 @@ concept("phys.electronics.diodes", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "Which description fits the current–voltage graph of a diode?",
-    options: [["Almost no current for reverse and small forward p.d.s, then current rising steeply above about 0.7 V", "Correct."], ["A straight line through the origin", "That is a fixed resistor."], ["A curve that flattens at higher p.d.s in both directions", "That is a filament lamp."], ["Equal currents for equal forward and reverse p.d.s", "A diode conducts one way."]],
+    options: [["No current in reverse; current rises steeply above about 0.7 V forward", "Correct."], ["A straight line through the origin in both directions", "That is a fixed resistor."], ["A curve that flattens at higher p.d.s in both directions", "That is a filament lamp."], ["Equal currents for equal forward and reverse p.d.s", "A diode conducts one way."]],
     answer: "A", explanation: "A diode blocks reverse current and conducts strongly once the forward p.d. passes about 0.6–0.7 V.",
     hints: ["What happens for negative p.d.s?"] });
 
@@ -163,9 +163,9 @@ concept("phys.electronics.diodes", {
     parts: [
       P.num({ label: "(a)", marks: 2, stem: "Calculate the resistance needed.", value: 120, unit: "Ω", wrong: [200, 80],
         explanation: t`The resistor takes $5.0 - 2.0 = 3.0\ \text{V}$; $R = \dfrac{3.0}{0.025} = 120\ \Omega$.` }),
-      P.mcq({ label: "(b)", stem: "How must the LED be connected?", options: [["With its anode (the triangle side of the symbol) towards the positive terminal", "Correct: forward biased."], ["With its cathode towards the positive terminal", "That is reverse bias: it would not light."], ["Either way round", "It conducts in one direction only."], ["In parallel with the resistor", "It must be in series."]], answer: "A",
+      P.mcq({ label: "(b)", stem: "How must the LED be connected?", options: [["With its anode (triangle side) towards the positive terminal", "Correct: forward biased."], ["With its cathode (bar side) towards the positive terminal", "That is reverse bias: it would not light."], ["Either way round, as LEDs conduct both ways", "It conducts in one direction only."], ["In parallel with the resistor, not in series", "It must be in series."]], answer: "A",
         explanation: "The LED must be forward biased to conduct and light." }),
-      P.mcq({ label: "(c)", stem: "What would probably happen if the resistor were left out?", options: [["The current would be too large and could destroy the LED.", "Correct."], ["The LED would be dimmer.", "It would be brighter, then fail."], ["Nothing would change.", "The resistor limits the current."], ["The LED would flash.", "No."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "What would probably happen if the resistor were left out?", options: [["The current would be too large and could destroy the LED.", "Correct."], ["The LED would be dimmer, with less current.", "It would be brighter, then fail."], ["Nothing would change, as the LED sets the current.", "The resistor limits the current."], ["The LED would flash on and off rapidly.", "Without the resistor the current is too large, not pulsing."]], answer: "A",
         explanation: "Without a resistor nothing limits the current through the LED." }),
     ],
     explanation: "The resistor takes the supply p.d. minus the LED's p.d.; the LED must be forward biased and current-limited.",
@@ -202,12 +202,12 @@ concept("phys.electronics.rectification", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z, daily: true,
     stem: "What does the output of a half-wave rectifier look like on a voltage–time graph?",
-    options: [["Humps in one direction with gaps between them", "Correct."], ["Continuous humps with no gaps", "That is full-wave."], ["A steady horizontal line", "That needs smoothing."], ["A wave above and below the axis", "That is unrectified a.c."]],
+    options: [["Humps in one direction with gaps between them", "Correct."], ["Continuous humps in one direction with no gaps", "That is full-wave."], ["A steady horizontal line above the axis", "That needs smoothing."], ["A wave above and below the time axis", "That is unrectified a.c."]],
     answer: "A", explanation: "Only the positive half-cycles pass, so the output is humps separated by flat gaps." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "What does the unsmoothed output of a full-wave bridge rectifier look like?",
-    options: [["Continuous humps in one direction with no gaps", "Correct."], ["Humps with gaps between them", "That is half-wave."], ["A wave above and below the axis", "That is a.c."], ["A steady line", "It still rises and falls."]],
+    options: [["Continuous humps in one direction with no gaps", "Correct."], ["Humps in one direction with gaps between them", "That is half-wave."], ["A wave going above and below the axis", "That is a.c."], ["A steady line, like a battery's output", "It still rises and falls."]],
     answer: "A", explanation: "Both half-cycles pass through the load in the same direction, giving continuous humps." });
 
   q.num({ d: 3, skill: "ANALYSIS", applies: Z,
@@ -229,7 +229,7 @@ concept("phys.electronics.rectification", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Why does a capacitor across the load reduce the ripple in a rectified output?",
-    options: [["It charges up at each peak and discharges slowly through the load between peaks.", "Correct."], ["It blocks all the d.c.", "It is in parallel with the load."], ["It turns the humps back into a.c.", "No."], ["It increases the peak voltage.", "No."]],
+    options: [["It charges at each peak and discharges slowly between peaks.", "Correct."], ["It blocks all the d.c. from reaching the load.", "It is in parallel with the load."], ["It turns the humps back into a smooth a.c. wave.", "It smooths the d.c.; it does not make a.c."], ["It increases the peak voltage of each hump.", "It does not raise the peaks; it fills the gaps."]],
     answer: "A", explanation: "Between peaks the capacitor supplies the load, keeping the voltage up until the next hump recharges it.",
     hints: ["What does a capacitor store?"] });
 
@@ -239,7 +239,7 @@ concept("phys.electronics.rectification", {
 
   q.mcq({ d: 3, skill: "EVALUATION", applies: Z,
     stem: "Why is full-wave rectification usually preferred to half-wave rectification?",
-    options: [["It uses both halves of each cycle, giving more power and an output that is easier to smooth.", "Correct."], ["Its output is alternating.", "Its output is d.c."], ["It needs fewer diodes.", "It needs four."], ["It never needs smoothing.", "It still has humps."]],
+    options: [["It uses both halves of each cycle: more power and easier smoothing.", "Correct."], ["Its output is alternating, which most devices need to work.", "Its output is d.c."], ["It needs fewer diodes than a half-wave rectifier circuit does.", "It needs four."], ["It never needs any smoothing capacitor after the bridge.", "It still has humps."]],
     answer: "A", explanation: "Full-wave rectification wastes no half-cycles, and its closer humps are easier to smooth.",
     hints: ["Compare the gaps in the two outputs."] });
 
@@ -251,11 +251,11 @@ concept("phys.electronics.rectification", {
   q.struct({ d: 3, skill: "UNDERSTANDING", applies: Z, examStyle: true,
     stem: "A radio's power supply uses a step-down transformer, a bridge rectifier and a large capacitor.",
     parts: [
-      P.mcq({ label: "(a)", stem: "What does the bridge rectifier do?", options: [["It converts the a.c. from the transformer into d.c.", "Correct."], ["It steps the voltage down.", "The transformer does that."], ["It smooths the output.", "The capacitor does that."], ["It protects against reversed batteries.", "Not its job here."]], answer: "A",
+      P.mcq({ label: "(a)", stem: "What does the bridge rectifier do?", options: [["It converts the transformer's a.c. into d.c.", "Correct."], ["It steps the mains voltage down.", "The transformer does that."], ["It smooths the output into steady d.c.", "The capacitor does that."], ["It protects the radio against reversed batteries.", "Not its job here."]], answer: "A",
         explanation: "The four diodes rectify the a.c." }),
       P.manual({ label: "(b)", marks: 2, stem: "Explain how the bridge sends current through the radio in the same direction in both half-cycles.",
         points: ["In one half-cycle one pair of opposite diodes conducts, sending current through the load one way", "In the next half-cycle the other pair conducts, and the current through the load is again in the same direction"] }),
-      P.mcq({ label: "(c)", stem: "What is the effect of the capacitor?", options: [["It smooths the output into a nearly steady d.c.", "Correct."], ["It doubles the frequency.", "No."], ["It rectifies the a.c.", "No."], ["It changes d.c. back to a.c.", "No."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "What is the effect of the capacitor?", options: [["It smooths the output into nearly steady d.c.", "Correct."], ["It doubles the frequency of the ripple.", "The bridge already gives two humps per cycle; the capacitor smooths them."], ["It rectifies the a.c. a second time.", "The bridge rectifies; the capacitor smooths."], ["It changes the d.c. back into a.c.", "A capacitor across the output smooths the d.c."]], answer: "A",
         explanation: "The capacitor fills in the dips between the humps." }),
     ],
     explanation: "Transformer: lower voltage. Bridge: a.c. to d.c. Capacitor: smoothing.",
@@ -303,7 +303,7 @@ concept("phys.electronics.components", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "What does the tolerance of a resistor tell you?",
-    options: [["The largest percentage by which its actual resistance may differ from the marked value", "Correct."], ["The largest power it can safely transfer", "That is the power rating."], ["The largest current it can carry", "No."], ["The temperature at which it was tested", "No."]],
+    options: [["The % by which its real resistance may differ from its marked value", "Correct."], ["The largest power it can safely transfer as heat in use", "That is the power rating."], ["The largest current it can carry without any damage", "That depends on the power rating, not the tolerance."], ["The temperature at which its marked value was tested", "Tolerance is about accuracy of the value, not test conditions."]],
     answer: "A", explanation: "A ±5% tolerance means the true resistance is within 5% of the marked value." });
 
   q.num({ d: 3, skill: "APPLICATION", applies: Z,
@@ -320,18 +320,18 @@ concept("phys.electronics.components", {
 
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What does a capacitor store?",
-    options: [["Electric charge (and so energy)", "Correct."], ["Current", "Current is a flow, not something stored."], ["Resistance", "No."], ["Magnetism", "No."]],
+    options: [["Electric charge, and so energy", "Correct."], ["Electric current", "Current is a flow, not something stored."], ["Electrical resistance", "Resistance is a property, not something stored."], ["Magnetic energy", "A capacitor stores charge in an electric field; coils store magnetic energy."]],
     answer: "A", explanation: "A capacitor stores charge on its plates, and with it energy." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "In a time-delay circuit, a capacitor charges through a resistor. How can the delay be made longer?",
-    options: [["Use a larger resistor or a larger capacitor.", "Correct."], ["Use a smaller resistor.", "That shortens the delay."], ["Remove the resistor.", "Then it would charge almost instantly."], ["Use a smaller capacitor.", "That shortens the delay."]],
+    options: [["Use a larger resistor or a larger capacitor.", "Correct."], ["Use a smaller resistor in the circuit.", "That shortens the delay."], ["Remove the resistor from the circuit.", "Then it would charge almost instantly."], ["Use a smaller capacitor in the circuit.", "That shortens the delay."]],
     answer: "A", explanation: "A larger resistance slows the charging current, and a larger capacitance needs more charge, so both lengthen the delay.",
     hints: ["What slows down the flow of charge onto the plates?"] });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "What happens to a reed switch when a magnet is brought near it?",
-    options: [["The reeds are magnetised, attract each other and touch, closing the circuit.", "Correct."], ["The reeds melt together.", "No."], ["The glass tube cracks.", "No."], ["Nothing: reed switches respond to light.", "They respond to magnetic fields."]],
+    options: [["The reeds become magnetised and touch, closing the circuit.", "Correct."], ["The reeds heat up and melt together at the tips.", "A magnet does not heat the reeds."], ["The glass tube is pulled sharply towards the magnet.", "Glass is not magnetic; the iron reeds respond."], ["Nothing: reed switches respond only to light.", "They respond to magnetic fields."]],
     answer: "A", explanation: "The magnet magnetises the reeds, which attract and make contact." });
 
   q.mcq({ d: 2, skill: "APPLICATION", applies: Z,

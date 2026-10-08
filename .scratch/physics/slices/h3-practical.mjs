@@ -13,12 +13,12 @@ concept("phys.practical.experimental-skills", {
 
   q.mcq({ d: 1, skill: "RECALL",
     stem: "In an experiment, what is the dependent variable?",
-    options: [["The quantity measured, which changes as a result of the change you make", "Correct."], ["The quantity you choose to change", "That is the independent variable."], ["A quantity kept constant", "That is a control variable."], ["The apparatus used", "No."]],
+    options: [["What you measure, which changes because of what you change", "Correct."], ["The quantity you choose to change step by step", "That is the independent variable."], ["A quantity kept constant throughout the test", "That is a control variable."], ["The apparatus used to take the measurements", "Variables are quantities, not equipment."]],
     answer: "A", explanation: "The dependent variable is measured; it depends on the independent variable." });
 
   q.mcq({ d: 2, skill: "APPLICATION", daily: true,
     stem: "A learner investigates how the length of a wire affects its resistance. Which is a control variable?",
-    options: [["The material and thickness of the wire", "Correct."], ["The length of the wire", "That is the independent variable."], ["The resistance of the wire", "That is the dependent variable."], ["The reading on the ammeter", "That is a measurement used to find the resistance."]],
+    options: [["The material and thickness of the wire", "Correct."], ["The length of the wire being tested", "That is the independent variable."], ["The resistance of the wire being tested", "That is the dependent variable."], ["The reading on the ammeter", "That is a measurement used to find the resistance."]],
     answer: "A", explanation: "Material and thickness also affect resistance, so they must be kept the same for a fair test." });
 
   q.mcq({ d: 2, skill: "APPLICATION",
@@ -38,7 +38,7 @@ concept("phys.practical.experimental-skills", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why is it better to time 25 oscillations of a pendulum and divide by 25 than to time a single oscillation?",
-    options: [["The error from human reaction time is shared over many oscillations, so the period is more accurate.", "Correct."], ["The pendulum swings faster after many oscillations.", "The period stays the same."], ["A stopwatch cannot measure short times.", "It can, but reaction time makes short times inaccurate."], ["It removes the need to repeat the experiment.", "Repeats are still useful."]],
+    options: [["The reaction-time error is spread over 25 swings.", "Correct."], ["The pendulum swings faster after many oscillations.", "The period stays the same."], ["A stopwatch cannot measure times shorter than 2 s.", "It can, but reaction time makes short times inaccurate."], ["It removes any need to repeat the experiment.", "Repeats are still useful."]],
     answer: "A", explanation: "A reaction-time error of about 0.2 s is a large fraction of one swing but a small fraction of 25." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
@@ -48,7 +48,7 @@ concept("phys.practical.experimental-skills", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "How should a learner deal with an anomalous result?",
-    options: [["Check it and repeat the measurement; leave it out of any mean if it is a mistake.", "Correct."], ["Always include it in the mean.", "A mistaken value would make the mean wrong."], ["Change it so that it fits the pattern.", "Results must never be altered."], ["Throw away all the results and start again.", "Only the anomaly needs repeating."]],
+    options: [["Repeat it, and leave it out of the mean if it is a mistake.", "Correct."], ["Always include it in the mean with the others.", "A mistaken value would make the mean wrong."], ["Change it so that it fits the pattern of the others.", "Results must never be altered."], ["Throw away all the results and start the experiment again.", "Only the anomaly needs repeating."]],
     answer: "A", explanation: "Anomalies are identified, checked by repeating, and excluded from averages if they are errors." });
 
   q.num({ d: 3, skill: "APPLICATION",
@@ -87,7 +87,7 @@ concept("phys.practical.experimental-skills", {
         points: ["One control variable: the same spring is used throughout", "A second control variable: for example the same reference point for measuring length, or the same temperature"] }),
       P.num({ label: "(c)", marks: 2, stem: "The learner's graph of load (y-axis, in N) against extension (x-axis, in m) is a straight line through the origin and the point (0.15 m, 9.0 N). Calculate the spring constant.", value: 60, unit: "N/m", wrong: [0.017, 1.35],
         explanation: t`Gradient $= \dfrac{9.0}{0.15} = 60\ \text{N/m}$, which is the spring constant.` }),
-      P.mcq({ label: "(d)", stem: "Which is a sensible safety precaution?", options: [["Wear eye protection and put a tray or soft mat under the hanging loads", "Correct."], ["Stand on a chair to read the scale", "That is unsafe."], ["Add all the loads at once to save time", "This could overload the spring."], ["Use as large a load as possible", "This could break the spring."]], answer: "A",
+      P.mcq({ label: "(d)", stem: "Which is a sensible safety precaution?", options: [["Wear eye protection and put a soft mat under the loads", "Correct."], ["Stand on a chair to read the top of the scale", "That is unsafe."], ["Add all the loads at once to save time", "This could overload the spring."], ["Use as large a load as possible each time", "This could break the spring."]], answer: "A",
         explanation: "A stretched spring can snap back, and falling masses can injure feet." }),
     ],
     explanation: "Change the load, measure the extension, keep the spring and method the same; the gradient of load against extension is the spring constant.",

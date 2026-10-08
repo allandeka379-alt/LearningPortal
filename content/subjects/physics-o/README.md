@@ -236,12 +236,16 @@ every rule has enough candidates after the earlier rules have taken theirs (the 
 - **Lessons are shorter than in the other families** (median about 710 words against about 1,200 in biology), though
   each covers its syllabus statements with definitions, worked examples, mistakes and tips.
 
-- **Answer positions fixed, length cue remains (2026-10-08).** The key was almost always option A, and the player shows
-  options in stored order. `.scratch/physics/build-content.mjs` now balances key positions before writing (469 keys
-  moved; four-option keys A 167, B 169, C 169, D 168), and text fill-in blanks ignore punctuation (7 files changed).
-  The DEV database has the old order until the family is re-imported and published. Still open: in 243 of the 589
-  single-answer MCQs the key is at least 1.3 times and 12 characters longer than every distractor, so a student can
-  often guess by length; many rationales are only "Correct." Both need an editing pass of the slices.
+- **Answer cues fixed (2026-10-08).** The key was almost always option A, and the player shows options in stored
+  order. `.scratch/physics/build-content.mjs` now balances key positions before writing (four-option keys A 167,
+  B 169, C 169, D 168), and text fill-in blanks ignore punctuation. In 275 single-answer MCQs and MCQ parts the key
+  was at least 1.3 times and 12 characters longer than every distractor; all were rewritten in the slices (shorter
+  keys, plausible distractors of similar length, explanations instead of bare "No." rationales), and
+  `forces.cog.q09` was corrected (a completely full bottle does not have a lower centre of gravity than an empty one).
+  A milder cue remains: the key is still the single longest option (by any margin) in 296 of 589 single-answer
+  MCQs (50 %, against about 25 % by chance), so a pass that makes one distractor per item the longest would help.
+  Many correct options still carry the rationale "Correct." (the explanation gives the reason). The DEV database
+  has the old versions until the family is re-imported and published.
 
 ## Needs a specialist teacher's check
 
