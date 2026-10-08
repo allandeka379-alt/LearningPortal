@@ -193,6 +193,9 @@ export const P = {
         const o = { id: b.id, accepted: b.accepted.map(String) };
         if (b.tolerance !== undefined) o.tolerance = b.tolerance;
         if (b.marks !== undefined) o.marks = b.marks;
+        // Text blanks ignore punctuation ("Decoding." = "decoding"), unless the blank sets its own flags.
+        if (b.normalise) o.normalise = b.normalise;
+        else if ((!b.input || b.input === "text") && !b.choices) o.normalise = ["strip_punctuation"];
         return o;
       }),
     };

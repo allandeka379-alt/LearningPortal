@@ -248,3 +248,254 @@ concept("cs.physics.solar-heating", {
   q.card("FACT", "Which way do solar collectors face in Zimbabwe?", "North, because south of the equator the midday Sun is in the northern sky for most of the year.");
   q.card("CONCEPT", "Advantages and disadvantages of solar cookers", "For: free renewable energy, no smoke, less firewood (deforestation), lower fire risk. Against: no use at night or in cloud, slow, must face the Sun.");
 });
+
+// =====================================================================================================================
+const COMM = O("7.3.4.6.1");
+const MEDIA = O("7.3.4.6.2");
+const PHONE = O("7.3.4.6.3");
+
+concept("cs.physics.telecommunication", {
+  file: "physics/telecommunication",
+  keyPrefix: "physics.telecom",
+}, (q) => {
+  q.mcq({ d: 1, skill: "RECALL", objectives: PHONE,
+    stem: "Which part of a cell phone changes the sound of your voice into an electrical signal?",
+    options: [
+      ["The microphone", "Sound waves make it vibrate, producing a varying electric current."],
+      ["The loudspeaker", "The loudspeaker does the reverse: electrical signal to sound."],
+      ["The aerial", "The aerial sends and receives radio waves."],
+      ["The battery", "The battery supplies electrical energy from chemical energy."],
+    ],
+    answer: "A", explanation: "The microphone changes sound energy into electrical energy: the varying current copies the pattern of the sound waves." });
+
+  q.mcq({ d: 1, skill: "RECALL", objectives: PHONE,
+    stem: "What is a cell phone base station?",
+    options: [
+      ["A mast with aerials that exchanges radio signals with the phones in its area", "Each base station serves one area, called a cell."],
+      ["A shop where phones are repaired and their batteries are charged", "That is a service point, not part of the network."],
+      ["A satellite in orbit that sends calls directly from phone to phone", "Ordinary cell phones talk to masts on the ground."],
+      ["A small box inside the phone that stores contacts and messages", "That is the phone's memory or SIM card."],
+    ],
+    answer: "A", explanation: "Base stations are the masts on hills and buildings. Each one sends and receives the radio signals of the phones in its cell and connects them to the rest of the network." });
+
+  q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true, objectives: PHONE,
+    stem: "What kind of waves carry the signal between a cell phone and the nearest mast?",
+    options: [
+      ["Radio waves (microwaves)", "They are electromagnetic waves that travel through air at the speed of light."],
+      ["Sound waves", "Sound is too slow and fades within a short distance; it stops at the microphone."],
+      ["Visible light", "Light would be blocked by walls, trees and pockets."],
+      ["Ultrasound", "Ultrasound is sound above the range of hearing; it does not carry phone calls."],
+    ],
+    answer: "A", explanation: "Phones and base stations communicate with radio waves in the microwave range. They are electromagnetic, need no medium and travel at about 300 000 km/s." });
+
+  q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: PHONE,
+    stem: "Which energy change takes place in the loudspeaker (earpiece) of a phone?",
+    options: [
+      ["Electrical energy to sound energy", "The current makes the speaker cone vibrate, producing sound."],
+      ["Sound energy to electrical energy", "That is the microphone."],
+      ["Chemical energy to electrical energy", "That is the battery."],
+      ["Electrical energy to radio-wave energy", "That is the aerial of the sending phone."],
+    ],
+    answer: "A", explanation: "The varying current from the phone's circuits makes the loudspeaker vibrate, so electrical energy becomes sound (the kinetic energy of vibrating air), with some wasted as heat." });
+
+  q.match({ d: 2, skill: "UNDERSTANDING", objectives: PHONE,
+    stem: "Match each part of a cell phone system to the main energy change that takes place in it.",
+    pairs: [
+      ["Battery", "Chemical to electrical"],
+      ["Microphone", "Sound to electrical"],
+      ["Aerial of the sending phone", "Electrical to electromagnetic (radio waves)"],
+      ["Loudspeaker", "Electrical to sound"],
+    ],
+    explanation: "The battery supplies electrical energy; the microphone and loudspeaker convert between sound and electrical energy; the sending aerial turns electrical signals into radio waves." });
+
+  q.tf({ d: 1, skill: "RECALL", objectives: COMM,
+    stem: "True or false: the person receiving an email must be online at the moment it is sent, or the email is lost.",
+    answer: false,
+    feedbackFalse: "Correct. The email waits on the receiver's mail server until it is downloaded.",
+    feedbackTrue: "Not so. The email is stored in the receiver's inbox on a mail server until they read it.",
+    explanation: "Email is stored on a mail server, so the receiver can read it hours or days later. A phone call, by contrast, needs both people to be connected at the same time." });
+
+  q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: COMM,
+    stem: "Where is an email kept between being sent and being read?",
+    options: [
+      ["On the receiver's mail server, in their inbox", "The server stores it until the receiver's device downloads it."],
+      ["In the sender's outbox, until the receiver switches on", "Once sent, the email leaves the sender's device."],
+      ["In the base station nearest to the receiver", "Base stations pass signals on; they do not store email."],
+      ["Inside the router in the sender's home or school", "A router forwards data onwards; it does not keep messages."],
+    ],
+    answer: "A", explanation: "An email travels through the internet to the receiver's mail server and waits in their inbox. When the receiver opens their email, the device downloads and decodes it." });
+
+  q.mcq({ d: 2, skill: "ANALYSIS", objectives: COMM,
+    stem: "Which is an advantage of sending a message by email rather than making a phone call?",
+    options: [
+      ["It gives a written record and can carry documents as attachments.", "Text and files arrive exactly as sent and can be kept."],
+      ["It can be sent and received without any internet connection.", "Email needs an internet connection at both ends."],
+      ["It always reaches the other person faster than speaking to them.", "A call is instant; an email waits until it is read."],
+      ["It needs no phone or computer at the receiving end.", "The receiver needs a device to download and read it."],
+    ],
+    answer: "A", explanation: "Email keeps a written record, can be sent to many people at once and can carry attachments such as forms and photos. It needs an internet connection and may not be read at once." });
+
+  q.fib({ d: 2, skill: "RECALL", objectives: PHONE,
+    stem: "Complete the sentence.",
+    template: "Changing a message into a code of 0s and 1s before it is sent is called {{blank:a}}; changing the code back into the message at the receiver is called {{blank:b}}.",
+    blanks: [
+      { id: "a", accepted: ["encoding", "coding", "digitising", "digitizing"], wrong: "decoding" },
+      { id: "b", accepted: ["decoding"], wrong: "encoding" },
+    ],
+    explanation: "The transmitter encodes the message into a digital signal; the receiver decodes it back into sound, text or pictures." });
+
+  q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: MEDIA,
+    stem: "How does a signal travel along an optical fibre?",
+    options: [
+      ["As pulses of light kept in the core by total internal reflection", "The light reflects off the boundary with the cladding again and again."],
+      ["As an electric current flowing through the glass core", "Glass is an insulator; it cannot carry a current."],
+      ["As radio waves travelling along the plastic outer coat", "The coat only protects the fibre."],
+      ["As sound waves vibrating along the length of the glass", "Sound would be far too slow and would fade quickly."],
+    ],
+    answer: "A", explanation: "An optical fibre carries pulses of light (often infrared). The light hits the core–cladding boundary at large angles and is totally internally reflected, so it stays in the core." });
+
+  q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true, objectives: MEDIA,
+    stem: "Why are the copper wires in a twisted-pair cable twisted around each other?",
+    options: [
+      ["To reduce interference from other cables and electrical equipment", "Twisting makes picked-up disturbances cancel out."],
+      ["To make the cable stronger so that it does not snap", "Strength comes from the sheath; the twist is for the signal."],
+      ["To let pulses of light travel along the wires", "Copper carries electrical signals, not light."],
+      ["To make the electric current flow faster along the cable", "Twisting does not speed up the signal."],
+    ],
+    answer: "A", explanation: "Twisting the pair means that any interference affects both wires almost equally, so its effect largely cancels. This keeps the signal cleaner." });
+
+  q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: MEDIA,
+    stem: "A coaxial cable has a woven metal layer (the screen) around the insulated central wire. What does the screen do?",
+    options: [
+      ["It shields the signal in the central wire from electrical interference.", "The earthed screen keeps outside disturbances away from the signal."],
+      ["It carries the light pulses that hold the information.", "Coaxial cables carry electrical signals, not light."],
+      ["It insulates the cable so that it does not overheat.", "The plastic layers insulate; the screen is metal."],
+      ["It makes the cable waterproof when buried underground.", "The outer plastic sheath keeps water out."],
+    ],
+    answer: "A", explanation: "The signal travels along the central copper wire. The surrounding metal screen blocks electrical interference, so coaxial cable is well shielded (used for TV aerials and satellite dishes)." });
+
+  q.mcq({ d: 3, skill: "APPLICATION", objectives: MEDIA,
+    stem: "A family wants to connect three phones and a laptop in their house to the internet, without drilling holes in the walls for cables. Which medium is most suitable inside the house?",
+    options: [
+      ["Wi-Fi radio waves from a wireless router", "No cables are needed and the devices can move from room to room."],
+      ["Coaxial cable to each device", "Each device would need its own cable through the walls."],
+      ["Optical fibre to each device", "Fibre is expensive and needs cables and special connectors."],
+      ["Twisted-pair cable to each device", "This still needs a cable run to every device."],
+    ],
+    answer: "A", explanation: "Wi-Fi uses radio waves through the air, so no cables are needed, several devices can connect, and people can move about. Its short range is enough inside a house.",
+    hints: ["Which medium needs no cable at all?"] });
+
+  q.mcq({ d: 3, skill: "UNDERSTANDING", multiple: true, objectives: MEDIA,
+    stem: "Which media carry the signal as an electrical current? Select **all** that apply.",
+    options: [
+      ["Twisted-pair cable", "The signal travels as electricity along copper wires."],
+      ["Coaxial cable", "The signal travels as electricity along the central copper wire."],
+      ["Optical fibre", "This carries pulses of light."],
+      ["Wi-Fi", "This uses radio waves through the air."],
+      ["A microwave link between two masts", "This uses microwaves (radio) through the air."],
+    ],
+    answer: ["A", "B"], explanation: "Copper cables (twisted pair and coaxial) carry electrical signals. Optical fibres carry light, and Wi-Fi and microwave links carry electromagnetic waves through the air.",
+    hints: ["Which media contain copper?"] });
+
+  q.tf({ d: 2, skill: "UNDERSTANDING", objectives: MEDIA,
+    stem: "True or false: Wi-Fi signals pass through thick brick walls without becoming any weaker.",
+    answer: false,
+    feedbackFalse: "Correct. Walls absorb and reflect some of the radio waves, so the signal weakens.",
+    feedbackTrue: "Not so. Thick walls weaken Wi-Fi signals, which is one reason for its short range.",
+    explanation: "Wi-Fi radio waves are partly absorbed and reflected by walls, so the signal becomes weaker. Its range is only tens of metres." });
+
+  q.mcq({ d: 3, skill: "UNDERSTANDING", objectives: PHONE,
+    stem: "A passenger makes a call on a bus travelling from Harare to Marondera. Why does the call not cut off as the bus leaves the area served by the first mast?",
+    options: [
+      ["The network hands the call over to the next base station.", "Each base station serves one cell; the call is passed from cell to cell."],
+      ["The phone sends its signal straight to the switching centre.", "A phone's signal only reaches nearby masts."],
+      ["The phone switches over to the bus's Wi-Fi automatically.", "Most buses have no Wi-Fi, and calls are carried by the cell network."],
+      ["The first mast's radio waves follow the bus along the road.", "Each mast covers a limited area; its waves do not follow anyone."],
+    ],
+    answer: "A", explanation: "As the phone moves out of one cell and into the next, the network hands the call over to the new base station without breaking the connection.",
+    hints: ["Why are they called cell phones?"] });
+
+  q.mcq({ d: 3, skill: "UNDERSTANDING", objectives: PHONE,
+    stem: "Why do modern phone networks send voice and data as digital signals?",
+    options: [
+      ["Only 0s and 1s must be told apart, so noise can be removed.", "The original code can be recovered and re-sent cleanly."],
+      ["Digital signals travel faster than any other kind of signal.", "All radio signals travel at the speed of light."],
+      ["Digital signals never become weaker as they travel.", "They do weaken, but they can be regenerated."],
+      ["Digital signals do not need any medium or aerial at all.", "They still need aerials and a medium such as air or cable."],
+    ],
+    answer: "A", explanation: "A digital signal has only two values. Even after it has weakened and picked up noise, the receiver can tell 0 from 1, so repeaters and base stations can rebuild a clean copy.",
+    hints: ["What does a receiver have to decide for each part of a digital signal?"] });
+
+  q.short({ d: 1, skill: "RECALL", objectives: MEDIA,
+    stem: "Name the process that keeps light inside the core of an optical fibre.",
+    accepted: ["total internal reflection", "TIR", "total reflection", "internal reflection"],
+    wrong: ["refraction", "diffraction"],
+    explanation: "Light meets the boundary between the core and the cladding at a large angle and is totally internally reflected, so it zig-zags along the core." });
+
+  q.mcq({ d: 2, skill: "UNDERSTANDING", objectives: MEDIA,
+    stem: "Which is a disadvantage of optical fibre compared with copper cable?",
+    options: [
+      ["It costs more, and joining fibres needs special skill.", "Fibre and its connecting equipment are expensive."],
+      ["It is heavier and thicker for the same amount of data.", "Fibres are thin and light."],
+      ["It picks up interference from nearby power lines.", "Light signals are not affected by electrical interference."],
+      ["It carries much less information than a copper cable.", "Fibre carries far more information than copper."],
+    ],
+    answer: "A", explanation: "Optical fibre carries more information with less loss and no electrical interference, but it is expensive, the glass is fragile, and fibres must be joined with special equipment." });
+
+  q.struct({ d: 3, skill: "APPLICATION", examStyle: true, objectives: PHONE,
+    stem: "A farmer in Murehwa uses a cell phone to call a cattle buyer in Bulawayo.",
+    parts: [
+      P.short({ label: "(a)", marks: 1, stem: "Name the part of the farmer's phone that changes his voice into an electrical signal.",
+        accepted: ["microphone", "mic", "the microphone", "mouthpiece"], wrong: ["loudspeaker"] }),
+      P.short({ label: "(b)", marks: 1, stem: "Name the type of wave that carries the signal from the farmer's phone to the nearest mast.",
+        accepted: ["radio waves", "radio", "radio wave", "microwaves", "microwave", "electromagnetic waves", "electromagnetic waves (radio)"],
+        keywords: { any: ["radio*", "microwave*"] },
+        wrong: ["sound waves"] }),
+      P.manual({ label: "(c)", marks: 3, stem: "Describe how the signal reaches the buyer's phone after it arrives at the base station near Murehwa.",
+        points: ["The base station passes the signal into the network / to a switching centre", "It is carried through cables, optical fibres or microwave links to a base station near Bulawayo (the network finds where the buyer's phone is)", "That base station sends it as radio waves to the buyer's phone, whose aerial picks it up and decodes it"] }),
+      P.manual({ label: "(d)", marks: 1, stem: "State the energy change in the loudspeaker of the buyer's phone.",
+        points: ["Electrical energy to sound energy"] }),
+    ],
+    explanation: "Microphone (sound → electrical) and encoding; radio waves to the mast; the network routes the call through cables, fibres or microwave links to a mast near the receiver; radio waves to the receiving phone, decoding, and the loudspeaker (electrical → sound).",
+    hints: ["Follow the call in order: phone, mast, network, mast, phone."] });
+
+  q.struct({ d: 4, skill: "EVALUATION", examStyle: true, objectives: MEDIA,
+    stem: "A secondary school is improving its connections. Classrooms will use Wi-Fi, and the school will be joined to the district office 25 km away by an optical fibre cable.",
+    parts: [
+      P.manual({ label: "(a)", marks: 1, stem: "State one advantage of using Wi-Fi in the classrooms.",
+        points: ["No cables needed / learners' devices can move around / many devices can connect easily"] }),
+      P.manual({ label: "(b)", marks: 1, stem: "State one disadvantage of Wi-Fi in a school building.",
+        points: ["Short range / weakened by thick walls / interference / needs a password to keep it secure"] }),
+      P.manual({ label: "(c)", marks: 2, stem: "Describe how the signal travels along the optical fibre.",
+        points: ["As pulses of light (or infrared) in the glass core", "kept in the core by total internal reflection at the boundary with the cladding"] }),
+      P.manual({ label: "(d)", marks: 2, stem: "Give two reasons why optical fibre is a better choice than coaxial cable for the link to the district office.",
+        points: ["Carries much more information (data) at a time", "Less signal loss over long distances / not affected by electrical interference / harder to tap / thinner and lighter"] }),
+    ],
+    explanation: "Wi-Fi needs no cables but has a short range; optical fibre carries light by total internal reflection and offers high capacity, low loss and no electrical interference over long distances.",
+    hints: ["For (d), think about distance and the amount of data."] });
+
+  q.ext({ d: 4, skill: "EVALUATION", examStyle: true, objectives: COMM, marks: 6,
+    stem: "A learner in Gweru emails a photo of her science project to her teacher in Kwekwe. Describe how the email travels from the learner's phone to the teacher's laptop, and give two ways in which sending it by email differs from describing the project in a phone call. [6]",
+    points: [
+      "The phone encodes the message and photo as digital data (0s and 1s)",
+      "The data are sent from the phone (by radio to a mast or by Wi-Fi to a router) into the internet",
+      "They travel through cables, optical fibres and radio links to the mail server(s)",
+      "The email is stored in the teacher's inbox on the mail server until the teacher downloads it and the laptop decodes it",
+      "Email: the teacher need not be online at the same time / can read it later, whereas a call needs both people at once",
+      "Email: carries the photo exactly and keeps a written record, whereas a call carries only speech and leaves no record",
+    ],
+    modelAnswer: "The learner's phone encodes the message and the photo as digital data, a stream of 0s and 1s. The phone sends the data by radio waves to the nearest mast (or by Wi-Fi to a router), and they travel through the internet's cables, optical fibres and radio links to the mail server. The email is stored in the teacher's inbox on the server. When the teacher opens his email, the laptop downloads the message and decodes it into text and the picture. Unlike a phone call, the teacher does not have to be available when the email is sent: it waits on the server. The email also carries the actual photo and keeps a written record that can be read again, whereas a call carries only speech at that moment.",
+    explanation: "Encode → send by radio or Wi-Fi → internet links → mail server inbox → download and decode. Email is store-and-forward and carries files; a call is live speech.",
+    hints: ["Use the parts of a communication system: transmitter, medium, receiver; then compare."] });
+
+  q.card("DEFINITION", "Telecommunication", "Communicating over a distance using electrical signals, light or radio waves.");
+  q.card("CONCEPT", "Parts of a communication system", "Source → transmitter (encoder) → medium → receiver (decoder) → destination.");
+  q.card("CONCEPT", "Cell phone call in order", "Microphone (sound → electrical) → encoded as digital → aerial sends radio waves → base station → network → base station → receiving aerial → decoded → loudspeaker (electrical → sound).");
+  q.card("FACT", "Energy conversions in a phone", "Battery: chemical → electrical. Microphone: sound → electrical. Sending aerial: electrical → radio waves. Receiving aerial: radio waves → electrical. Loudspeaker: electrical → sound. Screen: electrical → light.");
+  q.card("DEFINITION", "Cell (in a phone network)", "The area served by one base station. As a phone moves, the call is handed over from one base station to the next.");
+  q.card("CONCEPT", "How email travels", "Encoded as digital data → internet (radio, cables, fibres) → mail server → stored in the inbox → downloaded and decoded by the receiver's device.");
+  q.card("CONCEPT", "Why digital signals?", "Only 0 and 1 must be told apart, so noise can be removed and the signal regenerated: clear over long distances.");
+  q.card("FACT", "Twisted pair and coaxial cable", "Both carry electrical signals in copper. Twisting reduces interference (cheap, short distances); coaxial has a metal screen (well shielded, more information).");
+  q.card("FACT", "Optical fibre", "Pulses of light kept in a glass core by total internal reflection. Huge capacity, low loss, no electrical interference, hard to tap; but expensive and fragile.");
+  q.card("FACT", "Wi-Fi", "Radio waves between a wireless router and devices. No cables and devices can move; but short range, weakened by walls, needs a password.");
+});
