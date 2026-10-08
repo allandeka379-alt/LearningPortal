@@ -66,3 +66,25 @@ QUEUE FOR THE OWNER'S PC (needs the DB), in order:
 5. Smoke: npx tsx --conditions=react-server .scratch/physics/smoke.ts ; a Combined Science smoke script is still to be written (model: .scratch/chem-assemble2/smoke.ts).
 
 Next content work (cloud or PC): waveB subjects from .scratch/content-subjects.json, starting with english-language-o. Quality follow-ups: milder length cue (key still the single longest option in 43-50% of science single-answer MCQs); physics-o deepening (exam-style) and independent review.
+
+## NEXT ON THE OWNER'S PC: English Language syllabi (cloud cannot reach the sources, 2026-10-08)
+The cloud container's network policy blocks cambridgeinternational.org, zimsec.co.zw and mopsemashwest.gov.zw (and
+WebFetch cannot resolve any host), so source the syllabi locally, the same way as for the other subjects:
+1. git pull origin main-uma1fn. Download each PDF into .scratch/english/sources/ (NOT in git, copyright) and extract
+   text (pdftotext -layout). Never bypass TLS: if a site's certificate has expired, read it the way the biology /
+   Combined Science copies were read, or find another official copy.
+   - Cambridge IGCSE First Language English 0500, exams 2027-2029 (found by web search):
+     https://www.cambridgeinternational.org/Images/718783-2027-2029-syllabus.pdf
+   - Cambridge IGCSE English as a Second Language 0510, 2027-2029: syllabus link on the 0510 qualification page of
+     cambridgeinternational.org (the related 0511 count-in-speaking notes are at /jp/Images/757618-…-0511.pdf).
+   - ZIMSEC O-Level English Language (code commonly 1122): the provincial site that had the biology and Combined
+     Science copies (https://www.mopsemashwest.gov.zw/files/…) or zimsec.co.zw. Web search found only spam mirrors:
+     do not use them. Note the version/years printed on the document; under the Heritage-Based Curriculum a newer
+     syllabus may apply to November 2026+ candidates.
+2. Build content/syllabi/{zimsec/o-level/english-language,cambridge/igcse/english-language,
+   cambridge/igcse/english-second-language}/<years>.json plus the concept registry, following
+   .scratch/combined-science/build-syllabus.mjs (headings transcribed, objectives paraphrased, OFFICIAL_SYLLABUS source
+   with the URL; docs/CONTENT_PIPELINE.md). Validate: npm run content:validate -- english-language-o --strict.
+3. Commit and push the syllabus/registry files (not the PDFs). The writing (lessons, original comprehension passages
+   with Zimbabwean settings, summary/directed writing, composition prompts with mark-scheme points, grammar and
+   vocabulary items) can then continue in either a local or a cloud session.
