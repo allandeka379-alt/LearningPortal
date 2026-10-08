@@ -377,14 +377,21 @@ introduced-predator question (largemouth bass in a farm dam) with the same key, 
    copy. The subject code is unknown (null) and the version dates are assumed. Under the Heritage-Based Curriculum
    (2024-2030) new syllabi were issued: confirm which syllabus the November 2026 and later examinations use and add a
    new version file when it changes (a new version must cover the same concepts, docs/CONTENT_PIPELINE.md §13).
-10. **Answers typed with the box prefix.** The number parser gives 0 for an answer typed together with the prefix shown
-    beside the box, e.g. "×12" or "x400" in magnification boxes (`cells.magnification` q02, q08, q12, q17, q21;
-    `practical.results-and-evaluation` q21), "12:1" in ratio boxes (`cells.diffusion-and-active-transport` q06,
-    q16(b)) and "pH 7" (`enzymes.temperature-and-ph` q10(a)). The UI shows the prefix and opens a number keypad,
-    so the risk is mainly on desktop; the platform could strip a leading answer prefix before marking.
+10. **Answers typed with the box prefix (fixed 2026-10-08).** An answer typed together with the prefix or suffix shown
+    beside the box used to score 0, e.g. "×12" or "x400" in magnification boxes (`cells.magnification` q02, q08, q12,
+    q17, q21; `practical.results-and-evaluation` q21), "12:1" in ratio boxes (`cells.diffusion-and-active-transport`
+    q06, q16(b)) and "pH 7" (`enzymes.temperature-and-ph` q10(a)). Marking now removes it first
+    (`stripAnswerAffixes` in `src/lib/questions/number.ts`); no content change was needed.
 11. **Superscripts in daily questions.** Some daily-eligible genetics items show LaTeX superscripts (I^A, X^b:
     `inheritance.codominance` q03–q05, `inheritance.sex-linkage` q04). They render on the web; they would not render
     in plain-text channels such as WhatsApp (switched off).
+12. **Length cue in MCQs (mostly fixed 2026-10-08).** Beyond the 131 slice-4 items the reviewer rebalanced, 382
+    single-answer MCQs and MCQ parts still had a key at least 1.3 times and 12 characters longer than every
+    distractor, so a student could guess by length. All were edited in the JSON: over-long keys were tightened (any
+    detail they lost moved into the rationale) and distractors lengthened to comparable length while staying clearly
+    wrong; answers, keys and marks are unchanged. A milder cue remains: the key is still the single longest option in
+    493 of 997 single-answer MCQs (49 %, against about 25 % by chance). The DEV database has the old wording until the
+    family is re-imported and published.
 
 ## Needs a specialist teacher's check
 
@@ -466,6 +473,9 @@ stated in general terms; confirm them before production):
   53 multi-select or 5–8-option MCQs; 20 items were left as authored (sorted numbers, options that refer to other
   options, one explanation that names option letters). 11 question files with compact arrays were reformatted to the
   standard 2-space layout. `content:validate --strict --no-cache` stays 0/0; DEV needs a re-import and publish.
+- **MCQ length cue (2026-10-08):** `node .scratch/tools/length-cue.mjs biology-o` lists single-answer MCQs whose key
+  is clearly the longest option (382 before, 0 now); `.scratch/tools/apply-option-edits.mjs` applies option rewrites
+  from a spec file without disturbing the JSON layout. Re-run the check after adding or editing MCQs.
 
 - The files in this directory are the source of truth. The writers' generator scripts (in the untracked `.scratch/`
   folder, e.g. `.scratch/bio-coord-slice/`) predate the review fixes: **do not re-run them**.

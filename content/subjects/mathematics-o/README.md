@@ -332,8 +332,8 @@ revision 2) and smoke-tested as students of both boards:
   `geometry.polygons.q19`, `trigonometry.functions.q12` and `q19`, `trigonometry.obtuse.q20`).
 - Invented data presented as examples (tax bands, tariffs, exchange rates such as US$1 = R18, the Harare–Bulawayo
   coach timetable): check that every item labels them as example values and none reads as a current real rate.
-- Known lenient or strict marking left as it is: 31/80 = 0.3875 also accepts 0.387; typing "US$442" into a box that
-  already shows the US$ prefix is not understood ("442" is).
+- Known lenient marking left as it is: 31/80 = 0.3875 also accepts 0.387. (Typing "US$442" into a box that already
+  shows the US$ prefix used to score 0; since 2026-10-08 marking removes the repeated prefix first.)
 - `coordinate.perpendicular.q19` reuses the line from a lesson example for a different task, and the
   graphs-in-practical-situations lesson is shorter than the 900-word guideline (about 700 words).
 
