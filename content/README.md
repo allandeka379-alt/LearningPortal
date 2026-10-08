@@ -20,7 +20,7 @@ its run completes; counts change as the runs write, so check `npm run content:va
 | --- | --- | --- |
 | `mathematics-o` | ZIMSEC O-Level Mathematics (4004), Cambridge IGCSE Mathematics (0580) | Complete: 107 lessons, 2,133 questions, 1,073 flashcards, 23 topic tests, 4 mock exams, 1 fixed quadratics test; independent AI review fixed 640 defects; DEV preview only, awaiting human review |
 | `biology-o` | ZIMSEC O-Level Biology, Cambridge IGCSE Biology (0610) | Complete: 95 lessons, 2,061 questions, 1,019 flashcards, 34 topic tests, 5 mock exams; independent AI review fixed 365 defects; DEV preview only, awaiting human review |
-| `chemistry-o` | ZIMSEC O-Level Chemistry, Cambridge IGCSE Chemistry (0620) | Written and reviewed (104 lessons, 2,114 questions, 1,056 flashcards); second AI review pass and assembly (tests, import) running |
+| `chemistry-o` | ZIMSEC O-Level Chemistry, Cambridge IGCSE Chemistry (0620) | Complete: 104 lessons, 2,114 questions, 1,056 flashcards, 35 topic tests, 5 mock exams; two independent AI review passes fixed 461 defects; DEV preview only, awaiting human review |
 | `physics-o` | ZIMSEC O-Level Physics, Cambridge IGCSE Physics (0625) | Complete (breadth): 92 lessons, 1,186 questions, 641 flashcards, 21 topic tests, 2 Cambridge mocks, 1 ZIMSEC practice exam; written in the main session with automated checks only (no independent AI review yet); DEV preview only, awaiting human review |
 
 Every item is AI-written and imported as `aiGenerated`; nothing reaches students in production until a human reviewer

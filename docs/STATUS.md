@@ -63,8 +63,7 @@ this file (typecheck, ESLint, 506 test files / 5,302 tests, production build, de
 against a live provider or a deployed worker.
 
 **Content (2026-10-08):** four subject families are in the repository and published in the **DEV database for
-preview only** (none human-reviewed, §41): mathematics-o, biology-o, chemistry-o and physics-o complete (chemistry's
-README is still to be written). combined-science-o (ZIMSEC Combined Science, which reuses the four families' content
+preview only** (none human-reviewed, §41): mathematics-o, biology-o, chemistry-o and physics-o complete. combined-science-o (ZIMSEC Combined Science, which reuses the four families' content
 through `conceptFamilies`) is in progress. Single-answer MCQs in chemistry-o had their correct option moved so that
 answer positions are balanced; physics-o and combined-science-o still need the same fix (`.scratch/tools/rebalance-mcq.mjs`;
 the player shows options in stored order). Hand-off notes: `.scratch/active-runs.md`. Each family's `content/subjects/<family>/README.md` lists coverage, tests, known gaps and specialist checks;
