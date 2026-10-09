@@ -1,0 +1,1482 @@
+[
+ {
+  "key": "exam.w1a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.polynomials.remainder-factor",
+   "amath.polynomials.cubic-equations"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The polynomial $p(x) = 6x^{3} + ax^{2} + bx - 2$, where $a$ and $b$ are constants, has a factor $2x - 1$. When $p(x)$ is divided by $x + 1$ the remainder is $6$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Use the two given conditions.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "EXTENDED_RESPONSE",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Show that $a + 2b = 5$.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "M1 uses $p\\left(\\frac{1}{2}\\right) = 0$: $\\frac{6}{8} + \\frac{a}{4} + \\frac{b}{2} - 2 = 0$",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "A1 multiplies by 4 and rearranges to $a + 2b = 5$",
+          "marks": 1
+         }
+        ]
+       },
+       "modelAnswer": "$$\np\\left(\\tfrac{1}{2}\\right) = \\tfrac{3}{4} + \\tfrac{a}{4} + \\tfrac{b}{2} - 2 = 0\n$$\n\n$$\n3 + a + 2b - 8 = 0 \\;\\Rightarrow\\; a + 2b = 5\n$$"
+      }
+     },
+     {
+      "label": "(ii)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 2,
+      "stem": "Find the values of a and b.",
+      "payload": {
+       "template": "a = {{blank:a}}, b = {{blank:b}}",
+       "blanks": [
+        {
+         "id": "a",
+         "input": "number"
+        },
+        {
+         "id": "b",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "a",
+         "accepted": [
+          "11"
+         ]
+        },
+        {
+         "id": "b",
+         "accepted": [
+          "-3"
+         ]
+        }
+       ]
+      },
+      "explanation": "$p(-1) = -6 + a - b - 2 = 6$, so $a - b = 14$. With $a + 2b = 5$: $3b = -9$, $b = -3$, $a = 11$."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Factorise $p(x)$ completely. Type it like (2x-1)(x+a)(bx+c).",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "(2x-1)(x+2)(3x+1)"
+      },
+      {
+       "value": "(2x-1)(3x+1)(x+2)"
+      },
+      {
+       "value": "(x+2)(2x-1)(3x+1)"
+      },
+      {
+       "value": "(x+2)(3x+1)(2x-1)"
+      },
+      {
+       "value": "(3x+1)(2x-1)(x+2)"
+      },
+      {
+       "value": "(3x+1)(x+2)(2x-1)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$p(x) = 6x^{3} + 11x^{2} - 3x - 2$. Dividing by $2x - 1$ gives $3x^{2} + 7x + 2 = (3x + 1)(x + 2)$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Hence solve $p(x) = 0$.",
+    "payload": {
+     "template": "x = {{blank:x1}}, x = {{blank:x2}} or x = {{blank:x3}} (in ascending order; fractions allowed)",
+     "blanks": [
+      {
+       "id": "x1",
+       "input": "number"
+      },
+      {
+       "id": "x2",
+       "input": "number"
+      },
+      {
+       "id": "x3",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x1",
+       "accepted": [
+        "-2"
+       ]
+      },
+      {
+       "id": "x2",
+       "accepted": [
+        "-1/3"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "x3",
+       "accepted": [
+        "0.5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$(2x - 1)(x + 2)(3x + 1) = 0$ gives $x = -2$, $-\\frac{1}{3}$ or $\\frac{1}{2}$."
+   }
+  ],
+  "explanation": "The factor gives $a + 2b = 5$ and the remainder gives $a - b = 14$, so $a = 11$, $b = -3$ and $p(x) = (2x - 1)(x + 2)(3x + 1)$.",
+  "hints": [
+   "For the factor $2x - 1$, substitute $x = \\frac{1}{2}$.",
+   "The remainder on dividing by x + 1 is p(−1)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(ii)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "11"
+      },
+      {
+       "blankId": "b",
+       "text": "-3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "(2x-1)(x+2)(3x+1)"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x1",
+       "text": "-2"
+      },
+      {
+       "blankId": "x2",
+       "text": "-1/3"
+      },
+      {
+       "blankId": "x3",
+       "text": "0.5"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(ii)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-3"
+       },
+       {
+        "blankId": "b",
+        "text": "4"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x1",
+        "text": "2"
+       },
+       {
+        "blankId": "x2",
+        "text": "-3"
+       },
+       {
+        "blankId": "x3",
+        "text": "2"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "exam.w1a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.algebra.simultaneous-equations"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The line $y = x + 3$ meets the curve $x^{2} + y^{2} = 17$ at the points $A$ and $B$, where $A$ has the smaller $x$-coordinate. Do not use a calculator.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the $x$-coordinates of $A$ and $B$ satisfy $x^{2} + 3x - 4 = 0$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 substitutes: $x^{2} + (x + 3)^{2} = 17$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 simplifies $2x^{2} + 6x - 8 = 0$ to the given equation",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nx^{2} + (x + 3)^{2} = 17 \\;\\Rightarrow\\; 2x^{2} + 6x + 9 = 17 \\;\\Rightarrow\\; 2x^{2} + 6x - 8 = 0\n$$\n\nDividing by 2: $x^{2} + 3x - 4 = 0$."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the coordinates of $A$ and $B$.",
+    "payload": {
+     "template": "A({{blank:x1}}, {{blank:y1}}) and B({{blank:x2}}, {{blank:y2}})",
+     "blanks": [
+      {
+       "id": "x1",
+       "input": "number"
+      },
+      {
+       "id": "y1",
+       "input": "number"
+      },
+      {
+       "id": "x2",
+       "input": "number"
+      },
+      {
+       "id": "y2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x1",
+       "accepted": [
+        "-4"
+       ]
+      },
+      {
+       "id": "y1",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "x2",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "y2",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "$(x + 4)(x - 1) = 0$, so $x = -4$ or $1$; from $y = x + 3$: $A(-4, -1)$, $B(1, 4)$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 1,
+    "stem": "The length $AB$ can be written as $k\\sqrt{2}$. Find $k$.",
+    "payload": {
+     "template": "k = {{blank:k}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$AB = \\sqrt{5^{2} + 5^{2}} = \\sqrt{50} = 5\\sqrt{2}$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the equation of the perpendicular bisector of $AB$ in the form $y = mx + c$.",
+    "payload": {
+     "template": "m = {{blank:m}}, c = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "Midpoint $\\left(-\\frac{3}{2}, \\frac{3}{2}\\right)$; gradient of $AB$ is 1, so the perpendicular gradient is $-1$. $y - \\frac{3}{2} = -\\left(x + \\frac{3}{2}\\right)$ gives $y = -x$ (through the centre of the circle, as expected)."
+   }
+  ],
+  "explanation": "Substitution gives $x^{2} + 3x - 4 = 0$, so $A(-4, -1)$, $B(1, 4)$, $AB = 5\\sqrt{2}$, and the perpendicular bisector is $y = -x$.",
+  "hints": [
+   "$(x + 3)^{2} = x^{2} + 6x + 9$.",
+   "Perpendicular gradients multiply to −1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x1",
+       "text": "-4"
+      },
+      {
+       "blankId": "y1",
+       "text": "-1"
+      },
+      {
+       "blankId": "x2",
+       "text": "1"
+      },
+      {
+       "blankId": "y2",
+       "text": "4"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "5"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "-1"
+      },
+      {
+       "blankId": "c",
+       "text": "0"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x1",
+        "text": "4"
+       },
+       {
+        "blankId": "y1",
+        "text": "1"
+       },
+       {
+        "blankId": "x2",
+        "text": "-1"
+       },
+       {
+        "blankId": "y2",
+        "text": "-4"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "50"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "1"
+       },
+       {
+        "blankId": "c",
+        "text": "3"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "exam.w1a-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.algebra.substitution"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Do not use a calculator in this question.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Solve $3x - 11\\sqrt{x} + 6 = 0$. Give your answers as exact fractions or integers.",
+    "payload": {
+     "template": "x = {{blank:x1}} or x = {{blank:x2}} (smaller value first)",
+     "blanks": [
+      {
+       "id": "x1",
+       "input": "number"
+      },
+      {
+       "id": "x2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x1",
+       "accepted": [
+        "4/9"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "x2",
+       "accepted": [
+        "9"
+       ]
+      }
+     ]
+    },
+    "explanation": "Let $u = \\sqrt{x}$: $3u^{2} - 11u + 6 = 0$, $(3u - 2)(u - 3) = 0$, so $u = \\frac{2}{3}$ or $3$, giving $x = \\frac{4}{9}$ or $9$."
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "Consider the equation $2e^{x} + 3e^{-x} = 7$.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "EXTENDED_RESPONSE",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Show that, with $u = e^{x}$, the equation becomes $2u^{2} - 7u + 3 = 0$.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "M1 multiplies by $e^{x}$ (or writes $3e^{-x} = \\frac{3}{u}$)",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "A1 obtains $2u^{2} - 7u + 3 = 0$",
+          "marks": 1
+         }
+        ]
+       },
+       "modelAnswer": "$$\n2u + \\frac{3}{u} = 7 \\;\\Rightarrow\\; 2u^{2} + 3 = 7u \\;\\Rightarrow\\; 2u^{2} - 7u + 3 = 0\n$$"
+      }
+     },
+     {
+      "label": "(ii)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 3,
+      "stem": "Hence find the exact solutions, in the form $x = \\ln p$ and $x = \\ln q$ with $p < q$.",
+      "payload": {
+       "template": "p = {{blank:p}}, q = {{blank:q}}",
+       "blanks": [
+        {
+         "id": "p",
+         "input": "number"
+        },
+        {
+         "id": "q",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "p",
+         "accepted": [
+          "0.5"
+         ]
+        },
+        {
+         "id": "q",
+         "accepted": [
+          "3"
+         ]
+        }
+       ]
+      },
+      "explanation": "$(2u - 1)(u - 3) = 0$, so $e^{x} = \\frac{1}{2}$ or $e^{x} = 3$: $x = \\ln \\frac{1}{2}$ $(= -\\ln 2)$ or $x = \\ln 3$."
+     }
+    ]
+   }
+  ],
+  "explanation": "(a) $u = \\sqrt{x}$ gives $u = \\frac{2}{3}$ or $3$, so $x = \\frac{4}{9}$ or $9$. (b) Multiplying by $e^{x}$ gives $2u^{2} - 7u + 3 = 0$, so $x = \\ln \\frac{1}{2}$ or $\\ln 3$.",
+  "hints": [
+   "In (a), let $u = \\sqrt{x}$ so that $x = u^{2}$.",
+   "In (b), $e^{-x} = \\frac{1}{e^{x}}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x1",
+       "text": "4/9"
+      },
+      {
+       "blankId": "x2",
+       "text": "9"
+      }
+     ]
+    },
+    "(b)(ii)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "0.5"
+      },
+      {
+       "blankId": "q",
+       "text": "3"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x1",
+        "text": "0.6666666666666666"
+       },
+       {
+        "blankId": "x2",
+        "text": "3"
+       }
+      ]
+     },
+     "(b)(ii)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "-0.5"
+       },
+       {
+        "blankId": "q",
+        "text": "-3"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "exam.w1a-cambridge.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.counting.permutations",
+   "amath.counting.combinations"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Do not use a calculator in this question.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "The six letters of the word MUTARE are arranged in a line.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "Find the number of different arrangements.",
+      "answerSpec": {
+       "value": 720
+      },
+      "explanation": "$6! = 720$.",
+      "workedSolution": "1. $6! = 720$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Find the number of arrangements that begin with a vowel and end with a consonant.",
+      "answerSpec": {
+       "value": 216
+      },
+      "explanation": "First letter: 3 vowels (U, A, E). Last letter: 3 consonants (M, T, R). Middle: $4! = 24$. Total $3 \\times 3 \\times 24 = 216$.",
+      "workedSolution": "1. First letter: 3 vowels (U, A, E). Last letter: 3 consonants (M, T, R). Middle: $4! = 24$. Total $3 \\times 3 \\times 24 = 216$."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Find the number of arrangements in which the three vowels are next to each other.",
+      "answerSpec": {
+       "value": 144
+      },
+      "explanation": "Block of vowels with M, T, R: 4 items, $4! = 24$; inside the block $3! = 6$. Total $144$.",
+      "workedSolution": "1. Block of vowels with M, T, R: 4 items, $4! = 24$; inside the block $3! = 6$. Total $144$."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "A team of 4 is chosen from 6 boys and 5 girls. Find the number of teams that contain at least 2 girls.",
+    "answerSpec": {
+     "value": 215
+    },
+    "explanation": "2 girls: $^{5}C_{2} \\times {}^{6}C_{2} = 150$; 3 girls: $^{5}C_{3} \\times 6 = 60$; 4 girls: $^{5}C_{4} = 5$. Total $215$. (Or $^{11}C_{4} - {}^{6}C_{4} - 5 \\times {}^{6}C_{3} = 330 - 15 - 100 = 215$.)",
+    "workedSolution": "1. 2 girls: $^{5}C_{2} \\times {}^{6}C_{2} = 150$; 3 girls: $^{5}C_{3} \\times 6 = 60$; 4 girls: $^{5}C_{4} = 5$. Total $215$. (Or $^{11}C_{4} - {}^{6}C_{4} - 5 \\times {}^{6}C_{3} = 330 - 15 - 100 = 215$.)"
+   }
+  ],
+  "explanation": "(a) $720$; vowel first and consonant last $3 \\times 3 \\times 4! = 216$; vowels together $4! \\times 3! = 144$. (b) At least 2 girls: $150 + 60 + 5 = 215$.",
+  "hints": [
+   "Fill restricted positions first; glue items that must be together.",
+   "At least 2 girls: 2, 3 or 4 girls."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "NUMERICAL",
+     "value": "720"
+    },
+    "(a)(ii)": {
+     "type": "NUMERICAL",
+     "value": "216"
+    },
+    "(a)(iii)": {
+     "type": "NUMERICAL",
+     "value": "144"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "215"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "NUMERICAL",
+      "value": "36"
+     },
+     "(a)(ii)": {
+      "type": "NUMERICAL",
+      "value": "24"
+     },
+     "(a)(iii)": {
+      "type": "NUMERICAL",
+      "value": "24"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "150"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "exam.w1a-cambridge.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.polynomials.cubic-equations",
+   "amath.polynomials.remainder-factor"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "It is given that $f(x) = 2x^{3} - x^{2} - 10x + 5$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $2x - 1$ is a factor of $f(x)$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 evaluates $f\\left(\\frac{1}{2}\\right) = \\frac{1}{4} - \\frac{1}{4} - 5 + 5$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 obtains $0$ and concludes",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nf\\left(\\tfrac{1}{2}\\right) = 2\\left(\\tfrac{1}{8}\\right) - \\tfrac{1}{4} - 5 + 5 = 0\n$$\n\nSo $2x - 1$ is a factor of $f(x)$."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the quadratic factor of $f(x)$. Type it like x^2+px+q.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "x^2-5"
+      },
+      {
+       "value": "x²-5"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$f(x) = x^{2}(2x - 1) - 5(2x - 1) = (2x - 1)\\left(x^{2} - 5\\right)$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Solve $f(x) = 0$, giving non-exact roots correct to 3 significant figures.",
+    "payload": {
+     "template": "x = {{blank:x1}}, x = {{blank:x2}} or x = {{blank:x3}} (in ascending order)",
+     "blanks": [
+      {
+       "id": "x1",
+       "input": "number"
+      },
+      {
+       "id": "x2",
+       "input": "number"
+      },
+      {
+       "id": "x3",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x1",
+       "accepted": [
+        "-2.24"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "x2",
+       "accepted": [
+        "0.5"
+       ]
+      },
+      {
+       "id": "x3",
+       "accepted": [
+        "2.24"
+       ],
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$x = \\frac{1}{2}$ or $x^{2} = 5$, so $x = \\pm\\sqrt{5} = \\pm 2.24$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the remainder when $f(x)$ is divided by $x - 2$.",
+    "answerSpec": {
+     "value": -3
+    },
+    "explanation": "$f(2) = 16 - 4 - 20 + 5 = -3$.",
+    "workedSolution": "1. $f(2) = 16 - 4 - 20 + 5 = -3$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of the constant $k$ for which $x + 1$ is a factor of $f(x) + k$.",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": -12
+    },
+    "explanation": "$f(-1) + k = 0$. $f(-1) = -2 - 1 + 10 + 5 = 12$, so $k = -12$.",
+    "workedSolution": "1. $f(-1) + k = 0$. $f(-1) = -2 - 1 + 10 + 5 = 12$, so $k = -12$."
+   }
+  ],
+  "explanation": "$f\\left(\\frac{1}{2}\\right) = 0$, and grouping gives $f(x) = (2x - 1)(x^{2} - 5)$ with roots $\\frac{1}{2}$, $\\pm 2.24$. The remainder on dividing by $x - 2$ is $-3$, and $f(-1) = 12$ gives $k = -12$.",
+  "hints": [
+   "Substitute $x = \\frac{1}{2}$.",
+   "Group the terms in pairs to factorise.",
+   "For (e), f(−1) + k must be zero."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "x^2-5"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x1",
+       "text": "-2.24"
+      },
+      {
+       "blankId": "x2",
+       "text": "0.5"
+      },
+      {
+       "blankId": "x3",
+       "text": "2.24"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "-3"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "-12"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x1",
+        "text": "5"
+       },
+       {
+        "blankId": "x2",
+        "text": "2"
+       },
+       {
+        "blankId": "x3",
+        "text": "5"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "12"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "exam.w1a-cambridge.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.algebra.simultaneous-equations"
+  ],
+  "difficulty": 5,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The line $y = 2x + 1$ meets the curve $x^{2} + 3xy = 20$ at the points $A$ and $B$, where $A$ has the smaller $x$-coordinate.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the $x$-coordinates of $A$ and $B$ satisfy $7x^{2} + 3x - 20 = 0$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 substitutes: $x^{2} + 3x(2x + 1) = 20$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 simplifies to $7x^{2} + 3x - 20 = 0$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nx^{2} + 3x(2x + 1) = 20 \\;\\Rightarrow\\; x^{2} + 6x^{2} + 3x = 20 \\;\\Rightarrow\\; 7x^{2} + 3x - 20 = 0\n$$"
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Find the coordinates of $A$ and $B$, giving each value correct to 3 significant figures.",
+    "payload": {
+     "template": "A({{blank:x1}}, {{blank:y1}}) and B({{blank:x2}}, {{blank:y2}})",
+     "blanks": [
+      {
+       "id": "x1",
+       "input": "number"
+      },
+      {
+       "id": "y1",
+       "input": "number"
+      },
+      {
+       "id": "x2",
+       "input": "number"
+      },
+      {
+       "id": "y2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x1",
+       "accepted": [
+        "-1.92"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "y1",
+       "accepted": [
+        "-2.84"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "x2",
+       "accepted": [
+        "1.49"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "y2",
+       "accepted": [
+        "3.98"
+       ],
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$x = \\dfrac{-3 \\pm \\sqrt{9 + 560}}{14} = \\dfrac{-3 \\pm \\sqrt{569}}{14}$, so $x = -1.918\\ldots$ or $1.489\\ldots$; then $y = 2x + 1$ gives $-2.836\\ldots$ and $3.979\\ldots$. $A(-1.92, -2.84)$, $B(1.49, 3.98)$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the length of $AB$, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 7.6197916303397655,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$AB = \\sqrt{(1.4896 + 1.9181)^{2} + (3.9791 + 2.8362)^{2}} = \\sqrt{3.4077^{2} + 6.8153^{2}} = 7.62$. Use unrounded values.",
+    "workedSolution": "1. $AB = \\sqrt{(1.4896 + 1.9181)^{2} + (3.9791 + 2.8362)^{2}} = \\sqrt{3.4077^{2} + 6.8153^{2}} = 7.62$. Use unrounded values."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the exact $x$-coordinate of the midpoint of $AB$, as a fraction.",
+    "answerSpec": {
+     "value": -0.2142857142857143,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "The sum of the roots of $7x^{2} + 3x - 20 = 0$ is $-\\frac{3}{7}$, so the midpoint has $x = -\\frac{3}{14}$.",
+    "workedSolution": "1. The sum of the roots of $7x^{2} + 3x - 20 = 0$ is $-\\frac{3}{7}$, so the midpoint has $x = -\\frac{3}{14}$."
+   }
+  ],
+  "explanation": "Substitution gives $7x^{2} + 3x - 20 = 0$; the formula gives $A(-1.92, -2.84)$ and $B(1.49, 3.98)$, so $AB = 7.62$, and the midpoint $x$-coordinate is half the sum of the roots, $-\\frac{3}{14}$.",
+  "hints": [
+   "Substitute the line into the curve.",
+   "Keep full calculator accuracy until the final answer.",
+   "The sum of the roots of ax² + bx + c = 0 is −b/a."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x1",
+       "text": "-1.92"
+      },
+      {
+       "blankId": "y1",
+       "text": "-2.84"
+      },
+      {
+       "blankId": "x2",
+       "text": "1.49"
+      },
+      {
+       "blankId": "y2",
+       "text": "3.98"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "7.62"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "-3/14"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x1",
+        "text": "1.92"
+       },
+       {
+        "blankId": "y1",
+        "text": "2.84"
+       },
+       {
+        "blankId": "x2",
+        "text": "-1.49"
+       },
+       {
+        "blankId": "y2",
+        "text": "-3.98"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3.41"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "-0.42857142857142855"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "exam.w1a-cambridge.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.algebra.substitution"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "Solve the following equations.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "$5^{2x} - 6 \\times 5^{x} + 8 = 0$. Give your answers correct to 3 significant figures.",
+    "payload": {
+     "template": "x = {{blank:x1}} or x = {{blank:x2}} (smaller value first)",
+     "blanks": [
+      {
+       "id": "x1",
+       "input": "number"
+      },
+      {
+       "id": "x2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x1",
+       "accepted": [
+        "0.431"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "x2",
+       "accepted": [
+        "0.861"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "Let $u = 5^{x}$: $u^{2} - 6u + 8 = 0$, so $u = 2$ or $4$. $x = \\dfrac{\\lg 2}{\\lg 5} = 0.431$ or $x = \\dfrac{\\lg 4}{\\lg 5} = 0.861$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "$2x^{\\frac{2}{3}} - 5x^{\\frac{1}{3}} - 3 = 0$. Give exact answers.",
+    "payload": {
+     "template": "x = {{blank:x1}} or x = {{blank:x2}} (smaller value first; fractions allowed)",
+     "blanks": [
+      {
+       "id": "x1",
+       "input": "number"
+      },
+      {
+       "id": "x2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x1",
+       "accepted": [
+        "-1/8"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "x2",
+       "accepted": [
+        "27"
+       ]
+      }
+     ]
+    },
+    "explanation": "Let $u = x^{\\frac{1}{3}}$: $2u^{2} - 5u - 3 = 0$, $(2u + 1)(u - 3) = 0$, so $u = -\\frac{1}{2}$ or $3$. Cube roots can be negative, so both are valid: $x = -\\frac{1}{8}$ or $x = 27$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "$(\\lg x)^{2} - \\lg\\left(x^{3}\\right) + 2 = 0$.",
+    "payload": {
+     "template": "x = {{blank:x1}} or x = {{blank:x2}} (smaller value first)",
+     "blanks": [
+      {
+       "id": "x1",
+       "input": "number"
+      },
+      {
+       "id": "x2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x1",
+       "accepted": [
+        "10"
+       ]
+      },
+      {
+       "id": "x2",
+       "accepted": [
+        "100"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\lg\\left(x^{3}\\right) = 3\\lg x$. Let $u = \\lg x$: $u^{2} - 3u + 2 = 0$, so $u = 1$ or $2$, giving $x = 10$ or $x = 100$."
+   }
+  ],
+  "explanation": "Each equation is a quadratic in a suitable $u$: $u = 5^{x}$ gives $x = 0.431$ or $0.861$; $u = x^{\\frac{1}{3}}$ gives $x = -\\frac{1}{8}$ or $27$; $u = \\lg x$ gives $x = 10$ or $100$.",
+  "hints": [
+   "$5^{2x} = \\left(5^{x}\\right)^{2}$.",
+   "A cube root may be negative, unlike a square root.",
+   "$\\lg\\left(x^{3}\\right) = 3\\lg x$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x1",
+       "text": "0.431"
+      },
+      {
+       "blankId": "x2",
+       "text": "0.861"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x1",
+       "text": "-1/8"
+      },
+      {
+       "blankId": "x2",
+       "text": "27"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x1",
+       "text": "10"
+      },
+      {
+       "blankId": "x2",
+       "text": "100"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x1",
+        "text": "2"
+       },
+       {
+        "blankId": "x2",
+        "text": "4"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x1",
+        "text": "-0.5"
+       },
+       {
+        "blankId": "x2",
+        "text": "3"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x1",
+        "text": "1"
+       },
+       {
+        "blankId": "x2",
+        "text": "2"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true
+ }
+]

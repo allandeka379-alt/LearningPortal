@@ -1,0 +1,973 @@
+[
+ {
+  "key": "calculus.small-increments.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$y$ is a function of $x$. When $x$ changes by a small amount $\\delta x$, which expression approximates the change $\\delta y$ in $y$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{dy}{dx} \\div \\delta x$",
+    "rationale": "Dividing by $\\delta x$ would make $\\delta y$ huge for a tiny step."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{dy}{dx} \\times \\delta x$",
+    "correct": true,
+    "rationale": "Correct: the gradient times the small step."
+   },
+   {
+    "key": "C",
+    "content": "$y \\times \\delta x$",
+    "rationale": "The change depends on the gradient, not on the value of y."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{dy}{dx} + \\delta x$",
+    "rationale": "The gradient and the step multiply; they do not add."
+   }
+  ],
+  "explanation": "Near a point the curve is close to its tangent, so $\\frac{\\delta y}{\\delta x} \\approx \\frac{dy}{dx}$ and $\\delta y \\approx \\frac{dy}{dx}\\,\\delta x$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $y = x^2$, use calculus to find the approximate change in $y$ when $x$ increases from 5 to 5.02.",
+  "answerSpec": {
+   "value": 0.2,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\frac{dy}{dx} = 2x = 10$ at $x = 5$; $\\delta x = 0.02$. $\\delta y \\approx 10 \\times 0.02 = 0.2$. The value 25.2 is the approximate new value of $y$, not the change.",
+  "workedSolution": "1. $\\frac{dy}{dx} = 2x = 10$ at $x = 5$; $\\delta x = 0.02$. $\\delta y \\approx 10 \\times 0.02 = 0.2$. The value 25.2 is the approximate new value of $y$, not the change.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.200"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.0004"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "25.2"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $y = 4x^3$, use calculus to find the approximate change in $y$ when $x$ decreases from 1 to 0.98.",
+  "answerSpec": {
+   "value": -0.24,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\frac{dy}{dx} = 12x^2 = 12$ at $x = 1$; $\\delta x = 0.98 - 1 = -0.02$. $\\delta y \\approx 12 \\times (-0.02) = -0.24$. Forgetting that $x$ decreases gives $+0.24$.",
+  "workedSolution": "1. $\\frac{dy}{dx} = 12x^2 = 12$ at $x = 1$; $\\delta x = 0.98 - 1 = -0.02$. $\\delta y \\approx 12 \\times (-0.02) = -0.24$. Forgetting that $x$ decreases gives $+0.24$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-0.240"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.24"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-0.08"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The radius of a circle increases by 1%. What is the approximate percentage increase in its area?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1%",
+    "rationale": "The area depends on $r^2$, so its percentage change is about twice that of $r$."
+   },
+   {
+    "key": "B",
+    "content": "π%",
+    "rationale": "$\\pi$ cancels when the change is divided by $A = \\pi r^2$."
+   },
+   {
+    "key": "C",
+    "content": "2%",
+    "correct": true,
+    "rationale": "Correct: $\\delta A \\approx 2\\pi r \\times 0.01r = 0.02\\pi r^2$, which is 2% of $A$."
+   },
+   {
+    "key": "D",
+    "content": "4%",
+    "rationale": "That would need the area to depend on the fourth power of r."
+   }
+  ],
+  "explanation": "For $y = kx^n$, a small $k\\%$ change in $x$ gives about $nk\\%$ change in $y$. With $A = \\pi r^2$, $n = 2$: about 2%.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q05",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In the approximation $\\delta y \\approx \\dfrac{dy}{dx}\\,\\delta x$, the result $\\delta y$ is the approximate new value of $y$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. $\\delta y$ is the approximate **change** in $y$. The approximate new value is the original $y$ plus $\\delta y$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q06",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The radius of a circular metal disc increases from 6 cm to 6.04 cm when heated. Use calculus to estimate the increase in its area, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "cm²"
+  },
+  "answerSpec": {
+   "value": 1.5079644737231008,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm²",
+     "cm^2",
+     "square centimetres"
+    ]
+   }
+  },
+  "explanation": "$A = \\pi r^2$, $\\frac{dA}{dr} = 2\\pi r = 12\\pi$. $\\delta A \\approx 12\\pi \\times 0.04 = 0.48\\pi = 1.51$ cm². Multiplying the area itself by 0.04 gives $4.52$.",
+  "workedSolution": "1. $A = \\pi r^2$, $\\frac{dA}{dr} = 2\\pi r = 12\\pi$. $\\delta A \\approx 12\\pi \\times 0.04 = 0.48\\pi = 1.51$ cm². Multiplying the area itself by 0.04 gives $4.52$.",
+  "hints": [
+   "$\\delta r = 0.04$."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "1.51"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "4.52"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "calculus.small-increments.q07",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $y = x^2 + 3x$, find the approximate change in $y$ as $x$ increases from 2 to $2 + p$, where $p$ is small. Give your answer in terms of $p$, for example 4p.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "7p"
+    },
+    {
+     "value": "δy=7p"
+    },
+    {
+     "value": "7*p"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$\\frac{dy}{dx} = 2x + 3 = 7$ at $x = 2$, and $\\delta x = p$. So $\\delta y \\approx 7p$. The value $10 + 7p$ is the approximate new value of $y$.",
+  "hints": [
+   "Evaluate dy/dx at x = 2, then multiply by p."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "7p"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "10+7p"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q08",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $y = \\dfrac{2}{x^2}$, find the approximate change in $y$ as $x$ increases from 1 to $1 + h$, where $h$ is small. Give your answer in terms of $h$.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "-4h"
+    },
+    {
+     "value": "δy=-4h"
+    },
+    {
+     "value": "-4*h"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$y = 2x^{-2}$, $\\frac{dy}{dx} = -4x^{-3} = -4$ at $x = 1$. $\\delta y \\approx -4h$: $y$ decreases by about $4h$.",
+  "hints": [
+   "Rewrite as a negative power before differentiating."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "-4h"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "4h"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "-2h"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use calculus, with $y = \\sqrt{x}$ and $x = 49$, to find an approximate value of $\\sqrt{49.7}$. Give your answer to 2 decimal places.",
+  "answerSpec": {
+   "value": 7.05,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$\\frac{dy}{dx} = \\frac{1}{2\\sqrt{x}} = \\frac{1}{14}$ at $x = 49$; $\\delta x = 0.7$. $\\delta y \\approx \\frac{0.7}{14} = 0.05$, so $\\sqrt{49.7} \\approx 7 + 0.05 = 7.05$. Adding 0.7 directly gives 7.7.",
+  "workedSolution": "1. $\\frac{dy}{dx} = \\frac{1}{2\\sqrt{x}} = \\frac{1}{14}$ at $x = 49$; $\\delta x = 0.7$. $\\delta y \\approx \\frac{0.7}{14} = 0.05$, so $\\sqrt{49.7} \\approx 7 + 0.05 = 7.05$. Adding 0.7 directly gives 7.7.",
+  "hints": [
+   "Start from √49 = 7.",
+   "$\\delta x = 0.7$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "7.05"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "7.7"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7.35"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use calculus, with $y = x^{\\frac{1}{3}}$, to find an approximate value of $\\sqrt[3]{8.12}$. Give your answer to 2 decimal places.",
+  "answerSpec": {
+   "value": 2.01,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$\\frac{dy}{dx} = \\frac{1}{3}x^{-\\frac{2}{3}} = \\frac{1}{3 \\times 4} = \\frac{1}{12}$ at $x = 8$; $\\delta x = 0.12$. $\\delta y \\approx \\frac{0.12}{12} = 0.01$, so $\\sqrt[3]{8.12} \\approx 2.01$.",
+  "workedSolution": "1. $\\frac{dy}{dx} = \\frac{1}{3}x^{-\\frac{2}{3}} = \\frac{1}{3 \\times 4} = \\frac{1}{12}$ at $x = 8$; $\\delta x = 0.12$. $\\delta y \\approx \\frac{0.12}{12} = 0.01$, so $\\sqrt[3]{8.12} \\approx 2.01$.",
+  "hints": [
+   "$8^{\\frac{2}{3}} = 4$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.01"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2.12"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.04"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The radius of a sphere is increased by 2%. Use calculus to find the approximate percentage increase in its volume.",
+  "payload": {
+   "unitHint": "%"
+  },
+  "answerSpec": {
+   "value": 6,
+   "units": {
+    "required": false,
+    "accepted": [
+     "%",
+     "percent",
+     "per cent"
+    ]
+   }
+  },
+  "explanation": "$V = \\frac{4}{3}\\pi r^3$, $\\frac{dV}{dr} = 4\\pi r^2$, $\\delta r = 0.02r$. $\\delta V \\approx 4\\pi r^2 \\times 0.02r = 0.08\\pi r^3$. Then $\\frac{\\delta V}{V} = \\frac{0.08\\pi r^3}{\\frac{4}{3}\\pi r^3} = 0.06$, which is 6%. The answer 2 ignores the cube; 0.06 is the fraction, not the percentage.",
+  "workedSolution": "1. $V = \\frac{4}{3}\\pi r^3$, $\\frac{dV}{dr} = 4\\pi r^2$, $\\delta r = 0.02r$. $\\delta V \\approx 4\\pi r^2 \\times 0.02r = 0.08\\pi r^3$. Then $\\frac{\\delta V}{V} = \\frac{0.08\\pi r^3}{\\frac{4}{3}\\pi r^3} = 0.06$, which is 6%. The answer 2 ignores the cube; 0.06 is the fraction, not the percentage.",
+  "hints": [
+   "Write $\\delta r = 0.02r$ and keep $r$ as a letter.",
+   "Divide $\\delta V$ by $V$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "6"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.06"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $y = 5\\mathrm{e}^{2x}$, use calculus to estimate the change in $y$ when $x$ increases from 0 to 0.03.",
+  "answerSpec": {
+   "value": 0.3,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\frac{dy}{dx} = 10\\mathrm{e}^{2x} = 10$ at $x = 0$. $\\delta y \\approx 10 \\times 0.03 = 0.3$. Forgetting the factor 2 gives 0.15; 5.3 is the approximate new value.",
+  "workedSolution": "1. $\\frac{dy}{dx} = 10\\mathrm{e}^{2x} = 10$ at $x = 0$. $\\delta y \\approx 10 \\times 0.03 = 0.3$. Forgetting the factor 2 gives 0.15; 5.3 is the approximate new value.",
+  "hints": [
+   "$\\frac{d}{dx}\\mathrm{e}^{2x} = 2\\mathrm{e}^{2x}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.300"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.15"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5.3"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q13",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $y = \\sin x$, use calculus to estimate the change in $y$ when $x$ increases from $\\dfrac{\\pi}{6}$ to $\\dfrac{\\pi}{6} + 0.02$. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.017320508075688773,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$\\frac{dy}{dx} = \\cos x = \\frac{\\sqrt{3}}{2}$ at $x = \\frac{\\pi}{6}$. $\\delta y \\approx \\frac{\\sqrt{3}}{2} \\times 0.02 = 0.01\\sqrt{3} = 0.0173$. Using $\\sin\\frac{\\pi}{6} = \\frac{1}{2}$ in place of the derivative gives 0.01.",
+  "workedSolution": "1. $\\frac{dy}{dx} = \\cos x = \\frac{\\sqrt{3}}{2}$ at $x = \\frac{\\pi}{6}$. $\\delta y \\approx \\frac{\\sqrt{3}}{2} \\times 0.02 = 0.01\\sqrt{3} = 0.0173$. Using $\\sin\\frac{\\pi}{6} = \\frac{1}{2}$ in place of the derivative gives 0.01.",
+  "hints": [
+   "Work in radians.",
+   "$\\cos\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.0173"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.01"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "calculus.small-increments.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The edge of a cube is reduced by 1%. What is the approximate percentage change in its volume?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A decrease of 1%",
+    "rationale": "Volume depends on $x^3$, so the percentage change is about three times as large."
+   },
+   {
+    "key": "B",
+    "content": "An increase of 3%",
+    "rationale": "The edge decreases, so the volume decreases too."
+   },
+   {
+    "key": "C",
+    "content": "A decrease of 6%",
+    "rationale": "6% would come from the surface area coefficient 6 in $S = 6x^2$, not from the volume."
+   },
+   {
+    "key": "D",
+    "content": "A decrease of 3%",
+    "correct": true,
+    "rationale": "Correct: $V = x^3$, so $\\delta V \\approx 3x^2(-0.01x) = -0.03x^3$."
+   }
+  ],
+  "explanation": "$\\frac{\\delta V}{V} \\approx \\frac{-0.03x^3}{x^3} = -0.03$: about a 3% decrease.",
+  "hints": [
+   "For $y = x^n$, the percentage change is about $n$ times that of $x$."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q15",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "The time of one swing of a pendulum of length $l$ is $T = 2\\pi\\sqrt{\\dfrac{l}{g}}$, where $g$ is a constant. Show that a 2% increase in $l$ produces an increase of approximately 1% in $T$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 writes $T = \\frac{2\\pi}{\\sqrt{g}}l^{\\frac{1}{2}}$ and differentiates: $\\frac{dT}{dl} = \\frac{\\pi}{\\sqrt{g}}l^{-\\frac{1}{2}}$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 uses $\\delta l = 0.02l$: $\\delta T \\approx \\frac{\\pi}{\\sqrt{g}}l^{-\\frac{1}{2}} \\times 0.02l = \\frac{0.02\\pi}{\\sqrt{g}}l^{\\frac{1}{2}}$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 divides by $T$: $\\frac{\\delta T}{T} = 0.01$, which is 1%.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\nT = \\frac{2\\pi}{\\sqrt{g}}\\,l^{\\frac{1}{2}} \\Rightarrow \\frac{dT}{dl} = \\frac{\\pi}{\\sqrt{g}}\\,l^{-\\frac{1}{2}}\n$$\n\n$$\n\\delta T \\approx \\frac{\\pi}{\\sqrt{g}}\\,l^{-\\frac{1}{2}} \\times 0.02\\,l = \\frac{0.02\\pi}{\\sqrt{g}}\\,l^{\\frac{1}{2}}\n$$\n\n$$\n\\frac{\\delta T}{T} \\approx \\frac{0.02\\pi l^{\\frac{1}{2}} / \\sqrt{g}}{2\\pi l^{\\frac{1}{2}} / \\sqrt{g}} = 0.01 = 1\\%\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "$T$ is proportional to $l^{\\frac{1}{2}}$, so the percentage change in $T$ is about half that in $l$.",
+  "hints": [
+   "Treat $\\frac{2\\pi}{\\sqrt{g}}$ as a constant."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "calculus.small-increments.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A curve has equation $y = x^3 - 4x$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find $\\dfrac{dy}{dx}$ when $x = 3$.",
+    "answerSpec": {
+     "value": 23
+    },
+    "explanation": "$3x^2 - 4 = 27 - 4 = 23$.",
+    "workedSolution": "1. $3x^2 - 4 = 27 - 4 = 23$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use calculus to estimate the change in $y$ when $x$ increases from 3 to 3.02.",
+    "answerSpec": {
+     "value": 0.46,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\delta y \\approx 23 \\times 0.02 = 0.46$.",
+    "workedSolution": "1. $\\delta y \\approx 23 \\times 0.02 = 0.46$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find, in terms of $p$, the approximate change in $y$ when $x$ decreases from 3 to $3 - p$, where $p$ is small.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "-23p"
+      },
+      {
+       "value": "δy=-23p"
+      },
+      {
+       "value": "-23*p"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\delta x = -p$, so $\\delta y \\approx 23 \\times (-p) = -23p$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the exact change in y when x increases from 3 to 3.02, correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.4636079999999989,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$y(3.02) - y(3) = (27.543608 - 12.08) - 15 = 0.463608 = 0.4636$ (4 d.p.), close to the estimate 0.46.",
+    "workedSolution": "1. $y(3.02) - y(3) = (27.543608 - 12.08) - 15 = 0.463608 = 0.4636$ (4 d.p.), close to the estimate 0.46."
+   }
+  ],
+  "explanation": "Evaluate the derivative at the original point and multiply by the small change; a decrease gives a negative δx.",
+  "hints": [
+   "$\\delta y \\approx \\frac{dy}{dx}\\,\\delta x$.",
+   "A decrease of p means δx = −p."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "23"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.460"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "-23p"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.4636"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "15"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "15.46"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "23p"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.46"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "calculus.small-increments.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "A solid cone has height three times its base radius, so its volume is $V = \\pi r^3$ cm³ when the radius is $r$ cm.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 1,
+    "stem": "Write $\\dfrac{dV}{dr}$ in the form $k\\pi r^2$.",
+    "payload": {
+     "template": "k = {{blank:k}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\frac{d}{dr}(\\pi r^3) = 3\\pi r^2$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Use calculus to estimate the increase in volume when the radius increases from 4 cm to 4.05 cm. Give your answer in terms of π, for example 1.5π.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2.4π"
+      },
+      {
+       "value": "2.4pi"
+      },
+      {
+       "value": "12π/5"
+      },
+      {
+       "value": "12pi/5"
+      },
+      {
+       "value": "(12/5)π"
+      },
+      {
+       "value": "(12/5)pi"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\frac{dV}{dr} = 48\\pi$ at $r = 4$; $\\delta V \\approx 48\\pi \\times 0.05 = 2.4\\pi$ cm³."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The radius is increased by 1.25%. Find the approximate percentage increase in the volume.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 3.75,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "$\\delta V \\approx 3\\pi r^2 \\times 0.0125r = 0.0375\\pi r^3$, which is 3.75% of $V$.",
+    "workedSolution": "1. $\\delta V \\approx 3\\pi r^2 \\times 0.0125r = 0.0375\\pi r^3$, which is 3.75% of $V$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the approximate percentage increase in the radius that would increase the volume by 1.5%.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 0.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "The volume changes by about 3 times the percentage change in $r$, so $r$ changes by $\\frac{1.5}{3} = 0.5\\%$.",
+    "workedSolution": "1. The volume changes by about 3 times the percentage change in $r$, so $r$ changes by $\\frac{1.5}{3} = 0.5\\%$."
+   }
+  ],
+  "explanation": "Because V is proportional to r³, small percentage changes in V are about three times those in r.",
+  "hints": [
+   "$\\delta r = 0.0125r$ for a 1.25% increase."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "2.4π"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3.75"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.500"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "0.8π"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1.25"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "4.5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

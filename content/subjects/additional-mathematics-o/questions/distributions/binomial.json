@@ -1,0 +1,1080 @@
+[
+ {
+  "key": "distributions.binomial.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which of these is **not** one of the conditions for a binomial model $X \\sim B(n, p)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Success and failure are equally likely",
+    "correct": true,
+    "rationale": "Correct: p can be any value from 0 to 1; it need not be 0.5."
+   },
+   {
+    "key": "B",
+    "content": "There is a fixed number of trials",
+    "rationale": "This is a binomial condition: n is fixed in advance."
+   },
+   {
+    "key": "C",
+    "content": "The trials are independent",
+    "rationale": "This is a binomial condition."
+   },
+   {
+    "key": "D",
+    "content": "The probability of success is the same in every trial",
+    "rationale": "This is a binomial condition: p is constant."
+   }
+  ],
+  "explanation": "The conditions are: a fixed number n of independent trials, each with two outcomes, and a constant probability p of success. Nothing requires p = 0.5.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which random variable is best modelled by a binomial distribution?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The number of tosses of a coin needed to get the first head",
+    "rationale": "The number of trials is not fixed, so this is not binomial."
+   },
+   {
+    "key": "B",
+    "content": "The number of heads in 15 tosses of a fair coin",
+    "correct": true,
+    "rationale": "Correct: 15 independent trials, two outcomes, p = 0.5 each time."
+   },
+   {
+    "key": "C",
+    "content": "The number of girls when 4 learners are chosen without replacement from a class of 12",
+    "rationale": "Without replacement from a small class, p changes after each choice."
+   },
+   {
+    "key": "D",
+    "content": "The total score when 3 dice are rolled",
+    "rationale": "A total score is not a count of successes in trials with two outcomes."
+   }
+  ],
+  "explanation": "Binomial: a fixed number of independent trials with constant p, counting successes. The coin tosses meet every condition.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim B(6, 0.4)$. Find $P(X = 2)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.31104000000000004,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$P(X = 2) = \\binom{6}{2}(0.4)^2(0.6)^4 = 15 \\times 0.16 \\times 0.1296 = 0.311$. Leaving out $\\binom{6}{2} = 15$ gives 0.0207; swapping the powers gives 0.138.",
+  "workedSolution": "1. $P(X = 2) = \\binom{6}{2}(0.4)^2(0.6)^4 = 15 \\times 0.16 \\times 0.1296 = 0.311$. Leaving out $\\binom{6}{2} = 15$ gives 0.0207; swapping the powers gives 0.138.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.311"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.020736"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.13824000000000003"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "distributions.binomial.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In a large town, 35% of households own a solar panel. A random sample of 40 households is taken. $X$ is the number in the sample with a solar panel. Find $E(X)$.",
+  "answerSpec": {
+   "value": 14
+  },
+  "explanation": "$X \\sim B(40, 0.35)$, so $E(X) = np = 40 \\times 0.35 = 14$. 9.1 is the variance $npq$; 26 is the expected number without a panel.",
+  "workedSolution": "1. $X \\sim B(40, 0.35)$, so $E(X) = np = 40 \\times 0.35 = 14$. 9.1 is the variance $npq$; 26 is the expected number without a panel.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "14"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "9.1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "26"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim B(25, 0.36)$. Find the standard deviation of $X$.",
+  "answerSpec": {
+   "value": 2.4,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$\\operatorname{Var}(X) = npq = 25 \\times 0.36 \\times 0.64 = 5.76$, so the standard deviation is $\\sqrt{5.76} = 2.4$. 5.76 is the variance; 9 is the mean.",
+  "workedSolution": "1. $\\operatorname{Var}(X) = npq = 25 \\times 0.36 \\times 0.64 = 5.76$, so the standard deviation is $\\sqrt{5.76} = 2.4$. 5.76 is the variance; 9 is the mean.",
+  "hints": [
+   "The standard deviation is the square root of npq."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.40"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5.76"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "9"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim B(9, 0.25)$. Find $P(X \\leq 1)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.3003387451171875,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$P(X = 0) = 0.75^9 = 0.07508$ and $P(X = 1) = 9 \\times 0.25 \\times 0.75^8 = 0.22525$. $P(X \\leq 1) = 0.07508 + 0.22525 = 0.300$. Forgetting $P(X = 0)$ gives 0.225.",
+  "workedSolution": "1. $P(X = 0) = 0.75^9 = 0.07508$ and $P(X = 1) = 9 \\times 0.25 \\times 0.75^8 = 0.22525$. $P(X \\leq 1) = 0.07508 + 0.22525 = 0.300$. Forgetting $P(X = 0)$ gives 0.225.",
+  "hints": [
+   "$X \\leq 1$ means $X = 0$ or $X = 1$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.300"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.22525405883789062"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.6996612548828125"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "distributions.binomial.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Each egg from a farm in Marondera is cracked with probability 0.12, independently. A box holds 7 eggs. Find the probability that at least one egg in the box is cracked, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.59132440363008,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$X \\sim B(7, 0.12)$. $P(X \\geq 1) = 1 - P(X = 0) = 1 - 0.88^7 = 1 - 0.40868 = 0.591$. 0.409 is $P(X = 0)$; $7 \\times 0.12$ is the mean, not a probability.",
+  "workedSolution": "1. $X \\sim B(7, 0.12)$. $P(X \\geq 1) = 1 - P(X = 0) = 1 - 0.88^7 = 1 - 0.40868 = 0.591$. 0.409 is $P(X = 0)$; $7 \\times 0.12$ is the mean, not a probability.",
+  "hints": [
+   "At least one = 1 − P(none)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.591"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.40867559636992"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.84"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "distributions.binomial.q08",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A fair die is rolled 12 times. Find the probability of getting between 2 and 4 sixes inclusive, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.5823173516417217,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$X \\sim B\\left(12, \\frac{1}{6}\\right)$. $P(X = 2) = 66\\left(\\frac{1}{6}\\right)^2\\left(\\frac{5}{6}\\right)^{10} = 0.29609$, $P(X = 3) = 220\\left(\\frac{1}{6}\\right)^3\\left(\\frac{5}{6}\\right)^9 = 0.19739$, $P(X = 4) = 495\\left(\\frac{1}{6}\\right)^4\\left(\\frac{5}{6}\\right)^8 = 0.08883$. Total $= 0.582$. Leaving out $X = 4$ gives 0.493.",
+  "workedSolution": "1. $X \\sim B\\left(12, \\frac{1}{6}\\right)$. $P(X = 2) = 66\\left(\\frac{1}{6}\\right)^2\\left(\\frac{5}{6}\\right)^{10} = 0.29609$, $P(X = 3) = 220\\left(\\frac{1}{6}\\right)^3\\left(\\frac{5}{6}\\right)^9 = 0.19739$, $P(X = 4) = 495\\left(\\frac{1}{6}\\right)^4\\left(\\frac{5}{6}\\right)^8 = 0.08883$. Total $= 0.582$. Leaving out $X = 4$ gives 0.493.",
+  "hints": [
+   "'Between 2 and 4 inclusive' means X = 2, 3 or 4."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.582"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.1973957124209226"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.4934892810523065"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "distributions.binomial.q09",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "$X \\sim B(n, p)$ has mean 4.8 and variance 2.88. Find $n$ and $p$.",
+  "payload": {
+   "template": "n = {{blank:n}}, p = {{blank:p}}",
+   "blanks": [
+    {
+     "id": "n",
+     "input": "number"
+    },
+    {
+     "id": "p",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "n",
+     "accepted": [
+      "12"
+     ]
+    },
+    {
+     "id": "p",
+     "accepted": [
+      "0.4"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$npq = 2.88$ and $np = 4.8$, so $q = \\frac{2.88}{4.8} = 0.6$ and $p = 0.4$. Then $n = \\frac{4.8}{0.4} = 12$. Taking $p = 0.6$ (the value of $q$) gives $n = 8$.",
+  "hints": [
+   "Divide the variance by the mean to get q."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "n",
+     "text": "12"
+    },
+    {
+     "blankId": "p",
+     "text": "0.4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "n",
+      "text": "8"
+     },
+     {
+      "blankId": "p",
+      "text": "0.6"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A machine makes bolts, and each bolt is faulty with probability 0.06, independently. An inspector takes n bolts. Find the least value of n for which the probability that at least one bolt is faulty is greater than 0.9.",
+  "answerSpec": {
+   "value": 38
+  },
+  "explanation": "We need $1 - 0.94^n > 0.9$, so $0.94^n < 0.1$. $0.94^{37} = 0.1013$ (not small enough) and $0.94^{38} = 0.0952$. Least $n = 38$. With logarithms, $n > \\frac{\\lg 0.1}{\\lg 0.94} = 37.2$, so $n = 38$; rounding down to 37 is wrong.",
+  "workedSolution": "1. We need $1 - 0.94^n > 0.9$, so $0.94^n < 0.1$. $0.94^{37} = 0.1013$ (not small enough) and $0.94^{38} = 0.0952$. Least $n = 38$. With logarithms, $n > \\frac{\\lg 0.1}{\\lg 0.94} = 37.2$, so $n = 38$; rounding down to 37 is wrong.",
+  "hints": [
+   "P(at least one faulty) = 1 − 0.94ⁿ.",
+   "Solve 0.94ⁿ < 0.1 by trial or with logarithms."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "38"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "37"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "15"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "distributions.binomial.q11",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For $X \\sim B(n, p)$, $\\operatorname{Var}(X) = np$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. $np$ is the mean. The variance is $np(1 - p)$, which is smaller than the mean.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $X \\sim B(10, 0.5)$, then $P(X = 3) = P(X = 7)$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. $P(X = 3) = \\binom{10}{3}0.5^{10}$ and $P(X = 7) = \\binom{10}{7}0.5^{10}$, and $\\binom{10}{3} = \\binom{10}{7} = 120$. With $p = 0.5$ the distribution is symmetrical about the mean 5.",
+  "hints": [
+   "Compare $\\binom{10}{3}$ and $\\binom{10}{7}$."
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim B(10, 0.35)$. Which expression equals $P(X = 4)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\binom{10}{4}(0.35)^6(0.65)^4$",
+    "rationale": "The power of p must be the number of successes, 4."
+   },
+   {
+    "key": "B",
+    "content": "$(0.35)^4(0.65)^6$",
+    "rationale": "This is one particular order; multiply by the number of orders."
+   },
+   {
+    "key": "C",
+    "content": "$\\binom{10}{4}(0.35)^4$",
+    "rationale": "The failures are missing: (0.65)⁶ is needed too."
+   },
+   {
+    "key": "D",
+    "content": "$\\binom{10}{4}(0.35)^4(0.65)^6$",
+    "correct": true,
+    "rationale": "Correct: r = 4 successes and n − r = 6 failures."
+   }
+  ],
+  "explanation": "$P(X = r) = \\binom{n}{r}p^r(1 - p)^{n - r}$ with $n = 10$, $r = 4$, $p = 0.35$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "$X \\sim B(20, 0.25)$. Match each quantity with its value or expression.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$E(X)$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\operatorname{Var}(X)$"
+    },
+    {
+     "id": "L3",
+     "content": "$P(X = 0)$"
+    },
+    {
+     "id": "L4",
+     "content": "$P(X = 20)$"
+    },
+    {
+     "id": "L5",
+     "content": "$P(X \\geq 1)$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$0.75^{20}$"
+    },
+    {
+     "id": "R4",
+     "content": "$0.25^{20}$"
+    },
+    {
+     "id": "R5",
+     "content": "$1 - 0.75^{20}$"
+    },
+    {
+     "id": "R1",
+     "content": "5"
+    },
+    {
+     "id": "R2",
+     "content": "3.75"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "$np = 5$, $npq = 20 \\times 0.25 \\times 0.75 = 3.75$. No successes: every trial fails, $0.75^{20}$. All successes: $0.25^{20}$. At least one: $1 - P(X = 0)$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Four learners are chosen at random, without replacement, from a group of 12 girls and 8 boys. Explain why the number of girls chosen does not have a binomial distribution.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Without replacement, the probability that the next learner chosen is a girl changes after each choice (12/20, then 11/19 or 12/19, …).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "So p is not constant and the choices are not independent, which breaks the binomial conditions.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The probability of choosing a girl is 12/20 for the first learner but 11/19 or 12/19 for the second, depending on the first choice. The probability is not constant and the trials are not independent, so the binomial conditions fail."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A small population sampled without replacement is not binomial.",
+  "hints": [
+   "Does the probability of choosing a girl stay the same?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Nyasha models the number of days in a 30-day month on which it rains in Harare by a binomial distribution. Give two reasons why this model may not be suitable.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The trials (days) may not be independent: a rainy day makes rain the next day more likely (weather comes in spells).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The probability of rain may not be the same on every day of the month (it changes with the season).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Rain on one day makes rain on the next day more likely, so the days are not independent; and the probability of rain changes through the month as the season changes, so p is not constant."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Check each binomial condition in context: independence and constant p are the usual failures.",
+  "hints": [
+   "Which binomial conditions might fail for weather?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "distributions.binomial.q17",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim B(5, p)$ and $P(X = 5) = 0.07776$. Find $p$.",
+  "answerSpec": {
+   "value": 0.6,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$P(X = 5) = p^5 = 0.07776$, so $p = 0.07776^{\\frac{1}{5}} = 0.6$. The answer 0.4 would give $P(X = 0) = 0.6^5$ instead.",
+  "workedSolution": "1. $P(X = 5) = p^5 = 0.07776$, so $p = 0.07776^{\\frac{1}{5}} = 0.6$. The answer 0.4 would give $P(X = 0) = 0.6^5$ instead.",
+  "hints": [
+   "$P(X = 5) = p^5$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.600"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.015552"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "distributions.binomial.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "The borehole pump at a school in Masvingo starts first time on any morning with probability 0.92, independently of other mornings. Consider a period of 14 mornings.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that the pump starts first time on all 14 mornings, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.31119283051109253,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$0.92^{14} = 0.311$.",
+    "workedSolution": "1. $0.92^{14} = 0.311$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that it fails to start first time on exactly 2 mornings, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.21412890417020353,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Let $F \\sim B(14, 0.08)$ be the number of failures. $P(F = 2) = \\binom{14}{2}(0.08)^2(0.92)^{12} = 91 \\times 0.0064 \\times 0.36767 = 0.214$.",
+    "workedSolution": "1. Let $F \\sim B(14, 0.08)$ be the number of failures. $P(F = 2) = \\binom{14}{2}(0.08)^2(0.92)^{12} = 91 \\times 0.0064 \\times 0.36767 = 0.214$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the expected number of mornings on which it fails to start first time.",
+    "answerSpec": {
+     "value": 1.12,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$E(F) = 14 \\times 0.08 = 1.12$.",
+    "workedSolution": "1. $E(F) = 14 \\times 0.08 = 1.12$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that it fails to start first time on at most one morning, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.6900362763506835,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$P(F \\leq 1) = 0.92^{14} + 14 \\times 0.08 \\times 0.92^{13} = 0.3112 + 0.3788 = 0.690$.",
+    "workedSolution": "1. $P(F \\leq 1) = 0.92^{14} + 14 \\times 0.08 \\times 0.92^{13} = 0.3112 + 0.3788 = 0.690$."
+   }
+  ],
+  "explanation": "Define the number of failures as B(14, 0.08) and use the binomial formula, adding terms for 'at most'.",
+  "hints": [
+   "Count failures: p = 0.08 for a failure.",
+   "At most one: F = 0 or F = 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.311"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.214"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.12"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.690"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "12.88"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.0023530648809912476"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "12.88"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.37884344583959095"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "distributions.binomial.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.distributions.binomial"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "A quiz has 15 multiple-choice questions, each with 5 options of which only one is correct. Tatenda guesses every answer at random. X is the number of correct answers.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the distribution of $X$ in the form $X \\sim B(n, p)$.",
+    "payload": {
+     "template": "n = {{blank:n}}, p = {{blank:p}}",
+     "blanks": [
+      {
+       "id": "n",
+       "input": "number"
+      },
+      {
+       "id": "p",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "n",
+       "accepted": [
+        "15"
+       ]
+      },
+      {
+       "id": "p",
+       "accepted": [
+        "0.2"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "15 independent questions, each correct with probability $\\frac{1}{5} = 0.2$: $X \\sim B(15, 0.2)$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that Tatenda gets at least 3 answers correct, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.6019767907450877,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$P(X \\leq 2) = 0.8^{15} + 15(0.2)(0.8)^{14} + 105(0.2)^2(0.8)^{13} = 0.03518 + 0.1319 + 0.2309 = 0.3980$. So $P(X \\geq 3) = 1 - 0.3980 = 0.602$.",
+    "workedSolution": "1. $P(X \\leq 2) = 0.8^{15} + 15(0.2)(0.8)^{14} + 105(0.2)^2(0.8)^{13} = 0.03518 + 0.1319 + 0.2309 = 0.3980$. So $P(X \\geq 3) = 1 - 0.3980 = 0.602$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find $E(X)$.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "$15 \\times 0.2 = 3$.",
+    "workedSolution": "1. $15 \\times 0.2 = 3$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find $\\operatorname{Var}(X)$.",
+    "answerSpec": {
+     "value": 2.4000000000000004,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$15 \\times 0.2 \\times 0.8 = 2.4$.",
+    "workedSolution": "1. $15 \\times 0.2 \\times 0.8 = 2.4$."
+   }
+  ],
+  "explanation": "Identify n and p, use the complement for 'at least', and np, npq for the mean and variance.",
+  "hints": [
+   "At least 3 = 1 − P(X ≤ 2)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "n",
+       "text": "15"
+      },
+      {
+       "blankId": "p",
+       "text": "0.2"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.602"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2.40"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "n",
+        "text": "5"
+       },
+       {
+        "blankId": "p",
+        "text": "0.8"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.3518378954260475"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.4"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ }
+]

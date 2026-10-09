@@ -1,0 +1,1635 @@
+[
+ {
+  "key": "exam.w1b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.quadratics.completing-square",
+   "amath.quadratics.solving",
+   "amath.functions.domain-range"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "The function $f$ is defined by $f(x) = 2x^2 + 8x - 1$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "By completing the square:",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 3,
+      "stem": "Express $f(x)$ in the form $a(x + b)^2 + c$.",
+      "payload": {
+       "template": "a = {{blank:a}}, b = {{blank:b}}, c = {{blank:c}}",
+       "blanks": [
+        {
+         "id": "a",
+         "input": "number"
+        },
+        {
+         "id": "b",
+         "input": "number"
+        },
+        {
+         "id": "c",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "a",
+         "accepted": [
+          "2"
+         ]
+        },
+        {
+         "id": "b",
+         "accepted": [
+          "2"
+         ]
+        },
+        {
+         "id": "c",
+         "accepted": [
+          "-9"
+         ]
+        }
+       ]
+      },
+      "explanation": "$2(x^2 + 4x) - 1 = 2\\left[(x + 2)^2 - 4\\right] - 1 = 2(x + 2)^2 - 9$."
+     },
+     {
+      "label": "(ii)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 2,
+      "stem": "Hence state the minimum value of $f(x)$ and the value of $x$ at which it occurs.",
+      "payload": {
+       "template": "minimum value = {{blank:m}} when x = {{blank:x}}",
+       "blanks": [
+        {
+         "id": "m",
+         "input": "number"
+        },
+        {
+         "id": "x",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "m",
+         "accepted": [
+          "-9"
+         ]
+        },
+        {
+         "id": "x",
+         "accepted": [
+          "-2"
+         ]
+        }
+       ]
+      },
+      "explanation": "$2(x + 2)^2 \\geq 0$, so $f(x) \\geq -9$, with equality at $x = -2$."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence solve $f(x) = 0$, giving your answers correct to 3 significant figures, in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}} or x = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-4.12"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0.121"
+       ],
+       "marks": 2,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$2(x + 2)^2 = 9$, so $(x + 2)^2 = 4.5$ and $x = -2 \\pm \\sqrt{4.5}$: $x = -4.12$ or $x = 0.121$."
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "The domain of $f$ is now restricted to $-3 \\leq x \\leq 1$.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 2,
+      "stem": "Find the range of $f$.",
+      "payload": {
+       "template": "{{blank:lo}} ≤ f(x) ≤ {{blank:hi}}",
+       "blanks": [
+        {
+         "id": "lo",
+         "input": "number"
+        },
+        {
+         "id": "hi",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "lo",
+         "accepted": [
+          "-9"
+         ]
+        },
+        {
+         "id": "hi",
+         "accepted": [
+          "9"
+         ]
+        }
+       ]
+      },
+      "explanation": "The vertex $x = -2$ is inside the domain, so the least value is $-9$; $f(-3) = -7$ and $f(1) = 9$, so the greatest is $9$."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Explain why $f$ is not a one-to-one mapping on this domain.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Gives two inputs in the domain with equal outputs, e.g. $f(-3) = f(-1) = -7$.",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "States that a one-to-one mapping needs distinct images for distinct inputs (the domain contains points on both sides of x = −2).",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: $f(-3) = 18 - 24 - 1 = -7$ and $f(-1) = 2 - 8 - 1 = -7$. Two different inputs have the same image, so $f$ is two-to-one on this domain, not one-to-one."
+      },
+      "explanation": "The domain contains points on both sides of the line of symmetry x = −2."
+     }
+    ]
+   }
+  ],
+  "explanation": "Completing the square gives the vertex $(-2, -9)$, which answers (a), solves (b) by square roots, and decides the range in (c).",
+  "hints": [
+   "Take 2 out of $2x^2 + 8x$ first.",
+   "For (b), $(x + 2)^2 = \\frac{9}{2}$.",
+   "For (c), check whether the vertex lies in the domain."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      },
+      {
+       "blankId": "c",
+       "text": "-9"
+      }
+     ]
+    },
+    "(a)(ii)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "-9"
+      },
+      {
+       "blankId": "x",
+       "text": "-2"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-4.12"
+      },
+      {
+       "blankId": "b",
+       "text": "0.121"
+      }
+     ]
+    },
+    "(c)(i)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "lo",
+       "text": "-9"
+      },
+      {
+       "blankId": "hi",
+       "text": "9"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "4"
+       },
+       {
+        "blankId": "c",
+        "text": "-5"
+       }
+      ]
+     },
+     "(a)(ii)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "-1"
+       },
+       {
+        "blankId": "x",
+        "text": "2"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-4.21"
+       },
+       {
+        "blankId": "b",
+        "text": "0.212"
+       }
+      ]
+     },
+     "(c)(i)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "lo",
+        "text": "-7"
+       },
+       {
+        "blankId": "hi",
+        "text": "9"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.functions.composite",
+   "amath.functions.inverse",
+   "amath.functions.domain-range"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "The functions $f$ and $g$ are defined by $f(x) = 2x + 3$ for $x \\in \\mathbb{R}$, and $g(x) = \\dfrac{6}{x - 2}$ for $x \\neq 2$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Find, in its simplest form,",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "stem": "$fg(x)$, as a single fraction. Type it with /, e.g. (4x+1)/(x-5).",
+      "payload": {
+       "maxLength": 60
+      },
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "(3x+6)/(x-2)"
+        },
+        {
+         "value": "(6+3x)/(x-2)"
+        },
+        {
+         "value": "3(x+2)/(x-2)"
+        },
+        {
+         "value": "12/(x-2)+3"
+        },
+        {
+         "value": "3+12/(x-2)"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "remove_whitespace"
+       ]
+      },
+      "explanation": "$fg(x) = 2\\left(\\frac{6}{x - 2}\\right) + 3 = \\frac{12 + 3(x - 2)}{x - 2} = \\frac{3x + 6}{x - 2}$."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "stem": "$gf(x)$. Type it with /, e.g. 5/(3x-1).",
+      "payload": {
+       "maxLength": 60
+      },
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "6/(2x+1)"
+        },
+        {
+         "value": "6/(1+2x)"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "remove_whitespace"
+       ]
+      },
+      "explanation": "$gf(x) = \\frac{6}{(2x + 3) - 2} = \\frac{6}{2x + 1}$."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Find",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "stem": "$f^{-1}(x)$. Type it with /, e.g. (x+1)/4.",
+      "payload": {
+       "maxLength": 60
+      },
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "(x-3)/2"
+        },
+        {
+         "value": "x/2-3/2"
+        },
+        {
+         "value": "0.5x-1.5"
+        },
+        {
+         "value": "0.5(x-3)"
+        },
+        {
+         "value": "(1/2)(x-3)"
+        },
+        {
+         "value": "1/2(x-3)"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "remove_whitespace"
+       ]
+      },
+      "explanation": "$y = 2x + 3$ gives $x = \\frac{y - 3}{2}$, so $f^{-1}(x) = \\frac{x - 3}{2}$."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "stem": "$g^{-1}(x)$. Type it with /, e.g. (3x+1)/x.",
+      "payload": {
+       "maxLength": 60
+      },
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "(2x+6)/x"
+        },
+        {
+         "value": "(6+2x)/x"
+        },
+        {
+         "value": "2+6/x"
+        },
+        {
+         "value": "6/x+2"
+        },
+        {
+         "value": "2(x+3)/x"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "remove_whitespace"
+       ]
+      },
+      "explanation": "$y = \\frac{6}{x - 2}$ gives $x - 2 = \\frac{6}{y}$, so $x = 2 + \\frac{6}{y}$ and $g^{-1}(x) = \\frac{2x + 6}{x}$."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Solve $fg(x) = 9$.",
+    "payload": {
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "$\\frac{12}{x - 2} + 3 = 9$ gives $\\frac{12}{x - 2} = 6$, so $x - 2 = 2$ and $x = 4$.",
+    "workedSolution": "1. $\\frac{12}{x - 2} + 3 = 9$ gives $\\frac{12}{x - 2} = 6$, so $x - 2 = 2$ and $x = 4$."
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 3,
+    "stem": "The function $g^{-1}$ is not defined for one real value of $x$.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State this value.",
+      "payload": {
+       "answerPrefix": "x ="
+      },
+      "answerSpec": {
+       "value": 0
+      },
+      "explanation": "$g^{-1}(x) = \\frac{2x + 6}{x}$ needs $x \\neq 0$.",
+      "workedSolution": "1. $g^{-1}(x) = \\frac{2x + 6}{x}$ needs $x \\neq 0$."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Explain, with reference to $g$, why this value is excluded.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "States that the domain of $g^{-1}$ is the range of $g$.",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "States that $\\frac{6}{x - 2}$ can never equal 0 (the numerator is never zero), so 0 is not in the range of $g$.",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: The inputs of $g^{-1}$ are the outputs of $g$. Since $\\frac{6}{x - 2} \\neq 0$ for every $x$, the value 0 is never an output of $g$, so $g^{-1}(0)$ is undefined."
+      },
+      "explanation": "Domain of the inverse = range of the function."
+     }
+    ]
+   }
+  ],
+  "explanation": "Substitute the inner function in brackets for composites; rearrange y = f(x) for inverses; the domain of an inverse is the range of the original function.",
+  "hints": [
+   "$fg(x) = f\\left(\\frac{6}{x - 2}\\right)$.",
+   "For $g^{-1}$, make $x$ the subject of $y = \\frac{6}{x - 2}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "SHORT_ANSWER",
+     "text": "(3x+6)/(x-2)"
+    },
+    "(a)(ii)": {
+     "type": "SHORT_ANSWER",
+     "text": "6/(2x+1)"
+    },
+    "(b)(i)": {
+     "type": "SHORT_ANSWER",
+     "text": "(x-3)/2"
+    },
+    "(b)(ii)": {
+     "type": "SHORT_ANSWER",
+     "text": "(2x+6)/x"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(d)(i)": {
+     "type": "NUMERICAL",
+     "value": "0"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "SHORT_ANSWER",
+      "text": "6/(2x+1)"
+     },
+     "(a)(ii)": {
+      "type": "SHORT_ANSWER",
+      "text": "(3x+6)/(x-2)"
+     },
+     "(b)(i)": {
+      "type": "SHORT_ANSWER",
+      "text": "(x+3)/2"
+     },
+     "(b)(ii)": {
+      "type": "SHORT_ANSWER",
+      "text": "(x-2)/6"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(d)(i)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.quadratics.discriminant",
+   "amath.quadratics.inequalities",
+   "amath.quadratics.solving"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A curve has equation $y = x^2 - 2x + 5$ and a line has equation $y = mx + 1$, where $m$ is a constant.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the $x$-coordinates of the points where the line meets the curve satisfy $x^2 - (2 + m)x + 4 = 0$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 equates $x^2 - 2x + 5 = mx + 1$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 rearranges to $x^2 - (2 + m)x + 4 = 0$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nx^2 - 2x + 5 = mx + 1\n$$\n\n$$\nx^2 - 2x - mx + 4 = 0\n$$\n\n$$\nx^2 - (2 + m)x + 4 = 0\n$$"
+    },
+    "explanation": "At a common point both equations give the same y."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the values of $m$ for which the line is a tangent to the curve, in ascending order.",
+    "payload": {
+     "template": "m = {{blank:a}} or m = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-6"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "Equal roots: $(2 + m)^2 - 16 = 0$, so $2 + m = \\pm 4$ and $m = 2$ or $m = -6$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "For the positive value of $m$, find the coordinates of the point of contact.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$m = 2$: $x^2 - 4x + 4 = (x - 2)^2 = 0$, so $x = 2$ and $y = 2(2) + 1 = 5$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Hence find the set of values of $m$ for which the line meets the curve at two distinct points.",
+    "payload": {
+     "template": "m < {{blank:a}} or m > {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-6"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$(2 + m)^2 > 16$: $2 + m < -4$ or $2 + m > 4$, so $m < -6$ or $m > 2$."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "State the number of points where the line $y = -3x + 1$ meets the curve.",
+    "options": [
+     {
+      "key": "A",
+      "content": "0",
+      "correct": true,
+      "rationale": "Correct: $m = -3$ lies between $-6$ and $2$, so the discriminant is negative."
+     },
+     {
+      "key": "B",
+      "content": "1",
+      "rationale": "One point needs m = −6 or m = 2."
+     },
+     {
+      "key": "C",
+      "content": "2",
+      "rationale": "Two points need m < −6 or m > 2."
+     },
+     {
+      "key": "D",
+      "content": "3",
+      "rationale": "A line meets a parabola at most twice."
+     }
+    ],
+    "explanation": "With $m = -3$: $x^2 + x + 4 = 0$ has discriminant $1 - 16 < 0$, so there are no points of intersection."
+   },
+   {
+    "label": "(f)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "For $m = 6$, find the exact $x$-coordinates of the points of intersection in the form $p \\pm q\\sqrt{3}$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "4"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "2"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "$x^2 - 8x + 4 = 0$: $x = \\frac{8 \\pm \\sqrt{64 - 16}}{2} = \\frac{8 \\pm \\sqrt{48}}{2} = \\frac{8 \\pm 4\\sqrt{3}}{2} = 4 \\pm 2\\sqrt{3}$."
+   }
+  ],
+  "explanation": "One quadratic, formed by equating line and curve, answers every part through its discriminant: zero for a tangent, positive for two points, negative for none.",
+  "hints": [
+   "The combined quadratic has $b = -(2 + m)$ and $c = 4$.",
+   "$\\sqrt{48} = 4\\sqrt{3}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-6"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "2"
+      },
+      {
+       "blankId": "y",
+       "text": "5"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-6"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(f)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "4"
+      },
+      {
+       "blankId": "q",
+       "text": "2"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-2"
+       },
+       {
+        "blankId": "b",
+        "text": "6"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "-2"
+       },
+       {
+        "blankId": "y",
+        "text": "3"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "-6"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(f)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "8"
+       },
+       {
+        "blankId": "q",
+        "text": "4"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-zimsec.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.quadratics.completing-square",
+   "amath.quadratics.inequalities",
+   "amath.quadratics.discriminant",
+   "amath.functions.inverse"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "The function $f$ is defined by $f(x) = 5 + 4x - x^2$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Express $f(x)$ in the form $a - (x - b)^2$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "9"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$-(x^2 - 4x) + 5 = -\\left[(x - 2)^2 - 4\\right] + 5 = 9 - (x - 2)^2$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe the sketch of $y = f(x)$, stating the coordinates of the turning point and of the points where the curve meets the axes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "An upside-down parabola with maximum point $(2, 9)$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Meets the $x$-axis at $(-1, 0)$ and $(5, 0)$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Meets the $y$-axis at $(0, 5)$.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A ∩-shaped curve with its maximum at $(2, 9)$, symmetrical about $x = 2$, crossing the $x$-axis at $(-1, 0)$ and $(5, 0)$ (since $5 + 4x - x^2 = -(x - 5)(x + 1)$) and the $y$-axis at $(0, 5)$."
+    },
+    "explanation": "Use the completed square for the vertex and factorise for the roots."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Hence solve $5 + 4x - x^2 > 0$.",
+    "payload": {
+     "template": "{{blank:a}} < x < {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "5"
+       ]
+      }
+     ]
+    },
+    "explanation": "The curve is above the $x$-axis between its roots: $-1 < x < 5$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Solve $5 + 4x - x^2 \\geq -7$.",
+    "payload": {
+     "template": "{{blank:a}} ≤ x ≤ {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "6"
+       ]
+      }
+     ]
+    },
+    "explanation": "$x^2 - 4x - 12 \\leq 0$, so $(x - 6)(x + 2) \\leq 0$ and $-2 \\leq x \\leq 6$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The equation $f(x) = k$ has two distinct real roots. State the set of values of $k$ in the form $k < c$; find $c$.",
+    "payload": {
+     "answerPrefix": "c ="
+    },
+    "answerSpec": {
+     "value": 9
+    },
+    "explanation": "The horizontal line $y = k$ meets the curve twice when it is below the maximum value 9: $k < 9$.",
+    "workedSolution": "1. The horizontal line $y = k$ meets the curve twice when it is below the maximum value 9: $k < 9$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "The domain of $f$ is restricted to $x \\geq 2$. Find $f^{-1}(x)$. Type sqrt(...) or √(...), e.g. 3+sqrt(4-x).",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2+sqrt(9-x)"
+      },
+      {
+       "value": "2+√(9-x)"
+      },
+      {
+       "value": "sqrt(9-x)+2"
+      },
+      {
+       "value": "√(9-x)+2"
+      },
+      {
+       "value": "2+sqrt(-x+9)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$y = 9 - (x - 2)^2$ gives $(x - 2)^2 = 9 - y$; with $x \\geq 2$, $x - 2 = \\sqrt{9 - y}$. So $f^{-1}(x) = 2 + \\sqrt{9 - x}$, for $x \\leq 9$."
+   }
+  ],
+  "explanation": "The completed square $9 - (x - 2)^2$ gives the maximum, the line of symmetry, the inequality regions and the inverse on $x \\geq 2$.",
+  "hints": [
+   "Write $5 + 4x - x^2 = -(x^2 - 4x) + 5$.",
+   "The curve is ∩-shaped: positive between its roots.",
+   "For the inverse, use the positive square root because x ≥ 2."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "9"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-1"
+      },
+      {
+       "blankId": "b",
+       "text": "5"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-2"
+      },
+      {
+       "blankId": "b",
+       "text": "6"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "9"
+    },
+    "(f)": {
+     "type": "SHORT_ANSWER",
+     "text": "2+sqrt(9-x)"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "-2"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-5"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-6"
+       },
+       {
+        "blankId": "b",
+        "text": "2"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     },
+     "(f)": {
+      "type": "SHORT_ANSWER",
+      "text": "2-sqrt(9-x)"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-zimsec.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.functions.inverse",
+   "amath.quadratics.completing-square",
+   "amath.functions.composite",
+   "amath.functions.domain-range"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "The functions $f$ and $g$ are defined by $f(x) = x^2 - 6x + 11$ for $x \\geq 3$, and $g(x) = 2x - 1$ for $x \\in \\mathbb{R}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Express $f(x)$ in the form $(x - a)^2 + b$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "3"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$x^2 - 6x + 11 = (x - 3)^2 - 9 + 11 = (x - 3)^2 + 2$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The range of $f$ is $f(x) \\geq m$. Find $m$.",
+    "payload": {
+     "answerPrefix": "m ="
+    },
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "The least value, at $x = 3$, is 2.",
+    "workedSolution": "1. The least value, at $x = 3$, is 2."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Find $f^{-1}(x)$. Type sqrt(...) or √(...), e.g. 4+sqrt(x-1).",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "3+sqrt(x-2)"
+      },
+      {
+       "value": "3+√(x-2)"
+      },
+      {
+       "value": "sqrt(x-2)+3"
+      },
+      {
+       "value": "√(x-2)+3"
+      },
+      {
+       "value": "3+sqrt(-2+x)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$y = (x - 3)^2 + 2$ gives $(x - 3)^2 = y - 2$; since $x \\geq 3$, $x - 3 = \\sqrt{y - 2}$. So $f^{-1}(x) = 3 + \\sqrt{x - 2}$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The domain of $f^{-1}$ is $x \\geq k$. Find $k$.",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "Domain of $f^{-1}$ = range of $f$: $x \\geq 2$.",
+    "workedSolution": "1. Domain of $f^{-1}$ = range of $f$: $x \\geq 2$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find $gf(x)$ in the form $ax^2 + bx + c$. Type it, e.g. 3x^2-4x+5.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2x^2-12x+21"
+      },
+      {
+       "value": "21-12x+2x^2"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$gf(x) = 2(x^2 - 6x + 11) - 1 = 2x^2 - 12x + 21$."
+   },
+   {
+    "label": "(f)",
+    "type": "STRUCTURED",
+    "marks": 3,
+    "stem": "Solve $gf(x) = 17$.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 2,
+      "stem": "Give the solution in the form $x = p + \\sqrt{q}$.",
+      "payload": {
+       "template": "p = {{blank:p}}, q = {{blank:q}}",
+       "blanks": [
+        {
+         "id": "p",
+         "input": "number"
+        },
+        {
+         "id": "q",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "p",
+         "accepted": [
+          "3"
+         ]
+        },
+        {
+         "id": "q",
+         "accepted": [
+          "7"
+         ]
+        }
+       ]
+      },
+      "explanation": "$2(x - 3)^2 + 3 = 17$, so $(x - 3)^2 = 7$ and $x = 3 \\pm \\sqrt{7}$; only $3 + \\sqrt{7}$ is in the domain."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "markingMode": "MANUAL",
+      "stem": "Explain why $x = 3 - \\sqrt{7}$ is not a solution.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "States that $3 - \\sqrt{7} < 3$, so it is outside the domain $x \\geq 3$ of $f$ (and so of $gf$).",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: $3 - \\sqrt{7} \\approx 0.35$, which is less than 3, so it is not in the domain of $f$."
+      },
+      "explanation": "gf only accepts inputs in the domain of f."
+     }
+    ]
+   }
+  ],
+  "explanation": "The completed square gives the range and the inverse; the composite $gf$ is solved most easily as $2(x - 3)^2 + 3 = 17$.",
+  "hints": [
+   "$gf(x) = 2f(x) - 1 = 2(x - 3)^2 + 3$.",
+   "The domain x ≥ 3 decides which square root to keep."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "3"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "3+sqrt(x-2)"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(e)": {
+     "type": "SHORT_ANSWER",
+     "text": "2x^2-12x+21"
+    },
+    "(f)(i)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "3"
+      },
+      {
+       "blankId": "q",
+       "text": "7"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-3"
+       },
+       {
+        "blankId": "b",
+        "text": "20"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "11"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "3-sqrt(x-2)"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(e)": {
+      "type": "SHORT_ANSWER",
+      "text": "4x^2-16x+18"
+     },
+     "(f)(i)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "-3"
+       },
+       {
+        "blankId": "q",
+        "text": "9"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ }
+]

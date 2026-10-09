@@ -1,0 +1,1410 @@
+[
+ {
+  "key": "exam.w1b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.modulus.equations",
+   "amath.modulus.inequalities"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Answer this question without a calculator.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Solve $|3x - 4| = |x + 2|$, giving the solutions in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}} or x = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0.5"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "$3x - 4 = x + 2$ gives $x = 3$; $3x - 4 = -(x + 2)$ gives $4x = 2$, $x = \\frac{1}{2}$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Hence solve $|3x - 4| > |x + 2|$.",
+    "payload": {
+     "template": "x < {{blank:a}} or x > {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0.5"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "Squaring: $8x^2 - 28x + 12 > 0$, i.e. $2x^2 - 7x + 3 > 0$, $(2x - 1)(x - 3) > 0$: outside the critical values. Test $x = 1$: $1 > 3$ is false, confirming."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Solve $|3x - 4| = x$, giving the solutions in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}} or x = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$3x - 4 = x$ gives $x = 2$; $-(3x - 4) = x$ gives $x = 1$. Both make the right-hand side positive."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the number of solutions of $|3x - 4| = 2x - 6$.",
+    "answerSpec": {
+     "value": 0
+    },
+    "explanation": "Case 1 gives $x = -2$, where $2x - 6 = -10 < 0$; case 2 gives $x = 2$, where $2x - 6 = -2 < 0$. Both are rejected, so there are no solutions.",
+    "workedSolution": "1. Case 1 gives $x = -2$, where $2x - 6 = -10 < 0$; case 2 gives $x = 2$, where $2x - 6 = -2 < 0$. Both are rejected, so there are no solutions."
+   }
+  ],
+  "explanation": "Use cases (or squaring when both sides are moduli), and always check that a right-hand side equal to a modulus is non-negative.",
+  "hints": [
+   "Both sides of (a) are moduli: use ± or square.",
+   "In (d), check the sign of 2x − 6 for each candidate."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0.5"
+      },
+      {
+       "blankId": "b",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0.5"
+      },
+      {
+       "blankId": "b",
+       "text": "3"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-0.5"
+       },
+       {
+        "blankId": "b",
+        "text": "-3"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "3"
+       },
+       {
+        "blankId": "b",
+        "text": "0.5"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-1"
+       },
+       {
+        "blankId": "b",
+        "text": "-2"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.graphs.cubic",
+   "amath.graphs.modulus-functions"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The function $f$ is defined by $f(x) = (x + 1)(x - 2)(x - 4)$. The curve $y = f(x)$ has turning points at approximately $(0.21, 8.21)$ and $(3.12, -4.06)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the $y$-intercept of $y = f(x)$.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "$f(0) = (1)(-2)(-4) = 8$.",
+    "workedSolution": "1. $f(0) = (1)(-2)(-4) = 8$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe the sketch of $y = |f(x)|$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Cusps on the $x$-axis at $(-1, 0)$, $(2, 0)$ and $(4, 0)$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The parts for $x < -1$ and $2 < x < 4$ are reflected, so the graph is never below the axis; between 2 and 4 there is a hump with maximum about $(3.12, 4.06)$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Passes through $(0, 8)$ with a maximum about $(0.21, 8.21)$; $y \\to \\infty$ at both ends.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Coming down from the top left to a cusp at $(-1, 0)$, rising through $(0, 8)$ to a maximum near $(0.21, 8.21)$, falling to a cusp at $(2, 0)$, rising to a reflected maximum near $(3.12, 4.06)$, falling to a cusp at $(4, 0)$, then rising steeply."
+    },
+    "explanation": "Reflect the negative parts of the cubic: x < −1 and 2 < x < 4."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Solve $f(x) \\geq 0$.",
+    "payload": {
+     "template": "{{blank:a}} ≤ x ≤ {{blank:b}} or x ≥ {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "Positive cubic with roots $-1$, $2$, $4$: on or above the axis for $-1 \\leq x \\leq 2$ and $x \\geq 4$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the number of solutions of $|f(x)| = 5$.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "The line $y = 5$ is below the maximum 8.21, so it meets the part between $-1$ and $2$ twice and the branch for $x > 4$ once; it is above the reflected hump of height 4.06, so it misses that; and it meets the reflected branch for $x < -1$ once. Total 4.",
+    "workedSolution": "1. The line $y = 5$ is below the maximum 8.21, so it meets the part between $-1$ and $2$ twice and the branch for $x > 4$ once; it is above the reflected hump of height 4.06, so it misses that; and it meets the reflected branch for $x < -1$ once. Total 4."
+   }
+  ],
+  "explanation": "Factors give the intercepts; the sign of the leading coefficient gives the shape; reflecting the negative parts gives the modulus graph.",
+  "hints": [
+   "Multiply the constants for the y-intercept.",
+   "After reflection, the turning point (3.12, −4.06) becomes a maximum of height 4.06."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-1"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      },
+      {
+       "blankId": "c",
+       "text": "4"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "-8"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "-2"
+       },
+       {
+        "blankId": "c",
+        "text": "-4"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.quadratics.discriminant",
+   "amath.quadratics.inequalities"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A curve has equation $y = 2x^2 - 3x + 5$ and a line has equation $y = x + k$, where $k$ is a constant.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the $x$-coordinates of any points of intersection satisfy $2x^2 - 4x + 5 - k = 0$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 equates $2x^2 - 3x + 5 = x + k$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 rearranges to $2x^2 - 4x + 5 - k = 0$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n2x^2 - 3x + 5 = x + k\n$$\n\n$$\n2x^2 - 4x + 5 - k = 0\n$$"
+    },
+    "explanation": "Equate the two expressions for y."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of $k$ for which the line is a tangent to the curve.",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Equal roots: $16 - 8(5 - k) = 0$, so $8k = 24$ and $k = 3$.",
+    "workedSolution": "1. Equal roots: $16 - 8(5 - k) = 0$, so $8k = 24$ and $k = 3$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the point of contact.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "$k = 3$: $2x^2 - 4x + 2 = 2(x - 1)^2 = 0$, so $x = 1$ and $y = 1 + 3 = 4$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the set of values of $k$ for which the line does not meet the curve, in the form $k < c$. Give $c$.",
+    "payload": {
+     "answerPrefix": "c ="
+    },
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "No intersection: $16 - 8(5 - k) < 0$, so $8k < 24$ and $k < 3$.",
+    "workedSolution": "1. No intersection: $16 - 8(5 - k) < 0$, so $8k < 24$ and $k < 3$."
+   }
+  ],
+  "explanation": "The discriminant of the combined quadratic is 8k − 24: zero for a tangent, negative when the line misses the curve.",
+  "hints": [
+   "Here $a = 2$, $b = -4$, $c = 5 - k$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "1"
+      },
+      {
+       "blankId": "y",
+       "text": "4"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-3"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "-1"
+       },
+       {
+        "blankId": "y",
+        "text": "3"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.functions.inverse",
+   "amath.functions.composite",
+   "amath.functions.domain-range"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The functions $f$ and $g$ are defined by $f(x) = (x - 2)^2 + 3$ for $x \\geq 2$, and $g(x) = 2x + 1$ for $x \\in \\mathbb{R}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The range of $f$ is $f(x) \\geq m$. Find $m$.",
+    "payload": {
+     "answerPrefix": "m ="
+    },
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "The least value is $f(2) = 3$.",
+    "workedSolution": "1. The least value is $f(2) = 3$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find $f^{-1}(x)$. Type sqrt(...) or √(...), e.g. 1+sqrt(x-5).",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2+sqrt(x-3)"
+      },
+      {
+       "value": "2+√(x-3)"
+      },
+      {
+       "value": "sqrt(x-3)+2"
+      },
+      {
+       "value": "√(x-3)+2"
+      },
+      {
+       "value": "2+sqrt(-3+x)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$(x - 2)^2 = y - 3$; with $x \\geq 2$, $x - 2 = \\sqrt{y - 3}$, so $f^{-1}(x) = 2 + \\sqrt{x - 3}$, $x \\geq 3$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Solve $fg(x) = 12$.",
+    "payload": {
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "$fg(x) = (2x + 1 - 2)^2 + 3 = (2x - 1)^2 + 3 = 12$, so $(2x - 1)^2 = 9$, $2x - 1 = \\pm 3$, giving $x = 2$ or $x = -1$. For $fg$ to be defined, $g(x) \\geq 2$, i.e. $x \\geq \\frac{1}{2}$, so $x = 2$ only.",
+    "workedSolution": "1. $fg(x) = (2x + 1 - 2)^2 + 3 = (2x - 1)^2 + 3 = 12$, so $(2x - 1)^2 = 9$, $2x - 1 = \\pm 3$, giving $x = 2$ or $x = -1$. For $fg$ to be defined, $g(x) \\geq 2$, i.e. $x \\geq \\frac{1}{2}$, so $x = 2$ only."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why $x = -1$ is not a solution of $fg(x) = 12$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Finds $g(-1) = -1$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "States that $-1$ is not in the domain of $f$ ($x \\geq 2$), so $fg(-1)$ is not defined.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $g(-1) = -1$, and $f$ is only defined for inputs $x \\geq 2$, so $f(g(-1))$ does not exist."
+    },
+    "explanation": "The range of the inner function must lie in the domain of the outer one."
+   }
+  ],
+  "explanation": "Restricted domains matter: the inverse uses the positive square root, and the composite only accepts x with g(x) ≥ 2.",
+  "hints": [
+   "$fg(x) = f(2x + 1)$: replace $x$ by $2x + 1$ in $(x - 2)^2 + 3$.",
+   "Check each answer: is $g(x)$ in the domain of $f$?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "2+sqrt(x-3)"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "2-sqrt(x-3)"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "-1"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.quadratics.solving"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A rectangular lawn at a clinic in Bulawayo measures 12 m by 8 m. A path of constant width $x$ metres is laid all the way round the outside of the lawn. The lawn and the path together cover $160\\ \\text{m}^2$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $x^2 + 10x - 16 = 0$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes the outer dimensions as $(12 + 2x)$ and $(8 + 2x)$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 forms $(12 + 2x)(8 + 2x) = 160$ and expands to $96 + 40x + 4x^2$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 simplifies $4x^2 + 40x - 64 = 0$ to the given equation.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n(12 + 2x)(8 + 2x) = 160\n$$\n\n$$\n96 + 24x + 16x + 4x^2 = 160\n$$\n\n$$\n4x^2 + 40x - 64 = 0 \\Rightarrow x^2 + 10x - 16 = 0\n$$"
+    },
+    "explanation": "The path adds x on each side, so 2x to each dimension."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Solve the equation to find the width of the path, giving your answer correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "m",
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 1.4031242374328485,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "$x = \\frac{-10 \\pm \\sqrt{100 + 64}}{2} = \\frac{-10 \\pm \\sqrt{164}}{2} = -5 \\pm \\sqrt{41}$. The positive root is $x = 1.4031\\ldots \\approx 1.40$ m.",
+    "workedSolution": "1. $x = \\frac{-10 \\pm \\sqrt{100 + 64}}{2} = \\frac{-10 \\pm \\sqrt{164}}{2} = -5 \\pm \\sqrt{41}$. The positive root is $x = 1.4031\\ldots \\approx 1.40$ m."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the other root of the equation is rejected.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "States the other root is negative (about $-11.4$).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "States that a width cannot be negative.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The other root is $x \\approx -11.40$, which is negative, and the width of a path must be positive."
+    },
+    "explanation": "Interpret roots in context."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Paving costs US\\$12 per square metre. Find the cost of paving the path.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 768
+    },
+    "explanation": "Path area $= 160 - 12 \\times 8 = 64\\ \\text{m}^2$; cost $= 64 \\times 12$, which is US\\$768.",
+    "workedSolution": "1. Path area $= 160 - 12 \\times 8 = 64\\ \\text{m}^2$; cost $= 64 \\times 12$, which is US\\$768."
+   }
+  ],
+  "explanation": "Form the area equation from the outer dimensions, solve with the formula and keep the positive root.",
+  "hints": [
+   "The outer rectangle is (12 + 2x) m by (8 + 2x) m.",
+   "Use the quadratic formula; only the positive root is a width."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.40"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "768"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-11.403124237432849"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1920"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w1b-cambridge.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.graphs.modulus-functions"
+  ],
+  "difficulty": 5,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The graph of $y = |3\\sin 2x - 1|$ is drawn for $0^\\circ \\leq x \\leq 180^\\circ$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the greatest value of $y$ and the value of $y$ when $x = 0^\\circ$.",
+    "payload": {
+     "template": "greatest value = {{blank:m}}; y at 0° = {{blank:y}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "$3\\sin 2x - 1$ ranges from $-4$ to $2$, so the greatest value of its modulus is 4 (at $x = 135^\\circ$). At $x = 0$, $y = |-1| = 1$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the $x$-coordinates of the points where the graph meets the $x$-axis, correct to 1 decimal place, in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}}° and x = {{blank:b}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "9.7"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "80.3"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\sin 2x = \\frac{1}{3}$: $2x = 19.47^\\circ$ or $160.53^\\circ$, so $x = 9.7^\\circ$ or $80.3^\\circ$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Solve $|3\\sin 2x - 1| = 2$, giving your answers correct to 1 decimal place where necessary, in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}}°, {{blank:b}}°, {{blank:c}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "45"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "99.7"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "170.3"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$3\\sin 2x - 1 = 2$ gives $\\sin 2x = 1$, $2x = 90^\\circ$, $x = 45^\\circ$. $3\\sin 2x - 1 = -2$ gives $\\sin 2x = -\\frac{1}{3}$, $2x = 199.47^\\circ$ or $340.53^\\circ$, so $x = 99.7^\\circ$ or $170.3^\\circ$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of solutions of $|3\\sin 2x - 1| = 1$ for $0^\\circ \\leq x \\leq 180^\\circ$.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "$\\sin 2x = \\frac{2}{3}$ gives 2 solutions; $\\sin 2x = 0$ gives $x = 0^\\circ, 90^\\circ, 180^\\circ$. Total 5.",
+    "workedSolution": "1. $\\sin 2x = \\frac{2}{3}$ gives 2 solutions; $\\sin 2x = 0$ gives $x = 0^\\circ, 90^\\circ, 180^\\circ$. Total 5."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the shape of the graph between $x = 90^\\circ$ and $x = 180^\\circ$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "For $90^\\circ < x < 180^\\circ$, $3\\sin 2x - 1 < 0$, so this whole section is reflected above the axis.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It rises from $(90^\\circ, 1)$ to a maximum $(135^\\circ, 4)$ and falls back to $(180^\\circ, 1)$, with no cusps in this section.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Between $90^\\circ$ and $180^\\circ$, $\\sin 2x \\leq 0$, so $3\\sin 2x - 1 \\leq -1$ and the graph is the reflection: a smooth arch from $(90^\\circ, 1)$ up to $(135^\\circ, 4)$ and down to $(180^\\circ, 1)$."
+    },
+    "explanation": "The cusps are only where the original graph crosses the axis, both of which lie between 0° and 90°."
+   }
+  ],
+  "explanation": "Find where $3\\sin 2x - 1$ is negative (from $x \\approx 80.3^\\circ$ to $180^\\circ$ and from $0^\\circ$ to $9.7^\\circ$) and reflect those sections; count intersections with horizontal lines.",
+  "hints": [
+   "$3\\sin 2x - 1$ takes values from $-4$ to $2$.",
+   "Solve each case for $2x$ in $0^\\circ \\leq 2x \\leq 360^\\circ$, then halve."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "4"
+      },
+      {
+       "blankId": "y",
+       "text": "1"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "9.7"
+      },
+      {
+       "blankId": "b",
+       "text": "80.3"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "45"
+      },
+      {
+       "blankId": "b",
+       "text": "99.7"
+      },
+      {
+       "blankId": "c",
+       "text": "170.3"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "2"
+       },
+       {
+        "blankId": "y",
+        "text": "-1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "19.5"
+       },
+       {
+        "blankId": "b",
+        "text": "160.5"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "90"
+       },
+       {
+        "blankId": "b",
+        "text": "9.7"
+       },
+       {
+        "blankId": "c",
+        "text": "80.3"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w1b-cambridge.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.functions.inverse",
+   "amath.functions.composite",
+   "amath.functions.domain-range"
+  ],
+  "difficulty": 5,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The functions $f$ and $g$ are defined by $f(x) = 3\\mathrm{e}^{2x} - 1$ for $x \\in \\mathbb{R}$, and $g(x) = \\ln(x + 4)$ for $x > -4$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The range of $f$ is $f(x) > m$. Find $m$.",
+    "payload": {
+     "answerPrefix": "m ="
+    },
+    "answerSpec": {
+     "value": -1
+    },
+    "explanation": "$3\\mathrm{e}^{2x} > 0$, so $f(x) > -1$.",
+    "workedSolution": "1. $3\\mathrm{e}^{2x} > 0$, so $f(x) > -1$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find $f^{-1}(x)$. Type ln(...) for the natural logarithm, e.g. (1/2)ln((x+2)/5).",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "(1/2)ln((x+1)/3)"
+      },
+      {
+       "value": "1/2ln((x+1)/3)"
+      },
+      {
+       "value": "0.5ln((x+1)/3)"
+      },
+      {
+       "value": "ln((x+1)/3)/2"
+      },
+      {
+       "value": "(ln((x+1)/3))/2"
+      },
+      {
+       "value": "(1/2)(ln(x+1)-ln3)"
+      },
+      {
+       "value": "ln(sqrt((x+1)/3))"
+      },
+      {
+       "value": "0.5*ln((x+1)/3)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\mathrm{e}^{2x} = \\frac{y + 1}{3}$, so $2x = \\ln\\frac{y + 1}{3}$ and $f^{-1}(x) = \\frac{1}{2}\\ln\\left(\\frac{x + 1}{3}\\right)$, for $x > -1$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Show that $fg(x)$ can be written as a polynomial, and give it in the form $a(x + b)^2 + c$. Type it, e.g. 2(x+5)^2-3.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "3(x+4)^2-1"
+      },
+      {
+       "value": "-1+3(x+4)^2"
+      },
+      {
+       "value": "3x^2+24x+47"
+      },
+      {
+       "value": "3(4+x)^2-1"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$fg(x) = 3\\mathrm{e}^{2\\ln(x + 4)} - 1 = 3\\mathrm{e}^{\\ln (x + 4)^2} - 1 = 3(x + 4)^2 - 1$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Hence solve $fg(x) = 74$.",
+    "payload": {
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "$3(x + 4)^2 = 75$, so $(x + 4)^2 = 25$ and $x + 4 = \\pm 5$: $x = 1$ or $x = -9$. Only $x = 1$ satisfies $x > -4$.",
+    "workedSolution": "1. $3(x + 4)^2 = 75$, so $(x + 4)^2 = 25$ and $x + 4 = \\pm 5$: $x = 1$ or $x = -9$. Only $x = 1$ satisfies $x > -4$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find $f^{-1}(5)$, giving your answer correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.34657359027997264,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$f^{-1}(5) = \\frac{1}{2}\\ln 2 = 0.3466\\ldots \\approx 0.347$.",
+    "workedSolution": "1. $f^{-1}(5) = \\frac{1}{2}\\ln 2 = 0.3466\\ldots \\approx 0.347$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why $x = -9$ is not a solution in part (d).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "States that $-9$ is not in the domain of $g$ ($x > -4$).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Because $\\ln(-5)$ is undefined, so $fg(-9)$ does not exist (even though the polynomial gives 74).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $g(-9) = \\ln(-5)$, which is undefined, so $-9$ is outside the domain of $g$ and of $fg$. The polynomial form $3(x + 4)^2 - 1$ is only valid for $x > -4$."
+    },
+    "explanation": "Simplifying a composite does not change its domain."
+   }
+  ],
+  "explanation": "Use $\\mathrm{e}^{\\ln u} = u$ to simplify $fg$, and keep track of domains: $fg$ is only defined for $x > -4$.",
+  "hints": [
+   "$2\\ln(x + 4) = \\ln (x + 4)^2$.",
+   "Make $\\mathrm{e}^{2x}$ the subject to find $f^{-1}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "-1"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "(1/2)ln((x+1)/3)"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "3(x+4)^2-1"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.347"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "ln((x+1)/3)"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "3e^(2ln(x+4))-1"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "-9"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.6931471805599453"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ }
+]

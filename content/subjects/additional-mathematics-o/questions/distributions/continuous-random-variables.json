@@ -1,0 +1,1028 @@
+[
+ {
+  "key": "distributions.continuous-random-variables.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which pair of conditions must a probability density function $f(x)$ satisfy?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$f(x) \\geq 0$ for all $x$, and the total area under the graph is 1",
+    "correct": true,
+    "rationale": "Correct: densities are never negative and the total probability is 1."
+   },
+   {
+    "key": "B",
+    "content": "$0 \\leq f(x) \\leq 1$ for all $x$, and $f$ is increasing",
+    "rationale": "A density can exceed 1 at some points, and it need not increase."
+   },
+   {
+    "key": "C",
+    "content": "$f(x) > 0$ for all $x$, and $f(0) = 1$",
+    "rationale": "f(x) is 0 outside the range of X, and f(0) can be any non-negative value."
+   },
+   {
+    "key": "D",
+    "content": "The values of $f(x)$ add up to 1",
+    "rationale": "For a continuous variable the area (an integral), not a sum of values, equals 1."
+   }
+  ],
+  "explanation": "A pdf satisfies $f(x) \\geq 0$ and $\\int f(x)\\,dx = 1$ over the range of $X$. Probabilities are areas under its graph.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q02",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a continuous random variable $X$ with pdf $f$, $P(X = 2) = f(2)$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. For a continuous variable every single value has probability 0: $P(X = 2) = \\int_2^2 f(x)\\,dx = 0$. $f(2)$ is a density, the height of the graph.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q03",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a continuous random variable, $P(X < 3) = P(X \\leq 3)$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. They differ by $P(X = 3)$, which is 0 for a continuous random variable.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = kx$ for $0 \\leq x \\leq 5$, and $f(x) = 0$ otherwise. Find $k$, as a fraction or a decimal.",
+  "answerSpec": {
+   "value": 0.08,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$\\int_0^5 kx\\,dx = k\\Big[\\frac{x^2}{2}\\Big]_0^5 = 12.5k = 1$, so $k = \\frac{2}{25} = 0.08$. The answer 0.04 forgets to divide $x^2$ by 2.",
+  "workedSolution": "1. $\\int_0^5 kx\\,dx = k\\Big[\\frac{x^2}{2}\\Big]_0^5 = 12.5k = 1$, so $k = \\frac{2}{25} = 0.08$. The answer 0.04 forgets to divide $x^2$ by 2.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0800"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.04"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = \\dfrac{x}{2}$ for $0 \\leq x \\leq 2$, and $f(x) = 0$ otherwise. Find $P(X < 1)$.",
+  "answerSpec": {
+   "value": 0.25,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$P(X < 1) = \\int_0^1 \\frac{x}{2}\\,dx = \\Big[\\frac{x^2}{4}\\Big]_0^1 = \\frac{1}{4}$. Although 1 is half-way, less than half the probability lies below it because the density increases.",
+  "workedSolution": "1. $P(X < 1) = \\int_0^1 \\frac{x}{2}\\,dx = \\Big[\\frac{x^2}{4}\\Big]_0^1 = \\frac{1}{4}$. Although 1 is half-way, less than half the probability lies below it because the density increases.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.250"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.75"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = \\dfrac{3x^2}{64}$ for $0 \\leq x \\leq 4$. Find $P(X > 2)$, as a fraction or a decimal.",
+  "answerSpec": {
+   "value": 0.8750000000000008,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$P(X > 2) = \\Big[\\frac{x^3}{64}\\Big]_2^4 = \\frac{64 - 8}{64} = \\frac{7}{8} = 0.875$. 0.125 is $P(X < 2)$.",
+  "workedSolution": "1. $P(X > 2) = \\Big[\\frac{x^3}{64}\\Big]_2^4 = \\frac{64 - 8}{64} = \\frac{7}{8} = 0.875$. 0.125 is $P(X < 2)$.",
+  "hints": [
+   "$\\int \\frac{3x^2}{64}\\,dx = \\frac{x^3}{64}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.875"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.125"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = 2x$ for $0 \\leq x \\leq 1$. Find $E(X)$, as a fraction or correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.6666666666666671,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$E(X) = \\int_0^1 x \\cdot 2x\\,dx = \\Big[\\frac{2x^3}{3}\\Big]_0^1 = \\frac{2}{3}$. The answer 1 is $\\int_0^1 2x\\,dx$, the total area, which forgets the factor $x$.",
+  "workedSolution": "1. $E(X) = \\int_0^1 x \\cdot 2x\\,dx = \\Big[\\frac{2x^3}{3}\\Big]_0^1 = \\frac{2}{3}$. The answer 1 is $\\int_0^1 2x\\,dx$, the total area, which forgets the factor $x$.",
+  "hints": [
+   "Integrate $x f(x)$, not $f(x)$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.667"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The pdf of $X$ is $f(x) = \\dfrac{x + 1}{4}$ for $0 \\leq x \\leq 2$. Find $P(X < 1)$, as a fraction or a decimal.",
+  "answerSpec": {
+   "value": 0.37499999999999994,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\int_0^1 \\frac{x + 1}{4}\\,dx = \\frac{1}{4}\\Big[\\frac{x^2}{2} + x\\Big]_0^1 = \\frac{1}{4} \\times \\frac{3}{2} = \\frac{3}{8}$.",
+  "workedSolution": "1. $\\int_0^1 \\frac{x + 1}{4}\\,dx = \\frac{1}{4}\\Big[\\frac{x^2}{2} + x\\Big]_0^1 = \\frac{1}{4} \\times \\frac{3}{2} = \\frac{3}{8}$.",
+  "hints": [
+   "Integrate from 0 to 1."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.375"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.25"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = 2x$ for $0 \\leq x \\leq 1$, and $E(X) = \\frac{2}{3}$. Find $\\operatorname{Var}(X)$, as a fraction or correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.05555555555555497,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$E(X^2) = \\int_0^1 2x^3\\,dx = \\Big[\\frac{x^4}{2}\\Big]_0^1 = \\frac{1}{2}$. $\\operatorname{Var}(X) = \\frac{1}{2} - \\frac{4}{9} = \\frac{1}{18} \\approx 0.0556$. Subtracting $\\frac{2}{3}$ without squaring gives a negative number, which a variance can never be.",
+  "workedSolution": "1. $E(X^2) = \\int_0^1 2x^3\\,dx = \\Big[\\frac{x^4}{2}\\Big]_0^1 = \\frac{1}{2}$. $\\operatorname{Var}(X) = \\frac{1}{2} - \\frac{4}{9} = \\frac{1}{18} \\approx 0.0556$. Subtracting $\\frac{2}{3}$ without squaring gives a negative number, which a variance can never be.",
+  "hints": [
+   "$E(X^2) = \\int x^2 f(x)\\,dx$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0556"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-0.16666666666666663"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "$X$ has pdf $f(x) = k(9 - x^2)$ for $0 \\leq x \\leq 3$, and $f(x) = 0$ otherwise. Find $k$ (as a fraction) and $E(X)$.",
+  "payload": {
+   "template": "k = {{blank:k}}; E(X) = {{blank:m}}",
+   "blanks": [
+    {
+     "id": "k",
+     "input": "number"
+    },
+    {
+     "id": "m",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "k",
+     "accepted": [
+      "1/18"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "m",
+     "accepted": [
+      "1.125"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$\\int_0^3 (9 - x^2)\\,dx = 27 - 9 = 18$, so $k = \\frac{1}{18}$. $E(X) = \\frac{1}{18}\\int_0^3 (9x - x^3)\\,dx = \\frac{1}{18}\\left(\\frac{81}{2} - \\frac{81}{4}\\right) = \\frac{1}{18} \\times \\frac{81}{4} = \\frac{9}{8} = 1.125$. The mean is below 1.5 because the density decreases.",
+  "hints": [
+   "Total area = 1 gives k.",
+   "$E(X) = \\int_0^3 x f(x)\\,dx$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "k",
+     "text": "1/18"
+    },
+    {
+     "blankId": "m",
+     "text": "1.125"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "k",
+      "text": "1/27"
+     },
+     {
+      "blankId": "m",
+      "text": "1.5"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = kx^3$ for $0 \\leq x \\leq 2$, and $f(x) = 0$ otherwise. Find $k$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\frac{1}{8}$",
+    "rationale": "This sets $k \\times 2^3 = 1$, using $f(2)$ instead of the area."
+   },
+   {
+    "key": "B",
+    "content": "$\\frac{1}{16}$",
+    "rationale": "This uses $x^4$ without dividing by 4."
+   },
+   {
+    "key": "C",
+    "content": "$\\frac{1}{4}$",
+    "correct": true,
+    "rationale": "Correct: $k\\Big[\\frac{x^4}{4}\\Big]_0^2 = 4k = 1$."
+   },
+   {
+    "key": "D",
+    "content": "4",
+    "rationale": "This is 1/k: the area is 4k, so k is its reciprocal."
+   }
+  ],
+  "explanation": "$\\int_0^2 kx^3\\,dx = k \\times \\frac{16}{4} = 4k = 1$, so $k = \\frac{1}{4}$.",
+  "hints": [
+   "Set the total area equal to 1."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The pdf of $X$ is non-zero only for $1 \\leq x \\leq 5$, and its graph is symmetrical about the line $x = 3$. What is $E(X)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "2.5",
+    "rationale": "This is the mean of 0 and 5; the interval starts at 1."
+   },
+   {
+    "key": "B",
+    "content": "3",
+    "correct": true,
+    "rationale": "Correct: for a symmetrical pdf the mean is on the line of symmetry."
+   },
+   {
+    "key": "C",
+    "content": "4",
+    "rationale": "4 is the length of the interval, not its centre."
+   },
+   {
+    "key": "D",
+    "content": "It cannot be found without the formula for f(x)",
+    "rationale": "Symmetry alone fixes the mean at the centre."
+   }
+  ],
+  "explanation": "When f is symmetrical about x = c, values above and below c balance, so E(X) = c = 3.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q13",
+  "type": "MATCHING",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "$X$ has pdf $f(x)$ for $0 \\leq x \\leq 4$. Match each quantity with the integral that gives it.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$P(1 < X < 2)$"
+    },
+    {
+     "id": "L2",
+     "content": "$E(X)$"
+    },
+    {
+     "id": "L3",
+     "content": "$E(X^2)$"
+    },
+    {
+     "id": "L4",
+     "content": "The total probability, 1"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\displaystyle\\int_0^4 x^2 f(x)\\,dx$"
+    },
+    {
+     "id": "R4",
+     "content": "$\\displaystyle\\int_0^4 f(x)\\,dx$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\displaystyle\\int_1^2 f(x)\\,dx$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\displaystyle\\int_0^4 x f(x)\\,dx$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Probabilities integrate f over an interval; E(X) and E(X²) multiply f by x and x² and integrate over the whole range.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q14",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "$X$ has pdf $f(x) = kx(2 - x)$ for $0 \\leq x \\leq 2$, and $f(x) = 0$ otherwise. Show that $k = \\dfrac{3}{4}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 sets $\\int_0^2 k(2x - x^2)\\,dx = 1$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 integrates correctly: $k\\Big[x^2 - \\frac{x^3}{3}\\Big]_0^2$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 obtains $\\frac{4}{3}k = 1$, so $k = \\frac{3}{4}$.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n\\int_0^2 k(2x - x^2)\\,dx = k\\Big[x^2 - \\frac{x^3}{3}\\Big]_0^2 = k\\left(4 - \\frac{8}{3}\\right) = \\frac{4}{3}k\n$$\n\n$$\n\\frac{4}{3}k = 1 \\Rightarrow k = \\frac{3}{4}\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The total area under a pdf is 1.",
+  "hints": [
+   "Expand x(2 − x) before integrating."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "$X$ has pdf $f(x) = \\dfrac{3x^2}{8}$ for $0 \\leq x \\leq 2$, and $f(x) = 0$ otherwise. Describe the sketch of $y = f(x)$ that you would draw.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A curve (part of a parabola) starting at the origin $(0, 0)$, touching the $x$-axis there.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Increasing to the point $(2, 1.5)$ at the right-hand end of the interval.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "$f(x) = 0$ (along the $x$-axis) for $x < 0$ and $x > 2$, so the graph drops vertically to 0 at $x = 2$.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: For $0 \\leq x \\leq 2$ the graph is the right half of a U-shaped parabola, starting at $(0, 0)$ and rising to $(2, 1.5)$. Outside this interval the graph lies along the $x$-axis, so it drops from $(2, 1.5)$ to $(2, 0)$. The area under the curve is 1."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "At $x = 2$, $f(2) = \\frac{3 \\times 4}{8} = 1.5$; the density can be above 1 because only the area must equal 1.",
+  "hints": [
+   "Work out $f(0)$ and $f(2)$."
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = 3x^2$ for $0 \\leq x \\leq 1$. Find $E(X)$, and hence find $P(X > E(X))$. Give the probability as a fraction or correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.5781249999999997,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$E(X) = \\int_0^1 3x^3\\,dx = \\frac{3}{4}$. $P\\left(X > \\frac{3}{4}\\right) = \\Big[x^3\\Big]_{3/4}^{1} = 1 - \\frac{27}{64} = \\frac{37}{64} \\approx 0.578$. It is not 0.5: the mean is not the \"half-way\" value of the probability unless the pdf is symmetrical.",
+  "workedSolution": "1. $E(X) = \\int_0^1 3x^3\\,dx = \\frac{3}{4}$. $P\\left(X > \\frac{3}{4}\\right) = \\Big[x^3\\Big]_{3/4}^{1} = 1 - \\frac{27}{64} = \\frac{37}{64} \\approx 0.578$. It is not 0.5: the mean is not the \"half-way\" value of the probability unless the pdf is symmetrical.",
+  "hints": [
+   "Find E(X) first.",
+   "Then integrate $f$ from $E(X)$ to 1."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.578"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.421875"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "The random variable $X$ has pdf $f(x) = kx(3 - x)$ for $0 \\leq x \\leq 3$, and $f(x) = 0$ otherwise.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $k = \\dfrac{2}{9}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 $\\int_0^3 k(3x - x^2)\\,dx = k\\Big[\\frac{3x^2}{2} - \\frac{x^3}{3}\\Big]_0^3 = 1$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 $k(13.5 - 9) = 4.5k = 1$, so $k = \\frac{2}{9}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nk\\Big[\\frac{3x^2}{2} - \\frac{x^3}{3}\\Big]_0^3 = k\\left(\\frac{27}{2} - 9\\right) = \\frac{9}{2}k = 1 \\Rightarrow k = \\frac{2}{9}\n$$"
+    },
+    "explanation": "Total area = 1."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $P(X < 1)$, as a fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.2592592592592589,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{2}{9}\\Big[\\frac{3x^2}{2} - \\frac{x^3}{3}\\Big]_0^1 = \\frac{2}{9} \\times \\frac{7}{6} = \\frac{7}{27} \\approx 0.259$.",
+    "workedSolution": "1. $\\frac{2}{9}\\Big[\\frac{3x^2}{2} - \\frac{x^3}{3}\\Big]_0^1 = \\frac{2}{9} \\times \\frac{7}{6} = \\frac{7}{27} \\approx 0.259$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Write down $E(X)$.",
+    "answerSpec": {
+     "value": 1.500000000000002,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "The graph of $f$ is symmetrical about $x = 1.5$, so $E(X) = 1.5$.",
+    "workedSolution": "1. The graph of $f$ is symmetrical about $x = 1.5$, so $E(X) = 1.5$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find $\\operatorname{Var}(X)$.",
+    "answerSpec": {
+     "value": 0.4499999999999629,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$E(X^2) = \\frac{2}{9}\\int_0^3 (3x^3 - x^4)\\,dx = \\frac{2}{9}\\left(\\frac{243}{4} - \\frac{243}{5}\\right) = \\frac{2}{9} \\times \\frac{243}{20} = 2.7$. $\\operatorname{Var}(X) = 2.7 - 1.5^2 = 0.45$.",
+    "workedSolution": "1. $E(X^2) = \\frac{2}{9}\\int_0^3 (3x^3 - x^4)\\,dx = \\frac{2}{9}\\left(\\frac{243}{4} - \\frac{243}{5}\\right) = \\frac{2}{9} \\times \\frac{243}{20} = 2.7$. $\\operatorname{Var}(X) = 2.7 - 1.5^2 = 0.45$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Use symmetry to find $P(X < 2)$, as a fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.7407407407407411,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "By symmetry about $x = 1.5$, $P(X > 2) = P(X < 1) = \\frac{7}{27}$, so $P(X < 2) = 1 - \\frac{7}{27} = \\frac{20}{27} \\approx 0.741$.",
+    "workedSolution": "1. By symmetry about $x = 1.5$, $P(X > 2) = P(X < 1) = \\frac{7}{27}$, so $P(X < 2) = 1 - \\frac{7}{27} = \\frac{20}{27} \\approx 0.741$."
+   }
+  ],
+  "explanation": "Use total area 1 for k, integrate for probabilities and E(X²), and use the symmetry of the parabola for E(X).",
+  "hints": [
+   "The graph is an upside-down parabola with roots 0 and 3.",
+   "$\\operatorname{Var}(X) = E(X^2) - [E(X)]^2$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.259"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.50"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.450"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.741"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.3333333333333333"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2.7"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.4814814814814822"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "distributions.continuous-random-variables.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.distributions.continuous-random-variables"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "The time, $X$ minutes, that Rudo waits for a kombi in Harare has pdf $f(x) = \\dfrac{x}{18}$ for $0 \\leq x \\leq 6$, and $f(x) = 0$ otherwise.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that she waits more than 4 minutes, as a fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.5555555555555555,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\Big[\\frac{x^2}{36}\\Big]_4^6 = \\frac{36 - 16}{36} = \\frac{5}{9} \\approx 0.556$.",
+    "workedSolution": "1. $\\Big[\\frac{x^2}{36}\\Big]_4^6 = \\frac{36 - 16}{36} = \\frac{5}{9} \\approx 0.556$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the mean waiting time.",
+    "payload": {
+     "unitHint": "min"
+    },
+    "answerSpec": {
+     "value": 4,
+     "units": {
+      "required": false,
+      "accepted": [
+       "min",
+       "minutes",
+       "mins"
+      ]
+     }
+    },
+    "explanation": "$E(X) = \\int_0^6 \\frac{x^2}{18}\\,dx = \\Big[\\frac{x^3}{54}\\Big]_0^6 = \\frac{216}{54} = 4$ minutes. 3 is the middle of the interval, which ignores the shape of $f$.",
+    "workedSolution": "1. $E(X) = \\int_0^6 \\frac{x^2}{18}\\,dx = \\Big[\\frac{x^3}{54}\\Big]_0^6 = \\frac{216}{54} = 4$ minutes. 3 is the middle of the interval, which ignores the shape of $f$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $\\operatorname{Var}(X)$.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "$E(X^2) = \\int_0^6 \\frac{x^3}{18}\\,dx = \\frac{1296}{72} = 18$, so $\\operatorname{Var}(X) = 18 - 16 = 2$.",
+    "workedSolution": "1. $E(X^2) = \\int_0^6 \\frac{x^3}{18}\\,dx = \\frac{1296}{72} = 18$, so $\\operatorname{Var}(X) = 18 - 16 = 2$."
+   },
+   {
+    "label": "(d)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "Waiting times close to 0 minutes are more likely than waiting times close to 6 minutes.",
+    "answerSpec": {
+     "correct": false
+    },
+    "explanation": "False: $f(x) = \\frac{x}{18}$ increases, so longer waits near 6 minutes have the higher density."
+   }
+  ],
+  "explanation": "Integrate f for probabilities, x f for the mean and x² f for E(X²).",
+  "hints": [
+   "$\\int \\frac{x}{18}\\,dx = \\frac{x^2}{36}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.556"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(d)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.4444444444444444"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "18"
+     },
+     "(d)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ }
+]

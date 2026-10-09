@@ -1,0 +1,1304 @@
+[
+ {
+  "key": "series.sum-to-infinity.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which geometric series has a sum to infinity?",
+  "options": [
+   {
+    "key": "A",
+    "content": "common ratio $-0.6$",
+    "correct": true,
+    "rationale": "Correct: $|-0.6| = 0.6 < 1$, so the series converges."
+   },
+   {
+    "key": "B",
+    "content": "common ratio $1.2$",
+    "rationale": "$|r| = 1.2 > 1$: the terms grow, so the sums grow without limit."
+   },
+   {
+    "key": "C",
+    "content": "common ratio $-1$",
+    "rationale": "$|r| = 1$: the terms keep the same size and the sums alternate, so there is no limit."
+   },
+   {
+    "key": "D",
+    "content": "common ratio $2$",
+    "rationale": "The terms double each time; the series diverges."
+   }
+  ],
+  "explanation": "A geometric series converges exactly when $-1 < r < 1$. Only $r = -0.6$ satisfies this; a negative ratio is fine as long as its size is below 1.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the sum to infinity of the geometric series $36 + 12 + 4 + \\cdots$",
+  "answerSpec": {
+   "value": 54
+  },
+  "explanation": "$a = 36$, $r = \\frac{1}{3}$: $S_\\infty = \\frac{36}{1 - \\frac{1}{3}} = \\frac{36}{\\frac{2}{3}} = 54$.",
+  "workedSolution": "1. $a = 36$, $r = \\frac{1}{3}$: $S_\\infty = \\frac{36}{1 - \\frac{1}{3}} = \\frac{36}{\\frac{2}{3}} = 54$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "54"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "108"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "27"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the sum to infinity of the geometric series $12 - 4 + \\frac{4}{3} - \\cdots$",
+  "answerSpec": {
+   "value": 9
+  },
+  "explanation": "$r = \\frac{-4}{12} = -\\frac{1}{3}$, so $S_\\infty = \\frac{12}{1 - \\left(-\\frac{1}{3}\\right)} = \\frac{12}{\\frac{4}{3}} = 9$. (Ignoring the minus sign gives 18.)",
+  "workedSolution": "1. $r = \\frac{-4}{12} = -\\frac{1}{3}$, so $S_\\infty = \\frac{12}{1 - \\left(-\\frac{1}{3}\\right)} = \\frac{12}{\\frac{4}{3}} = 9$. (Ignoring the minus sign gives 18.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "9"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "18"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "36"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q04",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The geometric series $1 + 1.1 + 1.21 + \\cdots$ has a sum to infinity.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. $r = 1.1 > 1$, so the terms grow and the sum increases without limit.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q05",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a geometric series with $a > 0$ and $0 < r < 1$, every partial sum $S_n$ is less than $S_\\infty$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. $S_\\infty - S_n = \\frac{a}{1 - r} - \\frac{a(1 - r^n)}{1 - r} = \\frac{ar^n}{1 - r}$, which is positive when $a > 0$ and $0 < r < 1$. The sums increase towards $S_\\infty$ without reaching it.",
+  "hints": [
+   "Work out $S_\\infty - S_n$."
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Use a geometric series to write the recurring decimal $0.\\dot{1}\\dot{8} = 0.181818\\ldots$ as a fraction $\\frac{p}{q}$ in its lowest terms.",
+  "payload": {
+   "template": "p = {{blank:p}}, q = {{blank:q}}",
+   "blanks": [
+    {
+     "id": "p",
+     "input": "number"
+    },
+    {
+     "id": "q",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "q",
+     "accepted": [
+      "11"
+     ]
+    }
+   ]
+  },
+  "explanation": "$0.18 + 0.0018 + \\cdots$ has $a = \\frac{18}{100}$ and $r = \\frac{1}{100}$: $S_\\infty = \\frac{18/100}{99/100} = \\frac{18}{99} = \\frac{2}{11}$.",
+  "hints": [
+   "Two digits repeat, so $r = \\frac{1}{100}$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p",
+     "text": "2"
+    },
+    {
+     "blankId": "q",
+     "text": "11"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p",
+      "text": "18"
+     },
+     {
+      "blankId": "q",
+      "text": "99"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Write $0.2\\dot{7} = 0.27777\\ldots$ as a fraction $\\frac{p}{q}$ in its lowest terms.",
+  "payload": {
+   "template": "p = {{blank:p}}, q = {{blank:q}}",
+   "blanks": [
+    {
+     "id": "p",
+     "input": "number"
+    },
+    {
+     "id": "q",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p",
+     "accepted": [
+      "5"
+     ]
+    },
+    {
+     "id": "q",
+     "accepted": [
+      "18"
+     ]
+    }
+   ]
+  },
+  "explanation": "$0.2\\dot{7} = 0.2 + (0.07 + 0.007 + \\cdots)$. The bracket has $a = 0.07$, $r = 0.1$: $\\frac{0.07}{0.9} = \\frac{7}{90}$. Total $\\frac{2}{10} + \\frac{7}{90} = \\frac{18 + 7}{90} = \\frac{25}{90} = \\frac{5}{18}$.",
+  "hints": [
+   "Only the 7 repeats: split off the 0.2 first.",
+   "The repeating part $0.0777\\ldots$ has $r = \\frac{1}{10}$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p",
+     "text": "5"
+    },
+    {
+     "blankId": "q",
+     "text": "18"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p",
+      "text": "27"
+     },
+     {
+      "blankId": "q",
+      "text": "99"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A geometric series has first term 12 and sum to infinity 30. Find the common ratio.",
+  "payload": {
+   "answerPrefix": "r ="
+  },
+  "answerSpec": {
+   "value": 0.6,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\frac{12}{1 - r} = 30$ gives $1 - r = 0.4$, so $r = 0.6$ (and $|r| < 1$ as required).",
+  "workedSolution": "1. $\\frac{12}{1 - r} = 30$ gives $1 - r = 0.4$, so $r = 0.6$ (and $|r| < 1$ as required).",
+  "hints": [
+   "Set $\\frac{a}{1 - r}$ equal to 30."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.600"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A geometric series has common ratio $-0.25$ and sum to infinity 40. Find the first term.",
+  "payload": {
+   "answerPrefix": "a ="
+  },
+  "answerSpec": {
+   "value": 50
+  },
+  "explanation": "$a = S_\\infty(1 - r) = 40 \\times 1.25 = 50$. (Using $1 + r = 0.75$ by mistake gives 30.)",
+  "workedSolution": "1. $a = S_\\infty(1 - r) = 40 \\times 1.25 = 50$. (Using $1 + r = 0.75$ by mistake gives 30.)",
+  "hints": [
+   "$1 - (-0.25) = 1.25$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "50"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "30"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "32"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "A geometric series has sum to infinity 16 and second term 3. Find the two possible values of the common ratio, in ascending order, and the corresponding first terms.",
+  "payload": {
+   "template": "r = {{blank:r1}} with a = {{blank:a1}}; r = {{blank:r2}} with a = {{blank:a2}}",
+   "blanks": [
+    {
+     "id": "r1",
+     "input": "number"
+    },
+    {
+     "id": "a1",
+     "input": "number"
+    },
+    {
+     "id": "r2",
+     "input": "number"
+    },
+    {
+     "id": "a2",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "r1",
+     "accepted": [
+      "0.25"
+     ]
+    },
+    {
+     "id": "a1",
+     "accepted": [
+      "12"
+     ]
+    },
+    {
+     "id": "r2",
+     "accepted": [
+      "0.75"
+     ]
+    },
+    {
+     "id": "a2",
+     "accepted": [
+      "4"
+     ]
+    }
+   ]
+  },
+  "explanation": "$\\frac{a}{1 - r} = 16$ and $ar = 3$. Then $a = 16(1 - r)$, so $16r(1 - r) = 3$, giving $16r^2 - 16r + 3 = 0$ and $(4r - 1)(4r - 3) = 0$. $r = \\frac{1}{4}$ gives $a = 12$; $r = \\frac{3}{4}$ gives $a = 4$. Both satisfy $|r| < 1$.",
+  "hints": [
+   "Write $a$ in terms of $r$ from the sum to infinity.",
+   "Substitute into ar = 3 to get a quadratic in r."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "r1",
+     "text": "0.25"
+    },
+    {
+     "blankId": "a1",
+     "text": "12"
+    },
+    {
+     "blankId": "r2",
+     "text": "0.75"
+    },
+    {
+     "blankId": "a2",
+     "text": "4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "r1",
+      "text": "4"
+     },
+     {
+      "blankId": "a1",
+      "text": "4"
+     },
+     {
+      "blankId": "r2",
+      "text": "1.5"
+     },
+     {
+      "blankId": "a2",
+      "text": "12"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A ball is dropped from a height of 5 m. After each bounce it rises to 0.6 of the height from which it fell. Find the total distance it travels before coming to rest.",
+  "payload": {
+   "unitHint": "m"
+  },
+  "answerSpec": {
+   "value": 20,
+   "units": {
+    "required": false,
+    "accepted": [
+     "m",
+     "metres",
+     "metre",
+     "meters"
+    ]
+   }
+  },
+  "explanation": "First drop 5 m. The rebounds $3 + 1.8 + 1.08 + \\cdots$ have $S_\\infty = \\frac{3}{0.4} = 7.5$ m, travelled up and down: $2 \\times 7.5 = 15$ m. Total $5 + 15 = 20$ m. (Treating the whole motion as one series $\\frac{5}{0.4} = 12.5$ m forgets that each rebound height is travelled twice.)",
+  "workedSolution": "1. First drop 5 m. The rebounds $3 + 1.8 + 1.08 + \\cdots$ have $S_\\infty = \\frac{3}{0.4} = 7.5$ m, travelled up and down: $2 \\times 7.5 = 15$ m. Total $5 + 15 = 20$ m. (Treating the whole motion as one series $\\frac{5}{0.4} = 12.5$ m forgets that each rebound height is travelled twice.)",
+  "hints": [
+   "The first fall happens once; every rebound height is travelled twice."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "20"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "12.5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "15"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Find the set of values of $x$ for which the geometric series $1 + \\frac{x}{3} + \\left(\\frac{x}{3}\\right)^2 + \\cdots$ has a sum to infinity.",
+  "payload": {
+   "template": "{{blank:a}} < x < {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "-3"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "3"
+     ]
+    }
+   ]
+  },
+  "explanation": "$r = \\frac{x}{3}$. Convergence needs $-1 < \\frac{x}{3} < 1$, that is $-3 < x < 3$.",
+  "hints": [
+   "Identify $r$ in terms of $x$ and apply $|r| < 1$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "-3"
+    },
+    {
+     "blankId": "b",
+     "text": "3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "-1"
+     },
+     {
+      "blankId": "b",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the geometric series $81 + 27 + 9 + \\cdots$, find the difference between the sum to infinity and the sum of the first 4 terms.",
+  "answerSpec": {
+   "value": 1.5,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$S_\\infty = \\frac{81}{2/3} = 121.5$ and $S_4 = 81 + 27 + 9 + 3 = 120$, so the difference is $1.5$. (It equals $\\frac{ar^4}{1 - r} = \\frac{1}{2/3}$.)",
+  "workedSolution": "1. $S_\\infty = \\frac{81}{2/3} = 121.5$ and $S_4 = 81 + 27 + 9 + 3 = 120$, so the difference is $1.5$. (It equals $\\frac{ar^4}{1 - r} = \\frac{1}{2/3}$.)",
+  "hints": [
+   "Find $S_\\infty$ and $S_4$ separately."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1.50"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "120"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The sum to infinity of a geometric series is three times its first term. What is the common ratio?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\frac{1}{3}$",
+    "rationale": "This is $1 - r$, not $r$."
+   },
+   {
+    "key": "B",
+    "content": "$\\frac{2}{3}$",
+    "correct": true,
+    "rationale": "Correct: $\\frac{a}{1 - r} = 3a$ gives $1 - r = \\frac{1}{3}$."
+   },
+   {
+    "key": "C",
+    "content": "$-2$",
+    "rationale": "This solves $1 - r = 3$; the equation is $\\frac{1}{1 - r} = 3$."
+   },
+   {
+    "key": "D",
+    "content": "$3$",
+    "rationale": "A series with ratio 3 has no sum to infinity."
+   }
+  ],
+  "explanation": "Divide $\\frac{a}{1 - r} = 3a$ by $a$: $\\frac{1}{1 - r} = 3$, so $1 - r = \\frac{1}{3}$ and $r = \\frac{2}{3}$.",
+  "hints": [
+   "Cancel $a$ from both sides."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Explain why the geometric series $4 - 6 + 9 - 13.5 + \\cdots$ does not have a sum to infinity.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Finds the common ratio $r = \\frac{-6}{4} = -1.5$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "States that $|r| = 1.5 \\geq 1$ (the terms grow in size), so the series does not converge.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The common ratio is $r = -\\frac{6}{4} = -1.5$. A sum to infinity needs $|r| < 1$, but $|r| = 1.5$, so the terms get larger in size and the partial sums swing further and further apart: there is no limit."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The sign of r does not matter; its size must be less than 1.",
+  "hints": [
+   "Find r first, including its sign."
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the series $1 + \\frac{1}{2} + \\frac{1}{4} + \\cdots$, find the least value of $n$ for which $S_n$ is within 0.01 of the sum to infinity.",
+  "payload": {
+   "answerPrefix": "n ="
+  },
+  "answerSpec": {
+   "value": 8
+  },
+  "explanation": "$S_\\infty = 2$ and $S_\\infty - S_n = \\frac{ar^n}{1 - r} = 2(0.5)^n$. Need $2(0.5)^n < 0.01$, so $0.5^n < 0.005$ and $n > \\frac{\\ln 0.005}{\\ln 0.5} = 7.64$. So $n = 8$.",
+  "workedSolution": "1. $S_\\infty = 2$ and $S_\\infty - S_n = \\frac{ar^n}{1 - r} = 2(0.5)^n$. Need $2(0.5)^n < 0.01$, so $0.5^n < 0.005$ and $n > \\frac{\\ln 0.005}{\\ln 0.5} = 7.64$. So $n = 8$.",
+  "hints": [
+   "$S_\\infty - S_n = \\frac{ar^n}{1 - r}$.",
+   "Dividing by ln 0.5 (negative) reverses the inequality."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "100"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "series.sum-to-infinity.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "The second and third terms of a geometric progression are 12 and 9.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the common ratio and the first term.",
+    "payload": {
+     "template": "r = {{blank:r}}, a = {{blank:a}}",
+     "blanks": [
+      {
+       "id": "r",
+       "input": "number"
+      },
+      {
+       "id": "a",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r",
+       "accepted": [
+        "0.75"
+       ]
+      },
+      {
+       "id": "a",
+       "accepted": [
+        "16"
+       ]
+      }
+     ]
+    },
+    "explanation": "$r = \\frac{9}{12} = \\frac{3}{4}$ and $a = \\frac{12}{3/4} = 16$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the progression has a sum to infinity.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "States $|r| = \\frac{3}{4} < 1$, so the series converges.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The common ratio is $\\frac{3}{4}$, and $\\left|\\frac{3}{4}\\right| < 1$, so the series converges and has a sum to infinity."
+    },
+    "explanation": "Convergence needs |r| < 1."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the sum to infinity.",
+    "answerSpec": {
+     "value": 64
+    },
+    "explanation": "$S_\\infty = \\frac{16}{1 - 0.75} = 64$.",
+    "workedSolution": "1. $S_\\infty = \\frac{16}{1 - 0.75} = 64$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the least number of terms for which $S_n$ exceeds 60.",
+    "payload": {
+     "answerPrefix": "n ="
+    },
+    "answerSpec": {
+     "value": 10
+    },
+    "explanation": "$64(1 - 0.75^n) > 60$ gives $0.75^n < \\frac{1}{16}$, so $n > \\frac{\\ln(1/16)}{\\ln 0.75} = 9.64$. Least $n = 10$.",
+    "workedSolution": "1. $64(1 - 0.75^n) > 60$ gives $0.75^n < \\frac{1}{16}$, so $n > \\frac{\\ln(1/16)}{\\ln 0.75} = 9.64$. Least $n = 10$."
+   }
+  ],
+  "explanation": "Find r by dividing consecutive terms, check |r| < 1, then use S∞ and the inequality for Sₙ.",
+  "hints": [
+   "$r = \\frac{u_3}{u_2}$.",
+   "$S_n = S_\\infty(1 - r^n)$ when $S_\\infty = \\frac{a}{1 - r}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r",
+       "text": "0.75"
+      },
+      {
+       "blankId": "a",
+       "text": "16"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "64"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "10"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r",
+        "text": "1.33"
+       },
+       {
+        "blankId": "a",
+        "text": "9"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "48"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "9"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "series.sum-to-infinity.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "Thandeka drops a ball from a height of 10 m onto a concrete floor. Each time it bounces, it rises to $\\frac{2}{5}$ of the height from which it fell.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the height the ball reaches after its third bounce.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 0.64,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "$10 \\times 0.4^3 = 0.64$ m.",
+    "workedSolution": "1. $10 \\times 0.4^3 = 0.64$ m."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the total distance travelled up to the moment the ball hits the floor for the 5th time is $10 + \\dfrac{40}{3}\\left(1 - \\left(\\frac{2}{5}\\right)^4\\right)$ metres.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 identifies the first drop (10 m) plus up-and-down journeys of $4, 1.6, 0.64, 0.256$ m (four rebounds before the 5th impact).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 sums $2(4 + 1.6 + 0.64 + 0.256)$ as a GP with $a = 8$, $r = 0.4$, $n = 4$: $\\frac{8(1 - 0.4^4)}{0.6} = \\frac{40}{3}\\left(1 - 0.4^4\\right)$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "The ball falls 10 m to its first impact. Between the 1st and 5th impacts it makes four rebounds, of heights $4, 1.6, 0.64, 0.256$ m, each travelled up and down:\n\n$$\n2(4 + 1.6 + 0.64 + 0.256) = \\frac{8(1 - 0.4^4)}{1 - 0.4} = \\frac{40}{3}\\left(1 - \\left(\\frac{2}{5}\\right)^4\\right)\n$$\n\nSo the total is $10 + \\dfrac{40}{3}\\left(1 - \\left(\\frac{2}{5}\\right)^4\\right)$ metres."
+    },
+    "explanation": "Count impacts carefully: 5 impacts means 4 rebounds."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Evaluate this distance, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 22.992,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "$10 + \\frac{8 \\times 0.9744}{0.6} = 10 + 12.992 = 22.992 \\approx 23.0$ m.",
+    "workedSolution": "1. $10 + \\frac{8 \\times 0.9744}{0.6} = 10 + 12.992 = 22.992 \\approx 23.0$ m."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the total distance travelled before the ball comes to rest, according to this model.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 23.333333333333336,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "Rebounds: $S_\\infty = \\frac{4}{1 - 0.4} = \\frac{20}{3}$ m, travelled twice: $\\frac{40}{3}$ m. Total $10 + \\frac{40}{3} = \\frac{70}{3} \\approx 23.3$ m.",
+    "workedSolution": "1. Rebounds: $S_\\infty = \\frac{4}{1 - 0.4} = \\frac{20}{3}$ m, travelled twice: $\\frac{40}{3}$ m. Total $10 + \\frac{40}{3} = \\frac{70}{3} \\approx 23.3$ m."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The model predicts infinitely many bounces. Explain how the total distance can still be finite, and give one reason why the model is not exact.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "States that the rebound heights form a geometric series with $|r| = 0.4 < 1$, which converges, so the infinite sum is finite.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Gives a limitation, e.g. a real ball stops after a finite number of bounces, or air resistance and the size of the ball are ignored.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The heights $4, 1.6, 0.64, \\ldots$ shrink by the factor $0.4$; since $0.4 < 1$ the series converges and adds up to a finite number. In reality the ball stops after a few bounces (energy is also lost to air resistance and the ball is not a point), so the model is only an estimate."
+    },
+    "explanation": "A convergent series has a finite sum even though it has infinitely many terms."
+   }
+  ],
+  "explanation": "The first drop happens once; every rebound height is travelled up and down, and the rebound heights form a convergent GP.",
+  "hints": [
+   "The rebound heights are $4, 1.6, 0.64, \\ldots$",
+   "Up and down doubles each rebound distance."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.640"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "23.0"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "23.3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "1.6"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "23.1968"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "16.666666666666668"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "series.sum-to-infinity.q19",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is the sum to infinity of $1 + \\frac{1}{4} + \\frac{1}{16} + \\cdots$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\frac{5}{4}$",
+    "rationale": "This is only the sum of the first two terms."
+   },
+   {
+    "key": "B",
+    "content": "$\\frac{3}{4}$",
+    "rationale": "This is $1 - r$; the sum is $\\frac{a}{1 - r}$."
+   },
+   {
+    "key": "C",
+    "content": "$\\frac{4}{3}$",
+    "correct": true,
+    "rationale": "Correct: $\\frac{1}{1 - \\frac{1}{4}} = \\frac{1}{\\frac{3}{4}} = \\frac{4}{3}$."
+   },
+   {
+    "key": "D",
+    "content": "$4$",
+    "rationale": "This is $\\frac{1}{r}$, not $\\frac{a}{1 - r}$."
+   }
+  ],
+  "explanation": "$a = 1$, $r = \\frac{1}{4}$, so $S_\\infty = \\frac{1}{1 - \\frac{1}{4}} = \\frac{4}{3}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q20",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For which values of the common ratio $r$ does a geometric series have a sum to infinity?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$r < 1$",
+    "rationale": "This includes values such as $r = -3$, for which the terms grow in size."
+   },
+   {
+    "key": "B",
+    "content": "$0 < r < 1$",
+    "rationale": "Negative ratios such as $r = -0.5$ also give a sum to infinity."
+   },
+   {
+    "key": "C",
+    "content": "$-1 < r < 1$",
+    "correct": true,
+    "rationale": "Correct: the series converges exactly when $|r| < 1$."
+   },
+   {
+    "key": "D",
+    "content": "$r > -1$",
+    "rationale": "This includes $r = 2$, for which the series diverges."
+   }
+  ],
+  "explanation": "$r^n \\to 0$ only when $|r| < 1$, that is $-1 < r < 1$; then $S_\\infty = \\frac{a}{1 - r}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "series.sum-to-infinity.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.series.sum-to-infinity"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The geometric series $2 + 2x + 2x^2 + \\cdots$ has sum to infinity 5. Find $x$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$0.4$",
+    "rationale": "This is $1 - x$, not $x$."
+   },
+   {
+    "key": "B",
+    "content": "$2.5$",
+    "rationale": "This is $\\frac{5}{2}$; also a ratio of 2.5 would give no sum to infinity."
+   },
+   {
+    "key": "C",
+    "content": "$-1.5$",
+    "rationale": "This solves $1 - x = 2.5$, inverting the fraction."
+   },
+   {
+    "key": "D",
+    "content": "$0.6$",
+    "correct": true,
+    "rationale": "Correct: $\\frac{2}{1 - x} = 5$ gives $1 - x = 0.4$."
+   }
+  ],
+  "explanation": "$a = 2$, $r = x$: $\\frac{2}{1 - x} = 5$, so $1 - x = \\frac{2}{5}$ and $x = 0.6$, which satisfies $|x| < 1$.",
+  "hints": [
+   "The ratio of this series is $x$."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ }
+]

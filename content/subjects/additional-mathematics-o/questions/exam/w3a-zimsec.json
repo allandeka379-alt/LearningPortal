@@ -1,0 +1,1374 @@
+[
+ {
+  "key": "exam.w3a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.derivative-idea",
+   "amath.calculus.chain-rule",
+   "amath.calculus.product-quotient",
+   "amath.calculus.trig-exp-log",
+   "amath.calculus.differentiating-powers"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "Answer all parts of this question.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Find, from first principles, the derivative of $y = 3x^2 - x$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes $f(x + h) - f(x) = 3(x + h)^2 - (x + h) - (3x^2 - x) = 6xh + 3h^2 - h$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 divides by $h$: $6x + 3h - 1$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 lets $h \\to 0$: $\\frac{dy}{dx} = 6x - 1$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nf(x + h) - f(x) = 3x^2 + 6xh + 3h^2 - x - h - 3x^2 + x = 6xh + 3h^2 - h\n$$\n\n$$\n\\frac{f(x + h) - f(x)}{h} = 6x + 3h - 1 \\to 6x - 1 \\text{ as } h \\to 0\n$$"
+    },
+    "explanation": "Expand, subtract, divide by h, then let h tend to 0."
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "Differentiate with respect to x:",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 2,
+      "stem": "$(2x - 3)^5$, giving the answer in the form $k(2x - 3)^n$,",
+      "payload": {
+       "template": "k = {{blank:k}}, n = {{blank:n}}",
+       "blanks": [
+        {
+         "id": "k",
+         "input": "number"
+        },
+        {
+         "id": "n",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "k",
+         "accepted": [
+          "10"
+         ]
+        },
+        {
+         "id": "n",
+         "accepted": [
+          "4"
+         ]
+        }
+       ]
+      },
+      "explanation": "$5(2x - 3)^4 \\times 2 = 10(2x - 3)^4$."
+     },
+     {
+      "label": "(ii)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 3,
+      "stem": "$\\dfrac{\\mathrm{e}^{3x}}{x}$, giving the answer in the form $\\dfrac{\\mathrm{e}^{3x}(ax + b)}{x^2}$.",
+      "payload": {
+       "template": "a = {{blank:a}}, b = {{blank:b}}",
+       "blanks": [
+        {
+         "id": "a",
+         "input": "number"
+        },
+        {
+         "id": "b",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "a",
+         "accepted": [
+          "3"
+         ],
+         "marks": 2
+        },
+        {
+         "id": "b",
+         "accepted": [
+          "-1"
+         ]
+        }
+       ]
+      },
+      "explanation": "Quotient rule: $\\frac{x \\cdot 3\\mathrm{e}^{3x} - \\mathrm{e}^{3x} \\cdot 1}{x^2} = \\frac{\\mathrm{e}^{3x}(3x - 1)}{x^2}$."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the gradient of the curve $y = 4\\sin 2x$ at the point where $x = \\dfrac{\\pi}{6}$.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "$\\frac{dy}{dx} = 8\\cos 2x = 8\\cos\\frac{\\pi}{3} = 4$.",
+    "workedSolution": "1. $\\frac{dy}{dx} = 8\\cos 2x = 8\\cos\\frac{\\pi}{3} = 4$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Given $y = x^3 - 5x^2$, find the value of $\\dfrac{d^2y}{dx^2}$ when $x = 2$.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "$\\frac{dy}{dx} = 3x^2 - 10x$, $\\frac{d^2y}{dx^2} = 6x - 10 = 2$ at $x = 2$. The value $-8$ is $\\frac{dy}{dx}$ at $x = 2$.",
+    "workedSolution": "1. $\\frac{dy}{dx} = 3x^2 - 10x$, $\\frac{d^2y}{dx^2} = 6x - 10 = 2$ at $x = 2$. The value $-8$ is $\\frac{dy}{dx}$ at $x = 2$."
+   }
+  ],
+  "explanation": "First principles, the chain and quotient rules, trigonometric derivatives in radians and second derivatives.",
+  "hints": [
+   "$(x + h)^2 = x^2 + 2xh + h^2$.",
+   "$\\frac{d}{dx}\\mathrm{e}^{3x} = 3\\mathrm{e}^{3x}$.",
+   "$\\cos\\frac{\\pi}{3} = \\frac{1}{2}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)(i)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "10"
+      },
+      {
+       "blankId": "n",
+       "text": "4"
+      }
+     ]
+    },
+    "(b)(ii)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "3"
+      },
+      {
+       "blankId": "b",
+       "text": "-1"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)(i)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "5"
+       },
+       {
+        "blankId": "n",
+        "text": "5"
+       }
+      ]
+     },
+     "(b)(ii)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "-8"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.tangents-normals",
+   "amath.calculus.small-increments",
+   "amath.calculus.differentiating-powers"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "The point $P(2, 6)$ lies on the curve $y = x^3 - 3x + 4$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the gradient of the curve at $P$.",
+    "answerSpec": {
+     "value": 9
+    },
+    "explanation": "$\\frac{dy}{dx} = 3x^2 - 3 = 9$ at $x = 2$.",
+    "workedSolution": "1. $\\frac{dy}{dx} = 3x^2 - 3 = 9$ at $x = 2$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the equation of the tangent at $P$ in the form $y = mx + c$.",
+    "payload": {
+     "template": "m = {{blank:m}}, c = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "9"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-12"
+       ]
+      }
+     ]
+    },
+    "explanation": "$y - 6 = 9(x - 2)$, so $y = 9x - 12$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the equation of the normal at $P$ in the form $x + ay = b$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "9"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "56"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "Normal gradient $-\\frac{1}{9}$: $y - 6 = -\\frac{1}{9}(x - 2)$, so $9y - 54 = -x + 2$ and $x + 9y = 56$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "The tangent and the normal at $P$ meet the $x$-axis at $A$ and $B$. Find the area of triangle $APB$.",
+    "payload": {
+     "unitHint": "units²"
+    },
+    "answerSpec": {
+     "value": 164,
+     "units": {
+      "required": false,
+      "accepted": [
+       "units²",
+       "units^2",
+       "square units",
+       "unit^2"
+      ]
+     }
+    },
+    "explanation": "$A = \\left(\\frac{4}{3}, 0\\right)$ from $9x - 12 = 0$; $B = (56, 0)$. $AB = 56 - \\frac{4}{3} = \\frac{164}{3}$, height 6. Area $= \\frac{1}{2} \\times \\frac{164}{3} \\times 6 = 164$.",
+    "workedSolution": "1. $A = \\left(\\frac{4}{3}, 0\\right)$ from $9x - 12 = 0$; $B = (56, 0)$. $AB = 56 - \\frac{4}{3} = \\frac{164}{3}$, height 6. Area $= \\frac{1}{2} \\times \\frac{164}{3} \\times 6 = 164$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use calculus to estimate the change in $y$ when $x$ increases from 2 to 2.05.",
+    "answerSpec": {
+     "value": 0.45,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\delta y \\approx 9 \\times 0.05 = 0.45$.",
+    "workedSolution": "1. $\\delta y \\approx 9 \\times 0.05 = 0.45$."
+   },
+   {
+    "label": "(f)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the other point on the curve at which the tangent is parallel to the tangent at $P$.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "-2"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$3x^2 - 3 = 9$ gives $x = \\pm 2$; at $x = -2$, $y = -8 + 6 + 4 = 2$."
+   }
+  ],
+  "explanation": "The gradient at P gives the tangent; its negative reciprocal gives the normal; the x-intercepts give the base of the triangle, and the same gradient gives the small-increment estimate.",
+  "hints": [
+   "Normal gradient = −1 ÷ 9.",
+   "The height of the triangle is the y-coordinate of P.",
+   "$\\delta y \\approx \\frac{dy}{dx}\\,\\delta x$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "9"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "9"
+      },
+      {
+       "blankId": "c",
+       "text": "-12"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "9"
+      },
+      {
+       "blankId": "b",
+       "text": "56"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "164"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.450"
+    },
+    "(f)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "-2"
+      },
+      {
+       "blankId": "y",
+       "text": "2"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "6"
+       },
+       {
+        "blankId": "c",
+        "text": "6"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-9"
+       },
+       {
+        "blankId": "b",
+        "text": "52"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "328"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "6.45"
+     },
+     "(f)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "2"
+       },
+       {
+        "blankId": "y",
+        "text": "6"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.stationary-points",
+   "amath.calculus.differentiating-powers"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A curve has equation $y = 2x^3 - 3x^2 - 12x + 7$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $\\dfrac{dy}{dx}$ in the form $ax^2 + bx + c$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}, c = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "6"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-6"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-12"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\frac{dy}{dx} = 6x^2 - 6x - 12$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the x-coordinates of the stationary points, in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}} and x = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$6(x^2 - x - 2) = 6(x - 2)(x + 1) = 0$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the corresponding y-coordinates.",
+    "payload": {
+     "template": "at x = −1: y = {{blank:a}}; at x = 2: y = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "14"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-13"
+       ]
+      }
+     ]
+    },
+    "explanation": "$y(-1) = -2 - 3 + 12 + 7 = 14$; $y(2) = 16 - 12 - 24 + 7 = -13$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Determine the nature of each stationary point, showing your reasoning.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Finds $\\frac{d^2y}{dx^2} = 12x - 6$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "At $x = -1$: $-18 < 0$, so $(-1, 14)$ is a maximum.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "At $x = 2$: $18 > 0$, so $(2, -13)$ is a minimum.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: d²y/dx² = 12x − 6. At x = −1 it equals −18 < 0, so (−1, 14) is a maximum. At x = 2 it equals 18 > 0, so (2, −13) is a minimum."
+    },
+    "explanation": "Second-derivative test with reasons."
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Hence state the set of values of x for which y is decreasing, in the form p < x < q.",
+    "payload": {
+     "template": "{{blank:p}} < x < {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "Between the maximum at x = −1 and the minimum at x = 2 the gradient is negative."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Hence state the number of real roots of $2x^3 - 3x^2 - 12x + 7 = 0$.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "The maximum (y = 14) is above the x-axis and the minimum (y = −13) below it, so the curve crosses the axis three times.",
+    "workedSolution": "1. The maximum (y = 14) is above the x-axis and the minimum (y = −13) below it, so the curve crosses the axis three times."
+   }
+  ],
+  "explanation": "Differentiate, solve dy/dx = 0, classify with the second derivative, and use the shape of the cubic.",
+  "hints": [
+   "Take out the common factor 6.",
+   "y decreases between a maximum and the following minimum."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "6"
+      },
+      {
+       "blankId": "b",
+       "text": "-6"
+      },
+      {
+       "blankId": "c",
+       "text": "-12"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-1"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "14"
+      },
+      {
+       "blankId": "b",
+       "text": "-13"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "-1"
+      },
+      {
+       "blankId": "q",
+       "text": "2"
+      }
+     ]
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "-3"
+       },
+       {
+        "blankId": "c",
+        "text": "7"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "-2"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0"
+       },
+       {
+        "blankId": "b",
+        "text": "0"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "-13"
+       },
+       {
+        "blankId": "q",
+        "text": "14"
+       }
+      ]
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.rates-of-change",
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A water tank in Masvingo is an inverted right circular cone with base radius 3 m and height 4 m, vertex at the bottom. Water is pumped in at a constant rate of 0.5 m³ per minute. When the depth of water is $h$ m, the radius of the water surface is $r$ m.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that the volume of water is $V = \\dfrac{3\\pi h^3}{16}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses similar triangles: $\\frac{r}{h} = \\frac{3}{4}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 substitutes $r = \\frac{3h}{4}$ into $V = \\frac{1}{3}\\pi r^2 h$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 simplifies to $\\frac{3\\pi h^3}{16}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\frac{r}{h} = \\frac{3}{4} \\Rightarrow r = \\frac{3h}{4}\n$$\n\n$$\nV = \\frac{1}{3}\\pi\\left(\\frac{3h}{4}\\right)^2 h = \\frac{1}{3}\\pi \\cdot \\frac{9h^2}{16} \\cdot h = \\frac{3\\pi h^3}{16}\n$$"
+    },
+    "explanation": "Similar triangles, then the cone formula."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the exact value of $\\dfrac{dV}{dh}$ when $h = 2$. Type it in terms of π, for example 5π/3.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "9π/4"
+      },
+      {
+       "value": "9pi/4"
+      },
+      {
+       "value": "2.25π"
+      },
+      {
+       "value": "2.25pi"
+      },
+      {
+       "value": "(9/4)π"
+      },
+      {
+       "value": "(9/4)pi"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\frac{dV}{dh} = \\frac{9\\pi h^2}{16} = \\frac{36\\pi}{16} = \\frac{9\\pi}{4}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the rate at which the depth is increasing when h = 2, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.0707355302630646,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$\\frac{dh}{dt} = \\frac{0.5}{9\\pi/4} = \\frac{2}{9\\pi} = 0.0707$ m per minute.",
+    "workedSolution": "1. $\\frac{dh}{dt} = \\frac{0.5}{9\\pi/4} = \\frac{2}{9\\pi} = 0.0707$ m per minute."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the rate at which the area of the water surface is increasing at the same instant, in m² per minute.",
+    "answerSpec": {
+     "value": 0.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$A = \\pi r^2 = \\frac{9\\pi h^2}{16}$, $\\frac{dA}{dh} = \\frac{9\\pi h}{8} = \\frac{9\\pi}{4}$ at $h = 2$. $\\frac{dA}{dt} = \\frac{9\\pi}{4} \\times \\frac{2}{9\\pi} = 0.5$ m² per minute.",
+    "workedSolution": "1. $A = \\pi r^2 = \\frac{9\\pi h^2}{16}$, $\\frac{dA}{dh} = \\frac{9\\pi h}{8} = \\frac{9\\pi}{4}$ at $h = 2$. $\\frac{dA}{dt} = \\frac{9\\pi}{4} \\times \\frac{2}{9\\pi} = 0.5$ m² per minute."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Use calculus to estimate the increase in volume when the depth increases from 2 m to 2.04 m, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "m³"
+    },
+    "answerSpec": {
+     "value": 0.2827433388230814,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m³",
+       "m^3",
+       "cubic metres"
+      ]
+     }
+    },
+    "explanation": "$\\delta V \\approx \\frac{9\\pi}{4} \\times 0.04 = 0.09\\pi = 0.283$ m³.",
+    "workedSolution": "1. $\\delta V \\approx \\frac{9\\pi}{4} \\times 0.04 = 0.09\\pi = 0.283$ m³."
+   }
+  ],
+  "explanation": "Similar triangles give V and A in terms of h; the chain rule links each rate to dh/dt.",
+  "hints": [
+   "$\\frac{dh}{dt} = \\frac{dV/dt}{dV/dh}$.",
+   "$\\frac{dA}{dt} = \\frac{dA}{dh} \\times \\frac{dh}{dt}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "9π/4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.0707"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.500"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.283"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "3π/2"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3.53"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "7.07"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.09"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.product-quotient",
+   "amath.calculus.trig-exp-log",
+   "amath.calculus.stationary-points",
+   "amath.calculus.tangents-normals"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "The function $f$ is defined by $f(x) = (x - 1)\\mathrm{e}^{2x}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $f'(x) = (2x - 1)\\mathrm{e}^{2x}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses the product rule: $(x - 1) \\cdot 2\\mathrm{e}^{2x} + \\mathrm{e}^{2x} \\cdot 1$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 factorises to $(2x - 1)\\mathrm{e}^{2x}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nf'(x) = (x - 1) \\cdot 2\\mathrm{e}^{2x} + \\mathrm{e}^{2x} = \\mathrm{e}^{2x}(2x - 2 + 1) = (2x - 1)\\mathrm{e}^{2x}\n$$"
+    },
+    "explanation": "Product rule, then factorise."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the x-coordinate of the stationary point of the curve y = f(x).",
+    "payload": {
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 0.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{e}^{2x} > 0$, so $2x - 1 = 0$ and $x = \\frac{1}{2}$.",
+    "workedSolution": "1. $\\mathrm{e}^{2x} > 0$, so $2x - 1 = 0$ and $x = \\frac{1}{2}$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the exact y-coordinate of the stationary point. Type it in terms of e, for example -e/3.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "-e/2"
+      },
+      {
+       "value": "-0.5e"
+      },
+      {
+       "value": "-(1/2)e"
+      },
+      {
+       "value": "-1/2e"
+      },
+      {
+       "value": "y=-e/2"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$f\\left(\\frac{1}{2}\\right) = -\\frac{1}{2}\\mathrm{e}^{1} = -\\frac{\\mathrm{e}}{2}$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $f''(x)$ in the form $kx\\mathrm{e}^{2x}$.",
+    "payload": {
+     "template": "k = {{blank:k}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "$f''(x) = 2\\mathrm{e}^{2x} + (2x - 1)2\\mathrm{e}^{2x} = 4x\\mathrm{e}^{2x}$."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the nature of the stationary point?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A maximum, as $f''\\left(\\frac{1}{2}\\right) = 2\\mathrm{e} > 0$",
+      "rationale": "A positive second derivative means a minimum."
+     },
+     {
+      "key": "B",
+      "content": "A maximum, as $f''\\left(\\frac{1}{2}\\right) = -2\\mathrm{e} < 0$",
+      "rationale": "$4x\\mathrm{e}^{2x}$ is positive at $x = \\frac{1}{2}$."
+     },
+     {
+      "key": "C",
+      "content": "A minimum, as $f''\\left(\\frac{1}{2}\\right) = 2\\mathrm{e} > 0$",
+      "correct": true,
+      "rationale": "Correct: $4 \\times \\frac{1}{2} \\times \\mathrm{e} = 2\\mathrm{e}$."
+     },
+     {
+      "key": "D",
+      "content": "A minimum, as $f\\left(\\frac{1}{2}\\right) = -\\frac{\\mathrm{e}}{2} < 0$",
+      "rationale": "The sign of y does not determine the nature."
+     }
+    ],
+    "explanation": "$f''\\left(\\frac{1}{2}\\right) = 2\\mathrm{e} > 0$: minimum."
+   },
+   {
+    "label": "(f)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the equation of the tangent to $y = f(x)$ at the point where it crosses the $y$-axis, in the form $y = mx + c$.",
+    "payload": {
+     "template": "m = {{blank:m}}, c = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "-1"
+       ],
+       "marks": 2
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-1"
+       ]
+      }
+     ]
+    },
+    "explanation": "At $x = 0$: $f(0) = -1$ and $f'(0) = (0 - 1)\\mathrm{e}^0 = -1$. Tangent: $y + 1 = -1(x - 0)$, so $y = -x - 1$."
+   }
+  ],
+  "explanation": "Product rule with an exponential factor, which is never zero; then the second derivative and a tangent.",
+  "hints": [
+   "$\\frac{d}{dx}\\mathrm{e}^{2x} = 2\\mathrm{e}^{2x}$.",
+   "$\\mathrm{e}^{2x}$ is never zero."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.500"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "-e/2"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "4"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(f)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "-1"
+      },
+      {
+       "blankId": "c",
+       "text": "-1"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "e/2"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "2"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(f)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "1"
+       },
+       {
+        "blankId": "c",
+        "text": "0"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ }
+]

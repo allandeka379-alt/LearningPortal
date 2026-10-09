@@ -1,0 +1,1309 @@
+[
+ {
+  "key": "graphs.cubic.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Where does the curve $y = (x - 1)(x + 2)(x - 5)$ cross the $y$-axis?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$(0, 10)$",
+    "correct": true,
+    "rationale": "Correct: $(-1)(2)(-5) = 10$."
+   },
+   {
+    "key": "B",
+    "content": "$(0, -10)$",
+    "rationale": "Two of the constants are negative, so their product is positive."
+   },
+   {
+    "key": "C",
+    "content": "$(0, -6)$",
+    "rationale": "This adds the constants instead of multiplying them."
+   },
+   {
+    "key": "D",
+    "content": "$(0, 5)$",
+    "rationale": "$5$ is one of the roots, not the $y$-intercept."
+   }
+  ],
+  "explanation": "Put $x = 0$: $y = (0 - 1)(0 + 2)(0 - 5) = (-1)(2)(-5) = 10$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the curve $y = -(x + 1)(x - 2)(x - 3)$, what happens to $y$ as $x$ becomes large and positive?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$y \\to +\\infty$",
+    "rationale": "That is true for $y = (x + 1)(x - 2)(x - 3)$, but the minus sign in front reverses it."
+   },
+   {
+    "key": "B",
+    "content": "$y \\to -\\infty$",
+    "correct": true,
+    "rationale": "Correct: the leading coefficient is $-1$, so for large positive $x$ the curve heads downwards."
+   },
+   {
+    "key": "C",
+    "content": "$y \\to 0$",
+    "rationale": "A cubic never levels off towards a horizontal line."
+   },
+   {
+    "key": "D",
+    "content": "$y \\to 3$",
+    "rationale": "$3$ is a root of the cubic, not a limit of $y$."
+   }
+  ],
+  "explanation": "Expanding, the $x^3$ coefficient is $-1$. A negative cubic falls from the top left to the bottom right, so $y \\to -\\infty$ as $x \\to +\\infty$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q03",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Find the $x$-intercepts of $y = (2x - 1)(x + 3)(x - 4)$, in ascending order.",
+  "payload": {
+   "template": "x = {{blank:a}}, {{blank:b}}, {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "-3"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "0.5"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "4"
+     ]
+    }
+   ]
+  },
+  "explanation": "Set each factor to zero: $2x - 1 = 0$ gives $x = \\frac{1}{2}$; $x + 3 = 0$ gives $x = -3$; $x - 4 = 0$ gives $x = 4$.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "-3"
+    },
+    {
+     "blankId": "b",
+     "text": "0.5"
+    },
+    {
+     "blankId": "c",
+     "text": "4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "3"
+     },
+     {
+      "blankId": "b",
+      "text": "1"
+     },
+     {
+      "blankId": "c",
+      "text": "-4"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q04",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The curve $y = (x - 3)^2(x + 1)$ touches the $x$-axis at $x = 3$ without crossing it.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. $(x - 3)^2 \\geq 0$, so near $x = 3$ the sign of $y$ is the sign of $x + 1$, which is positive: the curve comes down to $(3, 0)$ and goes back up. A repeated root is a touching point.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "How many times does the curve $y = x(x - 2)(x + 5)$ cross the $x$-axis?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "There are three different single roots, $x = -5$, $0$ and $2$, and the curve crosses the axis at each.",
+  "workedSolution": "1. There are three different single roots, $x = -5$, $0$ and $2$, and the curve crosses the axis at each.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A cubic curve crosses the $x$-axis at $(-1, 0)$, touches it at $(2, 0)$, and crosses the $y$-axis at $(0, -4)$. Which could be its equation?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$y = (x + 1)(x - 2)^2$",
+    "rationale": "This has the right roots, but its $y$-intercept is $(1)(4) = +4$."
+   },
+   {
+    "key": "B",
+    "content": "$y = (x - 1)(x + 2)^2$",
+    "rationale": "Its roots are $1$ and $-2$, the wrong way round; it touches at $x = -2$."
+   },
+   {
+    "key": "C",
+    "content": "$y = (x + 1)^2(x - 2)$",
+    "rationale": "This touches the axis at $x = -1$ and crosses at $x = 2$, the opposite of the description."
+   },
+   {
+    "key": "D",
+    "content": "$y = -(x + 1)(x - 2)^2$",
+    "correct": true,
+    "rationale": "Correct: roots $-1$ and $2$ (repeated), and at $x = 0$, $y = -(1)(4) = -4$."
+   }
+  ],
+  "explanation": "Crossing at $-1$ gives a single factor $(x + 1)$; touching at $2$ gives $(x - 2)^2$. $(x + 1)(x - 2)^2$ has $y$-intercept $4$, so multiply by $-1$ to get $-4$.",
+  "hints": [
+   "A touching point comes from a squared factor.",
+   "Check the y-intercept of each option."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Solve $(x + 1)(x - 2)(x - 5) > 0$.",
+  "payload": {
+   "template": "{{blank:a}} < x < {{blank:b}} or x > {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "-1"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "5"
+     ]
+    }
+   ]
+  },
+  "explanation": "The cubic has a positive leading coefficient and roots $-1$, $2$, $5$. Its sign is negative for $x < -1$, positive for $-1 < x < 2$, negative for $2 < x < 5$ and positive for $x > 5$. So $-1 < x < 2$ or $x > 5$.",
+  "hints": [
+   "Sketch the cubic from bottom left to top right through the three roots."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "-1"
+    },
+    {
+     "blankId": "b",
+     "text": "2"
+    },
+    {
+     "blankId": "c",
+     "text": "5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "1"
+     },
+     {
+      "blankId": "b",
+      "text": "-2"
+     },
+     {
+      "blankId": "c",
+      "text": "-5"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Solve $x(x - 4)(x + 3) \\leq 0$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$-3 \\leq x \\leq 0$ or $x \\geq 4$",
+    "rationale": "These are the regions where the cubic is $\\geq 0$."
+   },
+   {
+    "key": "B",
+    "content": "$-3 \\leq x \\leq 4$",
+    "rationale": "$x = -1$ gives $(-1)(-5)(2) = 10 > 0$, so not all of this interval works."
+   },
+   {
+    "key": "C",
+    "content": "$x \\leq -3$ or $0 \\leq x \\leq 4$",
+    "correct": true,
+    "rationale": "Correct: the curve is on or below the axis there."
+   },
+   {
+    "key": "D",
+    "content": "$x \\leq -3$ or $x \\geq 4$",
+    "rationale": "$x = 5$ gives $5(1)(8) = 40 > 0$, so $x \\geq 4$ does not work."
+   }
+  ],
+  "explanation": "Roots $-3$, $0$, $4$; positive cubic. It is negative for $x < -3$ and for $0 < x < 4$, and zero at the roots, so $x \\leq -3$ or $0 \\leq x \\leq 4$.",
+  "hints": [
+   "Test one value in each of the four regions."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "How many positive integers satisfy $(x + 2)(x - 1)(x - 4) < 0$?",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "The cubic is negative for $x < -2$ and for $1 < x < 4$. The positive integers in these regions are 2 and 3 (1 and 4 make the product zero, which is not less than 0).",
+  "workedSolution": "1. The cubic is negative for $x < -2$ and for $1 < x < 4$. The positive integers in these regions are 2 and 3 (1 and 4 make the product zero, which is not less than 0).",
+  "hints": [
+   "Find where the cubic is below the axis."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Solve $(x - 3)^2(x + 2) > 0$.",
+  "payload": {
+   "template": "{{blank:a}} < x < {{blank:b}} or x > {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "-2"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "3"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "3"
+     ]
+    }
+   ]
+  },
+  "explanation": "$(x - 3)^2 > 0$ except at $x = 3$, where it is 0. So the product is positive when $x + 2 > 0$ and $x \\neq 3$: $-2 < x < 3$ or $x > 3$.",
+  "hints": [
+   "What is the sign of $(x - 3)^2$? When is it zero?"
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "-2"
+    },
+    {
+     "blankId": "b",
+     "text": "3"
+    },
+    {
+     "blankId": "c",
+     "text": "3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "2"
+     },
+     {
+      "blankId": "b",
+      "text": "-3"
+     },
+     {
+      "blankId": "c",
+      "text": "-2"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "To sketch $y = |(x - 1)(x + 1)(x - 3)|$, which parts of $y = (x - 1)(x + 1)(x - 3)$ are reflected in the $x$-axis?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$-1 < x < 1$ and $x > 3$",
+    "rationale": "These are where the cubic is positive; they stay as they are."
+   },
+   {
+    "key": "B",
+    "content": "$x < -1$ only",
+    "rationale": "The cubic is also negative between 1 and 3, e.g. $(1)(3)(-1) = -3$ at $x = 2$."
+   },
+   {
+    "key": "C",
+    "content": "$x < -1$ and $1 < x < 3$",
+    "correct": true,
+    "rationale": "Correct: these are where the cubic is negative."
+   },
+   {
+    "key": "D",
+    "content": "$-1 < x < 3$",
+    "rationale": "Between $-1$ and $1$ the cubic is positive, e.g. $3$ at $x = 0$."
+   }
+  ],
+  "explanation": "Positive cubic with roots $-1$, $1$, $3$: negative for $x < -1$ and $1 < x < 3$. Only those parts are reflected.",
+  "hints": [
+   "Find where the original cubic is below the axis."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The curve $y = x(x - 2)(x + 2)$ has a maximum point at about $(-1.15, 3.08)$ and a minimum point at about $(1.15, -3.08)$. Using the graph of $y = |x(x - 2)(x + 2)|$, find the number of solutions of $|x(x - 2)(x + 2)| = 1$.",
+  "answerSpec": {
+   "value": 6
+  },
+  "explanation": "Reflecting the parts below the axis gives two humps of height about $3.08$ (between $-2$ and $0$, and between $0$ and $2$) and two outer branches. The line $y = 1$ is lower than both humps, so it crosses each hump twice and each outer branch once: $2 + 2 + 1 + 1 = 6$ solutions.",
+  "workedSolution": "1. Reflecting the parts below the axis gives two humps of height about $3.08$ (between $-2$ and $0$, and between $0$ and $2$) and two outer branches. The line $y = 1$ is lower than both humps, so it crosses each hump twice and each outer branch once: $2 + 2 + 1 + 1 = 6$ solutions.",
+  "hints": [
+   "Both turning points become humps of height about 3.08 after reflection.",
+   "Count the crossings with y = 1 on each piece."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "6"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "graphs.cubic.q13",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 5,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Given $f(x) = (x + 1)(x - 1)(x - 3)$, solve $f(x) \\geq 3$. Give non-integer values correct to 2 decimal places.",
+  "payload": {
+   "template": "{{blank:a}} ≤ x ≤ {{blank:b}} or x ≥ {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "-0.3"
+     ],
+     "tolerance": 0.005
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "3.3"
+     ],
+     "tolerance": 0.005
+    }
+   ]
+  },
+  "explanation": "$f(0) = 3$, so $x = 0$ is one critical value. $f(x) = x^3 - 3x^2 - x + 3$, so $f(x) = 3$ gives $x(x^2 - 3x - 1) = 0$: $x = 0$ or $x = \\frac{3 \\pm \\sqrt{13}}{2}$, i.e. $-0.30$ and $3.30$. The curve is on or above $y = 3$ for $-0.30 \\leq x \\leq 0$ and $x \\geq 3.30$.",
+  "hints": [
+   "Find $f(0)$: it tells you one point where $y = 3$ meets the curve.",
+   "Expand $f(x) - 3$ and factor out $x$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "-0.3"
+    },
+    {
+     "blankId": "b",
+     "text": "0"
+    },
+    {
+     "blankId": "c",
+     "text": "3.3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "-1"
+     },
+     {
+      "blankId": "b",
+      "text": "1"
+     },
+     {
+      "blankId": "c",
+      "text": "3"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "graphs.cubic.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each cubic with its $y$-intercept.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$y = (x + 1)(x + 2)(x + 3)$"
+    },
+    {
+     "id": "L2",
+     "content": "$y = (x - 1)(x - 2)(x - 3)$"
+    },
+    {
+     "id": "L3",
+     "content": "$y = x(x - 2)(x + 3)$"
+    },
+    {
+     "id": "L4",
+     "content": "$y = (x - 2)^2(x + 3)$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$(0, 0)$"
+    },
+    {
+     "id": "R4",
+     "content": "$(0, 12)$"
+    },
+    {
+     "id": "R1",
+     "content": "$(0, 6)$"
+    },
+    {
+     "id": "R2",
+     "content": "$(0, -6)$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Multiply the constant terms of the factors: $1 \\cdot 2 \\cdot 3 = 6$; $(-1)(-2)(-3) = -6$; any factor $x$ gives 0; $(-2)^2 \\cdot 3 = 12$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Describe the sketch you would draw of $y = (x + 3)(x - 1)(2 - x)$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Negative leading coefficient: the curve comes from the top left and goes to the bottom right.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Crosses the $x$-axis at $(-3, 0)$, $(1, 0)$ and $(2, 0)$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Crosses the $y$-axis at $(0, -6)$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Turning points: a minimum between $-3$ and $1$ (below the axis) and a maximum between $1$ and $2$ (above the axis).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The $x^3$ coefficient is $1 \\times 1 \\times (-1) = -1$, so the curve falls from the top left. It crosses the axis at $-3$, dips to a minimum below the axis, passing through $(0, -6)$, rises through $(1, 0)$ to a small maximum, then falls through $(2, 0)$ and continues down to the bottom right."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The factor $(2 - x)$ contributes $-x$, making the leading coefficient negative. The $y$-intercept is $(3)(-1)(2) = -6$.",
+  "hints": [
+   "Multiply the $x$ terms of the three factors to find the sign of the $x^3$ coefficient."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "The function $f$ is given by $f(x) = (x + 2)(x - 1)(x - 4)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the $y$-intercept of $y = f(x)$.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "$f(0) = (2)(-1)(-4) = 8$.",
+    "workedSolution": "1. $f(0) = (2)(-1)(-4) = 8$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe the sketch of $y = f(x)$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Positive cubic shape: from the bottom left to the top right.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Crosses the $x$-axis at $(-2, 0)$, $(1, 0)$ and $(4, 0)$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Crosses the $y$-axis at $(0, 8)$, with a maximum between $-2$ and $1$ and a minimum between $1$ and $4$.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A curve rising from the bottom left through $(-2, 0)$ and $(0, 8)$ to a maximum, falling through $(1, 0)$ to a minimum below the axis, then rising through $(4, 0)$ to the top right."
+    },
+    "explanation": "Intercepts from the factors; shape from the positive leading coefficient."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Solve $f(x) < 0$.",
+    "payload": {
+     "template": "x < {{blank:a}} or {{blank:b}} < x < {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "Below the axis: $x < -2$ or $1 < x < 4$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of cusps on the graph of $y = |f(x)|$.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Each of the three single roots becomes a cusp when the negative parts are reflected.",
+    "workedSolution": "1. Each of the three single roots becomes a cusp when the negative parts are reflected."
+   }
+  ],
+  "explanation": "Read every answer from the factors and a sketch: roots, y-intercept, sign of the leading coefficient.",
+  "hints": [
+   "Multiply the constants for the y-intercept.",
+   "The sign alternates at each single root."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-2"
+      },
+      {
+       "blankId": "b",
+       "text": "1"
+      },
+      {
+       "blankId": "c",
+       "text": "4"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "-8"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "-1"
+       },
+       {
+        "blankId": "c",
+        "text": "-4"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "graphs.cubic.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.graphs.cubic"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "The curve $C$ has equation $y = x(x - 3)^2$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the $x$-coordinates of the points where $C$ meets the $x$-axis, in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}} and x = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "$x = 0$ or $(x - 3)^2 = 0$, so $x = 0$ and $x = 3$."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What happens to $C$ at $x = 3$?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It crosses the x-axis there, going from above it to below it.",
+      "rationale": "A repeated root is a touching point, not a crossing."
+     },
+     {
+      "key": "B",
+      "content": "It crosses the x-axis there, going from below it to above it.",
+      "rationale": "For $x$ just below and just above 3, $y > 0$: the curve does not cross."
+     },
+     {
+      "key": "C",
+      "content": "It has a vertical asymptote there, because the factor is squared.",
+      "rationale": "Polynomials have no asymptotes."
+     },
+     {
+      "key": "D",
+      "content": "It touches the x-axis (a minimum point) and turns back up.",
+      "correct": true,
+      "rationale": "Correct: $(x - 3)^2$ is a repeated factor."
+     }
+    ],
+    "explanation": "Near $x = 3$, $x > 0$ and $(x - 3)^2 \\geq 0$, so $y \\geq 0$: the curve touches the axis at a minimum point."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $x(x - 3)^2 - 4 = (x - 4)(x - 1)^2$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 expands both sides: $x^3 - 6x^2 + 9x - 4$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 shows both expansions are identical.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nx(x - 3)^2 - 4 = x(x^2 - 6x + 9) - 4 = x^3 - 6x^2 + 9x - 4\n$$\n\n$$\n(x - 4)(x - 1)^2 = (x - 4)(x^2 - 2x + 1) = x^3 - 2x^2 + x - 4x^2 + 8x - 4 = x^3 - 6x^2 + 9x - 4\n$$\n\nThe two sides are equal."
+    },
+    "explanation": "Expand both sides fully and compare."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Hence solve $x(x - 3)^2 \\leq 4$. The solution has the form $x \\leq a$; find $a$.",
+    "payload": {
+     "answerPrefix": "a ="
+    },
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "$(x - 4)(x - 1)^2 \\leq 0$. Since $(x - 1)^2 \\geq 0$, this holds when $x - 4 \\leq 0$ (and also at $x = 1$, which is already included). So $x \\leq 4$.",
+    "workedSolution": "1. $(x - 4)(x - 1)^2 \\leq 0$. Since $(x - 1)^2 \\geq 0$, this holds when $x - 4 \\leq 0$ (and also at $x = 1$, which is already included). So $x \\leq 4$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "$C$ has a maximum point at $(1, 4)$. Find the number of solutions of $|x(x - 3)^2| = 4$.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "$x(x - 3)^2 = 4$ gives $(x - 4)(x - 1)^2 = 0$: $x = 1$ and $x = 4$. $x(x - 3)^2 = -4$ has one solution, for $x < 0$, because the curve is only below the axis for $x < 0$. Total: 3 solutions.",
+    "workedSolution": "1. $x(x - 3)^2 = 4$ gives $(x - 4)(x - 1)^2 = 0$: $x = 1$ and $x = 4$. $x(x - 3)^2 = -4$ has one solution, for $x < 0$, because the curve is only below the axis for $x < 0$. Total: 3 solutions."
+   }
+  ],
+  "explanation": "The repeated factor makes $C$ touch the axis at $(3, 0)$; the identity in (c) shows the line $y = 4$ touches $C$ at its maximum $(1, 4)$ and crosses it at $x = 4$.",
+  "hints": [
+   "$(x - 3)^2$ is never negative.",
+   "For (e), solve $y = 4$ and $y = -4$ separately using the sketch."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0"
+      },
+      {
+       "blankId": "b",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-3"
+       },
+       {
+        "blankId": "b",
+        "text": "-3"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

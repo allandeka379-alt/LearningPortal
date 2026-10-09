@@ -1,0 +1,1075 @@
+[
+ {
+  "key": "probability.conditional.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which formula gives the conditional probability $P(A \\mid B)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{P(A \\cap B)}{P(B)}$",
+    "correct": true,
+    "rationale": "Correct: divide by the probability of the given event B."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{P(A \\cap B)}{P(A)}$",
+    "rationale": "This is P(B | A): the given event is in the denominator."
+   },
+   {
+    "key": "C",
+    "content": "$P(A) \\times P(B)$",
+    "rationale": "This is P(A ∩ B) for independent events, not a conditional probability."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{P(A)}{P(B)}$",
+    "rationale": "The numerator must be the overlap P(A ∩ B), not P(A)."
+   }
+  ],
+  "explanation": "Given $B$, the sample space shrinks to $B$, and the outcomes in $A$ are those in $A \\cap B$: $P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A company in Kwekwe has 90 employees: 40 men, of whom 14 cycle to work, and 50 women, of whom 9 cycle to work. An employee is chosen at random. Find the probability that the employee cycles to work, given that the employee is a man.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\frac{14}{23}$",
+    "rationale": "This is P(man | cycles): the 23 cyclists are the wrong sample space."
+   },
+   {
+    "key": "B",
+    "content": "$\\frac{14}{40}$",
+    "correct": true,
+    "rationale": "Correct: given 'man', the sample space is the 40 men."
+   },
+   {
+    "key": "C",
+    "content": "$\\frac{14}{90}$",
+    "rationale": "This is P(man and cycles), out of all 90 employees."
+   },
+   {
+    "key": "D",
+    "content": "$\\frac{23}{90}$",
+    "rationale": "This is the probability that any employee cycles."
+   }
+  ],
+  "explanation": "$P(\\text{cycles} \\mid \\text{man}) = \\frac{n(\\text{cycling men})}{n(\\text{men})} = \\frac{14}{40} = \\frac{7}{20}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$P(A \\cap B) = 0.18$ and $P(B) = 0.45$. Find $P(A \\mid B)$.",
+  "answerSpec": {
+   "value": 0.39999999999999997,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$P(A \\mid B) = \\frac{0.18}{0.45} = 0.4$. Multiplying ($0.081$) or subtracting ($0.27$) are not the conditional probability rule.",
+  "workedSolution": "1. $P(A \\mid B) = \\frac{0.18}{0.45} = 0.4$. Multiplying ($0.081$) or subtracting ($0.27$) are not the conditional probability rule.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.400"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.081"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.27"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$P(B) = 0.6$ and $P(A \\mid B) = 0.35$. Find $P(A \\cap B)$.",
+  "answerSpec": {
+   "value": 0.21,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Rearrange the definition: $P(A \\cap B) = P(B) \\times P(A \\mid B) = 0.6 \\times 0.35 = 0.21$.",
+  "workedSolution": "1. Rearrange the definition: $P(A \\cap B) = P(B) \\times P(A \\mid B) = 0.6 \\times 0.35 = 0.21$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.210"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.5833333333333334"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.95"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In a club of 64 learners, 30 play chess, 22 play draughts and 9 play both. A learner is chosen at random. Given that the learner plays draughts, find the probability that the learner also plays chess. Give your answer as a fraction or correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.4090909090909091,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Given \"draughts\", the sample space is the 22 draughts players, 9 of whom also play chess: $P = \\frac{9}{22} \\approx 0.409$. $\\frac{9}{30}$ is P(draughts | chess).",
+  "workedSolution": "1. Given \"draughts\", the sample space is the 22 draughts players, 9 of whom also play chess: $P = \\frac{9}{22} \\approx 0.409$. $\\frac{9}{30}$ is P(draughts | chess).",
+  "hints": [
+   "The given event is 'plays draughts': how many learners is that?"
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.409"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.140625"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$P(A) = 0.55$, $P(B) = 0.35$ and $P(A \\cup B) = 0.75$. Find $P(B \\mid A)$, as a fraction or correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.27272727272727276,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$P(A \\cap B) = 0.55 + 0.35 - 0.75 = 0.15$. Then $P(B \\mid A) = \\frac{0.15}{0.55} = \\frac{3}{11} \\approx 0.273$. The answer 0.429 is $P(A \\mid B) = \\frac{0.15}{0.35}$.",
+  "workedSolution": "1. $P(A \\cap B) = 0.55 + 0.35 - 0.75 = 0.15$. Then $P(B \\mid A) = \\frac{0.15}{0.55} = \\frac{3}{11} \\approx 0.273$. The answer 0.429 is $P(A \\mid B) = \\frac{0.15}{0.35}$.",
+  "hints": [
+   "Find P(A ∩ B) with the addition rule first."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.273"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.42857142857142866"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.35"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q07",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For any events $A$ and $B$, $P(A \\mid B) = P(B \\mid A)$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Both have numerator $P(A \\cap B)$, but the denominators are $P(B)$ and $P(A)$, which are usually different. They are equal only when $P(A) = P(B)$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $P(A \\mid B) = P(A)$, then $A$ and $B$ are independent.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Knowing that $B$ happened does not change the probability of $A$. Multiplying by $P(B)$ gives $P(A \\cap B) = P(A)P(B)$, the product-rule form of independence.",
+  "hints": [
+   "Multiply both sides by $P(B)$."
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Machine X makes 60% of a factory's bolts and machine Y makes the rest. 5% of X's bolts and 2% of Y's bolts are faulty. A bolt is chosen at random and found to be faulty. What is the probability that it was made by machine X?",
+  "options": [
+   {
+    "key": "A",
+    "content": "0.03",
+    "rationale": "This is P(X and faulty), the numerator only; divide by P(faulty)."
+   },
+   {
+    "key": "B",
+    "content": "0.05",
+    "rationale": "This is P(faulty | X), the probability in the wrong direction."
+   },
+   {
+    "key": "C",
+    "content": "$\\frac{15}{19}$",
+    "correct": true,
+    "rationale": "Correct: $\\frac{0.6 \\times 0.05}{0.6 \\times 0.05 + 0.4 \\times 0.02} = \\frac{0.03}{0.038}$."
+   },
+   {
+    "key": "D",
+    "content": "0.6",
+    "rationale": "This ignores the information that the bolt is faulty."
+   }
+  ],
+  "explanation": "$P(F) = 0.03 + 0.008 = 0.038$, so $P(X \\mid F) = \\frac{0.03}{0.038} = \\frac{15}{19} \\approx 0.789$.",
+  "hints": [
+   "Draw the tree: machine first, then faulty or not."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q10",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In a district, 10% of people have a certain illness. A test gives a positive result for 95% of people with the illness and, wrongly, for 8% of people without it. A person chosen at random tests positive. Find the probability that the person has the illness, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.5688622754491017,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$P(+) = 0.1 \\times 0.95 + 0.9 \\times 0.08 = 0.095 + 0.072 = 0.167$. $P(\\text{ill} \\mid +) = \\frac{0.095}{0.167} \\approx 0.569$. Although the test is good, many positives come from the large healthy group. 0.95 is $P(+ \\mid \\text{ill})$, the reverse probability.",
+  "workedSolution": "1. $P(+) = 0.1 \\times 0.95 + 0.9 \\times 0.08 = 0.095 + 0.072 = 0.167$. $P(\\text{ill} \\mid +) = \\frac{0.095}{0.167} \\approx 0.569$. Although the test is good, many positives come from the large healthy group. 0.95 is $P(+ \\mid \\text{ill})$, the reverse probability.",
+  "hints": [
+   "Find the total probability of a positive test from both branches.",
+   "Divide the 'ill and positive' path by that total."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.569"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.95"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.095"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "probability.conditional.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Two fair dice are rolled. Given that the total score is 8, find the probability that one of the dice shows a 3. Give your answer as a fraction or a decimal.",
+  "answerSpec": {
+   "value": 0.4,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Given total 8, the outcomes are (2, 6), (3, 5), (4, 4), (5, 3), (6, 2): 5 equally likely outcomes. Two contain a 3, so $P = \\frac{2}{5} = 0.4$. $\\frac{2}{36}$ forgets to shrink the sample space.",
+  "workedSolution": "1. Given total 8, the outcomes are (2, 6), (3, 5), (4, 4), (5, 3), (6, 2): 5 equally likely outcomes. Two contain a 3, so $P = \\frac{2}{5} = 0.4$. $\\frac{2}{36}$ forgets to shrink the sample space.",
+  "hints": [
+   "List only the outcomes with total 8."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.400"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.05555555555555555"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.3055555555555556"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A box holds 6 green and 4 yellow pegs. Two pegs are taken at random without replacement. Given that the two pegs are the same colour, find the probability that both are green. Give your answer as a fraction or correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.7142857142857143,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$P(GG) = \\frac{6}{10} \\times \\frac{5}{9} = \\frac{30}{90}$ and $P(YY) = \\frac{4}{10} \\times \\frac{3}{9} = \\frac{12}{90}$. $P(GG \\mid \\text{same}) = \\frac{30/90}{42/90} = \\frac{30}{42} = \\frac{5}{7} \\approx 0.714$. $\\frac{1}{3}$ is $P(GG)$ without the condition.",
+  "workedSolution": "1. $P(GG) = \\frac{6}{10} \\times \\frac{5}{9} = \\frac{30}{90}$ and $P(YY) = \\frac{4}{10} \\times \\frac{3}{9} = \\frac{12}{90}$. $P(GG \\mid \\text{same}) = \\frac{30/90}{42/90} = \\frac{30}{42} = \\frac{5}{7} \\approx 0.714$. $\\frac{1}{3}$ is $P(GG)$ without the condition.",
+  "hints": [
+   "'Same colour' is GG or YY.",
+   "Divide P(GG) by P(same colour)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.714"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.3333333333333333"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.6"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q13",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "For events $A$ and $B$, $P(A) = 0.48$, $P(B) = 0.32$ and $P(A \\cap B) = 0.12$.",
+  "payload": {
+   "template": "P(A | B) = {{blank:ab}} and P(B | A) = {{blank:ba}}",
+   "blanks": [
+    {
+     "id": "ab",
+     "input": "number"
+    },
+    {
+     "id": "ba",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "ab",
+     "accepted": [
+      "0.375"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "ba",
+     "accepted": [
+      "0.25"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$P(A \\mid B) = \\frac{0.12}{0.32} = 0.375$ and $P(B \\mid A) = \\frac{0.12}{0.48} = 0.25$. The given event goes in the denominator each time.",
+  "hints": [
+   "Which event is 'given' in each case?"
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "ab",
+     "text": "0.375"
+    },
+    {
+     "blankId": "ba",
+     "text": "0.25"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "ab",
+      "text": "0.25"
+     },
+     {
+      "blankId": "ba",
+      "text": "0.375"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Match each probability with an expression equal to it.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$P(A \\mid B)$"
+    },
+    {
+     "id": "L2",
+     "content": "$P(B \\mid A)$"
+    },
+    {
+     "id": "L3",
+     "content": "$P(A \\cap B)$ when $A$ and $B$ are independent"
+    },
+    {
+     "id": "L4",
+     "content": "$P(A \\cap B)$ in general"
+    },
+    {
+     "id": "L5",
+     "content": "$P(A')$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$P(A) \\times P(B)$"
+    },
+    {
+     "id": "R4",
+     "content": "$P(B) \\times P(A \\mid B)$"
+    },
+    {
+     "id": "R5",
+     "content": "$1 - P(A)$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\dfrac{P(A \\cap B)}{P(B)}$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\dfrac{P(A \\cap B)}{P(A)}$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The conditional formula divides by the given event; rearranged it gives the multiplication rule, which simplifies to the product rule for independent events.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Two fair coins are tossed. Given that at least one coin shows a head, what is the probability that both coins show heads?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\frac{1}{2}$",
+    "rationale": "This treats 'the other coin' as a fresh toss, but the condition does not say which coin shows the head."
+   },
+   {
+    "key": "B",
+    "content": "$\\frac{1}{4}$",
+    "rationale": "This is P(HH) before the condition is used."
+   },
+   {
+    "key": "C",
+    "content": "$\\frac{3}{4}$",
+    "rationale": "This is P(at least one head), the given event itself."
+   },
+   {
+    "key": "D",
+    "content": "$\\frac{1}{3}$",
+    "correct": true,
+    "rationale": "Correct: the outcomes HH, HT and TH remain, and only HH has two heads."
+   }
+  ],
+  "explanation": "Sample space $\\{HH, HT, TH, TT\\}$. \"At least one head\" leaves $\\{HH, HT, TH\\}$, so $P(HH \\mid \\text{at least one H}) = \\frac{1/4}{3/4} = \\frac{1}{3}$.",
+  "hints": [
+   "List the four outcomes and cross out the ones the condition rules out."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q16",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "$A$ and $B$ are events with non-zero probabilities. Show that if $P(A \\mid B) = P(A)$, then $P(B \\mid A) = P(B)$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 uses the definition: $\\frac{P(A \\cap B)}{P(B)} = P(A)$, so $P(A \\cap B) = P(A)P(B)$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 writes $P(B \\mid A) = \\frac{P(A \\cap B)}{P(A)}$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 substitutes to get $\\frac{P(A)P(B)}{P(A)} = P(B)$.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\nP(A \\mid B) = P(A) \\Rightarrow \\frac{P(A \\cap B)}{P(B)} = P(A) \\Rightarrow P(A \\cap B) = P(A)P(B)\n$$\n\n$$\nP(B \\mid A) = \\frac{P(A \\cap B)}{P(A)} = \\frac{P(A)P(B)}{P(A)} = P(B)\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Independence works both ways: if B gives no information about A, then A gives no information about B.",
+  "hints": [
+   "Turn the given statement into one about P(A ∩ B)."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "For a town, $P(\\text{rain in the afternoon} \\mid \\text{cloudy morning}) = 0.7$. Explain what this means in words, and explain why it does not tell you $P(\\text{cloudy morning} \\mid \\text{rain in the afternoon})$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Meaning: on days when the morning is cloudy, it rains in the afternoon on about 70% of them.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The reverse probability has a different given event (rainy afternoons) and so a different denominator; it also depends on how often mornings are cloudy, which is not given.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Of the days with a cloudy morning, about 70% have afternoon rain. The reverse probability is about days with afternoon rain, a different set of days, so it needs P(rain) and P(cloudy and rain); 0.7 alone does not give it."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "P(A | B) and P(B | A) have the same numerator but different denominators.",
+  "hints": [
+   "Which days does each probability talk about?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "Each morning Tatenda either takes a kombi to school, with probability 0.6, or walks. When she takes a kombi, the probability that she is late is 0.15; when she walks, it is 0.25.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that she is late on a given morning.",
+    "answerSpec": {
+     "value": 0.19,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$0.6 \\times 0.15 + 0.4 \\times 0.25 = 0.09 + 0.1 = 0.19$.",
+    "workedSolution": "1. $0.6 \\times 0.15 + 0.4 \\times 0.25 = 0.09 + 0.1 = 0.19$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Given that she is late, find the probability that she took a kombi. Give your answer as a fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.47368421052631576,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$P(K \\mid L) = \\frac{0.09}{0.19} = \\frac{9}{19} \\approx 0.474$.",
+    "workedSolution": "1. $P(K \\mid L) = \\frac{0.09}{0.19} = \\frac{9}{19} \\approx 0.474$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Given that she is not late, find the probability that she walked. Give your answer as a fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.3703703703703704,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$P(W \\cap L') = 0.4 \\times 0.75 = 0.3$ and $P(L') = 1 - 0.19 = 0.81$. $P(W \\mid L') = \\frac{0.3}{0.81} = \\frac{10}{27} \\approx 0.370$.",
+    "workedSolution": "1. $P(W \\cap L') = 0.4 \\times 0.75 = 0.3$ and $P(L') = 1 - 0.19 = 0.81$. $P(W \\mid L') = \\frac{0.3}{0.81} = \\frac{10}{27} \\approx 0.370$."
+   },
+   {
+    "label": "(d)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "Taking a kombi and being late are independent events.",
+    "answerSpec": {
+     "correct": false
+    },
+    "explanation": "False: $P(L \\mid K) = 0.15$ but $P(L) = 0.19$, which are different."
+   }
+  ],
+  "explanation": "Multiply along the tree, add the paths for the total, and divide the wanted path by that total for a reverse probability.",
+  "hints": [
+   "Draw the tree: kombi or walk, then late or not late.",
+   "In (c) the given event is 'not late', with probability 1 − 0.19."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.190"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.474"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.370"
+    },
+    "(d)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.4"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.15"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.75"
+     },
+     "(d)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.probability.conditional"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "In a survey of 150 households in Kariba, 45 own a fishing boat, and 27 of these have a solar panel. Of the households without a boat, 42 have a solar panel. A household is chosen at random.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the probability that it has a solar panel.",
+    "answerSpec": {
+     "value": 0.46,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{27 + 42}{150} = \\frac{69}{150} = 0.46$.",
+    "workedSolution": "1. $\\frac{27 + 42}{150} = \\frac{69}{150} = 0.46$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that it has a solar panel, given that it owns a boat.",
+    "answerSpec": {
+     "value": 0.6,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{27}{45} = 0.6$.",
+    "workedSolution": "1. $\\frac{27}{45} = 0.6$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that it owns a boat, given that it has a solar panel. Give your answer as a fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.391304347826087,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{27}{69} = \\frac{9}{23} \\approx 0.391$.",
+    "workedSolution": "1. $\\frac{27}{69} = \\frac{9}{23} \\approx 0.391$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Are owning a boat and having a solar panel independent? Give a reason using your answers.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Compares $P(S \\mid B) = 0.6$ with $P(S) = 0.46$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Concludes they are not independent, because the probabilities differ (boat owners are more likely to have a panel).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: No. $P(S \\mid B) = 0.6$ but $P(S) = 0.46$; knowing that a household owns a boat changes the probability that it has a solar panel, so the events are not independent."
+    },
+    "explanation": "Independent means $P(S \\mid B) = P(S)$."
+   }
+  ],
+  "explanation": "Make a two-way table; for a conditional probability, divide by the total of the given group.",
+  "hints": [
+   "Households with a solar panel: 27 + 42.",
+   "Given 'owns a boat', the sample space is 45 households."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.460"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.600"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.391"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.18"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.18"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.6"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

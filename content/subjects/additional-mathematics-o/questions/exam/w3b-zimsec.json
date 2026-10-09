@@ -1,0 +1,1084 @@
+[
+ {
+  "key": "exam.w3b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.integration-basics",
+   "amath.calculus.integration-functions"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "This question is about indefinite integrals.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find $\\displaystyle\\int \\left(4x^3 - \\frac{6}{x^2} + 5\\right)dx$ in the form $px^4 + \\dfrac{q}{x} + rx + c$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}, r = {{blank:r}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      },
+      {
+       "id": "r",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "6"
+       ]
+      },
+      {
+       "id": "r",
+       "accepted": [
+        "5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\int 4x^3\\,dx = x^4$; $\\int -6x^{-2}\\,dx = \\frac{-6x^{-1}}{-1} = \\frac{6}{x}$; $\\int 5\\,dx = 5x$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "$\\displaystyle\\int (4x + 1)^3\\,dx = \\frac{(4x + 1)^4}{k} + c$. Find $k$.",
+    "answerSpec": {
+     "value": 16
+    },
+    "explanation": "Divide by the new power 4 and by the coefficient of $x$, 4: $k = 16$.",
+    "workedSolution": "1. Divide by the new power 4 and by the coefficient of $x$, 4: $k = 16$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find $\\displaystyle\\int \\left(e^{3x} - 4\\sin 2x\\right)dx$ in the form $ae^{3x} + b\\cos 2x + c$. Type $a$ as a fraction.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1/3"
+       ],
+       "marks": 1,
+       "tolerance": 0.005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "$\\int e^{3x}\\,dx = \\frac{1}{3}e^{3x}$ and $\\int -4\\sin 2x\\,dx = -4 \\times \\left(-\\frac{1}{2}\\cos 2x\\right) = 2\\cos 2x$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "A curve has gradient function $\\dfrac{dy}{dx} = 6x^2 - 2x$ and passes through the point $(1, 4)$. Find its equation in the form $y = px^3 + qx^2 + r$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}, r = {{blank:r}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      },
+      {
+       "id": "r",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "r",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "$y = 2x^3 - x^2 + c$; at $(1, 4)$: $4 = 2 - 1 + c$, so $c = 3$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of $y$ on this curve when $x = 2$.",
+    "answerSpec": {
+     "value": 15
+    },
+    "explanation": "$y = 16 - 4 + 3 = 15$.",
+    "workedSolution": "1. $y = 16 - 4 + 3 = 15$."
+   }
+  ],
+  "explanation": "Rewrite as powers, add one to each power and divide; for linear composites divide by the coefficient of x; use the point to find c.",
+  "hints": [
+   "$\\frac{6}{x^2} = 6x^{-2}$.",
+   "$\\int \\sin 2x\\,dx = -\\frac{1}{2}\\cos 2x$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "1"
+      },
+      {
+       "blankId": "q",
+       "text": "6"
+      },
+      {
+       "blankId": "r",
+       "text": "5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "16"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1/3"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "2"
+      },
+      {
+       "blankId": "q",
+       "text": "-1"
+      },
+      {
+       "blankId": "r",
+       "text": "3"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "15"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "4"
+       },
+       {
+        "blankId": "q",
+        "text": "-6"
+       },
+       {
+        "blankId": "r",
+        "text": "0"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "3"
+       },
+       {
+        "blankId": "b",
+        "text": "-2"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "6"
+       },
+       {
+        "blankId": "q",
+        "text": "-2"
+       },
+       {
+        "blankId": "r",
+        "text": "4"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "12"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.definite-integrals-area",
+   "amath.calculus.volumes-of-revolution",
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "This question is about definite integrals, an area and a volume.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Evaluate $\\displaystyle\\int_1^2 \\left(6x^2 - \\frac{4}{x^3}\\right)dx$.",
+    "answerSpec": {
+     "value": 12.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$\\Big[2x^3 + 2x^{-2}\\Big]_1^2 = \\left(16 + \\frac{1}{2}\\right) - (2 + 2) = 12.5$.",
+    "workedSolution": "1. $\\Big[2x^3 + 2x^{-2}\\Big]_1^2 = \\left(16 + \\frac{1}{2}\\right) - (2 + 2) = 12.5$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 1,
+    "stem": "The curve $y = 2x - x^2$ meets the $x$-axis at $O$ and at $A$. Find the $x$-coordinate of $A$.",
+    "payload": {
+     "template": "x = {{blank:a}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$x(2 - x) = 0$ gives $x = 0$ or $x = 2$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the area of the region $R$ enclosed by the curve and the $x$-axis, as a fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 1.3333333333333328,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\Big[x^2 - \\frac{x^3}{3}\\Big]_0^2 = 4 - \\frac{8}{3} = \\frac{4}{3}$ square units.",
+    "workedSolution": "1. $\\Big[x^2 - \\frac{x^3}{3}\\Big]_0^2 = 4 - \\frac{8}{3} = \\frac{4}{3}$ square units."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "$R$ is rotated through $360°$ about the $x$-axis. The volume of the solid formed is $k\\pi$ cubic units. Find $k$, as a fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 1.066666666666683,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$y^2 = 4x^2 - 4x^3 + x^4$. $\\pi\\Big[\\frac{4x^3}{3} - x^4 + \\frac{x^5}{5}\\Big]_0^2 = \\pi\\left(\\frac{32}{3} - 16 + \\frac{32}{5}\\right) = \\frac{160 - 240 + 96}{15}\\pi = \\frac{16}{15}\\pi$.",
+    "workedSolution": "1. $y^2 = 4x^2 - 4x^3 + x^4$. $\\pi\\Big[\\frac{4x^3}{3} - x^4 + \\frac{x^5}{5}\\Big]_0^2 = \\pi\\left(\\frac{32}{3} - 16 + \\frac{32}{5}\\right) = \\frac{160 - 240 + 96}{15}\\pi = \\frac{16}{15}\\pi$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the volume in (d) is found with $\\pi\\displaystyle\\int y^2\\,dx$ and not $\\pi\\displaystyle\\int y\\,dx$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each thin slice of the solid is a disc of radius $y$ (and thickness $\\delta x$).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A disc's volume is $\\pi y^2\\,\\delta x$, so the sum of slices gives $\\pi\\int y^2\\,dx$; $\\pi\\int y\\,dx$ is just $\\pi$ times the area.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Slicing the solid at right angles to the $x$-axis gives thin discs of radius $y$ and thickness $\\delta x$, each of volume $\\pi y^2\\,\\delta x$. Adding them and letting $\\delta x \\to 0$ gives $\\pi\\int y^2\\,dx$. The integral $\\pi\\int y\\,dx$ is only $\\pi$ times the area of $R$."
+    },
+    "explanation": "The radius of each disc is y, so its area is πy²."
+   }
+  ],
+  "explanation": "Integrate powers carefully, find the roots for the limits, and square y (fully expanded) for the volume.",
+  "hints": [
+   "$\\int -4x^{-3}\\,dx = 2x^{-2}$.",
+   "$(2x - x^2)^2 = 4x^2 - 4x^3 + x^4$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "12.5"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.33"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "1.07"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "16.5"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-2"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1.3333333333333333"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.definite-integrals-area",
+   "amath.calculus.volumes-of-revolution"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "The line $y = x + 4$ meets the curve $y = x^2 + 2$ at the points $A$ and $B$, where $A$ is to the left of $B$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the coordinates of $A$ and $B$.",
+    "payload": {
+     "template": "A = ({{blank:ax}}, {{blank:ay}}), B = ({{blank:bx}}, {{blank:by}})",
+     "blanks": [
+      {
+       "id": "ax",
+       "input": "number"
+      },
+      {
+       "id": "ay",
+       "input": "number"
+      },
+      {
+       "id": "bx",
+       "input": "number"
+      },
+      {
+       "id": "by",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "ax",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "ay",
+       "accepted": [
+        "3"
+       ]
+      },
+      {
+       "id": "bx",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "by",
+       "accepted": [
+        "6"
+       ]
+      }
+     ]
+    },
+    "explanation": "$x^2 + 2 = x + 4$ gives $x^2 - x - 2 = (x - 2)(x + 1) = 0$. $A(-1, 3)$ and $B(2, 6)$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Show that the area of the region enclosed by the line and the curve is $\\displaystyle\\int_{-1}^{2} (2 + x - x^2)\\,dx$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "States that the line is above the curve between $A$ and $B$ (e.g. at $x = 0$: $4 > 2$) and forms $(x + 4) - (x^2 + 2) = 2 + x - x^2$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "Between $x = -1$ and $x = 2$ the line is above the curve (at $x = 0$ the line gives 4 and the curve 2), so the area is $\\int_{-1}^{2} \\left[(x + 4) - (x^2 + 2)\\right]dx = \\int_{-1}^{2} (2 + x - x^2)\\,dx$."
+    },
+    "explanation": "Area between two graphs = ∫ (upper − lower) dx."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Find this area.",
+    "answerSpec": {
+     "value": 4.500000000000001,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\Big[2x + \\frac{x^2}{2} - \\frac{x^3}{3}\\Big]_{-1}^{2} = \\left(4 + 2 - \\frac{8}{3}\\right) - \\left(-2 + \\frac{1}{2} + \\frac{1}{3}\\right) = \\frac{10}{3} + \\frac{7}{6} = \\frac{9}{2}$ square units.",
+    "workedSolution": "1. $\\Big[2x + \\frac{x^2}{2} - \\frac{x^3}{3}\\Big]_{-1}^{2} = \\left(4 + 2 - \\frac{8}{3}\\right) - \\left(-2 + \\frac{1}{2} + \\frac{1}{3}\\right) = \\frac{10}{3} + \\frac{7}{6} = \\frac{9}{2}$ square units."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "The region under the curve $y = x^2 + 2$ from $x = 0$ to $x = 2$ is rotated through $360°$ about the $x$-axis. The volume is $k\\pi$ cubic units. Find $k$, as a fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 25.06666666666665,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$y^2 = x^4 + 4x^2 + 4$. $\\pi\\Big[\\frac{x^5}{5} + \\frac{4x^3}{3} + 4x\\Big]_0^2 = \\pi\\left(\\frac{32}{5} + \\frac{32}{3} + 8\\right) = \\frac{96 + 160 + 120}{15}\\pi = \\frac{376}{15}\\pi$. Leaving out the middle term $4x^2$ gives $14.4$.",
+    "workedSolution": "1. $y^2 = x^4 + 4x^2 + 4$. $\\pi\\Big[\\frac{x^5}{5} + \\frac{4x^3}{3} + 4x\\Big]_0^2 = \\pi\\left(\\frac{32}{5} + \\frac{32}{3} + 8\\right) = \\frac{96 + 160 + 120}{15}\\pi = \\frac{376}{15}\\pi$. Leaving out the middle term $4x^2$ gives $14.4$."
+   }
+  ],
+  "explanation": "Solve simultaneously for the limits, integrate upper minus lower, and expand y² before integrating the volume.",
+  "hints": [
+   "At $x = -1$: $-2 + \\frac{1}{2} + \\frac{1}{3} = -\\frac{7}{6}$.",
+   "$(x^2 + 2)^2 = x^4 + 4x^2 + 4$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "ax",
+       "text": "-1"
+      },
+      {
+       "blankId": "ay",
+       "text": "3"
+      },
+      {
+       "blankId": "bx",
+       "text": "2"
+      },
+      {
+       "blankId": "by",
+       "text": "6"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4.50"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "25.1"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "ax",
+        "text": "1"
+       },
+       {
+        "blankId": "ay",
+        "text": "5"
+       },
+       {
+        "blankId": "bx",
+        "text": "-2"
+       },
+       {
+        "blankId": "by",
+        "text": "2"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "-4.5"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "14.4"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-zimsec.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.integration-basics",
+   "amath.calculus.definite-integrals-area"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A curve has gradient function $\\dfrac{dy}{dx} = 3x^2 - 12$ and crosses the $y$-axis at $(0, 16)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the equation of the curve in the form $y = x^3 + px + q$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "-12"
+       ]
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "16"
+       ]
+      }
+     ]
+    },
+    "explanation": "$y = x^3 - 12x + c$, and $y = 16$ when $x = 0$ gives $c = 16$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the coordinates of the stationary points, the one with the smaller $x$-coordinate first.",
+    "payload": {
+     "template": "({{blank:x1}}, {{blank:y1}}) and ({{blank:x2}}, {{blank:y2}})",
+     "blanks": [
+      {
+       "id": "x1",
+       "input": "number"
+      },
+      {
+       "id": "y1",
+       "input": "number"
+      },
+      {
+       "id": "x2",
+       "input": "number"
+      },
+      {
+       "id": "y2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x1",
+       "accepted": [
+        "-2"
+       ]
+      },
+      {
+       "id": "y1",
+       "accepted": [
+        "32"
+       ]
+      },
+      {
+       "id": "x2",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "y2",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "$3x^2 - 12 = 0$ gives $x = \\pm 2$; $y(-2) = -8 + 24 + 16 = 32$ and $y(2) = 8 - 24 + 16 = 0$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $y = (x - 2)^2(x + 4)$, and hence explain why the curve touches the $x$-axis at $(2, 0)$ and crosses it at $(-4, 0)$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 expands $(x - 2)^2(x + 4) = (x^2 - 4x + 4)(x + 4)$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 reaches $x^3 - 12x + 16$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "B1 explains: the repeated factor $(x - 2)^2$ gives a root where the curve touches the axis (it is the stationary point found in (b)); the single factor $(x + 4)$ gives a crossing.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n(x - 2)^2(x + 4) = (x^2 - 4x + 4)(x + 4) = x^3 + 4x^2 - 4x^2 - 16x + 4x + 16 = x^3 - 12x + 16\n$$\n\nThe factor $(x - 2)$ is repeated, so $y$ does not change sign at $x = 2$: the curve touches the axis at the minimum point $(2, 0)$. The single factor $(x + 4)$ makes $y$ change sign at $x = -4$, so the curve crosses the axis at $(-4, 0)$."
+    },
+    "explanation": "A squared factor means the curve touches the axis; a single factor means it crosses."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Find the area of the region enclosed by the curve and the $x$-axis.",
+    "answerSpec": {
+     "value": 108
+    },
+    "explanation": "The curve is on or above the axis for $-4 \\leq x \\leq 2$. $\\Big[\\frac{x^4}{4} - 6x^2 + 16x\\Big]_{-4}^{2} = (4 - 24 + 32) - (64 - 96 - 64) = 12 - (-96) = 108$ square units.",
+    "workedSolution": "1. The curve is on or above the axis for $-4 \\leq x \\leq 2$. $\\Big[\\frac{x^4}{4} - 6x^2 + 16x\\Big]_{-4}^{2} = (4 - 24 + 32) - (64 - 96 - 64) = 12 - (-96) = 108$ square units."
+   }
+  ],
+  "explanation": "Integrate the gradient function, use the y-intercept for c, locate the stationary points, factorise, then integrate between the roots.",
+  "hints": [
+   "Stationary points: $\\frac{dy}{dx} = 0$.",
+   "At $x = -4$: $\\frac{256}{4} - 96 - 64 = -96$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "-12"
+      },
+      {
+       "blankId": "q",
+       "text": "16"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x1",
+       "text": "-2"
+      },
+      {
+       "blankId": "y1",
+       "text": "32"
+      },
+      {
+       "blankId": "x2",
+       "text": "2"
+      },
+      {
+       "blankId": "y2",
+       "text": "0"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "108"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "-6"
+       },
+       {
+        "blankId": "q",
+        "text": "0"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x1",
+        "text": "2"
+       },
+       {
+        "blankId": "y1",
+        "text": "0"
+       },
+       {
+        "blankId": "x2",
+        "text": "-2"
+       },
+       {
+        "blankId": "y2",
+        "text": "32"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "12"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-zimsec.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.integration-functions",
+   "amath.calculus.definite-integrals-area",
+   "amath.calculus.volumes-of-revolution"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "This question is about definite integrals of exponential and trigonometric functions.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the exact value of $\\displaystyle\\int_0^{\\frac{\\pi}{2}} (2\\cos x + \\sin 2x)\\,dx$.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "$\\Big[2\\sin x - \\frac{1}{2}\\cos 2x\\Big]_0^{\\frac{\\pi}{2}} = \\left(2 + \\frac{1}{2}\\right) - \\left(0 - \\frac{1}{2}\\right) = 3$.",
+    "workedSolution": "1. $\\Big[2\\sin x - \\frac{1}{2}\\cos 2x\\Big]_0^{\\frac{\\pi}{2}} = \\left(2 + \\frac{1}{2}\\right) - \\left(0 - \\frac{1}{2}\\right) = 3$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the exact value of $\\displaystyle\\int_0^{\\ln 3} e^{2x}\\,dx$.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "$\\Big[\\frac{1}{2}e^{2x}\\Big]_0^{\\ln 3} = \\frac{1}{2}e^{2\\ln 3} - \\frac{1}{2} = \\frac{9}{2} - \\frac{1}{2} = 4$, since $e^{2\\ln 3} = e^{\\ln 9} = 9$.",
+    "workedSolution": "1. $\\Big[\\frac{1}{2}e^{2x}\\Big]_0^{\\ln 3} = \\frac{1}{2}e^{2\\ln 3} - \\frac{1}{2} = \\frac{9}{2} - \\frac{1}{2} = 4$, since $e^{2\\ln 3} = e^{\\ln 9} = 9$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "For $y = e^{x} + e^{-x}$, write $y^2$ in the form $e^{2x} + k + e^{-2x}$.",
+    "payload": {
+     "template": "k = {{blank:k}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$(e^{x} + e^{-x})^2 = e^{2x} + 2e^{x}e^{-x} + e^{-2x} = e^{2x} + 2 + e^{-2x}$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "The region under $y = e^{x} + e^{-x}$ from $x = 0$ to $x = 1$ is rotated through $360°$ about the $x$-axis. Find the volume of the solid, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "units³"
+    },
+    "answerSpec": {
+     "value": 17.67730332006747,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "units³",
+       "units^3",
+       "cubic units"
+      ]
+     }
+    },
+    "explanation": "$V = \\pi\\Big[\\frac{1}{2}e^{2x} + 2x - \\frac{1}{2}e^{-2x}\\Big]_0^1 = \\pi\\left(\\frac{1}{2}e^2 + 2 - \\frac{1}{2}e^{-2}\\right) - \\pi(0) \\approx 17.7$. Note that the lower limit gives $\\frac{1}{2} - \\frac{1}{2} = 0$.",
+    "workedSolution": "1. $V = \\pi\\Big[\\frac{1}{2}e^{2x} + 2x - \\frac{1}{2}e^{-2x}\\Big]_0^1 = \\pi\\left(\\frac{1}{2}e^2 + 2 - \\frac{1}{2}e^{-2}\\right) - \\pi(0) \\approx 17.7$. Note that the lower limit gives $\\frac{1}{2} - \\frac{1}{2} = 0$."
+   }
+  ],
+  "explanation": "Use the standard integrals with the factor 1/a, the law e^{ln a} = a, and expand y² for the volume.",
+  "hints": [
+   "$\\int \\sin 2x\\,dx = -\\frac{1}{2}\\cos 2x$.",
+   "$\\int e^{-2x}\\,dx = -\\frac{1}{2}e^{-2x}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "2"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "17.7"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4.5"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "0"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "11.394118012887876"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ }
+]

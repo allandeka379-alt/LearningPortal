@@ -1,0 +1,1189 @@
+[
+ {
+  "key": "exam.w2b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.trig.six-ratios",
+   "amath.trig.identities",
+   "amath.trig.equations-identities",
+   "amath.trig.equations"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "This question is about trigonometric ratios, an identity and an equation.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Given that $\\tan\\theta = -\\dfrac{7}{24}$ and $270° < \\theta < 360°$, find the exact values of $\\sin\\theta$ and $\\cos\\theta$. Type fractions, e.g. -3/5.",
+    "payload": {
+     "template": "sin θ = {{blank:s}}, cos θ = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "s",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "s",
+       "accepted": [
+        "-7/25"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "24/25"
+       ]
+      }
+     ]
+    },
+    "explanation": "Triangle with sides 7 and 24 has hypotenuse $\\sqrt{49 + 576} = 25$. In the fourth quadrant sine is negative and cosine positive: $\\sin\\theta = -\\frac{7}{25}$, $\\cos\\theta = \\frac{24}{25}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Hence find the exact value of $\\sec\\theta + \\operatorname{cosec}\\theta$, as a fraction.",
+    "answerSpec": {
+     "value": -2.5297619047619047,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\sec\\theta = \\frac{25}{24}$, $\\operatorname{cosec}\\theta = -\\frac{25}{7}$: $\\frac{25}{24} - \\frac{25}{7} = \\frac{175 - 600}{168} = -\\frac{425}{168}$.",
+    "workedSolution": "1. $\\sec\\theta = \\frac{25}{24}$, $\\operatorname{cosec}\\theta = -\\frac{25}{7}$: $\\frac{25}{24} - \\frac{25}{7} = \\frac{175 - 600}{168} = -\\frac{425}{168}$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Prove that $(\\sin x + \\cos x)^2 + (\\sin x - \\cos x)^2 \\equiv 2$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 expands both squares: $\\sin^2 x + 2\\sin x\\cos x + \\cos^2 x$ and $\\sin^2 x - 2\\sin x\\cos x + \\cos^2 x$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 adds so the $2\\sin x\\cos x$ terms cancel: $2\\sin^2 x + 2\\cos^2 x$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 uses $\\sin^2 x + \\cos^2 x = 1$ to reach 2.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\text{LHS} = (\\sin^2 x + 2\\sin x\\cos x + \\cos^2 x) + (\\sin^2 x - 2\\sin x\\cos x + \\cos^2 x)\n$$\n\n$$\n= 2\\sin^2 x + 2\\cos^2 x = 2(\\sin^2 x + \\cos^2 x) = 2 = \\text{RHS}\n$$"
+    },
+    "explanation": "The cross terms cancel; the rest is twice the basic identity."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Solve $2\\cos^2 x - \\sin x - 1 = 0$ for $0° \\leq x \\leq 360°$, giving the solutions in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}}°, {{blank:b}}°, {{blank:c}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "30"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "150"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "270"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "$2(1 - \\sin^2 x) - \\sin x - 1 = 0$ gives $2\\sin^2 x + \\sin x - 1 = 0$, so $(2\\sin x - 1)(\\sin x + 1) = 0$. $\\sin x = \\frac{1}{2}$: $30°, 150°$. $\\sin x = -1$: $270°$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "State the number of solutions of $2\\cos^2 x - \\sin x - 1 = 0$ for $0° \\leq x \\leq 720°$.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "The interval covers two full cycles, and each cycle contains three solutions: 6.",
+    "workedSolution": "1. The interval covers two full cycles, and each cycle contains three solutions: 6."
+   }
+  ],
+  "explanation": "Use the related-angle triangle with CAST signs, the Pythagorean identity, and a quadratic in sin x.",
+  "hints": [
+   "Fourth quadrant: only cos and sec are positive.",
+   "Replace $\\cos^2 x$ by $1 - \\sin^2 x$ in (d)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "s",
+       "text": "-7/25"
+      },
+      {
+       "blankId": "c",
+       "text": "24/25"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-2.53"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "30"
+      },
+      {
+       "blankId": "b",
+       "text": "150"
+      },
+      {
+       "blankId": "c",
+       "text": "270"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "s",
+        "text": "7/25"
+       },
+       {
+        "blankId": "c",
+        "text": "-24/25"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "2.5297619047619047"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "210"
+       },
+       {
+        "blankId": "b",
+        "text": "330"
+       },
+       {
+        "blankId": "c",
+        "text": "90"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2b-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.series.sigma-notation",
+   "amath.series.arithmetic",
+   "amath.series.sum-to-infinity",
+   "amath.series.geometric",
+   "amath.sequences.behaviour"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "This question is about sequences and series.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Evaluate $\\displaystyle\\sum_{r=1}^{12} (5r - 2)$.",
+    "answerSpec": {
+     "value": 366
+    },
+    "explanation": "$5 \\times \\frac{12 \\times 13}{2} - 2 \\times 12 = 390 - 24 = 366$.",
+    "workedSolution": "1. $5 \\times \\frac{12 \\times 13}{2} - 2 \\times 12 = 390 - 24 = 366$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "An arithmetic progression has second term 11, and the sum of its first 8 terms is 168. Find the first term and the common difference.",
+    "payload": {
+     "template": "a = {{blank:a}}, d = {{blank:d}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "7"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "$a + d = 11$ and $4(2a + 7d) = 168$, so $2a + 7d = 42$. With $2a + 2d = 22$: $5d = 20$, $d = 4$, $a = 7$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "A geometric progression has first term 48 and sum to infinity 64. Find its common ratio.",
+    "answerSpec": {
+     "value": 0.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{48}{1 - r} = 64$ gives $1 - r = 0.75$, so $r = 0.25$.",
+    "workedSolution": "1. $\\frac{48}{1 - r} = 64$ gives $1 - r = 0.75$, so $r = 0.25$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the sum of the first 4 terms of this geometric progression.",
+    "answerSpec": {
+     "value": 63.75,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$48 + 12 + 3 + 0.75 = 63.75$ (or $64\\left(1 - 0.25^4\\right) = 63.75$).",
+    "workedSolution": "1. $48 + 12 + 3 + 0.75 = 63.75$ (or $64\\left(1 - 0.25^4\\right) = 63.75$)."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "A sequence is defined by $u_1 = 48$ and $u_{n+1} = 0.25u_n + 48$. Given that it converges, find its limit.",
+    "answerSpec": {
+     "value": 64
+    },
+    "explanation": "$L = 0.25L + 48$ gives $0.75L = 48$ and $L = 64$.",
+    "workedSolution": "1. $L = 0.25L + 48$ gives $0.75L = 48$ and $L = 64$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the behaviour of the sequence in part (e), giving a reason.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "States that it is increasing: $48, 60, 63, 63.75, \\ldots$ (each term larger than the one before).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "States that it converges to 64 (the gaps shrink by a factor of 0.25).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The terms are $48, 60, 63, 63.75, \\ldots$: the sequence is increasing and convergent, approaching the limit 64 because each gap is a quarter of the previous one."
+    },
+    "explanation": "Work out a few terms to see the behaviour."
+   }
+  ],
+  "explanation": "Each part uses one standard result: Σr = n(n + 1)/2, the AP sum, S∞ = a/(1 − r), the GP sum and L = f(L).",
+  "hints": [
+   "$\\sum_{r=1}^{12} r = 78$.",
+   "For (b), $S_8 = 4(2a + 7d)$.",
+   "For (e), put $u_{n+1} = u_n = L$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "366"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "7"
+      },
+      {
+       "blankId": "d",
+       "text": "4"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.250"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "63.75"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "64"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "388"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "11"
+       },
+       {
+        "blankId": "d",
+        "text": "3"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.75"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "64"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "48"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2b-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.trig.graphs",
+   "amath.trig.equations"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "The function $f$ is defined by $f(x) = 3\\cos 2x + 1$ for $0° \\leq x \\leq 180°$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the amplitude and the period of $f$.",
+    "payload": {
+     "template": "amplitude {{blank:a}}, period {{blank:p}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "p",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "3"
+       ]
+      },
+      {
+       "id": "p",
+       "accepted": [
+        "180"
+       ]
+      }
+     ]
+    },
+    "explanation": "Amplitude 3; period $\\frac{360°}{2} = 180°$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the maximum and minimum values of $f(x)$.",
+    "payload": {
+     "template": "maximum {{blank:mx}}, minimum {{blank:mn}}",
+     "blanks": [
+      {
+       "id": "mx",
+       "input": "number"
+      },
+      {
+       "id": "mn",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "mx",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "mn",
+       "accepted": [
+        "-2"
+       ]
+      }
+     ]
+    },
+    "explanation": "Maximum $1 + 3 = 4$; minimum $1 - 3 = -2$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe the sketch of $y = f(x)$ for $0° \\leq x \\leq 180°$, giving the coordinates of the end points and of the minimum point.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "One complete cosine wave starting and ending at maxima $(0°, 4)$ and $(180°, 4)$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Minimum point at $(90°, -2)$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Crosses the x-axis twice, once either side of the minimum (between 45° and 90°, and between 90° and 135°).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A single cosine wave: it starts at the maximum $(0°, 4)$, falls through the $x$-axis near $x = 55°$ to the minimum $(90°, -2)$, rises through the $x$-axis near $x = 125°$ and ends at the maximum $(180°, 4)$."
+    },
+    "explanation": "The interval is exactly one period."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Hence solve $3\\cos 2x + 1 = 0$ for $0° \\leq x \\leq 180°$, giving your answers correct to 1 decimal place in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}}° or x = {{blank:b}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "54.7"
+       ],
+       "marks": 1,
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "125.3"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\cos 2x = -\\frac{1}{3}$: $2x = 109.47°$ or $360° - 109.47° = 250.53°$. So $x = 54.7°$ or $x = 125.3°$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "State the number of solutions of $f(x) = 3$ for $0° \\leq x \\leq 180°$.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "The line y = 3 lies between −2 and 4, so it meets the single wave twice.",
+    "workedSolution": "1. The line y = 3 lies between −2 and 4, so it meets the single wave twice."
+   }
+  ],
+  "explanation": "Read amplitude, period, maximum and minimum from a, b and c; use the sketch to count solutions.",
+  "hints": [
+   "Let $u = 2x$ with $0° \\leq u \\leq 360°$ in (d).",
+   "A horizontal line between the minimum and maximum meets one full wave twice."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "3"
+      },
+      {
+       "blankId": "p",
+       "text": "180"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "mx",
+       "text": "4"
+      },
+      {
+       "blankId": "mn",
+       "text": "-2"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "54.7"
+      },
+      {
+       "blankId": "b",
+       "text": "125.3"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "4"
+       },
+       {
+        "blankId": "p",
+        "text": "720"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "mx",
+        "text": "3"
+       },
+       {
+        "blankId": "mn",
+        "text": "-3"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "109.5"
+       },
+       {
+        "blankId": "b",
+        "text": "35.3"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2b-zimsec.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.trig.identities",
+   "amath.trig.equations-identities"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "This question is about identities involving the reciprocal functions.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Prove that $\\dfrac{1 + \\tan^2\\theta}{1 + \\cot^2\\theta} \\equiv \\tan^2\\theta$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses $1 + \\tan^2\\theta = \\sec^2\\theta$ and $1 + \\cot^2\\theta = \\operatorname{cosec}^2\\theta$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 writes $\\frac{\\sec^2\\theta}{\\operatorname{cosec}^2\\theta} = \\frac{\\sin^2\\theta}{\\cos^2\\theta}$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 concludes $= \\tan^2\\theta$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\frac{1 + \\tan^2\\theta}{1 + \\cot^2\\theta} = \\frac{\\sec^2\\theta}{\\operatorname{cosec}^2\\theta} = \\frac{1/\\cos^2\\theta}{1/\\sin^2\\theta}\n$$\n\n$$\n= \\frac{\\sin^2\\theta}{\\cos^2\\theta} = \\tan^2\\theta\n$$"
+    },
+    "explanation": "Both brackets are Pythagorean identities."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Hence write down the value of $\\dfrac{1 + \\tan^2\\theta}{1 + \\cot^2\\theta}$ when $\\theta = \\dfrac{\\pi}{3}$.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "$\\tan^2\\frac{\\pi}{3} = (\\sqrt{3})^2 = 3$.",
+    "workedSolution": "1. $\\tan^2\\frac{\\pi}{3} = (\\sqrt{3})^2 = 3$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the equation $\\operatorname{cosec}^2\\theta = 3\\cot\\theta - 1$ can be written as $\\cot^2\\theta - 3\\cot\\theta + 2 = 0$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 replaces $\\operatorname{cosec}^2\\theta$ by $1 + \\cot^2\\theta$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 rearranges to the given quadratic.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n1 + \\cot^2\\theta = 3\\cot\\theta - 1 \\Rightarrow \\cot^2\\theta - 3\\cot\\theta + 2 = 0\n$$"
+    },
+    "explanation": "cot θ appears unsquared, so replace cosec² θ."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the two values of $\\cot\\theta$, in ascending order.",
+    "payload": {
+     "template": "cot θ = {{blank:a}} or cot θ = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$(\\cot\\theta - 1)(\\cot\\theta - 2) = 0$."
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence solve $\\operatorname{cosec}^2\\theta = 3\\cot\\theta - 1$ for $0° < \\theta < 360°$, giving your answers in ascending order, to 1 decimal place where necessary.",
+    "payload": {
+     "template": "θ = {{blank:a}}°, {{blank:b}}°, {{blank:c}}°, {{blank:d}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "26.6"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "45"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "206.6"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "225"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\cot\\theta = 1$: $\\tan\\theta = 1$, $\\theta = 45°, 225°$. $\\cot\\theta = 2$: $\\tan\\theta = \\frac{1}{2}$, $\\theta = 26.6°, 206.6°$."
+   }
+  ],
+  "explanation": "Replace squared reciprocal functions with the Pythagorean identities, then solve a quadratic in cot θ and convert to tan θ.",
+  "hints": [
+   "$1 + \\cot^2\\theta = \\operatorname{cosec}^2\\theta$.",
+   "$\\cot\\theta = 2$ means $\\tan\\theta = \\frac{1}{2}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "26.6"
+      },
+      {
+       "blankId": "b",
+       "text": "45"
+      },
+      {
+       "blankId": "c",
+       "text": "206.6"
+      },
+      {
+       "blankId": "d",
+       "text": "225"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1.7320508075688772"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-1"
+       },
+       {
+        "blankId": "b",
+        "text": "-2"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "63.4"
+       },
+       {
+        "blankId": "b",
+        "text": "135"
+       },
+       {
+        "blankId": "c",
+        "text": "243.4"
+       },
+       {
+        "blankId": "d",
+        "text": "315"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2b-zimsec.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.series.arithmetic",
+   "amath.series.geometric"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "Company A drills boreholes near Chivhu. It charges US\\$50 for the first metre, and each further metre costs US\\$4 more than the one before. Company B charges US\\$80 for the first metre, and each further metre costs 3% more than the one before. Give money answers in US dollars.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find Company A's charge for the 20th metre.",
+    "answerSpec": {
+     "value": 126
+    },
+    "explanation": "$50 + 19 \\times 4 = 126$.",
+    "workedSolution": "1. $50 + 19 \\times 4 = 126$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find Company A's total charge for a borehole 20 metres deep.",
+    "answerSpec": {
+     "value": 1760
+    },
+    "explanation": "$S_{20} = \\frac{20}{2}(50 + 126) = 1760$.",
+    "workedSolution": "1. $S_{20} = \\frac{20}{2}(50 + 126) = 1760$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "A farmer has US\\$5,000. Find the greatest whole number of metres Company A can drill for this amount.",
+    "answerSpec": {
+     "value": 39
+    },
+    "explanation": "$\\frac{n}{2}\\{100 + 4(n - 1)\\} \\leq 5000$ gives $n^2 + 24n - 2500 \\leq 0$, so $n \\leq 39.4$. Check: $S_{39} = 4914$, $S_{40} = 5120$. So 39 metres.",
+    "workedSolution": "1. $\\frac{n}{2}\\{100 + 4(n - 1)\\} \\leq 5000$ gives $n^2 + 24n - 2500 \\leq 0$, so $n \\leq 39.4$. Check: $S_{39} = 4914$, $S_{40} = 5120$. So 39 metres."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find Company B's total charge for a borehole 20 metres deep, correct to the nearest dollar.",
+    "answerSpec": {
+     "value": 2149.629959118438,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     }
+    },
+    "explanation": "$S_{20} = \\frac{80(1.03^{20} - 1)}{0.03} = 2149.63$, so about US\\$2,150.",
+    "workedSolution": "1. $S_{20} = \\frac{80(1.03^{20} - 1)}{0.03} = 2149.63$, so about US\\$2,150."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "For a borehole 30 metres deep, find how much more Company B charges than Company A, correct to the nearest dollar.",
+    "answerSpec": {
+     "value": 566.0332565057624,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     }
+    },
+    "explanation": "A: $15(100 + 116) = 3240$. B: $\\frac{80(1.03^{30} - 1)}{0.03} = 3806.03$. Difference about US\\$566.",
+    "workedSolution": "1. A: $15(100 + 116) = 3240$. B: $\\frac{80(1.03^{30} - 1)}{0.03} = 3806.03$. Difference about US\\$566."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why, for very deep boreholes, the cost per metre with Company B eventually becomes far greater than with Company A.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "States that A's charge per metre grows by a fixed amount (arithmetic, linear growth).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "States that B's charge per metre is multiplied by 1.03 each time (geometric, exponential growth), which eventually exceeds any linear growth.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Company A adds US\\$4 per metre, so its charges grow linearly. Company B multiplies by 1.03 each metre, so its charges grow geometrically; however small the percentage, geometric growth eventually overtakes and leaves behind any fixed increase."
+    },
+    "explanation": "Compare adding a constant with multiplying by a constant."
+   }
+  ],
+  "explanation": "Company A's charges form an arithmetic progression and Company B's a geometric progression; use the appropriate nth-term and sum formulas.",
+  "hints": [
+   "Company A: $a = 50$, $d = 4$. Company B: $a = 80$, $r = 1.03$.",
+   "In (c), solve the quadratic inequality and check the whole numbers either side."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "126"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1760"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "39"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2150"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "566"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "130"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "2520"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "40"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "140.28048424616813"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "3806"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ }
+]

@@ -1,0 +1,1264 @@
+[
+ {
+  "key": "exam.w2a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.circle.line-tangents",
+   "amath.circle.equation"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The circle $C$ has equation $x^2 + y^2 - 10x + 4y + 4 = 0$. The point $P(8, 2)$ lies on $C$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the coordinates of the centre of $C$ and the radius of $C$.",
+    "payload": {
+     "template": "centre ({{blank:a}}, {{blank:b}}), radius {{blank:r}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "r",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "5"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-2"
+       ]
+      },
+      {
+       "id": "r",
+       "accepted": [
+        "5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$(x - 5)^2 - 25 + (y + 2)^2 - 4 + 4 = 0$, so $(x - 5)^2 + (y + 2)^2 = 25$: centre $(5, -2)$, radius 5."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "The tangent to $C$ at $P$ has equation $3x + 4y = k$. Find $k$.",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": 32
+    },
+    "explanation": "Gradient of radius $= \\frac{2 - (-2)}{8 - 5} = \\frac{4}{3}$, so the tangent has gradient $-\\frac{3}{4}$: $y - 2 = -\\frac{3}{4}(x - 8)$, $4y - 8 = -3x + 24$, so $3x + 4y = 32$.",
+    "workedSolution": "1. Gradient of radius $= \\frac{2 - (-2)}{8 - 5} = \\frac{4}{3}$, so the tangent has gradient $-\\frac{3}{4}$: $y - 2 = -\\frac{3}{4}(x - 8)$, $4y - 8 = -3x + 24$, so $3x + 4y = 32$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The tangent meets the $y$-axis at $T$. Find the $y$-coordinate of $T$.",
+    "payload": {
+     "answerPrefix": "y ="
+    },
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "$x = 0$: $4y = 32$, so $y = 8$.",
+    "workedSolution": "1. $x = 0$: $4y = 32$, so $y = 8$."
+   }
+  ],
+  "explanation": "Complete the square for the centre and radius; the tangent is perpendicular to the radius at the point of contact.",
+  "hints": [
+   "$x^2 - 10x = (x - 5)^2 - 25$.",
+   "The tangent's gradient is the negative reciprocal of the radius's gradient."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "5"
+      },
+      {
+       "blankId": "b",
+       "text": "-2"
+      },
+      {
+       "blankId": "r",
+       "text": "5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "32"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-5"
+       },
+       {
+        "blankId": "b",
+        "text": "2"
+       },
+       {
+        "blankId": "r",
+        "text": "25"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "24"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "32"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.circular.compound-shapes",
+   "amath.circular.radians"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The sector $OAB$ has centre $O$, radius 12 cm and angle $AOB = \\frac{\\pi}{3}$ radians. The point $C$ lies on $OB$ and $AC$ is perpendicular to $OB$. The region $R$ is bounded by $AC$, $CB$ and the arc $AB$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $AC = 6\\sqrt{3}$ cm and $OC = 6$ cm.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses the right angle at $C$: $AC = 12\\sin\\frac{\\pi}{3}$ and $OC = 12\\cos\\frac{\\pi}{3}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 uses $\\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$ and $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$ to reach both results.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nAC = 12\\sin\\frac{\\pi}{3} = 12 \\times \\frac{\\sqrt{3}}{2} = 6\\sqrt{3}, \\qquad OC = 12\\cos\\frac{\\pi}{3} = 12 \\times \\frac{1}{2} = 6\n$$"
+    },
+    "explanation": "Triangle OCA is right-angled at C with hypotenuse OA = 12."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the exact perimeter of $R$ in the form $p + q\\sqrt{3} + s\\pi$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}, s = {{blank:s}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      },
+      {
+       "id": "s",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "6"
+       ]
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "6"
+       ]
+      },
+      {
+       "id": "s",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "$CB = 12 - 6 = 6$; arc $AB = 12 \\times \\frac{\\pi}{3} = 4\\pi$. Perimeter $= 6\\sqrt{3} + 6 + 4\\pi$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the exact area of $R$ in the form $u\\pi + v\\sqrt{3}$.",
+    "payload": {
+     "template": "u = {{blank:u}}, v = {{blank:v}}",
+     "blanks": [
+      {
+       "id": "u",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "u",
+       "accepted": [
+        "24"
+       ]
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "-18"
+       ]
+      }
+     ]
+    },
+    "explanation": "Sector $= \\frac{1}{2}(144)\\left(\\frac{\\pi}{3}\\right) = 24\\pi$; triangle $OCA = \\frac{1}{2}(6)(6\\sqrt{3}) = 18\\sqrt{3}$. Area of $R = 24\\pi - 18\\sqrt{3}$."
+   }
+  ],
+  "explanation": "Region R is the sector minus the right-angled triangle OCA; its boundary is AC, CB and the arc.",
+  "hints": [
+   "$\\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$, $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$.",
+   "Area of R = sector OAB − triangle OCA."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "6"
+      },
+      {
+       "blankId": "q",
+       "text": "6"
+      },
+      {
+       "blankId": "s",
+       "text": "4"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "u",
+       "text": "24"
+      },
+      {
+       "blankId": "v",
+       "text": "-18"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "12"
+       },
+       {
+        "blankId": "q",
+        "text": "12"
+       },
+       {
+        "blankId": "s",
+        "text": "2"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "u",
+        "text": "12"
+       },
+       {
+        "blankId": "v",
+        "text": "-36"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.coordinate.linear-law",
+   "amath.logs.laws"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The variables $x$ and $y$ satisfy $y = Ax^n$, where $A$ and $n$ are constants. The graph of $\\lg y$ against $\\lg x$ is a straight line passing through the points $(1, 3)$ and $(3, 7)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\lg y = n\\lg x + \\lg A$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 takes logarithms and uses the product and power laws: $\\lg y = \\lg A + \\lg x^n = n\\lg x + \\lg A$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\lg y = \\lg (Ax^n) = \\lg A + n\\lg x\n$$"
+    },
+    "explanation": "Laws of logarithms."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $n$.",
+    "payload": {
+     "answerPrefix": "n ="
+    },
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "Gradient $= \\frac{7 - 3}{3 - 1} = 2$.",
+    "workedSolution": "1. Gradient $= \\frac{7 - 3}{3 - 1} = 2$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $A$.",
+    "payload": {
+     "answerPrefix": "A ="
+    },
+    "answerSpec": {
+     "value": 10
+    },
+    "explanation": "$3 = 2(1) + \\lg A$, so $\\lg A = 1$ and $A = 10$.",
+    "workedSolution": "1. $3 = 2(1) + \\lg A$, so $\\lg A = 1$ and $A = 10$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find $y$ when $x = 100$.",
+    "payload": {
+     "answerPrefix": "y ="
+    },
+    "answerSpec": {
+     "value": 100000
+    },
+    "explanation": "$y = 10 \\times 100^2 = 100\\,000$ (or $\\lg y = 2(2) + 1 = 5$).",
+    "workedSolution": "1. $y = 10 \\times 100^2 = 100\\,000$ (or $\\lg y = 2(2) + 1 = 5$)."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $x$ when $y = 1000$.",
+    "payload": {
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 10
+    },
+    "explanation": "$\\lg 1000 = 3 = 2\\lg x + 1$, so $\\lg x = 1$ and $x = 10$.",
+    "workedSolution": "1. $\\lg 1000 = 3 = 2\\lg x + 1$, so $\\lg x = 1$ and $x = 10$."
+   }
+  ],
+  "explanation": "On a graph of lg y against lg x, the gradient is n and the intercept is lg A.",
+  "hints": [
+   "The intercept is $\\lg A$, so $A = 10^{\\text{intercept}}$.",
+   "Use $\\lg y = 2\\lg x + 1$ for (d) and (e)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "10"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "100000"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "10"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.5"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-cambridge.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.circle.two-circles",
+   "amath.circle.line-tangents",
+   "amath.circle.equation"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The circles $C_1$ and $C_2$ have equations $x^2 + y^2 = 25$ and $x^2 + y^2 - 12x - 16y + 75 = 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that the circles touch externally.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 completes the square for $C_2$: $(x - 6)^2 + (y - 8)^2 = 25$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 finds the distance between centres $(0, 0)$ and $(6, 8)$: $\\sqrt{36 + 64} = 10$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 compares with $r_1 + r_2 = 5 + 5 = 10$ and concludes.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n(x - 6)^2 + (y - 8)^2 = 36 + 64 - 75 = 25\n$$\n\nCentres $(0, 0)$ and $(6, 8)$, radii 5 and 5.\n\n$$\nd = \\sqrt{6^2 + 8^2} = 10 = 5 + 5 = r_1 + r_2\n$$\n\nso the circles touch externally."
+    },
+    "explanation": "Compare the distance between the centres with the sum of the radii."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the point of contact.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "3"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "Equal radii, so the point of contact is the midpoint of the centres: $(3, 4)$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "The common tangent at the point of contact has equation $3x + 4y = k$. Find $k$.",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": 25
+    },
+    "explanation": "The line of centres has gradient $\\frac{4}{3}$; the tangent is perpendicular to it, gradient $-\\frac{3}{4}$, through $(3, 4)$: $3x + 4y = 9 + 16 = 25$.",
+    "workedSolution": "1. The line of centres has gradient $\\frac{4}{3}$; the tangent is perpendicular to it, gradient $-\\frac{3}{4}$, through $(3, 4)$: $3x + 4y = 9 + 16 = 25$."
+   }
+  ],
+  "explanation": "Touching circles: distance between centres = sum of radii; the common tangent at the contact point is perpendicular to the line of centres.",
+  "hints": [
+   "$x^2 - 12x = (x - 6)^2 - 36$.",
+   "The contact point lies on the line of centres."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "3"
+      },
+      {
+       "blankId": "y",
+       "text": "4"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "25"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "6"
+       },
+       {
+        "blankId": "y",
+        "text": "8"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "24"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-cambridge.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.logs.equations",
+   "amath.logs.graphs"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "Chipo pours a cup of tea in a room at constant temperature. The temperature of the tea, $\\theta$ °C, $t$ minutes later is modelled by $\\theta = 20 + 70\\mathrm{e}^{-0.04t}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the temperature of the tea when it is poured.",
+    "answerSpec": {
+     "value": 90
+    },
+    "explanation": "$t = 0$: $\\theta = 20 + 70 = 90$ °C.",
+    "workedSolution": "1. $t = 0$: $\\theta = 20 + 70 = 90$ °C."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the temperature after 10 minutes, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 66.92240322249475,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$20 + 70\\mathrm{e}^{-0.4} = 66.9$ °C.",
+    "workedSolution": "1. $20 + 70\\mathrm{e}^{-0.4} = 66.9$ °C."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the time taken for the temperature to fall to 50 °C, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 21.18244650968009,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$70\\mathrm{e}^{-0.04t} = 30$, so $\\mathrm{e}^{-0.04t} = \\frac{3}{7}$ and $t = \\frac{\\ln(7/3)}{0.04} = 21.2$ minutes.",
+    "workedSolution": "1. $70\\mathrm{e}^{-0.04t} = 30$, so $\\mathrm{e}^{-0.04t} = \\frac{3}{7}$ and $t = \\frac{\\ln(7/3)}{0.04} = 21.2$ minutes."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the temperature that the tea approaches after a long time.",
+    "answerSpec": {
+     "value": 20
+    },
+    "explanation": "$\\mathrm{e}^{-0.04t} \\to 0$, so $\\theta \\to 20$ °C (room temperature).",
+    "workedSolution": "1. $\\mathrm{e}^{-0.04t} \\to 0$, so $\\theta \\to 20$ °C (room temperature)."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe the graph of $\\theta$ against $t$ for $t \\geq 0$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Starts at $(0, 90)$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Decreasing throughout, falling more and more slowly (decay curve).",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Approaches the horizontal asymptote $\\theta = 20$ without reaching it.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The curve starts at $(0, 90)$ and decreases, steeply at first and then more gently, getting ever closer to the dashed line $\\theta = 20$ but never reaching it."
+    },
+    "explanation": "A curve of the form a + ke^(−nt) decays from a + k towards a."
+   }
+  ],
+  "explanation": "Isolate the exponential term, then take natural logarithms; the constant term gives the asymptote.",
+  "hints": [
+   "Subtract 20 and divide by 70 before taking $\\ln$.",
+   "$\\mathrm{e}^{-0.04t} \\to 0$ as $t$ grows."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "90"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "66.9"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "21.2"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "20"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "70"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "21.3"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "8.41"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2a-cambridge.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.circular.compound-shapes",
+   "amath.circular.radians"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The points $A$ and $B$ lie on a circle with centre $O$ and radius 9 cm, and angle $AOB = 1.3$ radians. Give answers correct to 3 significant figures.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the length of the minor arc $AB$.",
+    "payload": {
+     "unitHint": "cm"
+    },
+    "answerSpec": {
+     "value": 11.700000000000001,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres"
+      ]
+     }
+    },
+    "explanation": "$9 \\times 1.3 = 11.7$ cm.",
+    "workedSolution": "1. $9 \\times 1.3 = 11.7$ cm."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the length of the chord $AB$.",
+    "payload": {
+     "unitHint": "cm"
+    },
+    "answerSpec": {
+     "value": 10.893355303248711,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres"
+      ]
+     }
+    },
+    "explanation": "$2 \\times 9 \\times \\sin 0.65 = 10.9$ cm.",
+    "workedSolution": "1. $2 \\times 9 \\times \\sin 0.65 = 10.9$ cm."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the perimeter of the minor segment.",
+    "payload": {
+     "unitHint": "cm"
+    },
+    "answerSpec": {
+     "value": 22.593355303248714,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres"
+      ]
+     }
+    },
+    "explanation": "Arc + chord $= 11.7 + 10.9 = 22.6$ cm.",
+    "workedSolution": "1. Arc + chord $= 11.7 + 10.9 = 22.6$ cm."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the area of the minor segment.",
+    "payload": {
+     "unitHint": "cm²"
+    },
+    "answerSpec": {
+     "value": 13.625893490603687,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm²",
+       "cm^2",
+       "square centimetres"
+      ]
+     }
+    },
+    "explanation": "$\\frac{1}{2}(81)(1.3 - \\sin 1.3) = 40.5(1.3 - 0.9636) = 13.6$ cm$^2$.",
+    "workedSolution": "1. $\\frac{1}{2}(81)(1.3 - \\sin 1.3) = 40.5(1.3 - 0.9636) = 13.6$ cm$^2$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Write angle $AOB$ in degrees, correct to 1 decimal place.",
+    "payload": {
+     "unitHint": "°"
+    },
+    "answerSpec": {
+     "value": 74.48451336700703,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "°",
+       "degrees",
+       "degree",
+       "deg"
+      ]
+     }
+    },
+    "explanation": "$1.3 \\times \\frac{180}{\\pi} = 74.5^\\circ$.",
+    "workedSolution": "1. $1.3 \\times \\frac{180}{\\pi} = 74.5^\\circ$."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "A different sector, also with angle 1.3 radians, has area 100 cm². Find its radius.",
+    "payload": {
+     "unitHint": "cm"
+    },
+    "answerSpec": {
+     "value": 12.403473458920846,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres"
+      ]
+     }
+    },
+    "explanation": "$\\frac{1}{2}r^2(1.3) = 100$, so $r^2 = \\frac{200}{1.3}$ and $r = 12.4$ cm.",
+    "workedSolution": "1. $\\frac{1}{2}r^2(1.3) = 100$, so $r^2 = \\frac{200}{1.3}$ and $r = 12.4$ cm."
+   }
+  ],
+  "explanation": "Arc rθ, chord 2r sin(θ/2), segment ½r²(θ − sin θ), all with θ in radians.",
+  "hints": [
+   "Use radian mode.",
+   "Segment = sector − triangle."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "11.7"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "10.9"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "22.6"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "13.6"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "74.5"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "12.4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "5.85"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "17.3"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "29.7"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "52.65"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "234"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "8.77"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2a-cambridge.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.coordinate.linear-law",
+   "amath.logs.equations"
+  ],
+  "difficulty": 5,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "Tendai records the number of seedlings, $y$ (in hundreds), that have germinated in a nursery $x$ days after planting. He believes that $y = Ab^x$, where $A$ and $b$ are constants.\n\n| $x$ | $1$ | $2$ | $3$ | $4$ | $5$ |\n| --- | --- | --- | --- | --- | --- |\n| $y$ | $4.00$ | $6.40$ | $10.2$ | $16.4$ | $26.2$ |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $\\lg y$ for $x = 2$ and for $x = 4$, correct to 3 decimal places.",
+    "payload": {
+     "template": "x = 2: lg y = {{blank:a}}; x = 4: lg y = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0.806"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1.215"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$\\lg 6.40 = 0.806$ and $\\lg 16.4 = 1.215$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\lg y = x\\lg b + \\lg A$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 takes logarithms: $\\lg y = \\lg A + \\lg b^x = x\\lg b + \\lg A$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\lg y = \\lg (Ab^x) = \\lg A + x\\lg b\n$$"
+    },
+    "explanation": "Product and power laws."
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "The points $(1, 0.602)$ and $(5, 1.418)$ lie on the line of best fit of $\\lg y$ against $x$. Find, correct to 3 significant figures,",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "the value of $b$,",
+      "payload": {
+       "answerPrefix": "b ="
+      },
+      "answerSpec": {
+       "value": 1.599558028614669,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       }
+      },
+      "explanation": "Gradient $\\lg b = \\frac{1.418 - 0.602}{5 - 1} = 0.204$, so $b = 10^{0.204} = 1.60$.",
+      "workedSolution": "1. Gradient $\\lg b = \\frac{1.418 - 0.602}{5 - 1} = 0.204$, so $b = 10^{0.204} = 1.60$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "the value of $A$.",
+      "payload": {
+       "answerPrefix": "A ="
+      },
+      "answerSpec": {
+       "value": 2.5003453616964313,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       }
+      },
+      "explanation": "$0.602 = 0.204(1) + \\lg A$, so $\\lg A = 0.398$ and $A = 10^{0.398} = 2.50$.",
+      "workedSolution": "1. $0.602 = 0.204(1) + \\lg A$, so $\\lg A = 0.398$ and $A = 10^{0.398} = 2.50$."
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Use the model to estimate the number of days after which y = 50, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 6.377303942823621,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\lg 50 = 0.204x + 0.398$, so $x = \\frac{1.699 - 0.398}{0.204} = 6.38$ days.",
+    "workedSolution": "1. $\\lg 50 = 0.204x + 0.398$, so $x = \\frac{1.699 - 0.398}{0.204} = 6.38$ days."
+   }
+  ],
+  "explanation": "Plotting lg y against x straightens y = Ab^x: the gradient is lg b and the intercept is lg A.",
+  "hints": [
+   "Gradient $= \\lg b$, intercept $= \\lg A$.",
+   "For (d), solve $\\lg 50 = 0.204x + 0.398$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0.806"
+      },
+      {
+       "blankId": "b",
+       "text": "1.215"
+      }
+     ]
+    },
+    "(c)(i)": {
+     "type": "NUMERICAL",
+     "value": "1.60"
+    },
+    "(c)(ii)": {
+     "type": "NUMERICAL",
+     "value": "2.50"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "6.38"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0.6"
+       },
+       {
+        "blankId": "b",
+        "text": "2.797"
+       }
+      ]
+     },
+     "(c)(i)": {
+      "type": "NUMERICAL",
+      "value": "0.204"
+     },
+     "(c)(ii)": {
+      "type": "NUMERICAL",
+      "value": "0.398"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "12.5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ }
+]

@@ -1,0 +1,1124 @@
+[
+ {
+  "key": "estimation.confidence-intervals.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which value of z is used in a 99% confidence interval for a population mean?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1.96",
+    "rationale": "1.96 is used for 95% confidence."
+   },
+   {
+    "key": "B",
+    "content": "2.326",
+    "rationale": "$\\Phi(2.326) = 0.99$ leaves 1% in one tail; a two-sided 99% interval needs 0.5% in each tail."
+   },
+   {
+    "key": "C",
+    "content": "2.576",
+    "correct": true,
+    "rationale": "Correct: $\\Phi(2.576) = 0.995$, leaving 0.5% in each tail."
+   },
+   {
+    "key": "D",
+    "content": "0.99",
+    "rationale": "0.99 is the confidence level, not a z-value."
+   }
+  ],
+  "explanation": "A two-sided 99% interval leaves 0.5% in each tail, so z = 2.576; for 95%, z = 1.96.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A 95% confidence interval for the mean mass of oranges from an orchard is (148.2 g, 153.4 g). Which statement is the correct interpretation?",
+  "options": [
+   {
+    "key": "A",
+    "content": "95% of the oranges in the orchard weigh between 148.2 g and 153.4 g.",
+    "rationale": "The interval is about the mean, not about individual oranges."
+   },
+   {
+    "key": "B",
+    "content": "About 95% of intervals made this way from repeated samples would contain the true mean.",
+    "correct": true,
+    "rationale": "Correct: the confidence level describes the method over repeated samples."
+   },
+   {
+    "key": "C",
+    "content": "The sample mean lies between 148.2 g and 153.4 g with probability 0.95.",
+    "rationale": "The sample mean is the centre of the interval; it certainly lies inside it."
+   },
+   {
+    "key": "D",
+    "content": "The true mean mass changes, and lies in this interval 95% of the time.",
+    "rationale": "The true mean is fixed; it is the interval that varies from sample to sample."
+   }
+  ],
+  "explanation": "μ is fixed. A 95% confidence interval comes from a method that captures μ in about 95% of samples.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A population has standard deviation 14. A random sample of 49 is taken. Find the margin of error of a 95% confidence interval for the population mean.",
+  "answerSpec": {
+   "value": 3.9199999999999995,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "Standard error $= \\frac{14}{\\sqrt{49}} = 2$. Margin $= 1.96 \\times 2 = 3.92$. Dividing by 49 instead of 7 gives 0.56.",
+  "workedSolution": "1. Standard error $= \\frac{14}{\\sqrt{49}} = 2$. Margin $= 1.96 \\times 2 = 3.92$. Dividing by 49 instead of 7 gives 0.56.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3.92"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.5599999999999999"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5.152"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The lengths of leaves on a type of tobacco plant are normally distributed with standard deviation 4 cm. A random sample of 25 leaves has mean length 48.2 cm. Find a 95% confidence interval for the population mean length, giving the end-points to 3 significant figures.",
+  "payload": {
+   "template": "({{blank:a}} cm, {{blank:b}} cm)",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "46.6"
+     ],
+     "tolerance": 0.05
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "49.8"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "Standard error $= \\frac{4}{\\sqrt{25}} = 0.8$. Margin $= 1.96 \\times 0.8 = 1.568$. Interval: $48.2 \\pm 1.568 = (46.6, 49.8)$ cm. Using $\\sigma = 4$ instead of 0.8 gives the much wider (40.4, 56.0).",
+  "hints": [
+   "Use the standard error σ/√n."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "46.6"
+    },
+    {
+     "blankId": "b",
+     "text": "49.8"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "40.4"
+     },
+     {
+      "blankId": "b",
+      "text": "56.0"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A normal population has standard deviation 15. A random sample of 50 has mean 120. Find a 99% confidence interval for the population mean, giving the end-points to 1 decimal place.",
+  "payload": {
+   "template": "({{blank:a}}, {{blank:b}})",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "114.5"
+     ],
+     "tolerance": 0.05
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "125.5"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "Standard error $= \\frac{15}{\\sqrt{50}} = 2.121$. Margin $= 2.576 \\times 2.121 = 5.465$. Interval: $(114.5, 125.5)$. Using 1.96 gives the 95% interval (115.8, 124.2).",
+  "hints": [
+   "99% confidence uses z = 2.576."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "114.5"
+    },
+    {
+     "blankId": "b",
+     "text": "125.5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "115.8"
+     },
+     {
+      "blankId": "b",
+      "text": "124.2"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A population has standard deviation 10. Find the width of a 99% confidence interval for the mean based on a random sample of 100, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 5.152,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "Width $= 2 \\times 2.576 \\times \\frac{10}{\\sqrt{100}} = 5.152 \\approx 5.15$. 2.576 is the margin of error (half the width); 3.92 is the width at 95%.",
+  "workedSolution": "1. Width $= 2 \\times 2.576 \\times \\frac{10}{\\sqrt{100}} = 5.152 \\approx 5.15$. 2.576 is the margin of error (half the width); 3.92 is the width at 95%.",
+  "hints": [
+   "The width is twice the margin of error."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5.15"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2.576"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "3.92"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The yields of maize plots have standard deviation 8 bags per hectare. Find the smallest sample size needed for the margin of error of a 95% confidence interval for the mean yield to be at most 1.5 bags per hectare.",
+  "answerSpec": {
+   "value": 110
+  },
+  "explanation": "$1.96 \\times \\frac{8}{\\sqrt{n}} \\leq 1.5$ gives $\\sqrt{n} \\geq 10.453$, so $n \\geq 109.27$. The smallest sample size is 110 (round up); 109 is too small. Treating 1.5 as the full width instead of the margin gives 438.",
+  "workedSolution": "1. $1.96 \\times \\frac{8}{\\sqrt{n}} \\leq 1.5$ gives $\\sqrt{n} \\geq 10.453$, so $n \\geq 109.27$. The smallest sample size is 110 (round up); 109 is too small. Treating 1.5 as the full width instead of the margin gives 438.",
+  "hints": [
+   "Make √n the subject, square, then round up."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "110"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "109"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "438"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A 95% confidence interval for a population mean, based on a random sample of 100 from a population with known standard deviation, is (61.08, 64.92). Find the population standard deviation, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 9.795918367346939,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "The margin of error is half the width: $\\frac{64.92 - 61.08}{2} = 1.92$. So $1.96 \\times \\frac{\\sigma}{10} = 1.92$ and $\\sigma = \\frac{19.2}{1.96} = 9.80$.",
+  "workedSolution": "1. The margin of error is half the width: $\\frac{64.92 - 61.08}{2} = 1.92$. So $1.96 \\times \\frac{\\sigma}{10} = 1.92$ and $\\sigma = \\frac{19.2}{1.96} = 9.80$.",
+  "hints": [
+   "The centre is x̄ and half the width is the margin of error."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "9.80"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "7.453416149068323"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.92"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A confidence interval for a population mean is (23.4, 27.0). Find the sample mean from which it was calculated.",
+  "answerSpec": {
+   "value": 25.2,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "The interval is symmetrical about $\\bar{x}$: $\\bar{x} = \\frac{23.4 + 27.0}{2} = 25.2$. (The margin of error is 1.8.)",
+  "workedSolution": "1. The interval is symmetrical about $\\bar{x}$: $\\bar{x} = \\frac{23.4 + 27.0}{2} = 25.2$. (The margin of error is 1.8.)",
+  "hints": [
+   "The interval is x̄ ± margin."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "25.2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3.6"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.8"
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the same sample, raising the confidence level makes the confidence interval for the mean wider.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. More confidence needs a larger z (for example 2.576 instead of 1.96), so the interval is wider.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q11",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A 95% confidence interval for the mean contains about 95% of the values in the sample.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The interval is an estimate of the population mean, and it is usually much narrower than the spread of the data.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Taking a sample four times as large halves the width of a confidence interval for the mean (other things being equal).",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The width is $2z\\frac{\\sigma}{\\sqrt{n}}$; replacing $n$ by $4n$ doubles the denominator $\\sqrt{n}$, so the width is halved.",
+  "hints": [
+   "$\\sqrt{4n} = 2\\sqrt{n}$."
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q13",
+  "type": "MATCHING",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "For a confidence interval $\\bar{x} \\pm z\\frac{\\sigma}{\\sqrt{n}}$, match each quantity with its expression.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Centre of the interval"
+    },
+    {
+     "id": "L2",
+     "content": "Standard error of the mean"
+    },
+    {
+     "id": "L3",
+     "content": "Margin of error"
+    },
+    {
+     "id": "L4",
+     "content": "Width of the interval"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$z\\dfrac{\\sigma}{\\sqrt{n}}$"
+    },
+    {
+     "id": "R4",
+     "content": "$2z\\dfrac{\\sigma}{\\sqrt{n}}$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\bar{x}$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\dfrac{\\sigma}{\\sqrt{n}}$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The interval is centred on the sample mean; the margin is z standard errors; the width is twice the margin.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A health worker in Masvingo calculates a 95% confidence interval of (2.8 kg, 3.2 kg) for the mean birth mass of babies born at a district hospital. Interpret this interval in context.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "We are 95% confident that the mean birth mass of all babies born at the hospital lies between 2.8 kg and 3.2 kg.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Meaning: about 95% of intervals calculated in this way from random samples would contain the true mean (it does not say 95% of babies weigh between 2.8 and 3.2 kg).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: We can be 95% confident that the population mean birth mass at the hospital is between 2.8 kg and 3.2 kg: the method used gives intervals that contain the true mean in about 95% of samples. It is a statement about the mean, not about individual babies."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Interpret about the population mean, in context, with the confidence level.",
+  "hints": [
+   "Is the interval about individual babies or about the mean?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The amounts customers spend at a supermarket are strongly skewed. A random sample of 60 receipts is used to find a 95% confidence interval for the mean amount spent, using the normal distribution. Explain why this is justified, and what is used in place of the unknown population standard deviation.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The sample is large (n = 60), so by the central limit theorem the sample mean is approximately normally distributed even though the amounts are skewed.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The unknown σ is replaced by s, the square root of the unbiased estimate of the variance from the sample (acceptable because n is large).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: With n = 60 the central limit theorem says that the sample mean is approximately normal, whatever the shape of the population, so x̄ ± 1.96 s/√n can be used. Since σ is unknown, it is estimated by s from the sample, which is reasonable for a large sample."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Large sample: central limit theorem, and s replaces σ.",
+  "hints": [
+   "Which theorem makes x̄ approximately normal?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q16",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A company claims that its batteries last 13.5 hours on average. A 95% confidence interval for the mean life, from a random sample, is (12.3, 13.1) hours. What should you conclude?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The claim is proved true, because 13.5 is close to the interval.",
+    "rationale": "Being close is not enough; 13.5 is outside the interval."
+   },
+   {
+    "key": "B",
+    "content": "The claim is proved false with certainty.",
+    "rationale": "A 95% interval gives evidence, not certainty."
+   },
+   {
+    "key": "C",
+    "content": "No conclusion is possible without the sample size.",
+    "rationale": "The interval already includes the effect of the sample size."
+   },
+   {
+    "key": "D",
+    "content": "The data cast doubt on the claim, because 13.5 lies outside the interval.",
+    "correct": true,
+    "rationale": "Correct: the claimed mean is not among the plausible values."
+   }
+  ],
+  "explanation": "Values outside a 95% confidence interval are not supported by the data at the 5% level, so the claim of 13.5 hours is doubtful (the batteries seem to last less).",
+  "hints": [
+   "Is 13.5 inside the interval?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "A random sample of 64 bags of maize from a grain depot near Chinhoyi gives masses $x$ kg with $\\sum x = 3232$ and $\\sum x^2 = 163\\,820$. The bags are labelled \"50 kg\".",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find unbiased estimates of the population mean and variance, the variance correct to 3 significant figures.",
+    "payload": {
+     "template": "Mean = {{blank:m}} kg; variance = {{blank:v}} kg²",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "50.5"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "9.59"
+       ],
+       "tolerance": 0.006
+      }
+     ]
+    },
+    "explanation": "$\\bar{x} = \\frac{3232}{64} = 50.5$. $163\\,820 - \\frac{3232^2}{64} = 163\\,820 - 163\\,216 = 604$; $s^2 = \\frac{604}{63} = 9.59$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find a 95% confidence interval for the population mean mass, giving the end-points to 4 significant figures.",
+    "payload": {
+     "template": "({{blank:a}} kg, {{blank:b}} kg)",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "49.74"
+       ],
+       "tolerance": 0.006
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "51.26"
+       ],
+       "tolerance": 0.006
+      }
+     ]
+    },
+    "explanation": "$s = 3.096$, standard error $= \\frac{3.096}{8} = 0.3870$, margin $= 1.96 \\times 0.3870 = 0.759$. Interval $(49.74, 51.26)$ kg."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Comment on the label \"50 kg\".",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "50 lies inside the confidence interval.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the data are consistent with a mean of 50 kg (no evidence at the 5% level that the bags are wrongly labelled).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 50 kg lies inside the interval $(49.74, 51.26)$, so a population mean of 50 kg is plausible: the sample gives no evidence that the bags are wrongly labelled."
+    },
+    "explanation": "A claimed value inside the interval is consistent with the data."
+   },
+   {
+    "label": "(d)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "The interval in (b) is valid only if the masses of the bags are exactly normally distributed.",
+    "answerSpec": {
+     "correct": false
+    },
+    "explanation": "False: n = 64 is large, so the central limit theorem makes x̄ approximately normal whatever the distribution of the masses."
+   }
+  ],
+  "explanation": "Estimate μ and σ² from the summary statistics, then use x̄ ± 1.96 s/√n for a large sample.",
+  "hints": [
+   "Use n − 1 = 63 for s².",
+   "Standard error = s/√64."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "50.5"
+      },
+      {
+       "blankId": "v",
+       "text": "9.59"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "49.74"
+      },
+      {
+       "blankId": "b",
+       "text": "51.26"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "51.3"
+       },
+       {
+        "blankId": "v",
+        "text": "9.44"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "44.4"
+       },
+       {
+        "blankId": "b",
+        "text": "56.6"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.estimation.confidence-intervals"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "The heights of Form 4 girls in a province are normally distributed with standard deviation 6.5 cm. A random sample of 30 girls has mean height 158.4 cm.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find a 95% confidence interval for the mean height of all Form 4 girls in the province, giving the end-points to 1 decimal place.",
+    "payload": {
+     "template": "({{blank:a}} cm, {{blank:b}} cm)",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "156.1"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "160.7"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "Standard error $= \\frac{6.5}{\\sqrt{30}} = 1.187$; margin $= 1.96 \\times 1.187 = 2.326$. Interval $(156.1, 160.7)$ cm."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the width the 95% confidence interval would have had if the sample had contained 120 girls (with the same standard deviation), correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm"
+    },
+    "answerSpec": {
+     "value": 2.32599512753859,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres"
+      ]
+     }
+    },
+    "explanation": "Width $= 2 \\times 1.96 \\times \\frac{6.5}{\\sqrt{120}} = 2.33$ cm, half the width for 30 girls (4.65 cm), because the sample is four times as large. Dividing by 4 instead of 2 gives 1.16.",
+    "workedSolution": "1. Width $= 2 \\times 1.96 \\times \\frac{6.5}{\\sqrt{120}} = 2.33$ cm, half the width for 30 girls (4.65 cm), because the sample is four times as large. Dividing by 4 instead of 2 gives 1.16."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the smallest sample size for which the width of a 95% confidence interval would be at most 3 cm.",
+    "answerSpec": {
+     "value": 73
+    },
+    "explanation": "$2 \\times 1.96 \\times \\frac{6.5}{\\sqrt{n}} \\leq 3$ gives $\\sqrt{n} \\geq 8.493$, $n \\geq 72.1$, so $n = 73$.",
+    "workedSolution": "1. $2 \\times 1.96 \\times \\frac{6.5}{\\sqrt{n}} \\leq 3$ gives $\\sqrt{n} \\geq 8.493$, $n \\geq 72.1$, so $n = 73$."
+   }
+  ],
+  "explanation": "Interval x̄ ± zσ/√n; width 2zσ/√n; solve for n and round up.",
+  "hints": [
+   "The width is 2 × 1.96 × σ/√n.",
+   "Round the sample size up."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "156.1"
+      },
+      {
+       "blankId": "b",
+       "text": "160.7"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "2.33"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "73"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "145.7"
+       },
+       {
+        "blankId": "b",
+        "text": "171.1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1.162997563769295"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "72"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ }
+]

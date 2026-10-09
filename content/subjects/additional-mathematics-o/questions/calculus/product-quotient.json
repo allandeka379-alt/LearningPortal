@@ -1,0 +1,1270 @@
+[
+ {
+  "key": "calculus.product-quotient.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $y = uv$, where $u$ and $v$ are functions of $x$, which expression gives $\\dfrac{dy}{dx}$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$u\\dfrac{dv}{dx} + v\\dfrac{du}{dx}$",
+    "correct": true,
+    "rationale": "Correct: the product rule."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{du}{dx} \\times \\dfrac{dv}{dx}$",
+    "rationale": "The derivative of a product is not the product of the derivatives."
+   },
+   {
+    "key": "C",
+    "content": "$u\\dfrac{dv}{dx} - v\\dfrac{du}{dx}$",
+    "rationale": "The product rule adds the two terms; a minus sign belongs to the quotient rule."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{du}{dx} + \\dfrac{dv}{dx}$",
+    "rationale": "That is the derivative of the sum $u + v$, not of the product."
+   }
+  ],
+  "explanation": "Product rule: $\\dfrac{d}{dx}(uv) = u\\dfrac{dv}{dx} + v\\dfrac{du}{dx}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $y = \\dfrac{u}{v}$, which expression gives $\\dfrac{dy}{dx}$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{u\\frac{dv}{dx} - v\\frac{du}{dx}}{v^2}$",
+    "rationale": "The numerator is reversed, which changes the sign of the answer."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{v\\frac{du}{dx} + u\\frac{dv}{dx}}{v^2}$",
+    "rationale": "The quotient rule has a minus sign in the numerator."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{v\\frac{du}{dx} - u\\frac{dv}{dx}}{v}$",
+    "rationale": "The denominator must be squared: $v^2$."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{v\\frac{du}{dx} - u\\frac{dv}{dx}}{v^2}$",
+    "correct": true,
+    "rationale": "Correct: the quotient rule, starting with the bottom function v."
+   }
+  ],
+  "explanation": "Quotient rule: $\\dfrac{d}{dx}\\left(\\dfrac{u}{v}\\right) = \\dfrac{v\\frac{du}{dx} - u\\frac{dv}{dx}}{v^2}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use the quotient rule to find the gradient of $y = \\dfrac{x + 2}{x + 1}$ at the point where $x = 1$. Give your answer as a fraction or a decimal.",
+  "answerSpec": {
+   "value": -0.25,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\dfrac{dy}{dx} = \\dfrac{(x + 1)(1) - (x + 2)(1)}{(x + 1)^2} = \\dfrac{-1}{(x + 1)^2}$. At $x = 1$: $-\\frac{1}{4}$. The answer $\\frac{1}{4}$ reverses the numerator; $-\\frac{1}{2}$ forgets to square the denominator.",
+  "workedSolution": "1. $\\dfrac{dy}{dx} = \\dfrac{(x + 1)(1) - (x + 2)(1)}{(x + 1)^2} = \\dfrac{-1}{(x + 1)^2}$. At $x = 1$: $-\\frac{1}{4}$. The answer $\\frac{1}{4}$ reverses the numerator; $-\\frac{1}{2}$ forgets to square the denominator.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-0.250"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.25"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-0.5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Given $y = x^3\\mathrm{e}^x$, write $\\dfrac{dy}{dx}$ in the form $x^n\\mathrm{e}^x(x + a)$. (Use $\\dfrac{d}{dx}(\\mathrm{e}^x) = \\mathrm{e}^x$.)",
+  "payload": {
+   "template": "n = {{blank:n}}, a = {{blank:a}}",
+   "blanks": [
+    {
+     "id": "n",
+     "input": "number"
+    },
+    {
+     "id": "a",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "n",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "a",
+     "accepted": [
+      "3"
+     ]
+    }
+   ]
+  },
+  "explanation": "$u = x^3$, $u' = 3x^2$; $v = \\mathrm{e}^x$, $v' = \\mathrm{e}^x$. $\\frac{dy}{dx} = x^3\\mathrm{e}^x + 3x^2\\mathrm{e}^x = x^2\\mathrm{e}^x(x + 3)$.",
+  "hints": [
+   "Take out the common factor $x^2\\mathrm{e}^x$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "n",
+     "text": "2"
+    },
+    {
+     "blankId": "a",
+     "text": "3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "n",
+      "text": "3"
+     },
+     {
+      "blankId": "a",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Given $y = x(x - 3)^4$, write $\\dfrac{dy}{dx}$ in the form $(x - 3)^3(px + q)$.",
+  "payload": {
+   "template": "p = {{blank:p}}, q = {{blank:q}}",
+   "blanks": [
+    {
+     "id": "p",
+     "input": "number"
+    },
+    {
+     "id": "q",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p",
+     "accepted": [
+      "5"
+     ]
+    },
+    {
+     "id": "q",
+     "accepted": [
+      "-3"
+     ]
+    }
+   ]
+  },
+  "explanation": "$\\frac{dy}{dx} = x \\times 4(x - 3)^3 + (x - 3)^4 \\times 1 = (x - 3)^3[4x + (x - 3)] = (x - 3)^3(5x - 3)$.",
+  "hints": [
+   "Product rule with u = x and v = (x − 3)⁴.",
+   "Factor out the lower power $(x - 3)^3$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p",
+     "text": "5"
+    },
+    {
+     "blankId": "q",
+     "text": "-3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p",
+      "text": "4"
+     },
+     {
+      "blankId": "q",
+      "text": "3"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the gradient of the curve $y = \\dfrac{3x - 1}{x + 2}$ at the point where $x = 1$. Give your answer as an exact fraction or correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.7777777777777778,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\dfrac{dy}{dx} = \\dfrac{3(x + 2) - (3x - 1)(1)}{(x + 2)^2} = \\dfrac{7}{(x + 2)^2}$. At $x = 1$: $\\frac{7}{9}$. The answer $-\\frac{7}{9}$ reverses the numerator; $\\frac{7}{3}$ forgets to square.",
+  "workedSolution": "1. $\\dfrac{dy}{dx} = \\dfrac{3(x + 2) - (3x - 1)(1)}{(x + 2)^2} = \\dfrac{7}{(x + 2)^2}$. At $x = 1$: $\\frac{7}{9}$. The answer $-\\frac{7}{9}$ reverses the numerator; $\\frac{7}{3}$ forgets to square.",
+  "hints": [
+   "Simplify the numerator: the x terms cancel."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.778"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-0.7777777777777778"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.3333333333333335"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q07",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "With $x$ in radians, $\\dfrac{d}{dx}(x\\sin x) = \\cos x$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. That multiplies the derivatives ($1 \\times \\cos x$). By the product rule, $\\dfrac{d}{dx}(x\\sin x) = x\\cos x + \\sin x$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q08",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $y = \\dfrac{x^2}{2x + 1}$, write $\\dfrac{dy}{dx}$ in the form $\\dfrac{kx(x + 1)}{(2x + 1)^2}$.",
+  "payload": {
+   "template": "k = {{blank:k}}",
+   "blanks": [
+    {
+     "id": "k",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "k",
+     "accepted": [
+      "2"
+     ]
+    }
+   ]
+  },
+  "explanation": "$\\dfrac{dy}{dx} = \\dfrac{(2x + 1)(2x) - x^2(2)}{(2x + 1)^2} = \\dfrac{4x^2 + 2x - 2x^2}{(2x + 1)^2} = \\dfrac{2x^2 + 2x}{(2x + 1)^2} = \\dfrac{2x(x + 1)}{(2x + 1)^2}$.",
+  "hints": [
+   "Expand the numerator only, then factorise it."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "k",
+     "text": "2"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "k",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\dfrac{d}{dx}(x\\ln x)$ for $x > 0$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{1}{x}$",
+    "rationale": "This multiplies the derivatives $1 \\times \\frac{1}{x}$."
+   },
+   {
+    "key": "B",
+    "content": "$\\ln x + x$",
+    "rationale": "The term $x \\times \\frac{1}{x}$ simplifies to 1, not $x$."
+   },
+   {
+    "key": "C",
+    "content": "$\\ln x + 1$",
+    "correct": true,
+    "rationale": "Correct: $x \\times \\frac{1}{x} + \\ln x \\times 1$."
+   },
+   {
+    "key": "D",
+    "content": "$\\ln x$",
+    "rationale": "The term $u\\frac{dv}{dx} = x \\times \\frac{1}{x} = 1$ is missing."
+   }
+  ],
+  "explanation": "$u = x$, $v = \\ln x$: $\\frac{dy}{dx} = x \\cdot \\frac{1}{x} + \\ln x \\cdot 1 = 1 + \\ln x$.",
+  "hints": [
+   "$\\frac{d}{dx}(\\ln x) = \\frac{1}{x}$."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q10",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the gradient of the curve $y = x\\cos x$ at the point where $x = \\dfrac{\\pi}{3}$, giving your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": -0.4068996821171087,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\dfrac{dy}{dx} = \\cos x - x\\sin x$. At $x = \\frac{\\pi}{3}$: $\\frac{1}{2} - \\frac{\\pi}{3} \\times \\frac{\\sqrt{3}}{2} = -0.407$ (3 s.f.). The value $-0.866$ multiplies the derivatives; $1.41$ uses $\\frac{d}{dx}\\cos x = +\\sin x$.",
+  "workedSolution": "1. $\\dfrac{dy}{dx} = \\cos x - x\\sin x$. At $x = \\frac{\\pi}{3}$: $\\frac{1}{2} - \\frac{\\pi}{3} \\times \\frac{\\sqrt{3}}{2} = -0.407$ (3 s.f.). The value $-0.866$ multiplies the derivatives; $1.41$ uses $\\frac{d}{dx}\\cos x = +\\sin x$.",
+  "hints": [
+   "The calculator must be in radian mode.",
+   "$\\frac{d}{dx}(\\cos x) = -\\sin x$."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "-0.407"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "-0.866"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "1.41"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "calculus.product-quotient.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each function with its derivative (x in radians where needed).",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$x\\mathrm{e}^x$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\dfrac{x}{x + 1}$"
+    },
+    {
+     "id": "L3",
+     "content": "$x^2\\sin x$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\dfrac{\\ln x}{x}$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$x(2\\sin x + x\\cos x)$"
+    },
+    {
+     "id": "R4",
+     "content": "$\\dfrac{1 - \\ln x}{x^2}$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\mathrm{e}^x(x + 1)$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\dfrac{1}{(x + 1)^2}$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Products use $uv' + vu'$; quotients use $\\frac{vu' - uv'}{v^2}$. For example $\\frac{\\ln x}{x}$: $\\frac{x \\cdot \\frac{1}{x} - \\ln x \\cdot 1}{x^2} = \\frac{1 - \\ln x}{x^2}$.",
+  "hints": [
+   "Decide first which are products and which are quotients."
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which function can be differentiated with the chain rule alone, without the product or quotient rule?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$x^2(x + 1)^5$",
+    "rationale": "This is a product of two functions of x."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{5}{(x + 1)^3}$",
+    "correct": true,
+    "rationale": "Correct: the numerator is a constant, so write $5(x + 1)^{-3}$ and use the chain rule."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{x}{(x + 1)^3}$",
+    "rationale": "The numerator x is a function of x, so this is a genuine quotient."
+   },
+   {
+    "key": "D",
+    "content": "$x\\,\\mathrm{e}^{x + 1}$",
+    "rationale": "This is a product of x and an exponential."
+   }
+  ],
+  "explanation": "A quotient with a constant numerator is just a constant times a negative power: $\\frac{5}{(x + 1)^3} = 5(x + 1)^{-3}$, derivative $-15(x + 1)^{-4}$.",
+  "hints": [
+   "Look for a numerator that does not contain x."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q13",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Find the coordinates of the two points on the curve $y = \\dfrac{x^2}{x - 1}$ at which the gradient is zero. Give the point with the smaller $x$-coordinate first.",
+  "payload": {
+   "template": "({{blank:a}}, {{blank:b}}) and ({{blank:c}}, {{blank:d}})",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "d",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "4"
+     ]
+    }
+   ]
+  },
+  "explanation": "$\\dfrac{dy}{dx} = \\dfrac{(x - 1)(2x) - x^2(1)}{(x - 1)^2} = \\dfrac{x^2 - 2x}{(x - 1)^2} = \\dfrac{x(x - 2)}{(x - 1)^2}$. This is zero when the numerator is zero: $x = 0$ or $x = 2$. Then $y = 0$ and $y = \\frac{4}{1} = 4$.",
+  "hints": [
+   "A fraction is zero when its numerator is zero.",
+   "Find y from the equation of the curve."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "0"
+    },
+    {
+     "blankId": "b",
+     "text": "0"
+    },
+    {
+     "blankId": "c",
+     "text": "2"
+    },
+    {
+     "blankId": "d",
+     "text": "4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "1"
+     },
+     {
+      "blankId": "b",
+      "text": "1"
+     },
+     {
+      "blankId": "c",
+      "text": "-2"
+     },
+     {
+      "blankId": "d",
+      "text": "0"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The curve $y = \\dfrac{x + k}{x - 2}$, where $k$ is a constant, has gradient $-5$ at the point where $x = 3$. Find $k$.",
+  "payload": {
+   "answerPrefix": "k ="
+  },
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "$\\dfrac{dy}{dx} = \\dfrac{(x - 2) - (x + k)}{(x - 2)^2} = \\dfrac{-(2 + k)}{(x - 2)^2}$. At $x = 3$: $-(2 + k) = -5$, so $k = 3$. Reversing the numerator gives $2 + k = -5$, $k = -7$.",
+  "workedSolution": "1. $\\dfrac{dy}{dx} = \\dfrac{(x - 2) - (x + k)}{(x - 2)^2} = \\dfrac{-(2 + k)}{(x - 2)^2}$. At $x = 3$: $-(2 + k) = -5$, so $k = 3$. Reversing the numerator gives $2 + k = -5$, $k = -7$.",
+  "hints": [
+   "Apply the quotient rule with k left as a letter.",
+   "Substitute x = 3 and solve for k."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-7"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q15",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the gradient of the curve $y = \\dfrac{x^2}{x^2 + 1}$ at the point where $x = 1.5$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.28402366863905326,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\dfrac{dy}{dx} = \\dfrac{(x^2 + 1)(2x) - x^2(2x)}{(x^2 + 1)^2} = \\dfrac{2x}{(x^2 + 1)^2}$. At $x = 1.5$: $\\dfrac{3}{3.25^2} = 0.284$ (3 s.f.). Reversing the numerator gives the negative; not squaring the denominator gives $0.923$.",
+  "workedSolution": "1. $\\dfrac{dy}{dx} = \\dfrac{(x^2 + 1)(2x) - x^2(2x)}{(x^2 + 1)^2} = \\dfrac{2x}{(x^2 + 1)^2}$. At $x = 1.5$: $\\dfrac{3}{3.25^2} = 0.284$ (3 s.f.). Reversing the numerator gives the negative; not squaring the denominator gives $0.923$.",
+  "hints": [
+   "The $2x^3$ terms in the numerator cancel."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.284"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "-0.284"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.923"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "calculus.product-quotient.q16",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Show that $\\dfrac{d}{dx}\\left(x\\sqrt{2x + 1}\\right) = \\dfrac{3x + 1}{\\sqrt{2x + 1}}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 differentiates $v = (2x + 1)^{\\frac{1}{2}}$ by the chain rule: $\\frac{dv}{dx} = (2x + 1)^{-\\frac{1}{2}}$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 applies the product rule: $x(2x + 1)^{-\\frac{1}{2}} + (2x + 1)^{\\frac{1}{2}}$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 writes over the common denominator $\\sqrt{2x + 1}$: numerator $x + (2x + 1)$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 reaches $\\dfrac{3x + 1}{\\sqrt{2x + 1}}$ with no errors.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "Let $u = x$ and $v = (2x + 1)^{\\frac{1}{2}}$, so $\\frac{du}{dx} = 1$ and $\\frac{dv}{dx} = \\frac{1}{2}(2x + 1)^{-\\frac{1}{2}} \\times 2 = (2x + 1)^{-\\frac{1}{2}}$.\n\n$$\n\\frac{dy}{dx} = \\frac{x}{\\sqrt{2x + 1}} + \\sqrt{2x + 1}\n$$\n\n$$\n\\frac{dy}{dx} = \\frac{x + (2x + 1)}{\\sqrt{2x + 1}} = \\frac{3x + 1}{\\sqrt{2x + 1}}\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Product rule with the chain rule for the root, then one fraction over √(2x + 1).",
+  "hints": [
+   "$\\sqrt{2x + 1} = \\dfrac{2x + 1}{\\sqrt{2x + 1}}$."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q17",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Given that $y = \\dfrac{\\ln x}{x^2}$ for $x > 0$, show that $\\dfrac{dy}{dx} = \\dfrac{1 - 2\\ln x}{x^3}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 uses the quotient rule with $u = \\ln x$, $v = x^2$: $\\dfrac{x^2 \\cdot \\frac{1}{x} - \\ln x \\cdot 2x}{x^4}$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 simplifies the numerator to $x - 2x\\ln x = x(1 - 2\\ln x)$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 cancels $x$ to reach the given result.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n\\frac{dy}{dx} = \\frac{x^2 \\cdot \\frac{1}{x} - \\ln x \\cdot 2x}{(x^2)^2} = \\frac{x - 2x\\ln x}{x^4}\n$$\n\n$$\n\\frac{dy}{dx} = \\frac{x(1 - 2\\ln x)}{x^4} = \\frac{1 - 2\\ln x}{x^3}\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Quotient rule, then factor x out of the numerator and cancel.",
+  "hints": [
+   "$(x^2)^2 = x^4$."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "The function $f$ is defined by $f(x) = \\dfrac{x^2 + 5}{x + 2}$ for $x \\neq -2$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $f'(x) = \\dfrac{x^2 + 4x - 5}{(x + 2)^2}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 applies the quotient rule: $\\dfrac{(x + 2)(2x) - (x^2 + 5)(1)}{(x + 2)^2}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 expands the numerator: $2x^2 + 4x - x^2 - 5$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 simplifies to $x^2 + 4x - 5$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nf'(x) = \\frac{(x + 2)(2x) - (x^2 + 5)(1)}{(x + 2)^2} = \\frac{2x^2 + 4x - x^2 - 5}{(x + 2)^2} = \\frac{x^2 + 4x - 5}{(x + 2)^2}\n$$"
+    },
+    "explanation": "Quotient rule; simplify the numerator only."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the values of $x$ for which $f'(x) = 0$, in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}} or x = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-5"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "$x^2 + 4x - 5 = (x + 5)(x - 1) = 0$, so $x = -5$ or $x = 1$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of $f'(0)$.",
+    "answerSpec": {
+     "value": -1.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$f'(0) = \\frac{-5}{4} = -1.25$. Forgetting to square the denominator gives $-2.5$.",
+    "workedSolution": "1. $f'(0) = \\frac{-5}{4} = -1.25$. Forgetting to square the denominator gives $-2.5$."
+   }
+  ],
+  "explanation": "Use the quotient rule, simplify the numerator, and set it equal to zero for stationary values.",
+  "hints": [
+   "$u = x^2 + 5$, $v = x + 2$.",
+   "A fraction is zero only when its numerator is zero."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-5"
+      },
+      {
+       "blankId": "b",
+       "text": "1"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "-1.25"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "5"
+       },
+       {
+        "blankId": "b",
+        "text": "-1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "-2.5"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.product-quotient.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "A curve has equation $y = (x - 1)\\sqrt{x + 2}$ for $x > -2$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\dfrac{dy}{dx} = \\dfrac{3(x + 1)}{2\\sqrt{x + 2}}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses the product rule with $\\frac{d}{dx}\\sqrt{x + 2} = \\frac{1}{2}(x + 2)^{-\\frac{1}{2}}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 writes $\\sqrt{x + 2} + \\dfrac{x - 1}{2\\sqrt{x + 2}}$ over the denominator $2\\sqrt{x + 2}$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 simplifies the numerator $2(x + 2) + x - 1 = 3x + 3$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\frac{dy}{dx} = (x - 1) \\cdot \\frac{1}{2\\sqrt{x + 2}} + \\sqrt{x + 2} \\cdot 1\n$$\n\n$$\n\\frac{dy}{dx} = \\frac{(x - 1) + 2(x + 2)}{2\\sqrt{x + 2}} = \\frac{3x + 3}{2\\sqrt{x + 2}} = \\frac{3(x + 1)}{2\\sqrt{x + 2}}\n$$"
+    },
+    "explanation": "Product rule, then a single fraction."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the gradient of the curve at the point where $x = 2$.",
+    "answerSpec": {
+     "value": 2.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\frac{3(3)}{2\\sqrt{4}} = \\frac{9}{4}$.",
+    "workedSolution": "1. $\\frac{3(3)}{2\\sqrt{4}} = \\frac{9}{4}$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the point on the curve where the gradient is zero.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "-2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$3(x + 1) = 0$ gives $x = -1$; $y = (-2)\\sqrt{1} = -2$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the gradient of the curve at the point where $x = 7$.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "$\\frac{3(8)}{2\\sqrt{9}} = \\frac{24}{6} = 4$.",
+    "workedSolution": "1. $\\frac{3(8)}{2\\sqrt{9}} = \\frac{24}{6} = 4$."
+   }
+  ],
+  "explanation": "The product rule with a chain-rule factor gives a derivative that is easy to evaluate once written as a single fraction.",
+  "hints": [
+   "$u = x - 1$, $v = (x + 2)^{\\frac{1}{2}}$.",
+   "The gradient is zero when the numerator is zero."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "2.25"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "-1"
+      },
+      {
+       "blankId": "y",
+       "text": "-2"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4.5"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "1"
+       },
+       {
+        "blankId": "y",
+        "text": "0"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ }
+]

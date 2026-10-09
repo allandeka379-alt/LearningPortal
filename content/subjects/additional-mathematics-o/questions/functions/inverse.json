@@ -1,0 +1,1291 @@
+[
+ {
+  "key": "functions.inverse.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which of these functions, each defined for all real $x$, has an inverse?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$f(x) = 3x - 2$",
+    "correct": true,
+    "rationale": "Correct: a non-horizontal straight line is one-one."
+   },
+   {
+    "key": "B",
+    "content": "$f(x) = x^2 + 3$",
+    "rationale": "Many-one: $f(-1) = f(1) = 4$, so it has no inverse on all real numbers."
+   },
+   {
+    "key": "C",
+    "content": "$f(x) = (x - 2)^2$",
+    "rationale": "Many-one: $f(0) = f(4) = 4$."
+   },
+   {
+    "key": "D",
+    "content": "$f(x) = 5 - x^2$",
+    "rationale": "Many-one: $f(-2) = f(2) = 1$."
+   }
+  ],
+  "explanation": "Only one-one functions have inverses. Each quadratic is symmetrical about its vertex, so it is many-one unless its domain is restricted.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q02",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $f(x) = 5x + 2$, find $f^{-1}(x)$. Type a fraction with /, e.g. (x+1)/3.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "(x-2)/5"
+    },
+    {
+     "value": "x/5-2/5"
+    },
+    {
+     "value": "0.2x-0.4"
+    },
+    {
+     "value": "1/5(x-2)"
+    },
+    {
+     "value": "(1/5)(x-2)"
+    },
+    {
+     "value": "0.2(x-2)"
+    },
+    {
+     "value": "(-2+x)/5"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$y = 5x + 2$, so $x = \\frac{y - 2}{5}$ and $f^{-1}(x) = \\frac{x - 2}{5}$. Check: $f(1) = 7$ and $f^{-1}(7) = 1$.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "(x-2)/5"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1/(5x+2)"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "(x+2)/5"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "5x-2"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $f(x) = 3x - 4$, find $f^{-1}(11)$.",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "$f^{-1}(11)$ is the input that $f$ sends to 11: $3x - 4 = 11$, so $x = 5$. (Equivalently $f^{-1}(x) = \\frac{x + 4}{3}$ gives $\\frac{15}{3} = 5$.)",
+  "workedSolution": "1. $f^{-1}(11)$ is the input that $f$ sends to 11: $3x - 4 = 11$, so $x = 5$. (Equivalently $f^{-1}(x) = \\frac{x + 4}{3}$ gives $\\frac{15}{3} = 5$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "29"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.33"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $f(x) = x^3 + 1$, $x \\in \\mathbb{R}$, find $f^{-1}(x)$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\sqrt[3]{x} - 1$",
+    "rationale": "Subtract 1 before taking the cube root: undo the operations in reverse order."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{1}{x^3 + 1}$",
+    "rationale": "This is the reciprocal of f(x), not its inverse."
+   },
+   {
+    "key": "C",
+    "content": "$\\sqrt[3]{x - 1}$",
+    "correct": true,
+    "rationale": "Correct: $y = x^3 + 1$ gives $x^3 = y - 1$, so $x = \\sqrt[3]{y - 1}$."
+   },
+   {
+    "key": "D",
+    "content": "$x^3 - 1$",
+    "rationale": "Cubing again does not undo cubing; you need a cube root."
+   }
+  ],
+  "explanation": "$f$ cubes and then adds 1, so $f^{-1}$ subtracts 1 and then takes the cube root: $f^{-1}(x) = \\sqrt[3]{x - 1}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q05",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The graph of $y = f^{-1}(x)$ is the reflection of the graph of $y = f(x)$ in the line $y = x$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. If $(a, b)$ is on $y = f(x)$ then $(b, a)$ is on $y = f^{-1}(x)$; swapping coordinates is reflection in $y = x$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q06",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For any one-one function, $f^{-1}(x) = \\dfrac{1}{f(x)}$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The $-1$ means \"inverse function\", not reciprocal. For $f(x) = x + 2$, $f^{-1}(x) = x - 2$ but $\\frac{1}{f(x)} = \\frac{1}{x + 2}$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q07",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $f(x) = \\dfrac{x + 3}{x - 2}$, $x \\neq 2$, find $f^{-1}(x)$. Type a fraction with /, e.g. (4x+1)/(x-3).",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "(2x+3)/(x-1)"
+    },
+    {
+     "value": "(3+2x)/(x-1)"
+    },
+    {
+     "value": "(-2x-3)/(1-x)"
+    },
+    {
+     "value": "(2x+3)/(-1+x)"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$y(x - 2) = x + 3$, so $xy - 2y = x + 3$, $xy - x = 2y + 3$, $x(y - 1) = 2y + 3$ and $x = \\dfrac{2y + 3}{y - 1}$. So $f^{-1}(x) = \\dfrac{2x + 3}{x - 1}$, $x \\neq 1$.",
+  "hints": [
+   "Multiply by $(x - 2)$, then collect the $x$ terms on one side.",
+   "Factorise: $x(y - 1) = \\ldots$"
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "(2x+3)/(x-1)"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "(x-2)/(x+3)"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "(x+3)/(x-2)"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $f(x) = \\mathrm{e}^x - 2$, $x \\in \\mathbb{R}$, find $f^{-1}(x)$ and its domain.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$f^{-1}(x) = \\ln x + 2$, $x > 0$",
+    "rationale": "Add 2 before taking the logarithm: undo the operations in reverse order."
+   },
+   {
+    "key": "B",
+    "content": "$f^{-1}(x) = \\ln(x + 2)$, $x \\in \\mathbb{R}$",
+    "rationale": "$\\ln(x + 2)$ is only defined for $x > -2$, which is the range of $f$."
+   },
+   {
+    "key": "C",
+    "content": "$f^{-1}(x) = \\ln(x - 2)$, $x > 2$",
+    "rationale": "From $y = \\mathrm{e}^x - 2$, $\\mathrm{e}^x = y + 2$, not $y - 2$."
+   },
+   {
+    "key": "D",
+    "content": "$f^{-1}(x) = \\ln(x + 2)$, $x > -2$",
+    "correct": true,
+    "rationale": "Correct: $\\mathrm{e}^x = y + 2$, so $x = \\ln(y + 2)$; the range of $f$ is $f(x) > -2$."
+   }
+  ],
+  "explanation": "$y = \\mathrm{e}^x - 2$ gives $\\mathrm{e}^x = y + 2$, so $x = \\ln(y + 2)$. The domain of $f^{-1}$ is the range of $f$: since $\\mathrm{e}^x > 0$, $f(x) > -2$.",
+  "hints": [
+   "$\\ln$ undoes $\\mathrm{e}$."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q09",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $f(x) = \\ln 3x$, $x > 0$, find $f^{-1}(x)$. Type e^x for the exponential, e.g. 2e^x.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "e^x/3"
+    },
+    {
+     "value": "(1/3)e^x"
+    },
+    {
+     "value": "(e^x)/3"
+    },
+    {
+     "value": "e^(x)/3"
+    },
+    {
+     "value": "1/3*e^x"
+    },
+    {
+     "value": "1/3e^x"
+    },
+    {
+     "value": "(1/3)*e^x"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$y = \\ln 3x$ gives $3x = \\mathrm{e}^y$, so $x = \\frac{\\mathrm{e}^y}{3}$ and $f^{-1}(x) = \\frac{\\mathrm{e}^x}{3}$, for $x \\in \\mathbb{R}$.",
+  "hints": [
+   "Take $\\mathrm{e}$ to the power of both sides."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "e^x/3"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "3e^x"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "e^(3x)"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "e^x-3"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The function $f(x) = 2x + 1$ is defined for $0 \\leq x \\leq 4$. State the domain of $f^{-1}$.",
+  "payload": {
+   "template": "{{blank:lo}} ≤ x ≤ {{blank:hi}}",
+   "blanks": [
+    {
+     "id": "lo",
+     "input": "number"
+    },
+    {
+     "id": "hi",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "lo",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "hi",
+     "accepted": [
+      "9"
+     ]
+    }
+   ]
+  },
+  "explanation": "The domain of $f^{-1}$ is the range of $f$: $f(0) = 1$ and $f(4) = 9$, so $1 \\leq x \\leq 9$.",
+  "hints": [
+   "Domain of the inverse = range of the function."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "lo",
+     "text": "1"
+    },
+    {
+     "blankId": "hi",
+     "text": "9"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "lo",
+      "text": "0"
+     },
+     {
+      "blankId": "hi",
+      "text": "4"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The function $f(x) = (x - 2)^2 + 1$ is defined for $x \\geq 2$. Find $f^{-1}(10)$.",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "Solve $(x - 2)^2 + 1 = 10$: $(x - 2)^2 = 9$, so $x - 2 = \\pm 3$ and $x = 5$ or $x = -1$. Only $x = 5$ is in the domain $x \\geq 2$, so $f^{-1}(10) = 5$.",
+  "workedSolution": "1. Solve $(x - 2)^2 + 1 = 10$: $(x - 2)^2 = 9$, so $x - 2 = \\pm 3$ and $x = 5$ or $x = -1$. Only $x = 5$ is in the domain $x \\geq 2$, so $f^{-1}(10) = 5$.",
+  "hints": [
+   "Use the domain to choose between the two square roots."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "82"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q12",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The function $f(x) = (x + 1)^2 - 3$ is defined for $x \\geq -1$. Find $f^{-1}(x)$. Type sqrt(...) or √(...) for the square root.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "-1+√(x+3)"
+    },
+    {
+     "value": "-1+sqrt(x+3)"
+    },
+    {
+     "value": "√(x+3)-1"
+    },
+    {
+     "value": "sqrt(x+3)-1"
+    },
+    {
+     "value": "-1+√(3+x)"
+    },
+    {
+     "value": "-1+sqrt(3+x)"
+    },
+    {
+     "value": "√(3+x)-1"
+    },
+    {
+     "value": "sqrt(3+x)-1"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$y = (x + 1)^2 - 3$, so $(x + 1)^2 = y + 3$ and $x + 1 = \\pm\\sqrt{y + 3}$. Since $x \\geq -1$, $x + 1 \\geq 0$: take $+$. So $f^{-1}(x) = -1 + \\sqrt{x + 3}$, for $x \\geq -3$.",
+  "hints": [
+   "Rearrange to make the bracket the subject, then take square roots.",
+   "The domain x ≥ −1 decides the sign of the root."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "-1+√(x+3)"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "-1-√(x+3)"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "√(x-3)+1"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1+√(x+3)"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The function $f(x) = x^2 - 4x + 7$ is defined for $x \\geq 2$. What is the domain of $f^{-1}$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$x \\geq 2$",
+    "rationale": "That is the domain of $f$, which becomes the range of $f^{-1}$."
+   },
+   {
+    "key": "B",
+    "content": "$x \\geq 7$",
+    "rationale": "$7 = f(0)$, but 0 is not in the domain; the least value of $f$ is $f(2) = 3$."
+   },
+   {
+    "key": "C",
+    "content": "$x \\in \\mathbb{R}$",
+    "rationale": "$f^{-1}$ can only accept outputs of $f$, which are all at least 3."
+   },
+   {
+    "key": "D",
+    "content": "$x \\geq 3$",
+    "correct": true,
+    "rationale": "Correct: $f(x) = (x - 2)^2 + 3$, so the range of $f$ is $f(x) \\geq 3$."
+   }
+  ],
+  "explanation": "Complete the square: $(x - 2)^2 + 3$. On $x \\geq 2$ the least value is $3$, so the range of $f$, and hence the domain of $f^{-1}$, is $x \\geq 3$.",
+  "hints": [
+   "The domain of the inverse is the range of f."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The function $f(x) = x^2 - 2$ is defined for $x \\geq 0$. The graphs of $y = f(x)$ and $y = f^{-1}(x)$ meet at one point. Find its $x$-coordinate.",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "$f$ is increasing on $x \\geq 0$, so the graphs meet on $y = x$. Solve $x^2 - 2 = x$: $x^2 - x - 2 = 0$, $(x - 2)(x + 1) = 0$. Only $x = 2$ is in the domain, so the point is $(2, 2)$.",
+  "workedSolution": "1. $f$ is increasing on $x \\geq 0$, so the graphs meet on $y = x$. Solve $x^2 - 2 = x$: $x^2 - x - 2 = 0$, $(x - 2)(x + 1) = 0$. Only $x = 2$ is in the domain, so the point is $(2, 2)$.",
+  "hints": [
+   "For an increasing function, $f$ and $f^{-1}$ meet on the line $y = x$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-1"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Explain in words why the function $f(x) = x^2 + 1$, $x \\in \\mathbb{R}$, does not have an inverse.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "States that $f$ is many-one (not one-one), with an example such as $f(-2) = f(2) = 5$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "States that an inverse would map one value (e.g. 5) to two values, so it would not be a function.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: $f(-2) = 5$ and $f(2) = 5$, so $f$ is many-one. An inverse would have to send 5 back to both $-2$ and $2$, but a function gives only one output for each input, so $f^{-1}$ does not exist."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Restricting the domain to $x \\geq 0$ (or $x \\leq 0$) would make $f$ one-one and give it an inverse.",
+  "hints": [
+   "Find two inputs with the same output."
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q16",
+  "type": "MATCHING",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each function $f$ with its inverse $f^{-1}$.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$f(x) = 2x$"
+    },
+    {
+     "id": "L2",
+     "content": "$f(x) = x + 5$"
+    },
+    {
+     "id": "L3",
+     "content": "$f(x) = \\mathrm{e}^x$"
+    },
+    {
+     "id": "L4",
+     "content": "$f(x) = x^3$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$f^{-1}(x) = \\ln x$"
+    },
+    {
+     "id": "R4",
+     "content": "$f^{-1}(x) = \\sqrt[3]{x}$"
+    },
+    {
+     "id": "R1",
+     "content": "$f^{-1}(x) = \\frac{x}{2}$"
+    },
+    {
+     "id": "R2",
+     "content": "$f^{-1}(x) = x - 5$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each inverse undoes its function: halving undoes doubling, subtracting 5 undoes adding 5, ln undoes e to the power, the cube root undoes cubing.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q17",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given $f(x) = 3\\mathrm{e}^x$, $x \\in \\mathbb{R}$, find $f^{-1}(12)$, giving your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 1.3862943611198906,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$3\\mathrm{e}^x = 12$ gives $\\mathrm{e}^x = 4$, so $x = \\ln 4 = 1.39$. In general $f^{-1}(x) = \\ln\\frac{x}{3}$.",
+  "workedSolution": "1. $3\\mathrm{e}^x = 12$ gives $\\mathrm{e}^x = 4$, so $x = \\ln 4 = 1.39$. In general $f^{-1}(x) = \\ln\\frac{x}{3}$.",
+  "hints": [
+   "Solve $3\\mathrm{e}^x = 12$."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "1.39"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.828"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "functions.inverse.q18",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Given $f(x) = \\dfrac{3x - 1}{x + 2}$, $x \\neq -2$, show that $f^{-1}(x) = \\dfrac{2x + 1}{3 - x}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 writes $y(x + 2) = 3x - 1$ and expands to $xy + 2y = 3x - 1$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 collects the $x$ terms and factorises: $x(y - 3) = -2y - 1$ (or $x(3 - y) = 2y + 1$).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 reaches $f^{-1}(x) = \\dfrac{2x + 1}{3 - x}$ with correct signs.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\ny = \\frac{3x - 1}{x + 2}\n$$\n\n$$\nxy + 2y = 3x - 1\n$$\n\n$$\n2y + 1 = 3x - xy = x(3 - y)\n$$\n\n$$\nx = \\frac{2y + 1}{3 - y}\n$$\n\nSo $f^{-1}(x) = \\dfrac{2x + 1}{3 - x}$, for $x \\neq 3$."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Collecting the $x$ terms on the side where they are positive avoids sign errors. Check: $f(1) = \\frac{2}{3}$ and $f^{-1}\\left(\\frac{2}{3}\\right) = \\frac{7/3}{7/3} = 1$.",
+  "hints": [
+   "Multiply both sides by $(x + 2)$.",
+   "Get every term containing $x$ on one side."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "The function $f$ is defined by $f(x) = 2x^2 - 12x + 23$ for $x \\geq 3$. It can be written as $f(x) = 2(x - 3)^2 + 5$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The range of $f$ is $f(x) \\geq m$. Find $m$.",
+    "payload": {
+     "answerPrefix": "m ="
+    },
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "The least value is at $x = 3$: $f(3) = 5$.",
+    "workedSolution": "1. The least value is at $x = 3$: $f(3) = 5$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Find $f^{-1}(x)$. Type sqrt(...) or √(...) for the square root, e.g. 2+sqrt((x-1)/3).",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "3+sqrt((x-5)/2)"
+      },
+      {
+       "value": "3+√((x-5)/2)"
+      },
+      {
+       "value": "sqrt((x-5)/2)+3"
+      },
+      {
+       "value": "√((x-5)/2)+3"
+      },
+      {
+       "value": "3+sqrt(x/2-5/2)"
+      },
+      {
+       "value": "3+sqrt(0.5x-2.5)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$y = 2(x - 3)^2 + 5$, so $(x - 3)^2 = \\frac{y - 5}{2}$ and $x - 3 = +\\sqrt{\\frac{y - 5}{2}}$ (positive because $x \\geq 3$). So $f^{-1}(x) = 3 + \\sqrt{\\frac{x - 5}{2}}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The domain of $f^{-1}$ is $x \\geq k$. Find $k$.",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "The domain of $f^{-1}$ is the range of $f$: $x \\geq 5$.",
+    "workedSolution": "1. The domain of $f^{-1}$ is the range of $f$: $x \\geq 5$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the graphs of $y = f(x)$ and $y = f^{-1}(x)$ are related, giving the end point of each graph.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "One graph is the reflection of the other in the line $y = x$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "$y = f(x)$ starts at $(3, 5)$ and $y = f^{-1}(x)$ starts at $(5, 3)$.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: They are reflections of each other in $y = x$. The graph of $f$ is half a parabola starting at its vertex $(3, 5)$; the graph of $f^{-1}$ starts at $(5, 3)$ and rises more and more slowly."
+    },
+    "explanation": "Reflection in y = x swaps the coordinates of every point."
+   }
+  ],
+  "explanation": "The domain x ≥ 3 is the right half of the parabola, so f is one-one; the positive square root gives the inverse.",
+  "hints": [
+   "Rearrange $y = 2(x - 3)^2 + 5$ for $x$.",
+   "Domain of the inverse = range of the function."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "3+sqrt((x-5)/2)"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "23"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "3-sqrt((x-5)/2)"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "functions.inverse.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.functions.inverse"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "The function $f$ is defined by $f(x) = 2\\mathrm{e}^x + 1$ for $x \\in \\mathbb{R}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The range of $f$ is $f(x) > m$. Find $m$.",
+    "payload": {
+     "answerPrefix": "m ="
+    },
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "$2\\mathrm{e}^x > 0$, so $f(x) > 1$.",
+    "workedSolution": "1. $2\\mathrm{e}^x > 0$, so $f(x) > 1$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Find $f^{-1}(x)$. Type ln(...) for the natural logarithm, e.g. ln((x+2)/5).",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "ln((x-1)/2)"
+      },
+      {
+       "value": "ln(x-1)-ln2"
+      },
+      {
+       "value": "ln(x-1)-ln(2)"
+      },
+      {
+       "value": "ln(0.5(x-1))"
+      },
+      {
+       "value": "ln(0.5x-0.5)"
+      },
+      {
+       "value": "ln(x/2-1/2)"
+      },
+      {
+       "value": "ln(1/2(x-1))"
+      },
+      {
+       "value": "ln((1/2)(x-1))"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$y = 2\\mathrm{e}^x + 1$, so $\\mathrm{e}^x = \\frac{y - 1}{2}$ and $x = \\ln\\left(\\frac{y - 1}{2}\\right)$. So $f^{-1}(x) = \\ln\\left(\\frac{x - 1}{2}\\right)$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The domain of $f^{-1}$ is $x > k$. Find $k$.",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "Domain of $f^{-1}$ = range of $f$: $x > 1$.",
+    "workedSolution": "1. Domain of $f^{-1}$ = range of $f$: $x > 1$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Solve $f^{-1}(x) = \\ln 3$.",
+    "payload": {
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "$\\ln\\left(\\frac{x - 1}{2}\\right) = \\ln 3$, so $\\frac{x - 1}{2} = 3$ and $x = 7$. (Equivalently $x = f(\\ln 3) = 2(3) + 1 = 7$.)",
+    "workedSolution": "1. $\\ln\\left(\\frac{x - 1}{2}\\right) = \\ln 3$, so $\\frac{x - 1}{2} = 3$ and $x = 7$. (Equivalently $x = f(\\ln 3) = 2(3) + 1 = 7$.)"
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Write down the value of $ff^{-1}(5)$.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "$ff^{-1}(x) = x$ for every $x$ in the domain of $f^{-1}$, so $ff^{-1}(5) = 5$.",
+    "workedSolution": "1. $ff^{-1}(x) = x$ for every $x$ in the domain of $f^{-1}$, so $ff^{-1}(5) = 5$."
+   },
+   {
+    "label": "(f)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The graph of $y = f(x)$ has the asymptote $y = 1$. Which line is an asymptote of $y = f^{-1}(x)$?",
+    "options": [
+     {
+      "key": "A",
+      "content": "$y = 1$",
+      "rationale": "Asymptotes are reflected too: horizontal becomes vertical."
+     },
+     {
+      "key": "B",
+      "content": "$x = 1$",
+      "correct": true,
+      "rationale": "Correct: reflecting in y = x turns the horizontal asymptote y = 1 into the vertical asymptote x = 1."
+     },
+     {
+      "key": "C",
+      "content": "$x = -1$",
+      "rationale": "The reflection of $y = 1$ in $y = x$ is $x = 1$, not $x = -1$."
+     },
+     {
+      "key": "D",
+      "content": "$y = x$",
+      "rationale": "$y = x$ is the mirror line, not an asymptote."
+     }
+    ],
+    "explanation": "$f^{-1}(x) = \\ln\\left(\\frac{x - 1}{2}\\right) \\to -\\infty$ as $x \\to 1^+$: the line $x = 1$ is a vertical asymptote."
+   }
+  ],
+  "explanation": "Undo the operations of $f$ in reverse order: subtract 1, divide by 2, take $\\ln$. Domains, ranges and asymptotes all swap between $f$ and $f^{-1}$.",
+  "hints": [
+   "Make $\\mathrm{e}^x$ the subject first.",
+   "$\\ln$ and $\\mathrm{e}$ undo each other."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "ln((x-1)/2)"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(f)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "ln(x-1)/2"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "11"
+     },
+     "(f)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

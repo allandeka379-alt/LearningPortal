@@ -1,0 +1,880 @@
+[
+ {
+  "key": "calculus.rates-of-change.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The radius $r$ of a circle and its area $A$ both change with time $t$. Which statement connects their rates of change?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{dA}{dt} = \\dfrac{dA}{dr} \\times \\dfrac{dr}{dt}$",
+    "correct": true,
+    "rationale": "Correct: the chain rule, in which the dr 'cancels'."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{dA}{dt} = \\dfrac{dr}{dA} \\times \\dfrac{dr}{dt}$",
+    "rationale": "The first derivative is upside down; this does not give $\\frac{dA}{dt}$."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{dA}{dt} = \\dfrac{dA}{dr} + \\dfrac{dr}{dt}$",
+    "rationale": "Connected rates multiply; they do not add."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{dA}{dt} = \\dfrac{dA}{dr} \\div \\dfrac{dr}{dt}$",
+    "rationale": "Dividing gives $\\frac{dA}{dr} \\times \\frac{dt}{dr}$, which is not $\\frac{dA}{dt}$."
+   }
+  ],
+  "explanation": "Chain rule: $\\dfrac{dA}{dt} = \\dfrac{dA}{dr} \\times \\dfrac{dr}{dt}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "calculus.rates-of-change.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The amount of water, $Q$ litres, in a drum $t$ minutes after filling starts is $Q = 5t^2 + 2t$. Find the rate at which $Q$ is increasing when $t = 3$.",
+  "answerSpec": {
+   "value": 32
+  },
+  "explanation": "$\\frac{dQ}{dt} = 10t + 2 = 32$ litres per minute at $t = 3$. The value 51 is $Q$ itself at $t = 3$, not its rate of change.",
+  "workedSolution": "1. $\\frac{dQ}{dt} = 10t + 2 = 32$ litres per minute at $t = 3$. The value 51 is $Q$ itself at $t = 3$, not its rate of change.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "32"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "51"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "17"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.rates-of-change.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The side of a square metal plate expands at 0.2 cm/s when heated. Find the rate at which the area is increasing when the side is 6 cm.",
+  "payload": {
+   "unitHint": "cm²/s"
+  },
+  "answerSpec": {
+   "value": 2.4000000000000004,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm²/s",
+     "cm^2/s",
+     "cm^2 s^-1"
+    ]
+   }
+  },
+  "explanation": "$A = x^2$, $\\frac{dA}{dx} = 2x = 12$ at $x = 6$. $\\frac{dA}{dt} = 12 \\times 0.2 = 2.4$ cm²/s. Using $\\frac{dA}{dx} = x$ gives 1.2.",
+  "workedSolution": "1. $A = x^2$, $\\frac{dA}{dx} = 2x = 12$ at $x = 6$. $\\frac{dA}{dt} = 12 \\times 0.2 = 2.4$ cm²/s. Using $\\frac{dA}{dx} = x$ gives 1.2.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.40"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7.2"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.rates-of-change.q04",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The radius of a circular oil spill on Lake Kariba increases at 0.5 m/min. Find the rate at which the area of the spill is increasing when the radius is 8 m. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 25.132741228718345,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "$A = \\pi r^2$, $\\frac{dA}{dr} = 2\\pi r = 16\\pi$. $\\frac{dA}{dt} = 16\\pi \\times 0.5 = 8\\pi = 25.1$ m²/min. Using the area $\\pi r^2$ instead of its derivative gives $101$.",
+  "workedSolution": "1. $A = \\pi r^2$, $\\frac{dA}{dr} = 2\\pi r = 16\\pi$. $\\frac{dA}{dt} = 16\\pi \\times 0.5 = 8\\pi = 25.1$ m²/min. Using the area $\\pi r^2$ instead of its derivative gives $101$.",
+  "hints": [
+   "Differentiate $A = \\pi r^2$ with respect to $r$ first."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "25.1"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "101"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "50.3"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "calculus.rates-of-change.q05",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The area of a circle is increasing at 12 cm²/s. Find the rate at which the radius is increasing when the radius is 3 cm, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "cm/s"
+  },
+  "answerSpec": {
+   "value": 0.6366197723675814,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm/s",
+     "cm s^-1",
+     "cms^-1"
+    ]
+   }
+  },
+  "explanation": "$\\frac{dA}{dr} = 2\\pi r = 6\\pi$. From $\\frac{dA}{dt} = \\frac{dA}{dr} \\times \\frac{dr}{dt}$: $12 = 6\\pi \\frac{dr}{dt}$, so $\\frac{dr}{dt} = \\frac{2}{\\pi} = 0.637$ cm/s. Multiplying instead of dividing gives $226$.",
+  "workedSolution": "1. $\\frac{dA}{dr} = 2\\pi r = 6\\pi$. From $\\frac{dA}{dt} = \\frac{dA}{dr} \\times \\frac{dr}{dt}$: $12 = 6\\pi \\frac{dr}{dt}$, so $\\frac{dr}{dt} = \\frac{2}{\\pi} = 0.637$ cm/s. Multiplying instead of dividing gives $226$.",
+  "hints": [
+   "Here the rate of the area is given: divide by dA/dr."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.637"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "226"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.424"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "calculus.rates-of-change.q06",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The radius of a spherical ball of dough is increasing at 0.1 cm/s as it rises. Find the rate of increase of its volume when the radius is 6 cm, correct to 3 significant figures. ($V = \\frac{4}{3}\\pi r^3$.)",
+  "payload": {
+   "unitHint": "cm³/s"
+  },
+  "answerSpec": {
+   "value": 45.23893421169302,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm³/s",
+     "cm^3/s",
+     "cm^3 s^-1"
+    ]
+   }
+  },
+  "explanation": "$\\frac{dV}{dr} = 4\\pi r^2 = 144\\pi$. $\\frac{dV}{dt} = 144\\pi \\times 0.1 = 14.4\\pi = 45.2$ cm³/s. Using $V$ itself instead of $\\frac{dV}{dr}$ gives $90.5$.",
+  "workedSolution": "1. $\\frac{dV}{dr} = 4\\pi r^2 = 144\\pi$. $\\frac{dV}{dt} = 144\\pi \\times 0.1 = 14.4\\pi = 45.2$ cm³/s. Using $V$ itself instead of $\\frac{dV}{dr}$ gives $90.5$.",
+  "hints": [
+   "$\\frac{d}{dr}\\left(\\frac{4}{3}\\pi r^3\\right) = 4\\pi r^2$."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "45.2"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "90.5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "calculus.rates-of-change.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The volume of a cube is increasing at 9 cm³/s. Find the rate at which the length of each edge is increasing when the edge is 3 cm. Give your answer as a fraction or to 3 significant figures.",
+  "payload": {
+   "unitHint": "cm/s"
+  },
+  "answerSpec": {
+   "value": 0.3333333333333333,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm/s",
+     "cm s^-1",
+     "cms^-1"
+    ]
+   }
+  },
+  "explanation": "$V = x^3$, $\\frac{dV}{dx} = 3x^2 = 27$. $9 = 27 \\frac{dx}{dt}$, so $\\frac{dx}{dt} = \\frac{1}{3}$ cm/s. Using $\\frac{dV}{dx} = x^2 = 9$ gives 1.",
+  "workedSolution": "1. $V = x^3$, $\\frac{dV}{dx} = 3x^2 = 27$. $9 = 27 \\frac{dx}{dt}$, so $\\frac{dx}{dt} = \\frac{1}{3}$ cm/s. Using $\\frac{dV}{dx} = x^2 = 9$ gives 1.",
+  "hints": [
+   "$\\frac{dV}{dt} = \\frac{dV}{dx} \\times \\frac{dx}{dt}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.333"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "243"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.rates-of-change.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Water leaks from a tank, so its volume $V$ is decreasing. Then $\\dfrac{dV}{dt}$ is negative.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. A decreasing quantity has a negative rate of change; a leak of 5 cm³/s means $\\frac{dV}{dt} = -5$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.rates-of-change.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The edge of a cube increases at 0.05 cm/s. Its surface area is $S = 6x^2$. Find the rate of increase of $S$ when the edge $x$ is 4 cm.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$4.8$ cm²/s",
+    "rationale": "This uses $\\frac{dS}{dx} = 24x$ (or doubles the rate); $\\frac{d}{dx}6x^2 = 12x$."
+   },
+   {
+    "key": "B",
+    "content": "$0.6$ cm²/s",
+    "rationale": "This uses $\\frac{dS}{dx} = 3x$, not $12x$."
+   },
+   {
+    "key": "C",
+    "content": "$960$ cm²/s",
+    "rationale": "This divides by $0.05$ instead of multiplying."
+   },
+   {
+    "key": "D",
+    "content": "$2.4$ cm²/s",
+    "correct": true,
+    "rationale": "Correct: $\\frac{dS}{dx} = 12x = 48$, and $48 \\times 0.05 = 2.4$."
+   }
+  ],
+  "explanation": "$\\frac{dS}{dt} = \\frac{dS}{dx} \\times \\frac{dx}{dt} = 12(4)(0.05) = 2.4$ cm²/s.",
+  "hints": [
+   "Differentiate $6x^2$."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.rates-of-change.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A point moves along the curve $y = x^3 - 2x$ so that its $x$-coordinate increases at 3 units per second. Find the rate at which its $y$-coordinate is changing when $x = 2$.",
+  "answerSpec": {
+   "value": 30
+  },
+  "explanation": "$\\frac{dy}{dx} = 3x^2 - 2 = 10$ at $x = 2$. $\\frac{dy}{dt} = 10 \\times 3 = 30$ units per second. The value 10 is $\\frac{dy}{dx}$ only.",
+  "workedSolution": "1. $\\frac{dy}{dx} = 3x^2 - 2 = 10$ at $x = 2$. $\\frac{dy}{dt} = 10 \\times 3 = 30$ units per second. The value 10 is $\\frac{dy}{dx}$ only.",
+  "hints": [
+   "$\\frac{dy}{dt} = \\frac{dy}{dx} \\times \\frac{dx}{dt}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "30"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "10"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "12"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.rates-of-change.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A point moves along the curve $y = \\mathrm{e}^{2x}$ so that $x$ is decreasing at 0.1 units per second. Find $\\dfrac{dy}{dt}$ at the instant when $x = 0$.",
+  "answerSpec": {
+   "value": -0.2,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\frac{dy}{dx} = 2\\mathrm{e}^{2x} = 2$ at $x = 0$, and $\\frac{dx}{dt} = -0.1$ (decreasing). $\\frac{dy}{dt} = 2 \\times (-0.1) = -0.2$. Forgetting that $x$ decreases gives $+0.2$.",
+  "workedSolution": "1. $\\frac{dy}{dx} = 2\\mathrm{e}^{2x} = 2$ at $x = 0$, and $\\frac{dx}{dt} = -0.1$ (decreasing). $\\frac{dy}{dt} = 2 \\times (-0.1) = -0.2$. Forgetting that $x$ decreases gives $+0.2$.",
+  "hints": [
+   "A decreasing quantity has a negative rate."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-0.200"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-0.1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.rates-of-change.q12",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Water drains out of a conical funnel (vertex at the bottom) at 3 cm³/s. When the depth of water is $h$ cm, the volume is $V = \\dfrac{\\pi h^3}{27}$ cm³. Find the rate of change of the depth when $h = 6$, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "cm/s"
+  },
+  "answerSpec": {
+   "value": -0.238732414637843,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm/s",
+     "cm s^-1",
+     "cms^-1"
+    ]
+   }
+  },
+  "explanation": "$\\frac{dV}{dh} = \\frac{3\\pi h^2}{27} = \\frac{\\pi h^2}{9} = 4\\pi$ at $h = 6$. $\\frac{dV}{dt} = -3$ (draining), so $\\frac{dh}{dt} = \\frac{-3}{4\\pi} = -0.239$ cm/s: the depth falls at about $0.239$ cm/s.",
+  "workedSolution": "1. $\\frac{dV}{dh} = \\frac{3\\pi h^2}{27} = \\frac{\\pi h^2}{9} = 4\\pi$ at $h = 6$. $\\frac{dV}{dt} = -3$ (draining), so $\\frac{dh}{dt} = \\frac{-3}{4\\pi} = -0.239$ cm/s: the depth falls at about $0.239$ cm/s.",
+  "hints": [
+   "Draining means dV/dt is negative.",
+   "Divide the volume rate by dV/dh."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "-0.239"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.239"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "-37.7"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "calculus.rates-of-change.q13",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The surface area of a spherical soap bubble, $S = 4\\pi r^2$, is increasing at 8 cm²/s. Find the rate at which the radius is increasing when the radius is 4 cm, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "cm/s"
+  },
+  "answerSpec": {
+   "value": 0.07957747154594767,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm/s",
+     "cm s^-1",
+     "cms^-1"
+    ]
+   }
+  },
+  "explanation": "$\\frac{dS}{dr} = 8\\pi r = 32\\pi$. $8 = 32\\pi \\frac{dr}{dt}$, so $\\frac{dr}{dt} = \\frac{1}{4\\pi} = 0.0796$ cm/s. Dividing by $S = 64\\pi$ instead of $\\frac{dS}{dr}$ gives $0.0398$.",
+  "workedSolution": "1. $\\frac{dS}{dr} = 8\\pi r = 32\\pi$. $8 = 32\\pi \\frac{dr}{dt}$, so $\\frac{dr}{dt} = \\frac{1}{4\\pi} = 0.0796$ cm/s. Dividing by $S = 64\\pi$ instead of $\\frac{dS}{dr}$ gives $0.0398$.",
+  "hints": [
+   "$\\frac{dS}{dr} = 8\\pi r$."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.0796"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.0398"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "804"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "calculus.rates-of-change.q14",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The radius of a spherical balloon increases at 0.2 cm/s. Find the rate of increase of its surface area at the instant when its volume is $36\\pi$ cm³. Give your answer correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "cm²/s"
+  },
+  "answerSpec": {
+   "value": 15.079644737231007,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm²/s",
+     "cm^2/s",
+     "cm^2 s^-1"
+    ]
+   }
+  },
+  "explanation": "First the radius: $\\frac{4}{3}\\pi r^3 = 36\\pi$ gives $r^3 = 27$, $r = 3$. $S = 4\\pi r^2$, $\\frac{dS}{dr} = 8\\pi r = 24\\pi$. $\\frac{dS}{dt} = 24\\pi \\times 0.2 = 4.8\\pi = 15.1$ cm²/s.",
+  "workedSolution": "1. First the radius: $\\frac{4}{3}\\pi r^3 = 36\\pi$ gives $r^3 = 27$, $r = 3$. $S = 4\\pi r^2$, $\\frac{dS}{dr} = 8\\pi r = 24\\pi$. $\\frac{dS}{dt} = 24\\pi \\times 0.2 = 4.8\\pi = 15.1$ cm²/s.",
+  "hints": [
+   "Use the volume to find r at that instant.",
+   "Then differentiate the surface area formula."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "15.1"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "22.6"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "calculus.rates-of-change.q15",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "A container is an inverted right circular cone of radius 2 cm and height 6 cm (vertex at the bottom). Water is poured in at a constant rate of 5 cm³/s. When the depth of water is $h$ cm, the radius of the water surface is $r$ cm.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the volume of water is $V = \\dfrac{\\pi h^3}{27}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses similar triangles: $\\frac{r}{h} = \\frac{2}{6}$, so $r = \\frac{h}{3}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 substitutes into $V = \\frac{1}{3}\\pi r^2 h$ to reach $\\frac{\\pi h^3}{27}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\frac{r}{h} = \\frac{2}{6} \\Rightarrow r = \\frac{h}{3}\n$$\n\n$$\nV = \\frac{1}{3}\\pi\\left(\\frac{h}{3}\\right)^2 h = \\frac{\\pi h^3}{27}\n$$"
+    },
+    "explanation": "Similar triangles give r in terms of h."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Find the exact rate at which the depth is increasing when $h = 3$. Type your answer in terms of π, for example 2/π.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "5/π"
+      },
+      {
+       "value": "5/pi"
+      },
+      {
+       "value": "5π^-1"
+      },
+      {
+       "value": "5pi^-1"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\frac{dV}{dh} = \\frac{\\pi h^2}{9} = \\pi$ at $h = 3$. $5 = \\pi \\frac{dh}{dt}$, so $\\frac{dh}{dt} = \\frac{5}{\\pi}$ cm/s."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the rate at which the depth is increasing when $h = 6$, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm/s"
+    },
+    "answerSpec": {
+     "value": 0.3978873577297384,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm/s",
+       "cm s^-1",
+       "cms^-1"
+      ]
+     }
+    },
+    "explanation": "$\\frac{dV}{dh} = \\frac{36\\pi}{9} = 4\\pi$. $\\frac{dh}{dt} = \\frac{5}{4\\pi} = 0.398$ cm/s.",
+    "workedSolution": "1. $\\frac{dV}{dh} = \\frac{36\\pi}{9} = 4\\pi$. $\\frac{dh}{dt} = \\frac{5}{4\\pi} = 0.398$ cm/s."
+   }
+  ],
+  "explanation": "Write the volume in terms of h alone, differentiate, and divide the inflow rate by dV/dh at each depth. The level rises more slowly as the cone widens.",
+  "hints": [
+   "Use similar triangles for r in terms of h.",
+   "$\\frac{dh}{dt} = \\frac{dV/dt}{dV/dh}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "5/π"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.398"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "5π"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1.59"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "calculus.rates-of-change.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "A spherical balloon is losing air so that its volume decreases at a constant 20 cm³/s. ($V = \\frac{4}{3}\\pi r^3$ and $S = 4\\pi r^2$.)",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find $\\dfrac{dr}{dt}$ when the radius is 5 cm, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm/s"
+    },
+    "answerSpec": {
+     "value": -0.06366197723675814,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm/s",
+       "cm s^-1",
+       "cms^-1"
+      ]
+     }
+    },
+    "explanation": "$\\frac{dV}{dr} = 4\\pi r^2 = 100\\pi$. $-20 = 100\\pi \\frac{dr}{dt}$, so $\\frac{dr}{dt} = -\\frac{1}{5\\pi} = -0.0637$ cm/s.",
+    "workedSolution": "1. $\\frac{dV}{dr} = 4\\pi r^2 = 100\\pi$. $-20 = 100\\pi \\frac{dr}{dt}$, so $\\frac{dr}{dt} = -\\frac{1}{5\\pi} = -0.0637$ cm/s."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the rate of change of the surface area at the same instant.",
+    "payload": {
+     "unitHint": "cm²/s"
+    },
+    "answerSpec": {
+     "value": -8,
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm²/s",
+       "cm^2/s",
+       "cm^2 s^-1"
+      ]
+     }
+    },
+    "explanation": "$\\frac{dS}{dr} = 8\\pi r = 40\\pi$. $\\frac{dS}{dt} = 40\\pi \\times \\left(-\\frac{1}{5\\pi}\\right) = -8$ cm²/s (decreasing).",
+    "workedSolution": "1. $\\frac{dS}{dr} = 8\\pi r = 40\\pi$. $\\frac{dS}{dt} = 40\\pi \\times \\left(-\\frac{1}{5\\pi}\\right) = -8$ cm²/s (decreasing)."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that, at any instant, $\\dfrac{dS}{dt} = -\\dfrac{40}{r}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 finds $\\frac{dr}{dt} = \\frac{-20}{4\\pi r^2}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 uses $\\frac{dS}{dt} = 8\\pi r \\times \\frac{dr}{dt}$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 simplifies to $-\\frac{40}{r}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\frac{dr}{dt} = \\frac{dV/dt}{dV/dr} = \\frac{-20}{4\\pi r^2} = -\\frac{5}{\\pi r^2}\n$$\n\n$$\n\\frac{dS}{dt} = \\frac{dS}{dr} \\times \\frac{dr}{dt} = 8\\pi r \\times \\left(-\\frac{5}{\\pi r^2}\\right) = -\\frac{40}{r}\n$$"
+    },
+    "explanation": "Chain the rates through r with r left as a letter."
+   }
+  ],
+  "explanation": "The volume rate gives the radius rate through dV/dr; the radius rate gives the surface-area rate through dS/dr.",
+  "hints": [
+   "Decreasing volume: dV/dt = −20.",
+   "Work through the radius: V → r → S."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "-0.0637"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.0637"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

@@ -1,0 +1,1345 @@
+[
+ {
+  "key": "series.binomial-expansion.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which list gives the binomial coefficients of $(a + b)^4$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1, 4, 6, 4, 1",
+    "correct": true,
+    "rationale": "Correct: row 4 of Pascal's triangle."
+   },
+   {
+    "key": "B",
+    "content": "1, 3, 3, 1",
+    "rationale": "This is the row for $(a + b)^3$."
+   },
+   {
+    "key": "C",
+    "content": "1, 4, 4, 1",
+    "rationale": "The middle coefficient is 3 + 3 = 6, and there are five terms."
+   },
+   {
+    "key": "D",
+    "content": "1, 5, 10, 10, 5, 1",
+    "rationale": "This is the row for $(a + b)^5$."
+   }
+  ],
+  "explanation": "$(a + b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4$: five terms with coefficients $\\binom{4}{0}, \\ldots, \\binom{4}{4} = 1, 4, 6, 4, 1$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "How many terms are there in the expansion of $(a + b)^7$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "7",
+    "rationale": "This leaves out one term: the powers run from 0 to 7 inclusive."
+   },
+   {
+    "key": "B",
+    "content": "14",
+    "rationale": "This doubles n; the number of terms is n + 1."
+   },
+   {
+    "key": "C",
+    "content": "128",
+    "rationale": "$2^7 = 128$ is the sum of the coefficients, not the number of terms."
+   },
+   {
+    "key": "D",
+    "content": "8",
+    "correct": true,
+    "rationale": "Correct: the powers of $b$ run from 0 to 7, giving $7 + 1 = 8$ terms."
+   }
+  ],
+  "explanation": "$(a + b)^n$ has $n + 1$ terms, so $(a + b)^7$ has 8.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Evaluate $\\dbinom{6}{2}$.",
+  "answerSpec": {
+   "value": 15
+  },
+  "explanation": "$\\binom{6}{2} = \\frac{6 \\times 5}{2 \\times 1} = 15$. (Forgetting to divide by $2!$ gives 30.)",
+  "workedSolution": "1. $\\binom{6}{2} = \\frac{6 \\times 5}{2 \\times 1} = 15$. (Forgetting to divide by $2!$ gives 30.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "15"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "30"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "12"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^2$ in the expansion of $(1 + x)^7$.",
+  "answerSpec": {
+   "value": 21
+  },
+  "explanation": "The $x^2$ term is $\\binom{7}{2}(1)^5x^2 = 21x^2$.",
+  "workedSolution": "1. The $x^2$ term is $\\binom{7}{2}(1)^5x^2 = 21x^2$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "21"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "42"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Expand $(x + 3)^3$ fully. Complete: $(x + 3)^3 = x^3 + px^2 + qx + r$.",
+  "payload": {
+   "template": "p = {{blank:p}}, q = {{blank:q}}, r = {{blank:r}}",
+   "blanks": [
+    {
+     "id": "p",
+     "input": "number"
+    },
+    {
+     "id": "q",
+     "input": "number"
+    },
+    {
+     "id": "r",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p",
+     "accepted": [
+      "9"
+     ]
+    },
+    {
+     "id": "q",
+     "accepted": [
+      "27"
+     ]
+    },
+    {
+     "id": "r",
+     "accepted": [
+      "27"
+     ]
+    }
+   ]
+  },
+  "explanation": "Coefficients $1, 3, 3, 1$: $x^3 + 3x^2(3) + 3x(3)^2 + 3^3 = x^3 + 9x^2 + 27x + 27$.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p",
+     "text": "9"
+    },
+    {
+     "blankId": "q",
+     "text": "27"
+    },
+    {
+     "blankId": "r",
+     "text": "27"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p",
+      "text": "3"
+     },
+     {
+      "blankId": "q",
+      "text": "9"
+     },
+     {
+      "blankId": "r",
+      "text": "9"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The first three terms of $(1 - 2x)^6$, in ascending powers of $x$, are $1 + px + qx^2$. Find $p$ and $q$.",
+  "payload": {
+   "template": "p = {{blank:p}}, q = {{blank:q}}",
+   "blanks": [
+    {
+     "id": "p",
+     "input": "number"
+    },
+    {
+     "id": "q",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p",
+     "accepted": [
+      "-12"
+     ]
+    },
+    {
+     "id": "q",
+     "accepted": [
+      "60"
+     ]
+    }
+   ]
+  },
+  "explanation": "$\\binom{6}{1}(-2x) = -12x$ and $\\binom{6}{2}(-2x)^2 = 15 \\times 4x^2 = 60x^2$. So $p = -12$, $q = 60$.",
+  "hints": [
+   "Keep the bracket: $(-2x)^2 = 4x^2$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p",
+     "text": "-12"
+    },
+    {
+     "blankId": "q",
+     "text": "60"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p",
+      "text": "12"
+     },
+     {
+      "blankId": "q",
+      "text": "-60"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Find the first three terms, in ascending powers of $x$, of $(3 + x)^5$. Complete: $(3 + x)^5 = a + bx + cx^2 + \\cdots$",
+  "payload": {
+   "template": "a = {{blank:a}}, b = {{blank:b}}, c = {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "243"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "405"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "270"
+     ]
+    }
+   ]
+  },
+  "explanation": "$3^5 = 243$; $\\binom{5}{1}3^4x = 5 \\times 81x = 405x$; $\\binom{5}{2}3^3x^2 = 10 \\times 27x^2 = 270x^2$.",
+  "hints": [
+   "The powers of 3 go down: 3⁵, 3⁴, 3³."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "243"
+    },
+    {
+     "blankId": "b",
+     "text": "405"
+    },
+    {
+     "blankId": "c",
+     "text": "270"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "3"
+     },
+     {
+      "blankId": "b",
+      "text": "15"
+     },
+     {
+      "blankId": "c",
+      "text": "90"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^3$ in the expansion of $(2 + x)^6$.",
+  "answerSpec": {
+   "value": 160
+  },
+  "explanation": "$\\binom{6}{3}2^3x^3 = 20 \\times 8x^3 = 160x^3$. (The power of 2 is $6 - 3 = 3$.)",
+  "workedSolution": "1. $\\binom{6}{3}2^3x^3 = 20 \\times 8x^3 = 160x^3$. (The power of 2 is $6 - 3 = 3$.)",
+  "hints": [
+   "The $x^3$ term is $\\binom{6}{3}(2)^{3}x^3$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "160"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "20"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "320"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^2$ in the expansion of $(3 - 2x)^4$.",
+  "answerSpec": {
+   "value": 216
+  },
+  "explanation": "$\\binom{4}{2}(3)^2(-2x)^2 = 6 \\times 9 \\times 4x^2 = 216x^2$. The square makes it positive.",
+  "workedSolution": "1. $\\binom{4}{2}(3)^2(-2x)^2 = 6 \\times 9 \\times 4x^2 = 216x^2$. The square makes it positive.",
+  "hints": [
+   "Square the whole term $(-2x)$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "216"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-216"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "108"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which is the expansion of $(1 - x)^3$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$1 - 3x + 3x^2 - x^3$",
+    "correct": true,
+    "rationale": "Correct: coefficients $1, 3, 3, 1$ with $b = -x$, so the signs alternate."
+   },
+   {
+    "key": "B",
+    "content": "$1 - 3x - 3x^2 - x^3$",
+    "rationale": "$(-x)^2 = +x^2$, so the $x^2$ term is positive."
+   },
+   {
+    "key": "C",
+    "content": "$1 + 3x + 3x^2 + x^3$",
+    "rationale": "This is $(1 + x)^3$."
+   },
+   {
+    "key": "D",
+    "content": "$1 - x^3$",
+    "rationale": "The middle terms cannot be left out."
+   }
+  ],
+  "explanation": "$(1 - x)^3 = 1 + 3(-x) + 3(-x)^2 + (-x)^3 = 1 - 3x + 3x^2 - x^3$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q11",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For all integers $0 \\leq r \\leq n$, $\\dbinom{n}{r} = \\dbinom{n}{n - r}$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. $\\frac{n!}{r!(n - r)!}$ is unchanged when $r$ and $n - r$ swap, which is why each row of Pascal's triangle is symmetric.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The constant term in the expansion of $(2 + x)^5$ is 2.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The constant term is $2^5 = 32$: the first term of the binomial is raised to the power 5.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the first three terms of $(1 - 2x)^5$ in ascending powers of $x$, and use them with a suitable value of $x$ to estimate $0.98^5$. Give your estimate to 3 decimal places.",
+  "answerSpec": {
+   "value": 0.904,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$(1 - 2x)^5 = 1 - 10x + 40x^2 + \\cdots$. With $x = 0.01$: $0.98^5 \\approx 1 - 0.1 + 0.004 = 0.904$. (The true value is $0.90392\\ldots$)",
+  "workedSolution": "1. $(1 - 2x)^5 = 1 - 10x + 40x^2 + \\cdots$. With $x = 0.01$: $0.98^5 \\approx 1 - 0.1 + 0.004 = 0.904$. (The true value is $0.90392\\ldots$)",
+  "hints": [
+   "Choose $x$ so that $1 - 2x = 0.98$.",
+   "$\\binom{5}{2}(-2x)^2 = 40x^2$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.904"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.9"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.896"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q14",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Expand $\\left(2x + \\dfrac{1}{x}\\right)^3$ fully. Complete: $\\left(2x + \\dfrac{1}{x}\\right)^3 = ax^3 + bx + \\dfrac{c}{x} + \\dfrac{1}{x^3}$.",
+  "payload": {
+   "template": "a = {{blank:a}}, b = {{blank:b}}, c = {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "8"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "12"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "6"
+     ]
+    }
+   ]
+  },
+  "explanation": "$(2x)^3 + 3(2x)^2\\left(\\frac{1}{x}\\right) + 3(2x)\\left(\\frac{1}{x}\\right)^2 + \\left(\\frac{1}{x}\\right)^3 = 8x^3 + 12x + \\frac{6}{x} + \\frac{1}{x^3}$.",
+  "hints": [
+   "$(2x)^2 = 4x^2$, and $x^2 \\times \\frac{1}{x} = x$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "8"
+    },
+    {
+     "blankId": "b",
+     "text": "12"
+    },
+    {
+     "blankId": "c",
+     "text": "6"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "2"
+     },
+     {
+      "blankId": "b",
+      "text": "6"
+     },
+     {
+      "blankId": "c",
+      "text": "3"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q15",
+  "type": "MATCHING",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each binomial coefficient with its value.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\binom{5}{2}$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\binom{6}{3}$"
+    },
+    {
+     "id": "L3",
+     "content": "$\\binom{7}{1}$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\binom{8}{2}$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "7"
+    },
+    {
+     "id": "R4",
+     "content": "28"
+    },
+    {
+     "id": "R1",
+     "content": "10"
+    },
+    {
+     "id": "R2",
+     "content": "20"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "$\\frac{5 \\times 4}{2} = 10$; $\\frac{6 \\times 5 \\times 4}{6} = 20$; $\\binom{7}{1} = 7$; $\\frac{8 \\times 7}{2} = 28$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q16",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Show that the first three terms of $(3 + kx)^4$, in ascending powers of $x$, are $81 + 108kx + 54k^2x^2$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 writes $3^4 + \\binom{4}{1}3^3(kx) + \\binom{4}{2}3^2(kx)^2$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A1 simplifies to $81 + 108kx + 54k^2x^2$, with $(kx)^2 = k^2x^2$.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n(3 + kx)^4 = 3^4 + \\binom{4}{1}3^3(kx) + \\binom{4}{2}3^2(kx)^2 + \\cdots\n$$\n\n$$\n= 81 + 4 \\times 27kx + 6 \\times 9k^2x^2 + \\cdots = 81 + 108kx + 54k^2x^2 + \\cdots\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Treat kx as the second term of the binomial and keep it in brackets.",
+  "hints": [
+   "The second term of the binomial is $kx$."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "This question is about the expansion of $\\left(1 + \\dfrac{x}{2}\\right)^8$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the first three terms in ascending powers of $x$, in the form $1 + px + qx^2$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "4"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "7"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "$\\binom{8}{1}\\frac{x}{2} = 4x$ and $\\binom{8}{2}\\left(\\frac{x}{2}\\right)^2 = 28 \\times \\frac{x^2}{4} = 7x^2$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use your answer with a suitable value of $x$ to estimate $1.005^8$, to 4 decimal places.",
+    "answerSpec": {
+     "value": 1.0407,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$1 + \\frac{x}{2} = 1.005$ when $x = 0.01$: $1 + 0.04 + 0.0007 = 1.0407$. (The true value is $1.040707\\ldots$)",
+    "workedSolution": "1. $1 + \\frac{x}{2} = 1.005$ when $x = 0.01$: $1 + 0.04 + 0.0007 = 1.0407$. (The true value is $1.040707\\ldots$)"
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Explain why three terms give a good estimate here.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "States that $x = 0.01$ is small, so the terms in $x^3$ and higher powers are very small (the next term is $7 \\times 10^{-6}$ in size) and can be ignored.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: With $x = 0.01$, each further term is much smaller than the one before (the $x^3$ term is $\\binom{8}{3}\\frac{x^3}{8} = 7 \\times 10^{-6}$), so leaving them out changes only the 6th decimal place."
+    },
+    "explanation": "Higher powers of a small number are negligible."
+   }
+  ],
+  "explanation": "Expand with brackets around x/2, then choose x so that the bracket equals the number to be estimated.",
+  "hints": [
+   "$\\left(\\frac{x}{2}\\right)^2 = \\frac{x^2}{4}$.",
+   "Solve $1 + \\frac{x}{2} = 1.005$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "4"
+      },
+      {
+       "blankId": "q",
+       "text": "7"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.0407"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "8"
+       },
+       {
+        "blankId": "q",
+        "text": "28"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1.04"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 5,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "This question is about $(2 - x)^4$ and $(2 + x)^4$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Expand $(2 - x)^4$ fully, in the form $16 + ax + bx^2 + cx^3 + dx^4$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}, c = {{blank:c}}, d = {{blank:d}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-32"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "24"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-8"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "$16 + 4(8)(-x) + 6(4)(-x)^2 + 4(2)(-x)^3 + (-x)^4 = 16 - 32x + 24x^2 - 8x^3 + x^4$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Hence simplify $(2 - x)^4 + (2 + x)^4$ to the form $p + qx^2 + 2x^4$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "32"
+       ]
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "48"
+       ]
+      }
+     ]
+    },
+    "explanation": "$(2 + x)^4 = 16 + 32x + 24x^2 + 8x^3 + x^4$. Adding, the odd powers cancel: $32 + 48x^2 + 2x^4$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Hence find the exact value of $1.9^4 + 2.1^4$.",
+    "answerSpec": {
+     "value": 32.4802,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "With $x = 0.1$: $32 + 48(0.01) + 2(0.0001) = 32 + 0.48 + 0.0002 = 32.4802$.",
+    "workedSolution": "1. With $x = 0.1$: $32 + 48(0.01) + 2(0.0001) = 32 + 0.48 + 0.0002 = 32.4802$."
+   }
+  ],
+  "explanation": "Expand one bracket with alternating signs; adding the two expansions cancels the odd powers.",
+  "hints": [
+   "$(-x)^3 = -x^3$ but $(-x)^4 = x^4$.",
+   "Use $x = 0.1$ in part (c)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-32"
+      },
+      {
+       "blankId": "b",
+       "text": "24"
+      },
+      {
+       "blankId": "c",
+       "text": "-8"
+      },
+      {
+       "blankId": "d",
+       "text": "1"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "32"
+      },
+      {
+       "blankId": "q",
+       "text": "48"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "32.4802"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "32"
+       },
+       {
+        "blankId": "b",
+        "text": "-24"
+       },
+       {
+        "blankId": "c",
+        "text": "8"
+       },
+       {
+        "blankId": "d",
+        "text": "-1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "16"
+       },
+       {
+        "blankId": "q",
+        "text": "24"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "32.48"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q19",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is the coefficient of $x$ in the expansion of $(3 + 2x)^4$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "108",
+    "rationale": "This is $4 \\times 27$: the 2 in $2x$ has been left out."
+   },
+   {
+    "key": "B",
+    "content": "216",
+    "correct": true,
+    "rationale": "Correct: $\\binom{4}{1}3^3(2x) = 4 \\times 27 \\times 2x = 216x$."
+   },
+   {
+    "key": "C",
+    "content": "24",
+    "rationale": "This uses $3^1$ instead of $3^3$; the power of 3 is $4 - 1 = 3$."
+   },
+   {
+    "key": "D",
+    "content": "54",
+    "rationale": "This is $27 \\times 2$, without the coefficient $\\binom{4}{1} = 4$."
+   }
+  ],
+  "explanation": "The $x$ term is $\\binom{4}{1}(3)^3(2x) = 216x$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-expansion.q20",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.series.binomial-expansion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is the second term of the expansion of $(x - 2)^5$ in descending powers of $x$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$10x^4$",
+    "rationale": "The second term of the binomial is $-2$, so this term is negative."
+   },
+   {
+    "key": "B",
+    "content": "$-2x^4$",
+    "rationale": "The coefficient $\\binom{5}{1} = 5$ is missing."
+   },
+   {
+    "key": "C",
+    "content": "$-10x^4$",
+    "correct": true,
+    "rationale": "Correct: $\\binom{5}{1}x^4(-2) = -10x^4$."
+   },
+   {
+    "key": "D",
+    "content": "$-10x$",
+    "rationale": "In descending powers the second term has $x^4$, not $x$."
+   }
+  ],
+  "explanation": "$(x - 2)^5 = x^5 + \\binom{5}{1}x^4(-2) + \\cdots = x^5 - 10x^4 + \\cdots$",
+  "hints": [
+   "Descending powers start with x⁵."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ }
+]

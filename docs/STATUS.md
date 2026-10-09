@@ -85,7 +85,8 @@ Business Enterprise and Skills, Cambridge IGCSE Business 0264) followed: 128 les
 23 topic tests and 6 mocks, smoke 85/85. agriculture-o (ZIMSEC Agriculture 2015-2022, Cambridge 0600 2027-2028): 102 lessons,
 2,052 questions, 902 flashcards, 15 topic tests and 3 mocks, smoke 54/54. history-o (ZIMSEC History 2015-2022, Cambridge 0470 2027-2028): 111 lessons,
 2,223 questions, 1,015 flashcards, 18 topic tests and 5 mocks, smoke 64/64. heritage-studies-o (ZIMSEC Heritage Studies 2015-2022): 95 lessons, 1,757
-questions, 846 flashcards, 9 topic tests and 2 mocks, smoke 31/31.
+questions, 846 flashcards, 9 topic tests and 2 mocks, smoke 31/31. additional-mathematics-o (ZIMSEC Additional Mathematics 2015-2022, Cambridge 0606 2025-2027): 89 lessons,
+1,767 questions, 766 flashcards, 31 topic tests and 4 mocks, smoke 88/88.
 Hand-off notes: `.scratch/active-runs.md`. Each family's `content/subjects/<family>/README.md` lists coverage, tests, known gaps and specialist checks;
 `content/README.md` has the overview. Marking fix the same day: a numerical answer typed with the text the answer box
 already shows ("US$16.20", "x = 5", "×400", "pH 7", "12:1" when ": 1" follows the box) was unreadable and scored 0;

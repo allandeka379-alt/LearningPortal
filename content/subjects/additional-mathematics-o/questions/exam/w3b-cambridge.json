@@ -1,0 +1,1544 @@
+[
+ {
+  "key": "exam.w3b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.integration-functions",
+   "amath.calculus.definite-integrals-area"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Do not use a calculator in this question.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $\\displaystyle\\int \\left(e^{2x} + \\frac{4}{2x + 1}\\right)dx$ in the form $ae^{2x} + b\\ln(2x + 1) + c$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1/2"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\int e^{2x}\\,dx = \\frac{1}{2}e^{2x}$ and $\\int \\frac{4}{2x + 1}\\,dx = 4 \\times \\frac{1}{2}\\ln(2x + 1) = 2\\ln(2x + 1)$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Hence find the exact value of $\\displaystyle\\int_0^1 \\left(e^{2x} + \\frac{4}{2x + 1}\\right)dx$ in the form $pe^2 + q + r\\ln 3$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}, r = {{blank:r}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      },
+      {
+       "id": "r",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "1/2"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "-1/2"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "r",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\left(\\frac{1}{2}e^2 + 2\\ln 3\\right) - \\left(\\frac{1}{2}e^0 + 2\\ln 1\\right) = \\frac{1}{2}e^2 - \\frac{1}{2} + 2\\ln 3$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the exact value of $\\displaystyle\\int_0^{\\frac{\\pi}{12}} \\sec^2 3x\\,dx$.",
+    "answerSpec": {
+     "value": 0.3333333333333333,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\Big[\\frac{1}{3}\\tan 3x\\Big]_0^{\\frac{\\pi}{12}} = \\frac{1}{3}\\tan\\frac{\\pi}{4} - 0 = \\frac{1}{3}$.",
+    "workedSolution": "1. $\\Big[\\frac{1}{3}\\tan 3x\\Big]_0^{\\frac{\\pi}{12}} = \\frac{1}{3}\\tan\\frac{\\pi}{4} - 0 = \\frac{1}{3}$."
+   }
+  ],
+  "explanation": "Divide by the coefficient of x in each standard integral, then substitute exact values: e⁰ = 1, ln 1 = 0, tan(π/4) = 1.",
+  "hints": [
+   "$e^0 = 1$, not 0.",
+   "$\\tan\\frac{\\pi}{4} = 1$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1/2"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "1/2"
+      },
+      {
+       "blankId": "q",
+       "text": "-1/2"
+      },
+      {
+       "blankId": "r",
+       "text": "2"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.333"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "4"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "2"
+       },
+       {
+        "blankId": "q",
+        "text": "0"
+       },
+       {
+        "blankId": "r",
+        "text": "4"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.definite-integrals-area"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Do not use a calculator in this question. The line $y = x + 3$ meets the curve $y = x^2 - 2x + 3$ at the points $P$ and $Q$, where $P$ is on the $y$-axis.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of $Q$.",
+    "payload": {
+     "template": "Q = ({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "3"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "6"
+       ]
+      }
+     ]
+    },
+    "explanation": "$x^2 - 2x + 3 = x + 3$ gives $x^2 - 3x = x(x - 3) = 0$. $P$ is $(0, 3)$ and $Q$ is $(3, 6)$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the area of the region enclosed by the line and the curve is $\\displaystyle\\int_0^3 (3x - x^2)\\,dx$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 identifies the line as the upper boundary for $0 < x < 3$ (e.g. at $x = 1$: $4 > 2$).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 forms $(x + 3) - (x^2 - 2x + 3) = 3x - x^2$ with limits 0 and 3.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "For $0 < x < 3$ the line is above the curve (at $x = 1$ the line gives 4 and the curve 2). Area $= \\int_0^3 \\left[(x + 3) - (x^2 - 2x + 3)\\right]dx = \\int_0^3 (3x - x^2)\\,dx$."
+    },
+    "explanation": "Upper minus lower between the intersection points."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Find the exact area of this region.",
+    "answerSpec": {
+     "value": 4.500000000000001,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\Big[\\frac{3x^2}{2} - \\frac{x^3}{3}\\Big]_0^3 = \\frac{27}{2} - 9 = \\frac{9}{2}$ square units.",
+    "workedSolution": "1. $\\Big[\\frac{3x^2}{2} - \\frac{x^3}{3}\\Big]_0^3 = \\frac{27}{2} - 9 = \\frac{9}{2}$ square units."
+   }
+  ],
+  "explanation": "Find the intersections, decide which graph is on top, and integrate the difference.",
+  "hints": [
+   "Substitute x = 1 into both equations to see which is on top."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "3"
+      },
+      {
+       "blankId": "y",
+       "text": "6"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4.50"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "-3"
+       },
+       {
+        "blankId": "y",
+        "text": "0"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "13.5"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.kinematics"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Do not use a calculator in this question. A particle starts from a fixed point $O$ and moves in a straight line. Its velocity $t$ seconds later is $v = 3t^2 - 8t + 4$ m s$^{-1}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the times when the particle is instantaneously at rest, in ascending order. Type fractions where needed.",
+    "payload": {
+     "template": "t = {{blank:a}} s and t = {{blank:b}} s",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "2/3"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$3t^2 - 8t + 4 = (3t - 2)(t - 2) = 0$, so $t = \\frac{2}{3}$ or $t = 2$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the acceleration of the particle when $t = 2$.",
+    "payload": {
+     "unitHint": "m/s²"
+    },
+    "answerSpec": {
+     "value": 4,
+     "units": {
+      "required": false,
+      "accepted": [
+       "m/s²",
+       "m/s^2",
+       "m s^-2",
+       "ms^-2",
+       "m s-2"
+      ]
+     }
+    },
+    "explanation": "$a = 6t - 8 = 4$ m s$^{-2}$.",
+    "workedSolution": "1. $a = 6t - 8 = 4$ m s$^{-2}$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the particle is back at $O$ when $t = 2$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 integrates to $s = t^3 - 4t^2 + 4t$ (constant 0 because $s = 0$ at $t = 0$).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 shows $s(2) = 8 - 16 + 8 = 0$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\ns = \\int (3t^2 - 8t + 4)\\,dt = t^3 - 4t^2 + 4t + c, \\quad s(0) = 0 \\Rightarrow c = 0\n$$\n\n$$\ns(2) = 8 - 16 + 8 = 0\n$$\n\nso the particle is at $O$ when $t = 2$."
+    },
+    "explanation": "Integrate v, use s = 0 at t = 0, and substitute t = 2."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the total distance travelled in the first 2 seconds, as an exact fraction.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 2.3703703703703702,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "$s\\left(\\frac{2}{3}\\right) = \\frac{8}{27} - \\frac{16}{9} + \\frac{8}{3} = \\frac{8 - 48 + 72}{27} = \\frac{32}{27}$. It goes out $\\frac{32}{27}$ m and back again: distance $\\frac{64}{27}$ m, although the displacement is 0.",
+    "workedSolution": "1. $s\\left(\\frac{2}{3}\\right) = \\frac{8}{27} - \\frac{16}{9} + \\frac{8}{3} = \\frac{8 - 48 + 72}{27} = \\frac{32}{27}$. It goes out $\\frac{32}{27}$ m and back again: distance $\\frac{64}{27}$ m, although the displacement is 0."
+   }
+  ],
+  "explanation": "Rest is v = 0; integrate for s; the distance adds the outward and return stages.",
+  "hints": [
+   "$s = t(t - 2)^2$.",
+   "Find s at the first time of rest."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2/3"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2.37"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "3/2"
+       },
+       {
+        "blankId": "b",
+        "text": "-2"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-cambridge.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.kinematics",
+   "amath.calculus.integration-functions"
+  ],
+  "difficulty": 5,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A particle moves in a straight line, starting from a fixed point $O$. Its velocity $t$ seconds after leaving $O$ is $v = 8e^{-0.5t} - 2$ m s$^{-1}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the initial velocity of the particle.",
+    "payload": {
+     "unitHint": "m/s"
+    },
+    "answerSpec": {
+     "value": 6,
+     "units": {
+      "required": false,
+      "accepted": [
+       "m/s",
+       "m s^-1",
+       "ms^-1",
+       "m s-1",
+       "metres per second"
+      ]
+     }
+    },
+    "explanation": "$v(0) = 8 - 2 = 6$ m s$^{-1}$.",
+    "workedSolution": "1. $v(0) = 8 - 2 = 6$ m s$^{-1}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the time when the particle comes to instantaneous rest, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 2.772588722239781,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "$8e^{-0.5t} = 2$ gives $e^{-0.5t} = \\frac{1}{4}$, so $-0.5t = \\ln\\frac{1}{4}$ and $t = 2\\ln 4 = 2.77$ s.",
+    "workedSolution": "1. $8e^{-0.5t} = 2$ gives $e^{-0.5t} = \\frac{1}{4}$, so $-0.5t = \\ln\\frac{1}{4}$ and $t = 2\\ln 4 = 2.77$ s."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the acceleration of the particle when $t = 1$, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "m/s²"
+    },
+    "answerSpec": {
+     "value": -2.4261226388505337,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m/s²",
+       "m/s^2",
+       "m s^-2",
+       "ms^-2",
+       "m s-2"
+      ]
+     }
+    },
+    "explanation": "$a = \\frac{dv}{dt} = -4e^{-0.5t}$; at $t = 1$: $-4e^{-0.5} = -2.43$ m s$^{-2}$ (the particle is slowing down).",
+    "workedSolution": "1. $a = \\frac{dv}{dt} = -4e^{-0.5t}$; at $t = 1$: $-4e^{-0.5} = -2.43$ m s$^{-2}$ (the particle is slowing down)."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the displacement $s$ in the form $s = pe^{-0.5t} - 2t + q$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "-16"
+       ]
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "16"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\int 8e^{-0.5t}\\,dt = \\frac{8}{-0.5}e^{-0.5t} = -16e^{-0.5t}$. $s = -16e^{-0.5t} - 2t + c$, and $s(0) = 0$ gives $c = 16$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the total distance travelled in the first 5 seconds, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 8.223005089023255,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "It moves forwards until $t = 2\\ln 4$, reaching $s = -4 - 4\\ln 4 + 16 = 6.455$ m, then back to $s(5) = -16e^{-2.5} + 6 = 4.687$ m. Distance $= 6.455 + (6.455 - 4.687) = 8.22$ m. The displacement 4.69 m is not the distance.",
+    "workedSolution": "1. It moves forwards until $t = 2\\ln 4$, reaching $s = -4 - 4\\ln 4 + 16 = 6.455$ m, then back to $s(5) = -16e^{-2.5} + 6 = 4.687$ m. Distance $= 6.455 + (6.455 - 4.687) = 8.22$ m. The displacement 4.69 m is not the distance."
+   }
+  ],
+  "explanation": "Differentiate for a, integrate (dividing by −0.5) for s, and split the distance at the time of rest.",
+  "hints": [
+   "Take natural logarithms to solve $e^{-0.5t} = \\frac{1}{4}$.",
+   "The constant of integration is not zero."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "2.77"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "-2.43"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "-16"
+      },
+      {
+       "blankId": "q",
+       "text": "16"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "8.22"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.6931471805599453"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.4261226388505337"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "-4"
+       },
+       {
+        "blankId": "q",
+        "text": "0"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "4.6866400220176185"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3b-cambridge.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.vectors.geometry",
+   "amath.vectors.notation-magnitude"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Do not use a calculator in this question. In triangle $OAB$, $\\overrightarrow{OA} = \\mathbf{a}$ and $\\overrightarrow{OB} = \\mathbf{b}$, where $\\mathbf{a}$ and $\\mathbf{b}$ are not parallel. The point $P$ lies on $AB$ with $AP : PB = 2 : 1$, and $Q$ is the midpoint of $OA$. The lines $OP$ and $BQ$ meet at $X$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Write $\\overrightarrow{OP}$ in the form $p\\mathbf{a} + q\\mathbf{b}$. Type fractions.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "1/3"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "2/3"
+       ],
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$\\overrightarrow{OP} = \\mathbf{a} + \\frac{2}{3}(\\mathbf{b} - \\mathbf{a}) = \\frac{1}{3}\\mathbf{a} + \\frac{2}{3}\\mathbf{b}$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 1,
+    "stem": "Write $\\overrightarrow{BQ}$ in the form $r\\mathbf{a} + s\\mathbf{b}$.",
+    "payload": {
+     "template": "r = {{blank:r}}, s = {{blank:s}}",
+     "blanks": [
+      {
+       "id": "r",
+       "input": "number"
+      },
+      {
+       "id": "s",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r",
+       "accepted": [
+        "0.5"
+       ]
+      },
+      {
+       "id": "s",
+       "accepted": [
+        "-1"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\overrightarrow{BQ} = -\\mathbf{b} + \\frac{1}{2}\\mathbf{a}$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Given that $\\overrightarrow{OX} = \\lambda\\overrightarrow{OP}$ and $\\overrightarrow{BX} = \\mu\\overrightarrow{BQ}$, find $\\lambda$ and $\\mu$. Type fractions.",
+    "payload": {
+     "template": "λ = {{blank:l}}, μ = {{blank:m}}",
+     "blanks": [
+      {
+       "id": "l",
+       "input": "number"
+      },
+      {
+       "id": "m",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "l",
+       "accepted": [
+        "3/4"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      },
+      {
+       "id": "m",
+       "accepted": [
+        "1/2"
+       ],
+       "marks": 1,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$\\frac{\\lambda}{3}\\mathbf{a} + \\frac{2\\lambda}{3}\\mathbf{b} = \\frac{\\mu}{2}\\mathbf{a} + (1 - \\mu)\\mathbf{b}$. So $\\frac{\\lambda}{3} = \\frac{\\mu}{2}$ and $\\frac{2\\lambda}{3} = 1 - \\mu$. From the first, $\\mu = \\frac{2\\lambda}{3}$; then $\\frac{4\\lambda}{3} = 1$, $\\lambda = \\frac{3}{4}$ and $\\mu = \\frac{1}{2}$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State why it is valid to equate the coefficients of a and of b in part (c).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Because $\\mathbf{a}$ and $\\mathbf{b}$ are non-zero and not parallel, a multiple of one cannot equal a multiple of the other unless both are zero.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $\\mathbf{a}$ and $\\mathbf{b}$ are not parallel, so $(p - r)\\mathbf{a} = (s - q)\\mathbf{b}$ can only hold if both coefficients are zero."
+    },
+    "explanation": "Non-parallel vectors are independent."
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 1,
+    "stem": "Hence write $\\overrightarrow{OX}$ in the form $h\\mathbf{a} + k\\mathbf{b}$.",
+    "payload": {
+     "template": "h = {{blank:h}}, k = {{blank:k}}",
+     "blanks": [
+      {
+       "id": "h",
+       "input": "number"
+      },
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "h",
+       "accepted": [
+        "0.25"
+       ]
+      },
+      {
+       "id": "k",
+       "accepted": [
+        "0.5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\overrightarrow{OX} = \\frac{3}{4}\\left(\\frac{1}{3}\\mathbf{a} + \\frac{2}{3}\\mathbf{b}\\right) = \\frac{1}{4}\\mathbf{a} + \\frac{1}{2}\\mathbf{b}$."
+   }
+  ],
+  "explanation": "Route-find each vector, write OX along both lines with different scalars, and equate coefficients.",
+  "hints": [
+   "$\\overrightarrow{OX} = \\overrightarrow{OB} + \\mu\\overrightarrow{BQ}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "1/3"
+      },
+      {
+       "blankId": "q",
+       "text": "2/3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r",
+       "text": "0.5"
+      },
+      {
+       "blankId": "s",
+       "text": "-1"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "l",
+       "text": "3/4"
+      },
+      {
+       "blankId": "m",
+       "text": "1/2"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "h",
+       "text": "0.25"
+      },
+      {
+       "blankId": "k",
+       "text": "0.5"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "2/3"
+       },
+       {
+        "blankId": "q",
+        "text": "1/3"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r",
+        "text": "-0.5"
+       },
+       {
+        "blankId": "s",
+        "text": "1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "l",
+        "text": "1/2"
+       },
+       {
+        "blankId": "m",
+        "text": "3/4"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "h",
+        "text": "0.5"
+       },
+       {
+        "blankId": "k",
+        "text": "0.25"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-cambridge.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.vectors.velocity",
+   "amath.vectors.notation-magnitude"
+  ],
+  "difficulty": 5,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "In this question $\\mathbf{i}$ is a unit vector due east and $\\mathbf{j}$ a unit vector due north; distances are in kilometres and time $t$ in hours. At time $t$, boat $P$ has position vector $(\\mathbf{i} + 9\\mathbf{j}) + t(5\\mathbf{i} + \\mathbf{j})$ and boat $Q$ has position vector $(13\\mathbf{i} + 2\\mathbf{j}) + t(2\\mathbf{i} + 5\\mathbf{j})$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the speed of P, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "km/h"
+    },
+    "answerSpec": {
+     "value": 5.0990195135927845,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "km/h",
+       "km h^-1",
+       "kmh^-1",
+       "kilometres per hour"
+      ]
+     }
+    },
+    "explanation": "$|5\\mathbf{i} + \\mathbf{j}| = \\sqrt{26} = 5.10$ km/h. Adding the components gives 6.",
+    "workedSolution": "1. $|5\\mathbf{i} + \\mathbf{j}| = \\sqrt{26} = 5.10$ km/h. Adding the components gives 6."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the bearing on which Q is moving, correct to 1 decimal place.",
+    "payload": {
+     "unitHint": "°"
+    },
+    "answerSpec": {
+     "value": 21.80140948635181,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "°",
+       "degrees",
+       "degree",
+       "deg"
+      ]
+     }
+    },
+    "explanation": "The angle east of north satisfies $\\tan\\theta = \\frac{2}{5}$, so $\\theta = 21.8°$: bearing $021.8°$. The answer $68.2°$ is measured from east, not north.",
+    "workedSolution": "1. The angle east of north satisfies $\\tan\\theta = \\frac{2}{5}$, so $\\theta = 21.8°$: bearing $021.8°$. The answer $68.2°$ is measured from east, not north."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $\\overrightarrow{PQ}$ in the form $(a + bt)\\mathbf{i} + (c + dt)\\mathbf{j}$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}, c = {{blank:c}}, d = {{blank:d}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "12"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-3"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-7"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\mathbf{r}_Q - \\mathbf{r}_P = (13 - 1 + 2t - 5t)\\mathbf{i} + (2 - 9 + 5t - t)\\mathbf{j} = (12 - 3t)\\mathbf{i} + (-7 + 4t)\\mathbf{j}$."
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the boats do not collide.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 sets the $\\mathbf{i}$ component of $\\overrightarrow{PQ}$ to zero: $12 - 3t = 0$, $t = 4$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 shows the $\\mathbf{j}$ component at $t = 4$ is $-7 + 16 = 9 \\neq 0$, so the boats are never at the same place at the same time.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "A collision needs $\\overrightarrow{PQ} = \\mathbf{0}$. The $\\mathbf{i}$ component is zero only when $12 - 3t = 0$, i.e. $t = 4$. At $t = 4$ the $\\mathbf{j}$ component is $-7 + 4(4) = 9 \\neq 0$. So $\\overrightarrow{PQ}$ is never zero and the boats do not collide (at $t = 4$, $Q$ is 9 km due north of $P$)."
+    },
+    "explanation": "Both components of PQ must vanish at the same time."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the time when the boats are 15 km apart, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "h"
+    },
+    "answerSpec": {
+     "value": 5.358856909525744,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "h",
+       "hours",
+       "hour",
+       "hrs",
+       "hr"
+      ]
+     }
+    },
+    "explanation": "$|\\overrightarrow{PQ}|^2 = (12 - 3t)^2 + (4t - 7)^2 = 25t^2 - 128t + 193 = 225$, so $25t^2 - 128t - 32 = 0$ and $t = \\frac{128 \\pm \\sqrt{19584}}{50}$. The negative root is rejected (before the start), leaving $t = 5.36$ h.",
+    "workedSolution": "1. $|\\overrightarrow{PQ}|^2 = (12 - 3t)^2 + (4t - 7)^2 = 25t^2 - 128t + 193 = 225$, so $25t^2 - 128t - 32 = 0$ and $t = \\frac{128 \\pm \\sqrt{19584}}{50}$. The negative root is rejected (before the start), leaving $t = 5.36$ h."
+   }
+  ],
+  "explanation": "Speed is a magnitude, bearings are measured from north, PQ = r_Q − r_P, and distances come from |PQ|².",
+  "hints": [
+   "Bearing: $\\tan\\theta = \\frac{\\text{east}}{\\text{north}}$.",
+   "Reject a negative time."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "5.10"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "21.8"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "12"
+      },
+      {
+       "blankId": "b",
+       "text": "-3"
+      },
+      {
+       "blankId": "c",
+       "text": "-7"
+      },
+      {
+       "blankId": "d",
+       "text": "4"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "5.36"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "68.19859051364818"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-12"
+       },
+       {
+        "blankId": "b",
+        "text": "3"
+       },
+       {
+        "blankId": "c",
+        "text": "7"
+       },
+       {
+        "blankId": "d",
+        "text": "-4"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "-0.23885690952574407"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3b-cambridge.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.integration-functions",
+   "amath.calculus.definite-integrals-area"
+  ],
+  "difficulty": 5,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "This question is about the curve $y = x\\cos x$ for $0 \\leq x \\leq \\pi$, which meets the $x$-axis at $x = 0$, $x = \\frac{\\pi}{2}$ and $x = \\pi$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\dfrac{d}{dx}(x\\sin x) = \\sin x + x\\cos x$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses the product rule with $u = x$, $v = \\sin x$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 obtains $\\sin x + x\\cos x$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\frac{d}{dx}(x\\sin x) = 1 \\times \\sin x + x \\times \\cos x = \\sin x + x\\cos x\n$$"
+    },
+    "explanation": "Product rule."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Hence find $\\displaystyle\\int x\\cos x\\,dx$. Use $c$ for the constant, for example 2xsinx - cosx + c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "xsinx+cosx+c"
+      },
+      {
+       "value": "xsin(x)+cos(x)+c"
+      },
+      {
+       "value": "xsin(x)+cosx+c"
+      },
+      {
+       "value": "cosx+xsinx+c"
+      },
+      {
+       "value": "cos(x)+xsin(x)+c"
+      },
+      {
+       "value": "cosx+xsin(x)+c"
+      },
+      {
+       "value": "c+xsinx+cosx"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "Integrating (a): $x\\sin x = \\int \\sin x\\,dx + \\int x\\cos x\\,dx = -\\cos x + \\int x\\cos x\\,dx$. So $\\int x\\cos x\\,dx = x\\sin x + \\cos x + c$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the area of the region between the curve and the $x$-axis from $x = 0$ to $x = \\frac{\\pi}{2}$, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "units²"
+    },
+    "answerSpec": {
+     "value": 0.5707963267948984,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "units²",
+       "units^2",
+       "square units",
+       "unit^2"
+      ]
+     }
+    },
+    "explanation": "$\\Big[x\\sin x + \\cos x\\Big]_0^{\\frac{\\pi}{2}} = \\left(\\frac{\\pi}{2} + 0\\right) - (0 + 1) = \\frac{\\pi}{2} - 1 = 0.571$.",
+    "workedSolution": "1. $\\Big[x\\sin x + \\cos x\\Big]_0^{\\frac{\\pi}{2}} = \\left(\\frac{\\pi}{2} + 0\\right) - (0 + 1) = \\frac{\\pi}{2} - 1 = 0.571$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the total area enclosed by the curve and the $x$-axis for $0 \\leq x \\leq \\pi$, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "units²"
+    },
+    "answerSpec": {
+     "value": 3.1415926535897976,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "units²",
+       "units^2",
+       "square units",
+       "unit^2"
+      ]
+     }
+    },
+    "explanation": "From $\\frac{\\pi}{2}$ to $\\pi$: $(\\pi\\sin\\pi + \\cos\\pi) - \\frac{\\pi}{2} = -1 - \\frac{\\pi}{2}$ (below the axis). Total area $= \\left(\\frac{\\pi}{2} - 1\\right) + \\left(1 + \\frac{\\pi}{2}\\right) = \\pi = 3.14$. A single integral from 0 to $\\pi$ gives $-2$.",
+    "workedSolution": "1. From $\\frac{\\pi}{2}$ to $\\pi$: $(\\pi\\sin\\pi + \\cos\\pi) - \\frac{\\pi}{2} = -1 - \\frac{\\pi}{2}$ (below the axis). Total area $= \\left(\\frac{\\pi}{2} - 1\\right) + \\left(1 + \\frac{\\pi}{2}\\right) = \\pi = 3.14$. A single integral from 0 to $\\pi$ gives $-2$."
+   }
+  ],
+  "explanation": "Read the product rule backwards to integrate x cos x, then split the area at the root x = π/2.",
+  "hints": [
+   "$\\int \\sin x\\,dx = -\\cos x$, so it moves across with a sign change.",
+   "The part from π/2 to π is below the axis."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "xsinx+cosx+c"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.571"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "3.14"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "xsinx-cosx+c"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.5707963267948966"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "-2.000000000000001"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ }
+]

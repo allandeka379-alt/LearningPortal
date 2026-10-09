@@ -1,0 +1,1413 @@
+[
+ {
+  "key": "exam.w3a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.product-quotient",
+   "amath.calculus.tangents-normals"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A curve has equation $y = \\dfrac{3x - 2}{x^2 + 2}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find $\\dfrac{dy}{dx}$ in the form $\\dfrac{ax^2 + bx + c}{(x^2 + 2)^2}$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}, c = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-3"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "6"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\frac{(x^2 + 2)(3) - (3x - 2)(2x)}{(x^2 + 2)^2} = \\frac{3x^2 + 6 - 6x^2 + 4x}{(x^2 + 2)^2} = \\frac{-3x^2 + 4x + 6}{(x^2 + 2)^2}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the gradient of the curve where it crosses the y-axis.",
+    "answerSpec": {
+     "value": 1.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "At $x = 0$: $\\frac{6}{4} = \\frac{3}{2}$.",
+    "workedSolution": "1. At $x = 0$: $\\frac{6}{4} = \\frac{3}{2}$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the equation of the normal to the curve at the point where it crosses the $y$-axis, in the form $2x + ay + b = 0$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "3"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "The point is $(0, -1)$; normal gradient $-\\frac{2}{3}$. $y + 1 = -\\frac{2}{3}x$, so $3y + 3 = -2x$ and $2x + 3y + 3 = 0$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the x-coordinate of the point where this normal meets the x-axis.",
+    "payload": {
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": -1.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$y = 0$: $2x + 3 = 0$, so $x = -\\frac{3}{2}$.",
+    "workedSolution": "1. $y = 0$: $2x + 3 = 0$, so $x = -\\frac{3}{2}$."
+   }
+  ],
+  "explanation": "Quotient rule with the numerator simplified, then the normal at the y-intercept.",
+  "hints": [
+   "$u = 3x - 2$, $v = x^2 + 2$.",
+   "The normal's gradient is the negative reciprocal of 3/2."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-3"
+      },
+      {
+       "blankId": "b",
+       "text": "4"
+      },
+      {
+       "blankId": "c",
+       "text": "6"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.50"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "3"
+      },
+      {
+       "blankId": "b",
+       "text": "3"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "-1.50"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "3"
+       },
+       {
+        "blankId": "b",
+        "text": "-4"
+       },
+       {
+        "blankId": "c",
+        "text": "-6"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-1"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-3"
+       },
+       {
+        "blankId": "b",
+        "text": "-3"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1.5"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.chain-rule",
+   "amath.calculus.small-increments"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "It is given that $y = \\dfrac{4}{\\sqrt{2x + 1}}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $\\dfrac{dy}{dx}$ in the form $k(2x + 1)^n$.",
+    "payload": {
+     "template": "k = {{blank:k}}, n = {{blank:n}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      },
+      {
+       "id": "n",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "-4"
+       ]
+      },
+      {
+       "id": "n",
+       "accepted": [
+        "-1.5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$y = 4(2x + 1)^{-\\frac{1}{2}}$; $\\frac{dy}{dx} = 4 \\times \\left(-\\frac{1}{2}\\right)(2x + 1)^{-\\frac{3}{2}} \\times 2 = -4(2x + 1)^{-\\frac{3}{2}}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the exact value of dy/dx when x = 4. You may type a fraction.",
+    "answerSpec": {
+     "value": -0.14814814814814814,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$(2(4) + 1)^{-\\frac{3}{2}} = 9^{-\\frac{3}{2}} = \\frac{1}{27}$, so $\\frac{dy}{dx} = -\\frac{4}{27}$.",
+    "workedSolution": "1. $(2(4) + 1)^{-\\frac{3}{2}} = 9^{-\\frac{3}{2}} = \\frac{1}{27}$, so $\\frac{dy}{dx} = -\\frac{4}{27}$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find, in terms of $p$, the approximate change in $y$ as $x$ increases from 4 to $4 + p$, where $p$ is small. Type it, for example -2p/9.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "-4p/27"
+      },
+      {
+       "value": "-(4/27)p"
+      },
+      {
+       "value": "-4/27p"
+      },
+      {
+       "value": "-(4p)/27"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\delta y \\approx -\\frac{4}{27}p$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Hence find the approximate change in y when x increases from 4 to 4.27.",
+    "answerSpec": {
+     "value": -0.04,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$p = 0.27$: $\\delta y \\approx -\\frac{4}{27} \\times 0.27 = -0.04$.",
+    "workedSolution": "1. $p = 0.27$: $\\delta y \\approx -\\frac{4}{27} \\times 0.27 = -0.04$."
+   }
+  ],
+  "explanation": "Rewrite the root as a power, use the chain rule, and multiply the gradient by the small change.",
+  "hints": [
+   "$9^{\\frac{3}{2}} = 27$.",
+   "$\\delta y \\approx \\frac{dy}{dx}\\,\\delta x$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "-4"
+      },
+      {
+       "blankId": "n",
+       "text": "-1.5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-0.148"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "-4p/27"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "-0.0400"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "-2"
+       },
+       {
+        "blankId": "n",
+        "text": "-0.5"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-0.07407407407407407"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "4p/27"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.04"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.max-min-problems",
+   "amath.calculus.stationary-points"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A closed box is a cuboid with a square base of side $x$ cm and height $h$ cm. Its total surface area is 150 cm².",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that the volume of the box is $V = \\dfrac{75x - x^3}{2}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes $2x^2 + 4xh = 150$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 rearranges: $h = \\frac{150 - 2x^2}{4x}$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 substitutes into $V = x^2h$ to reach the given result.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n2x^2 + 4xh = 150 \\Rightarrow h = \\frac{150 - 2x^2}{4x}\n$$\n\n$$\nV = x^2 h = \\frac{x(150 - 2x^2)}{4} = \\frac{150x - 2x^3}{4} = \\frac{75x - x^3}{2}\n$$"
+    },
+    "explanation": "Two square faces and four rectangular faces."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of x for which V is stationary.",
+    "payload": {
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "$\\frac{dV}{dx} = \\frac{75 - 3x^2}{2} = 0$ gives $x^2 = 25$, $x = 5$ ($x > 0$).",
+    "workedSolution": "1. $\\frac{dV}{dx} = \\frac{75 - 3x^2}{2} = 0$ gives $x^2 = 25$, $x = 5$ ($x > 0$)."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of $\\dfrac{d^2V}{dx^2}$ at this value of $x$, and hence show that $V$ is a maximum.",
+    "answerSpec": {
+     "value": -15
+    },
+    "explanation": "$\\frac{d^2V}{dx^2} = -3x = -15 < 0$, so a maximum.",
+    "workedSolution": "1. $\\frac{d^2V}{dx^2} = -3x = -15 < 0$, so a maximum."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the maximum volume.",
+    "payload": {
+     "unitHint": "cm³"
+    },
+    "answerSpec": {
+     "value": 125,
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm³",
+       "cm^3",
+       "cubic centimetres"
+      ]
+     }
+    },
+    "explanation": "$V = \\frac{375 - 125}{2} = 125$ cm³ (the box is a cube of side 5 cm).",
+    "workedSolution": "1. $V = \\frac{375 - 125}{2} = 125$ cm³ (the box is a cube of side 5 cm)."
+   }
+  ],
+  "explanation": "Use the surface area to eliminate h, differentiate, and justify the maximum.",
+  "hints": [
+   "Surface area: $2x^2 + 4xh$.",
+   "Reject the negative root."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "-15"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "125"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "25"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "15"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-cambridge.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.trig-exp-log",
+   "amath.calculus.stationary-points",
+   "amath.calculus.product-quotient"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The curve $y = \\mathrm{e}^x\\cos x$ is defined for $0 \\leq x \\leq \\pi$, with $x$ in radians.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $\\dfrac{dy}{dx}$ in the form $\\mathrm{e}^x(a\\cos x + b\\sin x)$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-1"
+       ]
+      }
+     ]
+    },
+    "explanation": "Product rule: $\\mathrm{e}^x\\cos x + \\mathrm{e}^x(-\\sin x) = \\mathrm{e}^x(\\cos x - \\sin x)$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the gradient of the curve at the point where x = 0.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "$\\mathrm{e}^0(1 - 0) = 1$.",
+    "workedSolution": "1. $\\mathrm{e}^0(1 - 0) = 1$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the exact x-coordinate of the stationary point. Type it in terms of π, for example π/6.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "π/4"
+      },
+      {
+       "value": "pi/4"
+      },
+      {
+       "value": "x=π/4"
+      },
+      {
+       "value": "x=pi/4"
+      },
+      {
+       "value": "0.25π"
+      },
+      {
+       "value": "0.25pi"
+      },
+      {
+       "value": "(1/4)π"
+      },
+      {
+       "value": "(1/4)pi"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\mathrm{e}^x \\neq 0$, so $\\cos x = \\sin x$, $\\tan x = 1$ and $x = \\frac{\\pi}{4}$ in the interval."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $\\dfrac{d^2y}{dx^2}$ in the form $k\\mathrm{e}^x\\sin x$.",
+    "payload": {
+     "template": "k = {{blank:k}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "-2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\mathrm{e}^x(\\cos x - \\sin x) + \\mathrm{e}^x(-\\sin x - \\cos x) = -2\\mathrm{e}^x\\sin x$."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the nature of the stationary point?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A maximum, as $-2\\mathrm{e}^{\\frac{\\pi}{4}}\\sin\\frac{\\pi}{4} < 0$",
+      "correct": true,
+      "rationale": "Correct: the second derivative is negative there."
+     },
+     {
+      "key": "B",
+      "content": "A minimum, as $-2\\mathrm{e}^{\\frac{\\pi}{4}}\\sin\\frac{\\pi}{4} < 0$",
+      "rationale": "A negative second derivative means a maximum."
+     },
+     {
+      "key": "C",
+      "content": "A minimum, as $\\mathrm{e}^{\\frac{\\pi}{4}}\\cos\\frac{\\pi}{4} > 0$",
+      "rationale": "The sign of y does not determine the nature."
+     },
+     {
+      "key": "D",
+      "content": "A maximum, as $\\mathrm{e}^{\\frac{\\pi}{4}}\\cos\\frac{\\pi}{4} > 0$",
+      "rationale": "The conclusion is right but the reason is not: the sign of y is irrelevant."
+     }
+    ],
+    "explanation": "$\\frac{d^2y}{dx^2} = -2\\mathrm{e}^{\\frac{\\pi}{4}} \\cdot \\frac{\\sqrt{2}}{2} = -\\sqrt{2}\\mathrm{e}^{\\frac{\\pi}{4}} < 0$: a maximum."
+   }
+  ],
+  "explanation": "Product rule with exponential and trigonometric factors; e^x is never zero, so the stationary point comes from tan x = 1.",
+  "hints": [
+   "$\\frac{d}{dx}\\cos x = -\\sin x$.",
+   "$\\tan\\frac{\\pi}{4} = 1$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "-1"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "π/4"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "-2"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-1"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "3π/4"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "2"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-cambridge.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.rates-of-change"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "Air is pumped into a spherical balloon at a constant rate of 50 cm³/s. The balloon is empty at time $t = 0$. ($V = \\frac{4}{3}\\pi r^3$, $S = 4\\pi r^2$.)",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the rate at which the radius is increasing when the radius is 8 cm.",
+    "payload": {
+     "unitHint": "cm/s"
+    },
+    "answerSpec": {
+     "value": 0.062169899645271615,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm/s",
+       "cm s^-1",
+       "cms^-1"
+      ]
+     }
+    },
+    "explanation": "$\\frac{dV}{dr} = 4\\pi r^2 = 256\\pi$. $\\frac{dr}{dt} = \\frac{50}{256\\pi} = 0.0622$ cm/s.",
+    "workedSolution": "1. $\\frac{dV}{dr} = 4\\pi r^2 = 256\\pi$. $\\frac{dr}{dt} = \\frac{50}{256\\pi} = 0.0622$ cm/s."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the rate at which the surface area is increasing at the same instant.",
+    "payload": {
+     "unitHint": "cm²/s"
+    },
+    "answerSpec": {
+     "value": 12.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm²/s",
+       "cm^2/s",
+       "cm^2 s^-1"
+      ]
+     }
+    },
+    "explanation": "$\\frac{dS}{dr} = 8\\pi r = 64\\pi$. $\\frac{dS}{dt} = 64\\pi \\times \\frac{50}{256\\pi} = 12.5$ cm²/s.",
+    "workedSolution": "1. $\\frac{dS}{dr} = 8\\pi r = 64\\pi$. $\\frac{dS}{dt} = 64\\pi \\times \\frac{50}{256\\pi} = 12.5$ cm²/s."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the radius at the instant when the surface area is increasing at 4 cm²/s.",
+    "payload": {
+     "unitHint": "cm",
+     "answerPrefix": "r ="
+    },
+    "answerSpec": {
+     "value": 25,
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres"
+      ]
+     }
+    },
+    "explanation": "In general $\\frac{dS}{dt} = 8\\pi r \\times \\frac{50}{4\\pi r^2} = \\frac{100}{r}$. $\\frac{100}{r} = 4$ gives $r = 25$ cm.",
+    "workedSolution": "1. In general $\\frac{dS}{dt} = 8\\pi r \\times \\frac{50}{4\\pi r^2} = \\frac{100}{r}$. $\\frac{100}{r} = 4$ gives $r = 25$ cm."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the time taken for the radius to reach 8 cm.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 42.89321169701264,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "$V = \\frac{4}{3}\\pi(8)^3 = 2145$ cm³; at 50 cm³/s this takes $42.9$ s.",
+    "workedSolution": "1. $V = \\frac{4}{3}\\pi(8)^3 = 2145$ cm³; at 50 cm³/s this takes $42.9$ s."
+   }
+  ],
+  "explanation": "Link each rate through the radius: dr/dt = (dV/dt) ÷ (dV/dr), then dS/dt = (dS/dr)(dr/dt).",
+  "hints": [
+   "$\\frac{dV}{dr} = 4\\pi r^2$, $\\frac{dS}{dr} = 8\\pi r$.",
+   "Write dS/dt in terms of r for part (c)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.0622"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "12.5"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "25"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "42.9"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.249"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "50.0"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "12.5"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "16.1"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3a-cambridge.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.max-min-problems",
+   "amath.calculus.stationary-points"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A cylindrical water container, open at the top, is to hold 1000 cm³. Its radius is $r$ cm and its height is $h$ cm.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the area of material used is $S = \\pi r^2 + \\dfrac{2000}{r}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses $\\pi r^2 h = 1000$ to write $h = \\frac{1000}{\\pi r^2}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 substitutes into $S = \\pi r^2 + 2\\pi rh$ to reach the result.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nh = \\frac{1000}{\\pi r^2}, \\qquad S = \\pi r^2 + 2\\pi r \\cdot \\frac{1000}{\\pi r^2} = \\pi r^2 + \\frac{2000}{r}\n$$"
+    },
+    "explanation": "Base plus curved surface; no lid."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the value of r for which S is stationary, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm",
+     "answerPrefix": "r ="
+    },
+    "answerSpec": {
+     "value": 6.827840632552957,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres"
+      ]
+     }
+    },
+    "explanation": "$\\frac{dS}{dr} = 2\\pi r - \\frac{2000}{r^2} = 0$ gives $r^3 = \\frac{1000}{\\pi}$, so $r = 6.83$.",
+    "workedSolution": "1. $\\frac{dS}{dr} = 2\\pi r - \\frac{2000}{r^2} = 0$ gives $r^3 = \\frac{1000}{\\pi}$, so $r = 6.83$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the exact value of $\\dfrac{d^2S}{dr^2}$ at this value of $r$, in terms of π (for example 3π), and hence show that $S$ is a minimum.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "6π"
+      },
+      {
+       "value": "6pi"
+      },
+      {
+       "value": "d2S/dr2=6π"
+      },
+      {
+       "value": "d2S/dr2=6pi"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\frac{d^2S}{dr^2} = 2\\pi + \\frac{4000}{r^3}$, and $r^3 = \\frac{1000}{\\pi}$ gives $\\frac{4000}{r^3} = 4\\pi$. So $\\frac{d^2S}{dr^2} = 6\\pi > 0$: a minimum."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the least area of material, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm²"
+    },
+    "answerSpec": {
+     "value": 439.3775662684569,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm²",
+       "cm^2",
+       "square centimetres"
+      ]
+     }
+    },
+    "explanation": "$S = \\pi(6.83)^2 + \\frac{2000}{6.83} = 439$ cm².",
+    "workedSolution": "1. $S = \\pi(6.83)^2 + \\frac{2000}{6.83} = 439$ cm²."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the corresponding height h, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm",
+     "answerPrefix": "h ="
+    },
+    "answerSpec": {
+     "value": 6.827840632552958,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres"
+      ]
+     }
+    },
+    "explanation": "$h = \\frac{1000}{\\pi r^2} = 6.83$ cm, equal to the radius.",
+    "workedSolution": "1. $h = \\frac{1000}{\\pi r^2} = 6.83$ cm, equal to the radius."
+   }
+  ],
+  "explanation": "Eliminate h with the volume, minimise S, justify with the second derivative, and give the dimensions.",
+  "hints": [
+   "$r^3 = \\frac{1000}{\\pi}$.",
+   "Keep the full calculator value of r for later parts."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "6.83"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "6π"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "439"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "6.83"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "8.60"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "2π"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "146"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "13.7"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3a-cambridge.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.tangents-normals",
+   "amath.calculus.stationary-points",
+   "amath.calculus.product-quotient",
+   "amath.calculus.trig-exp-log"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A curve has equation $y = x\\ln x$ for $x > 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 1,
+    "stem": "Find $\\dfrac{dy}{dx}$ in the form $\\ln x + k$.",
+    "payload": {
+     "template": "k = {{blank:k}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "$x \\cdot \\frac{1}{x} + \\ln x = \\ln x + 1$."
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 3,
+    "stem": "For the stationary point of the curve, find, correct to 3 significant figures,",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "its x-coordinate,",
+      "answerSpec": {
+       "value": 0.36787944117144233,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "$\\ln x = -1$, so $x = \\mathrm{e}^{-1} = 0.368$.",
+      "workedSolution": "1. $\\ln x = -1$, so $x = \\mathrm{e}^{-1} = 0.368$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "its y-coordinate.",
+      "answerSpec": {
+       "value": -0.36787944117144233,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "$y = \\mathrm{e}^{-1}\\ln \\mathrm{e}^{-1} = -\\mathrm{e}^{-1} = -0.368$.",
+      "workedSolution": "1. $y = \\mathrm{e}^{-1}\\ln \\mathrm{e}^{-1} = -\\mathrm{e}^{-1} = -0.368$."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the nature of the stationary point?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A maximum, since $\\frac{d^2y}{dx^2} = \\frac{1}{x} > 0$",
+      "rationale": "A positive second derivative means a minimum."
+     },
+     {
+      "key": "B",
+      "content": "A maximum, since $y < 0$ there",
+      "rationale": "The sign of y does not decide the nature."
+     },
+     {
+      "key": "C",
+      "content": "A minimum, since $\\frac{d^2y}{dx^2} = \\frac{1}{x} > 0$",
+      "correct": true,
+      "rationale": "Correct: 1/x is positive for every x > 0."
+     },
+     {
+      "key": "D",
+      "content": "A minimum, since $\\frac{d^2y}{dx^2} = \\ln x < 0$",
+      "rationale": "The derivative of $\\ln x + 1$ is $\\frac{1}{x}$, not $\\ln x$."
+     }
+    ],
+    "explanation": "$\\frac{d^2y}{dx^2} = \\frac{1}{x} > 0$, so the point is a minimum."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "The tangent to the curve at the point where $x = \\mathrm{e}$ meets the $x$-axis at $A$. Find the $x$-coordinate of $A$, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 1.3591409142295225,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "At $x = \\mathrm{e}$: $y = \\mathrm{e}$ and $\\frac{dy}{dx} = \\ln \\mathrm{e} + 1 = 2$. Tangent: $y - \\mathrm{e} = 2(x - \\mathrm{e})$, so $y = 2x - \\mathrm{e}$; $y = 0$ gives $x = \\frac{\\mathrm{e}}{2} = 1.36$.",
+    "workedSolution": "1. At $x = \\mathrm{e}$: $y = \\mathrm{e}$ and $\\frac{dy}{dx} = \\ln \\mathrm{e} + 1 = 2$. Tangent: $y - \\mathrm{e} = 2(x - \\mathrm{e})$, so $y = 2x - \\mathrm{e}$; $y = 0$ gives $x = \\frac{\\mathrm{e}}{2} = 1.36$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The normal to the curve at the point where $x = \\mathrm{e}$ meets the $y$-axis at $B$. Find the $y$-coordinate of $B$, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 4.077422742688568,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "Normal gradient $-\\frac{1}{2}$: $y - \\mathrm{e} = -\\frac{1}{2}(x - \\mathrm{e})$. At $x = 0$: $y = \\mathrm{e} + \\frac{\\mathrm{e}}{2} = \\frac{3\\mathrm{e}}{2} = 4.08$.",
+    "workedSolution": "1. Normal gradient $-\\frac{1}{2}$: $y - \\mathrm{e} = -\\frac{1}{2}(x - \\mathrm{e})$. At $x = 0$: $y = \\mathrm{e} + \\frac{\\mathrm{e}}{2} = \\frac{3\\mathrm{e}}{2} = 4.08$."
+   }
+  ],
+  "explanation": "Product rule with ln x, the stationary point from ln x = −1, and the tangent and normal at (e, e).",
+  "hints": [
+   "$\\ln x = -1 \\Rightarrow x = \\mathrm{e}^{-1}$.",
+   "$\\ln \\mathrm{e} = 1$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "1"
+      }
+     ]
+    },
+    "(b)(i)": {
+     "type": "NUMERICAL",
+     "value": "0.368"
+    },
+    "(b)(ii)": {
+     "type": "NUMERICAL",
+     "value": "-0.368"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "1.36"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "4.08"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "0"
+       }
+      ]
+     },
+     "(b)(i)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(b)(ii)": {
+      "type": "NUMERICAL",
+      "value": "0.368"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2.72"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "-2.72"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/additional-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ }
+]

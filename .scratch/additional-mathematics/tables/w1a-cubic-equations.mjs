@@ -1,0 +1,10 @@
+import { poly, same, chk, quad } from "../lib.mjs";
+same(poly.div([1, -2, -5, 6], [1, -1]), { q: [1, -1, -6], r: [0] }, "ex1");
+same(poly.rationalRoots([1, -2, -5, 6]), [-2, 1, 3]);
+same(poly.div([2, 3, -11, -6], [1, -2]), { q: [2, 7, 3], r: [0] }, "ex2");
+same(poly.rationalRoots([2, 3, -11, -6]), [-3, -0.5, 2]);
+same(poly.div([1, -3, -2, 4], [1, -1]), { q: [1, -2, -4], r: [0] }, "ex3");
+console.log("ex3 roots", quad.roots(1, -2, -4), 1 - Math.sqrt(5), 1 + Math.sqrt(5));
+same(poly.mul([1, 2], [1, 2, -3]), [1, 4, 1, -6], "ex4");
+same(poly.div([1, 0, -7, -6], [1, -3]), { q: [1, 3, 2], r: [0] }, "ex5");
+console.log("ok");

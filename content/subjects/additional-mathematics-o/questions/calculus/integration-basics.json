@@ -1,0 +1,1358 @@
+[
+ {
+  "key": "calculus.integration-basics.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int 4x^3\\,dx$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$x^4 + c$",
+    "correct": true,
+    "rationale": "Correct: add one to the power (4) and divide by the new power: $\\frac{4x^4}{4} = x^4$."
+   },
+   {
+    "key": "B",
+    "content": "$12x^2 + c$",
+    "rationale": "This differentiates 4x³ instead of integrating it."
+   },
+   {
+    "key": "C",
+    "content": "$4x^4 + c$",
+    "rationale": "The power was raised but the coefficient was not divided by the new power 4."
+   },
+   {
+    "key": "D",
+    "content": "$\\frac{4x^4}{3} + c$",
+    "rationale": "This divides by the old power 3 instead of the new power 4."
+   }
+  ],
+  "explanation": "$\\displaystyle\\int 4x^3\\,dx = \\frac{4x^4}{4} + c = x^4 + c$. Check: $\\frac{d}{dx}(x^4) = 4x^3$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Why is a constant $c$ added when finding $\\displaystyle\\int 2x\\,dx = x^2 + c$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The constant makes the answer exact",
+    "rationale": "The constant has nothing to do with accuracy; it records the lost information about the constant term."
+   },
+   {
+    "key": "B",
+    "content": "It is the value of $x^2$ when $x = 0$",
+    "rationale": "x² is 0 when x = 0; c is the value of the whole integral there, which is unknown."
+   },
+   {
+    "key": "C",
+    "content": "Every function $x^2 + k$ has derivative $2x$",
+    "correct": true,
+    "rationale": "Correct: the derivative of any constant is 0, so the integral is a whole family of functions."
+   },
+   {
+    "key": "D",
+    "content": "It replaces the $dx$ after integrating",
+    "rationale": "The dx only shows the variable; it is not turned into c."
+   }
+  ],
+  "explanation": "Differentiating removes any constant term, so integrating cannot know what it was: $x^2$, $x^2 + 7$ and $x^2 - 3$ all differentiate to $2x$. The $+\\,c$ stands for all of them.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q03",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The rule $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + c$ works for every value of $n$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. For $n = -1$ it would divide by $n + 1 = 0$. The integral of $x^{-1} = \\frac{1}{x}$ is $\\ln x + c$, a different rule.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Find $\\displaystyle\\int (10x^4 - 9x^2 + 3)\\,dx$ by filling in the coefficients.",
+  "payload": {
+   "template": "∫(10x⁴ − 9x² + 3) dx = {{blank:a}}x⁵ + {{blank:b}}x³ + {{blank:c}}x + c",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "-3"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "3"
+     ]
+    }
+   ]
+  },
+  "explanation": "$\\dfrac{10x^5}{5} = 2x^5$, $\\dfrac{-9x^3}{3} = -3x^3$ and $\\int 3\\,dx = 3x$. Answers 40 and $-18$ come from differentiating instead of integrating.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "2"
+    },
+    {
+     "blankId": "b",
+     "text": "-3"
+    },
+    {
+     "blankId": "c",
+     "text": "3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "40"
+     },
+     {
+      "blankId": "b",
+      "text": "-18"
+     },
+     {
+      "blankId": "c",
+      "text": "0"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int (x + 3)(x - 1)\\,dx$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\left(\\frac{x^2}{2} + 3x\\right)\\left(\\frac{x^2}{2} - x\\right) + c$",
+    "rationale": "Each bracket was integrated separately and the results multiplied; there is no product rule like this."
+   },
+   {
+    "key": "B",
+    "content": "$\\frac{x^3}{3} + 2x^2 - 3x + c$",
+    "rationale": "The $2x$ term was not divided by its new power 2."
+   },
+   {
+    "key": "C",
+    "content": "$2x + 2 + c$",
+    "rationale": "This differentiates $x^2 + 2x - 3$ instead of integrating it."
+   },
+   {
+    "key": "D",
+    "content": "$\\frac{x^3}{3} + x^2 - 3x + c$",
+    "correct": true,
+    "rationale": "Correct: expand to $x^2 + 2x - 3$ and integrate each term."
+   }
+  ],
+  "explanation": "$(x + 3)(x - 1) = x^2 + 2x - 3$, so the integral is $\\frac{x^3}{3} + x^2 - 3x + c$. Always expand a product before integrating.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q06",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Two different curves can have exactly the same gradient function.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. $y = x^3 + 1$ and $y = x^3 - 5$ both have $\\frac{dy}{dx} = 3x^2$; one is a vertical translation of the other. That is why a point is needed to find the equation of a curve from its gradient.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q07",
+  "type": "MATCHING",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each function with its indefinite integral.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$3x^2$"
+    },
+    {
+     "id": "L2",
+     "content": "$x^{-2}$"
+    },
+    {
+     "id": "L3",
+     "content": "$x^{\\frac{1}{2}}$"
+    },
+    {
+     "id": "L4",
+     "content": "$5$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\frac{2}{3}x^{\\frac{3}{2}} + c$"
+    },
+    {
+     "id": "R4",
+     "content": "$5x + c$"
+    },
+    {
+     "id": "R1",
+     "content": "$x^3 + c$"
+    },
+    {
+     "id": "R2",
+     "content": "$-x^{-1} + c$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Add one to the power and divide by the new power: $x^{-2} \\to \\frac{x^{-1}}{-1}$; $x^{\\frac{1}{2}} \\to \\frac{x^{\\frac{3}{2}}}{\\frac{3}{2}} = \\frac{2}{3}x^{\\frac{3}{2}}$; a constant $5 = 5x^0 \\to 5x$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which curve passes through the point $(1, 2)$ and has gradient function $\\dfrac{dy}{dx} = 3x^2$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$y = x^3 + 2$",
+    "rationale": "The y-coordinate 2 was taken as c; at x = 1 this curve gives y = 3."
+   },
+   {
+    "key": "B",
+    "content": "$y = x^3 + 1$",
+    "correct": true,
+    "rationale": "Correct: integrating gives $y = x^3 + c$, and $2 = 1 + c$ gives $c = 1$."
+   },
+   {
+    "key": "C",
+    "content": "$y = 6x - 4$",
+    "rationale": "This differentiates $3x^2$ and then fits the point; its gradient is 6 everywhere."
+   },
+   {
+    "key": "D",
+    "content": "$y = 3x^3 - 1$",
+    "rationale": "The coefficient was not divided by the new power; its gradient is $9x^2$."
+   }
+  ],
+  "explanation": "$y = \\int 3x^2\\,dx = x^3 + c$. At $(1, 2)$: $2 = 1 + c$, so $c = 1$ and $y = x^3 + 1$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A curve has gradient function $\\dfrac{dy}{dx} = \\dfrac{1}{\\sqrt{x}}$ and passes through the point $(1, 3)$. Find the value of $y$ when $x = 16$.",
+  "answerSpec": {
+   "value": 9
+  },
+  "explanation": "$\\dfrac{dy}{dx} = x^{-\\frac{1}{2}}$, so $y = \\dfrac{x^{\\frac{1}{2}}}{\\frac{1}{2}} + c = 2\\sqrt{x} + c$. At $(1, 3)$: $3 = 2 + c$, $c = 1$. When $x = 16$: $y = 2(4) + 1 = 9$. The answer 8 forgets $c$; 10 takes $c = 3 - 1$ wrongly as 2.",
+  "workedSolution": "1. $\\dfrac{dy}{dx} = x^{-\\frac{1}{2}}$, so $y = \\dfrac{x^{\\frac{1}{2}}}{\\frac{1}{2}} + c = 2\\sqrt{x} + c$. At $(1, 3)$: $3 = 2 + c$, $c = 1$. When $x = 16$: $y = 2(4) + 1 = 9$. The answer 8 forgets $c$; 10 takes $c = 3 - 1$ wrongly as 2.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "9"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "10"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "It is given that $f'(x) = 6x - 5$ and $f(2) = 4$. Find $f(-1)$.",
+  "answerSpec": {
+   "value": 10
+  },
+  "explanation": "$f(x) = 3x^2 - 5x + c$. From $f(2) = 4$: $12 - 10 + c = 4$, so $c = 2$. Then $f(-1) = 3 + 5 + 2 = 10$. The answer 8 leaves out $c$; $-11$ is $f'(-1)$, the gradient, not the value of the function.",
+  "workedSolution": "1. $f(x) = 3x^2 - 5x + c$. From $f(2) = 4$: $12 - 10 + c = 4$, so $c = 2$. Then $f(-1) = 3 + 5 + 2 = 10$. The answer 8 leaves out $c$; $-11$ is $f'(-1)$, the gradient, not the value of the function.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-11"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int \\frac{2}{x^3}\\,dx$. Use $c$ for the constant and write powers with ^, for example -1/x^2 + c.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "-1/x^2+c"
+    },
+    {
+     "value": "-x^-2+c"
+    },
+    {
+     "value": "-x^(-2)+c"
+    },
+    {
+     "value": "c-1/x^2"
+    },
+    {
+     "value": "c-x^-2"
+    },
+    {
+     "value": "-1/(x^2)+c"
+    },
+    {
+     "value": "-(1/x^2)+c"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$\\dfrac{2}{x^3} = 2x^{-3}$. Add one to the power: $-2$. Divide by $-2$: $\\dfrac{2x^{-2}}{-2} = -x^{-2}$. So the integral is $-\\dfrac{1}{x^2} + c$. Going to $x^{-4}$ subtracts one instead of adding one.",
+  "hints": [
+   "Write $\\frac{2}{x^3}$ as $2x^{-3}$.",
+   "The new power is $-3 + 1 = -2$."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "-1/x^2+c"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "-1/x^4+c"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1/x^2+c"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Find $\\displaystyle\\int \\left(6\\sqrt{x} - \\frac{4}{\\sqrt{x}}\\right)dx$ by filling in the coefficients.",
+  "payload": {
+   "template": "integral = {{blank:a}}x^(3/2) + {{blank:b}}x^(1/2) + c",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "4"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "-8"
+     ]
+    }
+   ]
+  },
+  "explanation": "$6x^{\\frac{1}{2}} \\to 6 \\times \\frac{2}{3}x^{\\frac{3}{2}} = 4x^{\\frac{3}{2}}$ and $-4x^{-\\frac{1}{2}} \\to -4 \\times 2x^{\\frac{1}{2}} = -8x^{\\frac{1}{2}}$. The values 9 and $-2$ multiply by the new power instead of dividing by it.",
+  "hints": [
+   "Dividing by $\\frac{3}{2}$ is the same as multiplying by $\\frac{2}{3}$.",
+   "$\\frac{1}{\\sqrt{x}} = x^{-\\frac{1}{2}}$, whose new power is $\\frac{1}{2}$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "4"
+    },
+    {
+     "blankId": "b",
+     "text": "-8"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "9"
+     },
+     {
+      "blankId": "b",
+      "text": "-2"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int \\frac{x^2 - 4}{x^2}\\,dx$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$x - \\frac{4}{x} + c$",
+    "rationale": "Sign slip: $\\int -4x^{-2}\\,dx = \\frac{-4x^{-1}}{-1} = +4x^{-1}$."
+   },
+   {
+    "key": "B",
+    "content": "$x + \\frac{8}{x^3} + c$",
+    "rationale": "$-4x^{-2}$ was differentiated, not integrated."
+   },
+   {
+    "key": "C",
+    "content": "$\\frac{x^3/3 - 4x}{x^3/3} + c$",
+    "rationale": "The numerator and denominator were integrated separately; split the fraction first."
+   },
+   {
+    "key": "D",
+    "content": "$x + \\frac{4}{x} + c$",
+    "correct": true,
+    "rationale": "Correct: $\\frac{x^2 - 4}{x^2} = 1 - 4x^{-2}$, which integrates to $x + 4x^{-1}$."
+   }
+  ],
+  "explanation": "Divide each term by $x^2$: $1 - 4x^{-2}$. Then $\\int 1\\,dx = x$ and $\\int -4x^{-2}\\,dx = \\frac{-4x^{-1}}{-1} = \\frac{4}{x}$. Total: $x + \\frac{4}{x} + c$.",
+  "hints": [
+   "Split the fraction into separate terms before integrating."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The gradient of a curve at the point $(x, y)$ is $3\\sqrt{x}$. The curve passes through $(4, 10)$. Find the value of $y$ when $x = 9$.",
+  "answerSpec": {
+   "value": 48
+  },
+  "explanation": "$y = \\int 3x^{\\frac{1}{2}}\\,dx = 3 \\times \\frac{2}{3}x^{\\frac{3}{2}} + c = 2x^{\\frac{3}{2}} + c$. At $(4, 10)$: $10 = 2(8) + c$, so $c = -6$. At $x = 9$: $y = 2(27) - 6 = 48$. The answer 54 forgets $c$.",
+  "workedSolution": "1. $y = \\int 3x^{\\frac{1}{2}}\\,dx = 3 \\times \\frac{2}{3}x^{\\frac{3}{2}} + c = 2x^{\\frac{3}{2}} + c$. At $(4, 10)$: $10 = 2(8) + c$, so $c = -6$. At $x = 9$: $y = 2(27) - 6 = 48$. The answer 54 forgets $c$.",
+  "hints": [
+   "$4^{\\frac{3}{2}} = 8$ and $9^{\\frac{3}{2}} = 27$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "48"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "54"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "64"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q15",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A curve has gradient function $\\dfrac{dy}{dx} = kx - 4$, where $k$ is a constant. The curve has a stationary point at $(2, -1)$. Find $k$, and the $y$-coordinate of the point where the curve crosses the $y$-axis.",
+  "payload": {
+   "template": "k = {{blank:k}}; the curve crosses the y-axis at y = {{blank:c}}",
+   "blanks": [
+    {
+     "id": "k",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "k",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "3"
+     ]
+    }
+   ]
+  },
+  "explanation": "At a stationary point $\\frac{dy}{dx} = 0$: $2k - 4 = 0$, so $k = 2$. Then $y = x^2 - 4x + c$; at $(2, -1)$: $-1 = 4 - 8 + c$, so $c = 3$. The $y$-intercept is $y = 3$.",
+  "hints": [
+   "Stationary point: $\\frac{dy}{dx} = 0$ at $x = 2$.",
+   "The y-intercept is the value of c."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "k",
+     "text": "2"
+    },
+    {
+     "blankId": "c",
+     "text": "3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "k",
+      "text": "4"
+     },
+     {
+      "blankId": "c",
+      "text": "-1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Tatenda writes $\\displaystyle\\int (3x^2 + 2)\\,dx = x^3 + 2x$. Explain what is missing and why it matters when the integral is used to find the equation of a curve.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "States that the arbitrary constant $+\\,c$ is missing (derivatives of all $x^3 + 2x + c$ are equal).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Explains that a given point on the curve is used to find c; without it the curve cannot be fixed (the wrong curve is found).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The answer needs $+\\,c$, because $x^3 + 2x + c$ has derivative $3x^2 + 2$ for every constant $c$. To find the equation of a particular curve, you substitute a known point to find $c$; leaving it out gives a different curve that does not pass through the point."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Integration gives a family of curves; a point picks one of them.",
+  "hints": [
+   "Differentiate x³ + 2x + 5. What do you get?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "This question uses a derivative to find an integral.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\dfrac{d}{dx}\\left[(x - 2)\\sqrt{x}\\right] = \\dfrac{3x - 2}{2\\sqrt{x}}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes $(x - 2)\\sqrt{x} = x^{\\frac{3}{2}} - 2x^{\\frac{1}{2}}$ (or uses the product rule).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 differentiates: $\\frac{3}{2}x^{\\frac{1}{2}} - x^{-\\frac{1}{2}}$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 writes over the common denominator $2\\sqrt{x}$ to reach $\\frac{3x - 2}{2\\sqrt{x}}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n(x - 2)\\sqrt{x} = x^{\\frac{3}{2}} - 2x^{\\frac{1}{2}}\n$$\n\n$$\n\\frac{d}{dx}\\left(x^{\\frac{3}{2}} - 2x^{\\frac{1}{2}}\\right) = \\frac{3}{2}x^{\\frac{1}{2}} - x^{-\\frac{1}{2}}\n$$\n\n$$\n= \\frac{3x}{2\\sqrt{x}} - \\frac{2}{2\\sqrt{x}} = \\frac{3x - 2}{2\\sqrt{x}}\n$$"
+    },
+    "explanation": "Expand to powers of $x$, differentiate, then combine over $2\\sqrt{x}$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Hence find $\\displaystyle\\int \\frac{3x - 2}{\\sqrt{x}}\\,dx$. Use $c$ for the constant and write the square root as sqrt(x) or √x, for example 5(x-1)√x + c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2(x-2)√x+c"
+      },
+      {
+       "value": "2(x-2)sqrt(x)+c"
+      },
+      {
+       "value": "2(x-2)sqrtx+c"
+      },
+      {
+       "value": "2(x-2)√(x)+c"
+      },
+      {
+       "value": "(2x-4)√x+c"
+      },
+      {
+       "value": "(2x-4)sqrt(x)+c"
+      },
+      {
+       "value": "(2x-4)sqrtx+c"
+      },
+      {
+       "value": "(2x-4)√(x)+c"
+      },
+      {
+       "value": "2x√x-4√x+c"
+      },
+      {
+       "value": "2xsqrt(x)-4sqrt(x)+c"
+      },
+      {
+       "value": "2xsqrtx-4sqrtx+c"
+      },
+      {
+       "value": "2x√(x)-4√(x)+c"
+      },
+      {
+       "value": "2xsqrt(x)-4*sqrt(x)+c"
+      },
+      {
+       "value": "2x^(3/2)-4x^(1/2)+c"
+      },
+      {
+       "value": "2x^1.5-4x^0.5+c"
+      },
+      {
+       "value": "2√x(x-2)+c"
+      },
+      {
+       "value": "2sqrt(x)(x-2)+c"
+      },
+      {
+       "value": "2sqrtx(x-2)+c"
+      },
+      {
+       "value": "2√(x)(x-2)+c"
+      },
+      {
+       "value": "2*sqrt(x)(x-2)+c"
+      },
+      {
+       "value": "c+2(x-2)√x"
+      },
+      {
+       "value": "c+2(x-2)sqrt(x)"
+      },
+      {
+       "value": "c+2(x-2)sqrtx"
+      },
+      {
+       "value": "c+2(x-2)√(x)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "From (a), $\\int \\frac{3x - 2}{2\\sqrt{x}}\\,dx = (x - 2)\\sqrt{x} + c$. The integrand $\\frac{3x - 2}{\\sqrt{x}}$ is twice this, so the integral is $2(x - 2)\\sqrt{x} + c$."
+   }
+  ],
+  "explanation": "Read part (a) backwards: if $F'(x) = f(x)$ then $\\int 2f(x)\\,dx = 2F(x) + c$.",
+  "hints": [
+   "Compare $\\frac{3x - 2}{\\sqrt{x}}$ with $\\frac{3x - 2}{2\\sqrt{x}}$: what is the multiple?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "2(x-2)√x+c"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "(x-2)√x+c"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A curve has gradient function $\\dfrac{dy}{dx} = 3x^2 - 6x$ and passes through the point $(3, 2)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the equation of the curve in the form $y = x^3 + px^2 + q$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "-3"
+       ]
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$y = x^3 - 3x^2 + c$. At $(3, 2)$: $2 = 27 - 27 + c$, so $c = 2$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Find the coordinates of the two stationary points of the curve, the one with the smaller $x$-coordinate first.",
+    "payload": {
+     "template": "({{blank:x1}}, {{blank:y1}}) and ({{blank:x2}}, {{blank:y2}})",
+     "blanks": [
+      {
+       "id": "x1",
+       "input": "number"
+      },
+      {
+       "id": "y1",
+       "input": "number"
+      },
+      {
+       "id": "x2",
+       "input": "number"
+      },
+      {
+       "id": "y2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x1",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "y1",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "x2",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "y2",
+       "accepted": [
+        "-2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$3x^2 - 6x = 3x(x - 2) = 0$ gives $x = 0$ or $x = 2$. Then $y(0) = 2$ and $y(2) = 8 - 12 + 2 = -2$."
+   }
+  ],
+  "explanation": "Integrate, use the point to find c, then set dy/dx = 0 for the stationary points and substitute into y.",
+  "hints": [
+   "$\\int (3x^2 - 6x)\\,dx = x^3 - 3x^2 + c$.",
+   "Substitute the x-values into the equation of the curve, not into dy/dx."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "-3"
+      },
+      {
+       "blankId": "q",
+       "text": "2"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x1",
+       "text": "0"
+      },
+      {
+       "blankId": "y1",
+       "text": "2"
+      },
+      {
+       "blankId": "x2",
+       "text": "2"
+      },
+      {
+       "blankId": "y2",
+       "text": "-2"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "-6"
+       },
+       {
+        "blankId": "q",
+        "text": "0"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x1",
+        "text": "2"
+       },
+       {
+        "blankId": "y1",
+        "text": "0"
+       },
+       {
+        "blankId": "x2",
+        "text": "0"
+       },
+       {
+        "blankId": "y2",
+        "text": "-4"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.integration-basics.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.integration-basics"
+  ],
+  "difficulty": 5,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "The gradient of a curve at the point $(x, y)$ is given by $\\dfrac{dy}{dx} = 2x + \\dfrac{k}{x^2}$, where $k$ is a constant. The curve has a stationary point at $(1, 4)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of $k$.",
+    "answerSpec": {
+     "value": -2
+    },
+    "explanation": "At $x = 1$, $\\frac{dy}{dx} = 0$: $2 + k = 0$, so $k = -2$.",
+    "workedSolution": "1. At $x = 1$, $\\frac{dy}{dx} = 0$: $2 + k = 0$, so $k = -2$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the equation of the curve in the form $y = x^2 + \\dfrac{a}{x} + b$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\int (2x - 2x^{-2})\\,dx = x^2 - \\frac{2x^{-1}}{-1} + c = x^2 + \\frac{2}{x} + c$. At $(1, 4)$: $4 = 1 + 2 + c$, so $c = 1$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of $y$ when $x = 2$.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "$y = 4 + \\frac{2}{2} + 1 = 6$.",
+    "workedSolution": "1. $y = 4 + \\frac{2}{2} + 1 = 6$."
+   }
+  ],
+  "explanation": "Use the stationary point twice: dy/dx = 0 gives k, and the coordinates give the constant of integration.",
+  "hints": [
+   "$\\frac{k}{x^2} = kx^{-2}$ integrates to $-kx^{-1}$.",
+   "Stationary point: $\\frac{dy}{dx} = 0$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "-2"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2"
+      },
+      {
+       "blankId": "b",
+       "text": "1"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-2"
+       },
+       {
+        "blankId": "b",
+        "text": "3"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

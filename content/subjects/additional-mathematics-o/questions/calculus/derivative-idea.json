@@ -1,0 +1,1160 @@
+[
+ {
+  "key": "calculus.derivative-idea.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is meant by the gradient of a curve at a point P?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The gradient of the tangent to the curve at P",
+    "correct": true,
+    "rationale": "Correct: the tangent has the same direction as the curve at P, so its gradient measures the steepness there."
+   },
+   {
+    "key": "B",
+    "content": "The gradient of the line joining P to the origin",
+    "rationale": "That line usually cuts across the curve; its gradient depends on where the origin is, not on the shape of the curve at P."
+   },
+   {
+    "key": "C",
+    "content": "The y-coordinate of P divided by its x-coordinate",
+    "rationale": "This is the gradient of the line OP again, not of the curve itself."
+   },
+   {
+    "key": "D",
+    "content": "The gradient of any chord with one end at P",
+    "rationale": "A chord only approximates the tangent; different chords from P have different gradients."
+   }
+  ],
+  "explanation": "A curve's steepness changes from point to point. At P it is defined as the gradient of the tangent at P, the straight line that touches the curve there.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The points $P(2, 4)$ and $Q(2.1, 4.41)$ lie on the curve $y = x^2$. Find the exact gradient of the chord $PQ$.",
+  "answerSpec": {
+   "value": 4.100000000000001,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "Gradient $= \\dfrac{4.41 - 4}{2.1 - 2} = \\dfrac{0.41}{0.1} = 4.1$. The value 0.41 forgets to divide by the change in $x$; 4 is the gradient of the tangent at $P$, which the chord only approximates.",
+  "workedSolution": "1. Gradient $= \\dfrac{4.41 - 4}{2.1 - 2} = \\dfrac{0.41}{0.1} = 4.1$. The value 0.41 forgets to divide by the change in $x$; 4 is the gradient of the tangent at $P$, which the chord only approximates.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4.1"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.41"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$P$ is the point $(1, 1)$ on the curve $y = x^3$ and $Q$ is the point on the curve with $x = 1.1$. Find the exact gradient of the chord $PQ$.",
+  "answerSpec": {
+   "value": 3.310000000000004,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$Q$ is $(1.1, 1.331)$. Gradient $= \\dfrac{1.331 - 1}{0.1} = \\dfrac{0.331}{0.1} = 3.31$. It is a little more than 3, the gradient of the tangent at $P$.",
+  "workedSolution": "1. $Q$ is $(1.1, 1.331)$. Gradient $= \\dfrac{1.331 - 1}{0.1} = \\dfrac{0.331}{0.1} = 3.31$. It is a little more than 3, the gradient of the tangent at $P$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3.31"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.331"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Chords are drawn from a fixed point $P$ on a curve to points $Q$ that move closer to $P$. Their gradients are $5.3$, $5.03$, $5.003$ and $5.0003$. What is the gradient of the curve at $P$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$5.0003$",
+    "rationale": "This is the last chord gradient, still slightly larger than the limit the sequence approaches."
+   },
+   {
+    "key": "B",
+    "content": "$5.3$",
+    "rationale": "This is the first, least accurate chord, with Q furthest from P."
+   },
+   {
+    "key": "C",
+    "content": "$0$",
+    "rationale": "The differences from 5 tend to 0, but the gradients themselves tend to 5."
+   },
+   {
+    "key": "D",
+    "content": "$5$",
+    "correct": true,
+    "rationale": "Correct: the chord gradients approach 5 as Q approaches P, so the tangent at P has gradient 5."
+   }
+  ],
+  "explanation": "As Q moves towards P, the chord gradients tend to the gradient of the tangent at P. The sequence 5.3, 5.03, 5.003, … tends to 5.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q05",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The symbol $\\dfrac{dy}{dx}$ means the number $dy$ divided by the number $dx$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. $\\dfrac{dy}{dx}$ is a single symbol for the derivative of $y$ with respect to $x$, the limit of $\\dfrac{\\delta y}{\\delta x}$ as $\\delta x \\to 0$. There are no separate numbers $dy$ and $dx$ to divide.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q06",
+  "type": "MATCHING",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each notation with its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$f'(x)$"
+    },
+    {
+     "id": "L2",
+     "content": "$f''(x)$"
+    },
+    {
+     "id": "L3",
+     "content": "$f'(4)$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\dfrac{d}{dx}\\left(x^2 + 1\\right)$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The gradient of the curve where x = 4"
+    },
+    {
+     "id": "R4",
+     "content": "An instruction to differentiate $x^2 + 1$"
+    },
+    {
+     "id": "R1",
+     "content": "The gradient function of f"
+    },
+    {
+     "id": "R2",
+     "content": "The rate of change of the gradient"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "$f'(x)$ (or $\\frac{dy}{dx}$) is the gradient function; $f''(x)$ is the second derivative, the derivative of the gradient; $f'(4)$ is one number, the gradient at $x = 4$; $\\frac{d}{dx}(\\ldots)$ means \"differentiate this with respect to $x$\".",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q07",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $\\dfrac{dy}{dx} = -3$ at the point where $x = 1$, then $y$ is decreasing as $x$ increases through $1$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. A negative gradient means the tangent slopes downwards from left to right, so $y$ decreases as $x$ increases through that point.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q08",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "$P(4, 4)$ lies on the curve $y = x^2 - 3x$. The point $Q$ on the curve has $x$-coordinate $4 + h$. Find the gradient of the chord $PQ$ in the form $h + a$, and hence the gradient of the curve at $P$.",
+  "payload": {
+   "template": "gradient of PQ = h + {{blank:a}}\n\ngradient of the curve at P = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "5"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "5"
+     ]
+    }
+   ]
+  },
+  "explanation": "$y_Q = (4 + h)^2 - 3(4 + h) = 16 + 8h + h^2 - 12 - 3h = 4 + 5h + h^2$. Gradient $= \\dfrac{5h + h^2}{h} = 5 + h$, which tends to $5$ as $h \\to 0$.",
+  "hints": [
+   "Find $y_Q - y_P$ and divide by $h$.",
+   "Let $h \\to 0$ at the end."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "5"
+    },
+    {
+     "blankId": "b",
+     "text": "5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "8"
+     },
+     {
+      "blankId": "b",
+      "text": "4"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q09",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "For $f(x) = 3x^2 + x$, simplify $\\dfrac{f(x + h) - f(x)}{h}$ and hence state $f'(x)$. Fill in the coefficients.",
+  "payload": {
+   "template": "(f(x + h) − f(x))/h = {{blank:a}}x + {{blank:b}}h + {{blank:c}}\n\nf′(x) = {{blank:d}}x + {{blank:e}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "d",
+     "input": "number"
+    },
+    {
+     "id": "e",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "6"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "3"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "6"
+     ]
+    },
+    {
+     "id": "e",
+     "accepted": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "explanation": "$f(x + h) = 3x^2 + 6xh + 3h^2 + x + h$, so $f(x + h) - f(x) = 6xh + 3h^2 + h$. Dividing by $h$ gives $6x + 3h + 1$, and as $h \\to 0$, $f'(x) = 6x + 1$.",
+  "hints": [
+   "$3(x + h)^2 = 3x^2 + 6xh + 3h^2$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "6"
+    },
+    {
+     "blankId": "b",
+     "text": "3"
+    },
+    {
+     "blankId": "c",
+     "text": "1"
+    },
+    {
+     "blankId": "d",
+     "text": "6"
+    },
+    {
+     "blankId": "e",
+     "text": "1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "3"
+     },
+     {
+      "blankId": "b",
+      "text": "1"
+     },
+     {
+      "blankId": "c",
+      "text": "0"
+     },
+     {
+      "blankId": "d",
+      "text": "3"
+     },
+     {
+      "blankId": "e",
+      "text": "0"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q10",
+  "type": "CALCULATION",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Estimate the gradient of the curve $y = 2^x$ at the point $(0, 1)$ by finding the gradient of the chord from $(0, 1)$ to the point on the curve where $x = 0.001$. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.6933874625807412,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "At $x = 0.001$, $y = 2^{0.001} = 1.000\\,693\\,4\\ldots$ Gradient $= \\dfrac{1.000\\,693\\,4 - 1}{0.001} = 0.693$ (3 s.f.). (The exact gradient is $\\ln 2 = 0.6931\\ldots$; the chord is a very good estimate.) The value 0.001 forgets to divide by the change in $x$.",
+  "workedSolution": "1. At $x = 0.001$, $y = 2^{0.001} = 1.000\\,693\\,4\\ldots$ Gradient $= \\dfrac{1.000\\,693\\,4 - 1}{0.001} = 0.693$ (3 s.f.). (The exact gradient is $\\ln 2 = 0.6931\\ldots$; the chord is a very good estimate.) The value 0.001 forgets to divide by the change in $x$.",
+  "hints": [
+   "Gradient of a chord = change in y ÷ change in x.",
+   "Keep all the calculator digits of 2^0.001 before subtracting 1."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.693"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.001"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "calculus.derivative-idea.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a curve $y = f(x)$ it is known that $f(3) = 7$ and $f'(3) = -2$. Which statement is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The curve passes through $(3, -2)$",
+    "rationale": "That would need $f(3) = -2$; $f'(3)$ is a gradient, not a $y$-coordinate."
+   },
+   {
+    "key": "B",
+    "content": "The tangent at $(3, 7)$ has gradient $7$",
+    "rationale": "7 is the $y$-coordinate of the point; the gradient is $f'(3)$."
+   },
+   {
+    "key": "C",
+    "content": "$y$ is increasing where $x = 3$",
+    "rationale": "A negative derivative means $y$ is decreasing there."
+   },
+   {
+    "key": "D",
+    "content": "The tangent at $(3, 7)$ has gradient $-2$",
+    "correct": true,
+    "rationale": "Correct: $f'(3)$ is the gradient of the curve, and so of its tangent, where $x = 3$; $f(3) = 7$ gives the point."
+   }
+  ],
+  "explanation": "$f(3)$ locates the point $(3, 7)$; $f'(3) = -2$ is the gradient of the tangent there, so the curve is decreasing at that point.",
+  "hints": [
+   "Which of $f$ and $f'$ gives a $y$-coordinate, and which a gradient?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What does the second derivative $\\dfrac{d^2y}{dx^2}$ measure?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The square of the gradient, $\\left(\\dfrac{dy}{dx}\\right)^2$",
+    "rationale": "The 2s show that we differentiate twice; nothing is squared."
+   },
+   {
+    "key": "B",
+    "content": "The gradient at the point where $x = 2$",
+    "rationale": "The 2 is not a value of $x$; that would be written $f'(2)$."
+   },
+   {
+    "key": "C",
+    "content": "The rate at which $\\dfrac{dy}{dx}$ changes as $x$ changes",
+    "correct": true,
+    "rationale": "Correct: it is the derivative of the gradient function."
+   },
+   {
+    "key": "D",
+    "content": "Twice the gradient, $2\\dfrac{dy}{dx}$",
+    "rationale": "The notation means differentiating a second time, not doubling."
+   }
+  ],
+  "explanation": "$\\dfrac{d^2y}{dx^2} = \\dfrac{d}{dx}\\left(\\dfrac{dy}{dx}\\right)$: differentiate the gradient function again. It tells you how quickly the gradient itself is changing.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "It is given that the gradient function of the curve $y = x^3 - 12x$ is $\\dfrac{dy}{dx} = 3x^2 - 12$. Find the gradient of the curve at the point where $x = 3$.",
+  "answerSpec": {
+   "value": 15
+  },
+  "explanation": "Substitute $x = 3$ into the gradient function: $3(3)^2 - 12 = 27 - 12 = 15$. The value $-9$ is $y$ at $x = 3$ (the coordinate, not the gradient); 27 forgets the $-12$.",
+  "workedSolution": "1. Substitute $x = 3$ into the gradient function: $3(3)^2 - 12 = 27 - 12 = 15$. The value $-9$ is $y$ at $x = 3$ (the coordinate, not the gradient); 27 forgets the $-12$.",
+  "hints": [
+   "Substitute into dy/dx, not into y."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "15"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-9"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "27"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q14",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Find, from first principles, the gradient function of $y = x^2 + 4x$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 writes $f(x + h) = (x + h)^2 + 4(x + h) = x^2 + 2xh + h^2 + 4x + 4h$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 subtracts $f(x)$ to get $2xh + h^2 + 4h$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 divides by $h$: $2x + h + 4$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 lets $h \\to 0$ to reach $\\frac{dy}{dx} = 2x + 4$.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "Let $f(x) = x^2 + 4x$.\n\n$$\nf(x + h) - f(x) = (x^2 + 2xh + h^2 + 4x + 4h) - (x^2 + 4x) = 2xh + h^2 + 4h\n$$\n\n$$\n\\frac{f(x + h) - f(x)}{h} = 2x + h + 4\n$$\n\n$$\n\\frac{dy}{dx} = \\lim_{h \\to 0} (2x + h + 4) = 2x + 4\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Expand f(x + h), subtract f(x), divide by h, then let h tend to 0.",
+  "hints": [
+   "Start with f(x + h) − f(x).",
+   "Cancel h before letting h tend to 0."
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q15",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 5,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Show from first principles that the derivative of $f(x) = \\dfrac{1}{x}$ is $f'(x) = -\\dfrac{1}{x^2}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 writes $f(x + h) - f(x) = \\dfrac{1}{x + h} - \\dfrac{1}{x}$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 combines over a common denominator: $\\dfrac{x - (x + h)}{x(x + h)} = \\dfrac{-h}{x(x + h)}$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 divides by $h$: $\\dfrac{-1}{x(x + h)}$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 lets $h \\to 0$ to reach $-\\dfrac{1}{x^2}$, the given result.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\nf(x + h) - f(x) = \\frac{1}{x + h} - \\frac{1}{x} = \\frac{x - (x + h)}{x(x + h)} = \\frac{-h}{x(x + h)}\n$$\n\n$$\n\\frac{f(x + h) - f(x)}{h} = \\frac{-1}{x(x + h)}\n$$\n\n$$\nf'(x) = \\lim_{h \\to 0} \\frac{-1}{x(x + h)} = -\\frac{1}{x^2}\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "With a reciprocal, combine the two fractions first; the h in the numerator then cancels with the division by h.",
+  "hints": [
+   "Put the two fractions over the common denominator x(x + h).",
+   "After cancelling h, let h tend to 0."
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "The point $P(3, 3)$ lies on the curve $y = x^2 - 2x$. The point $Q$ on the curve has $x$-coordinate $3 + h$, where $h \\neq 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the gradient of the chord $PQ$ is $4 + h$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 finds $y_Q = (3 + h)^2 - 2(3 + h) = 3 + 4h + h^2$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 divides $y_Q - 3 = 4h + h^2$ by $h$ to reach $4 + h$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\ny_Q = 9 + 6h + h^2 - 6 - 2h = 3 + 4h + h^2\n$$\n\n$$\n\\text{gradient } PQ = \\frac{(3 + 4h + h^2) - 3}{(3 + h) - 3} = \\frac{4h + h^2}{h} = 4 + h\n$$"
+    },
+    "explanation": "Gradient of a chord = difference in y ÷ difference in x."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the gradient of $PQ$ when $h = 0.1$ and when $h = 0.01$.",
+    "payload": {
+     "template": "h = 0.1: {{blank:a}}; h = 0.01: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "4.1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "4.01"
+       ]
+      }
+     ]
+    },
+    "explanation": "$4 + 0.1 = 4.1$ and $4 + 0.01 = 4.01$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Deduce the gradient of the curve at P.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "As $h \\to 0$, $4 + h \\to 4$.",
+    "workedSolution": "1. As $h \\to 0$, $4 + h \\to 4$."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement about the curve at P is correct?",
+    "options": [
+     {
+      "key": "A",
+      "content": "$y$ is decreasing at $P$",
+      "rationale": "That needs a negative gradient."
+     },
+     {
+      "key": "B",
+      "content": "$y$ is increasing at $P$",
+      "correct": true,
+      "rationale": "Correct: the gradient 4 is positive."
+     },
+     {
+      "key": "C",
+      "content": "$P$ is a stationary point",
+      "rationale": "That needs a gradient of 0."
+     },
+     {
+      "key": "D",
+      "content": "The tangent at $P$ is vertical",
+      "rationale": "A vertical line has no gradient; this tangent has gradient 4."
+     }
+    ],
+    "explanation": "A positive gradient means the curve rises from left to right at P."
+   }
+  ],
+  "explanation": "The chord gradient 4 + h tends to 4 as Q approaches P, so the tangent at P has gradient 4.",
+  "hints": [
+   "Expand $(3 + h)^2$ carefully.",
+   "Let h become very small in 4 + h."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "4.1"
+      },
+      {
+       "blankId": "b",
+       "text": "4.01"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0.41"
+       },
+       {
+        "blankId": "b",
+        "text": "0.0401"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "4.01"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "calculus.derivative-idea.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amath.calculus.derivative-idea"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "$P$ is the point $(2, 8)$ on the curve $y = x^3$. Chords are drawn from $P$ to points $Q$ on the curve.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the gradient of the chord $PQ$ when $Q$ has $x$-coordinate $2.1$. Give the exact value.",
+    "answerSpec": {
+     "value": 12.61000000000001,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$2.1^3 = 9.261$; gradient $= \\dfrac{9.261 - 8}{0.1} = 12.61$.",
+    "workedSolution": "1. $2.1^3 = 9.261$; gradient $= \\dfrac{9.261 - 8}{0.1} = 12.61$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the gradient of the chord when $Q$ has $x$-coordinate $2.01$. Give the exact value.",
+    "answerSpec": {
+     "value": 12.060099999999707,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$2.01^3 = 8.120601$; gradient $= \\dfrac{0.120601}{0.01} = 12.0601$.",
+    "workedSolution": "1. $2.01^3 = 8.120601$; gradient $= \\dfrac{0.120601}{0.01} = 12.0601$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the gradient of the curve at P suggested by these results.",
+    "answerSpec": {
+     "value": 12
+    },
+    "explanation": "The chord gradients 12.61, 12.0601, … approach 12.",
+    "workedSolution": "1. The chord gradients 12.61, 12.0601, … approach 12."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "How could the estimate in part (c) be made more convincing?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Use Q with x-coordinate 3",
+      "rationale": "A point further away gives a worse approximation (the gradient would be 19)."
+     },
+     {
+      "key": "B",
+      "content": "Use Q with x-coordinates even closer to 2, such as 2.001",
+      "correct": true,
+      "rationale": "Correct: the closer Q is to P, the closer the chord gradient is to the tangent's gradient."
+     },
+     {
+      "key": "C",
+      "content": "Use the gradient of the line joining P to the origin",
+      "rationale": "That line is not a chord near P; its gradient is 4."
+     },
+     {
+      "key": "D",
+      "content": "Average the y-coordinates of P and Q",
+      "rationale": "Averaging coordinates says nothing about steepness."
+     }
+    ],
+    "explanation": "Shrinking the distance between Q and P makes the chord approach the tangent."
+   }
+  ],
+  "explanation": "Chord gradients from P(2, 8) to nearby points tend to the gradient of the tangent at P, which is 12.",
+  "hints": [
+   "Gradient = (y_Q − 8) ÷ (x_Q − 2).",
+   "Look at the pattern of the two answers."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "12.61"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "12.0601"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "12"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "1.261"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.120601"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ }
+]
