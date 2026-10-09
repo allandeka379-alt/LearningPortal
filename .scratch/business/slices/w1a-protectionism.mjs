@@ -70,7 +70,7 @@ concept("bus.trade.protectionism", { file: "trade/protectionism", keyPrefix: "tr
       ["A tariff raises government revenue; a quota usually does not", "Correct: tariffs are taxes; quotas are quantity limits."],
       ["A quota raises import prices; a tariff never does", "Tariffs directly raise import prices."],
       ["A tariff bans imports; a quota allows them freely", "Neither statement is true."],
-      ["A quota is a tax; a tariff is a quantity limit", "This reverses the definitions."],
+      ["A quota is a tax on imports; a tariff is a quantity limit on them", "This reverses the definitions."],
     ],
     answer: "A",
     explanation: "Tariffs earn revenue and let any quantity in at a higher price; quotas fix the quantity and earn no tax.",

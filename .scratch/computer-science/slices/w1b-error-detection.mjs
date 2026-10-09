@@ -70,7 +70,7 @@ concept("comp.transmission.error-detection", { file: "transmission/error-detecti
   b.mcq({
     d: 3, skill: "EVALUATION",
     stem: "What is a drawback of an echo check?",
-    options: [["An error found may have happened on the return journey", "Correct: the sender cannot tell whether the error was in the original transmission or in the echo."], ["It cannot detect errors in more than one bit", "Comparing whole copies can detect many bit errors."], ["It only works with even parity", "Echo checks do not use parity."], ["The receiver must calculate a check digit", "Check digits are for data entry, not echo checks."]],
+    options: [["An error found may have happened on the return journey", "Correct: the sender cannot tell whether the error was in the original transmission or in the echo."], ["It cannot detect errors in more than one bit", "Comparing whole copies can detect many bit errors."], ["It only works with even parity", "Echo checks do not use parity."], ["The receiver must calculate a check digit for every byte", "Check digits are for data entry, not echo checks."]],
     answer: "A",
     hints: ["The data travels twice. What could go wrong on the second trip?"],
     explanation: "Echo checks double the traffic, and if the copies differ the sender cannot tell which journey caused the error, so it simply resends.",

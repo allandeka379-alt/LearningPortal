@@ -95,7 +95,7 @@ concept("geo.population.terms-data", { file: "population/terms-data", keyPrefix:
       ["Mobile cross-border traders and the homeless", "Correct: they are hard to find on census night."],
       ["Teachers living in school houses", "They have fixed addresses."],
       ["Families in planned suburbs", "These are easy to enumerate."],
-      ["Patients in hospital on census night", "Institutions are counted directly."],
+      ["Patients in district hospitals on census night", "Institutions are counted directly."],
     ],
     answer: "A",
     explanation: "Mobile and homeless people are the hardest to count.",

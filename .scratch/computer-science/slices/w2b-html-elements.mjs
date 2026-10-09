@@ -91,7 +91,7 @@ concept("comp.web.html-elements", { file: "web/html-elements", keyPrefix: "web.h
       ["The site may look similar to many other sites", "Correct: templates are shared by many users."],
       ["Every page has a consistent layout", "This is an advantage."],
       ["A site can be produced quickly", "This is an advantage."],
-      ["Little knowledge of HTML is needed", "This is an advantage."],
+      ["Little knowledge of HTML or CSS is needed to build it", "This is an advantage."],
     ],
     answer: "A",
     explanation: "Templates are quick and consistent but less original and less flexible.",

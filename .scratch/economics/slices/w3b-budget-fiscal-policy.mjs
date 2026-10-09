@@ -49,7 +49,7 @@ concept("econ.fiscal.budget-fiscal-policy", { file: "fiscal/budget-fiscal-policy
     stem: "What is the difference between a budget deficit and the national debt?",
     options: [
       ["The deficit is one year's shortfall; the debt is the total owed from past borrowing", "Correct: deficits add to the debt."],
-      ["The deficit is owed to foreigners; the debt is owed to local banks", "Both can be owed to residents or foreigners."],
+      ["The deficit is owed to foreign lenders; the debt is owed to local banks and households", "Both can be owed to residents or foreigners."],
       ["The deficit is the total owed; the debt is one year's shortfall", "This reverses the two terms."],
       ["They are two names for exactly the same figure", "One is a yearly flow, the other a total stock."],
     ],
@@ -91,7 +91,7 @@ concept("econ.fiscal.budget-fiscal-policy", { file: "fiscal/budget-fiscal-policy
     options: [
       ["Higher productive capacity in farming, supporting economic growth", "Correct: irrigation raises output per hectare and reduces dependence on rain."],
       ["A permanent rise in the rate of inflation", "Higher capacity tends to reduce, not raise, inflation pressure in the long run."],
-      ["A fall in agricultural output as farmers stop working", "Irrigation makes farming more productive."],
+      ["A fall in agricultural output as farmers stop working the land they own", "Irrigation makes farming more productive."],
       ["A permanent budget surplus", "The spending adds to the budget deficit in the short run."],
     ],
     answer: "A",
@@ -103,7 +103,7 @@ concept("econ.fiscal.budget-fiscal-policy", { file: "fiscal/budget-fiscal-policy
     stem: "A government cuts income tax to raise spending in a recession, but the effect on domestic output is much smaller than expected. Which is the most likely reason?",
     options: [
       ["Households spent much of the extra income on imported goods", "Correct: spending on imports creates output abroad, not at home."],
-      ["The tax cut increased households' disposable income", "That is how the policy is meant to work, not why it failed."],
+      ["The tax cut increased households' disposable income as planned", "That is how the policy is meant to work, not why it failed."],
       ["Firms hired more workers to meet higher demand", "This would make the effect larger, not smaller."],
       ["Government spending on schools stayed the same", "Unchanged spending does not reduce the effect of the tax cut."],
     ],

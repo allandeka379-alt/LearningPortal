@@ -60,7 +60,7 @@ concept("bus.communication.methods", { file: "communication/methods", keyPrefix:
     stem: "Which is a disadvantage of email?",
     options: [
       ["It may be ignored or lost among many other messages", "Correct: busy receivers may not read it."],
-      ["It is always slower than sending a letter", "Email is usually much faster than post."],
+      ["It is always slower than sending a letter by ordinary post", "Email is usually much faster than post."],
       ["It cannot carry attached documents", "Email can carry attachments."],
       ["It leaves no record of the message", "Emails can be stored as records."],
     ],

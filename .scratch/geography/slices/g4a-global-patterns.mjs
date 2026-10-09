@@ -31,7 +31,7 @@ concept("geo.food.global-patterns", { file: "food/global-patterns", keyPrefix: "
     stem: "What is meant by **food miles**?",
     options: [
       ["The distance food travels from where it is produced to where it is eaten", "Correct: long food miles usually mean more transport emissions."],
-      ["The distance a farmer walks from home to his fields each day", "This is not the meaning of food miles."],
+      ["The distance a farmer walks from home to his fields and back again each day", "This is not the meaning of food miles."],
       ["The area of land needed to feed one person", "This is sometimes called a food or land footprint."],
       ["The amount of food wasted by supermarkets", "This is food waste."],
     ],
@@ -56,7 +56,7 @@ concept("geo.food.global-patterns", { file: "food/global-patterns", keyPrefix: "
     options: [
       ["The use of high-yielding crop varieties with fertiliser and irrigation from the 1960s", "Correct: it greatly increased wheat and rice yields in Asia and Latin America."],
       ["A campaign to plant trees in deserts", "That is afforestation, not the Green Revolution."],
-      ["A switch from growing crops to organic livestock farming in the 1960s", "The Green Revolution increased chemical inputs."],
+      ["A switch from growing cereal crops to organic livestock farming across Asia in the 1960s", "The Green Revolution increased chemical inputs."],
       ["The banning of fertilisers to protect rivers", "The Green Revolution used more fertiliser, not less."],
     ],
     answer: "A",
@@ -83,7 +83,7 @@ concept("geo.food.global-patterns", { file: "food/global-patterns", keyPrefix: "
       ["Country Y has suffered years of civil war that disrupted farming and trade", "Correct: conflict destroys crops and blocks food supplies."],
       ["Country Y receives more reliable rainfall than Country X", "The question states the climates are the same."],
       ["Country Y has more fertile soils than Country X", "The soils are the same, and better soils would raise intake."],
-      ["Country Y has a much smaller population growth rate than Country X", "Slower population growth would help, not reduce, food per person."],
+      ["Country Y has a much smaller population growth rate than neighbouring Country X", "Slower population growth would help, not reduce, food per person."],
     ],
     answer: "A",
     explanation: "When physical factors are equal, human factors such as conflict and poverty explain the difference.",
@@ -94,7 +94,7 @@ concept("geo.food.global-patterns", { file: "food/global-patterns", keyPrefix: "
     stem: "Which statement is the most balanced view of exporting fresh vegetables from an LIC to Europe?",
     options: [
       ["It earns foreign currency and jobs, but uses scarce water and land that could grow local food", "Correct: it weighs benefits against costs."],
-      ["It only benefits European consumers and supermarkets, and harms everyone in the LIC", "Workers and the government in the LIC gain jobs and income."],
+      ["It only benefits European consumers and supermarkets, and harms every single person in the LIC", "Workers and the government in the LIC gain jobs and income."],
       ["It has no environmental impact because vegetables are natural", "Air freight, water use and pesticides have impacts."],
       ["It always raises the calorie intake of everyone in the LIC", "Export crops do not necessarily feed local people."],
     ],

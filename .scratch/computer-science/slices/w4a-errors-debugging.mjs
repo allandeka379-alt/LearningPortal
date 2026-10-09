@@ -47,7 +47,7 @@ concept("comp.algorithms.errors-debugging", { file: "algorithms/errors-debugging
     stem: "What is a **syntax error**?",
     options: [
       ["An error that breaks the grammar rules of the programming language", "Correct: the translator cannot translate it."],
-      ["An error that makes the program give the wrong answer", "That is a logic error."],
+      ["An error that lets the program run but makes it give the wrong answer", "That is a logic error."],
       ["An error that makes a running program crash", "That is a run-time error."],
       ["An error made by the user when typing input data", "That is a data entry error, caught by validation."],
     ],
@@ -72,7 +72,7 @@ concept("comp.algorithms.errors-debugging", { file: "algorithms/errors-debugging
     options: [
       ["Dividing a total by a count that is zero", "Correct: division by zero crashes the program while it runs."],
       ["Spelling `OUTPUT` as `OUPUT`", "That is a syntax error."],
-      ["Using `<` where `>` was needed", "That is a logic error."],
+      ["Using `<` where `>` was needed in a condition", "That is a logic error."],
       ["Leaving out a comment", "Comments do not affect how a program runs."],
     ],
     answer: "A",
@@ -149,7 +149,7 @@ concept("comp.algorithms.errors-debugging", { file: "algorithms/errors-debugging
     stem: "What does a **breakpoint** do when debugging?",
     options: [
       ["It pauses the program at a chosen line so values can be inspected", "Correct."],
-      ["It stops the program permanently when an error is found", "A breakpoint is a deliberate, temporary pause."],
+      ["It stops the program permanently as soon as any error is found in it", "A breakpoint is a deliberate, temporary pause."],
       ["It splits a long program into separate modules", "That is decomposition."],
       ["It corrects syntax errors automatically", "It does not change the code."],
     ],
@@ -188,7 +188,7 @@ concept("comp.algorithms.errors-debugging", { file: "algorithms/errors-debugging
     stem: "Which change best prevents a run-time error in `Average ← Total / Count`?",
     options: [
       ["Only divide when `Count > 0`, otherwise output a message", "Correct: this avoids division by zero."],
-      ["Change the line to `Average ← Total * Count`", "That calculates something different."],
+      ["Change the line to `Average ← Total * Count` so it never divides", "That calculates something different."],
       ["Initialise `Total` to 1 instead of 0", "That makes the total wrong and does not stop the crash."],
       ["Use `Average ← Count / Total` instead", "That is the wrong calculation and Total could also be 0."],
     ],

@@ -45,7 +45,7 @@ concept("eng.functional.formal-letter", { file: "functional/formal-letter", keyP
     stem: "Which is the most suitable **first sentence** for a letter applying for a holiday job at a supermarket?",
     options: [
       ["I wish to apply for the post of shelf packer advertised in The Chronicle.", "Correct: it states the purpose and where the post was advertised."],
-      ["I hope this letter finds you well and that business is going nicely.", "A rambling greeting delays the purpose; formal letters state it at once."],
+      ["I hope this letter finds you well and that your business is going very nicely.", "A rambling greeting delays the purpose; formal letters state it at once."],
       ["My name is Farai and I am sixteen years old and I like shopping.", "The name goes at the end; the age and interests are not the purpose."],
       ["I really, really need a job these holidays, so please help me out.", "Pleading and informal; it does not identify the post."],
     ],

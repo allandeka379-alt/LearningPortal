@@ -93,7 +93,7 @@ concept("bus.finance.need-for-finance", { file: "finance/need-for-finance", keyP
     stem: "In ZIMSEC Commerce, capital invested in buildings and machinery that stays in the business for many years is called:",
     options: [
       ["Long-term (fixed) capital", "Correct: it finances non-current assets."],
-      ["Short-term capital", "Short-term capital finances current assets."],
+      ["Short-term (circulating) capital", "Short-term capital finances current assets."],
       ["Working capital", "Working capital is current assets minus current liabilities."],
       ["Called-up capital", "Called-up capital relates to shares."],
     ],

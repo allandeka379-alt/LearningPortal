@@ -49,7 +49,7 @@ concept("econ.labour.wage-differentials", { file: "labour/wage-differentials", k
     options: [
       ["A woman paid less than a man for doing the same job equally well", "Correct: unequal pay for the same work and ability."],
       ["A qualified engineer paid more than an apprentice", "This reflects training and skill."],
-      ["A night-shift worker paid more than a day-shift worker", "This compensates for unsocial hours."],
+      ["A night-shift worker paid more than a day-shift worker in the same job", "This compensates for unsocial hours."],
       ["A union member paid more after collective bargaining", "This reflects bargaining strength."],
     ],
     answer: "A",
@@ -138,7 +138,7 @@ concept("econ.labour.wage-differentials", { file: "labour/wage-differentials", k
       ["Many unskilled workers compete for farm jobs, and output per worker is low", "Correct: large supply and low productivity keep wages low."],
       ["Farming needs more qualifications than manufacturing", "Most farm jobs need few formal qualifications."],
       ["Primary-sector workers are all members of strong unions", "Farm workers are often poorly organised."],
-      ["The prices of farm products are fixed by law at a high level", "High fixed prices would tend to raise farm wages."],
+      ["The prices of farm products are fixed by law at a high level to protect farmers", "High fixed prices would tend to raise farm wages."],
     ],
     answer: "A",
     hints: ["Think about both supply of labour and productivity."],

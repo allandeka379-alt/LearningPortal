@@ -55,7 +55,7 @@ concept("bus.organisation.multinationals", { file: "organisation/multinationals"
     stem: "Which is a reason for a business to become a multinational?",
     options: [
       ["To avoid import tariffs by producing inside a market", "Correct: local production avoids trade barriers."],
-      ["To pay higher wages than in its home country", "Firms usually seek lower costs, not higher wages."],
+      ["To pay higher wages to workers than in its home country", "Firms usually seek lower costs, not higher wages."],
       ["To increase its transport costs", "Producing near customers reduces transport costs."],
       ["To reduce the number of markets it sells in", "MNCs aim to reach more markets."],
     ],
@@ -80,7 +80,7 @@ concept("bus.organisation.multinationals", { file: "organisation/multinationals"
     stem: "Which condition would most increase the benefit of a new foreign-owned factory to Zimbabwe?",
     options: [
       ["Requiring it to train and promote local managers", "Correct: skills stay in the country."],
-      ["Allowing it to send all its profits home", "This reduces the benefit to the host."],
+      ["Allowing it to send all its profits back to its home country", "This reduces the benefit to the host."],
       ["Exempting it from environmental rules", "This increases the risk of pollution."],
       ["Letting it import all its raw materials", "This reduces business for local suppliers."],
     ],

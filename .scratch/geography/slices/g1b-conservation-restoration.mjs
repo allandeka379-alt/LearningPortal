@@ -19,7 +19,7 @@ concept("geo.ecosystems.conservation-restoration", { file: "ecosystems/conservat
     stem: "How does a **biogas digester** help conserve woodland?",
     options: [
       ["It gives cooking fuel from dung, so less firewood is cut", "Correct: it replaces wood as a fuel."],
-      ["It makes newly planted trees grow much faster", "Biogas slurry can be used as fertiliser, but the main benefit is replacing firewood."],
+      ["It makes newly planted trees in the woodland grow much faster", "Biogas slurry can be used as fertiliser, but the main benefit is replacing firewood."],
       ["It stops veld fires from spreading", "Biogas has no effect on fire spread."],
       ["It turns firewood into charcoal", "Biogas is made from dung and plant waste, not by charring wood."],
     ],
@@ -57,7 +57,7 @@ concept("geo.ecosystems.conservation-restoration", { file: "ecosystems/conservat
       ["Livestock were not kept away from the seedlings", "Correct: browsing and trampling kill young trees."],
       ["The trees were planted on a slope", "Many trees grow well on slopes if protected."],
       ["Too much soil was held by the roots", "Roots holding soil is a benefit, not a cause of death."],
-      ["Tree planting always fails in Zimbabwe", "Many tree planting projects succeed when protected and cared for."],
+      ["Tree planting on hillsides always fails in Zimbabwe", "Many tree planting projects succeed when protected and cared for."],
     ],
     hints: ["What usually wanders freely on communal land?"],
     answer: "A",

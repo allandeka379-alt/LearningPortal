@@ -35,7 +35,7 @@ concept("bus.marketing.market-research", { file: "marketing/market-research", ke
     stem: "What is a sample in market research?",
     options: [
       ["The people chosen from the target market to take part", "Correct: a sample represents the whole population."],
-      ["A free product given to customers to try", "That is a free sample, a sales promotion method."],
+      ["A free product given to customers to try before buying", "That is a free sample, a sales promotion method."],
       ["Every customer the business has ever served", "That is the whole population, not a sample."],
       ["A list of questions given to customers", "That is a questionnaire."],
     ],
@@ -60,7 +60,7 @@ concept("bus.marketing.market-research", { file: "marketing/market-research", ke
     options: [
       ["Why do you prefer to buy bread from a tuck shop?", "Correct: it asks for reasons and opinions."],
       ["How many loaves do you buy each week?", "This produces a number: quantitative data."],
-      ["How much do you spend on bread each week?", "An amount of money is quantitative."],
+      ["How much money does your family spend on bread each week?", "An amount of money is quantitative."],
       ["How many people live in your household?", "A count is quantitative."],
     ],
     answer: "A",
@@ -85,7 +85,7 @@ concept("bus.marketing.market-research", { file: "marketing/market-research", ke
       ["Don't you agree that our new soap smells wonderful?", "Correct: it pushes the respondent towards one answer."],
       ["How often do you buy bath soap?", "A neutral question about frequency."],
       ["Which brand of soap did you buy last?", "A neutral question about behaviour."],
-      ["What price would you pay for a bar of soap?", "A neutral question about price."],
+      ["What price would you be willing to pay for a bar of soap?", "A neutral question about price."],
     ],
     answer: "A",
     hints: ["Which question suggests the answer the business wants?"],

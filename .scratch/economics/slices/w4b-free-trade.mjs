@@ -76,7 +76,7 @@ concept("econ.trade.free-trade", { file: "trade/free-trade", keyPrefix: "trade.f
     options: [
       ["New industries cannot gain economies of scale while facing large foreign competitors", "Correct: the infant industry argument."],
       ["Free trade always raises the prices paid by consumers", "Free trade usually lowers prices."],
-      ["Free trade prevents the country from exporting its minerals and farm goods", "Free trade makes exporting easier."],
+      ["Free trade prevents the country from exporting its minerals and farm goods to neighbours", "Free trade makes exporting easier."],
       ["Free trade reduces competition in the home market", "It increases competition."],
     ],
     answer: "A",

@@ -25,7 +25,7 @@ concept("eng.functional.notes-and-data", { file: "functional/notes-and-data", ke
       ["After three weeks without water, the borehole was repaired with a donation from a local business.", "Correct: all three parts of the note in one fluent, accurate sentence."],
       ["Borehole repaired. Three weeks. Donation by local business. Very good.", "This copies the note without grammar or links."],
       ["The borehole was repaired, which was very good news indeed for us all.", "The time and the donation are left out."],
-      ["A local business kindly donated three brand-new boreholes to the school last week.", "This contradicts the note: one borehole repaired, not three donated."],
+      ["A local business kindly donated three brand-new boreholes to the school and the clinic last week.", "This contradicts the note: one borehole repaired, not three donated."],
     ],
     answer: "A",
     explanation: "A good amplification includes **every part** of the note, adds grammar and links, and never contradicts the material.",
@@ -35,7 +35,7 @@ concept("eng.functional.notes-and-data", { file: "functional/notes-and-data", ke
     stem: "A survey found that **45 out of 150** learners cycle to school. Which description is accurate?",
     options: [
       ["between a quarter and a third of them", "Correct: a quarter of 150 is 37.5 and a third is 50, so 45 lies between."],
-      ["more than half of the learners", "Half of 150 is 75, so 45 is far less than half."],
+      ["a little more than half of the learners", "Half of 150 is 75, so 45 is far less than half."],
       ["almost all of the learners", "45 out of 150 is a minority."],
       ["exactly a fifth of the learners", "A fifth of 150 is 30, not 45."],
     ],
@@ -59,7 +59,7 @@ concept("eng.functional.notes-and-data", { file: "functional/notes-and-data", ke
     stem: `Study the table.\n\n${TABLE}\n\nWhich statement is **accurate**?`,
     options: [
       ["Chess club membership more than doubled, while Drama fell by fifteen.", "Correct: Chess 12 → 30 (2.5 times); Drama 40 → 25 (down 15)."],
-      ["Every club gained members between 2024 and 2025 at the school.", "Drama and Choir both lost members."],
+      ["Every single club gained new members between 2024 and 2025 at the school.", "Drama and Choir both lost members."],
       ["The Environment club had the largest membership in both years.", "The Choir was largest in both years (50 and 48)."],
       ["Choir membership fell sharply from 50 members to 30 members.", "Choir fell only slightly, from 50 to 48."],
     ],
@@ -73,7 +73,7 @@ concept("eng.functional.notes-and-data", { file: "functional/notes-and-data", ke
     options: [
       ["Form 4 borrowing fell by more than half, so the reasons deserve investigation.", "Correct: 90 to 41 is a fall of 49, more than half, and the table cannot explain why."],
       ["Form 1 borrowed more books than any other form in both terms.", "In Term 1, Form 4 (90) borrowed more than Form 1 (78)."],
-      ["Form 4 learners have completely stopped reading library books.", "They still borrowed 41 books in Term 2."],
+      ["Form 4 learners have now completely stopped borrowing and reading library books.", "They still borrowed 41 books in Term 2."],
       ["Borrowing increased in every form from Term 1 to Term 2.", "Form 4 borrowing fell sharply."],
     ],
     answer: "A",

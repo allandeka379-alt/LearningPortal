@@ -75,7 +75,7 @@ concept("econ.basics.ppc-shapes-shifts", { file: "basics/ppc-shapes-shifts", key
       stem: `An economy's production possibilities are shown below.\n\n${table(["Cotton (thousand bales)", "Wheat (thousand tonnes)"], x.map((v, i) => [v, y[i]]))}\n\nWhat shape is its production possibility curve?`,
       options: [
         ["A straight line, because the opportunity cost is constant", "Correct: each extra 5 thousand bales of cotton costs 15 thousand tonnes of wheat."],
-        ["Concave, because the opportunity cost is rising", "The wheat given up does not rise; it is 15 every time."],
+        ["Concave, because the opportunity cost of cotton is rising", "The wheat given up does not rise; it is 15 every time."],
         ["Convex, because the opportunity cost is falling", "The wheat given up does not fall; it is 15 every time."],
         ["Concave, because both goods are produced", "Shape depends on how opportunity cost changes, not on producing two goods."],
       ],

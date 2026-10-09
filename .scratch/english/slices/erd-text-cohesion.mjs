@@ -111,7 +111,7 @@ concept("eng.reading.text-cohesion", { file: "reading/text-cohesion", keyPrefix:
     options: [
       ["pupils who read for pleasure every evening", "Correct: the first of the two groups mentioned."],
       ["pupils who read only before tests", "That group is the latter."],
-      ["teachers who mark the compositions", "Teachers are not mentioned."],
+      ["teachers who mark the pupils' compositions", "Teachers are not mentioned."],
       ["all the pupils in the class", "The former refers to one of two groups."],
     ],
     answer: "A",
@@ -153,7 +153,7 @@ concept("eng.reading.text-cohesion", { file: "reading/text-cohesion", keyPrefix:
         stem: "In paragraph 3, what does **therefore** tell you about the free tastings?",
         options: [
           ["They were a response to the problem of selling the honey", "Correct: therefore introduces a result of the difficulties described."],
-          ["They explain why the honey was cheaper than syrup", "The honey's price is not linked to the tastings."],
+          ["They explain why the honey was cheaper than the syrup in shops", "The honey's price is not linked to the tastings."],
           ["They happened before the group was formed", "Therefore signals result, not earlier time."],
           ["They were an example of the syrups sold in shops", "Therefore does not introduce an example."],
         ],
@@ -205,7 +205,7 @@ concept("eng.reading.text-cohesion", { file: "reading/text-cohesion", keyPrefix:
     stem: `${BEES}\n\nIn paragraph 3, what does **the hardest part** most likely tell you about the rest of the group's work?`,
     options: [
       ["The other parts, such as keeping bees, were easier by comparison", "Correct: the superlative compares selling with the other tasks."],
-      ["Selling the honey later became impossible for the women", "The paragraph shows that selling improved with tastings."],
+      ["Selling the honey in the shops later became impossible for the women", "The paragraph shows that selling improved with tastings."],
       ["Keeping the hives was the most difficult task of all", "The writer says selling was the hardest part."],
       ["The lodges found it hard to buy the honey in bulk", "The difficulty belonged to the women, not to the lodges."],
     ],

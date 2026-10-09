@@ -7,7 +7,7 @@ concept("eng.composition.discursive", { file: "composition/discursive", keyPrefi
     stem: "What is the main aim of a **discursive** composition?",
     options: [
       ["To explore several sides of an issue before reaching a judgement", "Correct: discursive writing weighs different viewpoints fairly."],
-      ["To persuade the reader to accept one view and reject all others", "That is argumentative writing."],
+      ["To persuade the reader to accept one view and to reject all others", "That is argumentative writing."],
       ["To tell an exciting story with a clear plot and a climax", "That is narrative writing."],
       ["To describe a place vividly using details from the five senses", "That is descriptive writing."],
     ],
@@ -19,7 +19,7 @@ concept("eng.composition.discursive", { file: "composition/discursive", keyPrefi
     stem: "Which sentence uses **impersonal** language suitable for the body of a discursive composition?",
     options: [
       ["It is often argued that city life offers better job opportunities.", "Correct: the view is presented without the writer's I."],
-      ["I think that city life is definitely much better for everyone.", "This states the writer's opinion with I and sounds one-sided."],
+      ["I think that city life is definitely much better for everyone today.", "This states the writer's opinion with I and sounds one-sided."],
       ["You would be crazy to choose a village over a modern city.", "This is informal, rude and one-sided."],
       ["City life is the best and nobody can ever argue against it.", "This is an absolute claim that leaves no room for discussion."],
     ],
@@ -50,7 +50,7 @@ concept("eng.composition.discursive", { file: "composition/discursive", keyPrefi
     stem: "Which is the **best conclusion** for *\"Discuss the advantages and disadvantages of boarding schools.\"*?",
     options: [
       ["On balance, boarding suits independent learners well, provided schools keep families closely involved.", "Correct: it weighs both sides and gives a qualified, reasoned judgement."],
-      ["In conclusion, boarding schools have advantages and disadvantages, as this essay has shown.", "This only repeats the title and gives no judgement."],
+      ["In conclusion, boarding schools clearly have both advantages and disadvantages, as this essay has shown.", "This only repeats the title and gives no judgement."],
       ["Boarding schools also have very good sports facilities and large dining halls.", "This introduces new points instead of concluding."],
       ["Anyone who sends a child to boarding school simply does not love them enough.", "This is extreme and unfair, the opposite of a balanced conclusion."],
     ],
@@ -100,7 +100,7 @@ concept("eng.composition.discursive", { file: "composition/discursive", keyPrefi
     stem: "Which pair of points gives the **best balance** for *\"Should traditional ceremonies be preserved in modern Zimbabwe?\"*?",
     options: [
       ["For: they pass on identity and values. Against: some may clash with rights and cost families a lot.", "Correct: two serious, developed points, one on each side."],
-      ["For: they are good for people. Against: some people do not really like them at all.", "Both points are vague and undeveloped."],
+      ["For: they are good for people and communities. Against: some people do not really like them at all.", "Both points are vague and undeveloped."],
       ["For: they keep identity alive. Against: they keep identity alive for older people only.", "The second point barely differs from the first; there is no real opposing view."],
       ["For: they are colourful and loud. Against: they usually happen at the weekends.", "Neither point engages with whether ceremonies should be preserved."],
     ],

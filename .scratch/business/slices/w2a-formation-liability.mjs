@@ -33,7 +33,7 @@ concept("bus.organisation.formation-liability", { file: "organisation/formation-
       ["How directors are elected and meetings are held", "Correct: the articles are the company's internal rules."],
       ["The address of the registered office", "This is in the memorandum."],
       ["The objects of the company", "The objects are in the memorandum."],
-      ["A statement that liability is limited", "This is in the memorandum."],
+      ["A statement that the members' liability is limited", "This is in the memorandum."],
     ],
     answer: "A",
     explanation: "The articles cover internal matters: directors, meetings, voting, share transfers, dividends and accounts.",
@@ -55,7 +55,7 @@ concept("bus.organisation.formation-liability", { file: "organisation/formation-
     stem: "What does **corporate legal personality** allow a company to do?",
     options: [
       ["Own property and make contracts in its own name", "Correct: the company is a legal person separate from its owners."],
-      ["Avoid paying any of the debts it runs up", "A company must pay its debts as far as its assets allow."],
+      ["Avoid paying any of the debts it runs up in trading", "A company must pay its debts as far as its assets allow."],
       ["Ignore company law", "Companies must follow company law."],
       ["Pay no tax on its profits", "Companies pay tax on their profits."],
     ],

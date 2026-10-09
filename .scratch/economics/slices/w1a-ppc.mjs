@@ -133,7 +133,7 @@ concept("econ.basics.ppc", { file: "basics/ppc", keyPrefix: "basics.ppc" }, (b) 
     options: [
       ["A reliable electricity supply that lets idle factories work again", "Correct: idle resources are re-employed, so output rises to the curve."],
       ["The discovery of a large new deposit of platinum", "A new resource shifts the curve outwards; it does not use idle capacity."],
-      ["Emigration of many skilled workers to other countries", "Fewer resources would shift the curve inwards."],
+      ["Emigration of many skilled workers to other countries in the region", "Fewer resources would shift the curve inwards."],
       ["A rise in the price of both goods in the economy", "Prices do not change the economy's productive capacity or its use."],
     ],
     answer: "A",

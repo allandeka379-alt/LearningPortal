@@ -67,7 +67,7 @@ concept("econ.firms.smes-business-plan", { file: "firms/smes-business-plan", key
       ["Market research and analysis", "Correct."],
       ["Operations plan", "This covers premises, equipment and production."],
       ["Financial plan", "This covers costs, sales forecasts and cash flow."],
-      ["Management and staffing", "This covers who runs the business."],
+      ["Management and staffing plan", "This covers who runs the business."],
     ],
     answer: "A",
     explanation: "The market analysis section shows that there are customers for the product and who the competitors are.",
@@ -115,7 +115,7 @@ concept("econ.firms.smes-business-plan", { file: "firms/smes-business-plan", key
     stem: "Which is the **main** purpose of a business plan for a person seeking a loan?",
     options: [
       ["To show the lender that the business is viable and can repay", "Correct."],
-      ["To register the business as a public limited company", "Registration needs separate documents."],
+      ["To register the business as a public limited company on the stock exchange", "Registration needs separate documents."],
       ["To guarantee that the business will make a profit", "A plan cannot guarantee profit."],
       ["To avoid paying any tax on the business's profits", "A business plan has no effect on tax."],
     ],

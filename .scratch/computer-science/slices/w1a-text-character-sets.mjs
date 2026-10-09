@@ -10,7 +10,7 @@ concept("comp.data.text-character-sets", { file: "data/text-character-sets", key
     stem: "What is a **character set**?",
     options: [
       ["A list of characters a computer recognises, each with a unique binary code", "Correct: both parts are needed, the list and the unique code."],
-      ["The set of keys on a computer keyboard and their positions", "The keyboard layout is not the character set; many characters have no key."],
+      ["The set of keys on a computer keyboard, together with the position of each key", "The keyboard layout is not the character set; many characters have no key."],
       ["A collection of fonts used to display text on the screen", "Fonts control how characters look, not their codes."],
       ["The number of characters that fit on one line of a page", "That is a layout setting, not a character set."],
     ],

@@ -14,7 +14,7 @@ concept("comp.network.cloud", { file: "network/cloud", keyPrefix: "network.cloud
     stem: "What is **cloud storage**?",
     options: [
       ["Storing data on remote servers reached over the internet", "Correct: the servers belong to a cloud provider."],
-      ["Storing data on the computer's own hard disk", "That is local storage."],
+      ["Storing data on the computer's own internal hard disk drive", "That is local storage."],
       ["Storing data in RAM while a program runs", "RAM is primary storage."],
       ["Storing data on a USB flash drive", "A flash drive is local storage."],
     ],
@@ -50,7 +50,7 @@ concept("comp.network.cloud", { file: "network/cloud", keyPrefix: "network.cloud
     stem: "Which is a **disadvantage** of cloud storage?",
     options: [
       ["Files cannot be reached when the internet connection fails", "Correct: cloud access depends on the connection."],
-      ["Files are lost if the user's laptop is stolen", "Cloud copies survive the loss of a device."],
+      ["Files are lost for good if the user's laptop is stolen or damaged", "Cloud copies survive the loss of a device."],
       ["Files cannot be shared with other people", "Sharing is a strength of cloud storage."],
       ["Storage cannot be increased", "Bigger plans can be bought at any time."],
     ],

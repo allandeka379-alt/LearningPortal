@@ -173,7 +173,7 @@ concept("bus.production.division-of-labour", { file: "production/division-of-lab
       P.mcq({
         label: "(a)", marks: 1,
         stem: "At present, the carpenters are specialised by:",
-        options: [["person (craft)", "Correct: each is a carpenter who makes the whole product."], ["process", "They do not yet divide the work into stages."], ["region", "Regional specialisation concerns areas, not one workshop."], ["country", "Nothing here involves countries."]],
+        options: [["person (craft)", "Correct: each is a carpenter who makes the whole product."], ["process (stages of work)", "They do not yet divide the work into stages."], ["region", "Regional specialisation concerns areas, not one workshop."], ["country", "Nothing here involves countries."]],
         answer: "A",
       }),
       P.manual({

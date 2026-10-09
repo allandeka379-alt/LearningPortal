@@ -46,7 +46,7 @@ concept("comp.prog.arrays-1d", { file: "prog/arrays-1d", keyPrefix: "prog.arrays
     options: [
       ["A fixed number of values of the same data type under one identifier", "Correct: elements share a name and type and are reached by index."],
       ["A single variable that can hold a value of any data type", "An array holds many values, all of one type."],
-      ["A list of values of different data types stored together", "0478 arrays hold one data type."],
+      ["A list of values of different data types stored together under one name", "0478 arrays hold one data type."],
       ["A file of records stored on a disk", "Arrays are held in memory while the program runs."],
     ],
     answer: "A",

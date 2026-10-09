@@ -67,7 +67,7 @@ concept("bus.people.leadership", { file: "people/leadership", keyPrefix: "people
     stem: "Why might a democratic style help a business introduce a major change, such as new machinery?",
     options: [
       ["Employees who are consulted are more likely to accept the change", "Correct: involvement reduces resistance."],
-      ["The change can be introduced without any discussion", "Discussion is the basis of democratic leadership."],
+      ["The change can be introduced without any discussion or consultation", "Discussion is the basis of democratic leadership."],
       ["Employees will not need any training", "Training is still needed for new machinery."],
       ["Decisions will be made faster than by one person", "Democratic decisions are usually slower."],
     ],

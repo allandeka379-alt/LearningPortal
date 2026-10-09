@@ -35,7 +35,7 @@ concept("comp.applications.industry-mining-wildlife", { file: "applications/indu
     stem: "In CAD/CAM, what happens to the CAD design file?",
     options: [
       ["It is converted into instructions that control CNC machines to make the part", "Correct: design and manufacture are linked."],
-      ["It is printed and given to the workers, who cut each part by hand", "That is not computer-aided manufacturing."],
+      ["It is printed on paper and given to the workers, who then cut each part by hand", "That is not computer-aided manufacturing."],
       ["It is deleted once the part has been drawn", "The design is used to make the part."],
       ["It is posted on a social network so that customers can approve it", "Not part of CAD/CAM."],
     ],
@@ -49,7 +49,7 @@ concept("comp.applications.industry-mining-wildlife", { file: "applications/indu
       ["Designs can be changed and tested on screen before anything is made", "Correct: mistakes are found early, saving materials."],
       ["No training at all is needed to use the CAD software", "CAD needs training."],
       ["CAD software and computers cost nothing", "They are expensive."],
-      ["CAD software makes the parts as well as designing them", "Making parts is CAM."],
+      ["CAD software makes the finished parts as well as designing them on screen", "Making parts is CAM."],
     ],
     answer: "A",
     explanation: "CAD drawings are accurate, easy to edit, viewable in 3D and testable by simulation.",
@@ -73,7 +73,7 @@ concept("comp.applications.industry-mining-wildlife", { file: "applications/indu
     options: [
       ["Signals a pump to add more lime until the pH is within limits", "Correct: the actuator corrects the condition."],
       ["Switches off the pH sensor", "The sensor must keep measuring."],
-      ["Prints a report for the manager to read next month", "The correction must be immediate."],
+      ["Prints a report on the low pH reading for the manager to read next month", "The correction must be immediate."],
       ["Increases the speed of the ore conveyor", "Adding more ore does not correct the pH."],
     ],
     answer: "A",

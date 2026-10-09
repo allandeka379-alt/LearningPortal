@@ -19,7 +19,7 @@ concept("bus.people.trade-unions", { file: "people/trade-unions", keyPrefix: "pe
     stem: "What is collective bargaining?",
     options: [
       ["Negotiation between a union and an employer on behalf of all members", "Correct: workers bargain as a group."],
-      ["Each worker agreeing pay individually with the manager", "That is individual bargaining."],
+      ["Each worker agreeing pay and conditions individually with the manager", "That is individual bargaining."],
       ["Customers negotiating discounts with shops", "That is about customers, not employees."],
       ["Businesses buying stock in bulk together", "That is bulk buying."],
     ],
@@ -55,7 +55,7 @@ concept("bus.people.trade-unions", { file: "people/trade-unions", keyPrefix: "pe
     stem: "A union member is called to a disciplinary hearing. How can the union help her?",
     options: [
       ["A union representative can attend and support her", "Correct: representation at hearings is a key benefit."],
-      ["The union can pay her wages permanently", "Unions do not replace wages."],
+      ["The union can take over paying her wages permanently", "Unions do not replace wages."],
       ["The union can dismiss the manager", "Unions have no power to dismiss managers."],
       ["The union can cancel the hearing", "Hearings are run by the employer."],
     ],
@@ -163,7 +163,7 @@ concept("bus.people.trade-unions", { file: "people/trade-unions", keyPrefix: "pe
       P.mcq({
         label: "(a)", marks: 1,
         stem: "What is the meeting between the union and the managers an example of?",
-        options: [["Collective bargaining", "Correct: negotiation for all members."], ["Induction", "Induction is for new employees."], ["Delegation", "Delegation passes authority within management."], ["Recruitment", "No vacancy is being filled."]],
+        options: [["Collective bargaining", "Correct: negotiation for all members."], ["Induction", "Induction is for new employees."], ["Delegation", "Delegation passes authority within management."], ["Recruitment of new staff", "No vacancy is being filled."]],
         answer: "A",
       }),
       P.manual({

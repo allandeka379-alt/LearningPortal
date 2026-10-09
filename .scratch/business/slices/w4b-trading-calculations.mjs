@@ -82,7 +82,7 @@ concept("bus.finance.trading-calculations", { file: "finance/trading-calculation
     stem: "Which business is likely to have the **highest** rate of stock turnover?",
     options: [
       ["A bakery selling fresh bread", "Correct: bread is sold and replaced daily."],
-      ["A furniture showroom", "Furniture sells slowly, so its rate is low."],
+      ["A furniture showroom selling beds", "Furniture sells slowly, so its rate is low."],
       ["A jewellery shop", "Jewellery sells slowly at high mark-ups."],
       ["A car dealer", "Cars are expensive and sell slowly."],
     ],

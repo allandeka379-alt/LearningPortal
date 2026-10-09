@@ -69,7 +69,7 @@ concept("comp.software.system-application", { file: "software/system-application
     options: [
       ["System software, because it translates code into machine code for the computer", "Correct: translators are system software even though programmers start them deliberately."],
       ["Application software, because a programmer opens it to do a task", "Being opened by a person does not make it an application; its job is translation for the processor."],
-      ["A utility, because it checks code for errors", "Error reporting is part of translation; a compiler is classed as a translator, not a maintenance utility."],
+      ["A utility, because it checks a programmer's source code for errors and reports them", "Error reporting is part of translation; a compiler is classed as a translator, not a maintenance utility."],
       ["Hardware, because it is part of the processor", "A compiler is a program, so it is software."],
     ],
     answer: "A",
@@ -81,7 +81,7 @@ concept("comp.software.system-application", { file: "software/system-application
     stem: "Why should a solid-state drive (SSD) **not** be defragmented?",
     options: [
       ["It has no moving read-write heads, so fragments do not slow it, and extra writes shorten its life", "Correct: access time is the same wherever data is stored, and flash memory wears with each write."],
-      ["Its files are always stored in one continuous area, so they never become fragmented", "Files can be fragmented on an SSD too; it simply does not matter for speed."],
+      ["Its files are always stored in one continuous area of the drive, so they can never become fragmented", "Files can be fragmented on an SSD too; it simply does not matter for speed."],
       ["Defragmenting would delete all the files on it", "Defragmenting moves files; it does not delete them."],
       ["An SSD is volatile, so the files it holds are lost when it is switched off", "An SSD is non-volatile secondary storage."],
     ],

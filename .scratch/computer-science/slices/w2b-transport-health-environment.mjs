@@ -23,7 +23,7 @@ concept("comp.applications.transport-health-environment", { file: "applications/
     stem: "What is an **electronic health record**?",
     options: [
       ["A patient's medical history stored on a computer system", "Correct: diagnoses, treatments, medicines, results and allergies."],
-      ["A sensor that measures a patient's heart rate", "That is part of a monitoring system."],
+      ["A sensor that measures and displays a patient's heart rate", "That is part of a monitoring system."],
       ["A printed prescription given to a patient", "A printout is not the electronic record."],
       ["A video call between a patient and a doctor", "That is telemedicine."],
     ],
@@ -59,7 +59,7 @@ concept("comp.applications.transport-health-environment", { file: "applications/
     stem: "How does an online bus booking system prevent two passengers from buying the same seat?",
     options: [
       ["The central database marks each seat as sold as soon as it is booked", "Correct: the seat is no longer offered once sold."],
-      ["The driver checks every ticket by hand before booking", "Booking is checked by the system, not by the driver."],
+      ["The driver checks every ticket by hand before the booking is confirmed online", "Booking is checked by the system, not by the driver."],
       ["Each passenger chooses a seat on a different bus", "This avoids the problem only by luck."],
       ["The e-ticket is printed twice", "Printing does not prevent double booking."],
     ],
@@ -71,8 +71,8 @@ concept("comp.applications.transport-health-environment", { file: "applications/
     hints: ["Which information is shared nationally rather than about one patient?"],
     stem: "How does a national **health information system** help the health ministry during a malaria outbreak?",
     options: [
-      ["Clinics send case numbers to a central database, so medicines can be sent where cases are rising", "Correct: data from many clinics shows where the outbreak is."],
-      ["It monitors each patient's heart rate continuously in every clinic in the country", "That is patient monitoring."],
+      ["Clinics send case numbers to a central database, so medicines go where cases are rising", "Correct: data from many clinics shows where the outbreak is."],
+      ["It monitors every patient's heart rate and temperature continuously in each hospital and clinic in the country", "That is patient monitoring."],
       ["It lets patients book appointments online", "That is an appointment system."],
       ["It prints prescriptions for each patient", "Prescriptions are local tasks."],
     ],
@@ -100,7 +100,7 @@ concept("comp.applications.transport-health-environment", { file: "applications/
       ["Sensitive patient data could be accessed by hackers or unauthorised staff", "Correct: confidentiality of medical data is critical."],
       ["Records can be searched more quickly by the staff on the wards", "This is a benefit."],
       ["Records can be backed up", "This is a benefit."],
-      ["Several departments can view the same patient's record at once", "This is a benefit."],
+      ["Several departments can view the same patient's record at once from different wards", "This is a benefit."],
     ],
     answer: "A",
     explanation: "Health data is personal and sensitive; access controls, encryption and backups are essential.",

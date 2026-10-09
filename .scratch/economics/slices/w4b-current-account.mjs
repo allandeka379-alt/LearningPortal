@@ -79,7 +79,7 @@ concept("econ.bop.current-account", { file: "bop/current-account", keyPrefix: "b
     stem: "A country has had a large current account deficit for several years. Which is the most likely way the deficit has been financed?",
     options: [
       ["By borrowing from abroad or using its reserves of foreign currency", "Correct: the outflow must be paid for with foreign currency from somewhere."],
-      ["By raising taxes on domestic incomes and company profits", "Taxes raise government revenue in local currency; they do not provide foreign currency."],
+      ["By raising taxes on domestic incomes and company profits at home", "Taxes raise government revenue in local currency; they do not provide foreign currency."],
       ["By printing more of its own currency", "Foreign suppliers need foreign currency, which a country cannot print."],
       ["By reducing its unemployment rate", "Unemployment is not a source of foreign currency."],
     ],

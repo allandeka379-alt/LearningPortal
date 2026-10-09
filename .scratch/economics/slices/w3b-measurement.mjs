@@ -61,7 +61,7 @@ concept("econ.national-income.measurement", { file: "national-income/measurement
     stem: "How do statisticians avoid **double counting** when they measure national income by the output method?",
     options: [
       ["They add only the value added at each stage of production", "Correct: value added excludes inputs bought from other firms."],
-      ["They add the value of all sales made by every firm", "Adding every sale counts intermediate goods more than once."],
+      ["They add the value of all sales made by every firm in the country", "Adding every sale counts intermediate goods more than once."],
       ["They leave out the output of the services sector", "Services are final output and must be counted."],
       ["They subtract exports from the value of all output", "Exports are produced in the country and are part of output."],
     ],

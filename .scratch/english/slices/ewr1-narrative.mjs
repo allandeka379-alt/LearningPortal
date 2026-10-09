@@ -20,7 +20,7 @@ concept("eng.composition.narrative", { file: "composition/narrative", keyPrefix:
     options: [
       ["The power died in the middle of Mufaro's maths test, and someone in the dark began to laugh.", "Correct: it begins at the key moment and adds a mysterious detail that creates suspense."],
       ["I am going to tell you about the night the lights went out in our town.", "Announcing the story wastes the opening and creates no tension."],
-      ["My name is Mufaro, I am sixteen and I live in Kwekwe with my two parents.", "A self-introduction delays the story and has nothing to do with the lights going out."],
+      ["My name is Mufaro, I am sixteen years old and I live in Kwekwe with my parents and my sister.", "A self-introduction delays the story and has nothing to do with the lights going out."],
       ["Electricity is produced at power stations and sent along cables to homes.", "A general fact sounds like a science textbook, not the start of a story."],
     ],
     answer: "A",
@@ -102,7 +102,7 @@ concept("eng.composition.narrative", { file: "composition/narrative", keyPrefix:
       ["It shifts between past and present tense.", "Correct: opened and growled are past; see and step are present."],
       ["It changes from first to third person.", "It stays in the first person (I) throughout."],
       ["It uses too many adjectives in a row.", "There are very few adjectives here."],
-      ["It begins in the middle of the action.", "Starting in the action is a strength, not an error."],
+      ["It begins right in the middle of the action.", "Starting in the action is a strength, not an error."],
     ],
     answer: "A",
     hints: ["Look at the verbs one by one."],

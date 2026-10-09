@@ -44,7 +44,7 @@ concept("bus.economy.government-policy", { file: "economy/government-policy", ke
       ["A construction company", "Correct: it may win contracts to build the clinics."],
       ["A hair salon", "A salon gains little directly from clinic building."],
       ["A cinema", "Cinemas are not linked to clinic construction."],
-      ["A travel agent", "Travel agents are not linked to clinic construction."],
+      ["A travel and tours agent", "Travel agents are not linked to clinic construction."],
     ],
     answer: "A",
     explanation: "Higher **government spending** on infrastructure creates contracts for construction firms and their suppliers.",
@@ -79,7 +79,7 @@ concept("bus.economy.government-policy", { file: "economy/government-policy", ke
     stem: "What is the main effect on a business of a rise in the tax on profits?",
     options: [
       ["Less profit after tax to pay owners or reinvest", "Correct: more of the profit goes to the government."],
-      ["Higher prices for all its raw materials", "Tax on profits does not change material prices."],
+      ["Higher prices for all the raw materials it buys", "Tax on profits does not change material prices."],
       ["More customers because prices fall", "Tax on profits does not lower prices."],
       ["Lower wages paid to its workers", "Wages are not directly changed by tax on profits."],
     ],

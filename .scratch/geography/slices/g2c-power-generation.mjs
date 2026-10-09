@@ -35,7 +35,7 @@ concept("geo.energy.power-generation", { file: "energy/power-generation", keyPre
     stem: "What is the **main** reason why Hwange power station was built where it is?",
     options: [
       ["It is next to a coalfield, so the bulky fuel need not be moved far", "Correct: coal is heavy and costly to transport, so the station is built beside the mine."],
-      ["It is close to Harare, the largest market for electricity", "Hwange is several hundred kilometres from Harare; the grid carries the power to markets."],
+      ["It is close to Harare, the largest market for electricity in Zimbabwe", "Hwange is several hundred kilometres from Harare; the grid carries the power to markets."],
       ["It stands in a gorge where a dam can store water", "A gorge suits HEP, not a coal-fired station."],
       ["It has the strongest winds in the country", "Wind is not used to generate power at Hwange."],
     ],
@@ -72,7 +72,7 @@ concept("geo.energy.power-generation", { file: "energy/power-generation", keyPre
     options: [
       ["Less water flows into Lake Kariba, so less may be released through the turbines", "Correct: generation is limited to protect the lake level when inflow falls."],
       ["Hot weather melts the cables that leave the power station", "Heat does not melt transmission cables in this way."],
-      ["Evaporation turns the water into steam that cannot drive turbines", "Evaporation removes water from the lake; steam does not reach the turbines."],
+      ["Evaporation turns the lake water into steam, which cannot drive the turbines", "Evaporation removes water from the lake; steam does not reach the turbines."],
       ["Farmers pump most of the lake water away to irrigate crops", "Irrigation from Lake Kariba is small compared with the water used for power."],
     ],
     answer: "A",

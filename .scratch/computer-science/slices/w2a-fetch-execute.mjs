@@ -97,10 +97,10 @@ concept("comp.hardware.fetch-execute", { file: "hardware/fetch-execute", keyPref
     hints: ["Ask what cache stores and how quickly it can be reached."],
     stem: "Why does increasing the size of the cache usually improve CPU performance?",
     options: [
-      ["More frequently used instructions and data are kept close to the CPU, so fewer slow fetches from RAM are needed", "Correct: cache is faster to access than RAM."],
+      ["Frequently used instructions and data are kept near the CPU, so fewer slow fetches from RAM are needed", "Correct: cache is faster to access than RAM."],
       ["The clock produces more pulses every second, so each cycle finishes sooner", "That describes a faster clock speed, not a larger cache."],
       ["More instructions can be carried out at the same time on separate processing units inside the CPU", "That describes more cores."],
-      ["Programs no longer need to be loaded into main memory at all before they run", "Programs are still loaded into RAM; cache holds copies of the parts used most."],
+      ["Programs no longer need to be loaded into main memory at all before they run, so they start much sooner", "Programs are still loaded into RAM; cache holds copies of the parts used most."],
     ],
     answer: "A",
     explanation: "Cache is very fast memory near the CPU. A larger cache holds more of what the CPU needs, so it waits for RAM less often.",

@@ -83,7 +83,7 @@ concept("comp.db.advanced-queries", { file: "db/advanced-queries", keyPrefix: "d
     stem: "In a query, what does a **join** do?",
     options: [
       ["Combines records from related tables by matching a common field", "Correct: usually a foreign key matched to a primary key."],
-      ["Adds the values of a numeric field for all the records", "That is SUM."],
+      ["Adds up the values of a numeric field for all the records in a table", "That is SUM."],
       ["Adds new records to the end of a table", "That is INSERT."],
       ["Copies a table into a spreadsheet file", "That is exporting."],
     ],
@@ -95,7 +95,7 @@ concept("comp.db.advanced-queries", { file: "db/advanced-queries", keyPrefix: "d
     stem: "Which statement describes a **calculated field** in a query?",
     options: [
       ["Its values are worked out from other fields each time the query runs", "Correct: for example Quantity * Price."],
-      ["It is typed into the table by the user for every record", "Calculated values are not typed in."],
+      ["It is typed into the table by the user for every record when data is entered", "Calculated values are not typed in."],
       ["It is the primary key of the table the query uses", "A key is a stored field."],
       ["It prompts the user for a value when the query runs", "That is a parameter."],
     ],
@@ -107,7 +107,7 @@ concept("comp.db.advanced-queries", { file: "db/advanced-queries", keyPrefix: "d
     stem: "A pharmacy saves a query whose criteria for the Supplier field is `[Enter supplier name]`. What happens when the query is run?",
     options: [
       ["The user is asked to type a supplier name, and only that supplier's records are shown", "Correct: it is a parameter query."],
-      ["Only records whose supplier is literally 'Enter supplier name' are shown", "Square brackets make it a prompt, not a text value."],
+      ["Only the records whose Supplier field holds the exact text 'Enter supplier name' are shown", "Square brackets make it a prompt, not a text value."],
       ["Every record is shown, sorted by supplier name", "No sorting is set; the criterion filters records."],
       ["A new supplier record is added to the table", "Queries that select records do not add records."],
     ],
@@ -217,7 +217,7 @@ concept("comp.db.advanced-queries", { file: "db/advanced-queries", keyPrefix: "d
     stem: "Why should a program pass the text typed by a user to the database as a parameter (placeholder), rather than joining it into the SQL statement?",
     options: [
       ["So the input is treated only as data, which prevents SQL injection", "Correct: typed SQL code cannot change the statement."],
-      ["So the query runs without needing a database connection", "A connection is always needed."],
+      ["So the query can run without needing any connection to the database server", "A connection is always needed."],
       ["So the user's text is automatically spelt correctly", "Parameters do not check spelling."],
       ["So the results are always sorted in ascending order", "Sorting is set by ORDER BY."],
     ],
@@ -303,7 +303,7 @@ concept("comp.db.advanced-queries", { file: "db/advanced-queries", keyPrefix: "d
       }),
       P.mcq({
         label: "(d)", stem: "Why does Town have to come from the Branches table rather than being stored again in Parcels?",
-        options: [["Each town is then stored once, avoiding repeated data", "Correct: the parcel stores only the BranchID foreign key."], ["Parcels cannot have more than four fields", "There is no such limit."], ["A join only works when no field is repeated", "Joins depend on matching keys."], ["Town is the primary key of Parcels", "ParcelNo is the primary key of Parcels."]],
+        options: [["Each town is then stored once, avoiding repeated data", "Correct: the parcel stores only the BranchID foreign key."], ["Parcels cannot have more than four fields", "There is no such limit."], ["A join only works when no field is repeated in either table", "Joins depend on matching keys."], ["Town is the primary key of Parcels", "ParcelNo is the primary key of Parcels."]],
         answer: "A", explanation: "Storing the town once in Branches reduces redundancy; the join fetches it when needed.",
       }),
     ],

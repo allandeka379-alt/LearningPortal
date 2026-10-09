@@ -162,7 +162,7 @@ concept("geo.maps.photos-remote-sensing", { file: "maps/photos-remote-sensing", 
     options: [
       ["Checking what is on the ground to confirm image interpretation", "Correct: field visits test whether a coloured area really is, say, a crop or a forest."],
       ["Correcting a satellite's orbit using ground signals", "Orbit control is not part of image interpretation."],
-      ["Taking ground photographs instead of satellite images", "Ground truthing supports images; it does not replace them."],
+      ["Taking ground photographs instead of using any satellite images", "Ground truthing supports images; it does not replace them."],
       ["Measuring the height of the ground with contours", "Contours show relief; ground truthing checks land cover."],
     ],
     answer: "A",

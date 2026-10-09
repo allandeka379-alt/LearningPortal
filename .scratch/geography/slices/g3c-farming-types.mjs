@@ -93,7 +93,7 @@ concept("geo.agriculture.farming-types", { file: "agriculture/farming-types", ke
     options: [
       ["A tarred road that cuts journey time and losses from bruising", "Correct: perishable produce loses value on long, rough journeys."],
       ["A fall in the price of tomatoes in Harare", "Lower prices reduce income."],
-      ["More growers planting tomatoes at the same time", "A glut lowers prices."],
+      ["More growers near Harare planting their tomatoes at the same time", "A glut lowers prices."],
       ["A rise in the cost of transport per kilometre", "Higher transport costs reduce profit."],
     ],
     answer: "A",
@@ -187,7 +187,7 @@ concept("geo.agriculture.farming-types", { file: "agriculture/farming-types", ke
         options: [
           ["The irrigated plot produces more maize from a quarter of the area", "Correct: 3.0 t from 0.5 ha against 1.6 t from 2.0 ha."],
           ["The rain-fed plot has the higher maize yield per hectare", "Its yield (0.8 t/ha) is far lower than 6 t/ha."],
-          ["Irrigation costs nothing to run on the irrigated plot", "It costs US\\$240 a year."],
+          ["Irrigation costs nothing to run on the irrigated plot each year", "It costs US\\$240 a year."],
           ["Both plots grow two crops each year", "Only the irrigated plot grows two."],
         ],
         answer: "A", explanation: "Irrigation allows two crops a year and much higher yields.",

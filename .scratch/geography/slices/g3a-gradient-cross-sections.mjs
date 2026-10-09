@@ -122,7 +122,7 @@ concept("geo.maps.gradient-cross-sections", { file: "maps/gradient-cross-section
     stem: "When drawing a cross-section, what is the paper strip used for?",
     options: [
       ["Marking where each contour crosses the line of section", "Correct: the ticks and heights are then transferred to the graph."],
-      ["Measuring the bearing of the line of section", "Bearings are measured with a protractor, not a paper strip."],
+      ["Measuring the bearing of the line of section from north", "Bearings are measured with a protractor, not a paper strip."],
       ["Tracing the shape of the river channel", "The strip records crossings along one straight line only."],
       ["Calculating the vertical exaggeration", "VE is calculated from the two scales."],
     ],

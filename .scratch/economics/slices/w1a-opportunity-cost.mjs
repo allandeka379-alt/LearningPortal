@@ -75,7 +75,7 @@ concept("econ.basics.opportunity-cost", { file: "basics/opportunity-cost", keyPr
     options: [
       ["It is the sports ground, the most valuable alternative given up", "Correct: opportunity cost is the next best alternative, whichever ranks highest after the choice made."],
       ["It is the car park, because it was listed second", "The order of a list is not a ranking; the most valuable alternative forgone counts."],
-      ["It is the car park and the sports ground together", "Only the next best alternative counts."],
+      ["It is the car park and the sports ground, both of which were given up", "Only the next best alternative counts."],
       ["It is zero, because the market has been built", "Building the market used the plot, so an alternative was given up."],
     ],
     answer: "A",

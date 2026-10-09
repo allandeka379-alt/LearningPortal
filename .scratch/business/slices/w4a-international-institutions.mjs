@@ -82,7 +82,7 @@ concept("bus.finance.international-institutions", { file: "finance/international
       ["Lower interest and a longer repayment period", "Correct: development loans are on easier terms."],
       ["It never has to be repaid", "Most World Bank finance is a loan to be repaid."],
       ["No planning or reporting is needed", "Projects are planned and monitored."],
-      ["It is paid in the local currency only", "Loans are usually in major currencies."],
+      ["It is paid out in the borrower's local currency only", "Loans are usually in major currencies."],
     ],
     answer: "A",
     explanation: "Concessional terms make long-term projects affordable.",

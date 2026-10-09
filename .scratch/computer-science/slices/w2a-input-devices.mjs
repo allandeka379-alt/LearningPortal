@@ -12,7 +12,7 @@ concept("comp.hardware.input-devices", { file: "hardware/input-devices", keyPref
     stem: "Why does a computer need input devices?",
     options: [
       ["To capture data and convert it into a digital form the computer can process", "Correct: the CPU can only process digital (binary) data."],
-      ["To show the results of processing to the user on a screen", "That is the job of output devices."],
+      ["To show the results of processing to the user on a monitor, a speaker or a printout", "That is the job of output devices."],
       ["To keep data safe when the computer is switched off", "That is the job of secondary storage."],
       ["To carry out calculations on the data that has been entered", "Calculations are done by the CPU (the ALU)."],
     ],

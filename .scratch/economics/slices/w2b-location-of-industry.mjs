@@ -25,7 +25,7 @@ concept("econ.production.location-of-industry", { file: "production/location-of-
     options: [
       ["A selected rural centre where government concentrates investment to attract firms", "Correct: a tool of location policy."],
       ["The level of output at which a firm starts making a profit", "That is break-even."],
-      ["The highest point reached by a country's rate of economic growth", "Not the meaning used in location policy."],
+      ["The highest point reached by a country's annual rate of economic growth during a boom", "Not the meaning used in location policy."],
       ["A city where all new industry is forbidden", "Restrictions are a different tool."],
     ],
     answer: "A",
@@ -35,8 +35,8 @@ concept("econ.production.location-of-industry", { file: "production/location-of-
     d: 2, skill: "UNDERSTANDING",
     stem: "Why do breweries usually locate near large towns?",
     options: [
-      ["Their product is bulky and heavy, so it is cheaper to make it near customers", "Correct: weight-gaining industry."],
-      ["Their main raw material, grain, is found only in large towns", "Grain is grown in rural areas."],
+      ["Their product is bulky and heavy, so it is cheaper to make near customers", "Correct: weight-gaining industry."],
+      ["Their main raw materials, such as grain and hops, are found only in large towns", "Grain is grown in rural areas."],
       ["They need no water", "Breweries use large amounts of water."],
       ["Government forbids breweries in rural areas", "Not a general rule."],
     ],
@@ -59,9 +59,9 @@ concept("econ.production.location-of-industry", { file: "production/location-of-
     d: 2, skill: "UNDERSTANDING",
     stem: "Which is an example of a government **incentive** to influence location?",
     options: [
-      ["A five-year tax holiday for firms that build factories in a chosen district", "Correct: a carrot."],
+      ["A five-year tax holiday for firms building factories in a chosen district", "Correct: a carrot."],
       ["A zoning law banning factories in residential areas", "A restriction (stick)."],
-      ["A rule that polluting firms must operate far from towns and rivers", "A restriction."],
+      ["A rule that polluting firms must operate far from towns, rivers and dams", "A restriction."],
       ["Refusing planning permission in the city centre", "A restriction."],
     ],
     answer: "A",
@@ -84,9 +84,9 @@ concept("econ.production.location-of-industry", { file: "production/location-of-
     d: 4, skill: "EVALUATION",
     stem: "A government gives grants to firms that move to a remote growth point. Which is the most likely reason the policy might **fail**?",
     options: [
-      ["Firms face higher costs there because of small markets and few skilled workers", "Correct: incentives may not offset the higher costs."],
+      ["Firms face higher costs there because markets are small and skilled workers few", "Correct: incentives may not offset the higher costs."],
       ["The grants reduce the firms' costs by far too much to be useful", "Lower costs would help, not cause failure."],
-      ["Growth points have too many skilled workers looking for jobs", "Remote areas usually lack skilled workers."],
+      ["Growth points have too many skilled workers looking for well-paid jobs", "Remote areas usually lack skilled workers."],
       ["Firms are not allowed to employ local people", "There is no such rule."],
     ],
     answer: "A",

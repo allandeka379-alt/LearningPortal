@@ -522,7 +522,7 @@ concept("phys.motion.free-fall", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A flat sheet of paper and an identical sheet crumpled into a tight ball are dropped together in air. What happens?",
-    options: [["The flat sheet lands first because it is wider.", "Its larger area gives more air resistance, so it falls more slowly."], ["The crumpled ball lands first because it has less air resistance.", "Correct."], ["They land together because they have the same mass.", "This would be true only in a vacuum."], ["The crumpled ball lands first because it is heavier.", "Both have the same mass."]],
+    options: [["The flat sheet lands first because it is wider.", "Its larger area gives more air resistance, so it falls more slowly."], ["The crumpled ball lands first because it has less air resistance.", "Correct."], ["They land together because they have the same mass and so the same weight.", "This would be true only in a vacuum."], ["The crumpled ball lands first because it is heavier.", "Both have the same mass."]],
     answer: "B", explanation: "Same mass and weight, but the flat sheet meets much more air resistance, so it has a much smaller terminal velocity." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING",
@@ -531,7 +531,7 @@ concept("phys.motion.free-fall", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "Which describes the speed-time graph of a skydiver from jumping until she reaches terminal velocity (parachute still closed)?",
-    options: [["A straight line sloping upwards at a steady gradient", "That would be constant acceleration all the way."], ["A curve that starts steep and levels off to a horizontal line", "Correct."], ["A horizontal line from the start, at constant speed", "She starts from rest."], ["A curve that gets steeper and steeper as she falls", "Her acceleration decreases, not increases."]],
+    options: [["A straight line sloping upwards at a steady gradient", "That would be constant acceleration all the way."], ["A curve that starts steep and levels off to a horizontal line", "Correct."], ["A horizontal line from the start, at constant speed", "She starts from rest."], ["A curve that gets steeper and steeper as she falls towards the ground", "Her acceleration decreases, not increases."]],
     answer: "B", explanation: "The gradient (acceleration) starts at about 9.8 m/s² and decreases to zero as air resistance grows, so the curve levels off at terminal velocity.",
     hints: ["The gradient of a speed-time graph is the acceleration."] });
 

@@ -86,7 +86,7 @@ concept("geo.rivers.flooding", { file: "rivers/flooding", keyPrefix: "rivers.flo
       ["They are cheap and save lives, though property is still damaged", "Correct: a balanced judgement of a low-cost method."],
       ["They stop rivers from overflowing their banks", "Warnings do not change the river's flow."],
       ["They remove the need for any other flood measures", "Warnings reduce deaths but not damage; other measures still help."],
-      ["They work even when no one hears or acts on the warning", "Warnings only work if people receive and act on them."],
+      ["They work even when no one hears the warning or acts on it in time", "Warnings only work if people receive and act on them."],
     ],
     answer: "A",
     explanation: "Warnings are low-cost and very effective at saving lives, but they do not reduce damage to crops and homes and depend on communication and trust.",
@@ -97,7 +97,7 @@ concept("geo.rivers.flooding", { file: "rivers/flooding", keyPrefix: "rivers.flo
     stem: "A town builds high levées along its river. Twenty years later a much larger flood breaches them. Why can the damage be **worse** than if there had been no levées?",
     options: [
       ["People built on land thought safe, and held-back water escapes suddenly", "Correct: a false sense of security plus sudden release."],
-      ["Levées force the river to carry less water during large floods", "Levées hold more water in the channel, not less."],
+      ["Levées force the river to carry less water during large floods, so it overflows", "Levées hold more water in the channel, not less."],
       ["Levées make rainfall heavier over the town", "Engineering does not affect rainfall."],
       ["Levées lower the river bed, so the river runs dry", "Deposition behind levées often raises the bed rather than lowering it."],
     ],

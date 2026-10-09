@@ -36,7 +36,7 @@ concept("geo.coasts.management", { file: "coasts/management", keyPrefix: "coasts
     options: [
       ["They trap sediment, so beaches downdrift receive less", "Correct: starved beaches protect cliffs less."],
       ["They reflect waves towards the next town", "Groynes do not reflect waves like a sea wall."],
-      ["They make waves bigger along the whole coast", "Groynes do not change wave size offshore."],
+      ["They make waves bigger along the whole coast, even far offshore", "Groynes do not change wave size offshore."],
       ["They raise sea level next to the beach", "Structures do not raise sea level."],
     ],
     answer: "A",
@@ -48,7 +48,7 @@ concept("geo.coasts.management", { file: "coasts/management", keyPrefix: "coasts
     options: [
       ["Low air pressure and strong onshore winds", "Correct: the sea surface is raised and pushed onto land."],
       ["An earthquake on the sea bed", "Earthquakes cause tsunamis, not storm surges."],
-      ["The melting of sea ice in summer", "Melting floating ice does not cause sudden surges."],
+      ["The melting of floating sea ice in summer", "Melting floating ice does not cause sudden surges."],
       ["Constructive waves on a calm day", "Storm surges need storms."],
     ],
     answer: "A",
@@ -98,7 +98,7 @@ concept("geo.coasts.management", { file: "coasts/management", keyPrefix: "coasts
     options: [
       ["Reflected waves scour the beach, carrying sand offshore", "Correct: energy bounced back removes sediment."],
       ["The wall stopped longshore drift completely", "A wall along the beach does not block drift like a groyne."],
-      ["Constructive waves increased because of the wall", "The wall tends to make wave action more destructive."],
+      ["Constructive waves increased because of the new wall", "The wall tends to make wave action more destructive."],
       ["Sea level fell, exposing the sand to wind", "Sea level has not fallen; the cause is wave reflection."],
     ],
     answer: "A",

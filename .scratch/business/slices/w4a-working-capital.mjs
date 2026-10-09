@@ -70,7 +70,7 @@ concept("bus.finance.working-capital", { file: "finance/working-capital", keyPre
       ["Cash is tied up in goods that may spoil or go out of date", "Correct: idle stock earns nothing and costs money to store."],
       ["Inventory is a current liability", "Inventory is a current asset."],
       ["It reduces the value of non-current assets", "It does not affect non-current assets."],
-      ["It increases the interest on long-term loans", "Long-term loan interest is unaffected."],
+      ["It increases the interest payable on long-term bank loans", "Long-term loan interest is unaffected."],
     ],
     answer: "A",
     explanation: "Excess stock locks up cash and risks loss, damage and storage costs.",

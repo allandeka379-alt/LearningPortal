@@ -204,7 +204,7 @@ concept("geo.population.structure", { file: "population/structure", keyPrefix: "
           ["Most of P's dependants are children; most of Q's are elderly", "Correct: 41% v 3% in P; 14% v 21% in Q."],
           ["Most dependants in both countries are elderly", "In P children far outnumber the elderly."],
           ["Most dependants in both countries are children", "In Q the elderly outnumber children."],
-          ["P and Q have the same proportion of elderly people", "3% and 21% are very different."],
+          ["P and Q have exactly the same proportion of elderly residents", "3% and 21% are very different."],
         ],
         answer: "A", explanation: "P has youthful dependency; Q has elderly dependency.",
       }),

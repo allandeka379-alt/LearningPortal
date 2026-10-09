@@ -120,7 +120,7 @@ concept("phys.waves.wave-behaviour", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL", applies: C,
     stem: "What is diffraction?",
-    options: [["The spreading out of waves through a gap or around an edge", "Correct."], ["The bouncing back of waves from a barrier", "That is reflection."], ["The change of direction caused by a change of speed", "That is refraction."], ["A change in the frequency of a wave", "Frequency does not change."]],
+    options: [["The spreading out of waves through a gap or around an edge", "Correct."], ["The bouncing back of waves from a barrier", "That is reflection."], ["The change of direction caused by a change of speed at a boundary", "That is refraction."], ["A change in the frequency of a wave", "Frequency does not change."]],
     answer: "A", explanation: "Diffraction is the spreading of waves as they pass through a gap or around the edge of an obstacle." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -289,7 +289,7 @@ concept("phys.waves.sound", {
     parts: [
       P.manual({ label: "(a)", marks: 4, stem: "Describe how they should carry out the experiment.",
         points: ["Measure a large distance between them (several hundred metres) with a long tape or trundle wheel", "One makes a sound that can also be seen, such as banging two blocks together or firing a starting pistol", "The other starts a stopwatch on seeing the action and stops it on hearing the sound", "Repeat, find the mean time and calculate speed = distance ÷ time"] }),
-      P.mcq({ label: "(b)", stem: "Why should the distance be large?", options: [["So the time is long compared with the observer's reaction time", "Correct: this reduces the percentage error."], ["So the sound is louder", "A larger distance makes it quieter."], ["Because sound travels faster over long distances", "The speed does not depend on distance."], ["So the light arrives first", "Light always arrives first."]], answer: "A",
+      P.mcq({ label: "(b)", stem: "Why should the distance be large?", options: [["So the time is long compared with the observer's reaction time", "Correct: this reduces the percentage error."], ["So the sound is louder", "A larger distance makes it quieter."], ["Because sound travels faster over long distances once it has left the source", "The speed does not depend on distance."], ["So the light arrives first", "Light always arrives first."]], answer: "A",
         explanation: "A longer time makes the reaction-time error a smaller fraction of the measurement." }),
       P.mcq({ label: "(c)", stem: "Why can the time taken by the light be ignored?", options: [["Light travels about a million times faster than sound.", "Correct."], ["Light has no speed: it arrives everywhere instantly.", "Light travels at a finite speed."], ["Light travels more slowly than sound over short distances.", "It is far faster."], ["Light cannot travel through air, so it is not timed.", "It can."]], answer: "A",
         explanation: "Light crosses a few hundred metres in about a microsecond, which is negligible." }),
@@ -361,7 +361,7 @@ concept("phys.waves.echoes-ultrasound", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "In echo calculations, why is the distance travelled by the sound divided by 2?",
-    options: [["The sound travels to the reflecting surface and back again.", "Correct."], ["The sound slows to half its speed after reflecting.", "Its speed does not change."], ["Half of the sound is absorbed.", "Absorption does not change the distance."], ["Sound waves are longitudinal.", "Not the reason."]],
+    options: [["The sound travels to the reflecting surface and back again.", "Correct."], ["The sound slows to half its speed after reflecting from the surface.", "Its speed does not change."], ["Half of the sound is absorbed.", "Absorption does not change the distance."], ["Sound waves are longitudinal.", "Not the reason."]],
     answer: "A", explanation: "The echo time is for the journey there and back, so the distance to the surface is half the total distance." });
 
   q.mcq({ d: 1, skill: "RECALL",
@@ -461,7 +461,7 @@ concept("phys.waves.em-spectrum", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why must exposure to X-rays and gamma rays be limited?",
-    options: [["They can damage cells, causing mutations and cancer.", "Correct."], ["They mainly heat the body like microwaves.", "Their main danger is cell damage, not heating."], ["They only cause mild sunburn.", "They are far more dangerous."], ["They make the body permanently radioactive.", "Exposure to X-rays or gamma rays does not make the body radioactive."]],
+    options: [["They can damage cells, causing mutations and cancer.", "Correct."], ["They mainly heat the body like microwaves.", "Their main danger is cell damage, not heating."], ["They only cause mild sunburn.", "They are far more dangerous."], ["They make the body permanently radioactive after each exposure.", "Exposure to X-rays or gamma rays does not make the body radioactive."]],
     answer: "A", explanation: "X-rays and gamma rays are ionising: they damage DNA in cells, which can cause mutations and cancer.",
     hints: ["Think about what high-frequency radiation does to the atoms in cells."] });
 
@@ -569,7 +569,7 @@ concept("phys.waves.communication", {
         explanation: "Satellite links use microwaves." }),
       P.manual({ label: "(b)", marks: 2, stem: "Data are sent as digital signals. Explain one advantage of digital over analogue signals.",
         points: ["Noise can be removed when the signal is regenerated (it is only recognised as 1 or 0)", "so the signal can travel further / data can be sent at a higher rate without loss of quality"] }),
-      P.mcq({ label: "(c)", stem: "Some satellite phone networks use low-orbit satellites. What is an advantage of a low orbit compared with a geostationary orbit?", options: [["The signals travel a shorter distance, so there is less delay.", "Correct."], ["The satellite stays above the same point on the Earth.", "That is a geostationary satellite."], ["Fewer satellites are needed to cover the Earth.", "More are needed, because each moves across the sky."], ["The signals can be sent as sound.", "Sound cannot travel through space."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Some satellite phone networks use low-orbit satellites. What is an advantage of a low orbit compared with a geostationary orbit?", options: [["The signals travel a shorter distance, so there is less delay.", "Correct."], ["The satellite stays above the same point on the Earth's surface all day.", "That is a geostationary satellite."], ["Fewer satellites are needed to cover the Earth.", "More are needed, because each moves across the sky."], ["The signals can be sent as sound.", "Sound cannot travel through space."]], answer: "A",
         explanation: "Low-orbit satellites are much closer, so the signal delay is shorter." }),
     ],
     explanation: "Satellites use microwaves; digital signals can be regenerated without noise; low orbits are closer, so delays are shorter.",

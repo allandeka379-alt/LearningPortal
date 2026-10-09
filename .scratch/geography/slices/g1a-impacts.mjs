@@ -9,7 +9,7 @@ concept("geo.climate-change.impacts", { file: "climate-change/impacts", keyPrefi
     stem: "Which **two** processes are the main causes of sea-level rise?",
     options: [
       ["Thermal expansion of sea water and melting ice on land", "Correct: warming water expands and land ice adds water."],
-      ["Melting floating sea ice and heavier rainfall", "Floating ice barely changes sea level when it melts."],
+      ["Melting floating sea ice and heavier rainfall over the oceans", "Floating ice barely changes sea level when it melts."],
       ["Stronger tides and more rivers flowing", "Tides do not rise because of warming."],
       ["Volcanic eruptions and earthquakes", "These are not the causes of the long-term rise."],
     ],
@@ -58,7 +58,7 @@ concept("geo.climate-change.impacts", { file: "climate-change/impacts", keyPrefi
     options: [
       ["Longer growing seasons in some cold regions", "Correct: parts of Canada and Russia may grow new crops."],
       ["More coral bleaching", "This harms reefs and fisheries."],
-      ["Higher storm surges in Bangladesh", "This increases flood risk."],
+      ["Higher storm surges along the coast of Bangladesh", "This increases flood risk."],
       ["Lower water levels in reservoirs", "This harms water and power supply."],
     ],
     answer: "A",

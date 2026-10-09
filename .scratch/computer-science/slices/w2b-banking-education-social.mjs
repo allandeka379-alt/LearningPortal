@@ -70,7 +70,7 @@ concept("comp.applications.banking-education-social", { file: "applications/bank
     stem: "A rural school is considering e-learning. Which drawback is most relevant?",
     options: [
       ["Learners without devices or data at home may be left behind", "Correct: the digital divide affects rural learners most."],
-      ["Learners can replay lessons as often as they like", "This is a benefit."],
+      ["Learners can replay recorded lessons as often as they like at home", "This is a benefit."],
       ["Quizzes are marked automatically", "This is a benefit."],
       ["Lessons can be shared with other schools", "This is a benefit."],
     ],
@@ -84,7 +84,7 @@ concept("comp.applications.banking-education-social", { file: "applications/bank
     options: [
       ["Run a simulation to test how the design behaves under heavy loads and floods", "Correct: modelling tests designs safely and cheaply."],
       ["Use ATMs and EFT to pay the construction workers every week", "This is banking, not research and development."],
-      ["Post photographs of the river on a social network for comments", "This is not research."],
+      ["Post photographs of the river and the building site on a social network for public comments", "This is not research."],
       ["Use a school administration system to record the workers", "This is unrelated."],
     ],
     answer: "A",

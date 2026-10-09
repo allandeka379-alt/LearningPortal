@@ -13,7 +13,7 @@ concept("phys.practical.experimental-skills", {
 
   q.mcq({ d: 1, skill: "RECALL",
     stem: "In an experiment, what is the dependent variable?",
-    options: [["What you measure, which changes because of what you change", "Correct."], ["The quantity you choose to change step by step", "That is the independent variable."], ["A quantity kept constant throughout the test", "That is a control variable."], ["The apparatus used to take the measurements", "Variables are quantities, not equipment."]],
+    options: [["What you measure, which changes because of what you change", "Correct."], ["The quantity you choose to change step by step during the experiment", "That is the independent variable."], ["A quantity kept constant throughout the test", "That is a control variable."], ["The apparatus used to take the measurements", "Variables are quantities, not equipment."]],
     answer: "A", explanation: "The dependent variable is measured; it depends on the independent variable." });
 
   q.mcq({ d: 2, skill: "APPLICATION", daily: true,
@@ -43,7 +43,7 @@ concept("phys.practical.experimental-skills", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Which of these is a systematic error?",
-    options: [["A metre rule with a worn end, so every length reads 2 mm too long", "Correct: every reading is shifted the same way."], ["Reaction times varying when a stopwatch is started", "That is a random error."], ["Misreading a scale once", "That is a mistake, giving an anomalous result."], ["Readings scattering above and below the best-fit line", "That shows random errors."]],
+    options: [["A metre rule with a worn end, so every length reads 2 mm too long", "Correct: every reading is shifted the same way."], ["Reaction times varying when a stopwatch is started", "That is a random error."], ["Misreading a scale once", "That is a mistake, giving an anomalous result."], ["Readings scattering by different amounts above and below the best-fit line", "That shows random errors."]],
     answer: "A", explanation: "A systematic error shifts all readings by the same amount; repeating does not remove it." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
@@ -81,13 +81,13 @@ concept("phys.practical.experimental-skills", {
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,
     stem: "A learner plans to find out how the extension of a spring depends on the load hung from it.",
     parts: [
-      P.mcq({ label: "(a)", stem: "Which is the dependent variable?", options: [["The extension of the spring", "Correct."], ["The load", "That is the independent variable."], ["The spring itself", "No."], ["The metre rule", "That is apparatus."]], answer: "A",
+      P.mcq({ label: "(a)", stem: "Which is the dependent variable?", options: [["The extension of the spring", "Correct."], ["The load hung from the spring", "That is the independent variable."], ["The spring itself", "No."], ["The metre rule", "That is apparatus."]], answer: "A",
         explanation: "The extension is measured as the load is changed." }),
       P.manual({ label: "(b)", marks: 2, stem: "State two control variables.",
         points: ["One control variable: the same spring is used throughout", "A second control variable: for example the same reference point for measuring length, or the same temperature"] }),
       P.num({ label: "(c)", marks: 2, stem: "The learner's graph of load (y-axis, in N) against extension (x-axis, in m) is a straight line through the origin and the point (0.15 m, 9.0 N). Calculate the spring constant.", value: 60, unit: "N/m", wrong: [0.017, 1.35],
         explanation: t`Gradient $= \dfrac{9.0}{0.15} = 60\ \text{N/m}$, which is the spring constant.` }),
-      P.mcq({ label: "(d)", stem: "Which is a sensible safety precaution?", options: [["Wear eye protection and put a soft mat under the loads", "Correct."], ["Stand on a chair to read the top of the scale", "That is unsafe."], ["Add all the loads at once to save time", "This could overload the spring."], ["Use as large a load as possible each time", "This could break the spring."]], answer: "A",
+      P.mcq({ label: "(d)", stem: "Which is a sensible safety precaution?", options: [["Wear eye protection and put a soft mat under the loads", "Correct."], ["Stand on a chair to read the top of the scale", "That is unsafe."], ["Add all the loads at once to save time", "This could overload the spring."], ["Use as large a load as possible each time to get big extensions", "This could break the spring."]], answer: "A",
         explanation: "A stretched spring can snap back, and falling masses can injure feet." }),
     ],
     explanation: "Change the load, measure the extension, keep the spring and method the same; the gradient of load against extension is the spring constant.",

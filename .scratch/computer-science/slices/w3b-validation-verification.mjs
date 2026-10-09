@@ -132,7 +132,7 @@ concept("comp.algorithms.validation-verification", { file: "algorithms/validatio
     options: [
       ["The digit is recalculated from the others and compared with the one entered", "Correct: a mismatch shows the number was entered wrongly."],
       ["It is compared with a list of every product number ever sold", "That would be a lookup, not a check digit."],
-      ["It makes sure the number contains the right number of characters", "That is a length check."],
+      ["It makes sure the number that was typed contains the right number of characters", "That is a length check."],
       ["The number is entered twice and the two copies compared", "That is double entry."],
     ],
     answer: "A",

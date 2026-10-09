@@ -90,7 +90,7 @@ concept("phys.machines.simple-machines", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why does a machine NOT reduce the work needed to lift a load?",
-    options: [["The smaller effort must move through a larger distance.", "Correct: work = force × distance."], ["It does reduce the work.", "It reduces the force, not the work."], ["Machines only change the direction of a force.", "Many also multiply force."], ["Work does not depend on distance.", "It does: W = Fd."]],
+    options: [["The smaller effort must move through a larger distance.", "Correct: work = force × distance."], ["It does reduce the work.", "It reduces the force, not the work."], ["Machines only ever change the direction in which a force acts.", "Many also multiply force."], ["Work does not depend on distance.", "It does: W = Fd."]],
     answer: "A", explanation: "A machine trades force for distance: the effort is smaller but moves further, so the work input is at least the useful work output." });
 
   q.card("FORMULA", "Mechanical advantage?", "MA = load ÷ effort (no unit).", undefined, { applies: Z });
@@ -137,7 +137,7 @@ concept("phys.structures.beams", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Why are steel rods placed near the bottom of a reinforced concrete beam supported at both ends?",
-    options: [["The bottom is in tension, and concrete is weak in tension while steel is strong.", "Correct."], ["The bottom is in compression and steel is weak in compression.", "The bottom is in tension."], ["To make the beam heavier.", "Not the purpose."], ["To stop the concrete rusting.", "Concrete does not rust."]],
+    options: [["The bottom is in tension, and concrete is weak in tension while steel is strong.", "Correct."], ["The bottom is in compression and steel is weak in compression.", "The bottom is in tension."], ["To make the beam heavier so that it sits firmly and cannot shift on its supports", "Not the purpose: the steel is there to take the tension at the bottom."], ["To stop the concrete rusting.", "Concrete does not rust."]],
     answer: "A", explanation: "Concrete resists compression well but cracks under tension; the steel takes the tension in the stretched lower part.",
     hints: ["Which part of the beam is stretched?"] });
 
@@ -224,7 +224,7 @@ concept("phys.structures.trusses", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Why are struts usually made thicker than ties?",
-    options: [["Struts are compressed and must not buckle.", "Correct."], ["Struts carry less force.", "That would make them thinner."], ["Ties are stronger materials.", "They may be the same material."], ["Thicker members are always lighter.", "Thicker members are heavier."]],
+    options: [["Struts are compressed and must not buckle.", "Correct."], ["Struts carry less force.", "That would make them thinner."], ["Ties are stronger materials.", "They may be the same material."], ["Thicker members are always lighter for their strength.", "Thicker members are heavier."]],
     answer: "A", explanation: "Compressed members can buckle sideways if they are thin; members in tension cannot buckle, so ties can be thin, even cables.",
     hints: ["Which kind of member can buckle?"] });
 
@@ -300,7 +300,7 @@ concept("phys.structures.joining-materials", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: Z,
     stem: "How is a plastic joint made by 'plastic welding'?",
-    options: [["The surfaces are heated until they soften and fuse together.", "Correct."], ["Molten metal is poured between the plastic surfaces.", "That is not plastic welding."], ["They are bolted together through drilled holes.", "That is bolting, not welding."], ["They are stitched together with strong nylon thread.", "Not a structural joining method here."]],
+    options: [["The surfaces are heated until they soften and fuse together.", "Correct."], ["Molten metal is poured between the plastic surfaces.", "That is not plastic welding."], ["They are bolted together through drilled holes.", "That is bolting, not welding."], ["They are stitched together tightly with strong nylon thread.", "Not a structural joining method here."]],
     answer: "A", explanation: "Thermoplastics soften when heated, so their surfaces can be fused together." });
 
   q.short({ d: 2, skill: "RECALL", applies: Z,
@@ -391,7 +391,7 @@ concept("phys.structures.large-structures", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why does an earth dam have a very wide base?",
-    options: [["Water pressure is greatest at the bottom, so the base must be widest.", "Correct."], ["Earth is strong in tension, so a wide base stretches less.", "Earth is weak in tension."], ["So that water can seep through it and relieve the pressure.", "Seepage is a danger, not a purpose."], ["Because earth is light and would blow away if narrow.", "It is heavy."]],
+    options: [["Water pressure is greatest at the bottom, so the base must be widest.", "Correct."], ["Earth is strong in tension, so a wide base stretches less.", "Earth is weak in tension."], ["So that water can seep slowly through it and relieve the pressure behind it.", "Seepage is a danger, not a purpose."], ["Because earth is light and would blow away if narrow.", "It is heavy."]],
     answer: "A", explanation: "An earth dam relies on its mass and a wide, triangular cross-section to hold back water whose pressure increases with depth." });
 
   q.card("FACT", "Which materials are strong in compression but weak in tension?", "Stone, brick and concrete.", undefined, { applies: Z });

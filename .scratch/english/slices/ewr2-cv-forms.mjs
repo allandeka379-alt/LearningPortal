@@ -35,7 +35,7 @@ concept("eng.functional.cv-forms", { file: "functional/cv-forms", keyPrefix: "fu
       ["Shop assistant (holiday): served customers and recorded daily sales.", "Correct: specific role and concrete responsibilities."],
       ["I am a very good worker and everyone likes me a lot.", "Vague claims with no evidence; also not in CV style."],
       ["Worked somewhere in town for some time doing stuff.", "Vague and informal; no role, place or duties."],
-      ["My hobbies are music, football and chatting with friends.", "Interests belong in a different section."],
+      ["My hobbies are music, football and chatting with my friends at weekends.", "Interests belong in a different section."],
     ],
     answer: "A",
     explanation: "CV entries should be specific: role, place, dates and concrete duties, written consistently (*served…*, *recorded…*).",

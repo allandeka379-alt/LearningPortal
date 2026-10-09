@@ -20,7 +20,7 @@ concept("eng.functional.review", { file: "functional/review", keyPrefix: "functi
     options: [
       ["A detail that gives away a surprise or the ending", "Correct: spoilers ruin the experience for people who have not seen or read it."],
       ["A negative opinion about a book or film", "A negative opinion is criticism, not a spoiler."],
-      ["A star rating given at the start of a review", "A rating summarises the reviewer's verdict."],
+      ["A star rating given at the very start of a book review", "A rating summarises the reviewer's verdict."],
       ["A quotation from one of the actors in a film", "A quotation is not necessarily a spoiler."],
     ],
     answer: "A",
@@ -33,7 +33,7 @@ concept("eng.functional.review", { file: "functional/review", keyPrefix: "functi
       ["The novel is gripping because every chapter ends with an unanswered question.", "Correct: an opinion (gripping) with a specific reason."],
       ["The novel is very good and I liked it very much indeed.", "An opinion with no reason or example."],
       ["The novel has twenty-four chapters and three hundred pages.", "A fact, not an evaluation."],
-      ["The novel is the best book that has ever been written by anyone.", "An exaggerated claim with no support."],
+      ["The novel is simply the best book that has ever been written by anyone in the world.", "An exaggerated claim with no support."],
     ],
     answer: "A",
     explanation: "Support every opinion with a **reason** and, where possible, a specific **example** from the work.",
@@ -56,7 +56,7 @@ concept("eng.functional.review", { file: "functional/review", keyPrefix: "functi
     options: [
       ["Despite a slow start, it is a funny, moving production that families should not miss.", "Correct: balanced verdict and a clear recommendation for a named audience."],
       ["The play finished at nine o'clock and then everyone went home.", "A fact with no verdict or recommendation."],
-      ["In the end, the main character discovers that the thief was her own brother.", "This is a spoiler and gives no recommendation."],
+      ["In the end, the main character discovers that the thief was really her own older brother.", "This is a spoiler and gives no recommendation."],
       ["I do not really know what to say about it, so that is all.", "Weak and gives readers no guidance."],
     ],
     answer: "A",
@@ -69,7 +69,7 @@ concept("eng.functional.review", { file: "functional/review", keyPrefix: "functi
     options: [
       ["It gives a balanced judgement, noting a strength and a weakness.", "Correct: While links a strength with a weakness."],
       ["It reveals the ending and so contains a spoiler.", "Calling the story predictable does not reveal what happens."],
-      ["It is purely factual and contains no opinion at all.", "Excellent and predictable are both opinions."],
+      ["It is purely factual and contains no opinion about the film at all.", "Excellent and predictable are both opinions."],
       ["It recommends the film strongly to every reader.", "There is no recommendation in this sentence."],
     ],
     answer: "A",

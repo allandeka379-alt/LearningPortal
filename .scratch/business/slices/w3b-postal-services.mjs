@@ -16,7 +16,7 @@ concept("bus.communication.postal-services", { file: "communication/postal-servi
       ["Business reply service", "Correct: customers post the pre-printed card free."],
       ["Poste restante", "Poste restante holds mail for collection."],
       ["Registered mail", "Registered mail records valuable items."],
-      ["Cash on delivery", "Cash on delivery collects payment for goods."],
+      ["Cash on delivery service", "Cash on delivery collects payment for goods."],
     ],
     answer: "A",
     explanation: "With **business reply service**, the business supplies pre-printed cards or envelopes and pays the postage when they are returned.",
@@ -182,7 +182,7 @@ concept("bus.communication.postal-services", { file: "communication/postal-servi
       P.mcq({
         label: "(a)", marks: 1,
         stem: "Which service would let farmers send order forms to Thandeka without paying postage, using envelopes she supplies?",
-        options: [["Business reply service", "Correct."], ["Poste restante", "This holds mail for collection."], ["Recorded delivery", "This proves delivery."], ["Express mail", "This is faster delivery for a fee."]],
+        options: [["Business reply service", "Correct."], ["Poste restante", "This holds mail for collection."], ["Recorded delivery service", "This proves delivery."], ["Express mail", "This is faster delivery for a fee."]],
         answer: "A",
       }),
       P.manual({

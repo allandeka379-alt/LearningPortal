@@ -46,7 +46,7 @@ concept("bus.operations.quality", { file: "operations/quality", keyPrefix: "oper
     options: [
       ["Assurance prevents faults at each stage; control finds them after production", "Correct."],
       ["Assurance is only used by small businesses", "Both are used by businesses of all sizes."],
-      ["Control involves all workers; assurance uses only inspectors", "It is the other way round."],
+      ["Control involves all of the workers; assurance uses only specialist inspectors", "It is the other way round."],
       ["Assurance checks only finished products", "Assurance checks every stage."],
     ],
     answer: "A",
@@ -69,7 +69,7 @@ concept("bus.operations.quality", { file: "operations/quality", keyPrefix: "oper
     stem: "Which is a disadvantage of quality control?",
     options: [
       ["Faults are found after materials and time have been wasted", "Correct."],
-      ["Faulty goods are found before reaching customers", "That is an advantage."],
+      ["Faulty goods are found and removed before reaching customers", "That is an advantage."],
       ["It is easy for workers to understand", "That is an advantage."],
       ["It needs little training for production workers", "That is an advantage."],
     ],

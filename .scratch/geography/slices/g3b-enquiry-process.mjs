@@ -233,7 +233,7 @@ concept("geo.fieldwork.enquiry-process", { file: "fieldwork/enquiry-process", ke
         label: "(b)", stem: "Which statement about the results is correct?",
         options: [
           ["The terminus has the most litter, but litter does not fall steadily with distance", "Correct: site A has 34 items, but site C (27) has more than site B (12)."],
-          ["Litter falls steadily with distance from the terminus at every site", "Site C (27) and site E (19) are higher than the sites before them."],
+          ["Litter falls steadily with distance from the terminus, from site A through to site E", "Site C (27) and site E (19) are higher than the sites before them."],
           ["The residential streets have more litter than the terminus does", "No residential site has more than the terminus (34)."],
           ["Every site has a litter count above the mean of the five sites", "Sites B, D and E are below the mean."],
         ],

@@ -106,7 +106,7 @@ concept("geo.settlement.types-site-patterns", { file: "settlement/types-site-pat
     stem: "Which building feature best protects a house against **strong winds** during a tropical cyclone?",
     options: [
       ["Roof sheets bolted and tied firmly to the walls", "Correct: secure roofs are not lifted off by strong winds."],
-      ["A floor raised on a concrete platform", "Raised floors protect against flooding, not wind."],
+      ["A floor raised high on a solid concrete platform", "Raised floors protect against flooding, not wind."],
       ["A retaining wall behind the house", "Retaining walls protect against landslides."],
       ["Wide storm drains along the street", "Drains help with floodwater, not wind."],
     ],

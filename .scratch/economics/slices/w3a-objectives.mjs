@@ -26,7 +26,7 @@ concept("econ.firms.objectives", { file: "firms/objectives", keyPrefix: "firms.o
       ["Profit maximisation", "Correct: profit = TR − TC, made as large as possible."],
       ["Growth", "Growth is about size: sales, output or market share."],
       ["Survival", "Survival only needs costs to be covered."],
-      ["Social welfare", "Social welfare puts benefits to society first."],
+      ["Social welfare maximisation", "Social welfare puts benefits to society first."],
     ],
     answer: "A",
     explanation: "Profit maximisation means making TR − TC as large as possible.",
@@ -60,7 +60,7 @@ concept("econ.firms.objectives", { file: "firms/objectives", keyPrefix: "firms.o
     stem: "Why might the managers of a large company prefer **growth** to profit maximisation?",
     options: [
       ["Their pay, status and job security often rise with the firm's size", "Correct: managers' rewards are often linked to size, not profit."],
-      ["Growth always gives the firm the highest possible profit", "Growth can reduce profit, for example through price cuts."],
+      ["Growth always gives the firm the highest possible profit in the long run", "Growth can reduce profit, for example through price cuts."],
       ["Managers receive all of the firm's profits as dividends", "Dividends go to shareholders, not managers."],
       ["Larger firms never have to worry about their costs", "Large firms can still suffer from high costs."],
     ],

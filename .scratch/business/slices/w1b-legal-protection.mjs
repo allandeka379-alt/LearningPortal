@@ -21,7 +21,7 @@ concept("bus.consumer.legal-protection", { file: "consumer/legal-protection", ke
       ["Weights and measures control", "Correct: laws require accurate scales, and inspectors check them."],
       ["Price control", "Price control sets maximum prices; it does not check scales."],
       ["Labelling law", "Labelling laws concern the information on packages."],
-      ["Credit regulation", "Credit laws concern hire purchase and loan agreements."],
+      ["Hire purchase credit regulation", "Credit laws concern hire purchase and loan agreements."],
     ],
     answer: "A",
     explanation: "**Weights and measures** laws make short weight an offence; inspectors test and stamp scales used in trade.",
@@ -31,7 +31,7 @@ concept("bus.consumer.legal-protection", { file: "consumer/legal-protection", ke
     stem: "Which information is a packaged food product usually required by law to show?",
     options: [
       ["Its ingredients and a use-by or best-before date", "Correct: labelling laws require contents, quantity, producer and date marks."],
-      ["The names of the producer's shareholders", "Shareholders' names are not required on labels."],
+      ["The names of the producer's directors and shareholders", "The names of directors and shareholders are not required on labels."],
       ["The producer's profit on each packet", "Profit margins are not label information."],
       ["The wages paid to factory workers", "Wages are not shown on labels."],
     ],
@@ -81,7 +81,7 @@ concept("bus.consumer.legal-protection", { file: "consumer/legal-protection", ke
     stem: "Which action is an example of **self-protection** by a consumer?",
     options: [
       ["Checking the expiry date before buying medicine", "Correct: the consumer protects herself by checking the goods."],
-      ["A government banning a dangerous toy", "That is protection by government."],
+      ["A government banning the sale of a dangerous toy", "That is protection by government."],
       ["Inspectors testing a shop's scales", "That is enforcement by the authorities."],
       ["A standards body testing cables", "That is protection by a standards organisation."],
     ],

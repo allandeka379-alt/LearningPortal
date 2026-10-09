@@ -62,7 +62,7 @@ concept("comp.network.types-topologies", { file: "network/types-topologies", key
     options: [
       ["To absorb signals so that they do not reflect back along the cable", "Correct: reflected signals would collide with new data."],
       ["To send data only to the computer it is addressed to", "That is what a switch does in a star network."],
-      ["To boost the signal so that it can travel further", "That is the job of a repeater."],
+      ["To boost the signal so that it can travel further along the backbone cable", "That is the job of a repeater."],
       ["To connect the bus network to the internet", "A router connects a LAN to the internet."],
     ],
     answer: "A",

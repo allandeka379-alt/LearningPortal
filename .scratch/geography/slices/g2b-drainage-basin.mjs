@@ -99,7 +99,7 @@ concept("geo.rivers.drainage-basin", { file: "rivers/drainage-basin", keyPrefix:
       ["Water from rain far upstream is slowed by wide floodplains", "Correct: rain in Angola and Zambia takes weeks to arrive."],
       ["Snow melts on mountains at the source of the river", "There is no snowmelt in the Zambezi's source area."],
       ["Water is released from Lake Kariba at that time", "Kariba is downstream of the falls, so it cannot affect them."],
-      ["April is the wettest month at Victoria Falls town", "The local rains peak earlier, around December to February."],
+      ["April is the wettest month of the year at Victoria Falls town", "The local rains peak earlier, around December to February."],
     ],
     answer: "A",
     explanation: "The upper Zambezi drains a huge area of Angola and Zambia. Floodwater spreads over wide floodplains and travels slowly, so the peak reaches the falls weeks after the rains.",

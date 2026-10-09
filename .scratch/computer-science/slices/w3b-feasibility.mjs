@@ -20,7 +20,7 @@ concept("comp.sad.feasibility", { file: "sad/feasibility", keyPrefix: "sad.feasi
     options: [
       ["To decide whether a proposed system is possible and worthwhile", "Correct: it decides whether to go ahead."],
       ["To train users before the new system goes live", "Training happens during implementation."],
-      ["To correct errors found after the system is in use", "That is maintenance."],
+      ["To correct errors that are found after the new system has been in use", "That is maintenance."],
       ["To write the program code for the new system", "Coding happens in development."],
     ],
     answer: "A",
@@ -95,7 +95,7 @@ concept("comp.sad.feasibility", { file: "sad/feasibility", keyPrefix: "sad.feasi
     options: [
       ["Feasible: payback is two years, staff support it and hardware is available", "Correct: a clear recommendation justified by findings."],
       ["Feasible, because computers are modern and everybody uses them", "This is not based on the study's findings."],
-      ["Not feasible, because new systems are always expensive", "Cost alone, without benefits, is not a valid reason."],
+      ["Not feasible, because new systems are always expensive to buy and to install", "Cost alone, without benefits, is not a valid reason."],
       ["Feasible, because the analyst likes the new software", "Personal preference is not a justification."],
     ],
     answer: "A",

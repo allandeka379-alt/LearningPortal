@@ -14,7 +14,7 @@ concept("econ.firms.business-organisations", { file: "firms/business-organisatio
     options: [
       ["The owners' personal possessions can be used to pay the debts of the business", "Correct: the owners are personally liable for all business debts."],
       ["The business can borrow as much money as it wishes from banks", "Liability is about responsibility for debts, not borrowing limits."],
-      ["The owners can lose only the money they invested in the business", "That is limited liability."],
+      ["The owners can lose only the money they themselves invested in the business", "That is limited liability."],
       ["The business is allowed to sell its shares to the general public", "That describes a public limited company."],
     ],
     answer: "A",

@@ -11,7 +11,7 @@ concept("comp.network.protocols", { file: "network/protocols", keyPrefix: "netwo
     options: [
       ["A set of rules for how data is transmitted between devices", "Correct: protocols are agreed rules."],
       ["A device that forwards packets between networks", "That is a router."],
-      ["A cable that carries data between two computers", "That is a transmission medium."],
+      ["A cable that carries data between two computers on the same network", "That is a transmission medium."],
       ["A program that removes viruses from a network", "That is anti-malware software."],
     ],
     answer: "A",
@@ -48,7 +48,7 @@ concept("comp.network.protocols", { file: "network/protocols", keyPrefix: "netwo
       ["HTTPS encrypts the data sent between browser and server", "Correct: card and login details cannot be read if intercepted."],
       ["HTTPS makes web pages load without any server", "Pages still come from a web server."],
       ["HTTPS sends the shop's emails to customers", "Email is sent with SMTP."],
-      ["HTTPS compresses images so pages load faster", "Its purpose is security, not compression."],
+      ["HTTPS compresses the images so that payment pages load faster", "Its purpose is security, not compression."],
     ],
     answer: "A",
     explanation: "HTTPS is HTTP with encryption (SSL/TLS), so intercepted data is unreadable.",

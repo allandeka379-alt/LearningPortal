@@ -11,7 +11,7 @@ concept("geo.weather.hazards", { file: "weather/hazards", keyPrefix: "weather.ha
       ["A long period with rainfall well below normal", "Correct: it is defined against what is normal for the place."],
       ["Any month in which no rain falls", "A rainless month is normal in Zimbabwe's dry season."],
       ["A season of very high temperatures", "That describes a heatwave, not a drought."],
-      ["A sudden fall in the level of a river", "River levels can fall for many reasons; drought is about rainfall."],
+      ["A sudden fall in the level of a river or dam", "River levels can fall for many reasons; drought is about rainfall."],
     ],
     answer: "A",
     explanation: "A **drought** is a long period of much less rain than normal, so water supplies, crops and pasture suffer.",
@@ -45,7 +45,7 @@ concept("geo.weather.hazards", { file: "weather/hazards", keyPrefix: "weather.ha
     stem: "Why do low-lying places such as Muzarabani flood in many wet seasons?",
     options: [
       ["Flat land beside rivers that overflow after heavy rain", "Correct: water spreads out and drains slowly from flat valley floors."],
-      ["They receive the highest rainfall in Zimbabwe", "The wettest areas are the Eastern Highlands, not the Zambezi valley."],
+      ["They receive the highest rainfall in Zimbabwe every wet season", "The wettest areas are the Eastern Highlands, not the Zambezi valley."],
       ["Their soils are always frozen in winter", "Zimbabwe's soils do not freeze; floods come in the wet season."],
       ["Tropical cyclones reach them every year", "Cyclones affect Zimbabwe only in some years."],
     ],

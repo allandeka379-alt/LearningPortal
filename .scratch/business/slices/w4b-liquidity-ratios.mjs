@@ -33,7 +33,7 @@ concept("bus.finance.liquidity-ratios", { file: "finance/liquidity-ratios", keyP
       ["It is the hardest current asset to turn into cash quickly", "Correct: stock must be sold, and often paid for later, before it becomes cash."],
       ["It is a non-current asset kept for many years", "Inventory is a current asset."],
       ["It is already counted as a current liability", "Inventory is an asset, not a liability."],
-      ["Businesses never sell their inventory for cash", "Inventory is sold, but it takes time to become cash."],
+      ["Businesses never sell their inventory for cash, only on credit", "Inventory is sold, but it takes time to become cash."],
     ],
     answer: "A",
     explanation: "The acid test checks whether debts can be paid without relying on selling stock.",

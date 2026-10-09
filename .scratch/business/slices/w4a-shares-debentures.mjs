@@ -45,7 +45,7 @@ concept("bus.finance.shares-debentures", { file: "finance/shares-debentures", ke
       ["Unpaid dividends are carried forward and paid later", "Correct: arrears are paid before ordinary dividends."],
       ["Its dividend rises every year", "Its rate is fixed."],
       ["It gives the holder extra votes", "Preference shares usually carry no vote."],
-      ["It can never be bought back by the company", "That depends on whether it is redeemable."],
+      ["It can never be bought back by the company that issued it", "That depends on whether it is redeemable."],
     ],
     answer: "A",
     explanation: "Cumulative preference shareholders do not lose a missed dividend.",

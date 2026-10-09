@@ -25,7 +25,7 @@ concept("econ.money.banking", { file: "money/banking", keyPrefix: "money.banking
     options: [
       ["Charging more interest on loans than it pays on deposits", "Correct: the interest margin."],
       ["Printing new banknotes for its customers", "Only the central bank issues currency."],
-      ["Setting the country's official rate of interest", "The central bank sets the policy rate."],
+      ["Setting the country's official rate of interest each month", "The central bank sets the policy rate."],
       ["Collecting taxes on behalf of the government", "Tax collection is not a bank's main business."],
     ],
     answer: "A",

@@ -36,8 +36,8 @@ concept("econ.firms.multinationals", { file: "firms/multinationals", keyPrefix: 
     d: 2, skill: "UNDERSTANDING",
     stem: "Why might an MNC set up a factory in a country rather than export to it?",
     options: [
-      ["To avoid tariffs and transport costs by producing inside the market", "Correct."],
-      ["To pay its workers higher wages than in its home country", "MNCs usually seek lower, not higher, costs."],
+      ["To avoid tariffs and transport costs by producing in the market", "Correct."],
+      ["To pay its workers higher wages than it pays in its home country", "MNCs usually seek lower, not higher, costs."],
       ["To reduce the size of its operations", "Setting up abroad expands its operations."],
       ["To stop selling its products in that country", "It sets up to sell more there."],
     ],
@@ -90,7 +90,7 @@ concept("econ.firms.multinationals", { file: "firms/multinationals", keyPrefix: 
       ["Requiring it to train local workers and buy more inputs from local suppliers", "Correct: raises local spillovers while keeping the investment."],
       ["Taking ownership of all the MNC's assets without compensation", "This would drive away future investors."],
       ["Banning the MNC from selling its output abroad", "This would cut exports and probably cause it to leave."],
-      ["Exempting the MNC from all taxes and environmental rules forever", "This gives away revenue and allows damage."],
+      ["Exempting the MNC from all taxes and environmental rules for as long as it stays", "This gives away revenue and allows damage."],
     ],
     answer: "A",
     hints: ["Which option keeps the investment but spreads more of its benefits locally?"],
@@ -101,7 +101,7 @@ concept("econ.firms.multinationals", { file: "firms/multinationals", keyPrefix: 
     stem: "What name does the ZIMSEC syllabus use for MNCs?",
     options: [
       ["Multinational corporations", "Correct: ZIMSEC uses 'corporations'; Cambridge uses 'companies'."],
-      ["Public corporations", "These are state-owned firms (parastatals)."],
+      ["Public corporations (parastatals)", "These are state-owned firms (parastatals)."],
       ["Sole traders", "A sole trader is a one-owner business."],
       ["Co-operatives", "A co-operative is owned by its members."],
     ],

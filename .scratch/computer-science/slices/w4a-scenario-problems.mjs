@@ -64,7 +64,7 @@ concept("comp.algorithms.scenario-problems", { file: "algorithms/scenario-proble
     options: [
       ["Each input repeats until it meets the stated rules, with an error message", "Correct: a validation loop for every input."],
       ["Each input is entered twice and the two compared", "That is double entry, a verification check."],
-      ["The arrays are checked to be full before the program starts", "Validation applies to the inputs."],
+      ["The arrays are checked to make sure they are full before the program starts processing", "Validation applies to the inputs."],
       ["The output is checked by the user at the end", "That is not input validation."],
     ],
     answer: "A",

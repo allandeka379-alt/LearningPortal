@@ -8,7 +8,7 @@ concept("bus.transport.trends", { file: "transport/trends", keyPrefix: "transpor
     options: [
       ["Carrying goods in standard sealed steel boxes moved between modes", "Correct: the same container moves by ship, train and lorry without the goods being unpacked."],
       ["Packing goods in cardboard cartons for retail sale", "Cartons are retail packaging; containers are large standard transport boxes."],
-      ["Storing liquids in large tanks at an inland fuel depot", "That is bulk storage of liquids, not containerisation."],
+      ["Storing fuel and other liquids in large steel tanks at an inland depot", "That is bulk storage of liquids, not containerisation."],
       ["Charging road users a fee each time they use a highway", "That describes a toll, not containerisation."],
     ],
     answer: "A",
@@ -31,7 +31,7 @@ concept("bus.transport.trends", { file: "transport/trends", keyPrefix: "transpor
     stem: "What is the main purpose of a toll gate?",
     options: [
       ["To raise money for building and maintaining roads", "Correct: toll fees are used for road construction and repairs."],
-      ["To check drivers' licences at every gate", "Licence checks are done by the police, not toll gates."],
+      ["To check drivers' licences and permits at every gate", "Licence checks are done by the police, not toll gates."],
       ["To collect customs duty on imports", "Customs duty is collected at border posts and bonded warehouses."],
       ["To stop lorries from using main roads", "Toll gates charge lorries for road use; they do not ban them."],
     ],
@@ -55,7 +55,7 @@ concept("bus.transport.trends", { file: "transport/trends", keyPrefix: "transpor
     stem: "How can a vehicle tracking system reduce a haulage firm's costs?",
     options: [
       ["It reveals detours and misuse of fuel by drivers", "Correct: owners see routes and stops, so wasted fuel and unauthorised trips fall."],
-      ["It removes the need to insure the lorries", "Lorries must still be insured; tracking may lower premiums, not remove them."],
+      ["It removes the need to insure the lorries against theft", "Lorries must still be insured; tracking may lower premiums, not remove them."],
       ["It makes toll fees unnecessary", "Tolls are still payable whether or not a lorry is tracked."],
       ["It allows lorries to carry heavier loads", "Tracking does not change a lorry's carrying capacity."],
     ],
@@ -154,7 +154,7 @@ concept("bus.transport.trends", { file: "transport/trends", keyPrefix: "transpor
     parts: [
       P.mcq({
         label: "(a)", stem: "Which technology does a tracking unit use to find the lorry's position?",
-        options: [["Satellite positioning (GPS)", "Correct: the unit finds its position by satellite and reports it over a mobile network."], ["E-ticketing", "E-ticketing is for booking and paying for journeys."], ["Containerisation", "Containers are boxes for goods, not positioning technology."], ["Toll collection", "Tolls charge for road use."]],
+        options: [["Satellite positioning (GPS)", "Correct: the unit finds its position by satellite and reports it over a mobile network."], ["E-ticketing", "E-ticketing is for booking and paying for journeys."], ["Containerisation of the load", "Containers are boxes for goods, not positioning technology."], ["Toll collection", "Tolls charge for road use."]],
         answer: "A",
       }),
       P.manual({

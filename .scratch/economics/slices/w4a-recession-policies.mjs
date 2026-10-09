@@ -12,10 +12,10 @@ concept("econ.growth.recession-policies", { file: "growth/recession-policies", k
     d: 1, skill: "RECALL",
     stem: "A recession is",
     options: [
-      ["a period in which real GDP falls, commonly for two consecutive quarters.", "Correct: negative economic growth."],
+      ["a period in which real GDP falls, often for two consecutive quarters.", "Correct: negative economic growth."],
       ["a period in which the rate of economic growth slows down.", "Slower growth still means output is rising."],
       ["a period in which the general price level falls.", "That is deflation."],
-      ["a period in which the budget deficit rises above a set limit.", "A deficit may widen in a recession, but that is not the definition."],
+      ["a period in which the budget deficit rises above a limit set by law.", "A deficit may widen in a recession, but that is not the definition."],
     ],
     answer: "A",
     explanation: "A recession is a period of negative economic growth: real GDP falls, usually over two consecutive quarters.",
@@ -273,7 +273,7 @@ concept("econ.growth.recession-policies", { file: "growth/recession-policies", k
         stem: "Spending on technical colleges and rural roads is best described as",
         options: [
           ["a supply-side policy that raises productive capacity.", "Correct: it improves the quality of labour and infrastructure."],
-          ["a monetary policy that lowers interest rates.", "Monetary policy is run by the central bank."],
+          ["a monetary policy that lowers interest rates for borrowers.", "Monetary policy is run by the central bank."],
           ["a contractionary fiscal policy.", "Higher spending is expansionary."],
           ["a protectionist trade policy.", "It does not restrict imports."],
         ],

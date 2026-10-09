@@ -11,7 +11,7 @@ concept("comp.web.security-testing", { file: "web/security-testing", keyPrefix: 
     stem: "What does **HTTPS** do?",
     options: [
       ["Encrypts data travelling between the browser and the web server", "Correct: shown by a padlock in the address bar."],
-      ["Makes web pages load without an internet connection", "HTTPS still needs a connection."],
+      ["Makes web pages load even when there is no internet connection at all", "HTTPS still needs a connection."],
       ["Checks every link on a page for errors", "That is link testing."],
       ["Compresses the images on a web page", "That is image optimisation."],
     ],
@@ -24,7 +24,7 @@ concept("comp.web.security-testing", { file: "web/security-testing", keyPrefix: 
     options: [
       ["A service storing a site's files on an internet server", "Correct: visitors request pages from the host's server."],
       ["The person who designs the site's logo", "That is a graphic designer."],
-      ["A plugin that adds a contact form to a site", "That is a plugin."],
+      ["A plugin that adds a contact form to the pages of a website", "That is a plugin."],
       ["The name typed in the address bar", "That is the domain name."],
     ],
     answer: "A",
@@ -37,7 +37,7 @@ concept("comp.web.security-testing", { file: "web/security-testing", keyPrefix: 
       ["Updates fix security weaknesses that attackers look for", "Correct: out-of-date plugins are a common way in."],
       ["Old plugins change the site's colours", "Colours are set by the theme."],
       ["Updates register the domain name again", "Domain registration is separate."],
-      ["Plugins stop working on phones after a month", "Plugins do not expire like that."],
+      ["Plugins stop working on phones after a month unless updated", "Plugins do not expire like that."],
     ],
     answer: "A",
     explanation: "Keeping software updated closes known security holes.",
@@ -86,7 +86,7 @@ concept("comp.web.security-testing", { file: "web/security-testing", keyPrefix: 
     options: [
       ["It protects data in transit, not weak passwords or old plugins", "Correct: other measures are needed."],
       ["HTTPS makes all passwords visible to visitors", "HTTPS encrypts data; it does not reveal passwords."],
-      ["HTTPS switches off the input validation on forms", "The two are independent."],
+      ["HTTPS switches off the input validation on every form on the site", "The two are independent."],
       ["HTTPS only works on desktop computers", "It works on all devices."],
     ],
     answer: "A",
@@ -98,7 +98,7 @@ concept("comp.web.security-testing", { file: "web/security-testing", keyPrefix: 
     stem: "Why must a web server check form input even when the browser has already checked it?",
     options: [
       ["Attackers can bypass browser checks and send data directly", "Correct: server-side validation is the real protection."],
-      ["Browsers never check the input typed into a form", "Many browsers check input, but it can be bypassed."],
+      ["Browsers never check the input that is typed into a form by a user", "Many browsers check input, but it can be bypassed."],
       ["The server checks only the spelling of names", "Server checks cover format, range and harmful content."],
       ["Checking twice makes the page load faster", "Extra checks do not speed up loading."],
     ],

@@ -32,7 +32,7 @@ concept("bus.consumer.organisations", { file: "consumer/organisations", keyPrefi
     options: [
       ["The product has been tested against an agreed standard", "Correct: the mark shows certification by the standards body."],
       ["The product is the cheapest of its kind", "A standards mark is about quality and safety, not price."],
-      ["The product was made by a government factory", "Private firms' products carry the mark if they meet the standard."],
+      ["The product was made in a factory owned by the government", "Private firms' products carry the mark if they meet the standard."],
       ["The product can never become faulty", "No mark guarantees that a product will never fail."],
     ],
     answer: "A",
@@ -69,7 +69,7 @@ concept("bus.consumer.organisations", { file: "consumer/organisations", keyPrefi
     options: [
       ["checking that food premises are clean and food is fit to eat", "Correct: they inspect restaurants, butcheries and food shops."],
       ["setting national standards for building materials", "That is the work of the standards body."],
-      ["publishing monthly price surveys of basic goods", "That is a consumer council activity."],
+      ["publishing monthly price surveys of basic goods sold in shops", "That is a consumer council activity."],
       ["insuring consumers against faulty goods", "Inspectors do not provide insurance."],
     ],
     answer: "A",

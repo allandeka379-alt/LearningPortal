@@ -23,7 +23,7 @@ concept("eng.reading.writers-craft", { file: "reading/writers-craft", keyPrefix:
       ["The feelings and associations it carries", "Correct: e.g. home suggests warmth and belonging, beyond house."],
       ["Its dictionary definition only", "That is its denotation, its basic meaning."],
       ["The number of syllables it contains", "Syllables have nothing to do with connotation."],
-      ["The language it originally came from", "That is its origin (etymology)."],
+      ["The language that it originally came from", "That is its origin (etymology)."],
     ],
     answer: "A",
     explanation: "**Connotation** = the associations of a word beyond its literal meaning. *Stench* and *fragrance* are both smells, with opposite connotations.",
@@ -68,7 +68,7 @@ concept("eng.reading.writers-craft", { file: "reading/writers-craft", keyPrefix:
     stem: ext("*The floodwater **swallowed** the low bridge in a single night.*") + "\n\nWhat effect does the word **swallowed** have?",
     options: [
       ["The flood seems a greedy creature that makes the bridge vanish", "Correct: swallowing suggests a living thing consuming something completely."],
-      ["It suggests the bridge was too small and narrow to be seen", "The word describes the water's action, not the size of the bridge."],
+      ["It suggests that the bridge was too small and narrow to be seen", "The word describes the water's action, not the size of the bridge."],
       ["It suggests that the water was clean enough to drink", "The literal sense of drinking is not intended here."],
       ["It tells the reader that the flood was slow and gentle", "In a single night and swallowed both suggest speed and power."],
     ],
@@ -135,7 +135,7 @@ concept("eng.reading.writers-craft", { file: "reading/writers-craft", keyPrefix:
     stem: "Which comment on the phrase *the crowd **surged** towards the gate* is the **best** analysis?",
     options: [
       ["Surged suggests a powerful wave, so the crowd seems uncontrollable and dangerous.", "Correct: it explains the connotation and the effect."],
-      ["Surged is a good verb that makes the passage more interesting to read.", "This is generic: it does not say what the word suggests."],
+      ["Surged is a good verb that makes the passage much more interesting and exciting to read.", "This is generic: it does not say what the word suggests."],
       ["Surged is an example of a verb in the past tense.", "This identifies grammar, not effect."],
       ["Surged means that the crowd moved towards the gate.", "This gives only the literal meaning."],
     ],

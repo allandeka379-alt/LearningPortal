@@ -73,7 +73,7 @@ concept("geo.environment.management-laws", { file: "environment/management-laws"
       ["Cutting trees and hunting there were forbidden, so it acted as a reserve", "Correct: traditional rules protected the trees and animals."],
       ["The trees in sacred forests grew faster than other trees", "Tree growth does not depend on a forest's status."],
       ["Sacred forests received higher rainfall than other areas", "Rainfall does not depend on a forest's status."],
-      ["Only the government could enter sacred forests", "Sacred sites were controlled by traditional leaders and custom, not government."],
+      ["Only government foresters could enter sacred forests to manage the trees", "Sacred sites were controlled by traditional leaders and custom, not government."],
     ],
     answer: "A",
     explanation: "Sacred sites, enforced by chiefs and spirit mediums, worked like small nature reserves: people feared punishment or bad luck if they cut trees or hunted there.",

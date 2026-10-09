@@ -11,7 +11,7 @@ concept("bus.economy.pressure-groups", { file: "economy/pressure-groups", keyPre
     stem: "What is a pressure group?",
     options: [
       ["A group that tries to influence decisions without seeking to form a government", "Correct: it uses publicity, boycotts and lobbying."],
-      ["A government department that inspects businesses and enforces laws", "Government departments have legal powers; pressure groups do not."],
+      ["A government department that inspects businesses and enforces the law on them", "Government departments have legal powers; pressure groups do not."],
       ["A group of businesses that merge to form one company", "That is a merger."],
       ["The board of directors of a company", "Directors run a company; they are not a pressure group."],
     ],
@@ -73,7 +73,7 @@ concept("bus.economy.pressure-groups", { file: "economy/pressure-groups", keyPre
     options: [
       ["Falling sales and the possibility of stricter laws", "Correct: boycotts and lobbying can follow."],
       ["An immediate rise in its tax on profits", "Pressure groups cannot set taxes."],
-      ["Its directors being replaced by the group", "A pressure group cannot appoint directors."],
+      ["Its directors being replaced by members of the group", "A pressure group cannot appoint directors."],
       ["Its products becoming cheaper to make", "Ignoring a campaign does not lower costs."],
     ],
     answer: "A",
@@ -87,7 +87,7 @@ concept("bus.economy.pressure-groups", { file: "economy/pressure-groups", keyPre
       ["They warn businesses early about public concerns", "Correct: a business can change before problems grow."],
       ["They always reduce businesses' costs", "Their demands often raise costs."],
       ["They guarantee higher sales", "Campaigns may reduce sales."],
-      ["They pay for businesses' new equipment", "Pressure groups do not usually fund businesses."],
+      ["They pay for businesses' new pollution-control equipment", "Pressure groups do not usually fund businesses."],
     ],
     answer: "A",
     explanation: "Pressure groups can act as an **early warning** of what customers and the public care about.",
@@ -97,7 +97,7 @@ concept("bus.economy.pressure-groups", { file: "economy/pressure-groups", keyPre
     stem: "Residents form a group to oppose a nightclub opening in their street. What type of pressure group is this?",
     options: [
       ["A community (residents') group", "Correct: it protects a local area."],
-      ["A business group", "Business groups represent businesses."],
+      ["A business (employers') group", "Business groups represent businesses."],
       ["An animal welfare group", "Animals are not the issue."],
       ["A trade union", "Trade unions represent workers."],
     ],

@@ -100,7 +100,7 @@ concept("econ.costs.costs-of-production", { file: "costs/costs-of-production", k
       ["A semi-variable cost", "Correct: it has a fixed part and a variable part."],
       ["A fixed cost", "Part of the bill rises with use."],
       ["A variable cost", "Part of the bill is paid even with no use."],
-      ["An average cost", "An average is a cost per unit of output."],
+      ["An average variable cost", "An average is a cost per unit of output."],
     ],
     answer: "A",
     explanation: "A semi-variable cost has a fixed element (the standing charge) and an element that varies with use.",

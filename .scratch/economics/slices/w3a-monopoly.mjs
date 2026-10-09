@@ -62,7 +62,7 @@ concept("econ.structures.monopoly", { file: "structures/monopoly", keyPrefix: "s
     options: [
       ["Distribution of piped water in a town", "Correct: a second network would double costs."],
       ["Hairdressing in a city centre", "Many small firms can compete."],
-      ["Selling vegetables at a market", "Many sellers, low costs of entry."],
+      ["Selling vegetables at a busy town market", "Many sellers, low costs of entry."],
       ["Making school uniforms", "Many firms can supply."],
     ],
     answer: "A",

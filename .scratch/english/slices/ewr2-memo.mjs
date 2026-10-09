@@ -34,7 +34,7 @@ concept("eng.functional.memo", { file: "functional/memo", keyPrefix: "functional
     options: [
       ["Subject: Staff meeting moved to Thursday 5 March", "Correct: specific, so readers know the content before reading."],
       ["Subject: Very important please read now", "Urgent but vague: it does not say what the memo is about."],
-      ["Subject: Hello to all our hard-working staff", "A greeting, not a subject."],
+      ["Subject: Hello to all our hard-working teaching staff", "A greeting, not a subject."],
       ["Subject: Something has changed this week", "Too vague to be useful."],
     ],
     answer: "A",

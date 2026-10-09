@@ -8,7 +8,7 @@ concept("bus.insurance.procedures-documents", { file: "insurance/procedures-docu
     options: [
       ["Proposal form", "Correct: the proposal form gives the insurer the material facts about the risk."],
       ["Cover note", "A cover note is issued by the insurer after the proposal is accepted."],
-      ["Claim form", "A claim form is completed after a loss."],
+      ["Insurance claim form", "A claim form is completed after a loss."],
       ["Policy", "The policy is the contract issued by the insurer."],
     ],
     answer: "A",
@@ -44,7 +44,7 @@ concept("bus.insurance.procedures-documents", { file: "insurance/procedures-docu
     options: [
       ["A broker is independent and deals with many insurers", "Correct: an agent represents one insurer."],
       ["A broker works for only one insurer", "That describes an agent."],
-      ["A broker sets premium rates using statistics", "That is the actuary's job."],
+      ["A broker sets premium rates using statistics on past losses", "That is the actuary's job."],
       ["A broker pays claims from his own funds", "Claims are paid by the insurer."],
     ],
     answer: "A",
@@ -83,7 +83,7 @@ concept("bus.insurance.procedures-documents", { file: "insurance/procedures-docu
       ["Calculating premium rates from statistics on losses", "Correct: actuaries use probability and statistics to set rates."],
       ["Inspecting damage after a claim", "That is the loss adjuster's role."],
       ["Selling policies door to door", "That is done by agents."],
-      ["Advising clients which insurer to choose", "That is the broker's role."],
+      ["Advising clients which insurer and policy to choose", "That is the broker's role."],
     ],
     answer: "A",
     hints: ["Actuaries are mathematicians."],

@@ -88,7 +88,7 @@ concept("comp.algorithms.algorithm-basics", { file: "algorithms/algorithm-basics
     options: [
       ["So that each step can be understood and carried out in only one way", "Correct: a computer cannot guess what was meant."],
       ["So that the algorithm runs faster on any computer", "Clarity is about meaning, not speed."],
-      ["So that the algorithm can be written without any variables", "Unambiguous steps still use variables."],
+      ["So that the algorithm can be written without using any variables or constants", "Unambiguous steps still use variables."],
       ["So that the algorithm never needs to be tested", "Every algorithm still needs testing."],
     ],
     answer: "A",
@@ -227,7 +227,7 @@ concept("comp.algorithms.algorithm-basics", { file: "algorithms/algorithm-basics
     stem: `This algorithm should output the area of a rectangle.\n\n${fence(`1  INPUT Length\n2  Area ← Length * Width\n3  INPUT Width\n4  OUTPUT "Area is ", Area`)}\n\nWhat is wrong with it?`,
     options: [
       ["Width is used on line 2 before it is input on line 3", "Correct: lines 2 and 3 should be swapped."],
-      ["Line 4 should output Length instead of Area", "The area is the result that is required."],
+      ["Line 4 should output Length and Width instead of Area", "The area is the result that is required."],
       ["Line 1 should come after line 2", "Length must be input before it is used."],
       ["Line 2 should use + instead of *", "Area is length multiplied by width."],
     ],

@@ -27,7 +27,7 @@ concept("econ.systems.market-economy", { file: "systems/market-economy", keyPref
     options: [
       ["Competition gives firms an incentive to keep costs and prices down", "Correct: inefficient firms lose customers to rivals."],
       ["Goods are shared equally among all households", "Goods go to those who can pay, so sharing is unequal."],
-      ["Public goods such as street lighting are always provided", "Firms cannot profit from public goods, so markets do not provide them."],
+      ["Public goods such as street lighting are always provided by private firms", "Firms cannot profit from public goods, so markets do not provide them."],
       ["Harmful goods such as cigarettes are never produced", "Markets produce whatever is profitable, including harmful goods."],
     ],
     answer: "A",
@@ -88,7 +88,7 @@ concept("econ.systems.market-economy", { file: "systems/market-economy", keyPref
     stem: "Why might the profit motive in a market economic system lead to **innovation**?",
     options: [
       ["Firms that develop better products or methods can keep the extra profit", "Correct: the reward for innovation goes to the innovator, so firms have an incentive to try."],
-      ["Governments order firms to develop a new product every year", "Orders from the state are a feature of planning, not of markets."],
+      ["Governments order firms to develop at least one new product every year", "Orders from the state are a feature of planning, not of markets."],
       ["Consumers are not allowed to buy products from abroad", "This restricts trade; it does not explain innovation."],
       ["All firms share their profits equally with their rivals", "If profits were shared, the incentive to innovate would be weak."],
     ],

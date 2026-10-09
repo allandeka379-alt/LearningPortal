@@ -134,7 +134,7 @@ concept("econ.markets.taxes-subsidies", { file: "markets/taxes-subsidies", keyPr
       ["Value added tax charged as a percentage of the selling price", "Correct: the tax is a percentage of the value."],
       ["A duty of a fixed sum on each litre of fuel", "A fixed sum per unit is a specific tax."],
       ["Income tax deducted from a worker's monthly wage", "Income tax is a direct tax."],
-      ["A fixed licence fee paid each year by a bus operator", "A licence fee does not vary with the price of each unit sold."],
+      ["A fixed licence fee paid each year by a bus operator to the council", "A licence fee does not vary with the price of each unit sold."],
     ],
     answer: "A",
     explanation: "Ad valorem means 'according to value': VAT is the usual example.",

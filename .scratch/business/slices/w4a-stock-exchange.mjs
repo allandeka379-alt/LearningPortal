@@ -57,7 +57,7 @@ concept("bus.finance.stock-exchange", { file: "finance/stock-exchange", keyPrefi
       ["A listed public limited company", "Correct: only listed companies' shares are traded."],
       ["A sole trader", "Sole traders cannot issue shares."],
       ["A partnership", "Partnerships cannot issue shares."],
-      ["A co-operative society", "Co-operatives are not listed on the exchange."],
+      ["A registered co-operative society", "Co-operatives are not listed on the exchange."],
     ],
     answer: "A",
     explanation: "Public companies that meet the listing rules can sell shares on the exchange.",
@@ -93,7 +93,7 @@ concept("bus.finance.stock-exchange", { file: "finance/stock-exchange", keyPrefi
     stem: "How does the stock exchange help protect investors?",
     options: [
       ["Listed companies must publish accounts and information", "Correct: listing rules require disclosure."],
-      ["It repays investors whose shares fall in value", "Investors bear their own losses."],
+      ["It repays investors whose shares fall in value on the market", "Investors bear their own losses."],
       ["It sets the dividend each company must pay", "Directors decide dividends."],
       ["It allows only bulls to trade", "All investors may trade."],
     ],

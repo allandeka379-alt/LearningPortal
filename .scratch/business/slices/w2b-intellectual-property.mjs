@@ -23,7 +23,7 @@ concept("bus.enterprise.intellectual-property", { file: "enterprise/intellectual
     options: [
       ["Original creative work such as songs and books", "Correct: copyright covers literary, artistic and musical work."],
       ["A business's brand name and logo", "That is a trademark."],
-      ["A new machine or production process", "That is a patent."],
+      ["A new invention such as a machine or a process", "That is a patent."],
       ["The shape of a product", "That is an industrial design."],
     ],
     answer: "A",

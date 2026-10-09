@@ -31,7 +31,7 @@ concept("geo.population.migration", { file: "population/migration", keyPrefix: "
     stem: "Which of these is a **pull** factor?",
     options: [
       ["Higher wages in the destination", "Correct: it attracts people to the destination."],
-      ["Repeated drought at home", "Drought pushes people away from the origin."],
+      ["Repeated drought in the home area", "Drought pushes people away from the origin."],
       ["Shortage of land at home", "Land shortage is a push factor."],
       ["Civil war at home", "Conflict pushes people to flee."],
     ],
@@ -107,7 +107,7 @@ concept("geo.population.migration", { file: "population/migration", keyPrefix: "
     options: [
       ["Investment in jobs in origin countries", "Correct: it reduces the push factors."],
       ["Building higher border fences", "Fences treat the symptom and push migrants to riskier routes."],
-      ["Deporting undocumented migrants", "Deportation does not change why people leave."],
+      ["Deporting undocumented migrants quickly", "Deportation does not change why people leave."],
       ["Building larger refugee camps", "Camps shelter people but do not remove the causes."],
     ],
     answer: "A",

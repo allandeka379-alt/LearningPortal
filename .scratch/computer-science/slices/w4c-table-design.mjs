@@ -56,7 +56,7 @@ concept("comp.db.table-design", { file: "db/table-design", keyPrefix: "db.table-
       ["One item of data stored about every record, shown as a column", "Correct: a field is a column, such as Surname or Price."],
       ["All the data stored about one item, shown as a row", "That describes a record."],
       ["A collection of records about one type of thing", "That describes a table."],
-      ["A value that is unique for every row of the table", "That describes a primary key, which is one special field."],
+      ["A value that is unique for every row and identifies each record in the table", "That describes a primary key, which is one special field."],
     ],
     answer: "A",
     explanation: "A field holds one item of data (one attribute) for every record; it is a column of the table and has a name and a data type.",

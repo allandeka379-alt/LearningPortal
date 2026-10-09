@@ -32,7 +32,7 @@ concept("eng.composition.descriptive", { file: "composition/descriptive", keyPre
     options: [
       ["Fat drops slapped the tin roof, then the sky emptied all at once.", "Correct: precise verbs (slapped, emptied) and sound make the moment vivid."],
       ["It started to rain very heavily and it was very wet outside.", "Vague words (very heavily, very wet) do not help the reader see or hear the rain."],
-      ["The rain was nice and good for the crops in the fields nearby.", "This gives an opinion about the rain, not a description of it arriving."],
+      ["The rain was nice and very good for the crops in the fields nearby.", "This gives an opinion about the rain, not a description of it arriving."],
       ["There was a lot of rain falling from the sky onto everything.", "A lot of and everything are vague; there is no precise detail."],
     ],
     answer: "A",
@@ -64,7 +64,7 @@ concept("eng.composition.descriptive", { file: "composition/descriptive", keyPre
       ["Smoke rose from the cooking fires as straight as grain stalks.", "Correct: an original comparison drawn from the village world itself."],
       ["The morning was as white as snow and as cold as ice.", "These are tired clichés, and snow does not fit most Zimbabwean villages."],
       ["The roosters were as busy as bees in the early hours.", "A worn-out cliché that adds little to the picture."],
-      ["The huts stood like skyscrapers in a great modern city.", "The comparison clashes with the rural scene and is inaccurate."],
+      ["The little huts stood like tall skyscrapers in a great modern city.", "The comparison clashes with the rural scene and is inaccurate."],
     ],
     answer: "A",
     hints: ["Avoid comparisons you have heard many times.", "Which comparison comes from the world of the scene?"],
@@ -98,7 +98,7 @@ concept("eng.composition.descriptive", { file: "composition/descriptive", keyPre
     stem: "A learner writing *\"Describe the moments before an important match\"* includes this paragraph:\n\n*Then a thief grabbed my bag and I chased him through three streets until a policeman caught him and took him to the station, where I gave a statement.*\n\nWhat is the **main problem**?",
     options: [
       ["It turns the description into an unrelated story.", "Correct: the chase moves away from the match and the moments before it."],
-      ["It uses too many senses in one paragraph.", "It uses almost no sensory detail at all."],
+      ["It uses too many senses in just one short paragraph.", "It uses almost no sensory detail at all."],
       ["It is written in the past tense.", "Past tense is acceptable if used consistently."],
       ["It contains too much precise vocabulary.", "The vocabulary is plain; precision is not the problem."],
     ],

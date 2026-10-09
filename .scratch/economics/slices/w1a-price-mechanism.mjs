@@ -13,7 +13,7 @@ concept("econ.markets.price-mechanism", { file: "markets/price-mechanism", keyPr
     stem: "In economics, what is a **market**?",
     options: [
       ["Any arrangement that brings buyers and sellers together to exchange", "Correct: a market need not be a physical place."],
-      ["A building or open space where farmers sell their produce", "That is one kind of market, but markets need not be buildings."],
+      ["A building or open space where farmers sell their produce to the public", "That is one kind of market, but markets need not be buildings."],
       ["A government office that sets the prices of goods", "Prices in a market are set by buyers and sellers."],
       ["A group of firms that all make the same product for sale", "That is an industry, not a market."],
     ],

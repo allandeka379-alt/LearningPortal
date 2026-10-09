@@ -57,7 +57,7 @@ concept("bus.finance.sources", { file: "finance/sources", keyPrefix: "finance.so
       ["No interest is paid and nothing has to be repaid", "Correct: it is the owners' own money."],
       ["It is available to every new business", "New businesses have no retained profit yet."],
       ["It can always raise very large sums", "It may be too small."],
-      ["It increases the dividends paid to owners", "Retaining profit means less is paid out."],
+      ["It increases the dividends paid to owners each year", "Retaining profit means less is paid out."],
     ],
     answer: "A",
     explanation: "Retained profit costs no interest and causes no loss of control.",

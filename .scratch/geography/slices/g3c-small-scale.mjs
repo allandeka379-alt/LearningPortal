@@ -94,7 +94,7 @@ concept("geo.mining.small-scale", { file: "mining/small-scale", keyPrefix: "mini
       ["The river slows in the plunge pool and drops its heavy load", "Correct: the sudden fall in velocity below the falls deposits dense grains."],
       ["The waterfall erodes gold from the air above it", "Gold comes from weathered rock upstream, not from the air."],
       ["Gold floats on the water and collects in foam", "Gold is very dense and sinks; it does not float."],
-      ["Chemical reactions in the spray turn sand into gold", "Gold is an element; it cannot form from sand."],
+      ["Chemical reactions in the spray slowly turn quartz sand into gold", "Gold is an element; it cannot form from sand."],
     ],
     answer: "A",
     hints: ["What happens to river speed below a waterfall?", "Which grains are dropped first when a river slows?"],
@@ -185,7 +185,7 @@ concept("geo.mining.small-scale", { file: "mining/small-scale", keyPrefix: "mini
         options: [
           ["Small-scale deliveries rose while large-scale deliveries fell slightly", "Correct: small-scale rose from 10,000 to 19,000 kg; large-scale fell from 14,000 to 13,000 kg."],
           ["Both groups delivered more gold every year", "Large-scale deliveries fell each year."],
-          ["Large-scale producers delivered most of the gold in every year", "From Year 2, small-scale producers delivered more."],
+          ["Large-scale producers delivered most of the gold in every one of the three years", "From Year 2, small-scale producers delivered more."],
           ["Total deliveries fell over the three years", "The total rose from 24,000 to 32,000 kg."],
         ],
         answer: "A", explanation: "The growth in total deliveries came entirely from small-scale producers.",

@@ -83,7 +83,7 @@ concept("geo.tectonics.volcanoes", { file: "tectonics/volcanoes", keyPrefix: "te
       ["Viscous magma causes rare, explosive eruptions with pyroclastic flows", "Correct: long quiet periods are followed by violent eruptions."],
       ["Shield volcanoes never produce any lava flows at all", "Shield volcanoes produce many lava flows."],
       ["Strato-volcanoes are found only in very poor countries", "Strato-volcanoes occur in all kinds of countries, e.g. Japan and the USA."],
-      ["Shield volcanoes are always extinct and safe to live on", "Many shield volcanoes, like Mauna Loa, are active."],
+      ["Shield volcanoes are always extinct, so the land around them is safe to live on", "Many shield volcanoes, like Mauna Loa, are active."],
     ],
     answer: "A",
     explanation: "Gas trapped in viscous magma causes **explosive** eruptions; long quiet periods make people less prepared.",

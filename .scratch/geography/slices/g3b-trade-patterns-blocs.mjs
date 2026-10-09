@@ -55,7 +55,7 @@ concept("geo.trade.patterns-blocs", { file: "trade/patterns-blocs", keyPrefix: "
     stem: "How is **OPEC** different from a trading bloc such as SADC?",
     options: [
       ["It is a producers' group that agrees oil output to influence prices", "Correct: OPEC members co-ordinate oil production; they do not form a free trade area."],
-      ["It removes all tariffs on goods traded between its members", "That is what a free trade area does; it is not OPEC's purpose."],
+      ["It removes all tariffs and quotas on goods traded between its member countries", "That is what a free trade area does; it is not OPEC's purpose."],
       ["It is made up only of countries in one region of Africa", "OPEC members are in Africa, the Middle East and South America."],
       ["It is a group of countries that import oil from abroad", "OPEC members are oil exporters, not importers."],
     ],
@@ -79,7 +79,7 @@ concept("geo.trade.patterns-blocs", { file: "trade/patterns-blocs", keyPrefix: "
     stem: "Why do many African countries that export mainly raw materials tend to have **trade deficits**?",
     options: [
       ["Raw material prices are low and unstable, while manufactured imports cost more", "Correct: they earn little per tonne of exports but pay high prices for processed imports, so their terms of trade are poor."],
-      ["They are not allowed to sell raw materials to other countries", "They do sell them; the problem is the low and unstable price."],
+      ["They are not allowed by world trade rules to sell raw materials to other countries", "They do sell them; the problem is the low and unstable price."],
       ["Raw materials are always worth more than manufactured goods", "The opposite is generally true: processing adds value."],
       ["They import no manufactured goods from other countries", "They import large amounts of manufactured goods."],
     ],
@@ -105,7 +105,7 @@ concept("geo.trade.patterns-blocs", { file: "trade/patterns-blocs", keyPrefix: "
     stem: "Which reason best explains why trade **between African countries** is a small share of their total trade?",
     options: [
       ["Many produce similar primary goods and links between neighbours are poor", "Correct: neighbours often have little to sell each other, and roads and railways mostly run to the coast."],
-      ["African countries are not allowed to trade with each other", "There is no such ban; blocs such as SADC and COMESA promote it."],
+      ["African countries are not allowed by international law to trade with each other", "There is no such ban; blocs such as SADC and COMESA promote it."],
       ["African countries have no goods that could be exported", "They export large amounts of minerals, oil and crops."],
       ["All African trade must first pass through Europe", "Goods can and do move directly between African countries."],
     ],
@@ -205,7 +205,7 @@ concept("geo.trade.patterns-blocs", { file: "trade/patterns-blocs", keyPrefix: "
         options: [
           ["It depends heavily on exporting primary products", "Correct: three-quarters of export earnings come from minerals and an unprocessed crop."],
           ["It exports mainly manufactured goods", "The named exports are minerals and a farm crop, not manufactured goods."],
-          ["It earns most of its income from tourism", "Tourism is an invisible export and is not shown in the table."],
+          ["It earns most of its income from tourism and visitors", "Tourism is an invisible export and is not shown in the table."],
           ["It imports less than it exports", "Imports (8,400) are greater than exports (7,000)."],
         ],
         answer: "A", explanation: "Heavy dependence on a few primary products is typical of many African economies.",

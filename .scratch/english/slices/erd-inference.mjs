@@ -89,7 +89,7 @@ concept("eng.reading.inference", { file: "reading/inference", keyPrefix: "readin
     options: [
       ["It is losing customers to the new supermarket", "Correct: empty shelves, no customers and a full supermarket car park."],
       ["It has been closed down by the council", "The shop is still open with goods on the shelves."],
-      ["Mr Sibanda is too lazy to look after it", "Nothing in the extract suggests why, apart from the competition."],
+      ["Mr Sibanda is too lazy to look after it properly now", "Nothing in the extract suggests why, apart from the competition."],
       ["It will soon be the busiest shop again", "Every clue points the other way."],
     ],
     answer: "A",
@@ -106,7 +106,7 @@ concept("eng.reading.inference", { file: "reading/inference", keyPrefix: "readin
     stem: `${SHOP}\n\nWhat does the detail *the fridge stood unplugged in the corner with its door open* most suggest?`,
     options: [
       ["There is nothing cold left to sell, so it is not worth running", "Correct: an empty, switched-off fridge shows the shop has stopped stocking chilled goods."],
-      ["Mr Sibanda is cleaning the fridge to sell it the next day", "No clue mentions cleaning or selling the fridge."],
+      ["Mr Sibanda is cleaning out the old fridge to sell it the next day", "No clue mentions cleaning or selling the fridge."],
       ["There has been a power cut across the business centre", "The supermarket is busy, and unplugged means switched off at the wall, not a power cut."],
       ["The fridge is new and has not been delivered properly", "The shop is old and declining; nothing suggests a new fridge."],
     ],
@@ -121,7 +121,7 @@ concept("eng.reading.inference", { file: "reading/inference", keyPrefix: "readin
       ["He misses him and treasures the boots as a link to him", "Correct: he cares for the boots and holds them as if they might speak."],
       ["He is angry that his brother left him old boots", "He looks after the boots carefully, which suggests affection, not anger."],
       ["He is glad his brother has gone to Johannesburg", "Nothing in his actions shows gladness about the departure."],
-      ["He wants to sell the boots to buy a new pair", "He stuffs the toes to make them fit, so he plans to keep using them."],
+      ["He wants to sell the old boots to buy a new pair for himself", "He stuffs the toes to make them fit, so he plans to keep using them."],
     ],
     answer: "A",
     hints: ["Look at the last sentence: why would someone hold boots *as if they might say something*?"],
@@ -145,7 +145,7 @@ concept("eng.reading.inference", { file: "reading/inference", keyPrefix: "readin
     options: [
       ["The councillors' own roads are repaired while Fifth Street is ignored", "Correct: the sarcasm suggests the councillors look after themselves."],
       ["The councillors are careful drivers who obey the rules", "Taken literally this is praise, but the context shows she is being sarcastic."],
-      ["The councillors should drive more slowly on Fifth Street", "Her complaint is about repairs, not speed."],
+      ["The councillors should drive much more slowly and carefully on Fifth Street", "Her complaint is about repairs, not speed."],
       ["The councillors do not own cars of their own", "She suggests they have their own roads, not that they lack cars."],
     ],
     answer: "A",
@@ -207,7 +207,7 @@ concept("eng.reading.inference", { file: "reading/inference", keyPrefix: "readin
         stem: "In paragraph 1, why does Rumbi probably not ask how long her mother will be away?",
         options: [
           ["She senses that her mother does not know or cannot bear to say", "Correct: the silence on both sides suggests an answer neither wants to face."],
-          ["She is not interested in when her mother returns", "Everything later shows how much she misses her mother."],
+          ["She is not really interested in when her mother will return home", "Everything later shows how much she misses her mother."],
           ["She already knows the exact date of her return", "No date is given anywhere in the extract."],
           ["Her mother has told her never to ask questions", "There is no such rule in the extract."],
         ],

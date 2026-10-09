@@ -27,7 +27,7 @@ concept("econ.unemployment.types", { file: "unemployment/types", keyPrefix: "une
       ["a fall in aggregate demand during a downturn.", "Correct: firms in many industries need fewer workers."],
       ["the time taken to search for a job.", "That causes frictional unemployment."],
       ["the decline of one industry for good.", "That causes structural unemployment."],
-      ["changes in the weather during the year.", "That causes seasonal unemployment."],
+      ["changes in the weather and seasons during the year.", "That causes seasonal unemployment."],
     ],
     answer: "A",
     explanation: "Cyclical (demand-deficient) unemployment follows the business cycle: it rises when total spending falls.",

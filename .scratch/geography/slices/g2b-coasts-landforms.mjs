@@ -73,7 +73,7 @@ concept("geo.coasts.landforms", { file: "coasts/landforms", keyPrefix: "coasts.l
       ["Waves break further out and lose energy crossing the platform", "Correct: the platform absorbs wave energy."],
       ["The platform makes the rock in the cliff harder", "The rock's strength does not change."],
       ["The tide no longer reaches the platform", "The platform is covered at high tide."],
-      ["Sub-aerial weathering stops once a platform forms", "Weathering continues regardless of the platform."],
+      ["Sub-aerial weathering of the cliff face stops once a wide platform forms", "Weathering continues regardless of the platform."],
     ],
     answer: "A",
     explanation: "A wide, shallow platform makes waves break earlier and lose energy through friction, so less energy reaches the cliff foot.",

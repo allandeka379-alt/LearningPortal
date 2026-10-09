@@ -21,7 +21,7 @@ concept("geo.industry.small-informal", { file: "industry/small-informal", keyPre
       ["A welding mask or goggles", "Correct: they shield the eyes from sparks and the bright arc."],
       ["Ear protectors", "Ear protectors reduce noise, not eye damage."],
       ["Safety boots", "Boots protect the feet from falling objects."],
-      ["A reflective vest", "A reflective vest makes a worker visible to traffic."],
+      ["A reflective vest and hard hat", "A reflective vest makes a worker visible to traffic."],
     ],
     answer: "A",
     explanation: "Each item of PPE matches a hazard; welding masks protect the eyes and face.",
@@ -31,7 +31,7 @@ concept("geo.industry.small-informal", { file: "industry/small-informal", keyPre
     stem: "Why did the informal sector in Zimbabwe grow rapidly from the 1990s onwards?",
     options: [
       ["Many formal-sector workers lost their jobs and turned to self-employment", "Correct: retrenchments and factory closures pushed people into informal work."],
-      ["Formal factories were opening faster than workers could be found", "Formal employment shrank rather than grew in this period."],
+      ["Formal factories were opening much faster than skilled workers could be found", "Formal employment shrank rather than grew in this period."],
       ["The informal sector required large bank loans to start", "Informal businesses need little capital, which is why they are easy to start."],
       ["Laws required all new businesses to be informal", "No law required this; informal means outside official regulation."],
     ],
@@ -44,7 +44,7 @@ concept("geo.industry.small-informal", { file: "industry/small-informal", keyPre
     options: [
       ["Large numbers of potential customers pass by every day", "Correct: informal traders depend on passing trade."],
       ["Land there is reserved for large factories", "Bus termini are busy public spaces, not industrial land."],
-      ["Raw materials are mined beside bus termini", "There are no mines at bus termini."],
+      ["Raw materials for small industries are mined beside bus termini", "There are no mines at bus termini."],
       ["Councils pay traders to work there", "Councils charge fees or move traders; they do not pay them."],
     ],
     answer: "A",
@@ -68,7 +68,7 @@ concept("geo.industry.small-informal", { file: "industry/small-informal", keyPre
     stem: "Why do informal businesses find it hard to borrow money from banks?",
     options: [
       ["They lack collateral, records and registration that banks require", "Correct: without these, banks see the loans as too risky."],
-      ["Banks are not allowed to lend money to any small business", "Banks may lend to small businesses that meet their conditions."],
+      ["Banks are not allowed by law to lend money to any small or new business", "Banks may lend to small businesses that meet their conditions."],
       ["Informal businesses never need any money to grow", "They often need capital for tools and premises."],
       ["Interest rates for small businesses are always zero", "Small borrowers usually face higher, not zero, rates."],
     ],
@@ -82,7 +82,7 @@ concept("geo.industry.small-informal", { file: "industry/small-informal", keyPre
     options: [
       ["Fitting a guard over the blade and training in its use", "Correct: guarding moving parts prevents contact with the blade."],
       ["Wearing ear protectors while working", "Ear protectors reduce noise damage, not cuts."],
-      ["Keeping a fire extinguisher in the workshop", "This deals with fire, not cuts from the blade."],
+      ["Keeping a fire extinguisher and a first-aid kit in the workshop", "These deal with fire and with injuries after they happen, not with preventing cuts from the blade."],
       ["Opening the windows to improve ventilation", "Ventilation reduces dust and fumes, not cuts."],
     ],
     answer: "A",

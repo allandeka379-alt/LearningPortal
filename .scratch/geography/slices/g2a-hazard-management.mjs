@@ -34,7 +34,7 @@ concept("geo.tectonics.hazard-management", { file: "tectonics/hazard-management"
     options: [
       ["To absorb shaking so less movement reaches the building", "Correct: rubber or spring pads separate the building from the ground."],
       ["To stop the building from swaying at all", "Earthquake-resistant buildings are designed to sway safely."],
-      ["To make the foundations shallower and cheaper", "Foundations are usually made deeper, not shallower."],
+      ["To make the foundations shallower and cheaper to build", "Foundations are usually made deeper, not shallower."],
       ["To cut off the gas supply automatically", "That is done by automatic shut-off valves."],
     ],
     answer: "A",
@@ -47,7 +47,7 @@ concept("geo.tectonics.hazard-management", { file: "tectonics/hazard-management"
       ["Rising magma gives warning signs such as small earthquakes, swelling and gas", "Correct: these signs build up over days to months."],
       ["Volcanoes erupt at regular, fixed intervals", "Eruptions are not regular."],
       ["Earthquakes happen only at night, when instruments are switched off", "Earthquakes happen at any time; instruments run continuously."],
-      ["Scientists have no instruments for measuring earthquakes", "Seismometers record earthquakes very accurately."],
+      ["Scientists have no instruments for measuring earthquakes or ground movement", "Seismometers record earthquakes very accurately."],
     ],
     answer: "A",
     explanation: "Magma movement produces measurable signs; stress on faults builds without clear warning of the exact moment of failure.",
@@ -57,7 +57,7 @@ concept("geo.tectonics.hazard-management", { file: "tectonics/hazard-management"
     stem: "What does **land-use zoning** do to reduce hazard risk?",
     options: [
       ["Keeps homes and key buildings out of the most dangerous areas", "Correct: reduces exposure."],
-      ["Strengthens existing buildings with steel braces", "That is retrofitting."],
+      ["Strengthens existing buildings with steel braces and deeper foundations", "That is retrofitting."],
       ["Detects P waves and sends automatic alerts", "That is an early-warning system."],
       ["Provides tents and food after a disaster", "That is a primary response."],
     ],

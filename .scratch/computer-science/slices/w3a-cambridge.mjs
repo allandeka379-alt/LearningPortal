@@ -42,7 +42,7 @@ concept(C("network.devices"), { file: "exam/w3a-cambridge", keyPrefix: "exam.w3a
           ["They are allocated by the network and may be static or dynamic", "Correct."],
           ["They are set when the NIC is manufactured", "That is the MAC address."],
           ["They are always written in hexadecimal pairs", "That describes a MAC address; IPv4 uses denary."],
-          ["They never change once the computer is switched on", "Dynamic addresses can change on each connection."],
+          ["They never change once the computer has been switched on and connected", "Dynamic addresses can change on each connection."],
         ],
         answer: "A", explanation: "IP addresses are allocated by the network, static or dynamic.",
       }),

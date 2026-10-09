@@ -12,7 +12,7 @@ concept("econ.fiscal.taxation", { file: "fiscal/taxation", keyPrefix: "fiscal.ta
     d: 1, skill: "RECALL",
     stem: "Which is a **direct** tax?",
     options: [
-      ["Income tax deducted from a worker's salary", "Correct: a tax on income paid by the person who earns it."],
+      ["Income tax on a worker's salary", "Correct: a tax on income paid by the person who earns it."],
       ["Value added tax on a bag of rice", "VAT is a tax on spending, an indirect tax."],
       ["Customs duty on an imported car", "A duty on goods is an indirect tax."],
       ["Excise duty on a litre of fuel", "Excise duty on goods is an indirect tax."],
@@ -50,7 +50,7 @@ concept("econ.fiscal.taxation", { file: "fiscal/taxation", keyPrefix: "fiscal.ta
     options: [
       ["Proportional, because both pay 5% of their income", "Correct: 25 ÷ 500 and 100 ÷ 2,000 are both 5%."],
       ["Progressive, because Sipho pays more tax", "Sipho pays more dollars but the same percentage."],
-      ["Regressive, because Rudo's income is lower", "The share of income paid is the same, so it is not regressive."],
+      ["Regressive, because Rudo's income is much lower than Sipho's", "The share of income paid is the same, so it is not regressive."],
       ["Indirect, because it is a fixed amount", "The amounts differ, and nothing shows it is on spending."],
     ],
     answer: "A",
@@ -76,7 +76,7 @@ concept("econ.fiscal.taxation", { file: "fiscal/taxation", keyPrefix: "fiscal.ta
     stem: "Tatenda's marginal tax rate is 30% and his average tax rate is 18%. What does this mean?",
     options: [
       ["He pays 30c of each extra dollar earned, and 18% of his total income in tax", "Correct: marginal = rate on extra income; average = total tax ÷ income."],
-      ["He pays 30% of his total income and 18c of each extra dollar", "This reverses the two rates."],
+      ["He pays 30% of his total income in tax and 18c of each extra dollar earned", "This reverses the two rates."],
       ["He pays 48% of his income in tax", "The two rates are not added."],
       ["The tax must be regressive", "A marginal rate above the average rate indicates a progressive tax."],
     ],
@@ -101,7 +101,7 @@ concept("econ.fiscal.taxation", { file: "fiscal/taxation", keyPrefix: "fiscal.ta
     stem: "A government raises the top rate of income tax from 40% to 60%, but tax revenue from high earners hardly rises. Which is the most likely explanation?",
     options: [
       ["High earners work less, move abroad or avoid and evade the tax", "Correct: higher rates reduce incentives and encourage avoidance."],
-      ["The tax change made the system less progressive", "Raising the top rate makes the system more progressive."],
+      ["The tax change made the income tax system less progressive than before", "Raising the top rate makes the system more progressive."],
       ["High earners' incomes are not taxed by income tax", "Income tax falls on all taxable incomes."],
       ["Indirect taxes were cut at the same time", "Nothing in the stem suggests this."],
     ],
@@ -275,7 +275,7 @@ concept("econ.fiscal.taxation", { file: "fiscal/taxation", keyPrefix: "fiscal.ta
         options: [
           ["an indirect tax on spending.", "Correct: VAT is collected by sellers on goods and services."],
           ["a direct tax on income.", "Income tax is the direct tax."],
-          ["a tax on firms' profits.", "That is corporate tax."],
+          ["a tax on firms' profits and dividends.", "That is corporate tax."],
           ["a tax on imports only.", "VAT applies to most goods and services, not only imports."],
         ],
         answer: "A",

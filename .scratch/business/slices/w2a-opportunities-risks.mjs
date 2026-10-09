@@ -8,7 +8,7 @@ concept("bus.enterprise.opportunities-risks", { file: "enterprise/opportunities-
     options: [
       ["A situation in which a need could be met profitably", "Correct: an unmet or poorly met demand."],
       ["A loan offered by a commercial bank", "A loan is a source of finance."],
-      ["A legal document needed to start trading", "That is a licence or certificate."],
+      ["A legal document that is needed before starting to trade", "That is a licence or certificate."],
       ["A risk that a business may fail", "That is a business risk."],
     ],
     answer: "A",

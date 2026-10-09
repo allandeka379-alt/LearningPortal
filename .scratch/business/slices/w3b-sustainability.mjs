@@ -20,7 +20,7 @@ concept("bus.operations.sustainability", { file: "operations/sustainability", ke
     stem: "Which of these is a renewable source of energy?",
     options: [
       ["Solar power", "Correct: sunlight is replaced naturally."],
-      ["Coal", "Coal is non-renewable."],
+      ["Coal-fired power", "Coal is non-renewable."],
       ["Diesel", "Diesel comes from oil, which is non-renewable."],
       ["Petrol", "Petrol is non-renewable."],
     ],
@@ -32,7 +32,7 @@ concept("bus.operations.sustainability", { file: "operations/sustainability", ke
     stem: "What is sustainable production?",
     options: [
       ["Producing in ways that do not use up or damage resources, so production can continue", "Correct."],
-      ["Producing as much as possible in the shortest time with any resources", "This ignores the use of resources."],
+      ["Producing as much as possible in the shortest time, using whatever resources are available", "This ignores the use of resources."],
       ["Producing only for the home market and never exporting", "Sustainability is not about markets."],
       ["Producing goods by hand without any machines at all", "Sustainability does not require hand production."],
     ],
@@ -81,7 +81,7 @@ concept("bus.operations.sustainability", { file: "operations/sustainability", ke
     options: [
       ["It may cost more per unit, raising costs or prices", "Correct: a short-term cost disadvantage."],
       ["Customers never care about packaging", "Many customers do care."],
-      ["Recyclable packaging is illegal for food", "It is widely used for food."],
+      ["Recyclable packaging is illegal for food and drink products", "It is widely used for food."],
       ["Recycling increases the amount of waste", "Recycling reduces waste."],
     ],
     answer: "A",

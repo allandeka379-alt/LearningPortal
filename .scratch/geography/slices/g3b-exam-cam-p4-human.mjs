@@ -127,7 +127,7 @@ concept("geo.fieldwork.human-fieldwork", { file: "exam/cam-p4-human", keyPrefix:
           ["Scoring is subjective, so a mean evens out personal opinions", "Correct: bi-polar scoring is subjective, and averaging several scorers makes results more reliable."],
           ["Three students can finish each street more quickly", "Speed of survey does not explain the use of a mean."],
           ["Each student scored a different set of criteria", "All three used the same eight criteria."],
-          ["A mean turns every area's score into a positive one", "Area C's mean is −10, so means can be negative."],
+          ["A mean turns every area's score into a positive one for comparison", "Area C's mean is −10, so means can be negative."],
         ],
         answer: "A", explanation: "Bi-polar surveys are subjective; several scorers and a mean, with agreed descriptions for each score, improve reliability.",
       }),

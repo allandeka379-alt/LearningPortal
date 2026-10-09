@@ -12,7 +12,7 @@ concept("phys.energy.stores-transfers", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "In which energy store is energy held in a stretched catapult?",
-    options: [["Kinetic", "The catapult is not moving."], ["Elastic (strain)", "Correct."], ["Chemical", "No chemical change."], ["Nuclear", "No change to nuclei."]],
+    options: [["Kinetic", "The catapult is not moving."], ["Elastic (strain)", "Correct."], ["Chemical (in the rubber)", "No chemical change."], ["Nuclear", "No change to nuclei."]],
     answer: "B", explanation: "A stretched or squashed object stores energy in its elastic (strain) store." });
 
   q.mcq({ d: 1, skill: "RECALL",
@@ -188,7 +188,7 @@ concept("phys.energy.work", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "Work done is defined as:",
-    options: [["force × distance moved in the direction of the force", "Correct."], ["force × time for which the force is acting", "That is impulse (the change of momentum)."], ["mass × acceleration of the object being moved", "That is the resultant force."], ["energy transferred ÷ time taken to transfer it", "That is power."]],
+    options: [["force × distance moved in the direction of the force", "Correct."], ["force × time for which the force is acting on the object", "That is impulse (the change of momentum)."], ["mass × acceleration of the object being moved", "That is the resultant force."], ["energy transferred ÷ time taken to transfer it", "That is power."]],
     answer: "A", explanation: "W = Fd, with d the distance moved in the direction of the force." });
 
   q.num({ d: 2, skill: "APPLICATION", daily: true,
@@ -218,7 +218,7 @@ concept("phys.energy.work", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "A waiter carries a tray at a steady speed across a level floor. How much work does his upward supporting force do on the tray?",
-    options: [["None, because the force is at right angles to the motion", "Correct."], ["A lot, because the tray is heavy and he walks far", "Weight does not matter here."], ["Work equal to the weight of the tray, in joules", "Work is force × distance moved in the direction of the force, not a force."], ["Work equal to the weight × the distance he walks", "The distance moved is not in the direction of the force."]],
+    options: [["None, because the force is at right angles to the motion", "Correct."], ["A lot, because the tray is heavy and he walks far", "Weight does not matter here."], ["Work equal to the weight of the tray, in joules", "Work is force × distance moved in the direction of the force, not a force."], ["Work equal to the tray's weight × the distance he walks", "The distance moved is not in the direction of the force."]],
     answer: "A", explanation: "Work needs movement in the direction of the force; the upward force and horizontal motion are perpendicular, so no work is done.",
     hints: ["Is there any movement in the direction of the supporting force?"] });
 
@@ -309,7 +309,7 @@ concept("phys.energy.power", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "To measure your own power by running up stairs, which measurements are needed?",
-    options: [["Your mass, the stairs' vertical height and the time taken", "Correct."], ["Your height, the number of steps and your speed", "Your own height is not needed."], ["The length of the staircase and your mass only", "Time is needed for power."], ["Only the time taken to reach the top of the stairs", "The work done is also needed."]],
+    options: [["Your mass, the stairs' vertical height and the time taken", "Correct."], ["Your height, the number of steps and your running speed", "Your own height is not needed."], ["The length of the staircase and your mass only", "Time is needed for power."], ["Only the time taken to reach the top of the stairs", "The work done is also needed."]],
     answer: "A", explanation: "Power = work ÷ time = (weight × vertical height) ÷ time.",
     hints: ["Power = work ÷ time; what do you need to find the work?"] });
 
@@ -470,7 +470,7 @@ concept("phys.energy.resources", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "What is a biofuel?",
-    options: [["A fuel made from recently living material, e.g. wood or ethanol", "Correct."], ["A fuel made from coal, which formed from ancient plants", "Coal is a fossil fuel, formed over millions of years."], ["Any fuel that gives off no carbon dioxide when it burns", "Biofuels do release carbon dioxide when they burn."], ["A fuel such as uranium that is used in nuclear reactors", "That is nuclear fuel."]],
+    options: [["A fuel made from recently living material, e.g. wood or ethanol", "Correct."], ["A fuel made from coal, which formed from ancient plants", "Coal is a fossil fuel, formed over millions of years."], ["Any fuel that gives off no carbon dioxide at all when it is burned", "Biofuels do release carbon dioxide when they burn."], ["A fuel such as uranium that is used in nuclear reactors", "That is nuclear fuel."]],
     answer: "A", explanation: "Biofuels come from plants or animal waste: wood, ethanol, biogas." });
 
   q.card("DEFINITION", "What is a **renewable** resource?", "One that is replaced naturally as fast as it is used (sun, wind, water, biofuels).");
@@ -532,7 +532,7 @@ concept("phys.engines.four-stroke", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "A car's air filter becomes blocked. What is the most likely result?",
-    options: [["Incomplete combustion, producing black soot and carbon monoxide", "Correct: too little air."], ["The engine runs cooler and its exhaust becomes cleaner", "It runs worse."], ["Fuel economy improves because less air is drawn in", "Too little air wastes fuel: economy gets worse."], ["The spark plug stops working and the engine cuts out", "The spark plug is not affected directly."]],
+    options: [["Incomplete combustion, producing black soot and carbon monoxide", "Correct: too little air."], ["The engine runs cooler and its exhaust becomes cleaner", "It runs worse."], ["Fuel economy improves because less air is drawn in", "Too little air wastes fuel: economy gets worse."], ["The spark plug stops sparking at once and the engine cuts out completely", "The spark plug is not affected directly."]],
     answer: "A", explanation: "Too little air for the fuel means incomplete burning: soot, carbon monoxide and wasted fuel.",
     hints: ["What does fuel need to burn completely?"] });
 
@@ -549,7 +549,7 @@ concept("phys.engines.four-stroke", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "What does the choke do when a cold petrol engine is started?",
-    options: [["Cuts the air supply to give a richer, easier-to-light mixture", "Correct."], ["Cools the engine while it warms up after starting", "The choke does nothing to cool the engine."], ["Stops fuel reaching the engine until it is warm enough", "It enriches the mixture."], ["Opens the exhaust valve to clear out burnt gases", "That is the exhaust valve's job."]],
+    options: [["Cuts the air supply to give a richer, easier-to-light mixture", "Correct."], ["Cools the engine while it warms up after starting", "The choke does nothing to cool the engine."], ["Stops fuel reaching the cylinders until the engine is warm enough", "It enriches the mixture."], ["Opens the exhaust valve to clear out burnt gases", "That is the exhaust valve's job."]],
     answer: "A", explanation: "The choke restricts air so the mixture has more petrol, making a cold start easier." });
 
   q.card("FACT", "Four strokes in order?", "Induction, compression, power, exhaust.", undefined, { applies: Z });

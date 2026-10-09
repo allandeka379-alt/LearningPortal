@@ -57,7 +57,7 @@ concept("bus.organisation.sole-traders-partnerships", { file: "exam/w2a-commerce
       P.mcq({
         label: "(b)", marks: 1,
         stem: "Which document must the company obtain before it can start trading as a public company?",
-        options: [["Trading certificate", "Correct: issued after the minimum capital is raised."], ["Partnership deed", "Used by partnerships."], ["Insurance policy", "Not a formation document."], ["Invoice", "A trade document."]],
+        options: [["Trading certificate", "Correct: issued after the minimum capital is raised."], ["Partnership deed", "Used by partnerships."], ["Fire insurance policy", "Not a formation document."], ["Invoice", "A trade document."]],
         answer: "A",
       }),
       P.num({

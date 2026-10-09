@@ -61,7 +61,7 @@ concept("econ.development.meaning-indicators", { file: "development/meaning-indi
     stem: "Country M has a high real GDP per head but a low HDI. What is the most likely explanation?",
     options: [
       ["Its income is unequally shared and little is spent on health and education", "Correct: income is high on average, but health and schooling are poor."],
-      ["Its population is very large compared with its output", "That would give a low GDP per head."],
+      ["Its population is very large compared with its output, so average income is low", "That would give a low GDP per head."],
       ["Its people live long lives and spend many years in school", "That would give a high HDI."],
       ["Its prices have been rising rapidly", "Real GDP per head is adjusted for inflation."],
     ],

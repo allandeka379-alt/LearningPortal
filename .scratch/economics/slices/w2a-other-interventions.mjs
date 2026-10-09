@@ -47,9 +47,9 @@ concept("econ.markets.other-interventions", { file: "markets/other-interventions
     d: 2, skill: "UNDERSTANDING",
     stem: "Which is the most likely reason for a government to **nationalise** an electricity grid?",
     options: [
-      ["It is a natural monopoly, and state ownership can keep prices in the public interest", "Correct: one network is cheapest, so the state may own it to stop monopoly pricing."],
+      ["It is a natural monopoly, and state ownership can keep its prices fair to users", "Correct: one network is cheapest, so the state may own it to stop monopoly pricing."],
       ["Competition among many grids would make electricity too cheap", "Building several grids would waste resources; this is not the reason."],
-      ["State ownership always makes firms more efficient than private ownership", "State firms often lack the profit motive; efficiency is not guaranteed."],
+      ["State ownership always makes firms more efficient than private ownership does", "State firms often lack the profit motive; efficiency is not guaranteed."],
       ["Nationalisation raises money from selling the firm's shares", "Selling shares raises money in privatisation, not nationalisation."],
     ],
     answer: "A",
@@ -73,7 +73,7 @@ concept("econ.markets.other-interventions", { file: "markets/other-interventions
     stem: "A government fines factories that release more than a set amount of smoke. Which is a **disadvantage** of this regulation?",
     options: [
       ["Firms may pollute anyway if fines are small or inspections are rare", "Correct: regulation depends on enforcement."],
-      ["It raises the price of the factories' goods to consumers", "Higher costs may raise prices, but that reflects the external cost and is not the main weakness here."],
+      ["It raises the price of the factories' goods to consumers in the area", "Higher costs may raise prices, but that reflects the external cost and is not the main weakness here."],
       ["It reduces the amount of smoke released into the air", "This is the aim of the regulation, an advantage."],
       ["It gives the government revenue from fines", "Revenue from fines is usually listed as an advantage."],
     ],
@@ -99,7 +99,7 @@ concept("econ.markets.other-interventions", { file: "markets/other-interventions
     options: [
       ["National defence, from which no one can be excluded once it is provided", "Correct: a pure public good is not provided by the market at all, so a subsidy to sellers cannot work."],
       ["Bread, which nearly every household buys every day", "Bread is a private good that markets supply well."],
-      ["Mobile phone airtime, sold by several competing networks", "Competitive markets already supply airtime."],
+      ["Mobile phone airtime, sold by several competing networks across the country", "Competitive markets already supply airtime."],
       ["School uniforms, which parents can buy in many shops", "Uniforms are private goods; a subsidy or grant would be enough."],
     ],
     answer: "A",

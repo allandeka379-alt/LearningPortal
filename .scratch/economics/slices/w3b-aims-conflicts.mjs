@@ -76,7 +76,7 @@ concept("econ.macro.aims-conflicts", { file: "macro/aims-conflicts", keyPrefix: 
       ["It makes progress measurable and holds policymakers accountable", "Correct: a target shows whether the aim has been met."],
       ["It means the aim will be achieved automatically", "Targets can be missed."],
       ["It removes any conflict with other aims", "Setting a target does not remove conflicts."],
-      ["It allows the government to stop collecting statistics", "Statistics are needed to check the target."],
+      ["It allows the government to stop collecting statistics on the economy", "Statistics are needed to check the target."],
     ],
     answer: "A",
     hints: ["How would anyone know whether the aim had been reached?"],
@@ -88,7 +88,7 @@ concept("econ.macro.aims-conflicts", { file: "macro/aims-conflicts", keyPrefix: 
     options: [
       ["Redistribution may reduce incentives to work and invest, slowing growth", "Correct: higher taxes on high earners can weaken incentives."],
       ["Redistribution will raise the rate of inflation directly", "A transfer from rich to poor does not directly raise prices."],
-      ["Redistribution will improve the environment but cut employment", "There is no direct link to the environment here."],
+      ["Redistribution will improve the environment but cut employment in towns", "There is no direct link to the environment here."],
       ["Redistribution will make the current account surplus larger", "Poor households may spend more, including on imports."],
     ],
     answer: "A",

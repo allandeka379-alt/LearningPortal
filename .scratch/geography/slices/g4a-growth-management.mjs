@@ -19,7 +19,7 @@ concept("geo.tourism.growth-management", { file: "tourism/growth-management", ke
     stem: "What is **ecotourism**?",
     options: [
       ["Small-scale nature tourism that conserves the environment and benefits local people", "Correct: all three features are needed."],
-      ["Any holiday at all that includes a game drive or a visit to a national park", "A crowded park holiday with large hotels is not ecotourism."],
+      ["Any holiday at all that includes a game drive, a boat trip or a visit to a national park", "A crowded park holiday with large hotels is not ecotourism."],
       ["Cheap package holidays to large beach resorts with hotels", "That is mass tourism."],
       ["Business travel to attend international conferences", "That is business tourism."],
     ],
@@ -45,7 +45,7 @@ concept("geo.tourism.growth-management", { file: "tourism/growth-management", ke
       ["Tourist spending that leaves the host country, for example to foreign-owned hotels", "Correct: leakage reduces the benefit kept by the host country."],
       ["Water lost from hotel swimming pools by evaporation", "This is not the economic meaning of leakage."],
       ["Tourists leaving a resort before their holiday ends", "This is not leakage."],
-      ["Local hotel and lodge workers moving abroad to work in tourist resorts", "This is emigration, not leakage."],
+      ["Local hotel and lodge workers moving abroad to work in tourist resorts in other countries", "This is emigration, not leakage."],
     ],
     answer: "A",
     explanation: "Leakage is money from tourism that flows out of the destination country.",
@@ -94,7 +94,7 @@ concept("geo.tourism.growth-management", { file: "tourism/growth-management", ke
     stem: "Which is a **limitation** of the Butler model?",
     options: [
       ["It does not allow for sudden shocks such as pandemics or political crises", "Correct: real resorts can lose visitors suddenly for outside reasons."],
-      ["It suggests that tourism growth may not continue for ever", "This is a strength: it warns planners."],
+      ["It suggests that tourism growth may not continue for ever, so resorts must plan ahead", "This is a strength: it warns planners."],
       ["It is simple and can be applied to many resorts", "Simplicity is a strength."],
       ["It encourages planners to act before stagnation", "This is a strength."],
     ],

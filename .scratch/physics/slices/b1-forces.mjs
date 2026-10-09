@@ -50,7 +50,7 @@ concept("phys.forces.mass-weight", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Which instrument measures weight directly?",
-    options: [["A beam balance", "A beam balance compares weights to find mass."], ["A force meter (spring balance)", "Correct."], ["A measuring cylinder", "Measures volume."], ["A micrometer", "Measures small lengths."]],
+    options: [["A beam balance and a set of masses", "A beam balance compares weights to find mass."], ["A force meter (spring balance)", "Correct."], ["A measuring cylinder", "Measures volume."], ["A micrometer", "Measures small lengths."]],
     answer: "B", explanation: "A force meter measures a force in newtons, so it measures weight directly." });
 
   q.fib({ d: 2, skill: "RECALL",
@@ -315,7 +315,7 @@ concept("phys.forces.friction-drag", {
 
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is air resistance?",
-    options: [["Friction (drag) on an object moving through air", "Correct."], ["The weight of the air", "That gives atmospheric pressure."], ["A force that pushes objects forwards", "It opposes motion."], ["Friction between two solids", "That is solid friction."]],
+    options: [["Friction (drag) on an object moving through air", "Correct."], ["The weight of the air", "That gives atmospheric pressure."], ["A force from the air that pushes moving objects forwards", "It opposes motion."], ["Friction between two solids", "That is solid friction."]],
     answer: "A", explanation: "Air resistance is the drag force on an object moving through a gas." });
 
   q.num({ d: 2, skill: "APPLICATION", daily: true,
@@ -412,7 +412,7 @@ concept("phys.forces.circular-motion", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "A stone is whirled in a horizontal circle and the string breaks. How does the stone move immediately afterwards (seen from above)?",
-    options: [["Straight outwards, away from the centre", "No outward force pushes it."], ["In a straight line along the tangent to the circle", "Correct: no resultant force, so it moves in a straight line."], ["It keeps going round the circle", "Without the inward force it cannot."], ["It stops at once", "It keeps its velocity."]],
+    options: [["Straight outwards along the string, away from the centre", "No outward force pushes it."], ["In a straight line along the tangent to the circle", "Correct: no resultant force, so it moves in a straight line."], ["It keeps going round the circle", "Without the inward force it cannot."], ["It stops at once", "It keeps its velocity."]],
     answer: "B", explanation: "With the inward force gone, the stone carries on in a straight line in the direction it was moving at that instant: along the tangent.",
     hints: ["Newton's first law: what happens with no resultant force?"] });
 

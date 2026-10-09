@@ -56,7 +56,7 @@ concept("geo.industry.location-factors", { file: "industry/location-factors", ke
     options: [
       ["The clustering of related firms that benefit from sharing services and suppliers", "Correct: firms gain from being close together."],
       ["The closure of factories when raw materials run out", "That is industrial decline."],
-      ["Moving factories out of large cities to new rural growth points", "That is decentralisation."],
+      ["Moving factories out of large, crowded cities to new growth points in rural districts", "That is decentralisation."],
       ["Packing goods in standard steel boxes for transport", "That is containerisation."],
     ],
     answer: "A",
@@ -96,7 +96,7 @@ concept("geo.industry.location-factors", { file: "industry/location-factors", ke
       ["The largest market, a large labour supply and good transport links", "Correct: these human factors favour the capital."],
       ["Large deposits of raw materials found within the city", "The raw materials for food and clothing come from farms across the country."],
       ["Cheap land and an absence of other industries", "Land in Harare costs more and many industries already cluster there."],
-      ["Hot lowland climate and irrigation water from Lowveld dams", "These describe the south-east Lowveld, not Harare."],
+      ["Hot lowland climate and plentiful irrigation water from Lowveld dams", "These describe the south-east Lowveld, not Harare."],
     ],
     answer: "A",
     explanation: "Market-oriented and labour-oriented industries benefit from the capital's market, workforce, transport hub and agglomeration.",

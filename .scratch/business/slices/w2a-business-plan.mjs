@@ -57,7 +57,7 @@ concept("bus.enterprise.business-plan", { file: "enterprise/business-plan", keyP
       ["Market research and analysis", "Correct: survey evidence about customers and competitors."],
       ["Operations plan", "Operations covers premises and production."],
       ["Executive summary", "The summary would only mention the conclusion briefly."],
-      ["Management and people", "This covers staff and managers."],
+      ["Management and staffing plan", "This covers staff and managers."],
     ],
     answer: "A",
     explanation: "Survey results about customers and competitors belong in market research and analysis.",

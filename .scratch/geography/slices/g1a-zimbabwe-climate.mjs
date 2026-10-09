@@ -60,7 +60,7 @@ concept("geo.weather.zimbabwe-climate", { file: "weather/zimbabwe-climate", keyP
       ["Cloud and rain in the wet season reduce daytime heating", "Correct: before the rains the sky is clear and the sun high."],
       ["The sun is furthest north in October", "In October the sun is moving south towards the Tropic of Capricorn."],
       ["October and November have the longest nights", "Nights are longest in June."],
-      ["Winds from the Antarctic stop in October", "Cold southerly air is a winter feature but does not explain the October peak."],
+      ["Cold winds from the Antarctic stop blowing in October", "Cold southerly air is a winter feature but does not explain the October peak."],
     ],
     answer: "A",
     explanation: "In October-November the sun is high and the sky clear; once the rains begin, cloud cover and evaporation of rain keep temperatures lower.",

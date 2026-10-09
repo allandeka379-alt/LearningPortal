@@ -13,7 +13,7 @@ concept("comp.security.cyber-attacks", { file: "security/cyber-attacks", keyPref
     options: [
       ["Trying many passwords by trial and error until one works", "Correct: software tries combinations until it succeeds."],
       ["Flooding a web server with requests", "That is a denial of service attack."],
-      ["Sending fake emails that ask for bank details", "That is phishing."],
+      ["Sending fake emails that ask people to reply with their bank details", "That is phishing."],
       ["Physically breaking into a server room", "Brute force here means guessing passwords."],
     ],
     answer: "A",

@@ -19,7 +19,7 @@ concept("eng.functional.register", { file: "functional/register", keyPrefix: "fu
     stem: "Which sentence is the most suitable for a **formal letter to a District Schools Inspector**?",
     options: [
       ["I am writing to request permission to hold a science fair in May.", "Correct: full forms, precise verb (request) and a clear purpose."],
-      ["I'm just dropping you a line about our science fair in May.", "Contractions and the casual phrase dropping you a line are informal."],
+      ["I'm just dropping you a quick line about our school science fair in May.", "Contractions and the casual phrase dropping you a line are informal."],
       ["Guess what? We want to throw a big science fair in May!", "A chatty question, slang (throw) and an exclamation suit a friend, not an official."],
       ["Hey there, could we maybe do a science fair thing in May?", "Hey there and thing are far too casual for an official."],
     ],
@@ -56,7 +56,7 @@ concept("eng.functional.register", { file: "functional/register", keyPrefix: "fu
     options: [
       ["I would appreciate an assurance that the advertised timetable will be kept.", "Correct: a clear demand expressed courteously."],
       ["Your drivers are hopeless and should all be dismissed at once.", "Insulting and exaggerated: rude rather than firm."],
-      ["I am so sorry to trouble you, and please ignore this if you are busy.", "Over-apologetic: it weakens the complaint so much that nothing will be done."],
+      ["I am so sorry to trouble you, and please do ignore this letter if you are busy.", "Over-apologetic: it weakens the complaint so much that nothing will be done."],
       ["You people never care about passengers, so why should I bother?", "Rude and sarcastic, with no clear request."],
     ],
     answer: "A",
@@ -69,7 +69,7 @@ concept("eng.functional.register", { file: "functional/register", keyPrefix: "fu
     options: [
       ["It mixes a formal greeting with informal, text-speak language.", "Correct: coz, I'm and total nightmare clash with the formal purpose."],
       ["It names a real street, which is not allowed in letters.", "Naming a real place is fine; it makes the complaint specific."],
-      ["It should start with Dear Sir or Madam, never Dear Editor.", "Dear Editor is an acceptable greeting for a letter to a newspaper."],
+      ["It should always start with Dear Sir or Madam, never Dear Editor.", "Dear Editor is an acceptable greeting for a letter to a newspaper."],
       ["It states its purpose too early in the opening sentence.", "Stating the purpose at once is good practice."],
     ],
     answer: "A",

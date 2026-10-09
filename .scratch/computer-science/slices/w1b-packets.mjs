@@ -21,7 +21,7 @@ concept("comp.transmission.packets", { file: "transmission/packets", keyPrefix: 
   b.mcq({
     d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "Why does each packet's header contain a packet number?",
-    options: [["So the packets can be put back in order at the destination", "Correct: packets may arrive out of order and are reordered using their numbers."], ["So routers can choose the shortest route for it", "Routers use the destination address, not the packet number."], ["So the receiver can check the data for errors", "Error checking uses data in the trailer, such as a checksum."], ["So the sender knows which router to use first", "The packet number is not used to choose routers."]],
+    options: [["So the packets can be put back in order at the destination", "Correct: packets may arrive out of order and are reordered using their numbers."], ["So routers can choose the shortest route for it across the network", "Routers use the destination address, not the packet number."], ["So the receiver can check the data for errors", "Error checking uses data in the trailer, such as a checksum."], ["So the sender knows which router to use first", "The packet number is not used to choose routers."]],
     answer: "A",
     explanation: "In packet switching, packets can take different routes and arrive out of order. The packet number lets the receiver reassemble them correctly.",
   });

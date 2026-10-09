@@ -15,7 +15,7 @@ concept("econ.basics.factors-of-production", { file: "basics/factors-of-producti
     options: [
       ["Interest", "Correct: capital earns interest."],
       ["Rent", "Rent is the reward to land."],
-      ["Wages", "Wages are the reward to labour."],
+      ["Wages and salaries", "Wages are the reward to labour."],
       ["Profit", "Profit is the reward to enterprise."],
     ],
     answer: "A",
@@ -52,7 +52,7 @@ concept("econ.basics.factors-of-production", { file: "basics/factors-of-producti
       ["It organises the other factors and bears the risk of loss", "Correct: the entrepreneur takes the risk and receives profit or loss."],
       ["It is the only factor that is supplied by people", "Labour is also supplied by people."],
       ["It is the only factor that earns a fixed reward", "Profit is not fixed; it can even be a loss."],
-      ["It is a natural resource provided free by nature", "That describes land."],
+      ["It is a natural resource provided free by nature, like land", "That describes land."],
     ],
     answer: "A",
     explanation: "Enterprise combines land, labour and capital and accepts the risk. Its reward, profit, is what is left after the other factors are paid, and it may be negative.",

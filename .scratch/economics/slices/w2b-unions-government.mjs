@@ -52,7 +52,7 @@ concept("econ.labour.unions-government", { file: "labour/unions-government", key
     options: [
       ["An employers' association", "Correct: it speaks for firms in an industry."],
       ["A trade union", "A union represents workers."],
-      ["A workers' committee", "A workers' committee represents employees at one workplace."],
+      ["A workers' committee at a firm", "A workers' committee represents employees at one workplace, not employers."],
       ["A consumers' council", "A consumers' council represents buyers of goods."],
     ],
     answer: "A",

@@ -13,7 +13,7 @@ concept("econ.labour.division-of-labour", { file: "labour/division-of-labour", k
     options: [
       ["Breaking production into separate tasks, each done by different workers", "Correct: specialisation by workers within a process."],
       ["Sharing a firm's profit equally among its workers", "That is profit sharing."],
-      ["Dividing the labour force into employed and unemployed people", "That describes the labour force, not the division of labour."],
+      ["Dividing the labour force into employed and unemployed people for statistics", "That describes the labour force, not the division of labour."],
       ["Replacing workers with machines on a production line", "That is mechanisation or automation."],
     ],
     answer: "A",
@@ -62,7 +62,7 @@ concept("econ.labour.division-of-labour", { file: "labour/division-of-labour", k
       ["Interdependence between the stages of production", "Correct: every stage relies on the others."],
       ["Loss of craftsmanship among workers", "Craft skill is not the issue here."],
       ["Standardisation of the product", "Standard products are not why the line stopped."],
-      ["Lower occupational mobility of workers", "This affects workers who lose jobs, not the stoppage."],
+      ["Lower occupational mobility of specialised workers", "This affects workers who lose jobs, not the stoppage."],
     ],
     answer: "A",
     hints: ["What happens to the other stages when one stops?"],
@@ -86,7 +86,7 @@ concept("econ.labour.division-of-labour", { file: "labour/division-of-labour", k
     stem: "A region's economy depends almost entirely on one mineral. What is the main risk of this specialisation?",
     options: [
       ["A fall in the world price of the mineral would sharply cut the region's income", "Correct: heavy specialisation increases vulnerability."],
-      ["Workers in the region slowly become less skilled at mining over time", "Specialisation tends to raise mining skills."],
+      ["Workers in the region slowly become less skilled at mining and other work over time", "Specialisation tends to raise mining skills."],
       ["The region cannot trade with other regions", "Specialisation increases trade."],
       ["Output per worker in mining falls as the region specialises", "Specialisation tends to raise output per worker."],
     ],

@@ -19,7 +19,7 @@ concept("eng.functional.speech", { file: "functional/speech", keyPrefix: "functi
     stem: "Which sentence is a **rhetorical question**?",
     options: [
       ["How many more learners must be hurt before we act?", "Correct: it is asked for effect, to make the audience think, not to get an answer."],
-      ["What time does the assembly finish on Fridays?", "This is a genuine question seeking information."],
+      ["What time does the school assembly finish on Fridays?", "This is a genuine question seeking information."],
       ["Did you bring the visitors' book to the hall?", "This is a real question expecting a yes or no answer."],
       ["Where is the nearest clinic to the school?", "This asks for factual information."],
     ],
@@ -45,7 +45,7 @@ concept("eng.functional.speech", { file: "functional/speech", keyPrefix: "functi
       ["This brings me to my second concern: the state of our toilets.", "Correct: it tells listeners clearly that a new point is starting."],
       ["The toilets are also in a very bad state at the moment.", "The point is made, but listeners are not told it is a new section."],
       ["Toilets, toilets everywhere, and not one of them clean.", "This is a striking line, but it does not signpost a point."],
-      ["Many people say many things about the school toilets.", "Vague and does not mark the structure."],
+      ["Many people say many different things about the school toilets.", "Vague and does not mark the structure."],
     ],
     answer: "A",
     explanation: "Listeners cannot see paragraphs, so speakers use **signposts**: *First…*, *This brings me to…*, *My final point is…*.",
@@ -55,7 +55,7 @@ concept("eng.functional.speech", { file: "functional/speech", keyPrefix: "functi
     stem: "Which is the **best ending** for a speech urging Form 1 pupils to stop bullying?",
     options: [
       ["Let us make this a school where every learner feels safe. Thank you.", "Correct: an inclusive appeal, a clear message and a courteous close."],
-      ["That is all I have to say about bullying, so I will stop now.", "A flat, abrupt ending with no appeal."],
+      ["That is really all I have to say about bullying today, so I will stop now.", "A flat, abrupt ending with no appeal."],
       ["In conclusion, bullying is bad and other things are also bad.", "Vague and weak; it adds nothing memorable."],
       ["Any bullies will be expelled immediately, and that is final.", "A threat rather than an inspiring appeal; also not the speaker's decision."],
     ],

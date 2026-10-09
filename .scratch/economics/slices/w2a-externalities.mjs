@@ -12,7 +12,7 @@ concept("econ.market-failure.externalities", { file: "market-failure/externaliti
     stem: "What is an **external cost**?",
     options: [
       ["A cost of an activity paid by third parties who are not compensated", "Correct: for example pollution suffered by neighbours."],
-      ["A cost paid by a firm to suppliers in other countries", "Paying foreign suppliers is a private cost of the firm."],
+      ["A cost paid by a firm to its suppliers of raw materials in other countries", "Paying foreign suppliers is a private cost of the firm."],
       ["The total cost of an activity to the whole of society", "This is social cost."],
       ["A cost paid by consumers when they buy a good", "The price paid is a private cost to the consumer."],
     ],
@@ -48,7 +48,7 @@ concept("econ.market-failure.externalities", { file: "market-failure/externaliti
     stem: "Why does a free market tend to over-produce goods whose production creates external costs?",
     options: [
       ["Producers base decisions on private costs, which are below social costs", "Correct: costs falling on third parties are ignored."],
-      ["Consumers know the goods are harmful and buy more of them", "Consumers' knowledge of harm would reduce, not raise, demand."],
+      ["Consumers know the goods are harmful and so choose to buy more of them", "Consumers' knowledge of harm would reduce, not raise, demand."],
       ["The government pays producers to make more of them", "That would be a subsidy, not the cause of the failure."],
       ["Social costs are always lower than private costs", "With external costs, social cost is higher than private cost."],
     ],

@@ -73,7 +73,7 @@ concept("comp.prog.variables-data-types", { file: "prog/variables-data-types", k
     options: [
       ["The rate is fixed for the whole run and only one line changes if it is updated", "Correct: one edit updates every use, and it cannot be changed by mistake."],
       ["Constants use less memory than variables of the same data type", "Memory saving is not the reason given in either syllabus."],
-      ["A constant can be changed by the user with an INPUT statement", "A constant cannot be changed while the program runs."],
+      ["A constant can be changed by the user with an INPUT statement while the program runs", "A constant cannot be changed while the program runs."],
       ["Only constants can hold REAL values in pseudocode", "Variables can hold REAL values too."],
     ],
     answer: "A",

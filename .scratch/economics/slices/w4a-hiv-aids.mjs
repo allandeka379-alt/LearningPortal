@@ -50,7 +50,7 @@ concept("econ.population.hiv-aids", { file: "population/hiv-aids", keyPrefix: "p
     options: [
       ["It raised it, because many working-age adults died and orphans remained", "Correct: fewer working-age people supporting dependants."],
       ["It lowered it, because fewer children were born", "The main effect was on working-age adults."],
-      ["It had no effect, because all age groups were affected equally", "Working-age adults were affected most."],
+      ["It had no effect, because all the age groups were affected equally by HIV", "Working-age adults were affected most."],
       ["It lowered it, because the elderly population fell sharply", "The elderly were not the main group affected."],
     ],
     answer: "A",
@@ -62,7 +62,7 @@ concept("econ.population.hiv-aids", { file: "population/hiv-aids", keyPrefix: "p
     options: [
       ["People avoid testing and treatment for fear of being treated unfairly", "Correct: fear stops people from knowing their status or starting ART."],
       ["Stigma makes treatment medicines more expensive to produce", "Stigma does not change production costs."],
-      ["Stigma increases the number of clinics offering free testing", "Stigma discourages the use of services."],
+      ["Stigma increases the number of clinics offering free testing and counselling", "Stigma discourages the use of services."],
       ["Discrimination raises the wages of people living with HIV", "Discrimination harms, not helps, people's job prospects."],
     ],
     answer: "A",
@@ -87,7 +87,7 @@ concept("econ.population.hiv-aids", { file: "population/hiv-aids", keyPrefix: "p
     stem: "Which measure is likely to have the greatest effect in reducing both new infections and the economic impact of HIV?",
     options: [
       ["Widespread testing combined with treatment for everyone who needs it", "Correct: keeps people healthy and working and greatly reduces transmission."],
-      ["Dismissing workers who are known to be living with HIV", "This is discrimination; it worsens stigma and loses skilled workers."],
+      ["Dismissing workers who are known to be living with HIV to protect productivity", "This is discrimination; it worsens stigma and loses skilled workers."],
       ["Stopping all labour migration by law", "This is impractical and harms incomes."],
       ["Closing schools in areas with high HIV prevalence", "This damages education and does not reduce infections."],
     ],

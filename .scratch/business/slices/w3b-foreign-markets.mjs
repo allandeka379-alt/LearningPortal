@@ -94,7 +94,7 @@ concept("bus.marketing.foreign-markets", { file: "marketing/foreign-markets", ke
     stem: "Why might a business need to adapt its product for a foreign market?",
     options: [
       ["Customers' tastes and customs may differ from those at home", "Correct: cultural differences affect demand."],
-      ["Foreign customers always want the cheapest version", "Not always; it depends on the market."],
+      ["Foreign customers always want the cheapest version of a product", "Not always; it depends on the market."],
       ["Adapting a product always lowers its cost", "Adapting usually adds cost."],
       ["The home product cannot legally be exported", "Most products can be exported."],
     ],

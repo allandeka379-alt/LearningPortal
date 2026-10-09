@@ -82,7 +82,7 @@ concept("bus.finance.commercial-banks", { file: "finance/commercial-banks", keyP
       ["They lend savers' deposits to businesses for investment", "Correct: deposits are channelled into productive loans."],
       ["They issue the country's notes and coins", "The central bank issues currency."],
       ["They set the rates of income tax", "Tax rates are set by government."],
-      ["They guarantee every business against losses", "Banks do not guarantee businesses."],
+      ["They guarantee every business against making trading losses", "Banks do not guarantee businesses."],
     ],
     answer: "A",
     explanation: "Banks act as intermediaries, turning savings into loans for investment.",

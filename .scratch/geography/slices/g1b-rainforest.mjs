@@ -10,7 +10,7 @@ concept("geo.ecosystems.rainforest", { file: "ecosystems/rainforest", keyPrefix:
     stem: "Between which latitudes are most tropical rainforests found?",
     options: [
       ["About 10° N and 10° S of the equator", "Correct: the equatorial belt with no long dry season."],
-      ["About 15° and 30° N and S", "These latitudes are dominated by hot deserts under subtropical high pressure."],
+      ["About 15° and 30° N and S of the equator", "These latitudes are dominated by hot deserts under subtropical high pressure."],
       ["About 40° and 60° N and S", "These are temperate latitudes with deciduous and coniferous forest."],
       ["North of the Arctic Circle", "This is the tundra and ice of high latitudes."],
     ],
@@ -71,7 +71,7 @@ concept("geo.ecosystems.rainforest", { file: "ecosystems/rainforest", keyPrefix:
     options: [
       ["Nutrients are stored mainly in the plants and recycled quickly", "Correct: the fast cycle keeps nutrients in the biomass."],
       ["The soils are fertilised each year by river floods", "Most rainforest soils are not on floodplains."],
-      ["Rain adds nutrients faster than plants can use them", "Heavy rain leaches nutrients away rather than adding them."],
+      ["Heavy daily rain adds nutrients faster than plants can use them", "Heavy rain leaches nutrients away rather than adding them."],
       ["The deep leaf litter acts as a store of fertility", "Litter decomposes within weeks, so the layer is thin."],
     ],
     answer: "A",
@@ -97,7 +97,7 @@ concept("geo.ecosystems.rainforest", { file: "ecosystems/rainforest", keyPrefix:
     options: [
       ["To catch as much of the weak light as possible", "Correct: only a few per cent of the light gets through the canopy."],
       ["To store water for the dry season", "There is no long dry season in the rainforest."],
-      ["To protect themselves from veld fires", "Fire is rare in undisturbed rainforest."],
+      ["To protect themselves from frequent veld fires", "Fire is rare in undisturbed rainforest."],
       ["To shed snow in the cool season", "It never snows in lowland equatorial forest."],
     ],
     answer: "A",

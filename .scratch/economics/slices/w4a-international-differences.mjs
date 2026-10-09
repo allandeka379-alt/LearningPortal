@@ -61,8 +61,8 @@ concept("econ.development.international-differences", { file: "development/inter
     d: 3, skill: "ANALYSIS",
     stem: "A country has rich mineral deposits but remains poor. Which is the most likely reason?",
     options: [
-      ["Mineral earnings go to a few owners and are not invested in skills or infrastructure", "Correct: resources do not guarantee development."],
-      ["The minerals raise productivity in every sector of the economy equally", "Mining usually employs few people."],
+      ["Mineral earnings go to a few and are not invested in skills or infrastructure", "Correct: resources do not guarantee development."],
+      ["The minerals raise productivity in every sector of the economy equally and at once", "Mining usually employs few people."],
       ["Minerals can never be sold on world markets at any price", "Minerals are widely traded."],
       ["Mineral exports always reduce the country's real GDP over time", "Exports add to GDP."],
     ],
@@ -88,7 +88,7 @@ concept("econ.development.international-differences", { file: "development/inter
     stem: "Which policy would most directly reduce income inequality within a country?",
     options: [
       ["Cash transfers to the poorest households paid for by a progressive income tax", "Correct: it takes a larger share from high incomes and gives to low incomes."],
-      ["A rise in value added tax on all goods, including basic foods", "VAT on necessities is regressive and widens inequality."],
+      ["A rise in value added tax on all goods, including basic foods such as maize meal", "VAT on necessities is regressive and widens inequality."],
       ["A cut in the top rate of income tax", "This benefits high earners most."],
       ["A reduction in spending on free primary schools", "Poorer families lose most from cuts in free services."],
     ],

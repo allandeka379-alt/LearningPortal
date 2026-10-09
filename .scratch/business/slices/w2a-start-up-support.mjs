@@ -31,7 +31,7 @@ concept("bus.enterprise.start-up-support", { file: "enterprise/start-up-support"
     stem: "Why do banks often refuse loans to new businesses?",
     options: [
       ["They have no trading record and little collateral", "Correct: the bank cannot judge or secure the risk."],
-      ["New businesses are not allowed to borrow", "They may borrow if they satisfy the bank."],
+      ["New businesses are not allowed by law to borrow money", "They may borrow if they satisfy the bank."],
       ["Banks lend only to the government", "Banks lend to many types of customer."],
       ["New businesses always make high profits", "Many new businesses make losses."],
     ],
@@ -55,7 +55,7 @@ concept("bus.enterprise.start-up-support", { file: "enterprise/start-up-support"
     stem: "Which is a disadvantage of borrowing from family and friends to start a business?",
     options: [
       ["Relationships may suffer if the money is lost", "Correct: personal ties are at risk."],
-      ["High interest rates are always charged", "Family loans are often interest-free."],
+      ["High interest rates are always charged by relatives", "Family loans are often interest-free."],
       ["Collateral is always required", "Family rarely ask for collateral."],
       ["The process takes many months", "Family finance is usually quick."],
     ],
@@ -80,7 +80,7 @@ concept("bus.enterprise.start-up-support", { file: "enterprise/start-up-support"
     stem: "How does a government **loan guarantee** help a start-up obtain a bank loan?",
     options: [
       ["The government promises to repay if the start-up cannot", "Correct: this replaces collateral and reduces the bank's risk."],
-      ["The government pays the whole loan as a gift", "That would be a grant."],
+      ["The government pays the whole loan to the start-up as a gift", "That would be a grant."],
       ["The bank is forced to lend at zero interest", "A guarantee does not set interest."],
       ["The start-up no longer has to repay", "The start-up must still repay."],
     ],

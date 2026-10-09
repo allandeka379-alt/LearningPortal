@@ -8,7 +8,7 @@ concept("geo.ecosystems.wetlands", { file: "ecosystems/wetlands", keyPrefix: "ec
     options: [
       ["Land covered by shallow water or with saturated soil for all or part of the year", "Correct: saturation for at least part of the year is the key feature."],
       ["Any area that receives more than 1,000 mm of rain in a year", "High rainfall alone does not make a wetland; well-drained land can be wet only briefly."],
-      ["A deep lake that holds open water all year round, even in a drought", "Deep open water is a lake, not a wetland; wetlands are shallow or waterlogged."],
+      ["A deep lake that holds open water all year round, even in a severe drought year", "Deep open water is a lake, not a wetland; wetlands are shallow or waterlogged."],
       ["A river channel that flows only in the rainy season", "That is a seasonal (ephemeral) river, not a wetland."],
     ],
     answer: "A",
@@ -32,7 +32,7 @@ concept("geo.ecosystems.wetlands", { file: "ecosystems/wetlands", keyPrefix: "ec
     options: [
       ["It stores rainwater in its soil and releases it slowly", "Correct: the vlei acts like a sponge."],
       ["It increases the rainfall over the catchment", "Wetlands do not noticeably increase rainfall."],
-      ["It speeds up surface runoff into the stream", "A vlei slows runoff down; it does not speed it up."],
+      ["It speeds up surface runoff into the stream after storms", "A vlei slows runoff down; it does not speed it up."],
       ["It stops all evaporation from the catchment", "Water still evaporates from a vlei and its plants transpire."],
     ],
     answer: "A",
@@ -44,7 +44,7 @@ concept("geo.ecosystems.wetlands", { file: "ecosystems/wetlands", keyPrefix: "ec
     options: [
       ["They hold back storm water and reduce flood peaks downstream", "Correct: storage lowers and delays the peak."],
       ["They make rivers flow faster during storms", "Faster flow would raise flood risk, not lower it."],
-      ["They remove all the silt and sand from the river bed", "Wetlands trap silt from water passing through; this is purification, not flood control."],
+      ["They remove all the silt and sand from the river bed during floods", "Wetlands trap silt from water passing through; this is purification, not flood control."],
       ["They raise the height of river banks", "Wetlands do not build up banks; levées form by deposition on floodplains."],
     ],
     answer: "A",

@@ -14,7 +14,7 @@ concept("econ.systems.planned-mixed", { file: "systems/planned-mixed", keyPrefix
     stem: "What is a **mixed economic system**?",
     options: [
       ["One where resources are allocated by both the price mechanism and the government", "Correct: private and public sectors both allocate resources."],
-      ["One where all resources are allocated by central government planners", "That is a planned economy."],
+      ["One where all resources are allocated by central government planners and ministries", "That is a planned economy."],
       ["One where all resources are allocated by the price mechanism alone", "That is a market economy."],
       ["One where farming and mining are run by the same firms", "This describes firms, not an economic system."],
     ],
@@ -39,7 +39,7 @@ concept("econ.systems.planned-mixed", { file: "systems/planned-mixed", keyPrefix
     options: [
       ["State enterprises may be inefficient and need money from taxpayers", "Correct: government failure is a risk of intervention."],
       ["Public goods such as defence are never provided", "In a mixed economy the state provides public goods."],
-      ["There is no private sector to produce consumer goods", "A mixed economy has a large private sector."],
+      ["There is no private sector to produce goods such as food and clothing", "A mixed economy has a large private sector."],
       ["Prices play no part in allocating resources", "Prices allocate most goods in a mixed economy."],
     ],
     answer: "A",

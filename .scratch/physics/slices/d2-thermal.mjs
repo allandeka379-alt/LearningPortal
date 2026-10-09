@@ -22,12 +22,12 @@ concept("phys.thermal.changes-of-state", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why does the temperature of ice stay at 0 °C while it melts, even though it is being heated?",
-    options: [["The energy breaks bonds between particles instead of speeding them up.", "Correct."], ["The ice loses as much energy to the room as it gains.", "It gains energy."], ["Thermometers cannot read correctly inside melting ice.", "Not the reason."], ["The energy supplied is destroyed as the solid turns to liquid.", "Energy cannot be destroyed."]],
+    options: [["The energy breaks bonds between particles instead of speeding them up.", "Correct."], ["The ice loses as much energy to the room as it gains.", "It gains energy."], ["Thermometers cannot read correctly inside melting ice.", "Not the reason."], ["The energy supplied is destroyed as the solid ice turns to liquid water.", "Energy cannot be destroyed."]],
     answer: "A", explanation: "During a change of state, energy is used to overcome the forces between particles, so their kinetic energy (temperature) does not rise." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why does sweating help to cool you down?",
-    options: [["The most energetic particles evaporate, so the rest are cooler.", "Correct."], ["Sweat is colder than the body when it comes out.", "Sweat starts at body temperature."], ["Sweat on the skin reflects sunlight away from the body.", "Not the reason."], ["Sweat stops warm blood from flowing near the skin.", "Sweating does not stop blood flow."]],
+    options: [["The most energetic particles evaporate, so the rest are cooler.", "Correct."], ["Sweat is colder than the body when it comes out.", "Sweat starts at body temperature."], ["Sweat on the skin reflects sunlight and infrared away from the body.", "Not the reason."], ["Sweat stops warm blood from flowing near the skin.", "Sweating does not stop blood flow."]],
     answer: "A", explanation: "Evaporation removes the fastest particles, so the remaining liquid, and the skin under it, cools." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -53,7 +53,7 @@ concept("phys.thermal.changes-of-state", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "Water in an open pot boils at about 95 °C in a town high above sea level. Why?",
-    options: [["The atmospheric pressure is lower, which lowers the boiling point.", "Correct."], ["The air is colder, so the pot loses energy faster to it.", "Air temperature does not set the boiling point."], ["The water there contains more salt from the local rocks.", "Salt would raise the boiling point."], ["Thermometers read about 5 °C too low at high altitude.", "Not the reason."]],
+    options: [["The atmospheric pressure is lower, which lowers the boiling point.", "Correct."], ["The air is colder, so the pot loses energy faster to it.", "Air temperature does not set the boiling point."], ["The water there contains more dissolved salt from the local rocks and soil.", "Salt would raise the boiling point."], ["Thermometers read about 5 °C too low at high altitude.", "Not the reason."]],
     answer: "A", explanation: "Boiling point depends on pressure; lower pressure at altitude means water boils below 100 °C.",
     hints: ["How does air pressure change with height?"] });
 
@@ -111,7 +111,7 @@ concept("phys.thermal.latent-heat", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Why is the specific latent heat of vaporisation of water much larger than its specific latent heat of fusion?",
-    options: [["Boiling separates the particles completely; melting only loosens them.", "Correct."], ["Steam is hotter than ice, so it holds more energy per kg.", "Latent heat is not about temperature."], ["There are more particles in 1 kg of steam than of ice.", "1 kg is 1 kg: the number of particles is the same."], ["Melting releases energy, which lowers its latent heat.", "Melting absorbs energy."]],
+    options: [["Boiling separates the particles completely; melting only loosens them.", "Correct."], ["Steam is much hotter than ice, so each kilogram of it must hold far more energy.", "Latent heat is not about temperature."], ["There are more particles in 1 kg of steam than of ice.", "1 kg is 1 kg: the number of particles is the same."], ["Melting releases energy, which lowers its latent heat.", "Melting absorbs energy."]],
     answer: "A", explanation: "In vaporisation the particles must be pulled completely apart (and push back the atmosphere), which takes much more energy than melting.",
     hints: ["Compare what happens to the particles in each change."] });
 
@@ -259,13 +259,13 @@ concept("phys.thermal.convection", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "Where should the cooling unit of an old-style refrigerator be placed, and why?",
-    options: [["At the top: cooled air sinks, and warmer air rises to be cooled.", "Correct."], ["At the bottom: cold air rises and cools the whole fridge.", "Cold air sinks."], ["In the middle: the position does not matter for cooling.", "Position matters for convection."], ["Outside the fridge, so its heat does not warm the food", "It must cool the inside."]],
+    options: [["At the top: cooled air sinks, and warmer air rises to be cooled.", "Correct."], ["At the bottom: cold air rises and cools the whole fridge.", "Cold air sinks."], ["In the middle: the position does not matter for cooling.", "Position matters for convection."], ["Outside the fridge, so that its own heat does not warm the food", "It must cool the inside."]],
     answer: "A", explanation: "Air cooled at the top becomes denser and sinks, while warmer air rises to the cooling unit: a convection current cools the whole interior.",
     hints: ["Does cold air rise or sink?"] });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why does a hot-air balloon rise?",
-    options: [["The heated air inside is less dense than the cooler air outside.", "Correct."], ["Hot air is lighter because it has lost its particles.", "It has the same particles, spread out."], ["The burner pushes it up like a rocket.", "Not the main reason."], ["The balloon's fabric is lighter than air.", "Not the reason."]],
+    options: [["The heated air inside is less dense than the cooler air outside.", "Correct."], ["Hot air is lighter because the heating has destroyed some of its particles.", "It has the same particles, spread out."], ["The burner pushes it up like a rocket.", "Not the main reason."], ["The balloon's fabric is lighter than air.", "Not the reason."]],
     answer: "A", explanation: "Air inside the balloon expands when heated; the balloon's average density falls below that of the surrounding air." });
 
   q.fib({ d: 2, skill: "RECALL",
@@ -324,7 +324,7 @@ concept("phys.thermal.radiation", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "An object receives energy faster than it transfers energy away. What happens to it?",
-    options: [["Its temperature rises until it emits energy as fast as it receives it.", "Correct."], ["Its temperature falls until it stops receiving energy.", "It is gaining energy overall."], ["Its temperature stays the same, as energy is conserved.", "Only if the rates were equal."], ["It stops emitting radiation until it has cooled down again.", "It always emits."]],
+    options: [["Its temperature rises until it emits energy as fast as it receives it.", "Correct."], ["Its temperature falls until it stops receiving energy.", "It is gaining energy overall."], ["Its temperature stays the same, as energy is conserved.", "Only if the rates were equal."], ["It stops emitting any radiation at all until it has fully cooled down again.", "It always emits."]],
     answer: "A", explanation: "Net energy gain raises the temperature; hotter objects emit more, so it warms until the rates balance.",
     hints: ["What happens to emission as an object gets hotter?"] });
 
@@ -378,7 +378,7 @@ concept("phys.thermal.transfer-applications", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why is the collector panel of a solar water heater painted dull black?",
-    options: [["Dull black is the best absorber of infrared radiation.", "Correct."], ["Black paint stops convection.", "Not the reason."], ["Black surfaces reflect sunlight onto the tank.", "They absorb it."], ["Black paint insulates the pipes.", "Not the reason."]],
+    options: [["Dull black is the best absorber of infrared radiation.", "Correct."], ["Black paint stops convection.", "Not the reason."], ["Black surfaces reflect sunlight onto the water tank above them.", "They absorb it."], ["Black paint insulates the pipes.", "Not the reason."]],
     answer: "A", explanation: "A dull black surface absorbs the most radiation from the Sun." });
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
@@ -389,7 +389,7 @@ concept("phys.thermal.transfer-applications", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "On a sunny afternoon by Lake Kariba, a breeze blows from the lake towards the land. Why?",
-    options: [["Land heats faster than water; air over it rises and lake air moves in.", "Correct: a lake (sea) breeze."], ["The water is hotter than the land, so air flows from it.", "By day the land is hotter."], ["Wind always blows from water towards land, day and night.", "At night it reverses."], ["The lake gives out cold radiation that pushes the air inland.", "Cold is not radiated."]],
+    options: [["Land heats faster than water; air over it rises and lake air moves in.", "Correct: a lake (sea) breeze."], ["The water is hotter than the land, so air flows from it.", "By day the land is hotter."], ["Wind always blows from water towards land, day and night.", "At night it reverses."], ["The lake gives out cold radiation that pushes the cooler air inland over the land.", "Cold is not radiated."]],
     answer: "A", explanation: "Land has a lower specific heat capacity and warms faster; warm air rises over the land and air from over the water replaces it." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING",

@@ -24,8 +24,8 @@ concept("econ.monetary.monetary-policy", { file: "monetary/monetary-policy", key
     d: 1, skill: "RECALL",
     stem: "The **money supply** is best defined as",
     options: [
-      ["the total amount of notes, coins and bank deposits in the economy.", "Correct: money in circulation plus deposits."],
-      ["the total value of goods and services produced in a year.", "That is GDP."],
+      ["the total of notes, coins and bank deposits in the economy.", "Correct: money in circulation plus deposits."],
+      ["the total value of all goods and services produced in a year.", "That is GDP."],
       ["the amount of foreign currency held by the central bank.", "Those are foreign exchange reserves."],
       ["the total amount borrowed by the government.", "That is the national debt."],
     ],
@@ -73,9 +73,9 @@ concept("econ.monetary.monetary-policy", { file: "monetary/monetary-policy", key
     d: 3, skill: "ANALYSIS",
     stem: "A central bank raises interest rates. Which effect on the exchange rate is most likely?",
     options: [
-      ["The currency appreciates as foreign savers buy it to earn higher interest", "Correct: higher returns attract foreign funds, raising demand for the currency."],
+      ["The currency appreciates as foreign savers buy it to earn more interest", "Correct: higher returns attract foreign funds, raising demand for the currency."],
       ["The currency depreciates as foreign savers sell it", "Higher rates attract, rather than repel, foreign funds."],
-      ["The exchange rate cannot change when interest rates change", "Interest rates are one influence on demand for a currency."],
+      ["The exchange rate cannot change when only interest rates change at home", "Interest rates are one influence on demand for a currency."],
       ["The currency depreciates because exports rise", "An appreciation makes exports dearer, not more plentiful."],
     ],
     answer: "A",

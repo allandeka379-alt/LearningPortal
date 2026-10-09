@@ -63,7 +63,7 @@ concept("econ.structures.competitive-markets", { file: "structures/competitive-m
       ["It is too small to affect market supply and its product is identical to others'", "Correct: a higher price would lose all its customers."],
       ["The government fixes the price of every product it sells", "Perfect competition has no government interference."],
       ["It has no costs of production to cover", "It has costs like any firm."],
-      ["Its customers have no information about other sellers' prices", "Perfect knowledge is a feature of perfect competition."],
+      ["Its customers have no information about the prices that other sellers are charging", "Perfect knowledge is a feature of perfect competition."],
     ],
     answer: "A",
     hints: ["What happens if it raises its price above the market price?"],

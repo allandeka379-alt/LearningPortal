@@ -36,7 +36,7 @@ concept("eng.reading.own-words", { file: "reading/own-words", keyPrefix: "readin
     options: [
       ["The key words that carry the meaning being tested", "Correct: these show whether you understood."],
       ["Every single word, including the and and", "Small common words can stay."],
-      ["Only the names of people and places", "Names cannot usually be changed and do not show understanding."],
+      ["Only the names of people and places in the passage", "Names cannot usually be changed and do not show understanding."],
       ["Only the first word of each sentence", "The position of a word does not matter; its importance does."],
     ],
     answer: "A",
@@ -138,7 +138,7 @@ concept("eng.reading.own-words", { file: "reading/own-words", keyPrefix: "readin
       ["The clinic did not have enough equipment to deal with the sudden spread of illness.", "Correct: all key ideas are kept and every key word is changed."],
       ["The clinic was inadequately equipped to deal with the outbreak of illness.", "This lifts inadequately equipped and outbreak."],
       ["The clinic had poor staff who did not know how to treat the disease well.", "Staff are not mentioned: the meaning has changed."],
-      ["The clinic was closed because of an illness that spread through the area.", "The clinic was not closed: this changes the meaning."],
+      ["The clinic was closed because of an illness that spread quickly through the whole area.", "The clinic was not closed: this changes the meaning."],
     ],
     answer: "A",
     hints: ["Check two things: are the key words changed, and is the meaning exactly the same?"],

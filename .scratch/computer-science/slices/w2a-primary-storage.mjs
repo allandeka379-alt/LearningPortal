@@ -26,7 +26,7 @@ concept("comp.hardware.primary-storage", { file: "hardware/primary-storage", key
     options: [
       ["It is volatile and its contents can be changed", "Correct: RAM is read-write and loses its contents when the power is off."],
       ["It is non-volatile and read-only", "That describes ROM."],
-      ["It stores the bootstrap permanently", "The bootstrap is stored in ROM."],
+      ["It stores the bootstrap program permanently, even without power", "The bootstrap is stored in ROM."],
       ["It is a type of secondary storage", "RAM is primary storage."],
     ],
     answer: "A",
@@ -62,7 +62,7 @@ concept("comp.hardware.primary-storage", { file: "hardware/primary-storage", key
     options: [
       ["Checks the hardware and loads the operating system into RAM", "Correct."],
       ["Saves all open files to the hard disk", "Saving files is not part of starting up."],
-      ["Deletes temporary files from secondary storage", "That is done by utility software."],
+      ["Deletes temporary files from secondary storage to free up space", "That is done by utility software."],
       ["Copies the contents of RAM into ROM", "ROM is not written to in normal use."],
     ],
     answer: "A",
@@ -88,7 +88,7 @@ concept("comp.hardware.primary-storage", { file: "hardware/primary-storage", key
     options: [
       ["Pages are being moved constantly between RAM and virtual memory", "Correct: this disk thrashing is slow because secondary storage is much slower than RAM."],
       ["The bootstrap program is running again and again", "The bootstrap only runs at start-up."],
-      ["ROM is filling up with the programs that are open", "Programs in use are held in RAM, not ROM."],
+      ["ROM is filling up with copies of all the programs that are currently open", "Programs in use are held in RAM, not ROM."],
       ["The CPU is reading every program directly from ROM", "Programs are loaded into RAM to run."],
     ],
     answer: "A",

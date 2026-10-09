@@ -24,7 +24,7 @@ concept("bus.insurance.nature-purpose", { file: "insurance/nature-purpose", keyP
     stem: "What is a **premium**?",
     options: [
       ["The amount the insured pays the insurer for cover", "Correct: premiums are paid monthly or yearly in return for cover."],
-      ["The amount the insurer pays after a loss", "That is compensation (the claim settlement)."],
+      ["The amount the insurer pays to the insured after a loss", "That is compensation (the claim settlement)."],
       ["The maximum value covered by a policy", "That is the sum insured."],
       ["A document giving temporary cover", "That is a cover note."],
     ],
@@ -61,7 +61,7 @@ concept("bus.insurance.nature-purpose", { file: "insurance/nature-purpose", keyP
     options: [
       ["Many people pay premiums into a fund that pays the few who suffer losses", "Correct: the losses of the unlucky few are shared by everyone in the pool."],
       ["Several insurers merge into one large insurance company", "That is a merger, not pooling of risks."],
-      ["The insured pays the full cost of any loss out of savings", "Pooling exists so the insured does not bear the full loss."],
+      ["The insured pays the full cost of any loss out of his or her own savings", "Pooling exists so the insured does not bear the full loss."],
       ["Insurers share one office building to save costs", "Sharing premises is not what pooling of risks means."],
     ],
     answer: "A",

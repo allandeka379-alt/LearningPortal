@@ -56,7 +56,7 @@ concept("bus.finance.money", { file: "finance/money", keyPrefix: "finance.money"
     options: [
       ["Standard of deferred payment", "Correct: a future payment is stated in money."],
       ["Medium of exchange", "No goods are being bought now."],
-      ["Measure of value", "This compares the values of goods today."],
+      ["Unit of account (measure of value)", "This compares the values of goods today."],
       ["Store of value", "Storing value means keeping savings, not stating a debt."],
     ],
     answer: "A",

@@ -45,7 +45,7 @@ concept("geo.ecosystems.components", { file: "ecosystems/components", keyPrefix:
       ["The direction in which energy flows", "Correct: arrows point from the food to the feeder."],
       ["Which animal hunts which", "This reverses the meaning: arrows point to the eater, not the prey."],
       ["The size of each organism", "Size is not shown by arrows."],
-      ["The number of each organism", "Numbers are shown in a pyramid of numbers, not by arrows."],
+      ["The number of each organism present", "Numbers are shown in a pyramid of numbers, not by arrows."],
     ],
     answer: "A",
     explanation: "Food-chain arrows show energy passing from the organism eaten to the organism that eats it: grass → zebra means energy moves from grass into the zebra.",
@@ -93,7 +93,7 @@ concept("geo.ecosystems.components", { file: "ecosystems/components", keyPrefix:
     stem: "Which of these is a **decomposer**?",
     options: [
       ["Mushroom fungus on a rotting log", "Correct: fungi break dead matter down into nutrients."],
-      ["Grasshopper eating grass", "A grasshopper is a primary consumer."],
+      ["Grasshopper eating green grass leaves", "A grasshopper is a primary consumer."],
       ["Algae in a pond", "Algae photosynthesise, so they are producers."],
       ["Hawk eating a lizard", "A hawk is a carnivore (secondary or tertiary consumer)."],
     ],

@@ -45,7 +45,7 @@ concept("bus.finance.income-statement", { file: "finance/income-statement", keyP
     options: [
       ["The cost of the goods it sold rose as fast as its revenue", "Correct: higher cost of sales absorbed the extra revenue."],
       ["Its rent and wages were higher than last year", "Rent and wages are expenses; they affect profit, not gross profit."],
-      ["It paid larger dividends to its owners this year", "Dividends do not affect gross profit."],
+      ["It paid larger dividends to its owners this year than last year", "Dividends do not affect gross profit."],
       ["It bought a new building for its business", "A building is an asset, not part of gross profit."],
     ],
     answer: "A",

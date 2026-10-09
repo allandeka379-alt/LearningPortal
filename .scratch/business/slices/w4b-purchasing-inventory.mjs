@@ -8,7 +8,7 @@ concept("bus.operations.purchasing-inventory", { file: "operations/purchasing-in
     options: [
       ["Chairs that have been assembled but not yet varnished", "Correct: partly finished goods."],
       ["Planks of timber waiting in the yard", "These are raw materials."],
-      ["Varnished chairs packed and ready to deliver", "These are finished goods."],
+      ["Varnished chairs packed and ready to deliver to customers", "These are finished goods."],
       ["Money owed by customers for chairs", "That is trade receivables, not inventory."],
     ],
     answer: "A",
@@ -95,7 +95,7 @@ concept("bus.operations.purchasing-inventory", { file: "operations/purchasing-in
       ["The supplier is chosen and an order is placed", "Correct: comparison leads to choosing a supplier."],
       ["The goods are received and checked", "Goods arrive only after an order is placed."],
       ["The supplier's invoice is paid", "Payment comes after the goods and invoice arrive."],
-      ["The need for materials is identified", "This is the first step of the cycle."],
+      ["The need for more materials is identified by stores", "This is the first step of the cycle."],
     ],
     answer: "A",
     explanation: "Need → find suppliers → quotations → choose and order → receive and check → pay → review.",

@@ -50,7 +50,7 @@ concept("econ.firms.economies-of-scale", { file: "firms/economies-of-scale", key
       ["A college near a group of textile firms trains skilled machinists", "Correct: it benefits every firm in the area."],
       ["A firm buys a larger and more efficient machine", "That is an internal technical economy."],
       ["A firm employs a specialist accountant", "That is an internal managerial economy."],
-      ["A firm spreads an advertising campaign over more sales", "That is an internal marketing economy."],
+      ["A firm spreads the cost of an advertising campaign over more sales", "That is an internal marketing economy."],
     ],
     answer: "A",
     explanation: "External economies come from the growth of the industry or area, such as a pool of trained labour.",
@@ -61,7 +61,7 @@ concept("econ.firms.economies-of-scale", { file: "firms/economies-of-scale", key
     options: [
       ["Instructions pass through many layers of managers and become delayed", "Correct: a communication problem in a large firm."],
       ["Suppliers offer discounts for very large orders", "That is a purchasing economy."],
-      ["Traffic congestion in the industrial area delays deliveries", "That is an external diseconomy."],
+      ["Traffic congestion in the industrial area delays deliveries to every firm", "That is an external diseconomy."],
       ["A new power line lowers costs for all firms in the area", "That is an external economy."],
     ],
     answer: "A",

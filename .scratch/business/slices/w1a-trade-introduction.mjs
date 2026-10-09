@@ -80,7 +80,7 @@ concept("bus.trade.introduction", { file: "trade/introduction", keyPrefix: "trad
     options: [
       ["Specialists produce a surplus of one good and none of others", "Correct: they must exchange the surplus for what they lack."],
       ["Specialists produce everything they need themselves", "That describes direct production, not specialisation."],
-      ["Specialisation makes money unnecessary for exchange", "Specialisation increases the use of money in trade."],
+      ["Specialisation makes money unnecessary as a medium of exchange", "Specialisation increases the use of money in trade."],
       ["Specialists never sell any of their output", "Specialists sell their output; that is the point of specialising."],
     ],
     answer: "A",

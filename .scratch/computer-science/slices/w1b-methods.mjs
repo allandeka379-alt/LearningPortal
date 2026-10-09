@@ -48,7 +48,7 @@ concept("comp.transmission.methods", { file: "transmission/methods", keyPrefix: 
   b.mcq({
     d: 3, skill: "EVALUATION",
     stem: "Rudo says: \"Serial transmission is always slower than parallel transmission.\" Which response is best?",
-    options: [["Not always: over long distances fast serial links are more reliable and can be faster", "Correct: parallel loses its advantage over distance because of skew and crosstalk."], ["Yes: serial can never be faster because it sends one bit at a time", "Modern serial links are very fast; over distance they beat parallel."], ["No: serial sends several bits at once, so it is always faster", "Serial sends one bit at a time."], ["Yes: serial transmission works in one direction only", "Serial can be simplex, half- or full-duplex."]],
+    options: [["Not always: over long distances fast serial links are more reliable and can be faster", "Correct: parallel loses its advantage over distance because of skew and crosstalk."], ["Yes: serial can never be faster, because it sends only one bit at a time down a single wire", "Modern serial links are very fast; over distance they beat parallel."], ["No: serial sends several bits at once, so it is always faster", "Serial sends one bit at a time."], ["Yes: serial transmission works in one direction only", "Serial can be simplex, half- or full-duplex."]],
     answer: "A",
     hints: ["What limits parallel transmission over long cables?"],
     explanation: "Over short distances parallel is faster, but over long distances skew and interference limit it, so high-speed serial is used (for example USB and network links).",

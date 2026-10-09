@@ -115,17 +115,17 @@ concept("phys.space.solar-system", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: C,
     stem: "What is a comet?",
-    options: [["An icy, dusty body in a long thin orbit, forming a tail near the Sun", "Correct."], ["A rock burning up as it falls through the Earth's atmosphere", "That is a meteor."], ["One of the large moons that orbit Jupiter", "Moons orbit planets; comets orbit the Sun."], ["A small, faint star far beyond the Solar System", "A comet is a body of ice and dust in the Solar System, not a star."]],
+    options: [["An icy, dusty body in a long thin orbit, forming a tail near the Sun", "Correct."], ["A rock burning up as it falls through the Earth's atmosphere, leaving a bright trail", "That is a meteor."], ["One of the large moons that orbit Jupiter", "Moons orbit planets; comets orbit the Sun."], ["A small, faint star far beyond the Solar System", "A comet is a body of ice and dust in the Solar System, not a star."]],
     answer: "A", explanation: "Near the Sun a comet's ice evaporates, forming a glowing head and a tail pointing away from the Sun." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C, daily: true,
     stem: "According to the accretion model, why are the inner planets rocky and the outer planets large and gaseous?",
-    options: [["Near the Sun only rock and metal stayed solid; ice and gas collected further out.", "Correct."], ["The outer planets formed billions of years before the inner planets did.", "They formed at about the same time."], ["The Sun's gravity pulled all the gas inwards to the inner planets.", "The inner planets have little gas."], ["The inner planets lost their gas and ice to the outer planets.", "Material did not move between planets like this."]],
+    options: [["Near the Sun only rock and metal stayed solid; ice and gas collected further out.", "Correct."], ["The outer planets formed billions of years before the inner, rocky planets had even begun.", "They formed at about the same time."], ["The Sun's gravity pulled all the gas inwards to the inner planets.", "The inner planets have little gas."], ["The inner planets lost their gas and ice to the outer planets.", "Material did not move between planets like this."]],
     answer: "A", explanation: "Temperature in the early disc decided what could condense: rock close in, rock plus ice and gas further out." });
 
   q.mcq({ d: 2, skill: "RECALL", applies: C,
     stem: "What keeps the planets in their orbits around the Sun?",
-    options: [["The gravitational attraction of the Sun", "Correct."], ["Magnetic forces from the Sun", "No."], ["Friction with space", "Space has almost nothing to cause friction."], ["The planets' own spin", "No."]],
+    options: [["The gravitational attraction of the Sun", "Correct."], ["Magnetic forces from the Sun's spinning core", "No."], ["Friction with space", "Space has almost nothing to cause friction."], ["The planets' own spin", "No."]],
     answer: "A", explanation: "The Sun's gravity pulls each planet towards it, keeping it moving in a curved orbit." });
 
   q.tf({ d: 2, skill: "RECALL", applies: C,
@@ -156,7 +156,7 @@ concept("phys.space.solar-system", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why does a comet speed up as it approaches the Sun?",
-    options: [["It loses gravitational potential energy and gains kinetic energy.", "Correct."], ["The Sun's light pushes it forwards along its orbit.", "Not the main effect."], ["It loses mass in its tail, so it becomes lighter.", "Not the reason."], ["The solar wind blows it faster towards the Sun.", "Not the reason."]],
+    options: [["It loses gravitational potential energy and gains kinetic energy.", "Correct."], ["The Sun's light pushes it forwards along its orbit.", "Not the main effect."], ["It loses mass into its tail, so it becomes lighter and easier to accelerate.", "Not the reason."], ["The solar wind blows it faster towards the Sun.", "Not the reason."]],
     answer: "A", explanation: "Energy is conserved: the decrease in gravitational potential energy appears as an increase in kinetic energy.",
     hints: ["Total energy stays the same."] });
 
@@ -231,7 +231,7 @@ concept("phys.space.sun", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "In a stable star such as the Sun, what balances the inward pull of gravity?",
-    options: [["Outward pressure from the energy released by fusion", "Correct."], ["Magnetic forces from its spinning hot core", "Magnetic forces are not what holds a star up."], ["The star's fast rotation about its own axis", "Not the main balance."], ["Nothing: the star is slowly collapsing.", "A stable star keeps the same size."]],
+    options: [["Outward pressure from the energy released by fusion", "Correct."], ["Magnetic forces from its spinning hot core pushing outwards", "Magnetic forces are not what holds a star up."], ["The star's fast rotation about its own axis", "Not the main balance."], ["Nothing: the star is slowly collapsing.", "A stable star keeps the same size."]],
     answer: "A", explanation: "Fusion heats the gas, creating outward pressure that balances gravity.",
     hints: ["Something must push outwards."] });
 
@@ -277,7 +277,7 @@ concept("phys.space.stars", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL", applies: C,
     stem: "What is a galaxy?",
-    options: [["A huge group of billions of stars held together by gravity", "Correct."], ["A group of planets and moons orbiting one star", "That is a planetary system."], ["A single very large star with many planets", "A galaxy contains billions of stars."], ["A cloud of gas and dust around the Sun", "A galaxy is far larger than the Solar System."]],
+    options: [["A huge group of billions of stars held together by gravity", "Correct."], ["A group of planets and moons orbiting one star", "That is a planetary system."], ["A single very large star with many planets", "A galaxy contains billions of stars."], ["A cloud of gas and dust surrounding the Sun and its family of planets", "A galaxy is far larger than the Solar System."]],
     answer: "A", explanation: "A galaxy contains many billions of stars, with gas and dust." });
 
   q.mcq({ d: 1, skill: "RECALL", applies: C,
@@ -304,7 +304,7 @@ concept("phys.space.stars", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: C,
     stem: "How does a star begin to form?",
-    options: [["A cloud of gas and dust collapses under its own gravity.", "Correct."], ["A red giant cools down and shrinks to a new star.", "That is near the end of a star's life."], ["A white dwarf heats up again and starts to fuse.", "White dwarfs are the cooling remains of stars."], ["A supernova contracts back into a smaller star.", "A supernova is the explosion at the end of a large star's life."]],
+    options: [["A cloud of gas and dust collapses under its own gravity.", "Correct."], ["A red giant cools down and shrinks to a new star.", "That is near the end of a star's life."], ["A white dwarf heats up again and starts to fuse.", "White dwarfs are the cooling remains of stars."], ["A supernova contracts back into a smaller, hotter new star.", "A supernova is the explosion at the end of a large star's life."]],
     answer: "A", explanation: "Gravity pulls a cloud of gas and dust together; it heats up to form a protostar." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
@@ -377,7 +377,7 @@ concept("phys.space.universe", {
 
   q.mcq({ d: 1, skill: "RECALL", applies: C,
     stem: "What is redshift?",
-    options: [["An increase in the observed wavelength of radiation from a source moving away", "Correct."], ["A decrease in the observed wavelength from a source moving away", "The wavelength increases."], ["The reddening of starlight by dust", "Not this effect."], ["The cooling of old stars", "No."]],
+    options: [["An increase in the observed wavelength of radiation from a source moving away", "Correct."], ["A decrease in the observed wavelength of radiation from a distant source moving away", "The wavelength increases."], ["The reddening of starlight by dust", "Not this effect."], ["The cooling of old stars", "No."]],
     answer: "A", explanation: "Light from receding galaxies arrives with longer wavelengths than expected." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C, daily: true,
@@ -396,12 +396,12 @@ concept("phys.space.universe", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: C,
     stem: "What is the cosmic microwave background radiation (CMBR)?",
-    options: [["Microwaves from every direction, left over from the early Universe", "Correct."], ["Radiation leaking from microwave ovens and phone masts", "It comes from space, equally from every direction."], ["Radio waves given out by the Sun and all the planets", "It comes from every direction, not from the Sun."], ["X-rays from black holes at the centres of galaxies", "It is microwave radiation from the early Universe."]],
+    options: [["Microwaves from every direction, left over from the early Universe", "Correct."], ["Radiation leaking from microwave ovens, phone masts and other devices on Earth", "It comes from space, equally from every direction."], ["Radio waves given out by the Sun and all the planets", "It comes from every direction, not from the Sun."], ["X-rays from black holes at the centres of galaxies", "It is microwave radiation from the early Universe."]],
     answer: "A", explanation: "The CMBR is radiation from the early Universe, now detected as microwaves from every direction." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why is the CMBR now in the microwave region of the spectrum?",
-    options: [["The expansion of the Universe has stretched its wavelength.", "Correct."], ["It was produced as microwaves.", "It began as much higher-energy radiation."], ["Dust in space absorbs the shorter wavelengths.", "Not the reason."], ["The Earth's atmosphere changes it.", "No."]],
+    options: [["The expansion of the Universe has stretched its wavelength.", "Correct."], ["It was produced as microwaves.", "It began as much higher-energy radiation."], ["Dust in space has absorbed the shorter wavelengths over billions of years.", "Not the reason."], ["The Earth's atmosphere changes it.", "No."]],
     answer: "A", explanation: "As space expanded, the radiation's wavelength was stretched into the microwave region.",
     hints: ["What does expansion do to wavelengths?"] });
 

@@ -57,7 +57,7 @@ concept("geo.settlement.unplanned", { file: "settlement/unplanned", keyPrefix: "
       ["Residents are willing to invest in homes they cannot lose", "Correct: security encourages improvement."],
       ["The council then builds every house for free", "Tenure does not mean free houses."],
       ["It forces all residents to move away", "Tenure lets residents stay."],
-      ["It stops any new people arriving in the city", "It does not control migration."],
+      ["It stops any new migrants from rural areas arriving in the city", "It does not control migration."],
     ],
     answer: "A",
     explanation: "People improve homes when they are sure they will stay.",
@@ -80,7 +80,7 @@ concept("geo.settlement.unplanned", { file: "settlement/unplanned", keyPrefix: "
     stem: "A city has strict building standards requiring brick houses with tiled roofs on large plots. How might this contribute to unplanned settlements?",
     options: [
       ["Legal houses become too expensive for poor families", "Correct: high standards price the poor out of formal housing."],
-      ["It makes every family able to afford a house", "Higher standards raise costs."],
+      ["It makes every family able to afford a house of its own", "Higher standards raise costs."],
       ["It stops people migrating to the city", "Standards do not control migration."],
       ["It provides free land for all migrants", "Standards do not provide land."],
     ],
@@ -94,7 +94,7 @@ concept("geo.settlement.unplanned", { file: "settlement/unplanned", keyPrefix: "
     options: [
       ["It keeps communities and livelihoods in place", "Correct: residents keep their homes, networks and businesses."],
       ["It costs nothing at all", "Upgrading needs funding."],
-      ["It removes all residents from the city", "Upgrading keeps residents."],
+      ["It removes all residents from the city to new towns", "Upgrading keeps residents."],
       ["It needs no involvement from residents", "Upgrading works best with community participation."],
     ],
     answer: "A",

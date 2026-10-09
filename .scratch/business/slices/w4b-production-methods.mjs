@@ -69,7 +69,7 @@ concept("bus.operations.production-methods", { file: "operations/production-meth
       ["Finished goods and materials are stored between batches", "Correct: stock is held until the next batch or sale."],
       ["Batch production uses no machinery at all", "Batch production uses machines that can be reset."],
       ["Each batch is made for a single named customer", "That would be job production."],
-      ["Batch production makes only one product forever", "Batch production switches between products."],
+      ["Batch production makes only one product forever on each line", "Batch production switches between products."],
     ],
     answer: "A",
     explanation: "Each product is made only some of the time, so stocks must be held to meet demand in between.",

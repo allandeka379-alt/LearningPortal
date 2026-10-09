@@ -54,13 +54,13 @@ concept("phys.nuclear.atomic-structure", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "In the scattering experiment, why were some alpha particles deflected through small angles?",
-    options: [["They passed near a nucleus and were repelled by its charge.", "Correct."], ["They were attracted by the electrons they passed.", "Electrons have too little mass to deflect them noticeably."], ["They collided with neutrons inside the foil.", "The model at the time did not include neutrons; repulsion explains the deflection."], ["They were slowed down by the air in the apparatus.", "The experiment was in a vacuum."]],
+    options: [["They passed near a nucleus and were repelled by its charge.", "Correct."], ["They were attracted by the electrons they passed close to in the foil.", "Electrons have too little mass to deflect them noticeably."], ["They collided with neutrons inside the foil.", "The model at the time did not include neutrons; repulsion explains the deflection."], ["They were slowed down by the air in the apparatus.", "The experiment was in a vacuum."]],
     answer: "A", explanation: "Alpha particles are positive, so they are repelled when they pass near the positive nucleus.",
     hints: ["Like charges repel."] });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: C,
     stem: "Why was the alpha-particle scattering experiment carried out in a vacuum?",
-    options: [["Alpha particles travel only a few centimetres in air.", "Correct."], ["To keep the thin gold foil cool", "The foil is not heated; air would stop the alpha particles."], ["To stop the gold foil reacting with oxygen", "Gold does not react with air."], ["To give the alpha particles their charge", "They are always positive."]],
+    options: [["Alpha particles travel only a few centimetres in air.", "Correct."], ["To keep the thin gold foil cool", "The foil is not heated; air would stop the alpha particles."], ["To stop the thin gold foil reacting with oxygen in the air", "Gold does not react with air."], ["To give the alpha particles their charge", "They are always positive."]],
     answer: "A", explanation: "Air molecules would absorb and scatter the alpha particles, so the apparatus was evacuated." });
 
   q.match({ d: 3, skill: "ANALYSIS", applies: C,
@@ -72,7 +72,7 @@ concept("phys.nuclear.atomic-structure", {
   q.struct({ d: 3, skill: "ANALYSIS", applies: C, examStyle: true,
     stem: "Before 1909, many scientists believed in the plum pudding model of the atom. The alpha-particle scattering experiment showed it was wrong.",
     parts: [
-      P.mcq({ label: "(a)", stem: "In the plum pudding model, how was the positive charge arranged?", options: [["Spread through the whole atom, with electrons dotted in it", "Correct."], ["Concentrated in a tiny nucleus at the centre", "That is the nuclear model."], ["There was no positive charge in the atom at all.", "The atom had positive charge to balance the electrons."], ["Carried by the electrons dotted around the atom", "Electrons are negative."]], answer: "A",
+      P.mcq({ label: "(a)", stem: "In the plum pudding model, how was the positive charge arranged?", options: [["Spread through the whole atom, with electrons dotted in it", "Correct."], ["Concentrated in a tiny nucleus at the centre", "That is the nuclear model."], ["There was no positive charge in the atom at all.", "The atom had positive charge to balance the electrons."], ["Carried by the electrons dotted around inside the sphere of the atom", "Electrons are negative."]], answer: "A",
         explanation: "The plum pudding model spread the positive charge through the atom." }),
       P.manual({ label: "(b)", marks: 2, stem: "Explain why the plum pudding model cannot explain why some alpha particles bounced back.",
         points: ["Positive charge spread through the whole atom would exert only a weak force on a passing alpha particle, deflecting it slightly at most", "Only a tiny, concentrated, massive positive nucleus could repel an alpha particle strongly enough to turn it back"] }),
@@ -206,7 +206,7 @@ concept("phys.nuclear.fission-fusion", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: C, daily: true,
     stem: "Which process releases the energy of the Sun?",
-    options: [["Fusion of hydrogen nuclei into helium", "Correct."], ["Fission of uranium nuclei", "That happens in nuclear power stations."], ["Burning of hydrogen gas", "The Sun does not burn chemically."], ["Radioactive decay of helium", "No."]],
+    options: [["Fusion of hydrogen nuclei into helium", "Correct."], ["Fission of uranium nuclei", "That happens in nuclear power stations."], ["Burning of hydrogen gas", "The Sun does not burn chemically."], ["Radioactive decay of helium in the core", "No."]],
     answer: "A", explanation: "Stars like the Sun are powered by fusing hydrogen into helium." });
 
   q.mcq({ d: 2, skill: "RECALL", applies: C,
@@ -220,13 +220,13 @@ concept("phys.nuclear.fission-fusion", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why does fusion need an extremely high temperature?",
-    options: [["Nuclei repel, so they must move very fast to get close enough.", "Correct."], ["The nuclei must be melted before they can join.", "Nuclei do not melt."], ["Heat splits the nuclei apart into smaller pieces.", "That would be the opposite of fusion."], ["The heat produces the neutrons that trigger fusion.", "Fusion is not triggered by neutrons; nuclei must overcome their repulsion."]],
+    options: [["Nuclei repel, so they must move very fast to get close enough.", "Correct."], ["The nuclei must be melted before they can join.", "Nuclei do not melt."], ["Heat splits the nuclei apart into smaller pieces.", "That would be the opposite of fusion."], ["The heat produces the fast neutrons that are needed to trigger fusion.", "Fusion is not triggered by neutrons; nuclei must overcome their repulsion."]],
     answer: "A", explanation: "Only at enormous temperatures (and pressures) do nuclei move fast enough to overcome their electrical repulsion.",
     hints: ["What force acts between two positive nuclei?"] });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "What is a chain reaction in a nuclear reactor?",
-    options: [["Neutrons released by one fission go on to cause further fissions.", "Correct."], ["Alpha particles from one decay cause further decays.", "No."], ["Electrons flow round the reactor in a chain.", "No."], ["The reactor heats water, which drives a turbine.", "That is how the energy is used, not the chain reaction."]],
+    options: [["Neutrons released by one fission go on to cause further fissions.", "Correct."], ["Alpha particles from one decay cause further decays.", "No."], ["Electrons flow round the reactor in a chain.", "No."], ["The reactor heats water to make steam, which then drives a turbine and generator.", "That is how the energy is used, not the chain reaction."]],
     answer: "A", explanation: "Each fission releases two or three neutrons, which can split more nuclei; in a reactor this is controlled.",
     hints: ["What particles are released by each fission?"] });
 
@@ -249,7 +249,7 @@ concept("phys.nuclear.fission-fusion", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Where does the energy released in nuclear fission come from?",
-    options: [["A small decrease in mass, which is converted into energy", "Correct."], ["Breaking chemical bonds in the uranium", "Fission is a nuclear change, not a chemical one."], ["Only the kinetic energy of the incoming neutron", "The energy released is far larger than that."], ["Heat supplied by the reactor", "The reactor produces heat; it does not supply it."]],
+    options: [["A small decrease in mass, which is converted into energy", "Correct."], ["Breaking chemical bonds in the uranium", "Fission is a nuclear change, not a chemical one."], ["Only the kinetic energy carried in by the slow incoming neutron", "The energy released is far larger than that."], ["Heat supplied by the reactor", "The reactor produces heat; it does not supply it."]],
     answer: "A", explanation: "The products have slightly less mass than the uranium nucleus and neutron; the lost mass is released as energy.",
     hints: ["Compare the mass before and after."] });
 
@@ -265,7 +265,7 @@ concept("phys.nuclear.fission-fusion", {
         explanation: "Hydrogen fuses into helium." }),
       P.manual({ label: "(b)", marks: 2, stem: "Explain why fusion releases energy.",
         points: ["The mass of the helium nucleus formed is slightly less than the mass of the nuclei that fused", "The lost mass is released as energy (kinetic energy of the products and radiation)"] }),
-      P.mcq({ label: "(c)", stem: "Why does fusion happen naturally in the Sun's core but not at the Earth's surface?", options: [["Only the core has the huge temperature and pressure needed.", "Correct."], ["Hydrogen exists only in the Sun, not on the Earth.", "Hydrogen is common on the Earth."], ["The Earth's magnetic field prevents it here.", "The magnetic field does not stop fusion; the conditions are missing."], ["Fusion needs strong sunlight to get started.", "Fusion needs extreme temperature and pressure, not light."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Why does fusion happen naturally in the Sun's core but not at the Earth's surface?", options: [["Only the core has the huge temperature and pressure needed.", "Correct."], ["Hydrogen exists only in the Sun, not anywhere on or around the Earth.", "Hydrogen is common on the Earth."], ["The Earth's magnetic field prevents it here.", "The magnetic field does not stop fusion; the conditions are missing."], ["Fusion needs strong sunlight to get started.", "Fusion needs extreme temperature and pressure, not light."]], answer: "A",
         explanation: "Fusion needs nuclei to collide at enormous speeds, which requires the conditions in a star's core." }),
     ],
     explanation: "Hydrogen fuses into helium; the small mass loss is released as energy; extreme temperature and pressure are needed.",
@@ -287,12 +287,12 @@ concept("phys.nuclear.detection", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is background radiation?",
-    options: [["Ionising radiation that is always present in the environment", "Correct."], ["Radiation from a nearby radioactive source only", "Background is present even with no source."], ["Radiation from mobile phones", "That is non-ionising microwave radiation."], ["Thermal radiation from the ground", "Background radiation means ionising radiation."]],
+    options: [["Ionising radiation that is always present in the environment", "Correct."], ["Ionising radiation from a nearby radioactive source in the laboratory only", "Background is present even with no source."], ["Radiation from mobile phones", "That is non-ionising microwave radiation."], ["Thermal radiation from the ground", "Background radiation means ionising radiation."]],
     answer: "A", explanation: "Background radiation is the low level of ionising radiation that is always around us." });
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which of these is a natural source of background radiation?",
-    options: [["Radon gas from the ground", "Correct."], ["Mobile phone masts", "Not ionising radiation."], ["Microwave ovens", "Not ionising radiation."], ["Radio broadcasts", "Not ionising radiation."]],
+    options: [["Radon gas from the ground", "Correct."], ["Signals from mobile phone masts", "Not ionising radiation."], ["Microwave ovens", "Not ionising radiation."], ["Radio broadcasts", "Not ionising radiation."]],
     answer: "A", explanation: "Radon gas, rocks and buildings, food and drink, and cosmic rays are the main sources." });
 
   q.mcq({ d: 3, skill: "RECALL", multiple: true,
@@ -330,7 +330,7 @@ concept("phys.nuclear.detection", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why are radiation counts usually taken over several minutes, or repeated and averaged?",
-    options: [["Decay is random, so counts vary; longer counts are more reliable.", "Correct."], ["The detector needs several minutes to warm up.", "Not the reason."], ["The background changes every second, so it must be timed.", "It fluctuates randomly, but that is the point: average it."], ["To let the source cool down between readings.", "Sources do not need cooling."]],
+    options: [["Decay is random, so counts vary; longer counts are more reliable.", "Correct."], ["The detector needs several minutes to warm up.", "Not the reason."], ["The background changes every second, so it must be timed over several minutes.", "It fluctuates randomly, but that is the point: average it."], ["To let the source cool down between readings.", "Sources do not need cooling."]],
     answer: "A", explanation: "Random decay makes counts vary; counting for longer reduces the effect of the fluctuations." });
 
   q.tf({ d: 2, skill: "RECALL",
@@ -339,7 +339,7 @@ concept("phys.nuclear.detection", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "Why is the background count rate higher on a high mountain or in an aircraft?",
-    options: [["There is less air above to absorb cosmic radiation.", "Correct."], ["There is more radon gas at high altitude.", "Radon comes from the ground."], ["It is closer to the Sun's heat.", "Heat is not ionising radiation."], ["The air is colder up there.", "Temperature does not matter."]],
+    options: [["There is less air above to absorb cosmic radiation.", "Correct."], ["There is more radon gas in the thin air at high altitude.", "Radon comes from the ground."], ["It is closer to the Sun's heat.", "Heat is not ionising radiation."], ["The air is colder up there.", "Temperature does not matter."]],
     answer: "A", explanation: "The atmosphere absorbs much of the cosmic radiation, so less is absorbed above you at altitude.",
     hints: ["Which source of background radiation comes from space?"] });
 
@@ -373,7 +373,7 @@ concept("phys.nuclear.emissions", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is an alpha particle?",
-    options: [["A helium nucleus: two protons and two neutrons", "Correct."], ["A fast-moving electron from the nucleus", "That is a beta particle."], ["An electromagnetic wave", "That is gamma radiation."], ["A single neutron from the nucleus", "Neutrons are emitted in fission, not as alpha particles."]],
+    options: [["A helium nucleus: two protons and two neutrons", "Correct."], ["A fast-moving electron emitted from the nucleus", "That is a beta particle."], ["An electromagnetic wave", "That is gamma radiation."], ["A single neutron from the nucleus", "Neutrons are emitted in fission, not as alpha particles."]],
     answer: "A", explanation: "An alpha particle is a helium nucleus, with charge +2." });
 
   q.mcq({ d: 1, skill: "RECALL",
@@ -413,7 +413,7 @@ concept("phys.nuclear.emissions", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "What does it mean to say that radioactive emission is random?",
-    options: [["You cannot predict when a given nucleus will decay, or which way.", "Correct."], ["All the nuclei in the source decay at the same moment.", "Nuclei decay one by one at unpredictable times."], ["Decay happens only when the source is heated or shaken.", "Decay is spontaneous."], ["The radiation always goes upwards, away from the ground.", "It goes in random directions."]],
+    options: [["You cannot predict when a given nucleus will decay, or which way.", "Correct."], ["All the nuclei in the source decay at the same moment.", "Nuclei decay one by one at unpredictable times."], ["Decay happens only when the source is heated or shaken.", "Decay is spontaneous."], ["The radiation always goes upwards, away from the ground, in a single beam.", "It goes in random directions."]],
     answer: "A", explanation: "Each nucleus has a chance of decaying, but exactly when, and in which direction it emits, cannot be predicted." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
@@ -430,7 +430,7 @@ concept("phys.nuclear.emissions", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why is alpha radiation much more strongly ionising than gamma radiation?",
-    options: [["Alpha has a large charge and hits atoms strongly; gamma has no charge.", "Correct."], ["Gamma rays carry no energy to give to atoms.", "They do carry energy."], ["Alpha particles are electromagnetic waves of high energy.", "They are helium nuclei."], ["Alpha particles travel faster than gamma rays do.", "Gamma rays travel at the speed of light."]],
+    options: [["Alpha has a large charge and hits atoms strongly; gamma has no charge.", "Correct."], ["Gamma rays carry no energy to give to atoms.", "They do carry energy."], ["Alpha particles are electromagnetic waves of high energy.", "They are helium nuclei."], ["Alpha particles travel faster than gamma rays, so they hit more atoms each second.", "Gamma rays travel at the speed of light."]],
     answer: "A", explanation: "Charge and kinetic energy let alpha particles ionise many atoms close together; uncharged gamma rays rarely interact.",
     hints: ["Think about charge and how often each radiation interacts with atoms."] });
 
@@ -446,7 +446,7 @@ concept("phys.nuclear.emissions", {
         points: ["An alpha particle is a helium nucleus (two protons and two neutrons) with a charge of +2", "A gamma ray is an electromagnetic wave with no charge and no mass"] }),
       P.mcq({ label: "(b)", stem: "Which is more penetrating?", options: [["Gamma", "Correct."], ["Alpha", "Alpha is stopped by paper."], ["They are equally penetrating.", "No."], ["Neither can pass through paper.", "Gamma can."]], answer: "A",
         explanation: "Gamma passes through paper and aluminium and is only reduced by thick lead." }),
-      P.mcq({ label: "(c)", stem: "Which is more dangerous if a source is swallowed?", options: [["Alpha: it dumps all its energy in a small volume of tissue", "Correct."], ["Gamma, because it is more penetrating than alpha", "Inside the body, penetration means it passes out."], ["They are equally dangerous once inside the body.", "Alpha does far more damage inside the body."], ["Neither is harmful once it is inside the body.", "Both can harm cells."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Which is more dangerous if a source is swallowed?", options: [["Alpha: it dumps all its energy in a small volume of tissue", "Correct."], ["Gamma, because it is more penetrating than alpha", "Inside the body, penetration means it passes out."], ["They are equally dangerous once inside the body, as both are ionising.", "Alpha does far more damage inside the body."], ["Neither is harmful once it is inside the body.", "Both can harm cells."]], answer: "A",
         explanation: "Alpha particles are strongly ionising and cannot escape the body, so they damage nearby cells intensely." }),
     ],
     explanation: "Alpha: helium nucleus, +2, strongly ionising, least penetrating. Gamma: EM wave, uncharged, weakly ionising, most penetrating.",
@@ -469,7 +469,7 @@ concept("phys.nuclear.decay", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What happens to an unstable nucleus during radioactive decay?",
-    options: [["It emits radiation and may become a different element.", "Correct."], ["It gains electrons from the surroundings.", "Decay happens in the nucleus; electrons are not gained."], ["It always stays exactly the same element.", "Alpha and beta decay change it."], ["It splits into two equal halves every time.", "That is not decay; fission gives two smaller nuclei."]],
+    options: [["It emits radiation and may become a different element.", "Correct."], ["It gains electrons from the surroundings.", "Decay happens in the nucleus; electrons are not gained."], ["It always stays exactly the same element.", "Alpha and beta decay change it."], ["It splits into two equal halves, each a lighter element, every time.", "That is not decay; fission gives two smaller nuclei."]],
     answer: "A", explanation: "Radioactive decay is a random change in an unstable nucleus, emitting alpha, beta or gamma radiation." });
 
   q.mcq({ d: 2, skill: "RECALL",
@@ -479,7 +479,7 @@ concept("phys.nuclear.decay", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "How does beta decay change a nucleus?",
-    options: [["The nucleon number stays the same and the proton number rises by 1.", "Correct."], ["The nucleon number falls by 4 and the proton number by 2.", "That is alpha decay."], ["The nucleon number rises by 1.", "The total number of nucleons does not change."], ["Neither number changes.", "That is gamma emission."]],
+    options: [["The nucleon number stays the same and the proton number rises by 1.", "Correct."], ["The nucleon number falls by 4 and the proton number falls by 2 as well.", "That is alpha decay."], ["The nucleon number rises by 1.", "The total number of nucleons does not change."], ["Neither number changes.", "That is gamma emission."]],
     answer: "A", explanation: "A neutron becomes a proton, so Z goes up by 1 while A is unchanged." });
 
   q.tf({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -488,7 +488,7 @@ concept("phys.nuclear.decay", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "What happens inside the nucleus during beta decay?",
-    options: [["A neutron becomes a proton and an electron, which is emitted.", "Correct."], ["A proton changes into a neutron and stays inside.", "That is not beta-minus decay."], ["One of the atom's orbiting electrons is thrown out.", "The beta particle comes from the nucleus."], ["A neutron is emitted from the nucleus.", "No."]],
+    options: [["A neutron becomes a proton and an electron, which is emitted.", "Correct."], ["A proton changes into a neutron and stays inside.", "That is not beta-minus decay."], ["One of the atom's orbiting electrons is thrown out at very high speed.", "The beta particle comes from the nucleus."], ["A neutron is emitted from the nucleus.", "No."]],
     answer: "A", explanation: "In beta decay a neutron becomes a proton (which stays) and an electron (which is emitted)." });
 
   q.fib({ d: 3, skill: "APPLICATION",
@@ -530,7 +530,7 @@ concept("phys.nuclear.decay", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which types of decay produce a nucleus of a different element?",
-    options: [["Alpha decay and beta decay", "Correct."], ["Gamma emission only", "Gamma does not change the element."], ["All three", "Gamma does not."], ["None of them", "Alpha and beta change Z."]],
+    options: [["Alpha decay and beta decay", "Correct."], ["Gamma emission, but not alpha or beta", "Gamma does not change the element."], ["All three", "Gamma does not."], ["None of them", "Alpha and beta change Z."]],
     answer: "A", explanation: "Both alpha and beta decay change the proton number, so the element changes." });
 
   q.match({ d: 2, skill: "RECALL",
@@ -625,7 +625,7 @@ concept("phys.nuclear.half-life", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why must the background count rate be subtracted before finding a half-life from measured count rates?",
-    options: [["Background does not halve, so it makes the half-life seem too long.", "Correct."], ["The background doubles every half-life of the source.", "It stays roughly constant."], ["The background comes from the source itself, not the room.", "It comes from the surroundings."], ["It is not necessary: the background has no effect at all.", "It does affect the answer."]],
+    options: [["Background does not halve, so it makes the half-life seem too long.", "Correct."], ["The background doubles every half-life of the source.", "It stays roughly constant."], ["The background comes from the source itself, not from the room around it.", "It comes from the surroundings."], ["It is not necessary: the background has no effect at all.", "It does affect the answer."]],
     answer: "A", explanation: "Only the source's count rate halves each half-life; the constant background must be removed first.",
     hints: ["Does the background radiation decay away?"] });
 
@@ -682,7 +682,7 @@ concept("phys.nuclear.uses-safety", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "Why is an alpha emitter used in a smoke alarm?",
-    options: [["Alpha ionises the air so a current flows; smoke blocks it and the alarm sounds.", "Correct."], ["Alpha passes through the smoke and is detected outside the room.", "Alpha has a very short range."], ["Alpha particles heat the smoke until it glows and is seen.", "Alpha particles are not used to heat anything."], ["Alpha is the most penetrating, so it fills the whole room.", "They are the least penetrating."]],
+    options: [["Alpha ionises the air so a current flows; smoke blocks it and the alarm sounds.", "Correct."], ["Alpha passes straight through the smoke and is then detected by a sensor outside the room.", "Alpha has a very short range."], ["Alpha particles heat the smoke until it glows and is seen.", "Alpha particles are not used to heat anything."], ["Alpha is the most penetrating, so it fills the whole room.", "They are the least penetrating."]],
     answer: "A", explanation: "Strong ionisation gives a measurable current, easily interrupted by smoke; the short range makes it safe.",
     hints: ["What does smoke do to alpha particles?"] });
 
@@ -709,7 +709,7 @@ concept("phys.nuclear.uses-safety", {
 
   q.mcq({ d: 1, skill: "RECALL",
     stem: "Which is a safe way to handle a radioactive source in a school laboratory?",
-    options: [["Use long tongs and keep it pointed away from people", "Correct."], ["Pick it up quickly with your fingers", "Never handle sources with bare hands."], ["Point it at a partner to test the detector", "Never point a source at anyone."], ["Keep it in your pocket between experiments", "Sources must be stored in a lead-lined container."]],
+    options: [["Use long tongs and keep it pointed away from people", "Correct."], ["Pick it up quickly with your fingers", "Never handle sources with bare hands."], ["Point it at a partner to test the detector", "Never point a source at anyone."], ["Keep it in your pocket between experiments so it is not lost", "Sources must be stored in a lead-lined container."]],
     answer: "A", explanation: "Tongs increase the distance; sources are never pointed at people." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", multiple: true,
@@ -720,7 +720,7 @@ concept("phys.nuclear.uses-safety", {
 
   q.mcq({ d: 3, skill: "ANALYSIS",
     stem: "Why is an alpha source outside the body less dangerous than a gamma source, but more dangerous if it is swallowed?",
-    options: [["Skin stops alpha outside; inside, it dumps energy in living tissue.", "Correct."], ["Alpha is more penetrating than gamma once inside the body.", "It is much less penetrating."], ["Gamma radiation does not ionise the atoms it passes at all.", "It ionises weakly."], ["Alpha particles are electromagnetic waves, like gamma.", "They are helium nuclei."]],
+    options: [["Skin stops alpha outside; inside, it dumps energy in living tissue.", "Correct."], ["Alpha is more penetrating than gamma once it is inside the soft tissue of the body.", "It is much less penetrating."], ["Gamma radiation does not ionise the atoms it passes at all.", "It ionises weakly."], ["Alpha particles are electromagnetic waves, like gamma.", "They are helium nuclei."]],
     answer: "A", explanation: "Range and ionisation decide the hazard: alpha's short range protects us from outside but concentrates damage inside.",
     hints: ["Compare how far each radiation travels in tissue."] });
 
@@ -731,7 +731,7 @@ concept("phys.nuclear.uses-safety", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Engineers find a leak in an underground water pipe by adding a radioactive tracer to the water and searching above ground with a detector. Why must the tracer emit gamma rather than beta radiation?",
-    options: [["Gamma passes through the soil; beta would be absorbed by it.", "Correct."], ["Gamma is less dangerous than beta to the engineers.", "Not the reason."], ["Beta emitters always have very long half-lives.", "Not true."], ["Beta radiation cannot be detected by any instrument.", "It can, at short range."]],
+    options: [["Gamma passes through the soil; beta would be absorbed by it.", "Correct."], ["Gamma is less dangerous than beta to the engineers working above the pipe.", "Not the reason."], ["Beta emitters always have very long half-lives.", "Not true."], ["Beta radiation cannot be detected by any instrument.", "It can, at short range."]],
     answer: "A", explanation: "The radiation must penetrate the soil above the pipe, so a gamma emitter is needed (with a short half-life)." });
 
   q.match({ d: 2, skill: "RECALL",
@@ -744,7 +744,7 @@ concept("phys.nuclear.uses-safety", {
     parts: [
       P.manual({ label: "(a)", marks: 3, stem: "Describe three precautions the teacher should take.",
         points: ["Handle the source with long tongs, never with bare hands", "Keep it as far from people as possible, point it away from them and use it for as short a time as possible", "Return it promptly to its lead-lined box in a locked, labelled store"] }),
-      P.mcq({ label: "(b)", stem: "Why are sources stored in lead-lined boxes?", options: [["Lead absorbs the radiation, reducing exposure.", "Correct."], ["Lead keeps the source cool.", "No."], ["Lead stops the source being stolen.", "A lock does that."], ["Lead makes the source last longer.", "Nothing changes the half-life."]], answer: "A",
+      P.mcq({ label: "(b)", stem: "Why are sources stored in lead-lined boxes?", options: [["Lead absorbs the radiation, reducing exposure.", "Correct."], ["Lead keeps the source cool.", "No."], ["Lead stops the source being stolen.", "A lock does that."], ["Lead slows the decay, so the source lasts much longer.", "Nothing changes the half-life."]], answer: "A",
         explanation: "Lead is a dense absorber of beta and gamma radiation." }),
     ],
     explanation: "Reduce exposure through time, distance and shielding; store sources shielded and secure.",

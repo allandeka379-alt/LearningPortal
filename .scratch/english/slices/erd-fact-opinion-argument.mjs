@@ -47,7 +47,7 @@ concept("eng.reading.fact-opinion-argument", { file: "reading/fact-opinion-argum
       ["Netball is far more exciting to watch than football.", "Correct: exciting is a judgement others may dispute."],
       ["A netball team has seven players on court.", "This can be checked in the rules: a fact."],
       ["The school netball court was resurfaced in May.", "This can be checked in records: a fact."],
-      ["Our netball team played four matches last term.", "This can be counted: a fact."],
+      ["Our school netball team played four matches last term.", "This can be counted: a fact."],
     ],
     answer: "A",
     explanation: "Opinions express judgement or preference (*more exciting*). Facts can be checked.",
@@ -100,7 +100,7 @@ concept("eng.reading.fact-opinion-argument", { file: "reading/fact-opinion-argum
     stem: ADVERT + "\n\nWhat is the main purpose of the sentence *Don't let your children fall behind*?",
     options: [
       ["To make parents worry so that they buy the lamp", "Correct: it appeals to parents' fears for their children."],
-      ["To explain how the lamp's solar panel works", "It gives no technical information."],
+      ["To explain how the lamp's solar panel and battery work", "It gives no technical information."],
       ["To report the results of a study of pupils", "No study is mentioned."],
       ["To warn parents that the lamp is unsafe", "It warns about children falling behind, not about the lamp."],
     ],
@@ -238,7 +238,7 @@ concept("eng.reading.fact-opinion-argument", { file: "reading/fact-opinion-argum
     options: [
       ["All teenagers are lazy and spend all day on their phones.", "Correct: an over-simple idea applied to a whole group."],
       ["Many teenagers in our class own a mobile phone.", "Many is limited and could be checked; not a stereotype."],
-      ["My brother is often tired after football practice.", "This is about one person, not a group."],
+      ["My brother is often tired after his football practice at school.", "This is about one person, not a group."],
       ["Some pupils find mathematics difficult at first.", "Some is a cautious, limited claim."],
     ],
     answer: "A",

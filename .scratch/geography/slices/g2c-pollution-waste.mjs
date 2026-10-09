@@ -47,7 +47,7 @@ concept("geo.environment.pollution-waste", { file: "environment/pollution-waste"
     stem: "What is **leachate**?",
     options: [
       ["Polluted liquid that drains out of a waste dump", "Correct: rainwater soaks through rotting waste and picks up chemicals and bacteria."],
-      ["Gas given off by rotting waste in a dump", "That is landfill gas, mainly methane and carbon dioxide."],
+      ["Gas given off by rotting waste in a dump or landfill", "That is landfill gas, mainly methane and carbon dioxide."],
       ["Smoke from waste burned in the open", "Smoke is air pollution, not leachate."],
       ["Plastic waste collected for recycling", "Recyclable plastic is a resource, not leachate."],
     ],
@@ -73,7 +73,7 @@ concept("geo.environment.pollution-waste", { file: "environment/pollution-waste"
       ["Smoke with toxic gases and particles causes breathing problems", "Correct: burning plastics and mixed waste gives off particles and poisonous fumes."],
       ["The ash makes the soil too fertile for gardens", "Ash is not the main harm; it may contain toxic residues rather than making soil too fertile."],
       ["The fires use up oxygen needed by the residents", "Small fires do not noticeably lower the oxygen in the open air."],
-      ["The heat raises the temperature of the whole suburb", "The heat from small fires is local and short-lived."],
+      ["The heat from the fires raises the temperature of the whole suburb", "The heat from small fires is local and short-lived."],
     ],
     answer: "A",
     explanation: "Open burning of mixed waste releases smoke, particles and toxic gases that cause asthma, bronchitis and other respiratory illness.",

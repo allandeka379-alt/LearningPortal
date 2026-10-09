@@ -15,7 +15,7 @@ concept("geo.ecosystems.savanna-desert", { file: "exam/zim-p2-a-ecosystems", key
           ["Savanna (tropical continental)", "Correct: deciduous woodland with a long dry season."],
           ["Tropical rainforest", "Rainforest needs rain in every month."],
           ["Hot desert", "Miombo areas receive far more rain than a desert."],
-          ["Temperate grassland", "Temperate grasslands lie in mid-latitudes."],
+          ["Temperate grassland (prairie, steppe)", "Temperate grasslands lie in mid-latitudes."],
         ],
         answer: "A",
         explanation: "Miombo is a deciduous savanna woodland of Zimbabwe's higher plateau.",

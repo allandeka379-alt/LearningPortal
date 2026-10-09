@@ -84,10 +84,10 @@ concept("econ.inflation.measurement", { file: "inflation/measurement", keyPrefix
     d: 3, skill: "EVALUATION",
     stem: "Why might the CPI understate the rise in the cost of living for a poor household?",
     options: [
-      ["Poor households spend a larger share on food, whose prices may rise faster than average", "Correct: their spending pattern differs from the average basket."],
+      ["Poor households spend a larger share on food, whose prices may rise faster", "Correct: their spending pattern differs from the average basket."],
       ["Poor households do not pay any prices included in the CPI", "Poor households buy many items in the basket."],
       ["The CPI includes only luxury goods", "The basket covers typical household spending."],
-      ["The CPI is calculated only once every ten years, so it is always out of date", "It is usually published monthly."],
+      ["The CPI is calculated only once every ten years, so it is always badly out of date", "It is usually published monthly."],
     ],
     answer: "A",
     hints: ["Does every household spend its money in the same way as the 'average' basket?"],

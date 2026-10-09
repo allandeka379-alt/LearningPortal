@@ -49,7 +49,7 @@ concept("econ.production.productivity", { file: "production/productivity", keyPr
     options: [
       ["Change in total product when one more worker is employed", "Correct: the extra output of the extra worker."],
       ["Total product divided by the number of workers", "That is average product."],
-      ["Total product multiplied by the number of workers", "This has no meaning."],
+      ["Total product multiplied by the number of workers employed", "This has no meaning."],
       ["Total product minus total cost", "That relates to profit, not product."],
     ],
     answer: "A",
@@ -72,9 +72,9 @@ concept("econ.production.productivity", { file: "production/productivity", keyPr
     d: 3, skill: "ANALYSIS",
     stem: "Why can higher labour productivity allow a firm to pay higher wages without raising its prices?",
     options: [
-      ["Labour cost per unit can stay the same if output per worker rises as fast as wages", "Correct: unit labour cost = wage ÷ output per worker."],
+      ["Unit labour cost stays the same if output per worker rises as fast as wages", "Correct: unit labour cost = wage ÷ output per worker."],
       ["Higher productivity always reduces the number of workers to zero", "Productivity gains do not eliminate all workers."],
-      ["Higher wages automatically raise productivity by the same amount", "Wages and productivity are not automatically linked."],
+      ["Higher wages automatically raise productivity by the same amount in every firm", "Wages and productivity are not automatically linked."],
       ["Productivity has no effect on a firm's costs", "Productivity directly affects unit costs."],
     ],
     answer: "A",

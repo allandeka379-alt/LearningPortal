@@ -93,7 +93,7 @@ concept("geo.population.distribution-density", { file: "population/distribution-
     stem: "A district has a density of 40 people per km². Why might this figure be misleading?",
     options: [
       ["Most people may live in one town, leaving the rest empty", "Correct: density is an average that hides variation."],
-      ["Density is always measured in people per hectare", "It is usually per km²."],
+      ["Density is always measured in people per hectare, not per km²", "It is usually per km²."],
       ["It does not include children", "Density counts everyone."],
       ["It is the same as the birth rate", "Density and birth rate are unrelated measures."],
     ],

@@ -82,7 +82,7 @@ concept("geo.landforms.arid-wind", { file: "landforms/arid-wind", keyPrefix: "la
     options: [
       ["Sand grains carried by the wind are concentrated close to the ground, so abrasion is greatest there", "Correct: saltating sand rarely rises more than 1-2 m."],
       ["The upper part of the rock is softer and has been worn away more slowly over time", "Softer rock would be worn faster, not more slowly."],
-      ["Deflation lifts dust from the top of the rock and drops it around the base", "Deflation removes loose material; it does not build up rock."],
+      ["Deflation lifts dust from the top of the rock and drops it around the base, where it protects the lower part", "Deflation removes loose material; it does not build up rock."],
       ["Rain falling on the top of the rock is evaporated before it can weather it", "This does not explain undercutting at the base."],
     ],
     answer: "A",
@@ -213,7 +213,7 @@ concept("geo.landforms.arid-wind", { file: "landforms/arid-wind", keyPrefix: "la
       P.mcq({ label: "(c)", marks: 1, stem: "Which statement best describes the rainfall?", options: [
         ["Low and highly variable from year to year", "Correct: from 135 mm to 520 mm."],
         ["High and reliable", "No year reached even 600 mm, and totals vary widely."],
-        ["Low but almost the same every year", "Totals vary by a factor of almost four."],
+        ["Low but almost the same every year, at about 300 mm", "Totals vary by a factor of almost four, from 135 mm to 520 mm."],
         ["Increasing steadily every year", "Totals go up and down with no steady trend."],
       ], answer: "A", explanation: "Low totals and a large range show unreliable rainfall." }),
       P.manual({ label: "(d)", marks: 3, stem: "Suggest **three** problems such rainfall causes for farmers.", points: [

@@ -8,7 +8,7 @@ concept("bus.production.ownership-indigenisation", { file: "production/ownership
     options: [
       ["Increase local citizens' ownership of businesses and resources", "Correct: ownership moves towards indigenous (local) people."],
       ["Transfer every business to ownership by the state", "That is nationalisation, not indigenisation."],
-      ["Attract only foreign companies to invest in mining", "Indigenisation increases local, not foreign, ownership."],
+      ["Attract only foreign-owned companies to invest in mining and farming", "Indigenisation increases local, not foreign, ownership."],
       ["Stop all trade between Zimbabwe and other countries", "Indigenisation is about ownership, not banning trade."],
     ],
     answer: "A",
@@ -20,7 +20,7 @@ concept("bus.production.ownership-indigenisation", { file: "production/ownership
     options: [
       ["passed down between generations and held for the whole nation", "Correct: heritage is inherited from the past and kept for the future."],
       ["available only to the people who live in towns", "Heritage belongs to all citizens, not one group."],
-      ["owned by foreign investors who developed them", "That is the opposite of national heritage."],
+      ["owned by the foreign investors who discovered and developed them", "That is the opposite of national heritage."],
       ["resources that can never be used for production", "Heritage should be used productively and conserved, not left idle."],
     ],
     answer: "A",

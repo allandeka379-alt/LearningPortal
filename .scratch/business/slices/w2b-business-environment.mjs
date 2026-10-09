@@ -19,7 +19,7 @@ concept("bus.environment.business-environment", { file: "environment/business-en
     stem: "More customers want to pay a hair salon by mobile money. Which PESTLE factor is this mainly an example of?",
     options: [
       ["Technological", "Correct: a change in payment technology."],
-      ["Ecological", "Ecological factors concern the natural environment."],
+      ["Ecological (environmental)", "Ecological factors concern the natural environment."],
       ["Legal", "No law is involved."],
       ["Political", "No government policy is involved."],
     ],

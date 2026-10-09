@@ -8,7 +8,7 @@ concept("bus.organisation.public-sector-reforms", { file: "organisation/public-s
     options: [
       ["Transferring a public enterprise to private ownership", "Correct: ownership moves from the state to the private sector."],
       ["Transferring a private business to the state", "That is nationalisation."],
-      ["Running a state enterprise on business lines", "That is commercialisation."],
+      ["Running a state enterprise on commercial business lines", "That is commercialisation."],
       ["Registering an informal business", "That is formalisation."],
     ],
     answer: "A",
@@ -20,7 +20,7 @@ concept("bus.organisation.public-sector-reforms", { file: "organisation/public-s
     options: [
       ["The state taking over ownership of a private business", "Correct: ownership moves from private owners to the state."],
       ["Selling state-owned shares to the public", "That is a method of privatisation."],
-      ["Reducing government subsidies to a parastatal", "That is part of commercialisation."],
+      ["Reducing the government subsidies paid to a parastatal", "That is part of commercialisation."],
       ["A business expanding into many countries", "That describes becoming a multinational."],
     ],
     answer: "A",

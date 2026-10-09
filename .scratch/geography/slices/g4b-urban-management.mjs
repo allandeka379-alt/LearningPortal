@@ -21,7 +21,7 @@ concept("geo.settlement.urban-management", { file: "settlement/urban-management"
       ["To restrict urban sprawl into the countryside", "Correct: building is restricted in the protected zone."],
       ["To grow trees for firewood in the CBD", "Green belts surround the city, not the CBD."],
       ["To provide land for new factories", "Green belts restrict building."],
-      ["To store floodwater in the city centre", "That is the role of parks or detention ponds."],
+      ["To store floodwater in the city centre after storms", "That is the role of parks or detention ponds."],
     ],
     answer: "A",
     explanation: "Green belts protect open land around cities.",

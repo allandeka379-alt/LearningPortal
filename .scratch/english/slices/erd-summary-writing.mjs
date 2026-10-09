@@ -279,7 +279,7 @@ concept("eng.summary.writing", { file: "summary/writing", keyPrefix: "summary.wr
     options: [
       ["A scores higher: same content, but concise, relevant and own words", "Correct: B loses expression marks and goes over the limit."],
       ["B scores higher because the summary is longer", "Length is not rewarded; B is over the 70-word limit."],
-      ["Both score the same because they have six points each", "Expression marks differ: B lifts and adds irrelevant detail."],
+      ["Both score the same because they each contain the same six content points", "Expression marks differ: B lifts and adds irrelevant detail."],
       ["B scores higher because the joke adds human interest", "The joke is irrelevant to the problems."],
     ],
     answer: "A",

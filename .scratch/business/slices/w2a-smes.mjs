@@ -31,7 +31,7 @@ concept("bus.organisation.smes", { file: "organisation/smes", keyPrefix: "organi
     stem: "Why do commercial banks often refuse loans to SMEs?",
     options: [
       ["They lack collateral and proper records", "Correct: banks cannot judge the risk or secure the loan."],
-      ["SMEs are not allowed to borrow", "SMEs may borrow if they meet the bank's conditions."],
+      ["SMEs are not allowed by law to borrow money", "SMEs may borrow if they meet the bank's conditions."],
       ["SMEs have limited liability", "Most SMEs are sole traders with unlimited liability."],
       ["Banks lend only to the government", "Banks lend to businesses and individuals."],
     ],
@@ -80,7 +80,7 @@ concept("bus.organisation.smes", { file: "organisation/smes", keyPrefix: "organi
     stem: "Which government measure best tackles the SME problem of **lack of collateral**?",
     options: [
       ["Loan guarantees for small businesses", "Correct: the guarantee replaces collateral for the bank."],
-      ["Building new SME workshop bays", "This solves lack of workspace."],
+      ["Building new SME workshop bays in towns", "This solves lack of workspace."],
       ["Running bookkeeping courses", "This solves poor record keeping."],
       ["Holding trade fairs", "This helps with markets."],
     ],

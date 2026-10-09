@@ -14,7 +14,7 @@ concept("bus.communication.telecommunications", { file: "communication/telecommu
     stem: "What is telecommunication?",
     options: [
       ["Sending information over a distance by electronic means", "Correct."],
-      ["Carrying letters and parcels by road and rail", "That is a postal or courier service."],
+      ["Carrying letters and parcels over a distance by road and rail", "That is a postal or courier service."],
       ["Talking face to face at a meeting of managers", "That is oral communication without telecommunication."],
       ["Displaying notices on a staff notice board", "That is written communication."],
     ],
@@ -88,7 +88,7 @@ concept("bus.communication.telecommunications", { file: "communication/telecommu
     options: [
       ["Documents and pictures can be sent instantly and cheaply from a phone", "Correct."],
       ["Fax machines cannot send any written documents at all", "Sending documents is what fax does."],
-      ["Messaging apps work without any network or data connection", "They need a data connection."],
+      ["Messaging apps work anywhere without any mobile network or data connection", "They need a data connection."],
       ["Fax machines are now illegal for businesses to use", "They are legal, just outdated."],
     ],
     answer: "A",
@@ -181,7 +181,7 @@ concept("bus.communication.telecommunications", { file: "communication/telecommu
       P.mcq({
         label: "(a)", marks: 1,
         stem: "Which type of service provider would supply the internet connection?",
-        options: [["An internet service provider", "Correct."], ["A courier company", "Couriers deliver parcels."], ["A wholesaler", "Wholesalers sell goods in bulk."], ["The regulator", "The regulator licenses providers; it does not sell connections."]],
+        options: [["An internet service provider", "Correct."], ["A courier company", "Couriers deliver parcels."], ["A wholesaler", "Wholesalers sell goods in bulk."], ["The communications regulator", "The regulator licenses providers; it does not sell connections."]],
         answer: "A",
       }),
       P.manual({

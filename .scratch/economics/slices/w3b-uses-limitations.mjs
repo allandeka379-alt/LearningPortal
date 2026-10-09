@@ -65,7 +65,7 @@ concept("econ.national-income.uses-limitations", { file: "national-income/uses-l
       ["It fell, because prices rose faster than nominal GDP", "Correct: the volume of output fell (by about 1.8%)."],
       ["It rose by 8%, the same as nominal GDP", "This ignores the rise in prices."],
       ["It rose by 18%, the sum of the two changes", "Inflation reduces real GDP; it is not added."],
-      ["It did not change, because both figures rose", "Prices rose faster, so real output fell."],
+      ["It did not change, because both figures rose during the year", "Prices rose faster, so real output fell."],
     ],
     answer: "A",
     hints: ["Real GDP = nominal GDP ÷ price index × 100."],

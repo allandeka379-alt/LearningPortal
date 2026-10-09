@@ -49,7 +49,7 @@ concept("econ.macro.supply-side-policy", { file: "macro/supply-side-policy", key
     stem: "Many unemployed former miners lack the skills needed for jobs in a growing information technology sector. Which policy is most suitable?",
     options: [
       ["Retraining courses in computer skills for the former miners", "Correct: training tackles structural unemployment."],
-      ["A cut in interest rates to raise consumer spending", "Extra demand does not give the miners new skills."],
+      ["A cut in interest rates to raise consumer spending across the economy", "Extra demand does not give the miners new skills."],
       ["A rise in income tax to reduce inflation", "This does not address the skills mismatch."],
       ["Higher tariffs on imported computers", "This does not train the unemployed miners."],
     ],
@@ -74,7 +74,7 @@ concept("econ.macro.supply-side-policy", { file: "macro/supply-side-policy", key
     stem: "Supporters of privatisation as a supply-side measure argue that it",
     options: [
       ["raises efficiency because private owners are driven by profit and competition", "Correct: the profit motive can cut waste."],
-      ["always lowers prices, because private firms cannot be monopolies", "A privatised firm can be a private monopoly."],
+      ["always lowers prices, because private firms cannot become monopolies by law", "A privatised firm can be a private monopoly."],
       ["raises government spending on the industry every year", "Privatisation usually reduces state spending on the firm."],
       ["guarantees that no workers lose their jobs", "Efficiency gains often involve job cuts."],
     ],
@@ -101,7 +101,7 @@ concept("econ.macro.supply-side-policy", { file: "macro/supply-side-policy", key
     options: [
       ["The problem is too little demand, and firms already have spare capacity", "Correct: extra capacity is not used without more spending."],
       ["Supply-side policy always raises unemployment", "In the long run it aims to reduce unemployment."],
-      ["Supply-side policy can only be used when inflation is high", "It can be used at any time."],
+      ["Supply-side policy can only be used when inflation is high and rising quickly", "It can be used at any time."],
       ["Spare capacity means firms have too few machines", "Spare capacity means existing machines are not being used."],
     ],
     answer: "A",

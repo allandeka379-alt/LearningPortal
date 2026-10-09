@@ -81,7 +81,7 @@ concept("geo.agriculture.natural-regions", { file: "agriculture/natural-regions"
     options: [
       ["Maize fails more often, so small grains and livestock matter more", "Correct: drier conditions make maize riskier."],
       ["They can switch to tea and coffee", "These need much wetter conditions."],
-      ["Irrigation is no longer needed anywhere in these areas", "Drier conditions make irrigation more, not less, valuable."],
+      ["Irrigation is no longer needed anywhere in these newly drier areas", "Drier conditions make irrigation more, not less, valuable."],
       ["Yields of rain-fed maize rise every year", "Less, less reliable rain lowers maize yields."],
     ],
     answer: "A",

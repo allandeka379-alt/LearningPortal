@@ -96,7 +96,7 @@ concept("eng.reading.note-making", { file: "reading/note-making", keyPrefix: "re
       ["They repeat the same idea, so only one point is made", "Correct: each note should record a different idea."],
       ["They are both too long to be called notes", "Both are of a reasonable note length."],
       ["They should be under a heading called Plans", "They describe a difficulty, so Problems is right."],
-      ["They should be written as complete sentences", "Notes do not need to be full sentences."],
+      ["They should be written out as full, complete sentences", "Notes do not need to be full sentences."],
     ],
     answer: "A",
     hints: ["Compare the meaning of the two notes."],
@@ -213,7 +213,7 @@ concept("eng.reading.note-making", { file: "reading/note-making", keyPrefix: "re
     stem: "What is the main reason for making your own notes before writing a summary?",
     options: [
       ["To select the relevant points before joining them", "Correct: notes separate choosing points from writing them."],
-      ["To copy the passage faster in the examination", "Notes are for selecting, not copying."],
+      ["To copy the passage out faster in the examination room", "Notes are for selecting, not copying."],
       ["To make the summary longer than the limit", "Summaries must stay within the word limit."],
       ["To add your own opinions about the topic", "Summaries and notes do not include your opinions."],
     ],

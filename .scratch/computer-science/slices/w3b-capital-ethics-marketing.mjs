@@ -184,7 +184,7 @@ concept("comp.techno.capital-ethics-marketing", { file: "techno/capital-ethics-m
       }),
       P.mcq({
         label: "(b)", stem: "Which type of e-commerce is *FarmLink*, where individual farmers sell to households?",
-        options: [["Consumer-to-consumer (C2C) marketplace", "Correct: individuals trade with individuals through the platform."], ["Business-to-business (B2B)", "No business is buying stock from another."], ["Government-to-citizen (G2C)", "No government service is involved."], ["Business-to-government (B2G)", "No government buyer."]],
+        options: [["Consumer-to-consumer (C2C)", "Correct: individuals trade with individuals through the platform."], ["Business-to-business (B2B)", "No business is buying stock from another."], ["Government-to-citizen (G2C)", "No government service is involved."], ["Business-to-government (B2G)", "No government buyer."]],
         answer: "A", explanation: "A platform where individuals sell to individuals is C2C.",
       }),
       P.manual({

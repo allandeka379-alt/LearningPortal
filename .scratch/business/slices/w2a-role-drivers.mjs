@@ -57,7 +57,7 @@ concept("bus.enterprise.role-drivers", { file: "enterprise/role-drivers", keyPre
       ["Deciding how much of the budget to spend on stock", "Correct: dividing limited resources between uses."],
       ["Borrowing money from a savings club", "That is mobilising resources."],
       ["Noticing that a suburb has no pharmacy", "That is identifying an opportunity."],
-      ["Reading about new technology in newspapers", "That is scanning the environment."],
+      ["Reading about new technology in newspapers and magazines", "That is scanning the environment."],
     ],
     answer: "A",
     explanation: "Allocation means deciding how limited resources are used: money between stock and equipment, workers between tasks.",
@@ -173,7 +173,7 @@ concept("bus.enterprise.role-drivers", { file: "enterprise/role-drivers", keyPre
       P.mcq({
         label: "(a)", marks: 1,
         stem: "Noticing that shops ran out of uniforms in January is an example of:",
-        options: [["Identifying a business opportunity", "Correct: an unmet demand."], ["Allocating resources", "No resources are being divided."], ["Managing the business", "The business has not started yet."], ["Setting up the business", "This comes later."]],
+        options: [["Identifying a business opportunity", "Correct: an unmet demand."], ["Allocating resources", "No resources are being divided."], ["Managing the business's daily work", "The business has not started yet."], ["Setting up the business", "This comes later."]],
         answer: "A",
       }),
       P.manual({

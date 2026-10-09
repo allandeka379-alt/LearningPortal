@@ -48,9 +48,9 @@ concept("econ.firms.size-mergers", { file: "firms/size-mergers", keyPrefix: "fir
     d: 1, skill: "RECALL",
     stem: "What is meant by **internal growth** of a firm?",
     options: [
-      ["Growing by expanding its own activities, such as opening new branches", "Correct: organic growth."],
+      ["Growing by expanding its own activities, such as opening branches", "Correct: organic growth."],
       ["Growing by buying a controlling share in another firm", "That is a takeover: external growth."],
-      ["Growing by joining with another firm to form a new firm", "That is a merger: external growth."],
+      ["Growing by joining with another firm to form a new, larger firm", "That is a merger: external growth."],
       ["Growing by receiving a grant from the government", "A grant is a source of finance, not a method of growth."],
     ],
     answer: "A",

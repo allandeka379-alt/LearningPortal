@@ -149,7 +149,7 @@ concept("comp.prog.file-handling", { file: "prog/file-handling", keyPrefix: "pro
     options: [
       ["The old high score is lost before it can be read", "Correct: WRITE mode empties the file first."],
       ["Score and Best should both be strings", "Numbers can be compared and written."],
-      ["The IF statement needs an ELSE branch", "No ELSE is required here."],
+      ["The IF statement needs an ELSE branch for when Score is lower", "No ELSE is required here."],
       ["CLOSEFILE should be inside the IF", "The file must be closed whichever branch runs."],
     ],
     answer: "A",

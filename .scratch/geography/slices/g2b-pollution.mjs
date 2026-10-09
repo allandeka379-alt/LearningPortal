@@ -35,7 +35,7 @@ concept("geo.rivers.pollution", { file: "rivers/pollution", keyPrefix: "rivers.p
     stem: "In eutrophication, why do fish die?",
     options: [
       ["Bacteria decomposing dead algae use up the oxygen", "Correct: dissolved oxygen falls too low for fish."],
-      ["Nitrates are directly poisonous to fish", "At these levels the main effect is oxygen loss, not poisoning."],
+      ["Nitrates in the water are directly poisonous to fish", "At these levels the main effect is oxygen loss, not poisoning."],
       ["Algae eat the fish eggs and young fish", "Algae are producers; they do not eat fish."],
       ["The water becomes too salty for fish", "Nutrients do not make fresh water salty."],
     ],
@@ -71,7 +71,7 @@ concept("geo.rivers.pollution", { file: "rivers/pollution", keyPrefix: "rivers.p
     stem: "Downstream of a sewage outfall, dissolved oxygen falls sharply and then slowly rises again over several kilometres. What best explains the **rise**?",
     options: [
       ["Waste is diluted and broken down while turbulence adds oxygen", "Correct: the river gradually recovers."],
-      ["More sewage enters the river further downstream", "More sewage would lower oxygen further."],
+      ["More sewage and untreated waste enter the river further downstream", "More sewage would lower oxygen further."],
       ["The water temperature rises downstream", "Warmer water holds less oxygen, not more."],
       ["Algae stop photosynthesising downstream", "Photosynthesis adds oxygen; stopping it would not raise levels."],
     ],

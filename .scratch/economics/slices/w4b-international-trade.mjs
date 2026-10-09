@@ -50,7 +50,7 @@ concept("econ.trade.international-trade", { file: "trade/international-trade", k
     options: [
       ["Exchange rates may change and payment from distant buyers is harder to enforce", "Correct."],
       ["Foreign buyers always pay in the seller's own currency", "Not always; often the seller must accept foreign currency."],
-      ["There is less demand for goods in foreign markets than at home", "World markets are much larger."],
+      ["There is always less demand for goods in foreign markets than in the home market", "World markets are much larger."],
       ["Home trade is not subject to any laws", "Home trade is regulated too."],
     ],
     answer: "A",

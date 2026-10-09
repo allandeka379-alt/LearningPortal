@@ -82,7 +82,7 @@ concept("bus.finance.income-saving-investment", { file: "finance/income-saving-i
       ["Animals can multiply and may keep value when prices rise", "Correct: offspring add value and livestock may hold value in inflation."],
       ["Livestock carry no risk of loss", "Disease, drought and theft are real risks."],
       ["Livestock pay a fixed rate of interest", "Interest is paid on deposits and loans, not on animals."],
-      ["Livestock can be sold instantly at a known price", "Prices vary and buyers must be found."],
+      ["Livestock can always be sold instantly at a known, fixed price", "Prices vary and buyers must be found."],
     ],
     answer: "A",
     explanation: "Livestock produce offspring, milk or eggs and can hold value, but they carry risks.",

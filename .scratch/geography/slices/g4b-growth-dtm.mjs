@@ -44,7 +44,7 @@ concept("geo.population.growth-dtm", { file: "population/growth-dtm", keyPrefix:
     options: [
       ["More girls completing secondary education", "Correct: educated women marry later and have fewer children."],
       ["Higher infant mortality", "High infant mortality encourages more births."],
-      ["Children needed to work on farms", "This keeps birth rates high."],
+      ["Children needed to work on family farms and herd cattle", "This keeps birth rates high."],
       ["Early marriage", "Early marriage lengthens childbearing years."],
     ],
     answer: "A",

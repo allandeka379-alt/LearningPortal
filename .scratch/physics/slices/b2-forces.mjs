@@ -27,7 +27,7 @@ concept("phys.forces.moments", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "Why are door handles fixed as far as possible from the hinges?",
-    options: [["To give a larger moment for the same force", "Correct."], ["To make the door lighter", "Position does not change the door's weight."], ["To reduce friction in the hinges", "Friction is not the reason."], ["To balance the door's weight", "Handles are not counterweights."]],
+    options: [["To give a larger moment for the same force", "Correct."], ["To make the door lighter", "Position does not change the door's weight."], ["To reduce friction in the hinges as the door swings", "Friction is not the reason."], ["To balance the door's weight", "Handles are not counterweights."]],
     answer: "A", explanation: "A larger perpendicular distance from the pivot gives a larger turning effect, so less force is needed." });
 
   q.num({ d: 3, skill: "APPLICATION",
@@ -68,7 +68,7 @@ concept("phys.forces.moments", {
     parts: [
       P.manual({ label: "(a)", marks: 3, stem: "Describe the experiment she should carry out.",
         points: ["Balances a metre rule on a pivot at its centre (centre of gravity)", "Hangs known weights at measured distances on both sides and adjusts them until the rule balances horizontally", "Calculates the total clockwise and anticlockwise moments and shows they are equal; repeats for other arrangements"] }),
-      P.mcq({ label: "(b)", stem: "Why does she pivot the rule at its centre of gravity?", options: [["So the rule's own weight has no moment about the pivot", "Correct."], ["So the rule is stronger", "Strength is not the issue."], ["Because the rule cannot balance anywhere else", "It can, if the weight's moment is included."], ["To make the weights lighter", "Weights are unchanged."]], answer: "A", explanation: "The rule's weight then acts through the pivot, so its perpendicular distance, and moment, are zero." }),
+      P.mcq({ label: "(b)", stem: "Why does she pivot the rule at its centre of gravity?", options: [["So the rule's own weight has no moment about the pivot", "Correct."], ["So the rule is stronger", "Strength is not the issue."], ["Because the rule cannot balance at any other point along its length", "It can, if the weight's moment is included."], ["To make the weights lighter", "Weights are unchanged."]], answer: "A", explanation: "The rule's weight then acts through the pivot, so its perpendicular distance, and moment, are zero." }),
     ],
     explanation: "Balancing known weights at measured distances and comparing total clockwise with total anticlockwise moments verifies the principle.",
     hints: ["What do you need to measure for each weight?"] });
@@ -87,7 +87,7 @@ concept("phys.forces.moments", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A wheelbarrow full of sand is lifted at the handles. The wheel is the pivot. Why is it easier to lift when the load is placed nearer the wheel?",
-    options: [["Its moment about the wheel is smaller, so less effort is needed.", "Correct."], ["The load becomes lighter when it is near the wheel.", "Its weight does not change."], ["The handles become effectively longer for the lifter.", "The handles are the same length."], ["Friction between the wheel and the ground decreases.", "Friction is not the reason."]],
+    options: [["Its moment about the wheel is smaller, so less effort is needed.", "Correct."], ["The load becomes lighter when it is near the wheel.", "Its weight does not change."], ["The handles become effectively longer, so the lifter's effort has a bigger moment.", "The handles are the same length."], ["Friction between the wheel and the ground decreases.", "Friction is not the reason."]],
     answer: "A", explanation: "Moving the load nearer the pivot reduces its perpendicular distance, so its moment is smaller and a smaller lifting moment balances it." });
 
   q.short({ d: 2, skill: "RECALL",
@@ -126,7 +126,7 @@ concept("phys.forces.centre-of-gravity", {
     parts: [
       P.manual({ label: "(a)", marks: 3, stem: "Describe the method, including the apparatus used.",
         points: ["Makes a hole near the edge and hangs the card freely from a pin in a clamp, with a plumb line from the same pin", "Marks the line of the plumb line on the card when everything is still", "Repeats from another hole; the centre of gravity is where the lines cross"] }),
-      P.mcq({ label: "(b)", stem: "How can she check her result?", options: [["Hang it from a third hole and check the line passes through it.", "Correct."], ["Weigh the card on a balance and compare the two halves.", "Weighing does not locate the centre of gravity."], ["Measure the card's perimeter and find its midpoint.", "Not relevant."], ["Cut the card along one line and weigh both parts.", "Cutting destroys the card, and the two parts need not have equal weights."]], answer: "A", explanation: "All lines drawn this way pass through the centre of gravity, so a third line is a check." }),
+      P.mcq({ label: "(b)", stem: "How can she check her result?", options: [["Hang it from a third hole and check the line passes through it.", "Correct."], ["Weigh the card on a balance and compare the masses of the two halves.", "Weighing does not locate the centre of gravity."], ["Measure the card's perimeter and find its midpoint.", "Not relevant."], ["Cut the card along one line and weigh both parts.", "Cutting destroys the card, and the two parts need not have equal weights."]], answer: "A", explanation: "All lines drawn this way pass through the centre of gravity, so a third line is a check." }),
     ],
     explanation: "A freely hanging card rests with its centre of gravity directly below the pin; two plumb lines cross at it and a third checks it.",
     hints: ["Where does the centre of gravity lie when the card hangs freely?"] });
@@ -243,7 +243,7 @@ concept("phys.forces.momentum", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: C,
     stem: "Why does a car's crumple zone reduce the force on the passengers in a crash?",
-    options: [["It makes the stop take longer, so momentum changes more slowly.", "Correct."], ["It reduces the mass of the passengers during the crash.", "Mass does not change."], ["It increases the car's momentum so that it stops sooner.", "It does not."], ["It stops the car instantly so the crash is over quickly.", "That would increase the force."]],
+    options: [["It makes the stop take longer, so momentum changes more slowly.", "Correct."], ["It reduces the mass of the passengers during the crash.", "Mass does not change."], ["It increases the car's momentum so that it stops sooner.", "It does not."], ["It stops the car instantly so that the whole crash is over more quickly.", "That would increase the force."]],
     answer: "A", explanation: "The change in momentum is fixed; spreading it over a longer time reduces F = Δp/Δt.",
     hints: ["F = Δp/Δt: which part does a crumple zone change?"] });
 
@@ -444,7 +444,7 @@ concept("phys.forces.atmospheric-pressure", {
 
   q.mcq({ d: 4, skill: "ANALYSIS", applies: Z,
     stem: "A little water is boiled in a metal can, the cap is screwed on and the heating stopped. As the can cools, it collapses. What is the best explanation?",
-    options: [["The steam condenses, so the outside air pressure crushes the can.", "Correct."], ["The metal walls contract strongly as the can cools down.", "Thermal contraction is far too small to crush it."], ["The cooling water inside pulls the thin walls inwards.", "Water does not pull on the walls."], ["The steam inside expands as it cools and bends the can.", "Cooling steam contracts and condenses; expansion would push outwards."]],
+    options: [["The steam condenses, so the outside air pressure crushes the can.", "Correct."], ["The metal walls contract strongly as the can cools down.", "Thermal contraction is far too small to crush it."], ["The cooling water inside pulls the thin walls inwards.", "Water does not pull on the walls."], ["The steam inside expands as it cools and so bends the thin walls of the can.", "Cooling steam contracts and condenses; expansion would push outwards."]],
     answer: "A", explanation: "Condensing steam leaves a low pressure inside; the atmosphere outside now pushes harder than the gas inside.",
     hints: ["What happens to steam when it cools?"] });
 

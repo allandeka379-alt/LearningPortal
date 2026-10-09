@@ -446,7 +446,7 @@ concept("geo.development.measuring", { file: "exam/cam-p2-development", keyPrefi
           ["Meeting present needs without harming the ability of future generations to meet theirs", "Correct: this is the Brundtland idea."],
           ["Raising GDP as fast as possible, whatever the long-term cost to the environment", "This ignores future generations."],
           ["Stopping all economic growth so that natural resources are never used again", "Sustainable development allows growth."],
-          ["Relying on emergency aid from richer countries to meet basic needs every year", "Dependence on aid is not sustainable."],
+          ["Relying on emergency aid from richer countries to meet people's basic needs every year", "Dependence on aid is not sustainable."],
         ],
         answer: "A", explanation: "Present and future needs are balanced.",
       }),

@@ -9,7 +9,7 @@ concept("geo.development.uneven", { file: "development/uneven", keyPrefix: "deve
       ["The difference in wealth and well-being between rich and poor countries", "Correct: this is the definition."],
       ["The time between independence and industrialisation", "This is not what the term means."],
       ["The distance between a country and its nearest port", "This relates to being landlocked."],
-      ["The difference between a country's birth and death rates", "That is natural increase."],
+      ["The difference between a country's birth and death rates in a given year", "That is natural increase."],
     ],
     answer: "A",
     explanation: "The gap can be measured with income, life expectancy and other indicators.",
@@ -43,7 +43,7 @@ concept("geo.development.uneven", { file: "development/uneven", keyPrefix: "deve
     stem: "Which is an **economic** reason for uneven development?",
     options: [
       ["Dependence on a few primary exports", "Correct: their prices rise and fall on world markets."],
-      ["Frequent tropical cyclones", "This is an environmental reason."],
+      ["Frequent tropical cyclones and floods", "This is an environmental reason."],
       ["High rates of malaria", "This is a social or environmental reason."],
       ["Civil war", "This is a political reason."],
     ],

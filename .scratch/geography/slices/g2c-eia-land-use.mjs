@@ -23,7 +23,7 @@ concept("geo.environment.eia-land-use", { file: "environment/eia-land-use", keyP
     stem: "What is the main purpose of an environmental impact assessment?",
     options: [
       ["To predict a project's effects before it is approved", "Correct: so that harm can be avoided or reduced."],
-      ["To calculate the profit a project will make", "Profit is studied in a business plan, not an EIA."],
+      ["To calculate the profit a new project will make for its owners", "Profit is studied in a business plan, not an EIA."],
       ["To repair damage after a project has closed", "Rehabilitation is planned in the EIA, but the EIA itself comes first."],
       ["To choose the workers for a new project", "Recruiting workers is not part of an EIA."],
     ],
@@ -73,7 +73,7 @@ concept("geo.environment.eia-land-use", { file: "environment/eia-land-use", keyP
       ["Pits, waste dumps and polluted water can harm land for decades", "Correct: the EIA makes the company plan to prevent damage and rehabilitate the land."],
       ["Mining projects are always small and short-lived", "Many mines are large and last for decades."],
       ["Mines never affect nearby communities", "Mines often affect communities through dust, water and relocation."],
-      ["An EIA guarantees that the mine will make a profit", "An EIA does not deal with profit."],
+      ["An EIA guarantees that the mine will make a profit for its shareholders", "An EIA does not deal with profit."],
     ],
     answer: "A",
     explanation: "Mining changes land permanently. An EIA forces the developer to plan controls on dust, effluent and waste and to set out how the site will be rehabilitated when mining ends.",
@@ -84,7 +84,7 @@ concept("geo.environment.eia-land-use", { file: "environment/eia-land-use", keyP
     stem: "Which is a **weakness** of the EIA process?",
     options: [
       ["The developer pays for the report, which may play down impacts", "Correct: the consultant may be under pressure to please the client."],
-      ["It allows affected communities to give their views", "Public consultation is a strength, not a weakness."],
+      ["It allows affected communities to give their views at public meetings", "Public consultation is a strength, not a weakness."],
       ["It records the environment before a project begins", "The baseline study is a strength."],
       ["It proposes ways of reducing harmful impacts", "Mitigation is the main benefit of an EIA."],
     ],
@@ -213,7 +213,7 @@ concept("geo.environment.eia-land-use", { file: "environment/eia-land-use", keyP
       P.mcq({ label: "(c)", marks: 1, stem: "What is the main environmental risk of placing the industrial zone beside the wetland?", options: [
         ["Effluent and spills polluting the wetland and water downstream", "Correct: wetlands collect runoff from the land around them."],
         ["The wetland flooding the factories every day", "Wetlands may flood seasonally, but daily flooding is not the main risk described."],
-        ["The wetland making the factories too cold to work in", "Wetlands do not have this effect."],
+        ["The wetland making the factories too cold and damp to work in", "Wetlands do not have this effect."],
         ["The factories drying up all the rain over the town", "Factories do not stop rainfall."],
       ], answer: "A", explanation: "Industry next to a wetland upstream of homes risks polluting the water that flows towards residents." }),
       P.manual({ label: "(d)", marks: 2, stem: "Suggest a better location for the industrial zone and give a reason.", points: [

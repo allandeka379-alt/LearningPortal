@@ -31,7 +31,7 @@ concept("bus.people.recruitment-selection", { file: "people/recruitment-selectio
     stem: "Which item would appear on a person specification?",
     options: [
       ["At least two years' experience of driving heavy vehicles", "Correct: experience required of the person."],
-      ["Deliver goods to customers in Masvingo province", "That is a duty: job description."],
+      ["Deliver goods to customers throughout Masvingo province each week", "That is a duty: job description."],
       ["Report to the transport manager", "Reporting lines are in the job description."],
       ["Working hours from 07:00 to 16:00", "Hours are working conditions: job description."],
     ],
@@ -44,7 +44,7 @@ concept("bus.people.recruitment-selection", { file: "people/recruitment-selectio
     options: [
       ["It brings new ideas and skills into the business", "Correct: outsiders have different experience."],
       ["It is cheaper than recruiting internally", "External recruitment usually costs more."],
-      ["The candidate already knows the business", "That is true of internal recruitment."],
+      ["The candidate already knows the business and its staff", "That is true of internal recruitment."],
       ["It needs no induction training", "New external staff need induction."],
     ],
     answer: "A",
@@ -68,7 +68,7 @@ concept("bus.people.recruitment-selection", { file: "people/recruitment-selectio
     options: [
       ["The agency finds and shortlists suitable candidates, saving managers' time", "Correct: agencies do much of the recruitment work."],
       ["Agencies are always cheaper than advertising", "Agencies charge fees, which can be high."],
-      ["Agencies guarantee that the new employee will stay for years", "No agency can guarantee that."],
+      ["Agencies guarantee that the new employee will stay in the job for many years", "No agency can guarantee that."],
       ["It allows the business to recruit internally", "Agencies find external candidates."],
     ],
     answer: "A",

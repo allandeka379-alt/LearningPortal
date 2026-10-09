@@ -20,7 +20,7 @@ concept("comp.software.languages-translators", { file: "software/languages-trans
     options: [
       ["A short code, such as `ADD`, that stands for one machine code instruction", "Correct: mnemonics are easy-to-remember codes for instructions."],
       ["A complete program written in English sentences", "Assembly language is not written in sentences."],
-      ["A pattern of binary digits that the processor executes directly", "That is a machine code instruction."],
+      ["A pattern of binary digits that the processor fetches and executes directly", "That is a machine code instruction."],
       ["An error message that a compiler reports for a line of code", "Error messages are not mnemonics."],
     ],
     answer: "A",
@@ -68,7 +68,7 @@ concept("comp.software.languages-translators", { file: "software/languages-trans
     stem: "Thandeka is still writing and testing her program. Which translator is most useful at this stage, and why?",
     options: [
       ["An interpreter, because it runs the code up to an error so she can fix it and retry", "Correct: interpreters suit development and debugging."],
-      ["A compiler, because it makes an executable file for sharing", "Useful for the finished program, not while testing small changes."],
+      ["A compiler, because it makes a single executable file she can share with her classmates", "Useful for the finished program, not while testing small changes."],
       ["An assembler, because it translates high-level languages fastest", "An assembler translates assembly language only."],
       ["No translator, because the processor understands high-level code", "The processor needs machine code."],
     ],
@@ -83,7 +83,7 @@ concept("comp.software.languages-translators", { file: "software/languages-trans
       ["Customers get an executable, so the source code stays private and no translator is needed", "Correct: compiled programs protect the source code."],
       ["Compiled programs never contain any logic errors at all when sold", "Compiling finds syntax errors, not every logic error."],
       ["An interpreter cannot run on a customer's computer", "Interpreters run on many computers; the issue is privacy and convenience."],
-      ["A compiler translates one line at a time, which makes the program run faster", "A compiler translates the whole program at once."],
+      ["A compiler translates one line at a time as the program runs, which makes the program run faster", "A compiler translates the whole program at once."],
     ],
     answer: "A",
     explanation: "The executable runs without the source code or a translator and runs faster than interpreted code.",

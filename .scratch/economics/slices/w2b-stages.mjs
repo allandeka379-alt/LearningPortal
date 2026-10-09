@@ -37,7 +37,7 @@ concept("econ.production.stages", { file: "production/stages", keyPrefix: "produ
     options: [
       ["Millers have less maize to process and transporters have fewer loads to carry", "Correct: a primary shock spreads to secondary and tertiary."],
       ["Farmers' land becomes more fertile for the next season", "Drought does not raise fertility."],
-      ["The price of maize falls because the supply of maize is now lower", "Lower supply raises the price."],
+      ["The price of maize falls because the supply of maize on the market is now lower", "Lower supply raises the price."],
       ["Banks stop lending to all firms in every sector", "This overstates the effect and is not the link between stages."],
     ],
     answer: "A",
@@ -71,8 +71,8 @@ concept("econ.production.stages", { file: "production/stages", keyPrefix: "produ
     d: 3, skill: "ANALYSIS",
     stem: "Why is the total value added at all stages of a production chain equal to the final price paid by consumers?",
     options: [
-      ["Each firm's input cost is the previous firm's output, so only new value is counted once", "Correct: intermediate purchases cancel out."],
-      ["Every firm in the chain charges exactly the same price for its own output", "Prices differ at each stage."],
+      ["Each firm's inputs are the previous firm's output, so only new value is counted", "Correct: intermediate purchases cancel out."],
+      ["Every firm in the chain charges exactly the same price for its own output to buyers", "Prices differ at each stage."],
       ["The government fixes the value added at each stage", "Value added is set by market prices and costs."],
       ["Only the retailer adds value to the product", "Every stage adds value."],
     ],

@@ -111,7 +111,7 @@ concept("comp.prog.gui-oop", { file: "prog/gui-oop", keyPrefix: "prog.gui-oop" }
     options: [
       ["A group of radio (option) buttons", "Correct: exactly one choice from a small fixed set."],
       ["A text box", "Typing allows spelling mistakes and invalid methods."],
-      ["A group of check boxes", "Check boxes allow several choices to be ticked at once."],
+      ["A group of check boxes, one per method", "Check boxes allow several choices to be ticked at once."],
       ["A label", "A label only displays text; the user cannot choose with it."],
     ],
     answer: "A",
@@ -233,7 +233,7 @@ concept("comp.prog.gui-oop", { file: "prog/gui-oop", keyPrefix: "prog.gui-oop" }
     options: [
       ["Many commands stay available without cluttering the form", "Correct: menus organise commands into logical groups."],
       ["Menus make the program run faster", "Menus affect layout, not speed."],
-      ["Menus stop the user from making any mistakes", "Menus help but cannot prevent every mistake."],
+      ["Menus stop the user from ever making any mistakes in the program", "Menus help but cannot prevent every mistake."],
       ["Sub-menus are needed before buttons can work", "Buttons work without menus."],
     ],
     answer: "A",

@@ -13,7 +13,7 @@ concept("phys.measurement.length-volume-time", {
     stem: "A learner needs the diameter of a thin copper wire, about $0.5\\ \\text{mm}$ across, as precisely as possible. Which instrument should she use?",
     options: [
       ["A metre rule", "A metre rule reads only to the nearest millimetre, which is bigger than the whole diameter."],
-      ["A tape measure", "A tape measure is for long distances and reads to about a millimetre."],
+      ["A long steel tape measure", "A tape measure is for long distances and reads to about a millimetre."],
       ["Vernier callipers", "Vernier callipers read to $0.1\\ \\text{mm}$: better than a rule, but not the most precise choice."],
       ["A micrometer screw gauge", "Correct: a micrometer reads to $0.01\\ \\text{mm}$, ideal for a thin wire."],
     ], answer: "D",
@@ -55,7 +55,7 @@ concept("phys.measurement.length-volume-time", {
     options: [
       ["The pendulum swings faster after many oscillations.", "The period stays the same; that is why timing many works."],
       ["It reduces the effect of reaction-time errors on the value of the period.", "Correct: the same reaction-time error is shared over 20 oscillations."],
-      ["A stop-watch cannot measure a time as short as one second.", "It can display it, but reaction time makes a single reading unreliable."],
+      ["A stop-watch cannot display a time as short as one second to the nearest 0.01 s.", "It can display it, but reaction time makes a single reading unreliable."],
       ["It removes the need to repeat the experiment.", "Repeating and averaging is still good practice."],
     ], answer: "B",
     explanation: "The reaction-time error at the start and end is the same whether you time 1 or 20 oscillations, so dividing by 20 makes it 20 times smaller per oscillation." });
@@ -468,7 +468,7 @@ concept("phys.matter.density", {
     hints: ["Density = mass ÷ volume.","Compare your answer with 19.3 g/cm³."],
     parts: [
       P.num({ label: "(a)", marks: 1, stem: "Calculate the density of the ring.", value: 19, unit: "g/cm³", tol: 0.05, wrong: [4.75, 0.053], explanation: t`$\dfrac{9.5}{0.50} = 19\ \text{g/cm}^3$.` }),
-      P.mcq({ label: "(b)", stem: "Could the ring be pure gold?", options: [["Yes: its density is very close to that of gold.", "Correct: 19 g/cm³ agrees with 19.3 g/cm³ within the precision of the measurements."], ["No: gold is less dense than 19 g/cm³.", "Gold is 19.3 g/cm³."], ["No: rings are always alloys.", "This cannot be decided without the density."], ["It cannot be decided from density.", "Density is exactly how jewellers check it."]], answer: "A",
+      P.mcq({ label: "(b)", stem: "Could the ring be pure gold?", options: [["Yes: its density is very close to that of gold.", "Correct: 19 g/cm³ agrees with 19.3 g/cm³ within the precision of the measurements."], ["No: pure gold is much less dense than this ring at 19 g/cm³.", "Gold is 19.3 g/cm³."], ["No: rings are always alloys.", "This cannot be decided without the density."], ["It cannot be decided from density.", "Density is exactly how jewellers check it."]], answer: "A",
         explanation: "The measured density, 19 g/cm³, agrees with 19.3 g/cm³ to the precision of the measurements." }),
     ],
     explanation: "Density identifies the material: 9.5 g ÷ 0.50 cm³ = 19 g/cm³, consistent with gold." });
@@ -476,7 +476,7 @@ concept("phys.matter.density", {
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "A ship is made of steel (7800 kg/m³), yet it floats. Why?",
     hints: ["Think about what fills most of the inside of the hull."],
-    options: [["Steel becomes less dense when it is in cold sea water.", "The density of steel does not change."], ["Its average density, with the air inside, is less than water's.", "Correct."], ["The engines and propellers push the ship upwards.", "Engines push it forwards."], ["Sea water is denser than steel, so steel always floats.", "Sea water is about 1030 kg/m³."]],
+    options: [["Steel becomes less dense when it is in cold sea water.", "The density of steel does not change."], ["Its average density, with the air inside, is less than water's.", "Correct."], ["The engines and propellers push the ship upwards.", "Engines push it forwards."], ["Sea water is denser than steel, so any steel object will always float in it.", "Sea water is about 1030 kg/m³."]],
     answer: "B", explanation: "The hull encloses a large volume of air, so the whole ship's mass ÷ volume is less than the density of water." });
 
   const vol = 0.36 / 2500;

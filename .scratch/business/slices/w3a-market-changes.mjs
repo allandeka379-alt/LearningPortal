@@ -16,7 +16,7 @@ concept("bus.marketing.market-changes", { file: "marketing/market-changes", keyP
     stem: "What is market share?",
     options: [
       ["The percentage of total market sales achieved by one business", "Correct: it compares the business with the whole market."],
-      ["The total sales of all businesses in the market", "That is market size."],
+      ["The total value of sales made by all businesses in the market", "That is market size."],
       ["The number of shareholders in a company", "That has nothing to do with market share."],
       ["The profit a business makes on each sale", "That is a profit margin idea."],
     ],
@@ -91,7 +91,7 @@ concept("bus.marketing.market-changes", { file: "marketing/market-changes", keyP
       ["Its brand is well known, so supermarkets expect it to sell", "Correct: retailers want products that sell quickly."],
       ["It always charges the highest prices", "High share does not mean high prices."],
       ["It has no competitors at all", "A high share still allows competitors."],
-      ["Supermarkets are legally required to stock it", "No such requirement exists."],
+      ["Supermarkets are legally required to stock the market leader", "No such requirement exists."],
     ],
     answer: "A",
     hints: ["What does a supermarket want from the products on its shelves?"],

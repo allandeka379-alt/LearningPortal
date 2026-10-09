@@ -39,7 +39,7 @@ concept("econ.forex.exchange-rates", { file: "forex/exchange-rates", keyPrefix: 
     options: [
       ["A rise in the country's interest rates compared with other countries", "Correct: foreign savers buy the currency to deposit it."],
       ["A rise in the country's spending on imports", "Residents sell more of the currency to buy foreign currency, so it depreciates."],
-      ["Higher inflation in the country than in its trading partners", "Its exports become less competitive, so demand for the currency falls."],
+      ["Higher inflation in the country than in its main trading partners abroad", "Its exports become less competitive, so demand for the currency falls."],
       ["Expectations among dealers that the currency will fall", "Speculators would sell the currency."],
     ],
     answer: "A",

@@ -31,7 +31,7 @@ concept("bus.organisation.limited-companies", { file: "organisation/limited-comp
     stem: "Which feature is true of a private limited company but **not** of a public limited company?",
     options: [
       ["Its shares cannot be offered to the general public", "Correct: only public companies can invite the public to buy shares."],
-      ["Its shareholders have limited liability", "Both types give shareholders limited liability."],
+      ["Its shareholders have limited liability for its debts", "Both types give shareholders limited liability."],
       ["It has a separate legal identity", "Both types are incorporated."],
       ["It continues if a shareholder dies", "Both types have continuity."],
     ],

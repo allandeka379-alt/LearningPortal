@@ -39,7 +39,7 @@ concept("econ.population.growth-distribution", { file: "population/growth-distri
       ["To plan the provision of schools, clinics, housing and jobs", "Correct: planning needs accurate data on numbers, ages and location."],
       ["To collect income tax from every household", "Tax is collected by the revenue authority, not the census."],
       ["To set the prices of basic goods in shops", "The census does not set prices."],
-      ["To decide the interest rate of the central bank", "Interest rates are set by the central bank on other grounds."],
+      ["To decide the interest rate that the central bank will charge banks", "Interest rates are set by the central bank on other grounds."],
     ],
     answer: "A",
     explanation: "Census data show how many people there are, their ages, where they live and what they do, which is needed for planning.",
@@ -50,7 +50,7 @@ concept("econ.population.growth-distribution", { file: "population/growth-distri
     options: [
       ["More girls completing secondary school and taking paid jobs", "Correct: educated women tend to marry later and have fewer children."],
       ["A rise in infant mortality", "Parents may have more children to replace those who die."],
-      ["More families depending on children to work on farms", "This makes large families more valuable."],
+      ["More families depending on their children to work on the family farm", "This makes large families more valuable."],
       ["Reduced access to family-planning services", "This tends to raise the birth rate."],
     ],
     answer: "A",

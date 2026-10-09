@@ -8,7 +8,7 @@ concept("geo.mining.processing-beneficiation", { file: "mining/processing-benefi
     options: [
       ["Processing a mineral further inside the country before export", "Correct: beneficiation adds value locally so more of the final price is earned at home."],
       ["Exporting raw ore as soon as it leaves the mine", "This is the opposite of beneficiation."],
-      ["Searching for new mineral deposits to mine later", "This is prospecting."],
+      ["Searching for new mineral deposits that can be mined in the years to come", "This is prospecting."],
       ["Filling and replanting old mine pits", "This is rehabilitation."],
     ],
     answer: "A",
@@ -67,7 +67,7 @@ concept("geo.mining.processing-beneficiation", { file: "mining/processing-benefi
     stem: "How are diamonds picked out from crushed gravel at a modern processing plant?",
     options: [
       ["By X-ray sorters, because diamonds glow under X-rays", "Correct: diamonds fluoresce, so sorting machines detect and remove them."],
-      ["By magnets, because diamonds are magnetic", "Diamonds are not magnetic."],
+      ["By strong magnets, because diamonds are strongly magnetic", "Diamonds are not magnetic."],
       ["By dissolving the gravel in cyanide", "Cyanide is used for gold, not diamonds."],
       ["By smelting the gravel in a blast furnace", "Heat would destroy diamonds; smelting is for metals."],
     ],
@@ -80,7 +80,7 @@ concept("geo.mining.processing-beneficiation", { file: "mining/processing-benefi
     options: [
       ["Building a refinery to separate matte into pure metals locally", "Correct: refining in Zimbabwe keeps the last and most valuable stage at home."],
       ["Exporting more unprocessed ore from the Great Dyke", "Exporting ore adds no value locally."],
-      ["Opening a new underground shaft at an existing mine", "This raises output, but it does not add value to it."],
+      ["Opening a new underground shaft at an existing Great Dyke mine", "This raises output, but it does not add value to it."],
       ["Lowering royalties on exports of concentrate", "This may encourage concentrate exports rather than further processing."],
     ],
     answer: "A",

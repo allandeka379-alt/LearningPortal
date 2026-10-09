@@ -52,7 +52,7 @@ concept("comp.db.security", { file: "db/security", keyPrefix: "db.security" }, (
     options: [
       ["A log of who accessed or changed data, what changed and when", "Correct: it records actions automatically."],
       ["A copy of the database kept at another site", "That is an off-site backup."],
-      ["A list of the tables each user is allowed to open", "That describes access rights."],
+      ["A list of the tables and fields that each user is allowed to open", "That describes access rights."],
       ["A method of scrambling data so it cannot be read", "That is encryption."],
     ],
     answer: "A",
@@ -65,7 +65,7 @@ concept("comp.db.security", { file: "db/security", keyPrefix: "db.security" }, (
       ["A saved query showing users only chosen fields and records", "Correct: the rest of the table is hidden from them."],
       ["A printed report of every record in a table", "Reports present data; they are not a security control."],
       ["A second copy of a table kept in case of loss", "That is a backup."],
-      ["The login screen on which a user types a password", "That is the login screen."],
+      ["The login screen on which a user types a username and password", "That is the login screen."],
     ],
     answer: "A",
     explanation: "Users given a view instead of the table can see only what the view selects.",
@@ -165,7 +165,7 @@ concept("comp.db.security", { file: "db/security", keyPrefix: "db.security" }, (
     stem: "Why should at least one backup of a school database be kept off-site or in cloud storage?",
     options: [
       ["A fire, flood or theft at the school could destroy the server and nearby copies together", "Correct: a copy elsewhere survives."],
-      ["Off-site copies are made faster than copies on the school's own drives", "Speed is not the reason; distance from the risk is."],
+      ["Off-site copies are always made faster than copies saved to the school's own drives and servers", "Speed is not the reason; distance from the risk is."],
       ["The law requires all school data to be stored outside the country", "There is no such general requirement."],
       ["A backup kept on site cannot be encrypted", "On-site backups can be encrypted too."],
     ],

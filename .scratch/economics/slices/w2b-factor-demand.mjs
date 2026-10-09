@@ -12,7 +12,7 @@ concept("econ.production.factor-demand", { file: "production/factor-demand", key
     stem: "What is meant by **capital-intensive** production?",
     options: [
       ["Using a high proportion of machinery and equipment relative to labour", "Correct: capital dominates the mix of factors."],
-      ["Using a large amount of borrowed money to finance a firm", "Capital here means capital goods, not money."],
+      ["Using a large amount of borrowed money to finance a firm's expansion", "Capital here means capital goods, not money."],
       ["Using a high proportion of workers relative to machinery", "That is labour-intensive production."],
       ["Producing goods only in the capital city", "This is about location, not the mix of factors."],
     ],
@@ -99,7 +99,7 @@ concept("econ.production.factor-demand", { file: "production/factor-demand", key
     options: [
       ["Output is small and the machines would be idle most of the day", "Correct: fixed machinery costs are spread over few units."],
       ["Output is large and the product is standardised", "Here capital-intensive methods usually cut unit costs."],
-      ["Wages are rising faster than the cost of machinery", "This makes capital relatively cheaper."],
+      ["Wages are rising faster than the cost of buying and running machinery", "This makes capital relatively cheaper."],
       ["Many workers are absent and quality is poor", "Machines may improve reliability and quality."],
     ],
     answer: "A",

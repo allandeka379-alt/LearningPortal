@@ -44,7 +44,7 @@ concept("comp.hardware.cpu", { file: "hardware/cpu", keyPrefix: "hardware.cpu" }
     options: [
       ["Sending control signals to co-ordinate the other parts of the computer", "Correct: the CU manages and directs, using control signals."],
       ["Adding two numbers together and storing the answer", "Arithmetic is done by the ALU."],
-      ["Holding the program and its data while the program runs", "Programs in use are held in main memory (RAM)."],
+      ["Holding the program instructions and their data in memory while the program runs", "Programs in use are held in main memory (RAM)."],
       ["Keeping data safe when the power is switched off", "That is done by secondary storage or ROM."],
     ],
     answer: "A",
@@ -55,7 +55,7 @@ concept("comp.hardware.cpu", { file: "hardware/cpu", keyPrefix: "hardware.cpu" }
     stem: "Why must a program be copied into main memory before the CPU can run it?",
     options: [
       ["The CPU can only directly access instructions held in main memory", "Correct: the CPU fetches instructions and data from main memory, not from secondary storage."],
-      ["Main memory keeps the program safe when the power is off", "Main memory (RAM) is volatile: it loses its contents when the power is off."],
+      ["Main memory keeps the program safe when the power is switched off at night", "Main memory (RAM) is volatile: it loses its contents when the power is off."],
       ["The hard disk cannot store programs, only data", "Hard disks store both programs and data."],
       ["Main memory converts the program into machine code", "Translation is done by a compiler or interpreter, not by memory."],
     ],

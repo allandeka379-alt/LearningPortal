@@ -19,7 +19,7 @@ concept("bus.trade.wholesale", { file: "trade/wholesale", keyPrefix: "trade.whol
     stem: "A self-service warehouse where retailers choose goods, pay cash and take them away themselves is a:",
     options: [
       ["cash and carry wholesaler", "Correct: no credit and no delivery, so prices are lower."],
-      ["specialist wholesaler", "A specialist stocks one line of goods; it may deliver and give credit."],
+      ["specialist wholesaler of hardware", "A specialist stocks one line of goods; it may deliver and give credit."],
       ["marketing board", "A marketing board buys farm produce from farmers."],
       ["commodity market", "A commodity market trades large lots of raw materials."],
     ],
@@ -44,7 +44,7 @@ concept("bus.trade.wholesale", { file: "trade/wholesale", keyPrefix: "trade.whol
     options: [
       ["Fresh milk from a dairy farm", "Correct: perishable goods must reach consumers quickly."],
       ["Packets of matches", "Small, durable, mass-produced goods usually pass through wholesalers."],
-      ["Tins of baked beans", "Tinned food keeps well and is normally distributed through wholesalers."],
+      ["Tins of baked beans from a cannery", "Tinned food keeps well and is normally distributed through wholesalers."],
       ["Bars of washing soap", "Soap is sold through wholesalers to many small retailers."],
     ],
     answer: "A",

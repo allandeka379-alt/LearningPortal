@@ -7,7 +7,7 @@ concept("bus.economy.external-costs-benefits", { file: "economy/external-costs-b
     stem: "What is an external cost?",
     options: [
       ["A cost of a business decision paid by others, not the business", "Correct: e.g. pollution suffered by the community."],
-      ["A cost paid by the business for imported materials", "This is a private cost, even if the materials come from abroad."],
+      ["A cost paid by the business for materials imported from abroad", "This is a private cost, even if the materials come from abroad."],
       ["The wages a business pays to its workers", "Wages are private costs."],
       ["A cost the business pays to an outside consultant", "The business pays it, so it is private."],
     ],
@@ -82,7 +82,7 @@ concept("bus.economy.external-costs-benefits", { file: "economy/external-costs-b
     options: [
       ["Private costs and benefits", "Correct: the business considers its own costs and revenue."],
       ["External costs only", "Businesses usually do not pay external costs."],
-      ["External benefits only", "External benefits go to others."],
+      ["External benefits to society only", "External benefits go to others."],
       ["Social costs only", "Social costs include costs the business does not pay."],
     ],
     answer: "A",

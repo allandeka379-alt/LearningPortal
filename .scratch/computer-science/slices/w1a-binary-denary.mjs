@@ -112,7 +112,7 @@ concept("comp.data.binary-denary", { file: "data/binary-denary", keyPrefix: "dat
     stem: "Tendai converted 52 to binary by repeated division and wrote **001011**. What mistake did he make?",
     options: [
       ["He read the remainders from top to bottom", "Correct: 52 is 110100; his answer is the same bits written backwards."],
-      ["He divided by 10 instead of by 2", "Dividing by 10 would give the digits 2 and 5, not this pattern."],
+      ["He divided by 10 at each step instead of by 2", "Dividing by 10 would give the digits 2 and 5, not this pattern."],
       ["He added extra leading zeros", "Leading zeros never change a value; the bits themselves are in the wrong order."],
       ["He left out the last remainder", "All six remainders are there, but in reverse order."],
     ],

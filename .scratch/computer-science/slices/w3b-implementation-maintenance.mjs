@@ -78,7 +78,7 @@ concept("comp.sad.implementation-maintenance", { file: "sad/implementation-maint
       ["One module at a time is introduced across the whole organisation", "Correct: e.g. stock first, then sales, then payroll."],
       ["The whole system is introduced in one branch first", "That is a pilot."],
       ["The old and new systems run together for a month", "That is parallel running."],
-      ["The old system is switched off as the new one starts", "That is direct changeover."],
+      ["The old system is switched off on the same day as the new one starts", "That is direct changeover."],
     ],
     answer: "A",
     explanation: "Phased implementation introduces the new system part by part.",

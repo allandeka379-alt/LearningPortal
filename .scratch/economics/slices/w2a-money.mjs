@@ -12,7 +12,7 @@ concept("econ.money.money", { file: "money/money", keyPrefix: "money.money" }, (
     stem: "What is meant by the **double coincidence of wants**?",
     options: [
       ["Each trader must want what the other trader has to offer", "Correct: the main problem of barter."],
-      ["Two buyers want the same good at the same time", "Competition between buyers is not the double coincidence of wants."],
+      ["Two buyers want the same good at the same time and place", "Competition between buyers is not the double coincidence of wants."],
       ["Consumers want both goods and services", "This is not about the conditions for exchange."],
       ["A good is wanted by both households and firms", "The term is about two traders each wanting the other's goods."],
     ],
@@ -25,7 +25,7 @@ concept("econ.money.money", { file: "money/money", keyPrefix: "money.money" }, (
     options: [
       ["Unit of account (measure of value)", "Correct: all prices are stated in the same unit."],
       ["Store of value", "This lets money be saved for later use."],
-      ["Standard of deferred payment", "This allows debts to be settled in the future."],
+      ["Standard of deferred payment (for debts)", "This allows debts to be settled in the future."],
       ["Medium of exchange", "This means money is accepted in payment."],
     ],
     answer: "A",
@@ -87,7 +87,7 @@ concept("econ.money.money", { file: "money/money", keyPrefix: "money.money" }, (
       ["Standard of deferred payment", "Correct: a future payment can be fixed as a sum of money."],
       ["Medium of exchange", "This concerns accepting money in payment now, not later."],
       ["Divisibility", "Divisibility is a characteristic, not a function."],
-      ["Durability", "Durability is a characteristic, not a function."],
+      ["Durability of notes and coins", "Durability is a characteristic, not a function."],
     ],
     answer: "A",
     hints: ["The payment is in the future."],

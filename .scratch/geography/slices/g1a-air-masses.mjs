@@ -33,7 +33,7 @@ concept("geo.weather.air-masses", { file: "weather/air-masses", keyPrefix: "weat
     stem: "What happens to air at the **ITCZ**?",
     options: [
       ["Trade winds converge and the air is forced to rise", "Correct: rising air cools, condenses and gives heavy rain."],
-      ["Air sinks and spreads out at the surface", "Sinking and diverging air is typical of high pressure, not the ITCZ."],
+      ["Air sinks from high levels and spreads out at the surface", "Sinking and diverging air is typical of high pressure, not the ITCZ."],
       ["Cold polar air meets warm tropical air", "That is the polar front of the mid-latitudes."],
       ["Air stays completely still for months", "The ITCZ has calm spells (doldrums) but strong rising currents and storms."],
     ],

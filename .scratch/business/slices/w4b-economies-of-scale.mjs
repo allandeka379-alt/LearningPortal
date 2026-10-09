@@ -33,7 +33,7 @@ concept("bus.operations.economies-of-scale", { file: "operations/economies-of-sc
       ["Banks see them as less risky because they have more assets", "Correct: a financial economy of scale."],
       ["The law sets lower interest rates for large firms", "There is no such law."],
       ["Large firms never need to repay their loans", "All loans must be repaid."],
-      ["Large firms borrow only from their own employees", "Large firms borrow from banks and markets."],
+      ["Large firms borrow only from their own employees and directors", "Large firms borrow from banks and markets."],
     ],
     answer: "A",
     explanation: "Lower risk to the lender means cheaper, easier finance.",
@@ -44,7 +44,7 @@ concept("bus.operations.economies-of-scale", { file: "operations/economies-of-sc
     options: [
       ["Messages between head office and branches are slow and distorted", "Correct: poor communication raises costs."],
       ["The business gains discounts for buying in bulk", "That is a purchasing economy."],
-      ["The business employs a specialist marketing manager", "That is a managerial economy."],
+      ["The business employs a specialist marketing manager for each region", "That is a managerial economy."],
       ["The business buys a faster, larger machine", "That is a technical economy."],
     ],
     answer: "A",
@@ -68,7 +68,7 @@ concept("bus.operations.economies-of-scale", { file: "operations/economies-of-sc
     options: [
       ["Low commitment of employees", "Correct: workers feel remote and unmotivated."],
       ["Weak coordination", "Coordination is about departments working together."],
-      ["Purchasing diseconomies", "This is not a recognised type and is unrelated to workers."],
+      ["Purchasing diseconomies of scale", "This is not a recognised type and is unrelated to workers."],
       ["Financial economies", "This is an economy, not a diseconomy."],
     ],
     answer: "A",

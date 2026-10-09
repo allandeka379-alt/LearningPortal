@@ -128,8 +128,8 @@ concept("geo.maps.relief-contours", { file: "maps/relief-contours", keyPrefix: "
     options: [
       ["A trigonometrical station", "Correct: a surveyed reference point, shown by a triangle and its height."],
       ["A spot height", "A spot height is shown by a dot with a height, not a triangle."],
-      ["A contour label", "Contour labels are written along the contour line itself."],
-      ["A rock outcrop", "Outcrops have their own rock symbol, not a triangle with a height."],
+      ["A contour value label", "Contour labels are written along the contour line itself."],
+      ["A rock outcrop on a hilltop", "Outcrops have their own rock symbol, not a triangle with a height."],
     ],
     answer: "A",
     explanation: "A **trigonometrical station** is marked by a small triangle and its exact height; a spot height is a dot with a height.",

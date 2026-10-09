@@ -94,7 +94,7 @@ concept("bus.marketing.demand-forecasting", { file: "marketing/demand-forecastin
     stem: "How does an accurate demand forecast most directly help a business prepare its cash budget?",
     options: [
       ["It gives the expected sales revenue, the main cash inflow", "Correct: forecast sales feed the receipts section."],
-      ["It shows the exact profit the business will make", "A forecast estimates sales; it does not give exact profit."],
+      ["It shows the exact profit the business will make in each month", "A forecast estimates sales; it does not give exact profit."],
       ["It removes the need to borrow money", "It may show a need to borrow."],
       ["It sets the wage rate for workers", "Wage rates are not set by a forecast."],
     ],

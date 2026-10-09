@@ -41,7 +41,7 @@ concept("phys.electronics.thermionic-emission", {
 
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What makes the spot on the screen of a cathode-ray oscilloscope visible?",
-    options: [["The screen's fluorescent coating glows where electrons hit it.", "Correct."], ["The electrons themselves are hot and glow as they fly.", "Electrons are not seen; the coating glows."], ["The vacuum inside the tube glows faintly.", "A vacuum cannot glow."], ["The deflecting plates give out light as they charge.", "The plates steer the beam; they do not glow."]],
+    options: [["The screen's fluorescent coating glows where electrons hit it.", "Correct."], ["The electrons themselves are hot and glow as they fly.", "Electrons are not seen; the coating glows."], ["The vacuum inside the tube glows faintly.", "A vacuum cannot glow."], ["The deflecting plates give out light as they charge up and steer the beam.", "The plates steer the beam; they do not glow."]],
     answer: "A", explanation: "A fluorescent material on the inside of the screen gives out light where the beam hits it." });
 
   q.num({ d: 3, skill: "APPLICATION", applies: Z,
@@ -58,12 +58,12 @@ concept("phys.electronics.thermionic-emission", {
 
   q.mcq({ d: 2, skill: "RECALL", applies: Z,
     stem: "In a cathode-ray oscilloscope, what does the time-base do?",
-    options: [["It sweeps the spot steadily across the screen from left to right.", "Correct."], ["It moves the spot up and down in step with the input p.d.", "That is the Y-input and Y-plates."], ["It heats the cathode.", "No."], ["It focuses the beam.", "No."]],
+    options: [["It sweeps the spot steadily across the screen from left to right.", "Correct."], ["It moves the spot up and down in step with the p.d. at the Y-input terminals", "That is the Y-input and Y-plates."], ["It heats the cathode.", "No."], ["It focuses the beam.", "No."]],
     answer: "A", explanation: "The time-base drives the X-plates, moving the spot across the screen at a steady rate so that signals are drawn against time." });
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: Z,
     stem: "A steady d.c. p.d. is connected to the Y-input of a CRO with the time-base switched on. What is seen on the screen?",
-    options: [["A horizontal line moved up or down from the centre", "Correct."], ["A wave moving across the screen", "A wave needs a changing p.d."], ["A vertical line through the centre", "That is an a.c. input with the time-base off."], ["Nothing at all, as d.c. cannot be shown", "The spot is still visible."]],
+    options: [["A horizontal line moved up or down from the centre", "Correct."], ["A wave moving across the screen", "A wave needs a changing p.d."], ["A vertical line through the centre", "That is an a.c. input with the time-base off."], ["Nothing at all, as a steady d.c. input cannot be shown", "The spot is still visible."]],
     answer: "A", explanation: "The steady p.d. shifts the spot a fixed distance up (or down) while the time-base sweeps it across, drawing a horizontal line.",
     hints: ["The p.d. does not change, but the spot still moves across the screen."] });
 
@@ -81,7 +81,7 @@ concept("phys.electronics.thermionic-emission", {
         explanation: t`One wave spans $\dfrac{10}{4} = 2.5$ divisions, so $T = 2.5 \times 1 = 2.5\ \text{ms}$.` }),
       P.num({ label: "(c)", stem: "Calculate the frequency of the sound.", value: 400, unit: "Hz", wrong: [0.4, 2.5],
         explanation: t`$f = \dfrac{1}{0.0025} = 400\ \text{Hz}$.` }),
-      P.mcq({ label: "(d)", stem: "The sound becomes louder but keeps the same pitch. How does the trace change?", options: [["The waves are taller, with the same spacing.", "Correct."], ["There are more waves on the screen.", "That would be a higher pitch."], ["There are fewer waves on the screen.", "That would be a lower pitch."], ["The trace becomes a flat line.", "No."]], answer: "A",
+      P.mcq({ label: "(d)", stem: "The sound becomes louder but keeps the same pitch. How does the trace change?", options: [["The waves are taller, with the same spacing.", "Correct."], ["There are more waves across the width of the screen.", "That would be a higher pitch."], ["There are fewer waves on the screen.", "That would be a lower pitch."], ["The trace becomes a flat line.", "No."]], answer: "A",
         explanation: "Loudness depends on amplitude (height); pitch depends on frequency (spacing)." }),
     ],
     explanation: "Divisions × Y-gain gives p.d.; divisions × time-base gives time; f = 1/T.",
@@ -144,7 +144,7 @@ concept("phys.electronics.diodes", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "Which description fits the current–voltage graph of a diode?",
-    options: [["No current in reverse; current rises steeply above about 0.7 V forward", "Correct."], ["A straight line through the origin in both directions", "That is a fixed resistor."], ["A curve that flattens at higher p.d.s in both directions", "That is a filament lamp."], ["Equal currents for equal forward and reverse p.d.s", "A diode conducts one way."]],
+    options: [["No current in reverse; current rises steeply above about 0.7 V forward", "Correct."], ["A straight line through the origin in both directions", "That is a fixed resistor."], ["A curve through the origin that flattens at higher p.d.s in both directions", "That is a filament lamp."], ["Equal currents for equal forward and reverse p.d.s", "A diode conducts one way."]],
     answer: "A", explanation: "A diode blocks reverse current and conducts strongly once the forward p.d. passes about 0.6–0.7 V.",
     hints: ["What happens for negative p.d.s?"] });
 
@@ -165,7 +165,7 @@ concept("phys.electronics.diodes", {
         explanation: t`The resistor takes $5.0 - 2.0 = 3.0\ \text{V}$; $R = \dfrac{3.0}{0.025} = 120\ \Omega$.` }),
       P.mcq({ label: "(b)", stem: "How must the LED be connected?", options: [["With its anode (triangle side) towards the positive terminal", "Correct: forward biased."], ["With its cathode (bar side) towards the positive terminal", "That is reverse bias: it would not light."], ["Either way round, as LEDs conduct both ways", "It conducts in one direction only."], ["In parallel with the resistor, not in series", "It must be in series."]], answer: "A",
         explanation: "The LED must be forward biased to conduct and light." }),
-      P.mcq({ label: "(c)", stem: "What would probably happen if the resistor were left out?", options: [["The current would be too large and could destroy the LED.", "Correct."], ["The LED would be dimmer, with less current.", "It would be brighter, then fail."], ["Nothing would change, as the LED sets the current.", "The resistor limits the current."], ["The LED would flash on and off rapidly.", "Without the resistor the current is too large, not pulsing."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "What would probably happen if the resistor were left out?", options: [["The current would be too large and could destroy the LED.", "Correct."], ["The LED would be dimmer, with less current.", "It would be brighter, then fail."], ["Nothing would change, as the LED itself sets the size of the current.", "The resistor limits the current."], ["The LED would flash on and off rapidly.", "Without the resistor the current is too large, not pulsing."]], answer: "A",
         explanation: "Without a resistor nothing limits the current through the LED." }),
     ],
     explanation: "The resistor takes the supply p.d. minus the LED's p.d.; the LED must be forward biased and current-limited.",
@@ -229,7 +229,7 @@ concept("phys.electronics.rectification", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
     stem: "Why does a capacitor across the load reduce the ripple in a rectified output?",
-    options: [["It charges at each peak and discharges slowly between peaks.", "Correct."], ["It blocks all the d.c. from reaching the load.", "It is in parallel with the load."], ["It turns the humps back into a smooth a.c. wave.", "It smooths the d.c.; it does not make a.c."], ["It increases the peak voltage of each hump.", "It does not raise the peaks; it fills the gaps."]],
+    options: [["It charges at each peak and discharges slowly between peaks.", "Correct."], ["It blocks all the d.c. from reaching the load.", "It is in parallel with the load."], ["It turns the humps back into a smooth, unbroken a.c. wave for the load.", "It smooths the d.c.; it does not make a.c."], ["It increases the peak voltage of each hump.", "It does not raise the peaks; it fills the gaps."]],
     answer: "A", explanation: "Between peaks the capacitor supplies the load, keeping the voltage up until the next hump recharges it.",
     hints: ["What does a capacitor store?"] });
 
@@ -255,7 +255,7 @@ concept("phys.electronics.rectification", {
         explanation: "The four diodes rectify the a.c." }),
       P.manual({ label: "(b)", marks: 2, stem: "Explain how the bridge sends current through the radio in the same direction in both half-cycles.",
         points: ["In one half-cycle one pair of opposite diodes conducts, sending current through the load one way", "In the next half-cycle the other pair conducts, and the current through the load is again in the same direction"] }),
-      P.mcq({ label: "(c)", stem: "What is the effect of the capacitor?", options: [["It smooths the output into nearly steady d.c.", "Correct."], ["It doubles the frequency of the ripple.", "The bridge already gives two humps per cycle; the capacitor smooths them."], ["It rectifies the a.c. a second time.", "The bridge rectifies; the capacitor smooths."], ["It changes the d.c. back into a.c.", "A capacitor across the output smooths the d.c."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "What is the effect of the capacitor?", options: [["It smooths the output into nearly steady d.c.", "Correct."], ["It doubles the frequency of the ripple.", "The bridge already gives two humps per cycle; the capacitor smooths them."], ["It rectifies the a.c. a second time.", "The bridge rectifies; the capacitor smooths."], ["It changes the d.c. back into a smooth a.c.", "A capacitor across the output smooths the d.c."]], answer: "A",
         explanation: "The capacitor fills in the dips between the humps." }),
     ],
     explanation: "Transformer: lower voltage. Bridge: a.c. to d.c. Capacitor: smoothing.",
@@ -303,7 +303,7 @@ concept("phys.electronics.components", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "What does the tolerance of a resistor tell you?",
-    options: [["The % by which its real resistance may differ from its marked value", "Correct."], ["The largest power it can safely transfer as heat in use", "That is the power rating."], ["The largest current it can carry without any damage", "That depends on the power rating, not the tolerance."], ["The temperature at which its marked value was tested", "Tolerance is about accuracy of the value, not test conditions."]],
+    options: [["The % by which its real resistance may differ from its marked value", "Correct."], ["The largest power it can safely transfer as heat in use", "That is the power rating."], ["The largest current it can carry without any damage", "That depends on the power rating, not the tolerance."], ["The temperature at which its marked value was measured in the factory", "Tolerance is about accuracy of the value, not test conditions."]],
     answer: "A", explanation: "A ±5% tolerance means the true resistance is within 5% of the marked value." });
 
   q.num({ d: 3, skill: "APPLICATION", applies: Z,
@@ -320,7 +320,7 @@ concept("phys.electronics.components", {
 
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What does a capacitor store?",
-    options: [["Electric charge, and so energy", "Correct."], ["Electric current", "Current is a flow, not something stored."], ["Electrical resistance", "Resistance is a property, not something stored."], ["Magnetic energy", "A capacitor stores charge in an electric field; coils store magnetic energy."]],
+    options: [["Electric charge, and so energy", "Correct."], ["Electric current", "Current is a flow, not something stored."], ["Electrical resistance", "Resistance is a property, not something stored."], ["Magnetic energy between its plates", "A capacitor stores charge in an electric field; coils store magnetic energy."]],
     answer: "A", explanation: "A capacitor stores charge on its plates, and with it energy." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", applies: Z,
@@ -331,7 +331,7 @@ concept("phys.electronics.components", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "What happens to a reed switch when a magnet is brought near it?",
-    options: [["The reeds become magnetised and touch, closing the circuit.", "Correct."], ["The reeds heat up and melt together at the tips.", "A magnet does not heat the reeds."], ["The glass tube is pulled sharply towards the magnet.", "Glass is not magnetic; the iron reeds respond."], ["Nothing: reed switches respond only to light.", "They respond to magnetic fields."]],
+    options: [["The reeds become magnetised and touch, closing the circuit.", "Correct."], ["The reeds heat up and melt together at the tips.", "A magnet does not heat the reeds."], ["The glass tube is pulled sharply towards the magnet and breaks.", "Glass is not magnetic; the iron reeds respond."], ["Nothing: reed switches respond only to light.", "They respond to magnetic fields."]],
     answer: "A", explanation: "The magnet magnetises the reeds, which attract and make contact." });
 
   q.mcq({ d: 2, skill: "APPLICATION", applies: Z,
@@ -351,7 +351,7 @@ concept("phys.electronics.components", {
         explanation: "Green 5, blue 6, red = two zeros: 5600 Ω." }),
       P.num({ label: "(b)", marks: 2, stem: "Calculate the smallest value its resistance could have.", value: 5040, unit: "Ω", wrong: [5320, 5600],
         explanation: "Silver = ±10%; 10% of 5600 is 560, so the smallest value is 5600 − 560 = 5040 Ω." }),
-      P.mcq({ label: "(c)", stem: "The resistor is rated 0.25 W. Is it safe to connect it directly across a 9.0 V battery?", options: [["Yes: the power is only about 0.014 W.", "Correct."], ["No: the power is about 2.3 W.", "Recalculate: I = 9.0/5600 A."], ["No: the power is about 0.5 W.", "No."], ["It cannot be worked out.", "It can, from V and R."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "The resistor is rated 0.25 W. Is it safe to connect it directly across a 9.0 V battery?", options: [["Yes: the power is only about 0.014 W.", "Correct."], ["No: the power is about 2.3 W, far above 0.25 W.", "Recalculate: I = 9.0/5600 A."], ["No: the power is about 0.5 W.", "No."], ["It cannot be worked out.", "It can, from V and R."]], answer: "A",
         explanation: "I = 9.0 ÷ 5600 = 0.0016 A; P = IV = 0.0016 × 9.0 ≈ 0.014 W, well below 0.25 W." }),
     ],
     explanation: "Digits, multiplier and tolerance give the range; P = IV checks the power rating.",

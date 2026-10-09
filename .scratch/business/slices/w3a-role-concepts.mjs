@@ -7,7 +7,7 @@ concept("bus.marketing.role-concepts", { file: "marketing/role-concepts", keyPre
     stem: "Which statement best describes marketing?",
     options: [
       ["Identifying and satisfying customer needs profitably", "Correct: marketing starts and ends with the customer."],
-      ["Advertising products on radio and television", "Advertising is only one part of marketing."],
+      ["Advertising and selling products on radio and television", "Advertising is only one part of marketing."],
       ["Producing goods as cheaply as possible", "That is the production concept."],
       ["Recording sales and costs in the accounts", "That is a finance task."],
     ],
@@ -68,7 +68,7 @@ concept("bus.marketing.role-concepts", { file: "marketing/role-concepts", keyPre
     options: [
       ["Customers can easily switch to rivals who meet their needs better", "Correct: competition gives customers choice."],
       ["Customers will buy anything that is available", "That is only true when demand exceeds supply."],
-      ["Production costs do not matter in competitive markets", "Costs always matter."],
+      ["Production costs do not matter at all in highly competitive markets", "Costs always matter."],
       ["Competitive markets have no customer loyalty to win", "Loyalty matters more when there is choice."],
     ],
     answer: "A",

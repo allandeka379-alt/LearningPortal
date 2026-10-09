@@ -165,7 +165,7 @@ concept("comp.prog.arrays-2d", { file: "prog/arrays-2d", keyPrefix: "prog.arrays
     options: [
       ["It uses row indexes up to 5, but there are only 2 rows", "Correct: the loop bounds are the wrong way round for the indexes."],
       ["REAL values cannot be output", "Any element can be output."],
-      ["The inner loop should be the row loop", "Either order is allowed if the bounds match the indexes."],
+      ["The inner loop should be the row loop, not the column loop", "Either order is allowed if the bounds match the indexes."],
       ["2D arrays cannot be processed with FOR loops", "Nested FOR loops are the usual method."],
     ],
     answer: "A",

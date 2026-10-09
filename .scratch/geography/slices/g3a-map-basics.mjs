@@ -29,7 +29,7 @@ concept("geo.maps.map-basics", { file: "maps/map-basics", keyPrefix: "maps.map-b
     options: [
       ["Contour lines and their heights", "Correct: brown is the conventional colour for relief, so contours are printed in brown."],
       ["Rivers and dams", "Water features are conventionally blue."],
-      ["Forests and plantations", "Vegetation is conventionally green."],
+      ["Forests and plantations of trees", "Vegetation is conventionally green."],
       ["Buildings and railways", "Most buildings and railways are printed in black."],
     ],
     answer: "A",
@@ -114,7 +114,7 @@ concept("geo.maps.map-basics", { file: "maps/map-basics", keyPrefix: "maps.map-b
     options: [
       ["The settlement in square 6244 provides some services to the surrounding area.", "Correct: a school, a clinic and a church are close to the settlement, which is evidence of a service function."],
       ["The settlement in square 6244 is mainly a mining town.", "No mine, dump or shaft symbol appears in the extract."],
-      ["The area around the dam is used for a large forest plantation.", "The forest symbols are in square 6145, not around the dam in 6344."],
+      ["The area around the dam in square 6344 is used for a large forest plantation.", "The forest symbols are in square 6145, not around the dam in 6344."],
       ["The river in square 6345 flows towards the north-west.", "The arrow on the river shows it flows towards the south-east."],
     ],
     answer: "A",

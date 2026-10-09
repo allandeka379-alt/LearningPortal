@@ -109,8 +109,8 @@ concept("econ.trade.terms-of-trade", { file: "trade/terms-of-trade", keyPrefix: 
     d: 2, skill: "UNDERSTANDING",
     stem: "Which statement correctly distinguishes the terms of trade from the balance of trade?",
     options: [
-      ["The terms of trade compare export and import prices; the balance of trade compares export and import values", "Correct."],
-      ["The terms of trade include services; the balance of trade includes only income flows", "The balance of trade is about visible goods, not income flows."],
+      ["The terms of trade compare export and import prices; the balance of trade compares their values", "Correct."],
+      ["The terms of trade include services; the balance of trade includes only income flows from abroad", "The balance of trade is about visible goods, not income flows."],
       ["The terms of trade are measured in US dollars; the balance of trade is an index", "It is the other way round."],
       ["They measure the same thing using different base years", "They measure different things."],
     ],

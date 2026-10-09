@@ -7,7 +7,7 @@ concept("geo.food.food-security", { file: "food/food-security", keyPrefix: "food
     stem: "Which is the best definition of **food security**?",
     options: [
       ["All people at all times can obtain enough safe, nutritious food", "Correct: it covers availability, access and nutrition at all times."],
-      ["A country grows all of its own food without imports", "That is food self-sufficiency; imports can also provide food security."],
+      ["A country grows all of its own food every year without any imports", "That is food self-sufficiency; imports can also provide food security."],
       ["Food is kept in locked stores to prevent theft", "This is about physical security of stores, not food security."],
       ["Farmers receive guaranteed prices for their crops", "Guaranteed prices may help, but they are not the definition."],
     ],
@@ -33,7 +33,7 @@ concept("geo.food.food-security", { file: "food/food-security", keyPrefix: "food
       ["It can lower the prices local farmers receive for their crops", "Correct: free food reduces demand for locally grown food."],
       ["It saves lives during a sudden emergency", "This is an advantage."],
       ["It stops families selling their cattle to buy food", "This is an advantage."],
-      ["It can pay workers to build dams through food-for-work", "This is an advantage."],
+      ["It can pay workers to build dams and roads through food-for-work", "This is an advantage."],
     ],
     answer: "A",
     explanation: "Food aid can create dependency and undercut local farmers.",
@@ -94,7 +94,7 @@ concept("geo.food.food-security", { file: "food/food-security", keyPrefix: "food
     stem: "Which approach is most likely to improve food security in the **long term** after a drought?",
     options: [
       ["Emergency food aid followed by irrigation, better seed and storage", "Correct: relief saves lives, and development tackles the causes."],
-      ["Free imported food every year, without other changes", "This can cause dependency and lower local prices."],
+      ["Free imported food handed out every year, without any other changes to farming", "This can cause dependency and lower local prices."],
       ["Waiting for the next good rainy season without help", "This leaves people hungry and repeats the problem."],
       ["Banning the sale of grain to local traders", "This would block markets and reduce access to food."],
     ],

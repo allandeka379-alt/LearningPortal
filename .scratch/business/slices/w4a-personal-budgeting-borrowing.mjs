@@ -32,7 +32,7 @@ concept("bus.finance.personal-budgeting-borrowing", { file: "finance/personal-bu
     options: [
       ["To buy a sewing machine that will earn income", "Correct: the asset helps pay back the loan."],
       ["To pay for groceries every month", "Borrowing for everyday consumption builds up debt."],
-      ["To repay another loan that is overdue", "This leads into a debt trap."],
+      ["To repay another loan that is overdue at the bank", "This leads into a debt trap."],
       ["To buy luxuries on impulse", "Impulse borrowing is poor financial management."],
     ],
     answer: "A",
@@ -69,7 +69,7 @@ concept("bus.finance.personal-budgeting-borrowing", { file: "finance/personal-bu
     options: [
       ["A microfinance institution", "Correct: microfinance serves small borrowers with little security."],
       ["A merchant bank", "Merchant banks serve large companies."],
-      ["The stock exchange", "The stock exchange is for companies issuing shares."],
+      ["The Zimbabwe Stock Exchange", "The stock exchange is for companies issuing shares."],
       ["The Reserve Bank", "The central bank does not lend to individuals."],
     ],
     answer: "A",
@@ -83,7 +83,7 @@ concept("bus.finance.personal-budgeting-borrowing", { file: "finance/personal-bu
       ["A poor credit record, so future loans are refused", "Correct: lenders check repayment history."],
       ["Lower interest rates on future loans", "Riskier borrowers pay higher rates, not lower."],
       ["A larger overdraft limit from the bank", "The bank would reduce or cancel the limit."],
-      ["Automatic cancellation of the debt", "Debts remain and creditors can take legal action."],
+      ["Automatic cancellation of the unpaid debt by the lender", "Debts remain and creditors can take legal action."],
     ],
     answer: "A",
     explanation: "Defaulting damages a borrower's credit record and can lead to legal action and repossession.",

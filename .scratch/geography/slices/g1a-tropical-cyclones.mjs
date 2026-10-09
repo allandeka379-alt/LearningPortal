@@ -57,7 +57,7 @@ concept("geo.weather.tropical-cyclones", { file: "weather/tropical-cyclones", ke
     stem: "What causes a **storm surge**?",
     options: [
       ["Onshore winds and low pressure raising the sea", "Correct: water piles up against the coast."],
-      ["An earthquake beneath the ocean floor", "That causes a tsunami, not a storm surge."],
+      ["An earthquake beneath the ocean floor offshore", "That causes a tsunami, not a storm surge."],
       ["Torrential rain filling up the sea", "Rain adds very little to sea level; wind and pressure do."],
       ["Ice caps melting during the storm", "Ice caps do not melt in a single storm."],
     ],
@@ -83,7 +83,7 @@ concept("geo.weather.tropical-cyclones", { file: "weather/tropical-cyclones", ke
     options: [
       ["Flash floods and landslides from torrential rain", "Correct: steep, saturated slopes failed and rivers flooded."],
       ["A storm surge from the Indian Ocean", "Storm surges affect the coast, such as Beira, not inland mountains."],
-      ["Winds of over 250 km/h at the eye wall", "The storm had weakened inland; rain was the main hazard."],
+      ["Winds of over 250 km/h around the eye wall of the storm", "The storm had weakened inland; rain was the main hazard."],
       ["Drought after the storm passed", "Idai brought too much water, not too little."],
     ],
     answer: "A",
@@ -218,8 +218,8 @@ concept("geo.weather.tropical-cyclones", { file: "weather/tropical-cyclones", ke
       P.num({ label: "(b)", marks: 1, stem: "By how much did the maximum wind speed fall between Day 4 and Day 5?", value: 110, unit: "km/h", wrong: [75], explanation: "185 − 75 = 110 km/h." }),
       P.mcq({ label: "(c)", marks: 1, stem: "In which general direction did the storm move?", options: [
         ["Westwards, turning slightly south", "Correct: longitude falls from 48° E to 34° E and latitude increases from 14° S to 19° S."],
-        ["Eastwards, turning north", "Longitude decreases, so it moved west."],
-        ["Due north", "Latitude increases southwards, so it did not move north."],
+        ["Eastwards, turning sharply north", "Longitude decreases, so it moved west."],
+        ["Due north, then turning east", "Latitude increases southwards, so it did not move north."],
         ["Due east", "Longitude decreases, so it moved west."],
       ], answer: "A", explanation: "Decreasing east longitude means westward; increasing south latitude means southward." }),
       P.manual({ label: "(d)", marks: 3, stem: "Explain the changes in the storm between Day 4 and Day 5.", points: [

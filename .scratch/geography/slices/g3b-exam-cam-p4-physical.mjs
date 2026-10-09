@@ -115,8 +115,8 @@ concept("geo.fieldwork.physical-fieldwork", { file: "exam/cam-p4-physical", keyP
         options: [
           ["Swash carries pebbles up the beach at an angle and backwash drags them straight down", "Correct: waves from the west push material diagonally eastwards, and gravity pulls it straight back, so it zigzags east."],
           ["Backwash carries pebbles up the beach at an angle towards the east", "Backwash runs straight down the beach slope under gravity."],
-          ["Rivers flowing into the sea push pebbles towards the east", "River flow is not the process that moves material along the shore."],
-          ["Tides move all beach material in the same direction every day", "Tides move water up and down the beach; they do not cause a steady drift along it."],
+          ["Rivers flowing into the sea at the western end push pebbles steadily towards the east", "River flow is not the process that moves material along the shore."],
+          ["Tides move all beach material in the same direction every day, carrying it steadily eastwards", "Tides move water up and down the beach; they do not cause a steady drift along it."],
         ],
         answer: "A", explanation: "Longshore drift: oblique swash, perpendicular backwash, repeated many times, moves material along the coast in the direction of the prevailing waves.",
       }),

@@ -69,7 +69,7 @@ concept("bus.people.management-functions", { file: "people/management-functions"
       ["Tasks may be done badly if the subordinate lacks skill", "Correct: poor results are a real risk if training is lacking."],
       ["The manager has more tasks to do personally", "Delegation reduces the manager's workload."],
       ["Employees feel less trusted by the owner", "Delegation usually makes employees feel more trusted."],
-      ["Decisions take longer because staff must wait", "Delegation usually speeds up decisions."],
+      ["Decisions take longer because staff must wait for the owner", "Delegation usually speeds up decisions."],
     ],
     answer: "A",
     hints: ["Think about what can go wrong when someone else does the job."],
@@ -178,7 +178,7 @@ concept("bus.people.management-functions", { file: "people/management-functions"
       P.mcq({
         label: "(a)", marks: 1,
         stem: "Which management function failed when the sales team won orders that production could not meet?",
-        options: [["Coordinating", "Correct: sales and production were not working together."], ["Commanding", "Instructions to one worker were not the problem."], ["Planning", "Orders were planned; the departments were not linked."], ["Delegating", "Delegation is not a function of management."]],
+        options: [["Coordinating", "Correct: sales and production were not working together."], ["Commanding staff", "Instructions to one worker were not the problem."], ["Planning", "Orders were planned; the departments were not linked."], ["Delegating", "Delegation is not a function of management."]],
         answer: "A",
       }),
       P.short({

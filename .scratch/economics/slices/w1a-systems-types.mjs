@@ -37,10 +37,10 @@ concept("econ.systems.types", { file: "systems/types", keyPrefix: "systems.types
     d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "What is a **mixed economy**?",
     options: [
-      ["One where private and public sectors both own resources and make decisions", "Correct: the market and the state both allocate resources."],
+      ["One where private and public sectors both own resources and make choices", "Correct: the market and the state both allocate resources."],
       ["One in which half of all firms are owned by the state", "Mixed does not mean exactly half; the balance varies."],
       ["One in which agriculture and industry are equally important", "That describes the structure of output, not the economic system."],
-      ["One in which the country trades with both rich and poor nations", "Trade partners do not define the economic system."],
+      ["One in which the country trades with both rich and poor nations equally", "Trade partners do not define the economic system."],
     ],
     answer: "A",
     explanation: "A mixed economy combines a private sector working through the price mechanism with a public sector in which the government provides and regulates.",
@@ -50,7 +50,7 @@ concept("econ.systems.types", { file: "systems/types", keyPrefix: "systems.types
     stem: "In a market economy, how is the question **for whom to produce** answered?",
     options: [
       ["Goods go to those who are willing and able to pay for them", "Correct: income and prices decide who gets the goods."],
-      ["Goods are shared out equally among all households", "Equal sharing would be a planning decision, not the market's."],
+      ["Goods are shared out equally among all households in the economy", "Equal sharing would be a planning decision, not the market's."],
       ["Goods go to those the planning authority selects", "There is no planning authority in a market economy."],
       ["Goods are given first to those in greatest need", "Need does not decide allocation in a pure market economy."],
     ],

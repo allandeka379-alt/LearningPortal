@@ -55,7 +55,7 @@ concept("geo.tourism.zimbabwe", { file: "tourism/zimbabwe", keyPrefix: "tourism.
     stem: "Which of these is a **quaternary** service in Zimbabwe?",
     options: [
       ["Developing software for mobile banking", "Correct: ICT and research are knowledge-based (quaternary) activities."],
-      ["Driving a kombi between suburbs", "Transport is a tertiary service."],
+      ["Driving a kombi between Harare's suburbs", "Transport is a tertiary service."],
       ["Selling vegetables at a market", "Retail is a tertiary service."],
       ["Working as a waiter in a hotel", "Hospitality is a tertiary service."],
     ],

@@ -12,7 +12,7 @@ concept("econ.demand.law-of-demand", { file: "demand/law-of-demand", keyPrefix: 
     stem: "Which statement best defines **demand** in economics?",
     options: [
       ["The quantity consumers are willing and able to buy at each price over a period", "Correct: demand needs willingness, ability to pay, a price and a time period."],
-      ["The quantity of a good that consumers would like to own at some time", "A wish without the ability to pay is latent demand, and there is no price or time period."],
+      ["The quantity of a good that consumers would like to own at some time in the future", "A wish without the ability to pay is latent demand, and there is no price or time period."],
       ["The quantity of a good that firms offer for sale at each price", "That is supply, the producers' side of the market."],
       ["The total amount of money consumers spend on a good in a year", "Spending is price × quantity; demand is a quantity at each price."],
     ],

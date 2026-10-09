@@ -71,7 +71,7 @@ concept("comp.techno.innovation-ecosystem", { file: "techno/innovation-ecosystem
     stem: "What is the difference between an **invention** and an **innovation**?",
     options: [
       ["An innovation is an idea that has been turned into something people use", "Correct: innovation creates value from ideas."],
-      ["An invention always makes more money than an innovation", "Many inventions never make money."],
+      ["An invention always makes more money than an innovation, because it is completely new", "Many inventions never make money."],
       ["An innovation must always be a physical device", "Services and processes can be innovations."],
       ["They mean exactly the same thing in business", "They are different."],
     ],

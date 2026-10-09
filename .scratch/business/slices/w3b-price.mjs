@@ -44,7 +44,7 @@ concept("bus.marketing.price", { file: "marketing/price", keyPrefix: "marketing.
       ["Adding a percentage mark-up to the cost per unit", "Correct."],
       ["Charging the same price as competitors", "That is competitive pricing."],
       ["Changing prices according to demand", "That is dynamic pricing."],
-      ["Charging a high price for a new product", "That is skimming."],
+      ["Charging a high price for a new product at its launch", "That is skimming."],
     ],
     answer: "A",
     explanation: "Cost-plus: price = cost per unit + mark-up (a percentage of cost).",

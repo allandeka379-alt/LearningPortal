@@ -46,7 +46,7 @@ concept("geo.resources.wildlife-campfire", { file: "resources/wildlife-campfire"
     stem: "Why did CAMPFIRE give rural district councils authority over wildlife on communal land?",
     options: [
       ["So communities that bear the costs of wildlife also receive the benefits", "Correct: the idea is benefit sharing."],
-      ["So councils could turn all communal land into national parks", "Communal land stayed communal; parks are separate."],
+      ["So councils could turn all communal land into national parks for wildlife", "Communal land stayed communal; parks are separate."],
       ["So that all hunting in Zimbabwe would be banned", "Hunting is the main source of CAMPFIRE income."],
       ["So that wildlife could be removed from communal areas", "The aim is to manage and benefit from wildlife, not remove it."],
     ],
@@ -83,7 +83,7 @@ concept("geo.resources.wildlife-campfire", { file: "resources/wildlife-campfire"
     stem: "Which is the **biggest** threat to the sustainability of CAMPFIRE income?",
     options: [
       ["Heavy dependence on trophy hunting, which international rules can restrict", "Correct: a single income source is risky."],
-      ["Too many tourists visiting the communal areas every single year", "Most CAMPFIRE areas receive few tourists."],
+      ["Too many photographic tourists visiting the communal areas every single year", "Most CAMPFIRE areas receive few tourists."],
       ["Wildlife numbers growing too slowly to be seen", "Slow growth is not the main threat to income."],
       ["Schools and clinics being built with CAMPFIRE money", "Schools are a benefit, not a threat."],
     ],

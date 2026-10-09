@@ -11,9 +11,9 @@ concept("econ.supply.law-of-supply", { file: "supply/law-of-supply", keyPrefix: 
     d: 1, skill: "RECALL",
     stem: "Which statement best defines **supply**?",
     options: [
-      ["The quantity producers are willing and able to offer for sale at each price over a period", "Correct: supply needs willingness and ability, a price and a time period."],
+      ["The quantity producers are willing and able to sell at each price over a period", "Correct: supply needs willingness and ability, a price and a time period."],
       ["The total quantity of a good that producers have in their warehouses", "Stocks held are not the same as the quantity offered for sale at each price."],
-      ["The quantity consumers are willing and able to buy at each price over a period", "That is the definition of demand."],
+      ["The quantity consumers are willing and able to buy at each price over a period of time", "That is the definition of demand."],
       ["The quantity of a good actually sold in a market in one year", "Quantity sold depends on demand as well; supply is what is offered at each price."],
     ],
     answer: "A",

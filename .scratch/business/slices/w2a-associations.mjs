@@ -55,7 +55,7 @@ concept("bus.organisation.associations", { file: "organisation/associations", ke
     stem: "What is **lobbying**?",
     options: [
       ["Trying to influence government decisions", "Correct: associations lobby on fees, taxes and rules."],
-      ["Advertising products on radio", "That is promotion."],
+      ["Advertising members' products on local radio", "That is promotion."],
       ["Buying goods in large quantities", "That is bulk buying."],
       ["Settling disputes between members", "That is dispute resolution."],
     ],
@@ -173,7 +173,7 @@ concept("bus.organisation.associations", { file: "organisation/associations", ke
       P.mcq({
         label: "(a)", marks: 1,
         stem: "Which function would help the vendors most with the rising market fees?",
-        options: [["Representing members to the council", "Correct: negotiation with the council."], ["Bulk buying", "Does not affect fees."], ["Running a savings club", "Does not affect fees."], ["Training in customer care", "Does not affect fees."]],
+        options: [["Representing members to the council", "Correct: negotiation with the council."], ["Bulk buying", "Does not affect fees."], ["Running a savings club for its members", "Does not affect fees."], ["Training in customer care", "Does not affect fees."]],
         answer: "A",
       }),
       P.manual({

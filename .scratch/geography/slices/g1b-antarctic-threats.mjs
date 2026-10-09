@@ -24,7 +24,7 @@ concept("geo.ecosystems.antarctic-threats", { file: "ecosystems/antarctic-threat
       ["It bans mineral resource activities except scientific research", "Correct: mining is prohibited."],
       ["It allows mining if a country pays a tax", "There is no mining tax; mining is banned."],
       ["It allows only coal and oil to be extracted", "No minerals, oil or gas may be extracted commercially."],
-      ["It gives each claimant country its own mining zone", "Territorial claims are on hold and mining is banned."],
+      ["It gives each claimant country its own mining zone off the Antarctic coast", "Territorial claims are on hold and mining is banned."],
     ],
     answer: "A",
     explanation: "The Protocol designates Antarctica as a natural reserve and bans all mineral resource activities other than scientific research.",

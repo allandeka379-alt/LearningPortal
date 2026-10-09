@@ -23,7 +23,7 @@ concept("geo.energy.management", { file: "energy/management", keyPrefix: "energy
     stem: "What is an **interconnector**?",
     options: [
       ["A power line linking the electricity grids of different countries", "Correct: it allows countries to trade electricity."],
-      ["A pipe that carries water from a dam to the turbines", "That is a penstock."],
+      ["A steel pipe that carries water from a dam down to the power station turbines", "That is a penstock."],
       ["A meter that customers pay for before they use power", "That is a prepaid meter."],
       ["A tank in which dung rots to produce gas", "That is a biogas digester."],
     ],
@@ -35,7 +35,7 @@ concept("geo.energy.management", { file: "energy/management", keyPrefix: "energy
     stem: "How does an efficient enclosed wood stove help to conserve energy?",
     options: [
       ["It burns wood more completely and keeps the heat around the pot", "Correct: less heat escapes, so far less wood is needed."],
-      ["It produces electricity as well as heat for cooking", "Wood stoves do not generate electricity."],
+      ["It produces electricity for lighting as well as heat for cooking the food", "Wood stoves do not generate electricity."],
       ["It can only be used with charcoal, not wood", "Efficient stoves are designed for wood, often small sticks."],
       ["It makes the wood regrow faster in the woodland", "A stove does not affect tree growth directly; it reduces cutting."],
     ],
@@ -49,7 +49,7 @@ concept("geo.energy.management", { file: "energy/management", keyPrefix: "energy
       ["One bus moves as many people as many cars, using less fuel per passenger", "Correct: fuel use per person falls sharply."],
       ["Buses run on solar power, so they use no fuel at all", "Most buses run on diesel."],
       ["Public transport makes people travel longer distances", "This would increase, not reduce, energy use."],
-      ["Buses do not need roads, so no energy is used to build them", "Buses use roads like cars do."],
+      ["Buses do not need tarred roads, so no energy is used to build or repair them", "Buses use roads like cars do."],
     ],
     answer: "A",
     explanation: "Moving people in shared vehicles (buses, trains) uses much less energy per passenger-kilometre than private cars.",
@@ -213,7 +213,7 @@ concept("geo.energy.management", { file: "energy/management", keyPrefix: "energy
       P.num({ label: "(a)", marks: 1, unit: "%", stem: "Calculate the percentage of households that have rooftop solar panels.", value: 35, wrong: [14, 2.86], explanation: "14 ÷ 40 × 100 = 35 %." }),
       P.mcq({ label: "(b)", marks: 1, stem: "Which measure was found in the most households?", options: [
         ["LED bulbs throughout the house", "Correct: 26 of the 40 households."],
-        ["Rooftop solar panels", "14 households, fewer than LED bulbs."],
+        ["Rooftop solar panels for electricity", "14 households, fewer than LED bulbs."],
         ["Solar water heater", "Only 8 households."],
         ["Biogas digester", "Only 2 households: the least common measure."],
       ], answer: "A", explanation: "LED bulbs (26 households) were the most common measure." }),

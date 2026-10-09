@@ -7,7 +7,7 @@ concept("comp.transmission.encryption", { file: "transmission/encryption", keyPr
   b.mcq({
     d: 1, skill: "RECALL",
     stem: "What is **ciphertext**?",
-    options: [["The scrambled data produced by encryption", "Correct."], ["The original readable data", "That is plaintext."], ["The value used to encrypt data", "That is the key."], ["A list of trusted websites", "That has nothing to do with ciphertext."]],
+    options: [["The scrambled data produced by encryption", "Correct."], ["The original readable data", "That is plaintext."], ["The value used with the algorithm to encrypt data", "That is the key."], ["A list of trusted websites", "That has nothing to do with ciphertext."]],
     answer: "A",
     explanation: "Plaintext + key + algorithm → ciphertext. Ciphertext is what travels across the network.",
   });

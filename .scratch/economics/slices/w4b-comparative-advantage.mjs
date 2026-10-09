@@ -27,7 +27,7 @@ concept("econ.trade.comparative-advantage", { file: "trade/comparative-advantage
     options: [
       ["The quantity and quality of the factors of production it has", "Correct: land, labour, capital and enterprise available to it."],
       ["The amount of foreign aid it receives each year", "Aid is a financial flow, not an endowment of factors."],
-      ["The list of goods that it exports to other countries", "Exports may result from the endowment but are not the endowment."],
+      ["The list of goods that it exports to other countries each year", "Exports may result from the endowment but are not the endowment."],
       ["The profit earned by its largest firms", "Profit is a reward to enterprise, not the stock of resources."],
     ],
     explanation: "Differences in factor endowment (minerals, fertile land, skilled labour, capital) are one reason why countries specialise and trade.",
@@ -85,10 +85,10 @@ concept("econ.trade.comparative-advantage", { file: "trade/comparative-advantage
     d: 2, skill: "UNDERSTANDING",
     stem: "Why can a country **not** have a comparative advantage in both of two goods when compared with another country?",
     options: [
-      ["Its opportunity cost of one good is the reciprocal of its opportunity cost of the other", "Correct: lower in one good means higher in the other."],
+      ["Its opportunity cost of one good is the reciprocal of that of the other", "Correct: lower in one good means higher in the other."],
       ["Its resources can be used to produce only one good at a time", "Resources can be split between goods."],
       ["International agreements allow each country to export only one good", "No such rule exists."],
-      ["A country with an absolute advantage must import both goods", "Absolute advantage does not force a country to import."],
+      ["A country with an absolute advantage in both goods must still import both goods", "Absolute advantage does not force a country to import."],
     ],
     answer: "A",
     explanation: "If a country gives up less cloth to make maize, it must give up more maize to make cloth, so its comparative advantage can lie in only one of the two goods (unless the costs are equal, when there is no gain from trade).",

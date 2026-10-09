@@ -86,7 +86,7 @@ concept("bus.communication.formal-informal-trends", { file: "communication/forma
     options: [
       ["Complaints and rumours about a business can spread very quickly", "Correct: bad news travels fast online."],
       ["It is impossible to contact customers online", "Social media makes contact easier."],
-      ["Advertising has become more expensive than television", "Social media advertising is often cheaper."],
+      ["Advertising on social media has become more expensive than on television", "Social media advertising is often cheaper."],
       ["Customers can no longer give feedback", "Social media increases feedback."],
     ],
     answer: "A",

@@ -44,7 +44,7 @@ concept("geo.industry.tncs", { file: "industry/tncs", keyPrefix: "industry.tncs"
     options: [
       ["Paying independent factories to make its products instead of owning them", "Correct: Nike owns very few of the factories that make its goods."],
       ["Buying every company in the supply chain", "That would be ownership, the opposite of subcontracting."],
-      ["Selling the rights to the company's brand name to another firm", "Selling a brand is not subcontracting."],
+      ["Selling the rights to the company's brand name and logo to another firm", "Selling a brand is not subcontracting."],
       ["Making all its products at its headquarters", "Nike's headquarters handles design and marketing, not mass production."],
     ],
     answer: "A",
@@ -83,7 +83,7 @@ concept("geo.industry.tncs", { file: "industry/tncs", keyPrefix: "industry.tncs"
       ["To avoid the tariffs charged on cars imported into the bloc", "Correct: producing inside the bloc avoids import taxes."],
       ["Because cars cannot be carried on container ships", "Cars are routinely shipped by sea."],
       ["To be as far as possible from its customers", "Being inside the bloc places it closer to customers."],
-      ["Because labour is always cheaper in trading blocs", "Many trading blocs are high-wage areas."],
+      ["Because labour is always cheaper inside trading blocs than outside them", "Many trading blocs are high-wage areas."],
     ],
     answer: "A",
     explanation: "Avoiding trade barriers and being close to a market are common reasons for TNC investment.",
@@ -195,7 +195,7 @@ concept("geo.industry.tncs", { file: "industry/tncs", keyPrefix: "industry.tncs"
         options: [
           ["The most skilled, best-paid work is in the HIC; low-paid assembly is in the LIC", "Correct: this is the typical TNC hierarchy."],
           ["Most workers are employed at the headquarters", "Only 1,500 of 11,500 work at the headquarters."],
-          ["Wages are similar in all three countries, whatever the type of work", "Wages differ enormously, from 155 to 6,200."],
+          ["Wages are similar in all three countries, whatever the type of work and level of skill", "Wages differ enormously, from 155 to 6,200."],
           ["The LIC has the fewest workers", "The LIC has the most workers (6,000)."],
         ],
         answer: "A", explanation: "Decision-making and research are in the HIC; labour-intensive assembly is in the LIC.",

@@ -102,7 +102,7 @@ concept("bus.marketing.place", { file: "marketing/place", keyPrefix: "marketing.
     stem: "What is an agent in a channel of distribution?",
     options: [
       ["A firm that arranges sales for a producer for commission", "Correct: agents usually do not own the goods."],
-      ["A shop that sells goods to the final consumer", "That is a retailer."],
+      ["A shop that buys goods and sells them to the final consumer", "That is a retailer."],
       ["A firm that buys in bulk and breaks bulk", "That is a wholesaler."],
       ["A customer who buys goods for personal use", "That is a consumer."],
     ],

@@ -70,7 +70,7 @@ concept("geo.weather.precipitation", { file: "weather/precipitation", keyPrefix:
     options: [
       ["Warm air rises gently over a shallow slope of cold air", "Correct: gentle uplift spreads layered cloud over a wide area."],
       ["Warm fronts always carry more water vapour", "The amount of vapour varies; the slope of the front is the key."],
-      ["Cold fronts move too slowly to give rain", "Cold fronts often move faster than warm fronts."],
+      ["Cold fronts move far too slowly to give any lasting rain", "Cold fronts often move faster than warm fronts."],
       ["Warm fronts occur only over mountains", "Fronts form where air masses meet, over any kind of ground."],
     ],
     answer: "A",

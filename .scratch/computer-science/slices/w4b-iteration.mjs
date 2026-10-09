@@ -181,7 +181,7 @@ concept("comp.prog.iteration", { file: "prog/iteration", keyPrefix: "prog.iterat
     options: [
       ["Price never changes inside the loop, so it may never end", "Correct: no new price is input, so the condition can never change."],
       ["A WHILE loop cannot test for 0", "Any comparison can be used as a condition."],
-      ["The loop body runs exactly once and then stops", "It runs forever unless the first price is 0."],
+      ["The loop body runs exactly once and then stops at the ENDWHILE", "It runs forever unless the first price is 0."],
       ["ENDWHILE should be NEXT Price", "NEXT closes a FOR loop."],
     ],
     answer: "A",

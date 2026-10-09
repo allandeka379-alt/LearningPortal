@@ -89,7 +89,7 @@ concept("bus.people.motivation-methods", { file: "people/motivation-methods", ke
     options: [
       ["Employees gain when the business does well, so they care about costs", "Correct: it links workers' rewards to the business's success."],
       ["It pays workers more for each extra unit they produce", "That is piece rate."],
-      ["It guarantees each worker a higher, fixed monthly income", "Profit shares vary and are usually annual."],
+      ["It guarantees each worker a higher, fixed monthly income from the profits", "Profit shares vary and are usually annual."],
       ["It rewards sales staff for each sale", "That is commission."],
     ],
     answer: "A",

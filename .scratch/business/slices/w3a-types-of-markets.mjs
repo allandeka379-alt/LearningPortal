@@ -7,7 +7,7 @@ concept("bus.marketing.types-of-markets", { file: "marketing/types-of-markets", 
     stem: "What is a virtual market?",
     options: [
       ["A market where buyers and sellers trade electronically without meeting", "Correct: trade happens online or by phone."],
-      ["A market held in a town square only on public holidays", "Timing does not make a market virtual."],
+      ["A market held in a town square only on public holidays and at weekends", "Timing does not make a market virtual."],
       ["A market where only services are sold", "Virtual markets sell goods too."],
       ["A market that has no buyers", "Every market has buyers and sellers."],
     ],

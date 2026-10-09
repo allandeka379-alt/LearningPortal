@@ -20,7 +20,7 @@ concept("eng.functional.journal-interview", { file: "functional/journal-intervie
     options: [
       ["Looking back, I realise I was angry because I felt nobody had listened to me.", "Correct: the writer thinks about the reason behind a feeling."],
       ["I woke up at six, had tea and bread, and then got dressed for school.", "A plain event with no reflection."],
-      ["Then I walked to school, and then I sat in my class until the bell rang.", "A list of actions joined by then."],
+      ["Then I walked to school, and then I sat in my class until the bell rang at one.", "A list of actions joined by then."],
       ["The meeting was held in the school hall on Tuesday afternoon at three.", "A fact, impersonally stated."],
     ],
     answer: "A",
@@ -56,7 +56,7 @@ concept("eng.functional.journal-interview", { file: "functional/journal-intervie
     options: [
       ["It shows the writer's private worry, as if thinking aloud.", "Correct: questions to oneself reveal anxiety and make the voice natural."],
       ["It asks the reader to reply with advice in a letter.", "A journal is private; the question is not addressed to a reader."],
-      ["It introduces a formal recommendation for the school.", "There is no recommendation; this is personal feeling."],
+      ["It introduces a formal recommendation for the school's managers.", "There is no recommendation; this is personal feeling."],
       ["It is an interview question put to the teacher.", "The writer is not interviewing anyone."],
     ],
     answer: "A",
@@ -69,7 +69,7 @@ concept("eng.functional.journal-interview", { file: "functional/journal-intervie
     options: [
       ["Use the passage's details and develop the ranger's thoughts and feelings about them.", "Correct: stay in role, use the text and develop it."],
       ["Write about your own weekend instead, since journals are always personal.", "This ignores the role and the passage."],
-      ["Copy the passage's sentences in order and simply change he to I throughout.", "Copying earns little; you must develop and reflect in your own words."],
+      ["Copy all the passage's sentences in the same order and simply change he to I throughout.", "Copying earns little; you must develop and reflect in your own words."],
       ["Invent a completely new story unconnected to the passage.", "Role tasks require you to use the details in the text."],
     ],
     answer: "A",

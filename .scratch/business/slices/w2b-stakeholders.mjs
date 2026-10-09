@@ -93,7 +93,7 @@ concept("bus.enterprise.stakeholders", { file: "enterprise/stakeholders", keyPre
     stem: "How do lenders help a business?",
     options: [
       ["They provide finance for starting or expanding the business", "Correct: banks and other lenders supply loans."],
-      ["They make the day-to-day decisions in the business", "That is the role of managers."],
+      ["They make the day-to-day decisions on how the business is run", "That is the role of managers."],
       ["They buy most of the business's products", "That is the role of customers."],
       ["They pass the laws that businesses must obey", "That is the role of government."],
     ],

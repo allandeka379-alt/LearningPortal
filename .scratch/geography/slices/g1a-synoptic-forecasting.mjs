@@ -45,7 +45,7 @@ concept("geo.weather.synoptic-forecasting", { file: "weather/synoptic-forecastin
       ["Clear skies, light winds and cold nights with possible frost", "Correct: sinking air prevents cloud; clear calm nights lose heat fast."],
       ["Thick cloud, heavy rain and thunderstorms", "Thick cloud and storms come with rising air in low pressure."],
       ["Strong winds and continuous drizzle all day", "Highs have widely spaced isobars (light winds) and dry, sinking air."],
-      ["Hot, humid afternoons with heavy convectional rain", "Convectional storms belong to the hot wet season, not a winter high."],
+      ["Hot, humid afternoons with heavy convectional rain and hail", "Convectional storms belong to the hot wet season, not a winter high."],
     ],
     answer: "A",
     explanation: "In a high, air **sinks**, warms and dries, so cloud does not form. With clear skies and light winds, heat escapes at night, giving cold nights and frost in low-lying places, and sunny days.",

@@ -107,7 +107,7 @@ concept("bus.economy.exchange-rates", { file: "economy/exchange-rates", keyPrefi
       ["Foreign buyers value its quality and are not very sensitive to price", "Correct: if demand is price-inelastic, a higher foreign price cuts sales only slightly."],
       ["Appreciation makes its goods cheaper abroad", "Appreciation makes exports dearer abroad."],
       ["Exporters never sell to foreign buyers on price", "Price matters to many buyers; the point is how much."],
-      ["Appreciation always lowers the exporter's costs to zero", "Cheaper imported inputs may lower some costs, but never to zero."],
+      ["Appreciation always lowers the exporter's imported input costs to zero", "Cheaper imported inputs may lower some costs, but never to zero."],
     ],
     answer: "A",
     hints: ["Think about how sensitive buyers are to price."],

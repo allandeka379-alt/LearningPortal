@@ -178,7 +178,7 @@ concept("eng.reading.fiction", { file: "reading/fiction", keyPrefix: "reading.fi
         options: [
           ["It suggests the quarrel is an old one that keeps returning", "Correct: the repeated quarrel shows a deep, unresolved conflict."],
           ["It shows that the grandmother is deaf", "Heard it all before means familiarity, not deafness."],
-          ["It reveals that the field has already been sold", "Nothing suggests a sale."],
+          ["It reveals that the field has already been sold to a neighbour", "Nothing suggests a sale."],
           ["It introduces a new conflict about the kettle", "The kettle is a domestic detail, not a conflict."],
         ],
         answer: "A",
@@ -206,7 +206,7 @@ concept("eng.reading.fiction", { file: "reading/fiction", keyPrefix: "reading.fi
     stem: "Which of these is a **minor** character's typical role?",
     options: [
       ["To support the plot or reveal something about a major character", "Correct: minor characters have supporting roles."],
-      ["To be the person whose choices drive the whole story", "That is a major character (protagonist)."],
+      ["To be the central person whose choices drive the whole story forward", "That is a major character (protagonist)."],
       ["To narrate every event from beginning to end", "A narrator may or may not be a minor character."],
       ["To change completely by the end of the story", "Change is typical of major (dynamic) characters."],
     ],
@@ -246,7 +246,7 @@ concept("eng.reading.fiction", { file: "reading/fiction", keyPrefix: "reading.fi
       ["The writer shows Tendai's fear through his shaking hands and short replies.", "Correct: it identifies a method of characterisation with evidence."],
       ["Tendai went to the river and then he came back home late.", "This only retells events."],
       ["The story is about Tendai and it is very good and interesting.", "This is vague and gives no evidence."],
-      ["At the end of the story Tendai finally meets his long-lost father.", "This summarises the plot without analysis."],
+      ["At the very end of the story Tendai finally meets his long-lost father again.", "This summarises the plot without analysis."],
     ],
     answer: "A",
     hints: ["Which sentence explains *how* the writer creates an effect?"],

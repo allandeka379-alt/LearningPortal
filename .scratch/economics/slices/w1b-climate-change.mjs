@@ -73,7 +73,7 @@ concept("econ.supply.climate-change", { file: "supply/climate-change", keyPrefix
     stem: "Which measure helps a cattle farmer in Matabeleland South **adapt** to more frequent droughts?",
     options: [
       ["Storing fodder and selling some animals before the dry season", "Correct: this protects the herd's value when pasture fails."],
-      ["Buying more cattle at the start of the dry season", "More animals need more grazing and water just when they are scarce."],
+      ["Buying more cattle at the start of the dry season to build up the herd", "More animals need more grazing and water just when they are scarce."],
       ["Burning grassland to clear it for grazing", "Burning destroys pasture and releases carbon dioxide."],
       ["Moving cattle away from water points", "Cattle need water most in a drought."],
     ],

@@ -31,7 +31,7 @@ concept("geo.development.sustainable", { file: "development/sustainable", keyPre
     stem: "What is **tied aid**?",
     options: [
       ["Aid that must be spent on the donor's goods", "Correct: it benefits the donor's firms."],
-      ["Aid given through the United Nations", "That is multilateral aid."],
+      ["Aid given through United Nations agencies", "That is multilateral aid."],
       ["Aid given by charities", "That is voluntary (NGO) aid."],
       ["Aid given straight after a disaster", "That is emergency aid."],
     ],
@@ -80,7 +80,7 @@ concept("geo.development.sustainable", { file: "development/sustainable", keyPre
     stem: "Which strategy would most increase a mineral-exporting country's earnings in the long term?",
     options: [
       ["Processing ores into refined metals before export", "Correct: adding value raises prices and skilled jobs."],
-      ["Exporting more raw ore at the same price", "Earnings rise only while the ore lasts."],
+      ["Exporting more raw ore each year at the same world price", "Earnings rise only while the ore lasts."],
       ["Relying on emergency food aid", "Aid does not raise export earnings."],
       ["Borrowing to pay existing debts", "This increases debt."],
     ],
@@ -93,7 +93,7 @@ concept("geo.development.sustainable", { file: "development/sustainable", keyPre
     stem: "Which type of aid is usually the most **sustainable**?",
     options: [
       ["Small bottom-up projects run with local communities", "Correct: they meet local needs and are maintained locally."],
-      ["Large top-down projects designed by donors", "They may not meet local needs or be maintained."],
+      ["Large top-down projects designed and run by foreign donors", "They may not meet local needs or be maintained."],
       ["Tied aid spent on donor goods", "This benefits the donor more."],
       ["Long periods of free food aid", "This can undercut local farmers and create dependency."],
     ],

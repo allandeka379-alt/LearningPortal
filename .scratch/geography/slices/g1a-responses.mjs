@@ -46,7 +46,7 @@ concept("geo.climate-change.responses", { file: "climate-change/responses", keyP
     options: [
       ["Conservation farming with planting basins and mulching", "Correct: it conserves soil moisture to cope with dry spells."],
       ["Building new coal-fired power stations", "Pfumvudza is a farming programme."],
-      ["Planting maize only on large commercial farms", "It targets smallholder plots."],
+      ["Planting hybrid maize only on large commercial farms", "It targets smallholder plots."],
       ["Moving all farmers to towns", "It aims to keep farming productive in a changing climate."],
     ],
     answer: "A",
@@ -69,7 +69,7 @@ concept("geo.climate-change.responses", { file: "climate-change/responses", keyP
     stem: "Why might a small country like Zimbabwe put more effort into **adaptation** than mitigation?",
     options: [
       ["Its emissions are small but it is very vulnerable to drought", "Correct: cutting its tiny emissions would barely change global warming."],
-      ["Adaptation reduces global greenhouse gas levels", "Adaptation copes with effects; it does not reduce gases."],
+      ["Adaptation is the cheapest way to reduce global greenhouse gas levels", "Adaptation copes with effects; it does not reduce gases."],
       ["Mitigation is banned for developing countries", "All countries can mitigate; the Paris Agreement asks all to make pledges."],
       ["Climate change will not affect Zimbabwe", "Zimbabwe is highly vulnerable to drought and heat."],
     ],

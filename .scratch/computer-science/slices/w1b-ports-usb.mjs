@@ -19,7 +19,7 @@ concept("comp.hardware.ports-usb", { file: "hardware/ports-usb", keyPrefix: "har
   b.mcq({
     d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "What happens first when a new device is plugged into a USB port?",
-    options: [["The computer detects that a device is connected", "Correct: detection comes first, then identification and the driver."], ["The user must restart the computer", "USB devices can be connected while the computer is on."], ["The data is sent in parallel", "USB sends data serially."], ["The device's battery is charged fully", "Charging can happen, but detection comes first."]],
+    options: [["The computer detects that a device is connected", "Correct: detection comes first, then identification and the driver."], ["The user must restart the computer", "USB devices can be connected while the computer is on."], ["The data is sent in parallel", "USB sends data serially."], ["The device's battery is charged fully before anything else", "Charging can happen, but detection comes first."]],
     answer: "A",
     explanation: "Sequence: device detected → device identified → driver loaded or installed → data transmitted serially.",
   });
@@ -33,14 +33,14 @@ concept("comp.hardware.ports-usb", { file: "hardware/ports-usb", keyPrefix: "har
   b.mcq({
     d: 2, skill: "UNDERSTANDING",
     stem: "Which is a **drawback** of USB?",
-    options: [["The maximum cable length is only a few metres", "Correct: longer cables make the signal unreliable."], ["Devices are detected automatically", "That is a benefit (plug and play)."], ["It can supply power to devices", "That is a benefit."], ["Most computers have USB ports", "That is a benefit: it is an industry standard."]],
+    options: [["The maximum cable length is only a few metres", "Correct: longer cables make the signal unreliable."], ["Devices are detected and set up automatically when plugged in", "That is a benefit (plug and play)."], ["It can supply power to devices", "That is a benefit."], ["Most computers have USB ports", "That is a benefit: it is an industry standard."]],
     answer: "A",
     explanation: "USB drawbacks: limited cable length, slower older versions, limited power, several connector types.",
   });
   b.mcq({
     d: 3, skill: "APPLICATION", applies: ZIM,
     stem: "A pupil plugs headphones into a computer, but no sound comes out. The volume is turned up and not muted. What should be checked next?",
-    options: [["That the plug is in the audio output jack, not the microphone jack", "Correct: a plug in the wrong jack is a common simple fault."], ["That the computer's processor is fast enough", "Processor speed does not stop sound playing."], ["That the headphones are plugged into the Ethernet port", "Audio plugs do not fit an Ethernet port."], ["That the printer is switched on", "The printer has nothing to do with sound."]],
+    options: [["That the plug is in the audio output jack, not the microphone jack", "Correct: a plug in the wrong jack is a common simple fault."], ["That the computer's processor is fast enough", "Processor speed does not stop sound playing."], ["That the headphones are plugged into the Ethernet port on the back panel", "Audio plugs do not fit an Ethernet port."], ["That the printer is switched on", "The printer has nothing to do with sound."]],
     answer: "A",
     hints: ["Troubleshooting starts with the simplest causes: cables and ports."],
     explanation: "Check the simple things first: the correct port, a firm connection, power, then the driver and settings.",

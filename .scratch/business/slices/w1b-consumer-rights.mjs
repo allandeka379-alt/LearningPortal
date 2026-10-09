@@ -8,7 +8,7 @@ concept("bus.consumer.rights", { file: "consumer/rights", keyPrefix: "consumer.r
     options: [
       ["A person who buys goods or services for his or her own use", "Correct: a consumer uses what he or she buys rather than reselling it."],
       ["A trader who buys goods to resell at a profit", "A trader buying stock to resell is not acting as a consumer of that stock."],
-      ["A manufacturer who turns raw materials into goods", "A manufacturer is a producer."],
+      ["A manufacturer who turns raw materials into finished goods for sale", "A manufacturer is a producer."],
       ["A government official who inspects shops", "An inspector enforces consumer laws; that is not what makes someone a consumer."],
     ],
     answer: "A",
@@ -160,7 +160,7 @@ concept("bus.consumer.rights", { file: "consumer/rights", keyPrefix: "consumer.r
     parts: [
       P.mcq({
         label: "(a)", stem: "Which form of exploitation is shown by the label \"genuine leather\"?",
-        options: [["False description", "Correct: the goods are not what the label claims."], ["Short measure", "Short measure concerns quantity, not material."], ["Overpricing", "Nothing is said about the price being unfair."], ["Unsafe goods", "Plastic uppers are not dangerous."]],
+        options: [["False description", "Correct: the goods are not what the label claims."], ["Short measure", "Short measure concerns quantity, not material."], ["Overpricing", "Nothing is said about the price being unfair."], ["Unsafe or dangerous goods", "Plastic uppers are not dangerous."]],
         answer: "A",
       }),
       P.manual({

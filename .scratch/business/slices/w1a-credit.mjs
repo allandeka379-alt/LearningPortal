@@ -19,7 +19,7 @@ concept("bus.trade.credit", { file: "trade/credit", keyPrefix: "trade.credit" },
     stem: "Which form of credit passes ownership of the goods to the buyer immediately?",
     options: [
       ["Deferred payment (credit sale)", "Correct: ownership passes when the agreement is made."],
-      ["A hire purchase agreement", "Under HP ownership passes after the last instalment."],
+      ["A hire purchase (HP) agreement", "Under HP ownership passes after the last instalment."],
       ["Leasing", "Under leasing the goods are never owned by the user."],
       ["Renting", "Renting gives use of the goods, not ownership."],
     ],

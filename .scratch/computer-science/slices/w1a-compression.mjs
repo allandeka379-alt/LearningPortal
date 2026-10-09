@@ -86,7 +86,7 @@ concept("comp.data.compression", { file: "data/compression", keyPrefix: "data.co
       ["Removing frequencies that people cannot hear", "Correct: perceptual coding removes sounds people are unlikely to notice."],
       ["Run-length encoding the samples", "RLE is lossless."],
       ["Increasing the sample rate", "Increasing the sample rate makes the file larger."],
-      ["Adding a parity bit to each sample", "Parity bits are for error detection and add data."],
+      ["Adding a parity bit to each sample before saving", "Parity bits are for error detection and add data."],
     ],
     answer: "A",
     explanation: "Lossy sound methods: reduce sample rate or resolution, remove sounds outside human hearing or masked by louder sounds.",

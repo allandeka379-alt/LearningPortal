@@ -20,7 +20,7 @@ concept("econ.markets.equilibrium", { file: "markets/equilibrium", keyPrefix: "m
       ["The price at which quantity demanded equals quantity supplied", "Correct: the market clears at this price."],
       ["The price set by the government for the good", "A government-set price may be above or below equilibrium."],
       ["The highest price consumers are willing to pay", "Equilibrium depends on both demand and supply."],
-      ["The price at which producers make the most profit", "Equilibrium is where buyers' and sellers' plans match, not a profit maximum."],
+      ["The price at which producers of the good make the most profit", "Equilibrium is where buyers' and sellers' plans match, not a profit maximum."],
     ],
     answer: "A",
     explanation: "At the equilibrium price the quantity consumers want to buy equals the quantity producers want to sell, so there is no pressure on the price to change.",

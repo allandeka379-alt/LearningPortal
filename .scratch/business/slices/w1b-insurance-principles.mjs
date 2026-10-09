@@ -59,7 +59,7 @@ concept("bus.insurance.principles", { file: "insurance/principles", keyPrefix: "
       ["The insured is restored to the position just before the loss", "Correct: no better and no worse off; no profit from insurance."],
       ["The insured always receives the full sum insured", "The insurer pays the actual loss, up to the sum insured."],
       ["The insurer must pay within seven days", "Indemnity is about the amount paid, not the timing."],
-      ["The insured may claim from several insurers in full", "That would give a profit; contribution prevents it."],
+      ["The insured may claim the full loss from each of several insurers", "That would give a profit; contribution prevents it."],
     ],
     answer: "A",
     explanation: "**Indemnity**: compensation restores the insured's financial position; it does not allow a profit.",

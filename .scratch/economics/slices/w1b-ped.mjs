@@ -13,8 +13,8 @@ concept("econ.elasticity.ped", { file: "elasticity/ped", keyPrefix: "elasticity.
     stem: "What does **price elasticity of demand** measure?",
     options: [
       ["How responsive quantity demanded is to a change in the good's own price", "Correct."],
-      ["How responsive quantity demanded is to a change in income", "That is income elasticity of demand."],
-      ["How responsive quantity supplied is to a change in price", "That is price elasticity of supply."],
+      ["How responsive quantity demanded is to a change in consumers' income", "That is income elasticity of demand."],
+      ["How responsive quantity supplied is to a change in the good's own price", "That is price elasticity of supply."],
       ["How much the price of a good changes over a year", "PED compares the response of quantity to a price change; it is not a measure of inflation."],
     ],
     answer: "A",

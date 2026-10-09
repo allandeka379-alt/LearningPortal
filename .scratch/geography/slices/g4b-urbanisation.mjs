@@ -44,7 +44,7 @@ concept("geo.settlement.urbanisation", { file: "settlement/urbanisation", keyPre
     options: [
       ["Most people already live in towns, so few remain to migrate", "Correct: high urbanisation leaves little rural population to move."],
       ["Their cities have no jobs to attract migrants", "HIC cities have many jobs."],
-      ["Their birth rates are the highest in the world", "HIC birth rates are low."],
+      ["Their birth rates are the highest in the world, so towns grow from within", "HIC birth rates are low, so natural increase in towns is small."],
       ["Laws forbid people from living in cities", "No such general laws exist."],
     ],
     answer: "A",
@@ -68,7 +68,7 @@ concept("geo.settlement.urbanisation", { file: "settlement/urbanisation", keyPre
     options: [
       ["Colonial restrictions on moving to towns were removed", "Correct: people could now live and work freely in towns."],
       ["Most towns were built only after 1980", "Harare and Bulawayo were founded long before 1980."],
-      ["Rural areas suddenly had more jobs than towns", "This would reduce migration to towns."],
+      ["Rural areas suddenly had many more jobs than the towns did", "This would reduce migration to towns."],
       ["Urban birth rates fell to zero", "Birth rates did not fall to zero."],
     ],
     answer: "A",

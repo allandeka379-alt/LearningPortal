@@ -13,7 +13,7 @@ concept("econ.population.effects", { file: "population/effects", keyPrefix: "pop
     stem: "The optimum population of a country is the population that",
     options: [
       ["gives the highest output per head with existing resources and technology.", "Correct: optimum is defined by output per head."],
-      ["gives the highest total output the country could ever produce.", "Total output may keep rising after output per head starts to fall."],
+      ["gives the highest total output that the country could ever produce in a year.", "Total output may keep rising after output per head starts to fall."],
       ["is the largest that the country's land can physically hold.", "That is not an economic definition."],
       ["has an equal number of males and females in every age group.", "That describes structure, not size."],
     ],
@@ -37,7 +37,7 @@ concept("econ.population.effects", { file: "population/effects", keyPrefix: "pop
     stem: "Which change would most likely **raise** a country's optimum population?",
     options: [
       ["New technology that raises output from the same resources", "Correct: more output per worker means a larger population can be supported at the highest output per head."],
-      ["A fall in the birth rate over the next ten years", "This changes the actual population, not the optimum."],
+      ["A fall in the birth rate over the next ten years or more", "This changes the actual population, not the optimum."],
       ["Severe soil erosion on much of the farmland", "Fewer productive resources lower the optimum."],
       ["An increase in the emigration of young workers", "This changes the actual population, not the optimum."],
     ],
@@ -62,7 +62,7 @@ concept("econ.population.effects", { file: "population/effects", keyPrefix: "pop
     options: [
       ["Pension and health spending rises as the share of taxpayers falls", "Correct: more elderly people and relatively fewer workers."],
       ["Spending on primary schools rises sharply over time", "Fewer children means less need for primary schools."],
-      ["Tax revenue rises because more people are now retired", "Retired people usually pay less income tax."],
+      ["Tax revenue rises because more people are now retired and drawing pensions", "Retired people usually pay less income tax."],
       ["Spending on pensions falls because people live longer", "Longer lives mean pensions are paid for longer."],
     ],
     answer: "A",

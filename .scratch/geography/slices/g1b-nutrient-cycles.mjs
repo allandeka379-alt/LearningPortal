@@ -93,7 +93,7 @@ concept("geo.ecosystems.nutrient-cycles", { file: "ecosystems/nutrient-cycles", 
     stem: "Why does a cleared patch of rainforest soon become infertile?",
     options: [
       ["The main nutrient store, the vegetation, has been removed", "Correct: most nutrients were held in the biomass."],
-      ["The temperature falls once the trees are gone", "Bare ground usually becomes hotter, not cooler."],
+      ["The temperature of the bare soil falls sharply once the trees are gone", "Bare ground usually becomes hotter, not cooler."],
       ["Leaching stops when there are no trees", "Leaching increases, because no roots take up the nutrients and the soil is exposed to heavy rain."],
       ["Decomposers multiply and destroy the soil", "Decomposers release nutrients; they do not destroy soil."],
     ],

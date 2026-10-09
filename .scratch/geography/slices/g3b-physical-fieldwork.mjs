@@ -55,7 +55,7 @@ concept("geo.fieldwork.physical-fieldwork", { file: "fieldwork/physical-fieldwor
     stem: "Why should river depth be measured at **equal intervals across** the channel rather than once in the middle?",
     options: [
       ["The depth varies across the channel, so several readings give a true mean depth", "Correct: the channel is usually shallow near the banks and deeper in the middle."],
-      ["The middle of the channel is always too dangerous for students to reach", "Safety matters, but the reason for intervals is accuracy of the mean depth."],
+      ["The middle of the channel is always far too dangerous for students to reach safely", "Safety matters, but the reason for intervals is accuracy of the mean depth."],
       ["Depth readings in the middle are always much too shallow to measure", "The middle is usually the deepest part, not the shallowest."],
       ["Depth must be measured at the same place as the float is released", "Float release points are chosen for velocity, not for depth."],
     ],

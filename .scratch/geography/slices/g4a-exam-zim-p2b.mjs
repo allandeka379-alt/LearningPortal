@@ -36,7 +36,7 @@ concept("geo.industry.zimbabwe-industry", { file: "exam/zim-p2-b-industry", keyP
         options: [
           ["Ferrochrome smelting near the Great Dyke", "Correct: heavy chrome ore is processed close to where it is mined."],
           ["Bread baking in Harare", "Bakeries are market-oriented because bread is perishable."],
-          ["Printing newspapers in Bulawayo", "Printing is market-oriented."],
+          ["Printing daily newspapers in Bulawayo", "Printing is market-oriented."],
           ["Software development in Harare", "Software is footloose."],
         ],
         answer: "A", explanation: "Weight-losing processing of minerals locates near the raw material.",

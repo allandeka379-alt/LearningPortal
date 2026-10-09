@@ -82,8 +82,8 @@ concept("geo.landforms.weathering-mass-wasting", { file: "landforms/weathering-m
     options: [
       ["Water and high temperatures speed up reactions such as hydrolysis", "Correct: hydrolysis needs water, and warmth speeds up the reaction."],
       ["Frost is more common in the wet season", "Frost occurs in the cool dry season, and it is physical weathering anyway."],
-      ["The daily temperature range is largest in the wet season", "Cloud reduces the daily range in the wet season; the range is largest in the dry season."],
-      ["Wind blows more sand against the rock in the wet season", "Wind abrasion is erosion, not chemical weathering."],
+      ["The daily temperature range is largest in the wet season, so rocks crack", "Cloud reduces the daily range in the wet season; the range is largest in the dry season."],
+      ["Wind blows more sand against the granite rock in the wet season", "Wind abrasion is erosion, not chemical weathering."],
     ],
     answer: "A",
     explanation: "Hot, wet conditions in the summer rains favour **hydrolysis** and oxidation; in the dry season there is little water for the reactions.",

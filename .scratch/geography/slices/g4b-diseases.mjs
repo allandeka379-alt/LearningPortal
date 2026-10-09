@@ -94,7 +94,7 @@ concept("geo.population.diseases", { file: "population/diseases", keyPrefix: "po
     options: [
       ["Loss of workers in their most productive years", "Correct: it mainly affects adults aged about 15-49."],
       ["A rise in the number of orphans", "This is a social effect."],
-      ["Stigma against people living with HIV", "This is a social effect."],
+      ["Stigma and discrimination against people living with HIV", "This is a social effect."],
       ["Grandparents caring for grandchildren", "This is a social effect."],
     ],
     answer: "A",

@@ -34,7 +34,7 @@ concept("geo.ecosystems.antarctic", { file: "ecosystems/antarctic", keyPrefix: "
     stem: "Why does Antarctica receive so little precipitation?",
     options: [
       ["Cold, sinking air under high pressure holds little moisture", "Correct: the interior is a polar desert."],
-      ["The continent is surrounded by warm ocean currents", "The surrounding currents are cold."],
+      ["The continent is surrounded by warm ocean currents all year", "The surrounding currents are cold."],
       ["Strong convection lifts the air every afternoon", "Convection needs strong heating, which Antarctica lacks."],
       ["Mountains block all winds from reaching the coast", "Winds do reach the coast; katabatic winds blow off the ice sheet."],
     ],
@@ -47,7 +47,7 @@ concept("geo.ecosystems.antarctic", { file: "ecosystems/antarctic", keyPrefix: "
     options: [
       ["Most of the incoming sunlight is reflected rather than absorbed", "Correct: little energy is left to warm the surface."],
       ["It traps heat near the ground at night", "Reflection of sunlight does not trap heat at night."],
-      ["It produces strong, warm winds that blow in from the sea", "Albedo does not create sea winds."],
+      ["It produces strong, warm winds that blow in from the sea every summer", "Albedo does not create sea winds."],
       ["It increases the length of the summer day", "Day length depends on latitude and season, not albedo."],
     ],
     answer: "A",
@@ -71,7 +71,7 @@ concept("geo.ecosystems.antarctic", { file: "ecosystems/antarctic", keyPrefix: "
     options: [
       ["Penguin and whale numbers in the area decline", "Correct: they lose their main food."],
       ["Phytoplankton numbers fall sharply", "With fewer krill grazing on it, phytoplankton is more likely to increase."],
-      ["Leopard seals switch to eating lichens", "Leopard seals are carnivores; they do not eat lichens."],
+      ["Leopard seals switch to eating lichens and mosses", "Leopard seals are carnivores; they do not eat lichens."],
       ["Sea ice stops forming in winter", "Sea ice depends on temperature, not krill."],
     ],
     answer: "A",

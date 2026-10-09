@@ -7,7 +7,7 @@ concept("bus.marketing.segmentation", { file: "marketing/segmentation", keyPrefi
     stem: "What is market segmentation?",
     options: [
       ["Dividing a market into groups of customers with similar needs", "Correct: groups are then targeted separately."],
-      ["Selling the same product to everyone in the market", "That is mass marketing."],
+      ["Selling the same product in the same way to everyone in the market", "That is mass marketing."],
       ["Dividing a business into departments", "That is organisational structure."],
       ["Splitting profit between partners", "That has nothing to do with marketing."],
     ],
@@ -80,7 +80,7 @@ concept("bus.marketing.segmentation", { file: "marketing/segmentation", keyPrefi
     stem: "A gym in Harare offers early-morning classes for office workers and afternoon classes for retired people. How does this help the gym?",
     options: [
       ["It meets the needs of different segments, attracting more members", "Correct: each group is served at times that suit it."],
-      ["It reduces the gym's running costs to almost nothing", "Classes still cost money to run."],
+      ["It cuts the gym's staff wages and electricity costs to almost nothing", "Classes still cost money to run."],
       ["It makes the gym a mass-market business", "It is targeting segments, not treating everyone the same."],
       ["It ensures every member pays the same", "Nothing is said about prices."],
     ],

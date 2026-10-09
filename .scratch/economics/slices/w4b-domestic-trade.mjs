@@ -14,7 +14,7 @@ concept("econ.trade.domestic-trade", { file: "trade/domestic-trade", keyPrefix: 
     options: [
       ["Buying and selling of goods and services within one country", "Correct."],
       ["Trade in goods between two or more countries", "That is foreign (international) trade."],
-      ["Production of goods by households for their own use", "That is subsistence production, not trade."],
+      ["Production of goods by households for their own use and not for sale", "That is subsistence production, not trade."],
       ["Exchange of goods without using any money", "That is barter; domestic trade normally uses money."],
     ],
     answer: "A",
@@ -75,7 +75,7 @@ concept("econ.trade.domestic-trade", { file: "trade/domestic-trade", keyPrefix: 
       ["It buys in bulk directly and has its own warehouses and transport", "Correct: it performs the wholesaler's functions itself."],
       ["It sells only goods that are produced by wholesalers", "Wholesalers do not usually produce goods."],
       ["It is not allowed by law to buy from wholesalers", "There is no such law."],
-      ["It sells goods only in large quantities to other shops", "Supermarkets sell to final consumers."],
+      ["It sells goods only in large quantities to other shops and traders", "Supermarkets sell to final consumers."],
     ],
     answer: "A",
     hints: ["Which functions does a wholesaler normally perform?"],

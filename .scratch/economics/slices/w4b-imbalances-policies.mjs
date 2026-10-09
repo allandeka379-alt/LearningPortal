@@ -51,7 +51,7 @@ concept("econ.bop.imbalances-policies", { file: "bop/imbalances-policies", keyPr
     options: [
       ["Spending on domestic goods also falls, reducing output and jobs", "Correct: expenditure-reducing policies cut demand for all goods."],
       ["It makes imports cheaper than before", "Higher taxes do not lower import prices."],
-      ["It raises the price of exports for foreign buyers", "Income tax does not directly change export prices."],
+      ["It raises the price of the country's exports for foreign buyers", "Income tax does not directly change export prices."],
       ["It increases households' disposable income", "Higher income tax reduces disposable income."],
     ],
     answer: "A",
@@ -76,7 +76,7 @@ concept("econ.bop.imbalances-policies", { file: "bop/imbalances-policies", keyPr
     stem: "A country's currency depreciates, but its current account deficit gets **worse** in the following months. What is the most likely explanation?",
     options: [
       ["Demand for its exports and imports is price inelastic in the short run", "Correct: volumes adjust slowly, so the import bill rises."],
-      ["Depreciation always makes exports dearer for foreign buyers", "Depreciation makes exports cheaper."],
+      ["Depreciation always makes the country's exports dearer for foreign buyers", "Depreciation makes exports cheaper."],
       ["Depreciation makes imports cheaper, so more are bought", "Depreciation makes imports dearer."],
       ["Depreciation removes all tariffs on imports", "Exchange rates and tariffs are separate."],
     ],
@@ -90,7 +90,7 @@ concept("econ.bop.imbalances-policies", { file: "bop/imbalances-policies", keyPr
     options: [
       ["Supply-side policies that raise productivity and competitiveness", "Correct, though they take time."],
       ["A large rise in interest rates", "This reduces spending and output."],
-      ["A large cut in government spending on public services", "This reduces aggregate demand and output."],
+      ["A large cut in government spending on public services and wages", "This reduces aggregate demand and output."],
       ["A rise in income tax", "This reduces spending and output."],
     ],
     answer: "A",
@@ -238,7 +238,7 @@ concept("econ.bop.imbalances-policies", { file: "bop/imbalances-policies", keyPr
       P.mcq({
         label: "(a)", marks: 1,
         stem: "Which option is a supply-side policy?",
-        options: [["Investment in skills, roads and power", "Correct: raises productivity and competitiveness."], ["A depreciation of the currency", "This is expenditure-switching."], ["Import tariffs", "This is expenditure-switching."], ["A rise in income tax", "This is expenditure-reducing."]],
+        options: [["Investment in skills, roads and power", "Correct: raises productivity and competitiveness."], ["A depreciation of the national currency", "This is expenditure-switching."], ["Import tariffs", "This is expenditure-switching."], ["A rise in income tax", "This is expenditure-reducing."]],
         answer: "A",
         explanation: "Supply-side policies increase the productive capacity and competitiveness of the economy.",
       }),

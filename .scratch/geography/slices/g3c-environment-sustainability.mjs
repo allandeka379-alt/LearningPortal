@@ -7,7 +7,7 @@ concept("geo.mining.environment-sustainability", { file: "mining/environment-sus
     stem: "What is **rehabilitation** of mined land?",
     options: [
       ["Restoring the land to a safe, stable and useful state", "Correct: filling, reshaping, re-soiling and replanting the land."],
-      ["Opening a second pit next to the first one", "This expands mining; it does not restore land."],
+      ["Opening a second pit next to the first one on the same site", "This expands mining; it does not restore land."],
       ["Selling the mine to a new company", "A change of owner does not restore the land."],
       ["Sinking a deeper shaft to reach more ore", "This is further mining."],
     ],
@@ -67,7 +67,7 @@ concept("geo.mining.environment-sustainability", { file: "mining/environment-sus
     stem: "Why is **topsoil** stripped and stored separately before an open-cast mine begins?",
     options: [
       ["So it can be spread back to help vegetation regrow later", "Correct: topsoil holds the seeds, nutrients and organisms needed for rehabilitation."],
-      ["Because it contains most of the valuable ore", "Ore lies below; topsoil is not the target."],
+      ["Because it contains most of the valuable ore that the mine will process", "Ore lies below; topsoil is not the target."],
       ["So it can be sold as building sand", "Topsoil is kept for rehabilitation, not for sale."],
       ["Because it stops blasting from making noise", "Stored topsoil has no effect on blasting noise."],
     ],
@@ -79,7 +79,7 @@ concept("geo.mining.environment-sustainability", { file: "mining/environment-sus
     stem: "A cost-benefit analysis gives a proposed mine a benefit-cost ratio of 0.8. What does this suggest?",
     options: [
       ["Costs exceed benefits, so the project is not worthwhile on these figures", "Correct: a ratio below 1 means benefits are smaller than costs."],
-      ["Benefits exceed costs by 80%, so the mine should go ahead", "A ratio of 0.8 means benefits are only 80% of costs."],
+      ["Benefits exceed costs by 80%, so the mine should go ahead on these figures", "A ratio of 0.8 means benefits are only 80% of costs."],
       ["The mine will employ 80% of local workers", "The ratio compares values, not employment."],
       ["Benefits and costs are exactly equal", "Equal values give a ratio of exactly 1."],
     ],

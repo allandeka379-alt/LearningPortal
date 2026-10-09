@@ -79,7 +79,7 @@ concept("phys.thermal.particle-model", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "How are the particles arranged in a solid?",
-    options: [["Close together in a regular pattern, vibrating about fixed positions", "Correct."], ["Far apart, moving randomly and quickly in all directions", "That is a gas."], ["Close together but free to slide past one another at random", "That is a liquid."], ["Far apart in a regular pattern, vibrating about fixed points", "Solid particles are close together."]],
+    options: [["Close together in a regular pattern, vibrating about fixed positions", "Correct."], ["Far apart, moving randomly and quickly in all directions", "That is a gas."], ["Close together but free to slide past one another at random", "That is a liquid."], ["Far apart in a regular pattern, each vibrating about its own fixed point", "Solid particles are close together."]],
     answer: "A", explanation: "Solid particles are packed in a regular lattice and vibrate about fixed positions." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
@@ -152,7 +152,7 @@ concept("phys.thermal.gas-laws", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What causes the pressure of a gas on the walls of its container?",
-    options: [["Gas particles colliding with the walls", "Correct."], ["The weight of the container", "Not the cause."], ["Particles sticking to the walls", "They bounce off."], ["Heat rising", "Not the cause."]],
+    options: [["Gas particles colliding with the walls", "Correct."], ["The weight of the container", "Not the cause."], ["Particles sticking to the walls of the container", "They bounce off."], ["Heat rising", "Not the cause."]],
     answer: "A", explanation: "Each collision pushes on the wall; billions of collisions produce the pressure." });
 
   q.num({ d: 2, skill: "APPLICATION", daily: true,
@@ -167,7 +167,7 @@ concept("phys.thermal.gas-laws", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "A sealed can of gas is heated. Its volume cannot change. What happens to the pressure, and why?",
-    options: [["It increases: faster particles hit the walls harder and more often.", "Correct."], ["It decreases: the particles spread out as they speed up.", "They cannot spread out; the volume is fixed."], ["It stays the same: the volume and the gas are both fixed.", "Temperature also affects pressure."], ["It increases: the particles get bigger and fill more space.", "Particles do not grow."]],
+    options: [["It increases: faster particles hit the walls harder and more often.", "Correct."], ["It decreases: the particles spread out as they speed up.", "They cannot spread out; the volume is fixed."], ["It stays the same: the volume and the gas are both fixed.", "Temperature also affects pressure."], ["It increases: the particles get bigger and so fill more of the space inside.", "Particles do not grow."]],
     answer: "A", explanation: "Faster particles collide with the walls more frequently and with more force, so the pressure rises." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
@@ -234,7 +234,7 @@ concept("phys.thermal.expansion", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", daily: true,
     stem: "Why are small gaps left between sections of a railway line?",
-    options: [["To allow the rails to expand on hot days without buckling", "Correct."], ["To let rainwater drain away from under the rails", "Not the main reason."], ["To make the wheels run more quietly over the rails", "The gaps make it noisier."], ["To save steel on very long stretches of track", "The saving is tiny."]],
+    options: [["To allow the rails to expand on hot days without buckling", "Correct."], ["To let rainwater drain away quickly from under the rails", "Not the main reason."], ["To make the wheels run more quietly over the rails", "The gaps make it noisier."], ["To save steel on very long stretches of track", "The saving is tiny."]],
     answer: "A", explanation: "Rails expand in hot weather; without gaps they would push against each other and buckle." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
@@ -248,7 +248,7 @@ concept("phys.thermal.expansion", {
 
   q.mcq({ d: 3, skill: "ANALYSIS", applies: C,
     stem: "Why do gases expand much more than solids for the same rise in temperature?",
-    options: [["The forces between gas particles are very weak, so they spread easily.", "Correct."], ["Gas particles grow bigger when heated, so they push apart.", "Size is not the reason."], ["Solids do not have particles that can move further apart.", "They do."], ["Gas particles stop moving when heated, leaving bigger gaps.", "They speed up."]],
+    options: [["The forces between gas particles are very weak, so they spread easily.", "Correct."], ["Gas particles grow bigger when heated, so they push each other further apart.", "Size is not the reason."], ["Solids do not have particles that can move further apart.", "They do."], ["Gas particles stop moving when heated, leaving bigger gaps.", "They speed up."]],
     answer: "A", explanation: "Strong forces hold solid particles together, limiting expansion; the very weak forces in a gas allow large expansion.",
     hints: ["Compare the forces between particles in each state."] });
 
@@ -265,7 +265,7 @@ concept("phys.thermal.expansion", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Why can boiling water crack a thick glass tumbler?",
-    options: [["The inside heats and expands before the outside, causing strain", "Correct."], ["Hot water is heavier and presses harder on the glass", "Not the reason."], ["Thick glass starts to soften and melt at about 100 °C", "Glass melts at a much higher temperature."], ["Hot water makes the glass contract and pull itself apart", "It expands it."]],
+    options: [["The inside heats and expands before the outside, causing strain", "Correct."], ["Hot water is heavier and presses harder on the glass", "Not the reason."], ["Thick glass starts to soften and melt at about 100 °C", "Glass melts at a much higher temperature."], ["Hot water makes the glass contract quickly and pull itself apart", "It expands it."]],
     answer: "A", explanation: "Glass is a poor conductor, so the inner surface expands while the outer is still cool; the uneven expansion can crack it." });
 
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,
@@ -295,7 +295,7 @@ concept("phys.thermal.thermometers", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL", applies: Z,
     stem: "What is the lower fixed point of the Celsius scale?",
-    options: [["The temperature of pure melting ice, 0 °C", "Correct."], ["The temperature of the human body", "Not a fixed point."], ["The steam point, 100 °C", "That is the upper fixed point."], ["Absolute zero", "Not used as a fixed point here."]],
+    options: [["The temperature of pure melting ice, 0 °C", "Correct."], ["The temperature of the human body", "Not a fixed point."], ["The steam point of pure boiling water, 100 °C", "That is the upper fixed point."], ["Absolute zero", "Not used as a fixed point here."]],
     answer: "A", explanation: "The ice point, pure melting ice, defines 0 °C." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z, daily: true,
@@ -311,7 +311,7 @@ concept("phys.thermal.thermometers", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING", applies: Z,
     stem: "Why does a clinical thermometer have a constriction (narrow kink) just above the bulb?",
-    options: [["So the liquid thread stays put after it is taken from the patient", "Correct."], ["To make it more sensitive to small changes in temperature", "Sensitivity comes from the narrow bore."], ["To stop the liquid expanding past the top of the scale", "It does not stop expansion."], ["To make the range of temperatures it can measure wider", "The range is deliberately small."]],
+    options: [["So the liquid thread stays put after it is taken from the patient", "Correct."], ["To make it more sensitive to small changes in the patient's temperature", "Sensitivity comes from the narrow bore."], ["To stop the liquid expanding past the top of the scale", "It does not stop expansion."], ["To make the range of temperatures it can measure wider", "The range is deliberately small."]],
     answer: "A", explanation: "The constriction breaks the thread when the liquid contracts, so the highest reading can be read later." });
 
   q.mcq({ d: 3, skill: "EVALUATION", applies: Z,

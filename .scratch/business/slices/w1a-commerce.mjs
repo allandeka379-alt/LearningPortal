@@ -88,7 +88,7 @@ concept("bus.trade.home-trade-documents", { file: "exam/w1a-commerce", keyPrefix
       P.mcq({
         label: "(b)", marks: 1,
         stem: "When will Farai become the owner of the welding machine?",
-        options: [["After paying the last instalment", "Correct: under hire purchase ownership passes at the end."], ["When he pays the deposit", "The deposit gives possession, not ownership."], ["When he signs the agreement", "That is when ownership passes under a credit sale."], ["After half the instalments", "Ownership does not pass part-way."]],
+        options: [["After paying the last instalment", "Correct: under hire purchase ownership passes at the end."], ["When he pays the deposit", "The deposit gives possession, not ownership."], ["When he signs the hire purchase agreement", "That is when ownership passes under a credit sale."], ["After half the instalments", "Ownership does not pass part-way."]],
         answer: "A",
       }),
       P.manual({

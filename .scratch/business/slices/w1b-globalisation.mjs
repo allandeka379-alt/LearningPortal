@@ -33,7 +33,7 @@ concept("bus.economy.globalisation", { file: "economy/globalisation", keyPrefix:
       ["They reduce barriers such as tariffs between member countries", "Correct: lower barriers make trading across borders cheaper and easier."],
       ["They require every country to use one currency", "Free trade agreements do not require a single currency."],
       ["They ban multinational companies", "They do not ban multinationals; they often encourage investment."],
-      ["They set the wages paid in every member country", "Wages are not set by free trade agreements."],
+      ["They set the minimum wages paid by employers in every member country", "Wages are not set by free trade agreements."],
     ],
     answer: "A",
     explanation: "A free trade agreement removes or reduces tariffs and quotas between members, so firms can sell into a bigger market on better terms.",

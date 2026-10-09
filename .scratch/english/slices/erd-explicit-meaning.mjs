@@ -37,7 +37,7 @@ concept("eng.reading.explicit-meaning", { file: "reading/explicit-meaning", keyP
       ["Looking quickly through a text for one particular word, name or number", "Correct: scanning hunts for a specific item without reading every word."],
       ["Reading a whole text quickly to find out its general topic", "That is skimming: reading for the gist."],
       ["Reading every sentence slowly and making notes on each one", "That is close or intensive reading, not scanning."],
-      ["Working out an idea that the writer suggests but never states", "That is inference, which finds implicit meaning."],
+      ["Working out an idea that the writer only suggests but never states directly", "That is inference, which finds implicit meaning."],
     ],
     answer: "A",
     explanation: "**Scanning** = searching for a specific detail (a name, date, number or key word). **Skimming** = reading quickly for the gist. Use skimming first, then scanning for each question.",
@@ -277,7 +277,7 @@ concept("eng.reading.explicit-meaning", { file: "reading/explicit-meaning", keyP
     stem: `${MARKET}\n\nAccording to paragraph 1, why do the writer and Mbuya leave home so early?`,
     options: [
       ["The best places at the market go to those who arrive first", "Correct: this is the reason stated after because."],
-      ["The walk to the market takes them more than two hours", "The walk takes forty minutes."],
+      ["The walk to the market usually takes them more than two hours", "The walk takes forty minutes."],
       ["Mbuya wants to avoid the heat of the late morning sun", "The heat is mentioned in paragraph 4, not as a reason for leaving early."],
       ["They need to buy roasted maize before it is sold out", "The roasting-maize sellers are only mentioned as a warm smell."],
     ],
@@ -290,7 +290,7 @@ concept("eng.reading.explicit-meaning", { file: "reading/explicit-meaning", keyP
     stem: `${MARKET}\n\nWhich statement is **directly stated** in the blog, rather than suggested?`,
     options: [
       ["Mbuya counts her money twice before leaving the market.", "Correct: paragraph 4 states this in so many words."],
-      ["Mbuya's customers are fond of her friendly manner.", "This is suggested by the smiles and extra banana, but not stated."],
+      ["Mbuya's regular customers are fond of her friendly manner.", "This is suggested by the smiles and extra banana, but not stated."],
       ["The writer is proud of the Commerce project.", "Pride may be implied, but the blog never says it."],
       ["Mbuya earns more money now than she did before.", "This is likely but not stated; the blog says only that she brings more avocados."],
     ],

@@ -33,7 +33,7 @@ concept("comp.internet.cookies", { file: "internet/cookies", keyPrefix: "interne
   b.mcq({
     d: 2, skill: "UNDERSTANDING",
     stem: "Which is the best example of a use for a **session** cookie?",
-    options: [["Keeping items in a shopping basket while the user browses", "Correct: needed only during the visit."], ["Remembering a user's login for next month", "That needs a persistent cookie."], ["Remembering a chosen language for future visits", "That needs a persistent cookie."], ["Building a record of interests over many weeks", "Long-term tracking uses persistent cookies."]],
+    options: [["Keeping items in a shopping basket while the user browses", "Correct: needed only during the visit."], ["Remembering a user's login for next month", "That needs a persistent cookie."], ["Remembering a chosen language for future visits", "That needs a persistent cookie."], ["Building a record of the user's interests over many weeks of browsing", "Long-term tracking uses persistent cookies."]],
     answer: "A",
     explanation: "Session cookies support one visit, such as keeping a basket or a login while moving between pages.",
   });

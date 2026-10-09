@@ -47,7 +47,7 @@ concept("geo.energy.types-sources", { file: "energy/types-sources", keyPrefix: "
     stem: "What is **biogas** mainly made of, and how is it produced?",
     options: [
       ["Methane, produced when dung and plant waste rot without air in a digester", "Correct: bacteria break down the waste anaerobically and give off methane."],
-      ["Carbon dioxide, produced when wood is burned in a closed stove", "Burning wood gives off carbon dioxide and smoke, not biogas."],
+      ["Carbon dioxide, produced when wood and dung are burned in a closed stove", "Burning wood gives off carbon dioxide and smoke, not biogas."],
       ["Hydrogen, produced when water is split by sunlight", "This is not how biogas is made."],
       ["Steam, produced when crop waste is boiled in a tank", "Biogas is a burnable gas, not steam."],
     ],
@@ -98,7 +98,7 @@ concept("geo.energy.types-sources", { file: "energy/types-sources", keyPrefix: "
     options: [
       ["It has large coal reserves and needs reliable power day and night", "Correct: coal gives reliable base-load power from a local resource, whatever the weather."],
       ["Coal-fired stations produce no carbon dioxide", "Burning coal releases large amounts of carbon dioxide."],
-      ["Coal is a renewable resource that will never run out", "Coal is non-renewable."],
+      ["Coal is a renewable resource, so the country's reserves will never run out", "Coal is non-renewable."],
       ["Coal-fired stations need no water for cooling", "Thermal stations need large amounts of water for cooling."],
     ],
     answer: "A",

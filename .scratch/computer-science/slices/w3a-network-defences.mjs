@@ -45,7 +45,7 @@ concept("comp.security.network-defences", { file: "security/network-defences", k
       ["Updates patch security weaknesses that attackers exploit", "Correct: fixes are applied as soon as they are released."],
       ["Updates remove the need for passwords", "Passwords are still needed."],
       ["Updates make the screen resolution higher", "Security updates do not change resolution."],
-      ["Updates stop the user from receiving any email", "Updates do not block email."],
+      ["Updates stop the user from receiving any email with attachments", "Updates do not block email."],
     ],
     answer: "A",
     explanation: "Automatic updates close security holes quickly, before hackers or malware can exploit them.",

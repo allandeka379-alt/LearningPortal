@@ -31,7 +31,7 @@ concept("eng.functional.article", { file: "functional/article", keyPrefix: "func
     stem: "Which opening sentence best **hooks** readers of an article on teenagers and sleep?",
     options: [
       ["Be honest: when did you last sleep a full eight hours before an exam?", "Correct: a direct question involves the reader at once."],
-      ["This article is going to be about teenagers and their sleep.", "Announcing the topic is dull and wastes the opening."],
+      ["This article is going to be all about teenagers and their sleeping habits.", "Announcing the topic is dull and wastes the opening."],
       ["Sleep is a thing that all people and animals do every night.", "A vague general statement does not grab attention."],
       ["I am writing to inform you of the importance of sleep.", "This is a formal letter opening, not an article hook."],
     ],
@@ -43,7 +43,7 @@ concept("eng.functional.article", { file: "functional/article", keyPrefix: "func
     stem: "Which feature shows that a text is an **article** rather than a **formal letter**?",
     options: [
       ["It has a headline and a by-line instead of addresses and a salutation.", "Correct: these are the format features of an article."],
-      ["It has the writer's address and the date in the top right corner.", "Those are features of a letter."],
+      ["It has the writer's address and the full date in the top right-hand corner.", "Those are features of a letter."],
       ["It ends with Yours faithfully and the writer's full name.", "That is a formal letter close."],
       ["It has To, From and Date lines above the first paragraph.", "Those belong to a memo or report."],
     ],

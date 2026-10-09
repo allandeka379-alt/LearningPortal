@@ -43,7 +43,7 @@ concept("bus.people.training", { file: "people/training", keyPrefix: "people.tra
     stem: "Which is a disadvantage of off-the-job training?",
     options: [
       ["It is expensive and no output is produced during the course", "Correct: fees plus lost output."],
-      ["Trainees are taught only by unqualified colleagues", "Off-the-job courses usually use experts."],
+      ["Trainees are taught only by unqualified and inexperienced colleagues", "Off-the-job courses usually use experts."],
       ["Trainees practise on real customers", "Off-the-job training avoids that risk."],
       ["It is only for new employees", "Induction is the training for new employees."],
     ],
@@ -68,7 +68,7 @@ concept("bus.people.training", { file: "people/training", keyPrefix: "people.tra
     options: [
       ["Expert trainers teach without risk to real patients", "Correct: mistakes on patients would be dangerous."],
       ["It is the cheapest form of training", "Off-the-job training is usually the most expensive."],
-      ["Nobody else in the hospital can do any work", "Other staff keep working."],
+      ["Nobody else in the hospital can do any work during training", "Other staff keep working."],
       ["It counts as induction for the staff", "The staff are existing employees."],
     ],
     answer: "A",
@@ -80,7 +80,7 @@ concept("bus.people.training", { file: "people/training", keyPrefix: "people.tra
     stem: "Why might a business worry about paying for employees to gain qualifications off the job?",
     options: [
       ["Qualified staff may leave for better-paid jobs elsewhere", "Correct: rivals may recruit them."],
-      ["Qualified staff always become less productive", "Training usually raises productivity."],
+      ["Qualified staff always become less productive in their jobs", "Training usually raises productivity."],
       ["Qualifications reduce staff motivation", "Gaining qualifications usually motivates."],
       ["It increases the risk of accidents", "Training reduces accidents."],
     ],

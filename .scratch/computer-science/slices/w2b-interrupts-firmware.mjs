@@ -45,7 +45,7 @@ concept("comp.software.interrupts-firmware", { file: "software/interrupts-firmwa
     stem: "Why is the bootloader stored in ROM or flash memory rather than in RAM?",
     options: [
       ["It must be available as soon as the power is switched on, and RAM is volatile", "Correct: RAM is empty at power-on; ROM and flash keep their contents."],
-      ["ROM is much faster than RAM, so the computer starts more quickly", "Speed is not the reason; RAM is usually faster to access."],
+      ["ROM is much faster to access than RAM, so the computer starts up far more quickly", "Speed is not the reason; RAM is usually faster to access."],
       ["RAM is too small to hold the bootloader as well as the OS", "RAM holds the OS and applications once loaded."],
       ["The user needs to change the bootloader every day", "Firmware is rarely changed; ROM is read-only."],
     ],
@@ -84,7 +84,7 @@ concept("comp.software.interrupts-firmware", { file: "software/interrupts-firmwa
     options: [
       ["Applications run on the OS, the OS runs on the firmware, the firmware runs on the hardware", "Correct: each layer runs on the one below."],
       ["Applications run directly on the hardware, without the OS", "Applications request services from the OS."],
-      ["The OS runs on the applications, and the applications run on the firmware", "The order is reversed."],
+      ["The OS runs on the applications, the applications run on the firmware, the firmware on the hardware", "The OS and the applications are the wrong way round."],
       ["The firmware runs on the OS, and the OS runs directly on the hardware", "The firmware is below the OS: it loads it."],
     ],
     answer: "A",

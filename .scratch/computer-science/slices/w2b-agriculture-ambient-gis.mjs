@@ -86,7 +86,7 @@ concept("comp.applications.agriculture-ambient-gis", { file: "applications/agric
       ["Data about the family's daily habits is collected and could be misused", "Correct: cameras and sensors record when people come and go."],
       ["Lights switch off automatically when the rooms are empty", "This is a benefit (saving energy)."],
       ["Elderly residents can get help after a fall", "This is a benefit."],
-      ["Appliances can be set to run when electricity is cheapest", "This is a benefit."],
+      ["Appliances can be set to run at night or whenever electricity is cheapest", "This is a benefit."],
     ],
     answer: "A",
     explanation: "Smart systems collect personal data; hacking and misuse are privacy risks.",

@@ -75,7 +75,7 @@ concept("econ.basics.scarcity", { file: "basics/scarcity", keyPrefix: "basics.sc
       ["For whom to produce", "Correct: the council is deciding who receives the stalls."],
       ["What to produce", "Building stalls was already decided; this is about who gets them."],
       ["How to produce", "No choice of production method is described."],
-      ["Where to produce", "Location is not one of the three basic questions."],
+      ["Where to produce them", "Location is not one of the three basic questions."],
     ],
     answer: "A",
     explanation: "*For whom to produce* is about how output is distributed among people: by ability to pay, by need, or by another rule.",

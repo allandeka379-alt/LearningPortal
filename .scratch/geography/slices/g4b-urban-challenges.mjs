@@ -19,7 +19,7 @@ concept("geo.settlement.urban-challenges", { file: "settlement/urban-challenges"
     stem: "What is **urban sprawl**?",
     options: [
       ["The spread of a town's built-up area into the countryside", "Correct: the outward, often uncontrolled, growth of the town."],
-      ["The movement of people from towns to rural areas", "That is counter-urbanisation."],
+      ["The movement of people from large towns back to rural areas", "That is counter-urbanisation."],
       ["The rebuilding of old housing in the inner city", "That is urban regeneration."],
       ["Overcrowding in the central business district", "Sprawl is about outward spread, not crowding at the centre."],
     ],
@@ -43,7 +43,7 @@ concept("geo.settlement.urban-challenges", { file: "settlement/urban-challenges"
     stem: "Why do many urban residents in LICs work in the informal sector?",
     options: [
       ["There are too few formal jobs for the growing population", "Correct: formal employment grows more slowly than the population."],
-      ["Informal jobs always pay more than formal jobs", "Informal incomes are usually low and uncertain."],
+      ["Informal jobs always pay more than formal jobs in offices", "Informal incomes are usually low and uncertain."],
       ["The informal sector is required by law", "Informal work is, by definition, unregistered."],
       ["Formal jobs are found only in rural areas", "Most formal jobs are in towns."],
     ],

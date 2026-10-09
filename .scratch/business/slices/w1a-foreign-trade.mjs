@@ -55,7 +55,7 @@ concept("bus.trade.foreign-trade", { file: "trade/foreign-trade", keyPrefix: "tr
     stem: "Which is a difficulty faced by an exporter that is **not** usually faced in home trade?",
     options: [
       ["Converting payment between different currencies", "Correct: home trade uses one currency."],
-      ["Customers who delay paying their debts", "Late payment can happen in home trade too."],
+      ["Customers who delay paying their debts for months", "Late payment can happen in home trade too."],
       ["Competition from other sellers", "Competition exists in home trade as well."],
       ["Paying for transport to customers", "Home traders also pay transport costs."],
     ],
@@ -67,7 +67,7 @@ concept("bus.trade.foreign-trade", { file: "trade/foreign-trade", keyPrefix: "tr
     stem: "Why do Zimbabwean exporters often face higher transport costs than exporters in coastal countries?",
     options: [
       ["Zimbabwe is landlocked, so goods cross other countries to reach a port", "Correct: road or rail transit to Beira, Durban or Dar es Salaam adds cost and delay."],
-      ["Zimbabwe has no road or rail links with its neighbours", "Zimbabwe has road and rail links with its neighbours."],
+      ["Zimbabwe has no road or rail links with any of its neighbouring countries", "Zimbabwe has road and rail links with its neighbours."],
       ["Exporters must use air freight for every product", "Most bulk exports go by road and rail."],
       ["Foreign buyers refuse to pay for any transport", "Who pays depends on the contract terms."],
     ],
@@ -209,7 +209,7 @@ concept("bus.trade.foreign-trade", { file: "trade/foreign-trade", keyPrefix: "tr
       P.mcq({
         label: "(b)", marks: 1,
         stem: "Farai sometimes sends parts on to buyers in Zambia without changing them. This part of his business is:",
-        options: [["entrepot (re-export) trade", "Correct: imported goods re-exported."], ["home trade", "Selling to another country is not home trade."], ["direct production", "Direct production is for own use."], ["visible import trade", "Sending goods out of the country is not importing."]],
+        options: [["entrepot (re-export) trade", "Correct: imported goods re-exported."], ["home trade", "Selling to another country is not home trade."], ["direct production", "Direct production is for own use."], ["visible import (inward) trade", "Sending goods out of the country is not importing."]],
         answer: "A",
       }),
       P.manual({

@@ -30,7 +30,7 @@ concept("geo.maps.thematic-maps", { file: "maps/thematic-maps", keyPrefix: "maps
       ["A map with areas shaded according to the value of a statistic", "Correct: darker shades usually show higher values."],
       ["A map with lines joining places of equal value", "That is an isoline map."],
       ["A map with dots each standing for a fixed quantity", "That is a dot distribution map."],
-      ["A map with lines whose width shows the amount moving", "That is a flow-line map."],
+      ["A map with lines whose width shows the amount moving between places", "That is a flow-line map."],
     ],
     answer: "A",
     explanation: "A **choropleth** map shades areas (wards, districts, provinces) by class of value, with a key.",
@@ -102,7 +102,7 @@ concept("geo.maps.thematic-maps", { file: "maps/thematic-maps", keyPrefix: "maps
     options: [
       ["Each area looks uniform, hiding variations within it", "Correct: a district looks evenly shaded although people cluster in towns."],
       ["It cannot show any data about areas", "Area data is exactly what choropleths show."],
-      ["It needs a separate symbol for every person", "That describes dot maps with a very small dot value."],
+      ["It needs a separate symbol for every person living in each area", "That describes dot maps with a very small dot value."],
       ["It can only be drawn for rainfall data", "Choropleths can show any rate or density by area."],
     ],
     answer: "A",
@@ -126,7 +126,7 @@ concept("geo.maps.thematic-maps", { file: "maps/thematic-maps", keyPrefix: "maps
     options: [
       ["A rapid change in value over a short distance", "Correct: as with contours, close spacing means a steep gradient of change."],
       ["The highest values on the map", "Spacing shows the rate of change, not the size of the value."],
-      ["An area where no data was collected", "Close lines need data; gaps in data give vague, widely spaced lines."],
+      ["An area where no data was collected by the survey", "Close lines need data; gaps in data give vague, widely spaced lines."],
       ["A gentle, gradual change in value", "Gentle change gives widely spaced isolines."],
     ],
     answer: "A",

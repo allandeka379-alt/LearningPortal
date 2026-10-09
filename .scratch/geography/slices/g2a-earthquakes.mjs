@@ -34,7 +34,7 @@ concept("geo.tectonics.earthquakes", { file: "tectonics/earthquakes", keyPrefix:
     options: [
       ["The effects of an earthquake at a particular place", "Correct: intensity, from I to XII."],
       ["The total energy released at the focus", "That is magnitude (Richter or moment magnitude)."],
-      ["The depth of the focus below the surface", "Depth is measured in kilometres, not on the Mercalli scale."],
+      ["The depth of the focus below the Earth's surface in km", "Depth is measured in kilometres, not on the Mercalli scale."],
       ["The speed of the seismic waves", "Wave speed is not what the scale describes."],
     ],
     answer: "A",
@@ -82,7 +82,7 @@ concept("geo.tectonics.earthquakes", { file: "tectonics/earthquakes", keyPrefix:
     options: [
       ["The water's weight and pressure triggered slip on faults", "Correct: reservoir-induced seismicity."],
       ["A new plate boundary formed under the lake", "No new plate boundary formed; Kariba lies inside the African plate."],
-      ["Strong waves on the lake shook the ground below", "Lake waves are far too weak to cause earthquakes."],
+      ["Strong waves on the lake shook the ground and rocks below the water", "Lake waves are far too weak to cause earthquakes."],
       ["Volcanoes erupted beneath the lake", "There are no active volcanoes in Zimbabwe."],
     ],
     answer: "A",

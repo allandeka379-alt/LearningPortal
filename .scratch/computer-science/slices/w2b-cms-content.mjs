@@ -52,7 +52,7 @@ concept("comp.web.cms-content", { file: "web/cms-content", keyPrefix: "web.cms-c
     options: [
       ["The content is stored separately from the theme that controls the design", "Correct: switching theme re-presents the same content."],
       ["Every page of the site is saved as a single picture", "Pages are built from content and theme."],
-      ["The visitor's browser chooses a new design for each visitor", "The design comes from the theme on the server."],
+      ["The visitor's browser chooses a new design for each visitor when the page loads", "The design comes from the theme on the server."],
       ["Plugins automatically retype the content", "Plugins add features; they do not retype content."],
     ],
     answer: "A",
@@ -65,7 +65,7 @@ concept("comp.web.cms-content", { file: "web/cms-content", keyPrefix: "web.cms-c
       ["An automatically updated list of the newest content for subscribers", "Correct: readers see new posts without visiting."],
       ["A way for visitors to pay for goods on the website", "That is an e-commerce plugin."],
       ["A backup copy of the site's database", "That is a backup plugin."],
-      ["A theme that rearranges its layout to work on phones", "That is a responsive theme."],
+      ["A theme that rearranges the site's layout so that it works well on phones and tablets", "That is a responsive theme."],
     ],
     answer: "A",
     explanation: "Feed readers and other sites use the feed to show new posts as they appear.",
@@ -193,7 +193,7 @@ concept("comp.web.cms-content", { file: "web/cms-content", keyPrefix: "web.cms-c
     stem: "Chipo is building a website for her family's lodge near Victoria Falls using a CMS.",
     parts: [
       P.manual({ label: "(a)", marks: 2, stem: "Describe how the CMS produces a page when a visitor requests it.", points: ["The content is retrieved from the database", "It is placed into the theme's layout and sent to the browser as HTML"], modelAnswer: "The CMS takes the page's content from its database, places it into the theme's layout and sends the resulting HTML to the visitor's browser." }),
-      P.mcq({ label: "(b)", stem: "Which would let guests book rooms on the site?", options: [["A booking (e-commerce) plugin", "Correct."], ["A new colour scheme", "Only changes the look."], ["A larger logo", "Only changes the look."], ["A web feed", "Lists new posts."]], answer: "A", explanation: "Plugins add features." }),
+      P.mcq({ label: "(b)", stem: "Which would let guests book rooms on the site?", options: [["A booking (e-commerce) plugin", "Correct."], ["A new colour scheme for the booking page", "Only changes the look."], ["A larger logo", "Only changes the look."], ["A web feed", "Lists new posts."]], answer: "A", explanation: "Plugins add features." }),
       P.mcq({ label: "(c)", stem: "Which format should she use for photos of the lodge?", options: [["JPEG", "Correct."], ["GIF", "Few colours."], ["SVG", "For vector graphics."], ["MP4", "Video format."]], answer: "A", explanation: "JPEG for photographs." }),
       P.manual({ label: "(d)", marks: 2, stem: "Explain why she should resize the photos before uploading them.", points: ["Smaller image dimensions mean smaller files", "Pages load faster / use less of visitors' mobile data / less storage space"], modelAnswer: "Resizing reduces the number of pixels and so the file size, so pages load faster and use less of visitors' data." }),
     ],

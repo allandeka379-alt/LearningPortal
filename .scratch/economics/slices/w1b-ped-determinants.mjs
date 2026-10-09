@@ -161,7 +161,7 @@ concept("econ.elasticity.ped-determinants", { file: "elasticity/ped-determinants
   });
 
   // Structured 1: data on PEDs for several goods.
-  const rows = [["Bread", -0.3], ["Mobile data bundles (one network)", -1.8], ["Cinema tickets", -1.4], ["Electricity (short run)", -0.2]];
+  const rows = [["Bread", -0.3], ["Mobile data bundles (one network)", -1.8], ["Cinema tickets", -1.4], ["Electricity for households (short run)", -0.2]];
   const t = table(["Good", "Estimated PED"], rows.map(([g, v]) => [g, f2(v)]));
   b.struct({
     d: 4, skill: "ANALYSIS", examStyle: true, marks: 8,
@@ -169,11 +169,11 @@ concept("econ.elasticity.ped-determinants", { file: "elasticity/ped-determinants
     parts: [
       P.mcq({
         label: "(a)", stem: "Which good has the most price elastic demand?",
-        options: [["Mobile data bundles (one network)", "Correct: 1.8 is the largest value ignoring the sign."], ["Cinema tickets", "1.4 is elastic but smaller than 1.8."], ["Bread", "0.3 is inelastic."], ["Electricity (short run)", "0.2 is the least elastic."]],
+        options: [["Mobile data bundles (one network)", "Correct: 1.8 is the largest value ignoring the sign."], ["Cinema tickets", "1.4 is elastic but smaller than 1.8."], ["Bread", "0.3 is inelastic."], ["Electricity for households (short run)", "0.2 is the least elastic."]],
         answer: "A",
         explanation: "Ignoring the sign, 1.8 is the largest PED.",
       }),
-      P.short({ label: "(b)", marks: 1, stem: "Name the good whose demand is the **least** responsive to price.", accepted: ["Electricity", "Electricity (short run)", "electricity in the short run"], wrong: ["Bread"], explanation: "Electricity in the short run: 0.2." }),
+      P.short({ label: "(b)", marks: 1, stem: "Name the good whose demand is the **least** responsive to price.", accepted: ["Electricity", "Electricity (short run)", "Electricity for households (short run)", "electricity in the short run"], wrong: ["Bread"], explanation: "Electricity in the short run: 0.2." }),
       P.manual({
         label: "(c)", marks: 6,
         stem: "Explain why the demand for mobile data bundles from one network is elastic while the demand for electricity in the short run is inelastic.",

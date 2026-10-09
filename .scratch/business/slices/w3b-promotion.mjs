@@ -81,7 +81,7 @@ concept("bus.marketing.promotion", { file: "marketing/promotion", keyPrefix: "ma
     options: [
       ["Customers wait for offers and the brand may look cheap", "Correct: regular offers lower the value customers place on the brand."],
       ["Sales rise permanently and stock runs out", "Sales from offers are usually temporary."],
-      ["Advertising becomes unnecessary for the brand", "Offers still need to be communicated."],
+      ["Advertising becomes completely unnecessary for the brand", "Offers still need to be communicated."],
       ["The business is forced to raise its prices", "Offers lower prices; they do not force a rise."],
     ],
     answer: "A",
@@ -93,7 +93,7 @@ concept("bus.marketing.promotion", { file: "marketing/promotion", keyPrefix: "ma
     stem: "What is the main advantage of targeted online advertising compared with a newspaper advert?",
     options: [
       ["It reaches mainly people likely to buy, and results can be measured", "Correct: less money wasted on people outside the target market."],
-      ["It reaches every adult in the country at the same time", "It is aimed at chosen groups, not everyone."],
+      ["It reaches every adult in the whole country at exactly the same time", "It is aimed at chosen groups, not everyone."],
       ["It needs no information about the people who see it", "Targeting uses data about users."],
       ["Customers cannot ignore it or switch it off", "Online adverts are often ignored or blocked."],
     ],

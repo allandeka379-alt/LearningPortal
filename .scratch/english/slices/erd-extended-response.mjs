@@ -68,7 +68,7 @@ concept("eng.reading.extended-response", { file: "reading/extended-response", ke
     stem: `${FERRY}\n\nWhich sentence in Lindani's journal **develops** a detail from the story most effectively?`,
     options: [
       ["When the branch spun us round, I saw Baba's face and knew he was afraid too.", "Correct: it uses the branch detail and interprets the father's feelings plausibly."],
-      ["A branch hit the boat halfway across and spun it round in the water.", "This only repeats the text without development."],
+      ["A branch hit the boat halfway across the river and spun it round in the water.", "This only repeats the text without development."],
       ["Then a crocodile leapt out and bit through the side of the boat.", "This invents a major event that is not in the text."],
       ["The river was brown and high, and the nurse had a cooler box.", "This lists details without explaining or interpreting them."],
     ],
@@ -115,7 +115,7 @@ concept("eng.reading.extended-response", { file: "reading/extended-response", ke
     stem: `${LIBRARY}\n\nYou are Mr Chinyama, writing a speech to town pupils. Which sentence best **interprets** his comment that the hardest part is *driving away when a child is still choosing*?`,
     options: [
       ["I hate leaving because I know it will be two weeks before that child can choose again.", "Correct: it explains the feeling, using the twice-a-month detail."],
-      ["The hardest part is driving away when a child is still choosing a book.", "This repeats his words without interpretation."],
+      ["As I told you, the hardest part is driving away when a child is still choosing a book.", "This repeats his words without interpretation."],
       ["Children in Mudzi do not like reading very much at all.", "This contradicts the queues and waiting lists."],
       ["Driving the lorry is difficult because the roads are tarred.", "The roads are dirt, and this misses the point of the comment."],
     ],

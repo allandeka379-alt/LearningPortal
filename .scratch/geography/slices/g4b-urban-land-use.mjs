@@ -31,7 +31,7 @@ concept("geo.settlement.urban-land-use", { file: "settlement/urban-land-use", ke
     stem: "Which feature is typical of the CBD?",
     options: [
       ["Tall office blocks with few permanent residents", "Correct: offices and shops dominate and few people live there."],
-      ["Large houses on big plots with gardens", "This describes low-density residential areas."],
+      ["Large houses on big plots with gardens and trees", "This describes low-density residential areas."],
       ["Small farms and smallholdings", "These are found on the rural-urban fringe."],
       ["Factories beside railway sidings", "This describes the industrial zone."],
     ],

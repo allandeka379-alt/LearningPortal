@@ -70,7 +70,7 @@ concept("eng.composition.informative", { file: "composition/informative", keyPre
     options: [
       ["Mulching, covering the soil with dry grass, keeps it moist.", "Correct: a brief definition in your own words, built into the sentence."],
       ["Mulching is a word that is used by many people.", "This says nothing about what mulching means."],
-      ["Look up mulching in a dictionary if you do not know it.", "The writer, not the reader, should define the term."],
+      ["Look up mulching in a dictionary if you do not know the word.", "The writer, not the reader, should define the term."],
       ["Mulching is mulching, as every farmer will tell you.", "This repeats the word instead of defining it."],
     ],
     answer: "A",

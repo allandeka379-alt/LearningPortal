@@ -12,7 +12,7 @@ concept("geo.ecosystems.savanna-desert", { file: "ecosystems/savanna-desert", ke
       ["Savanna (tropical continental)", "Correct: miombo and mopane woodland and wooded grassland."],
       ["Tropical rainforest", "Zimbabwe has a long dry season, so rainforest cannot grow."],
       ["Hot desert", "Even the driest parts of Zimbabwe receive more rain than a true desert."],
-      ["Mediterranean scrub", "This biome is found near 30-40° on west coasts, such as the Cape."],
+      ["Mediterranean scrub (warm temperate)", "This biome is found near 30-40° on west coasts, such as the Cape."],
     ],
     answer: "A",
     explanation: "Zimbabwe lies in the savanna belt, with a hot wet season and a long dry season. Its natural vegetation is mainly miombo and mopane woodland.",
@@ -96,7 +96,7 @@ concept("geo.ecosystems.savanna-desert", { file: "ecosystems/savanna-desert", ke
     options: [
       ["It reduces the leaf area exposed to the sun, so less water is lost", "Correct: less transpiration in the hottest hours."],
       ["It traps insects for extra nutrients from the soil", "Mopane is not an insect-trapping plant."],
-      ["It makes the leaves too bitter for all browsing animals", "Elephants and other animals browse mopane."],
+      ["It makes the leaves too bitter for elephants and all other browsing animals", "Elephants and other animals browse mopane."],
       ["It allows the leaves to catch more of the sunlight", "Folding exposes less leaf to the sun, not more."],
     ],
     answer: "A",

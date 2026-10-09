@@ -31,7 +31,7 @@ concept("geo.agriculture.systems-factors", { file: "agriculture/systems-factors"
     stem: "Which is an example of **feedback** in a farming system?",
     options: [
       ["Money from selling a crop is used to buy next season's seed", "Correct: an output returns to become an input."],
-      ["Rain falls on the fields during the wet season", "Rainfall is a physical input."],
+      ["Rain falls on the fields during the wet season from November to March", "Rainfall is a physical input."],
       ["The farmer weeds the maize field", "Weeding is a process."],
       ["Milk is sold to a dairy company", "Milk is an output; feedback happens when its value returns as an input."],
     ],
@@ -93,7 +93,7 @@ concept("geo.agriculture.systems-factors", { file: "agriculture/systems-factors"
     options: [
       ["Zoning the land into separate grazing, arable and wetland areas", "Correct: zoning separates uses, keeps cattle from fields and protects stream banks."],
       ["Increasing the number of cattle each family keeps", "More cattle would make straying and overgrazing worse."],
-      ["Ploughing the grazing land to plant more maize", "This would push cattle into even less space."],
+      ["Ploughing up the communal grazing land so that more maize can be planted", "This would push cattle into even less space."],
       ["Moving all gardens closer to the stream", "This would increase stream-bank cultivation and erosion."],
     ],
     answer: "A",

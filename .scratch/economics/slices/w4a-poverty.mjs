@@ -99,10 +99,10 @@ concept("econ.development.poverty", { file: "development/poverty", keyPrefix: "d
     d: 4, skill: "ANALYSIS",
     stem: "Why do poor households pay a larger share of their income in VAT than rich households?",
     options: [
-      ["They spend almost all their income, while rich households save part of theirs", "Correct: VAT is paid on spending, not on saving."],
+      ["They spend almost all their income, while the rich save part of theirs", "Correct: VAT is paid on spending, not on saving."],
       ["The rate of VAT is higher on goods bought by poor people", "The rate is the same for all buyers."],
       ["Rich households are not allowed to be charged VAT", "Everyone who buys taxed goods pays VAT."],
-      ["Poor households pay VAT on their wages before they spend them", "VAT is charged on purchases, not on wages."],
+      ["Poor households pay VAT on their wages before they can spend any of them", "VAT is charged on purchases, not on wages."],
     ],
     answer: "A",
     hints: ["What share of income does each household spend?"],

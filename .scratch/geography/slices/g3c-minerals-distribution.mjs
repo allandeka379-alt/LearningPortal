@@ -55,7 +55,7 @@ concept("geo.mining.minerals-distribution", { file: "mining/minerals-distributio
     stem: "Why is **coal** not found on the Great Dyke?",
     options: [
       ["The Dyke is igneous rock, and coal forms in sedimentary rock", "Correct: coal forms from buried plant remains in sedimentary basins such as the Karoo."],
-      ["The Dyke is too far from a railway line to mine coal", "Transport affects whether a deposit is mined, not whether coal forms there."],
+      ["The Dyke is too far from a railway line for any coal to be mined", "Transport affects whether a deposit is mined, not whether coal forms there."],
       ["The coal on the Dyke has all been mined out", "There was never coal there, because the rock type is wrong."],
       ["Coal only forms at heights above 1,500 m", "Coal formation depends on rock type and buried vegetation, not on present height."],
     ],

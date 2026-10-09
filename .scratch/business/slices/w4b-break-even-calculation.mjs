@@ -19,7 +19,7 @@ concept("bus.operations.break-even-calculation", { file: "operations/break-even-
     stem: "How is contribution per unit calculated?",
     options: [
       ["Selling price − variable cost per unit", "Correct."],
-      ["Selling price − fixed costs", "Fixed costs are not deducted per unit."],
+      ["Selling price per unit − total fixed costs", "Fixed costs are not deducted per unit."],
       ["Fixed costs ÷ selling price", "This is not contribution."],
       ["Total revenue − total costs", "That gives profit."],
     ],

@@ -68,7 +68,7 @@ concept("bus.finance.users-of-accounts", { file: "finance/users-of-accounts", ke
     stem: "Which factor would **not** be shown in a company's accounts?",
     options: [
       ["The skills and motivation of its employees", "Correct: non-financial factors are missing from accounts."],
-      ["The amount it owes to its suppliers", "Trade payables appear as a current liability."],
+      ["The amount it owes to its suppliers for goods", "Trade payables appear as a current liability."],
       ["The value of its inventory", "Inventory appears as a current asset."],
       ["The profit it made during the year", "Profit appears in the statement of profit or loss."],
     ],

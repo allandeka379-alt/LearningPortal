@@ -90,7 +90,7 @@ concept("bus.marketing.product-life-cycle", { file: "marketing/product-life-cycl
       ["Profits from mature products can pay for developing new ones", "Correct: a balanced range keeps cash and profit flowing."],
       ["Products in decline make the highest profits", "Profit is falling in decline."],
       ["Products at introduction need no finance", "Launch is costly."],
-      ["It prevents competitors from entering the market", "A product range does not stop rivals."],
+      ["It stops any competitor from entering the market with rival products", "A product range does not stop rivals."],
     ],
     answer: "A",
     hints: ["Which stage produces the most cash, and which stage needs it?"],

@@ -20,7 +20,7 @@ concept("bus.finance.banking-trends", { file: "finance/banking-trends", keyPrefi
     options: [
       ["Mobile network operators", "Correct: the wallet is linked to a phone number."],
       ["The central bank", "The central bank regulates but does not run wallets."],
-      ["The tax authority", "It collects taxes."],
+      ["The tax authority (ZIMRA)", "It collects taxes."],
       ["Building societies", "They provide mortgages and savings."],
     ],
     answer: "A",

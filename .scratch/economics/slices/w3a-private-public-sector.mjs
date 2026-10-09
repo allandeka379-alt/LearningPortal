@@ -36,7 +36,7 @@ concept("econ.firms.private-public-sector", { file: "firms/private-public-sector
     stem: "Who usually appoints the board that runs a **public corporation**?",
     options: [
       ["The government minister responsible for that sector", "Correct: the minister appoints the board."],
-      ["The shareholders at an annual general meeting", "Public corporations have no private shareholders."],
+      ["The shareholders voting at an annual general meeting", "Public corporations have no private shareholders."],
       ["The workers employed by the corporation", "Workers do not appoint the board."],
       ["The customers who buy its services", "Customers do not appoint the board."],
     ],
@@ -47,10 +47,10 @@ concept("econ.firms.private-public-sector", { file: "firms/private-public-sector
     d: 2, skill: "UNDERSTANDING",
     stem: "Why might a government own the company that supplies electricity through the national grid?",
     options: [
-      ["One supplier is cheapest, and a private monopoly might charge high prices", "Correct: a natural monopoly run in the public interest."],
+      ["One supplier is cheapest, and a private monopoly might overcharge", "Correct: a natural monopoly run in the public interest."],
       ["Electricity is a free good that has no cost of production", "Electricity has large production costs."],
       ["Private firms are not allowed to produce goods in any country", "Private firms produce most goods."],
-      ["Government firms always make larger profits than private firms", "Public ownership aims at social goals, not larger profits."],
+      ["Government firms always make larger profits than private firms do", "Public ownership aims at social goals, not larger profits."],
     ],
     answer: "A",
     explanation: "A grid is a natural monopoly; state ownership can keep prices affordable and supply everyone.",
@@ -85,7 +85,7 @@ concept("econ.firms.private-public-sector", { file: "firms/private-public-sector
     stem: "A state-owned water company supplies remote villages at the same price as towns, although it costs more to do so. What is the main **opportunity cost** of this policy?",
     options: [
       ["Government money used to cover the losses cannot be spent elsewhere", "Correct: the subsidy has alternative uses."],
-      ["Villagers must pay higher prices than people in the towns", "They pay the same price."],
+      ["Villagers must pay higher prices for water than people in the towns", "They pay the same price."],
       ["The company makes higher profits from its town customers", "Supplying villages below cost reduces profit."],
       ["Private firms are forced to supply water to the villages", "The state company is the supplier here."],
     ],

@@ -86,7 +86,7 @@ concept("geo.mining.minerals-distribution", { file: "exam/zim-p2-b-mining", keyP
         label: "(b)", stem: "Which statement best describes the pattern in the table?",
         options: [
           ["Silt is deepest at the panning area and decreases downstream", "Correct: depth falls from 38 cm at B to 11 cm at E, and is only 2 cm upstream at A."],
-          ["Silt increases steadily from upstream to downstream", "Depth is low at A, peaks at B and then falls."],
+          ["Silt depth increases steadily from upstream to the furthest site downstream", "Depth is low at A, peaks at B and then falls."],
           ["Silt depth is about the same at every site", "Depths range from 2 cm to 38 cm."],
           ["Silt is deepest upstream of the panning area", "Site A has the least silt."],
         ],

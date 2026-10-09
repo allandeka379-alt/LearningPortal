@@ -82,7 +82,7 @@ concept("bus.insurance.ict", { file: "insurance/ict", keyPrefix: "insurance.ict"
     options: [
       ["Some clients lack phones or skills and want personal advice", "Correct: not every client can or wants to buy online."],
       ["Online sales are illegal in Zimbabwe", "Online insurance sales are not illegal."],
-      ["Branches make premiums lower than online sales", "Branches usually cost more to run."],
+      ["Branches make premiums lower than those for policies sold online", "Branches usually cost more to run."],
       ["Agents can change the principles of insurance", "No one can change the principles."],
     ],
     answer: "A",

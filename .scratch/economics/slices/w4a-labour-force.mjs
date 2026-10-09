@@ -14,8 +14,8 @@ concept("econ.population.labour-force", { file: "population/labour-force", keyPr
     stem: "The labour force (economically active population) consists of",
     options: [
       ["people of working age who are employed or are unemployed and seeking work.", "Correct: employed + unemployed."],
-      ["everyone in the country who is of working age, active or not.", "The working-age population includes the inactive."],
-      ["only people who have formal jobs with a written contract.", "Informal workers and the unemployed are also included."],
+      ["everyone in the country who is of working age, whether active or not.", "The working-age population includes the inactive."],
+      ["only people who have formal jobs with a written contract of employment.", "Informal workers and the unemployed are also included."],
       ["the whole population of the country, including children.", "Children are below working age."],
     ],
     answer: "A",
@@ -50,7 +50,7 @@ concept("econ.population.labour-force", { file: "population/labour-force", keyPr
     stem: "Which policy mainly changes the **composition** (skills) of the labour force rather than its size?",
     options: [
       ["Expanding vocational colleges that train artisans and technicians", "Correct: raises the share of skilled workers."],
-      ["Allowing more immigrants of all skill levels to settle", "This mainly increases the size."],
+      ["Allowing more immigrants of all skill levels to settle in the country", "This mainly increases the size."],
       ["Lowering the retirement age by five years", "This mainly reduces the size."],
       ["Building more housing in the capital city", "Housing does not directly change skills."],
     ],

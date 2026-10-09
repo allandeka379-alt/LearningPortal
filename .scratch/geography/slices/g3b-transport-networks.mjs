@@ -68,7 +68,7 @@ concept("geo.transport.networks", { file: "transport/networks", keyPrefix: "tran
     options: [
       ["Building a new road between two towns already on the network", "Correct: links rise while nodes stay the same, so links ÷ nodes increases."],
       ["Closing a road between two towns on the network", "Removing a link lowers the beta index."],
-      ["Resurfacing a road that already joins two towns", "Resurfacing improves quality but adds no link or node."],
+      ["Resurfacing and widening a road that already joins two towns on the network", "Resurfacing improves quality but adds no link or node."],
       ["Lowering the speed limit on the main trunk road", "Speed limits do not change the number of links or nodes."],
     ],
     answer: "A",

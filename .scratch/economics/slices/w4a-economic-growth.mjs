@@ -14,7 +14,7 @@ concept("econ.growth.economic-growth", { file: "growth/economic-growth", keyPref
     options: [
       ["an increase in a country's real output of goods and services over time.", "Correct: growth is a rise in real GDP."],
       ["an increase in the general level of prices over time.", "That is inflation, not growth."],
-      ["an increase in the amount of money circulating in the economy.", "More money does not mean more goods and services."],
+      ["an increase in the amount of money circulating in the economy over time.", "More money does not mean more goods and services."],
       ["an increase in the value of a country's exports over time.", "Exports are one part of spending; growth concerns total real output."],
     ],
     answer: "A",
@@ -49,7 +49,7 @@ concept("econ.growth.economic-growth", { file: "growth/economic-growth", keyPref
     stem: "Which would increase the **productive capacity** of an economy?",
     options: [
       ["A programme that trains thousands of young people as electricians and welders", "Correct: better-skilled labour raises the quality of resources."],
-      ["A rise in consumer spending when there is already full employment", "At full employment extra spending mainly raises prices; capacity is unchanged."],
+      ["A rise in consumer spending at a time when there is already full employment", "At full employment extra spending mainly raises prices; capacity is unchanged."],
       ["A rise in the price of imported fuel", "Dearer inputs raise costs; they do not add resources."],
       ["A fall in investment in new machinery", "Less investment slows the growth of the capital stock."],
     ],
@@ -62,7 +62,7 @@ concept("econ.growth.economic-growth", { file: "growth/economic-growth", keyPref
     options: [
       ["Real output still increased, but more slowly than before", "Correct: a positive growth rate means output is still rising."],
       ["Real output fell by 4% between the two years", "A fall in the growth rate is not a fall in output."],
-      ["Real output fell, because the growth rate fell", "Output falls only when the growth rate is negative."],
+      ["Real output fell, because the growth rate fell by four points", "Output falls only when the growth rate is negative."],
       ["Real output stayed the same in the second year", "A 2% growth rate means output rose by 2%."],
     ],
     answer: "A",
@@ -73,7 +73,7 @@ concept("econ.growth.economic-growth", { file: "growth/economic-growth", keyPref
     d: 3, skill: "ANALYSIS",
     stem: "In a fictional country, nominal GDP rises by 9% in a year and prices rise by 9%. What has happened to real GDP?",
     options: [
-      ["It has stayed roughly the same", "Correct: the whole rise in nominal GDP is due to higher prices."],
+      ["It is roughly unchanged", "Correct: the whole rise in nominal GDP is due to higher prices."],
       ["It has risen by about 9%", "This ignores inflation."],
       ["It has risen by about 18%", "Inflation is subtracted, not added."],
       ["It has fallen by about 9%", "Output has not fallen; nominal GDP rose as much as prices."],

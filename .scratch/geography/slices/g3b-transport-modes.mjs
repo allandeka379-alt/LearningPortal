@@ -82,7 +82,7 @@ concept("geo.transport.modes", { file: "transport/modes", keyPrefix: "transport.
       ["Road is cheaper for short journeys, rail for long ones", "Correct: road has lower terminal costs but higher line-haul costs, so the lines cross at a break-even distance."],
       ["Road is cheaper than rail over every distance", "Because the road line rises more steeply, it eventually rises above the rail line."],
       ["Rail is cheaper than road over every distance", "At short distances the road line is lower, so road is cheaper there."],
-      ["Road and rail cost the same over every distance", "The lines have different starting points and slopes, so costs differ except where they cross."],
+      ["Road and rail cost the same over every distance travelled", "The lines have different starting points and slopes, so costs differ except where they cross."],
     ],
     answer: "A",
     hints: ["The starting point of each line shows terminal costs.", "The slope shows the cost added for each extra kilometre."],
@@ -93,7 +93,7 @@ concept("geo.transport.modes", { file: "transport/modes", keyPrefix: "transport.
     stem: "What is **containerisation**?",
     options: [
       ["Carrying goods in standard steel boxes moved between ship, rail and road", "Correct: standard containers can be transferred between modes without unpacking."],
-      ["Storing grain in large concrete silos at a railway depot", "This is storage, not a method of carrying goods."],
+      ["Storing grain in large concrete silos at a railway depot before it is loaded onto wagons", "This is storage, not a method of carrying goods."],
       ["Moving liquids through a closed system of steel pipes", "This describes pipeline transport."],
       ["Packing perishable goods in ice for air freight", "This is a way of keeping goods fresh, not containerisation."],
     ],

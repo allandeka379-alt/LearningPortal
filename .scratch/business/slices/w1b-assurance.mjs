@@ -33,7 +33,7 @@ concept("bus.insurance.assurance-social-security", { file: "insurance/assurance-
       ["To provide social security for all employees", "Correct: pensions and compensation for workers, funded by compulsory contributions."],
       ["To sell car insurance to the public", "NSSA is not a motor insurer."],
       ["To guarantee bank deposits", "NSSA does not guarantee bank deposits."],
-      ["To insure exporters against bad debts", "That is the role of export credit guarantee insurance."],
+      ["To insure exporters against bad debts from foreign buyers", "That is the role of export credit guarantee insurance."],
     ],
     answer: "A",
     explanation: "NSSA was set up to give all employees, not only those with private pension schemes, protection against loss of income in old age, invalidity, injury at work and death.",
@@ -55,7 +55,7 @@ concept("bus.insurance.assurance-social-security", { file: "insurance/assurance-
     stem: "A Zimbabwean exporter sells machinery on credit to a buyer abroad and fears the buyer may never pay. Which cover is designed for this risk?",
     options: [
       ["Export credit guarantee insurance", "Correct: it covers commercial and political risks of non-payment by foreign buyers."],
-      ["Marine cargo insurance", "Cargo insurance covers loss or damage to the goods, not non-payment."],
+      ["Marine cargo insurance for exports", "Cargo insurance covers loss or damage to the goods, not non-payment."],
       ["Fidelity guarantee", "Fidelity guarantee covers dishonest employees."],
       ["Endowment assurance", "Endowment is life assurance with saving."],
     ],
@@ -81,7 +81,7 @@ concept("bus.insurance.assurance-social-security", { file: "insurance/assurance-
     stem: "Farai takes a bank loan for 8 years and wants the cheapest cover that will repay the loan if he dies before it is cleared. Which policy should he choose?",
     options: [
       ["Term assurance for 8 years", "Correct: cheap cover for the life of the loan only."],
-      ["Whole life assurance", "Whole life lasts for life and costs more than he needs."],
+      ["Whole life assurance policy", "Whole life lasts for life and costs more than he needs."],
       ["Endowment assurance", "Endowment includes saving, so its premiums are highest."],
       ["Medical aid", "Medical aid pays medical bills, not a sum on death."],
     ],
@@ -158,7 +158,7 @@ concept("bus.insurance.assurance-social-security", { file: "insurance/assurance-
     parts: [
       P.mcq({
         label: "(a)", stem: "Which single policy best meets both of Nyasha's aims?",
-        options: [["A 12-year endowment policy", "Correct: it pays at maturity for fees, or earlier if she dies."], ["A 12-year term policy", "Term pays only on death, so there is no lump sum for fees if she lives."], ["Fidelity guarantee", "This covers employee dishonesty."], ["Public liability", "This is a business liability policy."]],
+        options: [["A 12-year endowment policy", "Correct: it pays at maturity for fees, or earlier if she dies."], ["A 12-year term assurance policy", "Term pays only on death, so there is no lump sum for fees if she lives."], ["Fidelity guarantee", "This covers employee dishonesty."], ["Public liability", "This is a business liability policy."]],
         answer: "A",
       }),
       P.manual({

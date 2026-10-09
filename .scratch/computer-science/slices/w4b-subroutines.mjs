@@ -71,7 +71,7 @@ concept("comp.prog.subroutines", { file: "prog/subroutines", keyPrefix: "prog.su
     options: [
       ["A function returns a value to where it was called; a procedure does not", "Correct: that is the defining difference."],
       ["A procedure can have parameters; a function cannot", "Both can have parameters."],
-      ["A function can only be called once in each program it is in", "Both can be called as many times as needed."],
+      ["A function can be called only once in a program; a procedure can be called many times", "Both can be called as many times as needed."],
       ["A procedure always runs faster than the equivalent function", "Speed is not the difference."],
     ],
     answer: "A",
@@ -195,7 +195,7 @@ concept("comp.prog.subroutines", { file: "prog/subroutines", keyPrefix: "prog.su
       ["The returned value is not stored, so Tax never receives it", "Correct: the call must be in an expression, e.g. Tax ← CalculateTax(Price)."],
       ["Functions cannot have REAL parameters", "Any data type may be used for a parameter."],
       ["OUTPUT cannot be used after a function call", "OUTPUT can follow any statement."],
-      ["Price must be declared inside the function first", "Price is passed in as the argument."],
+      ["Price must be declared again inside the function before it is used", "Price is passed in as the argument."],
     ],
     answer: "A",
     explanation: "Write `Tax ← CalculateTax(Price)` (no CALL) and then output Tax.",

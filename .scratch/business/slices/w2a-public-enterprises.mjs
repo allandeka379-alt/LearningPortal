@@ -8,7 +8,7 @@ concept("bus.organisation.public-enterprises", { file: "organisation/public-ente
     options: [
       ["The responsible government minister", "Correct: the minister appoints the board."],
       ["The shareholders at an AGM", "Public corporations have no private shareholders."],
-      ["The workers by secret ballot", "Workers do not appoint the board."],
+      ["The workers by a secret ballot each year", "Workers do not appoint the board."],
       ["The Registrar of Companies", "The Registrar registers companies; it does not appoint parastatal boards."],
     ],
     answer: "A",

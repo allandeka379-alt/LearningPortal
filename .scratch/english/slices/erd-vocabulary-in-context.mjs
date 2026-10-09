@@ -258,7 +258,7 @@ concept("eng.reading.vocabulary-in-context", { file: "reading/vocabulary-in-cont
     options: [
       ["It was straining and struggling to keep going", "Correct: wheezing is noisy, difficult breathing, compared to an old man climbing."],
       ["It was running smoothly and quietly", "The comparison with an old man climbing suggests struggle, not smoothness."],
-      ["It was about to explode into flames", "Wheezing suggests strain, not explosion."],
+      ["It was just about to explode and burst into flames", "Wheezing suggests strain, not explosion."],
       ["It was newly repaired and powerful", "The bus is *old* and *groaned*; nothing suggests new power."],
     ],
     answer: "A",

@@ -36,7 +36,7 @@ concept("geo.energy.supply-demand", { file: "energy/supply-demand", keyPrefix: "
     options: [
       ["Reliable, uninterrupted access to enough energy at an affordable price", "Correct: security combines reliability, sufficiency and affordability."],
       ["Guarding power stations against attack by building fences", "Physical protection is only a small part of energy security."],
-      ["Producing all of a country's energy from renewable sources", "Renewables can help but do not define energy security."],
+      ["Producing all of a country's energy from renewable sources such as solar and wind", "Renewables can help but do not define energy security."],
       ["Exporting more energy than the country imports each year", "That describes a surplus, not security."],
     ],
     answer: "A",
@@ -49,7 +49,7 @@ concept("geo.energy.supply-demand", { file: "energy/supply-demand", keyPrefix: "
       ["Rapid industrial growth and rising incomes in countries such as China and India", "Correct: industrialisation and rising living standards in large populations add huge demand."],
       ["Most people have moved from towns back to rural areas", "The trend is the opposite: urbanisation has increased."],
       ["The world population has fallen, so each person uses more", "World population has continued to rise."],
-      ["Fuelwood has replaced electricity in most high-income countries", "HICs rely on electricity, gas and oil, not fuelwood."],
+      ["Fuelwood has replaced electricity for heating and cooking in most high-income countries", "HICs rely on electricity, gas and oil, not fuelwood."],
     ],
     answer: "A",
     explanation: "Population growth, industrialisation, urbanisation and rising living standards all increase demand; China and India account for much of the growth.",
@@ -72,7 +72,7 @@ concept("geo.energy.supply-demand", { file: "energy/supply-demand", keyPrefix: "
     options: [
       ["Gas supplies from Russia were cut after the war in Ukraine began", "Correct: many European countries depended on Russian gas imports."],
       ["Europe's own gas fields suddenly became exhausted", "Domestic gas fields decline gradually; this was not the cause of the 2022 shock."],
-      ["A drought stopped the flow of gas through pipelines", "Drought does not stop gas flowing in pipelines."],
+      ["A long summer drought stopped the flow of gas through the main pipelines", "Drought does not stop gas flowing in pipelines."],
       ["European countries banned the use of solar panels", "No such ban occurred; solar use was expanding."],
     ],
     answer: "A",

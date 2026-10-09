@@ -112,7 +112,7 @@ concept("comp.network.addressing", { file: "network/addressing", keyPrefix: "net
     options: [
       ["IPv4's 32 bits do not give enough addresses for every device", "Correct: 128-bit IPv6 provides vastly more addresses."],
       ["IPv4 addresses cannot be used by routers", "Routers use IPv4 addresses all the time."],
-      ["IPv6 addresses are shorter and easier to remember", "IPv6 addresses are much longer."],
+      ["IPv6 addresses are shorter and easier for people to remember and type", "IPv6 addresses are much longer."],
       ["IPv4 addresses are given at manufacture", "IP addresses are allocated by the network."],
     ],
     answer: "A",

@@ -21,7 +21,7 @@ concept("eng.reading.tone-attitude", { file: "reading/tone-attitude", keyPrefix:
     stem: "What is the **tone** of a piece of writing?",
     options: [
       ["The writer's voice: the feeling with which it is written", "Correct: tone is the manner or attitude in the writer's voice."],
-      ["The main sequence of events that happens in a story", "That is the plot."],
+      ["The main sequence of events that happens in a story or play", "That is the plot."],
       ["The time and the place in which a story is set", "That is the setting."],
       ["The number of paragraphs the text contains", "Length has nothing to do with tone."],
     ],
@@ -198,7 +198,7 @@ concept("eng.reading.tone-attitude", { file: "reading/tone-attitude", keyPrefix:
     stem: `${MALL}\n\nWhat is the effect of the italic sentence *Coming soon: a world-class shopping experience* at the end of paragraph 1?`,
     options: [
       ["Its glossy advertising language contrasts with the lost stall", "Correct: the billboard slogan sounds empty beside the warm memory."],
-      ["It shows the writer is excited about shopping there", "The surrounding text shows regret, not excitement."],
+      ["It shows that the writer is excited about shopping at the new mall", "The surrounding text shows regret, not excitement."],
       ["It gives the opening date of the new shopping mall", "No date is given."],
       ["It tells readers where to find Mbuya Moyo now", "It is a billboard advertisement, not directions."],
     ],

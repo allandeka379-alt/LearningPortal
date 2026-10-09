@@ -43,7 +43,7 @@ concept("bus.enterprise.planning-process", { file: "enterprise/planning-process"
     stem: "What happens during **environmental analysis**?",
     options: [
       ["Strengths, weaknesses, opportunities and threats are studied", "Correct: often as a SWOT analysis."],
-      ["Workers are given their tasks and their deadlines", "That is implementation."],
+      ["Workers are given their individual tasks and their deadlines", "That is implementation."],
       ["Actual sales are compared with targets", "That is review and control."],
       ["The best option is chosen", "That is selection."],
     ],

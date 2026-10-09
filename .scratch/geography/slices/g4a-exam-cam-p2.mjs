@@ -48,7 +48,7 @@ concept("geo.industry.tncs", { file: "exam/cam-p2-economies", keyPrefix: "exam.c
           ["Low labour costs for work that needs many people", "Correct: assembly is labour-intensive, so low wages cut costs."],
           ["A large supply of research scientists", "Research is done at the headquarters in Country C."],
           ["The largest market for mobile phones", "The resource gives no evidence of this; LIC incomes are low."],
-          ["Strict laws that raise production costs", "Strict, costly regulations would discourage location."],
+          ["Strict environmental laws that raise production costs", "Strict, costly regulations would discourage location."],
         ],
         answer: "A", explanation: "Labour-intensive assembly is drawn to low-wage countries.",
       }),

@@ -121,7 +121,7 @@ concept("comp.data.octal", { file: "data/octal", keyPrefix: "data.octal" }, (b) 
     stem: "Why is hexadecimal used more widely than octal in modern computers?",
     options: [
       ["A byte divides exactly into two hex digits but not into octal digits", "Correct: 8 bits = 2 × 4 bits, but 8 is not a multiple of 3."],
-      ["Hexadecimal values take up less memory than octal values", "Both are display formats; the computer stores binary either way."],
+      ["Hexadecimal values take up less memory than the same values stored in octal", "Both are display formats; the computer stores binary either way."],
       ["Octal cannot represent numbers larger than 511", "Octal can represent any whole number by adding more digits."],
       ["Processors carry out arithmetic in hexadecimal", "Processors work in binary only."],
     ],

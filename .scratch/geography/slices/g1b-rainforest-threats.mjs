@@ -47,7 +47,7 @@ concept("geo.ecosystems.rainforest-threats", { file: "ecosystems/rainforest-thre
     options: [
       ["Burning and decay release stored carbon as carbon dioxide", "Correct: and fewer trees remain to absorb CO₂."],
       ["Cleared land reflects more heat back into space", "Higher reflection would tend to cool the surface, not warm the planet."],
-      ["Cutting trees releases large amounts of ozone", "Felling trees does not release ozone."],
+      ["Cutting and burning trees releases large amounts of ozone", "Felling trees does not release ozone."],
       ["Logging machinery cools the air near the ground", "Machinery does not cool the air."],
     ],
     answer: "A",
@@ -60,7 +60,7 @@ concept("geo.ecosystems.rainforest-threats", { file: "ecosystems/rainforest-thre
       ["Debt is reduced in return for spending on conservation", "Correct: part of a country's debt is cancelled for conservation."],
       ["A country sells its forest to pay its debts", "Selling forest would usually lead to clearance."],
       ["Loggers swap timber for farm machinery", "That is barter, not a conservation scheme."],
-      ["Farmers exchange cleared land for forest land", "That would not reduce debt or protect forest."],
+      ["Farmers exchange their cleared land for areas of forest land", "That would not reduce debt or protect forest."],
     ],
     answer: "A",
     explanation: "In a debt-for-nature swap, a lender or conservation group cancels part of a country's foreign debt and the country spends money on protecting nature.",

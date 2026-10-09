@@ -26,7 +26,7 @@ concept("econ.basics.positive-normative", { file: "basics/positive-normative", k
     stem: "A normative statement is one that",
     options: [
       ["contains a value judgement about what ought to be", "Correct: it rests on opinion, so evidence cannot settle it."],
-      ["can be proved true or false with figures", "That describes a positive statement."],
+      ["can be proved true or false with figures and other evidence", "That describes a positive statement."],
       ["predicts what will happen in the future", "Predictions can be checked later, so they are positive."],
       ["is made by a government or central bank", "Who makes a statement does not decide its type."],
     ],
@@ -64,7 +64,7 @@ concept("econ.basics.positive-normative", { file: "basics/positive-normative", k
       ["A survey found that most traders think rents should fall", "Correct: it reports what a survey found, which can be checked."],
       ["Market rents should fall to help small traders", "This is the speaker's own view: normative."],
       ["Councils should not charge traders any rent", "This is a value judgement about policy: normative."],
-      ["Traders should be given more help than shoppers", "This weighs groups by values: normative."],
+      ["Traders should be given more help than shoppers in the town", "This weighs groups by values: normative."],
     ],
     answer: "A",
     explanation: "Reporting what people believe is positive, because the survey result can be checked. The *should* belongs to the people surveyed, not to the speaker.",
@@ -88,7 +88,7 @@ concept("econ.basics.positive-normative", { file: "basics/positive-normative", k
     stem: "Why is the statement \"Harare has more registered companies than Bulawayo\" positive?",
     options: [
       ["It can be checked against company registration records", "Correct: it is testable."],
-      ["It is certainly true, so it must be positive", "Truth is not the test: a positive statement can be false."],
+      ["It is certainly true, so it must be a positive statement", "Truth is not the test: a positive statement can be false."],
       ["It describes something good about Harare", "Positive does not mean favourable."],
       ["It gives the speaker's view about business", "A view would make it normative."],
     ],

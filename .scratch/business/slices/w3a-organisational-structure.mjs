@@ -13,7 +13,7 @@ concept("bus.people.organisational-structure", { file: "people/organisational-st
     options: [
       ["The number of subordinates who report directly to one manager", "Correct: this is the definition."],
       ["The number of levels of authority in a business", "That is the hierarchy (number of levels)."],
-      ["The route by which instructions pass down a business", "That is the chain of command."],
+      ["The route by which orders and instructions pass down a business", "That is the chain of command."],
       ["The number of departments in a large business", "Departments are functional areas, not a span."],
     ],
     answer: "A",
@@ -26,7 +26,7 @@ concept("bus.people.organisational-structure", { file: "people/organisational-st
       ["Human resources", "Correct: recruitment, training and welfare are HR tasks."],
       ["Marketing", "Marketing deals with customers, pricing and promotion."],
       ["Finance", "Finance pays wages but does not recruit staff."],
-      ["Operations", "Operations produces the goods or services."],
+      ["Operations (production)", "Operations produces the goods or services."],
     ],
     answer: "A",
     explanation: "The **human resources** department recruits, trains, pays and looks after the welfare of employees.",

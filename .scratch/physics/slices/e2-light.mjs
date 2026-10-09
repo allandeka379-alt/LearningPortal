@@ -160,7 +160,7 @@ concept("phys.light.refraction", {
 
   q.mcq({ d: 2, skill: "RECALL",
     stem: "Which statement is one of the laws of refraction?",
-    options: [["The incident ray, the refracted ray and the normal all lie in the same plane.", "Correct."], ["The angle of incidence always equals the angle of refraction.", "That is not true for refraction."], ["Light always bends towards the normal when it crosses a boundary.", "Leaving a denser medium, it bends away."], ["The refractive index changes as the angle of incidence changes.", "For two given media, sin i / sin r is constant."]],
+    options: [["The incident ray, the refracted ray and the normal all lie in the same plane.", "Correct."], ["The angle of incidence always equals the angle of refraction.", "That is not true for refraction."], ["Light always bends towards the normal whenever it crosses a boundary between media.", "Leaving a denser medium, it bends away."], ["The refractive index changes as the angle of incidence changes.", "For two given media, sin i / sin r is constant."]],
     answer: "A", explanation: "Laws of refraction: the rays and the normal lie in one plane, and sin i / sin r is constant for two given media (Snell's law)." });
 
   q.mcq({ d: 2, skill: "RECALL",
@@ -207,7 +207,7 @@ concept("phys.light.total-internal-reflection", {
 }, (q) => {
   q.mcq({ d: 1, skill: "RECALL",
     stem: "What is the critical angle?",
-    options: [["The angle of incidence in the denser medium for which the angle of refraction is 90°", "Correct."], ["The angle at which all light is absorbed", "No."], ["The angle of incidence in air for which the angle of refraction is 90°", "Light entering a denser medium is never refracted at 90°."], ["The largest possible angle of reflection", "No."]],
+    options: [["The angle of incidence in the denser medium for which the angle of refraction is 90°", "Correct."], ["The angle at which all light is absorbed", "No."], ["The angle of incidence in the less dense medium (air) for which the angle of refraction is 90°", "Light entering a denser medium is never refracted at 90°."], ["The largest possible angle of reflection", "No."]],
     answer: "A", explanation: "The critical angle is the angle of incidence, inside the denser medium, that gives an angle of refraction of 90°." });
 
   q.mcq({ d: 3, skill: "UNDERSTANDING", multiple: true,
@@ -239,7 +239,7 @@ concept("phys.light.total-internal-reflection", {
 
   q.mcq({ d: 2, skill: "APPLICATION",
     stem: "Light inside a glass block (critical angle 42°) strikes the glass–air surface with an angle of incidence of 30°. What happens?",
-    options: [["Most refracts out, bending away from the normal; a little reflects.", "Correct."], ["It is totally internally reflected back into the glass.", "30° is less than the critical angle."], ["It is all absorbed by the glass at the glass–air surface.", "Clear glass absorbs very little light."], ["It refracts into the air, bending towards the normal.", "Speeding up into air, it bends away from the normal."]],
+    options: [["Most refracts out, bending away from the normal; a little reflects.", "Correct."], ["It is totally internally reflected, so all of it goes back into the glass.", "30° is less than the critical angle."], ["It is all absorbed by the glass at the glass–air surface.", "Clear glass absorbs very little light."], ["It refracts into the air, bending towards the normal.", "Speeding up into air, it bends away from the normal."]],
     answer: "A", explanation: "Below the critical angle, light mostly refracts out (bending away from the normal), with weak partial internal reflection." });
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
@@ -249,7 +249,7 @@ concept("phys.light.total-internal-reflection", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "How does light travel along a curved optical fibre?",
-    options: [["By repeated total internal reflection at the walls of the fibre", "Correct."], ["By refraction out through the walls and back in again", "The light stays inside."], ["By diffraction around the bends", "No."], ["In a straight line, ignoring the bends", "It follows the fibre."]],
+    options: [["By repeated total internal reflection at the walls of the fibre", "Correct."], ["By refraction out through the walls of the fibre and then back in again", "The light stays inside."], ["By diffraction around the bends", "No."], ["In a straight line, ignoring the bends", "It follows the fibre."]],
     answer: "A", explanation: "Light meets the walls at angles greater than the critical angle and is totally internally reflected again and again along the fibre." });
 
   q.match({ d: 2, skill: "APPLICATION",
@@ -284,7 +284,7 @@ concept("phys.light.total-internal-reflection", {
         explanation: t`$\sin c = \dfrac{1}{1.48} = 0.676$, so $c = 42.5^\circ$.` }),
       P.manual({ label: "(b)", marks: 2, stem: "Explain why light that enters one end of the fibre stays inside it, even where the fibre bends gently.",
         points: ["The light strikes the walls at angles of incidence greater than the critical angle", "so it is totally internally reflected each time instead of refracting out"] }),
-      P.mcq({ label: "(c)", stem: "Which is a use of optical fibres?", options: [["Carrying telephone and internet signals", "Correct."], ["Heating food quickly in an oven", "Microwaves or infrared heat food."], ["Producing X-ray images of bones", "X-rays are not carried by optical fibres."], ["Measuring air pressure in tyres", "Pressure gauges do that."]], answer: "A",
+      P.mcq({ label: "(c)", stem: "Which is a use of optical fibres?", options: [["Carrying telephone and internet signals", "Correct."], ["Heating food quickly in an oven", "Microwaves or infrared heat food."], ["Producing X-ray images of bones", "X-rays are not carried by optical fibres."], ["Measuring the air pressure in car tyres", "Pressure gauges do that."]], answer: "A",
         explanation: "Optical fibres carry telecommunication signals (and are used in endoscopes)." }),
     ],
     explanation: "c = sin⁻¹(1/n); light hitting the walls above the critical angle is totally internally reflected along the fibre.",
@@ -317,7 +317,7 @@ concept("phys.light.lenses", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "What does a diverging lens do to a parallel beam of light?",
-    options: [["It spreads the rays out as if they came from a focus in front of it.", "Correct."], ["It brings the rays together to a focus behind the lens.", "That is a converging lens."], ["It reflects the beam back towards where it came from.", "Lenses refract light."], ["It keeps the rays parallel but moves them closer together.", "It makes the rays diverge."]],
+    options: [["It spreads the rays out as if they came from a focus in front of it.", "Correct."], ["It brings the rays together to a focus behind the lens.", "That is a converging lens."], ["It reflects the beam back towards where it came from.", "Lenses refract light."], ["It keeps the rays parallel to each other but moves them closer together.", "It makes the rays diverge."]],
     answer: "A", explanation: "A diverging lens spreads parallel rays out; traced back, they appear to come from its principal focus." });
 
   q.mcq({ d: 2, skill: "APPLICATION", daily: true,
@@ -445,7 +445,7 @@ concept("phys.light.dispersion", {
 
   q.mcq({ d: 3, skill: "UNDERSTANDING",
     stem: "Why does a glass prism separate white light into colours?",
-    options: [["Each colour slows by a different amount in glass, so bends differently.", "Correct."], ["Each colour travels at its own different speed even in a vacuum.", "All colours travel at the same speed in a vacuum."], ["The prism absorbs some colours and lets the others through.", "The colours are separated, not removed."], ["Each colour is reflected at a different angle inside the prism.", "Dispersion is a refraction effect."]],
+    options: [["Each colour slows by a different amount in glass, so bends differently.", "Correct."], ["Each colour travels at its own different speed even in a vacuum.", "All colours travel at the same speed in a vacuum."], ["The prism absorbs some colours and lets the others through.", "The colours are separated, not removed."], ["Each colour is reflected at a different angle from the inside faces of the prism.", "Dispersion is a refraction effect."]],
     answer: "A", explanation: "In glass, violet light slows down most and red least, so violet is refracted most and the colours spread out.",
     hints: ["Refraction depends on the change of speed."] });
 
@@ -456,7 +456,7 @@ concept("phys.light.dispersion", {
 
   q.mcq({ d: 2, skill: "UNDERSTANDING",
     stem: "Rainbows form when sunlight passes through raindrops. Which process separates the colours?",
-    options: [["Refraction in and out of each drop, by a different amount per colour", "Correct."], ["Diffraction of the light as it bends around the drops", "Not the main cause."], ["Absorption of some colours by the clouds above the drops", "Clouds do not separate the colours."], ["Reflection alone, at the back surface inside each raindrop", "Reflection helps send the light back, but refraction separates the colours."]],
+    options: [["Refraction in and out of each drop, by a different amount per colour", "Correct."], ["Diffraction of the light as it bends around the drops", "Not the main cause."], ["Absorption of some of the colours by the clouds lying above the falling drops", "Clouds do not separate the colours."], ["Reflection alone, at the back surface inside each raindrop", "Reflection helps send the light back, but refraction separates the colours."]],
     answer: "A", explanation: "Each colour is refracted by a different amount as light enters and leaves the drops, so the colours separate (dispersion)." });
 
   q.struct({ d: 3, skill: "APPLICATION", examStyle: true,

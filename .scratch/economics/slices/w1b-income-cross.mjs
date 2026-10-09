@@ -37,7 +37,7 @@ concept("econ.elasticity.income-cross", { file: "elasticity/income-cross", keyPr
     stem: "The cross elasticity of demand between two goods is +1.8. The goods are",
     options: [
       ["close substitutes.", "Correct: positive and large."],
-      ["complements.", "Complements have a negative XED."],
+      ["close complements.", "Complements have a negative XED."],
       ["unrelated.", "Unrelated goods have an XED of about zero."],
       ["inferior goods.", "Inferior goods are identified by a negative YED."],
     ],

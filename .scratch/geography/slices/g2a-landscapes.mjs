@@ -82,7 +82,7 @@ concept("geo.landforms.landscapes", { file: "landforms/landscapes", keyPrefix: "
     options: [
       ["A narrow, deep gorge with a wide valley upstream", "Correct: a short wall closes the gorge and the wide valley behind holds the water."],
       ["A broad, flat plain", "A wall across a plain would be very long and the water shallow."],
-      ["The top of a plateau far from any river", "There must be a river to fill the reservoir."],
+      ["The flat top of a plateau far away from any river", "There must be a river to fill the reservoir."],
       ["A steep escarpment face", "Water cannot be held on a steep slope without a valley to contain it."],
     ],
     answer: "A",
@@ -96,7 +96,7 @@ concept("geo.landforms.landscapes", { file: "landforms/landscapes", keyPrefix: "
       ["High rainfall and cool temperatures support tea, coffee and timber plantations", "Correct: altitude and relief rain suit these crops and trees."],
       ["They are low-lying and hot, so they suit irrigated sugar cane", "Sugar cane is grown in the hot south-east lowveld, not the highlands."],
       ["They are flat and dry, so they suit large-scale cattle ranching", "The highlands are steep and the wettest part of Zimbabwe."],
-      ["They form the watershed dividing the Zambezi and Limpopo basins", "The main watershed runs through the central highveld."],
+      ["They form the main watershed dividing the Zambezi and Limpopo river basins", "The main watershed runs through the central highveld."],
     ],
     answer: "A",
     explanation: "The Eastern Highlands are high, steep and wet, with plantations of tea, coffee, pine and eucalyptus, and tourism.",

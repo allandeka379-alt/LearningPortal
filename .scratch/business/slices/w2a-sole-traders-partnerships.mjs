@@ -32,7 +32,7 @@ concept("bus.organisation.sole-traders-partnerships", { file: "organisation/sole
     options: [
       ["Personal possessions can be taken to pay business debts", "Correct: the owner is personally responsible for all debts."],
       ["The business can borrow as much as it likes", "Liability is about debts owed, not borrowing limits."],
-      ["The owner can lose only the capital invested", "That is limited liability."],
+      ["The owner can lose only the capital invested in the business", "That is limited liability."],
       ["The business never has to pay its creditors", "All businesses must pay their creditors."],
     ],
     answer: "A",
@@ -68,7 +68,7 @@ concept("bus.organisation.sole-traders-partnerships", { file: "organisation/sole
     options: [
       ["A limited (sleeping) partner", "Correct: she invests but does not manage, with limited liability."],
       ["A general partner", "A general partner takes part in management and has unlimited liability."],
-      ["A shareholder", "Shareholders own companies, not partnerships."],
+      ["A shareholder in a private company", "Shareholders own companies, not partnerships."],
       ["A sole trader", "A sole trader is the only owner of a business."],
     ],
     answer: "A",
@@ -80,7 +80,7 @@ concept("bus.organisation.sole-traders-partnerships", { file: "organisation/sole
     stem: "Why do banks often refuse large loans to sole traders?",
     options: [
       ["They have little security and a high risk of failure", "Correct: small capital and few assets make lending risky."],
-      ["Sole traders are not allowed to borrow money", "Sole traders can borrow; the issue is risk."],
+      ["Sole traders are not allowed by law to borrow any money", "Sole traders can borrow; the issue is risk."],
       ["Sole traders must publish their accounts", "Their accounts are private, which makes banks less sure."],
       ["Sole traders have limited liability", "Sole traders have unlimited liability."],
     ],

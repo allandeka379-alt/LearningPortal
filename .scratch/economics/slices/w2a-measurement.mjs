@@ -26,7 +26,7 @@ concept("econ.unemployment.measurement", { file: "unemployment/measurement", key
     options: [
       ["the employed and the unemployed.", "Correct: everyone working or willing, able and seeking to work."],
       ["the employed only.", "The unemployed are also part of the labour force."],
-      ["everyone of working age.", "Working age includes the economically inactive, such as students."],
+      ["everyone of working age in the country.", "Working age includes the economically inactive, such as students."],
       ["the whole population.", "Children and the retired are not in the labour force."],
     ],
     answer: "A",
@@ -62,7 +62,7 @@ concept("econ.unemployment.measurement", { file: "unemployment/measurement", key
     options: [
       ["It is costly and based on a sample, so it has a margin of error", "Correct: surveys are expensive and sample results are estimates."],
       ["It only counts people who claim unemployment benefits", "That is the claimant count; the survey includes non-claimants."],
-      ["It cannot be compared with figures from other countries", "Surveys use international (ILO) definitions, which helps comparison."],
+      ["It cannot be compared with figures from other countries in the region", "Surveys use international (ILO) definitions, which helps comparison."],
       ["It ignores the age and sex of the people questioned", "Surveys can collect detailed information on age, sex and region."],
     ],
     answer: "A",

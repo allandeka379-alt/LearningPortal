@@ -25,7 +25,7 @@ concept("econ.structures.equilibrium", { file: "structures/equilibrium", keyPref
     stem: "In the long run, a firm in perfect competition earns…",
     options: [
       ["normal profit, producing at the lowest average total cost", "Correct: entry removes abnormal profit."],
-      ["abnormal profit, protected by barriers to entry", "There are no barriers in perfect competition."],
+      ["abnormal profit, protected by high barriers to entry", "There are no barriers in perfect competition."],
       ["a loss, because the price is below average cost", "Loss-makers leave until losses disappear."],
       ["normal profit, with spare (excess) capacity", "Excess capacity is a feature of monopolistic competition."],
     ],
