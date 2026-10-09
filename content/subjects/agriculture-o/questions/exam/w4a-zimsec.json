@@ -1,0 +1,1343 @@
+[
+ {
+  "key": "exam.w4a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.livestock.broilers"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1440,
+  "stem": "Tatenda placed 600 day-old broiler chicks (mean mass 0.04 kg) near Chinhoyi. Deaths each week were:\n\n| Week | 1 | 2 | 3 | 4 | 5 | 6 |\n| --- | --- | --- | --- | --- | --- | --- |\n| Deaths | 18 | 6 | 3 | 2 | 2 | 1 |\n\nThe survivors were sold live at six weeks with a mean mass of 2.3 kg at US\\$4.20 each (assume this price). The batch ate 2,180 kg of feed. Variable costs were: chicks US\\$450, feed US\\$1,199, vaccines and medicines US\\$60, litter, fuel and other US\\$96. A sample bird of 2.3 kg gave a dressed carcass of 1.702 kg.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name **one** viral disease against which broilers are vaccinated.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Newcastle disease"
+      },
+      {
+       "value": "Newcastle"
+      },
+      {
+       "value": "Gumboro"
+      },
+      {
+       "value": "Gumboro disease"
+      },
+      {
+       "value": "infectious bursal disease"
+      },
+      {
+       "value": "IBD"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "newcastle",
+       "gumboro",
+       "bursal"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Newcastle disease or Gumboro (infectious bursal) disease."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the mortality percentage for the batch, to one decimal place.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 5.333333333333333,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "Deaths = 18 + 6 + 3 + 2 + 2 + 1 = 32; 32 ÷ 600 × 100 = 5.3%.",
+    "workedSolution": "1. Deaths = 18 + 6 + 3 + 2 + 2 + 1 = 32; 32 ÷ 600 × 100 = 5.3%."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the feed conversion ratio of the batch, to two decimal places.",
+    "answerSpec": {
+     "value": 1.6999376169681848,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "Gain = 568 × 2.3 − 600 × 0.04 = 1,306.4 − 24 = 1,282.4 kg; FCR = 2,180 ÷ 1,282.4 = 1.70. Ignoring the chicks' starting mass gives 1.67.",
+    "workedSolution": "1. Gain = 568 × 2.3 − 600 × 0.04 = 1,306.4 − 24 = 1,282.4 kg; FCR = 2,180 ÷ 1,282.4 = 1.70. Ignoring the chicks' starting mass gives 1.67."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the dressing percentage of the sample bird.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 74,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "1.702 ÷ 2.3 × 100 = 74%.",
+    "workedSolution": "1. 1.702 ÷ 2.3 × 100 = 74%."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the gross margin for the batch, in US\\$.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 580.5999999999999,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "Income = 568 × 4.20 = US\\$2385.60; costs = 450 + 1,199 + 60 + 96 = US\\$1,805; gross margin = US\\$580.60. Using all 600 chicks for income ignores the deaths.",
+    "workedSolution": "1. Income = 568 × 4.20 = US\\$2385.60; costs = 450 + 1,199 + 60 + 96 = US\\$1,805; gross margin = US\\$580.60. Using all 600 chicks for income ignores the deaths."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Most deaths occurred in week 1. Suggest and explain **three** possible causes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Brooder too cold (or draughts), so chicks crowded, chilled or were smothered.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Chicks did not find feed and water quickly (drinkers/feeders too far or empty), so they dehydrated or starved.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Weak or infected chicks from the hatchery / poor hygiene in a house not cleaned and rested.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Brooding, feed and water, chick quality and hygiene."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Describe and explain how Tatenda should manage his next batch of broilers from before the chicks arrive until they are sold, so that fewer die and they grow well.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Clean, disinfect and rest the house for about two weeks; fresh dry litter 5-10 cm; footbath; rat-proofing (breaks disease cycles).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Pre-heat the brooder and set up the chick guard, feeders and drinkers before arrival.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Brood at about 32-35 °C at chick level, reducing about 3 °C a week, adjusting to chick behaviour (crowding = cold, spread and panting = hot).",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Ventilate without draughts using curtains; keep litter dry to prevent coccidiosis.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Feed starter, then grower and finisher, with clean water always; raise feeders and drinkers to back height to cut waste.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Vaccinate against Newcastle and Gumboro disease on schedule; remove dead birds; restrict visitors (all-in, all-out).",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Keep records of deaths, feed and weekly weights to spot problems and calculate FCR.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Withdraw feed 8-12 h before sale/slaughter; sell at the planned age when demand is high.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Accurate, well-developed explanation of several relevant points using correct agricultural terms, applied to the crop, animal or situation in the question, with a clear judgement where one is asked for."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some relevant points explained, partly developed or only partly applied to the situation; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple statements or a list of points with little explanation or application."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     }
+    },
+    "explanation": "Ordered management with reasons: preparation, brooding, environment, feeding, health, records, marketing."
+   }
+  ],
+  "explanation": "Broiler batch performance (mortality, FCR, dressing percentage, gross margin) and a reasoned management plan.",
+  "hints": [
+   "Mortality = deaths ÷ chicks placed × 100.",
+   "Gain = survivors × final mass − chicks × 0.04 kg.",
+   "For the long part, follow the batch from before the chicks arrive to sale."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "Newcastle disease"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "5.3"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.70"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "74"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "580.6"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "32"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1.67"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "135.1"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "715"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section B"
+ },
+ {
+  "key": "exam.w4a-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.livestock.layers-indigenous"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1440,
+  "stem": "Rudo keeps 800 commercial layers in a deep-litter house near Marondera. The table shows how the laying percentage changed with the age of the flock.\n\n| Age of flock (weeks) | 20 | 24 | 28 | 40 | 56 | 72 |\n| --- | --- | --- | --- | --- | --- | --- |\n| Hen-day laying (%) | 12 | 78 | 92 | 88 | 80 | 64 |\n\nIn June (30 days) the 800 hens laid 20,640 eggs and each hen ate about 0.12 kg of layer mash a day.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "From the table, at about what age did the flock reach peak production?",
+    "options": [
+     {
+      "key": "A",
+      "content": "28 weeks",
+      "correct": true,
+      "rationale": "Correct: 92%."
+     },
+     {
+      "key": "B",
+      "content": "20 weeks",
+      "rationale": "At 20 weeks the flock had only just started laying (12%)."
+     },
+     {
+      "key": "C",
+      "content": "40 weeks",
+      "rationale": "Production had begun to fall (88%)."
+     },
+     {
+      "key": "D",
+      "content": "72 weeks, when the hens were oldest and most experienced at laying",
+      "rationale": "Production was lowest of the laying ages (64%)."
+     }
+    ],
+    "explanation": "Production rises steeply after point of lay, peaks at 28 weeks and then falls slowly."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the hen-day laying percentage for June.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 86,
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "20,640 ÷ (800 × 30) × 100 = 20,640 ÷ 24,000 × 100 = 86%.",
+    "workedSolution": "1. 20,640 ÷ (800 × 30) × 100 = 20,640 ÷ 24,000 × 100 = 86%."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "How many trays of 30 eggs were filled in June?",
+    "answerSpec": {
+     "value": 688
+    },
+    "explanation": "20,640 ÷ 30 = 688 trays.",
+    "workedSolution": "1. 20,640 ÷ 30 = 688 trays."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the mass of feed used per dozen eggs in June, in kg, to two decimal places.",
+    "payload": {
+     "unitHint": "kg"
+    },
+    "answerSpec": {
+     "value": 1.6744186046511629,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "kg",
+       "kilograms",
+       "kilogram",
+       "kgs"
+      ]
+     }
+    },
+    "explanation": "Feed = 800 × 0.12 × 30 = 2,880 kg; dozens = 20,640 ÷ 12 = 1,720; 2,880 ÷ 1,720 = 1.67 kg.",
+    "workedSolution": "1. Feed = 800 × 0.12 × 30 = 2,880 kg; dozens = 20,640 ÷ 12 = 1,720; 2,880 ÷ 1,720 = 1.67 kg."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** signs Rudo would use to pick out non-laying hens for culling.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Small, pale, shrunken comb and wattles.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Small, dry, puckered vent / pelvic bones close together (about one finger) / yellow colour returning to shanks.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Culling signs."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the lights in the layer house are kept on to give about 16 hours of light a day.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Long days stimulate the hen's hormones that control egg production.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A shorter or falling day length reduces laying, so light is kept long and never reduced during lay.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Photoperiod."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Suggest why the flock should be replaced at about 72 weeks of age.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Laying has fallen to 64%, so feed per dozen eggs rises and each hen earns less than she costs.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Off-layers can be sold for meat and the house cleaned and restocked with point-of-lay pullets.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Economics of the end of lay."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Describe and explain how Rudo should manage her layers to keep egg production and egg quality high.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "House: dry, deep litter; good ventilation without draughts; correct stocking density; nest boxes (about one per 4-5 hens) in a dim area; perches.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Feed layer mash high in calcium (plus shell grit) from point of lay, with clean water always; avoid sudden feed changes.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Light: about 16 hours a day, never reduced during lay.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Collect eggs at least two or three times a day to keep them clean and reduce breakage and egg eating.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Do not wash eggs; candle, grade and pack broad end up; store cool.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Health: vaccinate (e.g. Newcastle disease), control mites and worms, footbath, keep out visitors and wild birds.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Keep daily egg, feed and death records to detect problems early.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Cull non-layers regularly and replace the flock at the end of lay.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Accurate, well-developed explanation of several relevant points using correct agricultural terms, applied to the crop, animal or situation in the question, with a clear judgement where one is asked for."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some relevant points explained, partly developed or only partly applied to the situation; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple statements or a list of points with little explanation or application."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     }
+    },
+    "explanation": "Housing, feeding, light, egg handling, health, records and culling, each with a reason."
+   }
+  ],
+  "explanation": "Layer production curve, laying percentage, feed efficiency and a management plan for high egg output.",
+  "hints": [
+   "Hen-day % = eggs ÷ (hens × days) × 100.",
+   "Feed per dozen = total feed ÷ dozens of eggs.",
+   "For the long part, cover housing, feeding, lighting, eggs and health."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "86"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "688"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "1.67"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "25.8"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1720"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.14"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section B"
+ },
+ {
+  "key": "exam.w4a-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.livestock.pigs",
+   "agri.livestock.birth-young-stock"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1440,
+  "stem": "Breeding records from a piggery near Harare.\n\n| Sow | Date served | Piglets born alive | Piglets weaned |\n| --- | --- | --- | --- |\n| Sow A | 2 June 2026 | 11 | 10 |\n| Sow B | 20 June 2026 | 12 | 9 |\n| Sow C | 9 July 2026 | 10 | 9 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "State the expected farrowing date of sow B, using a gestation of 114 days.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "12 October 2026"
+      },
+      {
+       "value": "12 October"
+      },
+      {
+       "value": "12/10/2026"
+      },
+      {
+       "value": "12/10/2026"
+      },
+      {
+       "value": "October 12 2026"
+      },
+      {
+       "value": "October 12"
+      },
+      {
+       "value": "12th October 2026"
+      },
+      {
+       "value": "12th October"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "20 June 2026 + 114 days = 12 October 2026."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the total number of piglets weaned.",
+    "payload": {
+     "unitHint": "animals"
+    },
+    "answerSpec": {
+     "value": 28,
+     "units": {
+      "required": false,
+      "accepted": [
+       "animals",
+       "animal",
+       "head",
+       "head of cattle"
+      ]
+     }
+    },
+    "explanation": "10 + 9 + 9 = 28.",
+    "workedSolution": "1. 10 + 9 + 9 = 28."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the percentage of piglets born alive that died before weaning, to one decimal place.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 15.151515151515152,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "33 − 28 = 5 died; 5 ÷ 33 × 100 = 15.2%.",
+    "workedSolution": "1. 33 − 28 = 5 died; 5 ÷ 33 × 100 = 15.2%."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The piglets are weaned at 42 days and the sows are served 5 days after weaning. Calculate the number of litters per sow per year, to two decimal places.",
+    "answerSpec": {
+     "value": 2.267080745341615,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "Cycle = 114 + 42 + 5 = 161 days; 365 ÷ 161 = 2.27.",
+    "workedSolution": "1. Cycle = 114 + 42 + 5 = 161 days; 365 ÷ 161 = 2.27."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why are the piglets given an iron injection at about three days old?",
+    "options": [
+     {
+      "key": "A",
+      "content": "To protect them against African swine fever",
+      "rationale": "There is no iron 'vaccine'; iron prevents anaemia."
+     },
+     {
+      "key": "B",
+      "content": "Sow's milk is low in iron and piglets on concrete cannot get it from soil",
+      "correct": true,
+      "rationale": "Correct: prevents piglet anaemia."
+     },
+     {
+      "key": "C",
+      "content": "To strengthen their teeth before they are clipped",
+      "rationale": "Teeth are clipped on day 1; iron is for blood."
+     },
+     {
+      "key": "D",
+      "content": "To make them gain fat quickly so that they can be sold as porkers at weaning",
+      "rationale": "Iron prevents anaemia; it is not a fattening treatment."
+     }
+    ],
+    "explanation": "Iron is needed for haemoglobin; piglets grow fast with small iron stores."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** signs that a sow is about to farrow.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Nest building (biting and arranging bedding) / restlessness.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Swollen vulva / milk can be squeezed from the teats.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Signs of farrowing."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how a farrowing crate with a creep area reduces piglet deaths.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The crate makes the sow lie down slowly, so piglets can move away and are not crushed.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The heated creep area keeps piglets warm and away from the sow, preventing chilling.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Crushing and chilling."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Describe and explain the care of piglets from birth until weaning.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "At birth: clear mucus from nose and mouth; dry the piglet; cut and dip the navel in iodine (prevents infection).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Ensure every piglet suckles colostrum within hours (antibodies, energy); help weak piglets to a teat / foster extras.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Day 1: clip needle teeth (prevents injury to littermates and the sow's teats).",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "About day 3: iron injection (prevents anaemia).",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Identify by ear notching/tattoo; castrate males not for breeding within the first two weeks (less stress).",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Keep them warm in the creep area and protect from crushing with a farrowing crate or rails; clean, dry pen against scours.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Offer creep feed and clean water from about 1-2 weeks, so they grow and are ready for weaning.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Wean at about 4-8 weeks (here 6 weeks): move the sow out, leave piglets in their pen, change feed gradually; deworm.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Accurate, well-developed explanation of several relevant points using correct agricultural terms, applied to the crop, animal or situation in the question, with a clear judgement where one is asked for."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some relevant points explained, partly developed or only partly applied to the situation; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple statements or a list of points with little explanation or application."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     }
+    },
+    "explanation": "Ordered piglet care with ages and reasons."
+   }
+  ],
+  "explanation": "Sow records: farrowing date, piglet losses and litters per year; care of piglets to weaning.",
+  "hints": [
+   "Farrowing date = service date + 114 days.",
+   "Litters per year = 365 ÷ (gestation + lactation + days to service).",
+   "For the long part, work from birth to weaning, with ages and reasons."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "12 October 2026"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "28"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "15.2"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2.27"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "33"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "17.9"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "3.2"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section B"
+ },
+ {
+  "key": "exam.w4a-zimsec.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.livestock.beef-cattle",
+   "agri.livestock.birth-young-stock"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1440,
+  "stem": "A rancher near Masvingo weighed a group of beef cows on veld every two months.\n\n| Month | November | January | March | May | July | September |\n| --- | --- | --- | --- | --- | --- | --- |\n| Mean cow mass (kg) | 380 | 410 | 440 | 445 | 420 | 395 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "During which period did the cows gain mass?",
+    "options": [
+     {
+      "key": "A",
+      "content": "May to September",
+      "rationale": "The cows lost mass in the dry season."
+     },
+     {
+      "key": "B",
+      "content": "July to September only",
+      "rationale": "Mass fell from 420 to 395 kg."
+     },
+     {
+      "key": "C",
+      "content": "November to May",
+      "correct": true,
+      "rationale": "Correct: the rainy season, when grazing is green."
+     },
+     {
+      "key": "D",
+      "content": "The whole year, because the mass at the end was higher than in July",
+      "rationale": "September (395 kg) is lower than May (445 kg)."
+     }
+    ],
+    "explanation": "Mass rose from 380 to 445 kg in the rains, then fell to 395 kg in the dry season."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the mass lost per cow from May to September, in kg.",
+    "payload": {
+     "unitHint": "kg"
+    },
+    "answerSpec": {
+     "value": 50,
+     "units": {
+      "required": false,
+      "accepted": [
+       "kg",
+       "kilograms",
+       "kilogram",
+       "kgs"
+      ]
+     }
+    },
+    "explanation": "445 − 395 = 50 kg.",
+    "workedSolution": "1. 445 − 395 = 50 kg."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate this loss as a percentage of the May mass, to one decimal place.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 11.235955056179776,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "50 ÷ 445 × 100 = 11.2%. Dividing by the September mass gives 12.7%.",
+    "workedSolution": "1. 50 ÷ 445 × 100 = 11.2%. Dividing by the September mass gives 12.7%."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the cows lost mass between May and September.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "In the dry season the veld grass is dry, scarce and low in protein (and phosphorus).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Rumen microbes digest the poor grass slowly, so the cows eat less and use body reserves.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Dry-season feed quality."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the lick that prevents cattle chewing bones and catching botulism.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "phosphate lick"
+      },
+      {
+       "value": "phosphorus lick"
+      },
+      {
+       "value": "phosphate"
+      },
+      {
+       "value": "phosphorus"
+      },
+      {
+       "value": "bone meal lick"
+      },
+      {
+       "value": "dicalcium phosphate lick"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "phosph"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "A phosphate (phosphorus) lick."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Assume one bull to 30 cows. How many bulls are needed for 150 cows?",
+    "payload": {
+     "unitHint": "animals"
+    },
+    "answerSpec": {
+     "value": 5,
+     "units": {
+      "required": false,
+      "accepted": [
+       "animals",
+       "animal",
+       "head",
+       "head of cattle"
+      ]
+     }
+    },
+    "explanation": "150 ÷ 30 = 5 bulls.",
+    "workedSolution": "1. 150 ÷ 30 = 5 bulls."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Using the data, explain why the rancher plans for calves to be born from October to December.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Calves are born near the start of the rains, when the veld turns green.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Cows are then gaining mass and have good feed to produce milk, so calves grow well and cows recover condition to conceive again.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Match calving to the feed supply."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** methods of identifying beef cattle.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Branding (hot-iron or freeze).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Ear tags / ear notches / tattoos.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Identification."
+   },
+   {
+    "label": "(i)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Describe and explain the management practices the rancher should carry out in the herd during one year.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Breeding season of about three months with about one bull to 25-30 cows, timed for calving at the start of the rains; pregnancy test and cull open cows.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Supervise calving; ensure colostrum and navel care; identify calves (ear tags, branding).",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Disbud and castrate young calves early (less stress, safer handling, docile steers).",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Dip or spray against ticks (often weekly in the wet season) to prevent tick-borne diseases.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Dose against worms at strategic times and vaccinate (e.g. anthrax, blackleg, lumpy skin disease, botulism) on veterinary advice.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Dry-season supplements: protein/urea licks, phosphate lick and salt, hay or stover, to limit mass loss.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Wean calves at about 6-8 months so cows regain condition; sell weaners or finish them.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Keep stocking within carrying capacity, rotate paddocks and keep herd records (births, weights, treatments, sales).",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Accurate, well-developed explanation of several relevant points using correct agricultural terms, applied to the crop, animal or situation in the question, with a clear judgement where one is asked for."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some relevant points explained, partly developed or only partly applied to the situation; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple statements or a list of points with little explanation or application."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     }
+    },
+    "explanation": "A year of beef herd management with reasons."
+   }
+  ],
+  "explanation": "Seasonal mass change of beef cows on veld and the year's management of a beef herd.",
+  "hints": [
+   "Percentage loss = loss ÷ starting mass × 100.",
+   "Dry-season grass is low in protein and phosphorus.",
+   "For the long part, organise practices through the year with reasons."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "50"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "11.2"
+    },
+    "(e)": {
+     "type": "SHORT_ANSWER",
+     "text": "phosphate lick"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "25"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "12.7"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "4500"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section B"
+ }
+]

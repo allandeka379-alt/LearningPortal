@@ -1,0 +1,939 @@
+[
+ {
+  "key": "exam.w3a-theory.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.crops.maize"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "Chipo will plant 2.4 ha of maize near Marondera at 80 cm × 25 cm. She sows two seeds per station and thins to one plant. Assume each seed has a mass of 0.3 g.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the plant population per hectare after thinning.",
+    "payload": {
+     "unitHint": "plants/ha"
+    },
+    "answerSpec": {
+     "value": 50000,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "plants/ha",
+       "plants per ha",
+       "plants per hectare",
+       "plants"
+      ]
+     }
+    },
+    "explanation": "0.8 × 0.25 = 0.2 m² per station; 10,000 ÷ 0.2 = 50,000 plants/ha.",
+    "workedSolution": "1. 0.8 × 0.25 = 0.2 m² per station; 10,000 ÷ 0.2 = 50,000 plants/ha."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the mass of seed, in kg, she needs for the whole field.",
+    "payload": {
+     "unitHint": "kg"
+    },
+    "answerSpec": {
+     "value": 72,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "kg",
+       "kilograms",
+       "kilogram",
+       "kgs"
+      ]
+     }
+    },
+    "explanation": "Stations = 50,000 × 2.4 = 120,000; seeds = 240,000; × 0.3 g = 72,000 g = 72 kg. Forgetting the second seed gives 36 kg; giving the rate per hectare only gives 30 kg.",
+    "workedSolution": "1. Stations = 50,000 × 2.4 = 120,000; seeds = 240,000; × 0.3 g = 72,000 g = 72 kg. Forgetting the second seed gives 36 kg; giving the rate per hectare only gives 30 kg."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why does Chipo thin the seedlings to one plant per station?",
+    "options": [
+     {
+      "key": "A",
+      "content": "To avoid competition so each plant forms a good cob",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "To let the removed seedlings be transplanted to another field",
+      "rationale": "Maize transplants poorly."
+     },
+     {
+      "key": "C",
+      "content": "To raise the plant population per hectare",
+      "rationale": "Thinning lowers the number of plants."
+     },
+     {
+      "key": "D",
+      "content": "To make the plants flower and tassel much earlier",
+      "rationale": "Thinning is not done to change flowering."
+     }
+    ],
+    "explanation": "Two plants at one station compete for water, nutrients and light."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the pest whose larvae cause dead hearts and tunnels in maize stems.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "stalk borer"
+      },
+      {
+       "value": "maize stalk borer"
+      },
+      {
+       "value": "Busseola fusca"
+      },
+      {
+       "value": "stem borer"
+      },
+      {
+       "value": "maize stem borer"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "borer",
+       "busseola"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The maize stalk borer."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why hybrid maize seed must be bought every season.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Hybrid seed is F1 from crossing two inbred lines, uniform with hybrid vigour.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Saved seed (F2) gives variable plants and lower yields.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Hybrid vigour lost."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** factors Chipo should consider when choosing a maize cultivar.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Maturity group to suit the natural region / length of season / planting date.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Disease resistance (e.g. maize streak virus, grey leaf spot) / yield potential / market or grain type.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Cultivar choice."
+   }
+  ],
+  "explanation": "Plant population, seed requirement and cultivar choice for maize.",
+  "hints": [
+   "Plants/ha = 10,000 ÷ (row spacing × in-row spacing in m).",
+   "Seeds = stations × 2."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "50000"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "72"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "stalk borer"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "2000"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "36"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ },
+ {
+  "key": "exam.w3a-theory.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.land.crop-rotation"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "Tendai has 14 ha of arable land divided into four equal fields. He follows a four-course rotation in the order maize → groundnuts → sunflower → grass ley, moving each crop one field along every year.\n\n| Field | Year 1 crop |\n| --- | --- |\n| A | Maize (receives manure) |\n| B | Groundnuts |\n| C | Sunflower |\n| D | Grass ley |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which crop will grow in field A in year 2?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Maize",
+      "rationale": "Maize moves to the field that had the ley."
+     },
+     {
+      "key": "B",
+      "content": "Sunflower",
+      "rationale": "Sunflower follows groundnuts."
+     },
+     {
+      "key": "C",
+      "content": "Grass ley",
+      "rationale": "The ley follows sunflower."
+     },
+     {
+      "key": "D",
+      "content": "Groundnuts",
+      "correct": true,
+      "rationale": "Correct: groundnuts follow maize."
+     }
+    ],
+    "explanation": "Field A had maize in year 1, so it carries groundnuts in year 2."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the area of each field, in ha.",
+    "payload": {
+     "unitHint": "ha"
+    },
+    "answerSpec": {
+     "value": 3.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "ha",
+       "hectares",
+       "hectare"
+      ]
+     }
+    },
+    "explanation": "14 ÷ 4 = 3.5 ha.",
+    "workedSolution": "1. 14 ÷ 4 = 3.5 ha."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the plant family (group) to which groundnuts belong.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "legumes"
+      },
+      {
+       "value": "legume"
+      },
+      {
+       "value": "Fabaceae"
+      },
+      {
+       "value": "Leguminosae"
+      },
+      {
+       "value": "pea family"
+      },
+      {
+       "value": "bean family"
+      },
+      {
+       "value": "pulses"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "legum",
+       "fabaceae",
+       "pea",
+       "bean"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Legumes (Fabaceae)."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Manure is applied at 12 t/ha to the maize course only. Calculate the mass of manure needed each year, in tonnes.",
+    "payload": {
+     "unitHint": "t"
+    },
+    "answerSpec": {
+     "value": 42,
+     "units": {
+      "required": false,
+      "accepted": [
+       "t",
+       "tonnes",
+       "tonne",
+       "metric tons"
+      ]
+     }
+    },
+    "explanation": "12 × 3.5 = 42 t. Applying it to all 14 ha would need 168 t.",
+    "workedSolution": "1. 12 × 3.5 = 42 t. Applying it to all 14 ha would need 168 t."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why maize is followed by groundnuts.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Maize is a heavy feeder that removes much nitrogen; groundnuts fix their own nitrogen through Rhizobium.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Groundnuts are a different family, so maize pests, diseases and witchweed have no host.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Nitrogen and break crop."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain **three** advantages of including the grass ley in the rotation.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Rests the soil and builds up organic matter from dense grass roots.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Improves soil structure and protects the soil from erosion.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Provides grazing or hay; manure from grazing animals improves fertility for the next maize.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Ley benefits."
+   }
+  ],
+  "explanation": "Follow, calculate and justify a four-course rotation.",
+  "hints": [
+   "Field A grows the next crop in the order.",
+   "Only the maize course gets manure."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3.5"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "legumes"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "42"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "56"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "168"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ },
+ {
+  "key": "exam.w3a-theory.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.machinery.tillage-implements"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "A diagram of an ox-drawn mouldboard plough is described by its labelled parts.\n\n| Label | Description |\n| --- | --- |\n| P | Pointed steel blade at the bottom front of the body |\n| Q | Curved plate behind P |\n| R | Flat plate on the side opposite Q |\n| S | Metal piece at the front of the beam with holes in two rows |\n| T | Small wheel under the front of the beam |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 4,
+    "stem": "Match each labelled part with its function.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "P"
+      },
+      {
+       "id": "L2",
+       "content": "Q"
+      },
+      {
+       "id": "L3",
+       "content": "R"
+      },
+      {
+       "id": "L4",
+       "content": "S"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Presses on the furrow wall to keep the plough straight"
+      },
+      {
+       "id": "R4",
+       "content": "Hitch used to adjust depth and width of cut"
+      },
+      {
+       "id": "R1",
+       "content": "Cuts the furrow slice horizontally"
+      },
+      {
+       "id": "R2",
+       "content": "Lifts and turns the furrow slice over"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "P share, Q mouldboard, R landside, S hake."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What happens if part T is raised?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The plough works shallower",
+      "rationale": "Lowering the wheel makes it shallower."
+     },
+     {
+      "key": "B",
+      "content": "The width of cut doubles",
+      "rationale": "The wheel controls depth."
+     },
+     {
+      "key": "C",
+      "content": "The plough works deeper",
+      "correct": true,
+      "rationale": "Correct: the share runs lower relative to the wheel."
+     },
+     {
+      "key": "D",
+      "content": "The mouldboard stops turning the soil",
+      "rationale": "The mouldboard still turns the slice."
+     }
+    ],
+    "explanation": "Raising the wheel lets the body go deeper."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the plough should be maintained at the end of the ploughing season.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Clean off all soil and repair or replace worn parts (share, heel) and loose bolts.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Coat bright surfaces (share, mouldboard) with used oil or grease and paint the frame.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Store under a roof, off the ground.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Season-end care."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why part P should be kept sharp.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A sharp share penetrates and cuts easily, so less draught is needed and the oxen tire less.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The plough stays in the ground at an even depth (a blunt share rides out).",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Sharp share."
+   }
+  ],
+  "explanation": "Functions, adjustment and maintenance of the mouldboard plough.",
+  "hints": [
+   "Name the part from its position, then its job."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R4"
+       },
+       {
+        "leftId": "L4",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ },
+ {
+  "key": "exam.w3a-theory.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.crops.legumes"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "Thandeka grew 0.5 ha of groundnuts near Mutoko. She harvested 1,150 kg of dry pods, which gave 828 kg of kernels. Some pods stored in a damp shed went mouldy.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the yield of dry pods in t/ha.",
+    "payload": {
+     "unitHint": "t/ha"
+    },
+    "answerSpec": {
+     "value": 2.3,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "t/ha",
+       "t ha^-1",
+       "tonnes per hectare",
+       "tonnes/ha",
+       "t per ha"
+      ]
+     }
+    },
+    "explanation": "1,150 ÷ 0.5 = 2,300 kg/ha = 2.3 t/ha.",
+    "workedSolution": "1. 1,150 ÷ 0.5 = 2,300 kg/ha = 2.3 t/ha."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the shelling percentage.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 72,
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "828 ÷ 1,150 × 100 = 72%.",
+    "workedSolution": "1. 828 ÷ 1,150 × 100 = 72%."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "When should gypsum be applied to the groundnuts?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Mixed with the seed at planting",
+      "rationale": "Too early, and it is not a seed treatment."
+     },
+     {
+      "key": "B",
+      "content": "At early flowering, over the rows",
+      "correct": true,
+      "rationale": "Correct: calcium is then in the pegging zone."
+     },
+     {
+      "key": "C",
+      "content": "After the pods have been lifted",
+      "rationale": "Too late to help pod filling."
+     },
+     {
+      "key": "D",
+      "content": "Only to the following maize crop",
+      "rationale": "The groundnuts need the calcium."
+     }
+    ],
+    "explanation": "Pods absorb calcium directly from the soil around them as they fill."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the poison that can be produced by the mould on damp groundnuts.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "aflatoxin"
+      },
+      {
+       "value": "aflatoxins"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "aflatox"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Aflatoxin."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how the groundnuts should have been dried and stored to prevent mould.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Dry quickly with pods upwards, off damp soil, then in airy stacks until the pods rattle.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Store dry, in the shell, in a well-ventilated store off the floor.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Drying and storage."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why groundnuts need little nitrogen fertiliser.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Root nodules contain Rhizobium bacteria.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "These fix nitrogen from the air for the plant.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Nitrogen fixation."
+   }
+  ],
+  "explanation": "Groundnut yield and shelling calculations, gypsum, aflatoxin and nitrogen fixation.",
+  "hints": [
+   "Yield = mass ÷ area.",
+   "Shelling % = kernels ÷ pods × 100."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "2.3"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "72"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "aflatoxin"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.575"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "138.9"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ }
+]

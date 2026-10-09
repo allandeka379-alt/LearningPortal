@@ -1,0 +1,922 @@
+[
+ {
+  "key": "exam.w4a-theory.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.livestock.broilers"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "A school near Bulawayo reared a batch of broilers. A sample of birds was weighed each week.\n\n| Age (weeks) | Mean live mass (kg) |\n| --- | --- |\n| 0 | 0.045 |\n| 1 | 0.170 |\n| 2 | 0.450 |\n| 3 | 0.880 |\n| 4 | 1.400 |\n| 5 | 1.950 |\n| 6 | 2.445 |\n\nEach bird ate 4.08 kg of feed from hatching to six weeks.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the type of feed given to the broilers in their first week.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "broiler starter"
+      },
+      {
+       "value": "starter"
+      },
+      {
+       "value": "starter crumbs"
+      },
+      {
+       "value": "broiler starter crumbs"
+      },
+      {
+       "value": "chick starter"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "starter"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Broiler starter (crumbs), high in protein."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the mean live-weight gain per bird from week 0 to week 6, in kg.",
+    "payload": {
+     "unitHint": "kg"
+    },
+    "answerSpec": {
+     "value": 2.4,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "kg",
+       "kilograms",
+       "kilogram",
+       "kgs"
+      ]
+     }
+    },
+    "explanation": "2.445 − 0.045 = 2.4 kg.",
+    "workedSolution": "1. 2.445 − 0.045 = 2.4 kg."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the feed conversion ratio, to one decimal place.",
+    "answerSpec": {
+     "value": 1.7000000000000002,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "FCR = 4.08 ÷ 2.4 = 1.7000000000000002.",
+    "workedSolution": "1. FCR = 4.08 ÷ 2.4 = 1.7000000000000002."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "In which week did the birds gain the most mass?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Week 4 to week 5",
+      "correct": true,
+      "rationale": "Correct: 0.55 kg."
+     },
+     {
+      "key": "B",
+      "content": "Week 5 to week 6",
+      "rationale": "Gain was 0.495 kg."
+     },
+     {
+      "key": "C",
+      "content": "Week 3 to week 4",
+      "rationale": "Gain was 0.52 kg."
+     },
+     {
+      "key": "D",
+      "content": "Week 0 to week 1, when the chicks were growing fastest of all",
+      "rationale": "Gain was only 0.125 kg."
+     }
+    ],
+    "explanation": "Weekly gains: 0.125, 0.28, 0.43, 0.52, 0.55, 0.495 kg; the largest is from week 4 to week 5."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a low feed conversion ratio is important to a broiler farmer.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Less feed is needed for each kilogram of live-weight gain.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Feed is the largest cost, so a low FCR reduces costs and increases profit.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "FCR and profit."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Suggest **three** ways of improving the feed conversion ratio of the next batch.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Keep the brooder at the correct temperature, so feed energy is not used to keep warm.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Set feeders at back height and avoid spillage/wastage; keep rats out.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Prevent disease (vaccination, dry litter, hygiene) and sell at the right age before FCR worsens.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Temperature, wastage, health and timing."
+   }
+  ],
+  "explanation": "Broiler growth data, gain and FCR, and how management affects feed efficiency.",
+  "hints": [
+   "Gain = final mass − starting mass.",
+   "FCR = feed ÷ gain."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "broiler starter"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "2.4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.7"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "2.445"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.59"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ },
+ {
+  "key": "exam.w4a-theory.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.livestock.digestion"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "A described diagram of the stomach of a cow shows four compartments: W, the largest, on the left side of the abdomen; X, a small compartment with a honeycomb lining; Y, a compartment with many leaf-like folds; Z, a compartment with glands in its wall that leads to the small intestine.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name compartment X.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "reticulum"
+      },
+      {
+       "value": "the reticulum"
+      },
+      {
+       "value": "honeycomb"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "reticul"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "X is the reticulum."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name compartment Z.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "abomasum"
+      },
+      {
+       "value": "the abomasum"
+      },
+      {
+       "value": "true stomach"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "abomas",
+       "true stomach"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Z is the abomasum (true stomach)."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "In which compartment is most cellulose broken down by microbes?",
+    "options": [
+     {
+      "key": "A",
+      "content": "X",
+      "rationale": "The reticulum is small and mainly moves food and traps heavy objects."
+     },
+     {
+      "key": "B",
+      "content": "Y",
+      "rationale": "The omasum absorbs water."
+     },
+     {
+      "key": "C",
+      "content": "W",
+      "correct": true,
+      "rationale": "Correct: the rumen."
+     },
+     {
+      "key": "D",
+      "content": "Z",
+      "rationale": "The abomasum digests with gastric juice, not microbes."
+     }
+    ],
+    "explanation": "W, the rumen, is the fermentation chamber."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "In this cow W holds 135 L and the whole stomach holds 180 L. Calculate W as a percentage of the whole stomach.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 75,
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "135 ÷ 180 × 100 = 75%.",
+    "workedSolution": "1. 135 ÷ 180 × 100 = 75%."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** products of microbial fermentation in compartment W.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Volatile fatty acids (absorbed for energy).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Methane / carbon dioxide / microbial protein / B vitamins.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Fermentation products."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how rumination helps the cow digest roughage.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The cud is regurgitated and chewed again, breaking fibre into smaller pieces with a larger surface area for microbes.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Chewing produces much saliva that buffers (neutralises) the acids in the rumen.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Particle size and saliva."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a pig cannot live on grass as a cow can.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The pig has a simple stomach with no rumen, so it has few microbes to digest cellulose.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So it gets little energy from grass and needs concentrates rich in starch and protein.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Stomach type and diet."
+   }
+  ],
+  "explanation": "Identify ruminant stomach compartments and link structure to function and diet.",
+  "hints": [
+   "The order is rumen, reticulum, omasum, abomasum."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "reticulum"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "abomasum"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "75"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "300"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ },
+ {
+  "key": "exam.w4a-theory.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.livestock.broilers",
+   "agri.livestock.rabbits"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "Form 4 pupils slaughtered and dressed a broiler and a rabbit and weighed them.\n\n| Animal | Live mass (kg) | Dressed carcass (kg) |\n| --- | --- | --- |\n| Broiler | 2.10 | 1.512 |\n| Rabbit | 2.50 | 1.35 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the dressing percentage of the broiler.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 71.99999999999999,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "1.512 ÷ 2.1 × 100 = 72%.",
+    "workedSolution": "1. 1.512 ÷ 2.1 × 100 = 72%."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the dressing percentage of the rabbit.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 54,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "1.35 ÷ 2.5 × 100 = 54%.",
+    "workedSolution": "1. 1.35 ÷ 2.5 × 100 = 54%."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement best explains why the rabbit has the lower dressing percentage?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Rabbit meat is heavier than chicken meat",
+      "rationale": "This would raise, not lower, the percentage."
+     },
+     {
+      "key": "B",
+      "content": "The rabbit was not bled after slaughter",
+      "rationale": "Proper dressing includes bleeding; this is not the explanation."
+     },
+     {
+      "key": "C",
+      "content": "Feathers are left on the broiler carcass when it is weighed",
+      "rationale": "Feathers are removed from a dressed broiler."
+     },
+     {
+      "key": "D",
+      "content": "Its pelt and its large digestive tract are removed",
+      "correct": true,
+      "rationale": "Correct: the skin and a large gut (with the caecum) are a big share of a rabbit's live mass."
+     }
+    ],
+    "explanation": "Rabbits lose the pelt, head, feet and a large gut, so a smaller share of live mass remains as carcass."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why feed is withdrawn for some hours before slaughter, but water is not.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "An empty gut makes evisceration cleaner and reduces contamination of the carcass.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Water prevents dehydration / stress and loss of carcass mass and quality.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Clean evisceration; welfare."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the rabbit's pelt should be prepared for sale.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Remove the skin whole (cased) by peeling it from the hind legs downwards.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Scrape off fat and flesh and stretch it flesh-side out on a wire or board stretcher.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Dry it in the shade (not in hot sun) and store it dry, away from insects.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Case, clean, stretch, dry, store."
+   }
+  ],
+  "explanation": "Dressing percentages of a broiler and a rabbit, slaughter preparation and pelts.",
+  "hints": [
+   "Dressing % = carcass ÷ live mass × 100."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "72"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "54"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "138.9"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "185.2"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section A"
+ },
+ {
+  "key": "exam.w4a-theory.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.livestock.reproduction"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "A described diagram of the reproductive system of a cow lists, from the inside: P, two oval organs; Q, two narrow tubes with funnel-shaped ends; R, a body with two horns; S, a thick, muscular neck; T, a passage; U, the external opening. The cow was served by a bull on 14 April 2026.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the part, by letter or name, in which fertilisation takes place.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Q"
+      },
+      {
+       "value": "oviduct"
+      },
+      {
+       "value": "oviducts"
+      },
+      {
+       "value": "Q oviduct"
+      },
+      {
+       "value": "fallopian tube"
+      },
+      {
+       "value": "Q (oviduct)"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "oviduct",
+       "fallopian"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Q, the oviduct."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name part S.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "cervix"
+      },
+      {
+       "value": "the cervix"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "S is the cervix."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "State the cow's expected calving date, using a gestation period of 283 days.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "22 January 2027"
+      },
+      {
+       "value": "22 January"
+      },
+      {
+       "value": "22/01/2027"
+      },
+      {
+       "value": "22/1/2027"
+      },
+      {
+       "value": "January 22 2027"
+      },
+      {
+       "value": "January 22"
+      },
+      {
+       "value": "22th January 2027"
+      },
+      {
+       "value": "22th January"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "14 April 2026 + 283 days = 22 January 2027."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Before service, which sign best showed that the cow was on heat?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Her milk yield rose sharply",
+      "rationale": "Yield usually drops at heat."
+     },
+     {
+      "key": "B",
+      "content": "She stood still when other cows mounted her",
+      "correct": true,
+      "rationale": "Correct: standing heat."
+     },
+     {
+      "key": "C",
+      "content": "She lay quietly apart from the herd all day",
+      "rationale": "Cows on heat are restless."
+     },
+     {
+      "key": "D",
+      "content": "Her appetite increased and she grazed for longer than usual",
+      "rationale": "Appetite usually falls at heat."
+     }
+    ],
+    "explanation": "Standing to be mounted is the surest sign of heat."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** functions of part P.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Produces eggs (ova).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Produces hormones (oestrogen and progesterone) / forms the corpus luteum that maintains pregnancy.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Ovary functions."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe what happens from fertilisation until the embryo is attached in part R.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A sperm nucleus fuses with the egg nucleus in the oviduct to form a zygote.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The zygote divides repeatedly into an embryo as it moves down the oviduct to the uterus.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The embryo implants in the uterus wall and a placenta forms, through which it gets food and oxygen.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Fertilisation, cleavage, implantation."
+   }
+  ],
+  "explanation": "Identify parts of the cow's reproductive system, predict calving and describe fertilisation.",
+  "hints": [
+   "Order: ovaries, oviducts, uterus, cervix, vagina, vulva.",
+   "Gestation of a cow is about 283 days."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "Q"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "cervix"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "22 January 2027"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ }
+]

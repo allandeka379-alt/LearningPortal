@@ -1,0 +1,887 @@
+[
+ {
+  "key": "exam.w2a-theory.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.soil.inorganic-fertilisers",
+   "agri.soil.plant-nutrients"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "Tendai will plant 1.4 ha of maize near Chinhoyi at a spacing of 90 cm × 30 cm, one plant per station. He will apply Compound D at 300 kg/ha at planting and ammonium nitrate as a top dressing. Fertiliser is sold in 50 kg bags.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State whether Compound D is a straight or a compound fertiliser.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "compound"
+      },
+      {
+       "value": "compound fertiliser"
+      },
+      {
+       "value": "a compound fertiliser"
+      },
+      {
+       "value": "compound fertilizer"
+      }
+     ],
+     "rejected": [
+      {
+       "value": "straight"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "It supplies N, P and K, so it is a compound fertiliser."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the number of bags of Compound D Tendai must buy. Round UP to whole bags.",
+    "payload": {
+     "unitHint": "bags"
+    },
+    "answerSpec": {
+     "value": 9,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bags",
+       "bag"
+      ]
+     }
+    },
+    "explanation": "300 × 1.4 = 420 kg; 420 ÷ 50 = 8.4, so 9 bags.",
+    "workedSolution": "1. 300 × 1.4 = 420 kg; 420 ÷ 50 = 8.4, so 9 bags."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the mass of Compound D to be placed at each planting station, in g, to one decimal place.",
+    "payload": {
+     "unitHint": "g/plant"
+    },
+    "answerSpec": {
+     "value": 8.1,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "g/plant",
+       "g per plant",
+       "grams per plant",
+       "g"
+      ]
+     }
+    },
+    "explanation": "Stations per ha = 10,000 ÷ (0.9 × 0.3) = 37,037; 300,000 g ÷ 37,037 = 8.1 g.",
+    "workedSolution": "1. Stations per ha = 10,000 ÷ (0.9 × 0.3) = 37,037; 300,000 g ÷ 37,037 = 8.1 g."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why is the ammonium nitrate applied as a top dressing rather than at planting?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Nitrate leaches easily, so it is given when the crop can use it",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "Maize seedlings need no nitrogen at all during their first weeks",
+      "rationale": "Seedlings need some nitrogen; the compound supplies it."
+     },
+     {
+      "key": "C",
+      "content": "Ammonium nitrate is mainly a phosphorus fertiliser for root growth",
+      "rationale": "It supplies nitrogen."
+     },
+     {
+      "key": "D",
+      "content": "Top dressing raises the soil pH so that the maize can take up more phosphorus",
+      "rationale": "Ammonium fertilisers tend to lower pH."
+     }
+    ],
+    "explanation": "Applying nitrogen when the crop can use it reduces leaching losses."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the Compound D should be placed a few centimetres from the seed rather than touching it.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Concentrated fertiliser salts touching the seed draw water out of it by osmosis (fertiliser burn).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So germination is poor / seedlings die.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Fertiliser burn."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** signs on the maize that would show it was short of nitrogen.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Yellowing of the older, lower leaves (a V from the tip along the midrib).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Stunted, pale plants / thin stems / small cobs.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Nitrogen deficiency signs."
+   }
+  ],
+  "explanation": "Identify the fertiliser type, calculate bags and grams per station, then explain timing, placement and deficiency signs.",
+  "hints": [
+   "kg = rate × area; bags are rounded up.",
+   "g per station = kg/ha × 1000 ÷ stations per ha."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "compound"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "9"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "8.1"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.0081"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ },
+ {
+  "key": "exam.w2a-theory.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.soil.ph-liming"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "Form 3 pupils tested soil from three plots of a school farm near Gweru with universal indicator and a colour chart.\n\n| Plot | Colour of indicator | pH from chart | Area (ha) |\n| --- | --- | --- | --- |\n| P | Red-orange | 4.8 | 0.35 |\n| Q | Green | 6.8 | 0.5 |\n| R | Yellow-green | 6.0 | 0.4 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which plot has the most acid soil?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Plot Q",
+      "rationale": "pH 6.8 is close to neutral."
+     },
+     {
+      "key": "B",
+      "content": "Plot R",
+      "rationale": "pH 6.0 is only slightly acid."
+     },
+     {
+      "key": "C",
+      "content": "Plot P",
+      "correct": true,
+      "rationale": "Correct: pH 4.8 is the lowest."
+     },
+     {
+      "key": "D",
+      "content": "All three plots are equally acid",
+      "rationale": "Their pH values differ."
+     }
+    ],
+    "explanation": "The lower the pH, the more acid the soil."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the substance added to the soil and water in the test tube to make the clay settle.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "barium sulfate"
+      },
+      {
+       "value": "barium sulphate"
+      },
+      {
+       "value": "BaSO4"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "barium"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Barium sulfate."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Lime is recommended at 2 t/ha for plot P. Calculate the number of 50 kg bags needed for plot P.",
+    "payload": {
+     "unitHint": "bags"
+    },
+    "answerSpec": {
+     "value": 14,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bags",
+       "bag"
+      ]
+     }
+    },
+    "explanation": "2,000 × 0.35 = 700 kg; 700 ÷ 50 = 14 bags.",
+    "workedSolution": "1. 2,000 × 0.35 = 700 kg; 700 ÷ 50 = 14 bags."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "How many times more acid (in hydrogen ion concentration) is the soil of plot P than that of plot Q?",
+    "answerSpec": {
+     "value": 100
+    },
+    "explanation": "6.8 − 4.8 = 2 units; 10 × 10 = 100 times.",
+    "workedSolution": "1. 6.8 − 4.8 = 2 units; 10 × 10 = 100 times."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why crops grow poorly in plot P.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Aluminium and manganese become soluble and toxic, damaging roots.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Phosphorus is locked up / calcium and magnesium are short / soil bacteria (nitrifiers, Rhizobium) work poorly.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Toxicity and nutrient lock-up at low pH."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the lime should be applied to plot P.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Spread it evenly by broadcasting.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Work (disc or dig) it into the soil.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Apply well before planting (it acts slowly) and not together with ammonium fertilisers.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Broadcast, incorporate, early, separate from ammonium fertiliser."
+   }
+  ],
+  "explanation": "Interpret pH results, calculate lime and explain the effects of acidity and how to correct it.",
+  "hints": [
+   "Below pH 7 is acid.",
+   "Each pH unit is a tenfold change."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "barium sulfate"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "14"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "100"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.7"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ },
+ {
+  "key": "exam.w2a-theory.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.water.irrigation-methods",
+   "agri.water.irrigation-need-sources"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "Farai grows wheat in winter on 0.6 ha of gently undulating land with a sandy loam soil near Marondera. Water comes from a dam on the farm.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which irrigation method is most suitable for this wheat?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Basin irrigation",
+      "rationale": "Needs level land; unsuited to a close-sown cereal field."
+     },
+     {
+      "key": "B",
+      "content": "Hand watering with cans",
+      "rationale": "Impossible on 0.6 ha of wheat."
+     },
+     {
+      "key": "C",
+      "content": "Drip lines along every row",
+      "rationale": "Wheat rows are too close together for drip to be economic."
+     },
+     {
+      "key": "D",
+      "content": "Sprinkler irrigation",
+      "correct": true,
+      "rationale": "Correct: suits close-spaced wheat, sandy loam and uneven land."
+     }
+    ],
+    "explanation": "Sprinklers wet the whole surface evenly and cope with uneven land and sandy soils."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the volume of water, in litres, needed to store 35 mm of water in the root zone over the 0.6 ha.",
+    "payload": {
+     "unitHint": "L"
+    },
+    "answerSpec": {
+     "value": 210000,
+     "units": {
+      "required": false,
+      "accepted": [
+       "L",
+       "l",
+       "litres",
+       "litre",
+       "liters"
+      ]
+     }
+    },
+    "explanation": "0.6 ha = 6,000 m²; 6,000 × 35 = 210,000 L.",
+    "workedSolution": "1. 0.6 ha = 6,000 m²; 6,000 × 35 = 210,000 L."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Assume the system is 70% efficient. Calculate the volume of water that must be pumped from the dam, in litres.",
+    "payload": {
+     "unitHint": "L"
+    },
+    "answerSpec": {
+     "value": 300000,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "L",
+       "l",
+       "litres",
+       "litre",
+       "liters"
+      ]
+     }
+    },
+    "explanation": "210,000 ÷ 0.7 = 300,000 L.",
+    "workedSolution": "1. 210,000 ÷ 0.7 = 300,000 L."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the method of irrigation that delivers water drop by drop to each plant.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "drip"
+      },
+      {
+       "value": "drip irrigation"
+      },
+      {
+       "value": "trickle"
+      },
+      {
+       "value": "trickle irrigation"
+      },
+      {
+       "value": "drip (trickle) irrigation"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "drip",
+       "trickle"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Drip (trickle) irrigation."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the wheat must be irrigated.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It is grown in the dry winter season when there is almost no rain.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So without irrigation the crop would wilt and fail / yields would be very low.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Seasonal rainfall."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** disadvantages of the method you chose in (a).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "High cost of pipes, pump and energy.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Wind causes uneven watering / evaporation losses / wet leaves favour disease / needs clean water.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Sprinkler drawbacks."
+   }
+  ],
+  "explanation": "Choose a method, calculate water needed and supplied, and explain the need for irrigation.",
+  "hints": [
+   "1 mm over 1 m² = 1 L.",
+   "Water to pump = water needed ÷ efficiency."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "210000"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "300000"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "drip"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "21"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "147000"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ },
+ {
+  "key": "exam.w2a-theory.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.structures.fencing",
+   "agri.structures.fence-construction"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 720,
+  "stem": "A farmer near Masvingo will fence a rectangular paddock 160 m long and 80 m wide with 4 strands of barbed wire on gum poles placed every 8 m. Barbed wire is sold in 250 m rolls.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the perimeter of the paddock, in m.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 480,
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "2 × (160 + 80) = 480 m.",
+    "workedSolution": "1. 2 × (160 + 80) = 480 m."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the number of posts needed.",
+    "payload": {
+     "unitHint": "posts"
+    },
+    "answerSpec": {
+     "value": 60,
+     "units": {
+      "required": false,
+      "accepted": [
+       "posts",
+       "post",
+       "poles",
+       "pole"
+      ]
+     }
+    },
+    "explanation": "480 ÷ 8 = 60 posts (closed fence).",
+    "workedSolution": "1. 480 ÷ 8 = 60 posts (closed fence)."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the number of rolls of barbed wire needed.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "480 × 4 = 1,920 m; ÷ 250 = 7.68, so 8 rolls.",
+    "workedSolution": "1. 480 × 4 = 1,920 m; ÷ 250 = 7.68, so 8 rolls."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which treatment would make the gum poles last longest?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Brushing preservative onto the surface of each pole",
+      "rationale": "Stays near the surface."
+     },
+     {
+      "key": "B",
+      "content": "Pressure treatment with a preservative",
+      "correct": true,
+      "rationale": "Correct: deepest penetration."
+     },
+     {
+      "key": "C",
+      "content": "Leaving the bark on to protect the wood",
+      "rationale": "Bark blocks preservative and shelters insects."
+     },
+     {
+      "key": "D",
+      "content": "Painting the tops of the poles",
+      "rationale": "The butt in the soil is where rot and termites attack."
+     }
+    ],
+    "explanation": "Pressure treatment forces preservative deep into the wood."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the poles are debarked and seasoned before treatment.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Bark stops the preservative entering the wood and shelters insects.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Dry (seasoned) wood absorbs preservative better than wet wood.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Preparation for treatment."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Give **three** advantages of steel standards compared with gum poles.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Termite-proof and do not rot.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Fire-proof.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Long-lasting / quick to drive in / no preservative chemicals to handle.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Advantages of steel."
+   }
+  ],
+  "explanation": "Fencing materials: calculate quantities, then explain post treatment and compare materials.",
+  "hints": [
+   "Closed fence: posts = perimeter ÷ spacing.",
+   "Round rolls UP."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "480"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "60"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "12800"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "61"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "ZIMSEC P2 / Cambridge P1"
+ }
+]

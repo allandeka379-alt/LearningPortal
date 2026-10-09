@@ -1,0 +1,673 @@
+[
+ {
+  "key": "exam.w2a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.crops.maize",
+   "agri.soil.inorganic-fertilisers",
+   "agri.soil.ph-liming",
+   "agri.soil.plant-nutrients"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1440,
+  "stem": "Rudo farms in natural region II near Chinhoyi. She plans to grow 3 ha of maize. A soil test of the field gave these results.\n\n| Test | Result |\n| --- | --- |\n| pH | 4.9 (strongly acid) |\n| Phosphorus | Low |\n| Potassium | Medium |\n| Magnesium | Low |\n\nShe will apply Compound D (assume 7% N) at 375 kg/ha at planting and ammonium nitrate (assume 34.5% N) at 200 kg/ha as top dressing. Lime and fertiliser are sold in 50 kg bags.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the nutrient whose shortage would cause purple leaves on the young maize in this field.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "phosphorus"
+      },
+      {
+       "value": "P"
+      },
+      {
+       "value": "phosphate"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Phosphorus (low in the test, and locked up by acidity)."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the type of lime Rudo should use, given the soil test.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "dolomitic lime"
+      },
+      {
+       "value": "dolomitic"
+      },
+      {
+       "value": "dolomite"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "dolomit"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Dolomitic lime corrects acidity and supplies the low magnesium."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Lime is recommended at 3 t/ha. Calculate the number of bags of lime needed.",
+    "payload": {
+     "unitHint": "bags"
+    },
+    "answerSpec": {
+     "value": 180,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bags",
+       "bag"
+      ]
+     }
+    },
+    "explanation": "3,000 × 3 = 9,000 kg; ÷ 50 = 180 bags.",
+    "workedSolution": "1. 3,000 × 3 = 9,000 kg; ÷ 50 = 180 bags."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the number of bags of Compound D needed. Round UP to whole bags.",
+    "payload": {
+     "unitHint": "bags"
+    },
+    "answerSpec": {
+     "value": 23,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bags",
+       "bag"
+      ]
+     }
+    },
+    "explanation": "375 × 3 = 1,125 kg; ÷ 50 = 22.5, so 23 bags.",
+    "workedSolution": "1. 375 × 3 = 1,125 kg; ÷ 50 = 22.5, so 23 bags."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the total mass of nitrogen applied per hectare from both fertilisers, in kg, to two decimal places.",
+    "payload": {
+     "unitHint": "kg/ha"
+    },
+    "answerSpec": {
+     "value": 95.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "kg/ha",
+       "kg ha^-1",
+       "kg per ha",
+       "kg per hectare",
+       "kilograms per hectare"
+      ]
+     }
+    },
+    "explanation": "375 × 7 ÷ 100 = 26.25 kg; 200 × 34.5 ÷ 100 = 69 kg; total 95.25 kg N/ha.",
+    "workedSolution": "1. 375 × 7 ÷ 100 = 26.25 kg; 200 × 34.5 ÷ 100 = 69 kg; total 95.25 kg N/ha."
+   },
+   {
+    "label": "(f)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "When should the ammonium nitrate be applied?",
+    "options": [
+     {
+      "key": "A",
+      "content": "In split doses to the growing crop, e.g. at knee height and again later",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "All of it mixed with the lime a month before planting",
+      "rationale": "Lime with ammonium fertiliser loses ammonia; too early also leaches."
+     },
+     {
+      "key": "C",
+      "content": "All of it placed in the planting hole together with the seed at planting",
+      "rationale": "This would burn the seed and leach."
+     },
+     {
+      "key": "D",
+      "content": "After harvest, to prepare for the next season",
+      "rationale": "Too late to help this crop."
+     }
+    ],
+    "explanation": "Split top dressing matches nitrogen supply to rapid growth and reduces leaching."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain how liming the field with the lime you named in (b) will help Rudo get more value from her fertiliser.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Raising the pH releases phosphorus locked up by iron and aluminium / removes aluminium toxicity so roots grow well.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Healthier roots and active soil bacteria (nitrifiers) take up and use more of the applied nutrients, so less is wasted.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Dolomitic lime also supplies the magnesium (and calcium) that the soil test shows is low.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Lime improves nutrient availability and uptake."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Describe and explain how Rudo should fertilise this maize crop, from preparing the land to tasselling.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Test the soil and lime with dolomitic lime well before planting (dry season), broadcast and worked in.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Reason: lime acts slowly; it raises pH and supplies magnesium.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Apply Compound D as a basal dressing at planting, banded or placed beside but not touching the seed.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Reason: P and K move little and are needed for early root growth; contact burns seed.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Add manure or compost where available to improve organic matter and nutrient holding.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Top dress ammonium nitrate in split doses on moist soil beside the plants (e.g. about knee height and before tasselling).",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Reason: nitrogen leaches easily and is needed most during rapid vegetative growth; not on wet leaves (scorch).",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Watch for deficiency signs (yellow V on old leaves for N, purpling for P) and adjust; keep weeds controlled so they do not take the fertiliser.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Accurate, well-developed explanation of several relevant points using correct agricultural terms, applied to the crop, animal or situation in the question, with a clear judgement where one is asked for."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some relevant points explained, partly developed or only partly applied to the situation; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple statements or a list of points with little explanation or application."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     }
+    },
+    "explanation": "A programme in order, with reasons: lime, basal, organic matter, split top dressing, monitoring."
+   }
+  ],
+  "explanation": "Soil test interpretation, lime and fertiliser calculations, and a reasoned fertiliser programme for maize.",
+  "hints": [
+   "Bags = rate × area ÷ 50, rounded up.",
+   "Nutrient = product × % ÷ 100.",
+   "For the long part, follow the season in order and give a reason for each step."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "phosphorus"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "dolomitic lime"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "180"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "23"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "95.25"
+    },
+    "(f)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.18"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "22"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "69"
+     },
+     "(f)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section B"
+ },
+ {
+  "key": "exam.w2a-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.crops.vegetables",
+   "agri.water.irrigation-methods",
+   "agri.water.irrigation-equipment",
+   "agri.water.irrigation-need-sources"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1440,
+  "stem": "Chipo grows tomatoes in the dry season on a 30 m × 30 m plot near Mutare, using drip irrigation from a borehole. The plot has 25 drip lines, each 30 m long, with an emitter every 30 cm. Each emitter delivers 2 L per hour.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the part of the drip system that removes sand and silt from the water.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "filter"
+      },
+      {
+       "value": "screen filter"
+      },
+      {
+       "value": "disc filter"
+      },
+      {
+       "value": "sand filter"
+      },
+      {
+       "value": "media filter"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "filter"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The filter."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the total number of emitters on the plot.",
+    "answerSpec": {
+     "value": 2500
+    },
+    "explanation": "30 m = 3000 cm; 3000 ÷ 30 = 100 per line; × 25 lines = 2,500 emitters.",
+    "workedSolution": "1. 30 m = 3000 cm; 3000 ÷ 30 = 100 per line; × 25 lines = 2,500 emitters."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the total flow of the system, in litres per hour.",
+    "answerSpec": {
+     "value": 5000
+    },
+    "explanation": "2,500 × 2 = 5,000 L/h.",
+    "workedSolution": "1. 2,500 × 2 = 5,000 L/h."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The crop needs 5 mm of water over the whole plot. Calculate how many minutes the system must run.",
+    "payload": {
+     "unitHint": "min"
+    },
+    "answerSpec": {
+     "value": 54,
+     "units": {
+      "required": false,
+      "accepted": [
+       "min",
+       "minutes",
+       "mins"
+      ]
+     }
+    },
+    "explanation": "Water = 900 m² × 5 mm = 4,500 L; 4,500 ÷ 5,000 = 0.9 h = 54 minutes.",
+    "workedSolution": "1. Water = 900 m² × 5 mm = 4,500 L; 4,500 ÷ 5,000 = 0.9 h = 54 minutes."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why do tomatoes under drip irrigation usually suffer less from leaf diseases than tomatoes under sprinklers?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Drip water contains fungicide",
+      "rationale": "Not unless it is added."
+     },
+     {
+      "key": "B",
+      "content": "Drip irrigation uses more water",
+      "rationale": "Drip uses less water."
+     },
+     {
+      "key": "C",
+      "content": "The leaves stay dry",
+      "correct": true,
+      "rationale": "Correct: fungal spores need wet leaves."
+     },
+     {
+      "key": "D",
+      "content": "The plants grow faster and outgrow every disease",
+      "rationale": "Leaf wetness, not growth rate, is the key."
+     }
+    ],
+    "explanation": "Overhead watering wets the foliage, which favours fungal infection."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why irregular watering can cause blossom-end rot in tomatoes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Calcium reaches the fruit dissolved in water moving through the plant.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "When the soil dries out between waterings, too little calcium reaches the fruit, so tissue at the blossom end collapses.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Calcium moves with water."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** routine maintenance tasks for Chipo's drip system.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Clean the filter regularly.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Flush the drip lines / check and repair leaks / replace blocked emitters.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Drip maintenance."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Explain how drip irrigation, correctly managed, can improve the yield and quality of Chipo's tomato crop compared with furrow irrigation.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Drip delivers water to the root zone, so little is lost by evaporation, runoff and deep drainage; the limited borehole water irrigates more plants.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Frequent small applications keep soil moisture even, reducing stress, fruit cracking and blossom-end rot.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Leaves stay dry, so fewer fungal leaf diseases and sprays are not washed off.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Fertigation supplies nutrients directly to the roots in small, frequent doses, reducing leaching.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Fewer weeds grow between the rows because the soil there stays dry.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Fruit stays clean (no soil splash), improving marketable quality.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Management needed: filter and flush to prevent blocked emitters; schedule irrigation to crop stage and weather; avoid over-watering.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Comparison: furrow is cheaper but wastes water on sandy soils, wets the soil surface widely and gives less even moisture.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Accurate, well-developed explanation of several relevant points using correct agricultural terms, applied to the crop, animal or situation in the question, with a clear judgement where one is asked for."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some relevant points explained, partly developed or only partly applied to the situation; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple statements or a list of points with little explanation or application."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     }
+    },
+    "explanation": "Link each feature of drip and its management to yield and quality, and compare with furrows."
+   }
+  ],
+  "explanation": "Drip system calculations, equipment and maintenance, and how irrigation management affects tomato yield and quality.",
+  "hints": [
+   "Emitters per line = line length ÷ spacing (use the same units).",
+   "Time = water needed ÷ flow rate.",
+   "For the long part, link each management practice to yield or quality."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "filter"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "2500"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "5000"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "54"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "750"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2500"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.9"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section B"
+ }
+]

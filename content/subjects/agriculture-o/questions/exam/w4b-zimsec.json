@@ -1,0 +1,1373 @@
+[
+ {
+  "key": "exam.w4b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.nutrition.rations",
+   "agri.nutrition.feedstuffs",
+   "agri.nutrition.nutrients"
+  ],
+  "difficulty": 4,
+  "marks": 20,
+  "estimatedSeconds": 1440,
+  "stem": "Thandeka keeps 30 grower pigs near Bulawayo. She mixes her own grower ration from the feeds below and wants 540 kg of a 17% crude protein ration. Each pig eats about 2.2 kg a day. Last month her pigs grew from an average of 38 kg to 65 kg and each ate 81 kg of feed.\n\n| Feed | Crude protein (%) |\n| --- | --- |\n| Maize meal | 9 |\n| Soya bean cake | 45 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the protein concentrate in the table.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "soya bean cake"
+      },
+      {
+       "value": "soya cake"
+      },
+      {
+       "value": "soybean cake"
+      },
+      {
+       "value": "soya bean meal"
+      },
+      {
+       "value": "soya"
+      },
+      {
+       "value": "soybean meal"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "soya",
+       "soy"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "**Soya bean cake** (45% CP)."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use the Pearson square to calculate the mass of soya bean cake in 540 kg of the ration, in kg.",
+    "payload": {
+     "unitHint": "kg"
+    },
+    "answerSpec": {
+     "value": 120,
+     "units": {
+      "required": false,
+      "accepted": [
+       "kg",
+       "kilograms",
+       "kilogram",
+       "kgs"
+      ]
+     }
+    },
+    "explanation": "Soya 17 − 9 = 8 parts; maize 45 − 17 = 28 parts; total 36; soya = 8 ÷ 36 × 540 = 120 kg.",
+    "workedSolution": "1. Soya 17 − 9 = 8 parts; maize 45 − 17 = 28 parts; total 36; soya = 8 ÷ 36 × 540 = 120 kg."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the mass of maize meal in the 540 kg, in kg.",
+    "payload": {
+     "unitHint": "kg"
+    },
+    "answerSpec": {
+     "value": 420,
+     "units": {
+      "required": false,
+      "accepted": [
+       "kg",
+       "kilograms",
+       "kilogram",
+       "kgs"
+      ]
+     }
+    },
+    "explanation": "540 − 120 = 420 kg.",
+    "workedSolution": "1. 540 − 120 = 420 kg."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "How many 50 kg bags of ration does Thandeka need to feed all 30 pigs for 21 days? Round UP to whole bags.",
+    "payload": {
+     "unitHint": "bags"
+    },
+    "answerSpec": {
+     "value": 28,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bags",
+       "bag"
+      ]
+     }
+    },
+    "explanation": "30 × 2.2 × 21 = 1,386 kg; ÷ 50 = 27.72, so 28 bags.",
+    "workedSolution": "1. 30 × 2.2 × 21 = 1,386 kg; ÷ 50 = 27.72, so 28 bags."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the feed conversion ratio of the pigs last month.",
+    "answerSpec": {
+     "value": 3,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "Gain = 65 − 38 = 27 kg; FCR = 81 ÷ 27 = 3.",
+    "workedSolution": "1. Gain = 65 − 38 = 27 kg; FCR = 81 ÷ 27 = 3."
+   },
+   {
+    "label": "(f)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which mineral is given to young piglets kept on concrete, usually by injection, to prevent anaemia?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Iron",
+      "correct": true,
+      "rationale": "Correct: for haemoglobin."
+     },
+     {
+      "key": "B",
+      "content": "Iodine",
+      "rationale": "Prevents goitre."
+     },
+     {
+      "key": "C",
+      "content": "Sodium",
+      "rationale": "Salt, for body fluids."
+     },
+     {
+      "key": "D",
+      "content": "Calcium",
+      "rationale": "Calcium shortage causes rickets, not anaemia."
+     }
+    ],
+    "explanation": "Iron is needed for haemoglobin; sow milk is low in iron and piglets on concrete cannot get it from soil."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Distinguish between a maintenance ration and a production ration, using Thandeka's pigs as an example of one of them.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Maintenance ration: keeps an animal alive and healthy at constant weight (e.g. a mature boar not working).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Production ration: feed above maintenance for growth, milk, eggs, work or pregnancy.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Thandeka's growers need a production ration because they are growing (gaining weight daily).",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Definitions plus application."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Describe the feeding practices Thandeka should follow to raise her pigs efficiently and profitably from weaning to slaughter.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Feed a balanced ration matched to the stage: creep/weaner ration high in protein, then grower and finisher rations.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Make changes between rations gradually over several days to avoid digestive upsets and checks in growth.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Feed at regular times each day in clean troughs of the right size and height, with enough space for every pig.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Fill feeders only partly / use well-designed feeders to cut spillage, because spilled feed raises the FCR.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Provide clean water at all times; thirsty pigs eat and grow less.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Store feed dry, off the floor and away from rats; never feed mouldy feed.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Weigh pigs and feed regularly and keep records to calculate FCR and costs; adjust if FCR rises.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Use cheaper home-mixed rations (Pearson square) where they meet requirements; deworm and keep pigs healthy so feed is not wasted; sell at the target weight because FCR worsens as pigs get heavier.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Accurate, well-developed explanation of several relevant points using correct agricultural terms, applied to the crop, animal or situation in the question, with a clear judgement where one is asked for."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some relevant points explained, partly developed or only partly applied to the situation; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple statements or a list of points with little explanation or application."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     }
+    },
+    "explanation": "Balanced, staged feeding with good practice, records and cost control."
+   }
+  ],
+  "explanation": "Formulate and quantify a pig ration, calculate FCR and describe efficient feeding.",
+  "hints": [
+   "Pearson square: subtract diagonally.",
+   "Bags: round UP.",
+   "FCR = feed ÷ gain."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "soya bean cake"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "120"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "420"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "28"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(f)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "420"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "120"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "27"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1.25"
+     },
+     "(f)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section B"
+ },
+ {
+  "key": "exam.w4b-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.health.notifiable-immunity",
+   "agri.health.disease-hygiene"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1440,
+  "stem": "A veterinary officer in a district near Chipinge receives three reports in one week.\n\n| Farm | Animals | Signs reported to the veterinary officer |\n| --- | --- | --- |\n| 1 | Cattle | Drooling, lameness, blisters on the tongue and between the hooves; milk yield down |\n| 2 | Cattle | One cow found dead with dark, unclotted blood oozing from the nose and anus |\n| 3 | Chickens | Gasping, twisted necks, green diarrhoea, egg production down, many deaths |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the disease most likely on farm 1.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "foot-and-mouth disease"
+      },
+      {
+       "value": "foot and mouth disease"
+      },
+      {
+       "value": "foot and mouth"
+      },
+      {
+       "value": "FMD"
+      },
+      {
+       "value": "foot-and-mouth"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "foot",
+       "fmd"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "**Foot-and-mouth disease**."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the disease most likely on farm 2.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "anthrax"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "anthrax"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "**Anthrax**."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What type of organism causes the disease on farm 3?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A bacterium",
+      "rationale": "Anthrax is bacterial."
+     },
+     {
+      "key": "B",
+      "content": "A protozoan",
+      "rationale": "Trypanosomiasis is protozoan."
+     },
+     {
+      "key": "C",
+      "content": "A roundworm",
+      "rationale": "Worms do not cause it."
+     },
+     {
+      "key": "D",
+      "content": "A virus",
+      "correct": true,
+      "rationale": "Correct: Newcastle disease is viral."
+     }
+    ],
+    "explanation": "Newcastle disease is caused by a virus."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "In a vaccination campaign, 1,292 of the 1,520 cattle at the local dip tank were vaccinated. Calculate the percentage vaccinated.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 85,
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "1,292 ÷ 1,520 × 100 = 85%.",
+    "workedSolution": "1. 1,292 ÷ 1,520 × 100 = 85%."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Farm 3's neighbour must vaccinate 2,750 chickens. Assume the vaccine is sold in vials of 1,000 doses. How many vials must be bought?",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "2,750 ÷ 1,000 = 2.75, so 3 vials.",
+    "workedSolution": "1. 2,750 ÷ 1,000 = 2.75, so 3 vials."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the carcass on farm 2 must not be opened.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Exposed to air, the bacteria form resistant spores that contaminate the soil for many years.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Blood and spores can infect people and other animals; the carcass is burned or buried deep with lime as the veterinary officer directs.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Spores and human danger."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Distinguish between active and passive immunity, giving a natural and an artificial example of each.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Active immunity: the animal makes its own antibodies; slow to develop but long-lasting.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Examples: natural active by recovering from infection; artificial active by vaccination.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Passive immunity: ready-made antibodies received from outside; immediate but short-lived.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Examples: natural passive from colostrum; artificial passive by injection of antiserum / antitoxin.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Definitions and examples."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 7,
+    "markingMode": "MANUAL",
+    "stem": "Describe the measures the veterinary services would take to control the outbreak on farm 1, and explain why each is needed.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The disease is notifiable: the farmer reports it and the veterinary services confirm it by inspection and samples.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Quarantine the farm and declare a control zone around it, because the virus spreads very easily.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Stop movement of cattle and other cloven-hoofed animals, their products and sales/auctions in the zone (permits, roadblocks), so infected animals do not carry the virus elsewhere.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Disinfect vehicles, people and equipment leaving the area (footbaths, wheel dips), since the virus travels on them.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Vaccinate cattle around the outbreak (ring vaccination) to build immunity and stop spread.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Separate cattle from buffalo (repair game fences), as buffalo can carry the virus.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Keep up surveillance and lift restrictions only when no new cases appear; explain to farmers why exports and markets depend on control.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 7,
+        "descriptor": "Accurate, well-developed explanation of several relevant points using correct agricultural terms, applied to the crop, animal or situation in the question, with a clear judgement where one is asked for."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 5,
+        "descriptor": "Some relevant points explained, partly developed or only partly applied to the situation; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "Simple statements or a list of points with little explanation or application."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     }
+    },
+    "explanation": "Notification, quarantine, movement control, disinfection, vaccination, wildlife separation, surveillance."
+   }
+  ],
+  "explanation": "Identify notifiable diseases from signs, calculate vaccination figures, explain immunity and describe outbreak control.",
+  "hints": [
+   "Match the signs to anthrax, foot-and-mouth disease and Newcastle disease.",
+   "Coverage = vaccinated ÷ total × 100."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "foot-and-mouth disease"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "anthrax"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "85"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "228"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section B"
+ },
+ {
+  "key": "exam.w4b-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.health.internal-parasites",
+   "agri.health.external-parasites"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1440,
+  "stem": "Nyasha keeps 36 goats near Masvingo on a small, wet paddock beside a stream. In February several goats have pale inner eyelids and swelling under the jaw, and ticks are numerous. After she starts regular spraying, the average tick count per goat falls from 96 to 12. Assume her dewormer is given at 2 mL per 10 kg of body weight; her heaviest goat weighs 45 kg.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the blood-sucking roundworm of goats that causes pale eyelids and swelling under the jaw.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "wireworm"
+      },
+      {
+       "value": "wire worm"
+      },
+      {
+       "value": "Haemonchus"
+      },
+      {
+       "value": "Haemonchus contortus"
+      },
+      {
+       "value": "barber's pole worm"
+      },
+      {
+       "value": "barbers pole worm"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "wireworm",
+       "wire worm",
+       "haemonchus",
+       "barber"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "**Wireworm** (*Haemonchus*)."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which organism near the stream is the intermediate host of the liver fluke?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The frog",
+      "rationale": "Not a host of liver fluke."
+     },
+     {
+      "key": "B",
+      "content": "The mosquito larva",
+      "rationale": "Not part of the fluke's cycle."
+     },
+     {
+      "key": "C",
+      "content": "The water snail",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "The bont tick",
+      "rationale": "A tick, not a fluke host."
+     }
+    ],
+    "explanation": "Liver fluke larvae multiply in water snails."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the dose of dewormer for each goat, in mL.",
+    "payload": {
+     "unitHint": "mL"
+    },
+    "answerSpec": {
+     "value": 9,
+     "units": {
+      "required": false,
+      "accepted": [
+       "mL",
+       "ml",
+       "millilitres",
+       "millilitre"
+      ]
+     }
+    },
+    "explanation": "45 ÷ 10 = 4.5; 4.5 × 2 = 9 mL.",
+    "workedSolution": "1. 45 ÷ 10 = 4.5; 4.5 × 2 = 9 mL."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the volume of dewormer needed for all 36 goats, in mL.",
+    "payload": {
+     "unitHint": "mL"
+    },
+    "answerSpec": {
+     "value": 324,
+     "units": {
+      "required": false,
+      "accepted": [
+       "mL",
+       "ml",
+       "millilitres",
+       "millilitre"
+      ]
+     }
+    },
+    "explanation": "9 × 36 = 324 mL.",
+    "workedSolution": "1. 9 × 36 = 324 mL."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the percentage fall in the average tick count.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 87.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "(96 − 12) ÷ 96 × 100 = 87.5%.",
+    "workedSolution": "1. (96 − 12) ÷ 96 × 100 = 87.5%."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Describe the life cycle of a roundworm of goats.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Adult worms in the gut (abomasum) lay eggs that pass out in the dung.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Eggs hatch on the pasture in warm, moist conditions; larvae feed and moult.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Third-stage (infective) larvae move out of the dung and up grass blades in moisture/dew.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Goats swallow them while grazing and they develop into adults in about three weeks (direct life cycle).",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Direct cycle via pasture."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why Nyasha should dose all the goats by the weight of the heaviest goat rather than guessing.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Guessing often gives too little drug (under-dosing), so some worms survive.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Survivors breed and pass on resistance, so the dewormer stops working.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Avoid resistance."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 7,
+    "markingMode": "MANUAL",
+    "stem": "Discuss a year-round programme Nyasha could follow to control both internal and external parasites of her goats.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Move the goats off the small wet paddock; use rotational grazing so paddocks rest and larvae die before goats return.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Avoid overstocking and keep kids on the cleanest grazing; do not graze wet, low ground or in early morning dew.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Fence off the stream and marshy ground (snail habitat) and give water from clean troughs, to control liver fluke.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Dose strategically (in the rains when infection peaks) and when signs appear, by weight, using an eyelid colour chart to treat only anaemic goats; change drug group as advised.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Dip or spray regularly against ticks, more often in the hot wet season, at the correct strength; hand-dress ears, udder and tail.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Keep housing clean and dry; treat and quarantine new goats before mixing.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Keep records of doses, counts and weights; judgement: combining grazing management with correct chemical use controls parasites best and slows resistance.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 7,
+        "descriptor": "Accurate, well-developed explanation of several relevant points using correct agricultural terms, applied to the crop, animal or situation in the question, with a clear judgement where one is asked for."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 5,
+        "descriptor": "Some relevant points explained, partly developed or only partly applied to the situation; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "Simple statements or a list of points with little explanation or application."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     }
+    },
+    "explanation": "Integrated grazing, hygiene and chemical control through the year."
+   }
+  ],
+  "explanation": "Identify parasites, calculate doses and tick reductions, and plan integrated parasite control.",
+  "hints": [
+   "Dose by the weight of the heaviest goat.",
+   "Percentage fall = fall ÷ starting count × 100."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "wireworm"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "9"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "324"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "87.5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "4.5"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "72"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "12.5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section B"
+ },
+ {
+  "key": "exam.w4b-zimsec.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "agri.health.disease-hygiene",
+   "agri.health.signs-of-health"
+  ],
+  "difficulty": 4,
+  "marks": 20,
+  "estimatedSeconds": 1440,
+  "stem": "A piggery near Mutare weaned 160 piglets last quarter, and 11 of them died of scours and pneumonia. Visitors walk freely into the pig house, pens are cleaned only when dung builds up, new breeding sows are put straight into the pens, and a sick weaner was left with its pen-mates. The manager plans a footbath using a disinfectant mixed at 1 part concentrate to 24 parts water (assume), in a 20 L footbath.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the mortality percentage of the weaners, to one decimal place.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 6.9,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "11 ÷ 160 × 100 = 6.875, about 6.9%.",
+    "workedSolution": "1. 11 ÷ 160 × 100 = 6.875, about 6.9%."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the volume of disinfectant concentrate, in mL, for the 20 L footbath.",
+    "payload": {
+     "unitHint": "mL"
+    },
+    "answerSpec": {
+     "value": 800,
+     "units": {
+      "required": false,
+      "accepted": [
+       "mL",
+       "ml",
+       "millilitres",
+       "millilitre"
+      ]
+     }
+    },
+    "explanation": "20,000 mL ÷ 25 parts = 800 mL.",
+    "workedSolution": "1. 20,000 mL ÷ 25 parts = 800 mL."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Visitors who have been on other pig farms can bring disease in mainly by:",
+    "options": [
+     {
+      "key": "A",
+      "content": "breathing near the pigs' feed",
+      "rationale": "Not the main route from other farms."
+     },
+     {
+      "key": "B",
+      "content": "carrying pathogens on boots and clothing",
+      "correct": true,
+      "rationale": "Correct: equipment and footwear spread."
+     },
+     {
+      "key": "C",
+      "content": "looking at the pigs from the door",
+      "rationale": "Looking does not spread disease."
+     },
+     {
+      "key": "D",
+      "content": "bringing extra bags of feed in for the pigs",
+      "rationale": "Not the main risk."
+     }
+    ],
+    "explanation": "Pathogens travel between farms on boots, clothing and equipment."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Give the term for keeping newly bought sows apart from the herd for several weeks before they join it.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "quarantine"
+      },
+      {
+       "value": "quarantining"
+      },
+      {
+       "value": "quarantine period"
+      }
+     ],
+     "keywords": {
+      "any": [
+       "quarantin"
+      ]
+     },
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "**Quarantine**."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Distinguish between an infectious disease and a contagious disease.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Infectious: caused by a pathogen that invades the body and multiplies.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Contagious: an infectious disease that spreads by direct or close contact between animals (e.g. tetanus is infectious but not contagious).",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "All contagious diseases are infectious, not all infectious are contagious."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the sick weaner should have been isolated.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It was shedding pathogens in its dung, breath and discharges.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Its pen-mates were infected by contact and contaminated feed, water and floor; a sick pen with its own equipment stops this.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Breaking the route of spread."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** causes of disease in pigs other than pathogens.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Poor nutrition / deficiencies (e.g. iron-deficiency anaemia).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Injuries / poisoning (mouldy feed, chemicals) / parasites / stress from cold, draughts or overcrowding.",
+        "marks": 1
+       }
+      ]
+     }
+    },
+    "explanation": "Non-infectious causes."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Describe a programme of hygiene and management that would reduce disease in this piggery, explaining how each measure works.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Restrict visitors and keep a visitors' book; provide footbaths with fresh disinfectant at each door and farm clothing, so pathogens are not carried in.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Clean pens daily, remove dung and wet bedding, and wash before disinfecting, because dung shelters pathogens and weakens disinfectants.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Use all-in, all-out batches with thorough cleaning, disinfection and a rest period between batches, so pathogens do not pass from older to younger pigs.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Quarantine new sows for several weeks, checking and treating them, so they do not introduce disease.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Isolate sick pigs at once in a sick pen with its own equipment, and call the veterinary officer; report notifiable diseases.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Provide dry, draught-free, well-ventilated housing without overcrowding, which reduces stress and airborne spread of pneumonia.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Give clean water, balanced feed, iron to piglets, colostrum soon after birth, and vaccinate and deworm as advised, to build resistance.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Control rats and flies, dispose of dead pigs safely, and keep records of deaths and treatments to spot problems early.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 6,
+        "maxMarks": 8,
+        "descriptor": "Accurate, well-developed explanation of several relevant points using correct agricultural terms, applied to the crop, animal or situation in the question, with a clear judgement where one is asked for."
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 5,
+        "descriptor": "Some relevant points explained, partly developed or only partly applied to the situation; any judgement is simple or one-sided."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "Simple statements or a list of points with little explanation or application."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     }
+    },
+    "explanation": "Biosecurity, sanitation, isolation, housing, nutrition and records, each with its reason."
+   }
+  ],
+  "explanation": "Calculate mortality and disinfectant quantities and plan hygiene to prevent disease in a piggery.",
+  "hints": [
+   "Mortality = deaths ÷ number at the start × 100.",
+   "Total parts = 1 + 24."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "6.9"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "800"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "quarantine"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "11"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "833"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Paper 2 Section B"
+ }
+]
