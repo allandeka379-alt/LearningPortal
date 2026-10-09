@@ -134,3 +134,4 @@ WebFetch cannot resolve any host), so source the syllabi locally, the same way a
   Downloaded to .scratch/{mathematics-a,biology-a,chemistry-a,physics-a,religious-studies}/sources (+ Cambridge 9709+update, 9700, 9701, 9702).
   | wf_71031a83-484 (task welq3w34l) | subject-foundations-waveD | mathematics-a (ZIMSEC pure-mathematics, statistics, mechanics + Cambridge 9709), biology-a, chemistry-a, physics-a, religious-studies-o (ZIMSEC FRS) |
 - agriculture-o DONE: imported, DEV-published 3074, AVAILABLE; smoke 54/54. Committed + pushed.
+- history-o DONE: imported, DEV-published 3372, AVAILABLE; smoke 64/64. Committed + pushed.

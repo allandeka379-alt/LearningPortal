@@ -30,6 +30,7 @@ its run completes; counts change as the runs write, so check `npm run content:va
 | `computer-science-o` | ZIMSEC O-Level Computer Science, Cambridge IGCSE Computer Science (0478) | Complete: 102 lessons, 1,926 questions, 897 flashcards, 21 topic tests, 4 mock exams; written by nine AI writer agents, conversions and traces computed in code (no independent AI review yet); DEV-published 2026-10-09, smoke 68/68 |
 | `business-commerce-o` | ZIMSEC O-Level Commerce, ZIMSEC O-Level Business Enterprise and Skills, Cambridge IGCSE Business (0264) | Complete: 128 lessons, 2,301 questions, 1,091 flashcards, 23 topic tests, 6 mock exams; written by eight AI writer agents (no independent AI review yet); DEV-published 2026-10-09, smoke 85/85 |
 | `agriculture-o` | ZIMSEC O-Level Agriculture, Cambridge IGCSE Agriculture (0600) | Complete: 102 lessons, 2,052 questions, 902 flashcards, 15 topic tests, 3 mock exams; written by eight AI writer agents (no independent AI review yet); DEV-published 2026-10-09, smoke 54/54 |
+| `history-o` | ZIMSEC O-Level History, Cambridge IGCSE History (0470) | Complete: 111 lessons, 2,223 questions, 1,015 flashcards, 18 topic tests, 5 mock exams; written by eight AI writer agents, invented sources only (no independent AI review yet); DEV-published 2026-10-09, smoke 64/64 |
 
 Every item is AI-written and imported as `aiGenerated`; nothing reaches students in production until a human reviewer
 publishes it (§41). The ZIMSEC syllabus trees were transcribed from secondary or third-party copies and must be checked

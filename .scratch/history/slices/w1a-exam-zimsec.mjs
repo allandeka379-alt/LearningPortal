@@ -1,0 +1,374 @@
+// W1a exam-format items: ZIMSEC Paper 1 structured questions (25 marks: 5 + 12 + 8) and one source-based question
+// (25 marks: 5 + 8 + 12). Plans from EXAM in lib.mjs; part structure is our convention (reviewer to check).
+import { concept, P, source, sources, levels, EXAM, checkExam } from "../lib.mjs";
+
+const ZS = EXAM.ZIM_STRUCTURED;
+const ZQ = EXAM.ZIM_SOURCE;
+const zs = { skill: ZS.skill, applies: ZS.applies, secs: ZS.secs, examStyle: true, paper: "Paper 1" };
+
+concept("hist.precolonial.great-zimbabwe", { file: "exam/w1a-zimsec", keyPrefix: "exam.w1a-zimsec" }, (b) => {
+  // 1. Great Zimbabwe.
+  b.struct({
+    ...zs, d: 4,
+    concepts: ["hist.precolonial.great-zimbabwe"],
+    stem: "This question is about the Great Zimbabwe state.",
+    parts: checkExam(ZS, [
+      P.fib({
+        label: "(a)",
+        stem: "Complete the statements about Great Zimbabwe.",
+        template: "Great Zimbabwe lies near the modern town of {{blank:a}}. Its forerunner on the Limpopo was {{blank:b}}. Its gold and ivory reached the coast through the port of {{blank:c}}. The oval wall containing a conical tower is the {{blank:d}}. The archaeologist whose excavations in 1929 confirmed the site's African origin was {{blank:e}}.",
+        blanks: [
+          { id: "a", accepted: ["Masvingo"], choices: ["Masvingo", "Bulawayo", "Mutare", "Chinhoyi"] },
+          { id: "b", accepted: ["Mapungubwe"], choices: ["Mapungubwe", "Khami", "Naletale", "Dambarare"] },
+          { id: "c", accepted: ["Sofala"], choices: ["Sofala", "Luanda", "Cape Town", "Alexandria"] },
+          { id: "d", accepted: ["Great Enclosure"], choices: ["Great Enclosure", "Hill Complex", "Valley Ruins", "royal kraal"] },
+          { id: "e", accepted: ["Gertrude Caton-Thompson"], choices: ["Gertrude Caton-Thompson", "Karl Mauch", "Richard Hall", "Theodore Bent"] },
+        ],
+        explanation: "Masvingo; Mapungubwe (c. 1220-1290); Sofala, then Kilwa; the Great Enclosure; Caton-Thompson (1929), confirming Randall-MacIver (1905).",
+      }),
+      P.manual({
+        label: "(b)", marks: 12, type: "EXTENDED_RESPONSE",
+        stem: "Describe the political, economic, social and religious organisation of the Great Zimbabwe state.",
+        points: [
+          ["Political: the king, living in the Hill Complex, was political, military and religious head, advised by a council of relatives and officials", 2],
+          ["Political: provincial chiefs ruled outlying areas from smaller stone-walled centres and sent tribute", 2],
+          ["Economic: cattle were the main wealth; crops such as sorghum and millet were grown", 2],
+          ["Economic: gold mining and long-distance trade in gold and ivory through Sofala to Kilwa for beads, cloth and porcelain; tribute to the king", 2],
+          ["Social: the king and elite lived inside the stone enclosures, commoners in pole-and-daga huts outside (social differentiation); kinship and totems", 2],
+          ["Religious: belief in Mwari and ancestral spirits; the king's link with royal ancestors and rain-making (soapstone birds)", 2],
+        ],
+        modelAnswer: "Politically, the king was the head of the state. He lived in the Hill Complex and was its political, military and religious leader, advised by a council of royal relatives and officials. Provincial chiefs governed outlying areas from smaller stone-walled centres across the plateau and sent tribute to the capital.\n\nEconomically, cattle were the main form of wealth, and people grew sorghum, millet and other crops. Gold was mined and panned, and the rulers controlled the long-distance trade in gold and ivory through Sofala to Kilwa, receiving glass beads, cloth, Chinese porcelain and Persian pottery. Subjects and chiefs paid tribute in cattle, grain, ivory and gold.\n\nSocially, the state was divided: the king and elite lived inside the stone enclosures, while most people lived in pole-and-daga huts outside the walls. Families were organised by kinship and totems.\n\nIn religion, people believed in Mwari and honoured ancestral spirits. The king was believed to communicate with the royal ancestors and took part in rain-making; the soapstone birds found in the Hill Complex may represent royal ancestors.",
+        explanation: "Two marks for each developed point; at least one point on each area of organisation.",
+      }),
+      P.manual({
+        label: "(c)", marks: 8, type: "EXTENDED_RESPONSE",
+        stem: "To what extent was environmental exhaustion responsible for the decline of Great Zimbabwe?",
+        points: [
+          ["For: a large population over centuries used up firewood, grazing and fertile soil around the capital", 2],
+          ["Against: the shift of the gold and ivory trade north towards the Zambezi took away the rulers' wealth", 2],
+          ["Against: succession disputes, salt shortage and drought; traditions of Mutota leaving to find salt", 2],
+          ["Judgement: the causes are theories; most historians see several causes combining", 2],
+        ],
+        levels: levels(8),
+        modelAnswer: "Environmental exhaustion was an important cause. Great Zimbabwe supported a large population for centuries, and the land around the capital probably ran short of firewood, grazing and fertile soil, so people had to move away.\n\nHowever, other explanations are also strong. The gold and ivory trade shifted north towards the Zambezi valley, taking away the rulers' main source of wealth and the goods they used to reward followers. Succession disputes may have divided the ruling family, and traditions say that Mutota left to find salt, which suggests a shortage of resources; drought may also have played a part.\n\nBecause all these causes are theories based on archaeology and oral tradition, no single one can be proved. Environmental exhaustion was probably a major cause, but the decline is best explained by several factors working together, especially the combination of exhausted land and lost trade.",
+        explanation: "Level 4 answers weigh environmental exhaustion against other theories and reach a supported judgement, recognising that the causes are debated.",
+      }),
+    ]),
+    hints: ["In (c), treat each cause as a theory and weigh at least two others against environmental exhaustion."],
+    explanation: "A full ZIMSEC-style structured question: recall (a), description of organisation (b) and an evaluative judgement on the debated decline (c).",
+  });
+
+  // 2. Mutapa.
+  b.struct({
+    ...zs, d: 4,
+    concepts: ["hist.precolonial.mutapa"],
+    stem: "This question is about the Mutapa state.",
+    parts: checkExam(ZS, [
+      P.manual({
+        label: "(a)", marks: 5,
+        stem: "State **five** factors that led to the rise of the Mutapa state.",
+        points: [
+          "Control of trade through the Zambezi valley with Swahili (later Portuguese) traders",
+          "Gold and ivory resources",
+          "Military conquest (e.g. of the Tavara and Tonga of the Dande)",
+          "Fertile land and good grazing",
+          "Religious authority of the king through the mhondoro / strong leaders (Mutota, Matope)",
+        ],
+        modelAnswer: "Control of the Zambezi trade routes; gold and ivory; conquest of the Tavara and Tonga; fertile land and grazing in the Dande; the king's religious authority through the mhondoro and the strong leadership of Mutota and Matope.",
+      }),
+      P.manual({
+        label: "(b)", marks: 12, type: "EXTENDED_RESPONSE",
+        stem: "Describe the political, economic and religious organisation of the Mutapa state.",
+        points: [
+          ["Political: the Mutapa was supreme ruler, believed close to the ancestors, with a court of relatives, advisers, the queen mother and senior wives", 2],
+          ["Political: provincial chiefs (often relatives) ruled outlying areas, paid tribute and supplied soldiers; the royal fire symbolised loyalty", 2],
+          ["Economic: agriculture (sorghum, millet) and cattle as wealth", 2],
+          ["Economic: gold mining and panning, ivory hunting; trade with Swahili and later Portuguese traders at markets and fairs; tribute", 2],
+          ["Religious: belief in Mwari and ancestral spirits; the mhondoro (royal ancestral spirits) spoke through mediums", 2],
+          ["Religious: mediums advised the king, approved successors and led rain ceremonies, so their support was vital", 2],
+        ],
+        modelAnswer: "Politically, the Mutapa was the supreme ruler and was believed to be close to the royal ancestors. He governed with a court of royal relatives, advisers, the queen mother and senior wives, and officers in charge of the army and treasury. Provincial chiefs, often his relatives, ruled outlying areas, paid tribute and supplied soldiers; tradition says they relit their fires each year from the royal fire as a sign of loyalty.\n\nEconomically, people grew sorghum and millet and kept cattle, the main measure of wealth. Gold was mined and panned and elephants hunted for ivory, and these were traded with Swahili and later Portuguese traders at markets and fairs. Tribute in cattle, grain, ivory, gold and labour flowed to the king.\n\nIn religion, people believed in Mwari and in ancestral spirits. The mhondoro, the royal ancestral spirits, spoke through mediums who advised the king, took part in choosing successors and led rain ceremonies, so a king needed their support to rule.",
+        explanation: "Two marks per developed point, covering all three areas.",
+      }),
+      P.manual({
+        label: "(c)", marks: 8, type: "EXTENDED_RESPONSE",
+        stem: "How far were succession disputes responsible for the decline of the Mutapa state?",
+        points: [
+          ["For: succession disputes and civil wars divided the royal family and weakened central control; provinces broke away", 2],
+          ["For (link): rival kings such as Gatsi Rusere and Mavhura turned to the Portuguese for help, leading to the concessions of 1607 and the vassal treaty of 1629", 2],
+          ["Against: Portuguese interference (prazos, control of trade and mines), the rise of the Rozvi under Dombo, loss of trade income, later Nguni invasions", 2],
+          ["Supported judgement linking internal division to external pressures", 2],
+        ],
+        levels: levels(8),
+        modelAnswer: "Succession disputes were a major cause of decline. Quarrels in the royal family led to civil wars that weakened the king's control over the provinces, some of which broke away. These divisions also opened the door to the Portuguese: Gatsi Rusere, facing rebels, promised them the mines in return for help, and later the Portuguese installed Mavhura, who accepted their overlordship.\n\nHowever, other factors were also important. Portuguese traders and prazo holders took control of land, trade and mines, so the kings lost income. The rise of the Rozvi under Changamire Dombo in the late seventeenth century took much of the plateau, and in the nineteenth century Nguni invasions weakened the remaining state.\n\nOverall, succession disputes were the most important cause because they made Portuguese interference possible, but the decline came from the combination of internal division and external pressure.",
+        explanation: "Level 4 answers show how internal disputes and Portuguese interference were linked, and weigh other causes such as the Rozvi.",
+      }),
+    ]),
+    hints: ["In (c), ask whether the Portuguese could have interfered without the civil wars."],
+    explanation: "ZIMSEC-style structured question on the Mutapa state: rise (a), organisation (b), evaluation of decline (c).",
+  });
+
+  // 3. Ndebele state.
+  b.struct({
+    ...zs, d: 4,
+    concepts: ["hist.precolonial.ndebele-state"],
+    stem: "This question is about the Ndebele state.",
+    parts: checkExam(ZS, [
+      P.fib({
+        label: "(a)",
+        stem: "Complete the statements about the Ndebele state.",
+        template: "Mzilikazi broke away from {{blank:a}} and led his followers north. People incorporated in Zimbabwe, mainly Shona, formed the social group called {{blank:b}}. The king's senior officials and commanders were the {{blank:c}}. The king lent cattle to loyal subjects under the {{blank:d}} system. Lobengula's capital was {{blank:e}}.",
+        blanks: [
+          { id: "a", accepted: ["Shaka"], choices: ["Shaka", "Dingiswayo", "Zwide", "Soshangane"] },
+          { id: "b", accepted: ["Hole"], choices: ["Hole", "Zansi", "Enhla", "Rozvi"] },
+          { id: "c", accepted: ["izinduna"], choices: ["izinduna", "prazeros", "mhondoro", "achikunda"] },
+          { id: "d", accepted: ["ukusisa"], choices: ["ukusisa", "mussoco", "Inxwala", "roora"] },
+          { id: "e", accepted: ["koBulawayo"], choices: ["koBulawayo", "Inyati", "Khami", "Danangombe"] },
+        ],
+        explanation: "Shaka; Hole (Zansi = Nguni from the south, Enhla = Highveld peoples); izinduna; ukusisa; koBulawayo (founded 1870).",
+      }),
+      P.manual({
+        label: "(b)", marks: 12, type: "EXTENDED_RESPONSE",
+        stem: "Describe the political, economic and social organisation of the Ndebele state.",
+        points: [
+          ["Political: the king (inkosi) was head of state, commander, chief judge and religious leader, advised by senior izinduna", 2],
+          ["Political: regiments (amabutho) lived in regimental towns under izinduna; tributary Shona communities kept their chiefs but paid tribute", 2],
+          ["Economic: cattle were the main wealth; the king lent cattle to loyal subjects (ukusisa)", 2],
+          ["Economic: raiding, tribute, agriculture by women, hunting for ivory and trade with Europeans for guns, cloth and beads", 2],
+          ["Social: society divided into Zansi, Enhla and Hole with different status; intermarriage discouraged", 2],
+          ["Social: incorporation through regiments and families built one nation; the Inxwala ceremony united it around the king", 2],
+        ],
+        modelAnswer: "Politically, the king was head of state, commander of the army, chief judge and religious leader, advised by senior izinduna. The regiments were the backbone of the state: each lived in its own regimental town under an induna, farming and herding in peace and fighting when called. Many Shona communities outside the core kept their own chiefs but paid tribute.\n\nEconomically, cattle were the main wealth. The king lent cattle to loyal subjects under the ukusisa system, which built loyalty. The Ndebele also raided neighbours, received tribute, grew sorghum, millet and maize (mainly women's work), hunted for ivory and traded with European traders for guns, cloth and beads.\n\nSocially, the nation was divided into the Zansi (Nguni from the south), the Enhla (Sotho and Tswana from the Highveld) and the Hole (mainly Shona), with different status, and intermarriage was discouraged. Incorporation through the regiments and families still built a single nation, and the annual Inxwala ceremony united the people around the king.",
+        explanation: "Two marks per developed point across the three areas.",
+      }),
+      P.manual({
+        label: "(c)", marks: 8, type: "EXTENDED_RESPONSE",
+        stem: "To what extent was the Ndebele state already weakened by internal problems before the war with the British South Africa Company?",
+        points: [
+          ["For: the succession dispute after Mzilikazi's death (the Zwangendaba regiment and the Nkulumane claim) divided the nation", 2],
+          ["For: tensions between Zansi, Enhla and Hole; resentment among raided and tributary Shona communities", 2],
+          ["Against: Lobengula won the succession struggle and kept the regiments loyal and strong; the state remained powerful until defeated by superior weapons", 2],
+          ["Judgement: internal problems existed, but the state's fall came mainly from external pressure (concessions, Charter, occupation, Maxim guns)", 2],
+        ],
+        levels: levels(8),
+        modelAnswer: "The Ndebele state had some internal problems. After Mzilikazi's death there was a two-year succession dispute, and the Zwangendaba regiment rose in support of Nkulumane's claim before Lobengula defeated it. Social divisions between the Zansi, Enhla and Hole remained, and many raided or tributary Shona communities resented Ndebele power.\n\nHowever, these problems should not be exaggerated. Lobengula won the succession struggle, kept the regiments loyal and ruled a strong state for over twenty years. He held back his warriors in 1890 by choice, not weakness. The state was overcome by outside pressure: concession seekers, the Royal Charter, the occupation of Mashonaland and finally the Company's machine guns in 1893.\n\nSo the state was only weakened to a limited extent by internal problems; its fall was caused mainly by colonial aggression.",
+        explanation: "Level 4 answers weigh internal weaknesses against the state's continuing strength and external pressures.",
+      }),
+    ]),
+    hints: ["In (c), consider how strong Lobengula's state still was in the 1880s."],
+    explanation: "ZIMSEC-style structured question on the Ndebele state: recall (a), organisation (b), evaluation of internal weakness (c).",
+  });
+
+  // 4. Portuguese and the prazo system.
+  b.struct({
+    ...zs, d: 4,
+    concepts: ["hist.contact.portuguese-prazos"],
+    stem: "This question is about the Portuguese in the Zambezi valley.",
+    parts: checkExam(ZS, [
+      P.manual({
+        label: "(a)", marks: 5,
+        stem: "Identify **five** features of the prazo system.",
+        points: [
+          "Crown land grants (prazos) in the Zambezi valley",
+          "Granted usually for three lifetimes (generations)",
+          "In theory inherited through the eldest daughter, who had to marry a Portuguese-born man",
+          "Prazeros ruled like chiefs and collected tribute (mussoco)",
+          "Prazeros kept private armies of achikunda / traded ivory, gold and slaves",
+        ],
+        modelAnswer: "Prazos were Crown land grants in the Zambezi valley; they were granted for three lifetimes; in theory they passed through the eldest daughter, who had to marry a Portuguese-born man; prazeros ruled like chiefs and collected mussoco; and they kept private armies of achikunda.",
+      }),
+      P.manual({
+        label: "(b)", marks: 12, type: "EXTENDED_RESPONSE",
+        stem: "Describe the activities of the Portuguese in the Zambezi valley from the early sixteenth century to the end of the seventeenth century.",
+        points: [
+          ["Built a fort at Sofala (1505) and posts at Sena and Tete (1530s) to reach the interior", 2],
+          ["Traded at fairs (Masapa, Luanze, Bukutu, later Dambarare) for gold and ivory with the Mutapa's permission", 2],
+          ["Missionary work: Gonçalo da Silveira baptised the Mutapa and was killed (1561)", 2],
+          ["The Barreto expedition (1569-1573) tried and failed to seize the mines", 2],
+          ["Treaties with weakened Mutapa kings: Gatsi Rusere's concessions (1607), Mavhura's vassal treaty (1629)", 2],
+          ["Settlement and prazos on the plateau and in the valley, until the Rozvi drove them off the plateau in the 1690s", 2],
+        ],
+        modelAnswer: "The Portuguese built a fort at Sofala in 1505 and in the 1530s set up posts at Sena and Tete on the Zambezi. With the Mutapa's permission, their traders and agents exchanged cloth and beads for gold and ivory at fairs such as Masapa, Luanze and Bukutu.\n\nThey also sent missionaries. In 1561 the Jesuit Gonçalo da Silveira baptised the Mutapa, but he was killed soon afterwards. Using his death as an excuse, Portugal sent Francisco Barreto's expedition (1569-1573) to seize the mines, but it was destroyed by disease, tsetse fly and African resistance.\n\nIn the seventeenth century the Portuguese gained power through treaties with weakened Mutapa kings: Gatsi Rusere promised them the mines in 1607, and Mavhura became a Portuguese vassal in 1629. Portuguese traders and settlers spread across the plateau and took land, which became prazos. In the 1690s Changamire Dombo's Rozvi drove them off the plateau, and afterwards they traded only at fairs on its edge.",
+        explanation: "Two marks per developed activity, in roughly chronological order.",
+      }),
+      P.manual({
+        label: "(c)", marks: 8, type: "EXTENDED_RESPONSE",
+        stem: "\"The prazo system brought only suffering to African communities.\" To what extent do you agree?",
+        points: [
+          ["For: loss of land and independence; heavy mussoco and forced labour", 2],
+          ["For: slave raiding and trading, especially in the nineteenth century, causing insecurity, famine and depopulation; wars between prazeros", 2],
+          ["Against: some Africans (achikunda, local allies) gained power and wealth; new crops (maize, cassava); an Afro-Portuguese culture developed", 2],
+          ["Judgement: for most ordinary people the system was exploitative, but its effects differed between groups", 2],
+        ],
+        levels: levels(8),
+        modelAnswer: "There is strong evidence that the prazo system caused suffering. African communities lost their land and independence to prazeros, who demanded mussoco in grain, goods or labour. Prazeros fought each other and African rulers, and in the nineteenth century their achikunda raided for slaves, causing insecurity, famine and depopulation.\n\nHowever, the effects were not only suffering. Some Africans, especially achikunda soldiers and local allies, gained power and wealth, and some later became independent leaders. New crops such as maize and cassava spread, and an Afro-Portuguese society with its own culture developed through intermarriage.\n\nOverall, I largely agree: for most ordinary people the prazo system meant exploitation and insecurity, although a minority benefited and some lasting cultural changes were not harmful.",
+        explanation: "Level 4 answers weigh the clear harm against the limited benefits for some groups and reach a judgement.",
+      }),
+    ]),
+    hints: ["In (c), ask which groups of Africans gained and which lost."],
+    explanation: "ZIMSEC-style structured question on the Portuguese: features of the prazo system (a), activities (b), evaluation of impact (c).",
+  });
+
+  // 5. Missionaries.
+  b.struct({
+    ...zs, d: 5,
+    concepts: ["hist.contact.missionaries-agents"],
+    stem: "This question is about early missionaries in Zimbabwe.",
+    parts: checkExam(ZS, [
+      P.fib({
+        label: "(a)",
+        stem: "Name the church or society that founded each mission.",
+        template: "Inyati: {{blank:a}}. Hope Fountain: {{blank:b}}. Empandeni: {{blank:c}}. Morgenster: {{blank:d}}. Solusi: {{blank:e}}.",
+        blanks: [
+          { id: "a", accepted: ["London Missionary Society"], choices: ["London Missionary Society", "Jesuits", "Dutch Reformed Church", "Seventh-day Adventists"] },
+          { id: "b", accepted: ["London Missionary Society"], choices: ["London Missionary Society", "Jesuits", "Dutch Reformed Church", "Seventh-day Adventists"] },
+          { id: "c", accepted: ["Jesuits"], choices: ["London Missionary Society", "Jesuits", "Dutch Reformed Church", "Seventh-day Adventists"] },
+          { id: "d", accepted: ["Dutch Reformed Church"], choices: ["London Missionary Society", "Jesuits", "Dutch Reformed Church", "Seventh-day Adventists"] },
+          { id: "e", accepted: ["Seventh-day Adventists"], choices: ["London Missionary Society", "Jesuits", "Dutch Reformed Church", "Seventh-day Adventists"] },
+        ],
+        explanation: "Inyati (1859) and Hope Fountain (1870): LMS. Empandeni (1887): Jesuits. Morgenster (1891): Dutch Reformed Church. Solusi: Seventh-day Adventists.",
+      }),
+      P.manual({
+        label: "(b)", marks: 12, type: "EXTENDED_RESPONSE",
+        stem: "Describe the activities of early missionaries and explain their impact on African societies in Zimbabwe.",
+        points: [
+          ["Evangelism: preaching, building churches, translating the Bible and hymns into African languages", 2],
+          ["Education: schools teaching reading, writing and arithmetic; later teacher and nurse training", 2],
+          ["Health care and agriculture: treating the sick, clinics; new crops, the plough, crafts; advising rulers", 2],
+          ["Positive impact: literacy and education (many later nationalists were mission-educated); written African languages", 2],
+          ["Positive impact: medical care and new farming skills", 2],
+          ["Negative impact: undermined African religion and customs, divided communities; some helped colonisation (Moffat Treaty, Helm and the Rudd Concession) and missions received Company land", 2],
+        ],
+        modelAnswer: "Missionaries preached the Christian faith, built churches and translated parts of the Bible and hymns into African languages. They opened schools that taught reading, writing and arithmetic, and later trained teachers and nurses. They treated the sick and built clinics, introduced new crops, the plough and building skills, and acted as interpreters and advisers to rulers such as Lobengula.\n\nTheir impact was mixed. On the positive side, mission schools spread literacy and education, and many later nationalist leaders were educated in them; African languages were written down. Mission clinics and hospitals brought medical care, and new farming methods spread.\n\nOn the negative side, missionaries often condemned African religion and customs, dividing communities between converts and others. Some helped colonisation directly: John Smith Moffat negotiated the Moffat Treaty and Charles Helm interpreted the Rudd Concession, and after 1890 many missions received large areas of land from the Company.",
+        explanation: "Two marks per developed point: about half on activities and half on impact, with both positive and negative effects.",
+      }),
+      P.manual({
+        label: "(c)", marks: 8, type: "EXTENDED_RESPONSE",
+        stem: "How far did missionaries prepare the way for the colonisation of Zimbabwe?",
+        points: [
+          ["For: they gained the trust of Mzilikazi and Lobengula over decades and reported on the country", 2],
+          ["For: J. S. Moffat negotiated the Moffat Treaty; Helm interpreted the Rudd Concession and assured the king about unwritten promises; many urged British rule", 2],
+          ["Against: concession seekers backed by Rhodes's money, hunters and explorers (Mauch's gold reports, Selous), and British strategic aims were decisive; missionaries had few converts and limited influence", 2],
+          ["Supported judgement", 2],
+        ],
+        levels: levels(8),
+        modelAnswer: "Missionaries did much to prepare the way. Over thirty years the LMS gained the trust of Mzilikazi and Lobengula and sent information about the country to Britain. John Smith Moffat negotiated the Moffat Treaty, which placed the kingdom in the British sphere of influence, and Charles Helm interpreted the Rudd Concession and told the king about promises that were not in the written text. Many missionaries hoped that British rule would help their work.\n\nHowever, missionaries did not bring about colonisation alone. They had very few converts and limited influence over the king. The decisive steps were taken by concession seekers backed by Rhodes's money, by the British government, which wanted to block its rivals, and by hunters and explorers whose gold reports and route-finding drew settlers north.\n\nSo missionaries prepared the way to a significant extent, especially through the treaties of 1888, but concession seekers and imperial interests were more important.",
+        explanation: "Level 4 answers weigh the missionaries' direct role against other agents and imperial motives.",
+      }),
+    ]),
+    hints: ["In (c), separate what missionaries did themselves from what concession seekers and the British government did."],
+    explanation: "ZIMSEC-style structured question on missionaries: recall (a), activities and impact (b), evaluation of their role in colonisation (c).",
+  });
+
+  // 6. The colonisation of Zimbabwe.
+  b.struct({
+    ...zs, d: 5,
+    concepts: ["hist.colonisation.occupation", "hist.colonisation.scramble-berlin"],
+    stem: "This question is about the colonisation of Zimbabwe.",
+    parts: checkExam(ZS, [
+      P.fib({
+        label: "(a)",
+        stem: "Complete the statements about the colonisation of Zimbabwe.",
+        template: "The Grobler Treaty was made with the {{blank:a}}. The Moffat Treaty placed Lobengula's kingdom in the British {{blank:b}}. The Rudd Concession gave Rhodes's agents the rights to all {{blank:c}} in the kingdom. The Royal Charter was granted to the {{blank:d}}. The Pioneer Column raised the British flag at {{blank:e}}.",
+        blanks: [
+          { id: "a", accepted: ["South African Republic (Transvaal)"], choices: ["South African Republic (Transvaal)", "Portuguese government", "German Empire", "Cape Colony"] },
+          { id: "b", accepted: ["sphere of influence"], choices: ["sphere of influence", "Crown colony", "prazo system", "Federation"] },
+          { id: "c", accepted: ["metals and minerals"], choices: ["metals and minerals", "land and cattle", "rivers and forests", "towns and villages"] },
+          { id: "d", accepted: ["British South Africa Company"], choices: ["British South Africa Company", "London Missionary Society", "Dutch East India Company", "Royal Niger Company"] },
+          { id: "e", accepted: ["Fort Salisbury"], choices: ["Fort Salisbury", "Fort Tuli", "Bulawayo", "Inyati"] },
+        ],
+        explanation: "Grobler: Transvaal (1887). Moffat: British sphere of influence (February 1888). Rudd: metals and minerals (30 October 1888). Charter: BSAC (29 October 1889). Flag: Fort Salisbury (12 September 1890).",
+      }),
+      P.manual({
+        label: "(b)", marks: 12, type: "EXTENDED_RESPONSE",
+        stem: "Explain the process by which Zimbabwe was colonised, from the Grobler Treaty to the occupation of Mashonaland.",
+        points: [
+          ["The Grobler Treaty with the Transvaal alarmed Britain, which feared a Boer takeover", 2],
+          ["The Moffat Treaty placed the kingdom in the British sphere of influence, shutting out the Transvaal, Portugal and Germany", 2],
+          ["The Rudd Concession gave Rhodes's agents the mineral rights; verbal promises (ten men, obeying the king's laws) were left out", 2],
+          ["Lobengula protested (envoys to London, public notice), but Rhodes used the concession to win the Royal Charter for the BSAC", 2],
+          ["The Charter let the Company make laws, keep police, grant land and govern: empire on the cheap for Britain", 2],
+          ["The Pioneer Column (Johnson, Selous, Pennefather) avoided Matabeleland, built forts and raised the flag at Fort Salisbury; pioneers promised farms and gold claims", 2],
+        ],
+        modelAnswer: "The process began when Pieter Grobler obtained a treaty of friendship for the Transvaal, which alarmed the British, who feared that the Boers would take the land north of the Limpopo. In response, John Smith Moffat persuaded Lobengula to sign the Moffat Treaty, promising not to deal with other powers or give away land without British approval; this placed the kingdom in the British sphere of influence.\n\nRhodes then sent Rudd, Maguire and Thompson, who obtained the Rudd Concession, giving them all the metals and minerals in the kingdom in return for money, rifles and a steamboat. Lobengula was promised verbally that only ten white men would dig and that they would obey his laws, but this was not written down. When he understood the document, he sent envoys to London and published a notice suspending it, but Rhodes used the concession to win a Royal Charter for the British South Africa Company.\n\nThe Charter allowed the Company to make laws, keep police, grant land and govern, so Britain gained the territory without paying for it. Finally, the Pioneer Column, organised by Frank Johnson, guided by Selous and commanded by Pennefather, avoided Matabeleland, built forts at Tuli, Victoria and Charter and raised the flag at Fort Salisbury, beginning the occupation of Mashonaland. Each pioneer was promised a farm and gold claims.",
+        explanation: "Two marks per developed stage; each stage must be explained, not just named.",
+      }),
+      P.manual({
+        label: "(c)", marks: 8, type: "EXTENDED_RESPONSE",
+        stem: "To what extent was the search for gold the main reason for the colonisation of Zimbabwe?",
+        points: [
+          ["For: the 'second Rand' myth after the Witwatersrand discovery; Mauch's earlier reports; the Rudd Concession was about minerals", 2],
+          ["For: pioneers were promised gold claims; the Company's investors expected mining profits", 2],
+          ["Against: Rhodes's Cape-to-Cairo ambition, strategic rivalry with the Transvaal, Portugal and Germany, land for settlers, missionary pressure", 2],
+          ["Supported judgement (e.g. gold was the main attraction for investors, but strategic rivalry explains the timing and British government support)", 2],
+        ],
+        levels: levels(8),
+        modelAnswer: "The search for gold was very important. After the discovery of gold on the Witwatersrand, many believed that a 'second Rand' lay north of the Limpopo, a belief fed by earlier reports such as Mauch's. The Rudd Concession was about minerals, investors bought Company shares expecting mining profits, and each pioneer was promised gold claims.\n\nHowever, other reasons mattered. Rhodes dreamed of British territory from the Cape to Cairo, and the British government supported him mainly to stop the Transvaal, Portugal and Germany from taking the land. Settlers also wanted farmland, and missionaries pressed for British protection.\n\nGold was the main attraction for Rhodes's investors and the pioneers, but strategic rivalry explains why the British government backed the Company when it did. Gold was therefore the most important single reason, though not the only one.",
+        explanation: "Level 4 answers weigh the gold motive against strategic, political and settler motives and reach a supported judgement.",
+      }),
+    ]),
+    hints: ["In (b), keep the stages in order and say why each mattered.", "In (c), ask why the British government supported Rhodes."],
+    explanation: "ZIMSEC-style structured question on the colonisation of Zimbabwe: recall (a), the process (b), evaluation of motives (c).",
+  });
+
+  // 7. Source-based question: the Rudd Concession and its interpretation.
+  b.struct({
+    d: 5, skill: ZQ.skill, applies: ZQ.applies, secs: ZQ.secs, examStyle: true, paper: "Paper 1",
+    concepts: ["hist.colonisation.occupation", "hist.skills.source-evaluation"],
+    stem: [
+      "Study the sources and answer the questions that follow.",
+      "",
+      sources([
+        source("Source A", "a letter from a fictional trader living at Lobengula's capital to his brother in the Cape, written a few weeks after the Rudd Concession was signed",
+          "The king believes he has let a handful of white men dig for gold in one place, and that they will live under his law like any trader here. The young warriors are angry and say he has sold the country. The missionary who explained the paper assured the king that the white men would be few and would obey him."),
+        source("Source B", "an advertisement placed in London newspapers by a fictional mining company formed to work the concession, 1889",
+          "This company holds the sole and complete rights to every mineral in a territory larger than Great Britain, freely granted by the native king. The country is peaceful, the gold reefs are rich, and the investor may expect handsome returns."),
+        source("Source C", "an account recorded in the 1930s from a fictional Ndebele elder who was a young warrior at the time",
+          "We were told the king had agreed to let a few men dig holes. Then the wagons came, and the soldiers, and the forts. The old men said the paper had two faces: one that was read to the king and one that was kept for the white men."),
+      ]),
+    ].join("\n"),
+    parts: checkExam(ZQ, [
+      P.manual({
+        label: "(a)", marks: 5,
+        stem: "From the sources, identify **five** pieces of information about the Rudd Concession and how it was understood.",
+        points: [
+          "The king believed only a handful of white men would dig, in one place (A, C)",
+          "The king believed the diggers would live under his law (A)",
+          "A missionary explained the document and assured the king (A)",
+          "The company claimed sole and complete rights to all minerals in a territory larger than Great Britain (B)",
+          "Young warriors were angry / the wagons, soldiers and forts followed / people believed the paper had 'two faces' (A, C)",
+        ],
+        modelAnswer: "The king thought only a few white men would dig in one place (A, C); he thought they would obey his law (A); a missionary explained the paper and reassured him (A); the company claimed complete rights to all minerals over a huge territory (B); and the young warriors were angry, believing the country had been sold (A), while wagons, soldiers and forts followed (C).",
+      }),
+      P.manual({
+        label: "(b)", marks: 8, type: "EXTENDED_RESPONSE",
+        stem: "Why do Sources A and B describe the concession so differently? Use the provenance of each source.",
+        points: [
+          ["A is a private letter from a trader at the capital who saw how the king and warriors reacted; he had no obvious reason to deceive his brother", 2],
+          ["A reflects the king's understanding, shaped by the missionary's verbal assurances", 2],
+          ["B is an advertisement written to attract investors in London, so it exaggerates the rights and calls the country peaceful and rich", 2],
+          ["B's claim that the rights were 'freely granted' served the company's interests and hid the king's objections", 2],
+        ],
+        modelAnswer: "The two sources differ because of who wrote them and why. Source A is a private letter from a trader living at the king's capital. He could see how the king and the young warriors reacted, and he was writing to his brother, so he had little reason to hide the truth. He reports the king's understanding, which came from the missionary's spoken assurances that only a few men would come and obey him.\n\nSource B is an advertisement placed in London newspapers by a company that wanted investors' money. It was written to make the concession sound as valuable and secure as possible, so it claims 'sole and complete rights' over a territory larger than Britain, says the country is peaceful and calls the rights 'freely granted', leaving out the king's objections. A shows what the king believed; B shows what the company wanted investors to believe.",
+        explanation: "Two marks for each developed point on provenance and purpose.",
+      }),
+      P.manual({
+        label: "(c)", marks: 12, type: "EXTENDED_RESPONSE",
+        stem: "How far do Sources A to C show that Lobengula was deceived by the Rudd Concession? Use the sources and your own knowledge.",
+        points: [
+          ["Sources supporting deception: A (king's belief in a handful of men under his law; missionary's assurances) and C ('two faces')", 2],
+          ["B supports deception indirectly: the company claimed far more (all minerals, vast territory) than the king believed he had given", 2],
+          ["Own knowledge: the verbal promises (no more than ten men, obeying his laws) were not in the written text; Helm interpreted; Lobengula could not read English", 2],
+          ["Own knowledge: Lobengula protested (Babayane and Mshete to London; public notice), showing he felt deceived; Rhodes used the concession to win the Charter", 2],
+          ["Limits / other side: C is recalled decades later; A is second-hand about the king's thoughts; Lobengula received rifles and money and the written text did say all minerals; he faced strong pressure and may have chosen to gain time", 2],
+          ["Supported judgement on how far the sources show deception", 2],
+        ],
+        levels: levels(12),
+        modelAnswer: "The sources give strong evidence that Lobengula was deceived. Source A, written at the capital soon after the signing, says the king believed he had allowed only a handful of men to dig in one place, living under his law, and that the missionary who explained the document assured him of this. Source C, from a former warrior, says the paper had 'two faces': one read to the king and one kept for the white men. Source B supports this indirectly, because the company claimed far more, all minerals in a vast territory, than the king believed he had given.\n\nOwn knowledge supports the sources. The written Rudd Concession gave away the sole rights to all metals and minerals, but the verbal promises reported by Helm, that no more than ten white men would come and that they would obey the king's laws, were never written into it. Lobengula could not read the English text and depended on Helm's interpretation. When he understood what had happened, he sent Babayane and Mshete to London and published a notice suspending the concession, while Rhodes used the document to win the Royal Charter.\n\nHowever, the sources have limits. Source A reports the king's thoughts second-hand, and Source C was recorded about forty years later, when memories may have been shaped by the conquest. Source B is an advertisement and tells us about the company rather than the king. Some historians also point out that Lobengula, under pressure from many concession seekers, may have hoped that granting one powerful group rights would keep the others away and buy time.\n\nOverall, the sources, supported by own knowledge, show to a large extent that Lobengula was deceived about the meaning of the concession, although they cannot show exactly what he understood and they leave room for his own diplomatic calculations.",
+        explanation: "Level 3 answers use all three sources, test them for reliability, add accurate own knowledge on both sides and reach a supported judgement.",
+      }),
+    ]),
+    hints: ["Use each source's provenance as well as its content.", "Your own knowledge should include what the written concession said and what Lobengula did afterwards."],
+    explanation: "A ZIMSEC Paper 1 source-based question: comprehension (a), explaining differences through provenance (b), and a 'how far' judgement using the sources and own knowledge (c).",
+  });
+});

@@ -1,0 +1,571 @@
+// W4a exam-format items for Cambridge IGCSE History 0470: Paper 1 structured essays (20 = 4 + 6 + 10) on Option A key
+// question 3 (German unification) and Depth studies B (Germany) and C (Russia); Paper 2 document questions
+// (40 = 7 + 8 + 7 + 8 + 10) on German unification (prescribed March 2027); Paper 4 (40 = 16 + 24) on Depth studies B and
+// C. Plans from EXAM in lib.mjs; the part structure is our convention (reviewer to check). All sources are invented
+// for these questions and attributed only to fictional or anonymous people.
+import { concept, P, source, sources, levels, EXAM, checkExam } from "../lib.mjs";
+
+const P1 = EXAM.CAM_P1;
+const P2 = EXAM.CAM_P2;
+const P4 = EXAM.CAM_P4;
+const p1A = { skill: P1.skill, applies: P1.applies, secs: P1.secs, examStyle: true, paper: "Cambridge Paper 1 Section A" };
+const p1B = { ...p1A, paper: "Cambridge Paper 1 Section B" };
+const p2 = { skill: P2.skill, applies: P2.applies, secs: P2.secs, examStyle: true, paper: "Cambridge Paper 2" };
+const p4 = { skill: P4.skill, applies: P4.applies, secs: P4.secs, examStyle: true, paper: "Cambridge Paper 4" };
+
+const GU = (n) => `hist.german-unification.${n}`;
+const DE = (n) => `hist.germany.${n}`;
+const RU = (n) => `hist.russia.${n}`;
+
+/** Paper 1 structured essay: (a) describe 4 (points), (b) explain 6 (levels), (c) evaluate 10 (levels). */
+function p1Parts({ a, b, c }) {
+  return checkExam(P1, [
+    P.manual({ label: "(a)", marks: 4, stem: a.stem, points: a.points, modelAnswer: a.model, explanation: "One mark for each accurate, relevant point (or two marks for a developed point)." }),
+    P.manual({ label: "(b)", marks: 6, type: "EXTENDED_RESPONSE", stem: b.stem, points: b.points, levels: levels(6), modelAnswer: b.model, explanation: "Levels: the top level explains two or more reasons with supporting detail." }),
+    P.manual({ label: "(c)", marks: 10, type: "EXTENDED_RESPONSE", stem: c.stem, points: c.points, levels: levels(10), modelAnswer: c.model, explanation: "Levels: the top level explains both sides with specific evidence and reaches a supported judgement." }),
+  ]);
+}
+
+/** Paper 2 document question: five self-marked parts of 7, 8, 7, 8 and 10 marks. */
+function p2Parts(list) {
+  const marks = [7, 8, 7, 8, 10];
+  const labels = ["(a)", "(b)", "(c)", "(d)", "(e)"];
+  return checkExam(P2, list.map((x, i) => P.manual({
+    label: labels[i], marks: marks[i], type: "EXTENDED_RESPONSE", stem: x.stem, points: x.points, modelAnswer: x.model,
+    ...(i === 4 ? { levels: levels(10) } : {}),
+    explanation: i === 4 ? "Levels: the top level uses the sources on both sides, evaluates them and adds own knowledge to reach a judgement." : "Credit is given for using the sources' content and provenance, supported by own knowledge.",
+  })));
+}
+
+/** Paper 4: (a) an account, 16 (levels); (b) importance, 24 (levels). */
+function p4Parts({ a, b }) {
+  return checkExam(P4, [
+    P.manual({ label: "(a)", marks: 16, type: "EXTENDED_RESPONSE", stem: a.stem, points: a.points, levels: levels(16), modelAnswer: a.model, explanation: "Levels: the top level is a well-organised, accurate and detailed account in chronological order that stays focused on the question." }),
+    P.manual({ label: "(b)", marks: 24, type: "EXTENDED_RESPONSE", stem: b.stem, points: b.points, levels: levels(24), modelAnswer: b.model, explanation: "Levels: the top level discusses different ways of judging importance, with specific evidence, and reaches a supported judgement." }),
+  ]);
+}
+
+concept(DE("weimar-1918-23"), { file: "exam/w4a-cambridge", keyPrefix: "exam.w4a-cambridge" }, (b) => {
+  // -------------------------------------------------------------------------------------------------------------------
+  // Paper 1 Section A: Option A key question 3 (How was Germany unified?) x2.
+  b.struct({
+    ...p1A, d: 4, concepts: [GU("before-1851")],
+    stem: "This question is about Germany in 1848-50.",
+    hints: ["In (c), compare the king's refusal with the parliament's own weaknesses and Austria's recovery."],
+    parts: p1Parts({
+      a: { stem: "Describe the revolution of 1848 in Prussia.", points: [
+        "Street fighting in Berlin in March 1848.",
+        "Frederick William IV withdrew troops, promised a constitution / wore the national colours.",
+        "An elected Prussian assembly met.",
+        "The army returned in November 1848; the assembly was dissolved and the king imposed a constitution in December.",
+      ], model: "In March 1848 street fighting broke out in Berlin. Frederick William IV withdrew his troops, promised a constitution and appeared in the black, red and gold colours of the nationalists. An elected Prussian assembly met to draw up a constitution. But in November the army returned to Berlin, the assembly was dissolved, and in December the king imposed his own constitution." },
+      b: { stem: "Explain why Austria was able to restore its influence in Germany by 1850.", points: [
+        ["Austria recovered from the revolutions of 1848: its army crushed revolts and Schwarzenberg restored strong government", 2],
+        ["Russian support for Austria; Prussia was unwilling to risk war in 1850", 2],
+        ["Prussia's Erfurt Union had little support; at Olmütz Prussia backed down and the Confederation was restored (1851)", 2],
+      ], model: "Austria restored its influence first because it recovered from the revolutions of 1848. Its army crushed the risings in Vienna and elsewhere, and under its chief minister Schwarzenberg it regained the strength to act in Germany. Second, Austria had Russian support. When Prussia tried to form the Erfurt Union of German states under its own leadership in 1849-50, Austria demanded the restoration of the old Confederation, and Prussia, facing Austria backed by Russia, was not willing to risk war. Finally, the Erfurt Union had little real support among the German princes, so at Olmütz in November 1850 Prussia abandoned it, and the Confederation was restored in 1851 with Austria in the chair." },
+      c: { stem: "'The refusal of Frederick William IV to accept the imperial crown was the main reason why Germany was not unified in 1848-49.' How far do you agree? Explain your answer.", points: [
+        ["For: without Prussia's king and army a Little Germany had no leader and no force; his refusal ended the parliament's plan", 2],
+        ["For: his reasons (divine right, fear of Austria) show that the princes would not accept unity from below", 2],
+        ["Against: the parliament's weakness (no army or taxes; Schleswig-Holstein armistice) and its divisions", 2],
+        ["Against: the recovery of Austria and Prussia's armies by late 1848; little mass support", 2],
+        ["Supported judgement", 2],
+      ], model: "The king's refusal in April 1849 was decisive in one sense. The Frankfurt Parliament had chosen a Little Germany led by Prussia, and without Prussia's king and army there was no one to lead it and no force to carry out its constitution. His reasons, his belief in the divine right of kings and his fear of war with Austria, show that the princes would not accept unity offered by an elected assembly.\n\nHowever, the refusal came at the end of a long decline. The parliament had no army or taxes of its own, so in 1848 it had to accept Prussia's armistice with Denmark over Schleswig-Holstein. Its members argued for months over a Greater or Little Germany, and moderate liberals feared radicals. Meanwhile the Austrian and Prussian armies had restored order by the end of 1848, and the liberals had little support among peasants and workers.\n\nI disagree with the statement. The refusal was the final blow, but the parliament was already powerless and the old rulers had recovered; even if Frederick William had accepted, Austria, backed by Russia, would probably have prevented a united Germany, as it did at Olmütz in 1850." },
+    }),
+    explanation: "Paper 1 structured essay on Option A key question 3 (20 marks).",
+  });
+  b.struct({
+    ...p1A, d: 5, concepts: [GU("bismarck-austria"), GU("bismarck-france")],
+    stem: "This question is about the unification of Germany, 1862-71.",
+    hints: ["In (c), weigh economic and military strength against Bismarck's diplomacy."],
+    parts: p1Parts({
+      a: { stem: "Describe the Austro-Prussian War of 1866.", points: [
+        "Began in June 1866 after Prussian troops entered Holstein; most medium German states sided with Austria.",
+        "Italy fought on Prussia's side (Austria won at Custoza).",
+        "Moltke used railways to concentrate Prussian armies; decisive victory at Königgrätz (Sadowa), 3 July 1866.",
+        "Lasted about seven weeks; ended by the Treaty of Prague (August 1866).",
+      ], model: "The war began in June 1866 after Prussian troops entered Holstein; most of the medium-sized German states, such as Bavaria, Saxony and Hanover, sided with Austria. Italy fought on Prussia's side but was beaten by the Austrians at Custoza. Moltke used the railways to move Prussian armies quickly into Bohemia, where they defeated the main Austrian army at Königgrätz on 3 July. The war lasted about seven weeks and ended with the Treaty of Prague in August 1866." },
+      b: { stem: "Explain why the publication of the Ems telegram led to war in July 1870.", points: [
+        ["French anger after earlier humiliations (Sadowa, Luxembourg) and the Hohenzollern candidature; the government wanted a diplomatic victory", 2],
+        ["Bismarck's editing made the king's refusal look like an insult to France's ambassador and to France", 2],
+        ["French opinion demanded war; Napoleon III and his ministers feared the loss of prestige if they backed down; France declared war on 19 July", 2],
+      ], model: "French opinion was already angry. France had gained nothing from Prussia's victory in 1866, had been humiliated over Luxembourg in 1867, and saw the Hohenzollern candidature for the Spanish throne as an attempt to surround it. Even after the candidature was withdrawn, the French government wanted a public guarantee. Bismarck edited King Wilhelm's report of his meeting with the French ambassador at Ems so that the king's polite refusal looked like a deliberate snub, and published it. Newspapers and crowds in Paris demanded war, and Napoleon III and his ministers feared that backing down would cost them their prestige. France declared war on 19 July 1870." },
+      c: { stem: "'Prussia's economic and military strength, not Bismarck, was the main reason for German unification.' How far do you agree? Explain your answer.", points: [
+        ["For: Zollverein and industrial growth (coal, iron, railways) gave Prussia wealth and economic leadership", 2],
+        ["For: Roon's reforms, the needle gun, railways and Moltke won Königgrätz and Sedan", 2],
+        ["Against: Bismarck pushed through the army reforms (1862-66) and isolated Austria and France diplomatically", 2],
+        ["Against: Bismarck's skill in provoking wars on good terms (Gastein, Ems) and in the peace settlements and negotiations with the south", 2],
+        ["Supported judgement", 2],
+      ], model: "Prussia's strength was essential. Through the Zollverein it had become the economic leader of Germany, and its coal, iron and railways paid for and moved a modern army. Roon's reforms enlarged that army, the needle gun gave it superior firepower, and Moltke's planning won decisive victories at Königgrätz in 1866 and Sedan in 1870.\n\nBut strength needed to be used. Bismarck made the army reforms possible by governing without parliament's approval from 1862 to 1866. His diplomacy made sure that Prussia fought each enemy alone: Russia was won over in 1863, France stayed neutral in 1866, and Austria-Hungary and Russia stayed out in 1870. He chose the moment of each war, used Holstein and the Ems telegram to provoke conflict, made a mild peace with Austria and negotiated the southern states into the Empire.\n\nI partly agree. Prussia's economic and military strength made unification possible, but Bismarck decided how and when that strength was used. Without him unification might have come later or in a different form; without Prussian power his diplomacy would have achieved nothing." },
+    }),
+    explanation: "Paper 1 structured essay on Option A key question 3 (20 marks).",
+  });
+
+  // -------------------------------------------------------------------------------------------------------------------
+  // Paper 1 Section B: Depth study B (Germany, 1918-45) x4.
+  b.struct({
+    ...p1B, d: 4, concepts: [DE("weimar-1918-23"), DE("stresemann-era")],
+    stem: "This question is about the Weimar Republic, 1919-29.",
+    hints: ["In (c), judge recovery in the economy, foreign policy and politics separately."],
+    parts: p1Parts({
+      a: { stem: "Describe the Spartacist rising of January 1919.", points: [
+        "The Spartacists were communists led by Rosa Luxemburg and Karl Liebknecht.",
+        "They joined an uprising in Berlin in January 1919, aiming at a revolution like Russia's.",
+        "Ebert's government used the army and the Freikorps to crush it.",
+        "Luxemburg and Liebknecht were captured and murdered.",
+      ], model: "The Spartacists were German communists led by Rosa Luxemburg and Karl Liebknecht, who wanted a revolution like the one in Russia. In January 1919 they joined an uprising in Berlin, occupying buildings. Ebert's government called on the army and the Freikorps, which crushed the rising within days. Luxemburg and Liebknecht were captured and murdered." },
+      b: { stem: "Explain why the Treaty of Versailles weakened the Weimar Republic.", points: [
+        ["The republic was blamed for signing a 'Diktat': 'November criminals' and the stab-in-the-back myth linked democracy with defeat", 2],
+        ["Military terms angered the army and Freikorps (disbanding led to the Kapp Putsch)", 2],
+        ["Reparations led to the Ruhr occupation and hyperinflation (1923)", 2],
+      ], model: "The treaty weakened the republic because the new democratic politicians were blamed for it. Germans saw it as a Diktat, and nationalists called the politicians who had accepted the armistice and treaty the 'November criminals', spreading the myth that the army had been stabbed in the back. Democracy was thus linked with defeat and humiliation from the start. The military terms also angered the army and the Freikorps: the order to disband Freikorps units led directly to the Kapp Putsch of 1920. Finally, reparations caused economic crisis: when Germany fell behind with payments, France and Belgium occupied the Ruhr in 1923, and the government's response caused hyperinflation, ruining many middle-class families who blamed the republic." },
+      c: { stem: "How far did the Weimar Republic recover under Stresemann between 1924 and 1929? Explain your answer.", points: [
+        ["Recovery: stable currency (Rentenmark, Reichsmark); Dawes Plan loans; production above pre-war levels by 1928", 2],
+        ["Recovery: Locarno (1925), League membership (1926), Kellogg-Briand (1928); extremists weaker (Nazis 2.6% in 1928)", 2],
+        ["Limits: dependence on short-term American loans; farmers' problems; unemployment", 2],
+        ["Limits: unstable coalitions; Hindenburg elected 1925; nationalist opposition (Young Plan campaign)", 2],
+        ["Supported judgement", 2],
+      ], model: "The republic recovered a great deal. The Rentenmark ended hyperinflation, and the Dawes Plan of 1924 rescheduled reparations and brought American loans, so that by 1928 industrial production was above its pre-war level. Abroad, Stresemann's Locarno Treaties of 1925, League membership in 1926 and the Kellogg-Briand Pact of 1928 made Germany a respected power again. Politically the extremes declined: the Nazis won only 2.6% of the vote in 1928.\n\nHowever, the recovery had serious limits. It depended on short-term American loans that could be withdrawn, as happened after 1929. Farmers suffered from low prices and debts, and unemployment never disappeared. Coalition governments changed often, the election of Hindenburg in 1925 put a monarchist at the head of the republic, and nationalists still rejected it, as their campaign against the Young Plan in 1929 showed.\n\nThe republic recovered considerably, especially in foreign policy and the economy's surface, but the recovery was shallow, resting on foreign money and the work of one man, Stresemann, who died in October 1929." },
+    }),
+    explanation: "Paper 1 structured essay on Depth study B, key question 1 (20 marks).",
+  });
+  b.struct({
+    ...p1B, d: 4, concepts: [DE("nazi-rise")],
+    stem: "This question is about the rise of the Nazi Party.",
+    hints: ["In (c), compare the conservatives' decisions with the Nazis' own strength."],
+    parts: p1Parts({
+      a: { stem: "Describe the methods the Nazis used to win support in 1930-33.", points: [
+        "Propaganda organised by Goebbels: posters, rallies, films, loudspeakers, simple slogans.",
+        "Hitler's speeches; flights around Germany in the 1932 campaigns.",
+        "SA marches and violence against opponents, especially communists.",
+        "Promises tailored to different groups (work, bread, protection from communism, ending Versailles).",
+      ], model: "Goebbels organised modern propaganda: posters, mass rallies, films, loudspeaker vans and simple slogans repeated everywhere. Hitler spoke at huge meetings and in 1932 flew from city to city to address several in one day. The SA marched through the streets and fought communists, making the Nazis look strong. The party made promises tailored to each group: work for the unemployed, protection for farmers and shopkeepers, and the destruction of the Treaty of Versailles for nationalists." },
+      b: { stem: "Explain why the Nazis had little success in elections before 1930.", points: [
+        ["The Munich Putsch failed (1923); Hitler was imprisoned and the party banned until 1925", 2],
+        ["Stresemann's recovery: stable currency, prosperity and foreign success left extremists with few voters", 2],
+        ["The party was still small and reorganising; its ideas appealed to few in good times (2.6% in 1928)", 2],
+      ], model: "First, the Munich Putsch of 1923 failed: Hitler was imprisoned, the party was banned, and it had to be refounded in 1925 and rebuilt for the slow, legal road to power. Second, the years 1924-29 were the most prosperous of the republic. Under Stresemann the currency was stable, wages rose and Germany regained respect abroad, so few voters wanted extreme solutions. Third, the party was still small and busy reorganising, and its message of national humiliation and economic despair had little appeal in good times, so it won only 2.6% of the vote in 1928." },
+      c: { stem: "'Hitler became Chancellor in January 1933 mainly because of the actions of other politicians.' How far do you agree? Explain your answer.", points: [
+        ["For: Brüning's rule by decree undermined democracy; Article 48", 2],
+        ["For: Papen's intrigue and Hindenburg's decision; belief they could control Hitler; Nazi vote falling in November 1932", 2],
+        ["Against: the Depression created mass support (18.3% in 1930, 37.3% July 1932)", 2],
+        ["Against: Nazi propaganda, organisation and Hitler's appeal made them the largest party and impossible to ignore", 2],
+        ["Supported judgement", 2],
+      ], model: "Other politicians played a decisive part. From 1930 Brüning governed by presidential decree under Article 48, so Germany was already ruled by a small circle around Hindenburg rather than by the Reichstag. In January 1933 it was this circle that made Hitler Chancellor: Papen, seeking revenge on Schleicher, persuaded Hindenburg to appoint Hitler with Papen as Vice-Chancellor, believing they could control him. This happened even though the Nazi vote had fallen in November 1932.\n\nHowever, Hitler was only considered because of the support the Nazis had won. The Depression drove their vote from 2.6% in 1928 to 18.3% in 1930 and 37.3% in July 1932, making them the largest party. Goebbels' propaganda, the SA and Hitler's image as a strong leader persuaded millions that the Nazis could rescue Germany.\n\nI largely agree. The Nazis' mass support made Hitler a contender, but he could not win a majority; the final decision was made by conservative politicians who misjudged him, so their actions were the most direct reason for his appointment." },
+    }),
+    explanation: "Paper 1 structured essay on Depth study B, key question 2 (20 marks).",
+  });
+  b.struct({
+    ...p1B, d: 5, concepts: [DE("nazi-control")],
+    stem: "This question is about Nazi control of Germany, 1933-45.",
+    hints: ["In (c), distinguish between opposition, non-conformity and effective resistance."],
+    parts: p1Parts({
+      a: { stem: "Describe how the Enabling Act was passed in March 1933.", points: [
+        "After the Reichstag Fire, an emergency decree allowed the arrest of opponents, especially communists.",
+        "The Reichstag met in the Kroll Opera House surrounded by SA and SS men.",
+        "Communist deputies were absent (arrested or fled); the Centre Party voted for it after promises about the Church.",
+        "Passed by 444 votes to 94; only the SPD voted against.",
+      ], model: "After the Reichstag Fire, an emergency decree allowed the arrest of opponents, and many communists were imprisoned. On 23 March 1933 the Reichstag met in the Kroll Opera House, surrounded by SA and SS men. The Communist deputies were absent, having been arrested or having fled, and the Catholic Centre Party voted for the Act after promises that the Church's rights would be respected. The Act passed by 444 votes to 94; only the Social Democrats voted against." },
+      b: { stem: "Explain how the Nazis used culture and the mass media to control the German people.", points: [
+        ["Goebbels' ministry controlled the press and radio; cheap radios carried Hitler's speeches into most homes", 2],
+        ["Rallies, the Olympics and films (e.g. at Nuremberg) displayed power and unity", 2],
+        ["The Reich Chamber of Culture controlled artists and writers; book burning; 'degenerate' art condemned", 2],
+      ], model: "From March 1933 Goebbels' Ministry of Propaganda controlled what Germans read and heard. Newspapers had to follow government instructions and opposition papers were closed, while cheap radios were sold so that Hitler's speeches reached most homes, with loudspeakers in streets and workplaces. Huge events such as the Nuremberg rallies and the 1936 Olympics displayed Nazi power and unity, and films carried the same message. Culture was controlled through the Reich Chamber of Culture, which artists, writers and musicians had to join; books by Jewish and anti-Nazi authors were burned in 1933, and modern art was condemned as 'degenerate'. In this way Germans heard only one point of view." },
+      c: { stem: "How much opposition was there to the Nazi regime between 1933 and 1945? Explain your answer.", points: [
+        ["Opposition existed: communist and socialist underground groups; church opposition (Confessing Church, von Galen)", 2],
+        ["Young people (Edelweiss Pirates, Swing Youth, White Rose); the July 1944 bomb plot", 2],
+        ["Limited: terror (Gestapo, camps), destruction of parties and unions, denunciations made opposition dangerous", 2],
+        ["Limited: many supported or accepted the regime (jobs, order, foreign successes); opposition small and divided", 2],
+        ["Supported judgement", 2],
+      ], model: "There was opposition. Communists and socialists formed underground groups and distributed leaflets. Some church leaders resisted: Protestant pastors formed the Confessing Church, and in 1941 Bishop von Galen protested against the killing of disabled people. Some young people rejected Nazi culture, like the Edelweiss Pirates and the Swing Youth, and the White Rose students spread anti-Nazi leaflets until they were executed in 1943. In July 1944 army officers led by Stauffenberg tried to kill Hitler.\n\nHowever, opposition was small, divided and rarely effective. The SS, the Gestapo and the camps made it extremely dangerous, the destruction of the other parties and the trade unions removed any way to organise, and the Gestapo received many denunciations from ordinary people. Many Germans supported the regime or accepted it because it brought jobs, order and, until 1941, foreign successes.\n\nOverall, there was more opposition than Nazi propaganda admitted, but it involved only a small minority and never seriously threatened the regime until the bomb plot of 1944, which also failed." },
+    }),
+    explanation: "Paper 1 structured essay on Depth study B, key question 3(a) (20 marks).",
+  });
+  b.struct({
+    ...p1B, d: 4, concepts: [DE("life-nazi"), DE("persecution")],
+    stem: "This question is about life in Nazi Germany.",
+    hints: ["In (c), consider different groups: workers, business, farmers, women, the young and the persecuted."],
+    parts: p1Parts({
+      a: { stem: "Describe the Hitler Youth movement.", points: [
+        "Boys joined the German Young People at 10 and the Hitler Youth at 14; girls joined the League of German Maidens.",
+        "Activities: camping, sport, marching, military training for boys; domestic training for girls.",
+        "Taught Nazi ideas and loyalty to Hitler; led by Baldur von Schirach.",
+        "Became the state youth organisation (1936 law) and compulsory in 1939.",
+      ], model: "Boys joined the German Young People at 10 and the Hitler Youth at 14, while girls joined the Young Girls and then the League of German Maidens. Activities included camping, sport, marching and military training for boys, and preparation for motherhood for girls. Members were taught Nazi ideas and loyalty to Hitler under the leadership of Baldur von Schirach. A law of 1936 made it the state youth organisation, and membership became compulsory in 1939." },
+      b: { stem: "Explain why unemployment fell in Germany after 1933.", points: [
+        ["Public works (motorways, housing) and the Reich Labour Service created jobs", 2],
+        ["Rearmament and conscription (from 1935) absorbed workers into factories and the army", 2],
+        ["'Invisible unemployment': women and Jews removed from jobs and from the figures", 2],
+      ], model: "Unemployment fell partly because the government created work. Under Schacht it spent heavily on public works such as motorways and housing, and the Reich Labour Service, compulsory for young men from 1935, took them off the register. Rearmament, especially after the Four-Year Plan of 1936, created jobs in factories, and conscription from 1935 took hundreds of thousands of young men into the army. The figures were also manipulated: women pushed out of work and Jews dismissed from their jobs were not counted as unemployed, so the official fall from about six million to a few hundred thousand exaggerated the real change." },
+      c: { stem: "'Most people in Germany benefited from Nazi rule between 1933 and 1939.' How far do you agree? Explain your answer.", points: [
+        ["Benefited: jobs for the unemployed; big business profits from rearmament", 2],
+        ["Benefited: Strength Through Joy, Beauty of Labour; farmers protected; sense of order and national pride", 2],
+        ["Did not: wages frozen, longer hours, no unions, food shortages ('guns or butter')", 2],
+        ["Did not: women pushed from professions; Jews, Roma, disabled and opponents persecuted; loss of freedom", 2],
+        ["Supported judgement", 2],
+      ], model: "Many Germans did benefit. Millions of unemployed people found work, which after the Depression was what mattered most to them. Big businesses, especially in arms and chemicals, made large profits. Workers gained cheap holidays through Strength Through Joy and better workplaces through Beauty of Labour, farmers were protected from losing their land, and many enjoyed a sense of order and national pride.\n\nBut the benefits were limited. Wages were frozen while hours grew longer, workers lost their unions and the right to strike, and food became dearer and scarcer as resources went into weapons. Women were pushed out of many professions. Above all, those excluded from the 'people's community', Jews, Roma and Sinti, disabled people and political opponents, suffered persecution, and everyone lost freedom of speech.\n\nI partly agree. Most 'Aryan' Germans were better off than in the Depression, mainly because they had work, but their gains were modest, they lost their freedom, and the regime's benefits depended on the persecution of others." },
+    }),
+    explanation: "Paper 1 structured essay on Depth study B, key question 3(b) (20 marks).",
+  });
+
+  // -------------------------------------------------------------------------------------------------------------------
+  // Paper 1 Section B: Depth study C (Russia, 1905-41) x4.
+  b.struct({
+    ...p1B, d: 4, concepts: [RU("tsarist-1905")],
+    stem: "This question is about Russia between 1905 and 1914.",
+    hints: ["In (c), compare the promises of 1905 with what actually happened after 1906."],
+    parts: p1Parts({
+      a: { stem: "Describe the October Manifesto and the Fundamental Laws.", points: [
+        "October Manifesto (October 1905) promised civil rights (speech, assembly, religion).",
+        "It promised an elected Duma whose consent was needed for laws.",
+        "Fundamental Laws (1906) declared the Tsar still supreme autocrat.",
+        "The Tsar could dissolve the Duma, rule by decree when it was not sitting and appoint ministers.",
+      ], model: "The October Manifesto of 1905, issued on Witte's advice, promised civil rights such as freedom of speech, assembly and religion, and an elected Duma without whose consent no law could be passed. But in 1906, just before the first Duma met, the Fundamental Laws declared that the Tsar was still the supreme autocrat: he could dissolve the Duma, make laws by decree when it was not sitting, and appoint and dismiss his ministers." },
+      b: { stem: "Explain why there was a revolution in Russia in 1905.", points: [
+        ["Long-term grievances: autocracy, peasant poverty and land hunger, workers' conditions, minorities and Russification", 2],
+        ["Defeat in the Russo-Japanese War (Port Arthur, Tsushima) humiliated the government and caused hardship", 2],
+        ["Bloody Sunday (January 1905) destroyed trust in the Tsar and sparked strikes and risings", 2],
+      ], model: "There were deep long-term grievances. The Tsar ruled as an autocrat with no parliament; peasants were poor and wanted the landlords' land; factory workers lived and worked in harsh conditions; and national minorities resented Russification. The war with Japan from 1904 turned discontent into crisis: defeats such as the fall of Port Arthur and the destruction of the fleet at Tsushima humiliated the government, while the war raised prices and caused shortages. The spark was Bloody Sunday in January 1905, when troops fired on a peaceful procession led by Father Gapon; trust in the Tsar collapsed, and strikes, peasant risings and mutinies spread across the empire." },
+      c: { stem: "How far did the 1905 Revolution change the way Russia was governed? Explain your answer.", points: [
+        ["Change: an elected Duma existed for the first time; political parties legal; some civil rights; censorship relaxed", 2],
+        ["Change: Dumas criticised ministers; reforms such as Stolypin's land laws", 2],
+        ["Continuity: Fundamental Laws kept autocracy; first two Dumas dismissed; electoral law of 1907 favoured landowners", 2],
+        ["Continuity: ministers answerable to the Tsar; repression (Okhrana, Stolypin's courts) continued", 2],
+        ["Supported judgement", 2],
+      ], model: "The revolution brought some real changes. For the first time Russia had an elected parliament, the Duma, political parties could operate openly, and censorship was relaxed. The Dumas debated and criticised ministers, and important reforms such as Stolypin's land laws followed.\n\nBut the Tsar kept most of his power. The Fundamental Laws of 1906 declared him still the supreme autocrat, with the right to dissolve the Duma and appoint his own ministers, who were answerable to him alone. The first two Dumas were dismissed within months, and in 1907 the voting system was changed to favour landowners, so the later Dumas were more conservative. Repression continued through the Okhrana and Stolypin's special courts.\n\nThe revolution changed the appearance of Russian government more than its reality. Autocracy survived with a parliament attached, and the broken promises of 1905 left many Russians bitter." },
+    }),
+    explanation: "Paper 1 structured essay on Depth study C, key question 1 (20 marks).",
+  });
+  b.struct({
+    ...p1B, d: 5, concepts: [RU("revolutions-1917")],
+    stem: "This question is about Russia in 1917.",
+    hints: ["In (c), set the government's achievements against its failures."],
+    parts: p1Parts({
+      a: { stem: "Describe the role of the Petrograd Soviet in 1917.", points: [
+        "Formed in March 1917 (February old style) by workers and soldiers during the revolution.",
+        "Order No. 1: soldiers to obey officers and the government only if the Soviet agreed (dual power).",
+        "At first led by Mensheviks and SRs who supported the Provisional Government conditionally.",
+        "Bolsheviks won a majority by September; Trotsky its chairman; its Military Revolutionary Committee organised the November rising.",
+      ], model: "The Petrograd Soviet was formed by workers and soldiers during the March (February) Revolution. Its Order No. 1 told soldiers to obey their officers and the Provisional Government only if the Soviet agreed, creating dual power. At first it was led by Mensheviks and Socialist Revolutionaries who supported the government on conditions. By September the Bolsheviks had a majority, Trotsky became its chairman, and its Military Revolutionary Committee organised the seizure of power in November." },
+      b: { stem: "Explain why the Bolsheviks were able to seize power in November 1917.", points: [
+        ["The Provisional Government had lost support: war, delay over land and elections, economic chaos", 2],
+        ["The Kornilov affair armed the Red Guards and made the Bolsheviks the defenders of the revolution; majorities in the soviets", 2],
+        ["Lenin's leadership and slogans; Trotsky's organisation of the Military Revolutionary Committee", 2],
+      ], model: "By November the Provisional Government had lost almost all its support. It had kept Russia in the war, and the failed summer offensive led to mass desertion; it had postponed land reform and elections; and shortages and inflation grew worse. The Kornilov affair in September was a turning point: Kerensky had to arm the workers, including the Bolshevik Red Guards, and the Bolsheviks appeared as the defenders of the revolution, winning majorities in the Petrograd and Moscow Soviets. Finally, the Bolsheviks had the leadership to act: Lenin insisted on seizing power and offered the simple promise of 'Peace, Land and Bread', and Trotsky organised the rising through the Military Revolutionary Committee, taking key points in Petrograd with little resistance." },
+      c: { stem: "How effectively did the Provisional Government rule Russia in 1917? Explain your answer.", points: [
+        ["Effective: civil liberties, release of political prisoners, plans for elections; survived the July Days", 2],
+        ["Effective: faced impossible circumstances (war, collapse of authority) and kept going for eight months", 2],
+        ["Ineffective: dual power and Order No. 1; never controlled the army; continued the war (failed offensive)", 2],
+        ["Ineffective: delayed land reform and Constituent Assembly; economic chaos; Kornilov affair; fell easily", 2],
+        ["Supported judgement", 2],
+      ], model: "The Provisional Government had some achievements. It granted freedom of speech and the press, released political prisoners and promised elections to a Constituent Assembly. It survived the July Days, and it governed in almost impossible conditions, in the middle of a world war after the collapse of the old state.\n\nBut it ruled ineffectively. Under dual power it never controlled the army, because Order No. 1 told soldiers to obey the Soviet first. It kept fighting the war, and the failure of the summer offensive led to mass desertion. It postponed land reform and the elections, so peasants seized land anyway and the government seemed unrepresentative. Shortages and inflation grew worse, and in the Kornilov affair Kerensky had to arm the Bolsheviks to save himself. In November almost no one would defend it.\n\nOverall it ruled ineffectively. It faced terrible circumstances, but its decisions on the war, land and elections threw away the support it had in March." },
+    }),
+    explanation: "Paper 1 structured essay on Depth study C, key question 2 (20 marks).",
+  });
+  b.struct({
+    ...p1B, d: 4, concepts: [RU("civil-war-nep")],
+    stem: "This question is about Bolshevik rule, 1917-24.",
+    hints: ["In (c), compare Trotsky's role with geography, Lenin's policies and the Whites' weaknesses."],
+    parts: p1Parts({
+      a: { stem: "Describe War Communism.", points: [
+        "Grain requisitioning by armed squads.",
+        "Nationalisation of industry; strict labour discipline.",
+        "Private trade banned; rationing by class (best for workers and soldiers).",
+        "Results: falling production, famine (1921), peasant revolts.",
+      ], model: "War Communism was the Bolshevik economic policy of 1918-21. Armed squads requisitioned grain from the peasants to feed the Red Army and the cities. Industry was nationalised and workers faced strict discipline. Private trade was banned, and food was rationed, with the best rations for workers and soldiers. Peasants grew less, production collapsed, and by 1921 there was famine and widespread revolt." },
+      b: { stem: "Explain why the Bolsheviks signed the Treaty of Brest-Litovsk in March 1918.", points: [
+        ["The Russian army had collapsed and could not stop the German advance", 2],
+        ["Lenin had promised peace; the war had destroyed the Tsar and the Provisional Government", 2],
+        ["Peace was needed to secure the revolution against internal enemies; Lenin expected revolution in Germany to undo the treaty", 2],
+      ], model: "The Russian army had collapsed: soldiers had deserted in huge numbers, and when negotiations stalled in early 1918 the Germans advanced again with almost no resistance. Lenin had also promised peace, and he knew that the war had destroyed both the Tsar and the Provisional Government; continuing it would destroy the Bolsheviks too. Peace allowed the Bolsheviks to concentrate on their enemies inside Russia, and Lenin believed that revolution would soon spread to Germany, so the losses might be temporary. Indeed, the treaty was cancelled when Germany was defeated in November 1918." },
+      c: { stem: "'Trotsky was the main reason for the Bolshevik victory in the Civil War.' How far do you agree? Explain your answer.", points: [
+        ["For: Trotsky built the Red Army (conscription, ex-Tsarist officers, commissars), enforced discipline, visited fronts by armoured train", 2],
+        ["For: his leadership at key moments, e.g. the defence of Petrograd (1919)", 2],
+        ["Against: central position, railways, industry; War Communism and the Cheka supplied and controlled", 2],
+        ["Against: White weaknesses (divided, scattered, associated with landlords); limited foreign intervention; Lenin's leadership", 2],
+        ["Supported judgement", 2],
+      ], model: "Trotsky's role was vital. As Commissar for War he turned scattered Red Guards into a Red Army of several million by conscription, recruited former Tsarist officers and placed political commissars beside them to ensure loyalty, and enforced harsh discipline. He travelled between fronts in his armoured train, and his leadership helped to save Petrograd from Yudenich in 1919.\n\nBut other factors were at least as important. The Reds held the centre of Russia, with its railways, industry and population, so they could move troops quickly between fronts. War Communism supplied the army and the Cheka crushed opposition behind the lines. The Whites were divided in aims, scattered around the edges of Russia and unable to co-ordinate; many peasants feared they would bring back the landlords; and foreign intervention was small and half-hearted. Lenin's overall leadership held the party together.\n\nI disagree with the statement. Trotsky made the Red Army an effective force, but the Reds won mainly because of their central position and the weaknesses of the Whites; Trotsky made the most of those advantages." },
+    }),
+    explanation: "Paper 1 structured essay on Depth study C, key question 2 (20 marks).",
+  });
+  b.struct({
+    ...p1B, d: 5, concepts: [RU("stalin-power"), RU("stalin-economy")],
+    stem: "This question is about Stalin's Russia.",
+    hints: ["In (c), compare Stalin's own skill with his position and his rivals' mistakes."],
+    parts: p1Parts({
+      a: { stem: "Describe what happened to the kulaks during collectivisation.", points: [
+        "Labelled 'kulaks' for being better off or resisting collectivisation; Stalin called for their 'liquidation as a class'.",
+        "Their land, animals and property were seized by party activists and secret police.",
+        "Many were shot; about 1.8 million people deported in 1930-31 (estimate) to Siberia, Central Asia and the north.",
+        "Many died in exile or labour camps.",
+      ], model: "Peasants who were better off, or who resisted collectivisation, were labelled kulaks, and Stalin called for the 'liquidation of the kulaks as a class'. Party activists and the secret police seized their land, animals and property. Many were shot, and historians estimate that about 1.8 million people were deported in 1930-31 to Siberia, Central Asia and the far north, where many died in harsh conditions or labour camps." },
+      b: { stem: "Explain why Stalin abandoned the NEP in 1928.", points: [
+        ["The grain crisis of 1927-28: peasants sold less grain to the state, threatening cities and the army", 2],
+        ["Need for rapid industrialisation and defence; fear of invasion; grain exports to pay for machinery", 2],
+        ["Ideology and power: NEP seen as capitalism (Nepmen, kulaks); attacking it helped Stalin defeat Bukharin and the Right", 2],
+      ], model: "In 1927-28 peasants sold much less grain to the state because the prices offered were low, which threatened food supplies to the cities and the army; Stalin responded with forced requisitions and blamed kulaks for hoarding. He also believed the USSR had to industrialise rapidly to defend itself against capitalist enemies, and that required control of grain, both to feed workers and to export to pay for foreign machinery. Ideology and power mattered too: many communists saw the NEP's private traders and better-off peasants as a return to capitalism, and abandoning it allowed Stalin to defeat Bukharin and the Right, who defended it." },
+      c: { stem: "'Stalin became leader of the Soviet Union mainly because of his own political skill.' How far do you agree? Explain your answer.", points: [
+        ["For: skilful alliances (with Zinoviev and Kamenev, then Bukharin) and turning on each group in turn", 2],
+        ["For: presented himself as Lenin's loyal follower; Socialism in One Country appealed to members", 2],
+        ["Against: his position as General Secretary (control of appointments, Lenin Enrolment)", 2],
+        ["Against: rivals' mistakes and weaknesses (Trotsky's arrogance, failure to use the Testament, ban on factions used against them)", 2],
+        ["Supported judgement", 2],
+      ], model: "Stalin showed great political skill. He allied with Zinoviev and Kamenev to defeat Trotsky, then with Bukharin to defeat Zinoviev and Kamenev, and finally turned on Bukharin and the Right in 1928-29. He presented himself as Lenin's loyal follower, playing a leading part at Lenin's funeral and in honouring his memory, and his policy of Socialism in One Country appealed to party members tired of upheaval.\n\nHowever, his position gave him enormous advantages. As General Secretary he controlled appointments, so local officials who chose congress delegates owed their jobs to him, and many of the new members who joined in 1924 supported him. His rivals also made mistakes: Trotsky seemed arrogant, failed to build alliances and did not use Lenin's Testament, and the leaders who were later expelled had themselves agreed to the ban on factions that was used against them.\n\nI partly agree. Skill was important, but it worked because Stalin held the key post in the party and his opponents underestimated him and divided among themselves." },
+    }),
+    explanation: "Paper 1 structured essay on Depth study C, key question 3 (20 marks).",
+  });
+
+  // -------------------------------------------------------------------------------------------------------------------
+  // Paper 2: Option A prescribed topic (How was Germany unified?) x2.
+  b.struct({
+    ...p2, d: 5, concepts: [GU("bismarck-france")],
+    stem: `**Was Bismarck responsible for the Franco-Prussian War?**\n\nStudy the sources and answer the questions that follow.\n\n**Background information:** In July 1870 news that Prince Leopold of Hohenzollern had accepted the Spanish throne caused fury in France. The candidature was withdrawn on 12 July, but on 13 July the French ambassador asked King Wilhelm of Prussia at Ems for a promise that it would never be renewed. The king refused, and Bismarck published a shortened report of the meeting. France declared war on 19 July 1870.\n\n${sources([
+      source("Source A", "a cartoon (described in words) of the kind published in a British satirical magazine in July 1870", "A tall figure of Bismarck in a spiked helmet stands behind a curtain, holding the strings of a small puppet dressed as a Spanish king. In front of the curtain Napoleon III, red-faced, is pulling his sword from its scabbard while a crowd behind him waves French flags. The caption reads: 'Who is pulling the strings?'", { described: true }),
+      source("Source B", "a letter by a fictional member of the French parliament to his wife, 16 July 1870", "The Chamber was in a fever. When the ministers read out the dispatch from Ems, men shouted that France had been slapped in the face. A few of us asked to see the full text of the report on which the government was acting. We were refused and shouted down as cowards. The vote for war credits passed amid cheering. I fear we have voted in anger for something we have not understood."),
+      source("Source C", "a report by a fictional British diplomat in Paris to the Foreign Office in London, 14 July 1870", "The withdrawal of the Prince was a victory for France, and a wise government would have been content with it. But the ministers here demanded guarantees that no king could give, and now that the Prussian report has been printed the crowds on the boulevards are crying 'To Berlin!'. I am told the Emperor himself hesitated, but those around him wanted war, and the newspapers have made retreat impossible."),
+      source("Source D", "an article in a fictional Bavarian newspaper, 20 July 1870", "France has declared war, not on Prussia alone, but on Germany. Our treaty of 1866 obliges Bavaria to stand beside Prussia; but it is not the treaty that calls us, it is our honour. The French have long wished to keep Germany divided and weak. Bavarians, whatever we have thought of Berlin, today we are Germans first."),
+      source("Source E", "an extract from the memoirs of a fictional retired Prussian staff officer, published in 1895", "In the General Staff we had been ready for war with France since 1867, and we knew our railways would carry us to the frontier first. I was present at the Foreign Ministry on the evening of 13 July when the report from Ems was shortened. Nobody in the room doubted that the new version would bring war, and nobody regretted it. The Minister-President had judged the French perfectly."),
+      source("Source F", "an editorial in a fictional French republican newspaper, 10 September 1870, after the defeat at Sedan", "Let no one say that the Prussian chancellor alone brought this disaster upon France. It was the Emperor's ministers who demanded the impossible at Ems, the Emperor's newspapers that cried for war, and the Emperor's generals who swore that the army was ready to the last gaiter button. The Empire chose this war, and the Empire has lost it."),
+    ])}`,
+    hints: ["Use the provenance of each source: who wrote it, when, and why.", "In (e), group the sources into those that support and those that challenge the statement before evaluating them."],
+    parts: p2Parts([
+      { stem: "Study Source A. What is the cartoonist's message? Explain your answer using details of the cartoon and your knowledge.", points: [
+        ["Message: Bismarck secretly manipulated events (the Spanish candidature) to provoke France into war", 2],
+        ["Details: Bismarck hidden behind the curtain pulling the strings of the Spanish puppet; caption", 2],
+        ["Own knowledge: Bismarck secretly encouraged Leopold's candidature and edited the Ems telegram", 2],
+        ["Sub-message: France (Napoleon and the crowd) was rushing into war, falling into the trap", 1],
+      ], model: "The cartoonist's message is that Bismarck was secretly controlling events in order to provoke France into war. He is shown hidden behind a curtain pulling the strings of a puppet dressed as a Spanish king, which suggests that the Hohenzollern candidature for the Spanish throne was his doing, and the caption asks who is really pulling the strings. My own knowledge supports this: Bismarck had secretly encouraged Leopold's candidature, and after the meeting at Ems he shortened the king's report so that it would anger the French. The cartoon also suggests that France was walking into a trap, because Napoleon is drawing his sword in front of the curtain while the crowd cheers, unaware of who is controlling events." },
+      { stem: "Study Sources B and C. How far do these two sources agree about why France went to war? Explain your answer.", points: [
+        ["Agree: both show French public and political opinion inflamed by the published report from Ems", 2],
+        ["Agree: both suggest French decision-makers acted rashly (voted in anger; demanded impossible guarantees)", 2],
+        ["Disagree: B blames ministers for withholding the full report and hustling the Chamber; C blames ministers and the Emperor's circle for demanding guarantees after victory", 2],
+        ["Disagree: C says the Emperor hesitated and the press made retreat impossible; B does not mention the Emperor or the press; overall judgement on extent", 2],
+      ], model: "The sources agree that French opinion was inflamed by the published report from Ems: in Source B deputies shout that France has been slapped in the face, and in Source C the crowds cry 'To Berlin!'. Both also suggest that French decisions were rash: B says the Chamber voted 'in anger' without understanding, while C says the ministers demanded guarantees that no king could give. However, they place the blame differently. B blames the ministers for refusing to show the Chamber the full report and for hurrying the vote. C blames the ministers and the people around the Emperor for not accepting the withdrawal as a victory, and adds that the Emperor himself hesitated and that the newspapers made retreat impossible, points B does not make. Overall they largely agree that France went to war because of anger and the rashness of its leaders, but differ on who was most responsible." },
+      { stem: "Study Source D. Why was this article published at this time? Explain your answer using details of the source and your knowledge.", points: [
+        ["Context: France had just declared war (19 July 1870)", 2],
+        ["Context: Bavaria's secret alliance of 1866 obliged it to join Prussia if Prussia was attacked; many Bavarians distrusted Prussia", 2],
+        ["Purpose: to rally Bavarians behind the war as Germans, overcoming suspicion of Berlin ('Germans first')", 2],
+        ["Shows Bismarck's aim of uniting south with north through a defensive national war was succeeding", 1],
+      ], model: "The article was published on 20 July 1870, the day after France declared war on Prussia. Under the secret military alliance of 1866, Bavaria was obliged to support Prussia if Prussia was attacked, but many Bavarians, especially Catholics, distrusted Protestant Prussia and did not want to be ruled from Berlin. The writer's purpose was to rally Bavarians behind the war, presenting it as a war on all of Germany and appealing to honour and national feeling rather than to the treaty: 'whatever we have thought of Berlin, today we are Germans first'. It shows that, because France had declared war, Bismarck's aim of bringing the south into a national war alongside the north was succeeding." },
+      { stem: "Study Source E. How far is this source reliable as evidence of Bismarck's intentions in July 1870? Explain your answer using the source and your knowledge.", points: [
+        ["Provenance: memoir published 1895, 25 years later, after unification; written with hindsight", 2],
+        ["Purpose: a proud Prussian officer may exaggerate the General Staff's readiness and Bismarck's genius ('judged the French perfectly')", 2],
+        ["Cross-reference: own knowledge confirms Bismarck shortened the telegram with Moltke and Roon on 13 July and that German mobilisation was faster", 2],
+        ["Judgement: reliable on the editing and readiness for war; less reliable as proof of a long-planned war", 2],
+      ], model: "Source E has strengths and weaknesses. Its author claims to have been present when the report from Ems was shortened, and my own knowledge confirms that Bismarck edited the telegram on the evening of 13 July with Moltke and Roon, and that the German armies mobilised faster than the French, so parts of the account are accurate. However, it was published in 1895, twenty-five years later, after Germany had been unified and the war had become a source of national pride. A retired Prussian officer had every reason to present the General Staff as ready and Bismarck as a genius who 'judged the French perfectly', and memory after so long may be coloured by hindsight. The source is reliable evidence that Bismarck expected the edited telegram to provoke war, but less reliable as proof that he had planned the war long in advance." },
+      { stem: "How far do these sources provide convincing evidence that Bismarck was responsible for the war of 1870? Use the sources to explain your answer.", points: [
+        ["Support: A (strings, Spanish puppet) and E (editing, expectation of war), evaluated for provenance (British cartoon; 1895 memoir with hindsight)", 2],
+        ["Support: B and C show the report from Ems inflamed opinion, which own knowledge shows Bismarck intended", 2],
+        ["Challenge: B and C show French ministers' rashness, the demand for guarantees and a refused vote; F blames the Empire, evaluated (republican paper after Sedan blaming Napoleon)", 2],
+        ["D shows the result Bismarck wanted (southern states joining) but France declared war; own knowledge (Luxembourg, French opinion)", 2],
+        ["Supported judgement on how convincing the evidence is", 2],
+      ], model: "Some sources provide evidence that Bismarck was responsible. Source A shows him pulling the strings of the Spanish candidature, and Source E describes the shortening of the Ems report by men who expected it to bring war. My own knowledge confirms that Bismarck secretly encouraged the candidature and edited the telegram. Sources B and C show that the published report inflamed French opinion, which was exactly Bismarck's intention. However, A is a British cartoon, an outsider's opinion, and E was written in 1895 by a proud Prussian officer looking back with hindsight, so neither proves a long-planned war.\n\nOther sources place much of the blame on France. Source C, a diplomat's report written at the time with no reason to favour either side, says the French government should have been content with the withdrawal of the candidature but demanded impossible guarantees. Source B shows ministers refusing to let deputies see the full report and pushing through the vote. Source F, a republican newspaper writing after Sedan, blames the Emperor's ministers, newspapers and generals; it had a political motive to blame the fallen Empire, but its points match B and C. Source D shows that France declared war, which brought the southern states in, as Bismarck hoped, but it was still France that took the decision.\n\nOverall the sources provide convincing evidence that Bismarck created the opportunity for war and wanted it, but the most reliable contemporary sources, B and C, show that French leaders chose war when they could have accepted a diplomatic victory, so responsibility was shared." },
+    ]),
+    explanation: "Paper 2 document question on the prescribed topic 'How was Germany unified?' (40 marks).",
+  });
+  b.struct({
+    ...p2, d: 5, concepts: [GU("before-1851")],
+    stem: `**Why did the Frankfurt Parliament fail?**\n\nStudy the sources and answer the questions that follow.\n\n**Background information:** The Frankfurt Parliament, elected from across the German Confederation, met from May 1848. In March 1849 it completed a constitution for a united Germany without Austria and elected King Frederick William IV of Prussia as German Emperor. In April 1849 he refused the crown. Most members then left, and the remnant of the parliament was dispersed by troops in June 1849. In November 1850, at Olmütz, Prussia gave up its own plan for a union of German states, and the old Confederation was restored in 1851.\n\n${sources([
+      source("Source A", "a cartoon (described in words) of the kind published in German satirical magazines in 1849", "A group of men in academic gowns and spectacles sit around a long table covered in papers, arguing and pointing at a large paper crown in the middle. Through the window behind them, a column of soldiers with fixed bayonets marches past, unnoticed. The caption reads: 'The German nation, chapter one hundred and twelve.'", { described: true }),
+      source("Source B", "a letter by a fictional moderate liberal member of the Frankfurt Parliament from the Rhineland, to a friend, April 1849", "The King's answer has struck us like lightning. We offered him the crown of a free Germany, built by the votes of the people, and he treats it as an insult. Without Prussia we have no army, no money and no leader. Some speak of calling the people to arms. I will have no part in that; it would only bring the soldiers sooner."),
+      source("Source C", "an article in a fictional conservative Prussian newspaper, April 1849", "A King of Prussia receives his crown from God and from his fathers, not from an assembly of lawyers and professors that owes its existence to the disorders of last spring. His Majesty has rightly refused an offer that would have made him the servant of the Frankfurt parliament and the enemy of the Emperor of Austria."),
+      source("Source D", "a pamphlet by a fictional radical democrat from Baden, May 1849", "For a year the gentlemen at Frankfurt debated the rights of man, while the princes reloaded their guns. They feared the people more than the kings, and when the people rose in Vienna and Berlin, they looked away. Now the kings have answered them. If the constitution is to live, it must be defended by the people in arms, here in Baden and across Germany."),
+      source("Source E", "a report by a fictional Austrian official to his government in Vienna, December 1850", "Prussia has yielded at Olmütz without a shot being fired. The so-called Union is dead, and the Confederation will be restored as before, with His Majesty's government in the chair. Berlin knew that the Tsar would not allow an Austrian defeat, and its own generals did not believe they could win. The German question is settled for a generation."),
+      source("Source F", "an editorial in a fictional British newspaper, 1850", "The Germans have shown once again that they can talk of unity but cannot achieve it. Their parliament produced a library of speeches and a constitution that no one obeys. Germany will not be united by professors. It will be united, if ever, when one of the great German powers decides to take up the cause with its armies."),
+    ])}`,
+    hints: ["Separate the parliament's own weaknesses from the actions of Prussia, Austria and Russia.", "Consider whether each writer had reason to blame the parliament or others."],
+    parts: p2Parts([
+      { stem: "Study Source A. What is the cartoonist's message? Explain your answer using details of the cartoon and your knowledge.", points: [
+        ["Message: the parliament wasted time in endless debate while real power (the armies) returned", 2],
+        ["Details: professors arguing over a paper crown; soldiers unnoticed outside; caption 'chapter one hundred and twelve'", 2],
+        ["Own knowledge: long debates (rights, Greater/Little Germany); armies restored order by late 1848", 2],
+        ["The crown is only paper: the parliament had no real power to create a German state", 1],
+      ], model: "The cartoonist's message is that the Frankfurt Parliament wasted its time in endless argument while real power, the armies of the princes, was returning. The members are shown as professors in gowns arguing over a paper crown, and the caption mocks the length of their debates. Behind them soldiers march past unnoticed. My own knowledge supports this: the parliament spent months debating basic rights and whether Germany should include Austria, while by the end of 1848 the Austrian and Prussian armies had restored their rulers' control. The paper crown also suggests that the parliament had nothing real to offer: it had no army or taxes, so its crown was only words." },
+      { stem: "Study Sources B and C. How far do these two sources agree? Explain your answer.", points: [
+        ["Agree on facts: the King refused a crown offered by the parliament; he saw it as an insult / beneath him", 2],
+        ["Agree: Prussia (and Austria) held the real power; the parliament could do nothing without Prussia", 2],
+        ["Disagree: B regrets the refusal and values a crown from the people; C praises it and despises the parliament", 2],
+        ["Disagree on legitimacy: B 'votes of the people' versus C 'God and his fathers'; C adds fear of Austria; judgement on extent", 2],
+      ], model: "The sources agree on what happened: the king refused the crown and regarded the offer as beneath him. B says he treated it 'as an insult', and C says he refused an offer that would have made him the parliament's servant. Both also show that real power lay with Prussia: B admits that without Prussia the parliament has no army, money or leader, and C mentions the risk of becoming the enemy of the Emperor of Austria. But they disagree completely in their attitude. B, written by a liberal member, regrets the refusal and believes a crown built on the people's votes was legitimate. C, a conservative paper, praises the refusal, says a king's crown comes from God and his ancestors, and dismisses the parliament as lawyers and professors born of disorder. They agree about the facts but disagree about whether the refusal was right." },
+      { stem: "Study Source D. Why did the writer publish this pamphlet in May 1849? Explain your answer using details of the source and your knowledge.", points: [
+        ["Context: the king had refused the crown (April 1849); the parliament was collapsing", 2],
+        ["Context: risings in support of the constitution broke out in May 1849 in Baden and Saxony", 2],
+        ["Purpose: to urge people to take up arms to defend the constitution, criticising the moderates for their timidity", 2],
+        ["Radical viewpoint: the moderates feared the people more than the princes", 1],
+      ], model: "The pamphlet was published in May 1849, just after Frederick William IV had refused the crown in April and while the Frankfurt Parliament was collapsing as its members left. In May risings broke out in Baden and Saxony to defend the imperial constitution. The writer, a radical democrat in Baden, wanted to persuade people to join this armed defence: he says the constitution 'must be defended by the people in arms'. He also wanted to blame the moderate liberals at Frankfurt, who, he claims, feared the people more than the kings and wasted a year in debate. It was published to win support for the radical rising at the moment the moderates had failed." },
+      { stem: "Study Source E. Are you surprised by what this report says? Explain your answer using the source and your knowledge.", points: [
+        ["Not surprised by content: Prussia did back down at Olmütz without fighting; Confederation restored in 1851 with Austria in the chair", 2],
+        ["Not surprised: Russian support for Austria and Prussian reluctance to fight are confirmed by own knowledge", 2],
+        ["Not surprised by tone: an Austrian official would celebrate Austria's victory to his government", 2],
+        ["Surprised/limited: 'settled for a generation' proved wrong (Prussia defeated Austria in 1866, 16 years later); judgement", 2],
+      ], model: "I am not surprised by most of the report. My own knowledge confirms that at Olmütz in November 1850 Prussia abandoned its union plan without fighting, and that the Confederation was restored in 1851 with Austria in the chair. It is also accurate that Austria had Russian support and that Prussia was not prepared to risk war. Nor am I surprised by its confident, triumphant tone, because it was written by an Austrian official reporting a success to his own government. What is surprising, with hindsight, is the claim that the German question was settled for a generation: only sixteen years later Prussia defeated Austria at Königgrätz and excluded it from Germany. So the report is accurate about 1850 but wrong about the future." },
+      { stem: "How far do these sources provide convincing evidence that the Frankfurt Parliament failed because of its own weaknesses? Use the sources to explain your answer.", points: [
+        ["Support: A and F show endless talk and no power; D accuses moderates of timidity and delay; B admits no army or money", 2],
+        ["Evaluate support: A and F are satire and a foreign opinion; D is a radical with a motive to blame moderates; B is an honest insider admission", 2],
+        ["Challenge: B and C show the king's refusal was decisive; C shows conservative hostility; E shows Austria and Russia decided the outcome", 2],
+        ["Evaluate challenge: C is biased but shows the princes' attitude; E is an official report confirmed by own knowledge (Olmütz)", 2],
+        ["Supported judgement with own knowledge", 2],
+      ], model: "Several sources suggest that the parliament failed because of its own weaknesses. Source A shows its members arguing endlessly while the soldiers march past, and Source F says it produced only speeches and a constitution no one obeyed. Source D accuses the moderates of debating while the princes reloaded their guns and of fearing the people. Source B, written by a member, admits that without Prussia the parliament had no army, money or leader, which is strong evidence because it comes from an insider with no reason to exaggerate its weakness. However, A is satire and F a foreign opinion, and D was written by a radical who wanted to blame the moderates, so these must be treated with care.\n\nOther sources show that the decisive blows came from outside. Sources B and C show that the king's refusal of the crown ended the plan, and C reveals the princes' contempt for an elected assembly; though biased, it shows the attitude the parliament faced. Source E shows that in 1850 Austria, backed by Russia, decided the outcome without a shot, and my own knowledge of Olmütz confirms this.\n\nOverall the sources convincingly show that the parliament was weak, but they also show that it failed because the princes recovered and refused to co-operate. Its weakness, having no army and depending on Prussia, mattered because the rulers of Prussia and Austria chose not to accept it." },
+    ]),
+    explanation: "Paper 2 document question on the prescribed topic 'How was Germany unified?' (40 marks).",
+  });
+
+  // -------------------------------------------------------------------------------------------------------------------
+  // Paper 4: Depth study B x3, Depth study C x3.
+  b.struct({
+    ...p4, d: 5, concepts: [DE("weimar-1918-23"), DE("stresemann-era")],
+    stem: "**Depth study B (Germany).** Answer both parts.",
+    hints: ["In (a), keep the account in date order and focused on violence and threats.", "In (b), consider short-term and long-term importance, and compare Stresemann with other factors."],
+    parts: p4Parts({
+      a: { stem: "Write an account of the political violence faced by the Weimar Republic between 1919 and 1923.", points: [
+        ["January 1919: Spartacist rising in Berlin crushed by the army and Freikorps; Luxemburg and Liebknecht murdered", 2],
+        ["Spring 1919: other left-wing risings, e.g. the short-lived soviet republic in Bavaria, crushed by force", 2],
+        ["March 1920: Kapp Putsch by Freikorps; the army refused to act; defeated by a general strike", 2],
+        ["1920: left-wing rising in the Ruhr put down by the army and Freikorps", 2],
+        ["1921-22: political murders by right-wing extremists (Erzberger 1921, Rathenau 1922); lenient courts", 2],
+        ["1923: violence during the Ruhr occupation; communist rising in Hamburg", 2],
+        ["November 1923: Munich Putsch by Hitler and Ludendorff, crushed by Bavarian police", 2],
+        ["Links: the violence came from both extremes and showed the republic's dependence on the army and the bias of the courts", 2],
+      ], model: "The republic faced violence from its first weeks. In January 1919 the Spartacists, communists led by Rosa Luxemburg and Karl Liebknecht, joined an uprising in Berlin. Ebert's government used the army and the Freikorps to crush it, and Luxemburg and Liebknecht were murdered after their capture. In the spring of 1919 further left-wing risings, including a short-lived soviet republic in Bavaria, were also put down by force.\n\nIn March 1920 the threat came from the right. Freikorps units, angry at being disbanded under the Treaty of Versailles, marched into Berlin and declared Wolfgang Kapp head of a new government. The army refused to fire on them and the government fled, but the trade unions called a general strike that stopped the city, and the putsch collapsed after four days. Soon afterwards a left-wing rising in the Ruhr was put down by the army and Freikorps.\n\nIn 1921-22 right-wing extremists carried out a wave of political murders. Matthias Erzberger, who had signed the armistice, was killed in 1921, and the foreign minister Walther Rathenau in 1922. The courts often gave right-wing killers light sentences.\n\nThe crisis year of 1923 brought more violence. During the French and Belgian occupation of the Ruhr there were clashes in which Germans were killed, and in October communists attempted a rising in Hamburg. In November Hitler and Ludendorff launched the Munich Putsch, which was stopped by Bavarian police on 9 November.\n\nThroughout these years the republic survived, but the violence from both extremes showed how much it depended on an army and courts that did not fully support democracy." },
+      b: { stem: "How important was Stresemann to the Weimar Republic?", points: [
+        ["Short-term importance: ended passive resistance and introduced the Rentenmark (1923), ending hyperinflation and saving the republic", 4],
+        ["Economic importance: Dawes Plan (1924) and Young Plan (1929) made reparations manageable and brought loans and recovery", 4],
+        ["Foreign policy importance: Locarno (1925), League membership (1926), Kellogg-Briand (1928) restored Germany's standing; Rhineland evacuated early", 4],
+        ["Political importance: helped stabilise politics; extremist vote fell (Nazis 2.6% in 1928); a respected figure holding coalitions together", 4],
+        ["Limits: recovery depended on American loans and other people (Schacht, Dawes); weaknesses remained (farmers, coalitions, Hindenburg)", 4],
+        ["Long-term judgement: his achievements did not survive the Depression and his death in 1929; overall assessment of importance", 4],
+      ], model: "Stresemann's importance can be judged in several ways. In the short term he saved the republic. As Chancellor in 1923 he took the unpopular decision to end passive resistance in the Ruhr and introduced the Rentenmark, which ended hyperinflation within months. Without these decisions the republic might have collapsed in 1923.\n\nHe was also important for the economy. As foreign minister he negotiated the Dawes Plan of 1924, which rescheduled reparations and brought large American loans, and the Young Plan of 1929, which reduced the total. American money paid for new factories, housing and public works, and by 1928 production was above its pre-war level.\n\nHis greatest achievements were in foreign policy. At Locarno in 1925 Germany accepted its western borders and was treated as an equal; in 1926 it joined the League of Nations with a permanent seat on the Council; and in 1928 it signed the Kellogg-Briand Pact. His policy of co-operation won the early evacuation of the Ruhr and, later, of the Rhineland. He shared the Nobel Peace Prize in 1926.\n\nPolitically, this success helped to stabilise the republic. Extremist parties declined: the Nazis won only 2.6% of the vote in 1928. Stresemann, a respected figure in every government from 1923 to 1929, helped to hold coalitions together.\n\nHowever, his importance has limits. The recovery rested mainly on American loans, which he did not control, and on the work of others, such as Schacht at the central bank and the Dawes committee. Serious weaknesses remained: farmers suffered, coalitions were unstable, and in 1925 the monarchist Hindenburg was elected President. In the long term, his achievements did not survive the Depression, and he died in October 1929, just before the Wall Street Crash.\n\nOverall Stresemann was the most important individual in the republic's survival and recovery. He saved it in 1923 and made it respected abroad, but the recovery he led was fragile because it depended on forces beyond his control, so his importance was great in the short term and limited in the long term." },
+    }),
+    explanation: "Paper 4 question on Depth study B (40 marks).",
+  });
+  b.struct({
+    ...p4, d: 5, concepts: [DE("nazi-rise"), DE("nazi-control")],
+    stem: "**Depth study B (Germany).** Answer both parts.",
+    hints: ["In (a), cover 1930 to 30 January 1933 in order.", "In (b), compare the Night of the Long Knives with the Enabling Act and Hindenburg's death."],
+    parts: p4Parts({
+      a: { stem: "Write an account of how Hitler became Chancellor, 1930 to January 1933.", points: [
+        ["1929-30: the Depression; unemployment rises; the coalition falls (March 1930); Brüning rules by decree", 2],
+        ["September 1930 election: Nazis win 18.3% and 107 seats", 2],
+        ["Nazi campaigning: Goebbels' propaganda, rallies, the SA; support from farmers and the middle classes", 2],
+        ["1932 presidential election: Hindenburg re-elected; Hitler wins about 37% in the second round", 2],
+        ["June 1932: Papen Chancellor; July 1932 election: Nazis largest party (37.3%, 230 seats); Hindenburg refuses to appoint Hitler", 2],
+        ["November 1932 election: Nazi vote falls (33.1%); Schleicher Chancellor in December", 2],
+        ["January 1933: Papen intrigues with Hitler; persuades Hindenburg; conservatives believe they can control him", 2],
+        ["30 January 1933: Hitler appointed Chancellor with Papen as Vice-Chancellor and only three Nazis in the cabinet", 2],
+      ], model: "After the Wall Street Crash of October 1929, American loans were withdrawn and unemployment rose rapidly in Germany. In March 1930 the coalition government collapsed over the cost of unemployment benefits, and the new Chancellor, Heinrich Brüning, governed by presidential decree under Article 48.\n\nIn the election of September 1930 the Nazis jumped from 12 to 107 seats, winning 18.3% of the vote. Goebbels' propaganda, mass rallies and the marching SA presented the party as the energetic answer to the crisis, and it won support from farmers, the middle classes and many young people.\n\nIn the spring of 1932 Hitler stood for President against Hindenburg. He lost, but he won about 37% of the vote in the second round. In June Hindenburg replaced Brüning with Franz von Papen, who had little support in the Reichstag. In the election of July 1932 the Nazis won 37.3% and 230 seats, becoming the largest party, but Hindenburg refused to make Hitler Chancellor.\n\nIn November 1932 another election saw the Nazi vote fall to 33.1%. In December General Kurt von Schleicher replaced Papen but also failed to build a majority. Papen, seeking revenge, met Hitler in January 1933 and agreed to serve under him, and he persuaded Hindenburg that the conservatives could control Hitler, since there would be only three Nazis in the cabinet.\n\nOn 30 January 1933 Hindenburg appointed Hitler Chancellor, with Papen as Vice-Chancellor." },
+      b: { stem: "How important was the Night of the Long Knives in establishing Hitler's dictatorship?", points: [
+        ["Importance: removed the SA threat and Röhm's 'second revolution'; eliminated rivals (Röhm, Schleicher, Strasser)", 4],
+        ["Importance: won the army's support, leading to the oath of personal loyalty when Hindenburg died (August 1934)", 4],
+        ["Importance: showed that Hitler would murder opponents and that the law would approve it; spread fear; SS strengthened", 4],
+        ["Other factors: the Reichstag Fire decree and the Enabling Act gave legal dictatorial power (March 1933)", 4],
+        ["Other factors: Gleichschaltung (parties, unions, states) removed organised opposition before 1934; Hindenburg's death and the plebiscite", 4],
+        ["Judgement: different ways of judging importance (completion vs foundation); overall assessment", 4],
+      ], model: "The importance of the Night of the Long Knives can be judged by what it achieved, by comparison with other steps, and by its long-term effects.\n\nIt removed the greatest remaining threat to Hitler. The SA, with millions of members, was led by Ernst Röhm, who wanted a 'second revolution' and to merge the SA with the army. On 30 June 1934 SS units killed Röhm and other SA leaders, and Hitler used the purge to murder old enemies such as Schleicher and Strasser. No one inside the Nazi movement could challenge him afterwards.\n\nIt also won over the army. The generals, who had feared the SA, were relieved, and when Hindenburg died on 2 August 1934 they accepted Hitler as Führer, and every soldier swore an oath of personal loyalty to him. This tied the one institution that could have removed Hitler to his person.\n\nIt showed, too, that Hitler would kill his opponents and that the law would approve it afterwards, which spread fear, and it raised the SS, which soon controlled the police and the camps.\n\nHowever, the foundations of the dictatorship had been laid earlier. The emergency decree after the Reichstag Fire in February 1933 suspended civil rights, and the Enabling Act of March 1933 gave Hitler the power to make laws without the Reichstag. Using it, the Nazis abolished the trade unions, banned the other parties and took over the state governments. By July 1933 Germany was a one-party state. Hindenburg's death and the plebiscite of August 1934 were also needed before Hitler became Führer.\n\nOverall the Night of the Long Knives was the step that completed the dictatorship rather than the one that created it. The Enabling Act gave Hitler legal power, but the purge removed the last rivals inside his movement and won the army's loyalty, so it was essential to the dictatorship's security." },
+    }),
+    explanation: "Paper 4 question on Depth study B (40 marks).",
+  });
+  b.struct({
+    ...p4, d: 5, concepts: [DE("persecution"), DE("nazi-control")],
+    stem: "**Depth study B (Germany).** Answer both parts.",
+    hints: ["In (a), show how persecution increased step by step, with dates.", "In (b), compare propaganda with terror and popular support."],
+    parts: p4Parts({
+      a: { stem: "Write an account of the persecution of Jews in Germany between 1933 and 1939.", points: [
+        ["April 1933: SA boycott of Jewish shops and businesses", 2],
+        ["1933: Jews dismissed from the civil service; later excluded from many professions and the arts", 2],
+        ["Propaganda and education spread anti-Semitism (newspapers, schools)", 2],
+        ["September 1935: Nuremberg Laws removed citizenship and banned marriage with non-Jewish Germans", 2],
+        ["1936: brief easing during the Olympics; 1938: registration of property; seizure of Jewish businesses", 2],
+        ["9-10 November 1938: Kristallnacht; synagogues burned, about 90 killed, about 30,000 men sent to camps (estimates)", 2],
+        ["After Kristallnacht: collective fine, children expelled from schools, exclusion from economic life", 2],
+        ["Emigration: about half of Germany's Jews had left by 1939; obstacles (property, limits abroad)", 2],
+      ], model: "Persecution began soon after the Nazis took power. On 1 April 1933 the SA organised a boycott of Jewish shops, standing outside them to turn customers away. In the same month Jews were dismissed from the civil service, including teaching, and in the following years they were excluded from many other professions and from the arts. Nazi newspapers and the school curriculum spread anti-Semitic ideas.\n\nIn September 1935 the Nuremberg Laws took away Jews' German citizenship and banned marriages and relationships between Jews and non-Jewish Germans. Persecution eased slightly during the 1936 Olympics, when foreign visitors were in Germany, but in 1938 it became much harsher: Jews had to register their property, and Jewish businesses were increasingly taken over by non-Jews.\n\nOn 9-10 November 1938, after a German diplomat was shot in Paris by a young Jewish refugee, the Nazis organised Kristallnacht. Across Germany and Austria Jewish homes and shops were attacked and hundreds of synagogues burned; historians estimate that about 90 Jews were killed and about 30,000 Jewish men sent to concentration camps. Afterwards the Jewish community was fined one billion Reichsmarks, Jewish children were expelled from German schools, and Jews were driven out of economic life.\n\nMany Jews tried to emigrate, and about half of Germany's Jews had left by 1939, although they had to leave most of their property behind and many countries limited the number of refugees they accepted. By the outbreak of war, those who remained had lost their rights, their livelihoods and their safety." },
+      b: { stem: "How important was propaganda in maintaining Nazi control of Germany?", points: [
+        ["Importance: Goebbels' control of press, radio and film shaped opinion; cheap radios; only one view heard", 4],
+        ["Importance: rallies, the Olympics and the cult of Hitler built enthusiasm and a sense of national unity", 4],
+        ["Importance: culture, schools and the Hitler Youth spread Nazi ideas to the young; persecution justified by propaganda", 4],
+        ["Other factors: terror (SS, Gestapo, camps, People's Court) and the destruction of opposition organisations", 4],
+        ["Other factors: real achievements (jobs, order, foreign successes) won support; propaganda had limits (non-conformity, opposition, war-weariness)", 4],
+        ["Judgement: propaganda and terror worked together; overall assessment of importance", 4],
+      ], model: "Propaganda was very important. From March 1933 Goebbels' Ministry of Propaganda controlled the press, radio and films, so Germans heard only the regime's view. Cheap radios brought Hitler's speeches into most homes, and loudspeakers carried them into streets and workplaces.\n\nPropaganda also created enthusiasm. The Nuremberg rallies and the 1936 Olympics displayed power and unity, and the cult of Hitler presented him as the saviour of Germany. Through schools, the Hitler Youth and the Reich Chamber of Culture, Nazi ideas reached the young and shaped what people read, watched and heard. Propaganda prepared Germans to accept the persecution of Jews and other groups by presenting them as enemies.\n\nHowever, propaganda was not the only method. Terror was just as important: the SS and the Gestapo arrested opponents without trial, the camps held communists, socialists and others, and the courts were controlled. The destruction of other parties and the trade unions in 1933 meant there was no organised way to oppose the regime.\n\nThe regime also won real support through its achievements. Unemployment fell from about six million to a few hundred thousand, order returned to the streets, and Hitler's foreign successes before 1939 made him popular. Propaganda worked best when it could point to real gains. It also had limits: some young people rejected the Hitler Youth, the churches kept some independence, and as the war turned against Germany after 1942 propaganda convinced fewer people.\n\nOverall propaganda was important because it shaped how Germans saw the regime and made terror seem justified, but it worked together with terror and with genuine popular support. On its own it could not have kept the Nazis in power; without it, terror alone would have been far less effective." },
+    }),
+    explanation: "Paper 4 question on Depth study B (40 marks).",
+  });
+  b.struct({
+    ...p4, d: 5, concepts: [RU("tsarist-1905"), RU("revolutions-1917")],
+    stem: "**Depth study C (Russia).** Answer both parts.",
+    hints: ["In (a), cover January to December 1905 in order.", "In (b), judge Rasputin's importance against the war and the Tsar's own decisions."],
+    parts: p4Parts({
+      a: { stem: "Write an account of the 1905 Revolution in Russia.", points: [
+        ["Background: defeats in the Russo-Japanese War (Port Arthur, January 1905) and economic hardship", 2],
+        ["22 January 1905 (9 January): Bloody Sunday; troops fire on Father Gapon's procession", 2],
+        ["Spring-summer: strikes spread; peasant attacks on estates; risings in the national borderlands", 2],
+        ["June 1905: mutiny on the battleship Potemkin; May: defeat at Tsushima", 2],
+        ["September 1905: Treaty of Portsmouth ends the war with Japan", 2],
+        ["October 1905: general strike; St Petersburg Soviet formed (Trotsky prominent)", 2],
+        ["30 October 1905 (17 October): October Manifesto promises civil rights and a Duma; liberals satisfied", 2],
+        ["December 1905: Soviet leaders arrested; Moscow rising crushed by troops; the regime regains control", 2],
+      ], model: "By January 1905 Russia was losing the war with Japan: Port Arthur had just fallen, and prices and shortages were causing hardship in the cities. On 22 January (9 January, old style) Father Gapon led a peaceful procession of workers to the Winter Palace in St Petersburg to petition the Tsar. Troops opened fire, killing many; the day became known as Bloody Sunday.\n\nIn the following months strikes spread through the cities, peasants attacked landlords' estates, and there were risings in Poland and other national borderlands. In May the Russian fleet was destroyed at Tsushima, and in June the sailors of the battleship Potemkin mutinied in the Black Sea.\n\nIn September the Treaty of Portsmouth ended the war with Japan. In October a general strike paralysed the country, and workers in St Petersburg formed a soviet, in which Leon Trotsky played a leading part. On 30 October (17 October) the Tsar, on Witte's advice, issued the October Manifesto, promising civil rights and an elected Duma. Most liberals accepted it, and the opposition split.\n\nWith peace made and most of the army still loyal, the government struck back. In December the leaders of the St Petersburg Soviet were arrested and an armed rising in Moscow was crushed with artillery. By early 1906 the Tsar had regained control, and redemption payments were reduced to calm the peasants." },
+      b: { stem: "How important was Rasputin in the collapse of the Tsarist regime?", points: [
+        ["Importance: influence over the Tsarina through Alexei's haemophilia; scandal and rumours damaged the royal family's reputation", 4],
+        ["Importance: after 1915, with the Tsar at the front, Rasputin's influence over appointments; frequent changes of ministers; government chaos", 4],
+        ["Importance: rumours of German influence (the German-born Tsarina) undermined loyalty of nobles, Duma and army; nobles murdered him (December 1916)", 4],
+        ["Other factors: the First World War (defeats, casualties, shortages, inflation) and the Tsar taking command", 4],
+        ["Other factors: long-term weaknesses (autocracy, land hunger, workers, broken promises of 1905); the Petrograd mutiny in March 1917", 4],
+        ["Judgement: Rasputin was a symptom and an accelerator rather than a cause; ways of judging importance; overall assessment", 4],
+      ], model: "Rasputin's importance can be judged by his effect on the monarchy's reputation, on government, and in comparison with other causes.\n\nRasputin, a Siberian holy man, gained influence at court because he seemed able to help the Tsar's son Alexei, who had haemophilia. Stories about his drinking and behaviour, and about his power over the Tsarina, spread widely and damaged the royal family's prestige among nobles, Duma members and ordinary people alike.\n\nHis influence grew after September 1915, when Nicholas took command of the army and left the Tsarina, Alexandra, in charge in Petrograd. Rasputin was believed to influence the appointment and dismissal of ministers, which were changed so often that government became chaotic just when Russia needed efficient leadership in the war. Because the Tsarina was German-born, rumours spread that the court was influenced by Germany, weakening loyalty even among the Tsar's natural supporters. In December 1916 a group of nobles murdered Rasputin, a sign of how far the elite had turned against the court.\n\nHowever, other factors were more important. The First World War brought defeat, millions of casualties, food and fuel shortages and inflation, and after 1915 the Tsar was personally blamed for military failure. Long-term weaknesses, autocracy, peasant land hunger, poor conditions for workers and the broken promises of 1905, meant that the regime had little support to fall back on. The decisive moment came in March 1917, when the soldiers of the Petrograd garrison refused to fire on the crowds.\n\nOverall Rasputin was more a symptom of the regime's weakness than a cause of its collapse. He mattered because he destroyed the respect on which the monarchy depended and contributed to chaotic government during the war, but the regime would have been in serious danger without him; the war and the loss of the army's loyalty were far more important." },
+    }),
+    explanation: "Paper 4 question on Depth study C (40 marks).",
+  });
+  b.struct({
+    ...p4, d: 5, concepts: [RU("civil-war-nep"), RU("revolutions-1917")],
+    stem: "**Depth study C (Russia).** Answer both parts.",
+    hints: ["In (a), cover 1918 to 1921 in order, with named commanders and fronts.", "In (b), consider Lenin's role in 1917, in the Civil War and in the NEP, and compare it with others."],
+    parts: p4Parts({
+      a: { stem: "Write an account of the Russian Civil War, 1918-21.", points: [
+        ["Origins: Constituent Assembly closed (January 1918); Brest-Litovsk (March 1918) angered many; opponents organised", 2],
+        ["May 1918: revolt of the Czech Legion along the Trans-Siberian Railway", 2],
+        ["Foreign intervention: Britain, France, the USA, Japan and others land troops", 2],
+        ["July 1918: Tsar and family shot at Yekaterinburg; August-September: attempt on Lenin's life and Red Terror", 2],
+        ["1918-19: Trotsky builds the Red Army; War Communism supplies it", 2],
+        ["1919: White offensives by Kolchak (east), Denikin (south) and Yudenich (Petrograd) defeated one by one", 2],
+        ["1920: war with Poland; Wrangel's forces evacuated from Crimea (November 1920)", 2],
+        ["1921: peasant revolts and Kronstadt Rising; NEP; Bolshevik victory", 2],
+      ], model: "Opposition to Bolshevik rule grew after the closure of the Constituent Assembly in January 1918 and the Treaty of Brest-Litovsk in March, which gave up huge territories to Germany. In May 1918 the Czech Legion, former prisoners of war travelling east, rebelled and seized much of the Trans-Siberian Railway, and anti-Bolshevik governments formed behind them. Britain, France, the USA, Japan and other countries landed troops in the north, south and east.\n\nIn July 1918, as Czech and White forces approached Yekaterinburg, the Bolsheviks shot Nicholas II and his family. After an attempt on Lenin's life in August, the Cheka began the Red Terror against suspected opponents. Meanwhile Trotsky, as Commissar for War, built the Red Army by conscription, using former Tsarist officers watched by commissars, and War Communism seized grain and controlled industry to supply it.\n\nIn 1919 the Whites launched their main offensives. Admiral Kolchak advanced from Siberia in the spring, General Denikin from the south in the summer, reaching Orel, south of Moscow, and General Yudenich towards Petrograd in the autumn. Because the Whites attacked separately, the Reds defeated them one by one; Trotsky took charge of the defence of Petrograd.\n\nIn 1920 the Bolsheviks fought a war with Poland, and the last White army, under Wrangel, was evacuated from Crimea in November 1920. By 1921 the Reds had won, but War Communism had caused famine and peasant revolts, and in March 1921 the Kronstadt sailors rebelled, leading Lenin to introduce the New Economic Policy." },
+      b: { stem: "How important was Lenin to the success of the Bolsheviks between 1917 and 1924?", points: [
+        ["1917: April Theses and slogans; insisted on seizing power; persuaded the Central Committee", 4],
+        ["1917-18: early decrees (peace, land); closed the Constituent Assembly; accepted Brest-Litovsk to save the revolution", 4],
+        ["1918-21: leadership in the Civil War: War Communism, Red Terror, Cheka; held the party together", 4],
+        ["1921: flexibility of the NEP after Kronstadt; ban on factions secured party control", 4],
+        ["Other factors: Trotsky (Military Revolutionary Committee, Red Army); weakness of the Provisional Government and the Whites; geography", 4],
+        ["Judgement: ways of judging importance (decisions only he could make vs. circumstances); overall assessment", 4],
+      ], model: "Lenin's importance can be judged by the decisions he took that others would not have taken, and by comparing his role with other factors.\n\nIn 1917 his role was decisive. When he returned in April, many Bolsheviks were willing to co-operate with the Provisional Government, but his April Theses demanded opposition to it, an end to the war and all power to the soviets. 'Peace, Land and Bread' matched what millions wanted. In October he persuaded a reluctant Central Committee to vote for an armed rising.\n\nIn power he acted quickly and ruthlessly. The Decrees on Peace and Land won support; the Cheka was founded; and when the Constituent Assembly refused to accept Bolshevik rule, he closed it. Against strong opposition in his own party he insisted on accepting the Treaty of Brest-Litovsk, arguing that peace was the price of survival.\n\nDuring the Civil War Lenin led the government, introduced War Communism and backed the Red Terror, keeping the party united and the army supplied. In 1921, after the Kronstadt Rising, he showed flexibility by introducing the NEP, while the ban on factions tightened the party's control.\n\nHowever, others were also vital. Trotsky organised the seizure of power through the Military Revolutionary Committee and built the Red Army that won the Civil War. The Bolsheviks were helped by the failures of the Provisional Government, especially the war and the Kornilov affair, by their central position in Russia and by the divisions of the Whites.\n\nOverall Lenin was the most important single factor. Others carried out his decisions, and circumstances favoured the Bolsheviks, but without his insistence on seizing power in 1917, accepting peace in 1918 and retreating to the NEP in 1921, the Bolsheviks would probably not have gained power or kept it." },
+    }),
+    explanation: "Paper 4 question on Depth study C (40 marks).",
+  });
+  b.struct({
+    ...p4, d: 5, concepts: [RU("stalin-economy"), RU("stalin-power")],
+    stem: "**Depth study C (Russia).** Answer both parts.",
+    hints: ["In (a), cover the three plans in order with examples and results.", "In (b), compare terror with propaganda, the party machine and real achievements."],
+    parts: p4Parts({
+      a: { stem: "Write an account of the Five-Year Plans, 1928-41.", points: [
+        ["1928: the NEP abandoned; Gosplan sets targets for the first plan", 2],
+        ["First plan (1928-32): heavy industry; very high targets; declared complete in four years", 2],
+        ["Projects: Magnitogorsk, the Dnieper dam (1932), the White Sea Canal built by Gulag labour (1933)", 2],
+        ["Methods: piece rates, bonuses, propaganda; harsh discipline; internal passports (1932)", 2],
+        ["Second plan (1933-37): continued heavy industry, more attention to transport and some consumer goods; Moscow Metro (1935)", 2],
+        ["1935: Stakhanov's record and the Stakhanovite movement", 2],
+        ["Third plan (1938-41): shift to armaments; interrupted by the German invasion (June 1941)", 2],
+        ["Results: rapid growth of coal, steel and electricity; industry moved east; poor quality, shortages and human cost", 2],
+      ], model: "In 1928 Stalin abandoned the NEP and launched the first Five-Year Plan. Gosplan, the state planning agency, set targets for every industry, mine and factory, concentrating on heavy industry: coal, iron and steel, oil, electricity and machinery. The targets were very high and were often raised, and the first plan was declared complete in four years, in 1932.\n\nHuge projects were built. The new steel city of Magnitogorsk rose in the Urals, the Dnieper dam was completed in 1932, and the White Sea Canal was dug by Gulag prisoners and opened in 1933. Workers were driven by piece rates, bonuses and propaganda, and by harsh discipline; from 1932 internal passports restricted their movement.\n\nThe second plan (1933-37) continued to build heavy industry but gave more attention to transport and some consumer goods; the Moscow Metro opened in 1935. In 1935 the miner Alexei Stakhanov was reported to have cut many times his quota of coal in one shift, and the Stakhanovite movement encouraged workers to beat their targets.\n\nThe third plan, from 1938, turned increasingly to armaments as war approached, and it was interrupted by the German invasion in June 1941.\n\nBy 1941 production of coal, steel and electricity had grown many times over, and much industry had been built in the east, beyond the reach of invaders. But the plans also brought poor quality, waste, false figures, shortages of consumer goods and great human suffering." },
+      b: { stem: "How important was terror in Stalin's control of the Soviet Union by 1941?", points: [
+        ["Importance: Purges and show trials removed all rivals (Zinoviev, Kamenev, Bukharin); army purge (Tukhachevsky)", 4],
+        ["Importance: Great Terror 1937-38 (estimates about 1.5 million arrested, about 680,000 executed); NKVD; Gulag; fear prevented opposition", 4],
+        ["Importance: terror enforced economic policy (kulaks deported, 'wreckers', labour discipline)", 4],
+        ["Other factors: control of the party machine (General Secretary, appointments) and a new generation of officials loyal to Stalin", 4],
+        ["Other factors: propaganda, cult of personality, socialist realism, education; real achievements and social mobility won some support", 4],
+        ["Judgement: terror and propaganda worked together; ways of judging importance; overall assessment", 4],
+      ], model: "Terror was central to Stalin's control, but its importance should be weighed against other methods.\n\nFirst, terror removed every possible rival. After Kirov's murder in 1934, the show trials of 1936-38 destroyed the Old Bolsheviks: Zinoviev and Kamenev were shot in 1936 and Bukharin in 1938. In 1937 Marshal Tukhachevsky and many senior officers were executed, so the army could not challenge Stalin either.\n\nSecond, terror created fear throughout society. In the Great Terror of 1937-38, historians estimate from Soviet archives that about 1.5 million people were arrested and about 680,000 executed. The NKVD arrested people at night, and millions passed through the Gulag. Fear meant that people denounced others to protect themselves and that no one dared to organise opposition.\n\nThird, terror enforced economic policy. Peasants who resisted collectivisation were labelled kulaks and deported, managers who failed were accused of being 'wreckers', and harsh laws punished workers for lateness or absence.\n\nHowever, other factors also mattered. As General Secretary, Stalin controlled appointments, and the purges themselves created a new generation of officials who owed everything to him. Propaganda and the cult of personality presented him as the wise father of the peoples, and socialist realism and education shaped what people believed. The regime also had real achievements: jobs, education and promotion for millions of workers and peasants' children, which won genuine support from some.\n\nOverall terror was the most important method of control by 1941, because it destroyed every alternative source of power and made opposition unthinkable. But it worked together with propaganda and the party machine; terror alone created chaos and weakened the economy and the army, while propaganda and opportunity won the loyalty that fear could not." },
+    }),
+    explanation: "Paper 4 question on Depth study C (40 marks).",
+  });
+});
