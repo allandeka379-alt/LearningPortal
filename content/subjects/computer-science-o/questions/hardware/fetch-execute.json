@@ -1,0 +1,1094 @@
+[
+ {
+  "key": "hardware.fetch-execute.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which register holds the address of the **next** instruction to be fetched?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Program counter (PC)",
+    "correct": true,
+    "rationale": "Correct: the PC always points at the next instruction."
+   },
+   {
+    "key": "B",
+    "content": "Memory address register (MAR)",
+    "rationale": "The MAR holds the address currently being read from or written to."
+   },
+   {
+    "key": "C",
+    "content": "Current instruction register (CIR)",
+    "rationale": "The CIR holds the instruction being decoded and executed now."
+   },
+   {
+    "key": "D",
+    "content": "Accumulator (ACC)",
+    "rationale": "The ACC holds results from the ALU."
+   }
+  ],
+  "explanation": "The program counter holds the address of the next instruction; it is incremented during the fetch stage.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "hardware.fetch-execute.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which bus carries addresses from the CPU to memory, in one direction only?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Data bus",
+    "rationale": "The data bus carries data and instructions in both directions."
+   },
+   {
+    "key": "B",
+    "content": "Control bus",
+    "rationale": "The control bus carries control and timing signals."
+   },
+   {
+    "key": "C",
+    "content": "Address bus",
+    "correct": true,
+    "rationale": "Correct: the address bus is unidirectional, from the MAR to memory."
+   },
+   {
+    "key": "D",
+    "content": "Universal serial bus",
+    "rationale": "USB connects peripherals; it is not one of the CPU's internal buses."
+   }
+  ],
+  "explanation": "Address bus: one-way, CPU to memory. Data bus and control bus: two-way.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "hardware.fetch-execute.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In the fetch stage, which register receives the instruction that comes back from memory along the data bus?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Memory address register (MAR)",
+    "rationale": "The MAR holds the address, not the instruction found there."
+   },
+   {
+    "key": "B",
+    "content": "Memory data register (MDR)",
+    "correct": true,
+    "rationale": "Correct: everything read from memory arrives in the MDR first."
+   },
+   {
+    "key": "C",
+    "content": "Program counter (PC)",
+    "rationale": "The PC holds an address, not an instruction."
+   },
+   {
+    "key": "D",
+    "content": "Accumulator (ACC)",
+    "rationale": "The ACC holds results of calculations."
+   }
+  ],
+  "explanation": "Data or instructions read from memory go into the MDR; an instruction is then copied to the CIR.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "hardware.fetch-execute.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which component **decodes** the instruction held in the current instruction register?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The arithmetic logic unit",
+    "rationale": "The ALU carries out calculations during the execute stage."
+   },
+   {
+    "key": "B",
+    "content": "The control unit",
+    "correct": true,
+    "rationale": "Correct: the CU decodes the instruction and sends control signals."
+   },
+   {
+    "key": "C",
+    "content": "The memory data register",
+    "rationale": "The MDR only holds what was read from memory."
+   },
+   {
+    "key": "D",
+    "content": "The cache",
+    "rationale": "Cache stores frequently used data and instructions; it does not decode them."
+   }
+  ],
+  "explanation": "Decoding is done by the control unit.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "hardware.fetch-execute.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is an **instruction set**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The set of programs installed on a computer",
+    "rationale": "Installed programs are application and system software."
+   },
+   {
+    "key": "B",
+    "content": "The order in which the registers are used in the fetch stage",
+    "rationale": "That is the fetch-decode-execute cycle."
+   },
+   {
+    "key": "C",
+    "content": "A set of rules for writing high-level programs",
+    "rationale": "That describes a programming language's syntax."
+   },
+   {
+    "key": "D",
+    "content": "The list of all the machine code commands a CPU can process",
+    "correct": true,
+    "rationale": "Correct: each type of CPU has its own instruction set."
+   }
+  ],
+  "explanation": "An instruction set is the list of commands (machine code) that a particular CPU can carry out.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "hardware.fetch-execute.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Why does increasing the size of the cache usually improve CPU performance?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The clock produces more pulses every second, so each cycle finishes sooner",
+    "rationale": "That describes a faster clock speed, not a larger cache."
+   },
+   {
+    "key": "B",
+    "content": "More instructions can be carried out at the same time on separate processing units inside the CPU",
+    "rationale": "That describes more cores."
+   },
+   {
+    "key": "C",
+    "content": "More frequently used instructions and data are kept close to the CPU, so fewer slow fetches from RAM are needed",
+    "correct": true,
+    "rationale": "Correct: cache is faster to access than RAM."
+   },
+   {
+    "key": "D",
+    "content": "Programs no longer need to be loaded into main memory at all before they run",
+    "rationale": "Programs are still loaded into RAM; cache holds copies of the parts used most."
+   }
+  ],
+  "explanation": "Cache is very fast memory near the CPU. A larger cache holds more of what the CPU needs, so it waits for RAM less often.",
+  "hints": [
+   "Ask what cache stores and how quickly it can be reached."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "hardware.fetch-execute.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A program does one long calculation in which every step needs the answer to the step before. Which upgrade is **least** likely to make this program run faster?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Changing from a 4-core CPU to an 8-core CPU",
+    "correct": true,
+    "rationale": "Correct: the steps cannot run at the same time, so extra cores sit idle."
+   },
+   {
+    "key": "B",
+    "content": "Increasing the clock speed from 3.0 GHz to 3.6 GHz",
+    "rationale": "A faster clock speeds up every step, so this would help."
+   },
+   {
+    "key": "C",
+    "content": "Increasing the size of the cache",
+    "rationale": "A larger cache reduces waiting for RAM, so this would help."
+   },
+   {
+    "key": "D",
+    "content": "Using a CPU with both a faster clock and a larger cache",
+    "rationale": "Both changes speed up a single sequence of steps."
+   }
+  ],
+  "explanation": "Extra cores only improve performance when the work can be split into parts that run at the same time.",
+  "hints": [
+   "More cores only help if the work can be divided."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "hardware.fetch-execute.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In a Von Neumann computer, program instructions and data are stored in the same memory.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Both instructions and data are held in the same main memory and travel along the same buses.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "hardware.fetch-execute.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The program counter is incremented during the execute stage, after the instruction has been carried out.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The PC is incremented during the fetch stage, so it already points at the next instruction while the current one is decoded and executed.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "hardware.fetch-execute.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "Match each register to what it holds.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Program counter"
+    },
+    {
+     "id": "L2",
+     "content": "Memory address register"
+    },
+    {
+     "id": "L3",
+     "content": "Memory data register"
+    },
+    {
+     "id": "L4",
+     "content": "Current instruction register"
+    },
+    {
+     "id": "L5",
+     "content": "Accumulator"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The data or instruction just read from memory"
+    },
+    {
+     "id": "R4",
+     "content": "The instruction being decoded and executed"
+    },
+    {
+     "id": "R5",
+     "content": "The result of a calculation in the ALU"
+    },
+    {
+     "id": "R1",
+     "content": "The address of the next instruction"
+    },
+    {
+     "id": "R2",
+     "content": "The address of the location being read or written"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "PC and MAR hold addresses; MDR, CIR and ACC hold data, instructions or results.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "hardware.fetch-execute.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Complete the description of the fetch stage.",
+  "payload": {
+   "template": "The address in the {{blank:a}} is copied to the MAR. It is sent to memory along the {{blank:b}} bus. The instruction at that address is returned along the {{blank:c}} bus to the MDR, the PC is incremented, and the instruction is copied to the {{blank:d}}.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "PC",
+      "ACC",
+      "CIR",
+      "MDR"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "address",
+      "data",
+      "control"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "address",
+      "data",
+      "control"
+     ]
+    },
+    {
+     "id": "d",
+     "input": "select",
+     "choices": [
+      "CIR",
+      "ACC",
+      "PC",
+      "MAR"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "PC"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "address"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "data"
+     ]
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "CIR"
+     ]
+    }
+   ]
+  },
+  "explanation": "PC → MAR → address bus → memory → data bus → MDR → CIR, and the PC is incremented.",
+  "hints": [
+   "Addresses travel on the address bus; instructions come back on the data bus."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "PC"
+    },
+    {
+     "blankId": "b",
+     "text": "address"
+    },
+    {
+     "blankId": "c",
+     "text": "data"
+    },
+    {
+     "blankId": "d",
+     "text": "CIR"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "ACC"
+     },
+     {
+      "blankId": "b",
+      "text": "data"
+     },
+     {
+      "blankId": "c",
+      "text": "address"
+     },
+     {
+      "blankId": "d",
+      "text": "ACC"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "hardware.fetch-execute.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A tablet's CPU has a clock speed of 2.4 GHz. How many clock cycles does it produce each second? Give your answer in full (digits only).",
+  "answerSpec": {
+   "value": 2400000000
+  },
+  "explanation": "2.4 GHz = 2.4 × 1 000 000 000 = 2 400 000 000 cycles per second.",
+  "workedSolution": "1. 1 GHz = 1 000 000 000 cycles per second.\n2. 2.4 × 1 000 000 000 = 2 400 000 000 cycles per second.",
+  "hints": [
+   "1 GHz is one thousand million (10⁹) cycles per second."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2400000000"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2400000"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "24000000000"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "hardware.fetch-execute.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Memory holds this program and data. The PC starts at 60.\n\n| Address | Contents |\n|:-:|:--|\n| 60 | LDA 75 (load the value at address 75 into the ACC) |\n| 61 | ADD 76 (add the value at address 76 to the ACC) |\n| 62 | ADD 77 (add the value at address 77 to the ACC) |\n| 63 | STO 78 (store the ACC at address 78) |\n| 75 | 12 |\n| 76 | 5 |\n| 77 | 20 |\n\nState the value held in the **program counter** after all four instructions have been fetched and executed.",
+  "answerSpec": {
+   "value": 64
+  },
+  "explanation": "The PC is incremented once per fetch: 60 → 61 → 62 → 63 → 64. It holds the address of the next instruction.",
+  "workedSolution": "1. Fetching the instruction at 60 increments the PC to 61.\n2. Each later fetch adds 1: 62, 63, 64.\n3. After the fourth fetch the PC holds 64.",
+  "hints": [
+   "Work through the instructions one at a time.",
+   "Remember the PC is incremented in every fetch."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "64"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "63"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "78"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "hardware.fetch-execute.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Memory holds this program and data. The PC starts at 10.\n\n| Address | Contents |\n|:-:|:--|\n| 10 | LDA 25 |\n| 11 | ADD 26 |\n| 12 | ADD 25 |\n| 13 | STO 27 |\n| 25 | 8 |\n| 26 | 13 |\n\nLDA loads the value at an address into the ACC, ADD adds the value at an address to the ACC and STO stores the ACC at an address. State the value stored at address 27 when the program has finished.",
+  "answerSpec": {
+   "value": 29
+  },
+  "explanation": "ACC: 8 → 21 → 29 → 29; STO 27 stores 29.",
+  "workedSolution": "1. LDA 25: ACC = 8.\n2. ADD 26: ACC = 8 + 13 = 21.\n3. ADD 25: ACC = 21 + 8 = 29.\n4. STO 27 copies 29 to address 27.",
+  "hints": [
+   "LDA loads a value; ADD adds to what is already in the accumulator; STO copies the accumulator to memory."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "29"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "21"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "30"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "hardware.fetch-execute.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Describe the **fetch** stage of the fetch-decode-execute cycle. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The address in the PC is copied to the MAR",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The address is sent along the address bus to memory (with a read signal on the control bus)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The instruction at that address is sent along the data bus to the MDR",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The PC is incremented and the instruction is copied from the MDR to the CIR",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The address of the next instruction is copied from the PC into the MAR and sent along the address bus to RAM. The instruction stored there is returned along the data bus into the MDR. The PC is incremented, and the instruction is copied from the MDR into the CIR."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "PC → MAR → address bus → data bus → MDR → CIR; PC incremented.",
+  "hints": [
+   "Name the register or bus used at each step."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "hardware.fetch-execute.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "Rudo is choosing between two laptops for her accounting business in Harare.\n\n| | Laptop P | Laptop Q |\n|:--|:-:|:-:|\n| Cores | 2 | 6 |\n| Clock speed | 3.2 GHz | 2.8 GHz |\n| Cache | 4 MiB | 12 MiB |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is a **core**?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The fastest part of the computer's memory",
+      "rationale": "That describes cache."
+     },
+     {
+      "key": "B",
+      "content": "The part that sends regular timing pulses",
+      "rationale": "That is the clock."
+     },
+     {
+      "key": "C",
+      "content": "The main circuit board of the laptop",
+      "rationale": "That is the motherboard."
+     },
+     {
+      "key": "D",
+      "content": "A complete processing unit within the CPU",
+      "correct": true,
+      "rationale": "Correct: each core has its own ALU, CU and registers."
+     }
+    ],
+    "explanation": "A core can process instructions independently of the other cores."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how the larger cache of Laptop Q could improve its performance.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Cache stores frequently used instructions/data close to the CPU",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "More can be fetched from fast cache instead of slower RAM, so instructions are processed faster",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Cache holds frequently used instructions and data near the CPU. With 12 MiB, more of them are in cache, so the CPU fetches from the slower RAM less often and runs faster."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Rudo runs several programs at once. Recommend a laptop and justify your choice.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Recommends Laptop Q",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Six cores can process several programs/tasks at the same time",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Its larger cache outweighs the slightly slower clock / Laptop P's faster clock only helps one task at a time",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Laptop Q. Its six cores can run her programs at the same time, and its larger cache reduces waiting for RAM. Laptop P's faster clock does not make up for having only two cores when several programs are open."
+    }
+   }
+  ],
+  "explanation": "Cores: parallel tasks; cache: fewer RAM fetches; clock: cycles per second.",
+  "hints": [
+   "For each factor say what it is and why it speeds up processing."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true
+ },
+ {
+  "key": "hardware.fetch-execute.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 5,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "A CPU with a Von Neumann architecture runs this program. The PC starts at 40.\n\n| Address | Contents |\n|:-:|:--|\n| 40 | LDA 52 |\n| 41 | ADD 53 |\n| 42 | STO 54 |\n| 52 | 9 |\n| 53 | 34 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the contents of the **MAR** at the moment the first instruction is fetched from memory.",
+    "answerSpec": {
+     "value": 40
+    },
+    "explanation": "The address in the PC (40) is copied into the MAR.",
+    "workedSolution": "1. At the start of the fetch the PC holds 40.\n2. PC → MAR, so the MAR holds 40."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the contents of the **CIR** while the second instruction is being executed.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "ADD 53"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "The CIR holds the instruction currently being executed: ADD 53."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the contents of the **ACC** after the second instruction has been executed.",
+    "answerSpec": {
+     "value": 43
+    },
+    "explanation": "9 + 34 = 43, calculated by the ALU.",
+    "workedSolution": "1. LDA 52 puts 9 in the ACC.\n2. ADD 53: 9 + 34 = 43."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the contents of the **PC** while the third instruction is being executed.",
+    "answerSpec": {
+     "value": 43
+    },
+    "explanation": "The PC was incremented to 43 when STO 54 was fetched.",
+    "workedSolution": "1. STO 54 is at address 42.\n2. When it is fetched the PC is incremented to 43, before it is executed."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain the role of the control unit when the second instruction is processed.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Decodes the instruction in the CIR (ADD 53)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Sends control signals (e.g. read signal on the control bus / tells the ALU to add)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The CU decodes ADD 53 and sends control signals: a read signal to fetch the value at address 53 and a signal telling the ALU to add it to the accumulator."
+    }
+   }
+  ],
+  "explanation": "(a) 40 (b) ADD 53 (c) 43 (d) 43.",
+  "hints": [
+   "The PC and MAR hold addresses; the MDR, CIR and ACC hold data or instructions.",
+   "The PC changes during the fetch, before the instruction is executed."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "40"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "ADD 53"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "43"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "43"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "41"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "LDA 52"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "34"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "42"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

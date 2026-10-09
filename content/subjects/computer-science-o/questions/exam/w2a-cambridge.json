@@ -1,0 +1,672 @@
+[
+ {
+  "key": "exam.w2a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.hardware.cpu",
+   "comp.hardware.fetch-execute"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A tablet computer has a microprocessor with a Von Neumann architecture. Part of its memory holds this program and data:\n\n| Address | Contents |\n|:-:|:--|\n| 80 | LDA 95 (load the value at address 95 into the ACC) |\n| 81 | ADD 96 (add the value at address 96 to the ACC) |\n| 82 | ADD 97 (add the value at address 97 to the ACC) |\n| 95 | 14 |\n| 96 | 23 |\n| 97 | 6 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is meant by a **microprocessor**?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A CPU built as an integrated circuit on a single chip",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "A small computer with its own operating system and screen",
+      "rationale": "It is only the processor."
+     },
+     {
+      "key": "C",
+      "content": "A type of non-volatile memory holding the bootstrap",
+      "rationale": "That is ROM."
+     },
+     {
+      "key": "D",
+      "content": "A program that translates instructions into machine code",
+      "rationale": "That is a translator, which is software."
+     }
+    ],
+    "explanation": "A microprocessor is a type of integrated circuit on a single chip."
+   },
+   {
+    "label": "(b)",
+    "type": "MATCHING",
+    "marks": 4,
+    "stem": "Match each register to the item it holds.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Program counter (PC)"
+      },
+      {
+       "id": "L2",
+       "content": "Memory address register (MAR)"
+      },
+      {
+       "id": "L3",
+       "content": "Memory data register (MDR)"
+      },
+      {
+       "id": "L4",
+       "content": "Current instruction register (CIR)"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "The data or instruction just read from memory"
+      },
+      {
+       "id": "R4",
+       "content": "The instruction being decoded and executed"
+      },
+      {
+       "id": "R1",
+       "content": "The address of the next instruction"
+      },
+      {
+       "id": "R2",
+       "content": "The address of the location being accessed"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "PC and MAR hold addresses; MDR holds what was read; CIR holds the current instruction."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the sentences about the buses.",
+    "payload": {
+     "template": "The {{blank:a}} bus carries addresses in one direction only, from the CPU to memory. The {{blank:b}} bus carries data and instructions in both directions.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "address",
+        "data",
+        "control"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "address",
+        "data",
+        "control"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "address"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "data"
+       ]
+      }
+     ]
+    },
+    "explanation": "Address bus one-way; data bus two-way."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The PC starts at 80. State the value in the **accumulator** after all three instructions have been executed.",
+    "answerSpec": {
+     "value": 43
+    },
+    "explanation": "ACC: 14 → 37 → 43.",
+    "workedSolution": "1. LDA 95: ACC = 14.\n2. ADD 96: 14 + 23 = 37.\n3. ADD 97: 37 + 6 = 43."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value in the **program counter** while the instruction at address 82 is being executed.",
+    "answerSpec": {
+     "value": 83
+    },
+    "explanation": "The PC was incremented to 83 when the instruction at 82 was fetched.",
+    "workedSolution": "1. The instruction at 82 is fetched: MAR ← 82.\n2. The PC is incremented to 83 during the fetch, before execution."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the instruction at address 81 is **fetched** from memory.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The address 81 is copied from the PC into the MAR",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The address is sent along the address bus to memory (read signal on the control bus)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The instruction ADD 96 is returned along the data bus into the MDR",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "The PC is incremented (to 82) and the instruction is copied from the MDR to the CIR",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The PC holds 81, which is copied into the MAR and sent along the address bus, with a read signal on the control bus. ADD 96 is returned along the data bus into the MDR. The PC is incremented to 82, and ADD 96 is copied into the CIR to be decoded."
+    }
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The manufacturer's next tablet has a CPU with more cores. Explain how this could affect performance.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each core can process instructions independently, so several tasks/instructions can be processed at the same time",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Performance only improves if the software can split the work between cores (the cores must co-ordinate)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each core can execute instructions at the same time as the others, so more work is done per second, but only when the programs can split their work between the cores."
+    }
+   }
+  ],
+  "explanation": "(d) 43 (e) 83.",
+  "hints": [
+   "PC and MAR hold addresses; MDR, CIR and ACC hold data, instructions or results.",
+   "The PC is incremented in every fetch."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "address"
+      },
+      {
+       "blankId": "b",
+       "text": "data"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "43"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "83"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R4"
+       },
+       {
+        "leftId": "L4",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "data"
+       },
+       {
+        "blankId": "b",
+        "text": "address"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "37"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "82"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 1",
+  "calculator": false
+ },
+ {
+  "key": "exam.w2a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.hardware.input-devices",
+   "comp.hardware.output-devices",
+   "comp.hardware.sensors",
+   "comp.hardware.primary-storage",
+   "comp.hardware.secondary-storage"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A wildlife research station in Hwange National Park uses camera traps that photograph animals at a waterhole. It also has a visitor centre with an information kiosk and a projector.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each requirement to the most suitable sensor.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Triggering a camera when a warm-bodied animal passes"
+      },
+      {
+       "id": "L2",
+       "content": "Recording how full the waterhole's supply tank is"
+      },
+      {
+       "id": "L3",
+       "content": "Checking that the water pumped to the waterhole is not too acidic"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "pH sensor"
+      },
+      {
+       "id": "R1",
+       "content": "Infra-red sensor"
+      },
+      {
+       "id": "R2",
+       "content": "Level sensor"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Infra-red for body heat, level for the tank, pH for acidity."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Visitors often touch the kiosk screen with a pen or while wearing gloves. The supplier says a **capacitive** screen is not suitable. Which statement explains why?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It needs firm pressure, so a light touch does not register",
+      "rationale": "That describes a resistive screen."
+     },
+     {
+      "key": "B",
+      "content": "Dust or insects can break its beams and trigger false touches",
+      "rationale": "That describes an infra-red screen."
+     },
+     {
+      "key": "C",
+      "content": "It needs a conductive touch, so gloves and ordinary pens do not work",
+      "correct": true,
+      "rationale": "Correct: a capacitive screen detects a change in charge from a conductive finger."
+     },
+     {
+      "key": "D",
+      "content": "Its soft flexible top layer is easily scratched by pens",
+      "rationale": "That describes a resistive screen; capacitive screens use tough glass."
+     }
+    ],
+    "explanation": "Capacitive screens need a conductive touch such as a bare finger."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The visitor centre uses a DLP projector. Describe how a DLP projector produces an image.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A chip holds millions of micro-mirrors, one for each pixel",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Each mirror tilts towards or away from the lens (on/off) many times a second to give shades of grey",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Light passes through a spinning colour wheel (red, green, blue) to produce colour, and the lens projects the image",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A DLP chip has millions of tiny mirrors, one per pixel, which tilt on or off thousands of times a second to make shades. Light from the lamp passes through a spinning red, green and blue colour wheel so the image is in colour, and the lens projects it onto the screen."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Each camera trap has a 16 GiB SD card, and each photograph is 6 MiB. Calculate the number of **whole** photographs that fit on one card. Show your working.",
+    "answerSpec": {
+     "value": 2730
+    },
+    "explanation": "16 × 1024 = 16384 MiB; 16384 ÷ 6 = 2730.67…, so 2730 whole photographs.",
+    "workedSolution": "1. 16 GiB = 16 × 1024 = 16384 MiB.\n2. 16384 ÷ 6 = 2730.67…\n3. Round down: 2730 photographs."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why solid-state storage is suitable for the camera traps.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "No moving parts, so it is not damaged by knocks/vibration/animals or outdoor conditions",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Small, light and uses little power, so batteries last longer",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: SD cards have no moving parts, so knocks and vibration from animals do not damage them, and they use very little power, which saves the trap's batteries."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The station archives old photographs on Blu-ray discs. Which statement describes how data is stored on these discs?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Electrons are trapped on floating gates",
+      "rationale": "That is flash memory."
+     },
+     {
+      "key": "B",
+      "content": "Tracks and sectors are magnetised by electromagnets",
+      "rationale": "That is a hard disk."
+     },
+     {
+      "key": "C",
+      "content": "Ink is printed in a pattern of dots",
+      "rationale": "That is a printer."
+     },
+     {
+      "key": "D",
+      "content": "A laser forms pits and lands on a spiral track",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "Optical storage: pits and lands read by a laser."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The station's analysis computer often runs out of RAM when processing large sets of photographs. Describe how virtual memory is used in this situation.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "An area of secondary storage (HDD/SSD) is used as virtual memory",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "When RAM is full, pages of data not currently needed are moved from RAM to virtual memory",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "When those pages are needed again they are moved back into RAM (other pages being swapped out)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Part of the computer's drive is set aside as virtual memory. When RAM fills up, pages of photo data not being used are moved out to it, and they are swapped back into RAM when the program needs them again."
+    }
+   }
+  ],
+  "explanation": "(a) infra-red, level, pH (b) needs a conductive touch (d) 2730 photographs (f) pits and lands.",
+  "hints": [
+   "Choose each sensor by the quantity it measures.",
+   "Convert GiB to MiB first, and count only whole photos."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(d)": {
+     "type": "CALCULATION",
+     "value": "2730"
+    },
+    "(f)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "CALCULATION",
+      "value": "2731"
+     },
+     "(f)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 1",
+  "calculator": false
+ }
+]

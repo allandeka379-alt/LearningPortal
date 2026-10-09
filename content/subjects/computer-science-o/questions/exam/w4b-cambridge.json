@@ -1,0 +1,1146 @@
+[
+ {
+  "key": "exam.w4b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.arrays-1d",
+   "comp.prog.string-handling",
+   "comp.prog.iteration"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A college with campuses in Mutare (MUT), Harare (HRE) and Gweru (GWE) gives each learner a code made of the campus letters, a four-digit number and a course letter (A, B or C). Six codes are stored in the array `Codes`:\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Codes | MUT0412C | HRE1187B | MUT0935A | GWE2210C | MUT1406B | HRE0078C |\n\n```\nCount ← 0\nFOR Index ← 1 TO 6\n    IF SUBSTRING(Codes[Index], 1, 3) = \"MUT\"\n        THEN\n            Count ← Count + 1\n            OUTPUT SUBSTRING(Codes[Index], 4, 4)\n    ENDIF\nNEXT Index\nOUTPUT Count\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement declares the array `Codes`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`DECLARE Codes : ARRAY[1:6] OF CHAR`",
+      "rationale": "Each code has eight characters, so CHAR is too small."
+     },
+     {
+      "key": "B",
+      "content": "`DECLARE Codes : ARRAY[1:8] OF STRING`",
+      "rationale": "There are 6 codes; 8 is the length of each code."
+     },
+     {
+      "key": "C",
+      "content": "`DECLARE Codes : STRING[1:6]`",
+      "rationale": "The ARRAY keyword and OF clause are missing."
+     },
+     {
+      "key": "D",
+      "content": "`DECLARE Codes : ARRAY[1:6] OF STRING`",
+      "correct": true,
+      "rationale": "Correct: six elements, each a string."
+     }
+    ],
+    "explanation": "`DECLARE <identifier> : ARRAY[<lower>:<upper>] OF <type>`."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value returned by `LENGTH(Codes[2])`.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "\"HRE1187B\" has 8 characters.",
+    "workedSolution": "1. 3 letters + 4 digits + 1 letter.\n2. 8."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the value returned by `SUBSTRING(Codes[4], 1, 3)`.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "GWE"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Codes[4] is \"GWE2210C\"; its first three characters are \"GWE\"."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the values output inside the loop, in order.",
+    "payload": {
+     "template": "First: {{blank:a}}, second: {{blank:b}}, third: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a"
+      },
+      {
+       "id": "b"
+      },
+      {
+       "id": "c"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0412"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0935"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "1406"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Only codes starting \"MUT\" are processed: MUT0412C, MUT0935A, MUT1406B. SUBSTRING(…, 4, 4) gives 0412, 0935, 1406."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the final value output.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "3 codes start with MUT.",
+    "workedSolution": "1. MUT codes at indexes 1, 3, 5.\n2. Count = 3."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that inputs a course letter, accepting only A, B or C in either upper or lower case (re-input until valid), and then outputs how many codes in `Codes` end with that letter.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Prompt and INPUT of the letter, converted with UCASE",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Validation loop that repeats until the letter is A, B or C (with an error message or prompt)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Counter initialised to 0 and a loop over all 6 elements",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Extracts the last character with SUBSTRING(Codes[Index], 8, 1) or SUBSTRING(Codes[Index], LENGTH(Codes[Index]), 1) and compares it with the letter",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Increments the counter and outputs it after the loop with a message",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nREPEAT\n    OUTPUT \"Enter course letter (A, B or C)\"\n    INPUT Course\n    Course ← UCASE(Course)\nUNTIL Course = \"A\" OR Course = \"B\" OR Course = \"C\"\nCourseCount ← 0\nFOR Index ← 1 TO 6\n    IF SUBSTRING(Codes[Index], LENGTH(Codes[Index]), 1) = Course\n        THEN\n            CourseCount ← CourseCount + 1\n    ENDIF\nNEXT Index\nOUTPUT \"Learners on course \", Course, \": \", CourseCount\n```"
+    }
+   }
+  ],
+  "explanation": "(b) 8; (c) GWE; (d) 0412, 0935, 1406; (e) 3.",
+  "hints": [
+   "Number the characters of each code: 3 letters, 4 digits, 1 letter.",
+   "SUBSTRING(s, start, length) starts at position 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "GWE"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0412"
+      },
+      {
+       "blankId": "b",
+       "text": "0935"
+      },
+      {
+       "blankId": "c",
+       "text": "1406"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "MUT"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "041"
+       },
+       {
+        "blankId": "b",
+        "text": "093"
+       },
+       {
+        "blankId": "c",
+        "text": "140"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.subroutines",
+   "comp.prog.file-handling",
+   "comp.prog.selection"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A hardware shop in Gweru uses this function and procedure.\n\n```\nFUNCTION Discount(Total : REAL, Loyal : BOOLEAN) RETURNS REAL\n    IF Loyal AND Total >= 100\n        THEN\n            RETURN Total * 0.1\n        ELSE\n            RETURN 0\n    ENDIF\nENDFUNCTION\n\nPROCEDURE SaveSale(Customer : STRING, Amount : REAL)\n    OPENFILE \"sales.txt\" FOR WRITE\n    WRITEFILE \"sales.txt\", Customer\n    WRITEFILE \"sales.txt\", Amount\n    CLOSEFILE \"sales.txt\"\nENDPROCEDURE\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which of these is a parameter of `SaveSale`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Discount",
+      "rationale": "Discount is a function."
+     },
+     {
+      "key": "B",
+      "content": "sales.txt",
+      "rationale": "This is the name of a file."
+     },
+     {
+      "key": "C",
+      "content": "Amount",
+      "correct": true,
+      "rationale": "Correct: it is listed in the procedure header."
+     },
+     {
+      "key": "D",
+      "content": "Loyal",
+      "rationale": "Loyal is a parameter of Discount, not SaveSale."
+     }
+    ],
+    "explanation": "SaveSale's parameters are Customer and Amount."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the value returned by each call.",
+    "payload": {
+     "template": "`Discount(150, TRUE)`: {{blank:a}}\n\n`Discount(150, FALSE)`: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "15",
+        "15.0"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0",
+        "0.0"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Loyal and 150 >= 100: 150 × 0.1 = 15. Not loyal: 0."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value returned by `Discount(100, TRUE)`.",
+    "answerSpec": {
+     "value": 10
+    },
+    "explanation": "100 >= 100 is TRUE, so 100 × 0.1 = 10.",
+    "workedSolution": "1. Loyal is TRUE and 100 >= 100 is TRUE.\n2. 100 × 0.1 = 10."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "`SaveSale` is called three times, for three different customers. How many lines does `sales.txt` contain afterwards?",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "Each call opens the file FOR WRITE, which starts a new file, so only the last customer's 2 lines remain.",
+    "workedSolution": "1. Each call: OPENFILE … FOR WRITE empties the file.\n2. Then 2 lines are written.\n3. After the third call: 2 lines."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why is `Discount` written as a function but `SaveSale` as a procedure?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A function is not allowed to open or write to files",
+      "rationale": "A function could use a file; the difference is the returned value."
+     },
+     {
+      "key": "B",
+      "content": "Discount returns a value; SaveSale only performs a task",
+      "correct": true,
+      "rationale": "Correct: SaveSale stores data and returns nothing."
+     },
+     {
+      "key": "C",
+      "content": "Procedures cannot have REAL parameters",
+      "rationale": "Amount is a REAL parameter of SaveSale."
+     },
+     {
+      "key": "D",
+      "content": "Discount has two parameters and SaveSale has none",
+      "rationale": "SaveSale also has two parameters, and procedures may have parameters."
+     }
+    ],
+    "explanation": "A function returns a single value to its call; a procedure does not."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Write the main program. It inputs a customer's name, the total of their purchase (re-input until it is greater than 0) and whether they are a loyalty-card holder (Y or N). It calculates the amount to pay using `Discount`, outputs it, and saves the sale with `SaveSale`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Inputs the customer name with a prompt",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Inputs the total with a loop that repeats until Total > 0",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Inputs Y/N and sets a BOOLEAN (e.g. Loyal ← (Answer = \"Y\")) or uses IF",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Calculates Amount ← Total - Discount(Total, Loyal) (function called in an expression, no CALL)",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Outputs the amount to pay with a message",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "CALL SaveSale(CustomerName, Amount) with arguments in the right order",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nOUTPUT \"Customer name?\"\nINPUT CustomerName\nREPEAT\n    OUTPUT \"Purchase total (greater than 0)?\"\n    INPUT Total\nUNTIL Total > 0\nOUTPUT \"Loyalty card? (Y/N)\"\nINPUT Answer\nIF UCASE(Answer) = \"Y\"\n    THEN\n        Loyal ← TRUE\n    ELSE\n        Loyal ← FALSE\nENDIF\nAmount ← Total - Discount(Total, Loyal)\nOUTPUT \"Amount to pay: \", Amount\nCALL SaveSale(CustomerName, Amount)\n```"
+    }
+   }
+  ],
+  "explanation": "(b) 15 and 0; (c) 10; (d) 2 lines.",
+  "hints": [
+   "Both conditions must be TRUE for a discount.",
+   "What does WRITE mode do to an existing file?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "15"
+      },
+      {
+       "blankId": "b",
+       "text": "0"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "10"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0"
+       },
+       {
+        "blankId": "b",
+        "text": "15"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4b-cambridge.q03",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "comp.prog.arrays-2d",
+   "comp.prog.arrays-1d",
+   "comp.prog.iteration",
+   "comp.prog.selection",
+   "comp.prog.operators"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A bus company in Harare runs 8 routes. The one-dimensional array `RouteName[1:8]` stores the name of each route. The two-dimensional array `Passengers[1:8, 1:7]` stores the number of passengers carried on each route (row) on each day of last week (column 1 is Monday, column 7 is Sunday). Both arrays are already populated.\n\nWrite a program that:\n\n- outputs, for every route, its name, its total number of passengers for the week and its average number of passengers per day, rounded to 1 decimal place\n- outputs the name of the route with the highest weekly total and that total\n- inputs a day number and outputs the total number of passengers carried on all routes on that day.\n\nThe day number input must be validated. You must use pseudocode or program code and add comments to explain how your code works. You do not need to declare the arrays or initialise their data.",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Declares the variables used, with suitable data types",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Outer loop over the 8 routes",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Route total reset to 0 for each route, before the inner loop",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Inner loop over the 7 days adding Passengers[Route, Day] to the route total",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Calculates the average as route total / 7",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Rounds the average to 1 decimal place with ROUND(…, 1)",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Outputs RouteName[Route], the total and the average for each route with messages",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Initialises the highest total (and its route) before the route loop",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Compares each route total with the highest and stores the new highest and its route index",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "Outputs the name of the busiest route and its total after the loop",
+      "marks": 1
+     },
+     {
+      "id": "p11",
+      "description": "Prompts for and inputs a day number",
+      "marks": 1
+     },
+     {
+      "id": "p12",
+      "description": "Validates the day number (1 to 7) with a loop that repeats with an error message until valid",
+      "marks": 1
+     },
+     {
+      "id": "p13",
+      "description": "Day total initialised to 0 and a loop over the 8 routes adding Passengers[Route, ChosenDay]",
+      "marks": 1
+     },
+     {
+      "id": "p14",
+      "description": "Outputs the day total with a message",
+      "marks": 1
+     },
+     {
+      "id": "p15",
+      "description": "Uses the given array names with route as the row and day as the column throughout, and comments the code",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nDECLARE Route : INTEGER\nDECLARE Day : INTEGER\nDECLARE RouteTotal : INTEGER\nDECLARE Highest : INTEGER\nDECLARE BusiestRoute : INTEGER\nDECLARE ChosenDay : INTEGER\nDECLARE DayTotal : INTEGER\nDECLARE Average : REAL\n\n// weekly totals, averages and the busiest route\nHighest ← -1\nBusiestRoute ← 0\nFOR Route ← 1 TO 8\n    RouteTotal ← 0\n    FOR Day ← 1 TO 7\n        RouteTotal ← RouteTotal + Passengers[Route, Day]\n    NEXT Day\n    Average ← ROUND(RouteTotal / 7, 1)\n    OUTPUT RouteName[Route], \" total: \", RouteTotal, \" average per day: \", Average\n    IF RouteTotal > Highest\n        THEN\n            Highest ← RouteTotal\n            BusiestRoute ← Route\n    ENDIF\nNEXT Route\nOUTPUT \"Busiest route: \", RouteName[BusiestRoute], \" with \", Highest, \" passengers\"\n\n// total for one chosen day\nREPEAT\n    OUTPUT \"Enter a day number (1 = Monday to 7 = Sunday)\"\n    INPUT ChosenDay\n    IF ChosenDay < 1 OR ChosenDay > 7\n        THEN\n            OUTPUT \"Day must be from 1 to 7\"\n    ENDIF\nUNTIL ChosenDay >= 1 AND ChosenDay <= 7\nDayTotal ← 0\nFOR Route ← 1 TO 8\n    DayTotal ← DayTotal + Passengers[Route, ChosenDay]\nNEXT Route\nOUTPUT \"Passengers on day \", ChosenDay, \": \", DayTotal\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Nested loops give route totals and averages; a maximum is tracked in the outer loop; a validated day number selects a column to total.",
+  "hints": [
+   "Reset the route total for each route.",
+   "Validate the day number with a loop."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4b-cambridge.q04",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "comp.prog.arrays-1d",
+   "comp.prog.file-handling",
+   "comp.prog.iteration",
+   "comp.prog.selection"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "The tuck shop at a school in Bulawayo sells 50 items. Three one-dimensional arrays are already populated:\n\n- `ItemName[1:50]` stores the name of each item\n- `Price[1:50]` stores the price of each item in dollars\n- `Stock[1:50]` stores the number of each item in stock.\n\nThe same index refers to the same item in all three arrays.\n\nWrite a program that:\n\n- repeatedly inputs the name of an item being sold, until `END` is entered\n- searches for the item and outputs a message if it is not found or is out of stock\n- otherwise inputs the quantity sold, which must be from 1 to the number in stock, updates the stock level and outputs the cost of the sale\n- outputs the total takings when `END` is entered\n- then writes the name of every item with fewer than 5 in stock to a new text file `reorder.txt`.\n\nAll inputs must be validated. You must use pseudocode or program code and add comments to explain how your code works.",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Declares variables with suitable data types and initialises the total takings to 0",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Inputs the item name with a prompt before the loop and again at the end of the loop body",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Loop that ends when END is entered (END is not processed as a sale)",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Linear search through ItemName[1:50] comparing with the input",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Search stops when found (flag or condition) and the index of the item is kept",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Outputs a message when the item is not found",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Outputs a message when the item is out of stock",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Inputs the quantity with a prompt",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Validates the quantity: at least 1 and no more than Stock[Index], with an error message and re-input",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "Updates Stock[Index] by subtracting the quantity",
+      "marks": 1
+     },
+     {
+      "id": "p11",
+      "description": "Calculates the cost as Price[Index] * quantity, adds it to the takings and outputs it",
+      "marks": 1
+     },
+     {
+      "id": "p12",
+      "description": "Outputs the total takings after the loop",
+      "marks": 1
+     },
+     {
+      "id": "p13",
+      "description": "Opens reorder.txt FOR WRITE once, before the loop that writes to it",
+      "marks": 1
+     },
+     {
+      "id": "p14",
+      "description": "Loops over all 50 items and writes ItemName[Index] when Stock[Index] < 5",
+      "marks": 1
+     },
+     {
+      "id": "p15",
+      "description": "Closes the file after the loop",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nDECLARE ItemWanted : STRING\nDECLARE Index : INTEGER\nDECLARE Found : BOOLEAN\nDECLARE Quantity : INTEGER\nDECLARE Takings : REAL\nDECLARE SaleCost : REAL\n\nTakings ← 0.0\nOUTPUT \"Enter item name (END to finish)\"\nINPUT ItemWanted\nWHILE ItemWanted <> \"END\" DO\n    // linear search for the item\n    Found ← FALSE\n    Index ← 0\n    WHILE Found = FALSE AND Index < 50 DO\n        Index ← Index + 1\n        IF ItemName[Index] = ItemWanted\n            THEN\n                Found ← TRUE\n        ENDIF\n    ENDWHILE\n    IF Found = FALSE\n        THEN\n            OUTPUT \"Item not found\"\n        ELSE\n            IF Stock[Index] = 0\n                THEN\n                    OUTPUT \"Out of stock\"\n                ELSE\n                    REPEAT\n                        OUTPUT \"Quantity (1 to \", Stock[Index], \")\"\n                        INPUT Quantity\n                        IF Quantity < 1 OR Quantity > Stock[Index]\n                            THEN\n                                OUTPUT \"Invalid quantity\"\n                        ENDIF\n                    UNTIL Quantity >= 1 AND Quantity <= Stock[Index]\n                    Stock[Index] ← Stock[Index] - Quantity\n                    SaleCost ← Price[Index] * Quantity\n                    Takings ← Takings + SaleCost\n                    OUTPUT \"Cost of this sale: \", SaleCost\n            ENDIF\n    ENDIF\n    OUTPUT \"Enter item name (END to finish)\"\n    INPUT ItemWanted\nENDWHILE\nOUTPUT \"Total takings: \", Takings\n\n// items to reorder\nOPENFILE \"reorder.txt\" FOR WRITE\nFOR Index ← 1 TO 50\n    IF Stock[Index] < 5\n        THEN\n            WRITEFILE \"reorder.txt\", ItemName[Index]\n    ENDIF\nNEXT Index\nCLOSEFILE \"reorder.txt\"\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A rogue-value loop around a linear search over parallel arrays, a validated quantity, stock and takings updates, then a file of items to reorder.",
+  "hints": [
+   "Search ItemName for the item; the same index gives its price and stock.",
+   "Open the file once, before the loop that writes to it."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4b-cambridge.q05",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "comp.prog.arrays-2d",
+   "comp.prog.arrays-1d",
+   "comp.prog.iteration",
+   "comp.prog.selection",
+   "comp.prog.operators"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "An athletics meeting in Gweru has 16 athletes in the 100 m. The one-dimensional array `AthleteName[1:16]` is already populated with their names. Each athlete runs three heats, and their times in seconds will be stored in the two-dimensional array `Times[1:16, 1:3]` (row = athlete, column = heat), which is declared but empty.\n\nWrite a program that:\n\n- inputs and stores the three heat times for each athlete; each time must be from 9.5 to 60.0 seconds inclusive\n- calculates each athlete's best (lowest) time and average time, rounded to 2 decimal places, and outputs them with the athlete's name\n- outputs the name and time of the athlete with the fastest best time\n- outputs how many athletes have an average time below 12.0 seconds.\n\nAll inputs must be validated. You must use pseudocode or program code and add comments to explain how your code works.",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Declares variables with suitable data types (REAL for times and averages)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Outer loop over the 16 athletes and inner loop over the 3 heats",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Prompts with the athlete's name and heat number and inputs into Times[Athlete, Heat]",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Validates each time (9.5 to 60.0 inclusive) with a loop that repeats until valid",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Outputs an error message for an invalid time",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Total for each athlete reset to 0 before the heats and each valid time added",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Best time initialised for each athlete (e.g. to the first heat's time)",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Compares each heat's time with the best and replaces it when lower",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Calculates the average as total / 3",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "Rounds the average with ROUND(…, 2)",
+      "marks": 1
+     },
+     {
+      "id": "p11",
+      "description": "Outputs the athlete's name, best time and average",
+      "marks": 1
+     },
+     {
+      "id": "p12",
+      "description": "Fastest time (and athlete index) initialised before the athlete loop and updated when an athlete's best is lower",
+      "marks": 1
+     },
+     {
+      "id": "p13",
+      "description": "Outputs the name and time of the fastest athlete after the loops",
+      "marks": 1
+     },
+     {
+      "id": "p14",
+      "description": "Counter of averages below 12.0 initialised to 0 and incremented correctly",
+      "marks": 1
+     },
+     {
+      "id": "p15",
+      "description": "Outputs the count with a message",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nDECLARE Athlete : INTEGER\nDECLARE Heat : INTEGER\nDECLARE Best : REAL\nDECLARE Total : REAL\nDECLARE Average : REAL\nDECLARE FastestTime : REAL\nDECLARE FastestAthlete : INTEGER\nDECLARE UnderCount : INTEGER\n\nFastestTime ← 61.0\nFastestAthlete ← 0\nUnderCount ← 0\nFOR Athlete ← 1 TO 16\n    Total ← 0.0\n    FOR Heat ← 1 TO 3\n        REPEAT\n            OUTPUT \"Time for \", AthleteName[Athlete], \" in heat \", Heat\n            INPUT Times[Athlete, Heat]\n            IF Times[Athlete, Heat] < 9.5 OR Times[Athlete, Heat] > 60.0\n                THEN\n                    OUTPUT \"Time must be from 9.5 to 60.0 seconds\"\n            ENDIF\n        UNTIL Times[Athlete, Heat] >= 9.5 AND Times[Athlete, Heat] <= 60.0\n        Total ← Total + Times[Athlete, Heat]\n    NEXT Heat\n    Best ← Times[Athlete, 1]\n    FOR Heat ← 2 TO 3\n        IF Times[Athlete, Heat] < Best\n            THEN\n                Best ← Times[Athlete, Heat]\n        ENDIF\n    NEXT Heat\n    Average ← ROUND(Total / 3, 2)\n    OUTPUT AthleteName[Athlete], \" best: \", Best, \" average: \", Average\n    IF Best < FastestTime\n        THEN\n            FastestTime ← Best\n            FastestAthlete ← Athlete\n    ENDIF\n    IF Average < 12.0\n        THEN\n            UnderCount ← UnderCount + 1\n    ENDIF\nNEXT Athlete\nOUTPUT \"Fastest athlete: \", AthleteName[FastestAthlete], \" with \", FastestTime, \" seconds\"\nOUTPUT \"Athletes averaging under 12.0 seconds: \", UnderCount\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Input into a 2D array with validation, a per-row minimum and average, an overall minimum with its index, and a conditional count.",
+  "hints": [
+   "Validate each time inside the inner loop.",
+   "Start the best time at the first heat's time."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4b-cambridge.q06",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "comp.prog.string-handling",
+   "comp.prog.subroutines",
+   "comp.prog.arrays-1d",
+   "comp.prog.iteration",
+   "comp.prog.selection"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A school in Masvingo gives every learner an ID of exactly 7 characters: the letters `ZW`, then four digits, then one upper-case letter, for example `ZW2741K`. The one-dimensional array `LearnerID[1:500]` is already populated with the IDs of registered learners.\n\nWrite a program that:\n\n- includes a function `IsValidID` that takes an ID as a parameter and returns TRUE if it has the correct format and FALSE otherwise\n- repeatedly inputs an ID, converts it to upper case, and stops when `STOP` is entered\n- outputs `Invalid format` for an ID that fails the format check\n- for a valid ID, searches `LearnerID` and outputs its position in the array, or `Not registered`\n- when `STOP` is entered, outputs how many valid IDs were entered and how many of them were registered.\n\nYou must use pseudocode or program code and add comments to explain how your code works.",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Function header with a STRING parameter and RETURNS BOOLEAN, ending with ENDFUNCTION",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Checks the length is 7 with LENGTH",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Checks the first two characters are \"ZW\" with SUBSTRING(ID, 1, 2)",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Loop over positions 3 to 6 using SUBSTRING(ID, Position, 1)",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Tests each of those characters is a digit (from \"0\" to \"9\")",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Tests the seventh character is a letter from \"A\" to \"Z\"",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Returns TRUE only when every check passes, otherwise FALSE",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Inputs an ID with a prompt and converts it with UCASE",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Loop that repeats until STOP is entered, with the next input at the end of the loop body",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "Calls IsValidID in a condition (no CALL) and outputs Invalid format when it returns FALSE",
+      "marks": 1
+     },
+     {
+      "id": "p11",
+      "description": "Counts the valid IDs entered",
+      "marks": 1
+     },
+     {
+      "id": "p12",
+      "description": "Linear search through LearnerID[1:500] for a valid ID",
+      "marks": 1
+     },
+     {
+      "id": "p13",
+      "description": "Stops the search when found and outputs the position (index)",
+      "marks": 1
+     },
+     {
+      "id": "p14",
+      "description": "Outputs Not registered when the ID is not found, and counts the IDs that are found",
+      "marks": 1
+     },
+     {
+      "id": "p15",
+      "description": "Outputs both counts after the loop with messages",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nFUNCTION IsValidID(ID : STRING) RETURNS BOOLEAN\n    DECLARE Valid : BOOLEAN\n    DECLARE Position : INTEGER\n    DECLARE Ch : STRING\n    Valid ← TRUE\n    IF LENGTH(ID) <> 7\n        THEN\n            Valid ← FALSE\n        ELSE\n            IF SUBSTRING(ID, 1, 2) <> \"ZW\"\n                THEN\n                    Valid ← FALSE\n            ENDIF\n            FOR Position ← 3 TO 6\n                Ch ← SUBSTRING(ID, Position, 1)\n                IF Ch < \"0\" OR Ch > \"9\"\n                    THEN\n                        Valid ← FALSE\n                ENDIF\n            NEXT Position\n            Ch ← SUBSTRING(ID, 7, 1)\n            IF Ch < \"A\" OR Ch > \"Z\"\n                THEN\n                    Valid ← FALSE\n            ENDIF\n    ENDIF\n    RETURN Valid\nENDFUNCTION\n\nDECLARE EnteredID : STRING\nDECLARE Index : INTEGER\nDECLARE Found : BOOLEAN\nDECLARE ValidCount : INTEGER\nDECLARE FoundCount : INTEGER\n\nValidCount ← 0\nFoundCount ← 0\nOUTPUT \"Enter a learner ID (STOP to finish)\"\nINPUT EnteredID\nEnteredID ← UCASE(EnteredID)\nWHILE EnteredID <> \"STOP\" DO\n    IF IsValidID(EnteredID) = FALSE\n        THEN\n            OUTPUT \"Invalid format\"\n        ELSE\n            ValidCount ← ValidCount + 1\n            Found ← FALSE\n            Index ← 0\n            WHILE Found = FALSE AND Index < 500 DO\n                Index ← Index + 1\n                IF LearnerID[Index] = EnteredID\n                    THEN\n                        Found ← TRUE\n                ENDIF\n            ENDWHILE\n            IF Found\n                THEN\n                    FoundCount ← FoundCount + 1\n                    OUTPUT \"Registered at position \", Index\n                ELSE\n                    OUTPUT \"Not registered\"\n            ENDIF\n    ENDIF\n    OUTPUT \"Enter a learner ID (STOP to finish)\"\n    INPUT EnteredID\n    EnteredID ← UCASE(EnteredID)\nENDWHILE\nOUTPUT \"Valid IDs entered: \", ValidCount\nOUTPUT \"Registered IDs found: \", FoundCount\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "String functions inside a validation function, a rogue-value input loop, a linear search and two counters.",
+  "hints": [
+   "Check the length before using SUBSTRING.",
+   "A character is a digit if it is from \"0\" to \"9\"."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ }
+]

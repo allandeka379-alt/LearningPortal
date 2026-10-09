@@ -1,0 +1,1582 @@
+[
+ {
+  "key": "exam.w1b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.transmission.packets",
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A company in Gweru sends sales data from its shops to its head office over the internet.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe the structure of a data packet.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Header containing the destination address, the originator's address and the packet number",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Payload containing the actual data",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Trailer marking the end of the packet / containing error-checking data",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A packet has a header (destination address, originator's address, packet number), a payload holding the data, and a trailer that marks the end and holds an error check."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the packets reach head office using packet switching.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each packet is sent separately; routers read the destination address and choose the route",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Packets may take different routes and arrive out of order",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "When the last packet arrives, they are reordered using the packet numbers",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each packet travels independently; routers forward it by the best available route, so packets may arrive out of order. When all have arrived, head office reorders them by packet number."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "The 7-bit data 1001011 is sent with **even** parity, the parity bit being the left-most bit. Write the 8-bit byte sent.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01001011"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "1001011 has 4 ones, so the parity bit is 0: 01001011."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "A block of four bytes and a parity byte arrives using even parity:\n\n| Byte | P | 1 | 2 | 3 | 4 | 5 | 6 | 7 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| 1 | 1 | 1 | 1 | 0 | 0 | 1 | 0 | 0 |\n| 2 | 0 | 0 | 1 | 1 | 1 | 0 | 1 | 0 |\n| 3 | 1 | 1 | 0 | 1 | 0 | 1 | 1 | 1 |\n| 4 | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 1 |\n| Parity byte | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |\n\nState the number of the byte that contains an error.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "Byte 4 has an odd number of 1s.",
+    "workedSolution": "1. 1s per byte: 4, 4, 6, 5.\n2. Byte 4 is odd."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the column (P or 1 to 7) that contains the error.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Column 2 has an odd number of 1s."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the corrected byte.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10001101"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "Flip the bit in column 2: 10101101 → 10001101."
+   },
+   {
+    "label": "(g)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Books ordered by the shops have ISBN-13 numbers. The first 12 digits of one are 978065104412. Multiply the digits alternately by 1 and 3, add the products, find the remainder after dividing by 10 and subtract it from 10 (a remainder of 0 gives 0). Calculate the check digit.",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "Sum 83; remainder 3; check digit 7.",
+    "workedSolution": "1. Products: 9, 21, 8, 0, 6, 15, 1, 0, 4, 12, 1, 6.\n2. Sum: 83.\n3. Remainder: 3.\n4. Check digit: 7."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how an automatic repeat query (ARQ) makes sure the data arrives without error.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The receiver checks the data and sends a positive acknowledgement if it is correct (negative if not)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The sender starts a timer (timeout) when it sends the data",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "If a negative acknowledgement is received, or no acknowledgement before the timeout, the data is resent",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: After checking the data, the receiver sends a positive or negative acknowledgement. The sender waits for a set time; if it receives a negative acknowledgement or nothing before the timeout, it resends the data, repeating until a positive acknowledgement arrives."
+    }
+   }
+  ],
+  "explanation": "(c) 01001011. (d) byte 4, column 2, corrected 10001101. (e) 7.",
+  "hints": [
+   "Name all three parts of a packet.",
+   "In the parity block, find the row and the column with an odd number of 1s."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "01001011"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(e)": {
+     "type": "SHORT_ANSWER",
+     "text": "2"
+    },
+    "(f)": {
+     "type": "SHORT_ANSWER",
+     "text": "10001101"
+    },
+    "(g)": {
+     "type": "CALCULATION",
+     "value": "7"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "11001011"
+     },
+     "(e)": {
+      "type": "SHORT_ANSWER",
+      "text": "3"
+     },
+     "(f)": {
+      "type": "SHORT_ANSWER",
+      "text": "10101101"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 1",
+  "calculator": false
+ },
+ {
+  "key": "exam.w1b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.hardware.ports-usb",
+   "comp.transmission.encryption",
+   "comp.internet.web-browsing",
+   "comp.internet.cookies"
+  ],
+  "difficulty": 4,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "Rudo runs a small online clothing business from Bulawayo. She uses a laptop with a USB card reader, and customers buy through her website.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which method of data transmission does USB use?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Serial",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "Parallel",
+      "rationale": "USB is a serial bus."
+     },
+     {
+      "key": "C",
+      "content": "Simplex only",
+      "rationale": "USB carries data both ways."
+     },
+     {
+      "key": "D",
+      "content": "Analogue",
+      "rationale": "USB is digital."
+     }
+    ],
+    "explanation": "Universal serial bus."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give **two** benefits of using a USB connection for the card reader.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Industry standard / the device is detected and its driver installed automatically",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The cable supplies power to the device / backward compatible",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It is detected and set up automatically, and it is powered through the USB cable."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Customers' details are sent to Rudo using asymmetric encryption. Which key encrypts the details?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Rudo's private key",
+      "rationale": "Customers do not have it."
+     },
+     {
+      "key": "B",
+      "content": "Rudo's public key",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "The customer's private key",
+      "rationale": "Then anyone with the customer's public key could decrypt it."
+     },
+     {
+      "key": "D",
+      "content": "A key shared in advance",
+      "rationale": "That describes symmetric encryption."
+     }
+    ],
+    "explanation": "Receiver's public key encrypts."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which key decrypts the details?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Rudo's public key",
+      "rationale": "It cannot decrypt what it encrypted."
+     },
+     {
+      "key": "B",
+      "content": "The customer's public key",
+      "rationale": "That belongs to another key pair."
+     },
+     {
+      "key": "C",
+      "content": "Rudo's private key",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "No key is needed",
+      "rationale": "Ciphertext needs the key."
+     }
+    ],
+    "explanation": "Receiver's private key decrypts."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the customers' details are encrypted before they are transmitted.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Data can be intercepted during transmission",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Encrypted data is meaningless without the key, so the details stay confidential",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The data could be intercepted on the internet; encryption makes it unreadable to anyone without the key."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Rudo's site is at `https://www.rudostyle.co.zw/shop/dresses.html` (fictional). Match each part to its name.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "`https`"
+      },
+      {
+       "id": "L2",
+       "content": "`www.rudostyle.co.zw`"
+      },
+      {
+       "id": "L3",
+       "content": "`dresses.html`"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "File name"
+      },
+      {
+       "id": "R1",
+       "content": "Protocol"
+      },
+      {
+       "id": "R2",
+       "content": "Domain name"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Protocol, domain name, then path and file name."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Describe how a customer's browser locates, retrieves and displays the page.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The browser sends the domain name to a DNS",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The DNS returns the matching IP address",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The browser sends an HTTPS request to the web server at that IP address",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "The web server returns the HTML, which the browser renders",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The browser asks a DNS for the IP address of www.rudostyle.co.zw; the DNS returns it; the browser sends an HTTPS request to the web server, which returns the HTML file; the browser renders the page."
+    }
+   },
+   {
+    "label": "(h)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The site remembers each customer's chosen size between visits. Which type of cookie does this?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Session cookie",
+      "rationale": "Deleted when the browser closes."
+     },
+     {
+      "key": "B",
+      "content": "Third-party cookie",
+      "rationale": "Set by another domain, such as an advertiser."
+     },
+     {
+      "key": "C",
+      "content": "Encryption cookie",
+      "rationale": "No such type."
+     },
+     {
+      "key": "D",
+      "content": "Persistent cookie",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "Kept between visits: persistent."
+   }
+  ],
+  "explanation": "USB is serial; receiver's public key encrypts, private key decrypts; DNS → IP → web server → HTML; persistent cookies remember preferences.",
+  "hints": [
+   "USB: detection, driver, serial.",
+   "Asymmetric: the receiver's public key encrypts, its private key decrypts."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(f)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    },
+    "(h)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(f)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(h)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.logic.circuits-expressions",
+   "comp.logic.truth-tables",
+   "comp.logic.gates"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A pottery kiln in Mutare has three sensors:\n\n| Input | 1 means | 0 means |\n|:-:|:--|:--|\n| A | temperature above the limit | temperature within the limit |\n| B | door closed | door open |\n| C | cooling fan running | cooling fan off |\n\nAn alarm X sounds if the temperature is above the limit and the door is open, or if the door is closed and the cooling fan is running.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the logic expression for X.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "`A AND (NOT B)` for temperature high and door open",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "`B AND C` for door closed and fan running",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Both terms joined by OR: `X = (A AND NOT B) OR (B AND C)`",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: X = (A AND NOT B) OR (B AND C)"
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the truth table for X.",
+    "payload": {
+     "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r8",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "X = 00011101."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "How many logic gates (NOT counts as a gate) are needed to build the circuit exactly as written?",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "NOT, two ANDs and one OR.",
+    "workedSolution": "1. NOT B: 1 gate.\n2. A AND NOT B, B AND C: 2 gates.\n3. OR: 1 gate.\n4. Total 4."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the description of the circuit.",
+    "payload": {
+     "template": "Input B goes into a {{blank:g1}} gate. Its output and input A go into an {{blank:g2}} gate. Inputs B and C go into a second AND gate. The outputs of the two AND gates go into an {{blank:g3}} gate, whose output is X.",
+     "blanks": [
+      {
+       "id": "g1",
+       "input": "select",
+       "choices": [
+        "NOT",
+        "NOR",
+        "NAND",
+        "XOR"
+       ]
+      },
+      {
+       "id": "g2",
+       "input": "select",
+       "choices": [
+        "AND",
+        "OR",
+        "XOR",
+        "NOR"
+       ]
+      },
+      {
+       "id": "g3",
+       "input": "select",
+       "choices": [
+        "OR",
+        "AND",
+        "NAND",
+        "XOR"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "g1",
+       "accepted": [
+        "NOT"
+       ]
+      },
+      {
+       "id": "g2",
+       "accepted": [
+        "AND"
+       ]
+      },
+      {
+       "id": "g3",
+       "accepted": [
+        "OR"
+       ]
+      }
+     ]
+    },
+    "explanation": "NOT, AND, AND, OR."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the value of X when the temperature is above the limit, the door is closed and the fan is off.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "0"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "A = 1, B = 1, C = 0: A AND NOT B = 0; B AND C = 0; X = 0."
+   }
+  ],
+  "explanation": "X = (A AND NOT B) OR (B AND C); output 00011101.",
+  "hints": [
+   "Two conditions are joined by OR; each is an AND.",
+   "Count one gate per operator."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "0"
+      },
+      {
+       "blankId": "r2",
+       "text": "0"
+      },
+      {
+       "blankId": "r3",
+       "text": "0"
+      },
+      {
+       "blankId": "r4",
+       "text": "1"
+      },
+      {
+       "blankId": "r5",
+       "text": "1"
+      },
+      {
+       "blankId": "r6",
+       "text": "1"
+      },
+      {
+       "blankId": "r7",
+       "text": "0"
+      },
+      {
+       "blankId": "r8",
+       "text": "1"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "g1",
+       "text": "NOT"
+      },
+      {
+       "blankId": "g2",
+       "text": "AND"
+      },
+      {
+       "blankId": "g3",
+       "text": "OR"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "SHORT_ANSWER",
+     "text": "0"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "1"
+       },
+       {
+        "blankId": "r2",
+        "text": "1"
+       },
+       {
+        "blankId": "r3",
+        "text": "1"
+       },
+       {
+        "blankId": "r4",
+        "text": "0"
+       },
+       {
+        "blankId": "r5",
+        "text": "0"
+       },
+       {
+        "blankId": "r6",
+        "text": "0"
+       },
+       {
+        "blankId": "r7",
+        "text": "1"
+       },
+       {
+        "blankId": "r8",
+        "text": "0"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "g1",
+        "text": "NOR"
+       },
+       {
+        "blankId": "g2",
+        "text": "OR"
+       },
+       {
+        "blankId": "g3",
+        "text": "AND"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "SHORT_ANSWER",
+      "text": "1"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w1b-cambridge.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.logic.truth-tables",
+   "comp.logic.circuits-expressions",
+   "comp.logic.gates"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A logic circuit is described as follows. Inputs A and B go into an XOR gate (output P). Inputs B and C go into an AND gate (output Q). P and Q go into a NOR gate, whose output is X.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the logic expression for the circuit.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "`A XOR B`",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "`B AND C`",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Joined by NOR with correct brackets: `X = (A XOR B) NOR (B AND C)`",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: X = (A XOR B) NOR (B AND C)"
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the truth table for X.",
+    "payload": {
+     "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "P = 00111100; Q = 00010001; X = 11000010."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State how many of the eight input combinations give X = 1.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "X = 11000010.",
+    "workedSolution": "1. X column: 11000010.\n2. Count the 1s: 3."
+   },
+   {
+    "label": "(d)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "True or false: the circuit gives the same outputs as `X = NOT ((A XOR B) OR (B AND C))`.",
+    "answerSpec": {
+     "correct": true
+    },
+    "explanation": "NOR is NOT OR, so the two expressions are identical."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The NOR gate is replaced by an OR gate followed by a NOT gate. Explain whether the circuit's output changes, and why.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The output does not change",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "NOR gives the inverse of OR for every input combination",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "so OR followed by NOT produces exactly the same values (the circuit just uses one more gate)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The output stays the same: a NOR gate is equivalent to an OR gate followed by a NOT gate, because NOR inverts every OR output. The new circuit simply uses an extra gate."
+    }
+   }
+  ],
+  "explanation": "X = (A XOR B) NOR (B AND C): 11000010.",
+  "hints": [
+   "Work out P = A XOR B and Q = B AND C first.",
+   "NOR is 1 only when both of its inputs are 0."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "1"
+      },
+      {
+       "blankId": "r2",
+       "text": "1"
+      },
+      {
+       "blankId": "r3",
+       "text": "0"
+      },
+      {
+       "blankId": "r4",
+       "text": "0"
+      },
+      {
+       "blankId": "r5",
+       "text": "0"
+      },
+      {
+       "blankId": "r6",
+       "text": "0"
+      },
+      {
+       "blankId": "r7",
+       "text": "1"
+      },
+      {
+       "blankId": "r8",
+       "text": "0"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(d)": {
+     "type": "TRUE_FALSE",
+     "value": true
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "0"
+       },
+       {
+        "blankId": "r2",
+        "text": "0"
+       },
+       {
+        "blankId": "r3",
+        "text": "1"
+       },
+       {
+        "blankId": "r4",
+        "text": "1"
+       },
+       {
+        "blankId": "r5",
+        "text": "1"
+       },
+       {
+        "blankId": "r6",
+        "text": "1"
+       },
+       {
+        "blankId": "r7",
+        "text": "0"
+       },
+       {
+        "blankId": "r8",
+        "text": "1"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "TRUE_FALSE",
+      "value": false
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w1b-cambridge.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.logic.circuits-expressions",
+   "comp.logic.truth-tables",
+   "comp.logic.gates"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "An engineer is given this truth table for a circuit with three inputs:\n\n| A | B | C | X |\n|:-:|:-:|:-:|:-:|\n| 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 0 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 1 |\n| 1 | 0 | 0 | 1 |\n| 1 | 0 | 1 | 0 |\n| 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | 1 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State how many AND terms are needed to write the expression from the rows where X = 1.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "One term per row with X = 1.",
+    "workedSolution": "1. X = 1 in rows 011, 100 and 111.\n2. 3 terms."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write a logic expression for X.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Term for row 011: `(NOT A) AND B AND C`",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Term for row 100: `A AND (NOT B) AND (NOT C)`",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Term for row 111: `A AND B AND C`",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "All three terms joined by OR with correct brackets",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: X = ((NOT A) AND B AND C) OR (A AND (NOT B) AND (NOT C)) OR (A AND B AND C)"
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which expression produces the same truth table?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`X = (B AND C) OR (A AND NOT (B OR C))`",
+      "correct": true,
+      "rationale": "Correct: B AND C gives rows 011 and 111; A AND NOT (B OR C) gives row 100 (output 00011001)."
+     },
+     {
+      "key": "B",
+      "content": "`X = (B AND C) OR A`",
+      "rationale": "This gives 00011111: rows 101 and 110 would also be 1."
+     },
+     {
+      "key": "C",
+      "content": "`X = (B XOR C) OR (A AND B)`",
+      "rationale": "This gives 01100111."
+     },
+     {
+      "key": "D",
+      "content": "`X = A XOR (B AND C)`",
+      "rationale": "This gives 00011110: row 111 would be 0."
+     }
+    ],
+    "explanation": "Check each option against all eight rows."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Describe the circuit for the expression `X = (B AND C) OR (A AND NOT (B OR C))`, naming each gate and its inputs.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B and C go into an AND gate",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "B and C also go into an OR gate, whose output goes into a NOT gate",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The NOT gate's output and A go into a second AND gate",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "The outputs of the two AND gates go into an OR gate whose output is X",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: B and C go into an AND gate. B and C also go into an OR gate, whose output goes into a NOT gate. The NOT gate's output and A go into a second AND gate. The outputs of the two AND gates go into an OR gate, whose output is X."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the output X when A = 1, B = 0 and C = 1.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "0"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Row 101 of the table: X = 0."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the output X when A = 0, B = 1 and C = 1.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "1"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Row 011 of the table: X = 1."
+   }
+  ],
+  "explanation": "X = 1 in rows 011, 100 and 111.",
+  "hints": [
+   "Use only the rows where X = 1; each gives one AND term.",
+   "An input that is 0 in a row appears with NOT."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(e)": {
+     "type": "SHORT_ANSWER",
+     "text": "0"
+    },
+    "(f)": {
+     "type": "SHORT_ANSWER",
+     "text": "1"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(e)": {
+      "type": "SHORT_ANSWER",
+      "text": "1"
+     },
+     "(f)": {
+      "type": "SHORT_ANSWER",
+      "text": "0"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2"
+ }
+]

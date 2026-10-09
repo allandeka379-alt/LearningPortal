@@ -1,0 +1,1220 @@
+[
+ {
+  "key": "software.interrupts-firmware.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is an **interrupt**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A signal to the processor that an event needs attention",
+    "correct": true,
+    "rationale": "Correct: it is sent by a device or by software."
+   },
+   {
+    "key": "B",
+    "content": "A fault that switches the computer off",
+    "rationale": "An interrupt is a normal signal, not a shutdown."
+   },
+   {
+    "key": "C",
+    "content": "A program stored permanently in ROM",
+    "rationale": "That describes firmware."
+   },
+   {
+    "key": "D",
+    "content": "A cable that connects a device to the computer",
+    "rationale": "An interrupt is a signal, not a connection."
+   }
+  ],
+  "explanation": "An interrupt is a signal from hardware or software telling the processor that something needs attention.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "software.interrupts-firmware.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which program runs first when a computer is switched on, and loads the operating system?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The bootloader",
+    "correct": true,
+    "rationale": "Correct: this firmware starts the computer and loads the OS."
+   },
+   {
+    "key": "B",
+    "content": "The interrupt service routine",
+    "rationale": "An ISR handles one type of interrupt."
+   },
+   {
+    "key": "C",
+    "content": "The device driver",
+    "rationale": "Drivers are loaded by the OS later."
+   },
+   {
+    "key": "D",
+    "content": "The compiler",
+    "rationale": "A compiler translates program code."
+   }
+  ],
+  "explanation": "The bootloader is firmware held in ROM or flash memory; it checks the hardware and loads the OS into RAM.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "software.interrupts-firmware.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which of these generates a **software** interrupt?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A program attempts to divide a number by zero",
+    "correct": true,
+    "rationale": "Correct: the error arises in a running program."
+   },
+   {
+    "key": "B",
+    "content": "A key is pressed on the keyboard during a download",
+    "rationale": "A key press is a hardware interrupt."
+   },
+   {
+    "key": "C",
+    "content": "The mouse is moved",
+    "rationale": "Mouse movement is a hardware interrupt."
+   },
+   {
+    "key": "D",
+    "content": "The printer runs out of paper in the middle of a job",
+    "rationale": "This comes from a hardware device."
+   }
+  ],
+  "explanation": "Software interrupts come from programs: division by zero, two processes accessing the same memory location, requests for OS services.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "software.interrupts-firmware.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Why is the bootloader stored in ROM or flash memory rather than in RAM?",
+  "options": [
+   {
+    "key": "A",
+    "content": "ROM is much faster than RAM, so the computer starts more quickly",
+    "rationale": "Speed is not the reason; RAM is usually faster to access."
+   },
+   {
+    "key": "B",
+    "content": "RAM is too small to hold the bootloader as well as the OS",
+    "rationale": "RAM holds the OS and applications once loaded."
+   },
+   {
+    "key": "C",
+    "content": "The user needs to change the bootloader every day",
+    "rationale": "Firmware is rarely changed; ROM is read-only."
+   },
+   {
+    "key": "D",
+    "content": "It must be available as soon as the power is switched on, and RAM is volatile",
+    "correct": true,
+    "rationale": "Correct: RAM is empty at power-on; ROM and flash keep their contents."
+   }
+  ],
+  "explanation": "RAM loses its contents when the power is off, so the start-up program must be held in non-volatile memory.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "software.interrupts-firmware.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "When does the processor check whether an interrupt is waiting?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Only when the computer is switched on",
+    "rationale": "Interrupts are checked continually, not only at start-up."
+   },
+   {
+    "key": "B",
+    "content": "Only when the user presses the power button",
+    "rationale": "Interrupts come from many events."
+   },
+   {
+    "key": "C",
+    "content": "At the end of each fetch-decode-execute cycle",
+    "correct": true,
+    "rationale": "Correct: the current instruction is completed first."
+   },
+   {
+    "key": "D",
+    "content": "In the middle of decoding each instruction",
+    "rationale": "The current cycle is completed before an interrupt is serviced."
+   }
+  ],
+  "explanation": "The processor finishes the current cycle, then checks for interrupts before fetching the next instruction.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "software.interrupts-firmware.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Before running an interrupt service routine, why does the processor save the contents of its registers?",
+  "options": [
+   {
+    "key": "A",
+    "content": "So that the interrupt can be deleted",
+    "rationale": "Saving registers does not remove the interrupt."
+   },
+   {
+    "key": "B",
+    "content": "So that the operating system can be reloaded from storage",
+    "rationale": "The OS is already in RAM."
+   },
+   {
+    "key": "C",
+    "content": "So that the hardware can be checked for faults",
+    "rationale": "Hardware checks are done by the bootloader at start-up."
+   },
+   {
+    "key": "D",
+    "content": "So that the interrupted task can be resumed from where it stopped",
+    "correct": true,
+    "rationale": "Correct: the saved state is restored after the ISR."
+   }
+  ],
+  "explanation": "The ISR will use the registers. Saving them (including the program counter) lets the original task continue afterwards.",
+  "hints": [
+   "What must the processor remember so that it can carry on afterwards?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "software.interrupts-firmware.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which statement correctly describes how software runs on a computer?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Applications run directly on the hardware, without the OS",
+    "rationale": "Applications request services from the OS."
+   },
+   {
+    "key": "B",
+    "content": "Applications run on the OS, the OS runs on the firmware, the firmware runs on the hardware",
+    "correct": true,
+    "rationale": "Correct: each layer runs on the one below."
+   },
+   {
+    "key": "C",
+    "content": "The OS runs on the applications, and the applications run on the firmware",
+    "rationale": "The order is reversed."
+   },
+   {
+    "key": "D",
+    "content": "The firmware runs on the OS, and the OS runs directly on the hardware",
+    "rationale": "The firmware is below the OS: it loads it."
+   }
+  ],
+  "explanation": "Hardware → firmware (bootloader) → operating system → applications.",
+  "hints": [
+   "Which layer runs directly on the hardware?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "software.interrupts-firmware.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "An interrupt arrives while the processor is servicing another interrupt of **higher** priority. What happens?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The new interrupt is serviced at once and the current ISR is abandoned",
+    "rationale": "Only a higher-priority interrupt can pause the current task."
+   },
+   {
+    "key": "B",
+    "content": "The new interrupt is deleted and never serviced",
+    "rationale": "It is not discarded; it waits."
+   },
+   {
+    "key": "C",
+    "content": "The new interrupt waits until the higher-priority task is finished",
+    "correct": true,
+    "rationale": "Correct: lower-priority interrupts are held until they can be serviced."
+   },
+   {
+    "key": "D",
+    "content": "The computer restarts to clear both interrupts",
+    "rationale": "Interrupts are a normal event; no restart is needed."
+   }
+  ],
+  "explanation": "Interrupts are given priorities; a lower-priority interrupt waits until the processor can deal with it.",
+  "hints": [
+   "Compare the priority of the waiting interrupt with the current task."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "software.interrupts-firmware.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Moving the mouse generates a hardware interrupt.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Mouse movements and key presses are hardware interrupts generated by input devices.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "software.interrupts-firmware.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "On a PC the operating system is stored permanently in ROM and runs from there.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The OS is stored on secondary storage and loaded into RAM by the bootloader, which is the firmware stored in ROM or flash memory.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "software.interrupts-firmware.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "Classify each event as a hardware or a software interrupt.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "A key is pressed"
+    },
+    {
+     "id": "L2",
+     "content": "Two processes try to write to the same memory location"
+    },
+    {
+     "id": "L3",
+     "content": "The printer's buffer becomes empty"
+    },
+    {
+     "id": "L4",
+     "content": "A program divides by zero"
+    },
+    {
+     "id": "L5",
+     "content": "The mouse is clicked"
+    }
+   ],
+   "right": [
+    {
+     "id": "R1",
+     "content": "Hardware interrupt"
+    },
+    {
+     "id": "R2",
+     "content": "Software interrupt"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R1"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Devices generate hardware interrupts; running programs generate software interrupts.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R1"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "software.interrupts-firmware.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Put the steps for handling an interrupt in order by choosing the correct step for each position.",
+  "payload": {
+   "template": "Step 1: {{blank:s1}}\n\nStep 2: {{blank:s2}}\n\nStep 3: {{blank:s3}}\n\nStep 4: {{blank:s4}}",
+   "blanks": [
+    {
+     "id": "s1",
+     "input": "select",
+     "choices": [
+      "The interrupt signal is sent to the processor",
+      "The processor saves the contents of its registers",
+      "The interrupt service routine is run",
+      "The saved register contents are restored and the task resumes"
+     ]
+    },
+    {
+     "id": "s2",
+     "input": "select",
+     "choices": [
+      "The interrupt signal is sent to the processor",
+      "The processor saves the contents of its registers",
+      "The interrupt service routine is run",
+      "The saved register contents are restored and the task resumes"
+     ]
+    },
+    {
+     "id": "s3",
+     "input": "select",
+     "choices": [
+      "The interrupt signal is sent to the processor",
+      "The processor saves the contents of its registers",
+      "The interrupt service routine is run",
+      "The saved register contents are restored and the task resumes"
+     ]
+    },
+    {
+     "id": "s4",
+     "input": "select",
+     "choices": [
+      "The interrupt signal is sent to the processor",
+      "The processor saves the contents of its registers",
+      "The interrupt service routine is run",
+      "The saved register contents are restored and the task resumes"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "s1",
+     "accepted": [
+      "The interrupt signal is sent to the processor"
+     ]
+    },
+    {
+     "id": "s2",
+     "accepted": [
+      "The processor saves the contents of its registers"
+     ]
+    },
+    {
+     "id": "s3",
+     "accepted": [
+      "The interrupt service routine is run"
+     ]
+    },
+    {
+     "id": "s4",
+     "accepted": [
+      "The saved register contents are restored and the task resumes"
+     ]
+    }
+   ]
+  },
+  "explanation": "1. The interrupt signal is sent to the processor. 2. The processor saves the contents of its registers. 3. The interrupt service routine is run. 4. The saved register contents are restored and the task resumes.",
+  "hints": [
+   "The ISR runs between saving and restoring."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "s1",
+     "text": "The interrupt signal is sent to the processor"
+    },
+    {
+     "blankId": "s2",
+     "text": "The processor saves the contents of its registers"
+    },
+    {
+     "blankId": "s3",
+     "text": "The interrupt service routine is run"
+    },
+    {
+     "blankId": "s4",
+     "text": "The saved register contents are restored and the task resumes"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "s1",
+      "text": "The processor saves the contents of its registers"
+     },
+     {
+      "blankId": "s2",
+      "text": "The interrupt signal is sent to the processor"
+     },
+     {
+      "blankId": "s3",
+      "text": "The interrupt signal is sent to the processor"
+     },
+     {
+      "blankId": "s4",
+      "text": "The interrupt signal is sent to the processor"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "software.interrupts-firmware.q13",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Complete the sentences.",
+  "payload": {
+   "template": "A short program run to deal with one type of interrupt is an interrupt {{blank:a}} routine. Software stored permanently on a chip that controls hardware at a basic level is called {{blank:b}}.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "service",
+      "storage",
+      "search",
+      "status"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "firmware",
+      "freeware",
+      "shareware",
+      "middleware"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "service"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "firmware"
+     ]
+    }
+   ]
+  },
+  "explanation": "Interrupt service routine; firmware.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "service"
+    },
+    {
+     "blankId": "b",
+     "text": "firmware"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "storage"
+     },
+     {
+      "blankId": "b",
+      "text": "freeware"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "software.interrupts-firmware.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Give the abbreviation for the routine that handles an interrupt.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "ISR"
+    },
+    {
+     "value": "interrupt service routine"
+    },
+    {
+     "value": "interrupt handler"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "ISR: interrupt service routine.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "ISR"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "IDE"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "software.interrupts-firmware.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Explain how hardware, firmware and an operating system are all needed to run an application. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The firmware / bootloader (in ROM or flash) runs on the hardware when the computer is switched on",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "It loads the operating system from storage into RAM / starts the OS",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The application runs on the OS, which provides services / manages the hardware for it",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: When the computer is switched on, the bootloader (firmware in ROM) runs on the hardware and loads the operating system into RAM. The application then runs on the operating system, which manages the hardware for it."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The answer must show the chain: hardware → firmware → OS → application.",
+  "hints": [
+   "Start from switching on: what is in RAM, and what is in ROM?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "software.interrupts-firmware.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Describe how the processor handles an interrupt. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The processor checks for interrupts at the end of each FDE cycle / checks priority against the current task",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The current state / contents of the registers are saved",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The source is identified and the matching interrupt service routine is run",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The saved state is restored and the original task resumes (or the next interrupt is serviced)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: At the end of the current fetch-decode-execute cycle the processor checks for interrupts and compares the priority. If higher, it saves the contents of its registers, identifies the source and runs the matching ISR. Afterwards it restores the registers and continues the interrupted task."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Check, save, run ISR, restore.",
+  "hints": [
+   "Four steps: check, save, ISR, restore."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "software.interrupts-firmware.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "Nyasha is typing an essay while a large file is downloading in the background.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Each key press generates which type of interrupt?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Software interrupt",
+      "rationale": "It comes from a device, not a program."
+     },
+     {
+      "key": "B",
+      "content": "Firmware interrupt",
+      "rationale": "Not a category used here."
+     },
+     {
+      "key": "C",
+      "content": "Hardware interrupt",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "Boot interrupt",
+      "rationale": "Not a category used here."
+     }
+    ],
+    "explanation": "Keyboard → hardware interrupt."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe what happens from the moment the key is pressed until the letter appears.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Interrupt signal sent; the processor checks at the end of the FDE cycle and the priority is higher than the download task",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The download task's state (registers) is saved and the keyboard ISR runs",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The character is processed and displayed; the state is restored and the download continues",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The key press sends an interrupt. At the end of its current cycle the processor sees it has higher priority, saves the download task's registers and runs the keyboard ISR, which stores and displays the letter. It then restores the registers and the download continues."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give **two** examples of software interrupts.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Division by zero",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Two processes trying to access the same memory location (or a program requesting an OS service / a program error)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Division by zero; two processes trying to access the same memory location."
+    }
+   }
+  ],
+  "explanation": "Key press = hardware interrupt; save state, run ISR, restore.",
+  "hints": [
+   "The key press comes from a device.",
+   "Say what the user sees as a result."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "software.interrupts-firmware.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.software.interrupts-firmware"
+  ],
+  "difficulty": 5,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "Tendai switches on the desktop computer in a Bulawayo internet café.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the bootloader must be stored in non-volatile memory.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "RAM is volatile so it is empty when the power is switched on",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The bootloader must be available immediately to start the computer / load the OS, so it is held in ROM or flash memory",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: RAM is empty when the computer is switched on because it is volatile, so the start-up program must be in ROM or flash where it is available at once."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe what the bootloader does.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Checks / tests the hardware",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Loads the operating system from secondary storage into RAM and starts it",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It tests the hardware, then loads the OS from the drive into RAM and starts it."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Tendai's browser runs on which layer?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The bootloader directly",
+      "rationale": "Applications need the OS."
+     },
+     {
+      "key": "B",
+      "content": "The operating system",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "The ROM chip",
+      "rationale": "Applications run in RAM on the OS."
+     },
+     {
+      "key": "D",
+      "content": "The interrupt service routine",
+      "rationale": "ISRs handle interrupts."
+     }
+    ],
+    "explanation": "Applications run on the OS."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The printer runs out of paper while Tendai prints. What is the most likely result of the interrupt?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The computer restarts to clear the printer queue",
+      "rationale": "No restart is needed."
+     },
+     {
+      "key": "B",
+      "content": "A message asking him to add paper is displayed",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "The document is deleted from the print queue",
+      "rationale": "The job waits."
+     },
+     {
+      "key": "D",
+      "content": "The browser closes",
+      "rationale": "The interrupt does not close the application."
+     }
+    ],
+    "explanation": "The ISR displays a message; printing resumes later."
+   }
+  ],
+  "explanation": "Non-volatile firmware; bootloader loads the OS; apps on the OS; ISR displays a message.",
+  "hints": [
+   "RAM is volatile.",
+   "The bootloader is firmware."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ }
+]

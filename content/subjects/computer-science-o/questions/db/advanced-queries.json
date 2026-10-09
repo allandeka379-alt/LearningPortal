@@ -1,0 +1,1351 @@
+[
+ {
+  "key": "db.advanced-queries.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In a query, what does a **join** do?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Combines records from related tables by matching a common field",
+    "correct": true,
+    "rationale": "Correct: usually a foreign key matched to a primary key."
+   },
+   {
+    "key": "B",
+    "content": "Adds the values of a numeric field for all the records",
+    "rationale": "That is SUM."
+   },
+   {
+    "key": "C",
+    "content": "Adds new records to the end of a table",
+    "rationale": "That is INSERT."
+   },
+   {
+    "key": "D",
+    "content": "Copies a table into a spreadsheet file",
+    "rationale": "That is exporting."
+   }
+  ],
+  "explanation": "A join pairs each record in one table with the related record(s) in another, using matching key values.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "db.advanced-queries.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which statement describes a **calculated field** in a query?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Its values are worked out from other fields each time the query runs",
+    "correct": true,
+    "rationale": "Correct: for example Quantity * Price."
+   },
+   {
+    "key": "B",
+    "content": "It is typed into the table by the user for every record",
+    "rationale": "Calculated values are not typed in."
+   },
+   {
+    "key": "C",
+    "content": "It is the primary key of the table the query uses",
+    "rationale": "A key is a stored field."
+   },
+   {
+    "key": "D",
+    "content": "It prompts the user for a value when the query runs",
+    "rationale": "That is a parameter."
+   }
+  ],
+  "explanation": "A calculated field is an expression in the query, such as `Hours * Rate AS Pay`; it is not stored in a table.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "db.advanced-queries.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A pharmacy saves a query whose criteria for the Supplier field is `[Enter supplier name]`. What happens when the query is run?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Only records whose supplier is literally 'Enter supplier name' are shown",
+    "rationale": "Square brackets make it a prompt, not a text value."
+   },
+   {
+    "key": "B",
+    "content": "Every record is shown, sorted by supplier name",
+    "rationale": "No sorting is set; the criterion filters records."
+   },
+   {
+    "key": "C",
+    "content": "The user is asked to type a supplier name, and only that supplier's records are shown",
+    "correct": true,
+    "rationale": "Correct: it is a parameter query."
+   },
+   {
+    "key": "D",
+    "content": "A new supplier record is added to the table",
+    "rationale": "Queries that select records do not add records."
+   }
+  ],
+  "explanation": "A parameter query prompts for a value at run time and uses it in the criteria, so one query serves every supplier.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "db.advanced-queries.q04",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The values of a calculated field in a query are stored permanently in the table.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. They are calculated whenever the query runs, so they always use the current values of the fields.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "db.advanced-queries.q05",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A query with `GROUP BY Town` and `COUNT(*)` returns one row for each different town.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Records with the same town form one group, and COUNT gives the number of records in each group.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.advanced-queries.q06",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "Match each term to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Join"
+    },
+    {
+     "id": "L2",
+     "content": "Calculated field"
+    },
+    {
+     "id": "L3",
+     "content": "Parameter query"
+    },
+    {
+     "id": "L4",
+     "content": "GROUP BY"
+    },
+    {
+     "id": "L5",
+     "content": "Database connection"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Asks the user for a value when it runs and uses it as the criterion"
+    },
+    {
+     "id": "R4",
+     "content": "Gives one result row for each set of records sharing a value"
+    },
+    {
+     "id": "R5",
+     "content": "The link a program opens to send SQL to a database"
+    },
+    {
+     "id": "R1",
+     "content": "Combines related records from two tables using matching key values"
+    },
+    {
+     "id": "R2",
+     "content": "A result column worked out from other fields, such as Hours * Rate"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Join, calculated field, parameter query, grouping and connection are the Form 4 query and programming terms.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.advanced-queries.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A tour company stores these tables.\n\n| TourCode | Destination | PricePerPerson |\n|:-:|:-:|:-:|\n| TR-A | Great Zimbabwe | 35 |\n| TR-B | Matobo Hills | 28 |\n| TR-C | Chimanimani | 42 |\n\n| BookingNo | TourCode | People |\n|:-:|:-:|:-:|\n| 6021 | TR-B | 3 |\n| 6022 | TR-C | 2 |\n| 6023 | TR-A | 5 |\n| 6024 | TR-B | 4 |\n\nWhat value of Cost is output by this query?\n\n```\nSELECT Bookings.BookingNo, Tours.Destination, Bookings.People * Tours.PricePerPerson AS Cost\nFROM Bookings\nINNER JOIN Tours ON Bookings.TourCode = Tours.TourCode\nWHERE Bookings.BookingNo = 6024;\n```",
+  "answerSpec": {
+   "value": 112
+  },
+  "explanation": "Booking 6024 is for TR-B (Matobo Hills, 28 per person) with 4 people: 4 × 28 = 112.",
+  "workedSolution": "1. Booking 6024: TourCode TR-B, People 4.\n2. Join: TR-B has PricePerPerson 28.\n3. Cost = 4 × 28 = 112.",
+  "hints": [
+   "Find the tour for booking 6024, then its price per person."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "112"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "140"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "db.advanced-queries.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A school stores clubs and members.\n\n| ClubID | ClubName |\n|:-:|:-:|\n| CB1 | Debate |\n| CB2 | Chess |\n| CB3 | Choir |\n\n| MemberID | FirstName | ClubID |\n|:-:|:-:|:-:|\n| MB-A | Tendai | CB2 |\n| MB-B | Rudo | CB3 |\n| MB-C | Sipho | CB2 |\n| MB-D | Chipo | CB3 |\n| MB-E | Farai | CB2 |\n| MB-F | Nyasha | CB1 |\n\nThis query is run:\n\n```\nSELECT Clubs.ClubName, COUNT(*) AS Total\nFROM Members\nINNER JOIN Clubs ON Members.ClubID = Clubs.ClubID\nGROUP BY Clubs.ClubName;\n```\n\nWhat is the value of Total in the row for Chess?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "Chess is CB2, which appears 3 times in Members. The full output:\n\n| ClubName | Total |\n|:-:|:-:|\n| Chess | 3 |\n| Choir | 2 |\n| Debate | 1 |",
+  "workedSolution": "1. Chess has ClubID CB2.\n2. Members with CB2: Tendai, Sipho, Farai.\n3. COUNT = 3.",
+  "hints": [
+   "Find the ClubID of Chess, then count it in Members."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "db.advanced-queries.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The table `Results` has the fields `ResultID`, `CandidateNo`, `Subject` and `Grade`. The table `Candidates` has the fields `CandidateNo`, `Surname` and `Centre`. Which join condition links the tables correctly?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`ON Results.ResultID = Candidates.CandidateNo`",
+    "rationale": "ResultID is the key of Results, not a link to a candidate."
+   },
+   {
+    "key": "B",
+    "content": "`ON Results.Subject = Candidates.Surname`",
+    "rationale": "These fields hold different kinds of data."
+   },
+   {
+    "key": "C",
+    "content": "`ON Results.CandidateNo = Candidates.CandidateNo`",
+    "correct": true,
+    "rationale": "Correct: the foreign key in Results matches the primary key of Candidates."
+   },
+   {
+    "key": "D",
+    "content": "`ON Results.Grade = Candidates.Centre`",
+    "rationale": "Grade and Centre are not related fields."
+   }
+  ],
+  "explanation": "Tables are joined on the field they share: the foreign key `Results.CandidateNo` and the primary key `Candidates.CandidateNo`.",
+  "hints": [
+   "Match the foreign key to the primary key it refers to."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.advanced-queries.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the query, which lists each employee's name with their weekly pay (hours multiplied by hourly rate). `Timesheets` holds `EmpID` and `Hours`; `Employees` holds `EmpID`, `EmpName` and `Rate`.",
+  "payload": {
+   "template": "SELECT Employees.EmpName, Timesheets.Hours * Employees.Rate {{blank:a}} WeeklyPay\n\nFROM Timesheets\n\nINNER JOIN Employees {{blank:b}} Timesheets.EmpID = Employees.{{blank:c}};",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "AS",
+      "ON",
+      "BY",
+      "SET"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "ON",
+      "AS",
+      "WHERE",
+      "BY"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "EmpID",
+      "EmpName",
+      "Rate",
+      "Hours"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "AS"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "ON"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "EmpID"
+     ]
+    }
+   ]
+  },
+  "explanation": "`AS WeeklyPay` names the calculated field; `ON Timesheets.EmpID = Employees.EmpID` matches the foreign key to the primary key.",
+  "hints": [
+   "Which keyword gives a calculated column a name?",
+   "Which keyword introduces the join condition?"
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "AS"
+    },
+    {
+     "blankId": "b",
+     "text": "ON"
+    },
+    {
+     "blankId": "c",
+     "text": "EmpID"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "ON"
+     },
+     {
+      "blankId": "b",
+      "text": "AS"
+     },
+     {
+      "blankId": "c",
+      "text": "EmpName"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.advanced-queries.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A school canteen stores meals and orders.\n\n| MealID | MealName | Price |\n|:-:|:-:|:-:|\n| ML1 | Sadza and beef | 3 |\n| ML2 | Rice and chicken | 4 |\n| ML3 | Vegetable stew | 2 |\n\n| OrderID | MealID | Qty |\n|:-:|:-:|:-:|\n| OD-1 | ML2 | 11 |\n| OD-2 | ML1 | 14 |\n| OD-3 | ML3 | 9 |\n| OD-4 | ML2 | 6 |\n\nA query groups the orders by meal name and sums Qty. Which meal has the largest total?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "Rice and chicken"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "Totals: Rice and chicken 17, Sadza and beef 14, Vegetable stew 9. The largest is Rice and chicken.",
+  "hints": [
+   "Group the orders by meal and add their quantities."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "Rice and chicken"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "Sadza and beef"
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "db.advanced-queries.q12",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Using the same canteen tables, state the output of this query.\n\n| MealID | MealName | Price |\n|:-:|:-:|:-:|\n| ML1 | Sadza and beef | 3 |\n| ML2 | Rice and chicken | 4 |\n| ML3 | Vegetable stew | 2 |\n\n| OrderID | MealID | Qty |\n|:-:|:-:|:-:|\n| OD-1 | ML2 | 11 |\n| OD-2 | ML1 | 14 |\n| OD-3 | ML3 | 9 |\n| OD-4 | ML2 | 6 |\n\n```\nSELECT SUM(Orders.Qty * Meals.Price) AS Takings\nFROM Orders\nINNER JOIN Meals ON Orders.MealID = Meals.MealID;\n```",
+  "answerSpec": {
+   "value": 128
+  },
+  "explanation": "Each order's value is Qty × Price: 11 × 4 + 14 × 3 + 9 × 2 + 6 × 4 = 128.",
+  "workedSolution": "1. Join each order to its meal's price.\n2. OD-1: 11 × 4 = 44; OD-2: 14 × 3 = 42; OD-3: 9 × 2 = 18; OD-4: 6 × 4 = 24.\n3. Sum = 128.",
+  "hints": [
+   "Work out Qty × Price for each order, then add."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "128"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "40"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "db.advanced-queries.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A program has run an UPDATE statement on a database. Which step makes the change permanent?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Opening the connection again",
+    "rationale": "Opening a connection does not save earlier changes."
+   },
+   {
+    "key": "B",
+    "content": "Running a SELECT statement",
+    "rationale": "SELECT only reads data."
+   },
+   {
+    "key": "C",
+    "content": "Printing the records on screen",
+    "rationale": "Displaying data does not save it."
+   },
+   {
+    "key": "D",
+    "content": "Committing the changes",
+    "correct": true,
+    "rationale": "Correct: commit saves the changes to the database."
+   }
+  ],
+  "explanation": "The usual steps are connect, send SQL, use the results, commit any changes, then close the connection.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "db.advanced-queries.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Why should a program pass the text typed by a user to the database as a parameter (placeholder), rather than joining it into the SQL statement?",
+  "options": [
+   {
+    "key": "A",
+    "content": "So the query runs without needing a database connection",
+    "rationale": "A connection is always needed."
+   },
+   {
+    "key": "B",
+    "content": "So the user's text is automatically spelt correctly",
+    "rationale": "Parameters do not check spelling."
+   },
+   {
+    "key": "C",
+    "content": "So the results are always sorted in ascending order",
+    "rationale": "Sorting is set by ORDER BY."
+   },
+   {
+    "key": "D",
+    "content": "So the input is treated only as data, which prevents SQL injection",
+    "correct": true,
+    "rationale": "Correct: typed SQL code cannot change the statement."
+   }
+  ],
+  "explanation": "If input is pasted into the SQL text, a user could type SQL that changes or deletes data (SQL injection). Parameters keep input separate from the statement.",
+  "hints": [
+   "What could a user type into a search box?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.advanced-queries.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "A clerk suggests adding a field `TotalCost` to the `Orders` table and typing in Quantity × UnitPrice for every order. Explain why a calculated field in a query is better.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A calculated field is worked out from the current data every time, so it is always correct (a stored total becomes wrong / inconsistent if the quantity or price changes)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "It saves typing / storage and avoids arithmetic errors by the clerk",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The query calculates TotalCost from the current quantity and price each time it runs, so it is never out of date and never mistyped. A stored total would be wrong as soon as an order or price changed, and typing it in wastes time."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Derived values should be calculated, not stored.",
+  "hints": [
+   "What happens to a stored total when a price changes?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.advanced-queries.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Describe the steps a program takes to read the records of a database table and display them.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Opens a connection to the database (file or server)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Sends / executes an SQL SELECT statement (with any user input passed as parameters)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Reads the returned records one at a time in a loop and displays the fields of each",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Closes the connection when finished",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The program first opens a connection to the database. It then executes a SELECT statement, passing any search value as a parameter. It loops through the records returned, displaying the fields of each one, and finally closes the connection."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Connect, query, loop through the results, close.",
+  "hints": [
+   "Think of the steps from opening the database to finishing with it."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.advanced-queries.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "Farai writes this Python program for his school library project.\n\n```\nimport sqlite3\n\nconn = sqlite3.connect(\":memory:\")\ncur = conn.cursor()\ncur.execute(\"CREATE TABLE Books (BookID TEXT, Title TEXT, Copies INTEGER)\")\ncur.executemany(\"INSERT INTO Books VALUES (?, ?, ?)\",\n                [(\"K1\", \"Atlas\", 4), (\"K2\", \"Poems\", 1), (\"K3\", \"Physics\", 6)])\nconn.commit()\n\nwanted = 3\ncur.execute(\"SELECT Title FROM Books WHERE Copies >= ? ORDER BY Copies DESC\", (wanted,))\nfor row in cur.fetchall():\n    print(row[0])\n\ncur.execute(\"UPDATE Books SET Copies = Copies + 2 WHERE BookID = ?\", (\"K2\",))\nconn.commit()\ncur.execute(\"SELECT SUM(Copies) FROM Books\")\nprint(\"Total copies:\", cur.fetchone()[0])\nconn.close()\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Write the first two lines that the program outputs, in order, separated by a comma.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Physics, Atlas",
+       "marks": 2
+      },
+      {
+       "value": "Atlas, Physics",
+       "marks": 1,
+       "feedback": "Right titles, but DESC puts the larger number of copies first."
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Books with at least 3 copies: Atlas (4) and Physics (6). Sorted by Copies descending: Physics, Atlas."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number printed on the last line.",
+    "answerSpec": {
+     "value": 13
+    },
+    "explanation": "Poems rises from 1 to 3 copies, so the total is 4 + 3 + 6 = 13.",
+    "workedSolution": "1. UPDATE: K2 has 1 + 2 = 3 copies.\n2. SUM = 4 + 3 + 6 = 13."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the purpose of `conn.commit()` after the UPDATE?",
+    "options": [
+     {
+      "key": "A",
+      "content": "To open a connection to the database",
+      "rationale": "That is sqlite3.connect."
+     },
+     {
+      "key": "B",
+      "content": "To save the change permanently in the database",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "To print the updated record on screen",
+      "rationale": "print does that."
+     },
+     {
+      "key": "D",
+      "content": "To undo the change if it was a mistake",
+      "rationale": "That would be a rollback."
+     }
+    ],
+    "explanation": "commit makes the changes of INSERT, UPDATE and DELETE permanent."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The program passes `wanted` to the SELECT statement using `?`. Explain why this is better than joining the value into the SQL text.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The value is treated only as data, not as part of the SQL command",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "This prevents SQL injection (a user typing SQL that changes or deletes data) / avoids quoting errors",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: With a placeholder, the database treats the value strictly as data, so if the value came from a user, any SQL they typed could not change the statement. This protects against SQL injection."
+    }
+   }
+  ],
+  "explanation": "Output: Physics / Atlas / Total copies: 13.",
+  "hints": [
+   "The ? is replaced by the value of wanted.",
+   "The UPDATE adds 2 copies to one book only."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "Physics, Atlas"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "13"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "Atlas"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "11"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "db.advanced-queries.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.db.advanced-queries"
+  ],
+  "difficulty": 5,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A courier company stores its branches and parcels.\n\n| BranchID | Town |\n|:-:|:-:|\n| BX1 | Harare |\n| BX2 | Bulawayo |\n| BX3 | Kwekwe |\n\n| ParcelNo | BranchID | MassKg | Express |\n|:-:|:-:|:-:|:-:|\n| 9011 | BX2 | 3 | TRUE |\n| 9012 | BX1 | 12 | FALSE |\n| 9013 | BX2 | 7 | FALSE |\n| 9014 | BX3 | 2 | TRUE |\n| 9015 | BX2 | 5 | TRUE |\n| 9016 | BX1 | 4 | TRUE |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the output of this query.\n\n```\nSELECT Parcels.ParcelNo, Branches.Town\nFROM Parcels\nINNER JOIN Branches ON Parcels.BranchID = Branches.BranchID\nWHERE Parcels.Express = TRUE AND Parcels.MassKg > 3;\n```",
+    "payload": {
+     "template": "Row 1: ParcelNo {{blank:n0}}, Town {{blank:t0}}\n\nRow 2: ParcelNo {{blank:n1}}, Town {{blank:t1}}",
+     "blanks": [
+      {
+       "id": "n0",
+       "input": "number"
+      },
+      {
+       "id": "t0",
+       "input": "select",
+       "choices": [
+        "Harare",
+        "Bulawayo",
+        "Kwekwe"
+       ]
+      },
+      {
+       "id": "n1",
+       "input": "number"
+      },
+      {
+       "id": "t1",
+       "input": "select",
+       "choices": [
+        "Harare",
+        "Bulawayo",
+        "Kwekwe"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "n0",
+       "accepted": [
+        "9015"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "t0",
+       "accepted": [
+        "Bulawayo"
+       ]
+      },
+      {
+       "id": "n1",
+       "accepted": [
+        "9016"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "t1",
+       "accepted": [
+        "Harare"
+       ]
+      }
+     ]
+    },
+    "explanation": "Express parcels heavier than 3 kg:\n\n| ParcelNo | Town |\n|:-:|:-:|\n| 9015 | Bulawayo |\n| 9016 | Harare |"
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the output of this query.\n\n```\nSELECT Branches.Town, SUM(Parcels.MassKg) AS TotalMass\nFROM Parcels\nINNER JOIN Branches ON Parcels.BranchID = Branches.BranchID\nGROUP BY Branches.Town\nORDER BY TotalMass DESC;\n```",
+    "payload": {
+     "template": "Row 1: Town {{blank:t0}}, TotalMass {{blank:m0}}\n\nRow 2: Town {{blank:t1}}, TotalMass {{blank:m1}}\n\nRow 3: Town {{blank:t2}}, TotalMass {{blank:m2}}",
+     "blanks": [
+      {
+       "id": "t0",
+       "input": "select",
+       "choices": [
+        "Harare",
+        "Bulawayo",
+        "Kwekwe"
+       ]
+      },
+      {
+       "id": "m0",
+       "input": "number"
+      },
+      {
+       "id": "t1",
+       "input": "select",
+       "choices": [
+        "Harare",
+        "Bulawayo",
+        "Kwekwe"
+       ]
+      },
+      {
+       "id": "m1",
+       "input": "number"
+      },
+      {
+       "id": "t2",
+       "input": "select",
+       "choices": [
+        "Harare",
+        "Bulawayo",
+        "Kwekwe"
+       ]
+      },
+      {
+       "id": "m2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "t0",
+       "accepted": [
+        "Harare"
+       ]
+      },
+      {
+       "id": "m0",
+       "accepted": [
+        "16"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "t1",
+       "accepted": [
+        "Bulawayo"
+       ]
+      },
+      {
+       "id": "m1",
+       "accepted": [
+        "15"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "t2",
+       "accepted": [
+        "Kwekwe"
+       ]
+      },
+      {
+       "id": "m2",
+       "accepted": [
+        "2"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Masses by town, heaviest first:\n\n| Town | TotalMass |\n|:-:|:-:|\n| Harare | 16 |\n| Bulawayo | 15 |\n| Kwekwe | 2 |"
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The manager wants one saved query that lists the parcels for whichever town she types in. Describe how this would be set up.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A parameter query: the criterion for Town is a prompt such as [Enter town] (or a ? placeholder)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The query joins Parcels to Branches on BranchID so that Town can be tested / the typed town is used to select records each time it runs",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Make a parameter query joining Parcels and Branches on BranchID, with [Enter town] as the criterion for Town. Each time it runs, she types a town and only that town's parcels are listed."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why does Town have to come from the Branches table rather than being stored again in Parcels?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Parcels cannot have more than four fields",
+      "rationale": "There is no such limit."
+     },
+     {
+      "key": "B",
+      "content": "Each town is then stored once, avoiding repeated data",
+      "correct": true,
+      "rationale": "Correct: the parcel stores only the BranchID foreign key."
+     },
+     {
+      "key": "C",
+      "content": "A join only works when no field is repeated",
+      "rationale": "Joins depend on matching keys."
+     },
+     {
+      "key": "D",
+      "content": "Town is the primary key of Parcels",
+      "rationale": "ParcelNo is the primary key of Parcels."
+     }
+    ],
+    "explanation": "Storing the town once in Branches reduces redundancy; the join fetches it when needed."
+   }
+  ],
+  "explanation": "(a) 9015 Bulawayo; 9016 Harare. (b) Harare 16; Bulawayo 15; Kwekwe 2.",
+  "hints": [
+   "Join first: each parcel takes its branch's town.",
+   "Group by town and add the masses."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "n0",
+       "text": "9015"
+      },
+      {
+       "blankId": "t0",
+       "text": "Bulawayo"
+      },
+      {
+       "blankId": "n1",
+       "text": "9016"
+      },
+      {
+       "blankId": "t1",
+       "text": "Harare"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "t0",
+       "text": "Harare"
+      },
+      {
+       "blankId": "m0",
+       "text": "16"
+      },
+      {
+       "blankId": "t1",
+       "text": "Bulawayo"
+      },
+      {
+       "blankId": "m1",
+       "text": "15"
+      },
+      {
+       "blankId": "t2",
+       "text": "Kwekwe"
+      },
+      {
+       "blankId": "m2",
+       "text": "2"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "n0",
+        "text": "9011"
+       },
+       {
+        "blankId": "t0",
+        "text": "Harare"
+       },
+       {
+        "blankId": "n1",
+        "text": "9011"
+       },
+       {
+        "blankId": "t1",
+        "text": "Kwekwe"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "t0",
+        "text": "Bulawayo"
+       },
+       {
+        "blankId": "m0",
+        "text": "17"
+       },
+       {
+        "blankId": "t1",
+        "text": "Kwekwe"
+       },
+       {
+        "blankId": "m1",
+        "text": "16"
+       },
+       {
+        "blankId": "t2",
+        "text": "Harare"
+       },
+       {
+        "blankId": "m2",
+        "text": "3"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

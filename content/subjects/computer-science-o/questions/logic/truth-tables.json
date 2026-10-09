@@ -1,0 +1,2270 @@
+[
+ {
+  "key": "logic.truth-tables.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many rows does a truth table need for a circuit with three inputs?",
+  "options": [
+   {
+    "key": "A",
+    "content": "6",
+    "rationale": "Three inputs give 2 × 2 × 2 combinations, not 2 × 3."
+   },
+   {
+    "key": "B",
+    "content": "8",
+    "correct": true,
+    "rationale": "Correct: $2^3 = 8$ combinations, 000 to 111."
+   },
+   {
+    "key": "C",
+    "content": "9",
+    "rationale": "Each input has 2 values, not 3: use $2^3$, not $3^2$."
+   },
+   {
+    "key": "D",
+    "content": "4",
+    "rationale": "Four rows are needed for two inputs."
+   }
+  ],
+  "explanation": "Each input can be 0 or 1, so the number of combinations is $2^n$; for three inputs $2^3 = 8$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.truth-tables.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In a three-input truth table written in binary order, what are the values of A, B and C in the **sixth** row?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A = 1, B = 1, C = 0",
+    "rationale": "That is 110, the binary number 6, which is the seventh row."
+   },
+   {
+    "key": "B",
+    "content": "A = 1, B = 0, C = 1",
+    "correct": true,
+    "rationale": "Correct: the sixth row is the binary number 5, which is 101."
+   },
+   {
+    "key": "C",
+    "content": "A = 0, B = 1, C = 1",
+    "rationale": "That is 011, the binary number 3, the fourth row."
+   },
+   {
+    "key": "D",
+    "content": "A = 1, B = 0, C = 0",
+    "rationale": "That is 100, the binary number 4, the fifth row."
+   }
+  ],
+  "explanation": "Rows count from 000 (row 1) upwards, so row 6 is the binary form of 5: 101.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.truth-tables.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the output of `X = (A XOR B) AND C` when A = 1, B = 1 and C = 1?",
+  "options": [
+   {
+    "key": "A",
+    "content": "0",
+    "correct": true,
+    "rationale": "Correct: 1 XOR 1 = 0, and 0 AND 1 = 0."
+   },
+   {
+    "key": "B",
+    "content": "1",
+    "rationale": "This treats 1 XOR 1 as 1, as if XOR were OR."
+   },
+   {
+    "key": "C",
+    "content": "It cannot be worked out without the circuit",
+    "rationale": "The expression gives all the information needed."
+   },
+   {
+    "key": "D",
+    "content": "It depends on the order of A and B",
+    "rationale": "XOR gives the same result whichever input is first."
+   }
+  ],
+  "explanation": "Work inside the bracket first: 1 XOR 1 = 0 (the inputs are the same). Then 0 AND 1 = 0.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "logic.truth-tables.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "For which inputs is the output of `X = (A AND NOT B) OR C` equal to **0**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A = 1, B = 0, C = 0",
+    "rationale": "A AND NOT B = 1 AND 1 = 1, so X = 1."
+   },
+   {
+    "key": "B",
+    "content": "A = 0, B = 1, C = 1",
+    "rationale": "C = 1, so the OR gives X = 1."
+   },
+   {
+    "key": "C",
+    "content": "A = 1, B = 1, C = 0",
+    "correct": true,
+    "rationale": "Correct: NOT B = 0, so A AND NOT B = 0; with C = 0 the OR gives 0."
+   },
+   {
+    "key": "D",
+    "content": "A = 1, B = 1, C = 1",
+    "rationale": "C = 1, so X = 1."
+   }
+  ],
+  "explanation": "X = 0 needs both parts of the OR to be 0: C = 0 and (A AND NOT B) = 0. Among the options only A = 1, B = 1, C = 0 does this. Output column: 01011101.",
+  "hints": [
+   "X is 1 whenever C = 1, so look at rows with C = 0.",
+   "Then A AND NOT B must also be 0."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.truth-tables.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which expression gives this output column X (rows 000 to 111 in binary order)?\n\n| A | B | C | X |\n|:-:|:-:|:-:|:-:|\n| 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 0 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 1 |\n| 1 | 0 | 0 | 0 |\n| 1 | 0 | 1 | 1 |\n| 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | 1 |",
+  "options": [
+   {
+    "key": "A",
+    "content": "`X = (A OR B) AND C`",
+    "correct": true,
+    "rationale": "Correct: the column is 00010101: C must be 1 and at least one of A and B must be 1."
+   },
+   {
+    "key": "B",
+    "content": "`X = (A AND B) OR C`",
+    "rationale": "This gives 01010111: row 001 would be 1."
+   },
+   {
+    "key": "C",
+    "content": "`X = (A OR B) OR C`",
+    "rationale": "This gives 01111111: every row except 000 would be 1."
+   },
+   {
+    "key": "D",
+    "content": "`X = (A XOR B) AND C`",
+    "rationale": "This gives 00010100: row 111 would be 0."
+   }
+  ],
+  "explanation": "X is 1 in rows 011, 101 and 111: C is always 1 and A or B (or both) is 1, so X = (A OR B) AND C.",
+  "hints": [
+   "Find the rows where X = 1. What do they have in common?",
+   "Test each option on row 111 and row 001."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "logic.truth-tables.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "For which inputs is the output of `X = (NOT A) OR B` equal to 0?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A = 0, B = 0",
+    "rationale": "NOT A = 1, so X = 1."
+   },
+   {
+    "key": "B",
+    "content": "A = 1, B = 1",
+    "rationale": "B = 1, so X = 1."
+   },
+   {
+    "key": "C",
+    "content": "A = 1, B = 0",
+    "correct": true,
+    "rationale": "Correct: NOT A = 0 and B = 0, so X = 0."
+   },
+   {
+    "key": "D",
+    "content": "A = 0, B = 1",
+    "rationale": "Both parts are 1, so X = 1."
+   }
+  ],
+  "explanation": "An OR output is 0 only when both of its inputs are 0: NOT A = 0 (so A = 1) and B = 0.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.truth-tables.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Tatenda completed the truth table for `X = (A AND B) XOR C`. Reading the X column from row 000 to row 111, he wrote 0, 1, 0, 1, 0, 1, 0, 0. In which row did he make a mistake?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A = 1, B = 1, C = 1",
+    "rationale": "A AND B = 1 and C = 1, so X = 1 XOR 1 = 0, which he wrote correctly."
+   },
+   {
+    "key": "B",
+    "content": "A = 0, B = 1, C = 1",
+    "rationale": "A AND B = 0, so X = 0 XOR 1 = 1, which he wrote correctly."
+   },
+   {
+    "key": "C",
+    "content": "A = 1, B = 0, C = 0",
+    "rationale": "A AND B = 0 and C = 0, so X = 0, which he wrote correctly."
+   },
+   {
+    "key": "D",
+    "content": "A = 1, B = 1, C = 0",
+    "correct": true,
+    "rationale": "Correct: A AND B = 1 and C = 0, so X = 1 XOR 0 = 1; he wrote the opposite."
+   }
+  ],
+  "explanation": "The correct column is 01010110. Only row 110 differs.",
+  "hints": [
+   "Work out A AND B for each row, then XOR it with C.",
+   "Compare your column with his, row by row."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "logic.truth-tables.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "`NOT (A AND B)` and `(NOT A) AND B` give the same truth table.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. NOT (A AND B) is NAND: 1110. (NOT A) AND B gives 0100. The position of NOT and the brackets matter.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.truth-tables.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In a three-input truth table in binary order, input C changes value on every row.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. C is the least significant bit, so it alternates 0, 1, 0, 1, …; B changes every two rows and A every four.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "logic.truth-tables.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Complete the truth table for `X = NOT (A OR B)`.",
+  "payload": {
+   "template": "A = 0, B = 0: X = {{blank:r1}}\n\nA = 0, B = 1: X = {{blank:r2}}\n\nA = 1, B = 0: X = {{blank:r3}}\n\nA = 1, B = 1: X = {{blank:r4}}",
+   "blanks": [
+    {
+     "id": "r1",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r2",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r4",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "r1",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r2",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r3",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r4",
+     "accepted": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "explanation": "A OR B gives 0111; inverting gives 1000. (This is the NOR pattern.)",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "r1",
+     "text": "1"
+    },
+    {
+     "blankId": "r2",
+     "text": "0"
+    },
+    {
+     "blankId": "r3",
+     "text": "0"
+    },
+    {
+     "blankId": "r4",
+     "text": "0"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "r1",
+      "text": "0"
+     },
+     {
+      "blankId": "r2",
+      "text": "1"
+     },
+     {
+      "blankId": "r3",
+      "text": "1"
+     },
+     {
+      "blankId": "r4",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.truth-tables.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 480,
+  "stem": "Complete the truth table for `X = (A XOR B) AND C`.",
+  "payload": {
+   "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+   "blanks": [
+    {
+     "id": "r1",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r2",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r4",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r5",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r6",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r7",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r8",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "r1",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r2",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r3",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r4",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r5",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r6",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r7",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r8",
+     "accepted": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "explanation": "A XOR B: 00111100. AND with C keeps a 1 only where C = 1: X = 00010100.",
+  "hints": [
+   "Make a working column for A XOR B first.",
+   "X can only be 1 in rows where C = 1."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "r1",
+     "text": "0"
+    },
+    {
+     "blankId": "r2",
+     "text": "0"
+    },
+    {
+     "blankId": "r3",
+     "text": "0"
+    },
+    {
+     "blankId": "r4",
+     "text": "1"
+    },
+    {
+     "blankId": "r5",
+     "text": "0"
+    },
+    {
+     "blankId": "r6",
+     "text": "1"
+    },
+    {
+     "blankId": "r7",
+     "text": "0"
+    },
+    {
+     "blankId": "r8",
+     "text": "0"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "r1",
+      "text": "1"
+     },
+     {
+      "blankId": "r2",
+      "text": "1"
+     },
+     {
+      "blankId": "r3",
+      "text": "1"
+     },
+     {
+      "blankId": "r4",
+      "text": "0"
+     },
+     {
+      "blankId": "r5",
+      "text": "1"
+     },
+     {
+      "blankId": "r6",
+      "text": "0"
+     },
+     {
+      "blankId": "r7",
+      "text": "1"
+     },
+     {
+      "blankId": "r8",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.truth-tables.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Complete the truth table for `X = (A NOR B) OR (B AND C)`.",
+  "payload": {
+   "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+   "blanks": [
+    {
+     "id": "r1",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r2",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r4",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r5",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r6",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r7",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r8",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "r1",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r2",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r4",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r5",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r6",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r7",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r8",
+     "accepted": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "explanation": "P = A NOR B: 11000000. Q = B AND C: 00010001. X = P OR Q: 11010001.\n\n| A | B | C | P | Q | X |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| 0 | 0 | 0 | 1 | 0 | 1 |\n| 0 | 0 | 1 | 1 | 0 | 1 |\n| 0 | 1 | 0 | 0 | 0 | 0 |\n| 0 | 1 | 1 | 0 | 1 | 1 |\n| 1 | 0 | 0 | 0 | 0 | 0 |\n| 1 | 0 | 1 | 0 | 0 | 0 |\n| 1 | 1 | 0 | 0 | 0 | 0 |\n| 1 | 1 | 1 | 0 | 1 | 1 |",
+  "hints": [
+   "Use two working columns: P = A NOR B and Q = B AND C.",
+   "X is 1 if P or Q is 1."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "r1",
+     "text": "1"
+    },
+    {
+     "blankId": "r2",
+     "text": "1"
+    },
+    {
+     "blankId": "r3",
+     "text": "0"
+    },
+    {
+     "blankId": "r4",
+     "text": "1"
+    },
+    {
+     "blankId": "r5",
+     "text": "0"
+    },
+    {
+     "blankId": "r6",
+     "text": "0"
+    },
+    {
+     "blankId": "r7",
+     "text": "0"
+    },
+    {
+     "blankId": "r8",
+     "text": "1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "r1",
+      "text": "0"
+     },
+     {
+      "blankId": "r2",
+      "text": "0"
+     },
+     {
+      "blankId": "r3",
+      "text": "1"
+     },
+     {
+      "blankId": "r4",
+      "text": "0"
+     },
+     {
+      "blankId": "r5",
+      "text": "1"
+     },
+     {
+      "blankId": "r6",
+      "text": "1"
+     },
+     {
+      "blankId": "r7",
+      "text": "1"
+     },
+     {
+      "blankId": "r8",
+      "text": "0"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.truth-tables.q13",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "A circuit is described as follows. Inputs A and C go into an AND gate. Input B goes into a NOT gate. The outputs of the AND gate and the NOT gate go into an OR gate, whose output is X.\n\nComplete the truth table for this circuit.",
+  "payload": {
+   "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+   "blanks": [
+    {
+     "id": "r1",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r2",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r4",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r5",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r6",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r7",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r8",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "r1",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r2",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r4",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r5",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r6",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r7",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r8",
+     "accepted": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "explanation": "The circuit is X = (A AND C) OR (NOT B). NOT B makes rows 000, 001, 100 and 101 equal to 1; A AND C adds row 111. X = 11001101.\n\n| A | B | C | A AND C | NOT B | X |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| 0 | 0 | 0 | 0 | 1 | 1 |\n| 0 | 0 | 1 | 0 | 1 | 1 |\n| 0 | 1 | 0 | 0 | 0 | 0 |\n| 0 | 1 | 1 | 0 | 0 | 0 |\n| 1 | 0 | 0 | 0 | 1 | 1 |\n| 1 | 0 | 1 | 1 | 1 | 1 |\n| 1 | 1 | 0 | 0 | 0 | 0 |\n| 1 | 1 | 1 | 1 | 0 | 1 |",
+  "hints": [
+   "Write the expression first: X = (A AND C) OR (NOT B).",
+   "Every row with B = 0 gives X = 1."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "r1",
+     "text": "1"
+    },
+    {
+     "blankId": "r2",
+     "text": "1"
+    },
+    {
+     "blankId": "r3",
+     "text": "0"
+    },
+    {
+     "blankId": "r4",
+     "text": "0"
+    },
+    {
+     "blankId": "r5",
+     "text": "1"
+    },
+    {
+     "blankId": "r6",
+     "text": "1"
+    },
+    {
+     "blankId": "r7",
+     "text": "0"
+    },
+    {
+     "blankId": "r8",
+     "text": "1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "r1",
+      "text": "0"
+     },
+     {
+      "blankId": "r2",
+      "text": "0"
+     },
+     {
+      "blankId": "r3",
+      "text": "1"
+     },
+     {
+      "blankId": "r4",
+      "text": "1"
+     },
+     {
+      "blankId": "r5",
+      "text": "0"
+     },
+     {
+      "blankId": "r6",
+      "text": "0"
+     },
+     {
+      "blankId": "r7",
+      "text": "1"
+     },
+     {
+      "blankId": "r8",
+      "text": "0"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "logic.truth-tables.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In the complete truth table for `X = (A NAND B) XOR C`, in how many of the eight rows is X equal to 1?",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "A NAND B: 11111100; C: 01010101; XOR: 10101001, which contains 4 ones.",
+  "workedSolution": "1. A NAND B for rows 000 to 111: 11111100.\n2. C: 01010101.\n3. XOR the two columns: 10101001.\n4. Count the 1s: 4.",
+  "hints": [
+   "A NAND B is 0 only in rows 110 and 111.",
+   "XOR with C gives 1 where the NAND output and C differ."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.truth-tables.q15",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "A circuit has the expression `X = (A AND B) NOR (B XOR C)`. Choose the values for the row A = 0, B = 1, C = 0.",
+  "payload": {
+   "template": "A AND B = {{blank:p}}\n\nB XOR C = {{blank:q}}\n\nX = {{blank:x}}",
+   "blanks": [
+    {
+     "id": "p",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "q",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "x",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "q",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "x",
+     "accepted": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "explanation": "A AND B = 0 AND 1 = 0; B XOR C = 1 XOR 0 = 1; X = 0 NOR 1 = 0.",
+  "hints": [
+   "NOR gives 1 only when both of its inputs are 0."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p",
+     "text": "0"
+    },
+    {
+     "blankId": "q",
+     "text": "1"
+    },
+    {
+     "blankId": "x",
+     "text": "0"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p",
+      "text": "1"
+     },
+     {
+      "blankId": "q",
+      "text": "0"
+     },
+     {
+      "blankId": "x",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.truth-tables.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "State the output of `X = (A OR B) AND C` when A = 0, B = 1 and C = 0.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "0"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "A OR B = 1, but C = 0, so X = 1 AND 0 = 0.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "0"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.truth-tables.q17",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each expression to its output column for the inputs A, B = 00, 01, 10, 11.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "`(NOT A) AND B`"
+    },
+    {
+     "id": "L2",
+     "content": "`A OR (NOT B)`"
+    },
+    {
+     "id": "L3",
+     "content": "`NOT (A XOR B)`"
+    },
+    {
+     "id": "L4",
+     "content": "`(NOT A) OR (NOT B)`"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "1001"
+    },
+    {
+     "id": "R4",
+     "content": "1110"
+    },
+    {
+     "id": "R1",
+     "content": "0100"
+    },
+    {
+     "id": "R2",
+     "content": "1011"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Work out each expression row by row. Note that `(NOT A) OR (NOT B)` gives the same column as NAND.",
+  "hints": [
+   "Write a NOT column for each inverted input first."
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.truth-tables.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Explain why it is good practice to include intermediate (working) columns when completing a truth table for a circuit with several gates. [2]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Each column records the output of one gate, so only one rule is applied at a time",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Reduces errors / makes it easy to check a row (and working can still earn credit)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Each working column holds the output of one gate, so you apply one gate's rule at a time instead of the whole expression at once. This reduces mistakes and makes each row easy to check."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Intermediate columns break a complex expression into simple steps.",
+  "hints": [
+   "Think about what an intermediate column records."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.truth-tables.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "A water pump at a farm near Masvingo is controlled by a circuit with three inputs: A (1 = tank full), B (1 = water in the borehole) and C (1 = manual override switch on).\n\nThe circuit: input A goes into a NOT gate. The output of the NOT gate and input B go into an AND gate. The output of the AND gate and input C go into an OR gate, whose output X switches the pump on (X = 1).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which logic expression describes this circuit?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`X = ((NOT A) AND B) OR C`",
+      "correct": true,
+      "rationale": "Correct: A is inverted first, then ANDed with B, then ORed with C."
+     },
+     {
+      "key": "B",
+      "content": "`X = (NOT (A AND B)) OR C`",
+      "rationale": "This inverts the AND result; in the circuit only A is inverted."
+     },
+     {
+      "key": "C",
+      "content": "`X = (NOT A) AND (B OR C)`",
+      "rationale": "This joins B and C first; in the circuit C enters only the final OR gate."
+     },
+     {
+      "key": "D",
+      "content": "`X = NOT ((A AND B) OR C)`",
+      "rationale": "This inverts the whole output; the NOT gate is on input A only."
+     }
+    ],
+    "explanation": "Follow the signals: NOT A, then AND with B, then OR with C."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the truth table for X.",
+    "payload": {
+     "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r8",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "X = 01110101."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Describe, in words, when the pump runs.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "When the override is on, or when the tank is not full and there is water in the borehole",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The pump runs whenever the override switch is on, or when the tank is not full and the borehole has water."
+    }
+   }
+  ],
+  "explanation": "X = ((NOT A) AND B) OR C, output 01110101.",
+  "hints": [
+   "Write the expression from the description first.",
+   "Use working columns for each gate before the final one."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "0"
+      },
+      {
+       "blankId": "r2",
+       "text": "1"
+      },
+      {
+       "blankId": "r3",
+       "text": "1"
+      },
+      {
+       "blankId": "r4",
+       "text": "1"
+      },
+      {
+       "blankId": "r5",
+       "text": "0"
+      },
+      {
+       "blankId": "r6",
+       "text": "1"
+      },
+      {
+       "blankId": "r7",
+       "text": "0"
+      },
+      {
+       "blankId": "r8",
+       "text": "1"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "1"
+       },
+       {
+        "blankId": "r2",
+        "text": "0"
+       },
+       {
+        "blankId": "r3",
+        "text": "0"
+       },
+       {
+        "blankId": "r4",
+        "text": "0"
+       },
+       {
+        "blankId": "r5",
+        "text": "1"
+       },
+       {
+        "blankId": "r6",
+        "text": "0"
+       },
+       {
+        "blankId": "r7",
+        "text": "1"
+       },
+       {
+        "blankId": "r8",
+        "text": "0"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "logic.truth-tables.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.logic.truth-tables"
+  ],
+  "difficulty": 5,
+  "marks": 8,
+  "estimatedSeconds": 480,
+  "stem": "A logic circuit is described as follows. Inputs A and C go into an XOR gate (output P). Input B goes into a NOT gate (output Q). P and Q go into a NAND gate, whose output is X.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the working column P = A XOR C.",
+    "payload": {
+     "template": "A = 0, B = 0, C = 0: P = {{blank:r1}}\n\nA = 0, B = 0, C = 1: P = {{blank:r2}}\n\nA = 0, B = 1, C = 0: P = {{blank:r3}}\n\nA = 0, B = 1, C = 1: P = {{blank:r4}}\n\nA = 1, B = 0, C = 0: P = {{blank:r5}}\n\nA = 1, B = 0, C = 1: P = {{blank:r6}}\n\nA = 1, B = 1, C = 0: P = {{blank:r7}}\n\nA = 1, B = 1, C = 1: P = {{blank:r8}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "P = 01011010."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the output column X.",
+    "payload": {
+     "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "Q = NOT B = 11001100; X = P NAND Q = 10110111."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State how many rows of the table give X = 0.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "X = 0 only where P = 1 and Q = 1.",
+    "workedSolution": "1. X column: 10110111.\n2. Count the 0s: 2."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Describe the input conditions that make X = 0.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B is 0 and A and C are different (exactly one of A and C is 1)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: X is 0 only when B = 0 and exactly one of A and C is 1."
+    }
+   }
+  ],
+  "explanation": "X = (A XOR C) NAND (NOT B): 10110111.",
+  "hints": [
+   "P = A XOR C and Q = NOT B are the working columns.",
+   "The final gate is NAND: it is 0 only when both of its inputs are 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "0"
+      },
+      {
+       "blankId": "r2",
+       "text": "1"
+      },
+      {
+       "blankId": "r3",
+       "text": "0"
+      },
+      {
+       "blankId": "r4",
+       "text": "1"
+      },
+      {
+       "blankId": "r5",
+       "text": "1"
+      },
+      {
+       "blankId": "r6",
+       "text": "0"
+      },
+      {
+       "blankId": "r7",
+       "text": "1"
+      },
+      {
+       "blankId": "r8",
+       "text": "0"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "1"
+      },
+      {
+       "blankId": "r2",
+       "text": "0"
+      },
+      {
+       "blankId": "r3",
+       "text": "1"
+      },
+      {
+       "blankId": "r4",
+       "text": "1"
+      },
+      {
+       "blankId": "r5",
+       "text": "0"
+      },
+      {
+       "blankId": "r6",
+       "text": "1"
+      },
+      {
+       "blankId": "r7",
+       "text": "1"
+      },
+      {
+       "blankId": "r8",
+       "text": "1"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "1"
+       },
+       {
+        "blankId": "r2",
+        "text": "0"
+       },
+       {
+        "blankId": "r3",
+        "text": "1"
+       },
+       {
+        "blankId": "r4",
+        "text": "0"
+       },
+       {
+        "blankId": "r5",
+        "text": "0"
+       },
+       {
+        "blankId": "r6",
+        "text": "1"
+       },
+       {
+        "blankId": "r7",
+        "text": "0"
+       },
+       {
+        "blankId": "r8",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "0"
+       },
+       {
+        "blankId": "r2",
+        "text": "1"
+       },
+       {
+        "blankId": "r3",
+        "text": "0"
+       },
+       {
+        "blankId": "r4",
+        "text": "0"
+       },
+       {
+        "blankId": "r5",
+        "text": "1"
+       },
+       {
+        "blankId": "r6",
+        "text": "0"
+       },
+       {
+        "blankId": "r7",
+        "text": "0"
+       },
+       {
+        "blankId": "r8",
+        "text": "0"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ }
+]

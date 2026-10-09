@@ -1,0 +1,376 @@
+[
+ {
+  "key": "exam.w4c-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.db.table-design",
+   "comp.db.sql"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A mobile phone shop in Harare stores details of the handsets it sells in a database table, `Handsets`.\n\n| HandsetID | Model | Brand | StorageGB | Price | Refurbished |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| HS-117 | Nova 5 | Kestrel | 64 | 135.50 | FALSE |\n| HS-123 | Nova 5 | Kestrel | 64 | 98.00 | TRUE |\n| HS-131 | Orbit X | Sable | 128 | 214.00 | FALSE |\n| HS-136 | Orbit Mini | Sable | 32 | 79.50 | TRUE |\n| HS-142 | Pulse 3 | Kestrel | 128 | 189.99 | FALSE |\n| HS-148 | Pulse 3 | Kestrel | 128 | 152.00 | TRUE |\n| HS-153 | Ridge | Granite | 256 | 214.00 | FALSE |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of fields in the table.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "Columns: HandsetID, Model, Brand, StorageGB, Price, Refurbished: 6 fields.",
+    "workedSolution": "1. Count the column headings: 6."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of records in the table.",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "There are 7 rows of data, one per handset.",
+    "workedSolution": "1. Count the rows below the headings: 7."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Identify the field that is most suitable as the primary key.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "HandsetID"
+      },
+      {
+       "value": "Handset ID"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "HandsetID is the only field with a different value in every record."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the Model field is **not** suitable as the primary key.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Model values repeat (e.g. Nova 5 and Pulse 3 appear twice), so Model cannot identify a single record / is not unique",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The same model appears in more than one record, for example Pulse 3 twice, so it does not identify one handset."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Choose the most suitable data type for each field.",
+    "payload": {
+     "template": "Price: {{blank:a}}\n\nRefurbished: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Integer",
+        "Real",
+        "Text",
+        "Boolean",
+        "Character",
+        "Date/time"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Integer",
+        "Real",
+        "Text",
+        "Boolean",
+        "Character",
+        "Date/time"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Real"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Boolean"
+       ]
+      }
+     ]
+    },
+    "explanation": "Prices have a fractional part (real); Refurbished is TRUE or FALSE (Boolean)."
+   },
+   {
+    "label": "(f)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the output of this SQL script.\n\n```\nSELECT Model, StorageGB\nFROM Handsets\nWHERE Brand = 'Kestrel' AND Refurbished = TRUE\nORDER BY StorageGB DESC;\n```",
+    "payload": {
+     "template": "Row 1: Model {{blank:m0}}, StorageGB {{blank:s0}}\n\nRow 2: Model {{blank:m1}}, StorageGB {{blank:s1}}",
+     "blanks": [
+      {
+       "id": "m0",
+       "input": "select",
+       "choices": [
+        "Nova 5",
+        "Orbit X",
+        "Orbit Mini",
+        "Pulse 3",
+        "Ridge"
+       ]
+      },
+      {
+       "id": "s0",
+       "input": "number"
+      },
+      {
+       "id": "m1",
+       "input": "select",
+       "choices": [
+        "Nova 5",
+        "Orbit X",
+        "Orbit Mini",
+        "Pulse 3",
+        "Ridge"
+       ]
+      },
+      {
+       "id": "s1",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m0",
+       "accepted": [
+        "Pulse 3"
+       ]
+      },
+      {
+       "id": "s0",
+       "accepted": [
+        "128"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "m1",
+       "accepted": [
+        "Nova 5"
+       ]
+      },
+      {
+       "id": "s1",
+       "accepted": [
+        "64"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Refurbished Kestrel handsets, largest storage first:\n\n| Model | StorageGB |\n|:-:|:-:|\n| Pulse 3 | 128 |\n| Nova 5 | 64 |"
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write an SQL script to display the model and price of every handset made by Sable or Granite, in ascending order of price.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "`SELECT Model, Price FROM Handsets`",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "`WHERE Brand = 'Sable' OR Brand = 'Granite'`",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "`ORDER BY Price ASC`",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: SELECT Model, Price\nFROM Handsets\nWHERE Brand = 'Sable' OR Brand = 'Granite'\nORDER BY Price ASC;"
+    }
+   },
+   {
+    "label": "(h)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the output of this SQL script.\n\n```\nSELECT COUNT(*)\nFROM Handsets\nWHERE StorageGB >= 128 OR Price < 80;\n```",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "Handsets with at least 128 GB: HS-131, HS-142, HS-148, HS-153; under 80 dollars: HS-136. COUNT = 5.",
+    "workedSolution": "1. StorageGB >= 128: 4 records.\n2. Price < 80: 1 record, not already counted.\n3. COUNT = 5."
+   }
+  ],
+  "explanation": "(a) 6 fields. (b) 7 records. (c) HandsetID. (e) Real, Boolean. (f) Pulse 3 128; Nova 5 64. (h) 5.",
+  "hints": [
+   "Filter with WHERE, sort with ORDER BY, then show only the selected fields.",
+   "With OR, count each record that meets at least one condition, once."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "HandsetID"
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Real"
+      },
+      {
+       "blankId": "b",
+       "text": "Boolean"
+      }
+     ]
+    },
+    "(f)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m0",
+       "text": "Pulse 3"
+      },
+      {
+       "blankId": "s0",
+       "text": "128"
+      },
+      {
+       "blankId": "m1",
+       "text": "Nova 5"
+      },
+      {
+       "blankId": "s1",
+       "text": "64"
+      }
+     ]
+    },
+    "(h)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "Model"
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Integer"
+       },
+       {
+        "blankId": "b",
+        "text": "Text"
+       }
+      ]
+     },
+     "(f)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m0",
+        "text": "Nova 5"
+       },
+       {
+        "blankId": "s0",
+        "text": "64"
+       },
+       {
+        "blankId": "m1",
+        "text": "Pulse 3"
+       },
+       {
+        "blankId": "s1",
+        "text": "128"
+       }
+      ]
+     },
+     "(h)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ }
+]

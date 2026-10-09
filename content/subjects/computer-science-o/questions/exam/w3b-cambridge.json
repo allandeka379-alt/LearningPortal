@@ -1,0 +1,321 @@
+[
+ {
+  "key": "exam.w3b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.validation-verification"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A weather station in Masvingo records temperatures. This algorithm validates each reading.\n\n```\nAttempts ← 0\nREPEAT\n    OUTPUT \"Enter temperature (-10 to 50)\"\n    INPUT Temperature\n    Attempts ← Attempts + 1\n    IF Temperature < -10 OR Temperature > 50\n        THEN\n            OUTPUT \"Out of range\"\n    ENDIF\nUNTIL Temperature >= -10 AND Temperature <= 50\nOUTPUT \"Accepted after \", Attempts, \" attempts\"\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which type of validation check does the algorithm perform?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Length check",
+      "rationale": "No characters are counted."
+     },
+     {
+      "key": "B",
+      "content": "Range check",
+      "correct": true,
+      "rationale": "Correct: the value must lie between -10 and 50."
+     },
+     {
+      "key": "C",
+      "content": "Presence check",
+      "rationale": "It does not only test for an empty input."
+     },
+     {
+      "key": "D",
+      "content": "Format check",
+      "rationale": "No pattern of characters is tested."
+     }
+    ],
+    "explanation": "A range check tests a value against lower and upper limits."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "The inputs are 64, -11, 50. Complete the results of a dry run.",
+    "payload": {
+     "template": "Number of times \"Out of range\" is output: {{blank:a}}. Value of `Attempts` in the final output: {{blank:b}}.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "2"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "3"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "64 > 50 and -11 < -10 are rejected (2 messages); 50 is accepted on attempt 3."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Classify each item of test data for this algorithm as normal, abnormal or extreme.",
+    "payload": {
+     "template": "-10: {{blank:t0}}\n\n75: {{blank:t1}}\n\n25: {{blank:t2}}",
+     "blanks": [
+      {
+       "id": "t0",
+       "input": "select",
+       "choices": [
+        "normal",
+        "abnormal",
+        "extreme"
+       ]
+      },
+      {
+       "id": "t1",
+       "input": "select",
+       "choices": [
+        "normal",
+        "abnormal",
+        "extreme"
+       ]
+      },
+      {
+       "id": "t2",
+       "input": "select",
+       "choices": [
+        "normal",
+        "abnormal",
+        "extreme"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "t0",
+       "accepted": [
+        "extreme"
+       ]
+      },
+      {
+       "id": "t1",
+       "accepted": [
+        "abnormal"
+       ]
+      },
+      {
+       "id": "t2",
+       "accepted": [
+        "normal"
+       ]
+      }
+     ]
+    },
+    "explanation": "-10 is the smallest value that is accepted (extreme); 75 is outside the range and rejected (abnormal); 25 is a typical accepted value (normal)."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Each sensor has a product code whose final digit is a check digit, calculated like an ISBN-13 (weights 1, 3, 1, 3, …; the check digit makes the total a multiple of 10). Calculate the check digit for the code **402718**.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "Weighted total 52; 52 MOD 10 = 2; check digit 8.",
+    "workedSolution": "1. 4 × 1 + 0 × 3 + 2 × 1 + 7 × 3 + 1 × 1 + 8 × 3 = 52.\n2. (10 − 2) MOD 10 = 8."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Readings are also typed in from paper logs. Describe **one** verification check the clerk could use and explain why it is needed as well as validation.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Describes visual check (compare screen with the paper log) or double entry (type twice, computer compares)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Validation cannot detect a wrong value that is within range (e.g. 23 typed as 32)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Double entry: each reading is typed twice and the computer accepts it only if both match. This is needed because a mistyped reading such as 32 instead of 23 is still within range and would pass validation."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that inputs a station code and repeats the input until it is **exactly 6 characters** long, outputting an error message each time it is not.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Prompt and INPUT of the station code",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Loop (REPEAT … UNTIL or WHILE) using LENGTH(code) = 6 / <> 6 correctly",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Error message and re-input for each invalid code",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nOUTPUT \"Enter station code\"\nINPUT StationCode\nWHILE LENGTH(StationCode) <> 6 DO\n    OUTPUT \"Code must be 6 characters\"\n    INPUT StationCode\nENDWHILE\n```"
+    }
+   }
+  ],
+  "explanation": "(a) Range check. (b) 2; 3. (c) extreme, abnormal, normal. (d) 8.",
+  "hints": [
+   "Each invalid input adds one to Attempts and produces one message.",
+   "Boundary data sits on, or just outside, a limit.",
+   "Multiply by 1, 3, 1, 3, … then make the total up to a multiple of 10."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2"
+      },
+      {
+       "blankId": "b",
+       "text": "3"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "t0",
+       "text": "extreme"
+      },
+      {
+       "blankId": "t1",
+       "text": "abnormal"
+      },
+      {
+       "blankId": "t2",
+       "text": "normal"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "xyz"
+       },
+       {
+        "blankId": "b",
+        "text": "xyz"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "t0",
+        "text": "normal"
+       },
+       {
+        "blankId": "t1",
+        "text": "normal"
+       },
+       {
+        "blankId": "t2",
+        "text": "abnormal"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ }
+]

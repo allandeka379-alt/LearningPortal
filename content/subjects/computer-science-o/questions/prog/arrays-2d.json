@@ -1,0 +1,1172 @@
+[
+ {
+  "key": "prog.arrays-2d.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How is one element of a two-dimensional array identified?",
+  "options": [
+   {
+    "key": "A",
+    "content": "By its value alone",
+    "rationale": "Several elements can hold the same value."
+   },
+   {
+    "key": "B",
+    "content": "By a row index and a column index",
+    "correct": true,
+    "rationale": "Correct: two indexes, row first in 0478 pseudocode."
+   },
+   {
+    "key": "C",
+    "content": "By a single index counting every element",
+    "rationale": "That describes a 1D array."
+   },
+   {
+    "key": "D",
+    "content": "By the name of the array alone",
+    "rationale": "The name refers to the whole array."
+   }
+  ],
+  "explanation": "Each element is written `Name[Row, Column]`.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.arrays-2d.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many elements does `DECLARE Seats : ARRAY[1:6, 1:8] OF BOOLEAN` contain?",
+  "answerSpec": {
+   "value": 48
+  },
+  "explanation": "6 rows × 8 columns = 48 elements.",
+  "workedSolution": "1. Rows: 6; columns: 8.\n2. 6 × 8 = 48.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "48"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "14"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.arrays-2d.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Marks for 25 learners in 9 subjects must be stored as whole numbers, one row per learner. Which declaration is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`DECLARE Marks : ARRAY[1:9, 1:25] OF INTEGER`",
+    "rationale": "This gives one row per subject, not per learner."
+   },
+   {
+    "key": "B",
+    "content": "`DECLARE Marks : ARRAY[1:225] OF INTEGER`",
+    "rationale": "A 1D array loses the learner/subject structure."
+   },
+   {
+    "key": "C",
+    "content": "`DECLARE Marks : ARRAY[1:25, 1:9] OF INTEGER`",
+    "correct": true,
+    "rationale": "Correct: 25 rows (learners) and 9 columns (subjects)."
+   },
+   {
+    "key": "D",
+    "content": "`DECLARE Marks : ARRAY[25, 9] OF INTEGER`",
+    "rationale": "0478 pseudocode states lower and upper bounds."
+   }
+  ],
+  "explanation": "Rows first: `ARRAY[1:25, 1:9]`.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.arrays-2d.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The array `Grid` holds:\n\n| Grid | Column 1 | Column 2 | Column 3 |\n|:-:|:-:|:-:|:-:|\n| Row 1 | 7 | 2 | 9 |\n| Row 2 | 4 | 11 | 5 |\n| Row 3 | 3 | 8 | 6 |\n\nWhat is the value of `Grid[2, 3]`?",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "Row 2, column 3 holds 5. (Grid[3, 2] would be 8.)",
+  "workedSolution": "1. Go to row 2: 4, 11, 5.\n2. Column 3: 5.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.arrays-2d.q05",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In nested loops over a 2D array, the inner loop runs completely for every pass of the outer loop.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. For a 3 × 4 array, the inner loop runs 4 times on each of the 3 outer passes.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.arrays-2d.q06",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In 0478 pseudocode, `Table[4, 2]` means column 4, row 2.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The first index is the row and the second the column: row 4, column 2.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.arrays-2d.q07",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "The array `Grid` holds:\n\n| Grid | Column 1 | Column 2 | Column 3 |\n|:-:|:-:|:-:|:-:|\n| Row 1 | 7 | 2 | 9 |\n| Row 2 | 4 | 11 | 5 |\n| Row 3 | 3 | 8 | 6 |\n\nMatch each expression to its value.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "`Grid[1, 3]`"
+    },
+    {
+     "id": "L2",
+     "content": "`Grid[3, 1]`"
+    },
+    {
+     "id": "L3",
+     "content": "`Grid[2, 2]`"
+    },
+    {
+     "id": "L4",
+     "content": "`Grid[3, 2] + Grid[1, 2]`"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "11"
+    },
+    {
+     "id": "R4",
+     "content": "10"
+    },
+    {
+     "id": "R1",
+     "content": "9"
+    },
+    {
+     "id": "R2",
+     "content": "3"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Grid[1, 3] = 9; Grid[3, 1] = 3; Grid[2, 2] = 11; 8 + 2 = 10.",
+  "hints": [
+   "Row first, then column."
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.arrays-2d.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Using the array `Grid` shown, what is output?\n\n| Grid | Column 1 | Column 2 | Column 3 |\n|:-:|:-:|:-:|:-:|\n| Row 1 | 7 | 2 | 9 |\n| Row 2 | 4 | 11 | 5 |\n| Row 3 | 3 | 8 | 6 |\n\n```\nTotal ← 0\nFOR Col ← 1 TO 3\n    Total ← Total + Grid[2, Col]\nNEXT Col\nOUTPUT Total\n```",
+  "answerSpec": {
+   "value": 20
+  },
+  "explanation": "Row 2: 4 + 11 + 5 = 20.",
+  "workedSolution": "1. The row index is fixed at 2.\n2. 4 + 11 + 5 = 20.",
+  "hints": [
+   "Only the column index changes."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "20"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "18"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.arrays-2d.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Using the array `Grid` shown, what is output?\n\n| Grid | Column 1 | Column 2 | Column 3 |\n|:-:|:-:|:-:|:-:|\n| Row 1 | 7 | 2 | 9 |\n| Row 2 | 4 | 11 | 5 |\n| Row 3 | 3 | 8 | 6 |\n\n```\nTotal ← 0\nFOR Row ← 1 TO 3\n    Total ← Total + Grid[Row, 3]\nNEXT Row\nOUTPUT Total\n```",
+  "answerSpec": {
+   "value": 20
+  },
+  "explanation": "Column 3: 9 + 5 + 6 = 20.",
+  "workedSolution": "1. The column index is fixed at 3.\n2. 9 + 5 + 6 = 20.",
+  "hints": [
+   "Here the row index changes and the column index is fixed."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "20"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "17"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.arrays-2d.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the algorithm, which sets every element of `Board : ARRAY[1:3, 1:3] OF CHAR` to `'-'`.\n\n```\nFOR Row ← 1 TO 3\n    FOR Column ← 1 TO 3\n        [1] ← '-'\n    NEXT [2]\nNEXT [3]\n```",
+  "payload": {
+   "template": "[1] {{blank:a}} [2] {{blank:b}} [3] {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "Board[Row, Column]",
+      "Board[Column, Row]",
+      "Board[3, 3]",
+      "Board"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "Row",
+      "Column"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "Row",
+      "Column"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "Board[Row, Column]"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "Column"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "Row"
+     ]
+    }
+   ]
+  },
+  "explanation": "Assign `Board[Row, Column]`; the inner loop closes first (`NEXT Column`), then the outer (`NEXT Row`). For a square array `Board[Column, Row]` would also reach every element, but it does not follow the row-column convention of the loops.",
+  "hints": [
+   "Rows in the outer loop, columns in the inner loop."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "Board[Row, Column]"
+    },
+    {
+     "blankId": "b",
+     "text": "Column"
+    },
+    {
+     "blankId": "c",
+     "text": "Row"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "Board[Column, Row]"
+     },
+     {
+      "blankId": "b",
+      "text": "Row"
+     },
+     {
+      "blankId": "c",
+      "text": "Column"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.arrays-2d.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Using the array `Grid` shown, what is output?\n\n| Grid | Column 1 | Column 2 | Column 3 |\n|:-:|:-:|:-:|:-:|\n| Row 1 | 7 | 2 | 9 |\n| Row 2 | 4 | 11 | 5 |\n| Row 3 | 3 | 8 | 6 |\n\n```\nCount ← 0\nFOR Row ← 1 TO 3\n    FOR Col ← 1 TO 3\n        IF Grid[Row, Col] > 5\n            THEN\n                Count ← Count + 1\n        ENDIF\n    NEXT Col\nNEXT Row\nOUTPUT Count\n```",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "Values over 5: 7, 9, 11, 8, 6: 5.",
+  "workedSolution": "1. Row 1: 7, 9; row 2: 11; row 3: 8, 6.\n2. Count = 5.",
+  "hints": [
+   "Check all nine elements."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.arrays-2d.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "An algorithm should output the total of **each row** of `Data : ARRAY[1:4, 1:5] OF INTEGER`.\n\n```\n// position P\nFOR Row ← 1 TO 4\n    // position Q\n    FOR Col ← 1 TO 5\n        // position R\n        RowTotal ← RowTotal + Data[Row, Col]\n    NEXT Col\n    OUTPUT RowTotal\nNEXT Row\n```\n\nWhere should `RowTotal ← 0` go?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Position P",
+    "rationale": "The total would never reset, giving running totals."
+   },
+   {
+    "key": "B",
+    "content": "Position Q",
+    "correct": true,
+    "rationale": "Correct: once per row, before that row's values are added."
+   },
+   {
+    "key": "C",
+    "content": "Position R",
+    "rationale": "The total would be reset before every addition."
+   },
+   {
+    "key": "D",
+    "content": "After `OUTPUT RowTotal`, with no other reset",
+    "rationale": "Row 1 would start without a value."
+   }
+  ],
+  "explanation": "Reset inside the outer loop, before the inner loop.",
+  "hints": [
+   "Each row needs its own total."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.arrays-2d.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Using the array `Grid` shown, what is output?\n\n| Grid | Column 1 | Column 2 | Column 3 |\n|:-:|:-:|:-:|:-:|\n| Row 1 | 7 | 2 | 9 |\n| Row 2 | 4 | 11 | 5 |\n| Row 3 | 3 | 8 | 6 |\n\n```\nTotal ← 0\nFOR Index ← 1 TO 3\n    Total ← Total + Grid[Index, Index]\nNEXT Index\nOUTPUT Total\n```",
+  "answerSpec": {
+   "value": 24
+  },
+  "explanation": "The diagonal: 7 + 11 + 6 = 24.",
+  "workedSolution": "1. Grid[1, 1] = 7, Grid[2, 2] = 11, Grid[3, 3] = 6.\n2. Total = 24.",
+  "hints": [
+   "Both indexes are the same variable, so only elements [1,1], [2,2] and [3,3] are used."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "24"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "18"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "prog.arrays-2d.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "`Readings` is declared as `ARRAY[1:2, 1:5] OF REAL`. Why does this cause a run-time error?\n\n```\nFOR Row ← 1 TO 5\n    FOR Col ← 1 TO 2\n        OUTPUT Readings[Row, Col]\n    NEXT Col\nNEXT Row\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "REAL values cannot be output",
+    "rationale": "Any element can be output."
+   },
+   {
+    "key": "B",
+    "content": "The inner loop should be the row loop",
+    "rationale": "Either order is allowed if the bounds match the indexes."
+   },
+   {
+    "key": "C",
+    "content": "It uses row indexes up to 5, but there are only 2 rows",
+    "correct": true,
+    "rationale": "Correct: the loop bounds are the wrong way round for the indexes."
+   },
+   {
+    "key": "D",
+    "content": "2D arrays cannot be processed with FOR loops",
+    "rationale": "Nested FOR loops are the usual method."
+   }
+  ],
+  "explanation": "Readings[3, 1] does not exist. Use rows 1 to 2 and columns 1 to 5, or swap the indexes inside the brackets.",
+  "hints": [
+   "What is the largest row index used?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.arrays-2d.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many times is the statement inside the inner loop executed?\n\n```\nFOR Row ← 1 TO 3\n    FOR Col ← 1 TO 4\n        Total ← Total + Table[Row, Col]\n    NEXT Col\nNEXT Row\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "12",
+    "correct": true,
+    "rationale": "Correct: 4 inner passes for each of 3 rows."
+   },
+   {
+    "key": "B",
+    "content": "7",
+    "rationale": "The counts are multiplied, not added."
+   },
+   {
+    "key": "C",
+    "content": "4",
+    "rationale": "The inner loop runs 4 times on each of the 3 outer passes."
+   },
+   {
+    "key": "D",
+    "content": "3",
+    "rationale": "That is only the number of outer passes."
+   }
+  ],
+  "explanation": "3 × 4 = 12 executions.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.arrays-2d.q16",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "`Data` is declared as `ARRAY[1:5, 1:8] OF INTEGER`. Which expression gives the element in the **last column** of row `R`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Data[8, R]`",
+    "rationale": "This is row 8, which does not exist."
+   },
+   {
+    "key": "B",
+    "content": "`Data[R, 5]`",
+    "rationale": "5 is the number of rows, not the last column."
+   },
+   {
+    "key": "C",
+    "content": "`Data[5, 8]`",
+    "rationale": "This is the last column of row 5 only."
+   },
+   {
+    "key": "D",
+    "content": "`Data[R, 8]`",
+    "correct": true,
+    "rationale": "Correct: row R, column 8 (the upper bound of the columns)."
+   }
+  ],
+  "explanation": "Keep the row index R and use the column upper bound, 8.",
+  "hints": [
+   "Which index stays the same, and which is at its upper bound?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.arrays-2d.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "A shop records daily sales for 4 tills over 7 days. Explain why a 2D array is more suitable than four separate 1D arrays.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "One identifier holds the whole table / the till number becomes an index",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Nested loops can process all the data (e.g. totals per till or per day) without repeating code for each array",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: With `Sales : ARRAY[1:4, 1:7]` the till is the row index, so one pair of nested loops can total each till or each day. Four 1D arrays would need four copies of every loop."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A 2D array keeps the table's shape under one name.",
+  "hints": [
+   "Think about keeping data for several weeks and several shops together."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.arrays-2d.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "The array `Temps[1:7, 1:3]` already holds three temperature readings (columns) for each of the 7 days of a week (rows). Write pseudocode that outputs the average temperature for each day and then the highest reading of the week.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Outer loop for the 7 days and inner loop for the 3 readings",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Day total reset to 0 inside the outer loop before the inner loop",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Adds Temps[Day, Reading] to the day total in the inner loop",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Outputs the day total / 3 with the day number after the inner loop",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Highest initialised (e.g. to Temps[1, 1]) before the loops and updated when Temps[Day, Reading] is greater",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Outputs the highest after both loops",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nHighest ← Temps[1, 1]\nFOR Day ← 1 TO 7\n    DayTotal ← 0\n    FOR Reading ← 1 TO 3\n        DayTotal ← DayTotal + Temps[Day, Reading]\n        IF Temps[Day, Reading] > Highest\n            THEN\n                Highest ← Temps[Day, Reading]\n        ENDIF\n    NEXT Reading\n    OUTPUT \"Day \", Day, \" average: \", DayTotal / 3\nNEXT Day\nOUTPUT \"Highest reading: \", Highest\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Row averages and an overall maximum in one nested loop.",
+  "hints": [
+   "Average per day: reset a day total inside the outer loop.",
+   "The overall highest can start at Temps[1, 1]."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.arrays-2d.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A teacher in Mutare stores the marks of 4 learners (rows) in 3 tests (columns) in `Marks : ARRAY[1:4, 1:3] OF INTEGER`.\n\n| Marks | Column 1 | Column 2 | Column 3 |\n|:-:|:-:|:-:|:-:|\n| Row 1 | 56 | 61 | 70 |\n| Row 2 | 82 | 77 | 90 |\n| Row 3 | 45 | 52 | 48 |\n| Row 4 | 68 | 73 | 64 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Marks[3, 2]`.",
+    "answerSpec": {
+     "value": 52
+    },
+    "explanation": "Row 3, column 2: 52.",
+    "workedSolution": "1. Row 3: 45, 52, 48.\n2. Column 2: 52."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the total of row 2.",
+    "answerSpec": {
+     "value": 249
+    },
+    "explanation": "82 + 77 + 90 = 249.",
+    "workedSolution": "1. Row 2: 82, 77, 90.\n2. Total 249."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the average mark in test 2 (column 2).",
+    "answerSpec": {
+     "value": 65.75,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     }
+    },
+    "explanation": "(61 + 77 + 52 + 73) / 4 = 65.75.",
+    "workedSolution": "1. Column 2: 61 + 77 + 52 + 73 = 263.\n2. ÷ 4 = 65.75."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which loop structure visits the elements in the order [1,1], [2,1], [3,1], [4,1], [1,2], …?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Outer loop over rows, inner loop over columns",
+      "rationale": "That order is [1,1], [1,2], [1,3], [2,1] …"
+     },
+     {
+      "key": "B",
+      "content": "A single loop from 1 to 12",
+      "rationale": "A single counter cannot give both indexes directly."
+     },
+     {
+      "key": "C",
+      "content": "Two separate loops, one after the other",
+      "rationale": "Separate loops do not visit pairs of indexes."
+     },
+     {
+      "key": "D",
+      "content": "Outer loop over columns, inner loop over rows",
+      "correct": true,
+      "rationale": "Correct: the row index changes fastest."
+     }
+    ],
+    "explanation": "The inner loop's counter changes fastest."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that outputs the number (row index) of the learner with the highest total over the three tests.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Outer loop over the 4 learners with the total reset to 0 for each learner",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Inner loop (or three additions) adding Marks[Learner, Test] to the total",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Compares each total with the best so far and stores the total and the row index",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Outputs the stored row index after the loops",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nBestTotal ← -1\nBestLearner ← 0\nFOR Learner ← 1 TO 4\n    Total ← 0\n    FOR Test ← 1 TO 3\n        Total ← Total + Marks[Learner, Test]\n    NEXT Test\n    IF Total > BestTotal\n        THEN\n            BestTotal ← Total\n            BestLearner ← Learner\n    ENDIF\nNEXT Learner\nOUTPUT \"Best learner: \", BestLearner\n```"
+    }
+   }
+  ],
+  "explanation": "(a) 52; (b) 249; (c) 65.75; best learner is row 2.",
+  "hints": [
+   "Each row is a learner; each column is a test.",
+   "A column average divides by the number of learners."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "52"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "249"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "65.8"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "90"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "263"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "83"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.arrays-2d.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.arrays-2d"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "A noughts and crosses game stores the board in `Board : ARRAY[1:3, 1:3] OF CHAR`.\n\n| Board | Column 1 | Column 2 | Column 3 |\n|:-:|:-:|:-:|:-:|\n| Row 1 | 'X' | 'O' | 'X' |\n| Row 2 | 'O' | 'X' | 'O' |\n| Row 3 | 'O' | 'X' | 'X' |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "How many elements hold `'X'`?",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "Rows: 2 + 1 + 2 = 5.",
+    "workedSolution": "1. Count X in each row: 2, 1, 2.\n2. Total 5."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the value of `Board[3, 1]`.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "O"
+      },
+      {
+       "value": "'O'"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "strip_punctuation",
+      "lowercase"
+     ]
+    },
+    "explanation": "Row 3, column 1 holds 'O'."
+   },
+   {
+    "label": "(c)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "The condition `Board[1, 1] = Board[2, 2] AND Board[2, 2] = Board[3, 3]` is TRUE for this board.",
+    "answerSpec": {
+     "correct": true
+    },
+    "explanation": "Board[1, 1], Board[2, 2] and Board[3, 3] are all 'X', so the condition is TRUE: X has won on the diagonal."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Write a function `RowWin(Symbol : CHAR) RETURNS BOOLEAN` that returns TRUE if any row of `Board` holds `Symbol` in all three columns.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Function header with the parameter, RETURNS BOOLEAN and ENDFUNCTION",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Loop over the 3 rows",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Checks all three columns of the row against Symbol (inner loop with a counter or a three-part AND)",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Uses Board[Row, Column] with the correct index order",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Returns TRUE when a complete row is found",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Returns FALSE when no row matches (after the loop)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nFUNCTION RowWin(Symbol : CHAR) RETURNS BOOLEAN\n    DECLARE Row : INTEGER\n    DECLARE Found : BOOLEAN\n    Found ← FALSE\n    FOR Row ← 1 TO 3\n        IF Board[Row, 1] = Symbol AND Board[Row, 2] = Symbol AND Board[Row, 3] = Symbol\n            THEN\n                Found ← TRUE\n        ENDIF\n    NEXT Row\n    RETURN Found\nENDFUNCTION\n```"
+    }
+   }
+  ],
+  "explanation": "5 X symbols; Board[3, 1] = 'O'; the diagonal condition is true.",
+  "hints": [
+   "Count every 'X' in all nine cells.",
+   "A diagonal uses Board[1,1], Board[2,2], Board[3,3]."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "O"
+    },
+    "(c)": {
+     "type": "TRUE_FALSE",
+     "value": true
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "X"
+     },
+     "(c)": {
+      "type": "TRUE_FALSE",
+      "value": false
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ }
+]

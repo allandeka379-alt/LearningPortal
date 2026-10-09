@@ -1,0 +1,539 @@
+[
+ {
+  "key": "exam.w4b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.selection",
+   "comp.prog.iteration"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A power utility sells prepaid electricity tokens. A clerk in Bulawayo uses this algorithm to work out the cost of each customer's units; an input of 0 ends the day.\n\n```\nTotal ← 0\nCount ← 0\nINPUT Units\nWHILE Units <> 0 DO\n    IF Units <= 50\n        THEN\n            Cost ← Units * 2\n        ELSE\n            Cost ← 100 + (Units - 50) * 3\n    ENDIF\n    OUTPUT Cost\n    Total ← Total + Cost\n    Count ← Count + 1\n    INPUT Units\nENDWHILE\nOUTPUT Total, \" \", Count\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "State the type of loop used in the algorithm.",
+    "options": [
+     {
+      "key": "A",
+      "content": "Post-condition loop",
+      "rationale": "That is REPEAT … UNTIL, which tests at the end."
+     },
+     {
+      "key": "B",
+      "content": "Pre-condition loop",
+      "correct": true,
+      "rationale": "Correct: WHILE tests its condition before each pass."
+     },
+     {
+      "key": "C",
+      "content": "Count-controlled loop",
+      "rationale": "The number of passes is not fixed in advance."
+     },
+     {
+      "key": "D",
+      "content": "Nested loop",
+      "rationale": "There is only one loop."
+     }
+    ],
+    "explanation": "WHILE … DO … ENDWHILE is a pre-condition loop."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The inputs are 30, 80, 50, 0. Complete the values of `Cost` that are output.",
+    "payload": {
+     "template": "Units = 30: Cost = {{blank:c0}}\n\nUnits = 80: Cost = {{blank:c1}}\n\nUnits = 50: Cost = {{blank:c2}}",
+     "blanks": [
+      {
+       "id": "c0",
+       "input": "number"
+      },
+      {
+       "id": "c1",
+       "input": "number"
+      },
+      {
+       "id": "c2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "c0",
+       "accepted": [
+        "60"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "c1",
+       "accepted": [
+        "190"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "c2",
+       "accepted": [
+        "100"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "30 × 2 = 60; 100 + (80 − 50) × 3 = 190; 50 is not over 50, so 50 × 2 = 100."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "State the value of `Total` that is output at the end.",
+    "answerSpec": {
+     "value": 350
+    },
+    "explanation": "60 + 190 + 100 = 350.",
+    "workedSolution": "1. Costs: 60, 190, 100.\n2. Total = 350; Count = 3 (the final 0 is not counted)."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a WHILE loop is more suitable here than a FOR loop.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The number of customers in a day is not known in advance",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The loop must stop when the rogue value 0 is input / it may not run at all if 0 is input first",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The clerk does not know how many customers will come, so a count-controlled FOR loop cannot be set up. A WHILE loop keeps going until the rogue value 0 is entered, and does not run at all if 0 is entered first."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Customers who buy more than 200 units pay a fixed 500 instead. Write the pseudocode needed and state where it goes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "IF Units > 200 THEN Cost ← 500 (an extra condition)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Placed so that it is tested before (or overrides) the other branches, e.g. as the first test of a nested IF, before OUTPUT Cost",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Add before `OUTPUT Cost` (after the existing IF):\n\n```\nIF Units > 200\n    THEN\n        Cost ← 500\nENDIF\n```"
+    }
+   }
+  ],
+  "explanation": "Costs 60, 190, 100; Total 350; Count 3.",
+  "hints": [
+   "The loop stops when 0 is input; 0 is not processed.",
+   "50 units exactly uses the first branch."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "c0",
+       "text": "60"
+      },
+      {
+       "blankId": "c1",
+       "text": "190"
+      },
+      {
+       "blankId": "c2",
+       "text": "100"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "350"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "c0",
+        "text": "61"
+       },
+       {
+        "blankId": "c1",
+        "text": "240"
+       },
+       {
+        "blankId": "c2",
+        "text": "101"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "350"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4b-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.subroutines",
+   "comp.prog.selection"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A school in Masvingo uses this function in its report program.\n\n```\nFUNCTION Grade(Mark : INTEGER) RETURNS CHAR\n    DECLARE Result : CHAR\n    IF Mark >= 70\n        THEN\n            Result ← 'A'\n        ELSE\n            IF Mark >= 55\n                THEN\n                    Result ← 'B'\n                ELSE\n                    Result ← 'C'\n            ENDIF\n    ENDIF\n    RETURN Result\nENDFUNCTION\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why is `Grade` written as a function rather than a procedure?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It has a parameter called Mark",
+      "rationale": "Procedures can have parameters too."
+     },
+     {
+      "key": "B",
+      "content": "It contains a nested IF statement",
+      "rationale": "Procedures can contain IF statements."
+     },
+     {
+      "key": "C",
+      "content": "It can only be called once in a program",
+      "rationale": "Functions can be called many times."
+     },
+     {
+      "key": "D",
+      "content": "It sends one value back to where it is called",
+      "correct": true,
+      "rationale": "Correct: the grade is sent back with RETURN."
+     }
+    ],
+    "explanation": "A function returns one value and is used in an expression."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "State the value returned by each call.",
+    "payload": {
+     "template": "`Grade(83)`: {{blank:g0}}\n\n`Grade(55)`: {{blank:g1}}\n\n`Grade(54)`: {{blank:g2}}",
+     "blanks": [
+      {
+       "id": "g0",
+       "input": "select",
+       "choices": [
+        "A",
+        "B",
+        "C"
+       ]
+      },
+      {
+       "id": "g1",
+       "input": "select",
+       "choices": [
+        "A",
+        "B",
+        "C"
+       ]
+      },
+      {
+       "id": "g2",
+       "input": "select",
+       "choices": [
+        "A",
+        "B",
+        "C"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "g0",
+       "accepted": [
+        "A"
+       ]
+      },
+      {
+       "id": "g1",
+       "accepted": [
+        "B"
+       ]
+      },
+      {
+       "id": "g2",
+       "accepted": [
+        "C"
+       ]
+      }
+     ]
+    },
+    "explanation": "83 >= 70 gives A; 55 >= 55 gives B; 54 is below 55, giving C."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Marks must be from 0 to 100. Classify each test value.",
+    "payload": {
+     "template": "70: {{blank:t0}}\n\n-8: {{blank:t1}}",
+     "blanks": [
+      {
+       "id": "t0",
+       "input": "select",
+       "choices": [
+        "normal",
+        "boundary",
+        "abnormal"
+       ]
+      },
+      {
+       "id": "t1",
+       "input": "select",
+       "choices": [
+        "normal",
+        "boundary",
+        "abnormal"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "t0",
+       "accepted": [
+        "boundary"
+       ]
+      },
+      {
+       "id": "t1",
+       "accepted": [
+        "abnormal"
+       ]
+      }
+     ]
+    },
+    "explanation": "70 is on the edge of the A band (boundary); -8 is outside 0 to 100 and should be rejected (abnormal)."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "`Result` is a local variable. Explain what this means and why it is good practice.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It is declared inside the function and can only be used there / exists only while the function runs",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The function cannot accidentally change data elsewhere / can be tested and reused on its own",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Result is declared inside Grade, so it exists only while the function runs and the main program cannot see it. This means the function cannot interfere with other variables and can be tested and reused independently."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write one statement that outputs the grade for the mark stored in `TestMark`, using the function.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Calls Grade(TestMark) inside an OUTPUT (no CALL keyword)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Includes a suitable message",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: `OUTPUT \"Grade: \", Grade(TestMark)`"
+    }
+   }
+  ],
+  "explanation": "Grades A, B, C; 70 is boundary data and -8 abnormal.",
+  "hints": [
+   "Test the conditions in order.",
+   "Boundary data is on the edge of a range; abnormal data should be rejected."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "g0",
+       "text": "A"
+      },
+      {
+       "blankId": "g1",
+       "text": "B"
+      },
+      {
+       "blankId": "g2",
+       "text": "C"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "t0",
+       "text": "boundary"
+      },
+      {
+       "blankId": "t1",
+       "text": "abnormal"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "g0",
+        "text": "B"
+       },
+       {
+        "blankId": "g1",
+        "text": "A"
+       },
+       {
+        "blankId": "g2",
+        "text": "A"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "t0",
+        "text": "normal"
+       },
+       {
+        "blankId": "t1",
+        "text": "normal"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ }
+]

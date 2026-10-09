@@ -1,0 +1,1538 @@
+[
+ {
+  "key": "exam.w4a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.trace-tables",
+   "comp.algorithms.totalling-counting"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A coach company checks passengers' bags at its Harare depot with this algorithm.\n\n```\nCount ← 0\nTotal ← 0\nLargest ← 0\nOUTPUT \"Enter weight in kg, 0 to stop\"\nINPUT Weight\nWHILE Weight <> 0 DO\n    IF Weight > 25\n        THEN\n            OUTPUT \"Too heavy\"\n        ELSE\n            Total ← Total + Weight\n            Count ← Count + 1\n            IF Weight > Largest\n                THEN\n                    Largest ← Weight\n            ENDIF\n    ENDIF\n    OUTPUT \"Enter weight in kg, 0 to stop\"\n    INPUT Weight\nENDWHILE\nOUTPUT Count, \" bags, total \", Total, \" kg, largest \", Largest\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 5,
+    "stem": "Dry-run the algorithm with the inputs 12, 30, 8, 20, 0. Complete the statements.",
+    "payload": {
+     "template": "Final value of Count: {{blank:c}}\n\nFinal value of Total: {{blank:t}}\n\nFinal value of Largest: {{blank:l}}\n\nNumber of times \"Too heavy\" is output: {{blank:h}}\n\nNumber of times the prompt is output: {{blank:p}}",
+     "blanks": [
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "t",
+       "input": "number"
+      },
+      {
+       "id": "l",
+       "input": "number"
+      },
+      {
+       "id": "h",
+       "input": "number"
+      },
+      {
+       "id": "p",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "c",
+       "accepted": [
+        "3"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "t",
+       "accepted": [
+        "40"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "l",
+       "accepted": [
+        "20"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "h",
+       "accepted": [
+        "1"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p",
+       "accepted": [
+        "5"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Trace:\n\n| Weight | Count | Total | Largest | OUTPUT |\n|:-:|:-:|:-:|:-:|:-:|\n|  | 0 | 0 | 0 |  |\n|  |  |  |  | Enter weight in kg, 0 to stop |\n| 12 |  |  |  |  |\n|  | 1 | 12 | 12 |  |\n|  |  |  |  | Enter weight in kg, 0 to stop |\n| 30 |  |  |  |  |\n|  |  |  |  | Too heavy |\n|  |  |  |  | Enter weight in kg, 0 to stop |\n| 8 |  |  |  |  |\n|  | 2 | 20 |  |  |\n|  |  |  |  | Enter weight in kg, 0 to stop |\n| 20 |  |  |  |  |\n|  | 3 | 40 | 20 |  |\n|  |  |  |  | Enter weight in kg, 0 to stop |\n| 0 |  |  |  |  |\n|  |  |  |  | 3 bags, total 40 kg, largest 20 |"
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write exactly what the last line outputs.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "3 bags, total 40 kg, largest 20"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The values are joined with the text: 3 bags, total 40 kg, largest 20."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is output by the last line if the first weight entered is 0?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`0 bags, total 0 kg, largest 0`",
+      "correct": true,
+      "rationale": "Correct: the loop body never runs, so the starting values are output."
+     },
+     {
+      "key": "B",
+      "content": "Nothing: the program stops at once",
+      "rationale": "The last line still runs after the loop."
+     },
+     {
+      "key": "C",
+      "content": "`Too heavy`",
+      "rationale": "That is only output for weights over 25."
+     },
+     {
+      "key": "D",
+      "content": "An error, because Total is divided by Count",
+      "rationale": "There is no division in this algorithm."
+     }
+    ],
+    "explanation": "WHILE tests before the first pass; 0 <> 0 is false, so the loop is skipped."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the purpose of the algorithm.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Inputs bag weights until 0 is entered, rejecting (with a message) bags over 25 kg",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Counts and totals the accepted bags, finds the heaviest accepted bag, and outputs the three results",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It inputs the weights of bags until 0 is entered. Bags over 25 kg are rejected with \"Too heavy\". For the accepted bags it counts them, totals their weight and finds the heaviest, then outputs the count, total and largest weight."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the changes needed so that the algorithm also counts the bags that are too heavy and outputs this count at the end.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Initialise a new counter (e.g. Rejected ← 0) before the loop",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Add Rejected ← Rejected + 1 in the THEN branch with \"Too heavy\"",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Output Rejected (with a message) after the loop",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nRejected ← 0              // before the loop\n...\n        THEN\n            OUTPUT \"Too heavy\"\n            Rejected ← Rejected + 1\n...\nOUTPUT \"Bags rejected: \", Rejected   // after the loop\n```"
+    }
+   }
+  ],
+  "explanation": "3 bags, total 40 kg, largest 20; 1 rejected.",
+  "hints": [
+   "Weights over 25 are rejected and not added.",
+   "A prompt is output before every input, including the 0."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "c",
+       "text": "3"
+      },
+      {
+       "blankId": "t",
+       "text": "40"
+      },
+      {
+       "blankId": "l",
+       "text": "20"
+      },
+      {
+       "blankId": "h",
+       "text": "1"
+      },
+      {
+       "blankId": "p",
+       "text": "5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "3 bags, total 40 kg, largest 20"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "c",
+        "text": "4"
+       },
+       {
+        "blankId": "t",
+        "text": "70"
+       },
+       {
+        "blankId": "l",
+        "text": "30"
+       },
+       {
+        "blankId": "h",
+        "text": "0"
+       },
+       {
+        "blankId": "p",
+        "text": "4"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "4 bags, total 65 kg, largest 25"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.errors-debugging",
+   "comp.algorithms.test-data",
+   "comp.algorithms.totalling-counting"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "This algorithm should input the scores of 30 learners in a test marked out of 40, rejecting any score outside 0 to 40, then output the average score, the number of passes (a score of 20 or more) and the highest score. It contains four errors.\n\n```\n1   Total ← 0\n2   Passes ← 0\n3   Highest ← 40\n4   FOR Learner ← 1 TO 30\n5       REPEAT\n6           OUTPUT \"Enter score\"\n7           INPUT Score\n8       UNTIL Score >= 0 OR Score <= 40\n9       Total ← Total + Score\n10      IF Score > 20\n11          THEN\n12              Passes ← Passes + 1\n13      ENDIF\n14      IF Score > Highest\n15          THEN\n16              Highest ← Score\n17      ENDIF\n18  NEXT Learner\n19  Average ← Total / Learner\n20  OUTPUT Average, \" \", Passes, \" \", Highest\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Give the line numbers of the four errors, in ascending order.",
+    "payload": {
+     "template": "Error 1: line {{blank:e0}}\n\nError 2: line {{blank:e1}}\n\nError 3: line {{blank:e2}}\n\nError 4: line {{blank:e3}}",
+     "blanks": [
+      {
+       "id": "e0",
+       "input": "number"
+      },
+      {
+       "id": "e1",
+       "input": "number"
+      },
+      {
+       "id": "e2",
+       "input": "number"
+      },
+      {
+       "id": "e3",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "e0",
+       "accepted": [
+        "3"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "e1",
+       "accepted": [
+        "8"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "e2",
+       "accepted": [
+        "10"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "e3",
+       "accepted": [
+        "19"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Lines 3, 8, 10, 19."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write the corrected version of each line you identified.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Line 3: Highest ← -1 (or 0, or any value below 0; or Highest set from the first score)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Line 8: UNTIL Score >= 0 AND Score <= 40",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Line 10: IF Score >= 20",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Line 19: Average ← Total / 30",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Line 3: `Highest ← -1`. Line 8: `UNTIL Score >= 0 AND Score <= 40`. Line 10: `IF Score >= 20`. Line 19: `Average ← Total / 30`."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "With the original line 3, what value of `Highest` is output whatever valid scores are entered?",
+    "answerSpec": {
+     "value": 40
+    },
+    "explanation": "Highest starts at 40 and no valid score is greater than 40, so 40 is always output.",
+    "workedSolution": "1. Highest ← 40.\n2. Valid scores are at most 40, so Score > Highest is never true.\n3. Output 40."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which single test score shows the error on line 10?",
+    "options": [
+     {
+      "key": "A",
+      "content": "35",
+      "rationale": "35 is counted as a pass by both versions."
+     },
+     {
+      "key": "B",
+      "content": "10",
+      "rationale": "10 is a fail in both versions."
+     },
+     {
+      "key": "C",
+      "content": "45",
+      "rationale": "45 is rejected by correct validation."
+     },
+     {
+      "key": "D",
+      "content": "20",
+      "correct": true,
+      "rationale": "Correct: 20 is a pass but 20 > 20 is false."
+     }
+    ],
+    "explanation": "Boundary values reveal comparison errors."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What type of error is on line 8?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Syntax error",
+      "rationale": "The line follows the pseudocode rules."
+     },
+     {
+      "key": "B",
+      "content": "Run-time error",
+      "rationale": "It does not crash the program."
+     },
+     {
+      "key": "C",
+      "content": "Logic error",
+      "correct": true,
+      "rationale": "Correct: it runs but accepts invalid scores."
+     },
+     {
+      "key": "D",
+      "content": "Data entry error",
+      "rationale": "The fault is in the algorithm, not the typing."
+     }
+    ],
+    "explanation": "The condition is valid but wrong: a logic error."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the condition on line 8 lets invalid scores through. Use an example score.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "With OR only one part needs to be true",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Every number is either >= 0 or <= 40 (or both), so the loop always ends after one input",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Example: 75 is >= 0, so it is accepted (or -5 is <= 40, so it is accepted)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: With OR, the loop ends if either part is true. Every number is at least 0 or at most 40, so any value ends the loop: for example 75 passes because 75 >= 0. AND is needed so both limits apply."
+    }
+   }
+  ],
+  "explanation": "Errors on lines 3, 8, 10, 19.",
+  "hints": [
+   "Check the starting value of Highest, the validation condition, the pass mark and the divisor.",
+   "Scores of 20 or more are passes."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "e0",
+       "text": "3"
+      },
+      {
+       "blankId": "e1",
+       "text": "8"
+      },
+      {
+       "blankId": "e2",
+       "text": "10"
+      },
+      {
+       "blankId": "e3",
+       "text": "19"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "40"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "e0",
+        "text": "4"
+       },
+       {
+        "blankId": "e1",
+        "text": "9"
+       },
+       {
+        "blankId": "e2",
+        "text": "11"
+       },
+       {
+        "blankId": "e3",
+        "text": "20"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4a-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A library in Gweru stores seven book codes in the array `BookCodes`:\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 | 7 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| BookCodes | 5120 | 3301 | 7745 | 1208 | 6634 | 2987 | 4410 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "A linear search (which stops when the item is found) looks for 6634. How many comparisons does it make?",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "6634 is at position 5.",
+    "workedSolution": "1. Compare with 5120, 3301, 7745, 1208, 6634.\n2. 5 comparisons."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "How many comparisons does it make when searching for 3000?",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "3000 is not in the array, so all 7 codes are compared.",
+    "workedSolution": "1. No code matches.\n2. All 7 are compared."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode for a linear search that inputs a book code and outputs its position in `BookCodes`, or a message if it is not found. The search must stop when the code is found.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Inputs the code to find, and sets Found ← FALSE and Index ← 1 before the loop",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "WHILE (or REPEAT) loop that continues while not found and Index <= 7",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Compares BookCodes[Index] with the code: sets Found ← TRUE if equal, otherwise Index ← Index + 1",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "After the loop outputs the position if found, otherwise a not-found message",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nOUTPUT \"Enter book code\"\nINPUT Wanted\nFound ← FALSE\nIndex ← 1\nWHILE Found = FALSE AND Index <= 7 DO\n    IF BookCodes[Index] = Wanted\n        THEN\n            Found ← TRUE\n        ELSE\n            Index ← Index + 1\n    ENDIF\nENDWHILE\nIF Found = TRUE\n    THEN\n        OUTPUT \"Found at position \", Index\n    ELSE\n        OUTPUT \"Code not found\"\nENDIF\n```"
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The codes are sorted into ascending order with a bubble sort. Give the contents of `BookCodes` after the **first** pass.",
+    "payload": {
+     "template": "BookCodes[1]: {{blank:p0}}\n\nBookCodes[2]: {{blank:p1}}\n\nBookCodes[3]: {{blank:p2}}\n\nBookCodes[4]: {{blank:p3}}\n\nBookCodes[5]: {{blank:p4}}\n\nBookCodes[6]: {{blank:p5}}\n\nBookCodes[7]: {{blank:p6}}",
+     "blanks": [
+      {
+       "id": "p0",
+       "input": "number"
+      },
+      {
+       "id": "p1",
+       "input": "number"
+      },
+      {
+       "id": "p2",
+       "input": "number"
+      },
+      {
+       "id": "p3",
+       "input": "number"
+      },
+      {
+       "id": "p4",
+       "input": "number"
+      },
+      {
+       "id": "p5",
+       "input": "number"
+      },
+      {
+       "id": "p6",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p0",
+       "accepted": [
+        "3301"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p1",
+       "accepted": [
+        "5120"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p2",
+       "accepted": [
+        "1208"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p3",
+       "accepted": [
+        "6634"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p4",
+       "accepted": [
+        "2987"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p5",
+       "accepted": [
+        "4410"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p6",
+       "accepted": [
+        "7745"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "After pass 1: 3301, 5120, 1208, 6634, 2987, 4410, 7745."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The sort uses a flag and stops after the first pass with no swaps. How many passes does it make in total?",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "Pass 1: 3301, 5120, 1208, 6634, 2987, 4410, 7745 (5 swaps); Pass 2: 3301, 1208, 5120, 2987, 4410, 6634, 7745 (3 swaps); Pass 3: 1208, 3301, 2987, 4410, 5120, 6634, 7745 (3 swaps); Pass 4: 1208, 2987, 3301, 4410, 5120, 6634, 7745 (1 swaps); Pass 5: 1208, 2987, 3301, 4410, 5120, 6634, 7745 (0 swaps).",
+    "workedSolution": "1. Pass 1: 5 swaps.\n2. Pass 2: 3 swaps.\n3. Pass 3: 3 swaps.\n4. Pass 4: 1 swaps.\n5. Pass 5: 0 swaps."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the bubble sort uses a flag.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The flag records whether any swap was made during a pass",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "If a pass makes no swaps the list is sorted, so the sort stops early, saving unnecessary passes",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The flag is set to FALSE at the start of each pass and TRUE when a swap happens. A pass with no swaps means the codes are in order, so the sort can stop instead of making the remaining passes."
+    }
+   }
+  ],
+  "explanation": "Search: 5 and 7 comparisons. Pass 1: 3301, 5120, 1208, 6634, 2987, 4410, 7745; 5 passes.",
+  "hints": [
+   "Compare neighbouring codes and swap when the left one is larger.",
+   "A linear search stops at the first match."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p0",
+       "text": "3301"
+      },
+      {
+       "blankId": "p1",
+       "text": "5120"
+      },
+      {
+       "blankId": "p2",
+       "text": "1208"
+      },
+      {
+       "blankId": "p3",
+       "text": "6634"
+      },
+      {
+       "blankId": "p4",
+       "text": "2987"
+      },
+      {
+       "blankId": "p5",
+       "text": "4410"
+      },
+      {
+       "blankId": "p6",
+       "text": "7745"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p0",
+        "text": "5120"
+       },
+       {
+        "blankId": "p1",
+        "text": "3301"
+       },
+       {
+        "blankId": "p2",
+        "text": "7745"
+       },
+       {
+        "blankId": "p3",
+        "text": "1208"
+       },
+       {
+        "blankId": "p4",
+        "text": "6634"
+       },
+       {
+        "blankId": "p5",
+        "text": "2987"
+       },
+       {
+        "blankId": "p6",
+        "text": "4410"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4a-cambridge.q04",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "comp.algorithms.scenario-problems",
+   "comp.algorithms.totalling-counting"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A school tuck-shop in Bulawayo sells 15 items. The names of the items are stored in the array `Items[1:15]` and their prices in dollars in the array `Prices[1:15]`; the item at each index of `Items` has its price at the same index of `Prices`. The two-dimensional array `Sold[1:15, 1:5]` has been declared to store the number of each item sold on each of the five school days of a week.\n\nWrite a program that meets the following requirements:\n\n- input and store the number of each item sold on each day; each number must be from 0 to 200;\n- for each item, calculate the total number sold in the week and the takings for that item (number sold × price);\n- output each item's name, the number sold and the takings, rounded to two decimal places;\n- calculate and output the total takings for the week, rounded to two decimal places;\n- find and output the name of the item that sold the most units;\n- count and output the number of items that sold fewer than 20 units in the week.\n\nAll inputs must be validated. You must use pseudocode or program code and add comments to explain how your code works. You do not need to declare the arrays `Items`, `Prices` and `Sold`, or initialise `Items` and `Prices`.",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Declares the variables used, with suitable data types (counters, totals, best item)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Initialises the week's takings, the slow-seller count and the best quantity before the loops",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Outer loop that runs for all 15 items",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Inner loop that runs for all 5 days of each item",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Prompts and inputs each value into Sold[Item, Day]",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Validation loop that repeats while the value is below 0 or above 200",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Suitable error message for an invalid value",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Item total reset before the inner loop and the day's value added to it inside the inner loop",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Calculates the item's takings as the item total × Prices[Item]",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "Adds each item's takings to the week's takings",
+      "marks": 1
+     },
+     {
+      "id": "p11",
+      "description": "Outputs Items[Item], the number sold and the takings rounded to 2 decimal places",
+      "marks": 1
+     },
+     {
+      "id": "p12",
+      "description": "Compares each item's total with the most so far and stores the new most and the item's name",
+      "marks": 1
+     },
+     {
+      "id": "p13",
+      "description": "Counts items whose weekly total is below 20",
+      "marks": 1
+     },
+     {
+      "id": "p14",
+      "description": "Outputs the week's takings rounded to 2 decimal places after the loops",
+      "marks": 1
+     },
+     {
+      "id": "p15",
+      "description": "Outputs the best-selling item's name and the count of slow sellers with messages",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nDECLARE Item : INTEGER\nDECLARE Day : INTEGER\nDECLARE ItemQuantity : INTEGER\nDECLARE ItemTakings : REAL\nDECLARE WeekTakings : REAL\nDECLARE BestQuantity : INTEGER\nDECLARE BestItem : STRING\nDECLARE SlowSellers : INTEGER\n\nWeekTakings ← 0\nBestQuantity ← -1\nSlowSellers ← 0\nFOR Item ← 1 TO 15\n    ItemQuantity ← 0                      // fresh total for this item\n    FOR Day ← 1 TO 5\n        OUTPUT \"Enter number of \", Items[Item], \" sold on day \", Day\n        INPUT Sold[Item, Day]\n        WHILE Sold[Item, Day] < 0 OR Sold[Item, Day] > 200 DO   // validate\n            OUTPUT \"Must be from 0 to 200, enter again\"\n            INPUT Sold[Item, Day]\n        ENDWHILE\n        ItemQuantity ← ItemQuantity + Sold[Item, Day]\n    NEXT Day\n    ItemTakings ← ItemQuantity * Prices[Item]\n    WeekTakings ← WeekTakings + ItemTakings\n    OUTPUT Items[Item], \": \", ItemQuantity, \" sold, takings \", ROUND(ItemTakings, 2)\n    IF ItemQuantity > BestQuantity        // best seller so far\n        THEN\n            BestQuantity ← ItemQuantity\n            BestItem ← Items[Item]\n    ENDIF\n    IF ItemQuantity < 20                  // slow seller\n        THEN\n            SlowSellers ← SlowSellers + 1\n    ENDIF\nNEXT Item\nOUTPUT \"Total takings for the week: \", ROUND(WeekTakings, 2)\nOUTPUT \"Best-selling item: \", BestItem\nOUTPUT \"Items selling fewer than 20: \", SlowSellers\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A nested loop processes the 2D array; per-item totals feed the overall total, the maximum and the conditional count.",
+  "hints": [
+   "Outer loop over the 15 items, inner loop over the 5 days.",
+   "Reset each item's quantity before its inner loop."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w4a-cambridge.q05",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "comp.algorithms.scenario-problems",
+   "comp.algorithms.totalling-counting"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A coach running from Harare to Mutare has 12 rows of 4 seats. The two-dimensional array `Seats[1:12, 1:4]` stores the name of the passenger in each seat; a free seat holds an empty string `\"\"`. At the start every element has been set to `\"\"`. Every ticket costs 25 dollars.\n\nWrite a program that meets the following requirements:\n\n- allow the booking clerk to make bookings until they choose to stop: for each booking, input a row number (1 to 12) and a seat number (1 to 4);\n- if the seat is free, input the passenger's name, which must not be blank, store it in `Seats`, and output a confirmation; if the seat is already taken, output a suitable message;\n- after each booking attempt, ask whether another booking is to be made (Y or N);\n- when the clerk stops, output the number of bookings made and the total fares taken;\n- output, for each row, the row number and the number of free seats in that row, and then the total number of free seats on the coach.\n\nAll inputs must be validated. You must use pseudocode or program code and add comments to explain how your code works. You do not need to declare or initialise the array `Seats`.",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Declares the variables used with suitable data types, and a constant (or variable) for the fare of 25",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Initialises the number of bookings to 0 before the booking loop",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Conditional loop (REPEAT … UNTIL / WHILE) that continues until the clerk chooses to stop",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Inputs the row with validation 1 to 12 and an error message",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Inputs the seat with validation 1 to 4 and an error message",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Checks whether Seats[Row, Seat] is empty (free)",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "If free, inputs the passenger's name with a presence check (repeats while blank)",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Stores the name in Seats[Row, Seat], adds 1 to the bookings and outputs a confirmation",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "If the seat is taken, outputs a suitable message",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "Inputs Y or N for another booking, validated (repeats until Y or N)",
+      "marks": 1
+     },
+     {
+      "id": "p11",
+      "description": "After the loop, outputs the number of bookings and the total fares (bookings × 25)",
+      "marks": 1
+     },
+     {
+      "id": "p12",
+      "description": "Nested loops over all 12 rows and 4 seats for the report",
+      "marks": 1
+     },
+     {
+      "id": "p13",
+      "description": "Free-seat count for a row reset before the inner loop and increased for each empty element",
+      "marks": 1
+     },
+     {
+      "id": "p14",
+      "description": "Outputs each row number with its number of free seats",
+      "marks": 1
+     },
+     {
+      "id": "p15",
+      "description": "Totals and outputs the number of free seats on the coach",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nCONSTANT Fare ← 25\nDECLARE Row : INTEGER\nDECLARE Seat : INTEGER\nDECLARE Name : STRING\nDECLARE Again : STRING\nDECLARE Bookings : INTEGER\nDECLARE RowFree : INTEGER\nDECLARE TotalFree : INTEGER\n\nBookings ← 0\nREPEAT\n    OUTPUT \"Enter row number (1 to 12)\"\n    INPUT Row\n    WHILE Row < 1 OR Row > 12 DO\n        OUTPUT \"Row must be 1 to 12, enter again\"\n        INPUT Row\n    ENDWHILE\n    OUTPUT \"Enter seat number (1 to 4)\"\n    INPUT Seat\n    WHILE Seat < 1 OR Seat > 4 DO\n        OUTPUT \"Seat must be 1 to 4, enter again\"\n        INPUT Seat\n    ENDWHILE\n    IF Seats[Row, Seat] = \"\"              // seat is free\n        THEN\n            OUTPUT \"Enter passenger name\"\n            INPUT Name\n            WHILE Name = \"\" DO           // presence check\n                OUTPUT \"Name must not be blank, enter again\"\n                INPUT Name\n            ENDWHILE\n            Seats[Row, Seat] ← Name\n            Bookings ← Bookings + 1\n            OUTPUT \"Row \", Row, \" seat \", Seat, \" booked for \", Name\n        ELSE\n            OUTPUT \"That seat is already booked\"\n    ENDIF\n    REPEAT\n        OUTPUT \"Another booking? (Y/N)\"\n        INPUT Again\n    UNTIL Again = \"Y\" OR Again = \"N\"\nUNTIL Again = \"N\"\nOUTPUT \"Bookings made: \", Bookings, \" Total fares: \", Bookings * Fare\nTotalFree ← 0\nFOR Row ← 1 TO 12                         // report of free seats\n    RowFree ← 0\n    FOR Seat ← 1 TO 4\n        IF Seats[Row, Seat] = \"\"\n            THEN\n                RowFree ← RowFree + 1\n        ENDIF\n    NEXT Seat\n    OUTPUT \"Row \", Row, \": \", RowFree, \" seats free\"\n    TotalFree ← TotalFree + RowFree\nNEXT Row\nOUTPUT \"Seats still free: \", TotalFree\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Combines a conditional loop with validation and a presence check, a 2D array update, and a nested-loop report.",
+  "hints": [
+   "Use a conditional loop for the bookings and a nested FOR loop for the report.",
+   "A seat is free when its element holds an empty string."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w4a-cambridge.q06",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "comp.algorithms.scenario-problems",
+   "comp.algorithms.totalling-counting"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A Form 3 class in Gweru has 35 learners. Their names are stored in the array `Learners[1:35]`. The two-dimensional array `Marks[1:35, 1:4]` has been declared to store each learner's marks in four tests; each test is marked out of 50.\n\nWrite a program that meets the following requirements:\n\n- input and store the four test marks for every learner; each mark must be from 0 to 50;\n- calculate each learner's total and their percentage (total out of 200 converted to a percentage);\n- award a grade: A for 80% or more, B for 65% to less than 80%, C for 50% to less than 65%, U below 50%;\n- output each learner's name, percentage rounded to one decimal place, and grade;\n- count and output the number of learners awarded each grade;\n- calculate and output the class's average percentage, rounded to one decimal place.\n\nAll inputs must be validated. You must use pseudocode or program code and add comments to explain how your code works. You do not need to declare the arrays `Learners` and `Marks`, or initialise `Learners`.",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Declares the variables used with suitable data types (including a CHAR or STRING for the grade)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Initialises the four grade counters and the class total to 0 before the loops",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Outer loop for all 35 learners",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Inner loop for the 4 tests",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Prompts and inputs each mark into Marks[Learner, Test]",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Validation of each mark (0 to 50) in a loop, with an error message",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Learner's total reset before the inner loop and each mark added inside it",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Calculates the percentage as total / 200 × 100 (or total / 2)",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Correct conditions for grade A (>= 80) and grade B (>= 65 and < 80)",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "Correct conditions for grade C (>= 50 and < 65) and grade U (< 50)",
+      "marks": 1
+     },
+     {
+      "id": "p11",
+      "description": "Adds 1 to the counter for the grade awarded",
+      "marks": 1
+     },
+     {
+      "id": "p12",
+      "description": "Outputs each learner's name, percentage rounded to 1 decimal place and grade",
+      "marks": 1
+     },
+     {
+      "id": "p13",
+      "description": "Adds each learner's percentage (or total) to the class total",
+      "marks": 1
+     },
+     {
+      "id": "p14",
+      "description": "Outputs the number of learners with each grade after the loops",
+      "marks": 1
+     },
+     {
+      "id": "p15",
+      "description": "Calculates and outputs the class average percentage rounded to 1 decimal place",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nDECLARE Learner : INTEGER\nDECLARE Test : INTEGER\nDECLARE Total : INTEGER\nDECLARE Percentage : REAL\nDECLARE Grade : CHAR\nDECLARE CountA : INTEGER\nDECLARE CountB : INTEGER\nDECLARE CountC : INTEGER\nDECLARE CountU : INTEGER\nDECLARE ClassTotal : REAL\n\nCountA ← 0\nCountB ← 0\nCountC ← 0\nCountU ← 0\nClassTotal ← 0\nFOR Learner ← 1 TO 35\n    Total ← 0\n    FOR Test ← 1 TO 4\n        REPEAT                                     // validate each mark\n            OUTPUT \"Enter mark for test \", Test, \" for \", Learners[Learner]\n            INPUT Marks[Learner, Test]\n            IF Marks[Learner, Test] < 0 OR Marks[Learner, Test] > 50\n                THEN\n                    OUTPUT \"Mark must be from 0 to 50\"\n            ENDIF\n        UNTIL Marks[Learner, Test] >= 0 AND Marks[Learner, Test] <= 50\n        Total ← Total + Marks[Learner, Test]\n    NEXT Test\n    Percentage ← Total / 200 * 100\n    IF Percentage >= 80                            // award and count the grade\n        THEN\n            Grade ← 'A'\n            CountA ← CountA + 1\n        ELSE\n            IF Percentage >= 65\n                THEN\n                    Grade ← 'B'\n                    CountB ← CountB + 1\n                ELSE\n                    IF Percentage >= 50\n                        THEN\n                            Grade ← 'C'\n                            CountC ← CountC + 1\n                        ELSE\n                            Grade ← 'U'\n                            CountU ← CountU + 1\n                    ENDIF\n            ENDIF\n    ENDIF\n    ClassTotal ← ClassTotal + Percentage\n    OUTPUT Learners[Learner], \" \", ROUND(Percentage, 1), \"% grade \", Grade\nNEXT Learner\nOUTPUT \"A: \", CountA, \" B: \", CountB, \" C: \", CountC, \" U: \", CountU\nOUTPUT \"Class average: \", ROUND(ClassTotal / 35, 1), \"%\"\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Nested loops fill and total the 2D array; selection awards and counts grades; the class average comes after the loops.",
+  "hints": [
+   "Total each learner's four marks in an inner loop.",
+   "Use nested IF (or a chain) to award the grade, counting each grade."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w4a-cambridge.q07",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "comp.algorithms.scenario-problems",
+   "comp.algorithms.totalling-counting"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A community borehole near Masvingo supplies 40 households. The names of the households are stored in the array `Households[1:40]`. The two-dimensional array `Litres[1:40, 1:7]` has been declared to store the number of litres each household draws on each day of a week.\n\nWrite a program that meets the following requirements:\n\n- input and store the litres drawn by each household on each of the seven days; each value must be a whole number from 0 to 2000;\n- calculate each household's total for the week and its average daily use;\n- output each household's name, weekly total and average daily use rounded to one decimal place; if the weekly total is more than 7000 litres, also output the words \"Over limit\" next to that household;\n- count and output the number of households over the limit;\n- find and output the name of the household with the lowest weekly total;\n- calculate and output the total number of litres drawn from the borehole in the week.\n\nAll inputs must be validated. You must use pseudocode or program code and add comments to explain how your code works. You do not need to declare the arrays `Households` and `Litres`, or initialise `Households`.",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Declares the variables used with suitable data types",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Initialises the borehole total and the over-limit count to 0 before the loops",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Initialises the lowest total to a value above any possible weekly total (above 14000) or to the first household's total",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Outer loop for all 40 households",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Inner loop for the 7 days",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Prompts and inputs each value into Litres[House, Day]",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Validation loop for 0 to 2000 with an error message",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Weekly total reset before the inner loop and each day's litres added inside it",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Calculates the average daily use as weekly total / 7",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "Outputs the household's name, weekly total and average rounded to 1 decimal place",
+      "marks": 1
+     },
+     {
+      "id": "p11",
+      "description": "Outputs \"Over limit\" when the weekly total is greater than 7000",
+      "marks": 1
+     },
+     {
+      "id": "p12",
+      "description": "Adds 1 to the over-limit count for each such household",
+      "marks": 1
+     },
+     {
+      "id": "p13",
+      "description": "Compares each weekly total with the lowest so far, storing the new lowest and the household's name",
+      "marks": 1
+     },
+     {
+      "id": "p14",
+      "description": "Adds each weekly total to the borehole total",
+      "marks": 1
+     },
+     {
+      "id": "p15",
+      "description": "After the loops, outputs the borehole total, the over-limit count and the name of the lowest user, with messages",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nDECLARE House : INTEGER\nDECLARE Day : INTEGER\nDECLARE WeekTotal : INTEGER\nDECLARE BoreholeTotal : INTEGER\nDECLARE OverLimit : INTEGER\nDECLARE LowestTotal : INTEGER\nDECLARE LowestName : STRING\n\nBoreholeTotal ← 0\nOverLimit ← 0\nLowestTotal ← 99999                        // above any possible weekly total\nFOR House ← 1 TO 40\n    WeekTotal ← 0\n    FOR Day ← 1 TO 7\n        OUTPUT \"Litres used by \", Households[House], \" on day \", Day\n        INPUT Litres[House, Day]\n        WHILE Litres[House, Day] < 0 OR Litres[House, Day] > 2000 DO\n            OUTPUT \"Litres must be from 0 to 2000, enter again\"\n            INPUT Litres[House, Day]\n        ENDWHILE\n        WeekTotal ← WeekTotal + Litres[House, Day]\n    NEXT Day\n    BoreholeTotal ← BoreholeTotal + WeekTotal\n    IF WeekTotal > 7000                     // flag heavy users\n        THEN\n            OUTPUT Households[House], \" \", WeekTotal, \" litres, average \", ROUND(WeekTotal / 7, 1), \" Over limit\"\n            OverLimit ← OverLimit + 1\n        ELSE\n            OUTPUT Households[House], \" \", WeekTotal, \" litres, average \", ROUND(WeekTotal / 7, 1)\n    ENDIF\n    IF WeekTotal < LowestTotal              // lowest user so far\n        THEN\n            LowestTotal ← WeekTotal\n            LowestName ← Households[House]\n    ENDIF\nNEXT House\nOUTPUT \"Total drawn from the borehole: \", BoreholeTotal, \" litres\"\nOUTPUT \"Households over the limit: \", OverLimit\nOUTPUT \"Lowest use: \", LowestName\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Nested loops over the 2D array with validation; per-household totals, a conditional count, a minimum with its name and a grand total.",
+  "hints": [
+   "Each household's weekly total is the sum of its seven days.",
+   "Start the lowest total above any possible weekly total, or at the first household's total."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 2"
+ }
+]

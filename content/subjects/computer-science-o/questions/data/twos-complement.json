@@ -1,0 +1,1189 @@
+[
+ {
+  "key": "data.twos-complement.q01",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the denary number **-12** to 8-bit two's complement.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "11110100"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "+12 = 00001100; inverted 11110011; add 1 → 11110100. Check: $-128 + 64 + 32 + 16 + 4 = -12$.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "11110100"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11110011"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "00001100"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q02",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the denary number **-73** to 8-bit two's complement.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "10110111"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "+73 = 01001001; inverted 10110110; add 1 → 10110111. Check: $-128 + 32 + 16 + 4 + 2 + 1 = -73$.",
+  "hints": [
+   "Write the positive number in 8 bits first.",
+   "Invert every bit, then add 1."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "10110111"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "10110110"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "01001001"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q03",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the denary number **-115** to 8-bit two's complement.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "10001101"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "+115 = 01110011; inverted 10001100; add 1 → 10001101. Check: $-128 + 8 + 4 + 1 = -115$.",
+  "hints": [
+   "Write the positive number in 8 bits first.",
+   "Invert every bit, then add 1."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "10001101"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "10001100"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "01110011"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q04",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the denary number **+58** to 8-bit two's complement.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "00111010"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Positive numbers are written as ordinary 8-bit binary with MSB 0: $32 + 16 + 8 + 2 = 58$ → 00111010.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "00111010"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11000101"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11000110"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The 8-bit two's complement number **11110110** is stored in a register. What is its denary value?",
+  "answerSpec": {
+   "value": -10
+  },
+  "explanation": "Place values −128, 64, …, 1: $-128 + 64 + 32 + 16 + 4 + 2 = -10$.",
+  "workedSolution": "1. Write −128, 64, 32, 16, 8, 4, 2, 1 over the bits.\n2. The 1s give $-128 + 64 + 32 + 16 + 4 + 2$.\n3. The value is -10.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "246"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "10"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The 8-bit two's complement number **10101001** is stored in a register. What is its denary value?",
+  "answerSpec": {
+   "value": -87
+  },
+  "explanation": "Place values −128, 64, …, 1: $-128 + 32 + 8 + 1 = -87$.",
+  "workedSolution": "1. Write −128, 64, 32, 16, 8, 4, 2, 1 over the bits.\n2. The 1s give $-128 + 32 + 8 + 1$.\n3. The value is -87.",
+  "hints": [
+   "The MSB is worth −128.",
+   "Add the place values of all the 1s."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-87"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "169"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "87"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The 8-bit two's complement number **01110001** is stored in a register. What is its denary value?",
+  "answerSpec": {
+   "value": 113
+  },
+  "explanation": "Place values −128, 64, …, 1: $64 + 32 + 16 + 1 = 113$.",
+  "workedSolution": "1. Write −128, 64, 32, 16, 8, 4, 2, 1 over the bits.\n2. The 1s give $64 + 32 + 16 + 1$.\n3. The value is 113.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "113"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-113"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The 8-bit two's complement number **10000011** is stored in a register. What is its denary value?",
+  "answerSpec": {
+   "value": -125
+  },
+  "explanation": "Place values −128, 64, …, 1: $-128 + 2 + 1 = -125$.",
+  "workedSolution": "1. Write −128, 64, 32, 16, 8, 4, 2, 1 over the bits.\n2. The 1s give $-128 + 2 + 1$.\n3. The value is -125.",
+  "hints": [
+   "The MSB is worth −128.",
+   "Add the place values of all the 1s."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-125"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "131"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "125"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the place value of the most significant bit in 8-bit two's complement?",
+  "options": [
+   {
+    "key": "A",
+    "content": "−128",
+    "correct": true,
+    "rationale": "Correct: the MSB has a negative place value."
+   },
+   {
+    "key": "B",
+    "content": "128",
+    "rationale": "+128 is the MSB value in ordinary unsigned binary."
+   },
+   {
+    "key": "C",
+    "content": "−1",
+    "rationale": "−1 is the value of 11111111, not of the MSB alone."
+   },
+   {
+    "key": "D",
+    "content": "−127",
+    "rationale": "−127 is the value of 10000001."
+   }
+  ],
+  "explanation": "8-bit two's complement place values: −128, 64, 32, 16, 8, 4, 2, 1.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.twos-complement.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the range of integers that can be stored in 8-bit two's complement?",
+  "options": [
+   {
+    "key": "A",
+    "content": "−127 to +127",
+    "rationale": "This leaves out 10000000, which is −128."
+   },
+   {
+    "key": "B",
+    "content": "−128 to +128",
+    "rationale": "+128 would need a ninth bit; 01111111 (127) is the largest."
+   },
+   {
+    "key": "C",
+    "content": "0 to 255",
+    "rationale": "That is the range of unsigned 8-bit binary."
+   },
+   {
+    "key": "D",
+    "content": "−128 to +127",
+    "correct": true,
+    "rationale": "Correct: 10000000 to 01111111."
+   }
+  ],
+  "explanation": "256 patterns: 128 negative values (−128 to −1), zero and 127 positive values.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.twos-complement.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In 8-bit two's complement, what does an MSB of **1** tell you about a number?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The number is odd",
+    "rationale": "Whether a number is odd depends on the LSB, not the MSB."
+   },
+   {
+    "key": "B",
+    "content": "The number is at least 128",
+    "rationale": "In two's complement the MSB is worth −128, not +128."
+   },
+   {
+    "key": "C",
+    "content": "An overflow has occurred",
+    "rationale": "MSB 1 is normal for any negative number."
+   },
+   {
+    "key": "D",
+    "content": "The number is negative",
+    "correct": true,
+    "rationale": "Correct: the −128 place is used, and the other bits add at most 127."
+   }
+  ],
+  "explanation": "With MSB 1 the value is −128 plus at most 127, so it is between −128 and −1.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.twos-complement.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which 8-bit two's complement number represents **−1**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "10000001",
+    "rationale": "This is $-128 + 1 = -127$."
+   },
+   {
+    "key": "B",
+    "content": "00000001",
+    "rationale": "This is +1."
+   },
+   {
+    "key": "C",
+    "content": "11111111",
+    "correct": true,
+    "rationale": "Correct: $-128 + 127 = -1$."
+   },
+   {
+    "key": "D",
+    "content": "11111110",
+    "rationale": "This is −2."
+   }
+  ],
+  "explanation": "+1 = 00000001 → inverted 11111110 → add 1 → 11111111.",
+  "hints": [
+   "Start with +1 = 00000001, invert and add 1."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Rudo converts −36 to two's complement. She writes +36 as 00100100 and inverts it to get **11011011**. What should she do next?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Stop: 11011011 is the answer",
+    "rationale": "Inverting alone gives −37, one less than −36."
+   },
+   {
+    "key": "B",
+    "content": "Add 1 to get 11011100",
+    "correct": true,
+    "rationale": "Correct: invert then add 1; check: −128 + 64 + 16 + 8 + 4 = −36."
+   },
+   {
+    "key": "C",
+    "content": "Subtract 1 to get 11011010",
+    "rationale": "Subtracting 1 gives −38."
+   },
+   {
+    "key": "D",
+    "content": "Change the MSB back to 0",
+    "rationale": "The MSB must be 1 for a negative number."
+   }
+  ],
+  "explanation": "+36 = 00100100; inverted 11011011; add 1 → 11011100.",
+  "hints": [
+   "Remember the full method: positive, invert, ..."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Why can **+128** not be stored in 8-bit two's complement?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Two's complement cannot store numbers above 100",
+    "rationale": "The limit is 127, set by the 7 bits below the MSB."
+   },
+   {
+    "key": "B",
+    "content": "It would need the MSB, which is reserved for −128",
+    "correct": true,
+    "rationale": "Correct: positive numbers need MSB 0, so the largest is 01111111 = 127."
+   },
+   {
+    "key": "C",
+    "content": "128 is not a power of 2",
+    "rationale": "128 is $2^7$; the issue is the negative MSB."
+   },
+   {
+    "key": "D",
+    "content": "Only negative numbers can be stored in two's complement",
+    "rationale": "Positive numbers from 0 to 127 are stored too."
+   }
+  ],
+  "explanation": "Positive values use only the seven bits worth 64 to 1, giving at most 127. 10000000 already means −128.",
+  "hints": [
+   "What must the MSB be for a positive number?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q15",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In two's complement, a positive number is written in exactly the same way as in ordinary 8-bit binary.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True, for 0 to 127: the MSB is 0 so the −128 place is not used.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.twos-complement.q16",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "To make a number negative in two's complement, you only need to change the MSB to 1.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Changing only the MSB subtracts 128. For example 00000101 (+5) becomes 10000101 (−123), not −5 (11111011). Use invert-and-add-1.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.twos-complement.q17",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the conversion of **−90** to 8-bit two's complement.",
+  "payload": {
+   "template": "+90 in 8 bits: {{blank:a}}. Inverted: {{blank:b}}. After adding 1: {{blank:c}}.",
+   "blanks": [
+    {
+     "id": "a"
+    },
+    {
+     "id": "b"
+    },
+    {
+     "id": "c"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "01011010"
+     ],
+     "normalise": [
+      "trim",
+      "remove_whitespace"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "10100101"
+     ],
+     "normalise": [
+      "trim",
+      "remove_whitespace"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "10100110"
+     ],
+     "normalise": [
+      "trim",
+      "remove_whitespace"
+     ]
+    }
+   ]
+  },
+  "explanation": "+90 = 01011010; inverted 10100101; add 1 → 10100110. Check: $-128 + 32 + 4 + 2 = -90$.",
+  "hints": [
+   "$90 = 64 + 16 + 8 + 2$.",
+   "Invert means swap every 0 and 1."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "01011010"
+    },
+    {
+     "blankId": "b",
+     "text": "10100101"
+    },
+    {
+     "blankId": "c",
+     "text": "10100110"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "1011010"
+     },
+     {
+      "blankId": "b",
+      "text": "01011010"
+     },
+     {
+      "blankId": "c",
+      "text": "10100101"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q18",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each 8-bit two's complement number with its denary value.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "01111111"
+    },
+    {
+     "id": "L2",
+     "content": "10000000"
+    },
+    {
+     "id": "L3",
+     "content": "11111110"
+    },
+    {
+     "id": "L4",
+     "content": "00000000"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "-2"
+    },
+    {
+     "id": "R4",
+     "content": "0"
+    },
+    {
+     "id": "R1",
+     "content": "127"
+    },
+    {
+     "id": "R2",
+     "content": "-128"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "01111111 = 127 (largest); 10000000 = −128 (smallest); 11111110 = −128 + 126 = −2; 00000000 = 0.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Explain how to tell from its bits whether an 8-bit two's complement number is positive or negative, and why this works.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Look at the MSB: 1 means negative, 0 means positive (or zero).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The MSB has place value −128 and the other seven bits add up to at most 127, so whenever the MSB is 1 the total is negative.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: If the most significant bit is 1 the number is negative; if it is 0 the number is positive or zero. This works because the MSB is worth −128, and the remaining bits can add at most 127, so the total is always below zero when the MSB is set."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "−128 + 127 = −1, so any number with MSB 1 is negative.",
+  "hints": [
+   "Compare −128 with the largest total of the other seven bits."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.twos-complement.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A cold-storage warehouse in Harare records temperatures in °C as 8-bit two's complement integers.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Convert the temperature -18 °C to 8-bit two's complement.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "11101110"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "+18 = 00010010; inverted 11101101; add 1 → 11101110."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Convert the temperature +23 °C to 8-bit two's complement.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "00010111"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$16 + 4 + 2 + 1 = 23$ → 00010111."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "A reading is stored as 11100111. Convert it to denary.",
+    "answerSpec": {
+     "value": -25
+    },
+    "explanation": "$-128 + 64 + 32 + 4 + 2 + 1 = -25$.",
+    "workedSolution": "1. $-128 + 64 + 32 + 4 + 2 + 1 = -25$."
+   },
+   {
+    "label": "(d)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "State the lowest temperature the system can record.",
+    "answerSpec": {
+     "value": -128
+    },
+    "explanation": "10000000 = −128.",
+    "workedSolution": "1. 10000000 = −128."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "An engineer suggests storing the temperatures as unsigned 8-bit binary instead. Explain why this would not work for this warehouse.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Unsigned binary can only store values from 0 to 255 / no negative numbers.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The warehouse records temperatures below 0 °C (such as −18 °C), which need a negative representation such as two's complement.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Unsigned binary stores only 0 to 255, so it has no way to show negative numbers. The cold store works below freezing, for example −18 °C, so it needs two's complement where the MSB is worth −128."
+    }
+   }
+  ],
+  "explanation": "(a) 11101110. (b) 00010111. (c) -25. (d) −128.",
+  "hints": [
+   "For a negative number: positive in 8 bits, invert, add 1.",
+   "The MSB is worth −128."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "11101110"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "00010111"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "-25"
+    },
+    "(d)": {
+     "type": "CALCULATION",
+     "value": "-128"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "11101101"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "00011000"
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "231"
+     },
+     "(d)": {
+      "type": "CALCULATION",
+      "value": "-127"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "data.twos-complement.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 5,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Tendai says that the 8-bit two's complement number **10010110** has the denary value 150. He worked it out by adding the place values of the 1s as he would in ordinary binary.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Give the correct denary value of 10010110 in two's complement.",
+    "answerSpec": {
+     "value": -106
+    },
+    "explanation": "$-128 + 16 + 4 + 2 = -106$.",
+    "workedSolution": "1. $-128 + 16 + 4 + 2 = -106$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Explain Tendai's mistake.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "He used +128 for the MSB (unsigned binary) instead of −128.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: He treated the MSB as +128, as in unsigned binary, but in two's complement it is worth −128."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Write the two's complement representation of the positive number with the same size (the opposite sign).",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01101010"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "+106 = 01101010 (invert 10010110 → 01101001, add 1 → 01101010)."
+   }
+  ],
+  "explanation": "10010110 = -106; its opposite +106 = 01101010.",
+  "hints": [
+   "The MSB is −128 in two's complement.",
+   "Invert-and-add-1 also turns a negative number into its positive."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "-106"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "01101010"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "CALCULATION",
+      "value": "150"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "01101011"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

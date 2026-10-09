@@ -1,0 +1,1227 @@
+[
+ {
+  "key": "prog.subroutines.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the main difference between a function and a procedure?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A function returns a value to where it was called; a procedure does not",
+    "correct": true,
+    "rationale": "Correct: that is the defining difference."
+   },
+   {
+    "key": "B",
+    "content": "A procedure can have parameters; a function cannot",
+    "rationale": "Both can have parameters."
+   },
+   {
+    "key": "C",
+    "content": "A function can only be called once in each program it is in",
+    "rationale": "Both can be called as many times as needed."
+   },
+   {
+    "key": "D",
+    "content": "A procedure always runs faster than the equivalent function",
+    "rationale": "Speed is not the difference."
+   }
+  ],
+  "explanation": "Functions return one value and are used in expressions; procedures are called as statements.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.subroutines.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which statement correctly runs the procedure `PrintReceipt`, which has no parameters?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`OUTPUT PrintReceipt`",
+    "rationale": "A procedure returns no value to output."
+   },
+   {
+    "key": "B",
+    "content": "`CALL PrintReceipt`",
+    "correct": true,
+    "rationale": "Correct: procedures are run with CALL."
+   },
+   {
+    "key": "C",
+    "content": "`PrintReceipt ← CALL`",
+    "rationale": "A procedure cannot be assigned."
+   },
+   {
+    "key": "D",
+    "content": "`RETURN PrintReceipt`",
+    "rationale": "RETURN is used inside a function to send back a value."
+   }
+  ],
+  "explanation": "`CALL <identifier>` is a complete statement that runs a procedure.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.subroutines.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output?\n\n```\nFUNCTION Triple(N : INTEGER) RETURNS INTEGER\n    RETURN N * 3\nENDFUNCTION\n\nOUTPUT Triple(7) + 1\n```",
+  "answerSpec": {
+   "value": 22
+  },
+  "explanation": "Triple(7) returns 21, then 21 + 1 = 22.",
+  "workedSolution": "1. N = 7; the function returns 7 × 3 = 21.\n2. 21 + 1 = 22.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "22"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "24"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.subroutines.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "`Larger(A : INTEGER, B : INTEGER)` is a function that returns the larger of two integers. Which statement uses it correctly?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`CALL Larger(Score1, Score2)`",
+    "rationale": "CALL is for procedures; the returned value would be lost."
+   },
+   {
+    "key": "B",
+    "content": "`Larger(Score1, Score2) ← Best`",
+    "rationale": "A function call cannot be assigned to."
+   },
+   {
+    "key": "C",
+    "content": "`Best ← Larger(Score1, Score2)`",
+    "correct": true,
+    "rationale": "Correct: the returned value is stored."
+   },
+   {
+    "key": "D",
+    "content": "`Best ← Larger`",
+    "rationale": "The function needs its two arguments."
+   }
+  ],
+  "explanation": "A function call is used inside an expression such as an assignment.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.subroutines.q05",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A variable declared inside a procedure can be used by the main program after the procedure has finished.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. It is local: it exists only while the procedure runs and only inside it.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.subroutines.q06",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A function call can be used as part of an expression, for example `Total ← Price + Tax(Price)`.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The returned value replaces the call and the expression is then evaluated.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.subroutines.q07",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each term to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Parameter"
+    },
+    {
+     "id": "L2",
+     "content": "Local variable"
+    },
+    {
+     "id": "L3",
+     "content": "Global variable"
+    },
+    {
+     "id": "L4",
+     "content": "Return value"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Declared in the main program and usable anywhere"
+    },
+    {
+     "id": "R4",
+     "content": "The single value a function sends back to its call"
+    },
+    {
+     "id": "R1",
+     "content": "Receives a value passed to a subroutine when it is called"
+    },
+    {
+     "id": "R2",
+     "content": "Declared inside a subroutine and usable only there"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Parameters receive data; scope is local or global; functions send back a return value.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.subroutines.q08",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the function, which returns the mean of two real numbers.\n\n```\nFUNCTION Mean(A : REAL, B : REAL) [1] [2]\n    [3] (A + B) / 2\nENDFUNCTION\n```",
+  "payload": {
+   "template": "[1] {{blank:a}} [2] {{blank:b}} [3] {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "RETURNS",
+      "RETURN",
+      "AS",
+      "CALL"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "REAL",
+      "INTEGER",
+      "BOOLEAN",
+      "STRING"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "RETURNS",
+      "RETURN",
+      "OUTPUT",
+      "CALL"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "RETURNS"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "REAL"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "RETURN"
+     ]
+    }
+   ]
+  },
+  "explanation": "The header ends `RETURNS REAL`; the body sends the value back with `RETURN`.",
+  "hints": [
+   "A function header states the type of value it sends back."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "RETURNS"
+    },
+    {
+     "blankId": "b",
+     "text": "REAL"
+    },
+    {
+     "blankId": "c",
+     "text": "RETURN"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "RETURN"
+     },
+     {
+      "blankId": "b",
+      "text": "INTEGER"
+     },
+     {
+      "blankId": "c",
+      "text": "RETURNS"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.subroutines.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output?\n\n```\nFUNCTION Square(N : INTEGER) RETURNS INTEGER\n    RETURN N * N\nENDFUNCTION\n\nFUNCTION Add(A : INTEGER, B : INTEGER) RETURNS INTEGER\n    RETURN A + B\nENDFUNCTION\n\nOUTPUT Add(Square(3), Square(4))\n```",
+  "answerSpec": {
+   "value": 25
+  },
+  "explanation": "Square(3) = 9 and Square(4) = 16; Add(9, 16) = 25.",
+  "workedSolution": "1. Square(3) = 9.\n2. Square(4) = 16.\n3. Add(9, 16) = 25.",
+  "hints": [
+   "Work out the inner calls first."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "25"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "49"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.subroutines.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output?\n\n```\nPROCEDURE ShowResult(Name : STRING, Subject : STRING)\n    OUTPUT Name, \" passed \", Subject\nENDPROCEDURE\n\nCALL ShowResult(\"Biology\", \"Farai\")\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "Farai passed Biology",
+    "rationale": "That would need the arguments in the other order."
+   },
+   {
+    "key": "B",
+    "content": "Biology passed Farai",
+    "correct": true,
+    "rationale": "Correct: the first argument goes to Name and the second to Subject."
+   },
+   {
+    "key": "C",
+    "content": "Name passed Subject",
+    "rationale": "The parameters' values are output, not their names."
+   },
+   {
+    "key": "D",
+    "content": "Nothing, because the call causes an error",
+    "rationale": "Both arguments are strings, so the call is valid, though illogical."
+   }
+  ],
+  "explanation": "Parameters are filled by position, not by meaning: always pass arguments in the order of the definition.",
+  "hints": [
+   "Arguments are matched to parameters by position."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.subroutines.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output?\n\n```\nDECLARE Total : INTEGER\nPROCEDURE AddPoints(Points : INTEGER)\n    Total ← Total + Points * 2\nENDPROCEDURE\n\nTotal ← 5\nCALL AddPoints(4)\nCALL AddPoints(Total)\nOUTPUT Total\n```",
+  "answerSpec": {
+   "value": 39
+  },
+  "explanation": "First call: 5 + 4 × 2 = 13. Second call: Points = 13, so 13 + 13 × 2 = 39.",
+  "workedSolution": "1. Total = 5.\n2. AddPoints(4): Total = 5 + 8 = 13.\n3. AddPoints(13): Total = 13 + 26 = 39.\n4. Output 39.",
+  "hints": [
+   "Total is global, so the procedure changes it.",
+   "In the second call, Points receives the current value of Total."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "39"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "13"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "prog.subroutines.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which is a benefit of using subroutines?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The program no longer needs to be tested",
+    "rationale": "Subroutines still need testing, though each can be tested separately."
+   },
+   {
+    "key": "B",
+    "content": "Variables no longer need data types",
+    "rationale": "Parameters and variables still have data types."
+   },
+   {
+    "key": "C",
+    "content": "The program can only be written by one programmer",
+    "rationale": "Subroutines make it easier for a team to share the work."
+   },
+   {
+    "key": "D",
+    "content": "A change to a task is made in one place only",
+    "correct": true,
+    "rationale": "Correct: the code exists only once, however often it is called."
+   }
+  ],
+  "explanation": "Reuse, easier maintenance, separate testing and teamwork are the usual benefits.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.subroutines.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "`CalculateTax(Price : REAL) RETURNS REAL` is a function. A learner writes `CALL CalculateTax(Price)` and then `OUTPUT Tax`. Why does this not output the tax?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Functions cannot have REAL parameters",
+    "rationale": "Any data type may be used for a parameter."
+   },
+   {
+    "key": "B",
+    "content": "OUTPUT cannot be used after a function call",
+    "rationale": "OUTPUT can follow any statement."
+   },
+   {
+    "key": "C",
+    "content": "The returned value is not stored, so Tax never receives it",
+    "correct": true,
+    "rationale": "Correct: the call must be in an expression, e.g. Tax ← CalculateTax(Price)."
+   },
+   {
+    "key": "D",
+    "content": "Price must be declared inside the function first",
+    "rationale": "Price is passed in as the argument."
+   }
+  ],
+  "explanation": "Write `Tax ← CalculateTax(Price)` (no CALL) and then output Tax.",
+  "hints": [
+   "What happens to the value a function returns when CALL is used?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.subroutines.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What does this Python program display?\n\n```\ndef double_plus(n):\n    return n * 2 + 1\n\nprint(double_plus(4) + double_plus(1))\n```",
+  "answerSpec": {
+   "value": 12
+  },
+  "explanation": "double_plus(4) returns 9 and double_plus(1) returns 3; 9 + 3 = 12.",
+  "workedSolution": "1. 4 × 2 + 1 = 9.\n2. 1 × 2 + 1 = 3.\n3. Display 12.",
+  "hints": [
+   "Each call returns its own value; add the two results."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "12"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "9"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "prog.subroutines.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In 0478 pseudocode, what is the largest number of parameters a procedure or function may have?",
+  "options": [
+   {
+    "key": "A",
+    "content": "One",
+    "rationale": "More than one is allowed."
+   },
+   {
+    "key": "B",
+    "content": "Two",
+    "rationale": "Up to three are allowed."
+   },
+   {
+    "key": "C",
+    "content": "There is no limit",
+    "rationale": "The 0478 syllabus sets a limit of three."
+   },
+   {
+    "key": "D",
+    "content": "Three",
+    "correct": true,
+    "rationale": "Correct: the syllabus allows up to three parameters."
+   }
+  ],
+  "explanation": "Procedures and functions may have no parameters or up to three.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ]
+ },
+ {
+  "key": "prog.subroutines.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Explain the difference between a local variable and a global variable, and give **one** reason why local variables are preferred inside subroutines.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Local: declared inside a subroutine, usable only there, exists only while it runs",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Global: declared in the main program, usable anywhere in the program",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Reason: subroutine can be tested / reused independently; avoids accidental changes to data elsewhere; names can be reused without clashes",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A local variable is declared inside a subroutine and can only be used there while it runs. A global variable is declared in the main program and can be used anywhere. Local variables are preferred because the subroutine then cannot accidentally change data used elsewhere, so it can be tested and reused on its own."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Scope decides where a variable can be used.",
+  "hints": [
+   "Where is each declared, and where can it be used?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.subroutines.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "Write a function `SalePrice` that takes a price and a discount percentage and returns the price after the discount. Then write main-program statements that input a price and output its sale price with a 15 percent discount.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Function header with two parameters and data types, and RETURNS REAL",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Calculates Price - Price * Percent / 100 (or Price * (1 - Percent / 100))",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "RETURN of the result and ENDFUNCTION",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Main program inputs the price (with a prompt)",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Calls the function in an expression (no CALL) with 15 and outputs the result",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nFUNCTION SalePrice(Price : REAL, Percent : REAL) RETURNS REAL\n    RETURN Price - Price * Percent / 100\nENDFUNCTION\n\nOUTPUT \"Enter the price\"\nINPUT ItemPrice\nOUTPUT \"Sale price: \", SalePrice(ItemPrice, 15)\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Define once, call in an expression.",
+  "hints": [
+   "A percentage of a price is Price * Percent / 100.",
+   "The main program stores or outputs the returned value."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.subroutines.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "Consider this procedure and call.\n\n```\nPROCEDURE DrawBox(Rows : INTEGER, Columns : INTEGER, Symbol : CHAR)\n    DECLARE R : INTEGER\n    DECLARE C : INTEGER\n    FOR R ← 1 TO Rows\n        FOR C ← 1 TO Columns\n            OUTPUT Symbol\n        NEXT C\n    NEXT R\nENDPROCEDURE\n\nCALL DrawBox(3, 6, '#')\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "How many times is a symbol output by the call?",
+    "answerSpec": {
+     "value": 18
+    },
+    "explanation": "3 rows × 6 columns = 18.",
+    "workedSolution": "1. Inner loop: 6 outputs per row.\n2. 3 rows: 18."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which of these are local variables of the procedure, apart from its parameters?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Rows and Columns",
+      "rationale": "These are parameters."
+     },
+     {
+      "key": "B",
+      "content": "Symbol only",
+      "rationale": "Symbol is a parameter."
+     },
+     {
+      "key": "C",
+      "content": "There are none",
+      "rationale": "R and C are declared inside the procedure."
+     },
+     {
+      "key": "D",
+      "content": "R and C",
+      "correct": true,
+      "rationale": "Correct: they are declared inside the procedure."
+     }
+    ],
+    "explanation": "Variables declared inside the subroutine are local."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the identifier of the parameter whose data type is CHAR.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Symbol"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "`Symbol : CHAR`."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why `DrawBox` is written as a procedure and not as a function, and write a call that draws a box of 2 rows and 9 columns of `'*'`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It performs a task (outputs symbols) and does not need to return a value",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "CALL DrawBox(…)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Arguments in the right order: 2, 9, '*'",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: DrawBox only produces output; it does not calculate a value for the rest of the program, so a procedure is suitable. `CALL DrawBox(2, 9, '*')`."
+    }
+   }
+  ],
+  "explanation": "18 symbols; R and C are local; Symbol is the CHAR parameter.",
+  "hints": [
+   "The inner loop outputs one symbol per column, for every row."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "18"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "Symbol"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "9"
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "Columns"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.subroutines.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.subroutines"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "A calendar program for a school in Harare uses this function.\n\n```\nFUNCTION IsLeapYear(Year : INTEGER) RETURNS BOOLEAN\n    IF MOD(Year, 400) = 0\n        THEN\n            RETURN TRUE\n    ENDIF\n    IF MOD(Year, 100) = 0\n        THEN\n            RETURN FALSE\n    ENDIF\n    IF MOD(Year, 4) = 0\n        THEN\n            RETURN TRUE\n        ELSE\n            RETURN FALSE\n    ENDIF\nENDFUNCTION\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "State the value returned for each call.",
+    "payload": {
+     "template": "`IsLeapYear(2028)`: {{blank:y0}}\n\n`IsLeapYear(2100)`: {{blank:y1}}\n\n`IsLeapYear(2000)`: {{blank:y2}}\n\n`IsLeapYear(2031)`: {{blank:y3}}",
+     "blanks": [
+      {
+       "id": "y0",
+       "input": "select",
+       "choices": [
+        "TRUE",
+        "FALSE"
+       ]
+      },
+      {
+       "id": "y1",
+       "input": "select",
+       "choices": [
+        "TRUE",
+        "FALSE"
+       ]
+      },
+      {
+       "id": "y2",
+       "input": "select",
+       "choices": [
+        "TRUE",
+        "FALSE"
+       ]
+      },
+      {
+       "id": "y3",
+       "input": "select",
+       "choices": [
+        "TRUE",
+        "FALSE"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "y0",
+       "accepted": [
+        "TRUE"
+       ]
+      },
+      {
+       "id": "y1",
+       "accepted": [
+        "FALSE"
+       ]
+      },
+      {
+       "id": "y2",
+       "accepted": [
+        "TRUE"
+       ]
+      },
+      {
+       "id": "y3",
+       "accepted": [
+        "FALSE"
+       ]
+      }
+     ]
+    },
+    "explanation": "2028 divides by 4 (TRUE); 2100 divides by 100 but not 400 (FALSE); 2000 divides by 400 (TRUE); 2031 does not divide by 4 (FALSE)."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why is the return type BOOLEAN?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The answer is always either TRUE or FALSE",
+      "correct": true,
+      "rationale": "Correct: a year is or is not a leap year."
+     },
+     {
+      "key": "B",
+      "content": "Years are whole numbers",
+      "rationale": "That is the parameter's type, not the result's."
+     },
+     {
+      "key": "C",
+      "content": "MOD always returns a Boolean",
+      "rationale": "MOD returns an integer remainder."
+     },
+     {
+      "key": "D",
+      "content": "Functions must always return BOOLEAN",
+      "rationale": "Functions can return any data type."
+     }
+    ],
+    "explanation": "The function answers a yes/no question."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write main-program pseudocode that inputs a year and uses the function to output either \"366 days\" or \"365 days\".",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Prompts and inputs the year",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Calls IsLeapYear(Year) inside an IF condition (no CALL)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Outputs \"366 days\" when TRUE",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Outputs \"365 days\" in the ELSE branch, with ENDIF",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nOUTPUT \"Enter a year\"\nINPUT Year\nIF IsLeapYear(Year)\n    THEN\n        OUTPUT \"366 days\"\n    ELSE\n        OUTPUT \"365 days\"\nENDIF\n```"
+    }
+   }
+  ],
+  "explanation": "Returns TRUE, FALSE, TRUE, FALSE.",
+  "hints": [
+   "Test the MOD conditions in the order written; RETURN ends the function at once.",
+   "Divisible by 400 is tested first."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "y0",
+       "text": "TRUE"
+      },
+      {
+       "blankId": "y1",
+       "text": "FALSE"
+      },
+      {
+       "blankId": "y2",
+       "text": "TRUE"
+      },
+      {
+       "blankId": "y3",
+       "text": "FALSE"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "y0",
+        "text": "FALSE"
+       },
+       {
+        "blankId": "y1",
+        "text": "TRUE"
+       },
+       {
+        "blankId": "y2",
+        "text": "FALSE"
+       },
+       {
+        "blankId": "y3",
+        "text": "TRUE"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

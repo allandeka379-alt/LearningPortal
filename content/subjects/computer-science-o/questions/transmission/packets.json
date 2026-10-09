@@ -1,0 +1,1016 @@
+[
+ {
+  "key": "transmission.packets.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which part of a packet carries the actual data being sent?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Payload",
+    "correct": true,
+    "rationale": "Correct: the payload is the piece of the message itself."
+   },
+   {
+    "key": "B",
+    "content": "Header",
+    "rationale": "The header carries addresses and the packet number, not the data."
+   },
+   {
+    "key": "C",
+    "content": "Trailer",
+    "rationale": "The trailer marks the end of the packet and holds error-checking data."
+   },
+   {
+    "key": "D",
+    "content": "Router",
+    "rationale": "A router is a network device, not part of a packet."
+   }
+  ],
+  "explanation": "A packet has a header (control information), a payload (the data) and a trailer (end marker and error check).",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.packets.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which item is stored in the **header** of a packet?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The packet number",
+    "correct": true,
+    "rationale": "Correct: the header holds the packet number and the two addresses."
+   },
+   {
+    "key": "B",
+    "content": "The checksum used for error checking",
+    "rationale": "Error-checking data is usually in the trailer."
+   },
+   {
+    "key": "C",
+    "content": "The section of the file being sent",
+    "rationale": "That is the payload."
+   },
+   {
+    "key": "D",
+    "content": "The route the packet must take",
+    "rationale": "Routes are chosen by routers as the packet travels; they are not fixed in the header."
+   }
+  ],
+  "explanation": "The header holds the destination address, the originator's address and the packet number.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.packets.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Why does each packet's header contain a packet number?",
+  "options": [
+   {
+    "key": "A",
+    "content": "So routers can choose the shortest route for it",
+    "rationale": "Routers use the destination address, not the packet number."
+   },
+   {
+    "key": "B",
+    "content": "So the receiver can check the data for errors",
+    "rationale": "Error checking uses data in the trailer, such as a checksum."
+   },
+   {
+    "key": "C",
+    "content": "So the sender knows which router to use first",
+    "rationale": "The packet number is not used to choose routers."
+   },
+   {
+    "key": "D",
+    "content": "So the packets can be put back in order at the destination",
+    "correct": true,
+    "rationale": "Correct: packets may arrive out of order and are reordered using their numbers."
+   }
+  ],
+  "explanation": "In packet switching, packets can take different routes and arrive out of order. The packet number lets the receiver reassemble them correctly.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "transmission.packets.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In packet switching, which device decides the route that a packet takes across a network?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Sending computer",
+    "rationale": "The sender only sends packets onto the network; it does not plan the route."
+   },
+   {
+    "key": "B",
+    "content": "Receiving computer",
+    "rationale": "The receiver reassembles packets; it does not route them."
+   },
+   {
+    "key": "C",
+    "content": "Router",
+    "correct": true,
+    "rationale": "Correct: each router reads the destination address and chooses the next hop."
+   },
+   {
+    "key": "D",
+    "content": "Web browser",
+    "rationale": "A browser requests and displays pages; it does not route packets."
+   }
+  ],
+  "explanation": "Routers read the destination address in the header and forward each packet along the best route available at that moment.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.packets.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Packets 1 to 5 of a voice note are sent from Mutare to Harare. Packet 4 arrives before packet 3. What is the most likely reason?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Packet 3 had a larger header than packet 4",
+    "rationale": "Header sizes are the same; this would not delay one packet noticeably."
+   },
+   {
+    "key": "B",
+    "content": "The routers sorted the packets into a new order",
+    "rationale": "Routers forward packets; they do not deliberately reorder them."
+   },
+   {
+    "key": "C",
+    "content": "Packet 3 took a different, slower route",
+    "correct": true,
+    "rationale": "Correct: packets are routed separately, so one may take a longer or busier route."
+   },
+   {
+    "key": "D",
+    "content": "Packet 4 had a higher priority in its trailer",
+    "rationale": "The trailer holds an end marker and error check, not a priority."
+   }
+  ],
+  "explanation": "Each packet is routed independently. If packet 3 is sent along a longer or more congested route, packet 4 can overtake it. The receiver reorders them using packet numbers.",
+  "hints": [
+   "Do all packets of one message follow the same route?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "transmission.packets.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which is a **disadvantage** of packet switching?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A single broken link stops the whole message arriving",
+    "rationale": "Packets can be routed around a broken link: that is an advantage."
+   },
+   {
+    "key": "B",
+    "content": "Packets may arrive out of order and must be reassembled",
+    "correct": true,
+    "rationale": "Correct: reordering takes time, and late packets can delay real-time data."
+   },
+   {
+    "key": "C",
+    "content": "The whole file must be resent if one packet is lost",
+    "rationale": "Only the lost packet needs to be resent."
+   },
+   {
+    "key": "D",
+    "content": "Only one user can use a line at a time",
+    "rationale": "Packet switching lets many users share lines."
+   }
+  ],
+  "explanation": "Packet switching avoids broken links and only resends lost packets, and lets many users share lines. Its drawbacks are out-of-order arrival, reassembly time and possible delays or losses.",
+  "hints": [
+   "Three of these describe things packet switching actually avoids."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "transmission.packets.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "When does the receiving device reassemble the data from the packets?",
+  "options": [
+   {
+    "key": "A",
+    "content": "As soon as the first packet has arrived",
+    "rationale": "The first packet alone cannot rebuild the data."
+   },
+   {
+    "key": "B",
+    "content": "At each router along the route",
+    "rationale": "Routers only forward packets."
+   },
+   {
+    "key": "C",
+    "content": "Before the packets leave the sending device",
+    "rationale": "The sender splits the data; it does not reassemble it."
+   },
+   {
+    "key": "D",
+    "content": "Once the last packet has arrived",
+    "correct": true,
+    "rationale": "Correct: all packets are needed before the data can be rebuilt in order."
+   }
+  ],
+  "explanation": "Once the last packet has arrived, the packets are ordered by packet number and the payloads joined.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.packets.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "All the packets of one message must travel by the same route.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. In packet switching each packet is routed separately, so packets of one message can take different routes.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "transmission.packets.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "If one packet is damaged during transmission, only that packet needs to be sent again.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. This is one reason data is broken into packets: resending a small packet is much quicker than resending the whole file.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.packets.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Match each part of a packet to what it contains.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Header"
+    },
+    {
+     "id": "L2",
+     "content": "Payload"
+    },
+    {
+     "id": "L3",
+     "content": "Trailer"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "End-of-packet marker and error-checking data"
+    },
+    {
+     "id": "R1",
+     "content": "Destination address, originator's address and packet number"
+    },
+    {
+     "id": "R2",
+     "content": "A piece of the data being sent"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Header: control information. Payload: the data. Trailer: end marker and error check.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.packets.q11",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A file of 4 800 bytes is sent across a network in which each packet's payload can carry at most 600 bytes. How many packets are needed?",
+  "answerSpec": {
+   "value": 8
+  },
+  "explanation": "$4\\,800 \\div 600 = 8$ packets.",
+  "workedSolution": "1. Divide the file size by the payload size: $4\\,800 \\div 600 = 8$.\n2. It divides exactly, so 8 packets are needed.",
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "transmission.packets.q12",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A 2 500-byte message is split into packets whose payloads carry at most 1 000 bytes each. How many packets are needed?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "$2\\,500 \\div 1\\,000 = 2.5$, so two full packets and one more for the remaining 500 bytes: 3 packets.",
+  "workedSolution": "1. $2\\,500 \\div 1\\,000 = 2.5$.\n2. A packet cannot be half-sent, so round up: 3 packets (the last payload holds 500 bytes).",
+  "hints": [
+   "What happens to the bytes left over after the full packets?"
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "2"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "transmission.packets.q13",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the description of packet switching.",
+  "payload": {
+   "template": "The data is broken into packets. A {{blank:a}} reads the destination address in each packet's {{blank:b}} and chooses the next part of the route. Packets may arrive out of order, so the receiver puts them back in order using the packet {{blank:c}}.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "router",
+      "browser",
+      "server",
+      "printer"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "header",
+      "payload",
+      "trailer"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "number",
+      "size",
+      "address",
+      "trailer"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "router"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "header"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "number"
+     ]
+    }
+   ]
+  },
+  "explanation": "Routers read the header's destination address; the receiver reorders packets by packet number.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "router"
+    },
+    {
+     "blankId": "b",
+     "text": "header"
+    },
+    {
+     "blankId": "c",
+     "text": "number"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "browser"
+     },
+     {
+      "blankId": "b",
+      "text": "payload"
+     },
+     {
+      "blankId": "c",
+      "text": "size"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.packets.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Name the part of a packet that usually contains error-checking data such as a checksum.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "trailer"
+    },
+    {
+     "value": "the trailer"
+    },
+    {
+     "value": "packet trailer"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "The trailer marks the end of the packet and holds error-checking data.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "trailer"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "header"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "payload"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.packets.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Explain **three** reasons why data is broken into packets before it is transmitted across the internet. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Lines can be shared by many users: packets from different users are interleaved",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "If an error occurs, only the affected packet needs to be resent",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Packets can be routed around busy or broken links, so data still arrives",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Packets from many users can share the same lines, so one large transfer does not block others. If a packet is damaged, only that packet is resent. Each packet can take any available route, avoiding congestion and failed links."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Sharing, quick error recovery and flexible routing are the main reasons.",
+  "hints": [
+   "Think about sharing, errors and broken links."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.packets.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Explain why the header of a packet includes the originator's address. [2]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "So the receiver knows who sent the packet",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "So it can reply / send an acknowledgement / request that a lost or damaged packet be resent",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The originator's address tells the receiver where the packet came from, so it can send an acknowledgement or ask for a damaged or missing packet to be resent."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Replies and resend requests are sent to the originator's address.",
+  "hints": [
+   "What would the receiver not be able to do without it?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.packets.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 480,
+  "stem": "Nyasha uploads a 7 200-byte assignment to her school's server. The network splits the file into packets with a payload of at most 900 bytes.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Calculate how many packets are needed.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "$7\\,200 \\div 900 = 8$.",
+    "workedSolution": "1. $7\\,200 \\div 900 = 8$, exactly, so 8 packets."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "State **three** items of data in the header of each packet.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Destination address (IP address of the server)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Originator's address (IP address of Nyasha's device)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Packet number",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Destination IP address, originator's IP address, packet number."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the packets travel to the server and how the file is rebuilt.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each packet is sent separately and routers read the destination address",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Each packet may take a different route (the best available at the time)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Packets may arrive out of order",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "When the last packet arrives, they are reordered using the packet numbers and the payloads joined",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each packet is sent independently. Routers read the destination address and forward it by the best route available, so packets may take different routes and arrive out of order. When the last packet arrives the server reorders them by packet number and rebuilds the file."
+    }
+   }
+  ],
+  "explanation": "Packet switching: split, route independently, reorder by packet number at the destination.",
+  "hints": [
+   "Use the terms header, payload, trailer, router and packet number.",
+   "Describe the steps in order."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "8"
+    }
+   }
+  },
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "transmission.packets.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.transmission.packets"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "A company in Harare holds daily video meetings with its branch in Bulawayo over the internet, which uses packet switching.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which part of a packet do routers read to forward it?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The packet number in the header",
+      "rationale": "The packet number is for reassembly."
+     },
+     {
+      "key": "B",
+      "content": "The destination address in the header",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "The error check in the trailer",
+      "rationale": "The trailer is checked by the receiver."
+     },
+     {
+      "key": "D",
+      "content": "The data in the payload",
+      "rationale": "Routers do not need to read the data."
+     }
+    ],
+    "explanation": "Routers use the destination address."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give **two** benefits of packet switching for the company.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "If one link fails or is busy, packets are routed another way, so the meeting can continue",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Only lost or damaged packets are resent / the lines are shared efficiently",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Packets can avoid a broken or congested link, and only lost packets need resending."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain **one** drawback of packet switching for a live video meeting.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Packets may take different routes and arrive late or out of order",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "so the video or sound may freeze or stutter while packets are reordered / waited for",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Packets can arrive late or out of order because they take different routes, so the picture may freeze or the sound break up while the receiver waits for them."
+    }
+   }
+  ],
+  "explanation": "Packet switching is robust but can cause delays for real-time data.",
+  "hints": [
+   "Think about what happens when a link is busy or broken.",
+   "Think about the effect of late packets on a live call."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true
+ }
+]

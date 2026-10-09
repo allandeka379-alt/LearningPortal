@@ -1,0 +1,859 @@
+[
+ {
+  "key": "exam.w1b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.logic.gates",
+   "comp.logic.truth-tables",
+   "comp.logic.circuits-expressions"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "This question is about logic gates and truth tables.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "A logic gate symbol is a triangle with a small circle at its point. Name the gate.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "NOT"
+      },
+      {
+       "value": "NOT gate"
+      },
+      {
+       "value": "inverter"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Triangle with a bubble: NOT (inverter)."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement describes a NOR gate?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The output is 1 only when both inputs are 0",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "The output is 0 only when both inputs are 1",
+      "rationale": "That is NAND."
+     },
+     {
+      "key": "C",
+      "content": "The output is 1 when the inputs differ",
+      "rationale": "That is XOR."
+     },
+     {
+      "key": "D",
+      "content": "The output is 1 when at least one input is 1",
+      "rationale": "That is OR."
+     }
+    ],
+    "explanation": "NOR = NOT OR."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "A circuit is described as follows: inputs A and B go into an OR gate; the output of the OR gate and input C go into a NAND gate, whose output is X. Complete the truth table.",
+    "payload": {
+     "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "A OR B: 00111111; X = (A OR B) NAND C: 11101010."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "A borehole pump P must run when the tank is not full (T = 0) and there is water in the borehole (W = 1). Write the logic expression for P.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "`NOT T` used for \"tank not full\"",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Joined to `W` with AND: `P = (NOT T) AND W`",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: P = (NOT T) AND W"
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the logic circuit for `X = (A AND B) XOR C`, naming each gate and its inputs.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A and B go into an AND gate",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The output of the AND gate and C go into an XOR gate whose output is X",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Inputs A and B go into an AND gate; its output and input C go into an XOR gate, whose output is X."
+    }
+   }
+  ],
+  "explanation": "(c) X = 11101010. (d) P = (NOT T) AND W.",
+  "hints": [
+   "NAND gives 0 only when both of its inputs are 1.",
+   "Turn \"and\", \"or\", \"not\" in the statement into operators, keeping the grouping."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "NOT"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "1"
+      },
+      {
+       "blankId": "r2",
+       "text": "1"
+      },
+      {
+       "blankId": "r3",
+       "text": "1"
+      },
+      {
+       "blankId": "r4",
+       "text": "0"
+      },
+      {
+       "blankId": "r5",
+       "text": "1"
+      },
+      {
+       "blankId": "r6",
+       "text": "0"
+      },
+      {
+       "blankId": "r7",
+       "text": "1"
+      },
+      {
+       "blankId": "r8",
+       "text": "0"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "NAND"
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "0"
+       },
+       {
+        "blankId": "r2",
+        "text": "0"
+       },
+       {
+        "blankId": "r3",
+        "text": "0"
+       },
+       {
+        "blankId": "r4",
+        "text": "1"
+       },
+       {
+        "blankId": "r5",
+        "text": "0"
+       },
+       {
+        "blankId": "r6",
+        "text": "1"
+       },
+       {
+        "blankId": "r7",
+        "text": "0"
+       },
+       {
+        "blankId": "r8",
+        "text": "1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w1b-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.transmission.methods",
+   "comp.hardware.ports-usb"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A secondary school in Kwekwe is improving its communication systems.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which term describes data travelling in both directions, but only one direction at a time?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Simplex",
+      "rationale": "One direction only."
+     },
+     {
+      "key": "B",
+      "content": "Full-duplex",
+      "rationale": "Both directions at once."
+     },
+     {
+      "key": "C",
+      "content": "Half-duplex",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "Serial",
+      "rationale": "Serial describes bits sent one at a time."
+     }
+    ],
+    "explanation": "Half-duplex."
+   },
+   {
+    "label": "(b)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each school system to its transmission mode.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "The public-address system plays announcements from the office to classrooms"
+      },
+      {
+       "id": "L2",
+       "content": "Teachers on duty use two-way radios and take turns to speak"
+      },
+      {
+       "id": "L3",
+       "content": "The head holds a video call with the district office"
+      }
+     ],
+     "right": [
+      {
+       "id": "R1",
+       "content": "Simplex"
+      },
+      {
+       "id": "R2",
+       "content": "Half-duplex"
+      },
+      {
+       "id": "R3",
+       "content": "Full-duplex"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "One way: simplex; taking turns: half-duplex; both at once: full-duplex."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the difference between serial and parallel transmission.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Serial: bits are sent one at a time along a single wire",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Parallel: several bits are sent at the same time along several wires",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Serial sends one bit at a time on a single wire; parallel sends several bits at once, each on its own wire."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The school connects a computer to a printer 30 m away. Explain why serial transmission is used.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Over a long distance parallel bits arrive out of step (skew) / suffer interference",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Serial needs fewer wires, so the cable is cheaper (and more reliable)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Over 30 m parallel bits would get out of step, causing errors; serial uses fewer wires, so it is reliable and cheaper."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The printer is connected by USB but does not print. State **two** checks a technician should make.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The cable is firmly connected at both ends / try another port or cable",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The printer is powered on and its driver is installed / it is selected as the default printer",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Check the USB cable is firmly connected (or try another port), and check the printer is on and its driver is installed."
+    }
+   }
+  ],
+  "explanation": "Half-duplex; PA simplex, radios half-duplex, video call full-duplex; serial for long distances.",
+  "hints": [
+   "Direction: simplex, half-duplex, full-duplex.",
+   "Number of bits at once: serial or parallel."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w1b-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.internet.web-browsing",
+   "comp.internet.cookies"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "Tatenda uses a web browser to visit `https://www.hararehardware.co.zw/tools/drills.html` (a fictional shop).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement about the internet and the world wide web is correct?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The internet is a collection of web pages",
+      "rationale": "The internet is the infrastructure."
+     },
+     {
+      "key": "B",
+      "content": "The web is the cables between networks",
+      "rationale": "That is the internet."
+     },
+     {
+      "key": "C",
+      "content": "They are the same thing",
+      "rationale": "They are different."
+     },
+     {
+      "key": "D",
+      "content": "The web is the pages accessed using the internet",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "Internet = infrastructure; web = pages."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the domain name in the URL.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "www.hararehardware.co.zw"
+      },
+      {
+       "value": "hararehardware.co.zw"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The domain name runs from after :// to the first single /."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the protocol in the URL.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "https"
+      },
+      {
+       "value": "hypertext transfer protocol secure"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The protocol is before ://."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the web page is found and displayed.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The domain name is sent to a DNS server, which returns the IP address",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The browser sends a request to the web server at that IP address",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The web server sends the HTML, which the browser renders and displays",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The browser asks a DNS server for the IP address of www.hararehardware.co.zw. It sends an HTTPS request to the web server at that address, which returns the HTML of drills.html; the browser renders it."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Tatenda adds a drill to his basket. Which kind of cookie keeps it there while he browses other pages?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Persistent cookie",
+      "rationale": "Needed only during this visit."
+     },
+     {
+      "key": "B",
+      "content": "Session cookie",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "Third-party cookie",
+      "rationale": "Set by other domains such as advertisers."
+     },
+     {
+      "key": "D",
+      "content": "Tracking cookie",
+      "rationale": "Tracking is for adverts."
+     }
+    ],
+    "explanation": "Session cookie."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** other uses of cookies on the shop's website.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Saving personal details / storing login details",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Remembering preferences (e.g. currency) / tracking browsing for adverts",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Storing his login details and remembering his preferred currency."
+    }
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State **one** privacy concern about cookies.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Browsing can be tracked and a profile built / another user of a shared computer could access the account",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: His browsing can be tracked to build a profile for adverts."
+    }
+   }
+  ],
+  "explanation": "Web = pages; DNS → IP → web server → HTML; session cookie for the basket.",
+  "hints": [
+   "The DNS gives an IP address; the web server sends the page.",
+   "Session cookies end when the browser closes."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "www.hararehardware.co.zw"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "https"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "https"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "http"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2"
+ }
+]

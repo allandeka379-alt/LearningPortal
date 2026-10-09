@@ -1,0 +1,772 @@
+[
+ {
+  "key": "exam.w3a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.network.types-topologies",
+   "comp.network.transmission-media"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A teachers' college in Chinhoyi has 4 buildings on one campus, about 400 m apart, and a second campus in Harare.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What type of network would link the Chinhoyi campus with the Harare campus?",
+    "options": [
+     {
+      "key": "A",
+      "content": "LAN",
+      "rationale": "A LAN covers one site."
+     },
+     {
+      "key": "B",
+      "content": "PAN",
+      "rationale": "A PAN covers one person's devices."
+     },
+     {
+      "key": "C",
+      "content": "WAN",
+      "correct": true,
+      "rationale": "Correct: the campuses are in different towns."
+     },
+     {
+      "key": "D",
+      "content": "Peer-to-peer",
+      "rationale": "This describes how resources are shared, not the area covered."
+     }
+    ],
+    "explanation": "Different towns: a wide area network."
+   },
+   {
+    "label": "(b)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each topology to its description.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Star"
+      },
+      {
+       "id": "L2",
+       "content": "Bus"
+      },
+      {
+       "id": "L3",
+       "content": "Ring"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Data travels in one direction round a closed loop"
+      },
+      {
+       "id": "R1",
+       "content": "All nodes have their own cable to a central switch"
+      },
+      {
+       "id": "R2",
+       "content": "All nodes share one backbone cable with terminators"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Star: central switch. Bus: shared backbone. Ring: closed loop."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The college wants a full mesh of cables joining the 4 buildings, with one link between every pair. How many links are needed?",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "4 × 3 ÷ 2 = 6 links.",
+    "workedSolution": "1. Each building links to 3 others: 4 × 3 = 12.\n2. Each link is counted twice: 12 ÷ 2 = 6."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why fibre-optic cable, rather than twisted pair, should join the buildings.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The buildings are about 400 m apart, beyond twisted pair's range (about 100 m), while fibre carries data long distances with little attenuation",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Fibre has a higher bandwidth / is immune to electrical interference",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: At 400 m apart the buildings are too far for twisted pair, which is limited to about 100 m, while fibre carries light over long distances without the signal fading, and it also has a much higher bandwidth."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Each building has a computer room of 30 computers. Recommend a topology for each room and justify your choice.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Recommends star (or another topology with a valid justification)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A fault in one computer or cable affects only that computer",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Easy to add computers / fewer collisions because the switch sends data only to the destination",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A star with a switch in each room. If one learner's computer or cable fails, the other 29 keep working, and more computers can be added with one cable each; the switch also sends data only to the computer it is for, so the room's network stays fast."
+    }
+   }
+  ],
+  "explanation": "(a) WAN (b) star, bus, ring (c) 6.",
+  "hints": [
+   "A full mesh needs a link between every pair.",
+   "Match each medium to distance and cost."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "12"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3a-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.network.protocols",
+   "comp.network.addressing",
+   "comp.network.devices"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A printing company in Masvingo has a network printer with the IPv4 address `10.0.200.9`. Staff send and receive email and upload files to customers' web servers.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which protocol downloads email from the mail server to one computer, usually removing it from the server?",
+    "options": [
+     {
+      "key": "A",
+      "content": "SMTP",
+      "rationale": "SMTP sends email."
+     },
+     {
+      "key": "B",
+      "content": "POP3",
+      "correct": true,
+      "rationale": "Correct: Post Office Protocol 3."
+     },
+     {
+      "key": "C",
+      "content": "IMAP",
+      "rationale": "IMAP leaves email on the server."
+     },
+     {
+      "key": "D",
+      "content": "HTTP",
+      "rationale": "HTTP transfers web pages."
+     }
+    ],
+    "explanation": "POP3 downloads email to one device."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the description of the TCP/IP layers.",
+    "payload": {
+     "template": "The {{blank:a}} layer provides services such as FTP to programs. The {{blank:b}} layer splits data into numbered packets. The {{blank:c}} layer adds IP addresses and routes the packets.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "application",
+        "transport",
+        "internet",
+        "link"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "application",
+        "transport",
+        "internet",
+        "link"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "application",
+        "transport",
+        "internet",
+        "link"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "application"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "transport"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "internet"
+       ]
+      }
+     ]
+    },
+    "explanation": "Application: services. Transport: TCP packets. Internet: IP addressing and routing."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Convert the third number of the printer's IP address, 200, into an 8-bit binary number.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "11001000"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "200 = 128 + 64 + 8, so 1100 1000."
+   },
+   {
+    "label": "(d)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "The printer's MAC address will change if it is moved to a different network.",
+    "answerSpec": {
+     "correct": false
+    },
+    "explanation": "False. The MAC address is fixed in the NIC at manufacture; the IP address may change."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why protocols are needed when the company's computers communicate with customers' servers.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The computers and servers are made by different manufacturers / run different software",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Protocols are agreed rules (data format, addressing, error checking), so both ends can understand the data",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The company's computers and the customers' servers are different makes running different software, and only by following the same agreed rules for formatting, addressing and checking data can they understand each other."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the network printer should have a static IP address rather than a dynamic one.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A static address does not change",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "so every computer can always find the printer at the same address (print jobs would fail if it changed)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A static address never changes, so all the computers can always send their print jobs to the same address; with a dynamic address the printer might get a new address and the computers could no longer find it."
+    }
+   }
+  ],
+  "explanation": "(a) POP3 (b) application, transport, internet (c) 1100 1000 (d) false.",
+  "hints": [
+   "POP3 and IMAP receive email; SMTP sends it.",
+   "Use place values 128 to 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "application"
+      },
+      {
+       "blankId": "b",
+       "text": "transport"
+      },
+      {
+       "blankId": "c",
+       "text": "internet"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "11001000"
+    },
+    "(d)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "transport"
+       },
+       {
+        "blankId": "b",
+        "text": "application"
+       },
+       {
+        "blankId": "c",
+        "text": "application"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "11001001"
+     },
+     "(d)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3a-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.security.malware",
+   "comp.security.cyber-attacks",
+   "comp.security.authentication-access",
+   "comp.security.network-defences"
+  ],
+  "difficulty": 5,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A mining supplies company in Kwekwe has suffered several computer crimes in one year.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each incident to the computer crime.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Someone outside the company got into the accounts server without permission"
+      },
+      {
+       "id": "L2",
+       "content": "Emails forged to look as if they came from the managing director"
+      },
+      {
+       "id": "L3",
+       "content": "Passwords were captured from data travelling over the company's Wi-Fi"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Sniffing"
+      },
+      {
+       "id": "X1",
+       "content": "Pharming"
+      },
+      {
+       "id": "R1",
+       "content": "Hacking"
+      },
+      {
+       "id": "R2",
+       "content": "Spoofing"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Unauthorised access: hacking. Forged sender: spoofing. Captured packets: sniffing."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Every file on the stores computer was encrypted and a message demanded payment. Which malware was this?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Adware",
+      "rationale": "Adware shows adverts."
+     },
+     {
+      "key": "B",
+      "content": "Worm",
+      "rationale": "A worm spreads itself; it does not demand payment."
+     },
+     {
+      "key": "C",
+      "content": "Spyware",
+      "rationale": "Spyware secretly collects data."
+     },
+     {
+      "key": "D",
+      "content": "Ransomware",
+      "correct": true,
+      "rationale": "Correct: it encrypts files and demands payment."
+     }
+    ],
+    "explanation": "Ransomware."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the hardware or software that checks traffic entering and leaving the network against a set of rules.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "firewall"
+      },
+      {
+       "value": "a firewall"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "A firewall."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** rules for staff passwords that would make the hacking less likely.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Long (at least 8 characters) and a mix of upper and lower case, digits and symbols",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Not a name/birthday/dictionary word / not shared or reused / changed if seen / account locks after failed attempts",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Passwords must be at least 10 characters with upper and lower case, digits and symbols, and must never be names, birthdays or passwords used elsewhere."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain how a proxy server would help protect the company's network.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Requests go to the proxy, which fetches pages on the users' behalf, so internal IP addresses are hidden from outside",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It filters requests, blocking dangerous or unsuitable websites",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "It can act as a firewall / absorb attacks before they reach the network (and caches pages)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Staff computers send their web requests to the proxy, which fetches the pages itself, so outsiders only ever see the proxy's address, not the company's computers. The proxy blocks requests to dangerous websites, and it can filter incoming traffic like a firewall before it reaches the internal network."
+    }
+   }
+  ],
+  "explanation": "(a) hacking, spoofing, sniffing (b) ransomware (c) firewall.",
+  "hints": [
+   "Look for the clue words in each incident.",
+   "A proxy acts on behalf of the users."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "firewall"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "proxy server"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2"
+ }
+]

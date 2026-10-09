@@ -1,0 +1,1481 @@
+[
+ {
+  "key": "db.sql.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In an SQL query, which keyword names the table that the data comes from?",
+  "options": [
+   {
+    "key": "A",
+    "content": "FROM",
+    "correct": true,
+    "rationale": "Correct: for example `FROM Learners`."
+   },
+   {
+    "key": "B",
+    "content": "SELECT",
+    "rationale": "SELECT lists the fields to show."
+   },
+   {
+    "key": "C",
+    "content": "WHERE",
+    "rationale": "WHERE gives the condition records must meet."
+   },
+   {
+    "key": "D",
+    "content": "ORDER BY",
+    "rationale": "ORDER BY sorts the results."
+   }
+  ],
+  "explanation": "A query has the form SELECT fields FROM table WHERE condition ORDER BY field.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "db.sql.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What does `ORDER BY Mark DESC` do to the results of a query?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Sorts them from the highest mark to the lowest",
+    "correct": true,
+    "rationale": "Correct: DESC means descending."
+   },
+   {
+    "key": "B",
+    "content": "Sorts them from the lowest mark to the highest",
+    "rationale": "That is ascending order, ASC."
+   },
+   {
+    "key": "C",
+    "content": "Shows only the record with the highest mark",
+    "rationale": "ORDER BY sorts; it does not remove records."
+   },
+   {
+    "key": "D",
+    "content": "Adds up the marks of all the records",
+    "rationale": "That is SUM(Mark)."
+   }
+  ],
+  "explanation": "DESC sorts in descending order (largest first, or Z to A for text); ASC sorts in ascending order.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "db.sql.q03",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "Match each part of an SQL query to its purpose.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "SELECT"
+    },
+    {
+     "id": "L2",
+     "content": "WHERE"
+    },
+    {
+     "id": "L3",
+     "content": "ORDER BY"
+    },
+    {
+     "id": "L4",
+     "content": "COUNT"
+    },
+    {
+     "id": "L5",
+     "content": "SUM"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Sorts the records in the results"
+    },
+    {
+     "id": "R4",
+     "content": "Returns the number of records that meet the condition"
+    },
+    {
+     "id": "R5",
+     "content": "Adds up the values of a numeric field"
+    },
+    {
+     "id": "R1",
+     "content": "Lists the fields to be shown in the results"
+    },
+    {
+     "id": "R2",
+     "content": "Gives the condition that records must meet"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "SELECT chooses fields, WHERE filters records, ORDER BY sorts, COUNT counts records and SUM totals a field.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.sql.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A table `Customers` has a text field `Town`. Which WHERE clause correctly selects the customers who live in Gweru?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`WHERE Town = Gweru`",
+    "rationale": "Without quotes, Gweru would be read as a field name."
+   },
+   {
+    "key": "B",
+    "content": "`WHERE 'Town' = Gweru`",
+    "rationale": "The quotes are around the wrong item: Town is the field."
+   },
+   {
+    "key": "C",
+    "content": "`WHERE Town = 'Gweru'`",
+    "correct": true,
+    "rationale": "Correct: a text value goes in quotation marks."
+   },
+   {
+    "key": "D",
+    "content": "`WHERE Gweru = Town()`",
+    "rationale": "The field goes on the left and needs no brackets."
+   }
+  ],
+  "explanation": "Field names are written as they are; text values are enclosed in single quotes.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "db.sql.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A teacher wants the learners who scored **at least** 65 in a test. Which condition is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`WHERE Score > 65`",
+    "rationale": "This leaves out learners who scored exactly 65."
+   },
+   {
+    "key": "B",
+    "content": "`WHERE Score >= 65`",
+    "correct": true,
+    "rationale": "Correct: 'at least 65' includes 65."
+   },
+   {
+    "key": "C",
+    "content": "`WHERE Score <= 65`",
+    "rationale": "This selects scores of 65 or less."
+   },
+   {
+    "key": "D",
+    "content": "`WHERE Score = 65`",
+    "rationale": "This selects only scores of exactly 65."
+   }
+  ],
+  "explanation": "'At least' and 'or more' mean `>=`; 'more than' means `>`.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.sql.q06",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A field can be used in the WHERE clause of a query even when it is not listed after SELECT.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. WHERE and ORDER BY may use any field of the table; only the fields after SELECT appear in the output.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "db.sql.q07",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "`SELECT COUNT(*) FROM Sales;` adds up the values stored in every field of the Sales table.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. COUNT(*) returns the number of records. SUM(Field) adds up the values of one numeric field.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.sql.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A car dealer in Harare has this table.\n\n| StockNo | Make | Colour | YearMade | Automatic |\n|:-:|:-:|:-:|:-:|:-:|\n| C-301 | Toyota | White | 2017 | TRUE |\n| C-302 | Honda | Grey | 2019 | TRUE |\n| C-305 | Nissan | Blue | 2014 | FALSE |\n| C-309 | Toyota | Silver | 2021 | TRUE |\n| C-310 | Mazda | Red | 2019 | FALSE |\n| C-314 | Honda | White | 2015 | TRUE |\n\nWhat is output by this query?\n\n```\nSELECT COUNT(*)\nFROM Cars\nWHERE Automatic = TRUE AND YearMade >= 2017;\n```",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "A record is counted only if it is automatic AND made in 2017 or later: C-301, C-302, C-309. The output is 3.",
+  "workedSolution": "1. Automatic cars: C-301, C-302, C-309, C-314.\n2. Of these, made in 2017 or later: C-301, C-302, C-309.\n3. COUNT gives 3.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "db.sql.q09",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A bakery in Bulawayo stores today's orders.\n\n| OrderNo | Item | Category | Quantity |\n|:-:|:-:|:-:|:-:|\n| 501 | White loaf | Bread | 35 |\n| 502 | Fruit scone | Scones | 48 |\n| 503 | Birthday cake | Cakes | 1 |\n| 504 | Brown loaf | Bread | 27 |\n| 505 | Cheese scone | Scones | 56 |\n| 506 | Cupcake | Cakes | 72 |\n\nWhat is output by this query?\n\n```\nSELECT SUM(Quantity)\nFROM Orders\nWHERE Category = 'Bread' OR Category = 'Scones';\n```",
+  "answerSpec": {
+   "value": 166
+  },
+  "explanation": "Bread and scone orders: 35 + 48 + 27 + 56 = 166.",
+  "workedSolution": "1. Records where Category is Bread or Scones: White loaf, Fruit scone, Brown loaf, Cheese scone.\n2. Add their quantities: 35 + 48 + 27 + 56 = 166.",
+  "hints": [
+   "OR includes a record if either condition is TRUE.",
+   "SUM adds the Quantity values; it does not count the records."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "166"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "db.sql.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A school records house points.\n\n| LearnerID | FirstName | House | Form | Points |\n|:-:|:-:|:-:|:-:|:-:|\n| L101 | Tendai | Kariba | 3 | 47 |\n| L102 | Rudo | Nyanga | 4 | 33 |\n| L103 | Farai | Kariba | 2 | 14 |\n| L104 | Chipo | Kariba | 4 | 41 |\n| L105 | Sipho | Nyanga | 1 | 26 |\n| L106 | Nyasha | Kariba | 3 | 35 |\n\nWhich names are output by this query, in order?\n\n```\nSELECT FirstName\nFROM Learners\nWHERE House = 'Kariba' AND Points > 35\nORDER BY FirstName ASC;\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "Chipo, Nyasha, Tendai",
+    "rationale": "Nyasha has exactly 35 points, and 35 > 35 is FALSE."
+   },
+   {
+    "key": "B",
+    "content": "Tendai, Chipo",
+    "rationale": "These are the right learners, but ASC sorts the names A to Z."
+   },
+   {
+    "key": "C",
+    "content": "Chipo, Rudo, Tendai",
+    "rationale": "Rudo is in Nyanga house, so the first condition is FALSE."
+   },
+   {
+    "key": "D",
+    "content": "Chipo, Tendai",
+    "correct": true,
+    "rationale": "Correct: Kariba learners with more than 35 points, sorted A to Z."
+   }
+  ],
+  "explanation": "Kariba learners: Tendai (47), Farai (14), Chipo (41), Nyasha (35). More than 35: Tendai and Chipo. Sorted ascending by name: Chipo, Tendai.",
+  "hints": [
+   "Both conditions must be TRUE.",
+   "> 35 does not include 35."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.sql.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A radio station stores songs.\n\n| SongID | Title | Genre | LengthSecs |\n|:-:|:-:|:-:|:-:|\n| S1 | Morning Market | Sungura | 243 |\n| S2 | Long Road Home | Gospel | 318 |\n| S3 | Highveld Rain | Sungura | 197 |\n| S4 | Sunset Drums | Jazz | 286 |\n| S5 | River Song | Sungura | 265 |\n\nWrite the titles output by this query, in order, separated by commas.\n\n```\nSELECT Title\nFROM Songs\nWHERE Genre = 'Sungura'\nORDER BY LengthSecs DESC;\n```",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "River Song, Morning Market, Highveld Rain"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "The Sungura songs sorted by length, longest first: River Song (265 s), Morning Market (243 s), Highveld Rain (197 s). Only Title is shown.",
+  "hints": [
+   "Filter first, then sort by length, then show only the titles."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "River Song, Morning Market, Highveld Rain"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "Highveld Rain, Morning Market, River Song"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.sql.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A stationery shop has this table.\n\n| Code | ItemName | Price | InStock |\n|:-:|:-:|:-:|:-:|\n| ST1 | Ruler | 1.5 | 120 |\n| ST2 | Exercise book | 0.8 | 300 |\n| ST3 | Calculator | 14 | 9 |\n| ST4 | Geometry set | 6.5 | 0 |\n| ST5 | Pen | 0.4 | 450 |\n\nWhich query produces exactly this output?\n\n| ItemName | Price |\n|:-:|:-:|\n| Calculator | 14 |\n| Geometry set | 6.5 |\n| Ruler | 1.5 |",
+  "options": [
+   {
+    "key": "A",
+    "content": "`SELECT ItemName, Price FROM Stationery WHERE Price > 1 ORDER BY Price ASC;`",
+    "rationale": "ASC would put the cheapest of these items first."
+   },
+   {
+    "key": "B",
+    "content": "`SELECT ItemName, Price FROM Stationery WHERE Price > 1 ORDER BY Price DESC;`",
+    "correct": true,
+    "rationale": "Correct: items over 1 dollar, most expensive first, showing name and price."
+   },
+   {
+    "key": "C",
+    "content": "`SELECT ItemName, Price FROM Stationery WHERE InStock > 1 ORDER BY Price DESC;`",
+    "rationale": "Testing InStock > 1 would include the exercise book and the pen, and drop the geometry set."
+   },
+   {
+    "key": "D",
+    "content": "`SELECT ItemName FROM Stationery WHERE Price > 1 ORDER BY Price DESC;`",
+    "rationale": "This shows only ItemName; the output also has a Price column."
+   }
+  ],
+  "explanation": "The output has two fields (ItemName, Price), contains only items over 1 dollar, and is sorted from the highest price down, so the query needs `WHERE Price > 1` and `ORDER BY Price DESC`.",
+  "hints": [
+   "Check the fields shown, the condition and the order separately."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "db.sql.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A weather table stores monthly rainfall.\n\n| Town | MonthName | RainMm |\n|:-:|:-:|:-:|\n| Mutare | January | 211 |\n| Gweru | January | 158 |\n| Mutare | February | 176 |\n| Gweru | February | 132 |\n\nThe query below was meant to show the rainfall for both towns. Why does it output no records?\n\n```\nSELECT MonthName, RainMm\nFROM Rainfall\nWHERE Town = 'Mutare' AND Town = 'Gweru';\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "Text values must not be put in quotation marks",
+    "rationale": "Quotes around text values are correct."
+   },
+   {
+    "key": "B",
+    "content": "Town is not listed after SELECT, so it cannot be tested",
+    "rationale": "WHERE can test any field of the table."
+   },
+   {
+    "key": "C",
+    "content": "The query needs an ORDER BY clause to output records",
+    "rationale": "ORDER BY is optional; it only sorts."
+   },
+   {
+    "key": "D",
+    "content": "No record can have Town equal to both values, so OR is needed",
+    "correct": true,
+    "rationale": "Correct: with OR, all the records would be output."
+   }
+  ],
+  "explanation": "AND needs both conditions TRUE for the same record, which is impossible here. `WHERE Town = 'Mutare' OR Town = 'Gweru'` returns all 4 records.",
+  "hints": [
+   "Can one record have two different towns?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "db.sql.q14",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Complete the query, which lists the names of products in the Drinks category in alphabetical order.",
+  "payload": {
+   "template": "{{blank:a}} ProductName\n\n{{blank:b}} Products\n\n{{blank:c}} Category = 'Drinks'\n\n{{blank:d}} ProductName ASC;",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "SELECT",
+      "FROM",
+      "WHERE",
+      "ORDER BY"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "SELECT",
+      "FROM",
+      "WHERE",
+      "ORDER BY"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "SELECT",
+      "FROM",
+      "WHERE",
+      "ORDER BY"
+     ]
+    },
+    {
+     "id": "d",
+     "input": "select",
+     "choices": [
+      "SELECT",
+      "FROM",
+      "WHERE",
+      "ORDER BY"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "SELECT"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "FROM"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "WHERE"
+     ]
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "ORDER BY"
+     ]
+    }
+   ]
+  },
+  "explanation": "The clauses always come in the order SELECT, FROM, WHERE, ORDER BY.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "SELECT"
+    },
+    {
+     "blankId": "b",
+     "text": "FROM"
+    },
+    {
+     "blankId": "c",
+     "text": "WHERE"
+    },
+    {
+     "blankId": "d",
+     "text": "ORDER BY"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "FROM"
+     },
+     {
+      "blankId": "b",
+      "text": "SELECT"
+     },
+     {
+      "blankId": "c",
+      "text": "WHERE"
+     },
+     {
+      "blankId": "d",
+      "text": "ORDER BY"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "db.sql.q15",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "A table `Buses` has the fields `Route`, `Depot`, `Seats` and `Wifi` (Boolean). Complete the query so that it shows the route of every bus from the Masvingo depot that has fewer than 60 seats.",
+  "payload": {
+   "template": "SELECT Route\n\nFROM Buses\n\nWHERE Depot = {{blank:a}} {{blank:b}} Seats {{blank:c}} 60;",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "'Masvingo'",
+      "Masvingo",
+      "Depot",
+      "'Depot'"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "AND",
+      "OR",
+      "NOT",
+      "ORDER BY"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "<",
+      "<=",
+      ">",
+      ">="
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "'Masvingo'"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "AND"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "<"
+     ]
+    }
+   ]
+  },
+  "explanation": "`WHERE Depot = 'Masvingo' AND Seats < 60`: the text value is quoted, both conditions must hold, and 'fewer than' is `<`.",
+  "hints": [
+   "'Fewer than' does not include the number itself.",
+   "Which value is text and needs quotes?"
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "'Masvingo'"
+    },
+    {
+     "blankId": "b",
+     "text": "AND"
+    },
+    {
+     "blankId": "c",
+     "text": "<"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "Masvingo"
+     },
+     {
+      "blankId": "b",
+      "text": "OR"
+     },
+     {
+      "blankId": "c",
+      "text": "<="
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.sql.q16",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Nyasha builds a query in the design grid of a database package. She wants only products with a price over 100. Where does she type `>100`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "In the Sort row of the Price column",
+    "rationale": "The Sort row sets ascending or descending order."
+   },
+   {
+    "key": "B",
+    "content": "In the Show row of the Price column",
+    "rationale": "The Show box decides whether the field appears in the results."
+   },
+   {
+    "key": "C",
+    "content": "In the Criteria row of the Price column",
+    "correct": true,
+    "rationale": "Correct: conditions go in the Criteria row under the field."
+   },
+   {
+    "key": "D",
+    "content": "In the Table row of the Price column",
+    "rationale": "The Table row names the table the field comes from."
+   }
+  ],
+  "explanation": "In a query design grid, each condition is entered in the Criteria row of the field it tests; it becomes the WHERE clause of the SQL.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "db.sql.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "A table `Members` has the fields `MemberID`, `Surname`, `Town`, `Phone` and `JoinYear`. Write an SQL query to show the surname and phone number of every member who lives in Mutare, sorted by surname from A to Z.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "`SELECT Surname, Phone`",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "`FROM Members`",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "`WHERE Town = 'Mutare'` (text in quotes)",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "`ORDER BY Surname ASC` (ASC may be omitted only if the answer still states ascending order)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: SELECT Surname, Phone FROM Members WHERE Town = 'Mutare' ORDER BY Surname ASC;"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One mark per correct clause.",
+  "hints": [
+   "Name the fields, then the table, then the condition, then the order."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "db.sql.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "A table `Sales` has the fields `SaleID`, `Branch`, `Product`, `Amount` and `Paid` (Boolean). Write an SQL query that outputs the total of the `Amount` field for all the sales at the Gweru branch that have been paid.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "`SELECT SUM(Amount)`",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "`FROM Sales`",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "`WHERE Branch = 'Gweru' AND Paid = TRUE`",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: SELECT SUM(Amount) FROM Sales WHERE Branch = 'Gweru' AND Paid = TRUE;"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "SUM totals one field over the records that meet both conditions.",
+  "hints": [
+   "SUM returns one value.",
+   "Two conditions joined by AND."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "db.sql.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A lodge at Lake Kariba stores its rooms in the table `Rooms`.\n\n| RoomNo | RoomType | Beds | Rate | LakeView |\n|:-:|:-:|:-:|:-:|:-:|\n| 11 | Single | 1 | 55 | FALSE |\n| 12 | Double | 2 | 85 | TRUE |\n| 14 | Family | 4 | 130 | TRUE |\n| 17 | Double | 2 | 70 | FALSE |\n| 19 | Single | 1 | 65 | TRUE |\n| 22 | Family | 4 | 115 | FALSE |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the output of this query.\n\n```\nSELECT RoomNo, Rate\nFROM Rooms\nWHERE LakeView = TRUE\nORDER BY Rate ASC;\n```",
+    "payload": {
+     "template": "Row 1: RoomNo {{blank:n0}}, Rate {{blank:r0}}\n\nRow 2: RoomNo {{blank:n1}}, Rate {{blank:r1}}\n\nRow 3: RoomNo {{blank:n2}}, Rate {{blank:r2}}",
+     "blanks": [
+      {
+       "id": "n0",
+       "input": "number"
+      },
+      {
+       "id": "r0",
+       "input": "number"
+      },
+      {
+       "id": "n1",
+       "input": "number"
+      },
+      {
+       "id": "r1",
+       "input": "number"
+      },
+      {
+       "id": "n2",
+       "input": "number"
+      },
+      {
+       "id": "r2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "n0",
+       "accepted": [
+        "19"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "r0",
+       "accepted": [
+        "65"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "n1",
+       "accepted": [
+        "12"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "r1",
+       "accepted": [
+        "85"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "n2",
+       "accepted": [
+        "14"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "130"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Lake-view rooms sorted by rate, lowest first:\n\n| RoomNo | Rate |\n|:-:|:-:|\n| 19 | 65 |\n| 12 | 85 |\n| 14 | 130 |"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the output of this query.\n\n```\nSELECT SUM(Beds) FROM Rooms WHERE RoomType = 'Double' OR RoomType = 'Family';\n```",
+    "answerSpec": {
+     "value": 12
+    },
+    "explanation": "Double and family rooms have 2 + 4 + 2 + 4 = 12 beds.",
+    "workedSolution": "1. Double or family rooms: 12, 14, 17, 22.\n2. Sum of Beds = 12."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write an SQL query to show the room number and room type of every one-bed room with a rate below 80, sorted with the highest room number first.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "`SELECT RoomNo, RoomType FROM Rooms`",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "`WHERE Rate < 80 AND Beds = 1` (both conditions, joined by AND)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "`ORDER BY RoomNo DESC`",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: SELECT RoomNo, RoomType FROM Rooms WHERE Rate < 80 AND Beds = 1 ORDER BY RoomNo DESC; (output on this data: 19, 11)"
+    }
+   }
+  ],
+  "explanation": "(a) 19 at 65; 12 at 85; 14 at 130. (b) 12.",
+  "hints": [
+   "Filter, sort, then show only the selected fields.",
+   "OR includes both room types."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "n0",
+       "text": "19"
+      },
+      {
+       "blankId": "r0",
+       "text": "65"
+      },
+      {
+       "blankId": "n1",
+       "text": "12"
+      },
+      {
+       "blankId": "r1",
+       "text": "85"
+      },
+      {
+       "blankId": "n2",
+       "text": "14"
+      },
+      {
+       "blankId": "r2",
+       "text": "130"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "12"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "n0",
+        "text": "12"
+       },
+       {
+        "blankId": "r0",
+        "text": "85"
+       },
+       {
+        "blankId": "n1",
+        "text": "14"
+       },
+       {
+        "blankId": "r1",
+        "text": "130"
+       },
+       {
+        "blankId": "n2",
+        "text": "19"
+       },
+       {
+        "blankId": "r2",
+        "text": "65"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "db.sql.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.db.sql"
+  ],
+  "difficulty": 5,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A football academy in Bulawayo keeps this table, `Players`.\n\n| PlayerID | PlayerName | AgeGroup | Position | Goals | FeesPaid |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| P01 | Tatenda | U15 | Striker | 13 | TRUE |\n| P02 | Sipho | U13 | Defender | 1 | FALSE |\n| P03 | Farai | U15 | Midfielder | 6 | TRUE |\n| P04 | Thandeka | U13 | Striker | 9 | TRUE |\n| P05 | Tendai | U15 | Striker | 11 | FALSE |\n| P06 | Nyasha | U13 | Midfielder | 4 | TRUE |\n| P07 | Chipo | U15 | Goalkeeper | 0 | TRUE |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the output of this query, row by row.\n\n```\nSELECT PlayerName, Goals\nFROM Players\nWHERE AgeGroup = 'U15' AND Goals > 5\nORDER BY Goals DESC;\n```",
+    "payload": {
+     "template": "Row 1: {{blank:p0}}\n\nRow 2: {{blank:p1}}\n\nRow 3: {{blank:p2}}",
+     "blanks": [
+      {
+       "id": "p0",
+       "input": "select",
+       "choices": [
+        "Tatenda",
+        "Sipho",
+        "Farai",
+        "Thandeka",
+        "Tendai",
+        "Nyasha",
+        "Chipo"
+       ]
+      },
+      {
+       "id": "p1",
+       "input": "select",
+       "choices": [
+        "Tatenda",
+        "Sipho",
+        "Farai",
+        "Thandeka",
+        "Tendai",
+        "Nyasha",
+        "Chipo"
+       ]
+      },
+      {
+       "id": "p2",
+       "input": "select",
+       "choices": [
+        "Tatenda",
+        "Sipho",
+        "Farai",
+        "Thandeka",
+        "Tendai",
+        "Nyasha",
+        "Chipo"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p0",
+       "accepted": [
+        "Tatenda"
+       ]
+      },
+      {
+       "id": "p1",
+       "accepted": [
+        "Tendai"
+       ]
+      },
+      {
+       "id": "p2",
+       "accepted": [
+        "Farai"
+       ]
+      }
+     ]
+    },
+    "explanation": "U15 players with more than 5 goals, most goals first:\n\n| PlayerName | Goals |\n|:-:|:-:|\n| Tatenda | 13 |\n| Tendai | 11 |\n| Farai | 6 |"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the output of this query.\n\n```\nSELECT COUNT(*)\nFROM Players\nWHERE FeesPaid = FALSE OR Position = 'Striker';\n```",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "Records with fees unpaid OR playing as striker: Tatenda, Sipho, Thandeka, Tendai. Each is counted once: 4.",
+    "workedSolution": "1. Unpaid: Sipho, Tendai.\n2. Strikers: Tatenda, Thandeka, Tendai.\n3. Together, without counting Tendai twice: 4."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the output of this query.\n\n```\nSELECT SUM(Goals) FROM Players WHERE Position = 'Striker';\n```",
+    "answerSpec": {
+     "value": 33
+    },
+    "explanation": "Strikers' goals: 13 + 9 + 11 = 33.",
+    "workedSolution": "1. Strikers: Tatenda, Thandeka, Tendai.\n2. Add their goals: 13 + 9 + 11 = 33."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write an SQL query to show the name and position of every player whose fees have not been paid, in alphabetical order of name.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "`SELECT PlayerName, Position FROM Players`",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "`WHERE FeesPaid = FALSE`",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "`ORDER BY PlayerName ASC`",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: SELECT PlayerName, Position FROM Players WHERE FeesPaid = FALSE ORDER BY PlayerName ASC;"
+    }
+   }
+  ],
+  "explanation": "(a) Tatenda, Tendai, Farai. (b) 4. (c) 33.",
+  "hints": [
+   "For AND, a record must pass both tests; for OR, either.",
+   "Write the output as rows in the sorted order."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p0",
+       "text": "Tatenda"
+      },
+      {
+       "blankId": "p1",
+       "text": "Tendai"
+      },
+      {
+       "blankId": "p2",
+       "text": "Farai"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "33"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p0",
+        "text": "Tendai"
+       },
+       {
+        "blankId": "p1",
+        "text": "Farai"
+       },
+       {
+        "blankId": "p2",
+        "text": "Tatenda"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

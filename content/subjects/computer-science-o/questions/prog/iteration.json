@@ -1,0 +1,1247 @@
+[
+ {
+  "key": "prog.iteration.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which type of loop always runs its statements at least once?",
+  "options": [
+   {
+    "key": "A",
+    "content": "REPEAT … UNTIL",
+    "correct": true,
+    "rationale": "Correct: the condition is tested after the body."
+   },
+   {
+    "key": "B",
+    "content": "WHILE … ENDWHILE",
+    "rationale": "The condition is tested first, so the body may run zero times."
+   },
+   {
+    "key": "C",
+    "content": "FOR … NEXT",
+    "rationale": "If the start value is past the end value, the body does not run."
+   },
+   {
+    "key": "D",
+    "content": "CASE … ENDCASE",
+    "rationale": "CASE is selection, not a loop."
+   }
+  ],
+  "explanation": "A post-condition loop tests its condition at the end of each pass.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.iteration.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A program must input the rainfall for each of the 31 days of a month. Which loop is most suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A FOR loop",
+    "correct": true,
+    "rationale": "Correct: the number of repetitions, 31, is known in advance."
+   },
+   {
+    "key": "B",
+    "content": "A WHILE loop",
+    "rationale": "It would work, but needs a counter written by hand; FOR is designed for a known count."
+   },
+   {
+    "key": "C",
+    "content": "A REPEAT … UNTIL loop",
+    "rationale": "Possible with a counter, but a count-controlled loop matches the problem."
+   },
+   {
+    "key": "D",
+    "content": "A CASE statement",
+    "rationale": "CASE chooses between options; it does not repeat."
+   }
+  ],
+  "explanation": "Use a count-controlled loop when the number of repetitions is known.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.iteration.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many times is the body of `FOR K ← 3 TO 11` executed?",
+  "answerSpec": {
+   "value": 9
+  },
+  "explanation": "K takes the values 3 to 11 inclusive: 11 − 3 + 1 = 9.",
+  "workedSolution": "1. Values: 3, 4, 5, 6, 7, 8, 9, 10, 11.\n2. Count them: 9.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "9"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many numbers are output?\n\n```\nFOR K ← 1 TO 17 STEP 4\n    OUTPUT K\nNEXT K\n```",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "K takes 1, 5, 9, 13, 17: 5 values. The next value, 21, is past 17.",
+  "workedSolution": "1. Start at 1 and add 4: 1, 5, 9, 13, 17.\n2. 5 values are output.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output?\n\n```\nTotal ← 0\nFOR J ← 2 TO 12 STEP 5\n    Total ← Total + J\nNEXT J\nOUTPUT Total\n```",
+  "answerSpec": {
+   "value": 21
+  },
+  "explanation": "J takes 2, 7, 12; 2 + 7 + 12 = 21.",
+  "workedSolution": "1. J = 2, 7, 12.\n2. Total = 2 + 7 + 12 = 21.",
+  "hints": [
+   "List the values J takes before adding."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "21"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "77"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Complete the results of a dry run.\n\n```\nN ← 200\nCount ← 0\nWHILE N > 10 DO\n    N ← DIV(N, 2)\n    Count ← Count + 1\nENDWHILE\nOUTPUT N, \" \", Count\n```",
+  "payload": {
+   "template": "Final value of N: {{blank:a}}\n\nFinal value of Count: {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "6"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "5"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "N takes 100, 50, 25, 12, 6; the loop stops when N = 6 (not > 10), after 5 passes.",
+  "hints": [
+   "Test the condition before every pass, including the first."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "6"
+    },
+    {
+     "blankId": "b",
+     "text": "5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "12"
+     },
+     {
+      "blankId": "b",
+      "text": "4"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.iteration.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A dice game asks the player to choose a number from 1 to 6 and must keep asking until a valid number is entered. Which line completes `REPEAT  INPUT Guess  …`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`UNTIL Guess < 1 OR Guess > 6`",
+    "rationale": "This stops on an invalid guess and repeats on a valid one."
+   },
+   {
+    "key": "B",
+    "content": "`UNTIL Guess >= 1 AND Guess <= 6`",
+    "correct": true,
+    "rationale": "Correct: the loop stops when the guess is valid."
+   },
+   {
+    "key": "C",
+    "content": "`UNTIL Guess >= 1 OR Guess <= 6`",
+    "rationale": "Every number satisfies one side, so any input is accepted."
+   },
+   {
+    "key": "D",
+    "content": "`UNTIL Guess = 6`",
+    "rationale": "Only 6 would be accepted."
+   }
+  ],
+  "explanation": "REPEAT … UNTIL stops when its condition is TRUE, so the condition states what a valid input is.",
+  "hints": [
+   "UNTIL describes when to stop."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.iteration.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The statements inside a WHILE loop may not be executed at all.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The condition is checked before the first pass; if it is FALSE, the body is skipped.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.iteration.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A REPEAT … UNTIL loop stops as soon as its condition becomes FALSE.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. REPEAT … UNTIL stops when the condition becomes TRUE. It is a WHILE loop that stops when its condition is FALSE.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.iteration.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each task to the most suitable loop.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Output the 12 times table from 1 × 12 to 12 × 12"
+    },
+    {
+     "id": "L2",
+     "content": "Keep asking for a PIN until the correct one is entered"
+    },
+    {
+     "id": "L3",
+     "content": "Add up prices until the cashier enters 0 (possibly at once)"
+    },
+    {
+     "id": "L4",
+     "content": "Process every element of an array of 50 names"
+    }
+   ],
+   "right": [
+    {
+     "id": "R1",
+     "content": "FOR … NEXT"
+    },
+    {
+     "id": "R2",
+     "content": "REPEAT … UNTIL"
+    },
+    {
+     "id": "R3",
+     "content": "WHILE … ENDWHILE"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R1"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Known counts suit FOR; at-least-once input suits REPEAT; a rogue value that may come first suits WHILE.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R1"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.iteration.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the WHILE loop so that it does the same as `FOR Day ← 1 TO 7 … NEXT Day`.\n\n```\nDay ← [1]\nWHILE Day [2] 7 DO\n    INPUT Sales\n    Day ← [3]\nENDWHILE\n```",
+  "payload": {
+   "template": "[1] {{blank:a}} [2] {{blank:b}} [3] {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "0",
+      "1",
+      "7"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "<",
+      "<=",
+      ">",
+      "="
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "Day + 1",
+      "Day - 1",
+      "7",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "<="
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "Day + 1"
+     ]
+    }
+   ]
+  },
+  "explanation": "Start at 1, repeat while Day <= 7, add 1 on each pass: seven passes, as in the FOR loop.",
+  "hints": [
+   "A WHILE loop needs the counter set before it and increased inside it."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "1"
+    },
+    {
+     "blankId": "b",
+     "text": "<="
+    },
+    {
+     "blankId": "c",
+     "text": "Day + 1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "0"
+     },
+     {
+      "blankId": "b",
+      "text": "<"
+     },
+     {
+      "blankId": "c",
+      "text": "Day - 1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.iteration.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is wrong with this algorithm?\n\n```\nINPUT Price\nWHILE Price <> 0 DO\n    Total ← Total + Price\nENDWHILE\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "A WHILE loop cannot test for 0",
+    "rationale": "Any comparison can be used as a condition."
+   },
+   {
+    "key": "B",
+    "content": "The loop body runs exactly once and then stops",
+    "rationale": "It runs forever unless the first price is 0."
+   },
+   {
+    "key": "C",
+    "content": "Price never changes inside the loop, so it may never end",
+    "correct": true,
+    "rationale": "Correct: no new price is input, so the condition can never change."
+   },
+   {
+    "key": "D",
+    "content": "ENDWHILE should be NEXT Price",
+    "rationale": "NEXT closes a FOR loop."
+   }
+  ],
+  "explanation": "Add `INPUT Price` at the end of the loop body. (Total should also be set to 0 first.)",
+  "hints": [
+   "Does anything inside the loop change the value that is tested?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.iteration.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many times is \"*\" output?\n\n```\nFOR Outer ← 1 TO 5\n    FOR Inner ← 1 TO 3\n        OUTPUT \"*\"\n    NEXT Inner\nNEXT Outer\n```",
+  "answerSpec": {
+   "value": 15
+  },
+  "explanation": "5 outer passes × 3 inner passes = 15.",
+  "workedSolution": "1. Inner loop: 3 outputs each time.\n2. It runs for each of 5 outer passes: 5 × 3 = 15.",
+  "hints": [
+   "The inner loop runs fully for every outer pass."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "15"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output?\n\n```\nCount ← 0\nFOR Row ← 1 TO 4\n    FOR Column ← 1 TO Row\n        Count ← Count + 1\n    NEXT Column\nNEXT Row\nOUTPUT Count\n```",
+  "answerSpec": {
+   "value": 10
+  },
+  "explanation": "The inner loop runs 1, 2, 3 and 4 times: 1 + 2 + 3 + 4 = 10.",
+  "workedSolution": "1. Row 1: 1 pass; Row 2: 2; Row 3: 3; Row 4: 4.\n2. Count = 10.",
+  "hints": [
+   "The inner loop's end value changes with Row.",
+   "Add up the inner passes for Row = 1, 2, 3, 4."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "16"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Compare the two algorithms.\n\nAlgorithm P:\n\n```\nX ← 50\nREPEAT\n    X ← X + 5\nUNTIL X > 20\nOUTPUT X\n```\n\nAlgorithm Q:\n\n```\nX ← 50\nWHILE X <= 20 DO\n    X ← X + 5\nENDWHILE\nOUTPUT X\n```\n\nWhat do they output?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Both output 50",
+    "rationale": "REPEAT always runs its body at least once."
+   },
+   {
+    "key": "B",
+    "content": "Both output 55",
+    "rationale": "The WHILE condition 50 <= 20 is FALSE, so Q's body never runs."
+   },
+   {
+    "key": "C",
+    "content": "P outputs 50; Q outputs 55",
+    "rationale": "This swaps the behaviour of the two loops."
+   },
+   {
+    "key": "D",
+    "content": "P outputs 55; Q outputs 50",
+    "correct": true,
+    "rationale": "Correct: P runs its body once before testing; Q's condition is FALSE at the start."
+   }
+  ],
+  "explanation": "A post-condition loop runs at least once; a pre-condition loop can run zero times.",
+  "hints": [
+   "When is the condition of each loop tested?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.iteration.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many numbers does this Python code display?\n\n```\nfor i in range(2, 10, 3):\n    print(i)\n```",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "It displays 2, 5, 8: 3 numbers. 11 would be the next, but range stops before 10.",
+  "workedSolution": "1. i starts at 2 and goes up in 3s: 2, 5, 8.\n2. The stop value 10 is not included.\n3. 3 numbers.",
+  "hints": [
+   "range(start, stop, step) stops before reaching stop."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which keyword closes a WHILE loop in pseudocode?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "ENDWHILE"
+    }
+   ],
+   "rejected": [
+    {
+     "value": "NEXT"
+    },
+    {
+     "value": "UNTIL"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "`WHILE … DO … ENDWHILE`. FOR loops end with NEXT and REPEAT loops with UNTIL.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "ENDWHILE"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "NEXT"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.iteration.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Describe **two** differences between a WHILE loop and a REPEAT … UNTIL loop, and give a task that suits REPEAT … UNTIL.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "WHILE tests the condition before the body (pre-condition); REPEAT tests it after the body (post-condition)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "WHILE may run zero times; REPEAT always runs at least once / WHILE stops when its condition is FALSE, REPEAT stops when its condition is TRUE",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Suitable task, e.g. validating an input / asking for a password until correct",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A WHILE loop checks its condition before each pass, so it may not run at all; a REPEAT loop checks after each pass, so it always runs at least once. WHILE repeats while its condition is TRUE, whereas REPEAT repeats until its condition becomes TRUE. REPEAT suits validating an age that must be entered at least once."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Position of the test, minimum passes and stopping condition.",
+  "hints": [
+   "Where is each condition tested?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.iteration.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "Write pseudocode that inputs whole numbers until -1 is entered, then outputs how many of the numbers were even. The -1 must not be counted.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Initialises the counter to 0 before the loop",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Inputs the first number before a WHILE loop (or uses an equivalent structure that does not process -1)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Loop condition Number <> -1",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Uses MOD(Number, 2) = 0 to add 1 to the counter for even numbers",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Inputs the next number inside the loop and outputs the count after the loop",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nEvenCount ← 0\nOUTPUT \"Enter a number (-1 to stop)\"\nINPUT Number\nWHILE Number <> -1 DO\n    IF MOD(Number, 2) = 0\n        THEN\n            EvenCount ← EvenCount + 1\n    ENDIF\n    OUTPUT \"Enter a number (-1 to stop)\"\n    INPUT Number\nENDWHILE\nOUTPUT \"Even numbers: \", EvenCount\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A rogue value that may come first needs a WHILE loop with a read before the loop.",
+  "hints": [
+   "Read one value before the loop and the next at the end of the loop body.",
+   "MOD(Number, 2) = 0 means even."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.iteration.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "Consider this algorithm.\n\n```\nTotal ← 0\nFOR Count ← 15 TO 3 STEP -4\n    Total ← Total + Count\nNEXT Count\nOUTPUT Total\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the values that `Count` takes, in order.",
+    "payload": {
+     "template": "First: {{blank:a}}, second: {{blank:b}}, last: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "15"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "11"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "3"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Count takes 15, 11, 7, 3; the next value, -1, is past 3."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value output.",
+    "answerSpec": {
+     "value": 36
+    },
+    "explanation": "15 + 11 + 7 + 3 = 36.",
+    "workedSolution": "1. Values: 15, 11, 7, 3.\n2. Total = 36."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Rewrite the algorithm using a WHILE loop so that it gives the same output.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Count ← 15 before the loop and condition WHILE Count >= 3",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Inside the loop: Total ← Total + Count and Count ← Count - 4",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nTotal ← 0\nCount ← 15\nWHILE Count >= 3 DO\n    Total ← Total + Count\n    Count ← Count - 4\nENDWHILE\nOUTPUT Total\n```"
+    }
+   }
+  ],
+  "explanation": "Count: 15, 11, 7, 3; output 36. Trace:\n\n| Count | Total | OUTPUT |\n|:-:|:-:|:-:|\n|  | 0 |  |\n| 15 | 15 |  |\n| 11 | 26 |  |\n| 7 | 33 |  |\n| 3 | 36 |  |\n|  |  | 36 |",
+  "hints": [
+   "Subtract 4 each time until the counter would go below 3."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "15"
+      },
+      {
+       "blankId": "b",
+       "text": "11"
+      },
+      {
+       "blankId": "c",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "36"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "15"
+       },
+       {
+        "blankId": "b",
+        "text": "12"
+       },
+       {
+        "blankId": "c",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "33"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.iteration"
+  ],
+  "difficulty": 5,
+  "marks": 6,
+  "estimatedSeconds": 720,
+  "stem": "A savings club in Gweru wants to reach a target of 120 dollars. Tatenda writes this algorithm; the weekly amounts entered are 35, 20, 40, 30, 25.\n\n```\nSaved ← 0\nWeeks ← 0\nWHILE Saved < 120 DO\n    INPUT Amount\n    Saved ← Saved + Amount\n    Weeks ← Weeks + 1\nENDWHILE\nOUTPUT \"Target reached in \", Weeks, \" weeks\"\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Weeks` that is output.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "After 4 weeks Saved = 125, which is at least 120.",
+    "workedSolution": "1. Running totals: 35, 55, 95, 125.\n2. The loop stops when Saved = 125: 4 weeks."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the final value of `Saved`.",
+    "answerSpec": {
+     "value": 125
+    },
+    "explanation": "35 + 20 + 40 + 30 = 125.",
+    "workedSolution": "1. Add the first 4 amounts.\n2. Saved = 125."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why is a WHILE loop more suitable here than a FOR loop?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A FOR loop cannot add numbers to a running total",
+      "rationale": "FOR loops can contain any statements."
+     },
+     {
+      "key": "B",
+      "content": "A WHILE loop always runs at least once",
+      "rationale": "That describes REPEAT, and WHILE may run zero times."
+     },
+     {
+      "key": "C",
+      "content": "The number of weeks needed is not known in advance",
+      "correct": true,
+      "rationale": "Correct: the loop depends on the amounts entered."
+     },
+     {
+      "key": "D",
+      "content": "FOR loops can only be used to process arrays",
+      "rationale": "FOR loops work with any statements."
+     }
+    ],
+    "explanation": "Condition-controlled loops suit an unknown number of repetitions."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Amounts must be between 1 and 50 dollars. Write the pseudocode that replaces `INPUT Amount` so that each amount is validated before it is added.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Uses a REPEAT … UNTIL (or WHILE) loop around the input",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Correct condition Amount >= 1 AND Amount <= 50 (or its opposite for WHILE)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Prompt / error message so the user knows to re-enter",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nREPEAT\n    OUTPUT \"Enter amount (1 to 50)\"\n    INPUT Amount\nUNTIL Amount >= 1 AND Amount <= 50\n```"
+    }
+   }
+  ],
+  "explanation": "4 weeks; Saved = 125.",
+  "hints": [
+   "Test the condition before each week.",
+   "The loop stops as soon as Saved reaches the target."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "125"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "120"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

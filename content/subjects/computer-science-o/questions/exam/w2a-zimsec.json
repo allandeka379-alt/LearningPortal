@@ -1,0 +1,504 @@
+[
+ {
+  "key": "exam.w2a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.hardware.cpu",
+   "comp.hardware.primary-storage",
+   "comp.hardware.secondary-storage"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A college in Masvingo is buying new laptops for its accounts department.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The laptops' spreadsheets check whether each fee payment is greater than the amount owed. Which part of the CPU carries out this check?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Arithmetic logic unit",
+      "correct": true,
+      "rationale": "Correct: comparisons are logical operations."
+     },
+     {
+      "key": "B",
+      "content": "Control unit",
+      "rationale": "The CU decodes and co-ordinates; it does not compare."
+     },
+     {
+      "key": "C",
+      "content": "Main memory",
+      "rationale": "Memory holds the values."
+     },
+     {
+      "key": "D",
+      "content": "Hard disk drive",
+      "rationale": "Secondary storage only keeps the files."
+     }
+    ],
+    "explanation": "Comparisons are done by the ALU."
+   },
+   {
+    "label": "(b)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each item to its function.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Control unit"
+      },
+      {
+       "id": "L2",
+       "content": "RAM"
+      },
+      {
+       "id": "L3",
+       "content": "ROM"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Holds the start-up (bootstrap) instructions"
+      },
+      {
+       "id": "R1",
+       "content": "Decodes instructions and sends control signals"
+      },
+      {
+       "id": "R2",
+       "content": "Holds the programs and data currently in use"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "CU: decode and control; RAM: data in use; ROM: bootstrap."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Each laptop has 6 GB of RAM. Using 1 GB = 1024 MB, state this amount in MB.",
+    "payload": {
+     "unitHint": "MB"
+    },
+    "answerSpec": {
+     "value": 6144,
+     "units": {
+      "required": false,
+      "accepted": [
+       "MB",
+       "megabytes",
+       "megabyte"
+      ]
+     }
+    },
+    "explanation": "6 × 1024 = 6144 MB.",
+    "workedSolution": "1. 1 GB = 1024 MB.\n2. 6 × 1024 = 6144 MB."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why each laptop needs both RAM and ROM.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "ROM is non-volatile, so the start-up instructions are kept when the laptop is off and can load the operating system",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "RAM is read-write (volatile), so it can hold the programs and data being used, which change all the time",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ROM keeps the bootstrap when the power is off, so the laptop can start and load the operating system. RAM can be written to, so it holds the spreadsheets and data being worked on, which change constantly."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The supplier offers each laptop with either a 1 TB hard disk drive or a 512 GB solid-state drive. Recommend one for the accounts staff and justify your choice.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Recommends the SSD (or the HDD with a valid justification)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "SSD: faster access / quicker start-up and file opening, because there are no moving parts",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "SSD: more durable if the laptop is knocked / lighter / uses less power; 512 GB is enough for documents and spreadsheets (HDD advantage: larger capacity, cheaper per GB)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The SSD. It has no moving parts, so the laptops start and open files faster and are less likely to be damaged if knocked. Accounts files are small, so 512 GB is plenty, even though the HDD has more space for the price."
+    }
+   }
+  ],
+  "explanation": "(a) ALU (b) CU decodes and controls, RAM holds data in use, ROM holds the bootstrap (c) 6144 MB.",
+  "hints": [
+   "The ALU calculates and compares; the control unit decodes and co-ordinates.",
+   "1 GB = 1024 MB."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "6144"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "6000"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2a-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.hardware.input-devices",
+   "comp.hardware.output-devices",
+   "comp.hardware.data-capture-systems"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A supermarket in Gweru uses point-of-sale (POS) terminals, and its bank has an ATM at the entrance.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Classify each POS device as an input device or an output device.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Barcode scanner"
+      },
+      {
+       "id": "L2",
+       "content": "Receipt printer"
+      },
+      {
+       "id": "L3",
+       "content": "Electronic scale"
+      }
+     ],
+     "right": [
+      {
+       "id": "R1",
+       "content": "Input device"
+      },
+      {
+       "id": "R2",
+       "content": "Output device"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R1"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "The scanner and scale capture data (input); the receipt printer presents results (output)."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is stored in the barcode on each product?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The price",
+      "rationale": "Prices are held in the stock file."
+     },
+     {
+      "key": "B",
+      "content": "The stock level",
+      "rationale": "Stock levels are held in the database."
+     },
+     {
+      "key": "C",
+      "content": "The product code",
+      "correct": true,
+      "rationale": "Correct: the price is looked up in the database."
+     },
+     {
+      "key": "D",
+      "content": "The expiry date and price",
+      "rationale": "The barcode holds only the product code."
+     }
+    ],
+    "explanation": "Barcode = product code."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "The bank also processes cheques. Name the data-capture method used to read the numbers printed in magnetic ink along the bottom of a cheque.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "MICR"
+      },
+      {
+       "value": "magnetic ink character recognition"
+      },
+      {
+       "value": "magnetic ink character reader"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "MICR reads magnetic-ink characters."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the POS system finds an item's price and keeps the stock level up to date when the item is scanned.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The barcode is read and the product code is searched for in the stock file/database",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The description and price are returned, displayed and added to the bill",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The stock level is reduced and compared with the reorder level (flagged for reorder if low)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The scanner reads the product code, which is looked up in the stock database. The description and price are returned and added to the bill. The stock level is reduced and checked against the reorder level, so low stock is reordered."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain **two** reasons why the bank issues chip-and-PIN cards for its ATM instead of cards with only a magnetic stripe.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The chip stores encrypted data, so the card is much harder to copy/clone (skimming)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A PIN must be entered, so a stolen card cannot easily be used",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The chip stores encrypted data, so criminals cannot easily copy the card with a skimmer, and the PIN means a stolen card is useless without the number."
+    }
+   }
+  ],
+  "explanation": "(a) input, output, input (b) product code (c) MICR.",
+  "hints": [
+   "Barcodes hold codes; prices are in the database.",
+   "Chip cards store encrypted data."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R1"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "MICR"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R1"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "OCR"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2"
+ }
+]

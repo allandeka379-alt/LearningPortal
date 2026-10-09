@@ -1,0 +1,684 @@
+[
+ {
+  "key": "exam.w1a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.number-systems",
+   "comp.data.binary-denary",
+   "comp.data.octal",
+   "comp.data.hexadecimal"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A stock-control program at a hardware shop in Gweru stores the number of items in each bin as a binary number. One bin holds **163** items.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the computer stores the number in binary.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The computer's circuits/switches/transistors (or logic gates, memory cells) have only two states, on and off.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The two states represent the binary digits 1 and 0, so all data must be converted to binary to be stored and processed.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A computer is built from electronic switches that can only be on or off. These two states stand for 1 and 0, so every number has to be held in binary."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Convert 163 to an 8-bit binary number.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10100011"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$128 + 32 + 2 + 1 = 163$ → 10100011."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Convert 163 to octal.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "243"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "163 ÷ 8 = 20 r 3; 20 ÷ 8 = 2 r 4; 2 ÷ 8 = 0 r 2 → 243. (Or group 10100011 in threes from the right: 010 100 011.)"
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Convert 163 to hexadecimal.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "A3"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "163 ÷ 16 = 10 r 3 → A3 (or 1010 0011 → A3)."
+   },
+   {
+    "label": "(e)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Another bin's count is shown on a technician's screen in hexadecimal as 7D. Convert it to denary.",
+    "answerSpec": {
+     "value": 125
+    },
+    "explanation": "$7 \\times 16 + 13 = 125$.",
+    "workedSolution": "1. $7 \\times 16 + 13 = 125$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two reasons why the technician's screen shows values in hexadecimal rather than binary.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Hexadecimal is shorter (one hex digit represents 4 bits), so it takes less space on screen.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It is easier for people to read/remember/copy, so fewer errors are made; it converts easily to and from binary.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A hex value is a quarter of the length of the binary, so it is quicker to read. It is also easier to remember and copy without mistakes, and each digit converts straight to four bits."
+    }
+   }
+  ],
+  "explanation": "163 = 10100011 (binary) = 243 (octal) = A3 (hex). 7D = 125.",
+  "hints": [
+   "Use place values 128 to 1 for binary.",
+   "Divide by 8 for octal and by 16 for hexadecimal; read remainders from the bottom up."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "10100011"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "243"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "A3"
+    },
+    "(e)": {
+     "type": "CALCULATION",
+     "value": "125"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "10100100"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "342"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "A4"
+     },
+     "(e)": {
+      "type": "CALCULATION",
+      "value": "73"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "exam.w1a-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.binary-addition",
+   "comp.data.binary-subtraction",
+   "comp.data.text-character-sets",
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A school's computer club in Bulawayo is practising binary arithmetic and character codes. The ASCII code for **A** is 65.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Add the binary numbers 01011101 and 00110110. Give an 8-bit answer.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10010011"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "01011101 + 00110110 = 10010011 ($93 + 54 = 147$)."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Work out 10010011 − 00101110 in binary. Give an 8-bit answer.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01100101"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "10010011 − 00101110 = 01100101 ($147 - 46 = 101$)."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Convert your answer to (b) to denary.",
+    "answerSpec": {
+     "value": 101
+    },
+    "explanation": "01100101 = $64 + 32 + 4 + 1 = 101$.",
+    "workedSolution": "1. 01100101 = $64 + 32 + 4 + 1 = 101$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Give the 8-bit binary ASCII code for the letter R.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01010010"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "R is 17 letters after A: $65 + 17 = 82$ → 01010010."
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 1,
+    "stem": "Decode this ASCII message.",
+    "payload": {
+     "template": "01010111 01001001 01001110 → {{blank:w}}",
+     "blanks": [
+      {
+       "id": "w"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "w",
+       "accepted": [
+        "WIN"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      }
+     ]
+    },
+    "explanation": "01010111 = 87 = W; 01001001 = 73 = I; 01001110 = 78 = N."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The club wants to send messages that include emojis. Explain why ASCII cannot be used and what should be used instead.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "ASCII uses 7 (or 8) bits, so it has only 128 (or 256) codes, none of which are emojis.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Unicode should be used: it uses more bits per character, so it has codes for emojis and characters of many languages.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ASCII only has 128 characters (256 in extended ASCII), and emojis are not among them. Unicode uses more bits per character, giving enough codes for emojis and other languages."
+    }
+   }
+  ],
+  "explanation": "(a) 10010011. (b) 01100101 = 101. (d) 01010010. (e) WIN.",
+  "hints": [
+   "Carry 1 when a column adds to 2 or 3; borrow 2 when a column needs it.",
+   "Count on through the alphabet from A = 65."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "10010011"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "01100101"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "101"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "01010010"
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "w",
+       "text": "WIN"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "10010100"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "01100110"
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "103"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "01010011"
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "w",
+        "text": "VHM"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "exam.w1a-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.storage-units"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A secondary school in Masvingo is buying storage for its computer laboratory. Use 1 KB = 1024 bytes, 1 MB = 1024 KB, 1 GB = 1024 MB and 1 TB = 1024 GB.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the units of storage in order from smallest to largest.",
+    "payload": {
+     "template": "bit, {{blank:a}}, byte, kilobyte, {{blank:b}}, gigabyte, {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "bit",
+        "nibble",
+        "byte",
+        "kilobyte",
+        "megabyte",
+        "gigabyte",
+        "terabyte"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "bit",
+        "nibble",
+        "byte",
+        "kilobyte",
+        "megabyte",
+        "gigabyte",
+        "terabyte"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "bit",
+        "nibble",
+        "byte",
+        "kilobyte",
+        "megabyte",
+        "gigabyte",
+        "terabyte"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "nibble"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "megabyte"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "terabyte"
+       ]
+      }
+     ]
+    },
+    "explanation": "bit → nibble → byte → kilobyte → megabyte → gigabyte → terabyte."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "How many nibbles are there in 6 bytes?",
+    "answerSpec": {
+     "value": 12
+    },
+    "explanation": "1 byte = 2 nibbles, so $6 \\times 2 = 12$.",
+    "workedSolution": "1. 1 byte = 2 nibbles, so $6 \\times 2 = 12$."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Convert 6 GB to MB.",
+    "payload": {
+     "unitHint": "MB"
+    },
+    "answerSpec": {
+     "value": 6144,
+     "units": {
+      "required": false,
+      "accepted": [
+       "MB",
+       "megabytes",
+       "megabyte"
+      ]
+     }
+    },
+    "explanation": "$6 \\times 1024 = 6144$ MB.",
+    "workedSolution": "1. $6 \\times 1024 = 6144$ MB."
+   },
+   {
+    "label": "(d)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Each pupil's folder may use up to 128 MB. How many pupils' folders fit on an 8 GB flash drive?",
+    "answerSpec": {
+     "value": 64
+    },
+    "explanation": "8 GB = $8 \\times 1024 = 8192$ MB; $8192 \\div 128 = 64$ folders.",
+    "workedSolution": "1. 8 GB = $8 \\times 1024 = 8192$ MB; $8192 \\div 128 = 64$ folders."
+   },
+   {
+    "label": "(e)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "A school report is 5120 KB. Give its size in MB.",
+    "payload": {
+     "unitHint": "MB"
+    },
+    "answerSpec": {
+     "value": 5,
+     "units": {
+      "required": false,
+      "accepted": [
+       "MB",
+       "megabytes",
+       "megabyte"
+      ]
+     }
+    },
+    "explanation": "$5120 \\div 1024 = 5$ MB.",
+    "workedSolution": "1. $5120 \\div 1024 = 5$ MB."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The school can buy either a 750 GB drive or a 2 TB drive. It must store 600 GB of files now and expects this to grow. Recommend a drive and justify your answer with a calculation.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "2 TB = 2 × 1024 = 2048 GB.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The 750 GB drive leaves only 150 GB for growth (or would soon be full).",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Recommends the 2 TB drive: 2048 − 600 = 1448 GB spare for growth.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 2 TB is 2 × 1024 = 2048 GB. The 750 GB drive would leave only 150 GB for growth. The 2 TB drive holds today's files with 2048 − 600 = 1448 GB to spare, so it allows for growth: buy the 2 TB drive."
+    }
+   }
+  ],
+  "explanation": "(b) 12. (c) 6144 MB. (d) 64. (e) 5 MB. (f) 2 TB = 2048 GB.",
+  "hints": [
+   "Multiply by 1024 to go to a smaller unit and divide to go to a larger one.",
+   "Put sizes in the same unit before comparing or dividing."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "nibble"
+      },
+      {
+       "blankId": "b",
+       "text": "megabyte"
+      },
+      {
+       "blankId": "c",
+       "text": "terabyte"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "12"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "6144"
+    },
+    "(d)": {
+     "type": "CALCULATION",
+     "value": "64"
+    },
+    "(e)": {
+     "type": "CALCULATION",
+     "value": "5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "bit"
+       },
+       {
+        "blankId": "b",
+        "text": "bit"
+       },
+       {
+        "blankId": "c",
+        "text": "bit"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "6000"
+     },
+     "(d)": {
+      "type": "CALCULATION",
+      "value": "62"
+     },
+     "(e)": {
+      "type": "CALCULATION",
+      "value": "5242880"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ]
+ }
+]

@@ -1,0 +1,600 @@
+[
+ {
+  "key": "exam.w1a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.number-systems",
+   "comp.data.binary-denary",
+   "comp.data.hexadecimal",
+   "comp.data.binary-addition",
+   "comp.data.logical-shifts",
+   "comp.data.twos-complement"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A microcontroller in an irrigation system at a farm near Chinhoyi stores data in 8-bit and 16-bit registers.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the microcontroller stores all data in binary.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It is made of switches/transistors/logic gates that have two states (on/off).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The two states represent 1 and 0, so all data must be converted to binary to be processed and stored.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The microcontroller's circuits are made of transistors that act as switches with only two states. These states represent the binary digits 1 and 0, so data must be held in binary to be processed."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "A 16-bit register holds the denary value 2748. Give this value in hexadecimal.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "0ABC"
+      },
+      {
+       "value": "ABC"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "2748 = 0000 1010 1011 1100 → 0ABC (0ABC or ABC)."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Convert the hexadecimal value 9E to 8-bit binary.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10011110"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "9 → 1001, E → 1110: 10011110."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Add the 8-bit binary integers 01101011 and 01010110. Give an 8-bit answer.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "11000001"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "01101011 + 01010110 = 11000001 ($107 + 86 = 193$)."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "The 8-bit integers 11001010 and 01100111 are added. Give the 8 bits left in the register.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "00110001"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The full sum is 100110001 (305); the register keeps 00110001."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the result in (e) is incorrect.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The true sum (305) is greater than 255, so it needs 9 bits; the extra bit is lost (overflow).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 202 + 103 = 305, which is more than 255, the largest 8-bit value, so the ninth bit is lost: an overflow error."
+    }
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Carry out a logical right shift of 2 places on 11001100. Give the 8-bit result.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "00110011"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "11001100 → 00110011."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Describe the effect of the shift in (g) on the value stored.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It divides the value by 4 (204 → 51); here the result is exact because only 0s were shifted out.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The value is divided by 4, from 204 to 51; the two bits lost were 0s, so no remainder is lost."
+    }
+   },
+   {
+    "label": "(i)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "A temperature of -57 is stored in 8-bit two's complement. Give the binary value.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "11000111"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "+57 = 00111001; invert → 11000110; add 1 → 11000111."
+   },
+   {
+    "label": "(j)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Another register holds the two's complement value 10110101. Give its denary value.",
+    "answerSpec": {
+     "value": -75
+    },
+    "explanation": "$-128 + 32 + 16 + 4 + 1 = -75$.",
+    "workedSolution": "1. $-128 + 32 + 16 + 4 + 1 = -75$."
+   },
+   {
+    "label": "(k)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Identify one place, other than memory dumps, where hexadecimal is used.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Any one: MAC addresses; HTML colour codes; error codes; assembly language / memory addresses.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: MAC addresses of network cards."
+    }
+   }
+  ],
+  "explanation": "(b) 0ABC. (c) 10011110. (d) 11000001. (e) 00110001, overflow. (g) 00110011, ÷ 4. (i) 11000111. (j) -75.",
+  "hints": [
+   "Group 16 bits into nibbles for hexadecimal.",
+   "Overflow: compare the sum with 255.",
+   "Two's complement: positive in 8 bits, invert, add 1; the MSB is worth −128."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "0ABC"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "10011110"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "11000001"
+    },
+    "(e)": {
+     "type": "SHORT_ANSWER",
+     "text": "00110001"
+    },
+    "(g)": {
+     "type": "SHORT_ANSWER",
+     "text": "00110011"
+    },
+    "(i)": {
+     "type": "SHORT_ANSWER",
+     "text": "11000111"
+    },
+    "(j)": {
+     "type": "CALCULATION",
+     "value": "-75"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "CBA"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "10011111"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "11000010"
+     },
+     "(e)": {
+      "type": "SHORT_ANSWER",
+      "text": "100110001"
+     },
+     "(g)": {
+      "type": "SHORT_ANSWER",
+      "text": "00110000"
+     },
+     "(i)": {
+      "type": "SHORT_ANSWER",
+      "text": "00111001"
+     },
+     "(j)": {
+      "type": "CALCULATION",
+      "value": "181"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "exam.w1a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.sound-images",
+   "comp.data.file-size",
+   "comp.data.compression"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A tourism company in Victoria Falls makes short promotional clips with recorded commentary and still photos for its website.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the commentary is stored as binary.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The amplitude/height of the sound wave is measured (sampled) at regular time intervals.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Each sample is stored as a binary number using a fixed number of bits (the sample resolution).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The sound wave's amplitude is sampled at set intervals, and each measurement is rounded and stored as a binary number using the sample resolution's number of bits."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the effect of increasing the sample resolution?",
+    "options": [
+     {
+      "key": "A",
+      "content": "More accurate sound and a smaller file",
+      "rationale": "More bits per sample makes the file larger."
+     },
+     {
+      "key": "B",
+      "content": "More accurate sound and a larger file",
+      "correct": true,
+      "rationale": "Correct: more levels per sample, more bits stored."
+     },
+     {
+      "key": "C",
+      "content": "More samples taken each second",
+      "rationale": "That is the sample rate."
+     },
+     {
+      "key": "D",
+      "content": "Less accurate sound and a larger file",
+      "rationale": "More bits per sample gives more accuracy."
+     }
+    ],
+    "explanation": "Higher resolution → more possible levels → more accurate, but each sample uses more bits."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "The commentary is recorded for 45 seconds at 16384 Hz with a sample resolution of 8 bits. Calculate the file size in KiB. Show your working.",
+    "payload": {
+     "unitHint": "KiB"
+    },
+    "answerSpec": {
+     "value": 720,
+     "units": {
+      "required": false,
+      "accepted": [
+       "KiB",
+       "kibibytes",
+       "kibibyte"
+      ]
+     }
+    },
+    "explanation": "Bits $= 16384 \\times 8 \\times 45$; bytes $= 16384 \\times 45$ (8-bit samples are 1 byte); KiB $= 16 \\times 45 = 720$ (since 16384 = 16 × 1024).",
+    "workedSolution": "1. Bits $= 16384 \\times 8 \\times 45$; bytes $= 16384 \\times 45$ (8-bit samples are 1 byte); KiB $= 16 \\times 45 = 720$ (since 16384 = 16 × 1024)."
+   },
+   {
+    "label": "(d)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "A logo uses 100 different colours. State the smallest colour depth that can be used.",
+    "payload": {
+     "unitHint": "bits"
+    },
+    "answerSpec": {
+     "value": 7,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bits",
+       "bit",
+       "b"
+      ]
+     }
+    },
+    "explanation": "$2^6 = 64 < 100 \\leq 128 = 2^7$, so 7 bits.",
+    "workedSolution": "1. $2^6 = 64 < 100 \\leq 128 = 2^7$, so 7 bits."
+   },
+   {
+    "label": "(e)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "A photo is 2560 × 1200 pixels with a colour depth of 24 bits. Calculate its file size in KiB.",
+    "payload": {
+     "unitHint": "KiB"
+    },
+    "answerSpec": {
+     "value": 9000,
+     "units": {
+      "required": false,
+      "accepted": [
+       "KiB",
+       "kibibytes",
+       "kibibyte"
+      ]
+     }
+    },
+    "explanation": "Bytes $= 2560 \\times 1200 \\times 3$; KiB $= \\frac{2560 \\times 1200 \\times 3}{1024} = 2.5 \\times 1200 \\times 3 = 9000$.",
+    "workedSolution": "1. Bytes $= 2560 \\times 1200 \\times 3$; KiB $= \\frac{2560 \\times 1200 \\times 3}{1024} = 2.5 \\times 1200 \\times 3 = 9000$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The photos load slowly on phones. Describe one lossy method that could reduce the photos' file size and its effect on the photos.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Method: reduce the resolution (fewer pixels) or reduce the colour depth (fewer bits per pixel).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Effect: the data is permanently removed, so the photo has less detail / fewer colours (lower quality), but a smaller file.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Reduce the colour depth from 24 to 8 bits per pixel. The file becomes a third of the size, but each pixel can only be one of 256 colours, so shading looks less smooth and the lost data cannot be recovered."
+    }
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "One row of the company logo has the pixel colours R R R R R R R R R R G G G G G R R R R R R B B B. Write the row using run-length encoding as count then colour (for example 3B).",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10R 5G 6R 3B"
+      },
+      {
+       "value": "10R5G6R3B"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "10R 5G 6R 3B."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The company's price list is a spreadsheet that is emailed to agents. Explain why it should be compressed with lossless rather than lossy compression.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Lossless compression lets the original be rebuilt exactly.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Every price/value in the spreadsheet must be exactly right; lossy would permanently remove/change data.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: With lossless compression the spreadsheet is rebuilt exactly when it is decompressed. Lossy compression would permanently remove data, which could change or lose prices, so it is unsuitable."
+    }
+   }
+  ],
+  "explanation": "(c) 720 KiB. (d) 7 bits. (e) 9000 KiB. (g) 10R 5G 6R 3B.",
+  "hints": [
+   "File sizes: work in bits, then ÷ 8 and ÷ 1024; cancel before multiplying.",
+   "Number of colours = $2^{\\text{depth}}$.",
+   "RLE: count each run of the same colour."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "720"
+    },
+    "(d)": {
+     "type": "CALCULATION",
+     "value": "7"
+    },
+    "(e)": {
+     "type": "CALCULATION",
+     "value": "9000"
+    },
+    "(g)": {
+     "type": "SHORT_ANSWER",
+     "text": "10R 5G 6R 3B"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "5760"
+     },
+     "(d)": {
+      "type": "CALCULATION",
+      "value": "6"
+     },
+     "(e)": {
+      "type": "CALCULATION",
+      "value": "72000"
+     },
+     "(g)": {
+      "type": "SHORT_ANSWER",
+      "text": "10R 5G 5R 3B"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "calculator": false
+ }
+]

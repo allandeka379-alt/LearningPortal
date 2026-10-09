@@ -1,0 +1,982 @@
+[
+ {
+  "key": "data.binary-subtraction.q01",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Work out the binary subtraction **1110 − 0100**.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "1010"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "No borrows are needed: 1010. Check: $14 - 4 = 10$.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "1010"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1011"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "0110"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.binary-subtraction.q02",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Work out **10110 − 00101** in binary.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "10001"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "1s: 0 − 1 needs a borrow from the 2s (which becomes 0): 2 − 1 = 1. 2s: 0 − 0 = 0. 4s: 1 − 1 = 0. 8s: 0 − 0 = 0. 16s: 1 − 0 = 1. Answer 10001; check $22 - 5 = 17$.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "10001"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "10011"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-subtraction.q03",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Work out the 8-bit subtraction **11000101 − 01010011**. Give an 8-bit answer.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "01110010"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The answer is 01110010. Check: $197 - 83 = 114$.",
+  "hints": [
+   "Start in the 1s column and borrow whenever the top digit is 0 and the bottom digit is 1.",
+   "Check by converting both numbers to denary."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "01110010"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "01110011"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-subtraction.q04",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Work out **10000000 − 00000001**. Give an 8-bit answer.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "01111111"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Borrow from the 128s: it becomes 0 and every lower column becomes 1, with the 1s column becoming 10; 10 − 1 = 1. Answer 01111111 ($128 - 1 = 127$).",
+  "hints": [
+   "The nearest 1 to borrow from is in the 128s column.",
+   "Every 0 you pass over becomes 1."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "01111111"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "10000001"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11111111"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-subtraction.q05",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Work out **11010000 − 00111001**. Give an 8-bit answer.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "10010111"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Answer 10010111. Check: $208 - 57 = 151$.",
+  "hints": [
+   "The first borrow has to cross several zeros.",
+   "After each borrow, write the new top digits above the old ones."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "10010111"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "10011000"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-subtraction.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In binary subtraction, what is **0 − 1** after borrowing from the next column?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1",
+    "correct": true,
+    "rationale": "Correct: the borrowed 1 makes the column 10 (two), and 2 − 1 = 1."
+   },
+   {
+    "key": "B",
+    "content": "9",
+    "rationale": "That treats the borrow as ten, as in denary."
+   },
+   {
+    "key": "C",
+    "content": "0",
+    "rationale": "0 is the result of 1 − 1."
+   },
+   {
+    "key": "D",
+    "content": "−1",
+    "rationale": "Borrowing avoids a negative digit; binary digits are only 0 and 1."
+   }
+  ],
+  "explanation": "After borrowing, the column holds binary 10 = 2, and $2 - 1 = 1$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.binary-subtraction.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "When you borrow 1 from the next column in binary subtraction, how much is it worth in the column that receives it?",
+  "options": [
+   {
+    "key": "A",
+    "content": "2",
+    "correct": true,
+    "rationale": "Correct: each binary place value is double the one to its right."
+   },
+   {
+    "key": "B",
+    "content": "10",
+    "rationale": "In denary a borrow is worth ten; binary uses base 2."
+   },
+   {
+    "key": "C",
+    "content": "1",
+    "rationale": "It is worth 1 of the left column, which is 2 of the column to its right."
+   },
+   {
+    "key": "D",
+    "content": "16",
+    "rationale": "16 is a place value in binary, not the value of a borrow."
+   }
+  ],
+  "explanation": "Place values double from right to left, so 1 in the left column equals 2 in the column to its right.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-subtraction.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is **1011 − 0110** in binary?",
+  "options": [
+   {
+    "key": "A",
+    "content": "0001",
+    "rationale": "0001 is 1; check in denary: 11 − 6 = 5, not 1."
+   },
+   {
+    "key": "B",
+    "content": "0101",
+    "correct": true,
+    "rationale": "Correct: 11 − 6 = 5 = 0101."
+   },
+   {
+    "key": "C",
+    "content": "1101",
+    "rationale": "This subtracts the smaller digit from the larger in every column."
+   },
+   {
+    "key": "D",
+    "content": "0111",
+    "rationale": "0111 is 7; check in denary: 11 − 6 = 5."
+   }
+  ],
+  "explanation": "1s: 1 − 0 = 1. 2s: 1 − 1 = 0. 4s: 0 − 1 → borrow from 8s: 2 − 1 = 1. 8s: 0 − 0 = 0. Answer 0101 = 5.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.binary-subtraction.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "When working out **1000 − 0011**, Chipo borrows for the 1s column. What happens to the 8s, 4s and 2s columns?",
+  "options": [
+   {
+    "key": "A",
+    "content": "8s becomes 0; 4s and 2s become 2",
+    "rationale": "Only the column that needs the borrow becomes 10 (two); passed-over zeros become 1."
+   },
+   {
+    "key": "B",
+    "content": "8s stays 1; 4s and 2s become 1",
+    "rationale": "The column you borrow from must drop by 1."
+   },
+   {
+    "key": "C",
+    "content": "8s becomes 0; 4s and 2s become 1",
+    "correct": true,
+    "rationale": "Correct: the nearest 1 (the 8s) gives up 1; the zeros passed over become 1."
+   },
+   {
+    "key": "D",
+    "content": "Nothing changes because 0 − 1 is 1",
+    "rationale": "0 − 1 needs a borrow; the columns to the left change."
+   }
+  ],
+  "explanation": "Borrowing across zeros: 8s → 0, 4s → 1, 2s → 1, 1s → 10. Then 2 − 1 = 1, 1 − 1 = 0, 1 − 0 = 1, 0 − 0 = 0: 0101 (8 − 3 = 5).",
+  "hints": [
+   "Find the nearest 1 to the left of the 1s column."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.binary-subtraction.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Tatenda says **11010 − 00110 = 11100**. How can you tell immediately that he is wrong?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The answer has more 1s than the bottom number",
+    "rationale": "The number of 1s does not decide whether an answer is right."
+   },
+   {
+    "key": "B",
+    "content": "The answer ends in 0, and differences must be odd",
+    "rationale": "Differences can be even or odd."
+   },
+   {
+    "key": "C",
+    "content": "Binary answers must always have eight bits",
+    "rationale": "Answers can use any number of bits unless a size is stated."
+   },
+   {
+    "key": "D",
+    "content": "The answer is bigger than the number he started with",
+    "correct": true,
+    "rationale": "Correct: 11100 (28) is more than 11010 (26); a difference cannot be larger."
+   }
+  ],
+  "explanation": "Subtracting a positive number makes the result smaller. The correct answer is 10100 ($26 - 6 = 20$).",
+  "hints": [
+   "Compare the size of the answer with the top number."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.binary-subtraction.q11",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In binary subtraction, 1 − 1 = 0 and no borrow is needed.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Only 0 − 1 needs a borrow.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.binary-subtraction.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Adding the answer of a binary subtraction to the bottom number should give the top number.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Subtraction and addition are inverse operations, so this is a quick check that needs no conversion.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-subtraction.q13",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each column subtraction with its result.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "0 − 0"
+    },
+    {
+     "id": "L2",
+     "content": "1 − 0"
+    },
+    {
+     "id": "L3",
+     "content": "1 − 1"
+    },
+    {
+     "id": "L4",
+     "content": "0 − 1"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "0, no borrow"
+    },
+    {
+     "id": "R4",
+     "content": "1, borrow from the left"
+    },
+    {
+     "id": "R1",
+     "content": "0, no borrow"
+    },
+    {
+     "id": "R2",
+     "content": "1, no borrow"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Only 0 − 1 needs a borrow; it then becomes 10 − 1 = 1.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.binary-subtraction.q14",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Nyasha works out **101101 − 010110**. Complete her working and check.",
+  "payload": {
+   "template": "The answer in binary is {{blank:a}}. In denary this is 45 − 22 = {{blank:b}}.",
+   "blanks": [
+    {
+     "id": "a"
+    },
+    {
+     "id": "b"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "010111",
+      "10111"
+     ],
+     "normalise": [
+      "trim",
+      "remove_whitespace"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "23"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "101101 − 010110 = 010111, and $45 - 22 = 23$.",
+  "hints": [
+   "Work column by column from the right, borrowing when needed.",
+   "Your denary answer should match your binary answer."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "010111"
+    },
+    {
+     "blankId": "b",
+     "text": "23"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "011001"
+     },
+     {
+      "blankId": "b",
+      "text": "25"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-subtraction.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Describe how to borrow in binary subtraction when the column to the left of a 0 − 1 column also contains 0.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Move left to the nearest column with a 1; that 1 becomes 0.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Every 0 passed over becomes 1, and the column that needed the borrow becomes 10 (two), so 10 − 1 = 1.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Go left until you find a column whose top digit is 1 and change it to 0. Each 0 you passed over becomes 1, and the column that needed the borrow becomes 10, so 0 − 1 becomes 2 − 1 = 1."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Borrowing across zeros works like denary 1000 − 1, except the passed-over zeros become 1s (the largest binary digit).",
+  "hints": [
+   "Think of 1000 − 1 in denary: the zeros become 9s."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-subtraction.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A vending machine at a Gweru college stores the number of drinks in binary. At 08:00 it held **10101010** drinks; by 16:00 **01011100** had been sold.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Work out, in binary, the number of drinks left. Give an 8-bit answer.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01001110"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "10101010 − 01011100 = 01001110."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Check your answer by converting all three numbers to denary. Give the number of drinks left in denary.",
+    "answerSpec": {
+     "value": 78
+    },
+    "explanation": "$170 - 92 = 78$; 01001110 = 78. ✓",
+    "workedSolution": "1. $170 - 92 = 78$; 01001110 = 78. ✓"
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which check gives back the starting number without converting to denary?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Subtract 01001110 from 01011100",
+      "rationale": "Taking the answer away from the number sold does not undo the subtraction."
+     },
+     {
+      "key": "B",
+      "content": "Add 10101010 and 01011100",
+      "rationale": "This adds the starting stock to the sales, which means nothing here."
+     },
+     {
+      "key": "C",
+      "content": "Subtract 01011100 from 01001110",
+      "rationale": "This does not undo the subtraction."
+     },
+     {
+      "key": "D",
+      "content": "Add 01001110 and 01011100",
+      "correct": true,
+      "rationale": "Correct: difference + amount sold = starting stock."
+     }
+    ],
+    "explanation": "Addition undoes subtraction: answer + bottom number = top number."
+   }
+  ],
+  "explanation": "170 − 92 = 78 = 01001110.",
+  "hints": [
+   "Several columns need borrows.",
+   "Convert to denary to check."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "01001110"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "78"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "01001111"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "80"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "data.binary-subtraction.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.binary-subtraction"
+  ],
+  "difficulty": 5,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Farai's stock program subtracts the binary number of bags sold from the stock level. The stock was **01100100** bags and **00011111** bags were sold. Farai's answer was **01001011**.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Work out the correct 8-bit answer.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01000101"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "01100100 − 00011111 = 01000101 ($100 - 31 = 69$)."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Convert Farai's answer to denary.",
+    "answerSpec": {
+     "value": 75
+    },
+    "explanation": "$64 + 8 + 2 + 1 = 75$.",
+    "workedSolution": "1. $64 + 8 + 2 + 1 = 75$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how Farai could have checked his answer without converting to denary, and what the check would show.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Add his answer to the number sold (01001011 + 00011111).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The sum would be 01101010, not the stock level 01100100, so the answer is wrong.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Add his answer to the bags sold: 01001011 + 00011111 = 01101010. This should equal the stock 01100100, but it does not, so his subtraction is wrong."
+    }
+   }
+  ],
+  "explanation": "Correct: 01000101 (69). Farai's 75 is 6 too many.",
+  "hints": [
+   "Borrow across the zeros carefully.",
+   "Answer + amount sold should give back the stock level."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "01000101"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "75"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "01001011"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "69"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ }
+]

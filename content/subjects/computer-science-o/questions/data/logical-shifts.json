@@ -1,0 +1,1150 @@
+[
+ {
+  "key": "data.logical-shifts.q01",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Carry out a logical left shift of **1 place** on the 8-bit number **00100101**. Give the 8-bit result.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "01001010"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Every bit moves 1 place left; 0 falls off the left end and 0s fill in: 01001010. Value 37 → 74 (× 2).",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "01001010"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "00010010"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q02",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Carry out a logical left shift of **3 places** on the 8-bit number **00010011**. Give the 8-bit result.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "10011000"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Every bit moves 3 places left; 000 falls off the left end and 0s fill in: 10011000. Value 19 → 152 (× 8).",
+  "hints": [
+   "Move every bit 3 places left.",
+   "Fill the 3 empty places on the right with 0s."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "10011000"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "00000010"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q03",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Carry out a logical right shift of **4 places** on the 8-bit number **11010000**. Give the 8-bit result.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "00001101"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Every bit moves 4 places right; 0000 falls off the right end and 0s fill in: 00001101. Value 208 → 13 (÷ 16).",
+  "hints": [
+   "Move every bit 4 places right.",
+   "Fill the 4 empty places on the left with 0s."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "00001101"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "00000000"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q04",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Carry out a logical right shift of **1 place** on the 8-bit number **01101110**. Give the 8-bit result.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "00110111"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Every bit moves 1 place right; 0 falls off the right end and 0s fill in: 00110111. Value 110 → 55 (÷ 2).",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "00110111"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11011100"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the effect of a logical **left** shift of **one** place on a positive binary integer (if no 1s are lost)?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It multiplies the value by 2",
+    "correct": true,
+    "rationale": "Correct: every bit moves to a place worth twice as much."
+   },
+   {
+    "key": "B",
+    "content": "It divides the value by 2",
+    "rationale": "Dividing by 2 is a right shift."
+   },
+   {
+    "key": "C",
+    "content": "It adds 1 to the value",
+    "rationale": "Shifting moves bits; it does not add 1."
+   },
+   {
+    "key": "D",
+    "content": "It multiplies the value by 10",
+    "rationale": "That is the effect of moving digits in denary, not binary."
+   }
+  ],
+  "explanation": "Place values double from right to left, so moving every bit one place left doubles the number.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.logical-shifts.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In a logical shift, what fills the empty places left behind?",
+  "options": [
+   {
+    "key": "A",
+    "content": "0s",
+    "correct": true,
+    "rationale": "Correct: logical shifts always fill with zeros."
+   },
+   {
+    "key": "B",
+    "content": "1s",
+    "rationale": "The empty places are never filled with 1s in a logical shift."
+   },
+   {
+    "key": "C",
+    "content": "The bits that fell off the other end",
+    "rationale": "That would be a rotation, which is not a logical shift."
+   },
+   {
+    "key": "D",
+    "content": "A copy of the most significant bit",
+    "rationale": "Copying the sign bit is an arithmetic shift, not in this syllabus."
+   }
+  ],
+  "explanation": "Bits that leave the register are lost, and zeros are shifted in at the other end.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.logical-shifts.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A positive 8-bit integer is shifted **3 places to the right**. What is the effect on its value?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It is divided by 3",
+    "rationale": "The factor is a power of 2, not the number of places."
+   },
+   {
+    "key": "B",
+    "content": "It is divided by 8",
+    "correct": true,
+    "rationale": "Correct: each place right divides by 2, so 3 places divide by $2^3 = 8$."
+   },
+   {
+    "key": "C",
+    "content": "It is divided by 6",
+    "rationale": "This multiplies 3 by 2; the factor is 2 × 2 × 2."
+   },
+   {
+    "key": "D",
+    "content": "It is multiplied by 8",
+    "rationale": "A left shift multiplies; a right shift divides."
+   }
+  ],
+  "explanation": "A right shift of $n$ places divides by $2^n$ (integer division, remainders lost).",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which 8-bit number gives an **incorrect** result when shifted 2 places to the left to multiply by 4?",
+  "options": [
+   {
+    "key": "A",
+    "content": "00110011",
+    "rationale": "$51 \\times 4 = 204$ fits; only 0s are lost."
+   },
+   {
+    "key": "B",
+    "content": "00111111",
+    "rationale": "$63 \\times 4 = 252$ fits in 8 bits."
+   },
+   {
+    "key": "C",
+    "content": "01000110",
+    "correct": true,
+    "rationale": "Correct: the 1 in the 64s place is shifted out, because $70 \\times 4 = 280$ is more than 255."
+   },
+   {
+    "key": "D",
+    "content": "00001010",
+    "rationale": "$10 \\times 4 = 40$ fits easily."
+   }
+  ],
+  "explanation": "A left shift of 2 is only correct if the two leftmost bits are 0. In 01000110 the second bit is 1, so it is lost and the result (00011000 = 24) is wrong.",
+  "hints": [
+   "Look at the two leftmost bits of each number.",
+   "If either of them is 1, it will be lost."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The 8-bit number **00101101** is shifted 1 place to the right. Which statement is true?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The result is 22.5 because the shift is exact",
+    "rationale": "Integers cannot hold 0.5; the 1 that falls off is lost."
+   },
+   {
+    "key": "B",
+    "content": "The result is 90 because a right shift doubles",
+    "rationale": "A right shift halves; a left shift doubles."
+   },
+   {
+    "key": "C",
+    "content": "The result is 23 because the value is rounded up",
+    "rationale": "Shifting always rounds down: bits are simply discarded."
+   },
+   {
+    "key": "D",
+    "content": "The result is 22 because the remainder is lost",
+    "correct": true,
+    "rationale": "Correct: $45 \\div 2 = 22.5$; the 1 shifted out of the LSB was the remainder."
+   }
+  ],
+  "explanation": "00101101 = 45 → 00010110 = 22.",
+  "hints": [
+   "What is the value before the shift?",
+   "What happens to the bit that leaves the right-hand end?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which logical shift multiplies a positive integer by **16** (when no 1s are lost)?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Left 16 places",
+    "rationale": "16 places would empty an 8-bit register; the factor is $2^n$."
+   },
+   {
+    "key": "B",
+    "content": "Left 8 places",
+    "rationale": "8 places would multiply by 256 (and empty an 8-bit register)."
+   },
+   {
+    "key": "C",
+    "content": "Left 4 places",
+    "correct": true,
+    "rationale": "Correct: $2^4 = 16$."
+   },
+   {
+    "key": "D",
+    "content": "Right 4 places",
+    "rationale": "A right shift divides."
+   }
+  ],
+  "explanation": "Left $n$ places multiplies by $2^n$, and $2^4 = 16$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q11",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A logical left shift always gives the correct product, however many places the bits are moved.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. If a 1 is shifted out of the left end, the true result is too big for 8 bits and the register holds a wrong value.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.logical-shifts.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Shifting an 8-bit number 8 places to the right in an 8-bit register always gives 00000000.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Every original bit is shifted out and all eight places are filled with 0s.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.logical-shifts.q13",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "The 8-bit number **00111001** is shifted 2 places to the right. Complete the sentences.",
+  "payload": {
+   "template": "The result is {{blank:a}}. The bits lost are {{blank:b}}. The denary value changes from 57 to {{blank:c}}.",
+   "blanks": [
+    {
+     "id": "a"
+    },
+    {
+     "id": "b"
+    },
+    {
+     "id": "c"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "00001110"
+     ],
+     "normalise": [
+      "trim",
+      "remove_whitespace"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "01"
+     ],
+     "normalise": [
+      "trim",
+      "remove_whitespace"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "14"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "00111001 (57) → 00001110 (14); the lost bits 01 were the remainder: $57 \\div 4 = 14.25$ → 14.",
+  "hints": [
+   "Move every bit two places right and fill the left with 0s.",
+   "The two rightmost bits fall off."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "00001110"
+    },
+    {
+     "blankId": "b",
+     "text": "01"
+    },
+    {
+     "blankId": "c",
+     "text": "14"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "11100100"
+     },
+     {
+      "blankId": "b",
+      "text": "00"
+     },
+     {
+      "blankId": "c",
+      "text": "14.25"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each logical shift with its effect on a positive 8-bit integer (assuming no 1s are lost).",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Left 1 place"
+    },
+    {
+     "id": "L2",
+     "content": "Left 3 places"
+    },
+    {
+     "id": "L3",
+     "content": "Right 1 place"
+    },
+    {
+     "id": "L4",
+     "content": "Right 2 places"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "÷ 2"
+    },
+    {
+     "id": "R4",
+     "content": "÷ 4"
+    },
+    {
+     "id": "R1",
+     "content": "× 2"
+    },
+    {
+     "id": "R2",
+     "content": "× 8"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Left $n$: × $2^n$. Right $n$: ÷ $2^n$ (integer division).",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.logical-shifts.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The 8-bit number **00000111** is shifted left 5 places. What is the denary value of the result?",
+  "answerSpec": {
+   "value": 224
+  },
+  "explanation": "$7 \\times 32 = 224$ and no 1s are lost: 11100000 = 224.",
+  "workedSolution": "1. 00000111 = 7.\n2. Shift left 5: 11100000.\n3. $128 + 64 + 32 = 224$ ($7 \\times 2^5$).",
+  "hints": [
+   "A left shift of 5 multiplies by 32.",
+   "Check whether any 1s are shifted out."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "224"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "35"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "448"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "The 8-bit number **10010100** is shifted 1 place to the left. Explain why the result is not double the original value.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The MSB is 1, and it is shifted out of the register / lost.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Double the value (148 × 2 = 296) is greater than 255, so it cannot be stored in 8 bits; the result (00101000 = 40) is wrong.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The leftmost bit is a 1, and a left shift pushes it out of the 8-bit register. The true answer, 296, is larger than 255, so it cannot fit and the register holds 00101000 (40) instead."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "10010100 = 148; shifted left 1 gives 00101000 = 40, not 296.",
+  "hints": [
+   "Look at the most significant bit."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.logical-shifts.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Describe the effect of a logical right shift of 2 places on the 8-bit number **01111011**, and explain whether the result is exact.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The bits move 2 places right, the two rightmost bits are lost and 0s fill the left: result 00011110.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The value is divided by 4: 123 becomes 30.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The result is not exact: the lost bits (11) were 1s / the remainder 3 is lost ($123 \\div 4 = 30.75$).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Every bit moves two places to the right, so the result is 00011110. This divides the value by 4, from 123 to 30. It is not exact, because the two bits shifted out were both 1, so the remainder of 3 is lost (the true answer is 30.75)."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Describe: direction, places, new bits, factor; then judge exactness from the lost bits.",
+  "hints": [
+   "Work out the result and both denary values.",
+   "Look at the bits that were shifted out."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.logical-shifts.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A processor stores the positive integer **00110110** in an 8-bit register.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Convert the register's contents to denary.",
+    "answerSpec": {
+     "value": 54
+    },
+    "explanation": "$32 + 16 + 4 + 2 = 54$.",
+    "workedSolution": "1. $32 + 16 + 4 + 2 = 54$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Give the contents of the register after a logical left shift of 3 places.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10110000"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "00110110 → 10110000; lost bits 001."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the effect of the shift in (b) on the value, and state whether the result is correct.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It multiplies the value by 8 ($2^3$).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The result is not correct: a 1 is shifted out of the left end, so 54 × 8 = 432 does not fit in 8 bits (the register holds 176).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A left shift of 3 multiplies by 8, but the leading 1 is lost, so the register holds 176 instead of 432."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "The original value 00110110 is instead shifted 2 places to the right. Give the result.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "00001101"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "00110110 → 00001101 (13)."
+   },
+   {
+    "label": "(e)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Give the denary value of your answer to (d).",
+    "answerSpec": {
+     "value": 13
+    },
+    "explanation": "$54 \\div 4 = 13.5$; the remainder is lost, giving 13.",
+    "workedSolution": "1. $54 \\div 4 = 13.5$; the remainder is lost, giving 13."
+   }
+  ],
+  "explanation": "(a) 54. (b) 10110000. (c) × 8, but a 1 is lost so it is wrong. (d) 00001101. (e) 13.",
+  "hints": [
+   "For (b), check which bits fall off the left end.",
+   "A right shift of 2 divides by 4 and discards the remainder."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "54"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "10110000"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "00001101"
+    },
+    "(e)": {
+     "type": "CALCULATION",
+     "value": "13"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "CALCULATION",
+      "value": "55"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "10110001"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "00001110"
+     },
+     "(e)": {
+      "type": "CALCULATION",
+      "value": "13.5"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "data.logical-shifts.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.logical-shifts"
+  ],
+  "difficulty": 5,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A games program stores the number of coins a player has, **00001100**, in an 8-bit register. A bonus round multiplies the coins by 16 using a logical shift.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which shift should the program use?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Left 16 places",
+      "rationale": "The factor is $2^n$, not $n$."
+     },
+     {
+      "key": "B",
+      "content": "Right 4 places",
+      "rationale": "A right shift divides by 16."
+     },
+     {
+      "key": "C",
+      "content": "Left 2 places",
+      "rationale": "That multiplies by 4."
+     },
+     {
+      "key": "D",
+      "content": "Left 4 places",
+      "correct": true,
+      "rationale": "Correct: $2^4 = 16$."
+     }
+    ],
+    "explanation": "Left 4 places multiplies by 16."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Give the contents of the register after the bonus.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "11000000"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "00001100 → 11000000."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The player had 12 coins. Explain whether the bonus gives the correct number of coins and suggest a change to the program.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "12 × 16 = 192, which is at most 255 / no 1s are shifted out.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the result 11000000 (192) is correct.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Suggestion: check the leftmost 4 bits are 0 before shifting / use a 16-bit register for players with 16 or more coins, because larger values would lose 1s and overflow.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 12 × 16 = 192, which fits in 8 bits, and the four bits shifted out were all 0, so 11000000 = 192 is correct. A player with 16 or more coins would lose a 1, so the program should check the top four bits first or store coins in a 16-bit register."
+    }
+   }
+  ],
+  "explanation": "00001100 (12) shifted left 4 = 11000000 (192), correct because only 0s were lost.",
+  "hints": [
+   "Which power of 2 is 16?",
+   "Look at the four bits that fall off."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "11000000"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "11000001"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

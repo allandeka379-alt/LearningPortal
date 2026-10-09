@@ -1,0 +1,628 @@
+[
+ {
+  "key": "exam.w4c-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.db.relational-erd",
+   "comp.db.table-design"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A secondary school in Chinhoyi stores its inter-house athletics data in two related tables.\n\n| HouseID | HouseName | Colour |\n|:-:|:-:|:-:|\n| H1 | Zambezi | Blue |\n| H2 | Limpopo | Green |\n| H3 | Save | Red |\n\n| AthleteID | AthleteName | DateOfBirth | Boarder | HouseID |\n|:-:|:-:|:-:|:-:|:-:|\n| AT-401 | Tinotenda | 15/02/2011 | TRUE | H2 |\n| AT-402 | Ruvarashe | 30/09/2010 | FALSE | H1 |\n| AT-405 | Kudakwashe | 07/06/2011 | FALSE | H2 |\n| AT-409 | Mufaro | 23/11/2009 | TRUE | H3 |\n| AT-412 | Anesu | 05/01/2010 | TRUE | H2 |\n| AT-416 | Tanaka | 20/08/2011 | FALSE | H1 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Define the term *primary key*.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A field (or fields) whose value is unique for every record, used to identify each record",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A field whose value is different in every record, so that it identifies each record."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Identify the foreign key in the Athletes table.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "HouseID"
+      },
+      {
+       "value": "House ID"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "HouseID is the primary key of Houses, stored in Athletes to link each athlete to a house."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "State the type of relationship between Houses and Athletes.",
+    "options": [
+     {
+      "key": "A",
+      "content": "One-to-one",
+      "rationale": "Limpopo has several athletes."
+     },
+     {
+      "key": "B",
+      "content": "Many-to-many",
+      "rationale": "Each athlete record holds only one HouseID."
+     },
+     {
+      "key": "C",
+      "content": "Many-to-one from Houses to Athletes",
+      "rationale": "Read from Houses, it is one house to many athletes."
+     },
+     {
+      "key": "D",
+      "content": "One-to-many",
+      "correct": true,
+      "rationale": "Correct: one house has many athletes; each athlete is in one house."
+     }
+    ],
+    "explanation": "One house, many athletes: one-to-many, with the foreign key on the many side (Athletes)."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Choose the most suitable data type for each field of the Athletes table.",
+    "payload": {
+     "template": "DateOfBirth: {{blank:a}}\n\nBoarder: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Text",
+        "Integer",
+        "Date/time",
+        "Boolean"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Text",
+        "Integer",
+        "Date/time",
+        "Boolean"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Date/time"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Boolean"
+       ]
+      }
+     ]
+    },
+    "explanation": "A date of birth is date/time (so ages can be calculated and dates sorted); Boarder has only two values, so Boolean."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State how many athletes belong to Limpopo house.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Limpopo is H2, which appears 3 times in Athletes.",
+    "workedSolution": "1. Houses: Limpopo has HouseID H2.\n2. Athletes with HouseID H2: Tinotenda, Kudakwashe, Anesu = 3."
+   },
+   {
+    "label": "(f)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Referential integrity is enforced. Which new Athletes record would be rejected?",
+    "options": [
+     {
+      "key": "A",
+      "content": "AthleteID AT-420 with HouseID H3",
+      "rationale": "H3 exists in Houses, so it is accepted."
+     },
+     {
+      "key": "B",
+      "content": "AthleteID AT-421 with HouseID H4",
+      "correct": true,
+      "rationale": "Correct: there is no house H4."
+     },
+     {
+      "key": "C",
+      "content": "AthleteID AT-422 with HouseID H1",
+      "rationale": "H1 exists in Houses, so it is accepted."
+     },
+     {
+      "key": "D",
+      "content": "AthleteID AT-423 with HouseID H2",
+      "rationale": "H2 exists in Houses, so it is accepted."
+     }
+    ],
+    "explanation": "A foreign key value must match an existing primary key value; H4 is not in Houses."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Each athlete may enter several events and each event has several athletes. Describe how the database should store which athletes enter which events.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Add an Events table (EventID primary key) and a link table, e.g. Entries",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The link table holds AthleteID and EventID as foreign keys, one record per entry, with the pair as a composite primary key (resolving the many-to-many into two one-to-many relationships)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Create an Events table with EventID as its primary key, and a link table called Entries with the fields AthleteID and EventID. Each record in Entries is one athlete in one event; the two fields are foreign keys and together form the primary key."
+    }
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Suggest a validation rule for the DateOfBirth field.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A sensible rule, e.g. range check: between 01/01/2004 and 31/12/2013 / must not be in the future / presence check",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A range check accepting only dates from 1 January 2004 to 31 December 2013 (ages for secondary learners)."
+    }
+   }
+  ],
+  "explanation": "(b) HouseID. (c) One-to-many. (d) Date/time, Boolean. (e) 3. (f) The record with HouseID H4.",
+  "hints": [
+   "The field that appears in both tables links them.",
+   "A foreign key value must exist as a primary key in the other table."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "HouseID"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Date/time"
+      },
+      {
+       "blankId": "b",
+       "text": "Boolean"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(f)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "AthleteID"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Text"
+       },
+       {
+        "blankId": "b",
+        "text": "Text"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(f)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4c-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.db.sql",
+   "comp.db.forms-reports-crud"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A school uniform shop in Kadoma keeps this table, `Uniforms`.\n\n| ItemCode | ItemName | Size | Price | InStock |\n|:-:|:-:|:-:|:-:|:-:|\n| U01 | Blazer | M | 39 | 6 |\n| U02 | Blazer | L | 43 | 0 |\n| U03 | Tie | One size | 7 | 44 |\n| U04 | Shirt | S | 13 | 31 |\n| U05 | Shirt | M | 13 | 27 |\n| U06 | Jersey | M | 24 | 3 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the output of this query.\n\n```\nSELECT ItemName, Size\nFROM Uniforms\nWHERE Price > 12 AND InStock < 10\nORDER BY Price ASC;\n```",
+    "payload": {
+     "template": "Row 1: ItemName {{blank:n0}}, Size {{blank:s0}}\n\nRow 2: ItemName {{blank:n1}}, Size {{blank:s1}}\n\nRow 3: ItemName {{blank:n2}}, Size {{blank:s2}}",
+     "blanks": [
+      {
+       "id": "n0",
+       "input": "select",
+       "choices": [
+        "Blazer",
+        "Tie",
+        "Shirt",
+        "Jersey"
+       ]
+      },
+      {
+       "id": "s0",
+       "input": "select",
+       "choices": [
+        "S",
+        "M",
+        "L",
+        "One size"
+       ]
+      },
+      {
+       "id": "n1",
+       "input": "select",
+       "choices": [
+        "Blazer",
+        "Tie",
+        "Shirt",
+        "Jersey"
+       ]
+      },
+      {
+       "id": "s1",
+       "input": "select",
+       "choices": [
+        "S",
+        "M",
+        "L",
+        "One size"
+       ]
+      },
+      {
+       "id": "n2",
+       "input": "select",
+       "choices": [
+        "Blazer",
+        "Tie",
+        "Shirt",
+        "Jersey"
+       ]
+      },
+      {
+       "id": "s2",
+       "input": "select",
+       "choices": [
+        "S",
+        "M",
+        "L",
+        "One size"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "n0",
+       "accepted": [
+        "Jersey"
+       ]
+      },
+      {
+       "id": "s0",
+       "accepted": [
+        "M"
+       ]
+      },
+      {
+       "id": "n1",
+       "accepted": [
+        "Blazer"
+       ]
+      },
+      {
+       "id": "s1",
+       "accepted": [
+        "M"
+       ]
+      },
+      {
+       "id": "n2",
+       "accepted": [
+        "Blazer"
+       ]
+      },
+      {
+       "id": "s2",
+       "accepted": [
+        "L"
+       ]
+      }
+     ]
+    },
+    "explanation": "Items over 12 dollars with fewer than 10 in stock, cheapest first:\n\n| ItemName | Size |\n|:-:|:-:|\n| Jersey | M |\n| Blazer | M |\n| Blazer | L |"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the output of this query.\n\n```\nSELECT COUNT(*)\nFROM Uniforms\nWHERE ItemName = 'Shirt' OR InStock = 0;\n```",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Shirts (U04, U05) and items with none in stock (U02): 3 records.",
+    "workedSolution": "1. ItemName = 'Shirt': U04, U05.\n2. InStock = 0: U02.\n3. COUNT = 3."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the output of this query.\n\n```\nSELECT SUM(InStock)\nFROM Uniforms\nWHERE Size = 'M';\n```",
+    "answerSpec": {
+     "value": 36
+    },
+    "explanation": "Size M items: 6 + 27 + 3 = 36.",
+    "workedSolution": "1. Size M: U01, U05, U06.\n2. 6 + 27 + 3 = 36."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write an SQL query to show the item code and price of every item that is out of stock, with the most expensive first.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "`SELECT ItemCode, Price FROM Uniforms`",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "`WHERE InStock = 0`",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "`ORDER BY Price DESC`",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: SELECT ItemCode, Price FROM Uniforms WHERE InStock = 0 ORDER BY Price DESC;"
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The manager runs this statement. State how many records are changed.\n\n```\nUPDATE Uniforms\nSET Price = Price + 2\nWHERE ItemName = 'Blazer' OR ItemName = 'Jersey';\n```",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Two blazer records and one jersey record match: 3 records each rise by 2 dollars.",
+    "workedSolution": "1. Blazer: U01, U02.\n2. Jersey: U06.\n3. 3 records updated."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The shop assistant enters new stock using a form, and the manager receives a printed report each month. State the purpose of each.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Form: to enter / edit data one record at a time in a user-friendly way, reducing errors (e.g. drop-down list for Size)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Report: to present selected data in a formatted layout for printing / reading, e.g. grouped with totals",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The form gives the assistant a clear screen to type in or edit one item at a time, with a drop-down list for Size to avoid mistakes. The report presents the stock data in a printed layout, grouped by item with totals, for the manager to read."
+    }
+   }
+  ],
+  "explanation": "(a) Jersey M; Blazer M; Blazer L. (b) 3. (c) 36. (e) 3.",
+  "hints": [
+   "For each query: filter with WHERE, sort, then show the selected fields.",
+   "OR includes a record when either condition is TRUE."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "n0",
+       "text": "Jersey"
+      },
+      {
+       "blankId": "s0",
+       "text": "M"
+      },
+      {
+       "blankId": "n1",
+       "text": "Blazer"
+      },
+      {
+       "blankId": "s1",
+       "text": "M"
+      },
+      {
+       "blankId": "n2",
+       "text": "Blazer"
+      },
+      {
+       "blankId": "s2",
+       "text": "L"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "36"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "n0",
+        "text": "Blazer"
+       },
+       {
+        "blankId": "s0",
+        "text": "L"
+       },
+       {
+        "blankId": "n1",
+        "text": "Jersey"
+       },
+       {
+        "blankId": "s1",
+        "text": "L"
+       },
+       {
+        "blankId": "n2",
+        "text": "Jersey"
+       },
+       {
+        "blankId": "s2",
+        "text": "M"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ }
+]

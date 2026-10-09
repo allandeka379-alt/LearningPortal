@@ -1,0 +1,1141 @@
+[
+ {
+  "key": "data.binary-addition.q01",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Add the 8-bit binary numbers **00100110** and **00011001**. Give your answer as an 8-bit binary number.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "00111111"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "No column has two 1s, so there are no carries: 00111111. Check: $38 + 25 = 63$.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "00111111"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "00111110"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "00111101"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.binary-addition.q02",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Add the 8-bit binary numbers **01011011** and **00100110**. Give your answer as an 8-bit binary number.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "10000001"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Column addition with carries gives 10000001. Check in denary: $91 + 38 = 129$.",
+  "hints": [
+   "Start with the right-hand column.",
+   "1 + 1 = 10: write 0 and carry 1; 1 + 1 + 1 = 11: write 1 and carry 1."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "10000001"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "10000010"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-addition.q03",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Add **01110111** and **00111101**. Give your answer as an 8-bit binary number.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "10110100"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The answer is 10110100. Check: $119 + 61 = 180$, which is at most 255, so there is no overflow.",
+  "hints": [
+   "There are several carries in a row; write each one above the next column.",
+   "Check by converting all three numbers to denary."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "10110100"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "10110101"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-addition.q04",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Add the three binary numbers **00010101**, **00001110** and **00000111**. Give your answer as an 8-bit binary number.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "00101010"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "00010101 + 00001110 = 00100011; then 00100011 + 00000111 = 00101010. Check: $21 + 14 + 7 = 42$.",
+  "hints": [
+   "Add the first two numbers, then add the third to your result.",
+   "Or add all three in each column: 1 + 1 + 1 = 11."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "00101010"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "00101011"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-addition.q05",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The 8-bit numbers **10101100** and **01100101** are added in an 8-bit register. What 8 bits are left in the register?",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "00010001"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The full sum is 100010001 ($172 + 101 = 273$), which needs 9 bits. The register keeps 00010001 (17) and an overflow occurs.",
+  "hints": [
+   "Work out the full 9-bit answer first.",
+   "The register keeps only the 8 right-hand bits."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "00010001"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "100010001"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11111111"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-addition.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In binary addition, what is **1 + 1**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "10 (write 0, carry 1)",
+    "correct": true,
+    "rationale": "Correct: 2 in binary is 10."
+   },
+   {
+    "key": "B",
+    "content": "2 (write 2)",
+    "rationale": "Binary has no digit 2."
+   },
+   {
+    "key": "C",
+    "content": "11 (write 1, carry 1)",
+    "rationale": "11 is 3, the result of 1 + 1 + 1."
+   },
+   {
+    "key": "D",
+    "content": "1 (write 1, no carry)",
+    "rationale": "That would be 0 + 1 or 1 + 0."
+   }
+  ],
+  "explanation": "1 + 1 = 2 = binary 10: write 0 in this column and carry 1 to the next.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.binary-addition.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A column contains 1 + 1 and a carry of 1 from the previous column. What is written in the column and what is carried?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Write 0, carry 1",
+    "rationale": "That is for a total of 2 (binary 10)."
+   },
+   {
+    "key": "B",
+    "content": "Write 1, carry 1",
+    "correct": true,
+    "rationale": "Correct: 1 + 1 + 1 = 3 = binary 11."
+   },
+   {
+    "key": "C",
+    "content": "Write 1, carry 0",
+    "rationale": "That is for a total of 1."
+   },
+   {
+    "key": "D",
+    "content": "Write 3, carry 0",
+    "rationale": "Binary uses only 0 and 1; 3 is written 11."
+   }
+  ],
+  "explanation": "Three 1s total 3, which is 11 in binary: write 1 and carry 1.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.binary-addition.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which result of adding two numbers would cause an **overflow** in an 8-bit register?",
+  "options": [
+   {
+    "key": "A",
+    "content": "255",
+    "rationale": "255 = 11111111 fits exactly in 8 bits."
+   },
+   {
+    "key": "B",
+    "content": "128",
+    "rationale": "128 = 10000000 fits in 8 bits."
+   },
+   {
+    "key": "C",
+    "content": "200",
+    "rationale": "200 = 11001000 fits in 8 bits."
+   },
+   {
+    "key": "D",
+    "content": "260",
+    "correct": true,
+    "rationale": "Correct: 260 is greater than 255, the largest 8-bit value."
+   }
+  ],
+  "explanation": "An 8-bit register holds 0 to 255. Any result above 255 needs a ninth bit, so it overflows.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-addition.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which pair of 8-bit numbers will cause an overflow when added in an 8-bit register?",
+  "options": [
+   {
+    "key": "A",
+    "content": "01111111 and 01111111",
+    "rationale": "127 + 127 = 254, which fits."
+   },
+   {
+    "key": "B",
+    "content": "11110000 and 00001111",
+    "rationale": "240 + 15 = 255, the largest value that fits."
+   },
+   {
+    "key": "C",
+    "content": "11000000 and 00111111",
+    "rationale": "192 + 63 = 255, which fits exactly."
+   },
+   {
+    "key": "D",
+    "content": "10000000 and 10000001",
+    "correct": true,
+    "rationale": "Correct: 128 + 129 = 257, which is greater than 255."
+   }
+  ],
+  "explanation": "Only 128 + 129 = 257 exceeds 255; the other sums are 254 and 255.",
+  "hints": [
+   "Convert each pair to denary and add.",
+   "Overflow means the sum is more than 255."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-addition.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Why does an overflow error occur in binary addition?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The two numbers being added have different numbers of 1s",
+    "rationale": "The number of 1s does not matter; only the size of the result does."
+   },
+   {
+    "key": "B",
+    "content": "The processor cannot add more than two 1s in one column",
+    "rationale": "Columns with three 1s are normal: write 1, carry 1."
+   },
+   {
+    "key": "C",
+    "content": "The register has a fixed number of bits and the result needs more",
+    "correct": true,
+    "rationale": "Correct: the extra bit has nowhere to go, so it is lost."
+   },
+   {
+    "key": "D",
+    "content": "Binary numbers are always converted to denary before adding",
+    "rationale": "The ALU adds directly in binary."
+   }
+  ],
+  "explanation": "A register stores a fixed number of bits. If a result is larger than the maximum (255 for 8 bits), the carry out of the leftmost column is lost and the stored value is wrong.",
+  "hints": [
+   "Think about the size of a register."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-addition.q11",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "When an overflow occurs in an 8-bit register, the value stored is still the correct sum.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The ninth bit is lost, so the stored value is the true sum minus 256: it is wrong.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-addition.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Adding 01111111 and 00000001 in an 8-bit register causes an overflow.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. $127 + 1 = 128 = 10000000$, which fits in 8 bits. There are many carries, but nothing is carried out of the 128s column.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-addition.q13",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Tendai adds **00101011** and **00011010**. Complete the missing values.",
+  "payload": {
+   "template": "The 2s column is 1 + 1, so he writes {{blank:a}} and carries {{blank:b}}. The final 8-bit answer is {{blank:c}}, which is {{blank:d}} in denary.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "0",
+      "1",
+      "2"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "c"
+    },
+    {
+     "id": "d"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "01000101"
+     ],
+     "normalise": [
+      "trim",
+      "remove_whitespace"
+     ]
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "69"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "00101011 (43) + 00011010 (26) = 01000101 (69).",
+  "hints": [
+   "1 + 1 = 10 in binary.",
+   "Check by adding the two numbers in denary."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "0"
+    },
+    {
+     "blankId": "b",
+     "text": "1"
+    },
+    {
+     "blankId": "c",
+     "text": "01000101"
+    },
+    {
+     "blankId": "d",
+     "text": "69"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "1"
+     },
+     {
+      "blankId": "b",
+      "text": "0"
+     },
+     {
+      "blankId": "c",
+      "text": "01000111"
+     },
+     {
+      "blankId": "d",
+      "text": "71"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-addition.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each column total with what is written and carried.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "0 + 0"
+    },
+    {
+     "id": "L2",
+     "content": "1 + 0"
+    },
+    {
+     "id": "L3",
+     "content": "1 + 1"
+    },
+    {
+     "id": "L4",
+     "content": "1 + 1 + 1"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "write 0, carry 1"
+    },
+    {
+     "id": "R4",
+     "content": "write 1, carry 1"
+    },
+    {
+     "id": "R1",
+     "content": "write 0, carry 0"
+    },
+    {
+     "id": "R2",
+     "content": "write 1, carry 0"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Totals of 0, 1, 2 (10) and 3 (11) give these results.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.binary-addition.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Two values are added in an 8-bit register and their true sum is **300**. What denary value is left in the register?",
+  "answerSpec": {
+   "value": 44
+  },
+  "explanation": "The register keeps only the lower 8 bits; the lost bit is worth 256, so $300 - 256 = 44$ is stored.",
+  "workedSolution": "1. 300 in binary is 100101100 (9 bits).\n2. The register keeps the right-hand 8 bits: 00101100.\n3. $00101100 = 32 + 8 + 4 = 44$ (or $300 - 256 = 44$).",
+  "hints": [
+   "The lost ninth bit is worth 256."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "44"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "255"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "300"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-addition.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Explain what is meant by an **overflow error** in an 8-bit register and why it happens.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The result of a calculation is too large to be stored in the register / is greater than 255.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The register has a fixed size of 8 bits, so the result needs a ninth bit that is not available.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The extra (carry) bit is lost, so the stored result is incorrect (an overflow flag may be set).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: An overflow error happens when the result of a calculation is bigger than the largest number the register can store, which is 255 for 8 bits. The register has a fixed size, so the ninth bit needed for the answer is lost and the value stored is wrong."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Overflow = result > maximum for the number of bits; fixed register size; extra bit lost; wrong value stored.",
+  "hints": [
+   "What is the largest 8-bit value?",
+   "What happens to the carry out of the leftmost column?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-addition.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A processor stores whole numbers in 8-bit registers and adds them in binary.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Add 01101100 and 01011010. Give the 8-bit result.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "11000110"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "11000110: $108 + 90 = 198$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Add 11001001 and 01000111. Give the 8 bits that are stored in the register.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "00010000"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The full sum is 100010000 (272); the register keeps 00010000."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Name the error that occurs in part (b).",
+    "options": [
+     {
+      "key": "A",
+      "content": "Syntax error",
+      "rationale": "A syntax error is a mistake in the grammar of a program."
+     },
+     {
+      "key": "B",
+      "content": "Rounding error",
+      "rationale": "Rounding errors happen with real numbers, not here."
+     },
+     {
+      "key": "C",
+      "content": "Overflow",
+      "correct": true,
+      "rationale": "Correct: the result is too large for 8 bits."
+     },
+     {
+      "key": "D",
+      "content": "Underflow",
+      "rationale": "Underflow is for results too small to represent, not too large."
+     }
+    ],
+    "explanation": "The sum is greater than 255, so it overflows."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the error in (b) occurred and suggest how the processor or program could avoid it.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The true result (272) is greater than 255, the largest 8-bit value.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The register has a fixed size, so the ninth bit / final carry is lost and the stored result is wrong.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Avoid it by using a larger register (e.g. 16 bits) or by checking/flagging overflow before using the result.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 11001001 + 01000111 = 272, which is more than 255. The 8-bit register cannot hold the ninth bit, so the carry is lost and the stored value is wrong. A 16-bit register could store the result, or the program could check the overflow flag and report an error."
+    }
+   }
+  ],
+  "explanation": "(a) 11000110. (b) 00010000 stored; true sum 272. (c) Overflow.",
+  "hints": [
+   "Remember to carry 1 whenever a column adds to 2 or 3.",
+   "Compare each sum with 255."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "11000110"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "00010000"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "11000111"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "100010000"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "data.binary-addition.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.binary-addition"
+  ],
+  "difficulty": 5,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A ticket machine at a Harare bus terminus counts tickets sold in an 8-bit register. In the morning it sold **10010110** tickets and in the afternoon **00111011** tickets.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Convert the morning figure to denary.",
+    "answerSpec": {
+     "value": 150
+    },
+    "explanation": "$128 + 16 + 4 + 2 = 150$.",
+    "workedSolution": "1. $128 + 16 + 4 + 2 = 150$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Add the two binary numbers to find the day's total. Give an 8-bit answer.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "11010001"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "10010110 + 00111011 = 11010001 (150 + 59 = 209)."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "How many more tickets could be sold that day before the register overflows? (The register overflows when the total goes above 255.)",
+    "answerSpec": {
+     "value": 46
+    },
+    "explanation": "$255 - 209 = 46$.",
+    "workedSolution": "1. $255 - 209 = 46$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State what would be shown if one more ticket than your answer to (c) were sold, and why.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The register would show 0 (00000000).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Because 256 needs 9 bits: the carry out of the 128s column is lost (overflow).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The total would be 256 = 100000000, which needs nine bits. The ninth bit is lost, so the register would show 00000000 (zero)."
+    }
+   }
+  ],
+  "explanation": "Total 209 = 11010001; 46 more tickets fit; one more after that gives 256, which overflows to 0.",
+  "hints": [
+   "Convert each number to check your binary addition.",
+   "The largest 8-bit value is 255."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "150"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "11010001"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "46"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "CALCULATION",
+      "value": "151"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "11010010"
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "47"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

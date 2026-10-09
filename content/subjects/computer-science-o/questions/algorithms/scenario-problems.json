@@ -1,0 +1,1058 @@
+[
+ {
+  "key": "algorithms.scenario-problems.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A scenario must store the names of 30 learners and their marks in 4 tests. Which data structures are most suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A 1D array of 30 names and a 2D array of 30 × 4 marks",
+    "correct": true,
+    "rationale": "Correct: the same index links a learner's name to their row of marks."
+   },
+   {
+    "key": "B",
+    "content": "A single variable for the names and one for the marks",
+    "rationale": "A variable holds only one value at a time."
+   },
+   {
+    "key": "C",
+    "content": "A 2D array of 4 × 30 names and a 1D array of 4 marks",
+    "rationale": "The names need one dimension; the marks need two."
+   },
+   {
+    "key": "D",
+    "content": "Four separate 1D arrays of 30 names each",
+    "rationale": "The names only need storing once."
+   }
+  ],
+  "explanation": "Parallel arrays: `Names[1:30]` and `Marks[1:30, 1:4]`, linked by the learner's index.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algorithms.scenario-problems.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many elements does the array `DECLARE Sales : ARRAY[1:12, 1:5] OF INTEGER` have?",
+  "answerSpec": {
+   "value": 60
+  },
+  "explanation": "12 rows × 5 columns = 60 elements.",
+  "workedSolution": "1. Rows: 12; columns: 5.\n2. 12 × 5 = 60.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "60"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "17"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "algorithms.scenario-problems.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A scenario says \"All inputs must be validated\". What does this require?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Each input is entered twice and the two compared",
+    "rationale": "That is double entry, a verification check."
+   },
+   {
+    "key": "B",
+    "content": "Each input repeats until it meets the stated rules, with an error message",
+    "correct": true,
+    "rationale": "Correct: a validation loop for every input."
+   },
+   {
+    "key": "C",
+    "content": "The arrays are checked to be full before the program starts",
+    "rationale": "Validation applies to the inputs."
+   },
+   {
+    "key": "D",
+    "content": "The output is checked by the user at the end",
+    "rationale": "That is not input validation."
+   }
+  ],
+  "explanation": "Every INPUT needs a loop (REPEAT … UNTIL or WHILE) that rejects values outside the rules and asks again.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algorithms.scenario-problems.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which loop is most suitable for processing every element of an array of known size?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A `REPEAT … UNTIL` loop",
+    "rationale": "Better for repeating until a condition, such as a valid input."
+   },
+   {
+    "key": "B",
+    "content": "A `WHILE` loop with a flag",
+    "rationale": "Better for stopping early, such as in a search."
+   },
+   {
+    "key": "C",
+    "content": "An `IF` statement",
+    "rationale": "IF does not repeat."
+   },
+   {
+    "key": "D",
+    "content": "A `FOR` loop",
+    "correct": true,
+    "rationale": "Correct: count-controlled, from the first index to the last."
+   }
+  ],
+  "explanation": "When the number of repetitions is known (the array size), use a count-controlled FOR loop.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "algorithms.scenario-problems.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Where should `ItemTotal ← 0` go in this algorithm?\n\n```\nFOR Item ← 1 TO 3\n    FOR Day ← 1 TO 4\n        ItemTotal ← ItemTotal + Sold[Item, Day]\n    NEXT Day\n    OUTPUT \"Item \", Item, \": \", ItemTotal\nNEXT Item\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "Before the outer loop",
+    "rationale": "Then each item's total would include all the earlier items."
+   },
+   {
+    "key": "B",
+    "content": "Inside the inner loop, before the addition",
+    "rationale": "The total would be reset every day."
+   },
+   {
+    "key": "C",
+    "content": "Inside the outer loop, just before the inner loop",
+    "correct": true,
+    "rationale": "Correct: each item's total starts again at 0."
+   },
+   {
+    "key": "D",
+    "content": "After the outer loop",
+    "rationale": "The totals have already been used by then."
+   }
+  ],
+  "explanation": "A per-item total is reset at the start of each item, before its values are added.",
+  "hints": [
+   "Each item needs its own total."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "algorithms.scenario-problems.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the algorithm, which outputs the total sold of each of 3 items over 4 days from `Sold[1:3, 1:4]`.\n\n```\nFOR Item ← 1 TO [1]\n    ItemTotal ← 0\n    FOR Day ← 1 TO [2]\n        ItemTotal ← ItemTotal + Sold[[3]]\n    NEXT Day\n    OUTPUT \"Item \", Item, \": \", ItemTotal\nNEXT Item\n```",
+  "payload": {
+   "template": "[1] {{blank:a}} [2] {{blank:b}} [3] {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "3",
+      "4",
+      "12",
+      "Day"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "4",
+      "3",
+      "12",
+      "Item"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "Item, Day",
+      "Day, Item",
+      "Item",
+      "Day"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "3"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "4"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "Item, Day"
+     ]
+    }
+   ]
+  },
+  "explanation": "The outer loop covers the 3 items (rows), the inner loop the 4 days (columns), and each element is Sold[Item, Day].",
+  "hints": [
+   "The row index comes first, then the column index."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "3"
+    },
+    {
+     "blankId": "b",
+     "text": "4"
+    },
+    {
+     "blankId": "c",
+     "text": "Item, Day"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "4"
+     },
+     {
+      "blankId": "b",
+      "text": "3"
+     },
+     {
+      "blankId": "c",
+      "text": "Day, Item"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.scenario-problems.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "`Sold` holds:\n\n| Item | Day 1 | Day 2 | Day 3 | Day 4 |\n|:-:|:-:|:-:|:-:|:-:|\n| 1 | 4 | 7 | 2 | 5 |\n| 2 | 6 | 1 | 8 | 3 |\n| 3 | 9 | 5 | 4 | 0 |\n\n```\nFOR Item ← 1 TO 3\n    ItemTotal ← 0\n    FOR Day ← 1 TO 4\n        ItemTotal ← ItemTotal + Sold[Item, Day]\n    NEXT Day\n    OUTPUT \"Item \", Item, \": \", ItemTotal\nNEXT Item\n```\n\nWhat total is output for item 2?",
+  "answerSpec": {
+   "value": 18
+  },
+  "explanation": "Item 2: 6 + 1 + 8 + 3 = 18.",
+  "workedSolution": "1. ItemTotal ← 0 for item 2.\n2. Add Sold[2, 1] to Sold[2, 4]: 6, 1, 8, 3.\n3. Total 18.",
+  "hints": [
+   "Trace the inner loop for one item at a time."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "18"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "14"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algorithms.scenario-problems.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Using the same `Sold` array:\n\n| Item | Day 1 | Day 2 | Day 3 | Day 4 |\n|:-:|:-:|:-:|:-:|:-:|\n| 1 | 4 | 7 | 2 | 5 |\n| 2 | 6 | 1 | 8 | 3 |\n| 3 | 9 | 5 | 4 | 0 |\n\nWhat is the total of all items sold on **day 3**?",
+  "answerSpec": {
+   "value": 14
+  },
+  "explanation": "Day 3 is column 3: 2 + 8 + 4 = 14.",
+  "workedSolution": "1. Sold[1, 3], Sold[2, 3], Sold[3, 3] = 2, 8, 4.\n2. Total 14.",
+  "hints": [
+   "Fix the column (Day 3) and add down the rows."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "14"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "18"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algorithms.scenario-problems.q09",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Using the same `Sold` array:\n\n| Item | Day 1 | Day 2 | Day 3 | Day 4 |\n|:-:|:-:|:-:|:-:|:-:|\n| 1 | 4 | 7 | 2 | 5 |\n| 2 | 6 | 1 | 8 | 3 |\n| 3 | 9 | 5 | 4 | 0 |\n\nState the value of `Sold[2, 3]`.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "8"
+    }
+   ],
+   "rejected": [
+    {
+     "value": "5"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "Row 2 (item 2), column 3 (day 3): 8. Sold[3, 2] would be 5.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "5"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.scenario-problems.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In Cambridge 0478 Paper 2, the 15-mark scenario question may be answered in Python, Visual Basic or Java instead of pseudocode.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The scenario question may be answered in pseudocode or one of those three languages; the rest of Paper 2 uses pseudocode.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ]
+ },
+ {
+  "key": "algorithms.scenario-problems.q11",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In a scenario answer, the arrays given in the question should be renamed to shorter names to save time.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Use the given array names and sizes exactly; marks are awarded for using the given data structures.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algorithms.scenario-problems.q12",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each requirement in a scenario to the technique it needs.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "\"Each mark must be between 0 and 50\""
+    },
+    {
+     "id": "L2",
+     "content": "\"Output the number of learners who passed\""
+    },
+    {
+     "id": "L3",
+     "content": "\"Output the name of the top learner\""
+    },
+    {
+     "id": "L4",
+     "content": "\"Output each learner's total\""
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Comparing with the highest so far and storing the index or name"
+    },
+    {
+     "id": "R4",
+     "content": "A total reset for each learner and added to in an inner loop"
+    },
+    {
+     "id": "R1",
+     "content": "A validation loop around the input"
+    },
+    {
+     "id": "R2",
+     "content": "A counter increased inside an IF"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Validation loop; conditional counting; maximum with its position; per-item totalling.",
+  "hints": [
+   "Which standard method does each requirement need?"
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.scenario-problems.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "A scenario stores 25 product names in `Products[1:25]` and their stock levels in `Stock[1:25]`. The program must output the total stock, the number of products with a stock level below 10, and the name of the product with the most stock. Write the declarations and initial values needed before the main loop.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Declares (with types) and initialises a total to 0 and a counter to 0",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Declares and initialises a variable for the highest stock (to the first value or a value below any possible stock) and one for its name or index",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Declares the loop counter as INTEGER (no redeclaration of the given arrays)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nDECLARE Index : INTEGER\nDECLARE TotalStock : INTEGER\nDECLARE LowCount : INTEGER\nDECLARE MostStock : INTEGER\nDECLARE MostName : STRING\nTotalStock ← 0\nLowCount ← 0\nMostStock ← -1\nMostName ← \"\"\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Plan the data first: every total, counter and maximum needs a starting value.",
+  "hints": [
+   "What totals, counters and maximum or minimum are needed?"
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "algorithms.scenario-problems.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "Continue the scenario above: write the main loop and the output that use `Products[1:25]` and `Stock[1:25]` to output the total stock, the number of products with stock below 10, and the name of the product with the most stock.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "FOR loop from 1 to 25 over both arrays using the same index",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Adds Stock[Index] to the total inside the loop",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "IF Stock[Index] < 10 THEN increases the counter by 1",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "IF Stock[Index] > MostStock THEN stores the new highest stock and Products[Index]",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "After the loop, outputs the total, the count and the name, each with a message",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nFOR Index ← 1 TO 25\n    TotalStock ← TotalStock + Stock[Index]\n    IF Stock[Index] < 10\n        THEN\n            LowCount ← LowCount + 1\n    ENDIF\n    IF Stock[Index] > MostStock\n        THEN\n            MostStock ← Stock[Index]\n            MostName ← Products[Index]\n    ENDIF\nNEXT Index\nOUTPUT \"Total stock: \", TotalStock\nOUTPUT \"Products with low stock: \", LowCount\nOUTPUT \"Most stock: \", MostName\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One loop can apply three standard methods to parallel arrays.",
+  "hints": [
+   "Use the same index for both arrays.",
+   "Initialise before the loop; output after."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "algorithms.scenario-problems.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Farai's Form 4 project needs a menu: 1 to add a record, 2 to search, 3 to print a report, 4 to quit. Write pseudocode that displays the menu, inputs a choice, calls a procedure for options 1 to 3 (`AddRecord`, `SearchRecords`, `PrintReport`), gives a message for an invalid choice, and repeats until 4 is chosen.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Outputs the menu options and inputs the choice inside a loop",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Uses CASE OF Choice (or IF … ELSE IF) with CALL for options 1, 2 and 3",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "OTHERWISE / ELSE outputs an error message for an invalid choice (4 handled without an error)",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The loop repeats until the choice is 4",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nREPEAT\n    OUTPUT \"1 Add record  2 Search  3 Report  4 Quit\"\n    INPUT Choice\n    CASE OF Choice\n        1 : CALL AddRecord\n        2 : CALL SearchRecords\n        3 : CALL PrintReport\n        4 : OUTPUT \"Goodbye\"\n        OTHERWISE OUTPUT \"Invalid choice\"\n    ENDCASE\nUNTIL Choice = 4\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A menu is a loop around an input and a CASE statement; the loop ends on the quit option.",
+  "hints": [
+   "Use CASE OF to choose an action; repeat the menu until the user quits."
+  ],
+  "skill": "CREATION",
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "algorithms.scenario-problems.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "A school canteen in Harare records the number of meals sold to each of four classes over three days. The class names are in `Classes[1:4]` and the meals in `Meals[1:4, 1:3]`:\n\n| Class | Mon | Tue | Wed |\n|:-:|:-:|:-:|:-:|\n| 1A | 12 | 15 | 9 |\n| 1B | 20 | 18 | 22 |\n| 2A | 7 | 11 | 10 |\n| 2B | 14 | 14 | 16 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the total meals sold to class 1B over the three days.",
+    "answerSpec": {
+     "value": 60
+    },
+    "explanation": "20 + 18 + 22 = 60.",
+    "workedSolution": "1. Row 2: 20, 18, 22.\n2. Total 60."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the total meals sold to all four classes.",
+    "answerSpec": {
+     "value": 168
+    },
+    "explanation": "Class totals 36 + 60 + 28 + 44 = 168.",
+    "workedSolution": "1. Class totals: 36, 60, 28, 44.\n2. Grand total 168."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State how many classes bought more than 40 meals in total.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "Totals over 40: 60, 44.",
+    "workedSolution": "1. Class totals: 36, 60, 28, 44.\n2. Over 40: 2."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the name of the class that bought the most meals.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "1B"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "1B has the highest total, 60."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that uses the two arrays to output each class's name and total, then the name of the class that bought the most meals.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Outer FOR loop over the 4 classes",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Class total reset to 0 inside the outer loop, before an inner FOR loop over the 3 days",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Adds Meals[Class, Day] to the class total inside the inner loop",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Outputs Classes[Class] with its total after the inner loop",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Keeps the highest total and the class name (initialised before the loops, updated with >) and outputs the name after the loops",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nMost ← -1\nFOR Class ← 1 TO 4\n    ClassTotal ← 0\n    FOR Day ← 1 TO 3\n        ClassTotal ← ClassTotal + Meals[Class, Day]\n    NEXT Day\n    OUTPUT Classes[Class], \": \", ClassTotal\n    IF ClassTotal > Most\n        THEN\n            Most ← ClassTotal\n            MostClass ← Classes[Class]\n    ENDIF\nNEXT Class\nOUTPUT \"Most meals: \", MostClass\n```"
+    }
+   }
+  ],
+  "explanation": "Class totals 36, 60, 28, 44; total 168; busiest 1B.",
+  "hints": [
+   "Each class's total is the sum of its row.",
+   "The busiest class has the largest row total."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "60"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "168"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "1B"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "58"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "124"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "1A"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "algorithms.scenario-problems.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.scenario-problems"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "A scenario reads: \"The heights of 40 seedlings in millimetres are input. Each height must be from 1 to 500. Output the average height and the number of seedlings taller than 300 mm.\"",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement validates each height?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`INPUT Height` then `IF Height < 1 OR Height > 500 THEN OUTPUT \"Error\"`",
+      "rationale": "This rejects one bad value but does not ask again."
+     },
+     {
+      "key": "B",
+      "content": "`REPEAT INPUT Height UNTIL Height < 1 OR Height > 500`",
+      "rationale": "This repeats until the value is invalid."
+     },
+     {
+      "key": "C",
+      "content": "`REPEAT INPUT Height UNTIL Height >= 1 AND Height <= 500`",
+      "correct": true,
+      "rationale": "Correct: repeats until valid."
+     },
+     {
+      "key": "D",
+      "content": "`WHILE Height >= 1 AND Height <= 500 DO INPUT Height`",
+      "rationale": "This keeps asking while the value is valid."
+     }
+    ],
+    "explanation": "The loop must end when the value is valid."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "After the loop, which statement calculates the average?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`Average ← Total / 500`",
+      "rationale": "500 is the largest allowed height."
+     },
+     {
+      "key": "B",
+      "content": "`Average ← Tall / 40`",
+      "rationale": "Tall is the count of seedlings over 300 mm."
+     },
+     {
+      "key": "C",
+      "content": "`Average ← Height / 40`",
+      "rationale": "Height holds only the last value."
+     },
+     {
+      "key": "D",
+      "content": "`Average ← Total / 40`",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "Average = total of the 40 heights ÷ 40."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "List the variables you would declare, with their data types and starting values, and say what each is for.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Total (INTEGER or REAL) starting at 0, for the sum of the heights",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Tall (INTEGER) starting at 0, to count heights over 300",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Height (INTEGER/REAL) for each input and Seedling (INTEGER) as the loop counter; Average (REAL) for the result",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Total : INTEGER, starts at 0, adds up the heights. Tall : INTEGER, starts at 0, counts heights over 300. Height : INTEGER for each input. Seedling : INTEGER loop counter. Average : REAL for the result."
+    }
+   }
+  ],
+  "explanation": "Validation loop; average = Total / 40; Total and Tall start at 0.",
+  "hints": [
+   "Which word asks for a check on the input?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true
+ }
+]

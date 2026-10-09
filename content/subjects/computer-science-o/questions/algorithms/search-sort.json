@@ -1,0 +1,1496 @@
+[
+ {
+  "key": "algorithms.search-sort.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How does a **linear search** find an item in a list?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It checks each item in turn until it finds a match or the list ends",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "It sorts the list first and then looks in the middle",
+    "rationale": "That describes a binary search on sorted data."
+   },
+   {
+    "key": "C",
+    "content": "It compares neighbouring pairs and swaps them when needed",
+    "rationale": "That describes a bubble sort."
+   },
+   {
+    "key": "D",
+    "content": "It jumps straight to the item using its value as a position",
+    "rationale": "A linear search must look at items one by one."
+   }
+  ],
+  "explanation": "A linear search looks at each item in order, stopping when the item is found or the list ends.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "algorithms.search-sort.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In a bubble sort, which items are compared with each other?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The first item and the last item",
+    "rationale": "Only adjacent items are compared."
+   },
+   {
+    "key": "B",
+    "content": "Every item with the item being searched for",
+    "rationale": "That is a search, not a sort."
+   },
+   {
+    "key": "C",
+    "content": "Neighbouring items, one pair at a time",
+    "correct": true,
+    "rationale": "Correct: each item is compared with the one next to it."
+   },
+   {
+    "key": "D",
+    "content": "The largest item and the smallest item",
+    "rationale": "The sort does not know which these are until it finishes."
+   }
+  ],
+  "explanation": "Bubble sort compares adjacent items and swaps them if they are in the wrong order.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "algorithms.search-sort.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The array `Learners` holds:\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Learners | Tendai | Rudo | Farai | Chipo | Sipho | Nyasha |\n\nA linear search that stops when the item is found looks for \"Chipo\". How many comparisons are made?",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "\"Chipo\" is at position 4, so 4 items are checked.",
+  "workedSolution": "1. Compare with Tendai, Rudo, Farai, Chipo.\n2. Match at position 4: 4 comparisons.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "algorithms.search-sort.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Using the same array:\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Learners | Tendai | Rudo | Farai | Chipo | Sipho | Nyasha |\n\nHow many comparisons does the linear search make when looking for \"Thandeka\"?",
+  "answerSpec": {
+   "value": 6
+  },
+  "explanation": "\"Thandeka\" is not in the list, so all 6 items are checked before the search reports \"not found\".",
+  "workedSolution": "1. No item matches.\n2. Every item is compared: 6 comparisons.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "6"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.search-sort.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "The array 42, 17, 58, 23, 9, 31 is sorted into ascending order with a bubble sort. Give the array after the **first** pass.",
+  "payload": {
+   "template": "Position 1: {{blank:p0}}\n\nPosition 2: {{blank:p1}}\n\nPosition 3: {{blank:p2}}\n\nPosition 4: {{blank:p3}}\n\nPosition 5: {{blank:p4}}\n\nPosition 6: {{blank:p5}}",
+   "blanks": [
+    {
+     "id": "p0",
+     "input": "number"
+    },
+    {
+     "id": "p1",
+     "input": "number"
+    },
+    {
+     "id": "p2",
+     "input": "number"
+    },
+    {
+     "id": "p3",
+     "input": "number"
+    },
+    {
+     "id": "p4",
+     "input": "number"
+    },
+    {
+     "id": "p5",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p0",
+     "accepted": [
+      "17"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "p1",
+     "accepted": [
+      "42"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "p2",
+     "accepted": [
+      "23"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "p3",
+     "accepted": [
+      "9"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "p4",
+     "accepted": [
+      "31"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "p5",
+     "accepted": [
+      "58"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "After pass 1: 17, 42, 23, 9, 31, 58. 58 has bubbled to the end.",
+  "hints": [
+   "Compare positions 1 and 2, then 2 and 3, and so on.",
+   "The largest value ends up last."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p0",
+     "text": "17"
+    },
+    {
+     "blankId": "p1",
+     "text": "42"
+    },
+    {
+     "blankId": "p2",
+     "text": "23"
+    },
+    {
+     "blankId": "p3",
+     "text": "9"
+    },
+    {
+     "blankId": "p4",
+     "text": "31"
+    },
+    {
+     "blankId": "p5",
+     "text": "58"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p0",
+      "text": "42"
+     },
+     {
+      "blankId": "p1",
+      "text": "17"
+     },
+     {
+      "blankId": "p2",
+      "text": "58"
+     },
+     {
+      "blankId": "p3",
+      "text": "23"
+     },
+     {
+      "blankId": "p4",
+      "text": "9"
+     },
+     {
+      "blankId": "p5",
+      "text": "31"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.search-sort.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "The array 36, 14, 50, 7, 28, 19 is sorted into ascending order with a bubble sort. Give the array after the **second** pass.",
+  "payload": {
+   "template": "Position 1: {{blank:p0}}\n\nPosition 2: {{blank:p1}}\n\nPosition 3: {{blank:p2}}\n\nPosition 4: {{blank:p3}}\n\nPosition 5: {{blank:p4}}\n\nPosition 6: {{blank:p5}}",
+   "blanks": [
+    {
+     "id": "p0",
+     "input": "number"
+    },
+    {
+     "id": "p1",
+     "input": "number"
+    },
+    {
+     "id": "p2",
+     "input": "number"
+    },
+    {
+     "id": "p3",
+     "input": "number"
+    },
+    {
+     "id": "p4",
+     "input": "number"
+    },
+    {
+     "id": "p5",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p0",
+     "accepted": [
+      "14"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "p1",
+     "accepted": [
+      "7"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "p2",
+     "accepted": [
+      "28"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "p3",
+     "accepted": [
+      "19"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "p4",
+     "accepted": [
+      "36"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "p5",
+     "accepted": [
+      "50"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "Pass 1: 14, 36, 7, 28, 19, 50. Pass 2: 14, 7, 28, 19, 36, 50.",
+  "hints": [
+   "Do the first pass completely, then the second pass on its result."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p0",
+     "text": "14"
+    },
+    {
+     "blankId": "p1",
+     "text": "7"
+    },
+    {
+     "blankId": "p2",
+     "text": "28"
+    },
+    {
+     "blankId": "p3",
+     "text": "19"
+    },
+    {
+     "blankId": "p4",
+     "text": "36"
+    },
+    {
+     "blankId": "p5",
+     "text": "50"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p0",
+      "text": "15"
+     },
+     {
+      "blankId": "p1",
+      "text": "8"
+     },
+     {
+      "blankId": "p2",
+      "text": "29"
+     },
+     {
+      "blankId": "p3",
+      "text": "20"
+     },
+     {
+      "blankId": "p4",
+      "text": "37"
+     },
+     {
+      "blankId": "p5",
+      "text": "51"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.search-sort.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many swaps are made in the first pass of a bubble sort (ascending) of 11, 45, 3, 27, 60, 8?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "Pass 1 makes 5 comparisons, of which 3 lead to a swap, giving 11, 3, 27, 45, 8, 60.",
+  "workedSolution": "1. Compare each neighbouring pair in turn, swapping when the left is larger.\n2. Swaps: 3.\n3. Array: 11, 3, 27, 45, 8, 60.",
+  "hints": [
+   "Count each time a pair is out of order in pass 1."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.search-sort.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the greatest number of passes a bubble sort needs for a list of 8 items?",
+  "answerSpec": {
+   "value": 7
+  },
+  "explanation": "Each pass places one item in its final position; when 7 are placed, the 8th must be too.",
+  "workedSolution": "1. n items need at most n − 1 passes.\n2. 8 − 1 = 7.",
+  "hints": [
+   "Each pass fixes one more item at the end."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "7"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algorithms.search-sort.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A bubble sort's passes each stop one place earlier than the last. What is the greatest total number of comparisons it can make for a list of 6 items?",
+  "answerSpec": {
+   "value": 15
+  },
+  "explanation": "5 + 4 + 3 + 2 + 1 = 15.",
+  "workedSolution": "1. Pass comparisons: 5, 4, 3, 2, 1.\n2. Total 15.",
+  "hints": [
+   "Each pass makes one comparison fewer than the one before."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "15"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "25"
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "algorithms.search-sort.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A bubble sort with a `Swapped` flag sorts the list 4, 11, 15, 20, 26, which is already in ascending order. How many comparisons does it make in total?",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "The first pass makes 4 comparisons and no swaps, so the flag stays FALSE and the sort stops.",
+  "workedSolution": "1. Pass 1: 4 comparisons, 0 swaps.\n2. Swapped = FALSE, so the sort ends: 4 comparisons.",
+  "hints": [
+   "The flag stops the sort after a pass with no swaps."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "10"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.search-sort.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the purpose of the `Swapped` flag in a bubble sort?",
+  "options": [
+   {
+    "key": "A",
+    "content": "To hold one value while two items are swapped",
+    "rationale": "That is the job of Temp."
+   },
+   {
+    "key": "B",
+    "content": "To stop the sort when a pass makes no swaps",
+    "correct": true,
+    "rationale": "Correct: no swaps means the list is sorted."
+   },
+   {
+    "key": "C",
+    "content": "To count the number of passes made",
+    "rationale": "A flag is Boolean; it does not count."
+   },
+   {
+    "key": "D",
+    "content": "To mark the position of the largest item",
+    "rationale": "The flag only records whether a swap happened."
+   }
+  ],
+  "explanation": "Swapped is set to FALSE at the start of each pass and TRUE when a swap happens; if it is still FALSE at the end, the sort stops early.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algorithms.search-sort.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A bubble sort uses `IF List[Index] < List[Index + 1]` to decide when to swap. What is the list 5, 12, 3, 9 after the first pass?",
+  "options": [
+   {
+    "key": "A",
+    "content": "5, 3, 9, 12",
+    "rationale": "That is the first pass of an ascending sort, which uses >."
+   },
+   {
+    "key": "B",
+    "content": "12, 5, 9, 3",
+    "correct": true,
+    "rationale": "Correct: with < the smaller values move to the end, sorting into descending order."
+   },
+   {
+    "key": "C",
+    "content": "12, 9, 5, 3",
+    "rationale": "That is fully sorted; one pass is not enough here."
+   },
+   {
+    "key": "D",
+    "content": "9, 3, 12, 5",
+    "rationale": "A pass compares neighbours; it does not reverse the list."
+   }
+  ],
+  "explanation": "With `<` a pair is swapped when the left item is smaller, so the smallest value moves to the end: 12, 5, 9, 3.",
+  "hints": [
+   "Which way round must the pair be to need a swap for descending order?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.search-sort.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A bubble sort puts these towns into alphabetical order: Mutare, Harare, Bulawayo, Masvingo, Gweru. What is the list after the first pass?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Bulawayo, Gweru, Harare, Masvingo, Mutare",
+    "rationale": "That is the fully sorted list."
+   },
+   {
+    "key": "B",
+    "content": "Harare, Mutare, Bulawayo, Masvingo, Gweru",
+    "rationale": "That shows only the first comparison."
+   },
+   {
+    "key": "C",
+    "content": "Gweru, Masvingo, Bulawayo, Harare, Mutare",
+    "rationale": "The list is not simply reversed."
+   },
+   {
+    "key": "D",
+    "content": "Harare, Bulawayo, Masvingo, Gweru, Mutare",
+    "correct": true,
+    "rationale": "Correct: Mutare moves to the end because it comes last alphabetically."
+   }
+  ],
+  "explanation": "Pass 1 compares neighbouring names and swaps when the left one comes later in the alphabet: Harare, Bulawayo, Masvingo, Gweru, Mutare.",
+  "hints": [
+   "Strings are compared alphabetically."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.search-sort.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A learner writes this swap. `List[1]` is 30 and `List[2]` is 15.\n\n```\nList[1] ← List[2]\nList[2] ← List[1]\n```\n\nWhat do the two elements hold afterwards?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Both hold 30",
+    "rationale": "The first line copies 15 into List[1]."
+   },
+   {
+    "key": "B",
+    "content": "List[1] holds 15 and List[2] holds 30",
+    "rationale": "That needs a temporary variable."
+   },
+   {
+    "key": "C",
+    "content": "Both hold 15",
+    "correct": true,
+    "rationale": "Correct: 30 is overwritten before it is saved."
+   },
+   {
+    "key": "D",
+    "content": "List[1] holds 30 and List[2] holds 15",
+    "rationale": "List[1] changes on the first line."
+   }
+  ],
+  "explanation": "Without Temp the first value is lost. Use Temp ← List[1], List[1] ← List[2], List[2] ← Temp.",
+  "hints": [
+   "What is in List[Index] after the first line?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "algorithms.search-sort.q15",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A linear search only works if the list has been sorted first.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. A linear search checks every item in turn, so it works on unsorted lists.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "algorithms.search-sort.q16",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "After the first pass of a bubble sort into ascending order, the largest item is in the last position.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The largest item is carried along by every comparison it is part of, so it ends at the end of the list.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algorithms.search-sort.q17",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each variable to its job.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "`Found` in a linear search"
+    },
+    {
+     "id": "L2",
+     "content": "`Swapped` in a bubble sort"
+    },
+    {
+     "id": "L3",
+     "content": "`Temp` in a bubble sort"
+    },
+    {
+     "id": "L4",
+     "content": "`Last` in a bubble sort"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Holds one value while two items change places"
+    },
+    {
+     "id": "R4",
+     "content": "Marks the end of the part of the list still to be sorted"
+    },
+    {
+     "id": "R1",
+     "content": "Becomes TRUE when the item is located, ending the loop"
+    },
+    {
+     "id": "R2",
+     "content": "Records whether any swap happened during a pass"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Two flags (Found, Swapped), a temporary store (Temp) and a boundary (Last).",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algorithms.search-sort.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "The array `Phones[1:50]` holds phone numbers as strings. Write an algorithm in pseudocode that inputs a phone number, uses a linear search to find it, and outputs its position, or a message if it is not in the array.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Inputs the number to find (with a prompt)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Initialises a flag (Found ← FALSE) and an index (Index ← 1) before the loop",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Loop that continues while not found AND Index <= 50",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Compares Phones[Index] with the input; sets the flag if equal, otherwise adds 1 to Index",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "After the loop outputs the position if found, or a not-found message",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nOUTPUT \"Enter the phone number\"\nINPUT Wanted\nFound ← FALSE\nIndex ← 1\nWHILE Found = FALSE AND Index <= 50 DO\n    IF Phones[Index] = Wanted\n        THEN\n            Found ← TRUE\n        ELSE\n            Index ← Index + 1\n    ENDIF\nENDWHILE\nIF Found = TRUE\n    THEN\n        OUTPUT \"Found at position \", Index\n    ELSE\n        OUTPUT \"Number not found\"\nENDIF\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The flag stops the search early; the IF after the loop chooses the message.",
+  "hints": [
+   "Use a flag and a WHILE loop so the search stops when the item is found.",
+   "Output a message in both cases."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "algorithms.search-sort.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Describe how a bubble sort puts a list of numbers into ascending order.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Neighbouring items are compared, starting with the first two",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "If the first of the pair is larger, the two items are swapped",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "This is repeated along the list (a pass); passes are repeated, each putting the next largest item in place",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The sort stops when a pass makes no swaps (a flag records this) or after n − 1 passes",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: It compares the first and second items and swaps them if the first is larger, then compares the second and third, and so on to the end of the list. That pass leaves the largest item at the end. Passes are repeated over the rest of the list. A flag records whether any swap was made; when a pass makes no swaps the list is sorted and the algorithm stops."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A full description covers comparing, swapping, repeating passes and stopping.",
+  "hints": [
+   "Compare, swap, pass, stop."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algorithms.search-sort.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A quiz club in Bulawayo stores five scores in the array `Points`:\n\n| Index | 1 | 2 | 3 | 4 | 5 |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| Points | 64 | 35 | 80 | 12 | 47 |\n\n```\nLast ← 5\nREPEAT\n    Swapped ← FALSE\n    FOR Index ← 1 TO Last - 1\n        IF Points[Index] > Points[Index + 1]\n            THEN\n                Temp ← Points[Index]\n                Points[Index] ← Points[Index + 1]\n                Points[Index + 1] ← Temp\n                Swapped ← TRUE\n        ENDIF\n    NEXT Index\n    Last ← Last - 1\nUNTIL Swapped = FALSE OR Last = 1\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Give the contents of `Points` after the first pass.",
+    "payload": {
+     "template": "Points[1]: {{blank:p0}}\n\nPoints[2]: {{blank:p1}}\n\nPoints[3]: {{blank:p2}}\n\nPoints[4]: {{blank:p3}}\n\nPoints[5]: {{blank:p4}}",
+     "blanks": [
+      {
+       "id": "p0",
+       "input": "number"
+      },
+      {
+       "id": "p1",
+       "input": "number"
+      },
+      {
+       "id": "p2",
+       "input": "number"
+      },
+      {
+       "id": "p3",
+       "input": "number"
+      },
+      {
+       "id": "p4",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p0",
+       "accepted": [
+        "35"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p1",
+       "accepted": [
+        "64"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p2",
+       "accepted": [
+        "12"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p3",
+       "accepted": [
+        "47"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p4",
+       "accepted": [
+        "80"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Pass 1: 35, 64, 12, 47, 80."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State how many times the `REPEAT` loop runs.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "Pass 1: 35, 64, 12, 47, 80 (3 swaps); Pass 2: 35, 12, 47, 64, 80 (2 swaps); Pass 3: 12, 35, 47, 64, 80 (1 swaps); Pass 4: 12, 35, 47, 64, 80 (0 swaps).",
+    "workedSolution": "1. Pass 1: 35, 64, 12, 47, 80, 3 swaps.\n2. Pass 2: 35, 12, 47, 64, 80, 2 swaps.\n3. Pass 3: 12, 35, 47, 64, 80, 1 swaps.\n4. Pass 4: 12, 35, 47, 64, 80, 0 swaps."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the total number of swaps made.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "Swaps per pass: 3 + 2 + 1 + 0 = 6.",
+    "workedSolution": "1. Swaps per pass: 3, 2, 1, 0.\n2. Total 6."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why does the `FOR` loop go to `Last - 1` and not to `Last`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The last element never needs sorting",
+      "rationale": "It does; it is reached through Index + 1."
+     },
+     {
+      "key": "B",
+      "content": "To make the sort run in descending order",
+      "rationale": "Order depends on the comparison operator."
+     },
+     {
+      "key": "C",
+      "content": "Because arrays in pseudocode always start at index 0",
+      "rationale": "These arrays start at 1."
+     },
+     {
+      "key": "D",
+      "content": "Each comparison also reads Points[Index + 1]",
+      "correct": true,
+      "rationale": "Correct: going to Last would read past the end."
+     }
+    ],
+    "explanation": "With Index = Last − 1 the pair compared is the last two elements."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why `Last ← Last - 1` makes the sort more efficient.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "After each pass the largest remaining item is in its final position at the end",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "so the next pass need not compare it again: fewer comparisons per pass",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each pass moves the largest unsorted value into its final place at the end, so the next pass can stop one position earlier, saving one comparison per pass."
+    }
+   }
+  ],
+  "explanation": "Passes: 35, 64, 12, 47, 80 → 35, 12, 47, 64, 80 → 12, 35, 47, 64, 80 → 12, 35, 47, 64, 80.",
+  "hints": [
+   "Do one pass at a time.",
+   "Count the passes until one makes no swaps or Last reaches 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p0",
+       "text": "35"
+      },
+      {
+       "blankId": "p1",
+       "text": "64"
+      },
+      {
+       "blankId": "p2",
+       "text": "12"
+      },
+      {
+       "blankId": "p3",
+       "text": "47"
+      },
+      {
+       "blankId": "p4",
+       "text": "80"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p0",
+        "text": "36"
+       },
+       {
+        "blankId": "p1",
+        "text": "65"
+       },
+       {
+        "blankId": "p2",
+        "text": "13"
+       },
+       {
+        "blankId": "p3",
+        "text": "48"
+       },
+       {
+        "blankId": "p4",
+        "text": "81"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "algorithms.search-sort.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.search-sort"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "The array `Learners` holds:\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Learners | Tendai | Rudo | Farai | Chipo | Sipho | Nyasha |\n\n```\nOUTPUT \"Enter a name\"\nINPUT Wanted\nFound ← FALSE\nIndex ← 1\nWHILE Found = FALSE AND Index <= 6 DO\n    IF Learners[Index] = Wanted\n        THEN\n            Found ← TRUE\n        ELSE\n            Index ← Index + 1\n    ENDIF\nENDWHILE\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The input is \"Sipho\". State the value of `Index` when the loop ends.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "\"Sipho\" is at position 5; Index stops there.",
+    "workedSolution": "1. Indexes 1 to 4 do not match.\n2. Match at 5."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The input is \"Thandeka\". State the value of `Index` when the loop ends.",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "No match: Index rises to 7 and the test Index <= 6 fails.",
+    "workedSolution": "1. All 6 comparisons fail.\n2. Index ← 6 + 1 = 7; the loop ends."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write the pseudocode to go after the loop to output a suitable message in each case.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "IF Found = TRUE THEN OUTPUT a found message with Index",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "ELSE OUTPUT a not-found message, ENDIF",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nIF Found = TRUE\n    THEN\n        OUTPUT Wanted, \" is at position \", Index\n    ELSE\n        OUTPUT Wanted, \" is not in the list\"\nENDIF\n```"
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a `WHILE` loop with a flag is better here than a `FOR` loop from 1 to 6.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The WHILE loop stops as soon as the name is found",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "so fewer comparisons are made / a FOR loop would always check all 6 items",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The WHILE loop ends as soon as Found becomes TRUE, so if the name is early in the list the remaining items are not checked; a FOR loop would always make all 6 comparisons."
+    }
+   }
+  ],
+  "explanation": "(a) 5. (b) 7.",
+  "hints": [
+   "The loop stops as soon as Found is TRUE.",
+   "What is Index when the name is missing?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ }
+]

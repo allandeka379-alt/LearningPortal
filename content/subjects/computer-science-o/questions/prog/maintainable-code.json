@@ -1,0 +1,974 @@
+[
+ {
+  "key": "prog.maintainable-code.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the purpose of a comment in a program?",
+  "options": [
+   {
+    "key": "A",
+    "content": "To explain the code to a human reader",
+    "correct": true,
+    "rationale": "Correct: comments are ignored by the computer."
+   },
+   {
+    "key": "B",
+    "content": "To make the program run faster",
+    "rationale": "Comments are ignored when the program runs."
+   },
+   {
+    "key": "C",
+    "content": "To store data the program needs later",
+    "rationale": "Data is stored in variables, not comments."
+   },
+   {
+    "key": "D",
+    "content": "To stop the program when an error occurs",
+    "rationale": "Comments have no effect on execution."
+   }
+  ],
+  "explanation": "A comment explains purpose or method to anyone reading the code.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.maintainable-code.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which identifier is most suitable for a variable holding the number of learners absent today?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`AbsentCount`",
+    "correct": true,
+    "rationale": "Correct: it describes the data and follows PascalCase."
+   },
+   {
+    "key": "B",
+    "content": "`x`",
+    "rationale": "A single letter says nothing about the data."
+   },
+   {
+    "key": "C",
+    "content": "`Number`",
+    "rationale": "Too vague: the number of what?"
+   },
+   {
+    "key": "D",
+    "content": "`TheNumberOfLearnersWhoWereAbsentFromSchoolToday`",
+    "rationale": "Descriptive, but far too long to read and type."
+   }
+  ],
+  "explanation": "A good identifier is descriptive but concise.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.maintainable-code.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A program uses the value 0.15 in six different calculations. How does replacing it with `CONSTANT TaxRate ← 0.15` make the program easier to maintain?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The calculations run faster with a constant",
+    "rationale": "Speed is not the benefit."
+   },
+   {
+    "key": "B",
+    "content": "If the rate changes, only one line needs editing",
+    "correct": true,
+    "rationale": "Correct: every calculation uses the single declaration."
+   },
+   {
+    "key": "C",
+    "content": "Users can now type in a new rate while it runs",
+    "rationale": "A constant cannot be changed while the program runs."
+   },
+   {
+    "key": "D",
+    "content": "Constants can store more decimal places than numbers",
+    "rationale": "There is no difference in precision."
+   }
+  ],
+  "explanation": "A named constant means one edit for a change, and its name explains what 0.15 is.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.maintainable-code.q04",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Comments in a program are executed by the computer like other statements.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Comments are ignored by the computer; they are only for human readers.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.maintainable-code.q05",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Indenting the statements inside a loop helps a reader see which statements are repeated.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Indentation shows the structure of loops, selections and subroutines.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.maintainable-code.q06",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each feature to how it helps maintenance.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Meaningful identifiers"
+    },
+    {
+     "id": "L2",
+     "content": "Comments"
+    },
+    {
+     "id": "L3",
+     "content": "Constants"
+    },
+    {
+     "id": "L4",
+     "content": "Subroutines"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "A fixed value is changed in one place only"
+    },
+    {
+     "id": "R4",
+     "content": "A task is written once, reused and tested separately"
+    },
+    {
+     "id": "R1",
+     "content": "The code explains what each item holds or does"
+    },
+    {
+     "id": "R2",
+     "content": "The purpose of a section or method is explained in plain words"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each feature makes code easier to read, test or change.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.maintainable-code.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which comment is the most useful?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`// add 1 to Count`",
+    "rationale": "It only repeats what the code already says."
+   },
+   {
+    "key": "B",
+    "content": "`// Repeat until a valid month (1 to 12) is entered`",
+    "correct": true,
+    "rationale": "Correct: it explains the purpose of a whole section."
+   },
+   {
+    "key": "C",
+    "content": "`// this is a REPEAT loop with an UNTIL condition`",
+    "rationale": "It names the construct but not its purpose."
+   },
+   {
+    "key": "D",
+    "content": "`// this bit is important`",
+    "rationale": "It does not say what the code does or why."
+   }
+  ],
+  "explanation": "Good comments describe purpose or method, not the obvious.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "prog.maintainable-code.q08",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which two characters begin a comment in 0478 pseudocode?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "//"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Comments start with `//` and continue to the end of the line.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "//"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "#"
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.maintainable-code.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which identifier is **valid** in 0478 pseudocode?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`2ndPlayer`",
+    "rationale": "An identifier cannot start with a digit."
+   },
+   {
+    "key": "B",
+    "content": "`Player_Score`",
+    "rationale": "The underscore is not allowed in 0478 identifiers."
+   },
+   {
+    "key": "C",
+    "content": "`OUTPUT`",
+    "rationale": "Keywords cannot be used as identifiers."
+   },
+   {
+    "key": "D",
+    "content": "`Player2Score`",
+    "correct": true,
+    "rationale": "Correct: letters and digits, starting with a letter."
+   }
+  ],
+  "explanation": "0478 identifiers use PascalCase with letters and digits only, start with a capital letter and are never keywords.",
+  "hints": [
+   "Identifiers contain only letters and digits, start with a letter and are not keywords."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.maintainable-code.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The inputs are 64, 88, 72, 55. What is the **first** value output?\n\n```\np ← 0\nq ← 0\nFOR r ← 1 TO 4\nINPUT s\np ← p + s\nIF s > 70\nTHEN\nq ← q + 1\nENDIF\nNEXT r\nOUTPUT p / 4, \" \", q\n```",
+  "answerSpec": {
+   "value": 69.75,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.5
+   }
+  },
+  "explanation": "p totals the inputs (279); 279 / 4 = 69.75.",
+  "workedSolution": "1. p = 64 + 88 + 72 + 55 = 279.\n2. p / 4 = 69.75.",
+  "hints": [
+   "Rename the variables in your head: p is a total, q a count."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "69.8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "279"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "prog.maintainable-code.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which set of identifiers would make the algorithm above most maintainable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Total1`, `Total2`, `Counter`, `Value`",
+    "rationale": "q counts marks over 70; it is not a second total."
+   },
+   {
+    "key": "B",
+    "content": "`A`, `B`, `C`, `D`",
+    "rationale": "Single letters are no better than the originals."
+   },
+   {
+    "key": "C",
+    "content": "`TotalMark`, `HighCount`, `Learner`, `Mark`",
+    "correct": true,
+    "rationale": "Correct: they describe the total, the count over 70, the loop counter and the input."
+   },
+   {
+    "key": "D",
+    "content": "`Mark`, `Total`, `Average`, `Count`",
+    "rationale": "These are given to the wrong variables: p is not a single mark."
+   }
+  ],
+  "explanation": "p → TotalMark, q → HighCount, r → Learner, s → Mark. Adding a constant for 70 and indenting would help further.",
+  "hints": [
+   "What are p and q used for?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.maintainable-code.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A program has 300 lines in one block, with the same 12-line grade calculation copied in four places. Which change would most improve its maintainability?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Add a comment above each of the four copies of the calculation",
+    "rationale": "Comments help reading but four copies must still be changed."
+   },
+   {
+    "key": "B",
+    "content": "Shorten every identifier to save space",
+    "rationale": "Shorter names make code harder to read."
+   },
+   {
+    "key": "C",
+    "content": "Remove the indentation to make the program shorter",
+    "rationale": "Indentation does not affect length meaningfully and helps reading."
+   },
+   {
+    "key": "D",
+    "content": "Put the calculation in a function called in all four places",
+    "correct": true,
+    "rationale": "Correct: one copy to test and change."
+   }
+  ],
+  "explanation": "Repeated code belongs in a subroutine.",
+  "hints": [
+   "How many places must be edited if the grade boundaries change?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.maintainable-code.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Describe **three** ways a programmer can make a program easier to maintain.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Meaningful identifiers, so the purpose of each variable / subroutine is clear",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Comments explaining the purpose of the program, subroutines or difficult sections",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Constants for fixed values / subroutines for repeated tasks / consistent indentation and white space",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Use meaningful identifiers such as TotalSales so the code explains itself. Add comments that state the purpose of each subroutine. Declare fixed values like a tax rate as constants so they are changed in one place."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Each point needs the feature and its benefit.",
+  "hints": [
+   "Name the feature, then say how it helps."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.maintainable-code.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Rewrite this algorithm so that it is easier to maintain. It must work in exactly the same way.\n\n```\nINPUT x\ny ← x * 1.6\nIF y > 50\nTHEN\ny ← y - 2\nENDIF\nOUTPUT y\n```",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Meaningful identifiers for the litres and the cost (e.g. Litres, Cost)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Constants for the price per litre (1.6), the threshold (50) and/or the discount (2)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A comment stating the purpose, and a prompt before the input",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Correct indentation of THEN and the body, and the same logic as the original",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\n// Fuel bill: discount of 2 dollars on bills over 50 dollars\nCONSTANT PricePerLitre ← 1.6\nCONSTANT DiscountLimit ← 50\nCONSTANT Discount ← 2\nOUTPUT \"Enter litres bought\"\nINPUT Litres\nCost ← Litres * PricePerLitre\nIF Cost > DiscountLimit\n    THEN\n        Cost ← Cost - Discount\nENDIF\nOUTPUT \"Amount to pay: \", Cost\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Improve readability without changing behaviour.",
+  "hints": [
+   "Name every variable after its contents.",
+   "1.6 is the price per litre."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.maintainable-code.q15",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A service station in Masvingo uses this algorithm.\n\n```\nINPUT x\ny ← x * 1.6\nIF y > 50\nTHEN\ny ← y - 2\nENDIF\nOUTPUT y\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value output when the input is 35.",
+    "answerSpec": {
+     "value": 54
+    },
+    "explanation": "35 × 1.6 = 56; 56 > 50, so 2 is taken off: 54.",
+    "workedSolution": "1. y = 35 × 1.6 = 56.\n2. 56 > 50, so y = 56 − 2 = 54."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which feature of this algorithm makes it hardest for another programmer to understand?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It uses an IF statement to decide on the discount",
+      "rationale": "Selection is a normal construct."
+     },
+     {
+      "key": "B",
+      "content": "It outputs the result without first storing it in a file",
+      "rationale": "Outputting a value is normal and needed."
+     },
+     {
+      "key": "C",
+      "content": "The identifiers x and y do not describe their data",
+      "correct": true,
+      "rationale": "Correct: nothing says that x is litres and y is the cost."
+     },
+     {
+      "key": "D",
+      "content": "It uses multiplication",
+      "rationale": "Arithmetic is a normal part of an algorithm."
+     }
+    ],
+    "explanation": "Meaningless names, unexplained values and no indentation all hinder maintenance; the names are the biggest problem."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The price per litre changes often. Explain how the programmer should handle the value 1.6, and state **two** other improvements.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Declare 1.6 as a named constant (e.g. CONSTANT PricePerLitre ← 1.6) so a change is made in one place",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Meaningful identifiers / comments",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Indentation / a prompt before INPUT / constants for 50 and 2",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Declare `CONSTANT PricePerLitre ← 1.6` at the top and use it in the calculation, so a price change is a single edit. Also rename x and y as Litres and Cost, and indent THEN and its statement."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "Rewriting the algorithm with better identifiers and constants should change the values it outputs.",
+    "answerSpec": {
+     "correct": false
+    },
+    "explanation": "False. Improving maintainability must keep the behaviour exactly the same."
+   }
+  ],
+  "explanation": "Output 54. Use meaningful names, constants and indentation.",
+  "hints": [
+   "Work out x * 1.6 first, then the IF."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "54"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(d)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "56"
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.maintainable-code.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.maintainable-code"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Nyasha is planning a program for a school library. It will have constants, global variable declarations, three subroutines and a main program.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the usual order of the parts of a well-structured program.",
+    "payload": {
+     "template": "Comments describing the program → {{blank:a}} → global variable declarations → {{blank:b}} → {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Constants",
+        "Subroutine definitions",
+        "Main program"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Constants",
+        "Subroutine definitions",
+        "Main program"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "Constants",
+        "Subroutine definitions",
+        "Main program"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Constants"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Subroutine definitions"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "Main program"
+       ]
+      }
+     ]
+    },
+    "explanation": "Comments, constants, globals, subroutines (defined before use), then the main program."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Suggest a meaningful identifier for (i) a function that checks whether a book is overdue and (ii) a procedure that prints a borrower's list of books.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "(i) A Boolean-sounding name such as IsOverdue / CheckOverdue",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "(ii) A task name such as PrintBorrowerBooks / ShowBooksOnLoan",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: (i) `IsOverdue` (ii) `PrintBooksOnLoan`"
+    }
+   }
+  ],
+  "explanation": "Constants, subroutine definitions, main program; descriptive subroutine names.",
+  "hints": [
+   "Think about the order of a well-structured program."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Constants"
+      },
+      {
+       "blankId": "b",
+       "text": "Subroutine definitions"
+      },
+      {
+       "blankId": "c",
+       "text": "Main program"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Subroutine definitions"
+       },
+       {
+        "blankId": "b",
+        "text": "Constants"
+       },
+       {
+        "blankId": "c",
+        "text": "Constants"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true
+ }
+]

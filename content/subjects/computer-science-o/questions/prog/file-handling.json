@@ -1,0 +1,1069 @@
+[
+ {
+  "key": "prog.file-handling.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Why does a program store data in a file rather than only in variables?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Data in a file is kept after the program ends",
+    "correct": true,
+    "rationale": "Correct: variables are lost when the program closes."
+   },
+   {
+    "key": "B",
+    "content": "Files are faster to access than variables",
+    "rationale": "Main memory is faster than secondary storage."
+   },
+   {
+    "key": "C",
+    "content": "Variables cannot hold text data",
+    "rationale": "STRING variables hold text."
+   },
+   {
+    "key": "D",
+    "content": "Files make the program use less code",
+    "rationale": "Using files adds statements; the benefit is permanence."
+   }
+  ],
+  "explanation": "Files are on secondary storage, so the data survives after the program stops or the power goes off.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.file-handling.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which statement opens the existing file `stock.txt` so that data can be taken from it?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`OPENFILE \"stock.txt\" FOR READ`",
+    "correct": true,
+    "rationale": "Correct: READ mode is for taking data from a file."
+   },
+   {
+    "key": "B",
+    "content": "`OPENFILE \"stock.txt\" FOR WRITE`",
+    "rationale": "WRITE creates a new file and loses the existing data."
+   },
+   {
+    "key": "C",
+    "content": "`READFILE \"stock.txt\" FOR READ`",
+    "rationale": "READFILE reads an item; it does not open the file."
+   },
+   {
+    "key": "D",
+    "content": "`OPENFILE stock.txt READ`",
+    "rationale": "The name needs quotes and the keyword FOR."
+   }
+  ],
+  "explanation": "`OPENFILE <file name> FOR READ`.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.file-handling.q03",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Opening an existing file `FOR WRITE` keeps its data and adds new lines after it.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. WRITE mode creates a new file; any data already in a file with that name is lost.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.file-handling.q04",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "After one `READFILE` statement, the next `READFILE` on the same open file reads the following line.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Each READFILE takes the next data item in order.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.file-handling.q05",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each statement to what it does.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "`OPENFILE \"a.txt\" FOR READ`"
+    },
+    {
+     "id": "L2",
+     "content": "`READFILE \"a.txt\", Item`"
+    },
+    {
+     "id": "L3",
+     "content": "`WRITEFILE \"a.txt\", Item`"
+    },
+    {
+     "id": "L4",
+     "content": "`CLOSEFILE \"a.txt\"`"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Adds the value as a new line in the file"
+    },
+    {
+     "id": "R4",
+     "content": "Finishes using the file and releases it"
+    },
+    {
+     "id": "R1",
+     "content": "Prepares an existing file so data can be read from it"
+    },
+    {
+     "id": "R2",
+     "content": "Copies the next line of the file into a variable"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Open, read or write, then close.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.file-handling.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the algorithm, which saves the 10 values of `Scores[1:10]` in `scores.txt`, one per line.\n\n```\nOPENFILE \"scores.txt\" FOR [1]\nFOR Index ← 1 TO 10\n    [2] \"scores.txt\", Scores[Index]\nNEXT Index\n[3] \"scores.txt\"\n```",
+  "payload": {
+   "template": "[1] {{blank:a}} [2] {{blank:b}} [3] {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "READ",
+      "WRITE"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "WRITEFILE",
+      "READFILE",
+      "OUTPUT",
+      "OPENFILE"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "CLOSEFILE",
+      "ENDFILE",
+      "OPENFILE",
+      "NEXT"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "WRITE"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "WRITEFILE"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "CLOSEFILE"
+     ]
+    }
+   ]
+  },
+  "explanation": "Open FOR WRITE, WRITEFILE each element, CLOSEFILE at the end.",
+  "hints": [
+   "Open once before the loop and close once after it."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "WRITE"
+    },
+    {
+     "blankId": "b",
+     "text": "WRITEFILE"
+    },
+    {
+     "blankId": "c",
+     "text": "CLOSEFILE"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "READ"
+     },
+     {
+      "blankId": "b",
+      "text": "READFILE"
+     },
+     {
+      "blankId": "c",
+      "text": "ENDFILE"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.file-handling.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What does `names.txt` contain after this algorithm runs, if `Names[1:3]` holds Chipo, Farai and Rudo?\n\n```\nFOR Index ← 1 TO 3\n    OPENFILE \"names.txt\" FOR WRITE\n    WRITEFILE \"names.txt\", Names[Index]\n    CLOSEFILE \"names.txt\"\nNEXT Index\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "Chipo, Farai and Rudo on three lines",
+    "rationale": "That needs the file opened once, before the loop."
+   },
+   {
+    "key": "B",
+    "content": "Only Chipo",
+    "rationale": "Later passes replace the file."
+   },
+   {
+    "key": "C",
+    "content": "Nothing, because the file is closed",
+    "rationale": "Closing saves the data that was written."
+   },
+   {
+    "key": "D",
+    "content": "Only Rudo",
+    "correct": true,
+    "rationale": "Correct: each pass creates a new file, so only the last name remains."
+   }
+  ],
+  "explanation": "Opening FOR WRITE starts an empty file every time. Open before the loop and close after it.",
+  "hints": [
+   "What does WRITE mode do to a file each time it is opened?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.file-handling.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The file `sales.txt` holds:\n\n| Line | Contents of sales.txt |\n|:-:|:-:|\n| 1 | 125 |\n| 2 | 98 |\n| 3 | 143 |\n| 4 | 110 |\n\n```\nTotal ← 0\nOPENFILE \"sales.txt\" FOR READ\nFOR Day ← 1 TO 4\n    READFILE \"sales.txt\", Amount\n    Total ← Total + Amount\nNEXT Day\nCLOSEFILE \"sales.txt\"\nOUTPUT Total\n```\n\nWhat is output?",
+  "answerSpec": {
+   "value": 476
+  },
+  "explanation": "125 + 98 + 143 + 110 = 476.",
+  "workedSolution": "1. The four lines are read in order: 125, 98, 143, 110.\n2. Total = 476.",
+  "hints": [
+   "Each READFILE takes the next line."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "476"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "110"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.file-handling.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The file `temps.txt` holds:\n\n| Line | Contents of temps.txt |\n|:-:|:-:|\n| 1 | 28 |\n| 2 | 33 |\n| 3 | 31 |\n| 4 | 26 |\n| 5 | 35 |\n| 6 | 30 |\n\n```\nOPENFILE \"temps.txt\" FOR READ\nOPENFILE \"hot.txt\" FOR WRITE\nFOR Day ← 1 TO 6\n    READFILE \"temps.txt\", Reading\n    IF Reading > 30\n        THEN\n            WRITEFILE \"hot.txt\", Reading\n    ENDIF\nNEXT Day\nCLOSEFILE \"temps.txt\"\nCLOSEFILE \"hot.txt\"\n```\n\nHow many lines does `hot.txt` contain afterwards?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "Readings over 30: 33, 31, 35: 3 lines. 30 itself is not greater than 30.",
+  "workedSolution": "1. Check each reading: 28, 33 (written), 31 (written), 26, 35 (written), 30.\n2. 3 lines.",
+  "hints": [
+   "Only values greater than 30 are written."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.file-handling.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Why does this algorithm fail?\n\n```\nOPENFILE \"log.txt\" FOR WRITE\nREADFILE \"log.txt\", Entry\nOUTPUT Entry\nCLOSEFILE \"log.txt\"\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "CLOSEFILE must come before OUTPUT",
+    "rationale": "The file can be closed after the output."
+   },
+   {
+    "key": "B",
+    "content": "The file is opened for writing but then read",
+    "correct": true,
+    "rationale": "Correct: READFILE needs the file opened FOR READ."
+   },
+   {
+    "key": "C",
+    "content": "Entry has not been declared as an array",
+    "rationale": "A single variable receives one line."
+   },
+   {
+    "key": "D",
+    "content": "File names cannot end in .txt",
+    "rationale": "Any valid file name can be used."
+   }
+  ],
+  "explanation": "Open FOR READ to read. (Opening FOR WRITE has also wiped the log.)",
+  "hints": [
+   "Which mode allows READFILE?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.file-handling.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which pseudocode keyword is used to finish using a file once a program no longer needs it?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "CLOSEFILE"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "`CLOSEFILE <file name>`.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "CLOSEFILE"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "ENDFILE"
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.file-handling.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which statement correctly writes the value of `Total` to the file `report.txt`, which is already open for writing?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`WRITEFILE Total, \"report.txt\"`",
+    "rationale": "The file name comes first."
+   },
+   {
+    "key": "B",
+    "content": "`OUTPUT \"report.txt\", Total`",
+    "rationale": "OUTPUT displays on the screen; it does not write to a file."
+   },
+   {
+    "key": "C",
+    "content": "`WRITEFILE \"report.txt\", Total`",
+    "correct": true,
+    "rationale": "Correct: file name in quotes, a comma, then the data."
+   },
+   {
+    "key": "D",
+    "content": "`WRITEFILE report.txt, Total`",
+    "rationale": "The file name is a string, so it needs quotes."
+   }
+  ],
+  "explanation": "`WRITEFILE <file identifier>, <variable>`.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.file-handling.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A game keeps its high score in `best.txt`.\n\n```\nOPENFILE \"best.txt\" FOR WRITE\nREADFILE \"best.txt\", Best\nIF Score > Best\n    THEN\n        WRITEFILE \"best.txt\", Score\nENDIF\nCLOSEFILE \"best.txt\"\n```\n\nWhat is the main logic problem?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Score and Best should both be strings",
+    "rationale": "Numbers can be compared and written."
+   },
+   {
+    "key": "B",
+    "content": "The IF statement needs an ELSE branch",
+    "rationale": "No ELSE is required here."
+   },
+   {
+    "key": "C",
+    "content": "The old high score is lost before it can be read",
+    "correct": true,
+    "rationale": "Correct: WRITE mode empties the file first."
+   },
+   {
+    "key": "D",
+    "content": "CLOSEFILE should be inside the IF",
+    "rationale": "The file must be closed whichever branch runs."
+   }
+  ],
+  "explanation": "Open FOR READ, read Best, close; then, only if needed, open FOR WRITE and write the new score.",
+  "hints": [
+   "What is in best.txt at the moment READFILE runs?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.file-handling.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The file `club.txt` holds:\n\n| Line | Contents of club.txt |\n|:-:|:-:|\n| 1 | Rudo |\n| 2 | Sipho |\n| 3 | Nyasha |\n| 4 | END |\n| 5 | Tendai |\n\n```\nCount ← 0\nOPENFILE \"club.txt\" FOR READ\nREADFILE \"club.txt\", Member\nWHILE Member <> \"END\" DO\n    Count ← Count + 1\n    READFILE \"club.txt\", Member\nENDWHILE\nCLOSEFILE \"club.txt\"\nOUTPUT Count\n```\n\nWhat is output?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "Rudo, Sipho, Nyasha are counted; reading \"END\" stops the loop, so line 5 is never read. Output 3.",
+  "workedSolution": "1. Lines before END: Rudo, Sipho, Nyasha.\n2. The terminator is not counted and the loop stops.\n3. Count = 3.",
+  "hints": [
+   "The loop stops when the line read is END.",
+   "Is the END line counted?"
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "prog.file-handling.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "A school's library program stores its list of books in a file. Explain **two** reasons why.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The data is kept permanently / after the program closes or the computer is switched off, so it is available next time",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The data can be shared with / used by another program or copied / backed up / prepared in advance without retyping",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The book list must still exist when the program is next run; in a file on secondary storage it is not lost when the program closes. The file can also be backed up or used by another program, such as one that prints reports."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Permanence plus one further reason.",
+  "hints": [
+   "What happens to variables when the program closes?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.file-handling.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "Write pseudocode that inputs 20 rainfall readings from the user and stores them in a new text file `rain.txt`, one reading per line.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Opens \"rain.txt\" FOR WRITE before the loop",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Loop that runs 20 times",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Prompts and inputs a reading inside the loop",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "WRITEFILE \"rain.txt\" with the reading inside the loop",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "CLOSEFILE \"rain.txt\" after the loop",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nDECLARE Reading : REAL\nDECLARE Count : INTEGER\nOPENFILE \"rain.txt\" FOR WRITE\nFOR Count ← 1 TO 20\n    OUTPUT \"Enter rainfall reading \", Count\n    INPUT Reading\n    WRITEFILE \"rain.txt\", Reading\nNEXT Count\nCLOSEFILE \"rain.txt\"\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Open, loop with input and write, close.",
+  "hints": [
+   "Open once, loop 20 times, close once."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.file-handling.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A shop in Masvingo stores its products in `products.txt`: each product name is followed on the next line by its price.\n\n| Line | Contents of products.txt |\n|:-:|:-:|\n| 1 | Soap |\n| 2 | 1.50 |\n| 3 | Rice |\n| 4 | 4.25 |\n| 5 | Salt |\n| 6 | 0.80 |\n\n```\nOPENFILE \"products.txt\" FOR READ\nFOR Item ← 1 TO 3\n    READFILE \"products.txt\", ProductName[Item]\n    READFILE \"products.txt\", Price[Item]\nNEXT Item\nCLOSEFILE \"products.txt\"\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the value of `ProductName[2]` after the algorithm runs.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Rice"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Pass 2 reads lines 3 and 4: ProductName[2] = \"Rice\"."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Price[3]`.",
+    "answerSpec": {
+     "value": 0.8,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "Pass 3 reads lines 5 and 6: Price[3] = 0.8.",
+    "workedSolution": "1. Pass 3 reads lines 5 and 6.\n2. Line 6 is the price of Salt: 0.8."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why must the loop run exactly 3 times?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A FOR loop that reads a file can only run 3 times",
+      "rationale": "There is no such limit."
+     },
+     {
+      "key": "B",
+      "content": "The file holds exactly 3 products and has no end marker",
+      "correct": true,
+      "rationale": "Correct: reading more lines than exist would fail."
+     },
+     {
+      "key": "C",
+      "content": "Each READFILE statement reads three lines",
+      "rationale": "Each READFILE reads one line."
+     },
+     {
+      "key": "D",
+      "content": "The arrays can only hold 3 characters",
+      "rationale": "The arrays hold whole names and prices."
+     }
+    ],
+    "explanation": "The number of records must be known (or a terminator used)."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that writes the name of every product costing more than 1.00 to a new file `dear.txt`, using the arrays filled above.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Opens \"dear.txt\" FOR WRITE before the loop and closes it after",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Loop 1 to 3 with IF Price[Item] > 1.00",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "WRITEFILE \"dear.txt\", ProductName[Item] inside the IF",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nOPENFILE \"dear.txt\" FOR WRITE\nFOR Item ← 1 TO 3\n    IF Price[Item] > 1.00\n        THEN\n            WRITEFILE \"dear.txt\", ProductName[Item]\n    ENDIF\nNEXT Item\nCLOSEFILE \"dear.txt\"\n```"
+    }
+   }
+  ],
+  "explanation": "ProductName[2] = Rice; Price[3] = 0.8; the dearest product is Rice.",
+  "hints": [
+   "Lines alternate: a name, then its price.",
+   "Each pass of the loop reads two lines."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "Rice"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.8"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "1.50"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4.25"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.file-handling.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.file-handling"
+  ],
+  "difficulty": 5,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A museum in Harare keeps a visitor log in `log.txt`, one line per day. The file currently holds 3 lines:\n\n| Line | Contents of log.txt |\n|:-:|:-:|\n| 1 | Mon 14 |\n| 2 | Tue 22 |\n| 3 | Wed 17 |\n\nThe programmer wants to add today's line, `\"Thu 19\"`, and writes:\n\n```\nOPENFILE \"log.txt\" FOR WRITE\nWRITEFILE \"log.txt\", \"Thu 19\"\nCLOSEFILE \"log.txt\"\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "How many lines does `log.txt` contain after this runs?",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "WRITE mode creates a new file, so only the new line remains.",
+    "workedSolution": "1. OPENFILE FOR WRITE empties the file.\n2. One WRITEFILE: 1 line."
+   },
+   {
+    "label": "(b)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "The lines for Mon, Tue and Wed are still in the file.",
+    "answerSpec": {
+     "correct": false
+    },
+    "explanation": "False. They were lost when the file was opened FOR WRITE."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that adds the new line correctly. It should read the 3 existing lines into an array `Days[1:4]`, store the new line as the 4th element and write all 4 lines back to `log.txt`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Opens \"log.txt\" FOR READ",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Loop 1 to 3 with READFILE \"log.txt\", Days[Index]",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Closes the file after reading",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Days[4] ← \"Thu 19\"",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Opens \"log.txt\" FOR WRITE and loops 1 to 4 with WRITEFILE \"log.txt\", Days[Index]",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Closes the file after writing",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nDECLARE Days : ARRAY[1:4] OF STRING\nDECLARE Index : INTEGER\nOPENFILE \"log.txt\" FOR READ\nFOR Index ← 1 TO 3\n    READFILE \"log.txt\", Days[Index]\nNEXT Index\nCLOSEFILE \"log.txt\"\nDays[4] ← \"Thu 19\"\nOPENFILE \"log.txt\" FOR WRITE\nFOR Index ← 1 TO 4\n    WRITEFILE \"log.txt\", Days[Index]\nNEXT Index\nCLOSEFILE \"log.txt\"\n```"
+    }
+   }
+  ],
+  "explanation": "Only 1 line remains, because WRITE mode starts a new file. Read the old lines first, then write them all back with the new one.",
+  "hints": [
+   "WRITE mode empties a file.",
+   "Copy the old lines into an array first, or write to a second file."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(b)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(b)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ }
+]

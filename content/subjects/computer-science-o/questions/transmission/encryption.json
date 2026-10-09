@@ -1,0 +1,1065 @@
+[
+ {
+  "key": "transmission.encryption.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is **ciphertext**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The scrambled data produced by encryption",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "The original readable data",
+    "rationale": "That is plaintext."
+   },
+   {
+    "key": "C",
+    "content": "The value used to encrypt data",
+    "rationale": "That is the key."
+   },
+   {
+    "key": "D",
+    "content": "A list of trusted websites",
+    "rationale": "That has nothing to do with ciphertext."
+   }
+  ],
+  "explanation": "Plaintext + key + algorithm → ciphertext. Ciphertext is what travels across the network.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.encryption.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In **symmetric** encryption, which key is used to decrypt the data?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The key used to encrypt it",
+    "correct": true,
+    "rationale": "Correct: one shared key does both jobs."
+   },
+   {
+    "key": "B",
+    "content": "The receiver's private key",
+    "rationale": "Private keys belong to asymmetric encryption."
+   },
+   {
+    "key": "C",
+    "content": "The sender's public key",
+    "rationale": "Public keys belong to asymmetric encryption."
+   },
+   {
+    "key": "D",
+    "content": "No key is needed to decrypt it",
+    "rationale": "Without the key the ciphertext cannot be decrypted."
+   }
+  ],
+  "explanation": "Symmetric encryption uses one shared secret key for encryption and decryption.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.encryption.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the main purpose of encrypting data before it is transmitted?",
+  "options": [
+   {
+    "key": "A",
+    "content": "To stop the data from being intercepted",
+    "rationale": "Encryption cannot stop interception."
+   },
+   {
+    "key": "B",
+    "content": "To make intercepted data meaningless without the key",
+    "correct": true,
+    "rationale": "Correct: encryption protects the content if it is intercepted."
+   },
+   {
+    "key": "C",
+    "content": "To make the data smaller so it sends faster",
+    "rationale": "That is compression, not encryption."
+   },
+   {
+    "key": "D",
+    "content": "To detect errors that occur during transmission",
+    "rationale": "That is the job of parity checks and checksums."
+   }
+  ],
+  "explanation": "Data on a network can be intercepted. Encryption does not prevent this, but without the key the ciphertext cannot be understood.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "transmission.encryption.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Tatenda wants to send Rudo a confidential file using asymmetric encryption. Which key should he use to encrypt it?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Rudo's private key",
+    "rationale": "Rudo's private key is secret; Tatenda does not have it."
+   },
+   {
+    "key": "B",
+    "content": "Tatenda's public key",
+    "rationale": "Then only Tatenda's private key could decrypt it, not Rudo's."
+   },
+   {
+    "key": "C",
+    "content": "Rudo's public key",
+    "correct": true,
+    "rationale": "Correct: only Rudo's matching private key can then decrypt it."
+   },
+   {
+    "key": "D",
+    "content": "Tatenda's private key",
+    "rationale": "Anyone with Tatenda's public key could decrypt it, so it would not be confidential."
+   }
+  ],
+  "explanation": "Encrypt with the receiver's public key; the receiver decrypts with their own private key.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.encryption.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Why is asymmetric encryption said to solve the **key distribution** problem of symmetric encryption?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The public key is too long for attackers to intercept",
+    "rationale": "Public keys can be intercepted; it does not matter if they are."
+   },
+   {
+    "key": "B",
+    "content": "The key needed to decrypt is never sent across the network",
+    "correct": true,
+    "rationale": "Correct: only the public key is shared; the private key stays with its owner."
+   },
+   {
+    "key": "C",
+    "content": "Asymmetric encryption does not use any keys",
+    "rationale": "It uses a key pair."
+   },
+   {
+    "key": "D",
+    "content": "Both keys are sent separately by different routes",
+    "rationale": "The private key is never sent at all."
+   }
+  ],
+  "explanation": "In symmetric encryption the secret key itself must be shared, and could be intercepted. In asymmetric encryption only the public key is shared; the private key, which decrypts, never leaves its owner.",
+  "hints": [
+   "Which key must be kept secret, and does it ever travel?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "transmission.encryption.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What does a **digital certificate** do?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It encrypts every web page on a server",
+    "rationale": "Certificates do not do the encrypting themselves."
+   },
+   {
+    "key": "B",
+    "content": "It stores the owner's private key for safekeeping",
+    "rationale": "Private keys are never placed in certificates."
+   },
+   {
+    "key": "C",
+    "content": "It checks transmitted data for parity errors",
+    "rationale": "That is a parity check."
+   },
+   {
+    "key": "D",
+    "content": "It links a public key to its verified owner",
+    "correct": true,
+    "rationale": "Correct: it is issued by a certificate authority."
+   }
+  ],
+  "explanation": "A digital certificate, issued by a trusted certificate authority, contains the owner's details and public key, so others can trust that the key belongs to that owner.",
+  "hints": [
+   "Think about how a browser knows a public key really belongs to a bank's website."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.encryption.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which key does a sender use to create a **digital signature**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The sender's public key",
+    "rationale": "Anyone has the public key, so a signature made with it would prove nothing."
+   },
+   {
+    "key": "B",
+    "content": "The receiver's public key",
+    "rationale": "That key is for encrypting confidential data to the receiver."
+   },
+   {
+    "key": "C",
+    "content": "The receiver's private key",
+    "rationale": "The sender never has the receiver's private key."
+   },
+   {
+    "key": "D",
+    "content": "The sender's private key",
+    "correct": true,
+    "rationale": "Correct: anyone can check it with the sender's public key."
+   }
+  ],
+  "explanation": "Only the sender holds their private key, so a signature made with it proves who sent the message; others verify it with the sender's public key.",
+  "hints": [
+   "Only the real sender should be able to make the signature."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.encryption.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In asymmetric encryption, the public key may be shared with anyone.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The public key is meant to be shared; only the private key is kept secret.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.encryption.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Encrypting data stops a hacker from intercepting it.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Encrypted data can still be intercepted, but it is meaningless without the key.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "transmission.encryption.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each term to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Plaintext"
+    },
+    {
+     "id": "L2",
+     "content": "Ciphertext"
+    },
+    {
+     "id": "L3",
+     "content": "Public key"
+    },
+    {
+     "id": "L4",
+     "content": "Private key"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Shared openly and used to encrypt data for its owner"
+    },
+    {
+     "id": "R4",
+     "content": "Kept secret and used by its owner to decrypt"
+    },
+    {
+     "id": "R1",
+     "content": "Readable data before encryption"
+    },
+    {
+     "id": "R2",
+     "content": "Scrambled data after encryption"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Plaintext → (key) → ciphertext. Public key: shared, encrypts. Private key: secret, decrypts.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.encryption.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A simple cipher replaces each letter with the letter a fixed number of places later in the alphabet (after Z it wraps round to A). With a key of 4, encrypt the word **CODE**.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "GSHI"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Move each letter 4 places on: C→G, O→S, D→H, E→I, giving GSHI.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "GSHI"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "FRGH"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "transmission.encryption.q12",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The same kind of cipher (each letter moved a fixed number of places along the alphabet, wrapping from Z to A) was used with a key of 2 to produce the ciphertext **AGU**. Decrypt it.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "YES"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Move each letter 2 places back: AGU → YES (A goes back to Y, wrapping round).",
+  "hints": [
+   "Decrypting with a symmetric key reverses the encryption: move each letter back.",
+   "Moving back from A wraps round to Z."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "YES"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "CIW"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "transmission.encryption.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A cipher moves each letter of the 26-letter alphabet a fixed number of places (wrapping from Z to A). A key of 0 or 26 leaves the text unchanged. How many different keys actually change the text?",
+  "answerSpec": {
+   "value": 25
+  },
+  "explanation": "Keys 1 to 25 each produce different ciphertext; 0 (and 26) change nothing. With only 25 keys, an attacker can try them all, which is why such ciphers are weak.",
+  "workedSolution": "1. Shifts of 1, 2, …, 25 each move letters to a different place.\n2. A shift of 26 brings every letter back to itself, like 0.\n3. So 25 useful keys.",
+  "hints": [
+   "Keys 1 to 25 each give a different result.",
+   "Key 26 is the same as key 0."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "25"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "26"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "transmission.encryption.q14",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the sentences about asymmetric encryption.",
+  "payload": {
+   "template": "Data is encrypted with the receiver's {{blank:a}} key and decrypted with the receiver's {{blank:b}} key. This method is slower than {{blank:c}} encryption.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "public",
+      "private"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "public",
+      "private"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "symmetric",
+      "asymmetric"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "public"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "private"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "symmetric"
+     ]
+    }
+   ]
+  },
+  "explanation": "Encrypt with the public key, decrypt with the private key; asymmetric is slower than symmetric.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "public"
+    },
+    {
+     "blankId": "b",
+     "text": "private"
+    },
+    {
+     "blankId": "c",
+     "text": "symmetric"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "private"
+     },
+     {
+      "blankId": "b",
+      "text": "public"
+     },
+     {
+      "blankId": "c",
+      "text": "asymmetric"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.encryption.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Describe how symmetric encryption is used to send data securely, and state its main weakness. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The same (secret) key is used to encrypt the plaintext and to decrypt the ciphertext",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The sender and receiver must both have the key before data is sent",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Weakness: the key must be shared / distributed; if it is intercepted the data can be decrypted",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The sender encrypts the plaintext with a secret key and sends the ciphertext; the receiver decrypts it with the same key. The weakness is that the key must be shared with the receiver, and if it is intercepted the attacker can decrypt the data."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One shared key; the risk is in sharing it.",
+  "hints": [
+   "How many keys? Who has them? What is the risk?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.encryption.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "A hospital in Mutare sends patients' test results to doctors over the internet. The hospital uses asymmetric encryption.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the test results should be encrypted before they are sent.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The data could be intercepted while it travels over the internet",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Encryption makes it meaningless to anyone without the key, so confidential medical data stays private",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The results could be intercepted on the internet; encrypted, they cannot be understood without the key, so patients' confidential data is protected."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which key does the hospital use to encrypt results sent to Dr Moyo?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Dr Moyo's private key",
+      "rationale": "The hospital does not have it."
+     },
+     {
+      "key": "B",
+      "content": "The hospital's private key",
+      "rationale": "Anyone with the hospital's public key could then decrypt it."
+     },
+     {
+      "key": "C",
+      "content": "Dr Moyo's public key",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "The hospital's public key",
+      "rationale": "Only the hospital could then decrypt it."
+     }
+    ],
+    "explanation": "Encrypt with the receiver's public key."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which key does Dr Moyo use to decrypt the results?",
+    "options": [
+     {
+      "key": "A",
+      "content": "His own public key",
+      "rationale": "The public key cannot decrypt what it encrypted."
+     },
+     {
+      "key": "B",
+      "content": "The hospital's public key",
+      "rationale": "That key belongs to the hospital's pair."
+     },
+     {
+      "key": "C",
+      "content": "The hospital's private key",
+      "rationale": "Dr Moyo never has it."
+     },
+     {
+      "key": "D",
+      "content": "His own private key",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "The matching private key decrypts."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why an attacker who intercepts both the ciphertext and Dr Moyo's public key still cannot read the results.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Data encrypted with the public key can only be decrypted with the matching private key",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The private key is kept secret by Dr Moyo and is never transmitted",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Only the matching private key can decrypt the data, and Dr Moyo keeps it secret; it never crosses the network."
+    }
+   }
+  ],
+  "explanation": "Receiver's public key encrypts; receiver's private key decrypts.",
+  "hints": [
+   "Say whose key is used at each step.",
+   "Think about what an interceptor would see."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "transmission.encryption.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.transmission.encryption"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "An online shop in Harare accepts mobile-money payments through its website.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State **two** items found in the shop's digital certificate.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The owner's (shop's) name / organisation details",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The owner's public key (or the issuing certificate authority / expiry date / serial number)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The shop's name and its public key (also the certificate authority that issued it and an expiry date)."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how a digital signature on the shop's emails shows that an email really came from the shop.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The shop signs the email with its private key, which only the shop has",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The customer's software checks the signature with the shop's public key; if the check succeeds the email came from the shop and was not altered",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The shop creates the signature with its private key. The customer's software verifies it with the shop's public key; a valid signature proves the sender and that the message is unchanged."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement about symmetric encryption is correct?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It uses a public and a private key",
+      "rationale": "That is asymmetric."
+     },
+     {
+      "key": "B",
+      "content": "It never needs the key to be shared",
+      "rationale": "The key must be shared with the receiver."
+     },
+     {
+      "key": "C",
+      "content": "It uses one key to encrypt and decrypt",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "It is slower than asymmetric encryption",
+      "rationale": "Symmetric is faster."
+     }
+    ],
+    "explanation": "One shared key."
+   }
+  ],
+  "explanation": "Certificates link public keys to owners; signatures use the sender's private key.",
+  "hints": [
+   "Signature: made with the sender's private key.",
+   "Certificate: issued by a certificate authority."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ]
+ }
+]

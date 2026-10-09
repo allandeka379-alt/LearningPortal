@@ -1,0 +1,656 @@
+[
+ {
+  "key": "exam.w4a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.flowcharts",
+   "comp.algorithms.algorithm-basics",
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A school library in Kadoma charges fines on late books. The librarian uses this flowchart, which repeats until -1 is entered:\n\n| Box | Shape | Text | Next |\n|:-:|:-:|:-:|:-:|\n| 1 | Terminator | START | 2 |\n| 2 | Process | TotalFines ← 0, Count ← 0 | 3 |\n| 3 | Input/Output | INPUT DaysLate | 4 |\n| 4 | Decision | DaysLate = -1? | Yes → 9, No → 5 |\n| 5 | Decision | DaysLate > 7? | Yes → 6, No → 7 |\n| 6 | Process | Fine ← 7 + (DaysLate - 7) * 2 | 8 |\n| 7 | Process | Fine ← DaysLate | 8 |\n| 8 | Process | TotalFines ← TotalFines + Fine, Count ← Count + 1 | 3 |\n| 9 | Input/Output | OUTPUT TotalFines, \" \", Count | 10 |\n| 10 | Terminator | STOP |  |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Define the term *algorithm*.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A finite sequence of precise / ordered steps to solve a problem or carry out a task",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A set of precise steps, in order, that solves a problem and comes to an end."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Name the flowchart symbol used for box 5.",
+    "options": [
+     {
+      "key": "A",
+      "content": "Decision",
+      "correct": true,
+      "rationale": "Correct: it asks a Yes/No question."
+     },
+     {
+      "key": "B",
+      "content": "Process",
+      "rationale": "Process boxes do calculations."
+     },
+     {
+      "key": "C",
+      "content": "Input/Output",
+      "rationale": "That is used for INPUT and OUTPUT."
+     },
+     {
+      "key": "D",
+      "content": "Terminator",
+      "rationale": "Terminators are START and STOP."
+     }
+    ],
+    "explanation": "Box 5 asks DaysLate > 7?, so it is a decision (diamond)."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the fine for a book that is exactly 7 days late.",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "7 > 7 is No, so box 7 gives Fine = 7.",
+    "workedSolution": "1. Box 5: 7 > 7? No → box 7.\n2. Fine ← 7 = 7."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "The inputs are 3, 10, 0, -1. Complete the values output.",
+    "payload": {
+     "template": "TotalFines: {{blank:t}}\n\nCount: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "t",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "t",
+       "accepted": [
+        "16"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "3"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "3 days → 3; 10 days → 13; 0 days → 0. TotalFines = 16; Count = 3 (the 0 still counts as a book)."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State the purpose of the flowchart.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "To calculate the fine for each late book and output the total of the fines and the number of books (until -1 is entered)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It works out the fine for each late book, then outputs the total fines and how many books were entered."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode for the flowchart.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Initialises TotalFines and Count to 0, then INPUT DaysLate before the loop",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "WHILE DaysLate <> -1 DO … ENDWHILE loop, with INPUT DaysLate again at the end of the loop body",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "IF DaysLate > 7 THEN Fine ← 7 + (DaysLate - 7) * 2 ELSE Fine ← DaysLate ENDIF",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Adds Fine to TotalFines and 1 to Count inside the loop; OUTPUT TotalFines and Count after the loop",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nTotalFines ← 0\nCount ← 0\nINPUT DaysLate\nWHILE DaysLate <> -1 DO\n    IF DaysLate > 7\n        THEN\n            Fine ← 7 + (DaysLate - 7) * 2\n        ELSE\n            Fine ← DaysLate\n    ENDIF\n    TotalFines ← TotalFines + Fine\n    Count ← Count + 1\n    INPUT DaysLate\nENDWHILE\nOUTPUT TotalFines, \" \", Count\n```"
+    }
+   }
+  ],
+  "explanation": "(c) 7. (d) 16 and 3. A book 12 days late would be fined 17.",
+  "hints": [
+   "Follow the boxes in order for each input, keeping a running total.",
+   "The arrow from box 8 back to box 3 is the loop."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "t",
+       "text": "16"
+      },
+      {
+       "blankId": "c",
+       "text": "3"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "9"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "t",
+        "text": "13"
+       },
+       {
+        "blankId": "c",
+        "text": "2"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ },
+ {
+  "key": "exam.w4a-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.trace-tables",
+   "comp.algorithms.totalling-counting"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A teacher in Chinhoyi dry-runs this algorithm.\n\n```\nCount ← 0\nHighest ← 0\nFOR Learner ← 1 TO 5\n    INPUT Mark\n    IF Mark >= 50\n        THEN\n            Count ← Count + 1\n    ENDIF\n    IF Mark > Highest\n        THEN\n            Highest ← Mark\n    ENDIF\nNEXT Learner\nOUTPUT Count, \" \", Highest\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is a dry run?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Running a program for the first time on a computer",
+      "rationale": "A dry run uses no computer."
+     },
+     {
+      "key": "B",
+      "content": "Working through an algorithm by hand with test data",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "Removing all the errors from a program",
+      "rationale": "That is debugging."
+     },
+     {
+      "key": "D",
+      "content": "Translating pseudocode into a programming language",
+      "rationale": "That is coding."
+     }
+    ],
+    "explanation": "A dry run follows the algorithm by hand, recording values in a trace table."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the trace for the inputs 45, 72, 50, 38, 66, giving Count and Highest after each learner.",
+    "payload": {
+     "template": "Learner 1 (Mark 45): Count = {{blank:c0}}, Highest = {{blank:h0}}\n\nLearner 2 (Mark 72): Count = {{blank:c1}}, Highest = {{blank:h1}}\n\nLearner 3 (Mark 50): Count = {{blank:c2}}, Highest = {{blank:h2}}\n\nLearner 4 (Mark 38): Count = {{blank:c3}}, Highest = {{blank:h3}}\n\nLearner 5 (Mark 66): Count = {{blank:c4}}, Highest = {{blank:h4}}",
+     "blanks": [
+      {
+       "id": "c0",
+       "input": "number"
+      },
+      {
+       "id": "h0",
+       "input": "number"
+      },
+      {
+       "id": "c1",
+       "input": "number"
+      },
+      {
+       "id": "h1",
+       "input": "number"
+      },
+      {
+       "id": "c2",
+       "input": "number"
+      },
+      {
+       "id": "h2",
+       "input": "number"
+      },
+      {
+       "id": "c3",
+       "input": "number"
+      },
+      {
+       "id": "h3",
+       "input": "number"
+      },
+      {
+       "id": "c4",
+       "input": "number"
+      },
+      {
+       "id": "h4",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "c0",
+       "accepted": [
+        "0"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "h0",
+       "accepted": [
+        "45"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "c1",
+       "accepted": [
+        "1"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "h1",
+       "accepted": [
+        "72"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "c2",
+       "accepted": [
+        "2"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "h2",
+       "accepted": [
+        "72"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "c3",
+       "accepted": [
+        "2"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "h3",
+       "accepted": [
+        "72"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "c4",
+       "accepted": [
+        "3"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "h4",
+       "accepted": [
+        "72"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Trace:\n\n| Learner | Mark | Count | Highest | OUTPUT |\n|:-:|:-:|:-:|:-:|:-:|\n|  |  | 0 | 0 |  |\n| 1 | 45 |  | 45 |  |\n| 2 | 72 | 1 | 72 |  |\n| 3 | 50 | 2 |  |  |\n| 4 | 38 |  |  |  |\n| 5 | 66 | 3 |  |  |\n|  |  |  |  | 3 72 |"
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write exactly what is output.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "3 72"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "Count = 3 and Highest = 72, separated by a space."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State the purpose of the algorithm.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Counts how many of the five marks are 50 or more (passes)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Finds the highest mark and outputs both",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It inputs five marks, counts how many are passes (50 or more), finds the highest mark, and outputs the number of passes and the highest mark."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why starting `Highest` at 0 works for these marks, and describe a situation in which it would not work.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Marks are never below 0, so the first mark is always at least as large and replaces / equals it",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It would fail if all the values could be negative (e.g. temperatures below zero): 0 would be output instead of the real highest value",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Marks cannot be negative, so any real mark is at least 0 and becomes the highest. If the data could all be negative, such as winter temperatures, no value would beat 0 and the output would wrongly be 0."
+    }
+   }
+  ],
+  "explanation": "Output 3 72.",
+  "hints": [
+   "One row per learner: write the new Count and Highest after each mark.",
+   ">= 50 includes 50."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "c0",
+       "text": "0"
+      },
+      {
+       "blankId": "h0",
+       "text": "45"
+      },
+      {
+       "blankId": "c1",
+       "text": "1"
+      },
+      {
+       "blankId": "h1",
+       "text": "72"
+      },
+      {
+       "blankId": "c2",
+       "text": "2"
+      },
+      {
+       "blankId": "h2",
+       "text": "72"
+      },
+      {
+       "blankId": "c3",
+       "text": "2"
+      },
+      {
+       "blankId": "h3",
+       "text": "72"
+      },
+      {
+       "blankId": "c4",
+       "text": "3"
+      },
+      {
+       "blankId": "h4",
+       "text": "72"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "3 72"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "c0",
+        "text": "1"
+       },
+       {
+        "blankId": "h0",
+        "text": "46"
+       },
+       {
+        "blankId": "c1",
+        "text": "2"
+       },
+       {
+        "blankId": "h1",
+        "text": "73"
+       },
+       {
+        "blankId": "c2",
+        "text": "3"
+       },
+       {
+        "blankId": "h2",
+        "text": "73"
+       },
+       {
+        "blankId": "c3",
+        "text": "3"
+       },
+       {
+        "blankId": "h3",
+        "text": "73"
+       },
+       {
+        "blankId": "c4",
+        "text": "4"
+       },
+       {
+        "blankId": "h4",
+        "text": "73"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "2 72"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 2",
+  "calculator": false
+ }
+]

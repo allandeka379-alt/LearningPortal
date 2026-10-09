@@ -1,0 +1,1132 @@
+[
+ {
+  "key": "data.binary-denary.q01",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the binary number **00101101** to denary.",
+  "answerSpec": {
+   "value": 45
+  },
+  "explanation": "Add the place values under the 1s: $32 + 8 + 4 + 1 = 45$.",
+  "workedSolution": "1. Place values: 128, 64, 32, 16, 8, 4, 2, 1.\n2. The 1s are under 32, 8, 4, 1.\n3. 32 + 8 + 4 + 1 = 45.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "45"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "44"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "180"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the binary number **11100011** to denary.",
+  "answerSpec": {
+   "value": 227
+  },
+  "explanation": "Add the place values under the 1s: $128 + 64 + 32 + 2 + 1 = 227$.",
+  "workedSolution": "1. Place values: 128, 64, 32, 16, 8, 4, 2, 1.\n2. The 1s are under 128, 64, 32, 2, 1.\n3. 128 + 64 + 32 + 2 + 1 = 227.",
+  "hints": [
+   "Write 128 64 32 16 8 4 2 1 over the bits.",
+   "Only the places with a 1 count."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "227"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "226"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "199"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q03",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the denary number **75** to an **8-bit** binary number.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "01001011"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$64 + 8 + 2 + 1 = 75$, so the answer is 01001011. As an 8-bit number it needs the leading zero; 1001011 has only 7 bits, and 11010010 is the bits in reverse order.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "01001011"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1001011"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11010010"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q04",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the denary number **232** to an **8-bit** binary number.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "11101000"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "232 − 128 = 104; 104 − 64 = 40; 40 − 32 = 8; 8 − 8 = 0. The 1s go under 128, 64, 32 and 8: 11101000.",
+  "hints": [
+   "Start with 128: does it fit into 232?",
+   "Subtract each place value that fits and carry on with what is left."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "11101000"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11101001"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q05",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the denary number **46** to binary.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "101110"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$32 + 8 + 4 + 2 = 46$, so 46 is 101110 (or 00101110 as an 8-bit number).",
+  "hints": [
+   "Find the largest place value that fits into 46."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "101110"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "101111"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the 16-bit binary number **0000 0110 0000 1000** to denary.",
+  "answerSpec": {
+   "value": 1544
+  },
+  "explanation": "The 1s are under 1024, 512 and 8: $1024 + 512 + 8 = 1544$.",
+  "workedSolution": "1. Split into bytes: 0000 0110 | 0000 1000.\n2. Left byte: 1s under 1024 and 512.\n3. Right byte: a 1 under 8.\n4. $1024 + 512 + 8 = 1544$.",
+  "hints": [
+   "The place values of the left group of 8 run from 32768 down to 256.",
+   "Only three bits are 1."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1544"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1552"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "776"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q07",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Convert the denary number **770** to a **16-bit** binary number.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "0000001100000010"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$770 = 512 + 256 + 2$, so the 16-bit number is 0000 0011 0000 0010.",
+  "hints": [
+   "The place value 512 fits into 770; what is left?",
+   "Write all 16 bits, with leading zeros."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "0000001100000010"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "0000001100000011"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "When converting denary to binary by repeated division by 2, how are the remainders read?",
+  "options": [
+   {
+    "key": "A",
+    "content": "From the first remainder to the last",
+    "rationale": "That writes the number backwards: the first remainder is the least significant bit."
+   },
+   {
+    "key": "B",
+    "content": "Only the remainders that are 1 are written",
+    "rationale": "Every remainder, 0 or 1, is one bit of the answer."
+   },
+   {
+    "key": "C",
+    "content": "From the last remainder to the first",
+    "correct": true,
+    "rationale": "Correct: the last remainder is the most significant bit, so read from the bottom up."
+   },
+   {
+    "key": "D",
+    "content": "The quotients are read instead of the remainders",
+    "rationale": "The quotients are what you divide next; the bits are the remainders."
+   }
+  ],
+  "explanation": "The first division gives the 1s bit (LSB); the last gives the MSB. Reading the remainders bottom-up gives the bits from left to right.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.binary-denary.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which of these binary numbers represents an **odd** denary number?",
+  "options": [
+   {
+    "key": "A",
+    "content": "10010010",
+    "rationale": "It ends in 0, so the value (146) is even."
+   },
+   {
+    "key": "B",
+    "content": "11111110",
+    "rationale": "It ends in 0, so the value (254) is even."
+   },
+   {
+    "key": "C",
+    "content": "01101000",
+    "rationale": "It ends in 0, so the value (104) is even."
+   },
+   {
+    "key": "D",
+    "content": "10010011",
+    "correct": true,
+    "rationale": "Correct: it ends in 1, so the 1s place counts and the number is odd (147)."
+   }
+  ],
+  "explanation": "Every place value except the rightmost is even, so a binary number is odd exactly when its least significant bit is 1.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-denary.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the denary value of the binary number **01000001**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "130",
+    "rationale": "This reads the bits in reverse order (128 + 2)."
+   },
+   {
+    "key": "B",
+    "content": "2",
+    "rationale": "This counts the number of 1s, not their place values."
+   },
+   {
+    "key": "C",
+    "content": "11",
+    "rationale": "This treats the bits as the denary digits 1 and 1."
+   },
+   {
+    "key": "D",
+    "content": "65",
+    "correct": true,
+    "rationale": "Correct: 64 + 1 = 65."
+   }
+  ],
+  "explanation": "The 1s are under 64 and 1: $64 + 1 = 65$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which denary number **cannot** be stored as an unsigned 8-bit binary number?",
+  "options": [
+   {
+    "key": "A",
+    "content": "256",
+    "correct": true,
+    "rationale": "Correct: the largest 8-bit value is 255; 256 needs a ninth bit (100000000)."
+   },
+   {
+    "key": "B",
+    "content": "255",
+    "rationale": "255 = 11111111 fits exactly in 8 bits."
+   },
+   {
+    "key": "C",
+    "content": "128",
+    "rationale": "128 = 10000000 fits in 8 bits."
+   },
+   {
+    "key": "D",
+    "content": "0",
+    "rationale": "0 = 00000000 fits in 8 bits."
+   }
+  ],
+  "explanation": "8 bits hold 0 to $2^8 - 1 = 255$.",
+  "hints": [
+   "What is the largest value when all 8 bits are 1?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Tendai converted 52 to binary by repeated division and wrote **001011**. What mistake did he make?",
+  "options": [
+   {
+    "key": "A",
+    "content": "He divided by 10 instead of by 2",
+    "rationale": "Dividing by 10 would give the digits 2 and 5, not this pattern."
+   },
+   {
+    "key": "B",
+    "content": "He read the remainders from top to bottom",
+    "correct": true,
+    "rationale": "Correct: 52 is 110100; his answer is the same bits written backwards."
+   },
+   {
+    "key": "C",
+    "content": "He added extra leading zeros",
+    "rationale": "Leading zeros never change a value; the bits themselves are in the wrong order."
+   },
+   {
+    "key": "D",
+    "content": "He left out the last remainder",
+    "rationale": "All six remainders are there, but in reverse order."
+   }
+  ],
+  "explanation": "52 ÷ 2 = 26 r 0, 26 ÷ 2 = 13 r 0, 13 ÷ 2 = 6 r 1, 6 ÷ 2 = 3 r 0, 3 ÷ 2 = 1 r 1, 1 ÷ 2 = 0 r 1. Bottom up: 110100. Tendai's answer ends in 1 (odd), but 52 is even.",
+  "hints": [
+   "Convert 52 yourself and compare the two answers.",
+   "Is 001011 even or odd? Is 52?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which binary number is the denary value **100**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "01100100",
+    "correct": true,
+    "rationale": "Correct: 64 + 32 + 4 = 100."
+   },
+   {
+    "key": "B",
+    "content": "01100010",
+    "rationale": "This is 64 + 32 + 2 = 98: the 4 was placed in the 2s column."
+   },
+   {
+    "key": "C",
+    "content": "00110100",
+    "rationale": "This is 32 + 16 + 4 = 52: the 64 was placed in the 16s column."
+   },
+   {
+    "key": "D",
+    "content": "00100110",
+    "rationale": "This is the correct bits written in reverse order (value 38)."
+   }
+  ],
+  "explanation": "$100 - 64 = 36$, $36 - 32 = 4$, $4 - 4 = 0$: the 1s go under 64, 32 and 4 → 01100100.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is the denary value of the 8-bit binary number **11111111**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "256",
+    "rationale": "256 is the number of different 8-bit patterns, not the largest value."
+   },
+   {
+    "key": "B",
+    "content": "255",
+    "correct": true,
+    "rationale": "Correct: 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255."
+   },
+   {
+    "key": "C",
+    "content": "8",
+    "rationale": "This counts the bits instead of adding their place values."
+   },
+   {
+    "key": "D",
+    "content": "128",
+    "rationale": "128 is only the value of the leftmost bit."
+   }
+  ],
+  "explanation": "All eight places count: the total is $2^8 - 1 = 255$, the largest unsigned 8-bit value.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q15",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The binary numbers 110 and 00000110 have the same denary value.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Leading zeros add nothing: both are $4 + 2 = 6$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.binary-denary.q16",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The largest number that can be stored in 16 bits is 65536.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. 16 bits give $2^{16} = 65536$ patterns, but one of them is 0, so the largest value is 65535.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-denary.q17",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Rudo converts 37 to 8-bit binary with the place-value method. Complete her working.",
+  "payload": {
+   "template": "Place values that fit: 32, then {{blank:a}}, then 1. So 37 in 8-bit binary is {{blank:b}}.",
+   "blanks": [
+    {
+     "id": "a"
+    },
+    {
+     "id": "b"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "4"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "00100101"
+     ],
+     "normalise": [
+      "trim",
+      "remove_whitespace"
+     ]
+    }
+   ]
+  },
+  "explanation": "37 − 32 = 5; 5 − 4 = 1; 1 − 1 = 0. The 1s go under 32, 4 and 1: 00100101.",
+  "hints": [
+   "After 32, 5 is left. Which place value fits into 5?"
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "4"
+    },
+    {
+     "blankId": "b",
+     "text": "00100101"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "8"
+     },
+     {
+      "blankId": "b",
+      "text": "100101"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-denary.q18",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each binary number with its denary value.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "00001111"
+    },
+    {
+     "id": "L2",
+     "content": "00010000"
+    },
+    {
+     "id": "L3",
+     "content": "10000001"
+    },
+    {
+     "id": "L4",
+     "content": "11110000"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "129"
+    },
+    {
+     "id": "R4",
+     "content": "240"
+    },
+    {
+     "id": "R1",
+     "content": "15"
+    },
+    {
+     "id": "R2",
+     "content": "16"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "00001111 = 8 + 4 + 2 + 1 = 15; 00010000 = 16; 10000001 = 128 + 1 = 129; 11110000 = 128 + 64 + 32 + 16 = 240.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Describe how to convert a denary number to binary using **repeated division by 2**.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Divide the number by 2 repeatedly (each time dividing the quotient), writing down the remainder (0 or 1) each time, until the quotient is 0.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Read the remainders in reverse order (last remainder is the most significant bit) to give the binary number.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Divide the denary number by 2 and write down the remainder. Keep dividing each quotient by 2 and recording the remainders until the quotient is 0. The binary number is the remainders read from the last to the first."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Each remainder is one bit; the first is the least significant bit, so the remainders are read bottom-up.",
+  "hints": [
+   "Two things: what you do repeatedly, and how you read the answer."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-denary.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A weather station at a school in Gweru stores each temperature reading, in tenths of a degree above 0 °C, as an 8-bit unsigned binary number.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "One reading is the denary value 181. Write it as an 8-bit binary number.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10110101"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$128 + 32 + 16 + 4 + 1 = 181$ → 10110101."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Another reading is stored as 01111010. Convert it to denary.",
+    "answerSpec": {
+     "value": 122
+    },
+    "explanation": "$64 + 32 + 16 + 8 + 2 = 122$.",
+    "workedSolution": "1. $64 + 32 + 16 + 8 + 2 = 122$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "A reading of 312 tenths of a degree must be stored. Explain why the 8-bit format cannot store it and state how many bits are needed.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "8 bits store at most 255, and 312 is larger than 255.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "9 bits are needed ($2^9 = 512$ values, 0 to 511).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The largest 8-bit unsigned value is 255 and 312 is bigger, so it does not fit. Nine bits are needed, because 9 bits hold values up to 511."
+    }
+   }
+  ],
+  "explanation": "(a) 10110101. (b) 122. (c) 312 > 255, so a ninth bit is needed.",
+  "hints": [
+   "Write the place values 128 to 1 for (a) and (b).",
+   "What is the largest 8-bit value?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "10110101"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "122"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "10110110"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "94"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "data.binary-denary.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.binary-denary"
+  ],
+  "difficulty": 5,
+  "marks": 5,
+  "estimatedSeconds": 540,
+  "stem": "Network software in a Bulawayo office stores port numbers as 16-bit unsigned binary integers.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Convert the port number 3000 to a 16-bit binary number.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "0000101110111000"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$3000 = 2048 + 512 + 256 + 128 + 32 + 16 + 8$ → 0000 1011 1011 1000."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Convert the stored value 0001 0000 0000 0001 to denary.",
+    "answerSpec": {
+     "value": 4097
+    },
+    "explanation": "The 1s are under 4096 and 1: $4096 + 1 = 4097$.",
+    "workedSolution": "1. The 1s are under 4096 and 1: $4096 + 1 = 4097$."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "State the largest port number that can be stored.",
+    "answerSpec": {
+     "value": 65535
+    },
+    "explanation": "$2^{16} - 1 = 65535$.",
+    "workedSolution": "1. $2^{16} - 1 = 65535$."
+   }
+  ],
+  "explanation": "(a) 0000 1011 1011 1000. (b) 4097. (c) 65535.",
+  "hints": [
+   "The 16-bit place values go up to 32768.",
+   "For 3000: 2048 fits; what is left?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "0000101110111000"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "4097"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "65535"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "0000101110111001"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "4096"
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "65536"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

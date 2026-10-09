@@ -1,0 +1,1218 @@
+[
+ {
+  "key": "prog.string-handling.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What does `LENGTH(Text)` return?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The number of characters in Text, as an integer",
+    "correct": true,
+    "rationale": "Correct: every character, including spaces, is counted."
+   },
+   {
+    "key": "B",
+    "content": "The number of words in Text",
+    "rationale": "Words are not counted; characters are."
+   },
+   {
+    "key": "C",
+    "content": "The position of the first space in Text",
+    "rationale": "LENGTH does not search for any character."
+   },
+   {
+    "key": "D",
+    "content": "The number of bytes the variable Text uses",
+    "rationale": "LENGTH counts characters, not storage."
+   }
+  ],
+  "explanation": "`LENGTH` gives the number of characters as an INTEGER.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.string-handling.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What value is returned by `LENGTH(\"Great Zimbabwe\")`?",
+  "answerSpec": {
+   "value": 14
+  },
+  "explanation": "\"Great\" has 5 characters, the space 1 and \"Zimbabwe\" 8: 14.",
+  "workedSolution": "1. 5 + 1 + 8.\n2. LENGTH = 14.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "14"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "13"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.string-handling.q03",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What string is returned by `SUBSTRING(\"Masvingo\", 1, 4)`?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "Masv"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "Four characters starting at position 1: \"Masv\".",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "Masv"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "Masvi"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.string-handling.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "`UCASE(\"Form 3b\")` is evaluated. Which characters of the string are changed?",
+  "options": [
+   {
+    "key": "A",
+    "content": "o, r, m and b",
+    "correct": true,
+    "rationale": "Correct: every lower-case letter becomes upper case, giving \"FORM 3B\"."
+   },
+   {
+    "key": "B",
+    "content": "Only the F",
+    "rationale": "F is already upper case, so it does not change."
+   },
+   {
+    "key": "C",
+    "content": "All seven characters, including 3",
+    "rationale": "Digits and spaces are not letters, so they are unchanged."
+   },
+   {
+    "key": "D",
+    "content": "Only the b at the end",
+    "rationale": "Every lower-case letter is converted, not just the last."
+   }
+  ],
+  "explanation": "UCASE converts letters only; digits, spaces and symbols are unchanged: \"FORM 3B\".",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.string-handling.q05",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What string is returned by `SUBSTRING(\"Bulawayo\", 5, 4)`?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "wayo"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "| Position | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Character | B | u | l | a | w | a | y | o |\n\nPositions 5 to 8: \"wayo\".",
+  "hints": [
+   "Write the positions above the letters. The third value is a count, not an end position."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "wayo"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "away"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "wa"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.string-handling.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which expression returns the **last three** characters of the string `Code`, whatever its length?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`SUBSTRING(Code, LENGTH(Code) - 3, 3)`",
+    "rationale": "This starts one position too early and misses the last character."
+   },
+   {
+    "key": "B",
+    "content": "`SUBSTRING(Code, LENGTH(Code) - 2, 3)`",
+    "correct": true,
+    "rationale": "Correct: for a 6-character code it starts at position 4 and takes 4, 5, 6."
+   },
+   {
+    "key": "C",
+    "content": "`SUBSTRING(Code, LENGTH(Code), 3)`",
+    "rationale": "Starting at the last position leaves no room for three characters."
+   },
+   {
+    "key": "D",
+    "content": "`SUBSTRING(Code, 3, LENGTH(Code))`",
+    "rationale": "This starts at position 3 and asks for too many characters."
+   }
+  ],
+  "explanation": "The last n characters start at position LENGTH − n + 1; for n = 3 that is LENGTH − 2.",
+  "hints": [
+   "Try the expression on a code of known length, e.g. 6 characters."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.string-handling.q07",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "`LENGTH` counts spaces as characters.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. A space is a character and occupies a position, so `LENGTH(\"Hi there\")` is 8.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.string-handling.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The statement `UCASE(Surname)` on its own line changes the value stored in `Surname` to upper case.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. UCASE returns a new value; it must be assigned, for example `Surname ← UCASE(Surname)`.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.string-handling.q09",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "`Word` holds `\"Chimanimani\"`. Match each expression to its result.\n\n| Position | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Character | C | h | i | m | a | n | i | m | a | n | i |",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "`LENGTH(Word)`"
+    },
+    {
+     "id": "L2",
+     "content": "`SUBSTRING(Word, 1, 4)`"
+    },
+    {
+     "id": "L3",
+     "content": "`UCASE(SUBSTRING(Word, 5, 3))`"
+    },
+    {
+     "id": "L4",
+     "content": "`SUBSTRING(Word, LENGTH(Word), 1)`"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "\"ANI\""
+    },
+    {
+     "id": "R4",
+     "content": "\"i\""
+    },
+    {
+     "id": "R1",
+     "content": "11"
+    },
+    {
+     "id": "R2",
+     "content": "\"Chim\""
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "`LENGTH(Word)` → 11; `SUBSTRING(Word, 1, 4)` → \"Chim\"; `UCASE(SUBSTRING(Word, 5, 3))` → \"ANI\"; `SUBSTRING(Word, LENGTH(Word), 1)` → \"i\".",
+  "hints": [
+   "Number the characters of Chimanimani first."
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.string-handling.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output?\n\n```\nSentence ← \"Rain fell on Gweru town\"\nCount ← 0\nFOR Position ← 1 TO LENGTH(Sentence)\n    IF SUBSTRING(Sentence, Position, 1) = \" \"\n        THEN\n            Count ← Count + 1\n    ENDIF\nNEXT Position\nOUTPUT Count + 1\n```",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "There are 4 spaces, so 4 + 1 = 5 is output: the number of words.",
+  "workedSolution": "1. Spaces between the 5 words: 4.\n2. Output Count + 1 = 5.",
+  "hints": [
+   "Count the spaces, then look at the OUTPUT statement."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "prog.string-handling.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the algorithm, which outputs the characters of `Word` one per line.\n\n```\nFOR Position ← 1 TO [1]\n    OUTPUT SUBSTRING(Word, [2], [3])\nNEXT Position\n```",
+  "payload": {
+   "template": "[1] {{blank:a}} [2] {{blank:b}} [3] {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "LENGTH(Word)",
+      "Word",
+      "Position",
+      "10"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "1",
+      "Position",
+      "LENGTH(Word)"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "1",
+      "Position",
+      "LENGTH(Word)"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "LENGTH(Word)"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "Position"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "explanation": "Loop to LENGTH(Word) and take 1 character starting at Position on each pass.",
+  "hints": [
+   "The loop must work for a word of any length."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "LENGTH(Word)"
+    },
+    {
+     "blankId": "b",
+     "text": "Position"
+    },
+    {
+     "blankId": "c",
+     "text": "1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "Word"
+     },
+     {
+      "blankId": "b",
+      "text": "1"
+     },
+     {
+      "blankId": "c",
+      "text": "Position"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.string-handling.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output?\n\n```\nSurname ← \"Moyo\"\nYear ← \"2026\"\nOUTPUT UCASE(SUBSTRING(Surname, 1, 3)), SUBSTRING(Year, 3, 2)\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "MOYO26",
+    "rationale": "SUBSTRING(Surname, 1, 3) takes only three letters."
+   },
+   {
+    "key": "B",
+    "content": "MOY2026",
+    "rationale": "SUBSTRING(Year, 3, 2) takes only two characters."
+   },
+   {
+    "key": "C",
+    "content": "MOY20",
+    "rationale": "SUBSTRING(Year, 3, 2) starts at position 3: \"26\"."
+   },
+   {
+    "key": "D",
+    "content": "MOY26",
+    "correct": true,
+    "rationale": "Correct: \"MOY\" followed by \"26\"."
+   }
+  ],
+  "explanation": "\"MOY\" and \"26\" are output together: MOY26.",
+  "hints": [
+   "OUTPUT with commas prints the items one after another with nothing between them."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.string-handling.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output?\n\n```\nWord ← \"Education\"\nVowels ← 0\nFOR Index ← 1 TO LENGTH(Word)\n    Letter ← LCASE(SUBSTRING(Word, Index, 1))\n    IF Letter = \"a\" OR Letter = \"e\" OR Letter = \"i\" OR Letter = \"o\" OR Letter = \"u\"\n        THEN\n            Vowels ← Vowels + 1\n    ENDIF\nNEXT Index\nOUTPUT Vowels\n```",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "The vowels in \"Education\" are E, u, a, i, o: 5. Without LCASE the capital E would be missed.",
+  "workedSolution": "1. Letters checked: 1:E✓ 2:d 3:u✓ 4:c 5:a✓ 6:t 7:i✓ 8:o✓ 9:n.\n2. Vowels = 5.",
+  "hints": [
+   "LCASE makes the capital E count as a vowel.",
+   "Check each of the letters in turn."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "prog.string-handling.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A program asks \"Continue? (Y/N)\". Why should it use `Answer ← UCASE(Answer)` before testing `IF Answer = \"Y\"`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Because IF statements only work with upper-case strings",
+    "rationale": "IF compares any strings; the issue is that \"y\" and \"Y\" differ."
+   },
+   {
+    "key": "B",
+    "content": "To make the string shorter before it is compared",
+    "rationale": "UCASE does not change the length."
+   },
+   {
+    "key": "C",
+    "content": "To convert the answer from a string to a Boolean",
+    "rationale": "UCASE returns a string."
+   },
+   {
+    "key": "D",
+    "content": "So that both y and Y are accepted as yes",
+    "correct": true,
+    "rationale": "Correct: comparisons are case-sensitive, so lower case would otherwise fail."
+   }
+  ],
+  "explanation": "String comparison is case-sensitive; converting first means one test covers both cases.",
+  "hints": [
+   "Is \"Y\" equal to \"y\"?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.string-handling.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "`Ch` holds one character. Which condition is TRUE only when `Ch` is a digit?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Ch >= \"0\" OR Ch <= \"9\"`",
+    "rationale": "Every character satisfies one side of OR."
+   },
+   {
+    "key": "B",
+    "content": "`LENGTH(Ch) = 1`",
+    "rationale": "Every single character has length 1."
+   },
+   {
+    "key": "C",
+    "content": "`Ch >= \"0\" AND Ch <= \"9\"`",
+    "correct": true,
+    "rationale": "Correct: the digit characters lie from \"0\" to \"9\"."
+   },
+   {
+    "key": "D",
+    "content": "`UCASE(Ch) = Ch`",
+    "rationale": "Digits pass, but so do capital letters and symbols."
+   }
+  ],
+  "explanation": "A range check on characters: `>= \"0\" AND <= \"9\"`.",
+  "hints": [
+   "Characters can be compared with < and >."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.string-handling.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Explain why a loop that examines each character of `Text` should use `FOR Position ← 1 TO LENGTH(Text)` rather than a fixed end value such as `FOR Position ← 1 TO 20`.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "LENGTH(Text) makes the loop run exactly once per character, for a string of any length",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A fixed value would miss characters of longer strings or ask SUBSTRING for positions that do not exist in shorter strings (an error)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Using LENGTH(Text) means the loop runs once for every character whatever the string's length. With a fixed 20, a 25-character string would have its last 5 characters ignored, and a 12-character string would make SUBSTRING ask for positions 13 to 20, which do not exist."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The loop adapts to the data.",
+  "hints": [
+   "What if the next string is longer or shorter?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.string-handling.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "Write pseudocode that inputs a password and outputs \"Strong\" if it has at least 8 characters **and** contains at least one digit, otherwise \"Weak\".",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Inputs the password (with a prompt)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Loop from 1 to LENGTH(Password) taking one character at a time with SUBSTRING",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Tests each character for a digit (>= \"0\" AND <= \"9\") and records it (flag or count)",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Tests LENGTH(Password) >= 8",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Outputs \"Strong\" only when both conditions are met, otherwise \"Weak\"",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nOUTPUT \"Enter a password\"\nINPUT Password\nHasDigit ← FALSE\nFOR Position ← 1 TO LENGTH(Password)\n    Ch ← SUBSTRING(Password, Position, 1)\n    IF Ch >= \"0\" AND Ch <= \"9\"\n        THEN\n            HasDigit ← TRUE\n    ENDIF\nNEXT Position\nIF LENGTH(Password) >= 8 AND HasDigit\n    THEN\n        OUTPUT \"Strong\"\n    ELSE\n        OUTPUT \"Weak\"\nENDIF\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Combine LENGTH, a loop with SUBSTRING and a Boolean flag.",
+  "hints": [
+   "Check the length with LENGTH.",
+   "Loop over the characters, looking for one from \"0\" to \"9\"."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.string-handling.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A courier labels parcels with codes such as `\"HRE-0457-K\"`: a three-letter town code, a hyphen, a four-digit parcel number, a hyphen and a size letter.\n\n| Position | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Character | H | R | E | - | 0 | 4 | 5 | 7 | - | K |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value returned by `LENGTH(ParcelCode)` for this code.",
+    "answerSpec": {
+     "value": 10
+    },
+    "explanation": "Ten characters including two hyphens: 10.",
+    "workedSolution": "1. 3 + 1 + 4 + 1 + 1.\n2. 10."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the string returned by `SUBSTRING(ParcelCode, 5, 4)`.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "0457"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Positions 5 to 8: \"0457\"."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the expressions.",
+    "payload": {
+     "template": "The town code `\"HRE\"` is `SUBSTRING(ParcelCode, {{blank:a}}, 3)`. The size letter `\"K\"` is `SUBSTRING(ParcelCode, {{blank:b}}, 1)`.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "0",
+        "1",
+        "3"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "LENGTH(ParcelCode)",
+        "LENGTH(ParcelCode) - 1",
+        "1",
+        "9"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "LENGTH(ParcelCode)"
+       ]
+      }
+     ]
+    },
+    "explanation": "Positions start at 1; the last character is at position LENGTH(ParcelCode)."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write a condition that is TRUE when the fourth and ninth characters of `ParcelCode` are both hyphens.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "SUBSTRING(ParcelCode, 4, 1) = \"-\"",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "AND SUBSTRING(ParcelCode, 9, 1) = \"-\"",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: `SUBSTRING(ParcelCode, 4, 1) = \"-\" AND SUBSTRING(ParcelCode, 9, 1) = \"-\"`"
+    }
+   }
+  ],
+  "explanation": "(a) 10; (b) \"0457\"; (c) 1 and LENGTH(ParcelCode).",
+  "hints": [
+   "Number the characters, including the hyphens."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "10"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "0457"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "LENGTH(ParcelCode)"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "-045"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0"
+       },
+       {
+        "blankId": "b",
+        "text": "LENGTH(ParcelCode) - 1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.string-handling.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.string-handling"
+  ],
+  "difficulty": 5,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A mobile money app accepts a phone number only if it has exactly 10 characters and begins with `\"07\"`.\n\n```\nOUTPUT \"Enter phone number\"\nINPUT Phone\nIF LENGTH(Phone) = 10 AND SUBSTRING(Phone, 1, 2) = \"07\"\n    THEN\n        OUTPUT \"Accepted\"\n    ELSE\n        OUTPUT \"Rejected\"\nENDIF\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "State the output for each input.",
+    "payload": {
+     "template": "`\"0715482903\"`: {{blank:p0}}\n\n`\"0812345678\"`: {{blank:p1}}\n\n`\"071548290\"`: {{blank:p2}}",
+     "blanks": [
+      {
+       "id": "p0",
+       "input": "select",
+       "choices": [
+        "Accepted",
+        "Rejected"
+       ]
+      },
+      {
+       "id": "p1",
+       "input": "select",
+       "choices": [
+        "Accepted",
+        "Rejected"
+       ]
+      },
+      {
+       "id": "p2",
+       "input": "select",
+       "choices": [
+        "Accepted",
+        "Rejected"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p0",
+       "accepted": [
+        "Accepted"
+       ]
+      },
+      {
+       "id": "p1",
+       "accepted": [
+        "Rejected"
+       ]
+      },
+      {
+       "id": "p2",
+       "accepted": [
+        "Rejected"
+       ]
+      }
+     ]
+    },
+    "explanation": "0715482903: 10 characters starting 07 (accepted). 0812345678: starts 08 (rejected). 071548290: only 9 characters (rejected)."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "A user types `\"0715 482 903\"` with spaces. What happens?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It is accepted because it starts with 07",
+      "rationale": "Both conditions must be TRUE; the length test fails."
+     },
+     {
+      "key": "B",
+      "content": "It is rejected because its length is 12",
+      "correct": true,
+      "rationale": "Correct: the two spaces make it 12 characters long."
+     },
+     {
+      "key": "C",
+      "content": "It is accepted because spaces are ignored",
+      "rationale": "LENGTH counts spaces."
+     },
+     {
+      "key": "D",
+      "content": "The program crashes",
+      "rationale": "The comparison is valid; it simply gives FALSE."
+     }
+    ],
+    "explanation": "LENGTH counts the spaces, so the length condition is FALSE."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that also checks that **every** character of `Phone` is a digit, and outputs \"Accepted\" only if all three checks pass.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Initialises a flag (e.g. AllDigits ← TRUE) before a loop",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "FOR loop from 1 to LENGTH(Phone) using SUBSTRING(Phone, Position, 1)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Sets the flag to FALSE when a character is < \"0\" or > \"9\"",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Final IF combines the flag with the length and prefix checks",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nAllDigits ← TRUE\nFOR Position ← 1 TO LENGTH(Phone)\n    Ch ← SUBSTRING(Phone, Position, 1)\n    IF Ch < \"0\" OR Ch > \"9\"\n        THEN\n            AllDigits ← FALSE\n    ENDIF\nNEXT Position\nIF LENGTH(Phone) = 10 AND SUBSTRING(Phone, 1, 2) = \"07\" AND AllDigits\n    THEN\n        OUTPUT \"Accepted\"\n    ELSE\n        OUTPUT \"Rejected\"\nENDIF\n```"
+    }
+   }
+  ],
+  "explanation": "Accepted, Rejected, Rejected; spaces count towards the length.",
+  "hints": [
+   "Check the length before using SUBSTRING.",
+   "Both conditions must be TRUE."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p0",
+       "text": "Accepted"
+      },
+      {
+       "blankId": "p1",
+       "text": "Rejected"
+      },
+      {
+       "blankId": "p2",
+       "text": "Rejected"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p0",
+        "text": "Rejected"
+       },
+       {
+        "blankId": "p1",
+        "text": "Accepted"
+       },
+       {
+        "blankId": "p2",
+        "text": "Accepted"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ }
+]

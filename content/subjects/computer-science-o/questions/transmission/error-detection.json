@@ -1,0 +1,1027 @@
+[
+ {
+  "key": "transmission.error-detection.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which method is used to detect errors when a number such as an ISBN is **typed in**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Check digit",
+    "correct": true,
+    "rationale": "Correct: a check digit detects data-entry errors."
+   },
+   {
+    "key": "B",
+    "content": "Echo check",
+    "rationale": "An echo check is for transmitted data."
+   },
+   {
+    "key": "C",
+    "content": "Parity check",
+    "rationale": "Parity checks are for transmitted bytes."
+   },
+   {
+    "key": "D",
+    "content": "Automatic repeat query",
+    "rationale": "ARQ makes sure transmitted data arrives correctly."
+   }
+  ],
+  "explanation": "Check digits (on ISBNs and bar codes) detect data-entry errors; the other three methods check data after transmission.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.error-detection.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In an echo check, what happens to the data after it is received?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It is sent back to the sender to be compared",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "It is checked against its parity bit",
+    "rationale": "That is a parity check."
+   },
+   {
+    "key": "C",
+    "content": "A value is calculated from it and compared",
+    "rationale": "That is a checksum."
+   },
+   {
+    "key": "D",
+    "content": "The receiver sends an acknowledgement only",
+    "rationale": "That is part of ARQ."
+   }
+  ],
+  "explanation": "In an echo check the receiver returns a copy of the data and the sender compares it with the original.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.error-detection.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Under **even** parity, which byte has definitely been received with an error?",
+  "options": [
+   {
+    "key": "A",
+    "content": "01101001",
+    "rationale": "It has 4 ones, an even number."
+   },
+   {
+    "key": "B",
+    "content": "00000000",
+    "rationale": "It has 0 ones, which is even."
+   },
+   {
+    "key": "C",
+    "content": "01101011",
+    "correct": true,
+    "rationale": "Correct: it has 5 ones, an odd number."
+   },
+   {
+    "key": "D",
+    "content": "11110000",
+    "rationale": "It has 4 ones, an even number."
+   }
+  ],
+  "explanation": "Under even parity every byte must contain an even number of 1s. 01101011 has 5 ones, which is odd, so an error has occurred.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "transmission.error-detection.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which error would a single parity bit **fail** to detect?",
+  "options": [
+   {
+    "key": "A",
+    "content": "One bit in the byte is flipped",
+    "rationale": "One flipped bit changes the parity, so it is detected."
+   },
+   {
+    "key": "B",
+    "content": "The parity bit itself is flipped",
+    "rationale": "The count of 1s changes by one, so it is detected."
+   },
+   {
+    "key": "C",
+    "content": "Three bits in the byte are flipped",
+    "rationale": "An odd number of flips changes the parity, so it is detected."
+   },
+   {
+    "key": "D",
+    "content": "Two bits in the byte are flipped",
+    "correct": true,
+    "rationale": "Correct: the count of 1s changes by 0 or 2, so its parity stays the same."
+   }
+  ],
+  "explanation": "Parity detects any odd number of flipped bits, but an even number of flips leaves the parity unchanged.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.error-detection.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In an automatic repeat query (ARQ), what does the sender do if no acknowledgement arrives before the timeout?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It sends the next packet",
+    "rationale": "Moving on would leave lost data unreplaced."
+   },
+   {
+    "key": "B",
+    "content": "It sends an echo of the data",
+    "rationale": "Echo checks are a different method."
+   },
+   {
+    "key": "C",
+    "content": "It resends the data",
+    "correct": true,
+    "rationale": "Correct: it assumes the data was lost or damaged."
+   },
+   {
+    "key": "D",
+    "content": "It recalculates the parity bit",
+    "rationale": "Parity is not used to handle a timeout."
+   }
+  ],
+  "explanation": "ARQ: the sender waits for an acknowledgement; on a negative acknowledgement or a timeout, it resends the data.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.error-detection.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is a drawback of an echo check?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It cannot detect errors in more than one bit",
+    "rationale": "Comparing whole copies can detect many bit errors."
+   },
+   {
+    "key": "B",
+    "content": "An error found may have happened on the return journey",
+    "correct": true,
+    "rationale": "Correct: the sender cannot tell whether the error was in the original transmission or in the echo."
+   },
+   {
+    "key": "C",
+    "content": "It only works with even parity",
+    "rationale": "Echo checks do not use parity."
+   },
+   {
+    "key": "D",
+    "content": "The receiver must calculate a check digit",
+    "rationale": "Check digits are for data entry, not echo checks."
+   }
+  ],
+  "explanation": "Echo checks double the traffic, and if the copies differ the sender cannot tell which journey caused the error, so it simply resends.",
+  "hints": [
+   "The data travels twice. What could go wrong on the second trip?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "transmission.error-detection.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which method could detect that a cashier keyed in a product code with two neighbouring digits swapped?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A parity check",
+    "rationale": "Parity checks bytes after transmission, not the code keyed in."
+   },
+   {
+    "key": "B",
+    "content": "A check digit",
+    "correct": true,
+    "rationale": "Correct: weighted check digits change when two neighbouring digits are swapped."
+   },
+   {
+    "key": "C",
+    "content": "An echo check",
+    "rationale": "Echo checks compare transmitted data, not the cashier's input."
+   },
+   {
+    "key": "D",
+    "content": "A checksum",
+    "rationale": "Checksums check transmitted blocks of data."
+   }
+  ],
+  "explanation": "Because digits are multiplied by different weights, swapping two neighbouring digits normally changes the calculated check digit, so the error is detected.",
+  "hints": [
+   "Which method is for data entry?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "transmission.error-detection.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A parity block with a parity byte can locate the exact bit that is wrong when one bit has changed.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The faulty bit is where the row (byte) and the column that both fail the parity check cross.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "transmission.error-detection.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In ARQ, a positive acknowledgement tells the sender that the data must be sent again.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. A positive acknowledgement means the data arrived correctly. A negative acknowledgement (or a timeout) causes a resend.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.error-detection.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "Match each method to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Parity check"
+    },
+    {
+     "id": "L2",
+     "content": "Checksum"
+    },
+    {
+     "id": "L3",
+     "content": "Echo check"
+    },
+    {
+     "id": "L4",
+     "content": "Check digit"
+    },
+    {
+     "id": "L5",
+     "content": "ARQ"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The receiver sends the data back to be compared with the original"
+    },
+    {
+     "id": "R4",
+     "content": "An extra digit calculated from a number detects keying errors"
+    },
+    {
+     "id": "R5",
+     "content": "Acknowledgements and timeouts trigger resending"
+    },
+    {
+     "id": "R1",
+     "content": "An extra bit makes the number of 1s even or odd"
+    },
+    {
+     "id": "R2",
+     "content": "A value calculated from a block of data is recalculated and compared"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each method in one line: parity (count of 1s), checksum (calculated value), echo (send back), check digit (data entry), ARQ (acknowledgements and timeouts).",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "transmission.error-detection.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The 7-bit data 0110101 is sent using **odd** parity, with the parity bit as the left-most bit. Write the 8-bit byte that is sent.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "10110101"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "0110101 has 4 ones. For odd parity the total must be odd, so the parity bit is 1: 10110101.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "10110101"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "00110101"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "transmission.error-detection.q12",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The 7-bit data 1100110 is sent using **even** parity, with the parity bit as the left-most bit. Write the 8-bit byte that is sent.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "01100110"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "1100110 has 4 ones, already even, so the parity bit is 0: 01100110.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "01100110"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11100110"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "transmission.error-detection.q13",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The first 12 digits of an ISBN-13 are 978077111203. The digits are multiplied alternately by 1 and 3 (starting with 1), the products are added, and the check digit is 10 minus the remainder after dividing the sum by 10 (or 0 if the remainder is 0). Calculate the check digit.",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "Products: 9 + 21 + 8 + 0 + 7 + 21 + 1 + 3 + 1 + 6 + 0 + 9 = 86. Remainder 6; $10 - 6 = 4$.",
+  "workedSolution": "1. Products: 9, 21, 8, 0, 7, 21, 1, 3, 1, 6, 0, 9.\n2. Sum: 86.\n3. Remainder after dividing by 10: 6.\n4. Check digit: 4.",
+  "hints": [
+   "Multiply the 1st, 3rd, 5th … digits by 1 and the 2nd, 4th, 6th … by 3.",
+   "Find the remainder of the sum after dividing by 10."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "transmission.error-detection.q14",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A checksum is calculated by adding the denary values of the bytes in a block and keeping the remainder after dividing by 256. A block contains the bytes 90, 150, 64, 17. Calculate the checksum.",
+  "answerSpec": {
+   "value": 65
+  },
+  "explanation": "90 + 150 + 64 + 17 = 321; the remainder after dividing by 256 is 65.",
+  "workedSolution": "1. Sum: 90 + 150 + 64 + 17 = 321.\n2. Remainder after dividing by 256: 65.",
+  "hints": [
+   "Add the four values first.",
+   "If the sum is 256 or more, subtract 256."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "65"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "321"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "transmission.error-detection.q15",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Complete the description of ARQ.",
+  "payload": {
+   "template": "After receiving data, the receiver sends a positive or negative {{blank:a}}. The sender starts a timer when it sends data; if nothing comes back before the {{blank:b}}, the data is sent again.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "acknowledgement",
+      "checksum",
+      "parity bit",
+      "echo"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "timeout",
+      "trailer",
+      "header",
+      "check digit"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "acknowledgement"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "timeout"
+     ]
+    }
+   ]
+  },
+  "explanation": "ARQ uses acknowledgements and a timeout.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "acknowledgement"
+    },
+    {
+     "blankId": "b",
+     "text": "timeout"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "checksum"
+     },
+     {
+      "blankId": "b",
+      "text": "trailer"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.error-detection.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Describe how a checksum is used to detect errors in transmitted data. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The sender calculates a checksum from the block of data using an agreed method",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The checksum is sent with the data",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The receiver recalculates the checksum from the data received",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The two are compared: if they differ, an error has occurred and the data is requested again",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Before sending, the sender calculates a value from the data using an agreed method and sends it with the data. The receiver calculates the value again from the data it received and compares it with the checksum sent. If they do not match, there is an error and the data is sent again."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Calculate, send, recalculate, compare, re-request.",
+  "hints": [
+   "Who calculates, what is sent, who recalculates, what happens if they differ?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "transmission.error-detection.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "Four bytes and a parity byte are received using **even** parity. The left-most bit (P) of each byte is its parity bit, and each bit of the parity byte is the parity bit for its column.\n\n| Byte | P | 1 | 2 | 3 | 4 | 5 | 6 | 7 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| 1 | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 |\n| 2 | 0 | 1 | 1 | 1 | 0 | 0 | 1 | 1 |\n| 3 | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 1 |\n| 4 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 0 |\n| Parity byte | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of the byte (1 to 4) that contains the error.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "Byte 2 has an odd number of 1s.",
+    "workedSolution": "1. Count the 1s in each byte: 4, 5, 4, 4.\n2. Only byte 2 has an odd count."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the column (P or 1 to 7) that contains the error.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "6"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Column 6 has an odd number of 1s."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Write the corrected byte 2.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01110001"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "Flip the bit at byte 2, column 6: 01110011 → 01110001."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why using a parity block is better than using a parity bit on each byte alone.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A parity bit alone shows a byte is wrong but not which bit",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The parity byte (column check) locates the exact bit, so it can be corrected without resending",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A single parity bit shows only that a byte is wrong. With the parity byte, the failing column identifies which bit, so the receiver can correct it without asking for the data again."
+    }
+   }
+  ],
+  "explanation": "Byte 2, column 6: corrected byte 01110001.",
+  "hints": [
+   "Count the 1s in each row, then in each column.",
+   "The error is where the failing row and failing column cross."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "6"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "01110001"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "5"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "01110011"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "transmission.error-detection.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.transmission.error-detection"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "A library in Bulawayo enters ISBN-13 numbers into its catalogue. For a new book the first 12 digits are 978155192370. The check digit is found by multiplying the digits alternately by 1 and 3, adding the products, finding the remainder after dividing by 10 and subtracting it from 10 (a remainder of 0 gives 0).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Calculate the sum of the products.",
+    "answerSpec": {
+     "value": 107
+    },
+    "explanation": "9 + 21 + 8 + 3 + 5 + 15 + 1 + 27 + 2 + 9 + 7 + 0 = 107.",
+    "workedSolution": "1. Products: 9, 21, 8, 3, 5, 15, 1, 27, 2, 9, 7, 0.\n2. Sum: 107."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Calculate the check digit.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Remainder 7; check digit 3.",
+    "workedSolution": "1. 107 ÷ 10 leaves remainder 7.\n2. Check digit 3."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "A librarian types the ISBN with one digit wrong. Explain how the computer detects the error.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The computer recalculates the check digit from the first 12 digits entered",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "using the same weights and method",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "and compares it with the 13th digit entered; they do not match, so an error is reported",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The computer repeats the calculation on the first 12 digits typed and compares its result with the check digit typed. Because one digit is wrong, the sum changes, the results differ and the number is rejected."
+    }
+   }
+  ],
+  "explanation": "Check digit 3.",
+  "hints": [
+   "Weights alternate 1, 3, 1, 3, …",
+   "A changed digit changes the sum, so the calculated check digit will not match."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "107"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "3"
+    }
+   }
+  },
+  "skill": "APPLICATION",
+  "examStyle": true
+ }
+]

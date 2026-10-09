@@ -1,0 +1,1410 @@
+[
+ {
+  "key": "algorithms.trace-tables.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is a **dry run** of an algorithm?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Running the program for the first time on a computer",
+    "rationale": "A dry run is done without a computer."
+   },
+   {
+    "key": "B",
+    "content": "Working through it by hand with test data, one step at a time",
+    "correct": true,
+    "rationale": "Correct: no computer is used."
+   },
+   {
+    "key": "C",
+    "content": "Translating the algorithm into machine code",
+    "rationale": "That is the job of a translator."
+   },
+   {
+    "key": "D",
+    "content": "Checking the spelling of every keyword in the algorithm",
+    "rationale": "That would only find syntax errors."
+   }
+  ],
+  "explanation": "A dry run follows the algorithm by hand with chosen data, recording the values in a trace table.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "algorithms.trace-tables.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which columns should a trace table have?",
+  "options": [
+   {
+    "key": "A",
+    "content": "One for each line number of the algorithm",
+    "rationale": "Lines are not columns; variables are."
+   },
+   {
+    "key": "B",
+    "content": "Only one column, for the final output",
+    "rationale": "Every variable's changes must be recorded."
+   },
+   {
+    "key": "C",
+    "content": "One for each variable and one for the output",
+    "correct": true,
+    "rationale": "Correct: every change and every output is recorded."
+   },
+   {
+    "key": "D",
+    "content": "One for each input and one for the line number",
+    "rationale": "Inputs are stored in variables, which get the columns."
+   }
+  ],
+  "explanation": "A trace table has a column for each variable plus OUTPUT; prompts are written in the OUTPUT column.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algorithms.trace-tables.q03",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In a trace table, a prompt such as \"Enter a number\" is recorded in the OUTPUT column.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. A prompt is displayed on screen, so it is an output; Cambridge expects prompts to appear in the trace.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "algorithms.trace-tables.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output by this algorithm?\n\n```\nX ← 1\nY ← 0\nWHILE X < 20 DO\n    Y ← Y + X\n    X ← X * 3\nENDWHILE\nOUTPUT Y\n```",
+  "answerSpec": {
+   "value": 13
+  },
+  "explanation": "X takes the values 1, 3, 9, 27; Y becomes 1, 4, 13. The loop stops when X = 27, so 13 is output.",
+  "workedSolution": "| X | Y | OUTPUT |\n|:-:|:-:|:-:|\n| 1 | 0 |  |\n| 3 | 1 |  |\n| 9 | 4 |  |\n| 27 | 13 |  |\n|  |  | 13 |",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "13"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "27"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "algorithms.trace-tables.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many times is the body of the `WHILE` loop carried out?\n\n```\nX ← 1\nY ← 0\nWHILE X < 20 DO\n    Y ← Y + X\n    X ← X * 3\nENDWHILE\nOUTPUT Y\n```",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "The body runs with X = 1, 3 and 9; when X = 27 the test X < 20 is false, so there are 3 passes.",
+  "workedSolution": "1. Passes start with X = 1, 3, 9.\n2. X = 27 fails the test.\n3. 3 passes.",
+  "hints": [
+   "Count the passes: the condition is tested before each one."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algorithms.trace-tables.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Dry-run this algorithm with the inputs 6, 4, 9, 0.\n\n```\nTotal ← 0\nREPEAT\n    OUTPUT \"Enter a number, 0 to stop\"\n    INPUT Number\n    IF MOD(Number, 3) = 0\n        THEN\n            Total ← Total + Number\n    ENDIF\nUNTIL Number = 0\nOUTPUT Total\n```",
+  "payload": {
+   "template": "The value output is {{blank:a}}. The prompt is displayed {{blank:b}} times.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "15"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "4"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "6 + 9 = 15. The REPEAT loop runs once per input, including the 0, so the prompt appears 4 times.",
+  "hints": [
+   "Only multiples of 3 are added.",
+   "0 is a multiple of 3 but adds nothing."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "15"
+    },
+    {
+     "blankId": "b",
+     "text": "4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "19"
+     },
+     {
+      "blankId": "b",
+      "text": "3"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.trace-tables.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output by this algorithm when the inputs are 12, 5, 7, 15, 0?\n\n```\nTotal ← 0\nREPEAT\n    OUTPUT \"Enter a number, 0 to stop\"\n    INPUT Number\n    IF MOD(Number, 3) = 0\n        THEN\n            Total ← Total + Number\n    ENDIF\nUNTIL Number = 0\nOUTPUT Total\n```",
+  "answerSpec": {
+   "value": 27
+  },
+  "explanation": "Only 12 and 15 are multiples of 3: 27.",
+  "workedSolution": "1. MOD(n, 3) = 0 for 12, 15, 0.\n2. Total = 12 + 15 + 0 = 27.",
+  "hints": [
+   "Check each input with MOD(Number, 3)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "27"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "39"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algorithms.trace-tables.q08",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 360,
+  "stem": "Complete the trace of this algorithm for the input 352, giving the values at the end of each pass of the loop.\n\n```\nINPUT Number\nReverse ← 0\nWHILE Number > 0 DO\n    Digit ← MOD(Number, 10)\n    Reverse ← Reverse * 10 + Digit\n    Number ← DIV(Number, 10)\nENDWHILE\nOUTPUT Reverse\n```",
+  "payload": {
+   "template": "Pass 1: Digit = {{blank:d0}}, Reverse = {{blank:r0}}\n\nPass 2: Digit = {{blank:d1}}, Reverse = {{blank:r1}}\n\nPass 3: Digit = {{blank:d2}}, Reverse = {{blank:r2}}",
+   "blanks": [
+    {
+     "id": "d0",
+     "input": "number"
+    },
+    {
+     "id": "r0",
+     "input": "number"
+    },
+    {
+     "id": "d1",
+     "input": "number"
+    },
+    {
+     "id": "r1",
+     "input": "number"
+    },
+    {
+     "id": "d2",
+     "input": "number"
+    },
+    {
+     "id": "r2",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "d0",
+     "accepted": [
+      "2"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "r0",
+     "accepted": [
+      "2"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "d1",
+     "accepted": [
+      "5"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "r1",
+     "accepted": [
+      "25"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "d2",
+     "accepted": [
+      "3"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "r2",
+     "accepted": [
+      "253"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "Trace:\n\n| Number | Digit | Reverse | OUTPUT |\n|:-:|:-:|:-:|:-:|\n| 352 |  | 0 |  |\n| 35 | 2 | 2 |  |\n| 3 | 5 | 25 |  |\n| 0 | 3 | 253 |  |\n|  |  |  | 253 |",
+  "hints": [
+   "Each pass takes the last digit with MOD and removes it with DIV."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "d0",
+     "text": "2"
+    },
+    {
+     "blankId": "r0",
+     "text": "2"
+    },
+    {
+     "blankId": "d1",
+     "text": "5"
+    },
+    {
+     "blankId": "r1",
+     "text": "25"
+    },
+    {
+     "blankId": "d2",
+     "text": "3"
+    },
+    {
+     "blankId": "r2",
+     "text": "253"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "d0",
+      "text": "3"
+     },
+     {
+      "blankId": "r0",
+      "text": "3"
+     },
+     {
+      "blankId": "d1",
+      "text": "6"
+     },
+     {
+      "blankId": "r1",
+      "text": "26"
+     },
+     {
+      "blankId": "d2",
+      "text": "4"
+     },
+     {
+      "blankId": "r2",
+      "text": "254"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.trace-tables.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "State the purpose of this algorithm.\n\n```\nINPUT Number\nReverse ← 0\nWHILE Number > 0 DO\n    Digit ← MOD(Number, 10)\n    Reverse ← Reverse * 10 + Digit\n    Number ← DIV(Number, 10)\nENDWHILE\nOUTPUT Reverse\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "To add up the digits of a whole number",
+    "rationale": "Adding the digits of 352 would give 10."
+   },
+   {
+    "key": "B",
+    "content": "To output the digits of a whole number in reverse order",
+    "correct": true,
+    "rationale": "Correct: 352 gives 253."
+   },
+   {
+    "key": "C",
+    "content": "To count how many digits a whole number has",
+    "rationale": "Reverse is built from the digits, not counted."
+   },
+   {
+    "key": "D",
+    "content": "To check whether a whole number is a palindrome",
+    "rationale": "Nothing is compared; the reversed number is just output."
+   }
+  ],
+  "explanation": "Each pass removes the last digit and appends it to Reverse, so the digits come out in reverse order.",
+  "hints": [
+   "Compare the input 352 with the output 253."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "algorithms.trace-tables.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output by this algorithm?\n\n```\nFOR Index ← 10 TO 1 STEP -3\n    OUTPUT Index\nNEXT Index\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "10, 7, 4, 1",
+    "correct": true,
+    "rationale": "Correct: it counts down in threes and 1 is still within the range."
+   },
+   {
+    "key": "B",
+    "content": "10, 7, 4",
+    "rationale": "1 is not below the end value, so it is output too."
+   },
+   {
+    "key": "C",
+    "content": "10, 7, 4, 1, -2",
+    "rationale": "-2 is below the end value 1, so the loop has stopped."
+   },
+   {
+    "key": "D",
+    "content": "1, 4, 7, 10",
+    "rationale": "The loop starts at 10 and counts down."
+   }
+  ],
+  "explanation": "Index takes 10, 7, 4, 1; the next value, -2, is past the end value, so the loop stops.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algorithms.trace-tables.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output by this algorithm?\n\n```\nWord ← \"banana\"\nCount ← 0\nFOR Position ← 1 TO LENGTH(Word)\n    IF SUBSTRING(Word, Position, 1) = \"a\"\n        THEN\n            Count ← Count + 1\n    ENDIF\nNEXT Position\nOUTPUT Count\n```",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "The loop checks each of the 6 characters; \"a\" appears 3 times.",
+  "workedSolution": "1. Characters: b, a, n, a, n, a.\n2. Count the \"a\"s: 3.",
+  "hints": [
+   "SUBSTRING(Word, Position, 1) is one character."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ]
+ },
+ {
+  "key": "algorithms.trace-tables.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The array `Scores` holds:\n\n| Index | 1 | 2 | 3 | 4 | 5 |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| Scores | 15 | 22 | 8 | 22 | 19 |\n\n```\nBest ← Scores[1]\nWhere ← 1\nFOR Index ← 2 TO 5\n    IF Scores[Index] > Best\n        THEN\n            Best ← Scores[Index]\n            Where ← Index\n    ENDIF\nNEXT Index\nOUTPUT Where\n```\n\nWhat is output?",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "Best becomes 22 at position 2; the later 22 is equal, not greater, so Where stays 2.",
+  "workedSolution": "1. Start: Best = 15, Where = 1.\n2. Index 2: 22 > 15, so Best = 22, Where = 2.\n3. Index 3: 8 is not greater.\n4. Index 4: 22 is equal, not greater.\n5. Index 5: 19 is not greater.\n6. Output 2.",
+  "hints": [
+   "The test uses > not >=: does an equal value replace Best?"
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "algorithms.trace-tables.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "State the purpose of this algorithm.\n\n```\nBest ← Scores[1]\nWhere ← 1\nFOR Index ← 2 TO 5\n    IF Scores[Index] > Best\n        THEN\n            Best ← Scores[Index]\n            Where ← Index\n    ENDIF\nNEXT Index\nOUTPUT Where\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "To output the largest score in the array",
+    "rationale": "Best holds the score, but Where (a position) is output."
+   },
+   {
+    "key": "B",
+    "content": "To output the position of the last largest score",
+    "rationale": "Equal scores do not replace Best because the test uses >."
+   },
+   {
+    "key": "C",
+    "content": "To sort the scores into descending order",
+    "rationale": "No values are moved."
+   },
+   {
+    "key": "D",
+    "content": "To output the position of the first largest score",
+    "correct": true,
+    "rationale": "Correct: Where records the index of the highest score."
+   }
+  ],
+  "explanation": "The algorithm keeps the highest score so far in Best and its index in Where, and outputs Where; with > the first occurrence is kept.",
+  "hints": [
+   "Use the trace of the Scores array.",
+   "What is output: a value or a position?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "algorithms.trace-tables.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Match each loop to how it is traced.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "`FOR Count ← 1 TO 4`"
+    },
+    {
+     "id": "L2",
+     "content": "`WHILE … DO`"
+    },
+    {
+     "id": "L3",
+     "content": "`REPEAT … UNTIL`"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Tests after each pass and stops when the condition is true"
+    },
+    {
+     "id": "R1",
+     "content": "Runs exactly four times, including Count = 4"
+    },
+    {
+     "id": "R2",
+     "content": "Tests the condition before each pass and may run zero times"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "FOR includes the end value; WHILE pre-tests; REPEAT post-tests and runs at least once.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algorithms.trace-tables.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "An algorithm should output the total of the numbers 1 to 4, but a trace shows it outputs 6:\n\n```\nTotal ← 0\nNumber ← 1\nWHILE Number < 4 DO\n    Total ← Total + Number\n    Number ← Number + 1\nENDWHILE\nOUTPUT Total\n```\n\nExplain the error shown by the trace and give the correction.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The loop stops when Number = 4 (4 < 4 is false), so 4 is never added: 1 + 2 + 3 = 6 instead of 10",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Correction: WHILE Number <= 4 DO (or Number < 5)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The trace shows Total becomes 1, 3, 6 and then Number is 4, so the test 4 < 4 is false and 4 is not added. The condition should be WHILE Number <= 4 DO."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The trace shows the last value is not processed: an off-by-one logic error in the condition.",
+  "hints": [
+   "Compare the trace's output with the total that was expected."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "algorithms.trace-tables.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Rudo writes this algorithm.\n\n```\nINPUT Number\nReverse ← 0\nWHILE Number > 0 DO\n    Digit ← MOD(Number, 10)\n    Reverse ← Reverse * 10 + Digit\n    Number ← DIV(Number, 10)\nENDWHILE\nOUTPUT Reverse\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the trace for the input 4096, giving the values at the end of each pass of the loop.",
+    "payload": {
+     "template": "Pass 1: Number = {{blank:n0}}, Digit = {{blank:d0}}, Reverse = {{blank:r0}}\n\nPass 2: Number = {{blank:n1}}, Digit = {{blank:d1}}, Reverse = {{blank:r1}}\n\nPass 3: Number = {{blank:n2}}, Digit = {{blank:d2}}, Reverse = {{blank:r2}}\n\nPass 4: Number = {{blank:n3}}, Digit = {{blank:d3}}, Reverse = {{blank:r3}}",
+     "blanks": [
+      {
+       "id": "n0",
+       "input": "number"
+      },
+      {
+       "id": "d0",
+       "input": "number"
+      },
+      {
+       "id": "r0",
+       "input": "number"
+      },
+      {
+       "id": "n1",
+       "input": "number"
+      },
+      {
+       "id": "d1",
+       "input": "number"
+      },
+      {
+       "id": "r1",
+       "input": "number"
+      },
+      {
+       "id": "n2",
+       "input": "number"
+      },
+      {
+       "id": "d2",
+       "input": "number"
+      },
+      {
+       "id": "r2",
+       "input": "number"
+      },
+      {
+       "id": "n3",
+       "input": "number"
+      },
+      {
+       "id": "d3",
+       "input": "number"
+      },
+      {
+       "id": "r3",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "n0",
+       "accepted": [
+        "409"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "d0",
+       "accepted": [
+        "6"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "r0",
+       "accepted": [
+        "6"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "n1",
+       "accepted": [
+        "40"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "d1",
+       "accepted": [
+        "9"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "r1",
+       "accepted": [
+        "69"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "n2",
+       "accepted": [
+        "4"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "d2",
+       "accepted": [
+        "0"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "690"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "n3",
+       "accepted": [
+        "0"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "d3",
+       "accepted": [
+        "4"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "6904"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Trace:\n\n| Number | Digit | Reverse | OUTPUT |\n|:-:|:-:|:-:|:-:|\n| 4096 |  | 0 |  |\n| 409 | 6 | 6 |  |\n| 40 | 9 | 69 |  |\n| 4 | 0 | 690 |  |\n| 0 | 4 | 6904 |  |\n|  |  |  | 6904 |"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value output.",
+    "answerSpec": {
+     "value": 6904
+    },
+    "explanation": "4096 reversed is 6904.",
+    "workedSolution": "1. Digits taken from the right: 6, 9, 0, 4.\n2. Reverse = 6904."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State the purpose of the algorithm.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "To reverse the digits of a (positive whole) number and output the result",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It outputs the digits of the number in reverse order."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain what is output when the input is 0, and why.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "0 is output",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "because the WHILE condition Number > 0 is false at the start, so the loop body never runs and Reverse keeps its starting value 0",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 0. The WHILE test 0 > 0 is false before the first pass, so the loop never runs and Reverse is still 0."
+    }
+   }
+  ],
+  "explanation": "(b) 6904.",
+  "hints": [
+   "One row per pass of the loop.",
+   "Digit is the remainder after dividing by 10."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "n0",
+       "text": "409"
+      },
+      {
+       "blankId": "d0",
+       "text": "6"
+      },
+      {
+       "blankId": "r0",
+       "text": "6"
+      },
+      {
+       "blankId": "n1",
+       "text": "40"
+      },
+      {
+       "blankId": "d1",
+       "text": "9"
+      },
+      {
+       "blankId": "r1",
+       "text": "69"
+      },
+      {
+       "blankId": "n2",
+       "text": "4"
+      },
+      {
+       "blankId": "d2",
+       "text": "0"
+      },
+      {
+       "blankId": "r2",
+       "text": "690"
+      },
+      {
+       "blankId": "n3",
+       "text": "0"
+      },
+      {
+       "blankId": "d3",
+       "text": "4"
+      },
+      {
+       "blankId": "r3",
+       "text": "6904"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "6904"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "n0",
+        "text": "410"
+       },
+       {
+        "blankId": "d0",
+        "text": "7"
+       },
+       {
+        "blankId": "r0",
+        "text": "7"
+       },
+       {
+        "blankId": "n1",
+        "text": "41"
+       },
+       {
+        "blankId": "d1",
+        "text": "10"
+       },
+       {
+        "blankId": "r1",
+        "text": "70"
+       },
+       {
+        "blankId": "n2",
+        "text": "5"
+       },
+       {
+        "blankId": "d2",
+        "text": "1"
+       },
+       {
+        "blankId": "r2",
+        "text": "691"
+       },
+       {
+        "blankId": "n3",
+        "text": "1"
+       },
+       {
+        "blankId": "d3",
+        "text": "5"
+       },
+       {
+        "blankId": "r3",
+        "text": "6905"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4096"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "algorithms.trace-tables.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.algorithms.trace-tables"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A school weather club in Masvingo uses this algorithm.\n\n```\nTotal ← 0\nCount ← 0\nFOR Day ← 1 TO 4\n    OUTPUT \"Enter rainfall in mm\"\n    INPUT Rain\n    IF Rain > 0\n        THEN\n            Total ← Total + Rain\n            Count ← Count + 1\n    ENDIF\nNEXT Day\nOUTPUT Count, \" wet days, total \", Total\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The inputs are 12, 0, 7, 20. Complete the statements.",
+    "payload": {
+     "template": "The final value of Total is {{blank:t}}. The final value of Count is {{blank:c}}. The prompt is output {{blank:p}} times.",
+     "blanks": [
+      {
+       "id": "t",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "p",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "t",
+       "accepted": [
+        "39"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "3"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      {
+       "id": "p",
+       "accepted": [
+        "4"
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Trace:\n\n| Day | Rain | Total | Count | OUTPUT |\n|:-:|:-:|:-:|:-:|:-:|\n|  |  | 0 | 0 |  |\n| 1 |  |  |  | Enter rainfall in mm |\n|  | 12 | 12 | 1 |  |\n| 2 |  |  |  | Enter rainfall in mm |\n|  | 0 |  |  |  |\n| 3 |  |  |  | Enter rainfall in mm |\n|  | 7 | 19 | 2 |  |\n| 4 |  |  |  | Enter rainfall in mm |\n|  | 20 | 39 | 3 |  |\n|  |  |  |  | 3 wet days, total 39 |"
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write exactly what is output by the last line.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "3 wet days, total 39"
+      },
+      {
+       "value": "3 wet days total 39"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The values are joined with the text: 3 wet days, total 39."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe what the algorithm does.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Inputs the rainfall for four days",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Counts the days with rain (more than 0 mm) and totals their rainfall, then outputs the count and the total",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It inputs four daily rainfall readings, counts how many days had some rain and adds up the rainfall on those days, then outputs the number of wet days and the total."
+    }
+   }
+  ],
+  "explanation": "Count 3, total 39.",
+  "hints": [
+   "The prompt is output once per day.",
+   "Only rainfall greater than 0 is counted."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "t",
+       "text": "39"
+      },
+      {
+       "blankId": "c",
+       "text": "3"
+      },
+      {
+       "blankId": "p",
+       "text": "4"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "3 wet days, total 39"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "t",
+        "text": "40"
+       },
+       {
+        "blankId": "c",
+        "text": "4"
+       },
+       {
+        "blankId": "p",
+        "text": "3"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "4 wet days, total 39"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ }
+]

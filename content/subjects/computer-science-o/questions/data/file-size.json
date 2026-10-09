@@ -1,0 +1,1145 @@
+[
+ {
+  "key": "data.file-size.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which calculation gives the file size of a bitmap image **in bits**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "width × height × colour depth",
+    "correct": true,
+    "rationale": "Correct: number of pixels × bits per pixel."
+   },
+   {
+    "key": "B",
+    "content": "width × height × number of colours",
+    "rationale": "Use the colour depth (bits), not the number of colours."
+   },
+   {
+    "key": "C",
+    "content": "width × height ÷ colour depth",
+    "rationale": "Each pixel uses colour-depth bits, so multiply."
+   },
+   {
+    "key": "D",
+    "content": "width + height + colour depth",
+    "rationale": "The pixels form a grid, so the dimensions are multiplied."
+   }
+  ],
+  "explanation": "Pixels = width × height; each pixel needs colour-depth bits.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.file-size.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which calculation gives the file size of a sound recording **in bits**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "sample rate × length in minutes",
+    "rationale": "This leaves out the bits per sample and uses the wrong time unit."
+   },
+   {
+    "key": "B",
+    "content": "sample resolution × length in seconds",
+    "rationale": "This leaves out how many samples are taken each second."
+   },
+   {
+    "key": "C",
+    "content": "sample rate × sample resolution × length in seconds",
+    "correct": true,
+    "rationale": "Correct: samples per second × bits per sample × seconds."
+   },
+   {
+    "key": "D",
+    "content": "sample rate ÷ sample resolution × length in seconds",
+    "rationale": "Each sample uses resolution bits, so multiply, not divide."
+   }
+  ],
+  "explanation": "Total samples = rate × seconds; each sample uses the sample resolution in bits.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.file-size.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A file size has been calculated in **bits**. What is the next step to give it in **KiB**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Divide by 1024 only",
+    "rationale": "That skips the bits → bytes step and is 8 times too big."
+   },
+   {
+    "key": "B",
+    "content": "Divide by 8, then divide by 1024",
+    "correct": true,
+    "rationale": "Correct: bits → bytes (÷ 8), bytes → KiB (÷ 1024)."
+   },
+   {
+    "key": "C",
+    "content": "Multiply by 8, then divide by 1024",
+    "rationale": "Going from bits to bytes divides by 8."
+   },
+   {
+    "key": "D",
+    "content": "Divide by 1000",
+    "rationale": "Cambridge uses 1024, and the ÷ 8 step is still needed."
+   }
+  ],
+  "explanation": "Always convert bits to bytes first (÷ 8), then each step up is ÷ 1024.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.file-size.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "An image's width and height are both **doubled** and its colour depth is unchanged. What happens to the file size?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It becomes 2 times as large",
+    "rationale": "Both dimensions double, so the number of pixels is multiplied by 4."
+   },
+   {
+    "key": "B",
+    "content": "It stays the same",
+    "rationale": "More pixels always need more bits."
+   },
+   {
+    "key": "C",
+    "content": "It becomes 8 times as large",
+    "rationale": "Only the pixel count changes (× 4); the bits per pixel are the same."
+   },
+   {
+    "key": "D",
+    "content": "It becomes 4 times as large",
+    "correct": true,
+    "rationale": "Correct: 2 × 2 = 4 times as many pixels."
+   }
+  ],
+  "explanation": "$(2w) \\times (2h) = 4wh$, so the size is 4 times as large.",
+  "hints": [
+   "Number of pixels = width × height."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.file-size.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A recording is changed from a sample resolution of 8 bits to 16 bits, and its sample rate is **halved**. What happens to the file size?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It doubles",
+    "rationale": "The halved sample rate cancels the doubled resolution."
+   },
+   {
+    "key": "B",
+    "content": "It halves",
+    "rationale": "The doubled resolution cancels the halved rate."
+   },
+   {
+    "key": "C",
+    "content": "It stays the same",
+    "correct": true,
+    "rationale": "Correct: × 2 for the resolution and ÷ 2 for the rate cancel out."
+   },
+   {
+    "key": "D",
+    "content": "It becomes 4 times as large",
+    "rationale": "This ignores the halved sample rate."
+   }
+  ],
+  "explanation": "Size ∝ rate × resolution: $\\frac{1}{2} \\times 2 = 1$, so no change.",
+  "hints": [
+   "The size is proportional to rate × resolution."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.file-size.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "An image is 512 × 256 pixels with a colour depth of 8 bits. Calculate its file size in **KiB**.",
+  "payload": {
+   "unitHint": "KiB"
+  },
+  "answerSpec": {
+   "value": 128,
+   "units": {
+    "required": false,
+    "accepted": [
+     "KiB",
+     "kibibytes",
+     "kibibyte"
+    ]
+   }
+  },
+  "explanation": "$512 \\times 256 \\times 8 \\div 8 \\div 1024 = 128$ KiB.",
+  "workedSolution": "1. Bits $= 512 \\times 256 \\times 8$.\n2. Bytes $= 512 \\times 256 = 131072$ (÷ 8 cancels the 8).\n3. KiB $= 131072 \\div 1024 = 128$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "128"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1024"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "131.072"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.file-size.q07",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A photo is 1600 × 2048 pixels with a colour depth of 16 bits. Calculate its file size in **KiB**.",
+  "payload": {
+   "unitHint": "KiB"
+  },
+  "answerSpec": {
+   "value": 6400,
+   "units": {
+    "required": false,
+    "accepted": [
+     "KiB",
+     "kibibytes",
+     "kibibyte"
+    ]
+   }
+  },
+  "explanation": "Bytes $= 1600 \\times 2048 \\times 2$; KiB $= 1600 \\times 2 \\times 2 = 6400$.",
+  "workedSolution": "1. Bytes $= 1600 \\times 2048 \\times 2$; KiB $= 1600 \\times 2 \\times 2 = 6400$.",
+  "hints": [
+   "Divide the colour depth by 8 first: 16 bits = 2 bytes per pixel.",
+   "Then divide by 1024: 2048 ÷ 1024 = 2."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "6400"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "51200"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "3200"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.file-size.q08",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "An image is 3072 × 2048 pixels with a colour depth of 8 bits. Calculate its file size in **MiB**.",
+  "payload": {
+   "unitHint": "MiB"
+  },
+  "answerSpec": {
+   "value": 6,
+   "units": {
+    "required": false,
+    "accepted": [
+     "MiB",
+     "mebibytes",
+     "mebibyte"
+    ]
+   }
+  },
+  "explanation": "Bytes $= 3072 \\times 2048$. MiB $= \\frac{3 \\times 1024 \\times 2 \\times 1024}{1024 \\times 1024} = 6$ MiB.",
+  "workedSolution": "1. Bytes $= 3072 \\times 2048$. MiB $= \\frac{3 \\times 1024 \\times 2 \\times 1024}{1024 \\times 1024} = 6$ MiB.",
+  "hints": [
+   "8 bits = 1 byte per pixel.",
+   "3072 = 3 × 1024 and 2048 = 2 × 1024."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "6"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "48"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "6144"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.file-size.q09",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A sound is recorded for 32 seconds at a sample rate of 16000 Hz with a sample resolution of 8 bits. Calculate the file size in **KiB**.",
+  "payload": {
+   "unitHint": "KiB"
+  },
+  "answerSpec": {
+   "value": 500,
+   "units": {
+    "required": false,
+    "accepted": [
+     "KiB",
+     "kibibytes",
+     "kibibyte"
+    ]
+   }
+  },
+  "explanation": "Bytes $= 16000 \\times 32$; KiB $= 16000 \\times 32 \\div 1024 = 16000 \\div 32 = 500$.",
+  "workedSolution": "1. Bytes $= 16000 \\times 32$; KiB $= 16000 \\times 32 \\div 1024 = 16000 \\div 32 = 500$.",
+  "hints": [
+   "8-bit samples are 1 byte each.",
+   "Then divide by 1024: $32 \\div 1024 = \\frac{1}{32}$."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "500"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "4000"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "512"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.file-size.q10",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A voice note is recorded for 1 minute at a sample rate of 8192 Hz with a sample resolution of 16 bits. Calculate the file size in **KiB**.",
+  "payload": {
+   "unitHint": "KiB"
+  },
+  "answerSpec": {
+   "value": 960,
+   "units": {
+    "required": false,
+    "accepted": [
+     "KiB",
+     "kibibytes",
+     "kibibyte"
+    ]
+   }
+  },
+  "explanation": "Bits $= 8192 \\times 16 \\times 60$; bytes $= 8192 \\times 2 \\times 60$; KiB $= 8 \\times 2 \\times 60 = 960$.",
+  "workedSolution": "1. Bits $= 8192 \\times 16 \\times 60$; bytes $= 8192 \\times 2 \\times 60$; KiB $= 8 \\times 2 \\times 60 = 960$.",
+  "hints": [
+   "Change 1 minute to seconds.",
+   "8192 = 8 × 1024."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "960"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "16"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "7680"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.file-size.q11",
+  "type": "CALCULATION",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 5,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A recorder has 5 MiB of free memory. It records sound at 16384 Hz with a sample resolution of 8 bits. For how many seconds can it record?",
+  "payload": {
+   "unitHint": "s"
+  },
+  "answerSpec": {
+   "value": 320,
+   "units": {
+    "required": false,
+    "accepted": [
+     "s",
+     "seconds",
+     "second",
+     "sec",
+     "secs"
+    ]
+   }
+  },
+  "explanation": "Bytes per second $= 16384 \\times 1 = 16384$. Free bytes $= 5 \\times 1024 \\times 1024$. Time $= \\frac{5 \\times 1024 \\times 1024}{16 \\times 1024} = 5 \\times 64 = 320$ s.",
+  "workedSolution": "1. Bytes per second $= 16384 \\times 1 = 16384$. Free bytes $= 5 \\times 1024 \\times 1024$. Time $= \\frac{5 \\times 1024 \\times 1024}{16 \\times 1024} = 5 \\times 64 = 320$ s.",
+  "hints": [
+   "Find how many bytes are used per second.",
+   "16384 = 16 × 1024."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "320"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "2560"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "5.333333333333333"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "data.file-size.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "An image can show **256** different colours. What colour depth does it use?",
+  "payload": {
+   "unitHint": "bits"
+  },
+  "answerSpec": {
+   "value": 8,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bits",
+     "bit",
+     "b"
+    ]
+   }
+  },
+  "explanation": "$2^8 = 256$, so the colour depth is 8 bits.",
+  "workedSolution": "1. Colours $= 2^{\\text{depth}}$.\n2. $2^8 = 256$, so depth = 8 bits.",
+  "hints": [
+   "Find $n$ so that $2^n = 256$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "256"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "16"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.file-size.q13",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Calculating width × height × colour depth gives an image's file size in bytes.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. It gives the size in **bits**; divide by 8 for bytes.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.file-size.q14",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Doubling the length of a recording, with the same sample rate and resolution, doubles its file size.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Twice as many seconds means twice as many samples.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.file-size.q15",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "Rudo calculates the size of a 640 × 512 image with 24-bit colour. Complete her working.",
+  "payload": {
+   "template": "Bits = 640 × 512 × 24. Bytes = 640 × 512 × {{blank:a}}. KiB = 640 × 512 × 3 ÷ 1024 = {{blank:b}}.",
+   "blanks": [
+    {
+     "id": "a"
+    },
+    {
+     "id": "b"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "3"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "960"
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "$640 \\times 512 \\times 3 \\div 1024 = 640 \\times 3 \\div 2 = 960$ KiB.",
+  "hints": [
+   "24 ÷ 8 = 3 bytes per pixel.",
+   "512 ÷ 1024 = one half."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "3"
+    },
+    {
+     "blankId": "b",
+     "text": "960"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "24"
+     },
+     {
+      "blankId": "b",
+      "text": "7680"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.file-size.q16",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each change with its effect on file size (everything else unchanged).",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Colour depth 8 bits → 24 bits"
+    },
+    {
+     "id": "L2",
+     "content": "Sample rate halved"
+    },
+    {
+     "id": "L3",
+     "content": "Width and height both doubled"
+    },
+    {
+     "id": "L4",
+     "content": "Recording length doubled"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "× 4"
+    },
+    {
+     "id": "R4",
+     "content": "× 2"
+    },
+    {
+     "id": "X1",
+     "content": "No change"
+    },
+    {
+     "id": "R1",
+     "content": "× 3"
+    },
+    {
+     "id": "R2",
+     "content": "÷ 2"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Size is proportional to each factor in the formula: 24/8 = 3; half the rate halves it; 2 × 2 = 4; twice the length doubles it.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.file-size.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Show how to calculate the size in **MiB** of an image that is 2048 × 2048 pixels with a colour depth of 8 bits.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Uses width × height × colour depth: 2048 × 2048 × 8 bits.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Divides by 8 to get bytes: 2048 × 2048 bytes.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Divides by 1024 twice: 2 × 2 = 4 MiB.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: 2048 × 2048 × 8 bits; ÷ 8 = 2048 × 2048 bytes; ÷ 1024 = 4096 KiB; ÷ 1024 = 4 MiB."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Answer 4 MiB.",
+  "hints": [
+   "2048 = 2 × 1024."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.file-size.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Nyasha takes product photos for an online shop in Harare. Each photo is 1280 × 720 pixels with a colour depth of 24 bits.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "Calculate the file size of one photo in KiB. Show your working.",
+    "payload": {
+     "unitHint": "KiB"
+    },
+    "answerSpec": {
+     "value": 2700,
+     "units": {
+      "required": false,
+      "accepted": [
+       "KiB",
+       "kibibytes",
+       "kibibyte"
+      ]
+     }
+    },
+    "explanation": "$1280 \\times 720 \\times 24 \\div 8 = 1280 \\times 720 \\times 3$ bytes; $\\div 1024$: since $1280 \\div 1024 = 1.25$, this is $1.25 \\times 720 \\times 3 = 2700$ KiB.",
+    "workedSolution": "1. $1280 \\times 720 \\times 24 \\div 8 = 1280 \\times 720 \\times 3$ bytes; $\\div 1024$: since $1280 \\div 1024 = 1.25$, this is $1.25 \\times 720 \\times 3 = 2700$ KiB."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "She uploads 256 photos. Calculate the total size in MiB.",
+    "payload": {
+     "unitHint": "MiB"
+    },
+    "answerSpec": {
+     "value": 675,
+     "units": {
+      "required": false,
+      "accepted": [
+       "MiB",
+       "mebibytes",
+       "mebibyte"
+      ]
+     }
+    },
+    "explanation": "$2700 \\times 256 = 691200$ KiB; $\\div 1024 = 675$ MiB (or $2700 \\div 4$).",
+    "workedSolution": "1. $2700 \\times 256 = 691200$ KiB; $\\div 1024 = 675$ MiB (or $2700 \\div 4$)."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "She reduces the colour depth to 8 bits. Give the new size of one photo in KiB.",
+    "payload": {
+     "unitHint": "KiB"
+    },
+    "answerSpec": {
+     "value": 900,
+     "units": {
+      "required": false,
+      "accepted": [
+       "KiB",
+       "kibibytes",
+       "kibibyte"
+      ]
+     }
+    },
+    "explanation": "8 bits is a third of 24 bits: $2700 \\div 3 = 900$ KiB.",
+    "workedSolution": "1. 8 bits is a third of 24 bits: $2700 \\div 3 = 900$ KiB."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give one disadvantage of reducing the colour depth for her product photos.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Fewer colours can be shown (256 instead of over 16 million).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the photos look less realistic / colours of products shown inaccurately / banding in shading.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: With 8 bits each pixel can only be one of 256 colours, so the products' colours and shading would look less realistic to customers."
+    }
+   }
+  ],
+  "explanation": "(a) 2700 KiB. (b) 675 MiB. (c) 900 KiB.",
+  "hints": [
+   "24 bits = 3 bytes per pixel.",
+   "1024 KiB = 1 MiB."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "2700"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "675"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "900"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "CALCULATION",
+      "value": "21600"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "691200"
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "2700"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "data.file-size.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.data.file-size"
+  ],
+  "difficulty": 5,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A radio station in Bulawayo records a 40-second advert at 32000 Hz with a sample resolution of 16 bits.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "Calculate the file size in KiB.",
+    "payload": {
+     "unitHint": "KiB"
+    },
+    "answerSpec": {
+     "value": 2500,
+     "units": {
+      "required": false,
+      "accepted": [
+       "KiB",
+       "kibibytes",
+       "kibibyte"
+      ]
+     }
+    },
+    "explanation": "Bits $= 32000 \\times 16 \\times 40$; bytes $= 32000 \\times 2 \\times 40 = 32000 \\times 80$; KiB $= 32000 \\times 80 \\div 1024 = 2500$.",
+    "workedSolution": "1. Bits $= 32000 \\times 16 \\times 40$; bytes $= 32000 \\times 2 \\times 40 = 32000 \\times 80$; KiB $= 32000 \\times 80 \\div 1024 = 2500$."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "The station re-records the advert at half the sample rate. Give the new file size in KiB.",
+    "payload": {
+     "unitHint": "KiB"
+    },
+    "answerSpec": {
+     "value": 1250,
+     "units": {
+      "required": false,
+      "accepted": [
+       "KiB",
+       "kibibytes",
+       "kibibyte"
+      ]
+     }
+    },
+    "explanation": "Half the samples: 1250 KiB.",
+    "workedSolution": "1. Half the samples: 1250 KiB."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain one advantage and one disadvantage of the lower sample rate.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Advantage: smaller file, so less storage / quicker to send.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Disadvantage: fewer samples per second, so the sound is less accurate / lower quality.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The file is half the size, so it takes less storage and is quicker to send to other stations. But fewer samples are taken each second, so the advert sounds less like the original."
+    }
+   }
+  ],
+  "explanation": "(a) 2500 KiB. (b) 1250 KiB.",
+  "hints": [
+   "16 bits = 2 bytes per sample.",
+   "Sound size is proportional to the sample rate."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "2500"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "1250"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "CALCULATION",
+      "value": "20000"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "5000"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

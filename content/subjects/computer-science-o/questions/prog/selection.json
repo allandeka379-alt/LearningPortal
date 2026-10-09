@@ -1,0 +1,1135 @@
+[
+ {
+  "key": "prog.selection.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In an `IF … THEN … ELSE … ENDIF` statement, when are the statements after ELSE executed?",
+  "options": [
+   {
+    "key": "A",
+    "content": "When the condition is FALSE",
+    "correct": true,
+    "rationale": "Correct: ELSE is the branch for a FALSE condition."
+   },
+   {
+    "key": "B",
+    "content": "When the condition is TRUE",
+    "rationale": "The THEN branch runs when the condition is TRUE."
+   },
+   {
+    "key": "C",
+    "content": "Every time, after the THEN branch",
+    "rationale": "Exactly one of the two branches runs."
+   },
+   {
+    "key": "D",
+    "content": "Only when there is no ENDIF",
+    "rationale": "ENDIF is always needed and does not decide which branch runs."
+   }
+  ],
+  "explanation": "With ELSE, one branch always runs: THEN for TRUE, ELSE for FALSE.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.selection.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which keyword must be the last clause inside a CASE statement when it is used?",
+  "options": [
+   {
+    "key": "A",
+    "content": "OTHERWISE",
+    "correct": true,
+    "rationale": "Correct: OTHERWISE catches every value not listed and must come last."
+   },
+   {
+    "key": "B",
+    "content": "ELSE",
+    "rationale": "ELSE belongs to an IF statement."
+   },
+   {
+    "key": "C",
+    "content": "ENDIF",
+    "rationale": "ENDIF closes an IF statement."
+   },
+   {
+    "key": "D",
+    "content": "DEFAULT",
+    "rationale": "DEFAULT is used in some languages but not in 0478 pseudocode."
+   }
+  ],
+  "explanation": "`OTHERWISE <statement>` is the final clause before ENDCASE.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.selection.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "What is output by this algorithm?\n\n```\nX ← 12\nIF X > 10\n    THEN\n        X ← X - 4\nENDIF\nIF X > 10\n    THEN\n        X ← X * 2\nENDIF\nOUTPUT X\n```",
+  "answerSpec": {
+   "value": 8
+  },
+  "explanation": "12 > 10, so X becomes 8. The second IF tests the new value: 8 > 10 is FALSE, so X stays 8.",
+  "workedSolution": "1. 12 > 10 is TRUE: X = 12 − 4 = 8.\n2. 8 > 10 is FALSE: X unchanged.\n3. Output 8.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "16"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.selection.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "The input is 28. What is output?\n\n```\nINPUT Temperature\nIF Temperature > 33\n    THEN\n        OUTPUT \"Very hot\"\n    ELSE\n        IF Temperature > 24\n            THEN\n                OUTPUT \"Warm\"\n            ELSE\n                OUTPUT \"Cool\"\n        ENDIF\nENDIF\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "Very hot",
+    "rationale": "28 is not greater than 33."
+   },
+   {
+    "key": "B",
+    "content": "Warm",
+    "correct": true,
+    "rationale": "Correct: 28 > 33 is FALSE, then 28 > 24 is TRUE."
+   },
+   {
+    "key": "C",
+    "content": "Cool",
+    "rationale": "The inner condition 28 > 24 is TRUE, so ELSE is not reached."
+   },
+   {
+    "key": "D",
+    "content": "Warm and Cool",
+    "rationale": "Only one branch of an IF … ELSE can run."
+   }
+  ],
+  "explanation": "The first condition is FALSE, so the inner IF is tested; 28 > 24, so \"Warm\" is output.",
+  "hints": [
+   "Test the conditions in order; stop at the first TRUE one."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.selection.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "This algorithm should output \"Merit\" for 65 or more, \"Pass\" for 40 to 64 and \"Fail\" below 40.\n\n```\nIF Mark >= 40\n    THEN\n        OUTPUT \"Pass\"\n    ELSE\n        IF Mark >= 65\n            THEN\n                OUTPUT \"Merit\"\n            ELSE\n                OUTPUT \"Fail\"\n        ENDIF\nENDIF\n```\n\nFor which input does it give the **wrong** output?",
+  "options": [
+   {
+    "key": "A",
+    "content": "53",
+    "rationale": "53 should be Pass, and Pass is output."
+   },
+   {
+    "key": "B",
+    "content": "38",
+    "rationale": "38 should be Fail; both conditions are FALSE, so Fail is output."
+   },
+   {
+    "key": "C",
+    "content": "40",
+    "rationale": "40 should be Pass, and 40 >= 40 is TRUE."
+   },
+   {
+    "key": "D",
+    "content": "72",
+    "correct": true,
+    "rationale": "Correct: 72 >= 40 is TRUE, so \"Pass\" is output instead of \"Merit\"."
+   }
+  ],
+  "explanation": "The lower boundary is tested first, so no mark can ever reach the Merit branch. Test `Mark >= 65` first.",
+  "hints": [
+   "Which branch is reached first by a high mark?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.selection.q06",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "In a CASE statement, once a matching case has run, the remaining cases are still checked.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The first matching case runs and control passes to the statement after ENDCASE.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.selection.q07",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "An IF statement without an ELSE clause may run none of its statements.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. If the condition is FALSE and there is no ELSE, nothing in the IF statement runs.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.selection.q08",
+  "type": "MATCHING",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 240,
+  "stem": "Match each task to the more suitable selection statement.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Run a different action for menu keys 1, 2, 3 and 4"
+    },
+    {
+     "id": "L2",
+     "content": "Award a bonus when sales are over 5000"
+    },
+    {
+     "id": "L3",
+     "content": "Give a discount when the customer is a member and spends over 200"
+    },
+    {
+     "id": "L4",
+     "content": "Output the name of a month from its number, 1 to 12"
+    }
+   ],
+   "right": [
+    {
+     "id": "R1",
+     "content": "CASE"
+    },
+    {
+     "id": "R2",
+     "content": "IF"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R1"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Lists of single values suit CASE; ranges and conditions on several variables need IF.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R1"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.selection.q09",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 180,
+  "stem": "Complete the CASE statement, which outputs the name of a shift from its code.\n\n```\n[1] ShiftCode\n    'M' : OUTPUT \"Morning\"\n    'A' : OUTPUT \"Afternoon\"\n    'N' : OUTPUT \"Night\"\n    [2] OUTPUT \"Unknown shift\"\n[3]\n```",
+  "payload": {
+   "template": "[1] {{blank:a}} [2] {{blank:b}} [3] {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "CASE OF",
+      "IF",
+      "SELECT",
+      "SWITCH"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "OTHERWISE",
+      "ELSE",
+      "DEFAULT",
+      "THEN"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "ENDCASE",
+      "ENDIF",
+      "END",
+      "NEXT"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "CASE OF"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "OTHERWISE"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "ENDCASE"
+     ]
+    }
+   ]
+  },
+  "explanation": "`CASE OF ShiftCode … OTHERWISE … ENDCASE`.",
+  "hints": [
+   "Which keywords open, catch the rest and close a CASE?"
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "CASE OF"
+    },
+    {
+     "blankId": "b",
+     "text": "OTHERWISE"
+    },
+    {
+     "blankId": "c",
+     "text": "ENDCASE"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "IF"
+     },
+     {
+      "blankId": "b",
+      "text": "ELSE"
+     },
+     {
+      "blankId": "c",
+      "text": "ENDIF"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.selection.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A user types `'s'` (lower case). What is output?\n\n```\nCASE OF Choice\n    'B' : OUTPUT \"Balance\"\n    'S' : OUTPUT \"Send\"\n    OTHERWISE OUTPUT \"Try again\"\nENDCASE\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "Send",
+    "rationale": "Comparisons are exact; lower case 's' is a different character."
+   },
+   {
+    "key": "B",
+    "content": "Nothing is output",
+    "rationale": "OTHERWISE runs when no case matches."
+   },
+   {
+    "key": "C",
+    "content": "Balance",
+    "rationale": "The first case is 'B', which does not match."
+   },
+   {
+    "key": "D",
+    "content": "Try again",
+    "correct": true,
+    "rationale": "Correct: 's' does not equal 'S', so no case matches."
+   }
+  ],
+  "explanation": "Convert the input first, `Choice ← UCASE(Choice)`, if both cases should be accepted.",
+  "hints": [
+   "Are 'S' and 's' the same character?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.selection.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "How many lines are output when the input is 80?\n\n```\nINPUT Mark\nIF Mark >= 40\n    THEN\n        OUTPUT \"Pass\"\nENDIF\nIF Mark >= 65\n    THEN\n        OUTPUT \"Merit\"\nENDIF\nIF Mark >= 80\n    THEN\n        OUTPUT \"Distinction\"\nENDIF\n```",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "80 satisfies all three separate conditions, so 3 lines are output. Nested IFs with ELSE would output only one.",
+  "workedSolution": "1. 80 >= 40: \"Pass\".\n2. 80 >= 65: \"Merit\".\n3. 80 >= 80: \"Distinction\".\n4. 3 lines.",
+  "hints": [
+   "The IFs are separate, so every one is tested."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "prog.selection.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A courier in Masvingo uses this algorithm. What is output when `Weight` is 7 and `Express` is TRUE?\n\n```\nIF Weight <= 2\n    THEN\n        Charge ← 6\n    ELSE\n        IF Weight <= 10\n            THEN\n                Charge ← 9\n            ELSE\n                Charge ← 15\n        ENDIF\nENDIF\nIF Express\n    THEN\n        Charge ← Charge + 4\nENDIF\nOUTPUT Charge\n```",
+  "answerSpec": {
+   "value": 13
+  },
+  "explanation": "7 is over 2 but at most 10, so Charge = 9; Express adds 4, giving 13.",
+  "workedSolution": "1. 7 <= 2 is FALSE; 7 <= 10 is TRUE: Charge = 9.\n2. Express is TRUE: Charge = 9 + 4 = 13.\n3. Output 13.",
+  "hints": [
+   "Find the weight band first, then apply the express rule."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "13"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "9"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.selection.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "A grade A is awarded for marks from 70 to 100 inclusive. Which condition is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Mark > 70 AND Mark < 100`",
+    "rationale": "This misses 70 and 100."
+   },
+   {
+    "key": "B",
+    "content": "`Mark >= 70 OR Mark <= 100`",
+    "rationale": "Every mark satisfies one side, so all marks get an A."
+   },
+   {
+    "key": "C",
+    "content": "`Mark >= 70 AND Mark <= 100`",
+    "correct": true,
+    "rationale": "Correct: both limits are included."
+   },
+   {
+    "key": "D",
+    "content": "`Mark = 70 AND Mark = 100`",
+    "rationale": "A mark cannot equal both values."
+   }
+  ],
+  "explanation": "Inclusive range: >= the lower limit AND <= the upper limit.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.selection.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 120,
+  "stem": "A program offers a menu with options 1 to 6. Explain why a CASE statement is more suitable than nested IF statements for processing the choice.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "One variable is compared with a list of single values, which is exactly what CASE does / it is shorter and easier to read than six nested IFs",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "OTHERWISE handles any invalid choice in one clause",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The choice is one variable compared with six single values, so a CASE statement lists them clearly without six levels of nesting, and the OTHERWISE clause catches any invalid choice with one error message."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "CASE suits a single variable with discrete values.",
+  "hints": [
+   "Think about how many values are compared and against what."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.selection.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 300,
+  "stem": "A museum in Bulawayo charges 3 dollars for visitors under 12, 5 dollars for visitors aged 12 to 59, and 2 dollars for visitors aged 60 or over. Write pseudocode that inputs a visitor's age and outputs the price, or an error message if the age is negative.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Prompts for and inputs the age",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Checks for a negative age and outputs an error message",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Correct condition and price for under 12",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Correct condition and price for 12 to 59",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Correct price for 60 or over, using ELSE or a correct condition, with matching ENDIFs",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nOUTPUT \"Enter age\"\nINPUT Age\nIF Age < 0\n    THEN\n        OUTPUT \"Age cannot be negative\"\n    ELSE\n        IF Age < 12\n            THEN\n                OUTPUT \"Price: 3 dollars\"\n            ELSE\n                IF Age <= 59\n                    THEN\n                        OUTPUT \"Price: 5 dollars\"\n                    ELSE\n                        OUTPUT \"Price: 2 dollars\"\n                ENDIF\n        ENDIF\nENDIF\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Four outcomes, so nested IFs (or IF with full ranges).",
+  "hints": [
+   "Reject negative ages first.",
+   "Test the age bands in an order that cannot overlap."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.selection.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A town council bills water use in bands.\n\n```\nINPUT Units\nIF Units <= 10\n    THEN\n        Bill ← Units * 1\n    ELSE\n        IF Units <= 30\n            THEN\n                Bill ← 10 + (Units - 10) * 2\n            ELSE\n                Bill ← 50 + (Units - 30) * 3\n        ENDIF\nENDIF\nOUTPUT \"Bill: \", Bill\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the bill output when the input is 24.",
+    "answerSpec": {
+     "value": 38
+    },
+    "explanation": "24 is in the middle band: 10 + (24 − 10) × 2 = 38.",
+    "workedSolution": "1. 24 <= 10 is FALSE; 24 <= 30 is TRUE.\n2. 10 + 14 × 2 = 38."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the bill output when the input is 35.",
+    "answerSpec": {
+     "value": 65
+    },
+    "explanation": "35 is over 30: 50 + (35 − 30) × 3 = 65.",
+    "workedSolution": "1. Both conditions are FALSE.\n2. 50 + 5 × 3 = 65."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which set of inputs best tests every boundary of this algorithm?",
+    "options": [
+     {
+      "key": "A",
+      "content": "5, 20, 40, 60",
+      "rationale": "These test each band but none of the boundaries."
+     },
+     {
+      "key": "B",
+      "content": "0, 50, 100, 150",
+      "rationale": "These miss the boundaries at 10 and 30."
+     },
+     {
+      "key": "C",
+      "content": "10, 11, 30, 31",
+      "correct": true,
+      "rationale": "Correct: each boundary and the value just above it."
+     },
+     {
+      "key": "D",
+      "content": "10, 20, 30, 40",
+      "rationale": "These miss the values just past each boundary."
+     }
+    ],
+    "explanation": "Boundary testing uses the last value in a band and the first value of the next."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The council wants a message \"High use\" output, as well as the bill, whenever more than 40 units are used. Write the pseudocode and say where it goes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A separate IF placed after the bill is calculated (not inside the ELSE branches)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Condition Units > 40",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "OUTPUT \"High use\" with ENDIF",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: After the nested IF (before or after the bill is output):\n\n```\nIF Units > 40\n    THEN\n        OUTPUT \"High use\"\nENDIF\n```"
+    }
+   }
+  ],
+  "explanation": "Bills 38 and 65; boundaries 10/11 and 30/31; a separate IF for the message.",
+  "hints": [
+   "Find the band first.",
+   "The 50 in the last band is the bill for the first 30 units."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "38"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "65"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "48"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "105"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.selection.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 5,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Sipho writes a simple calculator.\n\n```\nINPUT FirstNumber\nINPUT Operator\nINPUT SecondNumber\nCASE OF Operator\n    '+' : Answer ← FirstNumber + SecondNumber\n    '-' : Answer ← FirstNumber - SecondNumber\n    '*' : Answer ← FirstNumber * SecondNumber\n    '/' : Answer ← FirstNumber / SecondNumber\n    OTHERWISE OUTPUT \"Unknown operator\"\nENDCASE\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Answer` for the inputs 14, `'*'`, 3.",
+    "answerSpec": {
+     "value": 42
+    },
+    "explanation": "14 × 3 = 42.",
+    "workedSolution": "1. '*' matches the third case.\n2. 14 × 3 = 42."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Answer` for the inputs 27, `'/'`, 6.",
+    "answerSpec": {
+     "value": 4.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "27 / 6 = 4.5; / gives a real result.",
+    "workedSolution": "1. '/' matches the fourth case.\n2. 27 ÷ 6 = 4.5."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The inputs are 9, `'x'`, 2. What happens?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Answer is set to 18",
+      "rationale": "'x' is not the '*' character."
+     },
+     {
+      "key": "B",
+      "content": "\"Unknown operator\" is output",
+      "correct": true,
+      "rationale": "Correct: 'x' matches no case, so OTHERWISE runs."
+     },
+     {
+      "key": "C",
+      "content": "The program stops with an error",
+      "rationale": "OTHERWISE handles every unlisted value."
+     },
+     {
+      "key": "D",
+      "content": "Answer is set to 11",
+      "rationale": "No case matches 'x'."
+     }
+    ],
+    "explanation": "Any operator not listed reaches OTHERWISE."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Identify a run-time problem with the `'/'` case and describe how to prevent it.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Dividing by zero when SecondNumber is 0 causes a run-time error",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Check IF SecondNumber = 0 (output a message) before dividing / ELSE divide",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: If SecondNumber is 0 the division fails at run time. Inside the '/' case, test `IF SecondNumber = 0` and output \"Cannot divide by zero\"; otherwise do the division."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Rewrite the first two cases (`'+'` and `'-'`) and the OTHERWISE clause using IF statements instead of CASE.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "IF Operator = '+' THEN Answer ← FirstNumber + SecondNumber",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Nested in ELSE: IF Operator = '-' THEN Answer ← FirstNumber - SecondNumber",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Final ELSE outputs \"Unknown operator\", with two ENDIFs",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nIF Operator = '+'\n    THEN\n        Answer ← FirstNumber + SecondNumber\n    ELSE\n        IF Operator = '-'\n            THEN\n                Answer ← FirstNumber - SecondNumber\n            ELSE\n                OUTPUT \"Unknown operator\"\n        ENDIF\nENDIF\n```"
+    }
+   }
+  ],
+  "explanation": "(a) 42; (b) 4.5; (c) OTHERWISE runs; (d) guard against division by zero.",
+  "hints": [
+   "Find the case that matches the operator.",
+   "/ gives a real result."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "42"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4.5"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "17"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.selection.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "Which keyword closes an IF statement in pseudocode?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "ENDIF"
+    }
+   ],
+   "rejected": [
+    {
+     "value": "ENDCASE"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "Every IF is closed by ENDIF; a CASE statement is closed by ENDCASE.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "ENDIF"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "END"
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.selection.q19",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "comp.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 60,
+  "stem": "An IF statement nested inside the ELSE branch of another IF statement needs its own ENDIF, so the pair needs two ENDIFs in total.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Each IF is closed by its own ENDIF; the inner one is closed first.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ }
+]

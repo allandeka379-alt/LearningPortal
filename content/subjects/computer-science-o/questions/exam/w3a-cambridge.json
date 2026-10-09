@@ -1,0 +1,704 @@
+[
+ {
+  "key": "exam.w3a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.network.devices",
+   "comp.network.addressing",
+   "comp.network.cloud"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "A graphic design company in Bulawayo has 20 computers connected to a router. One computer's network interface card (NIC) has the MAC address `3C:A0:67:5D:12:F8`.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why each computer needs a NIC to access the network.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The NIC is the hardware that connects the computer to the network (by cable or wirelessly) and sends/receives its data",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It is given a unique MAC address at manufacture, which identifies the computer on the network",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Without a NIC the computer has no hardware to connect to the network and send or receive data, and the NIC carries the unique MAC address that identifies the computer on the network."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write down the part of the MAC address that is the manufacturer code.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "3C:A0:67"
+      },
+      {
+       "value": "3CA067"
+      },
+      {
+       "value": "3C-A0-67"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The first six hex digits, 3C:A0:67, identify the manufacturer."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Convert the pair `5D` from the MAC address into an 8-bit binary number.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01011101"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "5 = 0101, D = 1101: 0101 1101."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement about the computers' IP addresses is correct?",
+    "options": [
+     {
+      "key": "A",
+      "content": "They are allocated by the network and may be static or dynamic",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "They are set when the NIC is manufactured",
+      "rationale": "That is the MAC address."
+     },
+     {
+      "key": "C",
+      "content": "They are always written in hexadecimal pairs",
+      "rationale": "That describes a MAC address; IPv4 uses denary."
+     },
+     {
+      "key": "D",
+      "content": "They never change once the computer is switched on",
+      "rationale": "Dynamic addresses can change on each connection."
+     }
+    ],
+    "explanation": "IP addresses are allocated by the network, static or dynamic."
+   },
+   {
+    "label": "(e)",
+    "type": "MATCHING",
+    "marks": 4,
+    "stem": "The company's router supports IPv4 and IPv6. Classify each feature as IPv4 or IPv6.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "32 bits long"
+      },
+      {
+       "id": "L2",
+       "content": "128 bits long"
+      },
+      {
+       "id": "L3",
+       "content": "Four denary numbers separated by full stops"
+      },
+      {
+       "id": "L4",
+       "content": "Eight groups of hexadecimal digits separated by colons"
+      }
+     ],
+     "right": [
+      {
+       "id": "R1",
+       "content": "IPv4"
+      },
+      {
+       "id": "R2",
+       "content": "IPv6"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R2"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "IPv4: 32-bit, denary with full stops. IPv6: 128-bit, hex with colons."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe the role of the router in the company's network.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It sends/forwards data to a specific destination, using the IP address (routing table)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It assigns IP addresses to the computers on the network (dynamic addresses)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "It connects the company's local network to the internet",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The router reads the destination IP address of each packet and forwards it towards that destination. It gives each of the 20 computers an IP address when it connects, and it connects the company's LAN to the internet."
+    }
+   },
+   {
+    "label": "(g)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "The company is considering cloud storage. Cloud storage keeps data on physical servers owned by the cloud provider.",
+    "answerSpec": {
+     "correct": true
+    },
+    "explanation": "True. Cloud storage needs physical servers and storage devices."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The company's design files are very large. Give **one** advantage and **one** disadvantage to the company of storing them in the cloud rather than locally.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Advantage: designers can open files remotely from any device / easy to share with clients / provider backs them up / no hardware to buy",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Disadvantage: large files are slow to upload/download and need a reliable internet connection / security of data held by a third party / ongoing cost",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Designers could open and share the files from anywhere, but uploading and downloading such large files would be slow and impossible when the internet connection is down."
+    }
+   }
+  ],
+  "explanation": "(b) 3C:A0:67 (c) 0101 1101 (d) allocated by the network (e) IPv4, IPv6, IPv4, IPv6 (g) true.",
+  "hints": [
+   "The first half of a MAC address is the manufacturer code.",
+   "Each hex digit is four bits."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "3C:A0:67"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "01011101"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(e)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R2"
+      }
+     ]
+    },
+    "(g)": {
+     "type": "TRUE_FALSE",
+     "value": true
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "5D:12:F8"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "01011110"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(e)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R1"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L4",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(g)": {
+      "type": "TRUE_FALSE",
+      "value": false
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 1",
+  "calculator": false
+ },
+ {
+  "key": "exam.w3a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "comp.security.malware",
+   "comp.security.cyber-attacks",
+   "comp.security.authentication-access",
+   "comp.security.network-defences"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "An online shop based in Harare sells school uniforms. Its owner, Tatenda, is worried about cyber security threats.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 4,
+    "stem": "Match each description to the threat.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Software tries thousands of possible passwords for the admin account"
+      },
+      {
+       "id": "L2",
+       "content": "A botnet floods the shop's web server with requests"
+      },
+      {
+       "id": "L3",
+       "content": "Customers who type the shop's correct address are sent to a fake copy of it"
+      },
+      {
+       "id": "L4",
+       "content": "A caller pretending to be from the bank persuades a worker to reveal a code"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Pharming"
+      },
+      {
+       "id": "R4",
+       "content": "Social engineering"
+      },
+      {
+       "id": "X1",
+       "content": "Phishing"
+      },
+      {
+       "id": "R1",
+       "content": "Brute-force attack"
+      },
+      {
+       "id": "R2",
+       "content": "DDoS attack"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Trial and error: brute force. Flood: DDoS. Redirect on the correct address: pharming. Tricking a person: social engineering."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "A worker installs a free \"invoice generator\" that secretly opens a back door for an attacker. What type of malware is this?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Worm",
+      "rationale": "A worm spreads itself and is not disguised as a wanted program."
+     },
+     {
+      "key": "B",
+      "content": "Adware",
+      "rationale": "Adware shows adverts."
+     },
+     {
+      "key": "C",
+      "content": "Trojan horse",
+      "correct": true,
+      "rationale": "Correct: disguised as useful software."
+     },
+     {
+      "key": "D",
+      "content": "Ransomware",
+      "rationale": "Ransomware encrypts files for payment."
+     }
+    ],
+    "explanation": "A Trojan horse."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how a phishing attack on the shop's customers would be carried out, and its aim.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The criminal sends emails/messages that appear to come from the shop (a trusted source)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The email contains a link to a fake website that looks like the shop's",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Aim: customers enter login or payment details, which are stolen for fraud / identity theft",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The criminal sends customers emails that look as if they come from the shop, often with an urgent offer or warning, and a link to a fake copy of the website. Customers who click and log in or pay give their account and card details to the criminal, who uses them for fraud."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the description of how SSL protects customers on the shop's website.",
+    "payload": {
+     "template": "The shop's web server sends its digital {{blank:a}} to the browser, which checks it. The data sent between them is then {{blank:b}}.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "certificate",
+        "password",
+        "firewall",
+        "cookie"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "encrypted",
+        "compressed",
+        "cached",
+        "deleted"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "certificate"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "encrypted"
+       ]
+      }
+     ]
+    },
+    "explanation": "Certificate checked, then data encrypted."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how two-step verification would protect the shop's admin account from the brute-force attack.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Even if the password is guessed, the attacker also needs a one-time code",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The code is sent to / generated on the owner's own device, which the attacker does not have",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Even if the software guesses the password, it still cannot log in, because it also needs the one-time code sent to Tatenda's phone, which the attacker does not have."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how a firewall helps to keep the shop's data safe.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It monitors incoming and outgoing traffic and checks it against set rules/criteria",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It blocks traffic that does not meet the rules, e.g. unauthorised access attempts (hacking)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The firewall checks all traffic entering and leaving the shop's network against rules set by the owner, and blocks any that break them, such as a hacker trying to connect to the server."
+    }
+   },
+   {
+    "label": "(g)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "Automating software updates helps protect the shop because updates patch security weaknesses that attackers could exploit.",
+    "answerSpec": {
+     "correct": true
+    },
+    "explanation": "True. Updates close known security holes."
+   }
+  ],
+  "explanation": "(a) brute force, DDoS, pharming, social engineering (b) Trojan horse (d) certificate, encrypted (g) true.",
+  "hints": [
+   "Look for the clue in each description: trial and error, flood, redirect, trick.",
+   "SSL uses a certificate and encryption."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "certificate"
+      },
+      {
+       "blankId": "b",
+       "text": "encrypted"
+      }
+     ]
+    },
+    "(g)": {
+     "type": "TRUE_FALSE",
+     "value": true
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R4"
+       },
+       {
+        "leftId": "L4",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "password"
+       },
+       {
+        "blankId": "b",
+        "text": "compressed"
+       }
+      ]
+     },
+     "(g)": {
+      "type": "TRUE_FALSE",
+      "value": false
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/igcse/computer-science"
+  ],
+  "paper": "Paper 1",
+  "calculator": false
+ }
+]
