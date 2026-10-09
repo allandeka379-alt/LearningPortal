@@ -79,8 +79,9 @@ brief; smoke test 69/69 (`.scratch/english/smoke.ts`). geography-o (ZIMSEC Geogr
 DEV-published, smoke 74/74 (`.scratch/tools/smoke-family.ts`), and so did accounting-o (ZIMSEC Principles of
 Accounting 2015-2022, Cambridge 0452 2027-2029: 66 lessons, 1,268 questions, 573 flashcards, 13 topic tests and 4 mocks,
 smoke 52/52) and economics-o (ZIMSEC Economics 2015-2022, Cambridge 0455 2027-2029: 92 lessons, 1,741 questions,
-808 flashcards, 14 topic tests and 5 mocks, smoke 56/56). Syllabus files and registries for business-commerce-o and
-computer-science-o are in the repository (from the official documents); their content is being written.
+808 flashcards, 14 topic tests and 5 mocks, smoke 56/56) and computer-science-o (ZIMSEC Computer Science 2015-2022, Cambridge 0478 2026-2028: 102 lessons,
+1,926 questions, 897 flashcards, 21 topic tests and 4 mocks, smoke 68/68). business-commerce-o (ZIMSEC Commerce,
+Business Enterprise and Skills, Cambridge IGCSE Business 0264) is being written.
 Hand-off notes: `.scratch/active-runs.md`. Each family's `content/subjects/<family>/README.md` lists coverage, tests, known gaps and specialist checks;
 `content/README.md` has the overview. Marking fix the same day: a numerical answer typed with the text the answer box
 already shows ("US$16.20", "x = 5", "×400", "pH 7", "12:1" when ": 1" follows the box) was unreadable and scored 0;
