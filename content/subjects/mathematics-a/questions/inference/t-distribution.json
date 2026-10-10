@@ -1,0 +1,1152 @@
+[
+ {
+  "key": "inference.t-distribution.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A random sample of 12 observations is taken from a normal population with unknown variance, to test a hypothesis about the population mean using the t-distribution. How many degrees of freedom does the test statistic have?",
+  "options": [
+   {
+    "key": "A",
+    "content": "11",
+    "correct": true,
+    "rationale": "Correct: ν = n − 1 = 12 − 1, because one degree of freedom is used in estimating the mean."
+   },
+   {
+    "key": "B",
+    "content": "12",
+    "rationale": "This is the sample size; estimating the mean uses up one degree of freedom."
+   },
+   {
+    "key": "C",
+    "content": "10",
+    "rationale": "Only one parameter (the mean) is estimated before the spread, so subtract 1, not 2."
+   },
+   {
+    "key": "D",
+    "content": "13",
+    "rationale": "Degrees of freedom are never more than the number of observations."
+   }
+  ],
+  "explanation": "For a one-sample t method, $\\nu = n - 1 = 11$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "inference.t-distribution.q02",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The t-distribution has heavier tails than the standard normal distribution.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "Using s instead of σ adds uncertainty, so extreme values of the statistic are more likely: the t-distribution is more spread out in the tails, and its critical values are larger than the z values.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "inference.t-distribution.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What happens to the t-distribution as the number of degrees of freedom increases?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It becomes more spread out in the tails",
+    "rationale": "The spread decreases as ν increases: critical values shrink towards the z values."
+   },
+   {
+    "key": "B",
+    "content": "It becomes positively skewed",
+    "rationale": "The t-distribution is symmetrical about 0 for every ν."
+   },
+   {
+    "key": "C",
+    "content": "Its mean increases with ν",
+    "rationale": "Its mean is 0 for every ν greater than 1."
+   },
+   {
+    "key": "D",
+    "content": "It approaches the standard normal distribution",
+    "correct": true,
+    "rationale": "Correct: with more data s becomes a reliable estimate of σ, so the t-distribution's tails become lighter and it tends to N(0, 1)."
+   }
+  ],
+  "explanation": "As ν → ∞ the t-distribution tends to N(0, 1); for example the two-tailed 5% value falls from 2.571 (ν = 5) to 2.042 (ν = 30) towards 1.960.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.t-distribution.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A 95% confidence interval for a population mean is to be found from a sample of 6 observations from a normal population with unknown variance. State the t critical value used, correct to 3 decimal places.",
+  "answerSpec": {
+   "value": 2.571,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\nu = 5$ and a 95% interval leaves 2.5% in each tail: $t_5(0.975) = 2.571$. ($2.447$ uses $\\nu = 6$; $2.015$ is the one-tailed 5% value.)",
+  "workedSolution": "1. $\\nu = 5$ and a 95% interval leaves 2.5% in each tail: $t_5(0.975) = 2.571$. ($2.447$ uses $\\nu = 6$; $2.015$ is the one-tailed 5% value.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.571"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2.447"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.015"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "inference.t-distribution.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A random sample of $9$ observations from a normal population has mean $52.4$ and unbiased standard deviation estimate $s = 3.6$. Calculate the test statistic $t$ for testing $H_0: \\mu = 50$.",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}} = \\frac{52.4 - 50}{3.6/3} = \\frac{2.4}{1.2} = 2$. (Forgetting $\\sqrt{n}$ gives $0.667$; dividing $s$ by $n$ instead of $\\sqrt{n}$ gives $6$.)",
+  "workedSolution": "1. $t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}} = \\frac{52.4 - 50}{3.6/3} = \\frac{2.4}{1.2} = 2$. (Forgetting $\\sqrt{n}$ gives $0.667$; dividing $s$ by $n$ instead of $\\sqrt{n}$ gives $6$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.667"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "6.00"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "inference.t-distribution.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The masses, in kg, of $10$ randomly chosen sacks of groundnuts from a Murehwa co-operative have mean $18.6$ and unbiased standard deviation estimate $s = 2.4$. Assuming masses are normally distributed, find a 95% confidence interval for the mean mass. Give the limits correct to 3 significant figures.",
+  "payload": {
+   "template": "{{blank:lo}} kg to {{blank:hi}} kg",
+   "blanks": [
+    {
+     "id": "lo",
+     "input": "number"
+    },
+    {
+     "id": "hi",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "lo",
+     "accepted": [
+      "16.9"
+     ],
+     "tolerance": 0.05
+    },
+    {
+     "id": "hi",
+     "accepted": [
+      "20.3"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "$\\nu = 9$, $t_9(0.975) = 2.262$. Half-width $= 2.262 \\times \\frac{2.4}{\\sqrt{10}} = 1.717$. Interval $18.6 \\pm 1.717$: $(16.9, 20.3)$ kg. (Using $z = 1.96$ gives a narrower, wrong interval.)",
+  "hints": [
+   "ν = n − 1 = 9.",
+   "Half-width = t × s/√n."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "lo",
+     "text": "16.9"
+    },
+    {
+     "blankId": "hi",
+     "text": "20.3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "lo",
+      "text": "17.1"
+     },
+     {
+      "blankId": "hi",
+      "text": "20.1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.t-distribution.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The times, in minutes, taken by six randomly chosen learners to walk to a school in Chivhu were 31, 27, 35, 29, 33, 30. Assuming the times are normally distributed, find a 90% confidence interval for the mean time. Give the limits correct to 3 significant figures.",
+  "payload": {
+   "template": "{{blank:lo}} min to {{blank:hi}} min",
+   "blanks": [
+    {
+     "id": "lo",
+     "input": "number"
+    },
+    {
+     "id": "hi",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "lo",
+     "accepted": [
+      "28.5"
+     ],
+     "tolerance": 0.05
+    },
+    {
+     "id": "hi",
+     "accepted": [
+      "33.2"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "$\\bar{x} = 30.83$, $s^2 = 8.167$, $s = 2.858$. For 90% with $\\nu = 5$: $t_5(0.95) = 2.015$. Half-width $= 2.015 \\times \\frac{2.858}{\\sqrt{6}} = 2.351$, so the interval is $(28.5, 33.2)$ minutes. (The value $2.571$ would give a 95% interval.)",
+  "hints": [
+   "Find s with divisor n − 1.",
+   "A 90% interval uses t₅(0.95)."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "lo",
+     "text": "28.5"
+    },
+    {
+     "blankId": "hi",
+     "text": "33.2"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "lo",
+      "text": "27.8"
+     },
+     {
+      "blankId": "hi",
+      "text": "33.8"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.t-distribution.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A sample of 7 observations is taken from a normal population whose variance is unknown. Which method is appropriate for a confidence interval for the population mean?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The normal distribution, using s in place of σ",
+    "rationale": "With only 7 observations, s is an unreliable estimate of σ; the z value would make the interval too narrow."
+   },
+   {
+    "key": "B",
+    "content": "The t-distribution with 6 degrees of freedom, using s",
+    "correct": true,
+    "rationale": "Correct: normal population, unknown variance and a small sample call for t with ν = n − 1."
+   },
+   {
+    "key": "C",
+    "content": "The t-distribution with 7 degrees of freedom, using s",
+    "rationale": "The degrees of freedom are n − 1 = 6."
+   },
+   {
+    "key": "D",
+    "content": "The central limit theorem with the normal distribution",
+    "rationale": "The central limit theorem needs a large sample; here the population is normal but σ is unknown."
+   }
+  ],
+  "explanation": "Normal population + unknown $\\sigma$ + small $n$ → $\\bar{x} \\pm t_{6}\\,\\frac{s}{\\sqrt{7}}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.t-distribution.q09",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a random sample of $8$ bags of cement from a Bulawayo depot, the masses $x$ (in hundreds of grams) give $\\sum x = 1236$ and $\\sum x^2 = 191\\,200$. Calculate the test statistic $t$ for $H_0: \\mu = 150$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 2.182820625326997,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$\\bar{x} = \\frac{1236}{8} = 154.5$; $s^2 = \\frac{1}{7}\\left(191\\,200 - \\frac{1236^2}{8}\\right) = 34.00$; $t = \\frac{154.5 - 150}{\\sqrt{34.00/8}} = 2.18$. (Dividing by $8$ instead of $7$ in $s^2$ gives $2.33$.)",
+  "workedSolution": "1. $\\bar{x} = 154.5$.\n2. $s^2 = \\frac{1}{7}\\left(191\\,200 - 190962\\right) = 34.00$.\n3. $\\frac{s}{\\sqrt{n}} = 2.062$.\n4. $t = \\frac{4.5}{2.062} = 2.18$.",
+  "hints": [
+   "Unbiased variance: divide by n − 1.",
+   "t = (x̄ − μ₀)/(s/√n)."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "2.18"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "2.33"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.772"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.t-distribution.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A two-tailed t-test at the 5% level uses a sample of $15$ observations, and gives $t = -2.1$. The critical values are $\\pm2.145$. What is the correct conclusion?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Reject $H_0$: $-2.1 < 2.145$",
+    "rationale": "In a two-tailed test compare |t| with the critical value, or −2.1 with the lower value −2.145."
+   },
+   {
+    "key": "B",
+    "content": "Reject $H_0$: $|-2.1| > 1.96$",
+    "rationale": "1.96 is the z value; with 14 degrees of freedom the t critical value is larger."
+   },
+   {
+    "key": "C",
+    "content": "Do not reject $H_0$: $|-2.1| < 2.145$",
+    "correct": true,
+    "rationale": "Correct: the statistic is not in the critical region, so there is insufficient evidence against H₀ at the 5% level."
+   },
+   {
+    "key": "D",
+    "content": "Accept that $H_0$ is true",
+    "rationale": "Failing to reject H₀ does not prove it true; it means the evidence is not strong enough."
+   }
+  ],
+  "explanation": "$-2.145 < -2.1 < 2.145$, so $t$ is outside the critical region. Do not reject $H_0$; there is insufficient evidence at the 5% level that the mean differs from its stated value.",
+  "hints": [
+   "Two-tailed: is |t| bigger than the critical value?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "inference.t-distribution.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A one-tailed t-test at the 1% significance level, with H₁: μ > μ₀, uses a sample of 16 observations from a normal population. State the critical value, correct to 3 decimal places.",
+  "answerSpec": {
+   "value": 2.602,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\nu = 15$, upper tail 1%: $t_{15}(0.99) = 2.602$. ($2.947$ is the two-tailed 1% value; $2.583$ uses $\\nu = 16$.)",
+  "workedSolution": "1. $\\nu = 15$, upper tail 1%: $t_{15}(0.99) = 2.602$. ($2.947$ is the two-tailed 1% value; $2.583$ uses $\\nu = 16$.)",
+  "hints": [
+   "ν = n − 1; one tail of 1% means p = 0.99."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.602"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2.947"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.583"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.t-distribution.q12",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each situation (normal population, σ unknown) with its t critical value.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "95% confidence interval, n = 11"
+    },
+    {
+     "id": "L2",
+     "content": "One-tailed 5% test, n = 11"
+    },
+    {
+     "id": "L3",
+     "content": "99% confidence interval, n = 11"
+    },
+    {
+     "id": "L4",
+     "content": "Two-tailed 10% test, n = 21"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "3.169"
+    },
+    {
+     "id": "R4",
+     "content": "1.725"
+    },
+    {
+     "id": "R1",
+     "content": "2.228"
+    },
+    {
+     "id": "R2",
+     "content": "1.812"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "$\\nu = 10$: $t_{10}(0.975) = 2.228$, $t_{10}(0.95) = 1.812$, $t_{10}(0.995) = 3.169$. $\\nu = 20$, 5% in each tail: $t_{20}(0.95) = 1.725$.",
+  "hints": [
+   "Work out ν = n − 1 and the probability below the critical value."
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.t-distribution.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "State two assumptions needed for a one-sample t-test of a population mean.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The population is normally distributed (approximately).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The sample is random (the observations are independent).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The population from which the sample is drawn is normally distributed, and the sample is a random sample of independent observations."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The t-distribution result is exact only for a normal population; randomness justifies treating the observations as independent.",
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.t-distribution.q14",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "From the same sample, a 99% t-confidence interval for the mean is narrower than a 95% t-confidence interval.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "Greater confidence needs a larger critical value ($t_\\nu(0.995) > t_\\nu(0.975)$), so the 99% interval is wider.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.t-distribution.q15",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A 95% confidence interval for the mean of a normal population, calculated from a random sample of $10$ observations using the t-distribution, is $(46.3, 50.3)$. Find the value of $s$ used, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 2.7960014678765512,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "The mean is the midpoint, $48.3$, and the half-width is $2$. So $2.262 \\times \\frac{s}{\\sqrt{10}} = 2$, giving $s = \\frac{2\\sqrt{10}}{2.262} = 2.80$. (Using the full width $4$ doubles the answer; using $1.96$ ignores the small sample.)",
+  "workedSolution": "1. Mean $= \\frac{46.3 + 50.3}{2} = 48.3$; half-width $= 2$.\n2. $\\nu = 9$: $t_9(0.975) = 2.262$.\n3. $s = \\frac{2\\sqrt{10}}{2.262} = 2.80$.",
+  "hints": [
+   "Half-width = t × s/√n.",
+   "The half-width is half of 50.3 − 46.3."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "2.80"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "3.23"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "5.59"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "inference.t-distribution.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A student uses z = 1.645 to find a 90% confidence interval for a mean from a sample of 6 observations, with σ unknown. Explain why this is not appropriate and what effect it has on the interval.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "σ is estimated by s from only 6 values, so (x̄ − μ)/(s/√n) follows t with 5 degrees of freedom, not N(0, 1).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "1.645 is smaller than t₅(0.95) = 2.015, so the interval is too narrow: it overstates the precision (true confidence below 90%).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: With a small sample and σ unknown, the standardised mean has a t₅ distribution. Its critical value 2.015 exceeds 1.645, so using 1.645 gives an interval that is too narrow, with true confidence less than 90%."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Small sample + estimated σ → heavier tails → larger critical value.",
+  "hints": [
+   "Compare 1.645 with t₅(0.95)."
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "inference.t-distribution.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "A borehole pump in Masvingo is meant to deliver a mean of $12.5$ litres per minute. After a repair, $10$ random readings give $\\bar{x} = 11.6$ and $s = 1.5$ litres per minute. Delivery rates are normally distributed. Farai tests, at the 5% level, whether the mean rate has fallen.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the test statistic t, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": -1.8973665961010284,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$t = \\frac{11.6 - 12.5}{1.5/\\sqrt{10}} = -1.90$.",
+    "workedSolution": "1. $t = \\frac{11.6 - 12.5}{1.5/\\sqrt{10}} = -1.90$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the critical value of t for this test (give the negative value), correct to 3 decimal places.",
+    "answerSpec": {
+     "value": -1.833,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "One-tailed, lower tail, $\\nu = 9$: $-t_9(0.95) = -1.833$.",
+    "workedSolution": "1. One-tailed, lower tail, $\\nu = 9$: $-t_9(0.95) = -1.833$."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "What is the conclusion of the test?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Do not reject H₀: there is no evidence that the mean rate has fallen",
+      "rationale": "The statistic lies in the critical region."
+     },
+     {
+      "key": "B",
+      "content": "Reject H₀: the mean rate is now exactly 11.6 litres per minute",
+      "rationale": "A test gives evidence about μ, not its exact value."
+     },
+     {
+      "key": "C",
+      "content": "The test cannot be done because n is less than 30",
+      "rationale": "The t-test is designed for small samples from a normal population."
+     },
+     {
+      "key": "D",
+      "content": "Reject H₀: there is evidence that the mean rate has fallen",
+      "correct": true,
+      "rationale": "Correct: $-1.90 < -1.833$."
+     }
+    ],
+    "explanation": "$t = -1.90$ is below $-1.833$, so reject $H_0$ at the 5% level: there is evidence that the mean delivery rate has fallen."
+   }
+  ],
+  "explanation": "H₀: μ = 12.5, H₁: μ < 12.5; compare t with the lower 5% point of t₉.",
+  "hints": [
+   "ν = 9.",
+   "One-tailed: use t₉(0.95)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "-1.90"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-1.833"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "-0.600"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-2.262"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "inference.t-distribution.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.t-distribution"
+  ],
+  "difficulty": 4,
+  "marks": 14,
+  "estimatedSeconds": 1260,
+  "stem": "The masses, in kg, of $12$ randomly selected Form 6 learners at a Harare school are:\n68, 74, 71, 65, 70, 77, 69, 72, 66, 73, 75, 68.\nMasses are assumed to be normally distributed.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Calculate the sample mean and an unbiased estimate of the population variance, each correct to 3 significant figures.",
+    "payload": {
+     "template": "mean = {{blank:m}} kg, variance = {{blank:v}} kg²",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "70.7"
+       ],
+       "marks": 1,
+       "tolerance": 0.05
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "13.5"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\sum x = 848$, $\\sum x^2 = 60074$. $\\bar{x} = 70.67$; $s^2 = \\frac{1}{11}\\left(60074 - \\frac{848^2}{12}\\right) = 13.52$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Find a 95% confidence interval for the population mean mass, giving the limits correct to 3 significant figures.",
+    "payload": {
+     "template": "{{blank:lo}} kg to {{blank:hi}} kg",
+     "blanks": [
+      {
+       "id": "lo",
+       "input": "number"
+      },
+      {
+       "id": "hi",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "lo",
+       "accepted": [
+        "68.3"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      },
+      {
+       "id": "hi",
+       "accepted": [
+        "73.0"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\nu = 11$, $t_{11}(0.975) = 2.201$; half-width $2.201 \\times \\frac{3.676}{\\sqrt{12}} = 2.336$; interval $(68.3, 73.0)$ kg."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "A health officer claims the mean mass is 68 kg. Calculate the test statistic for a two-tailed t-test of this claim, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 2.512747767940826,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$t = \\frac{70.67 - 68}{3.676/\\sqrt{12}} = 2.51$.",
+    "workedSolution": "1. $t = \\frac{70.67 - 68}{3.676/\\sqrt{12}} = 2.51$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Using the 5% significance level, state the conclusion of the test in context, and explain how it agrees with the interval in (b).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Critical values $\\pm2.201$; $2.51 > 2.201$, so reject $H_0$: evidence that the mean mass is not 68 kg.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "68 lies outside the 95% interval, which is equivalent to rejecting H₀: μ = 68 in a two-tailed 5% test.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $|t| = 2.51 > 2.201$, so reject $H_0$ at the 5% level: there is evidence that the mean mass of Form 6 learners differs from 68 kg. This agrees with (b): $68$ is not inside $(68.3, 73.0)$."
+    },
+    "explanation": "A two-tailed 5% test rejects exactly the values outside the 95% interval."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State, with a reason, whether the conclusion would change at the 1% significance level.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The 1% critical value is $3.106$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "$2.51 < 3.106$, so $H_0$ would not be rejected at 1%: the conclusion changes.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: At 1%, the critical values are $\\pm3.106$ and $|t| = 2.51$ is smaller, so $H_0$ is not rejected: the evidence is significant at 5% but not at 1% (two-tailed p-value about $0.0288$)."
+    },
+    "explanation": "Compare the same statistic with the stricter critical value."
+   }
+  ],
+  "explanation": "Summarise the data, build the t-interval, then test using the same distribution.",
+  "hints": [
+   "ν = 11 throughout.",
+   "A value outside the 95% interval is rejected by a two-tailed 5% test."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "70.7"
+      },
+      {
+       "blankId": "v",
+       "text": "13.5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "lo",
+       "text": "68.3"
+      },
+      {
+       "blankId": "hi",
+       "text": "73.0"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.51"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "999"
+       },
+       {
+        "blankId": "v",
+        "text": "12.4"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "lo",
+        "text": "68.6"
+       },
+       {
+        "blankId": "hi",
+        "text": "72.7"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.725"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

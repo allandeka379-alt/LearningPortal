@@ -1,0 +1,1200 @@
+[
+ {
+  "key": "probability.conditional.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which formula gives $\\mathrm{P}(A \\mid B)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{\\mathrm{P}(A \\cap B)}{\\mathrm{P}(B)}$",
+    "correct": true,
+    "rationale": "Correct: the given event B becomes the new whole."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{\\mathrm{P}(A \\cap B)}{\\mathrm{P}(A)}$",
+    "rationale": "This is $\\mathrm{P}(B \\mid A)$: it divides by the wrong event."
+   },
+   {
+    "key": "C",
+    "content": "$\\mathrm{P}(A)\\,\\mathrm{P}(B)$",
+    "rationale": "This is P(A ∩ B) only when A and B are independent."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{\\mathrm{P}(A)}{\\mathrm{P}(B)}$",
+    "rationale": "The numerator must be the overlap $\\mathrm{P}(A \\cap B)$."
+   }
+  ],
+  "explanation": "Given $B$, only outcomes in $B$ remain possible, and of those the ones in $A$ form $A \\cap B$: $\\mathrm{P}(A \\mid B) = \\frac{\\mathrm{P}(A \\cap B)}{\\mathrm{P}(B)}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For events $A$ and $B$, $\\mathrm{P}(B) = 0.45$ and $\\mathrm{P}(A \\cap B) = 0.18$. Find $\\mathrm{P}(A \\mid B)$.",
+  "answerSpec": {
+   "value": 0.39999999999999997,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(A \\mid B) = \\frac{0.18}{0.45} = 0.4$. (0.081 multiplies instead of dividing.)",
+  "workedSolution": "1. $\\mathrm{P}(A \\mid B) = \\frac{0.18}{0.45} = 0.4$. (0.081 multiplies instead of dividing.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.400"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.081"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A box holds 5 red and 3 white beads. Two beads are taken at random without replacement. Find the probability that both are red. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.35714285714285715,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(RR) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14} \\approx 0.357$. ($\\frac{25}{64}$ assumes the first bead is put back.)",
+  "workedSolution": "1. $\\mathrm{P}(RR) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14} \\approx 0.357$. ($\\frac{25}{64}$ assumes the first bead is put back.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.357"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.390625"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.625"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "From the same box (5 red and 3 white beads), two beads are taken at random without replacement. Find the probability that they are different colours. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.5357142857142857,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(RW) + \\mathrm{P}(WR) = \\frac{5}{8} \\times \\frac{3}{7} + \\frac{3}{8} \\times \\frac{5}{7} = \\frac{30}{56} = \\frac{15}{28} \\approx 0.536$. ($\\frac{15}{56}$ counts only one of the two orders.)",
+  "workedSolution": "1. $\\mathrm{P}(RW) + \\mathrm{P}(WR) = \\frac{5}{8} \\times \\frac{3}{7} + \\frac{3}{8} \\times \\frac{5}{7} = \\frac{30}{56} = \\frac{15}{28} \\approx 0.536$. ($\\frac{15}{56}$ counts only one of the two orders.)",
+  "hints": [
+   "There are two paths: red then white, and white then red."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.536"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.26785714285714285"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.46875"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "From the same box (5 red and 3 white beads), two beads are taken at random without replacement. Given that the two beads are the same colour, find the probability that they are both white. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.23076923076923078,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(\\text{same}) = \\frac{20}{56} + \\frac{6}{56} = \\frac{26}{56}$. $\\mathrm{P}(WW \\mid \\text{same}) = \\frac{6/56}{26/56} = \\frac{6}{26} = \\frac{3}{13} \\approx 0.231$. ($\\frac{6}{56}$ is $\\mathrm{P}(WW)$ without the condition.)",
+  "workedSolution": "1. $\\mathrm{P}(\\text{same}) = \\frac{20}{56} + \\frac{6}{56} = \\frac{26}{56}$. $\\mathrm{P}(WW \\mid \\text{same}) = \\frac{6/56}{26/56} = \\frac{6}{26} = \\frac{3}{13} \\approx 0.231$. ($\\frac{6}{56}$ is $\\mathrm{P}(WW)$ without the condition.)",
+  "hints": [
+   "Find P(same colour) first: it is the denominator."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.231"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.10714285714285714"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.375"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A tin holds 3 red and 2 green pens. Tendai takes a pen at random, notes its colour and puts it back, then takes a pen at random again. What is the probability that both pens are red?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\frac{3}{10}$",
+    "rationale": "This is $\\frac{3}{5} \\times \\frac{2}{4}$, the answer without replacement."
+   },
+   {
+    "key": "B",
+    "content": "$\\frac{6}{25}$",
+    "rationale": "This is $\\frac{3}{5} \\times \\frac{2}{5}$, red then green."
+   },
+   {
+    "key": "C",
+    "content": "$\\frac{6}{5}$",
+    "rationale": "Adding the two probabilities gives a value above 1, which is impossible."
+   },
+   {
+    "key": "D",
+    "content": "$\\frac{9}{25}$",
+    "correct": true,
+    "rationale": "Correct: with replacement the picks are independent, $\\frac{3}{5} \\times \\frac{3}{5}$."
+   }
+  ],
+  "explanation": "The pen is replaced, so the second pick has the same probabilities: $\\left(\\frac{3}{5}\\right)^2 = \\frac{9}{25}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$\\mathrm{P}(A) = 0.7$ and $\\mathrm{P}(B \\mid A) = 0.2$. Find $\\mathrm{P}(A \\cap B')$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "0.14",
+    "rationale": "This is $\\mathrm{P}(A \\cap B) = 0.7 \\times 0.2$."
+   },
+   {
+    "key": "B",
+    "content": "0.56",
+    "correct": true,
+    "rationale": "Correct: $0.7 \\times (1 - 0.2) = 0.56$."
+   },
+   {
+    "key": "C",
+    "content": "0.24",
+    "rationale": "This is $0.3 \\times 0.8$, which uses $\\mathrm{P}(A')$ instead of $\\mathrm{P}(A)$."
+   },
+   {
+    "key": "D",
+    "content": "0.06",
+    "rationale": "This is $0.3 \\times 0.2$, the wrong branch at both stages."
+   }
+  ],
+  "explanation": "On the tree, the path \"$A$ then not $B$\" has probability $0.7 \\times 0.8 = 0.56$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$\\mathrm{P}(A) = 0.3$, $\\mathrm{P}(B) = 0.5$ and $\\mathrm{P}(A \\cup B) = 0.65$. Which statement is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$A$ and $B$ are exclusive, since $\\mathrm{P}(A \\cap B) = 0$",
+    "rationale": "$\\mathrm{P}(A) + \\mathrm{P}(B) = 0.8 \\ne 0.65$, so the overlap is not 0."
+   },
+   {
+    "key": "B",
+    "content": "$A$ and $B$ are not independent, since $0.3 + 0.5 \\ne 0.65$",
+    "rationale": "That compares the union with the sum; it tests exclusivity, not independence."
+   },
+   {
+    "key": "C",
+    "content": "$A$ and $B$ are independent, since $\\mathrm{P}(A \\cap B) = 0.15$",
+    "correct": true,
+    "rationale": "Correct: $0.3 + 0.5 - 0.65 = 0.15 = 0.3 \\times 0.5$."
+   },
+   {
+    "key": "D",
+    "content": "$A$ and $B$ are not independent, since $\\mathrm{P}(A \\cap B) = 0.35$",
+    "rationale": "$0.35$ is $\\mathrm{P}(A \\cup B) - \\mathrm{P}(A)$, not the overlap."
+   }
+  ],
+  "explanation": "$\\mathrm{P}(A \\cap B) = \\mathrm{P}(A) + \\mathrm{P}(B) - \\mathrm{P}(A \\cup B) = 0.15$, and $\\mathrm{P}(A)\\,\\mathrm{P}(B) = 0.15$, so they are independent.",
+  "hints": [
+   "Find P(A ∩ B) from the addition rule first."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Events $A$ and $B$ are independent, with $\\mathrm{P}(A) = 0.4$ and $\\mathrm{P}(B) = 0.25$. Find $\\mathrm{P}(A \\cup B)$.",
+  "answerSpec": {
+   "value": 0.55,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(A \\cap B) = 0.4 \\times 0.25 = 0.1$, so $\\mathrm{P}(A \\cup B) = 0.4 + 0.25 - 0.1 = 0.55$. (0.65 treats the events as exclusive.)",
+  "workedSolution": "1. $\\mathrm{P}(A \\cap B) = 0.4 \\times 0.25 = 0.1$, so $\\mathrm{P}(A \\cup B) = 0.4 + 0.25 - 0.1 = 0.55$. (0.65 treats the events as exclusive.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.550"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.65"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Events $A$ and $B$ are independent. $\\mathrm{P}(A) = 0.2$ and $\\mathrm{P}(A \\cup B) = 0.6$. Find $\\mathrm{P}(B)$.",
+  "answerSpec": {
+   "value": 0.5,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Let $\\mathrm{P}(B) = x$. Then $0.6 = 0.2 + x - 0.2x$, so $0.8x = 0.4$ and $x = 0.5$. (0.4 treats the events as exclusive.)",
+  "workedSolution": "1. Let $\\mathrm{P}(B) = x$. Then $0.6 = 0.2 + x - 0.2x$, so $0.8x = 0.4$ and $x = 0.5$. (0.4 treats the events as exclusive.)",
+  "hints": [
+   "Use $\\mathrm{P}(A \\cap B) = 0.2x$ in the addition rule."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.500"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.8"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "On a given day the probability of rain on the Harare–Bulawayo road is 0.3. If it rains, a bus arrives late with probability 0.45; if it does not rain, it arrives late with probability 0.15. Find the probability that the bus is late, and the probability that it rained given that the bus was late (to 3 significant figures).",
+  "payload": {
+   "template": "P(late) = {{blank:l}}; P(rain | late) = {{blank:r}}",
+   "blanks": [
+    {
+     "id": "l",
+     "input": "number"
+    },
+    {
+     "id": "r",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "l",
+     "accepted": [
+      "0.24"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "r",
+     "accepted": [
+      "0.563"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$\\mathrm{P}(L) = 0.3 \\times 0.45 + 0.7 \\times 0.15 = 0.135 + 0.105 = 0.24$. $\\mathrm{P}(R \\mid L) = \\frac{0.135}{0.24} = 0.5625 \\approx 0.563$. (0.135 is $\\mathrm{P}(R \\cap L)$, not the conditional probability.)",
+  "hints": [
+   "Draw a tree: rain or not, then late or not.",
+   "Divide the 'rain and late' path by the total probability of late."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "l",
+     "text": "0.24"
+    },
+    {
+     "blankId": "r",
+     "text": "0.563"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "l",
+      "text": "0.6"
+     },
+     {
+      "blankId": "r",
+      "text": "0.135"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A survey of 240 adults in Gweru asked whether they drink tea at breakfast.\n\n|  | Tea | No tea | Total |\n| --- | --- | --- | --- |\n| Men | 60 | 36 | 96 |\n| Women | 48 | 96 | 144 |\n| Total | 108 | 132 | 240 |\n\nOne adult is chosen at random. Given that the adult drinks tea, find the probability that the adult is a man. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.5555555555555556,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Restrict to the tea column: 108 adults, of whom 60 are men. $\\mathrm{P}(M \\mid T) = \\frac{60}{108} = \\frac{5}{9} \\approx 0.556$. (0.625 is $\\mathrm{P}(T \\mid M) = \\frac{60}{96}$, the reverse condition.)",
+  "workedSolution": "1. Restrict to the tea column: 108 adults, of whom 60 are men. $\\mathrm{P}(M \\mid T) = \\frac{60}{108} = \\frac{5}{9} \\approx 0.556$. (0.625 is $\\mathrm{P}(T \\mid M) = \\frac{60}{96}$, the reverse condition.)",
+  "hints": [
+   "The condition 'drinks tea' picks out one column of the table."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.556"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.625"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.25"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A school in Kwekwe has 300 learners: 120 boys, of whom 30 sing in the choir, and 180 girls, of whom 60 sing in the choir. Are the events 'is a boy' and 'sings in the choir' independent?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Yes: $\\mathrm{P}(B \\cap C) = 0.1 = \\mathrm{P}(B)\\,\\mathrm{P}(C)$",
+    "rationale": "$\\mathrm{P}(B)\\,\\mathrm{P}(C) = 0.4 \\times 0.3 = 0.12$, not 0.1."
+   },
+   {
+    "key": "B",
+    "content": "No: $\\mathrm{P}(B \\cap C) \\ne 0$",
+    "rationale": "A non-zero overlap shows the events are not exclusive; it says nothing about independence."
+   },
+   {
+    "key": "C",
+    "content": "No: $\\mathrm{P}(B \\cap C) = 0.1$ but $\\mathrm{P}(B)\\,\\mathrm{P}(C) = 0.12$",
+    "correct": true,
+    "rationale": "Correct: $\\frac{30}{300} = 0.1$ and $0.4 \\times 0.3 = 0.12$ differ."
+   },
+   {
+    "key": "D",
+    "content": "Yes: $\\mathrm{P}(C \\mid B) = 0.25 < \\mathrm{P}(B)$",
+    "rationale": "Independence compares $\\mathrm{P}(C \\mid B)$ with $\\mathrm{P}(C) = 0.3$, not with $\\mathrm{P}(B)$."
+   }
+  ],
+  "explanation": "$\\mathrm{P}(B) = 0.4$, $\\mathrm{P}(C) = 0.3$, $\\mathrm{P}(B \\cap C) = 0.1 \\ne 0.12$. Equivalently $\\mathrm{P}(C \\mid B) = 0.25 \\ne 0.3$: boys are less likely to sing in the choir, so the events are not independent.",
+  "hints": [
+   "Compute P(B), P(C) and P(B ∩ C) from the counts."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q14",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $A$ and $B$ are mutually exclusive and $\\mathrm{P}(A) > 0$ and $\\mathrm{P}(B) > 0$, then $A$ and $B$ cannot be independent.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "Exclusive gives $\\mathrm{P}(A \\cap B) = 0$, but $\\mathrm{P}(A)\\,\\mathrm{P}(B) > 0$, so the independence condition fails. If $A$ happens, $B$ becomes impossible, which changes its probability.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q15",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For any events with $\\mathrm{P}(A) > 0$ and $\\mathrm{P}(B) > 0$, $\\mathrm{P}(A \\mid B) = \\mathrm{P}(B \\mid A)$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "Both have numerator $\\mathrm{P}(A \\cap B)$ but the denominators are $\\mathrm{P}(B)$ and $\\mathrm{P}(A)$. They are equal only when $\\mathrm{P}(A) = \\mathrm{P}(B)$. In the Gweru tea survey, $\\mathrm{P}(T \\mid M) = 0.625$ but $\\mathrm{P}(M \\mid T) \\approx 0.556$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A group of 4 is chosen at random from 6 boys and 5 girls to represent a school in Masvingo. Given that the group contains at least two girls, find the probability that it contains exactly two girls. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.6976744186046512,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "All groups: ${}^{11}C_4 = 330$. Fewer than two girls: no girl ${}^6C_4 = 15$; one girl ${}^5C_1 \\times {}^6C_3 = 100$. At least two girls: $330 - 115 = 215$. Exactly two girls: ${}^5C_2 \\times {}^6C_2 = 150$. $\\mathrm{P} = \\frac{150}{215} = \\frac{30}{43} \\approx 0.698$. ($\\frac{150}{330}$ ignores the condition.)",
+  "workedSolution": "1. All groups: ${}^{11}C_4 = 330$. Fewer than two girls: no girl ${}^6C_4 = 15$; one girl ${}^5C_1 \\times {}^6C_3 = 100$. At least two girls: $330 - 115 = 215$. Exactly two girls: ${}^5C_2 \\times {}^6C_2 = 150$. $\\mathrm{P} = \\frac{150}{215} = \\frac{30}{43} \\approx 0.698$. ($\\frac{150}{330}$ ignores the condition.)",
+  "hints": [
+   "The denominator is the number of groups with at least two girls.",
+   "Count the complement: groups with 0 or 1 girl."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.698"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.45454545454545453"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.47619047619047616"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q17",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$\\mathrm{P}(A) = 0.5$, $\\mathrm{P}(B \\mid A) = 0.1$ and $\\mathrm{P}(B \\mid A') = 0.6$. Find $\\mathrm{P}(A \\mid B')$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.6923076923076923,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(A \\cap B') = 0.5 \\times 0.9 = 0.45$; $\\mathrm{P}(B') = 0.5 \\times 0.9 + 0.5 \\times 0.4 = 0.65$. $\\mathrm{P}(A \\mid B') = \\frac{0.45}{0.65} = \\frac{9}{13} \\approx 0.692$. (0.45 is the joint probability $\\mathrm{P}(A \\cap B')$.)",
+  "workedSolution": "1. $\\mathrm{P}(A \\cap B') = 0.5 \\times 0.9 = 0.45$; $\\mathrm{P}(B') = 0.5 \\times 0.9 + 0.5 \\times 0.4 = 0.65$. $\\mathrm{P}(A \\mid B') = \\frac{0.45}{0.65} = \\frac{9}{13} \\approx 0.692$. (0.45 is the joint probability $\\mathrm{P}(A \\cap B')$.)",
+  "hints": [
+   "Draw a tree with A first and B second.",
+   "P(B′ | A) = 1 − 0.1."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.692"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.45"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.9"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q18",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each statement about events $A$ and $B$ with what it tells you.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\mathrm{P}(A \\cap B) = 0$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\mathrm{P}(A \\cap B) = \\mathrm{P}(A)\\,\\mathrm{P}(B)$"
+    },
+    {
+     "id": "L3",
+     "content": "$\\mathrm{P}(A \\cup B) = 1$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\mathrm{P}(A \\mid B) = 1$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "A and B are exhaustive"
+    },
+    {
+     "id": "R4",
+     "content": "whenever B happens, A happens too"
+    },
+    {
+     "id": "R1",
+     "content": "A and B are mutually exclusive"
+    },
+    {
+     "id": "R2",
+     "content": "A and B are independent"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Exclusive: no overlap. Independent: the product rule holds. Exhaustive: together they cover everything. $\\mathrm{P}(A \\mid B) = 1$ means $\\mathrm{P}(A \\cap B) = \\mathrm{P}(B)$, so $B$ lies inside $A$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A tree diagram for taking two counters from a bag WITH replacement has the same probabilities on the second-stage branches whatever happened first. Explain what this tells you about the two picks, and how the tree changes if the counters are taken WITHOUT replacement.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "With replacement the second pick is independent of the first (its probabilities do not depend on the first outcome).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Without replacement the bag has one fewer counter (and one fewer of the colour taken), so the second-stage probabilities differ between branches: they are conditional probabilities.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: With replacement the bag is the same for the second pick, so P(second | first) = P(second): the picks are independent. Without replacement the total falls by one and the colour already taken has one fewer counter, so the second-stage branches carry different conditional probabilities, e.g. 4/7 after a red and 5/7 after a white from 5 red and 3 white."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Equal second-stage branches are the picture of independence.",
+  "hints": [
+   "Compare the second-stage branches after each first outcome."
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Chipo's netball team plays two matches. The probability that it wins the first match is 0.6. If it wins the first match, the probability that it wins the second is 0.75; if it does not win the first, the probability that it wins the second is 0.3.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that the team wins the second match.",
+    "answerSpec": {
+     "value": 0.57,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$0.6 \\times 0.75 + 0.4 \\times 0.3 = 0.45 + 0.12 = 0.57$. (0.45 is only the path \"win, win\".)",
+    "workedSolution": "1. $0.6 \\times 0.75 + 0.4 \\times 0.3 = 0.45 + 0.12 = 0.57$. (0.45 is only the path \"win, win\".)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Given that the team wins exactly one of the two matches, find the probability that it won the first match. Give your answer correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.5555555555555555,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Exactly one win: $\\mathrm{P}(WL) + \\mathrm{P}(LW) = 0.6 \\times 0.25 + 0.4 \\times 0.3 = 0.15 + 0.12 = 0.27$. $\\mathrm{P}(W_1 \\mid \\text{exactly one}) = \\frac{0.15}{0.27} = \\frac{5}{9} \\approx 0.556$.",
+    "workedSolution": "1. Exactly one win: $\\mathrm{P}(WL) + \\mathrm{P}(LW) = 0.6 \\times 0.25 + 0.4 \\times 0.3 = 0.15 + 0.12 = 0.27$. $\\mathrm{P}(W_1 \\mid \\text{exactly one}) = \\frac{0.15}{0.27} = \\frac{5}{9} \\approx 0.556$."
+   }
+  ],
+  "explanation": "Multiply along paths; divide one path by the total of the paths in the condition.",
+  "hints": [
+   "Draw a two-stage tree.",
+   "Which two paths give exactly one win?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.570"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.556"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.45"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.15"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "A bag contains 4 blue and 6 yellow discs. Sipho takes three discs from the bag, one at a time, at random and without replacement.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that all three discs are yellow. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.16666666666666666,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{6}{10} \\times \\frac{5}{9} \\times \\frac{4}{8} = \\frac{120}{720} = \\frac{1}{6}$. (0.216 is $0.6^3$, with replacement.)",
+    "workedSolution": "1. $\\frac{6}{10} \\times \\frac{5}{9} \\times \\frac{4}{8} = \\frac{120}{720} = \\frac{1}{6}$. (0.216 is $0.6^3$, with replacement.)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that exactly one of the three discs is blue. Give your answer as a fraction or a decimal.",
+    "answerSpec": {
+     "value": 0.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "One order: $\\frac{4}{10} \\times \\frac{6}{9} \\times \\frac{5}{8} = \\frac{120}{720} = \\frac{1}{6}$. The blue disc can be first, second or third, and each order has the same probability, so $3 \\times \\frac{1}{6} = \\frac{1}{2}$.",
+    "workedSolution": "1. One order: $\\frac{4}{10} \\times \\frac{6}{9} \\times \\frac{5}{8} = \\frac{120}{720} = \\frac{1}{6}$. The blue disc can be first, second or third, and each order has the same probability, so $3 \\times \\frac{1}{6} = \\frac{1}{2}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Given that exactly one of the three discs is blue, find the probability that the third disc is the blue one. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.3333333333333333,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(YYB) = \\frac{6}{10} \\times \\frac{5}{9} \\times \\frac{4}{8} = \\frac{1}{6}$. $\\mathrm{P}(YYB \\mid \\text{exactly one blue}) = \\frac{1/6}{1/2} = \\frac{1}{3}$.",
+    "workedSolution": "1. $\\mathrm{P}(YYB) = \\frac{6}{10} \\times \\frac{5}{9} \\times \\frac{4}{8} = \\frac{1}{6}$. $\\mathrm{P}(YYB \\mid \\text{exactly one blue}) = \\frac{1/6}{1/2} = \\frac{1}{3}$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that the first and third discs are both blue. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.13333333333333333,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Paths $B\\,B\\,B$ and $B\\,Y\\,B$: $\\frac{4}{10} \\cdot \\frac{3}{9} \\cdot \\frac{2}{8} + \\frac{4}{10} \\cdot \\frac{6}{9} \\cdot \\frac{3}{8} = \\frac{24 + 72}{720} = \\frac{96}{720} = \\frac{2}{15}$.",
+    "workedSolution": "1. Paths $B\\,B\\,B$ and $B\\,Y\\,B$: $\\frac{4}{10} \\cdot \\frac{3}{9} \\cdot \\frac{2}{8} + \\frac{4}{10} \\cdot \\frac{6}{9} \\cdot \\frac{3}{8} = \\frac{24 + 72}{720} = \\frac{96}{720} = \\frac{2}{15}$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Determine whether the events 'the first disc is blue' and 'the third disc is blue' are independent. Show your working.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 finds $\\mathrm{P}(\\text{third blue}) = 0.4$ (by symmetry or by adding the four paths).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 compares $\\mathrm{P}(\\text{both}) = \\frac{2}{15} \\approx 0.133$ with $0.4 \\times 0.4 = 0.16$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 concludes they are not independent, because the values differ.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: P(first blue) = 0.4. P(third blue) = 0.4 (each disc is equally likely to be in any position, or add BBB, BYB, YBB, YYB = 288/720). P(first blue and third blue) = 2/15 ≈ 0.133, but 0.4 × 0.4 = 0.16 ≠ 2/15, so the events are not independent."
+    }
+   }
+  ],
+  "explanation": "Without replacement, later picks depend on earlier ones; a symmetry argument shows each single pick is still blue with probability 0.4.",
+  "hints": [
+   "Multiply three fractions along each path; the denominators are 10, 9, 8.",
+   "For (b), count the positions the single blue disc can take."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.167"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.500"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.333"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.133"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.216"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.16666666666666666"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.16666666666666666"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.16"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.conditional.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Of 150 learners at a school in Chinhoyi, 60 are in Form 5 and the rest are in Form 6. Altogether 50 learners belong to the debate club, and $x$ of the debate club members are in Form 5.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Given that 'is in Form 5' and 'belongs to the debate club' are independent events, find x.",
+    "answerSpec": {
+     "value": 20
+    },
+    "explanation": "Independence: $\\frac{x}{150} = \\frac{60}{150} \\times \\frac{50}{150}$, so $x = \\frac{60 \\times 50}{150} = 20$.",
+    "workedSolution": "1. Independence: $\\frac{x}{150} = \\frac{60}{150} \\times \\frac{50}{150}$, so $x = \\frac{60 \\times 50}{150} = 20$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "With this value of x, find the probability that a learner chosen at random from Form 6 belongs to the debate club. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.3333333333333333,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Form 6 has $90$ learners, of whom $50 - 20 = 30$ are in the club: $\\frac{30}{90} = \\frac{1}{3}$, the same as $\\mathrm{P}(\\text{club}) = \\frac{50}{150}$, as independence requires.",
+    "workedSolution": "1. Form 6 has $90$ learners, of whom $50 - 20 = 30$ are in the club: $\\frac{30}{90} = \\frac{1}{3}$, the same as $\\mathrm{P}(\\text{club}) = \\frac{50}{150}$, as independence requires."
+   }
+  ],
+  "explanation": "Independence makes the conditional proportion in each row equal to the overall proportion.",
+  "hints": [
+   "Use P(A ∩ B) = P(A) P(B) with counts out of 150."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "20"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.333"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "25"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.2"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

@@ -1,0 +1,1420 @@
+[
+ {
+  "key": "series.maclaurin-taylor.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which is the coefficient of $x^3$ in the Maclaurin series of $f(x)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$f'''(0)$",
+    "rationale": "The factorial is missing."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{f'''(0)}{3}$",
+    "rationale": "Divide by $3! = 6$, not by 3."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{f'''(0)}{3!}$",
+    "correct": true,
+    "rationale": "Correct: the coefficient of $x^r$ is $\\frac{f^{(r)}(0)}{r!}$."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{f(0)}{3!}$",
+    "rationale": "The third derivative is needed, not f itself."
+   }
+  ],
+  "explanation": "$f(x) = f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3 + \\cdots$",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What are the first two non-zero terms of the Maclaurin series of $\\sin x$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$1 - \\dfrac{x^2}{2}$",
+    "rationale": "These are the first terms of $\\cos x$."
+   },
+   {
+    "key": "B",
+    "content": "$x + \\dfrac{x^3}{6}$",
+    "rationale": "The signs alternate: the $x^3$ term is negative."
+   },
+   {
+    "key": "C",
+    "content": "$x - \\dfrac{x^3}{3}$",
+    "rationale": "The denominator is $3! = 6$, not 3."
+   },
+   {
+    "key": "D",
+    "content": "$x - \\dfrac{x^3}{6}$",
+    "correct": true,
+    "rationale": "Correct: $\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots$"
+   }
+  ],
+  "explanation": "Derivatives of $\\sin x$ at 0 cycle $0, 1, 0, -1, \\ldots$, giving $x - \\frac{x^3}{6} + \\cdots$",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^2$ in the Maclaurin series of $\\mathrm{e}^{3x}$.",
+  "answerSpec": {
+   "value": 4.5,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$\\mathrm{e}^{3x} = 1 + 3x + \\frac{(3x)^2}{2!} + \\cdots = 1 + 3x + \\frac{9}{2}x^2 + \\cdots$, so the coefficient is $4.5$. (1.5 forgets to square the 3.)",
+  "workedSolution": "1. $\\mathrm{e}^{3x} = 1 + 3x + \\frac{(3x)^2}{2!} + \\cdots = 1 + 3x + \\frac{9}{2}x^2 + \\cdots$, so the coefficient is $4.5$. (1.5 forgets to square the 3.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4.50"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "9"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Find the Maclaurin series of $\\ln(1 + 2x)$ up to and including the term in $x^3$. Give coefficients as fractions or decimals.",
+  "payload": {
+   "template": "ln(1 + 2x) ≈ ({{blank:a}})x + ({{blank:b}})x² + ({{blank:c}})x³",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "-2"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "8/3",
+      "2.667",
+      "2.6667"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "Replace $x$ by $2x$ in $x - \\frac{x^2}{2} + \\frac{x^3}{3}$: $2x - \\frac{4x^2}{2} + \\frac{8x^3}{3} = 2x - 2x^2 + \\frac{8}{3}x^3$.",
+  "hints": [
+   "$(2x)^2 = 4x^2$ and $(2x)^3 = 8x^3$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "2"
+    },
+    {
+     "blankId": "b",
+     "text": "-2"
+    },
+    {
+     "blankId": "c",
+     "text": "8/3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "1"
+     },
+     {
+      "blankId": "b",
+      "text": "-1"
+     },
+     {
+      "blankId": "c",
+      "text": "2/3"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For which values of $x$ is the Maclaurin series of $\\ln(1 - x)$ valid?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$-1 < x \\le 1$",
+    "rationale": "This is the range for $\\ln(1 + x)$; the sign change flips which end is included."
+   },
+   {
+    "key": "B",
+    "content": "$-1 \\le x < 1$",
+    "correct": true,
+    "rationale": "Correct: replace $x$ by $-x$ in $-1 < x \\le 1$: $-1 < -x \\le 1$, i.e. $-1 \\le x < 1$."
+   },
+   {
+    "key": "C",
+    "content": "$-1 < x < 1$",
+    "rationale": "At $x = -1$ the series $-1 + \\frac{1}{2} - \\frac{1}{3} + \\cdots$ converges to $\\ln 2$, so that end is included."
+   },
+   {
+    "key": "D",
+    "content": "all real x",
+    "rationale": "$\\ln(1 - x)$ is not even defined for $x \\ge 1$."
+   }
+  ],
+  "explanation": "$\\ln(1 - x) = -x - \\frac{x^2}{2} - \\frac{x^3}{3} - \\cdots$, valid for $-1 \\le x < 1$.",
+  "hints": [
+   "Substitute $-x$ into the condition $-1 < x \\le 1$."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^4$ in the Maclaurin series of $\\cos 2x$. Give your answer as a fraction or to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.6666666666666666,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\frac{(2x)^4}{4!} = \\frac{16x^4}{24} = \\frac{2}{3}x^4$. (Using $\\frac{x^4}{4!}$ alone gives $\\frac{1}{24}$; forgetting the factorial gives 16.)",
+  "workedSolution": "1. $\\frac{(2x)^4}{4!} = \\frac{16x^4}{24} = \\frac{2}{3}x^4$. (Using $\\frac{x^4}{4!}$ alone gives $\\frac{1}{24}$; forgetting the factorial gives 16.)",
+  "hints": [
+   "The $x^4$ term of $\\cos u$ is $\\frac{u^4}{4!}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.667"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.08333333333333333"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "16"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Find the Maclaurin series of $\\mathrm{e}^x\\sin x$ up to and including the term in $x^3$.",
+  "payload": {
+   "template": "e^x sin x ≈ ({{blank:a}})x + ({{blank:b}})x² + ({{blank:c}})x³",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "1/3",
+      "0.333",
+      "0.3333"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$(1 + x + \\frac{x^2}{2})(x - \\frac{x^3}{6}) = x + x^2 + \\frac{x^3}{2} - \\frac{x^3}{6} + \\cdots = x + x^2 + \\frac{1}{3}x^3$.",
+  "hints": [
+   "Multiply the two series, keeping powers up to x³ only."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "1"
+    },
+    {
+     "blankId": "b",
+     "text": "1"
+    },
+    {
+     "blankId": "c",
+     "text": "1/3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "0"
+     },
+     {
+      "blankId": "b",
+      "text": "0.5"
+     },
+     {
+      "blankId": "c",
+      "text": "-1/6"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use the first four terms of the Maclaurin series of $\\mathrm{e}^x$ to estimate $\\mathrm{e}^{0.2}$. Give the value of your estimate to 4 decimal places.",
+  "answerSpec": {
+   "value": 1.2213333333333334,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$1 + 0.2 + \\frac{0.04}{2} + \\frac{0.008}{6} = 1.2213$ (to 4 d.p.). The calculator gives $1.2214$; the next term $\\frac{0.2^4}{24} = 0.00007$ accounts for the difference.",
+  "workedSolution": "1. $1 + 0.2 + \\frac{0.04}{2} + \\frac{0.008}{6} = 1.2213$ (to 4 d.p.). The calculator gives $1.2214$; the next term $\\frac{0.2^4}{24} = 0.00007$ accounts for the difference.",
+  "hints": [
+   "Four terms: $1 + x + \\frac{x^2}{2} + \\frac{x^3}{6}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1.2213"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.22"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.2214"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The Maclaurin series of $\\mathrm{e}^x$ is valid for all real values of $x$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "The factorials in the denominators grow faster than any power, so $\\sum \\frac{x^r}{r!}$ converges for every real $x$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use series to find $\\displaystyle\\lim_{x \\to 0}\\frac{\\mathrm{e}^x - 1 - x}{x^2}$. Give your answer as a decimal.",
+  "answerSpec": {
+   "value": 0.5,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{e}^x - 1 - x = \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots$, so the fraction is $\\frac{1}{2} + \\frac{x}{6} + \\cdots \\to \\frac{1}{2}$.",
+  "workedSolution": "1. $\\mathrm{e}^x - 1 - x = \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots$, so the fraction is $\\frac{1}{2} + \\frac{x}{6} + \\cdots \\to \\frac{1}{2}$.",
+  "hints": [
+   "Expand $\\mathrm{e}^x$; the first two terms cancel."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.500"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the Taylor series of $\\ln x$ about $x = 1$, up to and including the term in $(x - 1)^2$. Type it like (x-1)-(x-1)^2/5.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "(x-1)-(x-1)^2/2"
+    },
+    {
+     "value": "x-1-(x-1)^2/2"
+    },
+    {
+     "value": "(x-1)-1/2(x-1)^2"
+    },
+    {
+     "value": "(x-1)-(1/2)(x-1)^2"
+    },
+    {
+     "value": "-(x-1)^2/2+(x-1)"
+    },
+    {
+     "value": "(x-1)-0.5(x-1)^2"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$f(1) = 0$, $f'(x) = \\frac{1}{x} \\Rightarrow f'(1) = 1$, $f''(x) = -\\frac{1}{x^2} \\Rightarrow f''(1) = -1$. So $\\ln x \\approx (x - 1) - \\frac{(x - 1)^2}{2}$.",
+  "hints": [
+   "Evaluate f, f′ and f″ at x = 1."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "(x-1)-(x-1)^2/2"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "(x-1)+(x-1)^2/2"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "x-x^2/2"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Using the Taylor series $\\sqrt{x} \\approx 2 + \\frac{1}{4}(x - 4) - \\frac{1}{64}(x - 4)^2$, estimate $\\sqrt{4.08}$. Give the value of your estimate to 5 decimal places.",
+  "answerSpec": {
+   "value": 2.0199,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.000005
+   }
+  },
+  "explanation": "$x - 4 = 0.08$: $2 + 0.02 - \\frac{0.0064}{64} = 2 + 0.02 - 0.0001 = 2.01990$. (Calculator: $2.019901$.)",
+  "workedSolution": "1. $x - 4 = 0.08$: $2 + 0.02 - \\frac{0.0064}{64} = 2 + 0.02 - 0.0001 = 2.01990$. (Calculator: $2.019901$.)",
+  "hints": [
+   "Substitute x − 4 = 0.08."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.01990"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2.02"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.0201"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q13",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "By repeated differentiation, show that the Maclaurin series of $\\ln(1 + x)$ begins $x - \\dfrac{x^2}{2} + \\dfrac{x^3}{3}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 $f(x) = \\ln(1 + x)$, $f(0) = 0$; $f'(x) = (1 + x)^{-1}$, $f'(0) = 1$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 $f''(x) = -(1 + x)^{-2}$, $f''(0) = -1$; $f'''(x) = 2(1 + x)^{-3}$, $f'''(0) = 2$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 substitutes into $f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 obtains $x - \\frac{x^2}{2} + \\frac{x^3}{3}$.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\nf(x) = \\ln(1 + x), \\quad f'(x) = \\frac{1}{1 + x}, \\quad f''(x) = -\\frac{1}{(1 + x)^2}, \\quad f'''(x) = \\frac{2}{(1 + x)^3}\n$$\n\nAt $x = 0$: $f = 0$, $f' = 1$, $f'' = -1$, $f''' = 2$.\n\n$$\n\\ln(1 + x) = 0 + x - \\frac{1}{2!}x^2 + \\frac{2}{3!}x^3 + \\cdots = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Each differentiation brings down another power, producing the alternating pattern.",
+  "hints": [
+   "Write 1/(1 + x) as (1 + x)⁻¹ before differentiating again."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q14",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 5,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Show that the Maclaurin series of $\\tan x$ begins $x + \\dfrac{x^3}{3}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 $f'(x) = \\sec^2 x$, $f'(0) = 1$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 $f''(x) = 2\\sec^2 x\\tan x$, $f''(0) = 0$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 $f'''(x) = 2\\sec^4 x + 4\\sec^2 x\\tan^2 x$ (product rule), $f'''(0) = 2$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 $\\tan x = x + \\frac{2}{6}x^3 = x + \\frac{x^3}{3}$.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\nf(x) = \\tan x, \\quad f'(x) = \\sec^2 x, \\quad f''(x) = 2\\sec^2 x\\tan x\n$$\n\n$$\nf'''(x) = 2\\sec^2 x \\cdot \\sec^2 x + \\tan x \\cdot 4\\sec^2 x\\tan x = 2\\sec^4 x + 4\\sec^2 x\\tan^2 x\n$$\n\nAt 0: $f = 0$, $f' = 1$, $f'' = 0$, $f''' = 2$, so $\\tan x = x + \\frac{2}{3!}x^3 + \\cdots = x + \\frac{x^3}{3} + \\cdots$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "$\\frac{\\mathrm{d}}{\\mathrm{d}x}\\sec^2 x = 2\\sec^2 x\\tan x$ by the chain rule.",
+  "hints": [
+   "$\\frac{\\mathrm{d}}{\\mathrm{d}x}(\\sec^2 x) = 2\\sec x \\cdot \\sec x\\tan x$."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q15",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each function with the start of its Maclaurin series.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\mathrm{e}^x$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\sin x$"
+    },
+    {
+     "id": "L3",
+     "content": "$\\cos x$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\ln(1 + x)$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$1 - \\frac{x^2}{2} + \\cdots$"
+    },
+    {
+     "id": "R4",
+     "content": "$x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots$"
+    },
+    {
+     "id": "R1",
+     "content": "$1 + x + \\frac{x^2}{2} + \\cdots$"
+    },
+    {
+     "id": "R2",
+     "content": "$x - \\frac{x^3}{6} + \\cdots$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "These four standard series, with the binomial series, are the building blocks for products and composites.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q16",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is the Maclaurin series of $\\mathrm{e}^{-x^2}$ up to the term in $x^4$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$1 - x^2 + \\dfrac{x^4}{2}$",
+    "correct": true,
+    "rationale": "Correct: replace $x$ by $-x^2$ in $1 + x + \\frac{x^2}{2}$."
+   },
+   {
+    "key": "B",
+    "content": "$1 - x^2 - \\dfrac{x^4}{2}$",
+    "rationale": "$(-x^2)^2 = +x^4$, so the $x^4$ term is positive."
+   },
+   {
+    "key": "C",
+    "content": "$1 - x + \\dfrac{x^2}{2}$",
+    "rationale": "This is $\\mathrm{e}^{-x}$; the exponent is $-x^2$."
+   },
+   {
+    "key": "D",
+    "content": "$1 - x^2 + \\dfrac{x^4}{24}$",
+    "rationale": "The $x^4$ term comes from $\\frac{u^2}{2!}$ with $u = -x^2$, not from $\\frac{u^4}{4!}$."
+   }
+  ],
+  "explanation": "$\\mathrm{e}^u = 1 + u + \\frac{u^2}{2} + \\cdots$ with $u = -x^2$: $1 - x^2 + \\frac{x^4}{2} - \\cdots$",
+  "hints": [
+   "Substitute $u = -x^2$ into the series for $\\mathrm{e}^u$."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q17",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The Maclaurin series of a function begins $f(x) = 3 + 2x - 5x^2 + \\cdots$. Find $f''(0)$.",
+  "answerSpec": {
+   "value": -10
+  },
+  "explanation": "The coefficient of $x^2$ is $\\frac{f''(0)}{2!}$, so $f''(0) = 2 \\times (-5) = -10$.",
+  "workedSolution": "1. The coefficient of $x^2$ is $\\frac{f''(0)}{2!}$, so $f''(0) = 2 \\times (-5) = -10$.",
+  "hints": [
+   "Coefficient of $x^2$ = $\\frac{f''(0)}{2}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-2.5"
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "series.maclaurin-taylor.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "Let $f(x) = \\ln(1 + \\sin x)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $f'(x) = \\dfrac{\\cos x}{1 + \\sin x}$ and $f''(x) = -\\dfrac{1}{1 + \\sin x}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 chain rule: $f'(x) = \\frac{\\cos x}{1 + \\sin x}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 quotient rule: $f''(x) = \\frac{-\\sin x(1 + \\sin x) - \\cos^2 x}{(1 + \\sin x)^2}$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 uses $\\sin^2 x + \\cos^2 x = 1$: numerator $-(1 + \\sin x)$, so $f''(x) = -\\frac{1}{1 + \\sin x}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nf'(x) = \\frac{\\cos x}{1 + \\sin x}\n$$\n\n$$\nf''(x) = \\frac{-\\sin x(1 + \\sin x) - \\cos x \\cdot \\cos x}{(1 + \\sin x)^2} = \\frac{-\\sin x - (\\sin^2 x + \\cos^2 x)}{(1 + \\sin x)^2} = \\frac{-(1 + \\sin x)}{(1 + \\sin x)^2} = -\\frac{1}{1 + \\sin x}\n$$"
+    },
+    "explanation": "Chain rule, then quotient rule and the Pythagorean identity."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $f'''(0)$.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "$f'''(x) = \\frac{\\cos x}{(1 + \\sin x)^2}$, so $f'''(0) = 1$.",
+    "workedSolution": "1. $f'''(x) = \\frac{\\cos x}{(1 + \\sin x)^2}$, so $f'''(0) = 1$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Hence find the Maclaurin series of f(x) up to and including the term in x³.",
+    "payload": {
+     "template": "f(x) ≈ ({{blank:a}})x + ({{blank:b}})x² + ({{blank:c}})x³",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-1/2",
+        "-0.5"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "1/6",
+        "0.1667",
+        "0.167"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$f(0) = 0$, $f'(0) = 1$, $f''(0) = -1$, $f'''(0) = 1$: $f(x) = x - \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots$"
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use your series to estimate $\\ln(1 + \\sin 0.1)$, giving the value of the estimate to 5 decimal places.",
+    "answerSpec": {
+     "value": 0.09516666666666666,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.000005
+     }
+    },
+    "explanation": "$0.1 - 0.005 + 0.000167 = 0.09517$.",
+    "workedSolution": "1. $0.1 - 0.005 + 0.000167 = 0.09517$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The calculator value is 0.095159 (6 d.p.). Explain why the estimate is close, and how it could be improved.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "x = 0.1 is small, so the omitted x⁴ and higher terms are very small (about 10⁻⁵).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Including the next non-zero term (x⁴) of the series would improve the estimate.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The error is about 0.000008, which is the size of the next term (−x⁴/12 = −0.0000083 at x = 0.1). Taking that term too gives 0.095158, closer still."
+    }
+   }
+  ],
+  "explanation": "Differentiate repeatedly, evaluate at 0, build the series, and use it for a small x.",
+  "hints": [
+   "Use the quotient rule for f″.",
+   "Coefficient of xʳ is f⁽ʳ⁾(0)/r!."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "-1/2"
+      },
+      {
+       "blankId": "c",
+       "text": "1/6"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.09517"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-1"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0"
+       },
+       {
+        "blankId": "b",
+        "text": "-1"
+       },
+       {
+        "blankId": "c",
+        "text": "1"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.095"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "series.maclaurin-taylor.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 5,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "This question uses series to approximate an integral and a trigonometric value.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Using standard series, find the Maclaurin series of $\\mathrm{e}^x\\cos x$ up to and including the term in $x^3$.",
+    "payload": {
+     "template": "e^x cos x ≈ 1 + ({{blank:a}})x + ({{blank:b}})x² + ({{blank:c}})x³",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-1/3",
+        "-0.333",
+        "-0.3333"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$(1 + x + \\frac{x^2}{2} + \\frac{x^3}{6})(1 - \\frac{x^2}{2}) = 1 + x + \\left(\\frac{1}{2} - \\frac{1}{2}\\right)x^2 + \\left(\\frac{1}{6} - \\frac{1}{2}\\right)x^3 = 1 + x - \\frac{x^3}{3}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Hence estimate $\\displaystyle\\int_0^{0.2}\\mathrm{e}^x\\cos x\\,\\mathrm{d}x$, giving your answer to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.21986666666666665,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$\\int_0^{0.2}\\left(1 + x - \\frac{x^3}{3}\\right)\\mathrm{d}x = \\left[x + \\frac{x^2}{2} - \\frac{x^4}{12}\\right]_0^{0.2} = 0.2 + 0.02 - 0.000133 = 0.2199$.",
+    "workedSolution": "1. $\\int_0^{0.2}\\left(1 + x - \\frac{x^3}{3}\\right)\\mathrm{d}x = \\left[x + \\frac{x^2}{2} - \\frac{x^4}{12}\\right]_0^{0.2} = 0.2 + 0.02 - 0.000133 = 0.2199$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the Taylor series of $\\sin x$ about $x = \\frac{\\pi}{6}$, up to and including the term in $\\left(x - \\frac{\\pi}{6}\\right)^2$. Give the coefficients to 3 decimal places where they are not exact.",
+    "payload": {
+     "template": "sin x ≈ ({{blank:a}}) + ({{blank:b}})(x − π/6) + ({{blank:c}})(x − π/6)²",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0.5",
+        "1/2"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0.866"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-0.25",
+        "-1/4"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$f\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}$, $f'\\left(\\frac{\\pi}{6}\\right) = \\cos\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2} = 0.866$, $\\frac{f''\\left(\\frac{\\pi}{6}\\right)}{2!} = \\frac{-\\frac{1}{2}}{2} = -\\frac{1}{4}$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use your answer to (c) to estimate $\\sin 31^\\circ$, giving your answer to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.5150388403470051,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$31^\\circ = \\frac{\\pi}{6} + \\frac{\\pi}{180}$, so $x - \\frac{\\pi}{6} = 0.017453$: $0.5 + 0.866025 \\times 0.017453 - 0.25 \\times 0.000305 = 0.5150$.",
+    "workedSolution": "1. $31^\\circ = \\frac{\\pi}{6} + \\frac{\\pi}{180}$, so $x - \\frac{\\pi}{6} = 0.017453$: $0.5 + 0.866025 \\times 0.017453 - 0.25 \\times 0.000305 = 0.5150$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the value substituted for $x - \\frac{\\pi}{6}$ in (d) is $\\frac{\\pi}{180}$ and not 1.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The series for sin x is in radians (derivatives of sin need radians).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "1° = π/180 radians, so the step from 30° to 31° is π/180.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Calculus results such as d/dx(sin x) = cos x hold only in radians, so the Taylor series is in radians. The extra 1° must be converted: 1° = π/180 ≈ 0.01745 rad. Substituting 1 would mean 1 radian (about 57°)."
+    }
+   }
+  ],
+  "explanation": "Multiply standard series and integrate term by term; build a Taylor series at a point with exact values; work in radians.",
+  "hints": [
+   "$\\cos x = 1 - \\frac{x^2}{2} + \\cdots$; you need only up to $x^3$ in the product.",
+   "Use $a = \\frac{\\pi}{6}$, where $\\sin a$ and $\\cos a$ are exact."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "0"
+      },
+      {
+       "blankId": "c",
+       "text": "-1/3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.2199"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0.5"
+      },
+      {
+       "blankId": "b",
+       "text": "0.866"
+      },
+      {
+       "blankId": "c",
+       "text": "-0.25"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.5150"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       },
+       {
+        "blankId": "c",
+        "text": "1/6"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.22"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0.866"
+       },
+       {
+        "blankId": "b",
+        "text": "0.5"
+       },
+       {
+        "blankId": "c",
+        "text": "-0.5"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1.366"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

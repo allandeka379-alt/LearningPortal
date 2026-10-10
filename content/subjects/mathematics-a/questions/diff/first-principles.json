@@ -1,0 +1,1029 @@
+[
+ {
+  "key": "diff.first-principles.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which expression defines the derivative $f'(x)$ from first principles?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\lim_{h \\to 0} \\dfrac{f(x + h) - f(x)}{h}$",
+    "correct": true,
+    "rationale": "Correct: the limit of the chord gradient as the horizontal step h shrinks to zero."
+   },
+   {
+    "key": "B",
+    "content": "$\\lim_{h \\to 0} \\big(f(x + h) - f(x)\\big)$",
+    "rationale": "This is the change in y only; it always tends to 0 for a continuous function. You must divide by the step h."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{f(x + h) - f(x)}{h}$ with $h = 0$",
+    "rationale": "Putting h = 0 gives 0/0, which has no value. The derivative is a limit, found after cancelling h."
+   },
+   {
+    "key": "D",
+    "content": "$\\lim_{h \\to 0} \\dfrac{f(x + h) + f(x)}{h}$",
+    "rationale": "The numerator must be a difference of y-values (rise), not a sum."
+   }
+  ],
+  "explanation": "The chord from $(x, f(x))$ to $(x + h, f(x + h))$ has gradient $\\dfrac{f(x + h) - f(x)}{h}$. The derivative is its limit as $h \\to 0$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$P$ and $Q$ are the points on $y = x^{2}$ with $x$-coordinates 3 and 3.1. Find the gradient of the chord $PQ$.",
+  "answerSpec": {
+   "value": 6.1,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$P(3, 9)$ and $Q(3.1, 9.61)$. Gradient $= \\dfrac{9.61 - 9}{3.1 - 3} = \\dfrac{0.61}{0.1} = 6.1$. (The gradient of the curve at $x = 3$ is 6; the chord gradient is slightly larger.)",
+  "workedSolution": "1. $P(3, 9)$ and $Q(3.1, 9.61)$. Gradient $= \\dfrac{9.61 - 9}{3.1 - 3} = \\dfrac{0.61}{0.1} = 6.1$. (The gradient of the curve at $x = 3$ is 6; the chord gradient is slightly larger.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "6.10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.61"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "diff.first-principles.q03",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "$P$ and $Q$ are the points on $y = x^{4}$ with $x$-coordinates 1 and $1 + h$. The gradient of $PQ$ can be written as $a + bh + ch^{2} + h^{3}$. Find $a$, $b$ and $c$.",
+  "payload": {
+   "template": "a = {{blank:a}}, b = {{blank:b}}, c = {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "4"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "6"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "4"
+     ]
+    }
+   ]
+  },
+  "explanation": "$(1 + h)^{4} = 1 + 4h + 6h^{2} + 4h^{3} + h^{4}$ (coefficients 1, 4, 6, 4, 1). Subtract $1$ and divide by $h$: $4 + 6h + 4h^{2} + h^{3}$. As $h \\to 0$ the gradient tends to 4, the gradient of the curve at $x = 1$.",
+  "hints": [
+   "Expand (1 + h)⁴ with the binomial coefficients 1, 4, 6, 4, 1.",
+   "Subtract f(1) = 1 and divide every term by h."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "4"
+    },
+    {
+     "blankId": "b",
+     "text": "6"
+    },
+    {
+     "blankId": "c",
+     "text": "4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "1"
+     },
+     {
+      "blankId": "b",
+      "text": "4"
+     },
+     {
+      "blankId": "c",
+      "text": "6"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a curve $y = f(x)$, the gradient of the chord joining the points with $x$-coordinates 4 and $4 + h$ is $8 + h$. State the gradient of the curve at $x = 4$.",
+  "answerSpec": {
+   "value": 8
+  },
+  "explanation": "The gradient of the curve is the limit of the chord gradient as $h \\to 0$: $8 + h \\to 8$.",
+  "workedSolution": "1. The gradient of the curve is the limit of the chord gradient as $h \\to 0$: $8 + h \\to 8$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "9"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "12"
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For $f(x) = x^{2} + 5x$, which expression is $f(x + h) - f(x)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$2xh + h^{2} + 5x$",
+    "rationale": "The 5x terms cancel; the term left over from 5(x + h) is 5h."
+   },
+   {
+    "key": "B",
+    "content": "$h^{2} + 5h$",
+    "rationale": "The cross term 2xh from (x + h)² is missing: (x + h)² is not x² + h²."
+   },
+   {
+    "key": "C",
+    "content": "$2xh + h^{2} + 5h$",
+    "correct": true,
+    "rationale": "Correct: (x + h)² + 5(x + h) − x² − 5x = 2xh + h² + 5h."
+   },
+   {
+    "key": "D",
+    "content": "$2x + h + 5$",
+    "rationale": "This is the chord gradient after dividing by h, not the difference itself."
+   }
+  ],
+  "explanation": "$f(x + h) = x^{2} + 2xh + h^{2} + 5x + 5h$. Subtracting $f(x)$ leaves $2xh + h^{2} + 5h$. Dividing by $h$ and letting $h \\to 0$ gives $f'(x) = 2x + 5$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q06",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For $f(x) = 3x^{2} - 7x$, the gradient of the chord from $x$ to $x + h$ simplifies to $6x + 3h - 7$. Hence state $f'(x)$. Type your answer in terms of $x$, for example 4x+1.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "6x-7"
+    },
+    {
+     "value": "-7+6x"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$f(x + h) - f(x) = 6xh + 3h^{2} - 7h$; dividing by $h$ gives $6x + 3h - 7$, and as $h \\to 0$ this tends to $6x - 7$.",
+  "hints": [
+   "Let h tend to 0: which term disappears?"
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "6x-7"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "6x+3h-7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q07",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Differentiate $f(x) = \\dfrac{3}{x + 1}$ from first principles.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 writes $f(x + h) - f(x) = \\dfrac{3}{x + h + 1} - \\dfrac{3}{x + 1}$",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 combines over the common denominator to get $\\dfrac{-3h}{(x + h + 1)(x + 1)}$",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 divides by $h$ to get $\\dfrac{-3}{(x + h + 1)(x + 1)}$",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 lets $h \\to 0$ to reach $f'(x) = -\\dfrac{3}{(x + 1)^{2}}$",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\nf(x + h) - f(x) = \\frac{3}{x + h + 1} - \\frac{3}{x + 1} = \\frac{3(x + 1) - 3(x + h + 1)}{(x + h + 1)(x + 1)} = \\frac{-3h}{(x + h + 1)(x + 1)}\n$$\n\n$$\n\\frac{f(x + h) - f(x)}{h} = \\frac{-3}{(x + h + 1)(x + 1)} \\to -\\frac{3}{(x + 1)^{2}} \\text{ as } h \\to 0\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Combine the two fractions before dividing by $h$; the factor $h$ then cancels. Check: the power rule gives $\\dfrac{d}{dx}3(x + 1)^{-1} = -3(x + 1)^{-2}$.",
+  "hints": [
+   "Put the two fractions over the common denominator (x + h + 1)(x + 1)."
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q08",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Given that, for $h$ in radians, $\\dfrac{\\sin h}{h} \\to 1$ and $\\dfrac{\\cos h - 1}{h} \\to 0$ as $h \\to 0$, prove from first principles that $\\dfrac{d}{dx}(\\cos x) = -\\sin x$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 uses $\\cos(x + h) = \\cos x \\cos h - \\sin x \\sin h$",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 writes $\\cos(x + h) - \\cos x = \\cos x(\\cos h - 1) - \\sin x \\sin h$",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 divides by $h$ to get $\\cos x \\cdot \\dfrac{\\cos h - 1}{h} - \\sin x \\cdot \\dfrac{\\sin h}{h}$",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 applies both limits to reach $-\\sin x$, with the limit stated",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n\\cos(x + h) - \\cos x = \\cos x \\cos h - \\sin x \\sin h - \\cos x = \\cos x(\\cos h - 1) - \\sin x \\sin h\n$$\n\n$$\n\\frac{\\cos(x + h) - \\cos x}{h} = \\cos x \\cdot \\frac{\\cos h - 1}{h} - \\sin x \\cdot \\frac{\\sin h}{h} \\to \\cos x \\times 0 - \\sin x \\times 1 = -\\sin x\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Group the terms so that each contains one of the two standard limits. The minus sign comes from the compound-angle formula for cosine.",
+  "hints": [
+   "Expand cos(x + h) with the compound-angle formula.",
+   "Group the cos x terms together."
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $y = f(x)$, then $\\dfrac{d^{2}y}{dx^{2}}$ is the rate at which the gradient $\\dfrac{dy}{dx}$ changes with $x$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The second derivative is the derivative of the gradient function, so it measures how quickly the gradient changes. It is also written $f''(x)$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For $y = x^{3}$, the chord from $x = 5$ to $x = 5.001$ has a gradient exactly equal to the gradient of the curve at $x = 5$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The chord gradient is $3(5)^{2} + 3(5)h + h^{2}$ with $h = 0.001$, which is about $75.015$, slightly more than the gradient 75 of the curve. A chord gives only an approximation; the exact gradient is the limit as $h \\to 0$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": true
+ },
+ {
+  "key": "diff.first-principles.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each piece of notation with its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\dfrac{dy}{dx}$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\dfrac{d^{2}y}{dx^{2}}$"
+    },
+    {
+     "id": "L3",
+     "content": "$f'(3)$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\dfrac{\\delta y}{\\delta x}$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "the gradient of the curve at the point where x = 3"
+    },
+    {
+     "id": "R4",
+     "content": "the gradient of a chord for small changes in x and y"
+    },
+    {
+     "id": "R1",
+     "content": "the gradient function of the curve"
+    },
+    {
+     "id": "R2",
+     "content": "the rate of change of the gradient"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "$\\frac{dy}{dx}$ and $f'(x)$ name the gradient function; a number in the bracket, $f'(3)$, evaluates it at one point; $\\frac{\\delta y}{\\delta x}$ is the chord gradient whose limit is $\\frac{dy}{dx}$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$A$ and $B$ are the points on $y = \\sqrt{x}$ with $x$-coordinates 4 and 4.41. Find the gradient of the chord $AB$, giving your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.2439024390243905,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$A(4, 2)$ and $B(4.41, 2.1)$ since $\\sqrt{4.41} = 2.1$. Gradient $= \\dfrac{2.1 - 2}{0.41} = 0.2439\\ldots \\approx 0.244$. The curve's gradient at $x = 4$ is $\\frac{1}{2\\sqrt{4}} = 0.25$, so the chord to the right is a little less steep.",
+  "workedSolution": "1. $A(4, 2)$ and $B(4.41, 2.1)$ since $\\sqrt{4.41} = 2.1$. Gradient $= \\dfrac{2.1 - 2}{0.41} = 0.2439\\ldots \\approx 0.244$. The curve's gradient at $x = 4$ is $\\frac{1}{2\\sqrt{4}} = 0.25$, so the chord to the right is a little less steep.",
+  "hints": [
+   "Find both y-coordinates first.",
+   "Gradient = change in y ÷ change in x."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.244"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.25"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "diff.first-principles.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "To differentiate $f(x) = \\sqrt{x}$ from first principles, the chord gradient $\\dfrac{\\sqrt{x + h} - \\sqrt{x}}{h}$ is multiplied above and below by $\\sqrt{x + h} + \\sqrt{x}$. What does the chord gradient become?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{h}{\\sqrt{x + h} + \\sqrt{x}}$, which tends to $0$",
+    "rationale": "The numerator h should cancel with the h in the denominator; it does not remain on top."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{2x + h}{h\\big(\\sqrt{x + h} + \\sqrt{x}\\big)}$, which has no limit",
+    "rationale": "Wrong product: (√(x + h) − √x)(√(x + h) + √x) is a difference of two squares, (x + h) − x."
+   },
+   {
+    "key": "C",
+    "content": "$\\sqrt{x + h} + \\sqrt{x}$, which tends to $2\\sqrt{x}$",
+    "rationale": "This inverts the result: the conjugate ends up in the denominator, not the numerator."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{1}{\\sqrt{x + h} + \\sqrt{x}}$, which tends to $\\dfrac{1}{2\\sqrt{x}}$",
+    "correct": true,
+    "rationale": "Correct: the numerator becomes $(x + h) - x = h$, which cancels with the $h$ below."
+   }
+  ],
+  "explanation": "$(\\sqrt{x + h} - \\sqrt{x})(\\sqrt{x + h} + \\sqrt{x}) = (x + h) - x = h$. So the chord gradient is $\\dfrac{h}{h(\\sqrt{x + h} + \\sqrt{x})} = \\dfrac{1}{\\sqrt{x + h} + \\sqrt{x}} \\to \\dfrac{1}{2\\sqrt{x}}$.",
+  "hints": [
+   "Use (a − b)(a + b) = a² − b².",
+   "After cancelling h, let h → 0."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given that $y = x^{4} - 3x^{2}$, so that $\\dfrac{dy}{dx} = 4x^{3} - 6x$, find the value of $\\dfrac{d^{2}y}{dx^{2}}$ when $x = 2$.",
+  "answerSpec": {
+   "value": 42
+  },
+  "explanation": "Differentiate the gradient function: $\\dfrac{d^{2}y}{dx^{2}} = 12x^{2} - 6$. At $x = 2$: $48 - 6 = 42$. (20 is the value of $\\frac{dy}{dx}$ at $x = 2$.)",
+  "workedSolution": "1. Differentiate the gradient function: $\\dfrac{d^{2}y}{dx^{2}} = 12x^{2} - 6$. At $x = 2$: $48 - 6 = 42$. (20 is the value of $\\frac{dy}{dx}$ at $x = 2$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "42"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "20"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "10"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Why is $x$ measured in radians when we state that $\\dfrac{d}{dx}(\\sin x) = \\cos x$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Because the sine of an angle in degrees cannot be found exactly without a calculator",
+    "rationale": "Exactness of values is not the issue; the limit used in the proof depends on the unit."
+   },
+   {
+    "key": "B",
+    "content": "Because the limit $\\dfrac{\\sin h}{h} \\to 1$ as $h \\to 0$ holds only when $h$ is in radians",
+    "correct": true,
+    "rationale": "Correct: in degrees the limit is π/180, and an extra factor π/180 would appear in the derivative."
+   },
+   {
+    "key": "C",
+    "content": "Because $\\cos x$ is negative for some angles in degrees but never in radians",
+    "rationale": "Cosine takes negative values in both units (for example at π radians or 180°)."
+   },
+   {
+    "key": "D",
+    "content": "Because the compound-angle formula for $\\sin(x + h)$ is false in degrees",
+    "rationale": "The compound-angle formula holds in any unit; the limit of sin h / h is what changes."
+   }
+  ],
+  "explanation": "The first-principles proof uses $\\lim_{h \\to 0} \\frac{\\sin h}{h} = 1$, true only in radians. With $x$ in degrees, $\\frac{d}{dx}(\\sin x) = \\frac{\\pi}{180}\\cos x$.",
+  "hints": [
+   "Which standard limit does the proof use?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Rudo says: \"To find the gradient of $y = x^{2}$ at $x = 6$, I put $h = 0$ into $\\dfrac{(6 + h)^{2} - 36}{h}$.\" Explain what goes wrong and how she should find the gradient.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "States that $h = 0$ gives $\\frac{0}{0}$, which is undefined",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Says she must simplify to $12 + h$ first (cancelling $h$) and then let $h \\to 0$, giving 12",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Putting h = 0 gives 0/0, which has no value. She should expand: (6 + h)² − 36 = 12h + h², divide by h to get 12 + h, and then let h tend to 0, so the gradient is 12."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The derivative is a limit. The expression is undefined at $h = 0$ but tends to 12 as $h$ approaches 0.",
+  "hints": [
+   "What is 0 ÷ 0?"
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "The points $P$ and $Q$ lie on the curve $y = 2x^{2} - x$ and have $x$-coordinates 3 and $3 + h$, where $h > 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the gradient of $PQ$ is $11 + 2h$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 finds $y_{Q} - y_{P} = 2(3 + h)^{2} - (3 + h) - 15 = 11h + 2h^{2}$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 divides by $h$ to obtain $11 + 2h$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\ny_P = 18 - 3 = 15, \\quad y_Q = 2(9 + 6h + h^{2}) - 3 - h = 15 + 11h + 2h^{2}\n$$\n\n$$\n\\text{gradient } PQ = \\frac{11h + 2h^{2}}{h} = 11 + 2h\n$$"
+    },
+    "explanation": "Expand fully and check that every term of the difference contains h."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Hence state the gradient of the curve at P.",
+    "answerSpec": {
+     "value": 11
+    },
+    "explanation": "As $h \\to 0$, $11 + 2h \\to 11$.",
+    "workedSolution": "1. As $h \\to 0$, $11 + 2h \\to 11$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the value of h for which the gradient of PQ is 11.5.",
+    "payload": {
+     "answerPrefix": "h ="
+    },
+    "answerSpec": {
+     "value": 0.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$11 + 2h = 11.5$ gives $2h = 0.5$, $h = 0.25$.",
+    "workedSolution": "1. $11 + 2h = 11.5$ gives $2h = 0.5$, $h = 0.25$."
+   }
+  ],
+  "explanation": "The chord gradient $11 + 2h$ approaches the curve's gradient 11 as $Q$ slides towards $P$. (Check: $\\frac{dy}{dx} = 4x - 1 = 11$ at $x = 3$.)",
+  "hints": [
+   "Find the y-coordinates of P and Q first.",
+   "Let h tend to 0 for part (b)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "11"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.250"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "13"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.5"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "diff.first-principles.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.first-principles"
+  ],
+  "difficulty": 5,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Let $f(x) = \\dfrac{1}{x^{2}}$, $x \\neq 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\dfrac{f(x + h) - f(x)}{h} = -\\dfrac{2x + h}{x^{2}(x + h)^{2}}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes $\\dfrac{1}{(x + h)^{2}} - \\dfrac{1}{x^{2}}$ over the common denominator $x^{2}(x + h)^{2}$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 simplifies the numerator $x^{2} - (x + h)^{2}$ to $-2xh - h^{2} = -h(2x + h)$",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 divides by $h$ to reach the given expression",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nf(x + h) - f(x) = \\frac{x^{2} - (x + h)^{2}}{x^{2}(x + h)^{2}} = \\frac{-2xh - h^{2}}{x^{2}(x + h)^{2}} = \\frac{-h(2x + h)}{x^{2}(x + h)^{2}}\n$$\n\n$$\n\\frac{f(x + h) - f(x)}{h} = -\\frac{2x + h}{x^{2}(x + h)^{2}}\n$$"
+    },
+    "explanation": "Combine the fractions, factorise the numerator, then cancel h."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Hence find $f'(x)$. Type it in the form k/x^n, for example 5/x^4.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "-2/x^3"
+      },
+      {
+       "value": "-2x^-3"
+      },
+      {
+       "value": "-2x^(-3)"
+      },
+      {
+       "value": "(-2)/x^3"
+      },
+      {
+       "value": "-(2/x^3)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "As $h \\to 0$: $-\\dfrac{2x}{x^{2} \\cdot x^{2}} = -\\dfrac{2}{x^{3}}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the gradient of the curve $y = f(x)$ at the point where $x = -\\tfrac{1}{2}$.",
+    "answerSpec": {
+     "value": 16
+    },
+    "explanation": "$f'(-\\tfrac{1}{2}) = -\\dfrac{2}{(-\\frac{1}{2})^{3}} = -\\dfrac{2}{-\\frac{1}{8}} = 16$.",
+    "workedSolution": "1. $f'(-\\tfrac{1}{2}) = -\\dfrac{2}{(-\\frac{1}{2})^{3}} = -\\dfrac{2}{-\\frac{1}{8}} = 16$."
+   }
+  ],
+  "explanation": "From first principles $\\dfrac{d}{dx}\\left(x^{-2}\\right) = -2x^{-3}$, agreeing with the power rule.",
+  "hints": [
+   "Common denominator x²(x + h)².",
+   "(x + h)² − x² = 2xh + h²."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "-2/x^3"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "16"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "-2/x^4"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "-16"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false
+ }
+]

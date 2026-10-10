@@ -1,0 +1,939 @@
+[
+ {
+  "key": "exam.w2b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.numerical.trapezium-errors"
+  ],
+  "difficulty": 3,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "This question is about $I = \\displaystyle\\int_0^2 \\sqrt{1 + \\mathrm{e}^x}\\,\\mathrm{d}x$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the ordinates at x = 0.5 and x = 1.5, each correct to 4 decimal places.",
+    "payload": {
+     "template": "y(0.5) = {{blank:a}}, y(1.5) = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1.6275"
+       ],
+       "tolerance": 0.00005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2.3413"
+       ],
+       "tolerance": 0.00005
+      }
+     ]
+    },
+    "explanation": "$\\sqrt{1 + \\mathrm{e}^{0.5}} = \\sqrt{2.6487} = 1.6275$ and $\\sqrt{1 + \\mathrm{e}^{1.5}} = \\sqrt{5.4817} = 2.3413$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use the trapezium rule with 4 intervals to find an approximation to I, giving your answer correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 4.026187404021574,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$h = 0.5$; ordinates $1.4142, 1.6275, 1.9283, 2.3413, 2.8964$. $I \\approx 0.25[1.4142 + 2(1.6275 + 1.9283 + 2.3413) + 2.8964] = 0.25 \\times 16.1048 = 4.03$.",
+    "workedSolution": "1. $h = 0.5$; ordinates $1.4142, 1.6275, 1.9283, 2.3413, 2.8964$. $I \\approx 0.25[1.4142 + 2(1.6275 + 1.9283 + 2.3413) + 2.8964] = 0.25 \\times 16.1048 = 4.03$."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Is the approximation in (b) an over-estimate or an under-estimate of I?",
+    "options": [
+     {
+      "key": "A",
+      "content": "An under-estimate",
+      "rationale": "That would need the curve to bend downwards (concave)."
+     },
+     {
+      "key": "B",
+      "content": "An over-estimate",
+      "correct": true,
+      "rationale": "Correct: the curve is convex on [0, 2], so the chords lie above it."
+     },
+     {
+      "key": "C",
+      "content": "Exactly equal to I",
+      "rationale": "The trapezium rule is exact only for straight lines."
+     },
+     {
+      "key": "D",
+      "content": "It cannot be decided",
+      "rationale": "The concavity does not change on [0, 2], so it can be decided."
+     }
+    ],
+    "explanation": "Convex curve ⇒ trapezium rule over-estimates."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Justify your answer to (c).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "States that the curve y = √(1 + eˣ) bends upwards (is convex) for 0 ≤ x ≤ 2, e.g. from a sketch or because the gradient increases.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Concludes that the top of each trapezium (a chord) lies above the curve, so the area of the trapezia exceeds I.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The gradient eˣ/(2√(1 + eˣ)) increases with x, so the curve is convex on [0, 2]. Each chord lies above the curve, so the trapezia include extra area: the estimate is too large."
+    },
+    "explanation": "Refer to the shape of the curve, not just the answer."
+   }
+  ],
+  "explanation": "Ordinates, the trapezium rule, and the concavity argument for over- or under-estimation.",
+  "hints": [
+   "Four intervals need five ordinates.",
+   "Decide whether the curve bends up or down."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1.6275"
+      },
+      {
+       "blankId": "b",
+       "text": "2.3413"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4.03"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1.2840"
+       },
+       {
+        "blankId": "b",
+        "text": "2.1170"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "8.052374808043147"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.complex.cartesian",
+   "amaths.complex.argand-polar"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "The complex number $u$ is given by $u = \\dfrac{2 + 3\\mathrm{i}}{1 - \\mathrm{i}}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Showing all necessary working, express $u$ in the form $x + \\mathrm{i}y$, where $x$ and $y$ are real.",
+    "payload": {
+     "template": "x = {{blank:x}}, y = {{blank:y}}",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "-0.5"
+       ],
+       "marks": 1,
+       "tolerance": 0.001
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "2.5"
+       ],
+       "marks": 2,
+       "tolerance": 0.001
+      }
+     ]
+    },
+    "explanation": "$u = \\dfrac{(2 + 3\\mathrm{i})(1 + \\mathrm{i})}{(1 - \\mathrm{i})(1 + \\mathrm{i})} = \\dfrac{2 + 2\\mathrm{i} + 3\\mathrm{i} - 3}{2} = -\\dfrac{1}{2} + \\dfrac{5}{2}\\mathrm{i}$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the modulus and the argument of $u$, giving the argument in radians in the interval $-\\pi < \\theta \\le \\pi$. Give both correct to 3 significant figures.",
+    "payload": {
+     "template": "|u| = {{blank:m}}, arg u = {{blank:a}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "a",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "2.55"
+       ],
+       "marks": 1,
+       "tolerance": 0.005
+      },
+      {
+       "id": "a",
+       "accepted": [
+        "1.77"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$|u| = \\sqrt{0.25 + 6.25} = \\sqrt{6.5} = 2.55$. $u$ is in the second quadrant: $\\arg u = \\pi - \\tan^{-1}5 = 1.77$. (The calculator's $\\tan^{-1}(-5) = -1.37$ is in the wrong quadrant.)"
+   }
+  ],
+  "explanation": "Divide using the conjugate of the denominator, then find modulus and argument from a sketch.",
+  "hints": [
+   "Multiply numerator and denominator by 1 + i.",
+   "Which quadrant is u in?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "-0.5"
+      },
+      {
+       "blankId": "y",
+       "text": "2.5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "2.55"
+      },
+      {
+       "blankId": "a",
+       "text": "1.77"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "2"
+       },
+       {
+        "blankId": "y",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "6.5"
+       },
+       {
+        "blankId": "a",
+        "text": "-1.37"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w2b-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.de.separable"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "The variables $x$ and $y$ satisfy the differential equation $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x} = 2x(1 + y^2)$, and $y = 1$ when $x = 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Solve the differential equation, showing that $\\tan^{-1}y = x^2 + \\frac{1}{4}\\pi$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 separates: $\\int \\frac{1}{1 + y^2}\\,\\mathrm{d}y = \\int 2x\\,\\mathrm{d}x$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 integrates: $\\tan^{-1}y = x^2 + c$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 uses $y = 1$ at $x = 0$: $c = \\tan^{-1}1 = \\frac{1}{4}\\pi$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\int \\frac{1}{1 + y^2}\\,\\mathrm{d}y = \\int 2x\\,\\mathrm{d}x \\Rightarrow \\tan^{-1}y = x^2 + c\n$$\n$$\nx = 0, y = 1: \\; c = \\tan^{-1}1 = \\tfrac{1}{4}\\pi \\Rightarrow \\tan^{-1}y = x^2 + \\tfrac{1}{4}\\pi\n$$"
+    },
+    "explanation": "$\\int \\frac{1}{1 + y^2}\\,\\mathrm{d}y = \\tan^{-1}y$ is in MF19."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Hence find the value of $y$ when $x = 0.5$, giving your answer correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 1.6857964171683395,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$y = \\tan\\left(0.25 + \\frac{\\pi}{4}\\right) = \\tan 1.0354 = 1.69$ (radians).",
+    "workedSolution": "1. $y = \\tan\\left(0.25 + \\frac{\\pi}{4}\\right) = \\tan 1.0354 = 1.69$ (radians).",
+    "hints": [
+     "Use radians."
+    ]
+   }
+  ],
+  "explanation": "Separate the variables; the y-integral is a standard inverse tangent.",
+  "hints": [
+   "Divide both sides by $1 + y^2$.",
+   "Use radians when evaluating tan."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.69"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1.2553419212210364"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w2b-cambridge.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.numerical.locating-roots"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "The equation $\\ln x = 2 - x$ has one root, denoted by $\\alpha$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show by calculation that $\\alpha$ lies between 1.5 and 1.6.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 evaluates $g(x) = x - 2 + \\ln x$ (or equivalent) at 1.5 and 1.6: $-0.095$ and $0.070$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 notes the change of sign and concludes.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\ng(1.5) = 1.5 - 2 + \\ln 1.5 = -0.095 < 0, \\qquad g(1.6) = 1.6 - 2 + \\ln 1.6 = 0.070 > 0\n$$\n$g$ is continuous for $x > 0$ and changes sign, so $1.5 < \\alpha < 1.6$."
+    },
+    "explanation": "Sign change of a continuous function."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Use the iterative formula $x_{n+1} = 2 - \\ln x_n$, with $x_1 = 1.5$, to determine $\\alpha$ correct to 2 decimal places. Give the result of each iteration to 4 decimal places.",
+    "answerSpec": {
+     "value": 1.557145598997522,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$x_2 = 1.5945$, $x_3 = 1.5334$, $x_4 = 1.5725$, $x_5 = 1.5473$, $x_6 = 1.5635$, $x_7 = 1.5531$, $x_8 = 1.5598$, $x_9 = 1.5555$, $x_{10} = 1.5582$, $x_{11} = 1.5565$, $x_{12} = 1.5576$. The iterates oscillate and settle at $1.56$ (2 d.p.).",
+    "workedSolution": "1. $x_2 = 1.5945$, $x_3 = 1.5334$, $x_4 = 1.5725$, $x_5 = 1.5473$, $x_6 = 1.5635$, $x_7 = 1.5531$, $x_8 = 1.5598$, $x_9 = 1.5555$, $x_{10} = 1.5582$, $x_{11} = 1.5565$, $x_{12} = 1.5576$. The iterates oscillate and settle at $1.56$ (2 d.p.)."
+   }
+  ],
+  "explanation": "Locate the root by a sign change, then iterate until two successive iterates agree to 2 d.p.",
+  "hints": [
+   "Bring everything to one side for the sign check.",
+   "The iterates alternate either side of α; keep going."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.56"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1.55"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w2b-cambridge.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.complex.polynomial-equations",
+   "amaths.complex.loci"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "The polynomial $p(z)$ is defined by $p(z) = z^3 - 4z^2 + 9z - 10$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Given that $z = 2$ is a root of $p(z) = 0$, find the quadratic factor $z^2 + bz + c$ such that $p(z) = (z - 2)(z^2 + bz + c)$.",
+    "payload": {
+     "template": "b = {{blank:b}}, c = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "b",
+       "accepted": [
+        "-2"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "5"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "$p(2) = 8 - 16 + 18 - 10 = 0$. Comparing: constant $-2c = -10$, $c = 5$; $z^2$: $b - 2 = -4$, $b = -2$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Hence find the complex roots of $p(z) = 0$, in the form $a \\pm b\\mathrm{i}$ with $b > 0$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$z^2 - 2z + 5 = 0 \\Rightarrow z = \\dfrac{2 \\pm \\sqrt{4 - 20}}{2} = 1 \\pm 2\\mathrm{i}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the distance between the points representing the two complex roots on an Argand diagram.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "$|(1 + 2\\mathrm{i}) - (1 - 2\\mathrm{i})| = |4\\mathrm{i}| = 4$.",
+    "workedSolution": "1. $|(1 + 2\\mathrm{i}) - (1 - 2\\mathrm{i})| = |4\\mathrm{i}| = 4$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The three roots lie on a circle whose centre is on the real axis. Find the centre $(h, 0)$ and the radius $r$ of this circle, and hence write its equation in the form $|z - h| = r$.",
+    "payload": {
+     "template": "h = {{blank:h}}, r = {{blank:r}}",
+     "blanks": [
+      {
+       "id": "h",
+       "input": "number"
+      },
+      {
+       "id": "r",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "h",
+       "accepted": [
+        "-0.5"
+       ],
+       "marks": 2,
+       "tolerance": 0.001
+      },
+      {
+       "id": "r",
+       "accepted": [
+        "2.5"
+       ],
+       "marks": 1,
+       "tolerance": 0.001
+      }
+     ]
+    },
+    "explanation": "Equal distances from $(h, 0)$: $(2 - h)^2 = (1 - h)^2 + 4 \\Rightarrow 4 - 4h = 5 - 2h \\Rightarrow h = -\\frac{1}{2}$. Radius $2 - (-\\frac{1}{2}) = 2.5$. The circle is $|z + \\frac{1}{2}| = \\frac{5}{2}$."
+   }
+  ],
+  "explanation": "Factor theorem, conjugate roots, and the geometry of the roots on an Argand diagram.",
+  "hints": [
+   "Compare coefficients after dividing by z − 2.",
+   "The centre is equidistant from 2 and 1 + 2i."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "b",
+       "text": "-2"
+      },
+      {
+       "blankId": "c",
+       "text": "5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "h",
+       "text": "-0.5"
+      },
+      {
+       "blankId": "r",
+       "text": "2.5"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "b",
+        "text": "2"
+       },
+       {
+        "blankId": "c",
+        "text": "-5"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-1"
+       },
+       {
+        "blankId": "b",
+        "text": "4"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "h",
+        "text": "0.5"
+       },
+       {
+        "blankId": "r",
+        "text": "1.5"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w2b-cambridge.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.complex.loci"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "The region $R$ of an Argand diagram consists of the points representing complex numbers $z$ that satisfy both $|z - 3 - 4\\mathrm{i}| \\le 2$ and $\\mathrm{Re}\\,z \\ge 3$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how to sketch and shade R.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Circle with centre (3, 4) and radius 2, drawn solid.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The vertical line Re z = 3 (x = 3), solid; it passes through the centre.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "R is the right-hand half of the disc (x ≥ 3), including both boundaries.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Draw the circle centre (3, 4), radius 2, and the line x = 3, which is a diameter of the circle. R is the half-disc on the right of x = 3, including the arc and the diameter from (3, 2) to (3, 6)."
+    },
+    "explanation": "The line Re z = 3 passes through the centre, so R is a half-disc."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the greatest value of |z| for points in R.",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "The centre is 5 from $O$; the farthest point of the disc is $5 + 2 = 7$ from $O$, at $(4.2, 5.6)$, which has $\\mathrm{Re}\\,z \\ge 3$, so it is in $R$.",
+    "workedSolution": "1. The centre is 5 from $O$; the farthest point of the disc is $5 + 2 = 7$ from $O$, at $(4.2, 5.6)$, which has $\\mathrm{Re}\\,z \\ge 3$, so it is in $R$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the least value of arg z for points in R, in radians correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "rad"
+    },
+    "answerSpec": {
+     "value": 0.5157783719341241,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "rad",
+       "radians",
+       "radian"
+      ]
+     }
+    },
+    "explanation": "The lower tangent from $O$ to the circle makes angle $\\sin^{-1}\\frac{2}{5} = 0.4115$ with $Oc$, and $\\arg(3 + 4\\mathrm{i}) = 0.9273$. Least $\\arg z = 0.9273 - 0.4115 = 0.516$. The point of contact, about $(3.98, 2.26)$, has $\\mathrm{Re}\\,z \\ge 3$, so it lies in $R$.",
+    "workedSolution": "1. The lower tangent from $O$ to the circle makes angle $\\sin^{-1}\\frac{2}{5} = 0.4115$ with $Oc$, and $\\arg(3 + 4\\mathrm{i}) = 0.9273$. Least $\\arg z = 0.9273 - 0.4115 = 0.516$. The point of contact, about $(3.98, 2.26)$, has $\\mathrm{Re}\\,z \\ge 3$, so it lies in $R$.",
+    "hints": [
+     "Draw the tangent from O to the circle below the centre."
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the least value of |z| for points in R, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 3.6055512754639896,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "The nearest point of the whole disc, $(1.8, 2.4)$, has $\\mathrm{Re}\\,z < 3$, so it is not in $R$. On $R$ the distance from $O$ is least at the corner $(3, 2)$, where the line meets the circle: $|3 + 2\\mathrm{i}| = \\sqrt{13} = 3.61$.",
+    "workedSolution": "1. The nearest point of the whole disc, $(1.8, 2.4)$, has $\\mathrm{Re}\\,z < 3$, so it is not in $R$. On $R$ the distance from $O$ is least at the corner $(3, 2)$, where the line meets the circle: $|3 + 2\\mathrm{i}| = \\sqrt{13} = 3.61$.",
+    "hints": [
+     "Is the point of the disc nearest to O inside R?"
+    ]
+   }
+  ],
+  "explanation": "Sketch the half-disc; use the line through O and the centre, and the tangent from O, but check each extreme point lies in R.",
+  "hints": [
+   "|3 + 4i| = 5.",
+   "The tangent angle is sin⁻¹(radius ÷ distance)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.516"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "3.61"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.5467888408892473"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 3"
+ }
+]

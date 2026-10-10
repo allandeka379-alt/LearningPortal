@@ -1,0 +1,1035 @@
+[
+ {
+  "key": "inference.normal-mean-test.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A test of $H_0: \\mu = \\mu_0$ uses a random sample of size $n$ from a normal population with known standard deviation $\\sigma$. What is the test statistic?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$z = \\dfrac{\\bar{x} - \\mu_0}{\\sigma/\\sqrt{n}}$",
+    "correct": true,
+    "rationale": "Correct: the sample mean standardised using its own standard deviation σ/√n."
+   },
+   {
+    "key": "B",
+    "content": "$z = \\dfrac{\\bar{x} - \\mu_0}{\\sigma}$",
+    "rationale": "This uses the standard deviation of one observation, not of the sample mean."
+   },
+   {
+    "key": "C",
+    "content": "$z = \\dfrac{\\bar{x} - \\mu_0}{\\sigma/n}$",
+    "rationale": "The standard deviation of $\\bar{X}$ is $\\sigma/\\sqrt{n}$, not $\\sigma/n$."
+   },
+   {
+    "key": "D",
+    "content": "$z = \\dfrac{\\mu_0 - \\sigma}{\\bar{x}/\\sqrt{n}}$",
+    "rationale": "The quantities are in the wrong places."
+   }
+  ],
+  "explanation": "Under $H_0$, $\\bar{X} \\sim \\mathrm{N}\\left(\\mu_0, \\frac{\\sigma^2}{n}\\right)$, so $Z = \\frac{\\bar{X} - \\mu_0}{\\sigma/\\sqrt{n}} \\sim \\mathrm{N}(0, 1)$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "inference.normal-mean-test.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A sample of 36 observations from a normal population with standard deviation 6 has mean 52.1. Calculate the test statistic $z$ for testing $H_0: \\mu = 50$.",
+  "answerSpec": {
+   "value": 2.1000000000000014,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$z = \\frac{52.1 - 50}{6/\\sqrt{36}} = \\frac{2.1}{1} = 2.1$. (0.35 divides by $\\sigma$ instead of $\\frac{\\sigma}{\\sqrt{n}}$.)",
+  "workedSolution": "1. $z = \\frac{52.1 - 50}{6/\\sqrt{36}} = \\frac{2.1}{1} = 2.1$. (0.35 divides by $\\sigma$ instead of $\\frac{\\sigma}{\\sqrt{n}}$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.35000000000000003"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "12.600000000000001"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "inference.normal-mean-test.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In an upper-tailed z-test, the test statistic is $z = 2.1$. Find the p-value, correct to 3 significant figures, and state whether the result is significant at the 1% level.",
+  "answerSpec": {
+   "value": 0.0178644188878454,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.000086
+   }
+  },
+  "explanation": "From tables $\\Phi(2.1) = 0.9821$, so the p-value is $1 - 0.9821 = 0.0179$. Since $0.0179 > 0.01$, the result is **not** significant at the 1% level (although it is at 5%).",
+  "workedSolution": "1. From tables $\\Phi(2.1) = 0.9821$, so the p-value is $1 - 0.9821 = 0.0179$. Since $0.0179 > 0.01$, the result is **not** significant at the 1% level (although it is at 5%).",
+  "hints": [
+   "p-value $= \\mathrm{P}(Z \\ge 2.1)$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0179"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.9821355811121546"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.0357288377756908"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.normal-mean-test.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A two-tailed test of $H_0: \\mu = 80$ at the 5% significance level gives $z = -1.83$. What is the correct conclusion?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Reject $H_0$, because $-1.83 < -1.645$.",
+    "rationale": "1.645 is the one-tailed critical value; a two-tailed test uses 1.96."
+   },
+   {
+    "key": "B",
+    "content": "Reject $H_0$, because $z$ is negative.",
+    "rationale": "The sign shows the direction, not the significance."
+   },
+   {
+    "key": "C",
+    "content": "Do not reject $H_0$, because $-1.83 < 1.96$.",
+    "rationale": "Compare |z| with 1.96, or z with −1.96 for the lower tail."
+   },
+   {
+    "key": "D",
+    "content": "Do not reject $H_0$, because $|{-1.83}| < 1.96$.",
+    "correct": true,
+    "rationale": "Correct: the two-tailed 5% critical values are ±1.96."
+   }
+  ],
+  "explanation": "For a two-tailed 5% test, reject $H_0$ if $z < -1.96$ or $z > 1.96$. Here $-1.96 < -1.83 < 1.96$.",
+  "hints": [
+   "Which critical value applies to a two-tailed 5% test?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "inference.normal-mean-test.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A normal population has standard deviation 4. A test of $H_0: \\mu = 120$ against $H_1: \\mu \\ne 120$ at the 1% level uses a sample of 25. Find the critical region for $\\bar{x}$: reject $H_0$ if $\\bar{x} < a$ or $\\bar{x} > b$. Give $a$ and $b$ correct to 4 significant figures.",
+  "payload": {
+   "template": "a = {{blank:a}}, b = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "117.9"
+     ],
+     "tolerance": 0.005
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "122.1"
+     ],
+     "tolerance": 0.005
+    }
+   ]
+  },
+  "explanation": "Standard deviation of $\\bar{X}$: $\\frac{4}{5} = 0.8$. Two-tailed 1%: $z = \\pm 2.576$. $a = 120 - 2.576 \\times 0.8 = 117.9$, $b = 120 + 2.576 \\times 0.8 = 122.1$, i.e. $117.9$ and $122.1$.",
+  "hints": [
+   "Two-tailed 1%: 0.5% in each tail."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "117.9"
+    },
+    {
+     "blankId": "b",
+     "text": "122.1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "118.4"
+     },
+     {
+      "blankId": "b",
+      "text": "121.6"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.normal-mean-test.q06",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The masses, $x$ kg, of 60 randomly chosen sacks of fertiliser at a depot in Chinhoyi give $\\sum x = 2940$ and $\\sum x^2 = 145200$. Test $H_0: \\mu = 50$ against $H_1: \\mu < 50$. Calculate the test statistic $z$, correct to 3 significant figures, using an unbiased estimate of the variance.",
+  "answerSpec": {
+   "value": -1.7621756887140219,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$\\bar{x} = 49$, $s^2 = \\frac{1}{59}\\left(145200 - \\frac{2940^2}{60}\\right) = \\frac{1140}{59} = 19.32$. The sample is large, so $z = \\frac{49 - 50}{\\sqrt{19.32/60}} = -1.762$, i.e. $-1.76$. Since $-1.76 < -1.645$, this is significant at the 5% level.",
+  "workedSolution": "1. $\\bar{x} = \\frac{2940}{60} = 49$.\n2. $s^2 = \\frac{1}{59}(145200 - 144060) = 19.32$.\n3. Standard error $= \\sqrt{\\frac{19.32}{60}} = 0.5675$.\n4. $z = \\frac{49 - 50}{0.5675} = -1.76$.",
+  "hints": [
+   "Estimate σ² with the divisor n − 1.",
+   "The large sample justifies using s in place of σ."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "-1.76"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "-1.777046633277277"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "-0.22749590318269972"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.normal-mean-test.q07",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a large sample from a population of unknown distribution and unknown variance, a z-test for the mean can be carried out using the sample estimate s in place of σ.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "By the central limit theorem the sample mean is approximately normal for large n, and s is then a good estimate of σ.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.normal-mean-test.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The critical value of z for a two-tailed test at the 5% significance level is 1.645.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "For a two-tailed 5% test the critical values are $\\pm 1.96$ (2.5% in each tail). 1.645 is the one-tailed 5% value.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "inference.normal-mean-test.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A test of $H_0: \\mu = 300$ against $H_1: \\mu > 300$ at the 5% level uses a sample of 40 from a normal population with standard deviation 15. Find the largest value of the sample mean for which $H_0$ is not rejected, correct to 4 significant figures.",
+  "answerSpec": {
+   "value": 303.9014600632327,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "$H_0$ is not rejected while $\\frac{\\bar{x} - 300}{15/\\sqrt{40}} \\le 1.645$: $\\bar{x} \\le 300 + 1.645 \\times 2.372 = 303.9$, i.e. $303.9$.",
+  "workedSolution": "1. $H_0$ is not rejected while $\\frac{\\bar{x} - 300}{15/\\sqrt{40}} \\le 1.645$: $\\bar{x} \\le 300 + 1.645 \\times 2.372 = 303.9$, i.e. $303.9$.",
+  "hints": [
+   "Set z equal to the critical value and solve for the sample mean."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "303.9"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "304.6485481604475"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "324.675"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "inference.normal-mean-test.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A population is normal with standard deviation 8. A sample of size $n$ has mean 2 units above the value $\\mu_0$ in $H_0$. Find the smallest $n$ for which this result would be significant in an upper-tailed test at the 5% level.",
+  "answerSpec": {
+   "value": 44
+  },
+  "explanation": "Need $\\frac{2}{8/\\sqrt{n}} > 1.645$, so $\\sqrt{n} > 6.58$ and $n > 43.3$. The smallest integer is $n = 44$. (62 uses 1.96, the two-tailed value.)",
+  "workedSolution": "1. Need $\\frac{2}{8/\\sqrt{n}} > 1.645$, so $\\sqrt{n} > 6.58$ and $n > 43.3$. The smallest integer is $n = 44$. (62 uses 1.96, the two-tailed value.)",
+  "hints": [
+   "Solve $\\frac{2\\sqrt{n}}{8} > 1.645$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "44"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "43"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "62"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "inference.normal-mean-test.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Match each alternative hypothesis (tested at the 5% level with a z statistic) with its critical region.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$H_1: \\mu > \\mu_0$"
+    },
+    {
+     "id": "L2",
+     "content": "$H_1: \\mu < \\mu_0$"
+    },
+    {
+     "id": "L3",
+     "content": "$H_1: \\mu \\ne \\mu_0$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$|z| > 1.96$"
+    },
+    {
+     "id": "X1",
+     "content": "$|z| > 1.645$"
+    },
+    {
+     "id": "R1",
+     "content": "$z > 1.645$"
+    },
+    {
+     "id": "R2",
+     "content": "$z < -1.645$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "One-tailed tests put all 5% in one tail; the two-tailed test puts 2.5% in each.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.normal-mean-test.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Packets of sugar from a refinery in Chiredzi are labelled 500 g. A consumer group suspects that the mean mass is less than this. Which hypotheses should be tested?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$H_0: \\mu = 500$, $H_1: \\mu \\ne 500$",
+    "rationale": "The group suspects a specific direction (less)."
+   },
+   {
+    "key": "B",
+    "content": "$H_0: \\mu < 500$, $H_1: \\mu = 500$",
+    "rationale": "The null hypothesis must be the single value 500."
+   },
+   {
+    "key": "C",
+    "content": "$H_0: \\mu = 500$, $H_1: \\mu < 500$",
+    "correct": true,
+    "rationale": "Correct: a lower-tail test of the labelled mean."
+   },
+   {
+    "key": "D",
+    "content": "$H_0: \\mu = 500$, $H_1: \\mu > 500$",
+    "rationale": "The suspicion is that packets are underweight."
+   }
+  ],
+  "explanation": "The claim being questioned (500 g) is H₀; the suspected direction is H₁.",
+  "hints": [
+   "Which direction does the consumer group suspect?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "inference.normal-mean-test.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A z-test on the mean daily water use of 80 households used the central limit theorem. Explain why the theorem was needed and why it applies.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The distribution of daily water use is not known to be normal, so the sample mean cannot be assumed to be exactly normal.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The sample of 80 is large, so by the central limit theorem the sample mean is approximately normal, which justifies the z-test.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The z-test needs the sample mean to be normally distributed. Household water use is probably skewed, not normal, but with 80 households the central limit theorem says that the sample mean is approximately normal."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "State both the reason it is needed (population not known to be normal) and why it applies (large n).",
+  "hints": [
+   "What must be normal for a z-test?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.normal-mean-test.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The times taken to serve customers at a Harare bank are normally distributed with standard deviation 2.4 minutes. After a new system is introduced, a random sample of 30 customers has a mean service time of 17.6 minutes. Calculate the test statistic $z$ for $H_0: \\mu = 18.5$ against $H_1: \\mu < 18.5$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": -2.0539595906443697,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$z = \\frac{17.6 - 18.5}{2.4/\\sqrt{30}} = \\frac{-0.9}{0.4382} = -2.054$, i.e. $-2.05$. Since $-2.05 < -1.645$, there is evidence at the 5% level that the mean service time has decreased.",
+  "workedSolution": "1. $z = \\frac{17.6 - 18.5}{2.4/\\sqrt{30}} = \\frac{-0.9}{0.4382} = -2.054$, i.e. $-2.05$. Since $-2.05 < -1.645$, there is evidence at the 5% level that the mean service time has decreased.",
+  "hints": [
+   "Standardise using σ/√n.",
+   "Keep the sign: the test is lower-tailed."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-2.05"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-0.37499999999999944"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.0539595906443697"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.normal-mean-test.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In an upper-tailed z-test, $z = 2.05$. Which statement is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$H_0$ is rejected at both the 5% and the 1% levels.",
+    "rationale": "The one-tailed 1% critical value is 2.326, which 2.05 does not exceed."
+   },
+   {
+    "key": "B",
+    "content": "$H_0$ is rejected at the 5% level but not at the 1% level.",
+    "correct": true,
+    "rationale": "Correct: $1.645 < 2.05 < 2.326$."
+   },
+   {
+    "key": "C",
+    "content": "$H_0$ is rejected at neither level.",
+    "rationale": "2.05 exceeds the 5% critical value 1.645."
+   },
+   {
+    "key": "D",
+    "content": "$H_0$ is rejected at the 1% level but not at the 5% level.",
+    "rationale": "Anything significant at 1% is also significant at 5%."
+   }
+  ],
+  "explanation": "A smaller significance level needs a more extreme test statistic; results significant at 1% are always significant at 5%.",
+  "hints": [
+   "Compare 2.05 with 1.645 and 2.326."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "inference.normal-mean-test.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The lifetimes of a brand of bulb are normally distributed with mean 1000 hours and standard deviation 40 hours. After a change in the filament, a random sample of 50 bulbs has mean lifetime 1012 hours. Test, at the 5% level, whether the mean lifetime has increased.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the test statistic z, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 2.121320343559643,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$z = \\frac{1012 - 1000}{40/\\sqrt{50}} = 2.121$.",
+    "workedSolution": "1. $z = \\frac{1012 - 1000}{40/\\sqrt{50}} = 2.121$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "State the hypotheses and complete the test, giving your conclusion in context.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$H_0: \\mu = 1000$, $H_1: \\mu > 1000$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Compares 2.12 > 1.645 and rejects H₀.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "There is evidence at the 5% level that the mean lifetime has increased.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: H₀: μ = 1000, H₁: μ > 1000. z = 2.12 > 1.645, so reject H₀: there is evidence at the 5% level that the change has increased the mean lifetime of the bulbs."
+    },
+    "explanation": "Hypotheses, comparison, conclusion in context."
+   }
+  ],
+  "explanation": "Standardise the sample mean with σ/√n and compare with the one-tailed critical value 1.645.",
+  "hints": [
+   "Use σ/√n.",
+   "Upper-tailed 5%: 1.645."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "2.12"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.3"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "inference.normal-mean-test.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.normal-mean-test"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "A tea estate in Chipinge states that its pickers harvest a mean of 48 kg of tea leaves per day. A manager records the daily harvest, $x$ kg, of 100 randomly chosen pickers: $\\sum x = 4720$ and $\\sum x^2 = 224300$. She tests, at the 5% level, whether the mean daily harvest is different from 48 kg.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find unbiased estimates of the population mean and variance, giving the variance correct to 3 significant figures.",
+    "payload": {
+     "template": "mean = {{blank:m}} kg, variance = {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "47.2"
+       ],
+       "marks": 1,
+       "tolerance": 0.001
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "15.3"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\bar{x} = 47.2$; $s^2 = \\frac{1}{99}\\left(224300 - \\frac{4720^2}{100}\\right) = \\frac{1516}{99} = 15.31$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State the hypotheses and explain why a z-test may be used although the distribution of daily harvests is unknown.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$H_0: \\mu = 48$, $H_1: \\mu \\ne 48$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "n = 100 is large, so by the central limit theorem the sample mean is approximately normal (and s² estimates σ² well).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $H_0: \\mu = 48$, $H_1: \\mu \\ne 48$. The sample is large, so the central limit theorem makes $\\bar{X}$ approximately normal."
+    },
+    "explanation": "Two-tailed: 'different from'."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Calculate the test statistic z, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": -2.044362865311815,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$z = \\frac{47.2 - 48}{\\sqrt{15.31/100}} = \\frac{-0.8}{0.3913} = -2.044$.",
+    "workedSolution": "1. $z = \\frac{47.2 - 48}{\\sqrt{15.31/100}} = \\frac{-0.8}{0.3913} = -2.044$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Complete the test, giving your conclusion in context.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "|z| = 2.04 > 1.96 (or z < −1.96), so reject H₀.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "There is evidence at the 5% level that the mean daily harvest is different from 48 kg.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: z = -2.04 < −1.96, so reject H₀. There is evidence at the 5% level that the pickers' mean daily harvest differs from 48 kg (it appears to be lower)."
+    },
+    "explanation": "Compare with ±1.96."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the p-value of the test, correct to 2 significant figures.",
+    "answerSpec": {
+     "value": 0.04091770919971616,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0015
+     }
+    },
+    "explanation": "Two-tailed: $2 \\times \\mathrm{P}(Z < -2.04) = 0.04092$, about $0.041$.",
+    "workedSolution": "1. Two-tailed: $2 \\times \\mathrm{P}(Z < -2.04) = 0.04092$, about $0.041$."
+   },
+   {
+    "label": "(f)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Would the conclusion be the same at the 1% level?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Yes: the p-value is less than 0.05, so H₀ is still rejected.",
+      "rationale": "At 1% the comparison is with 0.01."
+     },
+     {
+      "key": "B",
+      "content": "No: the p-value exceeds 0.01, so H₀ would not be rejected.",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "Yes: a smaller significance level makes rejection easier.",
+      "rationale": "A smaller level makes rejection harder."
+     },
+     {
+      "key": "D",
+      "content": "No: a test at the 1% level must always be one-tailed.",
+      "rationale": "Any level can be one- or two-tailed."
+     }
+    ],
+    "explanation": "p = 0.041 > 0.01 (|z| < 2.576)."
+   }
+  ],
+  "explanation": "Large-sample z-test: estimate σ² from the sums, use the central limit theorem, compare with ±1.96 and interpret.",
+  "hints": [
+   "Divide by n − 1 for the variance.",
+   "Two-tailed 5%: ±1.96."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "47.2"
+      },
+      {
+       "blankId": "v",
+       "text": "15.3"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "-2.04"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.041"
+    },
+    "(f)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "4720"
+       },
+       {
+        "blankId": "v",
+        "text": "15.2"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "-0.20443628653118148"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.02045885459985808"
+     },
+     "(f)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

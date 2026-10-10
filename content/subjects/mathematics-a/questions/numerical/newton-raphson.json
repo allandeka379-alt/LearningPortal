@@ -1,0 +1,1144 @@
+[
+ {
+  "key": "numerical.newton-raphson.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which formula is the Newton–Raphson iteration for solving $f(x) = 0$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$x_{n+1} = x_n - \\dfrac{f(x_n)}{f'(x_n)}$",
+    "correct": true,
+    "rationale": "Correct: subtract the function value divided by the gradient."
+   },
+   {
+    "key": "B",
+    "content": "$x_{n+1} = x_n + \\dfrac{f(x_n)}{f'(x_n)}$",
+    "rationale": "Adding the correction moves away from the root along the tangent."
+   },
+   {
+    "key": "C",
+    "content": "$x_{n+1} = x_n - \\dfrac{f'(x_n)}{f(x_n)}$",
+    "rationale": "The fraction is upside down: the correction is f ÷ f′."
+   },
+   {
+    "key": "D",
+    "content": "$x_{n+1} = \\dfrac{f(x_n)}{f'(x_n)}$",
+    "rationale": "This is only the correction; it must be subtracted from $x_n$."
+   }
+  ],
+  "explanation": "The tangent at $(x_n, f(x_n))$ meets the $x$-axis at $x_n - \\frac{f(x_n)}{f'(x_n)}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "numerical.newton-raphson.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The Newton–Raphson method is applied to $f(x) = x^2 - 7$ with $x_1 = 3$. Find $x_2$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 2.6666666666666665,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$f(3) = 2$, $f'(3) = 6$, so $x_2 = 3 - \\frac{2}{6} = 2.67$. (3.33 adds the correction; 0 uses $\\frac{f'}{f}$.)",
+  "workedSolution": "1. $f(3) = 2$, $f'(3) = 6$, so $x_2 = 3 - \\frac{2}{6} = 2.67$. (3.33 adds the correction; 0 uses $\\frac{f'}{f}$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.67"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3.3333333333333335"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "numerical.newton-raphson.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Apply one step of the Newton–Raphson method to $x^3 - 4x + 1 = 0$, starting from $x_1 = 0$. Find $x_2$.",
+  "answerSpec": {
+   "value": 0.25,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$f(0) = 1$ and $f'(x) = 3x^2 - 4$, so $f'(0) = -4$. Then $x_2 = 0 - \\frac{1}{-4} = 0.25$.",
+  "workedSolution": "1. $f(0) = 1$ and $f'(x) = 3x^2 - 4$, so $f'(0) = -4$. Then $x_2 = 0 - \\frac{1}{-4} = 0.25$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.250"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-0.25"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "numerical.newton-raphson.q04",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The Newton–Raphson method cannot be used from a starting value $x_1$ at which $f'(x_1) = 0$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "The formula divides by $f'(x_1)$. Geometrically the tangent is horizontal and never meets the $x$-axis (unless $f(x_1) = 0$ already).",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "numerical.newton-raphson.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use the Newton–Raphson method with $x_1 = 1$ to find the root of $x^3 + x - 1 = 0$, correct to 4 decimal places.",
+  "answerSpec": {
+   "value": 0.6823278038277749,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$x_{n+1} = x_n - \\dfrac{x_n^3 + x_n - 1}{3x_n^2 + 1}$: $x_2 = 0.75$, $x_3 = 0.686047$, $x_4 = 0.682340$, $x_5 = 0.682328$. Root $0.6823$ (4 d.p.).",
+  "workedSolution": "1. $x_{n+1} = x_n - \\dfrac{x_n^3 + x_n - 1}{3x_n^2 + 1}$: $x_2 = 0.75$, $x_3 = 0.686047$, $x_4 = 0.682340$, $x_5 = 0.682328$. Root $0.6823$ (4 d.p.).",
+  "hints": [
+   "$f'(x) = 3x^2 + 1$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.6823"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.686"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.75"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "numerical.newton-raphson.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use the Newton–Raphson method on $f(x) = x^3 - 20$ with $x_1 = 3$ to find $\\sqrt[3]{20}$, correct to 4 decimal places.",
+  "answerSpec": {
+   "value": 2.7144176165949068,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$x_{n+1} = x_n - \\dfrac{x_n^3 - 20}{3x_n^2} = \\dfrac{2x_n^3 + 20}{3x_n^2}$: $x_2 = 2.740741$, $x_3 = 2.714670$, $x_4 = 2.714418$, $x_5 = 2.714418$. So $\\sqrt[3]{20} = 2.7144$.",
+  "workedSolution": "1. $x_{n+1} = x_n - \\dfrac{x_n^3 - 20}{3x_n^2} = \\dfrac{2x_n^3 + 20}{3x_n^2}$: $x_2 = 2.740741$, $x_3 = 2.714670$, $x_4 = 2.714418$, $x_5 = 2.714418$. So $\\sqrt[3]{20} = 2.7144$.",
+  "hints": [
+   "The cube root of 20 is a root of x³ − 20 = 0."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.7144"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2.7407"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.7147"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "numerical.newton-raphson.q07",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Show that the Newton–Raphson iteration for $f(x) = x^2 - 5$ can be written as $x_{n+1} = g(x_n)$ where $g$ is a single fraction. Type $g(x)$, using x for $x_n$ (e.g. (x^2+1)/(3x)).",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "(x^2+5)/(2x)"
+    },
+    {
+     "value": "(x²+5)/(2x)"
+    },
+    {
+     "value": "(5+x^2)/(2x)"
+    },
+    {
+     "value": "(x^2+5)/2x"
+    },
+    {
+     "value": "x/2+5/(2x)"
+    },
+    {
+     "value": "0.5(x+5/x)"
+    },
+    {
+     "value": "(x+5/x)/2"
+    },
+    {
+     "value": "1/2(x+5/x)"
+    },
+    {
+     "value": "(1/2)(x+5/x)"
+    },
+    {
+     "value": "0.5x+2.5/x"
+    },
+    {
+     "value": "x/2+2.5/x"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$g(x) = x - \\dfrac{x^2 - 5}{2x} = \\dfrac{2x^2 - x^2 + 5}{2x} = \\dfrac{x^2 + 5}{2x}$, i.e. the average of $x$ and $\\frac{5}{x}$.",
+  "hints": [
+   "Put everything over the common denominator 2x."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "(x^2+5)/(2x)"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "(x^2-5)/(2x)"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "numerical.newton-raphson.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use the Newton–Raphson method with $x_1 = 1$ to solve $x = \\cos x$ (radians), giving the root correct to 4 decimal places.",
+  "answerSpec": {
+   "value": 0.7390851332151607,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$f(x) = x - \\cos x$, $f'(x) = 1 + \\sin x$. $x_2 = 0.750364$, $x_3 = 0.739113$, $x_4 = 0.739085$, $x_5 = 0.739085$. Root $0.7391$. (Degree mode gives nonsense such as $0.9998$.)",
+  "workedSolution": "1. $f(x) = x - \\cos x$, $f'(x) = 1 + \\sin x$. $x_2 = 0.750364$, $x_3 = 0.739113$, $x_4 = 0.739085$, $x_5 = 0.739085$. Root $0.7391$. (Degree mode gives nonsense such as $0.9998$.)",
+  "hints": [
+   "Use radians.",
+   "$\\frac{\\mathrm{d}}{\\mathrm{d}x}(-\\cos x) = \\sin x$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.7391"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.7504"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.9998"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "numerical.newton-raphson.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Why can the Newton–Raphson method for $x^3 - 3x + 1 = 0$ not be started at $x_1 = 1$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$f(1) = 0$, so 1 is already a root",
+    "rationale": "$f(1) = 1 - 3 + 1 = -1$, not 0."
+   },
+   {
+    "key": "B",
+    "content": "$f(1)$ is negative, and the method needs a positive value of $f$",
+    "rationale": "The sign of f(x₁) does not matter."
+   },
+   {
+    "key": "C",
+    "content": "The method only works for starting values that are not whole numbers",
+    "rationale": "Whole-number starting values are often used; the issue is the gradient at x = 1."
+   },
+   {
+    "key": "D",
+    "content": "$f'(1) = 0$, so the tangent there is horizontal and the formula divides by zero",
+    "correct": true,
+    "rationale": "Correct: $f'(x) = 3x^2 - 3$ vanishes at $x = 1$, a turning point of the curve."
+   }
+  ],
+  "explanation": "$x_2 = x_1 - \\frac{f(x_1)}{f'(x_1)}$ needs $f'(x_1) \\ne 0$. At a turning point the tangent never meets the $x$-axis.",
+  "hints": [
+   "Differentiate f and evaluate at 1."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "numerical.newton-raphson.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The Newton–Raphson method is applied to $f(x) = x^3 - 3x + 1$ with $x_1 = 1.1$. Find $x_2$, correct to 3 significant figures, and comment on its size.",
+  "answerSpec": {
+   "value": 2.638095238095236,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$f(1.1) = -0.969$ and $f'(1.1) = 0.63$, so $x_2 = 1.1 + \\frac{0.969}{0.63} = 2.64$. Because $x_1$ is close to the turning point at $x = 1$, the tangent is shallow and overshoots the root $1.532$ badly (the iteration does recover: $2.00$, $1.67$, $1.55$, $1.532$).",
+  "workedSolution": "1. $f(1.1) = -0.969$ and $f'(1.1) = 0.63$, so $x_2 = 1.1 + \\frac{0.969}{0.63} = 2.64$. Because $x_1$ is close to the turning point at $x = 1$, the tangent is shallow and overshoots the root $1.532$ badly (the iteration does recover: $2.00$, $1.67$, $1.55$, $1.532$).",
+  "hints": [
+   "Evaluate $f(1.1)$ and $f'(1.1)$ carefully."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.64"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-0.4380952380952359"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.53"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "numerical.newton-raphson.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The equation $x^3 - 3x + 1 = 0$ has roots $-1.879$, $0.347$ and $1.532$ (3 d.p.). Starting the Newton–Raphson method at $x_1 = 0.95$, to which root do the iterates converge?",
+  "options": [
+   {
+    "key": "A",
+    "content": "0.347",
+    "rationale": "The shallow tangent near the turning point at $x = 1$ throws the iterate right past $0.347$."
+   },
+   {
+    "key": "B",
+    "content": "1.532",
+    "rationale": "From $0.95$ the tangent slopes downwards and $f(0.95) < 0$, so the step goes left, not right."
+   },
+   {
+    "key": "C",
+    "content": "−1.879",
+    "correct": true,
+    "rationale": "Correct: $f'(0.95) = -0.29$ is small and negative, so $x_2 = 0.95 - \\frac{f(0.95)}{f'(0.95)}$ jumps far to the left."
+   },
+   {
+    "key": "D",
+    "content": "It diverges and never settles near a root",
+    "rationale": "The iterates jump to $-2.44$ and then converge steadily."
+   }
+  ],
+  "explanation": "$f(0.95) = -0.993$, $f'(0.95) = -0.293$, so $x_2 = 0.95 - \\frac{-0.993}{-0.293} = -2.44$, then $-2.02$, $-1.89$, $-1.880$: the iterates converge to $-1.879$, not to the nearest root.",
+  "hints": [
+   "Work out x₂ before guessing."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "numerical.newton-raphson.q12",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "By considering the tangent to the curve $y = f(x)$ at the point where $x = x_n$, derive the Newton–Raphson formula $x_{n+1} = x_n - \\dfrac{f(x_n)}{f'(x_n)}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "B1 states the tangent at $(x_n, f(x_n))$ has gradient $f'(x_n)$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 writes the tangent equation $y - f(x_n) = f'(x_n)(x - x_n)$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 sets $y = 0$ for the $x$-intercept.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 rearranges to $x = x_n - \\frac{f(x_n)}{f'(x_n)}$.",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "B1 explains that this intercept is taken as the next approximation $x_{n+1}$ (and requires $f'(x_n) \\ne 0$).",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "The tangent to $y = f(x)$ at $(x_n, f(x_n))$ has gradient $f'(x_n)$:\n$$\ny - f(x_n) = f'(x_n)(x - x_n)\n$$\nIt meets the $x$-axis where $y = 0$:\n$$\n-f(x_n) = f'(x_n)(x - x_n) \\Rightarrow x - x_n = -\\frac{f(x_n)}{f'(x_n)}\n$$\n$$\nx = x_n - \\frac{f(x_n)}{f'(x_n)}\n$$\nNear a root the tangent is close to the curve, so this intercept is a better approximation: call it $x_{n+1}$. The step needs $f'(x_n) \\ne 0$."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The method replaces the curve by its tangent line.",
+  "hints": [
+   "Write the equation of the tangent and find where y = 0."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "numerical.newton-raphson.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Explain, with reference to the tangent, why the Newton–Raphson method can give a very poor $x_2$ when $f'(x_1)$ is close to zero.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "When f′(x₁) is close to 0, the tangent at x₁ is almost horizontal.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A nearly horizontal tangent meets the x-axis a long way from x₁ (the correction f/f′ is huge), possibly far from any root or near a different one.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: x₂ is where the tangent at x₁ crosses the x-axis. If the gradient is nearly zero the tangent is almost flat, so it crosses the axis far away; the step f(x₁)/f′(x₁) is very large and x₂ may be nowhere near the root."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Small denominators make large corrections.",
+  "hints": [
+   "What does the tangent look like at a turning point?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "numerical.newton-raphson.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each function f(x) with its Newton–Raphson iteration, written as x_{n+1} = g(x_n) (shown here with x for x_n).",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$f(x) = x^2 - 3$"
+    },
+    {
+     "id": "L2",
+     "content": "$f(x) = x^3 - 3$"
+    },
+    {
+     "id": "L3",
+     "content": "$f(x) = \\mathrm{e}^x - 3$"
+    },
+    {
+     "id": "L4",
+     "content": "$f(x) = \\ln x - 1$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$g(x) = x - 1 + 3\\mathrm{e}^{-x}$"
+    },
+    {
+     "id": "R4",
+     "content": "$g(x) = x(2 - \\ln x)$"
+    },
+    {
+     "id": "R1",
+     "content": "$g(x) = \\dfrac{x^2 + 3}{2x}$"
+    },
+    {
+     "id": "R2",
+     "content": "$g(x) = \\dfrac{2x^3 + 3}{3x^2}$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "In each case $g(x) = x - \\frac{f(x)}{f'(x)}$ simplified; e.g. for $\\ln x - 1$, $f'(x) = \\frac{1}{x}$ so $g(x) = x - x(\\ln x - 1) = x(2 - \\ln x)$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "numerical.newton-raphson.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The equation $\\tan x = x$ has a root between $\\pi$ and $\\frac{3\\pi}{2}$. Use the Newton–Raphson method with $x_1 = 4.5$ to find it correct to 3 decimal places.",
+  "answerSpec": {
+   "value": 4.493409457909064,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$f(x) = \\tan x - x$, $f'(x) = \\sec^2 x - 1 = \\tan^2 x$. $x_2 = 4.493614$, $x_3 = 4.493410$, $x_4 = 4.493409$. Root $4.493$ (3 d.p.).",
+  "workedSolution": "1. $f(x) = \\tan x - x$, $f'(x) = \\sec^2 x - 1 = \\tan^2 x$. $x_2 = 4.493614$, $x_3 = 4.493410$, $x_4 = 4.493409$. Root $4.493$ (3 d.p.).",
+  "hints": [
+   "$\\frac{\\mathrm{d}}{\\mathrm{d}x}\\tan x = \\sec^2 x$, and $\\sec^2 x - 1 = \\tan^2 x$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4.493"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4.494"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4.5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "numerical.newton-raphson.q16",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The Newton–Raphson method always converges to the root nearest to the starting value.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "It follows the tangent, which can jump past nearby roots. For $x^3 - 3x + 1 = 0$, starting at $0.95$ (nearest root $1.532$) leads to $-1.879$.",
+  "hints": [
+   "Think about a starting value near a turning point."
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "numerical.newton-raphson.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "The function f is defined by $f(x) = x^3 - 6x + 2$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the equation $f(x) = 0$ has a root $\\alpha$ between 2 and 3.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 evaluates $f(2) = -2$ and $f(3) = 11$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 states f is continuous and changes sign, so 2 < α < 3.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$f(2) = 8 - 12 + 2 = -2 < 0$ and $f(3) = 27 - 18 + 2 = 11 > 0$. $f$ is a polynomial, hence continuous, so there is a root between 2 and 3."
+    },
+    "explanation": "Change of sign."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that the Newton–Raphson iteration for this equation can be written $x_{n+1} = \\dfrac{2x_n^3 - 2}{3x_n^2 - 6}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 $f'(x) = 3x^2 - 6$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 writes $x_{n+1} = x_n - \\dfrac{x_n^3 - 6x_n + 2}{3x_n^2 - 6}$ over a common denominator.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 simplifies the numerator to 2x_n³ − 2.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nx_{n+1} = x_n - \\frac{x_n^3 - 6x_n + 2}{3x_n^2 - 6} = \\frac{3x_n^3 - 6x_n - x_n^3 + 6x_n - 2}{3x_n^2 - 6} = \\frac{2x_n^3 - 2}{3x_n^2 - 6}\n$$"
+    },
+    "explanation": "Combine over the denominator 3xₙ² − 6."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Use this iteration with $x_1 = 2.5$ to find $\\alpha$ correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 2.2618022452599718,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$x_2 = 2.294118$, $x_3 = 2.262533$, $x_4 = 2.261803$, $x_5 = 2.261802$: $\\alpha = 2.2618$.",
+    "workedSolution": "1. $x_2 = 2.294118$, $x_3 = 2.262533$, $x_4 = 2.261803$, $x_5 = 2.261802$: $\\alpha = 2.2618$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why $x_1 = \\sqrt{2}$ cannot be used as a starting value.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$f'(\\sqrt{2}) = 3(2) - 6 = 0$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The tangent there is horizontal (a turning point), so the formula divides by zero / the tangent does not meet the x-axis.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: f′(x) = 3x² − 6 is zero at x = √2, which is a stationary point of the curve. The denominator of the iteration is zero, and geometrically the horizontal tangent never meets the x-axis."
+    },
+    "explanation": "Check the denominator 3x² − 6 at the starting value."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The equation also has a root between 0 and 1. Starting from $x_1 = 0$, find $x_2$, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.3333333333333333,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$x_2 = \\dfrac{2(0) - 2}{3(0) - 6} = \\dfrac{-2}{-6} = 0.333$.",
+    "workedSolution": "1. $x_2 = \\dfrac{2(0) - 2}{3(0) - 6} = \\dfrac{-2}{-6} = 0.333$."
+   }
+  ],
+  "explanation": "Locate the root, simplify the Newton–Raphson formula, iterate, and avoid starting at a turning point.",
+  "hints": [
+   "$f'(x) = 3x^2 - 6$.",
+   "Keep full calculator accuracy between iterations."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.2618"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.333"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.2625"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "-0.3333333333333333"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "numerical.newton-raphson.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 5,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "The equation $x = 2\\sin x$, where $x$ is in radians, has a root $\\alpha$ with $\\alpha > 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $1.5 < \\alpha < 2$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 evaluates $h(x) = x - 2\\sin x$: $h(1.5) = -0.495$ and $h(2) = 0.181$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 states the change of sign with continuity and concludes.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nh(1.5) = 1.5 - 2\\sin 1.5 = -0.495 < 0, \\qquad h(2) = 2 - 2\\sin 2 = 0.181 > 0\n$$\n$h$ is continuous, so $1.5 < \\alpha < 2$."
+    },
+    "explanation": "Radians throughout."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that the Newton–Raphson iteration for $h(x) = x - 2\\sin x$ is $x_{n+1} = \\dfrac{2(\\sin x_n - x_n\\cos x_n)}{1 - 2\\cos x_n}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 $h'(x) = 1 - 2\\cos x$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 uses a common denominator.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 obtains the numerator $2\\sin x_n - 2x_n\\cos x_n$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nx_{n+1} = x_n - \\frac{x_n - 2\\sin x_n}{1 - 2\\cos x_n} = \\frac{x_n - 2x_n\\cos x_n - x_n + 2\\sin x_n}{1 - 2\\cos x_n} = \\frac{2(\\sin x_n - x_n\\cos x_n)}{1 - 2\\cos x_n}\n$$"
+    },
+    "explanation": "The x_n terms cancel in the numerator."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Using $x_1 = 2$, find $x_2$ and $x_3$, correct to 4 decimal places.",
+    "payload": {
+     "template": "x₂ = {{blank:a}}, x₃ = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1.9010"
+       ],
+       "tolerance": 0.00005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1.8955"
+       ],
+       "tolerance": 0.00005
+      }
+     ]
+    },
+    "explanation": "$x_2 = 1.9010$, $x_3 = 1.8955$ (to 4 d.p.)."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $\\alpha$ correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 1.8954942670338824,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$x_4 = 1.895494$, $x_5 = 1.895494$, so $\\alpha = 1.8955$.",
+    "workedSolution": "1. $x_4 = 1.895494$, $x_5 = 1.895494$, so $\\alpha = 1.8955$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why $x_1 = 1$ would be a poor starting value.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$h'(x) = 1 - 2\\cos x = 0$ at $x = \\frac{\\pi}{3} = 1.047$, which is close to 1.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the tangent at x = 1 is nearly horizontal and x₂ is thrown far from α.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The curve y = x − 2 sin x has a minimum at x = π/3 ≈ 1.05. At x = 1 the gradient h′(1) = 1 − 2cos 1 ≈ −0.08 is tiny, so the tangent is almost flat and meets the x-axis a long way off."
+    },
+    "explanation": "Starting near a stationary point is the classic failure."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of $x_2$ obtained from $x_1 = 1$, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": -7.4727406398312315,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$h(1) = 1 - 2\\sin 1 = -0.6829$ and $h'(1) = 1 - 2\\cos 1 = -0.0806$, so $x_2 = 1 - \\frac{-0.6829}{-0.0806} = -7.47$: nowhere near $\\alpha$.",
+    "workedSolution": "1. $h(1) = 1 - 2\\sin 1 = -0.6829$ and $h'(1) = 1 - 2\\cos 1 = -0.0806$, so $x_2 = 1 - \\frac{-0.6829}{-0.0806} = -7.47$: nowhere near $\\alpha$."
+   }
+  ],
+  "explanation": "Newton–Raphson converges rapidly from a good start and fails near a stationary point.",
+  "hints": [
+   "$h'(x) = 1 - 2\\cos x$.",
+   "Use radians."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1.9010"
+      },
+      {
+       "blankId": "b",
+       "text": "1.8955"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "1.8955"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "-7.47"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1.8955"
+       },
+       {
+        "blankId": "b",
+        "text": "1.9010"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1.901"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "7.4727406398312315"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

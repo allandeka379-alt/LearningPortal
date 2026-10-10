@@ -1,0 +1,1075 @@
+[
+ {
+  "key": "integ.volumes.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region under $y = f(x)$ from $x = a$ to $x = b$ is rotated through $360^\\circ$ about the $x$-axis. Which integral gives the volume?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\pi\\displaystyle\\int_{a}^{b} y^{2}\\,dx$",
+    "correct": true,
+    "rationale": "Correct: each thin slice is a disc of radius y."
+   },
+   {
+    "key": "B",
+    "content": "$\\displaystyle\\int_{a}^{b} y\\,dx$",
+    "rationale": "This is the area of the region, not the volume of the solid."
+   },
+   {
+    "key": "C",
+    "content": "$2\\pi\\displaystyle\\int_{a}^{b} y\\,dx$",
+    "rationale": "The disc's area πy² is needed, not the circumference 2πy."
+   },
+   {
+    "key": "D",
+    "content": "$\\pi\\displaystyle\\int_{a}^{b} x^{2}\\,dy$",
+    "rationale": "This is the formula for rotation about the y-axis."
+   }
+  ],
+  "explanation": "A slice of thickness $\\delta x$ is a disc of volume $\\pi y^{2}\\delta x$; summing gives $V = \\pi\\int_{a}^{b} y^{2}\\,dx$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region between $y = 3x$, the $x$-axis and the line $x = 2$ is rotated through $360^\\circ$ about the $x$-axis. The volume is $k\\pi$. Find $k$.",
+  "payload": {
+   "answerPrefix": "k ="
+  },
+  "answerSpec": {
+   "value": 24
+  },
+  "explanation": "$V = \\pi\\int_{0}^{2} 9x^{2}\\,dx = \\pi\\Big[3x^{3}\\Big]_{0}^{2} = 24\\pi$. (This solid is a cone of radius 6 and height 2: $\\frac{1}{3}\\pi \\times 36 \\times 2 = 24\\pi$.)",
+  "workedSolution": "1. $V = \\pi\\int_{0}^{2} 9x^{2}\\,dx = \\pi\\Big[3x^{3}\\Big]_{0}^{2} = 24\\pi$. (This solid is a cone of radius 6 and height 2: $\\frac{1}{3}\\pi \\times 36 \\times 2 = 24\\pi$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "24"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "12"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q03",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region between $y = \\sqrt{x}$, the $x$-axis and the line $x = 4$ is rotated through $360^\\circ$ about the $x$-axis. The volume is $k\\pi$. Find $k$.",
+  "payload": {
+   "template": "k = {{blank:k}}",
+   "blanks": [
+    {
+     "id": "k",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "k",
+     "accepted": [
+      "8"
+     ]
+    }
+   ]
+  },
+  "explanation": "$y^{2} = x$, so $V = \\pi\\int_{0}^{4} x\\,dx = \\pi\\Big[\\tfrac{x^{2}}{2}\\Big]_{0}^{4} = 8\\pi$.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "k",
+     "text": "8"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "k",
+      "text": "16"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region between $y = x^{2} + 1$, the axes and the line $x = 1$ is rotated through $360^\\circ$ about the $x$-axis. Find the volume, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "units³"
+  },
+  "answerSpec": {
+   "value": 5.8643062867009474,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "units³",
+     "units^3",
+     "cubic units"
+    ]
+   }
+  },
+  "explanation": "$y^{2} = x^{4} + 2x^{2} + 1$. $V = \\pi\\Big[\\tfrac{x^{5}}{5} + \\tfrac{2x^{3}}{3} + x\\Big]_{0}^{1} = \\pi\\left(\\tfrac{1}{5} + \\tfrac{2}{3} + 1\\right) = \\tfrac{28\\pi}{15} \\approx 5.86$. (4.19 uses $x^{4} + 1$, a wrong square.)",
+  "workedSolution": "1. $y^{2} = x^{4} + 2x^{2} + 1$. $V = \\pi\\Big[\\tfrac{x^{5}}{5} + \\tfrac{2x^{3}}{3} + x\\Big]_{0}^{1} = \\pi\\left(\\tfrac{1}{5} + \\tfrac{2}{3} + 1\\right) = \\tfrac{28\\pi}{15} \\approx 5.86$. (4.19 uses $x^{4} + 1$, a wrong square.)",
+  "hints": [
+   "Expand (x² + 1)² before integrating."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5.86"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4.19"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.87"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "integ.volumes.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A region between a curve, the $y$-axis and the lines $y = c$ and $y = d$ is rotated through $360^\\circ$ about the $y$-axis. Which integral gives the volume?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\pi\\displaystyle\\int_{c}^{d} y^{2}\\,dx$",
+    "rationale": "This mixes the x-axis formula with y-limits."
+   },
+   {
+    "key": "B",
+    "content": "$\\pi\\displaystyle\\int_{c}^{d} y^{2}\\,dy$",
+    "rationale": "The radius of each disc is x, not y."
+   },
+   {
+    "key": "C",
+    "content": "$\\pi\\displaystyle\\int_{c}^{d} x^{2}\\,dy$",
+    "correct": true,
+    "rationale": "Correct: the radius of each disc is the horizontal distance x."
+   },
+   {
+    "key": "D",
+    "content": "$\\displaystyle\\int_{c}^{d} x\\,dy$",
+    "rationale": "This is the area of the region against the y-axis, not the volume."
+   }
+  ],
+  "explanation": "Slices perpendicular to the $y$-axis are discs of radius $x$ and thickness $\\delta y$, so $V = \\pi\\int_{c}^{d} x^{2}\\,dy$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region between $y = x^{3}$ ($x \\geq 0$), the $y$-axis and the line $y = 8$ is rotated through $360^\\circ$ about the $y$-axis. Find the volume, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "units³"
+  },
+  "answerSpec": {
+   "value": 60.31857894892403,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "units³",
+     "units^3",
+     "cubic units"
+    ]
+   }
+  },
+  "explanation": "$x = y^{\\frac{1}{3}}$, so $x^{2} = y^{\\frac{2}{3}}$. $V = \\pi\\int_{0}^{8} y^{\\frac{2}{3}}\\,dy = \\pi\\Big[\\tfrac{3}{5}y^{\\frac{5}{3}}\\Big]_{0}^{8} = \\tfrac{3}{5} \\times 32\\pi = \\tfrac{96\\pi}{5} \\approx 60.3$.",
+  "workedSolution": "1. $x = y^{\\frac{1}{3}}$, so $x^{2} = y^{\\frac{2}{3}}$. $V = \\pi\\int_{0}^{8} y^{\\frac{2}{3}}\\,dy = \\pi\\Big[\\tfrac{3}{5}y^{\\frac{5}{3}}\\Big]_{0}^{8} = \\tfrac{3}{5} \\times 32\\pi = \\tfrac{96\\pi}{5} \\approx 60.3$.",
+  "hints": [
+   "Write x² in terms of y.",
+   "8^(5/3) = 32."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "60.3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "37.7"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "19.2"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "integ.volumes.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region enclosed between $y = x$ and $y = x^{2}$ is rotated through $360^\\circ$ about the $x$-axis. Find the volume of the solid formed, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "units³"
+  },
+  "answerSpec": {
+   "value": 0.41887902047863906,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "units³",
+     "units^3",
+     "cubic units"
+    ]
+   }
+  },
+  "explanation": "They meet at $x = 0$ and $x = 1$, with $y = x$ outside. $V = \\pi\\int_{0}^{1}(x^{2} - x^{4})\\,dx = \\pi\\left(\\tfrac{1}{3} - \\tfrac{1}{5}\\right) = \\tfrac{2\\pi}{15} \\approx 0.419$. (0.105 uses $(x - x^{2})^{2}$.)",
+  "workedSolution": "1. They meet at $x = 0$ and $x = 1$, with $y = x$ outside. $V = \\pi\\int_{0}^{1}(x^{2} - x^{4})\\,dx = \\pi\\left(\\tfrac{1}{3} - \\tfrac{1}{5}\\right) = \\tfrac{2\\pi}{15} \\approx 0.419$. (0.105 uses $(x - x^{2})^{2}$.)",
+  "hints": [
+   "Outer radius x, inner radius x².",
+   "Square each radius separately."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.419"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.105"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.524"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "integ.volumes.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "When the region between $y_{1}$ (outer) and $y_{2}$ (inner) is rotated about the $x$-axis, the volume is $\\pi\\displaystyle\\int_{a}^{b}(y_{1} - y_{2})^{2}\\,dx$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The solid is the outer solid minus the inner one: $V = \\pi\\int_{a}^{b}(y_{1}^{2} - y_{2}^{2})\\,dx$. Squaring the difference gives a smaller, wrong volume.",
+  "hints": [
+   "Think of a washer: big disc minus small disc."
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The upper half of the circle $x^{2} + y^{2} = r^{2}$ is rotated through $360^\\circ$ about the $x$-axis to form a sphere. Which integral gives its volume?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\pi\\displaystyle\\int_{-r}^{r}\\sqrt{r^{2} - x^{2}}\\,dx$",
+    "rationale": "The radius y must be squared."
+   },
+   {
+    "key": "B",
+    "content": "$\\pi\\displaystyle\\int_{-r}^{r}(r^{2} - x^{2})\\,dx$",
+    "correct": true,
+    "rationale": "Correct: $y^{2} = r^{2} - x^{2}$, and it evaluates to $\\frac{4}{3}\\pi r^{3}$."
+   },
+   {
+    "key": "C",
+    "content": "$\\pi\\displaystyle\\int_{0}^{r}(r^{2} - x^{2})\\,dx$",
+    "rationale": "These limits give only a hemisphere."
+   },
+   {
+    "key": "D",
+    "content": "$\\pi\\displaystyle\\int_{-r}^{r}(r - x)^{2}\\,dx$",
+    "rationale": "$y^{2} = r^{2} - x^{2}$, which is not $(r - x)^{2}$."
+   }
+  ],
+  "explanation": "$\\pi\\int_{-r}^{r}(r^{2} - x^{2})\\,dx = \\pi\\Big[r^{2}x - \\tfrac{x^{3}}{3}\\Big]_{-r}^{r} = \\pi\\left(\\tfrac{2r^{3}}{3} + \\tfrac{2r^{3}}{3}\\right) = \\tfrac{4}{3}\\pi r^{3}$.",
+  "hints": [
+   "Square y from the circle's equation."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q10",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region between $y = \\dfrac{2}{x}$, the $x$-axis and the lines $x = 1$ and $x = 3$ is rotated through $360^\\circ$ about the $x$-axis. Find the volume, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "units³"
+  },
+  "answerSpec": {
+   "value": 8.377580409572781,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "units³",
+     "units^3",
+     "cubic units"
+    ]
+   }
+  },
+  "explanation": "$V = \\pi\\int_{1}^{3}\\tfrac{4}{x^{2}}\\,dx = \\pi\\Big[-\\tfrac{4}{x}\\Big]_{1}^{3} = \\pi\\left(-\\tfrac{4}{3} + 4\\right) = \\tfrac{8\\pi}{3} \\approx 8.38$. (2.67 forgets the factor $\\pi$; 6.90 uses $\\pi\\int y\\,dx$ without squaring.)",
+  "workedSolution": "1. $y^{2} = \\dfrac{4}{x^{2}} = 4x^{-2}$.\n2. $V = \\pi\\displaystyle\\int_{1}^{3} 4x^{-2}\\,dx = \\pi\\Big[-4x^{-1}\\Big]_{1}^{3}$.\n3. $= \\pi\\left(-\\tfrac{4}{3} + 4\\right) = \\tfrac{8\\pi}{3} \\approx 8.38$.",
+  "hints": [
+   "Square 2/x before integrating."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "8.38"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "2.67"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "6.9"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "integ.volumes.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region between $y = \\mathrm{e}^{x}$, the axes and the line $x = 1$ is rotated through $360^\\circ$ about the $x$-axis. Find the volume, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "units³"
+  },
+  "answerSpec": {
+   "value": 10.035905851886797,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "units³",
+     "units^3",
+     "cubic units"
+    ]
+   }
+  },
+  "explanation": "$y^{2} = \\mathrm{e}^{2x}$. $V = \\pi\\Big[\\tfrac{1}{2}\\mathrm{e}^{2x}\\Big]_{0}^{1} = \\tfrac{\\pi}{2}(\\mathrm{e}^{2} - 1) \\approx 10.0$. (5.40 uses $\\pi\\int \\mathrm{e}^{x}\\,dx$, forgetting to square.)",
+  "workedSolution": "1. $y^{2} = \\mathrm{e}^{2x}$. $V = \\pi\\Big[\\tfrac{1}{2}\\mathrm{e}^{2x}\\Big]_{0}^{1} = \\tfrac{\\pi}{2}(\\mathrm{e}^{2} - 1) \\approx 10.0$. (5.40 uses $\\pi\\int \\mathrm{e}^{x}\\,dx$, forgetting to square.)",
+  "hints": [
+   "$(\\mathrm{e}^{x})^{2} = \\mathrm{e}^{2x}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10.0"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5.4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "20.1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "integ.volumes.q12",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each description with the integral for its volume (rotation through 360°).",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$y = x^{2}$, $0 \\leq x \\leq 1$, about the $x$-axis"
+    },
+    {
+     "id": "L2",
+     "content": "$y = x^{2}$, $0 \\leq y \\leq 1$, about the $y$-axis"
+    },
+    {
+     "id": "L3",
+     "content": "between $y = 2$ and $y = x^{2}$ ($x \\geq 0$), $0 \\leq x \\leq 1$, about the $x$-axis"
+    },
+    {
+     "id": "L4",
+     "content": "$y = 2x$, $0 \\leq x \\leq 1$, about the $x$-axis"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\pi\\displaystyle\\int_{0}^{1}(4 - x^{4})\\,dx$"
+    },
+    {
+     "id": "R4",
+     "content": "$\\pi\\displaystyle\\int_{0}^{1} 4x^{2}\\,dx$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\pi\\displaystyle\\int_{0}^{1} x^{4}\\,dx$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\pi\\displaystyle\\int_{0}^{1} y\\,dy$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "About the $x$-axis square $y$; about the $y$-axis square $x$ in terms of $y$; between two graphs subtract the squares.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region in the first quadrant bounded by $y = 4 - x^{2}$ and the axes is rotated through $360^\\circ$ about the $y$-axis. The volume is $k\\pi$. Find $k$.",
+  "payload": {
+   "answerPrefix": "k ="
+  },
+  "answerSpec": {
+   "value": 8
+  },
+  "explanation": "$x^{2} = 4 - y$ for $0 \\leq y \\leq 4$. $V = \\pi\\int_{0}^{4}(4 - y)\\,dy = \\pi\\Big[4y - \\tfrac{y^{2}}{2}\\Big]_{0}^{4} = 8\\pi$. (17.1 is the value of $k$ for rotation about the $x$-axis, a different solid.)",
+  "workedSolution": "1. $x^{2} = 4 - y$ for $0 \\leq y \\leq 4$. $V = \\pi\\int_{0}^{4}(4 - y)\\,dy = \\pi\\Big[4y - \\tfrac{y^{2}}{2}\\Big]_{0}^{4} = 8\\pi$. (17.1 is the value of $k$ for rotation about the $x$-axis, a different solid.)",
+  "hints": [
+   "Make x² the subject.",
+   "Use y-limits from 0 to 4."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "16"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "17.1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q14",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "The line $y = \\dfrac{r}{h}x$, for $0 \\leq x \\leq h$, is rotated through $360^\\circ$ about the $x$-axis. Show that the solid formed is a cone of volume $\\frac{1}{3}\\pi r^{2}h$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "B1 notes the solid is a cone with vertex at the origin and base radius $r$ (at $x = h$, $y = r$)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 writes $V = \\pi\\displaystyle\\int_{0}^{h}\\frac{r^{2}}{h^{2}}x^{2}\\,dx$",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 integrates to $\\pi\\dfrac{r^{2}}{h^{2}}\\Big[\\tfrac{x^{3}}{3}\\Big]_{0}^{h}$",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 simplifies to $\\frac{1}{3}\\pi r^{2}h$",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "At $x = h$, $y = r$, so the solid is a cone of height $h$ and base radius $r$.\n\n$$\nV = \\pi\\int_{0}^{h}\\frac{r^{2}}{h^{2}}x^{2}\\,dx = \\frac{\\pi r^{2}}{h^{2}}\\Big[\\frac{x^{3}}{3}\\Big]_{0}^{h} = \\frac{\\pi r^{2}}{h^{2}} \\cdot \\frac{h^{3}}{3} = \\frac{1}{3}\\pi r^{2}h\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "r and h are constants: they come outside the integral.",
+  "hints": [
+   "Square (r/h)x.",
+   "Treat r and h as constants."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region between $y = \\sqrt{x}$, the $x$-axis and the line $x = a$ (where $a > 0$) is rotated through $360^\\circ$ about the $x$-axis. The volume is $18\\pi$. Find $a$.",
+  "payload": {
+   "answerPrefix": "a ="
+  },
+  "answerSpec": {
+   "value": 6
+  },
+  "explanation": "$V = \\pi\\int_{0}^{a} x\\,dx = \\tfrac{\\pi a^{2}}{2} = 18\\pi$, so $a^{2} = 36$ and $a = 6$.",
+  "workedSolution": "1. $V = \\pi\\int_{0}^{a} x\\,dx = \\tfrac{\\pi a^{2}}{2} = 18\\pi$, so $a^{2} = 36$ and $a = 6$.",
+  "hints": [
+   "Find V in terms of a, then solve."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "6"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "36"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The region $R$ is enclosed by the curve $y = 5 - x^{2}$ and the line $y = 1$. $R$ is rotated through $360^\\circ$ about the $x$-axis.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the x-coordinates of the points where the curve meets the line, smaller first.",
+    "payload": {
+     "template": "x = {{blank:a}} and x = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$5 - x^{2} = 1$ gives $x^{2} = 4$, $x = \\pm 2$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Show that the volume is $V = \\pi\\displaystyle\\int_{-2}^{2}(24 - 10x^{2} + x^{4})\\,dx$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 uses $\\pi\\int\\left[(5 - x^{2})^{2} - 1^{2}\\right]dx$ and expands to $24 - 10x^{2} + x^{4}$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nV = \\pi\\int_{-2}^{2}\\left[(5 - x^{2})^{2} - 1\\right]dx = \\pi\\int_{-2}^{2}(25 - 10x^{2} + x^{4} - 1)\\,dx = \\pi\\int_{-2}^{2}(24 - 10x^{2} + x^{4})\\,dx\n$$"
+    },
+    "explanation": "Outer radius 5 − x², inner radius 1."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the volume, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "units³"
+    },
+    "answerSpec": {
+     "value": 174.25367251911388,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "units³",
+       "units^3",
+       "cubic units"
+      ]
+     }
+    },
+    "explanation": "$\\pi\\Big[24x - \\tfrac{10x^{3}}{3} + \\tfrac{x^{5}}{5}\\Big]_{-2}^{2} = 2\\pi\\left(48 - \\tfrac{80}{3} + \\tfrac{32}{5}\\right) = \\tfrac{832\\pi}{15} \\approx 174$. (55.5 forgets the factor $\\pi$.)",
+    "workedSolution": "1. $\\pi\\Big[24x - \\tfrac{10x^{3}}{3} + \\tfrac{x^{5}}{5}\\Big]_{-2}^{2} = 2\\pi\\left(48 - \\tfrac{80}{3} + \\tfrac{32}{5}\\right) = \\tfrac{832\\pi}{15} \\approx 174$. (55.5 forgets the factor $\\pi$.)"
+   }
+  ],
+  "explanation": "A washer-shaped solid: outer radius minus inner radius, each squared.",
+  "hints": [
+   "The line y = 1 is the inner radius.",
+   "The integrand is even: double the integral from 0 to 2."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-2"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "174"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-1"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "55.5"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "integ.volumes.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 5,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The curve $y = \\dfrac{3}{x + 2}$ is defined for $x \\geq 0$. Volumes below are of solids formed by rotation through $360^\\circ$ about the $x$-axis, written as $k\\pi$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The region between the curve, the axes and the line x = 1 is rotated. Find k.",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": 1.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\pi\\int_{0}^{1} 9(x + 2)^{-2}\\,dx = 9\\pi\\Big[-\\tfrac{1}{x + 2}\\Big]_{0}^{1} = 9\\pi\\left(\\tfrac{1}{2} - \\tfrac{1}{3}\\right) = \\tfrac{3\\pi}{2}$.",
+    "workedSolution": "1. $\\pi\\int_{0}^{1} 9(x + 2)^{-2}\\,dx = 9\\pi\\Big[-\\tfrac{1}{x + 2}\\Big]_{0}^{1} = 9\\pi\\left(\\tfrac{1}{2} - \\tfrac{1}{3}\\right) = \\tfrac{3\\pi}{2}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The unbounded region between the curve, the x-axis and the y-axis (all x ≥ 0) is rotated. Find k.",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": 4.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$9\\pi\\Big[-\\tfrac{1}{x + 2}\\Big]_{0}^{N} = 9\\pi\\left(\\tfrac{1}{2} - \\tfrac{1}{N + 2}\\right) \\to \\tfrac{9\\pi}{2}$ as $N \\to \\infty$.",
+    "workedSolution": "1. $9\\pi\\Big[-\\tfrac{1}{x + 2}\\Big]_{0}^{N} = 9\\pi\\left(\\tfrac{1}{2} - \\tfrac{1}{N + 2}\\right) \\to \\tfrac{9\\pi}{2}$ as $N \\to \\infty$."
+   },
+   {
+    "label": "(c)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "The area of the unbounded region in (b) is also finite.",
+    "answerSpec": {
+     "correct": false
+    },
+    "explanation": "False. $\\int_{0}^{N}\\frac{3}{x + 2}\\,dx = 3\\ln\\frac{N + 2}{2} \\to \\infty$. The area is infinite, yet the volume is finite because squaring makes $y^{2}$ shrink faster."
+   }
+  ],
+  "explanation": "$\\int(x + 2)^{-2}\\,dx = -(x + 2)^{-1}$; an infinite limit is handled as a limit.",
+  "hints": [
+   "Square y first: 9/(x + 2)².",
+   "For (b) replace ∞ by N."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "1.50"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4.50"
+    },
+    "(c)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.5"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "integ.volumes.q18",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The region between $y = x^{2}$ ($x \\geq 0$), the $y$-axis and the line $y = 9$ is rotated through $360^\\circ$ about the $y$-axis. What is the volume?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{243\\pi}{5}$",
+    "rationale": "This is $\\pi\\int_{0}^{3} x^{4}\\,dx$, rotation about the $x$-axis of a different region."
+   },
+   {
+    "key": "B",
+    "content": "$81\\pi$",
+    "rationale": "The $\\frac{1}{2}$ from integrating $y$ has been lost."
+   },
+   {
+    "key": "C",
+    "content": "$18\\pi$",
+    "rationale": "This is $\\pi\\int_{0}^{9} \\sqrt{y}\\,dy$; the integrand should be $x^{2} = y$."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{81\\pi}{2}$",
+    "correct": true,
+    "rationale": "Correct: $\\pi\\int_{0}^{9} y\\,dy = \\frac{81\\pi}{2}$."
+   }
+  ],
+  "explanation": "$x^{2} = y$, so $V = \\pi\\int_{0}^{9} y\\,dy = \\pi\\Big[\\tfrac{y^{2}}{2}\\Big]_{0}^{9} = \\tfrac{81\\pi}{2}$.",
+  "hints": [
+   "About the y-axis: integrate x² with respect to y."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ }
+]

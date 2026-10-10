@@ -1,0 +1,1819 @@
+[
+ {
+  "key": "exam.w2b-zimsec-pure.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.complex.de-moivre"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "This question uses de Moivre's theorem to solve a cubic equation.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Use de Moivre's theorem to show that $\\cos 3\\theta = 4\\cos^3\\theta - 3\\cos\\theta$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes $\\cos 3\\theta + \\mathrm{i}\\sin 3\\theta = (\\cos\\theta + \\mathrm{i}\\sin\\theta)^3$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 expands binomially: $c^3 + 3\\mathrm{i}c^2s - 3cs^2 - \\mathrm{i}s^3$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "M1 equates real parts and uses $s^2 = 1 - c^2$.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A1 reaches the given result.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\cos 3\\theta + \\mathrm{i}\\sin 3\\theta = (c + \\mathrm{i}s)^3 = c^3 + 3\\mathrm{i}c^2s - 3cs^2 - \\mathrm{i}s^3\n$$\n$$\n\\cos 3\\theta = c^3 - 3cs^2 = c^3 - 3c(1 - c^2) = 4c^3 - 3c\n$$"
+    },
+    "explanation": "Real parts of both sides."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 6,
+    "stem": "By substituting $x = \\cos\\theta$, solve the equation $8x^3 - 6x - 1 = 0$. Give the three roots correct to 3 significant figures, in descending order.",
+    "payload": {
+     "template": "x = {{blank:a}}, {{blank:b}}, {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0.94"
+       ],
+       "marks": 2,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-0.174"
+       ],
+       "marks": 2,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-0.766"
+       ],
+       "marks": 2,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$8x^3 - 6x = 1 \\Rightarrow 2\\cos 3\\theta = 1 \\Rightarrow \\cos 3\\theta = \\frac{1}{2}$. With $0 \\le \\theta \\le \\pi$: $3\\theta = \\frac{\\pi}{3}, \\frac{5\\pi}{3}, \\frac{7\\pi}{3}$, so $\\theta = \\frac{\\pi}{9}, \\frac{5\\pi}{9}, \\frac{7\\pi}{9}$. Roots $\\cos\\frac{\\pi}{9} = 0.940$, $\\cos\\frac{5\\pi}{9} = -0.174$, $\\cos\\frac{7\\pi}{9} = -0.766$."
+   }
+  ],
+  "explanation": "A multiple-angle identity converts a cubic into a trigonometric equation with three distinct solutions.",
+  "hints": [
+   "$8x^3 - 6x = 2(4\\cos^3\\theta - 3\\cos\\theta)$.",
+   "Find three values of $3\\theta$ in $[0, 3\\pi]$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0.94"
+      },
+      {
+       "blankId": "b",
+       "text": "-0.174"
+      },
+      {
+       "blankId": "c",
+       "text": "-0.766"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0.5"
+       },
+       {
+        "blankId": "b",
+        "text": "0.174"
+       },
+       {
+        "blankId": "c",
+        "text": "-0.940"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2b-zimsec-pure.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.numerical.newton-raphson",
+   "amaths.numerical.locating-roots"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The function f is defined by $f(x) = x^4 - 3x - 5$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the equation $f(x) = 0$ has a root $\\alpha$ between 1 and 2.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 $f(1) = -7$ and $f(2) = 5$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 change of sign, f continuous, so 1 < α < 2.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$f(1) = 1 - 3 - 5 = -7 < 0$ and $f(2) = 16 - 6 - 5 = 5 > 0$. $f$ is continuous, so there is a root between 1 and 2."
+    },
+    "explanation": "Change of sign."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the Newton–Raphson iteration for $f(x) = 0$ can be written $x_{n+1} = \\dfrac{3x_n^4 + 5}{4x_n^3 - 3}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 $f'(x) = 4x^3 - 3$ and $x_{n+1} = x_n - \\frac{x_n^4 - 3x_n - 5}{4x_n^3 - 3}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 simplifies over a common denominator to the given form.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nx_{n+1} = x_n - \\frac{x_n^4 - 3x_n - 5}{4x_n^3 - 3} = \\frac{4x_n^4 - 3x_n - x_n^4 + 3x_n + 5}{4x_n^3 - 3} = \\frac{3x_n^4 + 5}{4x_n^3 - 3}\n$$"
+    },
+    "explanation": "The −3xₙ terms cancel."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Use the iteration with $x_1 = 2$ to find $\\alpha$ correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 1.7951765308562078,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$x_2 = 1.827586$, $x_3 = 1.796148$, $x_4 = 1.795177$, $x_5 = 1.795177$: $\\alpha = 1.7952$.",
+    "workedSolution": "1. $x_2 = 1.827586$, $x_3 = 1.796148$, $x_4 = 1.795177$, $x_5 = 1.795177$: $\\alpha = 1.7952$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of $x_2$ obtained when $x_1 = 1$ is used instead.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "$x_2 = \\frac{3 + 5}{4 - 3} = 8$. The gradient $f'(1) = 1$ is small compared with $f(1) = -7$, so the tangent meets the axis far beyond the root (the curve has a turning point near $x = 0.91$).",
+    "workedSolution": "1. $x_2 = \\frac{3 + 5}{4 - 3} = 8$. The gradient $f'(1) = 1$ is small compared with $f(1) = -7$, so the tangent meets the axis far beyond the root (the curve has a turning point near $x = 0.91$)."
+   }
+  ],
+  "explanation": "Locate, derive the iteration, iterate, and see how a poor start overshoots.",
+  "hints": [
+   "$f'(x) = 4x^3 - 3$.",
+   "Keep full calculator accuracy between steps."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.7952"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1.7961"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "-6"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2b-zimsec-pure.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.groups.binary-operations-groups"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The set $G = \\{1, 2, 4, 5, 7, 8\\}$ is combined under multiplication modulo 9.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Find these entries of the Cayley table.",
+    "payload": {
+     "template": "2 × 4 = {{blank:a}}, 4 × 7 = {{blank:b}}, 5 × 8 = {{blank:c}}, 7 × 7 = {{blank:d}} (mod 9)",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "8"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "$8$; $28 = 3 \\times 9 + 1$; $40 = 4 \\times 9 + 4$; $49 = 5 \\times 9 + 4$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the identity element.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "1 × a = a for every a.",
+    "workedSolution": "1. 1 × a = a for every a."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the inverses of 2, 4 and 8.",
+    "payload": {
+     "template": "2⁻¹ = {{blank:a}}, 4⁻¹ = {{blank:b}}, 8⁻¹ = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "5"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "7"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "8"
+       ]
+      }
+     ]
+    },
+    "explanation": "$2 \\times 5 = 10 \\equiv 1$, $4 \\times 7 = 28 \\equiv 1$, $8 \\times 8 = 64 \\equiv 1 \\pmod 9$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Hence show that G is a group and state whether it is abelian.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Closure (all entries of the table lie in G) and associativity (inherited from multiplication of integers), with identity 1 and an inverse for every element (1, 2↔5, 4↔7, 8).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Abelian, since multiplication is commutative (the table is symmetric).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Every product lies in G, modular multiplication is associative, 1 is the identity, and each element has an inverse (1⁻¹ = 1, 2 and 5, 4 and 7, 8⁻¹ = 8). So G is a group; it is abelian because a × b = b × a."
+    },
+    "explanation": "List all four axioms with reasons."
+   }
+  ],
+  "explanation": "Cayley-table work: products, identity, inverses, then the group axioms.",
+  "hints": [
+   "Reduce each product modulo 9.",
+   "An inverse gives the identity 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "8"
+      },
+      {
+       "blankId": "b",
+       "text": "1"
+      },
+      {
+       "blankId": "c",
+       "text": "4"
+      },
+      {
+       "blankId": "d",
+       "text": "4"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "5"
+      },
+      {
+       "blankId": "b",
+       "text": "7"
+      },
+      {
+       "blankId": "c",
+       "text": "8"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "6"
+       },
+       {
+        "blankId": "b",
+        "text": "28"
+       },
+       {
+        "blankId": "c",
+        "text": "40"
+       },
+       {
+        "blankId": "d",
+        "text": "49"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "7"
+       },
+       {
+        "blankId": "b",
+        "text": "5"
+       },
+       {
+        "blankId": "c",
+        "text": "1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2b-zimsec-pure.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.matrices.transformations",
+   "amaths.matrices.operations-inverses"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The transformation $T$ is represented by $\\mathbf{A} = \\begin{pmatrix} 3 & 1 \\\\ 1 & 1 \\end{pmatrix}$, and $\\mathbf{B} = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$ represents a reflection in the line $y = x$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Find the matrix of the transformation \"$T$ followed by the reflection\". Enter it row by row.",
+    "payload": {
+     "template": "row 1 ({{blank:a}}, {{blank:b}}), row 2 ({{blank:c}}, {{blank:d}})",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "3"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "$T$ first, so the matrix is $\\mathbf{BA} = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 3 & 1 \\\\ 1 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 1 \\\\ 3 & 1 \\end{pmatrix}$: the reflection swaps the rows of $\\mathbf{A}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "A triangle of area 3 square units is transformed by this combined transformation. Find the area of its image.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "$\\det(\\mathbf{BA}) = 1 - 3 = -2$; area scale factor $|-2| = 2$, so the image has area 6 (the negative sign shows the orientation is reversed).",
+    "workedSolution": "1. $\\det(\\mathbf{BA}) = 1 - 3 = -2$; area scale factor $|-2| = 2$, so the image has area 6 (the negative sign shows the orientation is reversed)."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the point that the combined transformation maps to (5, 7).",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "4"
+       ]
+      }
+     ]
+    },
+    "explanation": "$(\\mathbf{BA})^{-1} = -\\frac{1}{2}\\begin{pmatrix} 1 & -1 \\\\ -3 & 1 \\end{pmatrix}$, so the point is $-\\frac{1}{2}\\begin{pmatrix} 5 - 7 \\\\ -15 + 7 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$. Check: $\\begin{pmatrix} 1 & 1 \\\\ 3 & 1 \\end{pmatrix}\\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} 5 \\\\ 7 \\end{pmatrix}$."
+   }
+  ],
+  "explanation": "Combine with the first transformation on the right; |det| gives the area factor; the inverse finds the object.",
+  "hints": [
+   "The matrix applied first goes on the right.",
+   "Area scale factor is |det|."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "1"
+      },
+      {
+       "blankId": "c",
+       "text": "3"
+      },
+      {
+       "blankId": "d",
+       "text": "1"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "1"
+      },
+      {
+       "blankId": "y",
+       "text": "4"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "3"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       },
+       {
+        "blankId": "c",
+        "text": "1"
+       },
+       {
+        "blankId": "d",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-6"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "12"
+       },
+       {
+        "blankId": "y",
+        "text": "22"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2b-zimsec-pure.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.de.separable"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The differential equation $x\\dfrac{\\mathrm{d}y}{\\mathrm{d}x} = -2y$ holds for $x > 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Find the general solution, using A for the arbitrary constant, in the form y = f(x). Type e.g. y=A/x^3.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "y=A/x^2"
+      },
+      {
+       "value": "y=Ax^-2"
+      },
+      {
+       "value": "y=A/x²"
+      },
+      {
+       "value": "y=Ax^(-2)"
+      },
+      {
+       "value": "y=c/x^2"
+      },
+      {
+       "value": "y=k/x^2"
+      },
+      {
+       "value": "y=C/x^2"
+      },
+      {
+       "value": "y=Ae^(-2lnx)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\int \\frac{1}{y}\\,\\mathrm{d}y = -2\\int \\frac{1}{x}\\,\\mathrm{d}x \\Rightarrow \\ln y = -2\\ln x + \\ln A \\Rightarrow y = \\dfrac{A}{x^2}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the value of A for the solution curve that passes through (1, 4).",
+    "payload": {
+     "answerPrefix": "A ="
+    },
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "$4 = \\frac{A}{1}$, so $A = 4$.",
+    "workedSolution": "1. $4 = \\frac{A}{1}$, so $A = 4$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "For this particular solution, find y when x = 2.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "$y = \\frac{4}{2^2} = 1$.",
+    "workedSolution": "1. $y = \\frac{4}{2^2} = 1$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the shapes of typical members of the family of solution curves for x > 0 (for example A = 1, A = 4 and A = −1).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "For A > 0: curves in the first quadrant, decreasing, with the y-axis and the x-axis as asymptotes (larger A further from the axes).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "For A < 0: reflections of these in the x-axis (fourth quadrant), increasing towards 0; A = 0 gives the x-axis itself.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each curve y = A/x² has asymptotes x = 0 and y = 0. For A = 1 and A = 4 the curves lie in the first quadrant and fall steeply then level off, the A = 4 curve above the A = 1 curve; for A = −1 the curve is the reflection of the A = 1 curve in the x-axis."
+    },
+    "explanation": "The constant scales the curve vertically."
+   }
+  ],
+  "explanation": "Separate, integrate, write the constant as ln A, then use the condition and sketch the family.",
+  "hints": [
+   "Divide by $xy$ before integrating.",
+   "$-2\\ln x = \\ln x^{-2}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "y=A/x^2"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "y=A/x"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.25"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2b-zimsec-pure.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.complex.polynomial-equations",
+   "amaths.complex.argand-polar",
+   "amaths.complex.de-moivre"
+  ],
+  "difficulty": 5,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "The polynomial $p(z)$ is defined by $p(z) = z^{5} - z^{4} + 9z^{3} - 7z^{2} + 18$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $1 + \\mathrm{i}$ is a root of $p(z) = 0$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 finds $(1 + \\mathrm{i})^2 = 2\\mathrm{i}$, $(1 + \\mathrm{i})^3 = -2 + 2\\mathrm{i}$, $(1 + \\mathrm{i})^4 = -4$, $(1 + \\mathrm{i})^5 = -4 - 4\\mathrm{i}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 substitutes every term.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 shows real and imaginary parts are both 0.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\np(1 + \\mathrm{i}) = (-4 - 4\\mathrm{i}) - (-4) + 9(-2 + 2\\mathrm{i}) - 7(2\\mathrm{i}) + 18\n$$\n$$\n= (-4 + 4 - 18 + 18) + (-4 + 18 - 14)\\mathrm{i} = 0\n$$"
+    },
+    "explanation": "Build the powers one at a time."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Given also that $3\\mathrm{i}$ is a root, write down two real quadratic factors of $p(z)$, as $z^2 + az + b$ (from the roots $1 \\pm \\mathrm{i}$) and $z^2 + cz + d$ (from the roots $\\pm 3\\mathrm{i}$).",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}, c = {{blank:c}}, d = {{blank:d}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "9"
+       ]
+      }
+     ]
+    },
+    "explanation": "Real coefficients: $1 - \\mathrm{i}$ and $-3\\mathrm{i}$ are also roots. $(z - 1)^2 + 1 = z^2 - 2z + 2$ and $(z - 3\\mathrm{i})(z + 3\\mathrm{i}) = z^2 + 9$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Hence find the real root of $p(z) = 0$.",
+    "payload": {
+     "answerPrefix": "z ="
+    },
+    "answerSpec": {
+     "value": -1
+    },
+    "explanation": "$(z^2 - 2z + 2)(z^2 + 9) = z^4 - 2z^3 + 11z^2 - 18z + 18$. Comparing constant terms, $p(z) = (z^4 - 2z^3 + 11z^2 - 18z + 18)(z + 1)$, so the real root is $-1$.",
+    "workedSolution": "1. $(z^2 - 2z + 2)(z^2 + 9) = z^4 - 2z^3 + 11z^2 - 18z + 18$. Comparing constant terms, $p(z) = (z^4 - 2z^3 + 11z^2 - 18z + 18)(z + 1)$, so the real root is $-1$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the modulus of $1 + \\mathrm{i}$ (to 4 s.f.) and its argument as kπ.",
+    "payload": {
+     "template": "modulus {{blank:m}}, k = {{blank:k}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "1.414"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "k",
+       "accepted": [
+        "1/4",
+        "0.2500",
+        "0.250"
+       ],
+       "tolerance": 0.002
+      }
+     ]
+    },
+    "explanation": "$|1 + \\mathrm{i}| = \\sqrt{2} = 1.414$ and $\\arg(1 + \\mathrm{i}) = \\frac{\\pi}{4}$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Hence use de Moivre's theorem to evaluate $(1 + \\mathrm{i})^8$.",
+    "answerSpec": {
+     "value": 16
+    },
+    "explanation": "$(\\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}\\pi/4})^8 = 16\\mathrm{e}^{2\\pi\\mathrm{i}} = 16$.",
+    "workedSolution": "1. $(\\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}\\pi/4})^8 = 16\\mathrm{e}^{2\\pi\\mathrm{i}} = 16$."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The five roots of $p(z) = 0$ are plotted on an Argand diagram. Find the greatest distance of any root from the origin.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "The moduli are $1$ (for $-1$), $\\sqrt{2}$ (for $1 \\pm \\mathrm{i}$) and $3$ (for $\\pm 3\\mathrm{i}$). The greatest is 3.",
+    "workedSolution": "1. The moduli are $1$ (for $-1$), $\\sqrt{2}$ (for $1 \\pm \\mathrm{i}$) and $3$ (for $\\pm 3\\mathrm{i}$). The greatest is 3."
+   }
+  ],
+  "explanation": "Substitute a root, use conjugate pairs to build quadratic factors, and finish with polar form and de Moivre.",
+  "hints": [
+   "Real coefficients: non-real roots come in conjugate pairs.",
+   "Compare constant terms to find the last factor."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-2"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      },
+      {
+       "blankId": "c",
+       "text": "0"
+      },
+      {
+       "blankId": "d",
+       "text": "9"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "-1"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "1.414"
+      },
+      {
+       "blankId": "k",
+       "text": "1/4"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "16"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "-2"
+       },
+       {
+        "blankId": "c",
+        "text": "3"
+       },
+       {
+        "blankId": "d",
+        "text": "-9"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "2"
+       },
+       {
+        "blankId": "k",
+        "text": "1/2"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "256"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "1.4142135623730951"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2b-zimsec-pure.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.matrices.operations-inverses"
+  ],
+  "difficulty": 5,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "The matrix $\\mathbf{A}$ is $\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & k \\\\ 2 & 1 & 1 \\end{pmatrix}$, where $k$ is a constant.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find $\\det\\mathbf{A}$ in terms of $k$. Type it in simplest form, e.g. 3k+1.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "k-2"
+      },
+      {
+       "value": "-2+k"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$1(2 - k) - 1(1 - 2k) + 1(1 - 4) = 2 - k - 1 + 2k - 3 = k - 2$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of $k$ for which $\\mathbf{A}$ is singular.",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "$\\det\\mathbf{A} = 0 \\iff k = 2$.",
+    "workedSolution": "1. $\\det\\mathbf{A} = 0 \\iff k = 2$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 9,
+    "stem": "For $k = 3$, $\\det\\mathbf{A} = 1$. Find $\\mathbf{A}^{-1}$, entering its entries row by row.",
+    "payload": {
+     "template": "row 1 ({{blank:e11}}, {{blank:e12}}, {{blank:e13}}), row 2 ({{blank:e21}}, {{blank:e22}}, {{blank:e23}}), row 3 ({{blank:e31}}, {{blank:e32}}, {{blank:e33}})",
+     "blanks": [
+      {
+       "id": "e11",
+       "input": "number"
+      },
+      {
+       "id": "e12",
+       "input": "number"
+      },
+      {
+       "id": "e13",
+       "input": "number"
+      },
+      {
+       "id": "e21",
+       "input": "number"
+      },
+      {
+       "id": "e22",
+       "input": "number"
+      },
+      {
+       "id": "e23",
+       "input": "number"
+      },
+      {
+       "id": "e31",
+       "input": "number"
+      },
+      {
+       "id": "e32",
+       "input": "number"
+      },
+      {
+       "id": "e33",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "e11",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "e12",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "e13",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "e21",
+       "accepted": [
+        "5"
+       ]
+      },
+      {
+       "id": "e22",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "e23",
+       "accepted": [
+        "-2"
+       ]
+      },
+      {
+       "id": "e31",
+       "accepted": [
+        "-3"
+       ]
+      },
+      {
+       "id": "e32",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "e33",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "Cofactors of $\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 2 & 1 & 1 \\end{pmatrix}$ by rows: $-1, 5, -3$; $0, -1, 1$; $1, -2, 1$. Transposing and dividing by $\\det = 1$: $\\mathbf{A}^{-1} = \\begin{pmatrix} -1 & 0 & 1 \\\\ 5 & -1 & -2 \\\\ -3 & 1 & 1 \\end{pmatrix}$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Hence solve $x + y + z = 6$, $x + 2y + 3z = 14$, $2x + y + z = 7$.",
+    "payload": {
+     "template": "x = {{blank:x}}, y = {{blank:y}}, z = {{blank:z}}",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      },
+      {
+       "id": "z",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "z",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\mathbf{X} = \\mathbf{A}^{-1}\\begin{pmatrix} 6 \\\\ 14 \\\\ 7 \\end{pmatrix} = \\begin{pmatrix} -6 + 0 + 7 \\\\ 30 - 14 - 14 \\\\ -18 + 14 + 7 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix}$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "When $k = 2$, the equations $x + y + z = 1$, $x + 2y + 2z = 2$, $2x + y + z = c$ have no unique solution. Find the value of $c$ for which they are consistent.",
+    "payload": {
+     "answerPrefix": "c ="
+    },
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "Subtracting the first equation from the second: $y + z = 1$, so $x = 0$. The third then reads $y + z = c$, so the system is consistent (with infinitely many solutions) only when $c = 1$.",
+    "workedSolution": "1. Subtracting the first equation from the second: $y + z = 1$, so $x = 0$. The third then reads $y + z = c$, so the system is consistent (with infinitely many solutions) only when $c = 1$."
+   }
+  ],
+  "explanation": "Determinant in terms of a parameter, inverse by cofactors, X = A⁻¹b, and the singular case.",
+  "hints": [
+   "Expand along the first row.",
+   "Remember to transpose the matrix of cofactors."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "k-2"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "e11",
+       "text": "-1"
+      },
+      {
+       "blankId": "e12",
+       "text": "0"
+      },
+      {
+       "blankId": "e13",
+       "text": "1"
+      },
+      {
+       "blankId": "e21",
+       "text": "5"
+      },
+      {
+       "blankId": "e22",
+       "text": "-1"
+      },
+      {
+       "blankId": "e23",
+       "text": "-2"
+      },
+      {
+       "blankId": "e31",
+       "text": "-3"
+      },
+      {
+       "blankId": "e32",
+       "text": "1"
+      },
+      {
+       "blankId": "e33",
+       "text": "1"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "1"
+      },
+      {
+       "blankId": "y",
+       "text": "2"
+      },
+      {
+       "blankId": "z",
+       "text": "3"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "2-k"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-2"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "e11",
+        "text": "1"
+       },
+       {
+        "blankId": "e12",
+        "text": "7"
+       },
+       {
+        "blankId": "e13",
+        "text": "-1"
+       },
+       {
+        "blankId": "e21",
+        "text": "-5"
+       },
+       {
+        "blankId": "e22",
+        "text": "1"
+       },
+       {
+        "blankId": "e23",
+        "text": "2"
+       },
+       {
+        "blankId": "e31",
+        "text": "3"
+       },
+       {
+        "blankId": "e32",
+        "text": "-1"
+       },
+       {
+        "blankId": "e33",
+        "text": "-1"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "2"
+       },
+       {
+        "blankId": "y",
+        "text": "1"
+       },
+       {
+        "blankId": "z",
+        "text": "1"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2b-zimsec-pure.q08",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.numerical.locating-roots",
+   "amaths.numerical.newton-raphson"
+  ],
+  "difficulty": 5,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "The equation $x^3 - 5x + 1 = 0$ has a root $\\alpha$ between 2 and 3.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $2 < \\alpha < 3$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 $f(2) = -1$ and $f(3) = 13$ for $f(x) = x^3 - 5x + 1$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 change of sign of a continuous function, so 2 < α < 3.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$f(2) = 8 - 10 + 1 = -1 < 0$ and $f(3) = 27 - 15 + 1 = 13 > 0$. $f$ is continuous, so $2 < \\alpha < 3$."
+    },
+    "explanation": "Change of sign."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Two rearrangements are $x = F_1(x) = \\dfrac{x^3 + 1}{5}$ and $x = F_2(x) = \\sqrt[3]{5x - 1}$. Using $\\alpha \\approx 2.13$, evaluate $F_1'(\\alpha)$ and $F_2'(\\alpha)$ correct to 2 decimal places, and hence decide which iteration converges to $\\alpha$ (type 1 or 2).",
+    "payload": {
+     "template": "F₁′(α) = {{blank:a}}, F₂′(α) = {{blank:c}}, converging iteration: {{blank:k}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "2.72"
+       ],
+       "marks": 1,
+       "tolerance": 0.015
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "0.37"
+       ],
+       "marks": 2,
+       "tolerance": 0.015
+      },
+      {
+       "id": "k",
+       "accepted": [
+        "2"
+       ],
+       "marks": 1
+      }
+     ]
+    },
+    "explanation": "$F_1'(x) = \\frac{3x^2}{5}$, so $F_1'(2.13) = 2.72 > 1$: diverges. $F_2'(x) = \\frac{5}{3(5x - 1)^{2/3}}$, so $F_2'(2.13) = 0.37 < 1$: converges. Use $F_2$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Use the converging iteration with $x_1 = 2$ to find $\\alpha$ correct to 3 decimal places.",
+    "answerSpec": {
+     "value": 2.128419063844831,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$x_2 = 2.08008$, $x_3 = 2.11049$, $x_4 = 2.12180$, $x_5 = 2.12598$, $x_6 = 2.12752$, $x_7 = 2.12809$, $x_8 = 2.12830$, $x_9 = 2.12837$: $\\alpha = 2.128$.",
+    "workedSolution": "1. $x_2 = 2.08008$, $x_3 = 2.11049$, $x_4 = 2.12180$, $x_5 = 2.12598$, $x_6 = 2.12752$, $x_7 = 2.12809$, $x_8 = 2.12830$, $x_9 = 2.12837$: $\\alpha = 2.128$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Use the Newton–Raphson method with $x_1 = 2$ to find $\\alpha$ correct to 5 decimal places.",
+    "answerSpec": {
+     "value": 2.128419063844831,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.000005
+     }
+    },
+    "explanation": "$x_{n+1} = x_n - \\frac{x_n^3 - 5x_n + 1}{3x_n^2 - 5}$: $x_2 = 2.142857$, $x_3 = 2.128571$, $x_4 = 2.128419$, $x_5 = 2.128419$. $\\alpha = 2.12842$. Newton–Raphson needs far fewer steps.",
+    "workedSolution": "1. $x_{n+1} = x_n - \\frac{x_n^3 - 5x_n + 1}{3x_n^2 - 5}$: $x_2 = 2.142857$, $x_3 = 2.128571$, $x_4 = 2.128419$, $x_5 = 2.128419$. $\\alpha = 2.12842$. Newton–Raphson needs far fewer steps."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why $x_1 = 1.29$ would be a poor starting value for the Newton–Raphson method here.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$f'(x) = 3x^2 - 5 = 0$ at $x = \\sqrt{5/3} \\approx 1.291$, a turning point of the curve.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So f′(1.29) is almost zero and the tangent is nearly horizontal.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The tangent meets the x-axis very far away (x₂ ≈ −428), nowhere near α.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The curve y = x³ − 5x + 1 has a minimum at x = √(5/3) ≈ 1.291, where f′ = 0. At x₁ = 1.29 the gradient is almost zero, so x₂ = x₁ − f(x₁)/f′(x₁) is huge (about −428) and the method fails to approach α."
+    },
+    "explanation": "Starting near a stationary point is the classic failure of Newton–Raphson."
+   }
+  ],
+  "explanation": "Locating a root, choosing a convergent rearrangement with |F′(α)| < 1, and comparing with Newton–Raphson.",
+  "hints": [
+   "Iteration converges when |F′(α)| < 1.",
+   "Find where f′(x) = 0."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2.72"
+      },
+      {
+       "blankId": "c",
+       "text": "0.37"
+      },
+      {
+       "blankId": "k",
+       "text": "2"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.128"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2.12842"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0.37"
+       },
+       {
+        "blankId": "c",
+        "text": "2.72"
+       },
+       {
+        "blankId": "k",
+        "text": "1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.127"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2.14286"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ }
+]

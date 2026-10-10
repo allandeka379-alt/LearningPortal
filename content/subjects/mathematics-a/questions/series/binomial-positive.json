@@ -1,0 +1,1231 @@
+[
+ {
+  "key": "series.binomial-positive.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is the value of $\\dbinom{7}{3}$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "35",
+    "correct": true,
+    "rationale": "Correct: $\\frac{7!}{3!\\,4!} = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = 35$."
+   },
+   {
+    "key": "B",
+    "content": "210",
+    "rationale": "This is $\\frac{7!}{4!} = 7 \\times 6 \\times 5$, the number of arrangements; divide by $3!$ as well."
+   },
+   {
+    "key": "C",
+    "content": "21",
+    "rationale": "This is $\\binom{7}{2}$."
+   },
+   {
+    "key": "D",
+    "content": "7",
+    "rationale": "This is $\\binom{7}{1}$."
+   }
+  ],
+  "explanation": "$\\binom{7}{3} = \\frac{7!}{3!(7 - 3)!} = 35$; it is also entry 3 of row 7 of Pascal's triangle: $1, 7, 21, 35, \\ldots$",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^2$ in the expansion of $(1 + 3x)^5$.",
+  "answerSpec": {
+   "value": 90
+  },
+  "explanation": "$\\binom{5}{2}(3x)^2 = 10 \\times 9x^2 = 90x^2$. (30 forgets to square the 3.)",
+  "workedSolution": "1. $\\binom{5}{2}(3x)^2 = 10 \\times 9x^2 = 90x^2$. (30 forgets to square the 3.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "90"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "30"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "270"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q03",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Find the first three terms, in ascending powers of $x$, of the expansion of $(2 + x)^5$.",
+  "payload": {
+   "template": "Expansion: ({{blank:a}}) + {{blank:b}}x + {{blank:c}}x²",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "32"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "80"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "80"
+     ]
+    }
+   ]
+  },
+  "explanation": "$2^5 + \\binom{5}{1}2^4x + \\binom{5}{2}2^3x^2 = 32 + 80x + 80x^2$.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "32"
+    },
+    {
+     "blankId": "b",
+     "text": "80"
+    },
+    {
+     "blankId": "c",
+     "text": "80"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "2"
+     },
+     {
+      "blankId": "b",
+      "text": "10"
+     },
+     {
+      "blankId": "c",
+      "text": "40"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^3$ in the expansion of $(2 - x)^6$.",
+  "answerSpec": {
+   "value": -160
+  },
+  "explanation": "$\\binom{6}{3}2^3(-x)^3 = 20 \\times 8 \\times (-1)x^3 = -160x^3$.",
+  "workedSolution": "1. $\\binom{6}{3}2^3(-x)^3 = 20 \\times 8 \\times (-1)x^3 = -160x^3$.",
+  "hints": [
+   "The bracket term is $(-x)$; an odd power keeps the minus sign."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-160"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "160"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-20"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the term independent of $x$ in the expansion of $\\left(x + \\dfrac{3}{x}\\right)^4$.",
+  "answerSpec": {
+   "value": 54
+  },
+  "explanation": "General term $\\binom{4}{r}x^{4-r}\\left(\\frac{3}{x}\\right)^r = \\binom{4}{r}3^r x^{4 - 2r}$. $r = 2$: $6 \\times 9 = 54$.",
+  "workedSolution": "1. General term $\\binom{4}{r}x^{4-r}\\left(\\frac{3}{x}\\right)^r = \\binom{4}{r}3^r x^{4 - 2r}$. $r = 2$: $6 \\times 9 = 54$.",
+  "hints": [
+   "Find r for which the power of x is zero."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "54"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "108"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the term independent of $x$ in the expansion of $\\left(2x - \\dfrac{1}{x^2}\\right)^9$.",
+  "answerSpec": {
+   "value": -5376
+  },
+  "explanation": "General term $\\binom{9}{r}(2x)^{9-r}\\left(-\\frac{1}{x^2}\\right)^r = \\binom{9}{r}2^{9-r}(-1)^r x^{9 - 3r}$. $9 - 3r = 0$ gives $r = 3$: $84 \\times 2^6 \\times (-1) = -5376$.",
+  "workedSolution": "1. General term $\\binom{9}{r}(2x)^{9-r}\\left(-\\frac{1}{x^2}\\right)^r = \\binom{9}{r}2^{9-r}(-1)^r x^{9 - 3r}$. $9 - 3r = 0$ gives $r = 3$: $84 \\times 2^6 \\times (-1) = -5376$.",
+  "hints": [
+   "The power of $x$ in each term is $(9 - r) - 2r$.",
+   "(−1)³ = −1."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-5376"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5376"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-672"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The first three terms of the expansion of $(1 + ax)^n$, where $n$ is a positive integer, are $1 + 12x + 60x^2$. Find $n$ and $a$.",
+  "payload": {
+   "template": "n = {{blank:n}}, a = {{blank:a}}",
+   "blanks": [
+    {
+     "id": "n",
+     "input": "number"
+    },
+    {
+     "id": "a",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "n",
+     "accepted": [
+      "6"
+     ]
+    },
+    {
+     "id": "a",
+     "accepted": [
+      "2"
+     ]
+    }
+   ]
+  },
+  "explanation": "$na = 12$ and $\\frac{n(n - 1)}{2}a^2 = 60$. Then $\\frac{(na)(n - 1)a}{2} = 6(n - 1)a = 60$, so $(n - 1)a = 10$, i.e. $na - a = 10$, giving $a = 2$ and $n = 6$.",
+  "hints": [
+   "Write the two coefficient equations: $na = 12$ and $\\binom{n}{2}a^2 = 60$.",
+   "Replace $na$ by 12 in the second."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "n",
+     "text": "6"
+    },
+    {
+     "blankId": "a",
+     "text": "2"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "n",
+      "text": "12"
+     },
+     {
+      "blankId": "a",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^2$ in the expansion of $(2 - x)(1 + 3x)^6$.",
+  "answerSpec": {
+   "value": 252
+  },
+  "explanation": "$(1 + 3x)^6 = 1 + 18x + 135x^2 + \\cdots$. The $x^2$ terms: $2 \\times 135x^2$ and $(-x) \\times 18x$. Coefficient $= 270 - 18 = 252$. (270 misses the second product.)",
+  "workedSolution": "1. $(1 + 3x)^6 = 1 + 18x + 135x^2 + \\cdots$. The $x^2$ terms: $2 \\times 135x^2$ and $(-x) \\times 18x$. Coefficient $= 270 - 18 = 252$. (270 misses the second product.)",
+  "hints": [
+   "Expand (1 + 3x)⁶ as far as the x² term.",
+   "Two products give x²."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "252"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "270"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "288"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "How many terms are there in the expansion of $(a + b)^{10}$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "10",
+    "rationale": "The powers run from 0 to 10 inclusive: one more than 10."
+   },
+   {
+    "key": "B",
+    "content": "20",
+    "rationale": "That would be a sum of two expansions; there is one term for each power."
+   },
+   {
+    "key": "C",
+    "content": "2",
+    "rationale": "There are two terms inside the bracket, but the expansion has many more."
+   },
+   {
+    "key": "D",
+    "content": "11",
+    "correct": true,
+    "rationale": "Correct: the powers of $b$ run from $0$ to $10$."
+   }
+  ],
+  "explanation": "$(a + b)^n$ has $n + 1$ terms.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For every positive integer $n$ and $0 \\le r \\le n$, $\\dbinom{n}{r} = \\dbinom{n}{n - r}$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "Choosing $r$ objects to take is the same as choosing $n - r$ to leave: $\\frac{n!}{r!(n - r)!}$ is unchanged when $r$ and $n - r$ swap. So each row of Pascal's triangle is symmetric.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^4$ in the expansion of $(x^2 - 3)^5$.",
+  "answerSpec": {
+   "value": -270
+  },
+  "explanation": "General term $\\binom{5}{r}(x^2)^{5-r}(-3)^r$. Power $2(5 - r) = 4$ gives $r = 3$: $10 \\times (-27) = -270$.",
+  "workedSolution": "1. General term $\\binom{5}{r}(x^2)^{5-r}(-3)^r$. Power $2(5 - r) = 4$ gives $r = 3$: $10 \\times (-27) = -270$.",
+  "hints": [
+   "The power of $x$ is $2(5 - r)$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-270"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "270"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "90"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The coefficient of $x^2$ in the expansion of $(1 + kx)^8$ is 112, and $k > 0$. Find $k$.",
+  "payload": {
+   "answerPrefix": "k ="
+  },
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "$\\binom{8}{2}k^2 = 28k^2 = 112$, so $k^2 = 4$ and, as $k > 0$, $k = 2$.",
+  "workedSolution": "1. $\\binom{8}{2}k^2 = 28k^2 = 112$, so $k^2 = 4$ and, as $k > 0$, $k = 2$.",
+  "hints": [
+   "The $x^2$ term is $\\binom{8}{2}(kx)^2$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-2"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use the first three terms of the expansion of $(2 - x)^5$, in ascending powers of $x$, to find an approximation to $1.98^5$. Give the value of your approximation exactly.",
+  "answerSpec": {
+   "value": 30.432,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$(2 - x)^5 = 32 - 80x + 80x^2 - \\cdots$. With $x = 0.02$: $32 - 1.6 + 0.032 = 30.432$. (The true value is $30.4316$ to 4 d.p.)",
+  "workedSolution": "1. $(2 - x)^5 = 32 - 80x + 80x^2 - \\cdots$. With $x = 0.02$: $32 - 1.6 + 0.032 = 30.432$. (The true value is $30.4316$ to 4 d.p.)",
+  "hints": [
+   "Choose x so that 2 − x = 1.98."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "30.432"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "30.4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "33.632"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Expand $(1 - 2x)^4$ fully, in ascending powers of $x$. Type powers with ^, e.g. 1-6x+12x^2-8x^3.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "1-8x+24x^2-32x^3+16x^4"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Row 4: $1, 4, 6, 4, 1$. $1 + 4(-2x) + 6(-2x)^2 + 4(-2x)^3 + (-2x)^4 = 1 - 8x + 24x^2 - 32x^3 + 16x^4$.",
+  "hints": [
+   "Odd powers of (−2x) are negative."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "1-8x+24x^2-32x^3+16x^4"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1-8x+24x^2+32x^3+16x^4"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1+8x+24x^2+32x^3+16x^4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q15",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each binomial coefficient with its value.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\binom{5}{2}$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\binom{6}{3}$"
+    },
+    {
+     "id": "L3",
+     "content": "$\\binom{8}{2}$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\binom{7}{1}$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "28"
+    },
+    {
+     "id": "R4",
+     "content": "7"
+    },
+    {
+     "id": "R1",
+     "content": "10"
+    },
+    {
+     "id": "R2",
+     "content": "20"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "$\\binom{5}{2} = \\frac{5 \\times 4}{2} = 10$; $\\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{6} = 20$; $\\binom{8}{2} = \\frac{8 \\times 7}{2} = 28$; $\\binom{7}{1} = 7$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q16",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is the 4th term, in ascending powers of $x$, of the expansion of $(1 + x)^9$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$126x^4$",
+    "rationale": "This is the 5th term ($r = 4$); the $(r + 1)$th term has $r$ one less than its position."
+   },
+   {
+    "key": "B",
+    "content": "$84x^3$",
+    "correct": true,
+    "rationale": "Correct: the 4th term has $r = 3$: $\\binom{9}{3}x^3 = 84x^3$."
+   },
+   {
+    "key": "C",
+    "content": "$36x^2$",
+    "rationale": "This is the 3rd term ($r = 2$)."
+   },
+   {
+    "key": "D",
+    "content": "$504x^3$",
+    "rationale": "$504 = 9 \\times 8 \\times 7$: divide by $3! = 6$ to get $\\binom{9}{3}$."
+   }
+  ],
+  "explanation": "Terms: $1$, $9x$, $36x^2$, $84x^3$, … The 4th term is $\\binom{9}{3}x^3 = 84x^3$.",
+  "hints": [
+   "The $(r + 1)$th term is $\\binom{n}{r}x^r$."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q17",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is the coefficient of $x^3$ in the expansion of $(1 - x)^5$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "10",
+    "rationale": "$(-x)^3 = -x^3$: an odd power keeps the minus sign."
+   },
+   {
+    "key": "B",
+    "content": "−5",
+    "rationale": "This uses $\\binom{5}{1}$; the $x^3$ term needs $\\binom{5}{3} = 10$."
+   },
+   {
+    "key": "C",
+    "content": "−10",
+    "correct": true,
+    "rationale": "Correct: $\\binom{5}{3}(-x)^3 = -10x^3$."
+   },
+   {
+    "key": "D",
+    "content": "−60",
+    "rationale": "$\\binom{5}{3} = 10$, not $5 \\times 4 \\times 3 = 60$."
+   }
+  ],
+  "explanation": "Row 5 of Pascal's triangle is $1, 5, 10, 10, 5, 1$, and the signs alternate: $1 - 5x + 10x^2 - 10x^3 + 5x^4 - x^5$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q18",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Use the binomial theorem to show that $(\\sqrt{3} + 1)^4 + (\\sqrt{3} - 1)^4 = 56$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 expands $(\\sqrt{3} + 1)^4 = 9 + 4(3\\sqrt{3}) + 6(3) + 4\\sqrt{3} + 1 = 28 + 16\\sqrt{3}$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 expands $(\\sqrt{3} - 1)^4 = 28 - 16\\sqrt{3}$ (odd powers of $-1$ change sign).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 adds: the surd terms cancel, leaving 56.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n(\\sqrt{3} + 1)^4 = (\\sqrt{3})^4 + 4(\\sqrt{3})^3 + 6(\\sqrt{3})^2 + 4\\sqrt{3} + 1 = 9 + 12\\sqrt{3} + 18 + 4\\sqrt{3} + 1 = 28 + 16\\sqrt{3}\n$$\n\n$$\n(\\sqrt{3} - 1)^4 = 9 - 12\\sqrt{3} + 18 - 4\\sqrt{3} + 1 = 28 - 16\\sqrt{3}\n$$\n\nAdding: $(28 + 16\\sqrt{3}) + (28 - 16\\sqrt{3}) = 56$."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The odd-power terms are equal and opposite in the two expansions, so they cancel.",
+  "hints": [
+   "$(\\sqrt{3})^3 = 3\\sqrt{3}$ and $(\\sqrt{3})^4 = 9$."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-positive.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "This question is about the expansion of $\\left(1 + \\dfrac{x}{2}\\right)^8$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Find the first four terms of the expansion in ascending powers of x, simplifying each coefficient.",
+    "payload": {
+     "template": "Expansion: ({{blank:a}}) + {{blank:b}}x + {{blank:c}}x² + {{blank:d}}x³",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "7"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "7"
+       ]
+      }
+     ]
+    },
+    "explanation": "$1 + 8\\left(\\frac{x}{2}\\right) + 28\\left(\\frac{x}{2}\\right)^2 + 56\\left(\\frac{x}{2}\\right)^3 = 1 + 4x + 7x^2 + 7x^3$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Hence find the coefficient of $x^2$ in the expansion of $(3 - 2x)\\left(1 + \\dfrac{x}{2}\\right)^8$.",
+    "answerSpec": {
+     "value": 13
+    },
+    "explanation": "$3 \\times 7 + (-2) \\times 4 = 21 - 8 = 13$.",
+    "workedSolution": "1. $3 \\times 7 + (-2) \\times 4 = 21 - 8 = 13$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use your expansion with a suitable value of $x$ to estimate $1.005^8$, correct to 5 significant figures.",
+    "answerSpec": {
+     "value": 1.040707,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$1 + \\frac{x}{2} = 1.005$ when $x = 0.01$: $1 + 0.04 + 0.0007 + 0.000007 = 1.040707 \\approx 1.0407$.",
+    "workedSolution": "1. $1 + \\frac{x}{2} = 1.005$ when $x = 0.01$: $1 + 0.04 + 0.0007 + 0.000007 = 1.040707 \\approx 1.0407$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the four-term expansion gives a very good estimate of $1.005^8$ but a poor estimate of $1.5^8$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "For $1.005^8$, $x = 0.01$ is small, so the omitted terms ($x^4$ and higher) are tiny.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "For $1.5^8$, $x = 1$, so the omitted terms are not small (e.g. $\\binom{8}{4}\\left(\\frac{1}{2}\\right)^4 = 4.375$).",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "So the truncated sum $1 + 4 + 7 + 7 = 19$ is far from $1.5^8 \\approx 25.6$.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: With x = 0.01 every later term is a power of 0.01 times a moderate coefficient, so it is negligible. With x = 1 the later terms 4.375, 1.75, 0.4375, … are large, so stopping after four terms gives 19 instead of 25.6."
+    }
+   }
+  ],
+  "explanation": "Expand with (x/2) as the second term, combine products for (b), and substitute a small x for estimates.",
+  "hints": [
+   "Keep the $\\frac{1}{2}$ inside the bracket: $\\left(\\frac{x}{2}\\right)^2 = \\frac{x^2}{4}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "4"
+      },
+      {
+       "blankId": "c",
+       "text": "7"
+      },
+      {
+       "blankId": "d",
+       "text": "7"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "13"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.0407"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0"
+       },
+       {
+        "blankId": "b",
+        "text": "8"
+       },
+       {
+        "blankId": "c",
+        "text": "28"
+       },
+       {
+        "blankId": "d",
+        "text": "56"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "21"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1.04"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "series.binomial-positive.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 5,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "In the expansion of $(2 + kx)^6$, where $k$ is a non-zero constant, the coefficient of $x^2$ is 5 times the coefficient of $x$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $k = 4$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 coefficient of $x$: $\\binom{6}{1}2^5k = 192k$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 coefficient of $x^2$: $\\binom{6}{2}2^4k^2 = 240k^2$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 $240k^2 = 5 \\times 192k = 960k$, and $k \\neq 0$ gives $k = 4$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nx: \\binom{6}{1}2^5k = 192k \\qquad x^2: \\binom{6}{2}2^4k^2 = 240k^2\n$$\n\n$$\n240k^2 = 5 \\times 192k = 960k \\Rightarrow 240k(k - 4) = 0 \\Rightarrow k = 4 \\quad (k \\neq 0)\n$$"
+    },
+    "explanation": "Write both coefficients in terms of k, then cancel k ≠ 0."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the coefficient of $x^3$.",
+    "answerSpec": {
+     "value": 10240
+    },
+    "explanation": "$\\binom{6}{3}2^3 4^3 = 20 \\times 8 \\times 64 = 10\\,240$.",
+    "workedSolution": "1. $\\binom{6}{3}2^3 4^3 = 20 \\times 8 \\times 64 = 10\\,240$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the coefficient of $x^2$ in the expansion of $(1 - 3x)(2 + 4x)^6$.",
+    "answerSpec": {
+     "value": 1536
+    },
+    "explanation": "$(2 + 4x)^6 = 64 + 768x + 3840x^2 + \\cdots$. Coefficient of $x^2$: $3840 - 3 \\times 768 = 1536$.",
+    "workedSolution": "1. $(2 + 4x)^6 = 64 + 768x + 3840x^2 + \\cdots$. Coefficient of $x^2$: $3840 - 3 \\times 768 = 1536$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the term independent of $x$ in the expansion of $(2 + 4x)^6\\left(1 + \\dfrac{1}{x}\\right)^2$.",
+    "answerSpec": {
+     "value": 5440
+    },
+    "explanation": "$\\left(1 + \\frac{1}{x}\\right)^2 = 1 + \\frac{2}{x} + \\frac{1}{x^2}$. Constant terms: $64 \\times 1 + 768x \\times \\frac{2}{x} + 3840x^2 \\times \\frac{1}{x^2} = 64 + 1536 + 3840 = 5440$.",
+    "workedSolution": "1. $\\left(1 + \\frac{1}{x}\\right)^2 = 1 + \\frac{2}{x} + \\frac{1}{x^2}$. Constant terms: $64 \\times 1 + 768x \\times \\frac{2}{x} + 3840x^2 \\times \\frac{1}{x^2} = 64 + 1536 + 3840 = 5440$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the sum of all the coefficients in the expansion of $(2 + 4x)^6$.",
+    "answerSpec": {
+     "value": 46656
+    },
+    "explanation": "Put $x = 1$: $(2 + 4)^6 = 6^6 = 46\\,656$.",
+    "workedSolution": "1. Put $x = 1$: $(2 + 4)^6 = 6^6 = 46\\,656$."
+   }
+  ],
+  "explanation": "Compare coefficients to find k, then use the expansion term by term; x = 1 gives the sum of the coefficients.",
+  "hints": [
+   "The coefficient of $x^r$ is $\\binom{6}{r}2^{6-r}k^r$.",
+   "In (d), pair each power of x with the matching power of 1/x."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "10240"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1536"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "5440"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "46656"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "2560"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3840"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "64"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "64"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

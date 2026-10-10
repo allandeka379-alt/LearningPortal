@@ -1,0 +1,2082 @@
+[
+ {
+  "key": "exam.w3a-zimsec-statistics.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.bayes",
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A factory in Gweru makes plastic chairs on three machines. Machine X makes 45% of the chairs, machine Y makes 35% and machine Z makes 20%. The percentages of faulty chairs are 2% for X, 5% for Y and 4% for Z.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State Bayes' theorem for events $A_1, A_2, A_3$ and an event $B$, giving the condition on $A_1, A_2, A_3$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$\\mathrm{P}(A_j \\mid B) = \\dfrac{\\mathrm{P}(A_j)\\,\\mathrm{P}(B \\mid A_j)}{\\sum_{i=1}^{3} \\mathrm{P}(A_i)\\,\\mathrm{P}(B \\mid A_i)}$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "$A_1, A_2, A_3$ are mutually exclusive and exhaustive (a partition).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: If A1, A2, A3 are mutually exclusive and exhaustive, then P(Aj | B) = P(Aj)P(B | Aj) / [P(A1)P(B | A1) + P(A2)P(B | A2) + P(A3)P(B | A3)]."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that a chair chosen at random is faulty.",
+    "answerSpec": {
+     "value": 0.0345,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$0.45(0.02) + 0.35(0.05) + 0.2(0.04) = 0.009 + 0.0175 + 0.008 = 0.0345$.",
+    "workedSolution": "1. $0.45(0.02) + 0.35(0.05) + 0.2(0.04) = 0.009 + 0.0175 + 0.008 = 0.0345$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "A chair is found to be faulty. Find the probability that it was made by machine Y, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.5072463768115941,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(Y \\mid F) = \\frac{0.0175}{0.0345} = 0.507$.",
+    "workedSolution": "1. $\\mathrm{P}(Y \\mid F) = \\frac{0.0175}{0.0345} = 0.507$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "A chair is found NOT to be faulty. Find the probability that it was made by machine X, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.45675815639564993,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(X \\cap F') = 0.45 \\times 0.98 = 0.441$; $\\mathrm{P}(F') = 1 - 0.0345 = 0.9655$. $\\mathrm{P}(X \\mid F') = \\frac{0.441}{0.9655} = 0.457$.",
+    "workedSolution": "1. $\\mathrm{P}(X \\cap F') = 0.45 \\times 0.98 = 0.441$; $\\mathrm{P}(F') = 1 - 0.0345 = 0.9655$. $\\mathrm{P}(X \\mid F') = \\frac{0.441}{0.9655} = 0.457$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Two chairs are chosen at random. Find the probability that exactly one of them is faulty, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.06661950000000001,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$2 \\times 0.0345 \\times 0.9655 = 0.0666$ (either the first or the second is the faulty one).",
+    "workedSolution": "1. $2 \\times 0.0345 \\times 0.9655 = 0.0666$ (either the first or the second is the faulty one)."
+   }
+  ],
+  "explanation": "Law of total probability for P(faulty), then Bayes' theorem to reverse the conditioning.",
+  "hints": [
+   "Draw a tree: machine first, then faulty or not.",
+   "The denominator in Bayes' theorem is P(faulty) or P(not faulty)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.0345"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.507"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.457"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.0666"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.03666666666666667"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.0175"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.441"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.0333"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.data.mean-sd",
+   "amaths.data.location-spread"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The masses, $m$ grams, of 200 eggs from a poultry project in Marondera are recorded.\n\n| Mass m (g) | 41 ≤ m < 49 | 49 ≤ m < 54 | 54 ≤ m < 59 | 59 ≤ m < 67 | 67 ≤ m < 83 |\n| --- | --- | --- | --- | --- | --- |\n| Number of eggs | 19 | 43 | 58 | 47 | 33 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate an estimate of the mean mass, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 58.9125,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "Mid-points 45, 51.5, 56.5, 63, 75: $\\sum fm = 855 + 2214.5 + 3277 + 2961 + 2475 = 11782.5$; mean $= \\frac{11782.5}{200} = 58.91$ g. (58.2 averages the mid-points without the frequencies.)",
+    "workedSolution": "1. Mid-points 45, 51.5, 56.5, 63, 75: $\\sum fm = 855 + 2214.5 + 3277 + 2961 + 2475 = 11782.5$; mean $= \\frac{11782.5}{200} = 58.91$ g. (58.2 averages the mid-points without the frequencies.)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Calculate an estimate of the standard deviation of the masses, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 8.861071817223921,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\sum fm^2 = 709840.25$; $\\sigma^2 = \\frac{709840.25}{200} - 58.91^2 = 78.52$; $\\sigma = 8.86$ g.",
+    "workedSolution": "1. $\\sum fm^2 = 709840.25$; $\\sigma^2 = \\frac{709840.25}{200} - 58.91^2 = 78.52$; $\\sigma = 8.86$ g."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Use linear interpolation to estimate the median and the quartiles (each to 3 significant figures).",
+    "payload": {
+     "template": "lower quartile {{blank:a}} g; median {{blank:b}} g; upper quartile {{blank:c}} g",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "52.6"
+       ],
+       "marks": 1,
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "57.3"
+       ],
+       "marks": 1,
+       "tolerance": 0.05
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "64.1"
+       ],
+       "marks": 1,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "Cumulative frequencies 19, 62, 120, 167, 200. $Q_1$ (50th) lies in $49 \\le m < 54$: $49 + \\frac{50 - 19}{43} \\times 5 = 52.6$. Median (100th): $54 + \\frac{100 - 62}{58} \\times 5 = 57.3$. $Q_3$ (150th): $59 + \\frac{150 - 120}{47} \\times 8 = 64.1$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Calculate Pearson's coefficient of skewness, 3(mean − median)/standard deviation, and interpret it.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Coefficient = 3(58.91 − 57.28) / 8.86 ≈ 0.55.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Positive, so the distribution is positively skewed (a tail of heavy eggs).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 3(58.91 − 57.28) / 8.861 ≈ 0.55. It is positive, so the masses are positively skewed: the mean is pulled up by the long upper class of heavy eggs."
+    }
+   }
+  ],
+  "explanation": "Use class mid-points for the mean and standard deviation, and interpolation on cumulative frequencies for the median and quartiles.",
+  "hints": [
+   "Class widths differ: use the true mid-points.",
+   "Find the class containing the 50th, 100th and 150th eggs."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "58.9"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "8.86"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "52.6"
+      },
+      {
+       "blankId": "b",
+       "text": "57.3"
+      },
+      {
+       "blankId": "c",
+       "text": "64.1"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "58.2"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "78.5"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "51.5"
+       },
+       {
+        "blankId": "b",
+        "text": "56.5"
+       },
+       {
+        "blankId": "c",
+        "text": "63"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.random-variables"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A fair spinner has equal sectors numbered $1, 2, \\ldots, n$, and $X$ is the score. $\\mathrm{E}(X) = 5.5$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find n.",
+    "answerSpec": {
+     "value": 10
+    },
+    "explanation": "$\\frac{n + 1}{2} = 5.5$, so $n = 10$.",
+    "workedSolution": "1. $\\frac{n + 1}{2} = 5.5$, so $n = 10$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find Var(X).",
+    "answerSpec": {
+     "value": 8.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\frac{n^2 - 1}{12} = \\frac{99}{12} = 8.25$.",
+    "workedSolution": "1. $\\frac{n^2 - 1}{12} = \\frac{99}{12} = 8.25$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that X is more than one standard deviation above the mean.",
+    "answerSpec": {
+     "value": 0.2,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$5.5 + \\sqrt{8.25} = 5.5 + 2.87 = 8.37$, so $X = 9$ or $10$: $\\frac{2}{10} = 0.2$.",
+    "workedSolution": "1. $5.5 + \\sqrt{8.25} = 5.5 + 2.87 = 8.37$, so $X = 9$ or $10$: $\\frac{2}{10} = 0.2$."
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "A second random variable $Y$ has $\\mathrm{P}(Y = y) = k(y + 1)$ for $y = 0, 1, 2, 3$.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "Find k.",
+      "answerSpec": {
+       "value": 0.1,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "$k(1 + 2 + 3 + 4) = 1$, so $k = \\frac{1}{10}$.",
+      "workedSolution": "1. $k(1 + 2 + 3 + 4) = 1$, so $k = \\frac{1}{10}$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Find E(Y).",
+      "answerSpec": {
+       "value": 2
+      },
+      "explanation": "$\\mathrm{E}(Y) = \\frac{0 + 2 + 6 + 12}{10} = 2$.",
+      "workedSolution": "1. $\\mathrm{E}(Y) = \\frac{0 + 2 + 6 + 12}{10} = 2$."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Find Var(Y).",
+      "answerSpec": {
+       "value": 1
+      },
+      "explanation": "$\\mathrm{E}(Y^2) = \\frac{0 + 2 + 12 + 36}{10} = 5$; $\\mathrm{Var}(Y) = 5 - 4 = 1$.",
+      "workedSolution": "1. $\\mathrm{E}(Y^2) = \\frac{0 + 2 + 12 + 36}{10} = 5$; $\\mathrm{Var}(Y) = 5 - 4 = 1$."
+     }
+    ]
+   }
+  ],
+  "explanation": "Discrete uniform formulas for X; ΣP = 1 for k, then the moment formulas for Y.",
+  "hints": [
+   "Mean of the discrete uniform distribution: (n + 1)/2.",
+   "Variance: (n² − 1)/12."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "10"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "8.25"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.200"
+    },
+    "(d)(i)": {
+     "type": "NUMERICAL",
+     "value": "0.100"
+    },
+    "(d)(ii)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(d)(iii)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "11"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "99"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.3"
+     },
+     "(d)(i)": {
+      "type": "NUMERICAL",
+      "value": "0.16666666666666666"
+     },
+     "(d)(ii)": {
+      "type": "NUMERICAL",
+      "value": "1.5"
+     },
+     "(d)(iii)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A borehole pump in a village near Masvingo often fails to start. Each attempt to start it succeeds with probability 0.2, independently. X is the number of attempts up to and including the first success.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find P(X = 3).",
+    "answerSpec": {
+     "value": 0.12800000000000003,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$0.8^2 \\times 0.2 = 0.128$.",
+    "workedSolution": "1. $0.8^2 \\times 0.2 = 0.128$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that more than 4 attempts are needed, correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.4096000000000001,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$\\mathrm{P}(X > 4) = 0.8^4 = 0.4096$.",
+    "workedSolution": "1. $\\mathrm{P}(X > 4) = 0.8^4 = 0.4096$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the mean and the variance of X.",
+    "payload": {
+     "template": "mean {{blank:m}}; variance {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "5"
+       ],
+       "marks": 1,
+       "tolerance": 0
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "20"
+       ],
+       "marks": 2,
+       "tolerance": 0
+      }
+     ]
+    },
+    "explanation": "$\\mathrm{E}(X) = \\frac{1}{0.2} = 5$; $\\mathrm{Var}(X) = \\frac{1 - p}{p^2} = \\frac{0.8}{0.04} = 20$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that X lies within one standard deviation of the mean, correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.8657822719999999,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$\\sigma = \\sqrt{20} = 4.47$, so $5 - 4.47 < X < 5 + 4.47$ means $1 \\le X \\le 9$. $\\mathrm{P}(X \\le 9) = 1 - 0.8^9 = 0.8658$.",
+    "workedSolution": "1. $\\sigma = \\sqrt{20} = 4.47$, so $5 - 4.47 < X < 5 + 4.47$ means $1 \\le X \\le 9$. $\\mathrm{P}(X \\le 9) = 1 - 0.8^9 = 0.8658$."
+   }
+  ],
+  "explanation": "Geo(0.2): P(X = r) = 0.8^(r−1)(0.2), P(X > r) = 0.8^r, mean 1/p, variance (1 − p)/p².",
+  "hints": [
+   "The smallest possible value of X is 1.",
+   "Find the integer values between 0.53 and 9.47."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.128"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.4096"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "5"
+      },
+      {
+       "blankId": "v",
+       "text": "20"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.8658"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.1024"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.512"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "4"
+       },
+       {
+        "blankId": "v",
+        "text": "4"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.6658"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.binomial"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "At a clinic in Chinhoyi, 30% of patients arrive by bicycle. On a particular morning 9 patients arrive, independently of each other. X is the number who arrive by bicycle.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two conditions needed for X to have a binomial distribution, in the context of the question.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A fixed number of patients (9), each either arriving by bicycle or not.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Patients choose independently, each with the same probability 0.3 of arriving by bicycle.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: There is a fixed number, 9, of patients, each of whom either arrives by bicycle or does not; and each patient arrives by bicycle independently of the others with the same probability, 0.3."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find P(X = 2), correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.2668279319999999,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "${}^9C_2(0.3)^2(0.7)^7 = 36 \\times 0.09 \\times 0.08235 = 0.2668$.",
+    "workedSolution": "1. ${}^9C_2(0.3)^2(0.7)^7 = 36 \\times 0.09 \\times 0.08235 = 0.2668$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find P(X ≤ 3), correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.7296590979999996,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$\\mathrm{P}(0) + \\mathrm{P}(1) + \\mathrm{P}(2) + \\mathrm{P}(3) = 0.0404 + 0.1556 + 0.2668 + 0.2668 = 0.7297$.",
+    "workedSolution": "1. $\\mathrm{P}(0) + \\mathrm{P}(1) + \\mathrm{P}(2) + \\mathrm{P}(3) = 0.0404 + 0.1556 + 0.2668 + 0.2668 = 0.7297$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the mean and the variance of X.",
+    "payload": {
+     "template": "mean {{blank:m}}; variance {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "2.7"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "1.89"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$np = 9 \\times 0.3 = 2.7$; $np(1 - p) = 2.7 \\times 0.7 = 1.89$."
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Y = 1 if the next patient arrives by bicycle and Y = 0 otherwise. State the distribution of Y and find its variance.",
+    "payload": {
+     "template": "distribution {{blank:d}}; variance {{blank:v}}",
+     "blanks": [
+      {
+       "id": "d"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "d",
+       "accepted": [
+        "Bernoulli",
+        "Bernoulli(0.3)",
+        "B(1,0.3)",
+        "Bernoulli distribution"
+       ],
+       "marks": 1,
+       "normalise": [
+        "trim",
+        "remove_whitespace"
+       ]
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "0.21"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$Y$ is Bernoulli with $p = 0.3$ (that is, $\\mathrm{B}(1, 0.3)$); its variance is $p(1 - p) = 0.21$."
+   }
+  ],
+  "explanation": "Binomial probabilities from the formula; mean np and variance np(1 − p); one trial is a Bernoulli variable.",
+  "hints": [
+   "X ~ B(9, 0.3).",
+   "A Bernoulli variable is a binomial with n = 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.2668"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.7297"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "2.7"
+      },
+      {
+       "blankId": "v",
+       "text": "1.89"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "d",
+       "text": "Bernoulli"
+      },
+      {
+       "blankId": "v",
+       "text": "0.21"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.0074"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.4628"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "3"
+       },
+       {
+        "blankId": "v",
+        "text": "0.81"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "d",
+        "text": "Poisson"
+       },
+       {
+        "blankId": "v",
+        "text": "0.09"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.normal.probabilities",
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The times taken by a kombi to travel from Mbare to Chitungwiza are normally distributed with mean 68 minutes and standard deviation 9 minutes.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that a journey takes more than 80 minutes, correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.09121122438730378,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00064
+     }
+    },
+    "explanation": "$z = \\frac{80 - 68}{9} = 1.333$; $1 - \\Phi(1.333) = 1 - 0.9082 = 0.0918$ (calculator 0.09121).",
+    "workedSolution": "1. $z = \\frac{80 - 68}{9} = 1.333$; $1 - \\Phi(1.333) = 1 - 0.9082 = 0.0918$ (calculator 0.09121)."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that a journey takes between 56 and 74 minutes, correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.6562962567585096,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.001
+     }
+    },
+    "explanation": "$z_1 = \\frac{56 - 68}{9} = -1.333$, $z_2 = \\frac{74 - 68}{9} = 0.667$. $\\Phi(0.667) - (1 - \\Phi(1.333)) = 0.7486 - 0.0918 = 0.6568$.",
+    "workedSolution": "1. $z_1 = \\frac{56 - 68}{9} = -1.333$, $z_2 = \\frac{74 - 68}{9} = 0.667$. $\\Phi(0.667) - (1 - \\Phi(1.333)) = 0.7486 - 0.0918 = 0.6568$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the time exceeded by only 5% of journeys, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "min"
+    },
+    "answerSpec": {
+     "value": 82.80368251480638,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0513
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "min",
+       "minutes",
+       "mins"
+      ]
+     }
+    },
+    "explanation": "$\\frac{t - 68}{9} = 1.645$, so $t = 68 + 9 \\times 1.645 = 82.8$ minutes.",
+    "workedSolution": "1. $\\frac{t - 68}{9} = 1.645$, so $t = 68 + 9 \\times 1.645 = 82.8$ minutes."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Sketch the distribution of journey times, marking the mean and the region found in (c).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Symmetrical bell-shaped curve with its peak at 68 minutes marked on the time axis.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Upper tail beyond about 82.8 minutes shaded and labelled 5%.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A bell curve centred at 68 minutes, symmetrical, approaching the axis at both ends; the region to the right of 82.8 minutes is shaded and labelled 0.05."
+    }
+   }
+  ],
+  "explanation": "Standardise for probabilities; use the inverse value 1.645 for the top 5%.",
+  "hints": [
+   "σ = 9.",
+   "Φ(1.645) = 0.95."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.0912"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.656"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "82.8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.9088"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-0.1613"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "53.2"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.events-rules",
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "At a school in Kadoma, a learner is chosen at random. Event $A$ is \"the learner plays chess\" and event $B$ is \"the learner sings in the choir\". $\\mathrm{P}(A) = 0.45$, $\\mathrm{P}(B) = 0.4$ and $\\mathrm{P}(A \\cup B) = 0.67$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $\\mathrm{P}(A \\cap B)$.",
+    "answerSpec": {
+     "value": 0.18000000000000005,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(A \\cap B) = 0.45 + 0.4 - 0.67 = 0.18$.",
+    "workedSolution": "1. $\\mathrm{P}(A \\cap B) = 0.45 + 0.4 - 0.67 = 0.18$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $\\mathrm{P}(A \\mid B)$.",
+    "answerSpec": {
+     "value": 0.4500000000000001,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{0.18}{0.4} = 0.45$.",
+    "workedSolution": "1. $\\frac{0.18}{0.4} = 0.45$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Determine whether A and B are independent, giving a reason.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Compares $\\mathrm{P}(A)\\,\\mathrm{P}(B) = 0.45 \\times 0.4 = 0.18$ with $\\mathrm{P}(A \\cap B) = 0.18$ (or $\\mathrm{P}(A \\mid B) = 0.45 = \\mathrm{P}(A)$).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Concludes A and B are independent.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: P(A)P(B) = 0.45 × 0.4 = 0.18 = P(A ∩ B), so A and B are independent (equivalently P(A | B) = 0.45 = P(A))."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $\\mathrm{P}(A' \\cap B)$, the probability that the learner sings in the choir but does not play chess.",
+    "answerSpec": {
+     "value": 0.21999999999999997,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(B) - \\mathrm{P}(A \\cap B) = 0.4 - 0.18 = 0.22$.",
+    "workedSolution": "1. $\\mathrm{P}(B) - \\mathrm{P}(A \\cap B) = 0.4 - 0.18 = 0.22$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that the learner does exactly one of the two activities.",
+    "answerSpec": {
+     "value": 0.49,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(A \\cup B) - \\mathrm{P}(A \\cap B) = 0.67 - 0.18 = 0.49$.",
+    "workedSolution": "1. $\\mathrm{P}(A \\cup B) - \\mathrm{P}(A \\cap B) = 0.67 - 0.18 = 0.49$."
+   }
+  ],
+  "explanation": "Use the general addition rule to find the overlap; everything else follows from a Venn diagram.",
+  "hints": [
+   "Draw a Venn diagram once you know P(A ∩ B).",
+   "Regions: A only 0.27, both 0.18, B only 0.22, neither 0.33."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.180"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.450"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.220"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.490"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.22"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.4"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.18000000000000002"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.67"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q08",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.counting.permutations",
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The eight letters of the word CHINHOYI are to be arranged in a line.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the number of different arrangements.",
+    "answerSpec": {
+     "value": 10080
+    },
+    "explanation": "H and I each appear twice: $\\frac{8!}{2!\\,2!} = \\frac{40\\,320}{4} = 10\\,080$.",
+    "workedSolution": "1. H and I each appear twice: $\\frac{8!}{2!\\,2!} = \\frac{40\\,320}{4} = 10\\,080$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the number of arrangements that begin with H and end with I.",
+    "answerSpec": {
+     "value": 720
+    },
+    "explanation": "With one H at the start and one I at the end, the middle six letters C, I, N, H, O, Y are all different: $6! = 720$.",
+    "workedSolution": "1. With one H at the start and one I at the end, the middle six letters C, I, N, H, O, Y are all different: $6! = 720$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the number of arrangements in which the two H's are not next to each other.",
+    "answerSpec": {
+     "value": 7560
+    },
+    "explanation": "H's together: treat HH as one item: $\\frac{7!}{2!} = 2520$ (I is still repeated). Not together: $10\\,080 - 2520 = 7560$.",
+    "workedSolution": "1. H's together: treat HH as one item: $\\frac{7!}{2!} = 2520$ (I is still repeated). Not together: $10\\,080 - 2520 = 7560$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "An arrangement is chosen at random. Find the probability that the two H's are not next to each other.",
+    "answerSpec": {
+     "value": 0.75,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{7560}{10\\,080} = \\frac{3}{4}$.",
+    "workedSolution": "1. $\\frac{7560}{10\\,080} = \\frac{3}{4}$."
+   }
+  ],
+  "explanation": "Divide by the factorial of each repeated letter; count 'not together' as total minus 'together'.",
+  "hints": [
+   "Two letters are repeated.",
+   "Not together = total − together."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "10080"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "720"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "7560"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.750"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "20160"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "180"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2520"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.25"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": false,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q09",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.data.histograms-cumulative",
+   "amaths.data.location-spread"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The ages, in years, of 160 adult visitors to the Great Zimbabwe monument on one day are summarised in the cumulative frequency table.\n\n| Age less than (years) | 20 | 30 | 40 | 50 | 60 | 75 |\n| --- | --- | --- | --- | --- | --- | --- |\n| Cumulative frequency | 0 | 16 | 46 | 98 | 139 | 160 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Estimate the median and the quartiles by linear interpolation (each to 3 significant figures).",
+    "payload": {
+     "template": "lower quartile {{blank:a}}; median {{blank:b}}; upper quartile {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "38.0"
+       ],
+       "marks": 1,
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "46.5"
+       ],
+       "marks": 1,
+       "tolerance": 0.05
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "55.4"
+       ],
+       "marks": 1,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$Q_1$ (40th): $30 + \\frac{40 - 16}{30} \\times 10 = 38.0$. Median (80th): $40 + \\frac{80 - 46}{52} \\times 10 = 46.5$. $Q_3$ (120th): $50 + \\frac{120 - 98}{41} \\times 10 = 55.4$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the interquartile range, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 17.365853658536587,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$55.37 - 38.00 = 17.4$ years.",
+    "workedSolution": "1. $55.37 - 38.00 = 17.4$ years."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Estimate the number of visitors aged under 34.",
+    "answerSpec": {
+     "value": 28
+    },
+    "explanation": "Cumulative frequency at 34: $16 + \\frac{4}{10} \\times 30 = 28$, so about 28 visitors. (132 is the number aged 34 or over.)",
+    "workedSolution": "1. Cumulative frequency at 34: $16 + \\frac{4}{10} \\times 30 = 28$, so about 28 visitors. (132 is the number aged 34 or over.)"
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The youngest visitor was 25 and the oldest 74. Describe a box plot of the ages, and say whether the oldest visitor is an outlier using the rule 'more than 1.5 × IQR above the upper quartile'.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Box plot: whiskers from 25 to 74, box from about 38.0 to 55.4 with the median line at about 46.5.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Upper fence 55.4 + 1.5 × 17.4 ≈ 81.4 > 74, so 74 is not an outlier.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The box runs from Q1 ≈ 38.0 to Q3 ≈ 55.4 with the median at ≈ 46.5; the whiskers reach 25 and 74. Q3 + 1.5 × IQR ≈ 55.4 + 26.0 = 81.4, which is above 74, so the oldest visitor is not an outlier."
+    }
+   }
+  ],
+  "explanation": "Interpolate within the class that contains each required position on the cumulative frequency scale.",
+  "hints": [
+   "The 40th, 80th and 120th visitors give Q1, the median and Q3."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "38.0"
+      },
+      {
+       "blankId": "b",
+       "text": "46.5"
+      },
+      {
+       "blankId": "c",
+       "text": "55.4"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "17.4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "28"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "40"
+       },
+       {
+        "blankId": "b",
+        "text": "80"
+       },
+       {
+        "blankId": "c",
+        "text": "120"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "8.83"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "132"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q10",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.bayes",
+   "amaths.probability.conditional"
+  ],
+  "difficulty": 5,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "In a district of Matabeleland South, 6% of cattle carry a certain disease. A blood test gives a positive result for 92% of cattle that carry the disease and for 7% of cattle that do not. Repeated tests on the same animal are independent given whether it carries the disease. Give answers correct to 4 decimal places.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that a randomly chosen animal tests positive.",
+    "answerSpec": {
+     "value": 0.121,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$0.06 \\times 0.92 + 0.94 \\times 0.07 = 0.0552 + 0.0658 = 0.121$.",
+    "workedSolution": "1. $0.06 \\times 0.92 + 0.94 \\times 0.07 = 0.0552 + 0.0658 = 0.121$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "An animal tests positive. Find the probability that it carries the disease.",
+    "answerSpec": {
+     "value": 0.456198347107438,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$\\frac{0.0552}{0.121} = 0.4562$.",
+    "workedSolution": "1. $\\frac{0.0552}{0.121} = 0.4562$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "An animal tests negative. Find the probability that it does not carry the disease.",
+    "answerSpec": {
+     "value": 0.9945392491467575,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$\\mathrm{P}(D' \\cap -) = 0.94 \\times 0.93 = 0.8742$; $\\mathrm{P}(-) = 1 - 0.121 = 0.879$. $\\frac{0.8742}{0.879} = 0.9945$.",
+    "workedSolution": "1. $\\mathrm{P}(D' \\cap -) = 0.94 \\times 0.93 = 0.8742$; $\\mathrm{P}(-) = 1 - 0.121 = 0.879$. $\\frac{0.8742}{0.879} = 0.9945$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "An animal that tested positive is tested a second time and again tests positive. Hence, using your answer to (b) as the new prior probability, find the probability that it carries the disease.",
+    "answerSpec": {
+     "value": 0.9168441957031954,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "Prior $0.4562$: $\\mathrm{P}(+) = 0.4562 \\times 0.92 + 0.5438 \\times 0.07 = 0.4578$; posterior $= \\frac{0.4197}{0.4578} = 0.9168$. (The same as $\\frac{0.06 \\times 0.92^2}{0.06 \\times 0.92^2 + 0.94 \\times 0.07^2}$.)",
+    "workedSolution": "1. Prior $0.4562$: $\\mathrm{P}(+) = 0.4562 \\times 0.92 + 0.5438 \\times 0.07 = 0.4578$; posterior $= \\frac{0.4197}{0.4578} = 0.9168$. (The same as $\\frac{0.06 \\times 0.92^2}{0.06 \\times 0.92^2 + 0.94 \\times 0.07^2}$.)"
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Comment on the usefulness of a single positive test, and explain why the second test changes the conclusion so much.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "After one positive test the probability of disease is only about 0.46, so many positives are false.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "This is because the disease is uncommon, so false positives from the 94% healthy cattle are numerous.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A second independent positive multiplies the evidence: the probability rises to about 0.92, so a confirmatory test is sensible.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A single positive test only raises the probability of disease from 0.06 to about 0.46: more than half the positives come from healthy cattle, because healthy animals are so numerous that their 7% false-positive rate outweighs the true positives. A second positive is much less likely for a healthy animal (0.07² ≈ 0.005) than for a diseased one (0.92² ≈ 0.85), so the probability rises to about 0.92."
+    }
+   }
+  ],
+  "explanation": "Law of total probability, Bayes' theorem, then Bayes again with the updated prior.",
+  "hints": [
+   "Draw a tree: disease or not, then positive or negative.",
+   "For (d), replace 0.06 by your answer to (b)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.1210"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.4562"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.9945"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.9168"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.0552"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.92"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.93"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.4562"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q11",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.normal.inverse-parameters",
+   "amaths.normal.probabilities",
+   "amaths.discrete.binomial"
+  ],
+  "difficulty": 5,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "A machine at a mill in Gweru fills packets of mealie-meal. The masses of the contents are normally distributed with mean 500 g and standard deviation σ g. 3% of packets contain less than 488 g.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find σ, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 6.3802855177784625,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0057
+     }
+    },
+    "explanation": "$\\frac{488 - 500}{\\sigma} = -1.881$, so $\\sigma = \\frac{12}{1.881} = 6.38$.",
+    "workedSolution": "1. $\\frac{488 - 500}{\\sigma} = -1.881$, so $\\sigma = \\frac{12}{1.881} = 6.38$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that a packet contains more than 515 g, correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.009361718300830102,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.000538
+     }
+    },
+    "explanation": "$z = \\frac{515 - 500}{6.38} = 2.351$; $1 - \\Phi(2.35) = 0.0094$ (calculator 0.0094).",
+    "workedSolution": "1. $z = \\frac{515 - 500}{6.38} = 2.351$; $1 - \\Phi(2.35) = 0.0094$ (calculator 0.0094)."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Hence find the probability that, in a random sample of 10 packets, at least 2 contain more than 515 g. Give your answer correct to 4 decimal places.",
+    "answerSpec": {
+     "value": 0.003751732314806411,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00053
+     }
+    },
+    "explanation": "$Y \\sim \\mathrm{B}(10, p)$ with $p = 0.0094$. $\\mathrm{P}(Y \\ge 2) = 1 - (1 - p)^{10} - 10p(1 - p)^9 = 0.0038$.",
+    "workedSolution": "1. $Y \\sim \\mathrm{B}(10, p)$ with $p = 0.0094$. $\\mathrm{P}(Y \\ge 2) = 1 - (1 - p)^{10} - 10p(1 - p)^9 = 0.0038$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "The mean is now adjusted, with σ unchanged, so that only 0.5% of packets contain less than 488 g. Find the new mean, correct to 4 significant figures.",
+    "answerSpec": {
+     "value": 504.43452630492766,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0507
+     }
+    },
+    "explanation": "$\\frac{488 - \\mu}{6.38} = -2.576$, so $\\mu = 488 + 2.576 \\times 6.380 = 504.4$ g.",
+    "workedSolution": "1. $\\frac{488 - \\mu}{6.38} = -2.576$, so $\\mu = 488 + 2.576 \\times 6.380 = 504.4$ g."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State one assumption needed for the binomial model in (c).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The masses of different packets are independent (and each packet has the same probability of exceeding 515 g).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The assumption is stated in the context of packets.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Whether one packet contains more than 515 g is independent of the others, and the probability is the same (≈ 0.009) for every packet."
+    }
+   }
+  ],
+  "explanation": "Find σ from the given percentage, use the normal model to get p, then a binomial model for the sample; finally adjust μ with σ fixed.",
+  "hints": [
+   "488 is below the mean: z is negative.",
+   "In (c) each packet is a trial with success probability from (b)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "6.38"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.00936"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.00375"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "504.4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "12.4"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.9906"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.0037"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "471.6"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3a-zimsec-statistics.q12",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.random-variables",
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 4,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "At a school fête in Harare, a player pays US\\$1 to play a game. The player throws a fair die up to three times, stopping as soon as a six appears. The prize is US\\$4 for a six on the first throw, US\\$2 for a six on the second throw, US\\$1 for a six on the third throw, and nothing if no six appears. G is the player's gain in dollars (prize minus the US\\$1 paid).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the probability distribution of G, giving each probability as a fraction.",
+    "payload": {
+     "template": "P(G = 3) = {{blank:a}}; P(G = 1) = {{blank:b}}; P(G = 0) = {{blank:c}}; P(G = −1) = {{blank:d}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1/6"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "5/36"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "25/216"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "125/216"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "Six first: $\\frac{1}{6}$. Six on the 2nd throw: $\\frac{5}{6} \\times \\frac{1}{6} = \\frac{5}{36}$. On the 3rd: $\\left(\\frac{5}{6}\\right)^2 \\frac{1}{6} = \\frac{25}{216}$. No six: $\\left(\\frac{5}{6}\\right)^3 = \\frac{125}{216}$. Gains: $4 - 1 = 3$, $2 - 1 = 1$, $1 - 1 = 0$, $-1$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find E(G) in dollars, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.06018518518518501,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$\\mathrm{E}(G) = 3 \\times \\frac{36}{216} + 1 \\times \\frac{30}{216} + 0 - 1 \\times \\frac{125}{216} = \\frac{108 + 30 - 125}{216} = \\frac{13}{216} \\approx 0.0602$. It is positive, so on average the player gains about 6 cents per game: the game slightly favours the player.",
+    "workedSolution": "1. $\\mathrm{E}(G) = 3 \\times \\frac{36}{216} + 1 \\times \\frac{30}{216} + 0 - 1 \\times \\frac{125}{216} = \\frac{108 + 30 - 125}{216} = \\frac{13}{216} \\approx 0.0602$. It is positive, so on average the player gains about 6 cents per game: the game slightly favours the player."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find Var(G), correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 2.2139703360768177,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\mathrm{E}(G^2) = 9 \\times \\frac{36}{216} + 1 \\times \\frac{30}{216} + 0 + 1 \\times \\frac{125}{216} = \\frac{324 + 30 + 125}{216} = \\frac{479}{216}$. $\\mathrm{Var}(G) = \\frac{479}{216} - \\left(\\frac{13}{216}\\right)^2 = 2.21$.",
+    "workedSolution": "1. $\\mathrm{E}(G^2) = 9 \\times \\frac{36}{216} + 1 \\times \\frac{30}{216} + 0 + 1 \\times \\frac{125}{216} = \\frac{324 + 30 + 125}{216} = \\frac{479}{216}$. $\\mathrm{Var}(G) = \\frac{479}{216} - \\left(\\frac{13}{216}\\right)^2 = 2.21$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the expected number of throws made in one game, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 2.5277777777777777,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$T = 1, 2, 3$ with probabilities $\\frac{1}{6}$, $\\frac{5}{36}$ and $\\left(\\frac{5}{6}\\right)^2 = \\frac{25}{36}$ (the third throw is made whether or not it is a six). $\\mathrm{E}(T) = \\frac{6 + 10 + 75}{36} = \\frac{91}{36} \\approx 2.53$. (6 is the mean of $\\mathrm{Geo}(\\frac{1}{6})$, which ignores the limit of three throws.)",
+    "workedSolution": "1. $T = 1, 2, 3$ with probabilities $\\frac{1}{6}$, $\\frac{5}{36}$ and $\\left(\\frac{5}{6}\\right)^2 = \\frac{25}{36}$ (the third throw is made whether or not it is a six). $\\mathrm{E}(T) = \\frac{6 + 10 + 75}{36} = \\frac{91}{36} \\approx 2.53$. (6 is the mean of $\\mathrm{Geo}(\\frac{1}{6})$, which ignores the limit of three throws.)"
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "The fête organisers expect 432 games to be played. Hence find the expected total profit (or loss) for the organisers, in dollars.",
+    "answerSpec": {
+     "value": -26
+    },
+    "explanation": "The organisers gain $-G$ per game: $432 \\times \\left(-\\frac{13}{216}\\right) = -26$, an expected loss of US\\$26. They should lower the prizes.",
+    "workedSolution": "1. The organisers gain $-G$ per game: $432 \\times \\left(-\\frac{13}{216}\\right) = -26$, an expected loss of US\\$26. They should lower the prizes."
+   }
+  ],
+  "explanation": "Build the distribution from the stopping rule; the expected gain per game, times the number of games, gives the organisers' expected result.",
+  "hints": [
+   "The game stops at the first six, so the probabilities follow the geometric pattern.",
+   "Gain = prize − 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1/6"
+      },
+      {
+       "blankId": "b",
+       "text": "5/36"
+      },
+      {
+       "blankId": "c",
+       "text": "25/216"
+      },
+      {
+       "blankId": "d",
+       "text": "125/216"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.0602"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.21"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2.53"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "-26"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1/4"
+       },
+       {
+        "blankId": "b",
+        "text": "1/6"
+       },
+       {
+        "blankId": "c",
+        "text": "1/6"
+       },
+       {
+        "blankId": "d",
+        "text": "1/2"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1.06"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.22"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "25.999999999999922"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ }
+]

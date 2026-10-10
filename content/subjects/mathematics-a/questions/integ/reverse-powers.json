@@ -1,0 +1,1132 @@
+[
+ {
+  "key": "integ.reverse-powers.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int x^{5}\\,dx$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{x^{6}}{6} + c$",
+    "correct": true,
+    "rationale": "Correct: add one to the power and divide by the new power."
+   },
+   {
+    "key": "B",
+    "content": "$5x^{4} + c$",
+    "rationale": "This is the derivative of x⁵, not its integral."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{x^{6}}{5} + c$",
+    "rationale": "Divide by the new power, 6, not the old power, 5."
+   },
+   {
+    "key": "D",
+    "content": "$6x^{6} + c$",
+    "rationale": "The new power divides; it does not multiply."
+   }
+  ],
+  "explanation": "$\\int x^{n}\\,dx = \\dfrac{x^{n + 1}}{n + 1} + c$, so $\\int x^{5}\\,dx = \\dfrac{x^{6}}{6} + c$. Check: $\\frac{d}{dx}\\frac{x^{6}}{6} = x^{5}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q02",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int (4x^{3} - 6x)\\,dx$. Include the constant, for example x^3+2x+c.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "x^4-3x^2+c"
+    },
+    {
+     "value": "-3x^2+x^4+c"
+    },
+    {
+     "value": "c+x^4-3x^2"
+    },
+    {
+     "value": "x^4-3x^2+k"
+    },
+    {
+     "value": "x^4-3x^2+C"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$\\int 4x^{3}\\,dx = x^{4}$ and $\\int 6x\\,dx = 3x^{2}$, so the answer is $x^{4} - 3x^{2} + c$.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "x^4-3x^2+c"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "x^4-3x^2"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "12x^2-6+c"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int \\frac{1}{x^{2}}\\,dx$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{1}{x} + c$",
+    "rationale": "Dividing by the new power −1 makes the result negative."
+   },
+   {
+    "key": "B",
+    "content": "$-\\dfrac{2}{x^{3}} + c$",
+    "rationale": "That is the derivative of $\\frac{1}{x^{2}}$."
+   },
+   {
+    "key": "C",
+    "content": "$\\ln(x^{2}) + c$",
+    "rationale": "Only $\\frac{1}{x}$ integrates to a logarithm."
+   },
+   {
+    "key": "D",
+    "content": "$-\\dfrac{1}{x} + c$",
+    "correct": true,
+    "rationale": "Correct: $\\int x^{-2}\\,dx = \\frac{x^{-1}}{-1} + c$."
+   }
+  ],
+  "explanation": "$\\int x^{-2}\\,dx = \\dfrac{x^{-1}}{-1} + c = -\\dfrac{1}{x} + c$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$\\displaystyle\\int (3x - 2)^{5}\\,dx = \\frac{(3x - 2)^{6}}{k} + c$. Find $k$.",
+  "payload": {
+   "template": "k = {{blank:k}}",
+   "blanks": [
+    {
+     "id": "k",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "k",
+     "accepted": [
+      "18"
+     ]
+    }
+   ]
+  },
+  "explanation": "Divide by the new power 6 and by the coefficient 3: $k = 3 \\times 6 = 18$. Check: $\\frac{d}{dx}\\frac{(3x - 2)^{6}}{18} = \\frac{6 \\times 3(3x - 2)^{5}}{18} = (3x - 2)^{5}$.",
+  "hints": [
+   "Differentiate (3x − 2)⁶ to see which factor must be cancelled."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "k",
+     "text": "18"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "k",
+      "text": "6"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A curve has gradient $\\dfrac{dy}{dx} = 4x - 3$ and passes through $(1, 6)$. Its equation is $y = 2x^{2} - 3x + c$. Find $c$.",
+  "payload": {
+   "answerPrefix": "c ="
+  },
+  "answerSpec": {
+   "value": 7
+  },
+  "explanation": "Substitute $(1, 6)$: $6 = 2 - 3 + c$, so $c = 7$.",
+  "workedSolution": "1. Substitute $(1, 6)$: $6 = 2 - 3 + c$, so $c = 7$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "7"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q06",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int 8\\sqrt{x}\\,dx$. Type the answer with a fractional power and the constant, for example (2/5)x^(5/2)+c.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "(16/3)x^(3/2)+c"
+    },
+    {
+     "value": "16/3x^(3/2)+c"
+    },
+    {
+     "value": "16x^(3/2)/3+c"
+    },
+    {
+     "value": "(16/3)x^1.5+c"
+    },
+    {
+     "value": "16/3x^1.5+c"
+    },
+    {
+     "value": "(16x^(3/2))/3+c"
+    },
+    {
+     "value": "(16/3)x√x+c"
+    },
+    {
+     "value": "(16/3)xsqrt(x)+c"
+    },
+    {
+     "value": "(16/3)xsqrtx+c"
+    },
+    {
+     "value": "(16/3)x√(x)+c"
+    },
+    {
+     "value": "(16/3)x^(3/2)+k"
+    },
+    {
+     "value": "(16/3)x^(3/2)+C"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$\\int 8x^{\\frac{1}{2}}\\,dx = \\dfrac{8x^{\\frac{3}{2}}}{\\frac{3}{2}} + c = \\dfrac{16}{3}x^{\\frac{3}{2}} + c$. (12 multiplies by $\\frac{3}{2}$ instead of dividing.)",
+  "hints": [
+   "Dividing by 3/2 means multiplying by 2/3."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "(16/3)x^(3/2)+c"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "12x^(3/2)+c"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "4x^(-1/2)+c"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "$\\displaystyle\\int \\frac{x^{2} + 5}{\\sqrt{x}}\\,dx = ax^{\\frac{5}{2}} + bx^{\\frac{1}{2}} + c$. Find $a$ and $b$ (give $a$ as a decimal).",
+  "payload": {
+   "template": "a = {{blank:a}}, b = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "0.4",
+      "2/5"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "10"
+     ]
+    }
+   ]
+  },
+  "explanation": "Divide first: $x^{\\frac{3}{2}} + 5x^{-\\frac{1}{2}}$. Integrate: $\\frac{2}{5}x^{\\frac{5}{2}} + 5 \\times 2x^{\\frac{1}{2}} = 0.4x^{\\frac{5}{2}} + 10x^{\\frac{1}{2}}$.",
+  "hints": [
+   "Write each term as a power of x before integrating."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "0.4"
+    },
+    {
+     "blankId": "b",
+     "text": "10"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "2.5"
+     },
+     {
+      "blankId": "b",
+      "text": "2.5"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$\\displaystyle\\int (2x + 3)^{2}\\,dx = \\frac{(2x + 3)^{3}}{3} + c$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Differentiating $\\frac{(2x + 3)^{3}}{3}$ gives $2(2x + 3)^{2}$, twice the integrand. The correct answer is $\\frac{(2x + 3)^{3}}{6} + c$: divide by the coefficient 2 as well.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A curve has $\\dfrac{dy}{dx} = \\dfrac{6}{(2x + 1)^{2}}$ and passes through $(1, 2)$. Find the value of $y$ when $x = 4$, correct to 3 significant figures.",
+  "payload": {
+   "answerPrefix": "y ="
+  },
+  "answerSpec": {
+   "value": 2.6666666666666665,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$y = \\dfrac{6(2x + 1)^{-1}}{2 \\times (-1)} + c = -\\dfrac{3}{2x + 1} + c$. At $(1, 2)$: $2 = -1 + c$, $c = 3$. At $x = 4$: $y = -\\frac{3}{9} + 3 = \\frac{8}{3} \\approx 2.67$.",
+  "workedSolution": "1. $y = \\dfrac{6(2x + 1)^{-1}}{2 \\times (-1)} + c = -\\dfrac{3}{2x + 1} + c$. At $(1, 2)$: $2 = -1 + c$, $c = 3$. At $x = 4$: $y = -\\frac{3}{9} + 3 = \\frac{8}{3} \\approx 2.67$.",
+  "hints": [
+   "Integrate 6(2x + 1)⁻²: divide by −1 and by 2.",
+   "Use the point to find c first."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.67"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.67"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.33"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each integrand with its indefinite integral (the + c is omitted).",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$x^{2}$"
+    },
+    {
+     "id": "L2",
+     "content": "$x^{-3}$"
+    },
+    {
+     "id": "L3",
+     "content": "$\\sqrt{x}$"
+    },
+    {
+     "id": "L4",
+     "content": "$(x + 4)^{2}$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\dfrac{2}{3}x^{\\frac{3}{2}}$"
+    },
+    {
+     "id": "R4",
+     "content": "$\\dfrac{(x + 4)^{3}}{3}$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\dfrac{x^{3}}{3}$"
+    },
+    {
+     "id": "R2",
+     "content": "$-\\dfrac{1}{2x^{2}}$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Add one to the power and divide by the new power: $x^{-3} \\to \\frac{x^{-2}}{-2}$ and $x^{\\frac{1}{2}} \\to \\frac{x^{3/2}}{3/2}$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Why does $\\displaystyle\\int 2x\\,dx$ include an arbitrary constant $c$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Because the area under y = 2x always includes an extra constant region",
+    "rationale": "An indefinite integral is a family of functions, not an area."
+   },
+   {
+    "key": "B",
+    "content": "Because every function x² + c has derivative 2x, so the integral is not unique",
+    "correct": true,
+    "rationale": "Correct: constants vanish on differentiation, so integration cannot recover them."
+   },
+   {
+    "key": "C",
+    "content": "Because 2x is not defined at x = 0",
+    "rationale": "2x is defined everywhere; the constant has nothing to do with this."
+   },
+   {
+    "key": "D",
+    "content": "Because integration rounds the answer, and c is the rounding error",
+    "rationale": "Integration is exact; c represents every possible constant."
+   }
+  ],
+  "explanation": "$\\frac{d}{dx}(x^{2} + c) = 2x$ for every constant $c$, so $\\int 2x\\,dx = x^{2} + c$ describes the whole family of curves.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q12",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Show that $\\dfrac{d}{dx}\\left[(x^{2} + 1)^{\\frac{3}{2}}\\right] = 3x\\sqrt{x^{2} + 1}$. Hence find $\\displaystyle\\int x\\sqrt{x^{2} + 1}\\,dx$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 uses the chain rule: $\\frac{3}{2}(x^{2} + 1)^{\\frac{1}{2}} \\times 2x$",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A1 simplifies to $3x\\sqrt{x^{2} + 1}$",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 deduces $\\int x\\sqrt{x^{2} + 1}\\,dx = \\frac{1}{3}(x^{2} + 1)^{\\frac{3}{2}} + c$",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n\\frac{d}{dx}(x^{2} + 1)^{\\frac{3}{2}} = \\frac{3}{2}(x^{2} + 1)^{\\frac{1}{2}} \\cdot 2x = 3x\\sqrt{x^{2} + 1}\n$$\n\n$$\n\\int x\\sqrt{x^{2} + 1}\\,dx = \\frac{1}{3}(x^{2} + 1)^{\\frac{3}{2}} + c\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Integration reverses differentiation, so a derivative you have just found gives an integral; divide by the constant factor 3.",
+  "hints": [
+   "Differentiate with the chain rule.",
+   "The integrand is one third of the derivative."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A curve has $\\dfrac{d^{2}y}{dx^{2}} = 6x$. At the point $(0, 1)$ the gradient of the curve is 2. Find the value of $y$ when $x = 2$.",
+  "payload": {
+   "answerPrefix": "y ="
+  },
+  "answerSpec": {
+   "value": 13
+  },
+  "explanation": "$\\dfrac{dy}{dx} = 3x^{2} + c_{1}$; at $x = 0$ the gradient is 2, so $c_{1} = 2$. Then $y = x^{3} + 2x + c_{2}$; at $(0, 1)$, $c_{2} = 1$. At $x = 2$: $8 + 4 + 1 = 13$. (9 forgets the $2x$ term; 11 forgets $c_{2}$.)",
+  "workedSolution": "1. $\\dfrac{dy}{dx} = 3x^{2} + c_{1}$; at $x = 0$ the gradient is 2, so $c_{1} = 2$. Then $y = x^{3} + 2x + c_{2}$; at $(0, 1)$, $c_{2} = 1$. At $x = 2$: $8 + 4 + 1 = 13$. (9 forgets the $2x$ term; 11 forgets $c_{2}$.)",
+  "hints": [
+   "Integrate twice; each integration gives a constant.",
+   "Use the gradient for the first constant and the point for the second."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "13"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "11"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "9"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int \\frac{4}{(1 - 2x)^{3}}\\,dx$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$-\\dfrac{1}{(1 - 2x)^{2}} + c$",
+    "rationale": "The two negative factors, −2 from the power and −2 from the bracket, multiply to +4."
+   },
+   {
+    "key": "B",
+    "content": "$-\\dfrac{2}{(1 - 2x)^{2}} + c$",
+    "rationale": "The division by −2 from the bracket has been forgotten."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{1}{(1 - 2x)^{2}} + c$",
+    "correct": true,
+    "rationale": "Correct: $\\frac{4(1 - 2x)^{-2}}{(-2)(-2)} = (1 - 2x)^{-2}$."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{1}{(1 - 2x)^{4}} + c$",
+    "rationale": "The power must increase by one, from −3 to −2."
+   }
+  ],
+  "explanation": "$\\int 4(1 - 2x)^{-3}\\,dx = \\dfrac{4(1 - 2x)^{-2}}{(-2) \\times (-2)} + c = (1 - 2x)^{-2} + c$. Check by differentiating: $-2(1 - 2x)^{-3} \\times (-2) = 4(1 - 2x)^{-3}$.",
+  "hints": [
+   "Divide by the new power and by the coefficient of x, both negative."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q15",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A curve has gradient $\\dfrac{dy}{dx} = k\\sqrt{x} - 2$, where $k$ is a constant. The curve passes through $(0, 1)$ and $(4, 9)$. Find $k$.",
+  "payload": {
+   "answerPrefix": "k ="
+  },
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "$y = \\frac{2k}{3}x^{\\frac{3}{2}} - 2x + c$. $(0, 1)$ gives $c = 1$. $(4, 9)$: $\\frac{2k}{3} \\times 8 - 8 + 1 = 9$, so $\\frac{16k}{3} = 16$ and $k = 3$.",
+  "workedSolution": "1. Integrate: $y = \\dfrac{2k}{3}x^{\\frac{3}{2}} - 2x + c$.\n2. At $(0, 1)$: $c = 1$.\n3. At $(4, 9)$: $4^{\\frac{3}{2}} = 8$, so $\\dfrac{16k}{3} - 8 + 1 = 9$.\n4. $\\dfrac{16k}{3} = 16$, so $k = 3$.",
+  "hints": [
+   "Two points give two equations: one for c, one for k.",
+   "4^(3/2) = 8."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "2"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "4.5"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "A curve has gradient function $\\dfrac{dy}{dx} = 3x^{2} - 12$ and passes through the point $(0, 5)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the equation of the curve. Type it as y = …",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "y=x^3-12x+5"
+      },
+      {
+       "value": "y=5-12x+x^3"
+      },
+      {
+       "value": "y=x^3+5-12x"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$y = x^{3} - 12x + c$ and $(0, 5)$ gives $c = 5$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the minimum point of the curve.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "-11"
+       ]
+      }
+     ]
+    },
+    "explanation": "$3x^{2} - 12 = 0$ at $x = \\pm 2$; $\\frac{d^{2}y}{dx^{2}} = 6x > 0$ at $x = 2$. $y = 8 - 24 + 5 = -11$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the gradient of the normal to the curve at the point where x = 1, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.1111111111111111,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "The tangent gradient at $x = 1$ is $3 - 12 = -9$, so the normal gradient is $\\frac{1}{9} \\approx 0.111$.",
+    "workedSolution": "1. The tangent gradient at $x = 1$ is $3 - 12 = -9$, so the normal gradient is $\\frac{1}{9} \\approx 0.111$."
+   }
+  ],
+  "explanation": "Integrate the gradient, use the point for c, and then use the gradient function directly for stationary points and normals.",
+  "hints": [
+   "Do not forget the constant of integration.",
+   "The gradient function is given: use it for (b) and (c)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "y=x^3-12x+5"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "2"
+      },
+      {
+       "blankId": "y",
+       "text": "-11"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.111"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "y=x^3-12x"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "-2"
+       },
+       {
+        "blankId": "y",
+        "text": "21"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "-9"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "integ.reverse-powers.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 5,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "A curve has $\\dfrac{dy}{dx} = \\sqrt{2x + 5}$ and passes through the point $(2, 10)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the equation of the curve. Type it as y = (1/3)(2x+5)^(3/2)+k with your value of k, or equivalent.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "y=(1/3)(2x+5)^(3/2)+1"
+      },
+      {
+       "value": "y=1/3(2x+5)^(3/2)+1"
+      },
+      {
+       "value": "y=(2x+5)^(3/2)/3+1"
+      },
+      {
+       "value": "y=(1/3)(2x+5)^1.5+1"
+      },
+      {
+       "value": "y=(2x+5)^1.5/3+1"
+      },
+      {
+       "value": "y=1+(1/3)(2x+5)^(3/2)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$y = \\dfrac{(2x + 5)^{\\frac{3}{2}}}{2 \\times \\frac{3}{2}} + c = \\frac{1}{3}(2x + 5)^{\\frac{3}{2}} + c$. At $(2, 10)$: $\\frac{1}{3} \\times 27 + c = 10$, so $c = 1$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the y-coordinate of the point where the curve crosses the y-axis, correct to 3 significant figures.",
+    "payload": {
+     "answerPrefix": "y ="
+    },
+    "answerSpec": {
+     "value": 4.72677996249965,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$y = \\frac{1}{3} \\times 5^{\\frac{3}{2}} + 1 = \\frac{5\\sqrt{5}}{3} + 1 \\approx 4.73$.",
+    "workedSolution": "1. $y = \\frac{1}{3} \\times 5^{\\frac{3}{2}} + 1 = \\frac{5\\sqrt{5}}{3} + 1 \\approx 4.73$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the value of x at which the gradient of the curve is 5.",
+    "payload": {
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 10
+    },
+    "explanation": "$\\sqrt{2x + 5} = 5$ gives $2x + 5 = 25$, $x = 10$.",
+    "workedSolution": "1. $\\sqrt{2x + 5} = 5$ gives $2x + 5 = 25$, $x = 10$."
+   }
+  ],
+  "explanation": "Integrate a power of a linear bracket by dividing by both the new power and the coefficient of x.",
+  "hints": [
+   "(2x + 5)^(1/2) integrates to (2x + 5)^(3/2) ÷ (2 × 3/2).",
+   "9^(3/2) = 27."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "y=(1/3)(2x+5)^(3/2)+1"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4.73"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "10"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "y=(2/3)(2x+5)^(3/2)-8"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3.24"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "integ.reverse-powers.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.integ.reverse-powers"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Chipo tries to find $\\displaystyle\\int \\frac{1}{x}\\,dx$ with the rule $\\int x^{n}\\,dx = \\frac{x^{n + 1}}{n + 1} + c$. Explain why this fails and state the correct integral.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "With $n = -1$ the rule gives $\\frac{x^{0}}{0}$, division by zero, so it does not apply",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "States $\\int \\frac{1}{x}\\,dx = \\ln|x| + c$",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: For n = −1 the formula would divide by n + 1 = 0, which is impossible, so the power rule excludes n = −1. Instead ∫ 1/x dx = ln|x| + c, because the derivative of ln x is 1/x."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The power rule covers every rational $n$ except $-1$; that gap is filled by the natural logarithm.",
+  "hints": [
+   "What is n + 1 when n = −1?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ }
+]

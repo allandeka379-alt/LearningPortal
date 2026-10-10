@@ -1,0 +1,1231 @@
+[
+ {
+  "key": "estimation.confidence-intervals.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A 95% confidence interval for a population mean $\\mu$ is calculated from a random sample. Which statement best describes what \"95% confidence\" means?",
+  "options": [
+   {
+    "key": "A",
+    "content": "In repeated sampling, about 95% of the intervals found would contain $\\mu$.",
+    "correct": true,
+    "rationale": "Correct: the 95% describes the long-run success rate of the method."
+   },
+   {
+    "key": "B",
+    "content": "About 95% of the individual sample values lie inside the interval.",
+    "rationale": "The interval estimates the mean; it does not contain 95% of individual values."
+   },
+   {
+    "key": "C",
+    "content": "The value of $\\mu$ varies, and lies in this interval 95% of the time.",
+    "rationale": "$\\mu$ is a fixed number; it is the interval that varies from sample to sample."
+   },
+   {
+    "key": "D",
+    "content": "The sample mean has a 95% chance of lying inside the interval.",
+    "rationale": "The sample mean is always at the centre of its own interval."
+   }
+  ],
+  "explanation": "A confidence interval is a random interval: before sampling, the probability that it will contain μ is 0.95. Once calculated, it either contains μ or it does not.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q02",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The heights of maize plants in a field are normally distributed with standard deviation 6 cm. A random sample of 36 plants has mean height 48.3 cm. Find a 95% confidence interval for the population mean height, giving the limits correct to 4 significant figures.",
+  "payload": {
+   "template": "{{blank:lo}} cm to {{blank:hi}} cm",
+   "blanks": [
+    {
+     "id": "lo",
+     "input": "number"
+    },
+    {
+     "id": "hi",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "lo",
+     "accepted": [
+      "46.34"
+     ],
+     "tolerance": 0.005
+    },
+    {
+     "id": "hi",
+     "accepted": [
+      "50.26"
+     ],
+     "tolerance": 0.005
+    }
+   ]
+  },
+  "explanation": "$48.3 \\pm 1.96 \\times \\frac{6}{\\sqrt{36}} = 48.3 \\pm 1.96$, giving $(46.34, 50.26)$. (Using 6 instead of $\\frac{6}{\\sqrt{36}}$ gives a far too wide interval, about $(36.5, 60.1)$.)",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "lo",
+     "text": "46.34"
+    },
+    {
+     "blankId": "hi",
+     "text": "50.26"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "lo",
+      "text": "38.5"
+     },
+     {
+      "blankId": "hi",
+      "text": "58.1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What value of z is used for a 90% confidence interval for a mean?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1.282",
+    "rationale": "$\\Phi(1.282) = 0.9$; that leaves 10% in one tail, for an 80% interval."
+   },
+   {
+    "key": "B",
+    "content": "1.96",
+    "rationale": "1.96 is used for a 95% interval."
+   },
+   {
+    "key": "C",
+    "content": "1.645",
+    "correct": true,
+    "rationale": "Correct: $\\Phi(1.645) = 0.95$, leaving 5% in each tail."
+   },
+   {
+    "key": "D",
+    "content": "2.576",
+    "rationale": "2.576 is used for a 99% interval."
+   }
+  ],
+  "explanation": "A 90% interval leaves 5% in each tail, so $z = \\Phi^{-1}(0.95) = 1.645$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The daily sales, $x$ litres, of milk at a dairy shop in Marondera are recorded on 80 randomly chosen days: $\\sum x = 2960$ and $\\sum x^2 = 112000$. Find a 99% confidence interval for the population mean daily sales, giving the limits correct to 3 significant figures.",
+  "payload": {
+   "template": "{{blank:lo}} litres to {{blank:hi}} litres",
+   "blanks": [
+    {
+     "id": "lo",
+     "input": "number"
+    },
+    {
+     "id": "hi",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "lo",
+     "accepted": [
+      "35.4"
+     ],
+     "tolerance": 0.05
+    },
+    {
+     "id": "hi",
+     "accepted": [
+      "38.6"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "$\\bar{x} = 37$, $s^2 = \\frac{1}{79}\\left(112000 - \\frac{2960^2}{80}\\right) = 31.39$. The sample is large, so by the central limit theorem: $37 \\pm 2.576\\sqrt{\\frac{31.39}{80}} = 37 \\pm 1.614$, giving $(35.4, 38.6)$. (1.96 gives the 95% interval.)",
+  "hints": [
+   "Estimate σ² with the divisor n − 1.",
+   "For 99%, z = 2.576."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "lo",
+     "text": "35.4"
+    },
+    {
+     "blankId": "hi",
+     "text": "38.6"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "lo",
+      "text": "35.8"
+     },
+     {
+      "blankId": "hi",
+      "text": "38.2"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "In a random sample of 240 voters in Masvingo, 84 said they listen to a particular radio station. Find an approximate 95% confidence interval for the proportion of all voters who listen to the station, giving the limits correct to 3 significant figures.",
+  "payload": {
+   "template": "{{blank:lo}} to {{blank:hi}}",
+   "blanks": [
+    {
+     "id": "lo",
+     "input": "number"
+    },
+    {
+     "id": "hi",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "lo",
+     "accepted": [
+      "0.290"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "hi",
+     "accepted": [
+      "0.410"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$\\hat{p} = \\frac{84}{240} = 0.35$. Standard error $\\sqrt{\\frac{0.35 \\times 0.65}{240}} = 0.03079$. Interval: $0.35 \\pm 1.96 \\times 0.03079 = 0.35 \\pm 0.06034$, giving $(0.290, 0.410)$.",
+  "hints": [
+   "Use $\\sqrt{\\frac{\\hat{p}(1 - \\hat{p})}{n}}$ for the standard error."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "lo",
+     "text": "0.290"
+    },
+    {
+     "blankId": "hi",
+     "text": "0.410"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "lo",
+      "text": "0.34"
+     },
+     {
+      "blankId": "hi",
+      "text": "0.36"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A population has standard deviation 5. Find the smallest sample size for which a 95% confidence interval for the population mean has a total width of at most 2.",
+  "answerSpec": {
+   "value": 97
+  },
+  "explanation": "Width $= 2 \\times 1.96 \\times \\frac{5}{\\sqrt{n}} \\le 2$, so $\\sqrt{n} \\ge 9.8$ and $n \\ge 96.04$. The smallest integer is $97$. (96 rounds down and gives a width just over 2; 25 leaves out the factor 1.96.)",
+  "workedSolution": "1. Width $= 2 \\times 1.96 \\times \\frac{5}{\\sqrt{n}} \\le 2$, so $\\sqrt{n} \\ge 9.8$ and $n \\ge 96.04$. The smallest integer is $97$. (96 rounds down and gives a width just over 2; 25 leaves out the factor 1.96.)",
+  "hints": [
+   "The width is twice 1.96σ/√n.",
+   "Round up."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "97"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "96"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "25"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A symmetric confidence interval for a population mean, using a known standard deviation of 5 and a sample of size 50, is $(73.62, 76.38)$. Find the confidence level of the interval, as a percentage correct to the nearest whole number.",
+  "answerSpec": {
+   "value": 94.90160396713601,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.5
+   }
+  },
+  "explanation": "Half-width $= 1.38 = z \\times \\frac{5}{\\sqrt{50}}$, so $z = 1.952$. Then $2\\Phi(1.95) - 1 = 0.9490$, a $95\\%$ confidence interval. ($\\Phi(z)$ alone, $97\\%$, forgets the second tail.)",
+  "workedSolution": "1. Half-width $= 1.38 = z \\times \\frac{5}{\\sqrt{50}}$, so $z = 1.952$. Then $2\\Phi(1.95) - 1 = 0.9490$, a $95\\%$ confidence interval. ($\\Phi(z)$ alone, $97\\%$, forgets the second tail.)",
+  "hints": [
+   "Find z from the half-width.",
+   "The level is the area between −z and z."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "95"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "97.450801983568"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "From the same sample, a 98% confidence interval for the mean is wider than a 90% confidence interval.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "A higher confidence level needs a larger z (2.326 instead of 1.645), so the interval must be wider to be more confident of containing μ.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If 20 separate 95% confidence intervals for a mean are calculated from independent random samples, on average 1 of them will not contain the population mean.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "Each interval misses $\\mu$ with probability 0.05, so the expected number of misses is $20 \\times 0.05 = 1$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A 95% confidence interval for a mean is calculated from a sample of size n. A second interval at the same level uses a sample of size 4n from the same population. How does the width of the second interval compare with the first (assuming the same standard deviation)?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It is a quarter as wide.",
+    "rationale": "The width depends on √n, not n."
+   },
+   {
+    "key": "B",
+    "content": "It is half as wide.",
+    "correct": true,
+    "rationale": "Correct: width is proportional to $\\frac{1}{\\sqrt{n}}$, and $\\sqrt{4} = 2$."
+   },
+   {
+    "key": "C",
+    "content": "It is twice as wide.",
+    "rationale": "Larger samples give narrower intervals."
+   },
+   {
+    "key": "D",
+    "content": "It is the same width.",
+    "rationale": "The width depends on the sample size through the standard error."
+   }
+  ],
+  "explanation": "Width $= 2z\\frac{\\sigma}{\\sqrt{n}}$, so quadrupling $n$ halves the width.",
+  "hints": [
+   "How does the width depend on n?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A 95% confidence interval for a population mean, calculated from a random sample of 25 observations from a normal population with known standard deviation $\\sigma$, is $(41.2, 46.8)$. Find the sample mean and $\\sigma$, giving $\\sigma$ correct to 3 significant figures.",
+  "payload": {
+   "template": "sample mean = {{blank:m}}, σ = {{blank:s}}",
+   "blanks": [
+    {
+     "id": "m",
+     "input": "number"
+    },
+    {
+     "id": "s",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "m",
+     "accepted": [
+      "44"
+     ],
+     "tolerance": 0.001
+    },
+    {
+     "id": "s",
+     "accepted": [
+      "7.14"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "The mean is the midpoint: $\\frac{41.2 + 46.8}{2} = 44$. Half-width $2.8 = 1.96 \\times \\frac{\\sigma}{5}$, so $\\sigma = \\frac{14}{1.96} = 7.143$, i.e. $7.14$. ($1.43$ forgets the $\\sqrt{25}$.)",
+  "hints": [
+   "The interval is symmetric about the sample mean.",
+   "Half-width = 1.96σ/√n."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "m",
+     "text": "44"
+    },
+    {
+     "blankId": "s",
+     "text": "7.14"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "m",
+      "text": "5.6"
+     },
+     {
+      "blankId": "s",
+      "text": "1.43"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A manufacturer claims that the mean lifetime of its batteries is 50 hours. A 95% confidence interval for the mean lifetime, from a random sample, is (46.1, 49.3) hours. What does the interval suggest?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The claim is supported, because 50 is close to the upper limit.",
+    "rationale": "Being close is not enough: 50 is outside the interval."
+   },
+   {
+    "key": "B",
+    "content": "The claim is proved false.",
+    "rationale": "A confidence interval gives evidence, not proof; there is a 5% risk with this method."
+   },
+   {
+    "key": "C",
+    "content": "Nothing, because the interval does not contain the sample mean.",
+    "rationale": "The sample mean (47.7) is the centre of the interval."
+   },
+   {
+    "key": "D",
+    "content": "The claim is doubtful, because 50 lies outside the interval.",
+    "correct": true,
+    "rationale": "Correct: all plausible values of the mean (at 95% confidence) are below 50 hours."
+   }
+  ],
+  "explanation": "A value outside a 95% confidence interval would be rejected by a two-tailed test at the 5% level.",
+  "hints": [
+   "Is 50 a plausible value of μ according to the interval?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A 95% confidence interval for the mean mass of a population was calculated from a sample of 60 items. The population distribution is unknown and $\\sigma$ was estimated from the sample. Explain why the central limit theorem was needed, and why it is valid here.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The population is not known to be normal, so the sample mean is not known to be exactly normal; the interval formula needs the sample mean to be (approximately) normal.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "n = 60 is large, so by the central limit theorem the sample mean is approximately normal (and s is a good estimate of σ).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The interval x̄ ± 1.96s/√n relies on the sample mean being normally distributed. The population distribution is unknown, so this needs the central limit theorem, which applies because the sample of 60 is large."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A normal population needs no central limit theorem; an unknown population needs a large sample.",
+  "hints": [
+   "What must be normal for the interval formula to work?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Two independent 95% confidence intervals for the same population mean are calculated. Find the probability that both intervals contain the population mean, correct to 4 decimal places.",
+  "answerSpec": {
+   "value": 0.9025,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "Each interval contains $\\mu$ with probability 0.95, independently: $0.95^2 = 0.9025$.",
+  "workedSolution": "1. Each interval contains $\\mu$ with probability 0.95, independently: $0.95^2 = 0.9025$.",
+  "hints": [
+   "Independent events: multiply."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.9025"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.95"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.9"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q15",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each confidence level with the value of z used in a two-sided confidence interval.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "90%"
+    },
+    {
+     "id": "L2",
+     "content": "95%"
+    },
+    {
+     "id": "L3",
+     "content": "98%"
+    },
+    {
+     "id": "L4",
+     "content": "99%"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "2.326"
+    },
+    {
+     "id": "R4",
+     "content": "2.576"
+    },
+    {
+     "id": "R1",
+     "content": "1.645"
+    },
+    {
+     "id": "R2",
+     "content": "1.96"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "For a $C\\%$ interval, $z = \\Phi^{-1}\\left(\\frac{1 + C/100}{2}\\right)$: e.g. 98% leaves 1% in each tail, $z = \\Phi^{-1}(0.99) = 2.326$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "estimation.confidence-intervals.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The journey times, $x$ minutes, of 50 randomly chosen kombi trips from the city centre of Harare to Chitungwiza give $\\sum x = 1215$ and $\\sum x^2 = 30150$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find unbiased estimates of the population mean and variance, giving the variance correct to 3 significant figures.",
+    "payload": {
+     "template": "mean = {{blank:m}} min, variance = {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "24.3"
+       ],
+       "tolerance": 0.001
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "12.8"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\bar{x} = 24.3$; $s^2 = \\frac{1}{49}\\left(30150 - \\frac{1215^2}{50}\\right) = \\frac{625.5}{49} = 12.77$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find a 95% confidence interval for the population mean journey time, giving the limits correct to 3 significant figures.",
+    "payload": {
+     "template": "{{blank:lo}} min to {{blank:hi}} min",
+     "blanks": [
+      {
+       "id": "lo",
+       "input": "number"
+      },
+      {
+       "id": "hi",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "lo",
+       "accepted": [
+        "23.3"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "hi",
+       "accepted": [
+        "25.3"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$24.3 \\pm 1.96\\sqrt{\\frac{12.77}{50}} = 24.3 \\pm 0.9903$: $(23.3, 25.3)$ minutes."
+   }
+  ],
+  "explanation": "Estimate the mean and variance from the sums, then use x̄ ± 1.96 s/√n (valid by the central limit theorem).",
+  "hints": [
+   "Divide by n − 1 for the variance.",
+   "Use the standard error s/√n."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "24.3"
+      },
+      {
+       "blankId": "v",
+       "text": "12.8"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "lo",
+       "text": "23.3"
+      },
+      {
+       "blankId": "hi",
+       "text": "25.3"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "1215"
+       },
+       {
+        "blankId": "v",
+        "text": "12.5"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "lo",
+        "text": "17.3"
+       },
+       {
+        "blankId": "hi",
+        "text": "31.3"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "estimation.confidence-intervals.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "A seed company tests a new maize variety. In a random sample of 400 plots in Mashonaland West, 156 plots produced more than 6 tonnes per hectare.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the sample proportion of plots producing more than 6 tonnes per hectare.",
+    "answerSpec": {
+     "value": 0.39,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\hat{p} = \\frac{156}{400} = 0.39$.",
+    "workedSolution": "1. $\\hat{p} = \\frac{156}{400} = 0.39$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find an approximate 90% confidence interval for the population proportion, giving the limits correct to 3 significant figures.",
+    "payload": {
+     "template": "{{blank:lo}} to {{blank:hi}}",
+     "blanks": [
+      {
+       "id": "lo",
+       "input": "number"
+      },
+      {
+       "id": "hi",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "lo",
+       "accepted": [
+        "0.350"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "hi",
+       "accepted": [
+        "0.430"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$0.39 \\pm 1.645\\sqrt{\\frac{0.39 \\times 0.61}{400}} = 0.39 \\pm 0.04012$: $(0.350, 0.430)$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the interval in (b) is only approximate.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The distribution of the sample proportion is approximated by a normal distribution (valid because n is large).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The standard error uses the estimate $\\hat{p}$ in place of the unknown $p$.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The number of successful plots is binomial; the interval uses a normal approximation to the distribution of $\\hat{p}$ (justified by the large sample), and the standard error uses $\\hat{p}$ instead of the unknown $p$."
+    },
+    "explanation": "Two sources of approximation: the normal model and the estimated standard error."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The company claims that 45% of plots will produce more than 6 tonnes per hectare. Does the 90% interval support this claim?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Yes, because 0.45 is close to 0.39.",
+      "rationale": "The interval, not closeness, decides plausibility."
+     },
+     {
+      "key": "B",
+      "content": "Yes, because the interval is only approximate.",
+      "rationale": "The approximation is good for n = 400."
+     },
+     {
+      "key": "C",
+      "content": "It cannot be judged from a confidence interval.",
+      "rationale": "Values outside the interval are not supported."
+     },
+     {
+      "key": "D",
+      "content": "No, because 0.45 lies above the upper limit of the interval.",
+      "correct": true,
+      "rationale": "Correct: 0.45 is not a plausible value at 90% confidence."
+     }
+    ],
+    "explanation": "The interval (0.350, 0.430) lies entirely below 0.45."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Using 0.39 as an estimate of the proportion, find the smallest sample size for which a 95% confidence interval would have a half-width of at most 0.03.",
+    "answerSpec": {
+     "value": 1016
+    },
+    "explanation": "$1.96\\sqrt{\\frac{0.39 \\times 0.61}{n}} \\le 0.03 \\Rightarrow n \\ge \\left(\\frac{1.96}{0.03}\\right)^2 \\times 0.2379 = 1015.46$, so $n = 1016$.",
+    "workedSolution": "1. $1.96\\sqrt{\\frac{0.39 \\times 0.61}{n}} \\le 0.03 \\Rightarrow n \\ge \\left(\\frac{1.96}{0.03}\\right)^2 \\times 0.2379 = 1015.46$, so $n = 1016$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The company takes 10 independent random samples and calculates a 90% confidence interval from each. Find the expected number of intervals that contain the true proportion, and explain what this tells you about a single interval.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Expected number = 10 × 0.9 = 9.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Each interval contains p with probability 0.9 (before the data are collected).",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A single calculated interval either contains p or does not; the 90% describes the method's long-run success rate.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each interval has probability 0.9 of containing p, so we expect 10 × 0.9 = 9 of them to contain it. For any single interval we cannot say whether it contains p; 90% is the proportion of such intervals that do in the long run."
+    },
+    "explanation": "Confidence describes the procedure, not one interval."
+   }
+  ],
+  "explanation": "Use p̂ ± z√(p̂(1 − p̂)/n), judge claims by whether they lie inside the interval, and solve for n by rounding up.",
+  "hints": [
+   "For 90%, z = 1.645.",
+   "Round the sample size up."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.39"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "lo",
+       "text": "0.350"
+      },
+      {
+       "blankId": "hi",
+       "text": "0.430"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "1016"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "156"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "lo",
+        "text": "0.342"
+       },
+       {
+        "blankId": "hi",
+        "text": "0.438"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1015"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

@@ -1,0 +1,1480 @@
+[
+ {
+  "key": "series.binomial-rational.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which is the expansion of $(1 + x)^{-1}$ for $|x| < 1$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$1 - x + x^2 - x^3 + \\cdots$",
+    "correct": true,
+    "rationale": "Correct: with $n = -1$ the coefficients are $1, -1, \\frac{(-1)(-2)}{2} = 1, \\frac{(-1)(-2)(-3)}{6} = -1, \\ldots$"
+   },
+   {
+    "key": "B",
+    "content": "$1 + x + x^2 + x^3 + \\cdots$",
+    "rationale": "This is $(1 - x)^{-1}$."
+   },
+   {
+    "key": "C",
+    "content": "$1 - x$",
+    "rationale": "For a negative index the series does not stop."
+   },
+   {
+    "key": "D",
+    "content": "$1 - x + 2x^2 - 6x^3 + \\cdots$",
+    "rationale": "The coefficients are divided by $2!$ and $3!$: $\\frac{(-1)(-2)}{2!} = 1$."
+   }
+  ],
+  "explanation": "$(1 + x)^{-1} = 1 - x + x^2 - x^3 + \\cdots$, a geometric series with ratio $-x$, valid for $|x| < 1$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For which values of $x$ is the expansion of $(1 - 3x)^{\\frac{1}{2}}$ in ascending powers of $x$ valid?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$|x| < 3$",
+    "rationale": "$|3x| < 1$ means $|x| < \\frac{1}{3}$, not 3."
+   },
+   {
+    "key": "B",
+    "content": "$|x| < 1$",
+    "rationale": "That is the range for $(1 + x)^n$; with $3x$ in the bracket the range shrinks."
+   },
+   {
+    "key": "C",
+    "content": "$x < \\frac{1}{3}$",
+    "rationale": "Large negative $x$ (e.g. $x = -1$) also makes $|3x| > 1$, so a lower limit is needed too."
+   },
+   {
+    "key": "D",
+    "content": "$|x| < \\frac{1}{3}$",
+    "correct": true,
+    "rationale": "Correct: the series for $(1 + u)^n$ needs $|u| < 1$, and here $u = -3x$."
+   }
+  ],
+  "explanation": "Valid for $|-3x| < 1$, i.e. $-\\frac{1}{3} < x < \\frac{1}{3}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q03",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Find the first three terms in the expansion of $(1 + x)^{\\frac{1}{2}}$ in ascending powers of $x$. Give coefficients as fractions or decimals.",
+  "payload": {
+   "template": "1 + {{blank:a}}x + {{blank:b}}x²",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "1/2",
+      "0.5"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "-1/8",
+      "-0.125"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$1 + \\frac{1}{2}x + \\frac{\\frac{1}{2}\\left(-\\frac{1}{2}\\right)}{2}x^2 = 1 + \\frac{1}{2}x - \\frac{1}{8}x^2$.",
+  "hints": [
+   "The $x^2$ coefficient is $\\frac{n(n - 1)}{2!}$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "1/2"
+    },
+    {
+     "blankId": "b",
+     "text": "-1/8"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "1"
+     },
+     {
+      "blankId": "b",
+      "text": "-0.25"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^2$ in the expansion of $(1 - 2x)^{-3}$.",
+  "answerSpec": {
+   "value": 24
+  },
+  "explanation": "$\\frac{(-3)(-4)}{2}(-2x)^2 = 6 \\times 4x^2 = 24x^2$.",
+  "workedSolution": "1. $\\frac{(-3)(-4)}{2}(-2x)^2 = 6 \\times 4x^2 = 24x^2$.",
+  "hints": [
+   "Square the whole term $(-2x)$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "24"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-24"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Find the first three terms of the expansion of $(1 + 4x)^{-\\frac{1}{2}}$ in ascending powers of $x$.",
+  "payload": {
+   "template": "1 + ({{blank:a}})x + ({{blank:b}})x²",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "-2"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "6"
+     ]
+    }
+   ]
+  },
+  "explanation": "$1 + \\left(-\\frac{1}{2}\\right)(4x) + \\frac{\\left(-\\frac{1}{2}\\right)\\left(-\\frac{3}{2}\\right)}{2}(4x)^2 = 1 - 2x + \\frac{3}{8} \\times 16x^2 = 1 - 2x + 6x^2$.",
+  "hints": [
+   "$(4x)^2 = 16x^2$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "-2"
+    },
+    {
+     "blankId": "b",
+     "text": "6"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "2"
+     },
+     {
+      "blankId": "b",
+      "text": "1.5"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^3$ in the expansion of $(2 + x)^{-2}$. Give your answer as a fraction or decimal.",
+  "answerSpec": {
+   "value": -0.125,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$(2 + x)^{-2} = \\frac{1}{4}\\left(1 + \\frac{x}{2}\\right)^{-2}$. The $x^3$ coefficient of $(1 + u)^{-2}$ is $\\frac{(-2)(-3)(-4)}{6} = -4$; with $u = \\frac{x}{2}$ it becomes $-4 \\times \\frac{1}{8} = -\\frac{1}{2}$, and multiplying by $\\frac{1}{4}$ gives $-\\frac{1}{8}$.",
+  "workedSolution": "1. $(2 + x)^{-2} = \\frac{1}{4}\\left(1 + \\frac{x}{2}\\right)^{-2}$. The $x^3$ coefficient of $(1 + u)^{-2}$ is $\\frac{(-2)(-3)(-4)}{6} = -4$; with $u = \\frac{x}{2}$ it becomes $-4 \\times \\frac{1}{8} = -\\frac{1}{2}$, and multiplying by $\\frac{1}{4}$ gives $-\\frac{1}{8}$.",
+  "hints": [
+   "Take out $2^{-2} = \\frac{1}{4}$ first."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-0.125"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-0.5"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Find the first three terms of the expansion of $(8 + x)^{\\frac{1}{3}}$ in ascending powers of $x$, and state the range of validity. Give coefficients as fractions.",
+  "payload": {
+   "template": "Expansion: ({{blank:a}}) + {{blank:b}}x + ({{blank:c}})x², valid for |x| < {{blank:d}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "d",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "1/12",
+      "0.08333"
+     ],
+     "tolerance": 0.00005
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "-1/288",
+      "-0.003472"
+     ],
+     "tolerance": 0.000005
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "8"
+     ]
+    }
+   ]
+  },
+  "explanation": "$(8 + x)^{\\frac{1}{3}} = 2\\left(1 + \\frac{x}{8}\\right)^{\\frac{1}{3}} = 2\\left(1 + \\frac{1}{3} \\cdot \\frac{x}{8} + \\frac{\\frac{1}{3}\\left(-\\frac{2}{3}\\right)}{2}\\cdot\\frac{x^2}{64}\\right) = 2 + \\frac{x}{12} - \\frac{x^2}{288}$. Valid for $\\left|\\frac{x}{8}\\right| < 1$, i.e. $|x| < 8$.",
+  "hints": [
+   "$8^{\\frac{1}{3}} = 2$.",
+   "$\\frac{\\frac{1}{3}\\left(-\\frac{2}{3}\\right)}{2} = -\\frac{1}{9}$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "2"
+    },
+    {
+     "blankId": "b",
+     "text": "1/12"
+    },
+    {
+     "blankId": "c",
+     "text": "-1/288"
+    },
+    {
+     "blankId": "d",
+     "text": "8"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "8"
+     },
+     {
+      "blankId": "b",
+      "text": "1/24"
+     },
+     {
+      "blankId": "c",
+      "text": "-1/576"
+     },
+     {
+      "blankId": "d",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For which values of $x$ is the expansion of $(3 - 2x)^{-1}$ in ascending powers of $x$ valid?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$|x| < \\frac{2}{3}$",
+    "rationale": "The fraction is upside down: $\\left|\\frac{2x}{3}\\right| < 1$ gives $|x| < \\frac{3}{2}$."
+   },
+   {
+    "key": "B",
+    "content": "$|x| < 3$",
+    "rationale": "The coefficient 2 of $x$ has been ignored."
+   },
+   {
+    "key": "C",
+    "content": "$|x| < \\frac{3}{2}$",
+    "correct": true,
+    "rationale": "Correct: $(3 - 2x)^{-1} = \\frac{1}{3}\\left(1 - \\frac{2x}{3}\\right)^{-1}$, valid for $\\left|\\frac{2x}{3}\\right| < 1$."
+   },
+   {
+    "key": "D",
+    "content": "$|x| < \\frac{1}{2}$",
+    "rationale": "The constant 3 must be taken out first; it changes the range."
+   }
+  ],
+  "explanation": "$(a + bx)^n$ is valid for $|x| < \\left|\\frac{a}{b}\\right| = \\frac{3}{2}$.",
+  "hints": [
+   "Take the constant 3 out of the bracket first."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use the first three terms of the expansion of $(1 + x)^{\\frac{1}{2}}$ with $x = 0.02$ to estimate $\\sqrt{1.02}$. Give the value of your estimate to 5 decimal places.",
+  "answerSpec": {
+   "value": 1.00995,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.000005
+   }
+  },
+  "explanation": "$1 + \\frac{1}{2}(0.02) - \\frac{1}{8}(0.02)^2 = 1 + 0.01 - 0.00005 = 1.00995$. (Calculator: $1.009950$.)",
+  "workedSolution": "1. $1 + \\frac{1}{2}(0.02) - \\frac{1}{8}(0.02)^2 = 1 + 0.01 - 0.00005 = 1.00995$. (Calculator: $1.009950$.)",
+  "hints": [
+   "$(1 + x)^{\\frac{1}{2}} \\approx 1 + \\frac{1}{2}x - \\frac{1}{8}x^2$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1.00995"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.01"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.0102"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Substituting $x = 2$ into the series $1 - x + x^2 - x^3 + \\cdots$ gives the value of $(1 + x)^{-1} = \\frac{1}{3}$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "The series is valid only for $|x| < 1$. With $x = 2$ it becomes $1 - 2 + 4 - 8 + \\cdots$, which does not converge.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The expansion of $(1 + ax)^n$ in ascending powers of $x$ begins $1 + 6x + 27x^2$. Find $n$ and $a$.",
+  "payload": {
+   "template": "n = {{blank:n}}, a = {{blank:a}}",
+   "blanks": [
+    {
+     "id": "n",
+     "input": "number"
+    },
+    {
+     "id": "a",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "n",
+     "accepted": [
+      "-2"
+     ]
+    },
+    {
+     "id": "a",
+     "accepted": [
+      "-3"
+     ]
+    }
+   ]
+  },
+  "explanation": "$na = 6$ and $\\frac{n(n - 1)}{2}a^2 = 27$. Then $\\frac{6(n - 1)a}{2} = 27$, so $(n - 1)a = 9$, i.e. $na - a = 9$: $6 - a = 9$, $a = -3$, $n = -2$. Check: $(1 - 3x)^{-2} = 1 + 6x + 27x^2 + \\cdots$",
+  "hints": [
+   "Replace $na$ by 6 in the second equation."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "n",
+     "text": "-2"
+    },
+    {
+     "blankId": "a",
+     "text": "-3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "n",
+      "text": "2"
+     },
+     {
+      "blankId": "a",
+      "text": "3"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the coefficient of $x^2$ in the expansion of $\\dfrac{1 + x}{(1 - 2x)^2}$ in ascending powers of $x$.",
+  "answerSpec": {
+   "value": 16
+  },
+  "explanation": "$(1 - 2x)^{-2} = 1 + 4x + 12x^2 + \\cdots$. Multiplying by $(1 + x)$: $x^2$ coefficient $= 12 + 4 = 16$.",
+  "workedSolution": "1. $(1 - 2x)^{-2} = 1 + 4x + 12x^2 + \\cdots$. Multiplying by $(1 + x)$: $x^2$ coefficient $= 12 + 4 = 16$.",
+  "hints": [
+   "Write $\\frac{1}{(1 - 2x)^2}$ as $(1 - 2x)^{-2}$ and expand."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "16"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "12"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "20"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q13",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Show that, for small $x$, $\\sqrt{\\dfrac{1 + x}{1 - x}} \\approx 1 + x + \\frac{1}{2}x^2$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 writes the expression as $(1 + x)^{\\frac{1}{2}}(1 - x)^{-\\frac{1}{2}}$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A1 $(1 + x)^{\\frac{1}{2}} \\approx 1 + \\frac{1}{2}x - \\frac{1}{8}x^2$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 $(1 - x)^{-\\frac{1}{2}} \\approx 1 + \\frac{1}{2}x + \\frac{3}{8}x^2$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 multiplies, collecting $x^2$: $\\frac{3}{8} + \\frac{1}{4} - \\frac{1}{8} = \\frac{1}{2}$, giving $1 + x + \\frac{1}{2}x^2$.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n\\sqrt{\\frac{1 + x}{1 - x}} = (1 + x)^{\\frac{1}{2}}(1 - x)^{-\\frac{1}{2}}\n$$\n\n$$\n(1 + x)^{\\frac{1}{2}} = 1 + \\frac{1}{2}x - \\frac{1}{8}x^2 + \\cdots \\qquad (1 - x)^{-\\frac{1}{2}} = 1 + \\frac{1}{2}x + \\frac{3}{8}x^2 + \\cdots\n$$\n\n$$\n\\left(1 + \\frac{1}{2}x - \\frac{1}{8}x^2\\right)\\left(1 + \\frac{1}{2}x + \\frac{3}{8}x^2\\right) = 1 + x + \\left(\\frac{3}{8} + \\frac{1}{4} - \\frac{1}{8}\\right)x^2 + \\cdots = 1 + x + \\frac{1}{2}x^2 + \\cdots\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Split the square root into two binomial expansions and multiply, ignoring powers above x².",
+  "hints": [
+   "$\\frac{\\left(-\\frac{1}{2}\\right)\\left(-\\frac{3}{2}\\right)}{2} = \\frac{3}{8}$."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Expand $(2 - x)^{-1}$ in ascending powers of $x$ up to and including the term in $x^2$. Type fractions with /, e.g. 1/3+x/9+x^2/27.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "1/2+x/4+x^2/8"
+    },
+    {
+     "value": "1/2+1/4x+1/8x^2"
+    },
+    {
+     "value": "0.5+0.25x+0.125x^2"
+    },
+    {
+     "value": "1/2+(1/4)x+(1/8)x^2"
+    },
+    {
+     "value": "1/2+x/4+(x^2)/8"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$(2 - x)^{-1} = \\frac{1}{2}\\left(1 - \\frac{x}{2}\\right)^{-1} = \\frac{1}{2}\\left(1 + \\frac{x}{2} + \\frac{x^2}{4}\\right) = \\frac{1}{2} + \\frac{x}{4} + \\frac{x^2}{8}$, valid for $|x| < 2$.",
+  "hints": [
+   "Take out $2^{-1}$ first."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "1/2+x/4+x^2/8"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1/2-x/4+x^2/8"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1+x/2+x^2/4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q15",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each expression with the range of x for which its binomial expansion is valid.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$(1 + 2x)^{-1}$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\left(1 - \\frac{x}{3}\\right)^{\\frac{1}{2}}$"
+    },
+    {
+     "id": "L3",
+     "content": "$(4 + x)^{-2}$"
+    },
+    {
+     "id": "L4",
+     "content": "$(1 - 5x)^{\\frac{1}{3}}$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$|x| < 4$"
+    },
+    {
+     "id": "R4",
+     "content": "$|x| < \\frac{1}{5}$"
+    },
+    {
+     "id": "R1",
+     "content": "$|x| < \\frac{1}{2}$"
+    },
+    {
+     "id": "R2",
+     "content": "$|x| < 3$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "$(1 + bx)^n$ is valid for $|x| < \\frac{1}{|b|}$; $(4 + x)^{-2} = \\frac{1}{16}\\left(1 + \\frac{x}{4}\\right)^{-2}$, valid for $|x| < 4$.",
+  "hints": [
+   "Make the constant in the bracket 1 first."
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q16",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given that $f(x) = \\dfrac{2}{1 + x} - \\dfrac{1}{1 - 3x}$, what is the coefficient of $x^2$ in the expansion of $f(x)$ in ascending powers of $x$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "11",
+    "rationale": "This adds $9$ instead of subtracting the second fraction."
+   },
+   {
+    "key": "B",
+    "content": "−7",
+    "correct": true,
+    "rationale": "Correct: $\\frac{2}{1 + x}$ gives $2x^2$ and $\\frac{1}{1 - 3x}$ gives $9x^2$; $2 - 9 = -7$."
+   },
+   {
+    "key": "C",
+    "content": "−1",
+    "rationale": "This uses $3x^2$ instead of $(3x)^2 = 9x^2$ in the second expansion."
+   },
+   {
+    "key": "D",
+    "content": "−5",
+    "rationale": "$-5$ is the coefficient of $x$: $-2 - 3$."
+   }
+  ],
+  "explanation": "$\\frac{2}{1 + x} = 2 - 2x + 2x^2 - \\cdots$ and $\\frac{1}{1 - 3x} = 1 + 3x + 9x^2 + \\cdots$. So $f(x) = 1 - 5x - 7x^2 + \\cdots$, valid for $|x| < \\frac{1}{3}$.",
+  "hints": [
+   "Expand each fraction separately, then subtract."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Explain why $(2 + x)^{-1}$ must be rewritten before using the series for $(1 + x)^n$, and state the range of validity of its expansion.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The series is for $(1 + x)^n$; the bracket must start with 1, so write $(2 + x)^{-1} = \\frac{1}{2}\\left(1 + \\frac{x}{2}\\right)^{-1}$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Valid for $\\left|\\frac{x}{2}\\right| < 1$, i.e. $|x| < 2$.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The binomial series applies to (1 + u)ⁿ, so take 2 out: (2 + x)⁻¹ = 2⁻¹(1 + x/2)⁻¹. The series in u = x/2 converges for |u| < 1, so the expansion is valid for −2 < x < 2."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Take the constant out as aⁿ, then the range comes from |bx/a| < 1.",
+  "hints": [
+   "What must the first term inside the bracket be?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "series.binomial-rational.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "Let $f(x) = \\dfrac{8 - x}{(2 - x)(1 + x)}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Express $f(x)$ in the form $\\dfrac{A}{2 - x} + \\dfrac{B}{1 + x}$.",
+    "payload": {
+     "template": "A = {{blank:A}}, B = {{blank:B}}",
+     "blanks": [
+      {
+       "id": "A",
+       "input": "number"
+      },
+      {
+       "id": "B",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "A",
+       "accepted": [
+        "2"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "B",
+       "accepted": [
+        "3"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "$8 - x = A(1 + x) + B(2 - x)$. $x = 2$: $6 = 3A$, $A = 2$. $x = -1$: $9 = 3B$, $B = 3$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence expand f(x) in ascending powers of x, up to and including the term in x². Give coefficients as decimals or fractions.",
+    "payload": {
+     "template": "f(x) ≈ ({{blank:a}}) + ({{blank:b}})x + ({{blank:c}})x²",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "4"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-2.5",
+        "-5/2"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "3.25",
+        "13/4"
+       ],
+       "marks": 2,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$\\frac{2}{2 - x} = \\left(1 - \\frac{x}{2}\\right)^{-1} = 1 + \\frac{x}{2} + \\frac{x^2}{4}$; $\\frac{3}{1 + x} = 3 - 3x + 3x^2$. Sum: $4 - \\frac{5}{2}x + \\frac{13}{4}x^2$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the set of values of x for which the expansion is valid.",
+    "payload": {
+     "template": "|x| < {{blank:k}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "1"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "$\\frac{2}{2 - x}$ needs $|x| < 2$ and $\\frac{3}{1 + x}$ needs $|x| < 1$; both hold for $|x| < 1$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Use your expansion to estimate f(0.1), giving the value of the estimate to 4 decimal places.",
+    "answerSpec": {
+     "value": 3.7825,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$4 - 0.25 + 0.0325 = 3.7825$. (The exact value $\\frac{7.9}{1.9 \\times 1.1} = 3.7799$; the difference comes from the neglected $x^3$ and higher terms.)",
+    "workedSolution": "1. $4 - 0.25 + 0.0325 = 3.7825$. (The exact value $\\frac{7.9}{1.9 \\times 1.1} = 3.7799$; the difference comes from the neglected $x^3$ and higher terms.)"
+   }
+  ],
+  "explanation": "Split into partial fractions, expand each with the binomial series, add, and take the narrower range of validity.",
+  "hints": [
+   "$\\frac{2}{2 - x} = \\left(1 - \\frac{x}{2}\\right)^{-1}$.",
+   "The combined expansion is valid where both parts are valid."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "A",
+       "text": "2"
+      },
+      {
+       "blankId": "B",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "4"
+      },
+      {
+       "blankId": "b",
+       "text": "-2.5"
+      },
+      {
+       "blankId": "c",
+       "text": "3.25"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "1"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "3.7825"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "A",
+        "text": "3"
+       },
+       {
+        "blankId": "B",
+        "text": "2"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "5"
+       },
+       {
+        "blankId": "b",
+        "text": "3.5"
+       },
+       {
+        "blankId": "c",
+        "text": "3.5"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "2"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "3.75"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "series.binomial-rational.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 5,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "This question is about the expansion of $\\sqrt{1 - 8x}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Expand √(1 − 8x) in ascending powers of x, up to and including the term in x³.",
+    "payload": {
+     "template": "1 + ({{blank:a}})x + ({{blank:b}})x² + ({{blank:c}})x³",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-4"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-8"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-32"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "$1 + \\frac{1}{2}(-8x) + \\frac{\\frac{1}{2}\\left(-\\frac{1}{2}\\right)}{2}(64x^2) + \\frac{\\frac{1}{2}\\left(-\\frac{1}{2}\\right)\\left(-\\frac{3}{2}\\right)}{6}(-512x^3) = 1 - 4x - 8x^2 - 32x^3$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 1,
+    "stem": "State the range of values of x for which the expansion is valid.",
+    "payload": {
+     "template": "|x| < {{blank:k}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "1/8",
+        "0.125"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$|8x| < 1$, i.e. $|x| < \\frac{1}{8}$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that substituting $x = \\frac{1}{100}$ gives $\\sqrt{0.92}$, and that $\\sqrt{23} = 5\\sqrt{0.92}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 $1 - 8 \\times \\frac{1}{100} = 0.92$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 $0.92 = \\frac{92}{100} = \\frac{4 \\times 23}{100}$, so $\\sqrt{0.92} = \\frac{2\\sqrt{23}}{10} = \\frac{\\sqrt{23}}{5}$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 hence $\\sqrt{23} = 5\\sqrt{0.92}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n1 - 8\\left(\\frac{1}{100}\\right) = 0.92 \\qquad \\sqrt{0.92} = \\sqrt{\\frac{92}{100}} = \\frac{\\sqrt{4 \\times 23}}{10} = \\frac{2\\sqrt{23}}{10} = \\frac{\\sqrt{23}}{5}\n$$\n\nSo $\\sqrt{23} = 5\\sqrt{0.92}$."
+    },
+    "explanation": "92 = 4 × 23, so the square root of 4 comes out."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Hence estimate √23, giving the value of your estimate to 5 decimal places.",
+    "answerSpec": {
+     "value": 4.795839999999999,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.000005
+     }
+    },
+    "explanation": "$\\sqrt{0.92} \\approx 1 - 0.04 - 0.0008 - 0.000032 = 0.959168$, so $\\sqrt{23} \\approx 5 \\times 0.959168 = 4.79584$. (Calculator: $4.795832$.)",
+    "workedSolution": "1. $\\sqrt{0.92} \\approx 1 - 0.04 - 0.0008 - 0.000032 = 0.959168$, so $\\sqrt{23} \\approx 5 \\times 0.959168 = 4.79584$. (Calculator: $4.795832$.)"
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why $x = \\frac{1}{100}$ is a suitable value to use, and why $x = \\frac{1}{10}$ could not be used to estimate $\\sqrt{0.2}$ in the same way.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$\\frac{1}{100}$ is well inside $|x| < \\frac{1}{8}$, so the terms shrink quickly and four terms are accurate.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "$x = \\frac{1}{10}$ is close to the edge ($\\frac{1}{10} < \\frac{1}{8}$ but only just), so the terms shrink slowly ($8x = 0.8$) and four terms give a poor estimate.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: With x = 1/100, 8x = 0.08, so each term is under a tenth of the one before and the neglected terms are tiny. With x = 1/10, 8x = 0.8: the series still converges, but very slowly, so four terms (1 − 0.4 − 0.08 − 0.032 = 0.488) are far from √0.2 = 0.447."
+    }
+   }
+  ],
+  "explanation": "Expand with u = −8x, choose x so that 1 − 8x is a convenient number, and keep x well inside the range of validity.",
+  "hints": [
+   "Every power of $(-8x)$ must be bracketed.",
+   "92 = 4 × 23."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-4"
+      },
+      {
+       "blankId": "b",
+       "text": "-8"
+      },
+      {
+       "blankId": "c",
+       "text": "-32"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "1/8"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "4.79584"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "4"
+       },
+       {
+        "blankId": "b",
+        "text": "8"
+       },
+       {
+        "blankId": "c",
+        "text": "32"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "8"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "4.8"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

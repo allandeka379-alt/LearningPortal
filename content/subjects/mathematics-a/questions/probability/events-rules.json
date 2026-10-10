@@ -1,0 +1,1378 @@
+[
+ {
+  "key": "probability.events-rules.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Events $A$ and $B$ are mutually exclusive. Which statement must be true?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\mathrm{P}(A \\cap B) = 0$",
+    "correct": true,
+    "rationale": "Correct: mutually exclusive events cannot happen together."
+   },
+   {
+    "key": "B",
+    "content": "$\\mathrm{P}(A) + \\mathrm{P}(B) = 1$",
+    "rationale": "That describes exclusive events that are also exhaustive, which is not given."
+   },
+   {
+    "key": "C",
+    "content": "$\\mathrm{P}(A \\cap B) = \\mathrm{P}(A)\\,\\mathrm{P}(B)$",
+    "rationale": "That is the condition for independence, a different idea."
+   },
+   {
+    "key": "D",
+    "content": "$\\mathrm{P}(A) = \\mathrm{P}(B)$",
+    "rationale": "Exclusive events can have any probabilities."
+   }
+  ],
+  "explanation": "Mutually exclusive means no outcome is in both events, so $\\mathrm{P}(A \\cap B) = 0$ and $\\mathrm{P}(A \\cup B) = \\mathrm{P}(A) + \\mathrm{P}(B)$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Two fair six-sided dice are thrown. Find the probability that the total score is 9. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.1111111111111111,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "A total of 9 comes from $(3, 6), (4, 5), (5, 4), (6, 3)$: 4 of the 36 equally likely outcomes, so $\\mathrm{P} = \\frac{4}{36} = \\frac{1}{9}$. ($\\frac{1}{11}$ wrongly treats the 11 totals 2 to 12 as equally likely.)",
+  "workedSolution": "1. A total of 9 comes from $(3, 6), (4, 5), (5, 4), (6, 3)$: 4 of the 36 equally likely outcomes, so $\\mathrm{P} = \\frac{4}{36} = \\frac{1}{9}$. ($\\frac{1}{11}$ wrongly treats the 11 totals 2 to 12 as equally likely.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.111"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.09090909090909091"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.08333333333333333"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Two fair six-sided dice are thrown and the (positive) difference between the scores is recorded. Find the probability that the difference is at least 3. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.3333333333333333,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Difference 3: 6 outcomes; 4: 4 outcomes; 5: 2 outcomes. That is $12$ of $36$, so $\\mathrm{P} = \\frac{12}{36} = \\frac{1}{3}$. (A difference table, 6 by 6, makes the count easy.)",
+  "workedSolution": "1. Difference 3: 6 outcomes; 4: 4 outcomes; 5: 2 outcomes. That is $12$ of $36$, so $\\mathrm{P} = \\frac{12}{36} = \\frac{1}{3}$. (A difference table, 6 by 6, makes the count easy.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.333"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.16666666666666666"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For events $A$ and $B$, $\\mathrm{P}(A) = 0.45$, $\\mathrm{P}(B) = 0.3$ and $\\mathrm{P}(A \\cap B) = 0.12$. Find $\\mathrm{P}(A \\cup B)$.",
+  "answerSpec": {
+   "value": 0.63,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(A \\cup B) = \\mathrm{P}(A) + \\mathrm{P}(B) - \\mathrm{P}(A \\cap B) = 0.45 + 0.3 - 0.12 = 0.63$. (0.75 forgets to subtract the overlap, which has been counted twice.)",
+  "workedSolution": "1. $\\mathrm{P}(A \\cup B) = \\mathrm{P}(A) + \\mathrm{P}(B) - \\mathrm{P}(A \\cap B) = 0.45 + 0.3 - 0.12 = 0.63$. (0.75 forgets to subtract the overlap, which has been counted twice.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.630"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.75"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.87"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "In a group of 40 learners at a school in Mutare, 22 play football, 15 do athletics and 7 do both. Fill in the numbers for the regions of a Venn diagram.",
+  "payload": {
+   "template": "football only {{blank:a}}; athletics only {{blank:b}}; both {{blank:c}}; neither {{blank:d}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "d",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "15"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "8"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "7"
+     ]
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "10"
+     ]
+    }
+   ]
+  },
+  "explanation": "Start with the intersection, 7. Football only $22 - 7 = 15$; athletics only $15 - 7 = 8$; neither $40 - (15 + 7 + 8) = 10$. (3 for \"neither\" comes from $40 - 22 - 15$, which subtracts the 7 twice.)",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "15"
+    },
+    {
+     "blankId": "b",
+     "text": "8"
+    },
+    {
+     "blankId": "c",
+     "text": "7"
+    },
+    {
+     "blankId": "d",
+     "text": "10"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "22"
+     },
+     {
+      "blankId": "b",
+      "text": "15"
+     },
+     {
+      "blankId": "c",
+      "text": "0"
+     },
+     {
+      "blankId": "d",
+      "text": "3"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Using the group of 40 learners above (22 play football, 15 do athletics, 7 do both), one learner is chosen at random. Find the probability that the learner does exactly one of the two sports. Give your answer as a fraction or a decimal.",
+  "answerSpec": {
+   "value": 0.575,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Exactly one sport: football only (15) plus athletics only (8) $= 23$. $\\mathrm{P} = \\frac{23}{40} = 0.575$. ($\\frac{30}{40}$ includes the 7 who do both.)",
+  "workedSolution": "1. Exactly one sport: football only (15) plus athletics only (8) $= 23$. $\\mathrm{P} = \\frac{23}{40} = 0.575$. ($\\frac{30}{40}$ includes the 7 who do both.)",
+  "hints": [
+   "Draw the Venn diagram first: start with the 7 in the overlap."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.575"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.75"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.925"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A fair six-sided die is thrown once. Which pair of events is mutually exclusive but NOT exhaustive?",
+  "options": [
+   {
+    "key": "A",
+    "content": "'a score of 1' and 'a score of 6'",
+    "correct": true,
+    "rationale": "Correct: they cannot both happen, but a score of 2 to 5 is neither."
+   },
+   {
+    "key": "B",
+    "content": "'an odd score' and 'an even score'",
+    "rationale": "These are exclusive and also exhaustive: every score is odd or even."
+   },
+   {
+    "key": "C",
+    "content": "'a score below 4' and 'a score above 2'",
+    "rationale": "A score of 3 is in both, so they are not exclusive."
+   },
+   {
+    "key": "D",
+    "content": "'a prime score' and 'an even score'",
+    "rationale": "A score of 2 is prime and even, so they are not exclusive."
+   }
+  ],
+  "explanation": "Exclusive: no common outcome. Exhaustive: together they include every outcome.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A fair spinner numbered 1 to 5 and a fair spinner numbered 1 to 4 are spun, and the two scores are multiplied. Find the probability that the product is odd. Give your answer as a fraction or a decimal.",
+  "answerSpec": {
+   "value": 0.3,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "The product is odd only when both scores are odd: 3 odd scores on the first spinner and 2 on the second give $3 \\times 2 = 6$ of the $5 \\times 4 = 20$ outcomes. $\\mathrm{P} = \\frac{6}{20} = 0.3$.",
+  "workedSolution": "1. The product is odd only when both scores are odd: 3 odd scores on the first spinner and 2 on the second give $3 \\times 2 = 6$ of the $5 \\times 4 = 20$ outcomes. $\\mathrm{P} = \\frac{6}{20} = 0.3$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.300"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.25"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A bag contains 6 green and 4 yellow counters. Four counters are taken at random, without replacement. Find the probability that exactly two of them are green. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.42857142857142855,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P} = \\dfrac{{}^6C_2 \\times {}^4C_2}{{}^{10}C_4} = \\dfrac{15 \\times 6}{210} = \\dfrac{90}{210} = \\dfrac{3}{7} \\approx 0.429$. (0.3456 is the with-replacement binomial answer $6 \\times 0.6^2 \\times 0.4^2$.)",
+  "workedSolution": "1. $\\mathrm{P} = \\dfrac{{}^6C_2 \\times {}^4C_2}{{}^{10}C_4} = \\dfrac{15 \\times 6}{210} = \\dfrac{90}{210} = \\dfrac{3}{7} \\approx 0.429$. (0.3456 is the with-replacement binomial answer $6 \\times 0.6^2 \\times 0.4^2$.)",
+  "hints": [
+   "Count the selections with exactly two green, then divide by all selections of 4 from 10."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.429"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.3456"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "From the same bag (6 green and 4 yellow counters), four counters are taken at random without replacement. Find the probability that at least one of them is yellow. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.9285714285714286,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(\\text{no yellow}) = \\frac{{}^6C_4}{{}^{10}C_4} = \\frac{15}{210} = \\frac{1}{14}$, so $\\mathrm{P}(\\text{at least one yellow}) = 1 - \\frac{1}{14} = \\frac{13}{14} \\approx 0.929$. (0.870 assumes replacement.)",
+  "workedSolution": "1. $\\mathrm{P}(\\text{no yellow}) = \\frac{{}^6C_4}{{}^{10}C_4} = \\frac{15}{210} = \\frac{1}{14}$, so $\\mathrm{P}(\\text{at least one yellow}) = 1 - \\frac{1}{14} = \\frac{13}{14} \\approx 0.929$. (0.870 assumes replacement.)",
+  "hints": [
+   "Use the complement: at least one yellow = 1 − P(no yellow)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.929"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.8704000000000001"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The letters of the word MUTARE are arranged in a random order. Find the probability that the three vowels are all next to each other. Give your answer as a fraction or a decimal.",
+  "answerSpec": {
+   "value": 0.2,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Treat U, A, E as one block: the block and M, T, R give $4!$ arrangements, and the vowels can be ordered inside the block in $3!$ ways. $\\mathrm{P} = \\frac{4! \\times 3!}{6!} = \\frac{144}{720} = \\frac{1}{5}$. ($\\frac{1}{30}$ forgets the $3!$ inside the block.)",
+  "workedSolution": "1. Treat U, A, E as one block: the block and M, T, R give $4!$ arrangements, and the vowels can be ordered inside the block in $3!$ ways. $\\mathrm{P} = \\frac{4! \\times 3!}{6!} = \\frac{144}{720} = \\frac{1}{5}$. ($\\frac{1}{30}$ forgets the $3!$ inside the block.)",
+  "hints": [
+   "Glue the vowels together and count arrangements of 4 items.",
+   "Remember the vowels can be arranged inside their block."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.200"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.03333333333333333"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.05"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "When two fair dice are thrown, each of the totals 2, 3, 4, …, 12 is equally likely.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "The 36 ordered pairs are equally likely, not the 11 totals: a total of 7 can happen in 6 ways but a total of 2 in only 1 way, so $\\mathrm{P}(7) = \\frac{6}{36}$ and $\\mathrm{P}(2) = \\frac{1}{36}$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q13",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $\\mathrm{P}(A) = 0.6$ and $\\mathrm{P}(B) = 0.7$, then $A$ and $B$ cannot be mutually exclusive.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "If they were exclusive, $\\mathrm{P}(A \\cup B) = 0.6 + 0.7 = 1.3 > 1$, which is impossible. In fact $\\mathrm{P}(A \\cap B) \\ge 0.6 + 0.7 - 1 = 0.3$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each term with its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "sample space"
+    },
+    {
+     "id": "L2",
+     "content": "event"
+    },
+    {
+     "id": "L3",
+     "content": "complement of A"
+    },
+    {
+     "id": "L4",
+     "content": "exhaustive events"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "all the outcomes that are not in A"
+    },
+    {
+     "id": "R4",
+     "content": "events that together include every possible outcome"
+    },
+    {
+     "id": "R1",
+     "content": "the set of all possible outcomes of an experiment"
+    },
+    {
+     "id": "R2",
+     "content": "a set of outcomes, such as 'an even score'"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The sample space $S$ lists all outcomes; an event is a subset of $S$; $A'$ is everything in $S$ outside $A$; exhaustive events cover $S$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For two events, $\\mathrm{P}(A) = 0.5$, $\\mathrm{P}(B) = 0.4$ and $\\mathrm{P}(A \\cup B) = 0.7$. Find $\\mathrm{P}(A' \\cap B')$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "0.2",
+    "rationale": "$0.2$ is $\\mathrm{P}(A \\cap B) = 0.5 + 0.4 - 0.7$, the overlap, not the outside region."
+   },
+   {
+    "key": "B",
+    "content": "0.3",
+    "correct": true,
+    "rationale": "Correct: neither $A$ nor $B$ is the complement of $A \\cup B$: $1 - 0.7$."
+   },
+   {
+    "key": "C",
+    "content": "0.1",
+    "rationale": "This subtracts $\\mathrm{P}(A) + \\mathrm{P}(B)$ from 1 and adds nothing back: $1 - 0.9$."
+   },
+   {
+    "key": "D",
+    "content": "0.6",
+    "rationale": "$0.6$ is $\\mathrm{P}(A')$ plus $\\mathrm{P}(B')$ halved; it is not a region of the diagram."
+   }
+  ],
+  "explanation": "$A' \\cap B'$ is \"neither\", the region outside both circles: $1 - \\mathrm{P}(A \\cup B) = 1 - 0.7 = 0.3$.",
+  "hints": [
+   "Which region of the Venn diagram is 'not A and not B'?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q16",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A committee of 4 is chosen at random from 5 men and 4 women. What is the probability that there are more women than men on the committee?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\frac{10}{63}$",
+    "rationale": "This counts 3 women and 1 man but forgets the committee of 4 women."
+   },
+   {
+    "key": "B",
+    "content": "$\\frac{1}{126}$",
+    "rationale": "This is the probability of 4 women only."
+   },
+   {
+    "key": "C",
+    "content": "$\\frac{4}{9}$",
+    "rationale": "This is the probability that one person chosen at random is a woman."
+   },
+   {
+    "key": "D",
+    "content": "$\\frac{1}{6}$",
+    "correct": true,
+    "rationale": "Correct: $\\frac{{}^4C_3\\,{}^5C_1 + {}^4C_4}{{}^9C_4} = \\frac{20 + 1}{126}$."
+   }
+  ],
+  "explanation": "More women than men means 3 women and 1 man ($4 \\times 5 = 20$ ways) or 4 women (1 way). Total committees ${}^9C_4 = 126$. $\\mathrm{P} = \\frac{21}{126} = \\frac{1}{6}$.",
+  "hints": [
+   "List the cases: 3 women and 1 man, or 4 women."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Tatenda says: 'Tomorrow it will either rain in Harare or it will not, so the probability that it rains is 1/2.' Explain what is wrong with his reasoning.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "States that the formula n(A)/n(S) needs equally likely outcomes.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Notes that 'rain' and 'no rain' are not equally likely, so the probability must be estimated another way (for example from past records).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Dividing the number of favourable outcomes by the number of outcomes only works when the outcomes are equally likely. Rain and no rain are two outcomes but they are not equally likely (it depends on the season), so the probability should be estimated from data such as the relative frequency of rainy days in past years."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Equally likely outcomes are an assumption that must be justified, for example by symmetry (a fair die).",
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Two fair six-sided dice, one red and one blue, are thrown. Event $A$ is \"the total score is more than 8\" and event $B$ is \"the two scores are equal (a double)\".",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find $\\mathrm{P}(A)$ as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.2777777777777778,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Totals 9, 10, 11, 12 occur in $4 + 3 + 2 + 1 = 10$ ways: $\\mathrm{P}(A) = \\frac{10}{36} = \\frac{5}{18}$.",
+    "workedSolution": "1. Totals 9, 10, 11, 12 occur in $4 + 3 + 2 + 1 = 10$ ways: $\\mathrm{P}(A) = \\frac{10}{36} = \\frac{5}{18}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find $\\mathrm{P}(A \\cap B)$ as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.05555555555555555,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "Doubles with total more than 8: $(5, 5)$ and $(6, 6)$, so $\\mathrm{P}(A \\cap B) = \\frac{2}{36} = \\frac{1}{18}$.",
+    "workedSolution": "1. Doubles with total more than 8: $(5, 5)$ and $(6, 6)$, so $\\mathrm{P}(A \\cap B) = \\frac{2}{36} = \\frac{1}{18}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $\\mathrm{P}(A \\cup B)$ as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.38888888888888884,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(A \\cup B) = \\frac{10}{36} + \\frac{6}{36} - \\frac{2}{36} = \\frac{14}{36} = \\frac{7}{18} \\approx 0.389$.",
+    "workedSolution": "1. $\\mathrm{P}(A \\cup B) = \\frac{10}{36} + \\frac{6}{36} - \\frac{2}{36} = \\frac{14}{36} = \\frac{7}{18} \\approx 0.389$."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Are $A$ and $B$ mutually exclusive?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Yes, because $\\mathrm{P}(A) \\ne \\mathrm{P}(B)$",
+      "rationale": "Unequal probabilities say nothing about exclusivity."
+     },
+     {
+      "key": "B",
+      "content": "Yes, because $\\mathrm{P}(A) + \\mathrm{P}(B) < 1$",
+      "rationale": "A sum below 1 does not make events exclusive."
+     },
+     {
+      "key": "C",
+      "content": "No, because $\\mathrm{P}(A \\cap B) \\ne 0$",
+      "correct": true,
+      "rationale": "Correct: (5, 5) and (6, 6) are in both events."
+     },
+     {
+      "key": "D",
+      "content": "No, because $\\mathrm{P}(A) + \\mathrm{P}(B) < 1$",
+      "rationale": "The reason is wrong: exclusivity is about the overlap."
+     }
+    ],
+    "explanation": "The events share outcomes, so they are not mutually exclusive."
+   }
+  ],
+  "explanation": "Count outcomes in the 36-cell table; use the general addition rule for the union.",
+  "hints": [
+   "Draw a 6 by 6 table of totals.",
+   "Subtract the overlap once when you add P(A) and P(B)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.278"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.0556"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.389"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.25"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.0463"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.4444444444444444"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "The six letters of the word KADOMA are written on six cards. The cards are shuffled and laid out in a row in a random order.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "How many different arrangements of the six letters are there?",
+    "answerSpec": {
+     "value": 360
+    },
+    "explanation": "A is repeated: $\\frac{6!}{2!} = 360$. (720 ignores the repeated A.)",
+    "workedSolution": "1. A is repeated: $\\frac{6!}{2!} = 360$. (720 ignores the repeated A.)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that the two A's are next to each other. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.3333333333333333,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Treat AA as one item: K, AA, D, O, M give $5! = 120$ arrangements. $\\mathrm{P} = \\frac{120}{360} = \\frac{1}{3}$.",
+    "workedSolution": "1. Treat AA as one item: K, AA, D, O, M give $5! = 120$ arrangements. $\\mathrm{P} = \\frac{120}{360} = \\frac{1}{3}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that the arrangement begins with K and ends with M, or begins with M and ends with K. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.06666666666666667,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "Fix the ends (2 ways: K…M or M…K). The middle four letters A, D, O, A give $\\frac{4!}{2!} = 12$ arrangements. Favourable $2 \\times 12 = 24$; $\\mathrm{P} = \\frac{24}{360} = \\frac{1}{15} \\approx 0.0667$.",
+    "workedSolution": "1. Fix the ends (2 ways: K…M or M…K). The middle four letters A, D, O, A give $\\frac{4!}{2!} = 12$ arrangements. Favourable $2 \\times 12 = 24$; $\\mathrm{P} = \\frac{24}{360} = \\frac{1}{15} \\approx 0.0667$."
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Three of the six cards are now chosen at random (the order does not matter).",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Find the probability that both A cards are chosen. Give your answer as a fraction or a decimal.",
+      "answerSpec": {
+       "value": 0.2,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "Treat the two A cards as different cards. Both A's and one of the other 4 cards: ${}^4C_1 = 4$ selections out of ${}^6C_3 = 20$. $\\mathrm{P} = \\frac{4}{20} = \\frac{1}{5}$.",
+      "workedSolution": "1. Treat the two A cards as different cards. Both A's and one of the other 4 cards: ${}^4C_1 = 4$ selections out of ${}^6C_3 = 20$. $\\mathrm{P} = \\frac{4}{20} = \\frac{1}{5}$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Find the probability that at least one A card is chosen. Give your answer as a fraction or a decimal.",
+      "answerSpec": {
+       "value": 0.8,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "No A: ${}^4C_3 = 4$ of 20 selections, so $\\mathrm{P}(\\text{at least one A}) = 1 - \\frac{4}{20} = \\frac{4}{5}$.",
+      "workedSolution": "1. No A: ${}^4C_3 = 4$ of 20 selections, so $\\mathrm{P}(\\text{at least one A}) = 1 - \\frac{4}{20} = \\frac{4}{5}$."
+     }
+    ]
+   }
+  ],
+  "explanation": "Divide by the factorial of each repeat when counting arrangements; block letters that must be together; use the complement for 'at least one'.",
+  "hints": [
+   "Repeated letters: divide by 2! for the two A's.",
+   "For the selection, label the two A cards A₁ and A₂ so all 20 selections are equally likely."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "360"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.333"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.0667"
+    },
+    "(d)(i)": {
+     "type": "NUMERICAL",
+     "value": "0.200"
+    },
+    "(d)(ii)": {
+     "type": "NUMERICAL",
+     "value": "0.800"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "720"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.6666666666666666"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.03333333333333333"
+     },
+     "(d)(i)": {
+      "type": "NUMERICAL",
+      "value": "0.06666666666666667"
+     },
+     "(d)(ii)": {
+      "type": "NUMERICAL",
+      "value": "0.5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.events-rules.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "A survey of 60 farmers in Mashonaland records which of maize ($M$), tobacco ($T$) and soya ($S$) they grow. 37 grow maize, 24 grow tobacco and 18 grow soya. 13 grow maize and tobacco, 10 grow maize and soya, 7 grow tobacco and soya, and 4 grow all three crops.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 5,
+    "stem": "Complete the regions of a Venn diagram for the three crops.",
+    "payload": {
+     "template": "M only {{blank:m}}; T only {{blank:t}}; S only {{blank:s}}; M and T only {{blank:mt}}; none of the three {{blank:n}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "t",
+       "input": "number"
+      },
+      {
+       "id": "s",
+       "input": "number"
+      },
+      {
+       "id": "mt",
+       "input": "number"
+      },
+      {
+       "id": "n",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "18"
+       ]
+      },
+      {
+       "id": "t",
+       "accepted": [
+        "8"
+       ]
+      },
+      {
+       "id": "s",
+       "accepted": [
+        "5"
+       ]
+      },
+      {
+       "id": "mt",
+       "accepted": [
+        "9"
+       ]
+      },
+      {
+       "id": "n",
+       "accepted": [
+        "7"
+       ]
+      }
+     ]
+    },
+    "explanation": "Centre 4. Two-crop-only regions: $13 - 4 = 9$ (M and T), $10 - 4 = 6$ (M and S), $7 - 4 = 3$ (T and S). One-crop regions: $M$ only $37 - 9 - 6 - 4 = 18$, $T$ only $24 - 9 - 3 - 4 = 8$, $S$ only $18 - 6 - 3 - 4 = 5$. Total inside $= 4 + 9 + 6 + 3 + 18 + 8 + 5 = 53$, so none $= 7$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "A farmer is chosen at random. Find the probability that the farmer grows exactly one of the three crops. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.5166666666666667,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Exactly one crop: $18 + 8 + 5 = 31$, so $\\mathrm{P} = \\frac{31}{60} \\approx 0.517$.",
+    "workedSolution": "1. Exactly one crop: $18 + 8 + 5 = 31$, so $\\mathrm{P} = \\frac{31}{60} \\approx 0.517$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $\\mathrm{P}(T \\cup S)$ as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.5833333333333334,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(T \\cup S) = \\frac{24}{60} + \\frac{18}{60} - \\frac{7}{60} = \\frac{35}{60} = \\frac{7}{12} \\approx 0.583$.",
+    "workedSolution": "1. $\\mathrm{P}(T \\cup S) = \\frac{24}{60} + \\frac{18}{60} - \\frac{7}{60} = \\frac{35}{60} = \\frac{7}{12} \\approx 0.583$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find $\\mathrm{P}(M' \\cap T')$, the probability that a farmer chosen at random grows neither maize nor tobacco. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.2,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Outside both $M$ and $T$: soya only (5) and none (7), so $\\frac{12}{60} = \\frac{1}{5}$.",
+    "workedSolution": "1. Outside both $M$ and $T$: soya only (5) and none (7), so $\\frac{12}{60} = \\frac{1}{5}$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the events 'grows tobacco' and 'grows soya' are not mutually exclusive, and name a pair of events from this survey that are.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "7 farmers grow both tobacco and soya, so the events can happen together.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A valid exclusive pair, e.g. 'grows none of the crops' and 'grows maize' (or 'maize only' and 'tobacco only').",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 7 farmers grow both tobacco and soya, so P(T ∩ S) = 7/60 ≠ 0 and the events are not exclusive. 'Grows maize only' and 'grows tobacco only' are mutually exclusive: no farmer can be in both regions."
+    }
+   }
+  ],
+  "explanation": "Fill a three-set Venn diagram from the centre outwards, then read probabilities from regions.",
+  "hints": [
+   "Start with the 4 in the centre.",
+   "Subtract the centre from each two-crop total before using the one-crop totals."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "18"
+      },
+      {
+       "blankId": "t",
+       "text": "8"
+      },
+      {
+       "blankId": "s",
+       "text": "5"
+      },
+      {
+       "blankId": "mt",
+       "text": "9"
+      },
+      {
+       "blankId": "n",
+       "text": "7"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.517"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.583"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.200"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "24"
+       },
+       {
+        "blankId": "t",
+        "text": "11"
+       },
+       {
+        "blankId": "s",
+        "text": "1"
+       },
+       {
+        "blankId": "mt",
+        "text": "13"
+       },
+       {
+        "blankId": "n",
+        "text": "3"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.6166666666666667"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.7"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.11666666666666667"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": false
+ }
+]

@@ -1,0 +1,1692 @@
+[
+ {
+  "key": "exam.w1b-zimsec-pure.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.standard-sums-differences"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "This question is about $S_n = \\displaystyle\\sum_{r=1}^{n} r(r + 3)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Write down $S_1$, $S_2$ and $S_3$.",
+    "payload": {
+     "template": "S₁ = {{blank:a}}, S₂ = {{blank:b}}, S₃ = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "14"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "32"
+       ]
+      }
+     ]
+    },
+    "explanation": "$1 \\times 4 = 4$; $4 + 2 \\times 5 = 14$; $14 + 3 \\times 6 = 32$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Use standard results to show that $S_n = \\dfrac{n(n + 1)(n + 5)}{3}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 $\\sum r^2 + 3\\sum r = \\frac{n(n + 1)(2n + 1)}{6} + \\frac{3n(n + 1)}{2}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 takes out $\\frac{n(n + 1)}{6}$: $\\frac{n(n + 1)}{6}(2n + 1 + 9)$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 $= \\frac{n(n + 1)(2n + 10)}{6} = \\frac{n(n + 1)(n + 5)}{3}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nS_n = \\sum r^2 + 3\\sum r = \\frac{n(n + 1)(2n + 1)}{6} + \\frac{3n(n + 1)}{2} = \\frac{n(n + 1)}{6}\\left[(2n + 1) + 9\\right] = \\frac{n(n + 1)(n + 5)}{3}\n$$"
+    },
+    "explanation": "Linearity, standard results and a common factor."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Hence evaluate $\\displaystyle\\sum_{r=11}^{20} r(r + 3)$.",
+    "answerSpec": {
+     "value": 2950
+    },
+    "explanation": "$S_{20} - S_{10} = \\frac{20 \\times 21 \\times 25}{3} - \\frac{10 \\times 11 \\times 15}{3} = 3500 - 550 = 2950$.",
+    "workedSolution": "1. $S_{20} - S_{10} = \\frac{20 \\times 21 \\times 25}{3} - \\frac{10 \\times 11 \\times 15}{3} = 3500 - 550 = 2950$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the least value of $n$ for which $S_n > 1000$.",
+    "payload": {
+     "answerPrefix": "n ="
+    },
+    "answerSpec": {
+     "value": 13
+    },
+    "explanation": "$S_{12} = \\frac{12 \\times 13 \\times 17}{3} = 884$ and $S_{13} = \\frac{13 \\times 14 \\times 18}{3} = 1092$, so $n = 13$.",
+    "workedSolution": "1. $S_{12} = \\frac{12 \\times 13 \\times 17}{3} = 884$ and $S_{13} = \\frac{13 \\times 14 \\times 18}{3} = 1092$, so $n = 13$."
+   }
+  ],
+  "explanation": "Standard results give a factorised closed form; differences of closed forms give sums between limits.",
+  "hints": [
+   "Expand $r(r + 3) = r^2 + 3r$.",
+   "$\\sum_{11}^{20} = S_{20} - S_{10}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "4"
+      },
+      {
+       "blankId": "b",
+       "text": "14"
+      },
+      {
+       "blankId": "c",
+       "text": "32"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2950"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "13"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "3"
+       },
+       {
+        "blankId": "b",
+        "text": "10"
+       },
+       {
+        "blankId": "c",
+        "text": "18"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3500"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "12"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-zimsec-pure.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.maclaurin-taylor"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "This question uses the Maclaurin series of $\\mathrm{e}^{2x}$ and $\\ln(1 - x)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Write down the Maclaurin series of e^(2x) up to and including the term in x³. Give coefficients as fractions or decimals.",
+    "payload": {
+     "template": "e^(2x) ≈ 1 + ({{blank:a}})x + ({{blank:b}})x² + ({{blank:c}})x³",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "4/3",
+        "1.333",
+        "1.3333"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$1 + 2x + \\frac{(2x)^2}{2!} + \\frac{(2x)^3}{3!} = 1 + 2x + 2x^2 + \\frac{4}{3}x^3$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Write down the Maclaurin series of ln(1 − x) up to and including the term in x³.",
+    "payload": {
+     "template": "ln(1 − x) ≈ −x + ({{blank:a}})x² + ({{blank:b}})x³",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-0.5",
+        "-1/2"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-1/3",
+        "-0.333",
+        "-0.3333"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "Replace $x$ by $-x$ in $x - \\frac{x^2}{2} + \\frac{x^3}{3}$: $-x - \\frac{x^2}{2} - \\frac{x^3}{3}$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Hence find the Maclaurin series of e^(2x) ln(1 − x) up to and including the term in x³.",
+    "payload": {
+     "template": "e^(2x) ln(1 − x) ≈ ({{blank:a}})x + ({{blank:b}})x² + ({{blank:c}})x³",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-2.5",
+        "-5/2"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-10/3",
+        "-3.333",
+        "-3.3333"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$(1 + 2x + 2x^2)(-x - \\frac{x^2}{2} - \\frac{x^3}{3})$: $x$: $-1$; $x^2$: $-\\frac{1}{2} - 2 = -\\frac{5}{2}$; $x^3$: $-\\frac{1}{3} - 1 - 2 = -\\frac{10}{3}$."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "For which values of x is the series in (c) valid?",
+    "options": [
+     {
+      "key": "A",
+      "content": "$-1 < x \\le 1$",
+      "rationale": "This is the range for $\\ln(1 + x)$."
+     },
+     {
+      "key": "B",
+      "content": "all real x",
+      "rationale": "$\\ln(1 - x)$ is undefined for $x \\ge 1$."
+     },
+     {
+      "key": "C",
+      "content": "$-\\frac{1}{2} < x \\le \\frac{1}{2}$",
+      "rationale": "The factor $2x$ is in the exponential, whose series converges everywhere."
+     },
+     {
+      "key": "D",
+      "content": "$-1 \\le x < 1$",
+      "correct": true,
+      "rationale": "Correct: $\\mathrm{e}^{2x}$ is valid for all $x$, so the range is that of $\\ln(1 - x)$."
+     }
+    ],
+    "explanation": "A product series is valid where both series are valid: here $-1 \\le x < 1$."
+   }
+  ],
+  "explanation": "Substitute into standard series, then multiply keeping powers up to x³.",
+  "hints": [
+   "$(2x)^3 = 8x^3$ and $3! = 6$.",
+   "Only products giving x, x², x³ are needed."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      },
+      {
+       "blankId": "c",
+       "text": "4/3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-0.5"
+      },
+      {
+       "blankId": "b",
+       "text": "-1/3"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-1"
+      },
+      {
+       "blankId": "b",
+       "text": "-2.5"
+      },
+      {
+       "blankId": "c",
+       "text": "-10/3"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "4"
+       },
+       {
+        "blankId": "c",
+        "text": "8"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0.5"
+       },
+       {
+        "blankId": "b",
+        "text": "1/3"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "-1.5"
+       },
+       {
+        "blankId": "c",
+        "text": "-7/3"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-zimsec-pure.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.trig.radians-arcs-sectors",
+   "amaths.trig.graphs-exact-values"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "This question is about circular measure, small angles and an inverse trigonometric graph.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "A sector of a circle of radius 6 cm has area 15 cm². Find the angle of the sector in radians, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "rad"
+    },
+    "answerSpec": {
+     "value": 0.8333333333333334,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "rad",
+       "radians",
+       "radian"
+      ]
+     }
+    },
+    "explanation": "$\\frac{1}{2} \\times 36 \\times \\theta = 15 \\Rightarrow \\theta = \\frac{5}{6} = 0.833$.",
+    "workedSolution": "1. $\\frac{1}{2} \\times 36 \\times \\theta = 15 \\Rightarrow \\theta = \\frac{5}{6} = 0.833$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the area of the segment cut off by the chord of this sector, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm²"
+    },
+    "answerSpec": {
+     "value": 1.6768166424713329,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm²",
+       "cm^2",
+       "square centimetres"
+      ]
+     }
+    },
+    "explanation": "$\\frac{1}{2} \\times 36(\\theta - \\sin\\theta) = 18(0.8333 - 0.7402) = 1.68$ cm$^2$.",
+    "workedSolution": "1. $\\frac{1}{2} \\times 36(\\theta - \\sin\\theta) = 18(0.8333 - 0.7402) = 1.68$ cm$^2$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Using small-angle approximations, show that $\\dfrac{1 - \\cos 2x}{x\\tan x} \\approx 2$ when $x$ is small.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 $\\cos 2x \\approx 1 - \\frac{(2x)^2}{2} = 1 - 2x^2$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 $\\tan x \\approx x$, so the denominator $\\approx x^2$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 $\\frac{2x^2}{x^2} = 2$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\frac{1 - \\cos 2x}{x\\tan x} \\approx \\frac{1 - (1 - 2x^2)}{x \\cdot x} = \\frac{2x^2}{x^2} = 2\n$$"
+    },
+    "explanation": "Replace each function by its small-angle approximation (x in radians)."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The graph of $y = 2\\cos^{-1}(2x)$ is sketched. State its domain and its greatest value of $y$, correct to 3 significant figures.",
+    "payload": {
+     "template": "Domain {{blank:a}} ≤ x ≤ {{blank:b}}; greatest y = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-0.5",
+        "-1/2"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0.5",
+        "1/2"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "6.28"
+       ],
+       "marks": 1,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$\\cos^{-1}u$ needs $-1 \\le 2x \\le 1$, so $-\\frac{1}{2} \\le x \\le \\frac{1}{2}$. Its range $[0, \\pi]$ becomes $[0, 2\\pi]$; the greatest value $2\\pi = 6.28$ occurs at $x = -\\frac{1}{2}$."
+   }
+  ],
+  "explanation": "Sector and segment formulas in radians; small-angle approximations; transformed inverse cosine.",
+  "hints": [
+   "Use radian mode.",
+   "$\\cos\\theta \\approx 1 - \\frac{\\theta^2}{2}$ with $\\theta = 2x$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.833"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.68"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-0.5"
+      },
+      {
+       "blankId": "b",
+       "text": "0.5"
+      },
+      {
+       "blankId": "c",
+       "text": "6.28"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "2.5"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "15"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-1"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       },
+       {
+        "blankId": "c",
+        "text": "3.14"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-zimsec-pure.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.coordinate.circles"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The circle $C$ has equation $x^2 + y^2 + 6x - 4y - 12 = 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the centre and the radius of C.",
+    "payload": {
+     "template": "Centre ({{blank:a}}, {{blank:b}}), radius {{blank:r}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "r",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-3"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "r",
+       "accepted": [
+        "5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$(x + 3)^2 + (y - 2)^2 = 12 + 9 + 4 = 25$: centre $(-3, 2)$, radius 5."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the point A(1, 5) lies on C.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Substitutes: $1 + 25 + 6 - 20 - 12$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Obtains 0, so A lies on C.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 1² + 5² + 6(1) − 4(5) − 12 = 1 + 25 + 6 − 20 − 12 = 0, so A satisfies the equation of C."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the equation of the tangent to C at A, in the form ax + by = c with integers a, b, c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "4x+3y=19"
+      },
+      {
+       "value": "3y+4x=19"
+      },
+      {
+       "value": "4x+3y-19=0"
+      },
+      {
+       "value": "y=-4/3x+19/3"
+      },
+      {
+       "value": "y=(-4/3)x+19/3"
+      },
+      {
+       "value": "y=19/3-4x/3"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "Radius gradient $\\frac{5 - 2}{1 + 3} = \\frac{3}{4}$, tangent gradient $-\\frac{4}{3}$: $y - 5 = -\\frac{4}{3}(x - 1) \\Rightarrow 4x + 3y = 19$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The line y = 2x + c is a tangent to C. Find the two possible values of c, correct to 3 significant figures, the smaller first.",
+    "payload": {
+     "template": "c = {{blank:a}} or c = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-3.18"
+       ],
+       "marks": 1,
+       "tolerance": 0.005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "19.18"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "Distance from $(-3, 2)$ to $2x - y + c = 0$ equals 5: $\\frac{|-6 - 2 + c|}{\\sqrt{5}} = 5 \\Rightarrow c - 8 = \\pm 5\\sqrt{5}$, so $c = 8 - 5\\sqrt{5} = -3.18$ or $c = 8 + 5\\sqrt{5} = 19.2$."
+   }
+  ],
+  "explanation": "Centre and radius by completing the square; tangent ⟂ radius; tangency from distance = radius (or a zero discriminant).",
+  "hints": [
+   "Halve the coefficients of x and y for the centre.",
+   "A tangent is at distance r from the centre."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-3"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      },
+      {
+       "blankId": "r",
+       "text": "5"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "4x+3y=19"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-3.18"
+      },
+      {
+       "blankId": "b",
+       "text": "19.18"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "3"
+       },
+       {
+        "blankId": "b",
+        "text": "-2"
+       },
+       {
+        "blankId": "r",
+        "text": "25"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "3x-4y=-17"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-8.00"
+       },
+       {
+        "blankId": "b",
+        "text": "8.00"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-zimsec-pure.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.arithmetic",
+   "amaths.series.geometric"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A sequence is defined by $u_1 = 2$ and $u_{n+1} = \\frac{1}{2}u_n + 3$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find $u_2$, $u_3$ and $u_4$.",
+    "payload": {
+     "template": "u₂ = {{blank:a}}, u₃ = {{blank:b}}, u₄ = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "5"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "5.5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$u_2 = 1 + 3 = 4$, $u_3 = 2 + 3 = 5$, $u_4 = 2.5 + 3 = 5.5$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The sequence is convergent. State its limit.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "At the limit $L = \\frac{1}{2}L + 3$, so $L = 6$.",
+    "workedSolution": "1. At the limit $L = \\frac{1}{2}L + 3$, so $L = 6$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Let $v_n = u_n - 6$. Show that $v_{n+1} = \\frac{1}{2}v_n$, so that $v_n$ is a geometric progression.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 $v_{n+1} = u_{n+1} - 6 = \\frac{1}{2}u_n + 3 - 6 = \\frac{1}{2}u_n - 3$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 $= \\frac{1}{2}(u_n - 6) = \\frac{1}{2}v_n$: a GP with ratio $\\frac{1}{2}$ and first term $v_1 = -4$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nv_{n+1} = u_{n+1} - 6 = \\frac{1}{2}u_n - 3 = \\frac{1}{2}(u_n - 6) = \\frac{1}{2}v_n\n$$\n\nSo $(v_n)$ is geometric with first term $v_1 = 2 - 6 = -4$ and common ratio $\\frac{1}{2}$."
+    },
+    "explanation": "Subtracting the limit turns the recurrence into a pure multiplication."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Hence find $\\displaystyle\\sum_{n=1}^{10} u_n$, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 52.0078125,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$\\sum u_n = \\sum (6 + v_n) = 60 + \\frac{-4(1 - 0.5^{10})}{0.5} = 60 - 7.992 = 52.0$.",
+    "workedSolution": "1. $\\sum u_n = \\sum (6 + v_n) = 60 + \\frac{-4(1 - 0.5^{10})}{0.5} = 60 - 7.992 = 52.0$."
+   }
+  ],
+  "explanation": "A convergent recurrence: find the limit, subtract it to get a GP, then sum.",
+  "hints": [
+   "At the limit, u(n+1) = u(n) = L.",
+   "Write u(n) = 6 + v(n)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "4"
+      },
+      {
+       "blankId": "b",
+       "text": "5"
+      },
+      {
+       "blankId": "c",
+       "text": "5.5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "52.0"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "7"
+       },
+       {
+        "blankId": "b",
+        "text": "6.5"
+       },
+       {
+        "blankId": "c",
+        "text": "6"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "60"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w1b-zimsec-pure.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.trig.harmonic-form",
+   "amaths.trig.compound-double-angle"
+  ],
+  "difficulty": 5,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "This question is about the expression $3\\cos\\theta + 4\\sin\\theta$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Express $3\\cos\\theta + 4\\sin\\theta$ in the form $R\\cos(\\theta - \\alpha)$, where $R > 0$ and $0^\\circ < \\alpha < 90^\\circ$. Give $\\alpha$ to 2 decimal places.",
+    "payload": {
+     "template": "R = {{blank:R}}, α = {{blank:a}}°",
+     "blanks": [
+      {
+       "id": "R",
+       "input": "number"
+      },
+      {
+       "id": "a",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "R",
+       "accepted": [
+        "5"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "a",
+       "accepted": [
+        "53.13"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$R\\cos\\alpha = 3$, $R\\sin\\alpha = 4$: $R = 5$, $\\alpha = \\tan^{-1}\\frac{4}{3} = 53.13^\\circ$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence solve $3\\cos\\theta + 4\\sin\\theta = -1$ for $0^\\circ \\le \\theta \\le 360^\\circ$, giving answers to 1 decimal place in ascending order.",
+    "payload": {
+     "template": "θ = {{blank:a}}° or θ = {{blank:b}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "154.7"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "311.6"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\cos(\\theta - 53.13^\\circ) = -0.2$; $\\cos^{-1}(-0.2) = 101.54^\\circ$. So $\\theta - 53.13^\\circ = 101.54^\\circ$ or $-101.54^\\circ$, giving $\\theta = 154.7^\\circ$ or $-48.41^\\circ + 360^\\circ = 311.6^\\circ$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the greatest and least values of $\\dfrac{1}{7 - 3\\cos\\theta - 4\\sin\\theta}$, giving the least value to 3 significant figures.",
+    "payload": {
+     "template": "greatest {{blank:g}}, least {{blank:l}}",
+     "blanks": [
+      {
+       "id": "g",
+       "input": "number"
+      },
+      {
+       "id": "l",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "g",
+       "accepted": [
+        "0.5"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "l",
+       "accepted": [
+        "0.0833"
+       ],
+       "marks": 2,
+       "tolerance": 0.00005
+      }
+     ]
+    },
+    "explanation": "The denominator $7 - 5\\cos(\\theta - \\alpha)$ lies between $2$ and $12$: greatest $\\frac{1}{2} = 0.5$, least $\\frac{1}{12} = 0.0833$."
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the equation $3\\cos 2x + 8\\sin x\\cos x = -1$ can be written as $3\\cos 2x + 4\\sin 2x = -1$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses $\\sin 2x = 2\\sin x\\cos x$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 $8\\sin x\\cos x = 4\\sin 2x$, giving the result.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n8\\sin x\\cos x = 4(2\\sin x\\cos x) = 4\\sin 2x \\Rightarrow 3\\cos 2x + 8\\sin x\\cos x = 3\\cos 2x + 4\\sin 2x\n$$"
+    },
+    "explanation": "Recognise the double-angle formula."
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence solve $3\\cos 2x + 8\\sin x\\cos x = -1$ for $0^\\circ \\le x \\le 180^\\circ$, giving answers to 1 decimal place in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}}° or x = {{blank:b}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "77.3"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "155.8"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "With $\\theta = 2x$ and $0^\\circ \\le 2x \\le 360^\\circ$, (b) gives $2x = 154.67^\\circ$ or $311.59^\\circ$, so $x = 77.3^\\circ$ or $155.8^\\circ$."
+   }
+  ],
+  "explanation": "Harmonic form gives solutions and extreme values; a double-angle rewrite turns a new equation into the old one in 2x.",
+  "hints": [
+   "Keep α to 2 d.p.",
+   "In (e), let θ = 2x and use your answers to (b)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "R",
+       "text": "5"
+      },
+      {
+       "blankId": "a",
+       "text": "53.13"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "154.7"
+      },
+      {
+       "blankId": "b",
+       "text": "311.6"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "g",
+       "text": "0.5"
+      },
+      {
+       "blankId": "l",
+       "text": "0.0833"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "77.3"
+      },
+      {
+       "blankId": "b",
+       "text": "155.8"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "R",
+        "text": "7"
+       },
+       {
+        "blankId": "a",
+        "text": "36.87"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "101.5"
+       },
+       {
+        "blankId": "b",
+        "text": "48.4"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "g",
+        "text": "0.0833"
+       },
+       {
+        "blankId": "l",
+        "text": "0.5"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "154.7"
+       },
+       {
+        "blankId": "b",
+        "text": "311.6"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w1b-zimsec-pure.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.standard-sums-differences"
+  ],
+  "difficulty": 5,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "Let $S_n = \\displaystyle\\sum_{r=1}^{n} \\frac{2}{(r + 1)(r + 3)}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Express $\\dfrac{2}{(r + 1)(r + 3)}$ in the form $\\dfrac{A}{r + 1} + \\dfrac{B}{r + 3}$.",
+    "payload": {
+     "template": "A = {{blank:A}}, B = {{blank:B}}",
+     "blanks": [
+      {
+       "id": "A",
+       "input": "number"
+      },
+      {
+       "id": "B",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "A",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "B",
+       "accepted": [
+        "-1"
+       ]
+      }
+     ]
+    },
+    "explanation": "$2 = A(r + 3) + B(r + 1)$. $r = -1$: $A = 1$; $r = -3$: $B = -1$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Use the method of differences to show that $S_n = \\dfrac{5}{6} - \\dfrac{1}{n + 2} - \\dfrac{1}{n + 3}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes terms as $\\frac{1}{r + 1} - \\frac{1}{r + 3}$ for $r = 1, 2, \\ldots, n$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 shows the cancellation pattern (first rows and last rows).",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 identifies the survivors $\\frac{1}{2} + \\frac{1}{3} - \\frac{1}{n + 2} - \\frac{1}{n + 3}$.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A1 simplifies $\\frac{1}{2} + \\frac{1}{3} = \\frac{5}{6}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nS_n = \\left(\\frac{1}{2} - \\frac{1}{4}\\right) + \\left(\\frac{1}{3} - \\frac{1}{5}\\right) + \\left(\\frac{1}{4} - \\frac{1}{6}\\right) + \\cdots + \\left(\\frac{1}{n + 1} - \\frac{1}{n + 3}\\right)\n$$\n\nEvery term from $\\frac{1}{4}$ to $\\frac{1}{n + 1}$ appears once with each sign and cancels, leaving\n\n$$\nS_n = \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{n + 2} - \\frac{1}{n + 3} = \\frac{5}{6} - \\frac{1}{n + 2} - \\frac{1}{n + 3}\n$$"
+    },
+    "explanation": "The gap between r + 1 and r + 3 is 2, so two terms survive at each end."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Write down the sum to infinity of the series, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.8333333333333334,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "As $n \\to \\infty$ the last two terms tend to 0, so $S_\\infty = \\frac{5}{6} = 0.833$.",
+    "workedSolution": "1. As $n \\to \\infty$ the last two terms tend to 0, so $S_\\infty = \\frac{5}{6} = 0.833$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Find the least value of $n$ for which $S_n > 0.7$.",
+    "payload": {
+     "answerPrefix": "n ="
+    },
+    "answerSpec": {
+     "value": 13
+    },
+    "explanation": "Need $\\frac{1}{n + 2} + \\frac{1}{n + 3} < \\frac{5}{6} - 0.7 = 0.1\\dot{3}$. $n = 12$: $\\frac{1}{14} + \\frac{1}{15} = 0.138$ (too big); $n = 13$: $\\frac{1}{15} + \\frac{1}{16} = 0.129$. So $n = 13$.",
+    "workedSolution": "1. Need $\\frac{1}{n + 2} + \\frac{1}{n + 3} < \\frac{5}{6} - 0.7 = 0.1\\dot{3}$. $n = 12$: $\\frac{1}{14} + \\frac{1}{15} = 0.138$ (too big); $n = 13$: $\\frac{1}{15} + \\frac{1}{16} = 0.129$. So $n = 13$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Find $\\displaystyle\\sum_{r=10}^{20} \\frac{2}{(r + 1)(r + 3)}$, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.08530961791831326,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$S_{20} - S_9 = \\left(\\frac{1}{11} + \\frac{1}{12}\\right) - \\left(\\frac{1}{22} + \\frac{1}{23}\\right) = 0.0853$.",
+    "workedSolution": "1. $S_{20} - S_9 = \\left(\\frac{1}{11} + \\frac{1}{12}\\right) - \\left(\\frac{1}{22} + \\frac{1}{23}\\right) = 0.0853$."
+   }
+  ],
+  "explanation": "Partial fractions make the series telescope; the closed form gives the sum to infinity, a 'least n' and sums between limits.",
+  "hints": [
+   "Write out the first three and last two rows of the cancellation.",
+   "$\\sum_{10}^{20} = S_{20} - S_9$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "A",
+       "text": "1"
+      },
+      {
+       "blankId": "B",
+       "text": "-1"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.833"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "13"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.0853"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "A",
+        "text": "2"
+       },
+       {
+        "blankId": "B",
+        "text": "1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.5"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "12"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.0713236039322993"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ }
+]

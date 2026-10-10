@@ -1,0 +1,1216 @@
+[
+ {
+  "key": "variable.force.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A particle moves along the $x$-axis with velocity $v$. Which expression is equal to its acceleration?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{\\mathrm{d}v}{\\mathrm{d}x}$",
+    "rationale": "This is missing the factor $v = \\frac{\\mathrm{d}x}{\\mathrm{d}t}$; its units are s$^{-1}$, not m s$^{-2}$."
+   },
+   {
+    "key": "B",
+    "content": "$x\\dfrac{\\mathrm{d}v}{\\mathrm{d}x}$",
+    "rationale": "The factor should be the velocity $v$, not the displacement $x$."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{\\mathrm{d}x}{\\mathrm{d}v}$",
+    "rationale": "This is the reciprocal of dv/dx and has the wrong units."
+   },
+   {
+    "key": "D",
+    "content": "$v\\dfrac{\\mathrm{d}v}{\\mathrm{d}x}$",
+    "correct": true,
+    "rationale": "Correct: by the chain rule, $\\frac{\\mathrm{d}v}{\\mathrm{d}t} = \\frac{\\mathrm{d}v}{\\mathrm{d}x}\\cdot\\frac{\\mathrm{d}x}{\\mathrm{d}t} = v\\frac{\\mathrm{d}v}{\\mathrm{d}x}$."
+   }
+  ],
+  "explanation": "$a = \\frac{\\mathrm{d}v}{\\mathrm{d}t} = \\frac{\\mathrm{d}^2x}{\\mathrm{d}t^2} = v\\frac{\\mathrm{d}v}{\\mathrm{d}x}$. The last form is used when the force depends on displacement.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q02",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The equation v = u + at can be used for a particle acted on by a force that increases with time.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "The suvat equations need constant acceleration. If the force varies, so does the acceleration, and $v$ must be found by integrating $a$ with respect to $t$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A particle moves in a straight line so that its displacement from $O$ at time $t$ seconds is $x = (t^3 - 5t^2 + 2)$ m. Find its acceleration when $t = 3$.",
+  "payload": {
+   "unitHint": "m/s²"
+  },
+  "answerSpec": {
+   "value": 8,
+   "units": {
+    "required": false,
+    "accepted": [
+     "m/s²",
+     "m/s^2",
+     "m s^-2",
+     "ms^-2",
+     "m s-2"
+    ]
+   }
+  },
+  "explanation": "$v = \\frac{\\mathrm{d}x}{\\mathrm{d}t} = 3t^2 - 10t$ and $a = \\frac{\\mathrm{d}v}{\\mathrm{d}t} = 6t - 10$. At $t = 3$, $a = 8$ m s$^{-2}$. ($-3$ is the velocity at $t = 3$; $-16$ is the displacement.)",
+  "workedSolution": "1. $v = \\frac{\\mathrm{d}x}{\\mathrm{d}t} = 3t^2 - 10t$ and $a = \\frac{\\mathrm{d}v}{\\mathrm{d}t} = 6t - 10$. At $t = 3$, $a = 8$ m s$^{-2}$. ($-3$ is the velocity at $t = 3$; $-16$ is the displacement.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-16"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A particle starts from rest and moves in a straight line with acceleration $a = 4t$ m s$^{-2}$ at time $t$ seconds. Find its speed when $t = 3$.",
+  "payload": {
+   "unitHint": "m/s"
+  },
+  "answerSpec": {
+   "value": 18,
+   "units": {
+    "required": false,
+    "accepted": [
+     "m/s",
+     "m s^-1",
+     "ms^-1",
+     "m s-1",
+     "metres per second"
+    ]
+   }
+  },
+  "explanation": "$v = \\int 4t\\,\\mathrm{d}t = 2t^2 + c$, and $c = 0$ since it starts from rest. At $t = 3$, $v = 18$ m s$^{-1}$. ($12$ uses $v = at$ with $a = 12$, which assumes constant acceleration.)",
+  "workedSolution": "1. $v = \\int 4t\\,\\mathrm{d}t = 2t^2 + c$, and $c = 0$ since it starts from rest. At $t = 3$, $v = 18$ m s$^{-1}$. ($12$ uses $v = at$ with $a = 12$, which assumes constant acceleration.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "18"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "12"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "36"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A particle starts from rest at $O$ and moves in a straight line with acceleration $(12 - 6t)$ m s$^{-2}$, where $t$ is the time in seconds. Find the time when it is next at rest and its distance from $O$ at that time.",
+  "payload": {
+   "template": "t = {{blank:t}} s, distance = {{blank:x}} m",
+   "blanks": [
+    {
+     "id": "t",
+     "input": "number"
+    },
+    {
+     "id": "x",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "t",
+     "accepted": [
+      "4"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "x",
+     "accepted": [
+      "32"
+     ],
+     "tolerance": 0
+    }
+   ]
+  },
+  "explanation": "$v = 12t - 3t^2$ (zero constant). $v = 0$ again when $3t(4 - t) = 0$, so $t = 4$ s. $x = 6t^2 - t^3$ (zero constant), so $x = 96 - 64 = 32$ m. ($t = 2$ is when the acceleration is zero, the time of greatest velocity.)",
+  "hints": [
+   "Integrate once for v, set v = 0.",
+   "Integrate again for x; both constants are zero."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "t",
+     "text": "4"
+    },
+    {
+     "blankId": "x",
+     "text": "32"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "t",
+      "text": "2"
+     },
+     {
+      "blankId": "x",
+      "text": "12"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q06",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A particle moves along the $x$-axis with acceleration $(2x + 1)$ m s$^{-2}$ when its displacement from $O$ is $x$ m. It passes through $O$ with speed $1$ m s$^{-1}$, moving in the positive direction. Find its speed when $x = 2$, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "m/s"
+  },
+  "answerSpec": {
+   "value": 3.605551275463989,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "m/s",
+     "m s^-1",
+     "ms^-1",
+     "m s-1",
+     "metres per second"
+    ]
+   }
+  },
+  "explanation": "$v\\frac{\\mathrm{d}v}{\\mathrm{d}x} = 2x + 1$, so $\\frac{1}{2}v^2 = x^2 + x + c$. At $x = 0$, $v = 1$: $c = \\frac{1}{2}$. So $v^2 = 2x^2 + 2x + 1$, and at $x = 2$, $v^2 = 13$, $v = 3.61$ m s$^{-1}$. (Forgetting the $\\frac{1}{2}$ on $\\frac{1}{2}v^2$ gives $\\sqrt{7}$.)",
+  "workedSolution": "1. $a$ depends on $x$, so use $v\\frac{\\mathrm{d}v}{\\mathrm{d}x} = 2x + 1$.\n2. $\\int v\\,\\mathrm{d}v = \\int (2x + 1)\\,\\mathrm{d}x$: $\\frac{1}{2}v^2 = x^2 + x + c$.\n3. $x = 0$, $v = 1$: $c = 0.5$; so $v^2 = 2x^2 + 2x + 1$.\n4. $x = 2$: $v = \\sqrt{13} = 3.61$ m s$^{-1}$.",
+  "hints": [
+   "Acceleration depends on x: use v dv/dx.",
+   "Use the speed at O to find the constant."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "3.61"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "2.65"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "variable.force.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A boat moves against a water resistance of $kv^2$ newtons. You are asked for the DISTANCE it travels while slowing from $8$ m s$^{-1}$ to $3$ m s$^{-1}$. Which form of the acceleration should you use in Newton's second law?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{\\mathrm{d}v}{\\mathrm{d}t}$",
+    "rationale": "This links v and t; it gives the time taken, and finding distance would need a second integration."
+   },
+   {
+    "key": "B",
+    "content": "$v\\dfrac{\\mathrm{d}v}{\\mathrm{d}x}$",
+    "correct": true,
+    "rationale": "Correct: it links v and x, so separating gives the distance directly."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{v - u}{t}$",
+    "rationale": "That assumes constant acceleration, but the resistance changes with v."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{v^2 - u^2}{2s}$",
+    "rationale": "This suvat form also assumes constant acceleration."
+   }
+  ],
+  "explanation": "$mv\\frac{\\mathrm{d}v}{\\mathrm{d}x} = -kv^2$ separates to $\\int \\frac{m}{kv}\\,\\mathrm{d}v = -\\int \\mathrm{d}x$, which gives the distance between the two speeds.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q08",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A particle of mass $2$ kg is projected with speed $10$ m s$^{-1}$ along a smooth horizontal surface. The only horizontal force is a resistance of magnitude $0.5v$ N, where $v$ is the speed. Find the time taken for its speed to fall to $5$ m s$^{-1}$, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "s"
+  },
+  "answerSpec": {
+   "value": 2.772588722239781,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "s",
+     "seconds",
+     "second",
+     "sec",
+     "secs"
+    ]
+   }
+  },
+  "explanation": "$2\\frac{\\mathrm{d}v}{\\mathrm{d}t} = -0.5v$, so $\\int_{10}^{5} \\frac{\\mathrm{d}v}{v} = -\\int_0^T \\frac{\\mathrm{d}t}{4}$. Then $\\ln\\frac{5}{10} = -\\frac{T}{4}$, giving $T = 4\\ln 2 = 2.77$ s. ($20$ s would come from a constant deceleration of $0.25$ m s$^{-2}$, which is wrong.)",
+  "workedSolution": "1. Newton's second law: $2\\frac{\\mathrm{d}v}{\\mathrm{d}t} = -0.5v$.\n2. Separate: $\\frac{1}{v}\\,\\mathrm{d}v = -\\frac{1}{4}\\,\\mathrm{d}t$.\n3. $[\\ln v]_{10}^{5} = -\\frac{T}{4}$, so $T = 4\\ln 2 = 2.77$ s.",
+  "hints": [
+   "Time is asked: use dv/dt.",
+   "Separate the variables and use limits."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "2.77"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.693"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "20"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "variable.force.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A particle of mass $2$ kg moves along a smooth horizontal surface against a resistance of magnitude $0.5v$ N and no other horizontal force. It passes a point $A$ with speed $14$ m s$^{-1}$. Show that its speed falls linearly with distance, and find the total distance it travels beyond $A$.",
+  "payload": {
+   "unitHint": "m"
+  },
+  "answerSpec": {
+   "value": 56,
+   "units": {
+    "required": false,
+    "accepted": [
+     "m",
+     "metres",
+     "metre",
+     "meters"
+    ]
+   }
+  },
+  "explanation": "$2v\\frac{\\mathrm{d}v}{\\mathrm{d}x} = -0.5v$, so $\\frac{\\mathrm{d}v}{\\mathrm{d}x} = -\\frac{1}{4}$ and $v = 14 - \\frac{x}{4}$, a linear fall with distance. The speed reaches $0$ when $x = 56$ m. (It never actually stops in a finite time, since $v = 14\\mathrm{e}^{-t/4}$, but the distance covered approaches $56$ m.)",
+  "workedSolution": "1. $2v\\frac{\\mathrm{d}v}{\\mathrm{d}x} = -0.5v$, so $\\frac{\\mathrm{d}v}{\\mathrm{d}x} = -\\frac{1}{4}$ and $v = 14 - \\frac{x}{4}$, a linear fall with distance. The speed reaches $0$ when $x = 56$ m. (It never actually stops in a finite time, since $v = 14\\mathrm{e}^{-t/4}$, but the distance covered approaches $56$ m.)",
+  "hints": [
+   "Distance is asked: use v dv/dx; v cancels."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "56"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "28"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q10",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A trolley of mass $5$ kg moves in a straight line on a horizontal track against an air resistance of $0.2v^2$ N. No other horizontal force acts. Find the distance it travels while its speed falls from $12$ m s$^{-1}$ to $5$ m s$^{-1}$, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "m"
+  },
+  "answerSpec": {
+   "value": 21.886718433847495,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "m",
+     "metres",
+     "metre",
+     "meters"
+    ]
+   }
+  },
+  "explanation": "$5v\\frac{\\mathrm{d}v}{\\mathrm{d}x} = -0.2v^2$, so $\\frac{\\mathrm{d}v}{\\mathrm{d}x} = -\\frac{v}{25}$. Then $\\int_{12}^{5}\\frac{\\mathrm{d}v}{v} = -\\frac{X}{25}$, giving $X = 25\\ln\\frac{12}{5} = 21.9$ m.",
+  "workedSolution": "1. $5v\\frac{\\mathrm{d}v}{\\mathrm{d}x} = -0.2v^2 \\Rightarrow \\frac{1}{v}\\frac{\\mathrm{d}v}{\\mathrm{d}x} = -0.04$.\n2. $\\ln 5 - \\ln 12 = -0.04X$.\n3. $X = 25\\ln 2.4 = 21.9$ m.",
+  "hints": [
+   "Distance is asked: use v dv/dx.",
+   "Cancel one factor of v before separating."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "21.9"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "35.0"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.875"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "variable.force.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A small steel ball of mass $0.05$ kg is released from rest in a tall jar of oil. The oil exerts a resistance of $0.7v$ N; ignore any upthrust. Take $g = 9.8$ m s$^{-2}$. Find the terminal velocity of the ball, and the time it takes to reach a speed of $0.5$ m s$^{-1}$ (3 significant figures).",
+  "payload": {
+   "template": "terminal velocity = {{blank:v}} m/s, time = {{blank:t}} s",
+   "blanks": [
+    {
+     "id": "v",
+     "input": "number"
+    },
+    {
+     "id": "t",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "v",
+     "accepted": [
+      "0.700"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "t",
+     "accepted": [
+      "0.0895"
+     ],
+     "tolerance": 0.00005
+    }
+   ]
+  },
+  "explanation": "$0.05\\frac{\\mathrm{d}v}{\\mathrm{d}t} = 0.49 - 0.7v = 0.7(0.7 - v)$, so $\\frac{\\mathrm{d}v}{\\mathrm{d}t} = 14(0.7 - v)$. Terminal velocity: $v = 0.7$ m s$^{-1}$. Separating: $\\int_0^{0.5}\\frac{\\mathrm{d}v}{0.7 - v} = 14T$, so $\\ln\\frac{0.7}{0.2} = 14T$ and $T = 0.0895$ s. (Free fall, $\\frac{0.5}{9.8}$ s, ignores the resistance.)",
+  "hints": [
+   "Terminal velocity: resultant force zero.",
+   "Separate: dv/(0.7 − v) = 14 dt."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "v",
+     "text": "0.700"
+    },
+    {
+     "blankId": "t",
+     "text": "0.0895"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "v",
+      "text": "14"
+     },
+     {
+      "blankId": "t",
+      "text": "0.0510"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "variable.force.q12",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A particle moves in a plane so that its position vector at time $t$ seconds is $\\mathbf{r} = 3t^2\\mathbf{i} + (t^3 - 6t)\\mathbf{j}$ metres. Find its velocity when $t = 2$. Type it in the form ai+bj, e.g. 5i-2j.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "12i+6j"
+    },
+    {
+     "value": "6j+12i"
+    },
+    {
+     "value": "(12,6)"
+    },
+    {
+     "value": "12i+6jm/s"
+    }
+   ],
+   "rejected": [
+    {
+     "value": "12i-4j"
+    },
+    {
+     "value": "6i+12j"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$\\mathbf{v} = \\dot{\\mathbf{r}} = 6t\\mathbf{i} + (3t^2 - 6)\\mathbf{j}$. At $t = 2$: $\\mathbf{v} = 12\\mathbf{i} + 6\\mathbf{j}$ m s$^{-1}$. ($12\\mathbf{i} - 4\\mathbf{j}$ is the position vector at $t = 2$.)",
+  "hints": [
+   "Differentiate each component with respect to t."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "12i+6j"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "12i-4j"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "6i+12j"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the particle with position vector $\\mathbf{r} = 3t^2\\mathbf{i} + (t^3 - 6t)\\mathbf{j}$ m, find the magnitude of its acceleration when $t = 2$, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "m/s²"
+  },
+  "answerSpec": {
+   "value": 13.416407864998739,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "m/s²",
+     "m/s^2",
+     "m s^-2",
+     "ms^-2",
+     "m s-2"
+    ]
+   }
+  },
+  "explanation": "$\\mathbf{a} = \\ddot{\\mathbf{r}} = 6\\mathbf{i} + 6t\\mathbf{j}$; at $t = 2$, $\\mathbf{a} = 6\\mathbf{i} + 12\\mathbf{j}$ and $|\\mathbf{a}| = \\sqrt{36 + 144} = 13.4$ m s$^{-2}$. (Adding the components, $18$, is not the magnitude; $8.49$ uses $6t$ with $t = 1$.)",
+  "workedSolution": "1. $\\mathbf{a} = \\ddot{\\mathbf{r}} = 6\\mathbf{i} + 6t\\mathbf{j}$; at $t = 2$, $\\mathbf{a} = 6\\mathbf{i} + 12\\mathbf{j}$ and $|\\mathbf{a}| = \\sqrt{36 + 144} = 13.4$ m s$^{-2}$. (Adding the components, $18$, is not the magnitude; $8.49$ uses $6t$ with $t = 1$.)",
+  "hints": [
+   "Differentiate twice, then use Pythagoras."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "13.4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "18"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "8.49"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "variable.force.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each situation with the best way to start the solution.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Force given in terms of t; velocity asked"
+    },
+    {
+     "id": "L2",
+     "content": "Force given in terms of x; speed at a point asked"
+    },
+    {
+     "id": "L3",
+     "content": "Resistance kv; time to slow down asked"
+    },
+    {
+     "id": "L4",
+     "content": "Position vector given in terms of t; acceleration asked"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Separate $m\\frac{\\mathrm{d}v}{\\mathrm{d}t} = -kv$"
+    },
+    {
+     "id": "R4",
+     "content": "Differentiate each component twice"
+    },
+    {
+     "id": "R1",
+     "content": "Integrate $a = \\frac{\\mathrm{d}v}{\\mathrm{d}t}$ with respect to $t$"
+    },
+    {
+     "id": "R2",
+     "content": "Use $v\\frac{\\mathrm{d}v}{\\mathrm{d}x} = a$ and integrate with respect to $x$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Match the form of the acceleration to the variable the force depends on and the quantity asked for.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q15",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "A minibus of mass $500$ kg starts from rest on a level road. Its engine exerts a constant driving force of $5000$ N and the total resistance is $200v$ N when its speed is $v$ m s$^{-1}$. Show that $v = 25\\left(1 - \\mathrm{e}^{-0.4t}\\right)$ at time $t$ seconds.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 Newton's second law: 500 dv/dt = 5000 − 200v.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A1 simplifies to dv/dt = 0.4(25 − v).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 separates: ∫ dv/(25 − v) = ∫ 0.4 dt.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 −ln(25 − v) = 0.4t + c with c = −ln 25 from v = 0 at t = 0.",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "A1 rearranges to v = 25(1 − e^(−0.4t)).",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n500\\frac{\\mathrm{d}v}{\\mathrm{d}t} = 5000 - 200v \\;\\Rightarrow\\; \\frac{\\mathrm{d}v}{\\mathrm{d}t} = 0.4(25 - v)\n$$\n$$\n\\int_0^v \\frac{\\mathrm{d}v}{25 - v} = \\int_0^t 0.4\\,\\mathrm{d}t \\;\\Rightarrow\\; -\\ln(25 - v) + \\ln 25 = 0.4t\n$$\n$$\n\\ln\\frac{25 - v}{25} = -0.4t \\;\\Rightarrow\\; 25 - v = 25\\mathrm{e}^{-0.4t} \\;\\Rightarrow\\; v = 25\\left(1 - \\mathrm{e}^{-0.4t}\\right)\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Set up F = ma with the correct signs, separate, integrate with limits, rearrange.",
+  "hints": [
+   "Factor 200 out of the right-hand side."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "For the minibus with $v = 25\\left(1 - \\mathrm{e}^{-0.4t}\\right)$, explain what happens to its speed as $t$ increases, and why the model says it never quite reaches $25$ m s$^{-1}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "As t increases, e^(−0.4t) → 0, so v increases towards 25 m/s (terminal velocity, where driving force = resistance).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "e^(−0.4t) is positive for every t, so v < 25 always: the acceleration 0.4(25 − v) gets smaller as v approaches 25.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The speed rises quickly at first and then levels off towards 25 m/s, where 5000 = 200v and the resultant force is zero. Since e^(−0.4t) > 0 for all t, v is always less than 25; the closer v gets, the smaller the resultant force and acceleration, so it approaches 25 m/s without reaching it."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Terminal velocity is the limit of v as t → ∞.",
+  "hints": [
+   "What does e^(−0.4t) do as t grows?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "A particle of mass $3$ kg starts from rest at $O$ and moves in a straight line under a single force of $(18t - 3t^2)$ N at time $t$ seconds.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Its velocity is v = pt² − t³/q. Find p and q.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "3"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "3"
+       ],
+       "tolerance": 0
+      }
+     ]
+    },
+    "explanation": "$a = \\frac{F}{m} = 6t - t^2$, so $v = 3t^2 - \\frac{t^3}{3}$ (zero constant): $p = 3$, $q = 3$. (Forgetting to divide by the mass gives $9t^2 - t^3$.)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the time when the particle is next at rest.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 9,
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "$t^2\\left(3 - \\frac{t}{3}\\right) = 0$ gives $t = 9$ s.",
+    "workedSolution": "1. $t^2\\left(3 - \\frac{t}{3}\\right) = 0$ gives $t = 9$ s."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find its distance from O at that time, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 182.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "$x = t^3 - \\frac{t^4}{12}$; at $t = 9$, $x = 729 - 546.75 = 182.25$, so $182$ m (3 s.f.).",
+    "workedSolution": "1. $x = t^3 - \\frac{t^4}{12}$; at $t = 9$, $x = 729 - 546.75 = 182.25$, so $182$ m (3 s.f.)."
+   }
+  ],
+  "explanation": "Divide the force by the mass, then integrate twice using the initial conditions.",
+  "hints": [
+   "a = F/m.",
+   "Both constants of integration are zero."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "3"
+      },
+      {
+       "blankId": "q",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "9"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "182"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "9"
+       },
+       {
+        "blankId": "q",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "729"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "variable.force.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.variable.force"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "A car of mass $600$ kg moves along a straight level road. The engine produces a constant driving force of $1200$ N and the resistance to motion is $kv^2$ N, where $v$ m s$^{-1}$ is the speed. The car's terminal speed is $20$ m s$^{-1}$. The car starts from rest.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find k.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "At terminal speed the forces balance: $k(20)^2 = 1200$, so $k = 3$.",
+    "workedSolution": "1. At terminal speed the forces balance: $k(20)^2 = 1200$, so $k = 3$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $200v\\dfrac{\\mathrm{d}v}{\\mathrm{d}x} = 400 - v^2$, where $x$ m is the distance travelled.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 Newton's second law with a = v dv/dx: 600v dv/dx = 1200 − 3v².",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 divides by 3.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 reaches 200v dv/dx = 400 − v².",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n600v\\frac{\\mathrm{d}v}{\\mathrm{d}x} = 1200 - 3v^2\n$$\nDividing by 3:\n$$\n200v\\frac{\\mathrm{d}v}{\\mathrm{d}x} = 400 - v^2\n$$"
+    },
+    "explanation": "Distance is involved, so use v dv/dx."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Find the distance the car travels while reaching a speed of 10 m/s, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 28.768207245178086,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "$\\int_0^{10}\\frac{200v}{400 - v^2}\\,\\mathrm{d}v = X$: $\\left[-100\\ln(400 - v^2)\\right]_0^{10} = 100\\ln\\frac{400}{300} = 100\\ln\\frac{4}{3} = 28.8$ m.",
+    "workedSolution": "1. $\\int_0^{10}\\frac{200v}{400 - v^2}\\,\\mathrm{d}v = X$: $\\left[-100\\ln(400 - v^2)\\right]_0^{10} = 100\\ln\\frac{400}{300} = 100\\ln\\frac{4}{3} = 28.8$ m."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Find the time it takes to reach 10 m/s, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 5.493061443340547,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "$200\\frac{\\mathrm{d}v}{\\mathrm{d}t} = 400 - v^2$, so $T = \\int_0^{10}\\frac{200}{(20 - v)(20 + v)}\\,\\mathrm{d}v = 200 \\cdot \\frac{1}{40}\\left[\\ln\\frac{20 + v}{20 - v}\\right]_0^{10} = 5\\ln 3 = 5.49$ s (partial fractions).",
+    "workedSolution": "1. $200\\frac{\\mathrm{d}v}{\\mathrm{d}t} = 400 - v^2$, so $T = \\int_0^{10}\\frac{200}{(20 - v)(20 + v)}\\,\\mathrm{d}v = 200 \\cdot \\frac{1}{40}\\left[\\ln\\frac{20 + v}{20 - v}\\right]_0^{10} = 5\\ln 3 = 5.49$ s (partial fractions)."
+   }
+  ],
+  "explanation": "Terminal speed gives k; use v dv/dx for distance and dv/dt (with partial fractions) for time.",
+  "hints": [
+   "At terminal speed the acceleration is zero.",
+   "$\\frac{1}{400 - v^2} = \\frac{1}{40}\\left(\\frac{1}{20 - v} + \\frac{1}{20 + v}\\right)$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "28.8"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "5.49"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "60"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "139"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "11.0"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

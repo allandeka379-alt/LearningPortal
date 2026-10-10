@@ -1,0 +1,2138 @@
+[
+ {
+  "key": "exam.w2a-zimsec-pure.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.first-principles",
+   "amaths.diff.applications"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "Let $f(x) = 2x^{2} - 5x$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Differentiate $f(x)$ from first principles.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes $f(x + h) = 2(x + h)^{2} - 5(x + h) = 2x^{2} + 4xh + 2h^{2} - 5x - 5h$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 simplifies $f(x + h) - f(x) = 4xh + 2h^{2} - 5h$",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "M1 divides by $h$: $4x + 2h - 5$",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A1 lets $h \\to 0$ (limit stated) to obtain $f'(x) = 4x - 5$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nf(x + h) - f(x) = 2(x + h)^{2} - 5(x + h) - 2x^{2} + 5x = 4xh + 2h^{2} - 5h\n$$\n\n$$\nf'(x) = \\lim_{h \\to 0}\\frac{4xh + 2h^{2} - 5h}{h} = \\lim_{h \\to 0}(4x + 2h - 5) = 4x - 5\n$$"
+    },
+    "explanation": "Expand, subtract, cancel h, then take the limit."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State f′(x). Type it in terms of x, for example 6x+1.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "4x-5"
+      },
+      {
+       "value": "-5+4x"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$f'(x) = 4x - 5$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the equation of the normal to the curve y = f(x) at the point where x = 3, in the form ax + by = c with integers a, b, c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "x+7y=24"
+      },
+      {
+       "value": "7y+x=24"
+      },
+      {
+       "value": "x+7y-24=0"
+      },
+      {
+       "value": "y=-x/7+24/7"
+      },
+      {
+       "value": "y=(24-x)/7"
+      },
+      {
+       "value": "-x-7y=-24"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "At $x = 3$: $y = 18 - 15 = 3$ and $f'(3) = 7$. Normal gradient $-\\frac{1}{7}$: $7y - 21 = -x + 3$, so $x + 7y = 24$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the point on the curve at which the tangent is parallel to the line y = 3x + 1.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "-2"
+       ]
+      }
+     ]
+    },
+    "explanation": "$4x - 5 = 3$ gives $x = 2$, and $y = 8 - 10 = -2$."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is $f''(x)$?",
+    "options": [
+     {
+      "key": "A",
+      "content": "4",
+      "correct": true,
+      "rationale": "Correct: the derivative of 4x − 5."
+     },
+     {
+      "key": "B",
+      "content": "4x",
+      "rationale": "The derivative of 4x is 4, not 4x."
+     },
+     {
+      "key": "C",
+      "content": "4x − 5",
+      "rationale": "That is f′(x)."
+     },
+     {
+      "key": "D",
+      "content": "0",
+      "rationale": "Only the derivative of the constant −5 is 0."
+     }
+    ],
+    "explanation": "$f''(x) = \\frac{d}{dx}(4x - 5) = 4$."
+   }
+  ],
+  "explanation": "ZIMSEC: first principles, then use the derivative for a normal and a parallel tangent.",
+  "hints": [
+   "Replace every x by x + h.",
+   "Parallel lines have equal gradients."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "4x-5"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "x+7y=24"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "2"
+      },
+      {
+       "blankId": "y",
+       "text": "-2"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "4x+2h-5"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "7x-y=18"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "3"
+       },
+       {
+        "blankId": "y",
+        "text": "7"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-zimsec-pure.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.stationary-points"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A curve has equation $y = 2x^{3} + 3x^{2} - 12x + 1$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Find the coordinates of the two stationary points, the one with the smaller x first.",
+    "payload": {
+     "template": "({{blank:a}}, {{blank:b}}) and ({{blank:c}}, {{blank:d}})",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "21"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "-6"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\frac{dy}{dx} = 6x^{2} + 6x - 12 = 6(x + 2)(x - 1)$: $x = -2$, $y = -16 + 12 + 24 + 1 = 21$; $x = 1$, $y = 2 + 3 - 12 + 1 = -6$."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Using the second derivative, what is the nature of the stationary point at x = 1?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A maximum, since d²y/dx² = 18 > 0",
+      "rationale": "A positive second derivative indicates a minimum."
+     },
+     {
+      "key": "B",
+      "content": "A minimum, since d²y/dx² = −6 < 0",
+      "rationale": "12(1) + 6 = 18, not −6."
+     },
+     {
+      "key": "C",
+      "content": "A minimum, since d²y/dx² = 18 > 0",
+      "correct": true,
+      "rationale": "Correct: d²y/dx² = 12x + 6."
+     },
+     {
+      "key": "D",
+      "content": "A point of inflexion",
+      "rationale": "The second derivative is not zero at x = 1."
+     }
+    ],
+    "explanation": "$\\frac{d^{2}y}{dx^{2}} = 12x + 6 = 18 > 0$ at $x = 1$: a minimum."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the point of inflexion, as decimals.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "-0.5"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "7.5"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\frac{d^{2}y}{dx^{2}} = 12x + 6 = 0$ at $x = -\\frac{1}{2}$, and it changes sign there. $y = -\\frac{1}{4} + \\frac{3}{4} + 6 + 1 = 7.5$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe a sketch of the curve, labelling the stationary points, the point of inflexion and the y-intercept.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Rises from −∞ to the maximum (−2, 21), falls through the inflexion (−0.5, 7.5) and the y-intercept (0, 1) to the minimum (1, −6), then rises to +∞",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "All four labelled points shown with correct coordinates",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: An S-shaped cubic: it comes up from −∞, reaches a maximum at (−2, 21), falls through the point of inflexion (−0.5, 7.5) and crosses the y-axis at (0, 1), reaches a minimum at (1, −6), then rises to +∞."
+    },
+    "explanation": "Positive leading coefficient: the curve falls to −∞ on the left and rises to +∞ on the right."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "How many real roots does the equation 2x³ + 3x² − 12x + 1 = 0 have?",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "The maximum value 21 is positive and the minimum value $-6$ is negative, so the curve crosses the $x$-axis three times.",
+    "workedSolution": "1. The maximum value 21 is positive and the minimum value $-6$ is negative, so the curve crosses the $x$-axis three times."
+   }
+  ],
+  "explanation": "Stationary points, their nature, the ZIMSEC point of inflexion, and a sketch.",
+  "hints": [
+   "Factorise 6x² + 6x − 12.",
+   "A point of inflexion is where d²y/dx² changes sign."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-2"
+      },
+      {
+       "blankId": "b",
+       "text": "21"
+      },
+      {
+       "blankId": "c",
+       "text": "1"
+      },
+      {
+       "blankId": "d",
+       "text": "-6"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "-0.5"
+      },
+      {
+       "blankId": "y",
+       "text": "7.5"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "-11"
+       },
+       {
+        "blankId": "c",
+        "text": "-1"
+       },
+       {
+        "blankId": "d",
+        "text": "15"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "0.5"
+       },
+       {
+        "blankId": "y",
+        "text": "1"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-zimsec-pure.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.partial-fractions",
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "Let $g(x) = \\dfrac{x^{2} + x + 2}{x^{2} - 1}$, $x > 1$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Express $g(x)$ in the form $P + \\dfrac{A}{x - 1} + \\dfrac{B}{x + 1}$.",
+    "payload": {
+     "template": "P = {{blank:P}}, A = {{blank:A}}, B = {{blank:B}}",
+     "blanks": [
+      {
+       "id": "P",
+       "input": "number"
+      },
+      {
+       "id": "A",
+       "input": "number"
+      },
+      {
+       "id": "B",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "P",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "A",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "B",
+       "accepted": [
+        "-1"
+       ]
+      }
+     ]
+    },
+    "explanation": "Divide: $g(x) = 1 + \\dfrac{x + 3}{x^{2} - 1}$. Then $x + 3 \\equiv A(x + 1) + B(x - 1)$: $x = 1$ gives $A = 2$, $x = -1$ gives $B = -1$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Hence find $\\displaystyle\\int_{2}^{3} g(x)\\,dx$ in the form $p + \\ln q$. Type it as, for example, 2+ln5.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "1+ln3"
+      },
+      {
+       "value": "ln3+1"
+      },
+      {
+       "value": "1+ln(3)"
+      },
+      {
+       "value": "ln(3)+1"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\Big[x + 2\\ln(x - 1) - \\ln(x + 1)\\Big]_{2}^{3} = (3 + 2\\ln 2 - \\ln 4) - (2 - \\ln 3) = 1 + \\ln 3$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Give the value of the integral correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 2.0986122886681096,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$1 + \\ln 3 \\approx 2.10$.",
+    "workedSolution": "1. $1 + \\ln 3 \\approx 2.10$."
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Using a suitable substitution, show that $\\displaystyle\\int_{2}^{3}\\frac{x}{x^{2} - 1}\\,dx = \\frac{1}{2}\\ln\\frac{8}{3}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 chooses $u = x^{2} - 1$ with $du = 2x\\,dx$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 changes the limits to $u = 3$ and $u = 8$ and obtains $\\frac{1}{2}\\int_{3}^{8}\\frac{1}{u}\\,du$",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 evaluates $\\frac{1}{2}(\\ln 8 - \\ln 3) = \\frac{1}{2}\\ln\\frac{8}{3}$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "With $u = x^{2} - 1$, $du = 2x\\,dx$ and the limits become 3 and 8:\n\n$$\n \\int_{2}^{3}\\frac{x}{x^{2} - 1}\\,dx = \\frac{1}{2}\\int_{3}^{8}\\frac{du}{u} = \\frac{1}{2}\\Big[\\ln u\\Big]_{3}^{8} = \\frac{1}{2}\\ln\\frac{8}{3}\n$$"
+    },
+    "explanation": "ZIMSEC expects you to choose the substitution: the denominator, whose derivative appears on top."
+   }
+  ],
+  "explanation": "ZIMSEC improper partial fractions, then an integral by a chosen substitution.",
+  "hints": [
+   "The degrees are equal: divide first.",
+   "Let u be the denominator."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "P",
+       "text": "1"
+      },
+      {
+       "blankId": "A",
+       "text": "2"
+      },
+      {
+       "blankId": "B",
+       "text": "-1"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "1+ln3"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.10"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "P",
+        "text": "0"
+       },
+       {
+        "blankId": "A",
+        "text": "1"
+       },
+       {
+        "blankId": "B",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "ln3"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1.1"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-zimsec-pure.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.implicit-parametric",
+   "amaths.integ.volumes"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A curve $C$ has parametric equations $x = t + 1$, $y = \\dfrac{2}{t}$, for $t > 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find a Cartesian equation of C. Type it as y = …",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "y=2/(x-1)"
+      },
+      {
+       "value": "y=2(x-1)^-1"
+      },
+      {
+       "value": "y=2(x-1)^(-1)"
+      },
+      {
+       "value": "y=2/(-1+x)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$t = x - 1$, so $y = \\dfrac{2}{x - 1}$ (for $x > 1$)."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find dy/dx in terms of t. Type it as a fraction, for example -3/t^2.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "-2/t^2"
+      },
+      {
+       "value": "-2t^-2"
+      },
+      {
+       "value": "-2t^(-2)"
+      },
+      {
+       "value": "-2/t²"
+      },
+      {
+       "value": "(-2)/t^2"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\frac{dx}{dt} = 1$ and $\\frac{dy}{dt} = -\\frac{2}{t^{2}}$, so $\\frac{dy}{dx} = -\\frac{2}{t^{2}}$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the equation of the tangent to C at the point where t = 2, in the form ax + by = c with integers a, b, c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "x+2y=5"
+      },
+      {
+       "value": "2y+x=5"
+      },
+      {
+       "value": "x+2y-5=0"
+      },
+      {
+       "value": "y=-x/2+5/2"
+      },
+      {
+       "value": "y=-0.5x+2.5"
+      },
+      {
+       "value": "y=(5-x)/2"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "At $t = 2$: $(3, 1)$ and $\\frac{dy}{dx} = -\\frac{1}{2}$. Tangent: $y - 1 = -\\frac{1}{2}(x - 3)$, i.e. $x + 2y = 5$."
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The region $R$ is bounded by $C$, the $x$-axis and the lines $x = 2$ and $x = 3$. Show that the area of $R$ is $2\\ln 2$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes the area as $\\int_{2}^{3}\\frac{2}{x - 1}\\,dx = \\Big[2\\ln(x - 1)\\Big]_{2}^{3}$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 evaluates $2\\ln 2 - 2\\ln 1 = 2\\ln 2$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\int_{2}^{3}\\frac{2}{x - 1}\\,dx = \\Big[2\\ln(x - 1)\\Big]_{2}^{3} = 2\\ln 2 - 0 = 2\\ln 2\n$$"
+    },
+    "explanation": "Use the Cartesian equation from (a)."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "R is rotated through 360° about the x-axis. Find the volume of the solid formed, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "units³"
+    },
+    "answerSpec": {
+     "value": 6.283185307179586,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "units³",
+       "units^3",
+       "cubic units"
+      ]
+     }
+    },
+    "explanation": "$V = \\pi\\int_{2}^{3}\\frac{4}{(x - 1)^{2}}\\,dx = 4\\pi\\Big[-\\tfrac{1}{x - 1}\\Big]_{2}^{3} = 4\\pi\\left(-\\tfrac{1}{2} + 1\\right) = 2\\pi \\approx 6.28$.",
+    "workedSolution": "1. $V = \\pi\\int_{2}^{3}\\frac{4}{(x - 1)^{2}}\\,dx = 4\\pi\\Big[-\\tfrac{1}{x - 1}\\Big]_{2}^{3} = 4\\pi\\left(-\\tfrac{1}{2} + 1\\right) = 2\\pi \\approx 6.28$."
+   }
+  ],
+  "explanation": "ZIMSEC: convert parametric equations to Cartesian form, then use both forms for a tangent, an area and a volume.",
+  "hints": [
+   "Eliminate t using x = t + 1.",
+   "Square y for the volume."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "y=2/(x-1)"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "-2/t^2"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "x+2y=5"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "6.28"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "y=2/(x+1)"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "2/t^2"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "2x+y=7"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-zimsec-pure.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.first-principles",
+   "amaths.diff.applications"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "Let $f(x) = \\dfrac{1}{2x + 1}$, $x \\neq -\\tfrac{1}{2}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Differentiate f(x) from first principles.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes $f(x + h) - f(x) = \\dfrac{1}{2x + 2h + 1} - \\dfrac{1}{2x + 1}$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 combines to $\\dfrac{-2h}{(2x + 2h + 1)(2x + 1)}$",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "M1 divides by $h$",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A1 lets $h \\to 0$ to obtain $f'(x) = -\\dfrac{2}{(2x + 1)^{2}}$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nf(x + h) - f(x) = \\frac{(2x + 1) - (2x + 2h + 1)}{(2x + 2h + 1)(2x + 1)} = \\frac{-2h}{(2x + 2h + 1)(2x + 1)}\n$$\n\n$$\nf'(x) = \\lim_{h \\to 0}\\frac{-2}{(2x + 2h + 1)(2x + 1)} = -\\frac{2}{(2x + 1)^{2}}\n$$"
+    },
+    "explanation": "A common denominator first; then the factor h cancels."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the gradient of the curve y = f(x) at x = 1, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": -0.2222222222222222,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$f'(1) = -\\frac{2}{9} \\approx -0.222$.",
+    "workedSolution": "1. $f'(1) = -\\frac{2}{9} \\approx -0.222$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Find the equation of the tangent at x = 1, in the form ax + by = c with integers a, b, c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2x+9y=5"
+      },
+      {
+       "value": "9y+2x=5"
+      },
+      {
+       "value": "2x+9y-5=0"
+      },
+      {
+       "value": "-2x-9y=-5"
+      },
+      {
+       "value": "y=-2x/9+5/9"
+      },
+      {
+       "value": "y=(5-2x)/9"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "At $x = 1$: $y = \\frac{1}{3}$. $y - \\frac{1}{3} = -\\frac{2}{9}(x - 1)$; multiply by 9: $9y - 3 = -2x + 2$, so $2x + 9y = 5$."
+   }
+  ],
+  "explanation": "ZIMSEC first principles for a rational function, then a tangent.",
+  "hints": [
+   "Use the common denominator (2x + 2h + 1)(2x + 1).",
+   "Find y at x = 1 before writing the tangent."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-0.222"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "2x+9y=5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-0.667"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "2x+9y=3"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2a-zimsec-pure.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.stationary-points",
+   "amaths.diff.exp-log-trig",
+   "amaths.diff.product-quotient"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A curve has equation $y = \\ln(x^{2} + 1)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Find dy/dx. Type it as a fraction, for example 3x/(x^2+2).",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2x/(x^2+1)"
+      },
+      {
+       "value": "2x/(1+x^2)"
+      },
+      {
+       "value": "2x/(x²+1)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\frac{dy}{dx} = \\frac{2x}{x^{2} + 1}$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\dfrac{d^{2}y}{dx^{2}} = \\dfrac{2(1 - x^{2})}{(x^{2} + 1)^{2}}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 applies the quotient rule to $\\frac{2x}{x^{2} + 1}$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 obtains $\\dfrac{2(x^{2} + 1) - 2x \\cdot 2x}{(x^{2} + 1)^{2}}$",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 simplifies to the given result",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\frac{d^{2}y}{dx^{2}} = \\frac{2(x^{2} + 1) - 2x(2x)}{(x^{2} + 1)^{2}} = \\frac{2 - 2x^{2}}{(x^{2} + 1)^{2}} = \\frac{2(1 - x^{2})}{(x^{2} + 1)^{2}}\n$$"
+    },
+    "explanation": "Quotient rule on the first derivative."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the point of inflexion with x > 0, giving y correct to 3 significant figures.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "0.693"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$\\frac{d^{2}y}{dx^{2}} = 0$ at $x = \\pm 1$ and changes sign there. At $x = 1$: $y = \\ln 2 \\approx 0.693$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the gradient of the curve at this point of inflexion.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "$\\frac{dy}{dx} = \\frac{2}{2} = 1$ at $x = 1$: a non-stationary point of inflexion.",
+    "workedSolution": "1. $\\frac{dy}{dx} = \\frac{2}{2} = 1$ at $x = 1$: a non-stationary point of inflexion."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the nature of the stationary point at the origin?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A maximum",
+      "rationale": "y is never negative, so the origin is the lowest point."
+     },
+     {
+      "key": "B",
+      "content": "A point of inflexion",
+      "rationale": "d²y/dx² = 2 > 0 at x = 0."
+     },
+     {
+      "key": "C",
+      "content": "Not stationary",
+      "rationale": "dy/dx = 0 at x = 0."
+     },
+     {
+      "key": "D",
+      "content": "A minimum",
+      "correct": true,
+      "rationale": "Correct: y = ln(x² + 1) ≥ 0, and y = 0 only at x = 0."
+     }
+    ],
+    "explanation": "$\\frac{d^{2}y}{dx^{2}} = 2 > 0$ at $x = 0$: a minimum."
+   }
+  ],
+  "explanation": "Logarithm and quotient rule derivatives; ZIMSEC points of inflexion.",
+  "hints": [
+   "d/dx ln f = f′/f.",
+   "Inflexion: d²y/dx² changes sign."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "2x/(x^2+1)"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "1"
+      },
+      {
+       "blankId": "y",
+       "text": "0.693"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "1/(x^2+1)"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "0"
+       },
+       {
+        "blankId": "y",
+        "text": "0"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2a-zimsec-pure.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.stationary-points",
+   "amaths.diff.product-quotient",
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 5,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "The function $f$ is defined by $f(x) = x\\mathrm{e}^{-\\frac{x}{2}}$ for $x \\geq 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Stationary point.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 2,
+      "stem": "Find $f'(x)$ in the form $\\mathrm{e}^{-\\frac{x}{2}}(a + bx)$.",
+      "payload": {
+       "template": "a = {{blank:a}}, b = {{blank:b}}",
+       "blanks": [
+        {
+         "id": "a",
+         "input": "number"
+        },
+        {
+         "id": "b",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "a",
+         "accepted": [
+          "1"
+         ]
+        },
+        {
+         "id": "b",
+         "accepted": [
+          "-0.5"
+         ],
+         "tolerance": 0.05
+        }
+       ]
+      },
+      "explanation": "$f'(x) = \\mathrm{e}^{-\\frac{x}{2}} - \\frac{x}{2}\\mathrm{e}^{-\\frac{x}{2}} = \\mathrm{e}^{-\\frac{x}{2}}\\left(1 - \\frac{x}{2}\\right)$."
+     },
+     {
+      "label": "(ii)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 2,
+      "stem": "Find the coordinates of the stationary point, giving y correct to 3 significant figures.",
+      "payload": {
+       "template": "({{blank:x}}, {{blank:y}})",
+       "blanks": [
+        {
+         "id": "x",
+         "input": "number"
+        },
+        {
+         "id": "y",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "x",
+         "accepted": [
+          "2"
+         ]
+        },
+        {
+         "id": "y",
+         "accepted": [
+          "0.736"
+         ],
+         "tolerance": 0.0005
+        }
+       ]
+      },
+      "explanation": "$1 - \\frac{x}{2} = 0$ at $x = 2$; $y = 2\\mathrm{e}^{-1} \\approx 0.736$."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 3,
+    "stem": "Second derivative.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "EXTENDED_RESPONSE",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Show that $f''(x) = \\mathrm{e}^{-\\frac{x}{2}}\\left(\\dfrac{x}{4} - 1\\right)$.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "M1 differentiates $\\mathrm{e}^{-\\frac{x}{2}}\\left(1 - \\frac{x}{2}\\right)$ by the product rule",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "A1 simplifies $-\\frac{1}{2}\\left(1 - \\frac{x}{2}\\right) - \\frac{1}{2}$ to $\\frac{x}{4} - 1$",
+          "marks": 1
+         }
+        ]
+       },
+       "modelAnswer": "$$\nf''(x) = -\\tfrac{1}{2}\\mathrm{e}^{-\\frac{x}{2}}\\left(1 - \\tfrac{x}{2}\\right) + \\mathrm{e}^{-\\frac{x}{2}}\\left(-\\tfrac{1}{2}\\right) = \\mathrm{e}^{-\\frac{x}{2}}\\left(\\tfrac{x}{4} - 1\\right)\n$$"
+      },
+      "explanation": "Product rule again."
+     },
+     {
+      "label": "(ii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Hence state the nature of the stationary point.",
+      "options": [
+       {
+        "key": "A",
+        "content": "A minimum, since f″(2) > 0",
+        "rationale": "f″(2) = e⁻¹(1/2 − 1) is negative."
+       },
+       {
+        "key": "B",
+        "content": "A maximum, since f″(2) = −e⁻¹/2 < 0",
+        "correct": true,
+        "rationale": "Correct: x/4 − 1 = −1/2 at x = 2."
+       },
+       {
+        "key": "C",
+        "content": "A point of inflexion, since f″(2) = 0",
+        "rationale": "f″(2) is not zero."
+       },
+       {
+        "key": "D",
+        "content": "A maximum, since f(2) > 0",
+        "rationale": "The sign of f does not decide the nature."
+       }
+      ],
+      "explanation": "$f''(2) = \\mathrm{e}^{-1}\\left(\\frac{1}{2} - 1\\right) < 0$: a maximum."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the point of inflexion, giving y correct to 3 significant figures.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "0.541"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$f''(x) = 0$ when $\\frac{x}{4} = 1$, $x = 4$, and $f''$ changes sign there. $y = 4\\mathrm{e}^{-2} \\approx 0.541$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Hence find the equation of the tangent at the point of inflexion, in the form y = mx + c, with m and c correct to 3 significant figures.",
+    "payload": {
+     "template": "m = {{blank:m}}, c = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "-0.135"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "1.08"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$m = f'(4) = \\mathrm{e}^{-2}(1 - 2) = -\\mathrm{e}^{-2} \\approx -0.135$. $c = 4\\mathrm{e}^{-2} - 4m = 8\\mathrm{e}^{-2} \\approx 1.08$."
+   },
+   {
+    "label": "(e)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Area.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "EXTENDED_RESPONSE",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Show that $\\displaystyle\\int x\\mathrm{e}^{-\\frac{x}{2}}\\,dx = -2(x + 2)\\mathrm{e}^{-\\frac{x}{2}} + c$.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "M1 uses parts with $u = x$, $v = -2\\mathrm{e}^{-\\frac{x}{2}}$: $-2x\\mathrm{e}^{-\\frac{x}{2}} + \\int 2\\mathrm{e}^{-\\frac{x}{2}}\\,dx$",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "A1 integrates to $-2x\\mathrm{e}^{-\\frac{x}{2}} - 4\\mathrm{e}^{-\\frac{x}{2}}$ and factorises",
+          "marks": 1
+         }
+        ]
+       },
+       "modelAnswer": "$$\n\\int x\\mathrm{e}^{-\\frac{x}{2}}\\,dx = -2x\\mathrm{e}^{-\\frac{x}{2}} + \\int 2\\mathrm{e}^{-\\frac{x}{2}}\\,dx = -2x\\mathrm{e}^{-\\frac{x}{2}} - 4\\mathrm{e}^{-\\frac{x}{2}} + c = -2(x + 2)\\mathrm{e}^{-\\frac{x}{2}} + c\n$$"
+      },
+      "explanation": "$\\int\\mathrm{e}^{-\\frac{x}{2}}\\,dx = -2\\mathrm{e}^{-\\frac{x}{2}}$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Hence find the area of the region bounded by the curve, the x-axis and the line x = 2, correct to 3 significant figures.",
+      "payload": {
+       "unitHint": "units²"
+      },
+      "answerSpec": {
+       "value": 1.0569644706284613,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "units²",
+         "units^2",
+         "square units",
+         "unit^2"
+        ]
+       }
+      },
+      "explanation": "$\\Big[-2(x + 2)\\mathrm{e}^{-\\frac{x}{2}}\\Big]_{0}^{2} = -8\\mathrm{e}^{-1} + 4 \\approx 1.06$.",
+      "workedSolution": "1. $\\Big[-2(x + 2)\\mathrm{e}^{-\\frac{x}{2}}\\Big]_{0}^{2} = -8\\mathrm{e}^{-1} + 4 \\approx 1.06$."
+     }
+    ]
+   }
+  ],
+  "explanation": "A full ZIMSEC curve study: stationary point, inflexion, tangent, and an area by parts.",
+  "hints": [
+   "Product rule with d/dx e^(−x/2) = −(1/2)e^(−x/2).",
+   "For the area, integrate by parts with u = x."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "-0.5"
+      }
+     ]
+    },
+    "(a)(ii)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "2"
+      },
+      {
+       "blankId": "y",
+       "text": "0.736"
+      }
+     ]
+    },
+    "(b)(ii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "4"
+      },
+      {
+       "blankId": "y",
+       "text": "0.541"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "-0.135"
+      },
+      {
+       "blankId": "c",
+       "text": "1.08"
+      }
+     ]
+    },
+    "(e)(ii)": {
+     "type": "NUMERICAL",
+     "value": "1.06"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "0.5"
+       }
+      ]
+     },
+     "(a)(ii)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "1"
+       },
+       {
+        "blankId": "y",
+        "text": "2"
+       }
+      ]
+     },
+     "(b)(ii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "2"
+       },
+       {
+        "blankId": "y",
+        "text": "4"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "0.135"
+       },
+       {
+        "blankId": "c",
+        "text": "0.541"
+       }
+      ]
+     },
+     "(e)(ii)": {
+      "type": "NUMERICAL",
+      "value": "2.94"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2a-zimsec-pure.q08",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.volumes",
+   "amaths.integ.partial-fractions",
+   "amaths.diff.powers-chain"
+  ],
+  "difficulty": 5,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "A curve has equation $y = \\dfrac{3}{\\sqrt{(x + 1)(x + 4)}}$ for $x \\geq 0$. Volumes are of solids formed by rotating regions through $360^\\circ$ about the $x$-axis.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Express $\\dfrac{3}{(x + 1)(x + 4)}$ in the form $\\dfrac{A}{x + 1} + \\dfrac{B}{x + 4}$.",
+    "payload": {
+     "template": "A = {{blank:A}}, B = {{blank:B}}",
+     "blanks": [
+      {
+       "id": "A",
+       "input": "number"
+      },
+      {
+       "id": "B",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "A",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "B",
+       "accepted": [
+        "-1"
+       ]
+      }
+     ]
+    },
+    "explanation": "$3 \\equiv A(x + 4) + B(x + 1)$: $x = -1$ gives $A = 1$; $x = -4$ gives $B = -1$."
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "The region between the curve, the axes and the line x = 2 is rotated.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 3,
+      "stem": "Find the exact volume, in the form kπ ln m. Type pi for π, for example 2piln5.",
+      "payload": {
+       "maxLength": 60
+      },
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "3πln2"
+        },
+        {
+         "value": "3piln2"
+        },
+        {
+         "value": "3π*ln2"
+        },
+        {
+         "value": "3pi*ln2"
+        },
+        {
+         "value": "3πln(2)"
+        },
+        {
+         "value": "3piln(2)"
+        },
+        {
+         "value": "πln8"
+        },
+        {
+         "value": "piln8"
+        },
+        {
+         "value": "3ln2π"
+        },
+        {
+         "value": "3ln2pi"
+        },
+        {
+         "value": "3ln2*pi"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "remove_whitespace"
+       ]
+      },
+      "explanation": "$y^{2} = \\frac{9}{(x + 1)(x + 4)} = 3\\left(\\frac{1}{x + 1} - \\frac{1}{x + 4}\\right)$. $V = 3\\pi\\Big[\\ln\\frac{x + 1}{x + 4}\\Big]_{0}^{2} = 3\\pi\\left(\\ln\\frac{1}{2} - \\ln\\frac{1}{4}\\right) = 3\\pi\\ln 2$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "Give the volume correct to 3 significant figures.",
+      "payload": {
+       "unitHint": "units³"
+      },
+      "answerSpec": {
+       "value": 6.532758270910805,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "units³",
+         "units^3",
+         "cubic units"
+        ]
+       }
+      },
+      "explanation": "$3\\pi\\ln 2 \\approx 6.53$.",
+      "workedSolution": "1. $3\\pi\\ln 2 \\approx 6.53$."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "The gradient of the curve.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Find the gradient of the curve at the point where x = 0, as an exact decimal.",
+      "answerSpec": {
+       "value": -0.9375,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.00005
+       }
+      },
+      "explanation": "$y = 3(x^{2} + 5x + 4)^{-\\frac{1}{2}}$, so $\\frac{dy}{dx} = -\\frac{3}{2}(2x + 5)(x^{2} + 5x + 4)^{-\\frac{3}{2}}$. At $x = 0$: $-\\frac{3}{2} \\times 5 \\times \\frac{1}{8} = -0.9375$.",
+      "workedSolution": "1. $y = 3(x^{2} + 5x + 4)^{-\\frac{1}{2}}$, so $\\frac{dy}{dx} = -\\frac{3}{2}(2x + 5)(x^{2} + 5x + 4)^{-\\frac{3}{2}}$. At $x = 0$: $-\\frac{3}{2} \\times 5 \\times \\frac{1}{8} = -0.9375$."
+     },
+     {
+      "label": "(ii)",
+      "type": "EXTENDED_RESPONSE",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Show that y is a decreasing function for x ≥ 0.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "M1 obtains $\\frac{dy}{dx} = -\\frac{3}{2}(2x + 5)\\left[(x + 1)(x + 4)\\right]^{-\\frac{3}{2}}$",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "A1 argues that $2x + 5 > 0$ and the bracket is positive for $x \\geq 0$, so $\\frac{dy}{dx} < 0$",
+          "marks": 1
+         }
+        ]
+       },
+       "modelAnswer": "For $x \\geq 0$, $2x + 5 > 0$ and $(x + 1)(x + 4) > 0$, so $\\frac{dy}{dx} = -\\frac{3}{2}(2x + 5)[(x + 1)(x + 4)]^{-3/2} < 0$: y is decreasing."
+      },
+      "explanation": "Every factor except the −3/2 is positive."
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "The unbounded region between the curve, the x-axis and the y-axis (all x ≥ 0) is rotated.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Find the volume, correct to 3 significant figures.",
+      "payload": {
+       "unitHint": "units³"
+      },
+      "answerSpec": {
+       "value": 13.065516541821612,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "units³",
+         "units^3",
+         "cubic units"
+        ]
+       }
+      },
+      "explanation": "$3\\pi\\Big[\\ln\\frac{x + 1}{x + 4}\\Big]_{0}^{N} = 3\\pi\\left(\\ln\\frac{N + 1}{N + 4} + \\ln 4\\right) \\to 3\\pi\\ln 4 \\approx 13.1$ as $N \\to \\infty$.",
+      "workedSolution": "1. $3\\pi\\Big[\\ln\\frac{x + 1}{x + 4}\\Big]_{0}^{N} = 3\\pi\\left(\\ln\\frac{N + 1}{N + 4} + \\ln 4\\right) \\to 3\\pi\\ln 4 \\approx 13.1$ as $N \\to \\infty$."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Explain why this volume is finite even though the region extends to infinity.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "States that $\\ln\\frac{N + 1}{N + 4} \\to \\ln 1 = 0$ as $N \\to \\infty$, so the integral converges",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "Links this to $y^{2}$ behaving like $\\frac{9}{x^{2}}$ for large $x$, which falls fast enough",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: As N → ∞, (N + 1)/(N + 4) → 1 and ln 1 = 0, so the volume tends to the finite limit 3π ln 4. For large x, y² is about 9/x², and the integral of 1/x² from a positive number to infinity is finite."
+      },
+      "explanation": "An improper integral converges when the integrand shrinks fast enough."
+     }
+    ]
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of k for which the volume generated by the region from x = 0 to x = k is half the volume in (d)(i).",
+    "payload": {
+     "answerPrefix": "k ="
+    },
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "$3\\pi\\ln\\frac{4(k + 1)}{k + 4} = \\frac{3\\pi\\ln 4}{2} = 3\\pi\\ln 2$, so $\\frac{4(k + 1)}{k + 4} = 2$, $4k + 4 = 2k + 8$, $k = 2$ (as in (b)).",
+    "workedSolution": "1. $3\\pi\\ln\\frac{4(k + 1)}{k + 4} = \\frac{3\\pi\\ln 4}{2} = 3\\pi\\ln 2$, so $\\frac{4(k + 1)}{k + 4} = 2$, $4k + 4 = 2k + 8$, $k = 2$ (as in (b))."
+   }
+  ],
+  "explanation": "Partial fractions make the volume integral a difference of logarithms; the improper case is a limit.",
+  "hints": [
+   "Square y first: y² = 9/((x + 1)(x + 4)).",
+   "ln((N + 1)/(N + 4)) → 0 as N → ∞."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "A",
+       "text": "1"
+      },
+      {
+       "blankId": "B",
+       "text": "-1"
+      }
+     ]
+    },
+    "(b)(i)": {
+     "type": "SHORT_ANSWER",
+     "text": "3πln2"
+    },
+    "(b)(ii)": {
+     "type": "NUMERICAL",
+     "value": "6.53"
+    },
+    "(c)(i)": {
+     "type": "NUMERICAL",
+     "value": "-0.9375"
+    },
+    "(d)(i)": {
+     "type": "NUMERICAL",
+     "value": "13.1"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "A",
+        "text": "3"
+       },
+       {
+        "blankId": "B",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)(i)": {
+      "type": "SHORT_ANSWER",
+      "text": "πln2"
+     },
+     "(b)(ii)": {
+      "type": "NUMERICAL",
+      "value": "2.18"
+     },
+     "(c)(i)": {
+      "type": "NUMERICAL",
+      "value": "0.9375"
+     },
+     "(d)(i)": {
+      "type": "NUMERICAL",
+      "value": "6.53"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ }
+]

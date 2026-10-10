@@ -1,0 +1,1071 @@
+[
+ {
+  "key": "integ.by-parts.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which is the formula for integration by parts?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\displaystyle\\int u\\frac{dv}{dx}\\,dx = uv - \\int v\\frac{du}{dx}\\,dx$",
+    "correct": true,
+    "rationale": "Correct: the product rule integrated and rearranged (MF19)."
+   },
+   {
+    "key": "B",
+    "content": "$\\displaystyle\\int u\\frac{dv}{dx}\\,dx = uv + \\int v\\frac{du}{dx}\\,dx$",
+    "rationale": "The second term is subtracted, not added."
+   },
+   {
+    "key": "C",
+    "content": "$\\displaystyle\\int u\\frac{dv}{dx}\\,dx = \\frac{du}{dx}\\frac{dv}{dx}$",
+    "rationale": "This multiplies two derivatives and is not an integral rule."
+   },
+   {
+    "key": "D",
+    "content": "$\\displaystyle\\int u\\frac{dv}{dx}\\,dx = u\\int v\\,dx - v\\int u\\,dx$",
+    "rationale": "This mixes up the roles of u and v; there is no such rule."
+   }
+  ],
+  "explanation": "From $\\frac{d}{dx}(uv) = u\\frac{dv}{dx} + v\\frac{du}{dx}$, integrate and rearrange: $\\int u\\frac{dv}{dx}\\,dx = uv - \\int v\\frac{du}{dx}\\,dx$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "integ.by-parts.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "To find $\\displaystyle\\int x\\mathrm{e}^{3x}\\,dx$ by parts, which choice is best?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$u = \\mathrm{e}^{3x}$ and $\\dfrac{dv}{dx} = x$",
+    "rationale": "Then the new integral contains $x^{2}\\mathrm{e}^{3x}$, which is harder than the original."
+   },
+   {
+    "key": "B",
+    "content": "$u = x$ and $\\dfrac{dv}{dx} = \\mathrm{e}^{3x}$",
+    "correct": true,
+    "rationale": "Correct: $\\frac{du}{dx} = 1$, so the new integral is just $\\int\\frac{1}{3}\\mathrm{e}^{3x}\\,dx$."
+   },
+   {
+    "key": "C",
+    "content": "$u = x\\mathrm{e}^{3x}$ and $\\dfrac{dv}{dx} = 1$",
+    "rationale": "This leads to an integral at least as hard as the original."
+   },
+   {
+    "key": "D",
+    "content": "$u = 3x$ and $\\dfrac{dv}{dx} = \\mathrm{e}^{x}$",
+    "rationale": "$\\mathrm{e}^{3x}$ is not $3x \\times \\mathrm{e}^{x}$; the factors are wrong."
+   }
+  ],
+  "explanation": "Take $u$ as the factor that simplifies on differentiation (the power of $x$). Then $\\int x\\mathrm{e}^{3x}\\,dx = \\frac{x}{3}\\mathrm{e}^{3x} - \\frac{1}{9}\\mathrm{e}^{3x} + c$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "integ.by-parts.q03",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int x\\mathrm{e}^{x}\\,dx$. Type e^x for the exponential and include the constant, for example (x+2)e^x+c.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "(x-1)e^x+c"
+    },
+    {
+     "value": "xe^x-e^x+c"
+    },
+    {
+     "value": "e^x(x-1)+c"
+    },
+    {
+     "value": "-e^x+xe^x+c"
+    },
+    {
+     "value": "(x-1)e^x+k"
+    },
+    {
+     "value": "(x-1)e^x+C"
+    },
+    {
+     "value": "x*e^x-e^x+c"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$u = x$, $v = \\mathrm{e}^{x}$: $x\\mathrm{e}^{x} - \\int\\mathrm{e}^{x}\\,dx = x\\mathrm{e}^{x} - \\mathrm{e}^{x} + c = (x - 1)\\mathrm{e}^{x} + c$.",
+  "hints": [
+   "Let u = x and dv/dx = eˣ."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "(x-1)e^x+c"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "xe^x+c"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "(x+1)e^x+c"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.by-parts.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Evaluate $\\displaystyle\\int_{0}^{\\pi/2} x\\cos x\\,dx$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.5707963267948966,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$u = x$, $v = \\sin x$: $\\Big[x\\sin x\\Big]_{0}^{\\pi/2} - \\int_{0}^{\\pi/2}\\sin x\\,dx = \\frac{\\pi}{2} - \\Big[-\\cos x\\Big]_{0}^{\\pi/2} = \\frac{\\pi}{2} - 1 \\approx 0.571$. (2.57 adds the second term.)",
+  "workedSolution": "1. $u = x$, $v = \\sin x$: $\\Big[x\\sin x\\Big]_{0}^{\\pi/2} - \\int_{0}^{\\pi/2}\\sin x\\,dx = \\frac{\\pi}{2} - \\Big[-\\cos x\\Big]_{0}^{\\pi/2} = \\frac{\\pi}{2} - 1 \\approx 0.571$. (2.57 adds the second term.)",
+  "hints": [
+   "Let u = x and dv/dx = cos x."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.571"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2.57"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.57"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "integ.by-parts.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "$\\displaystyle\\int x\\cos 3x\\,dx = \\frac{x}{p}\\sin 3x + \\frac{1}{q}\\cos 3x + c$. Find $p$ and $q$.",
+  "payload": {
+   "template": "p = {{blank:p}}, q = {{blank:q}}",
+   "blanks": [
+    {
+     "id": "p",
+     "input": "number"
+    },
+    {
+     "id": "q",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p",
+     "accepted": [
+      "3"
+     ]
+    },
+    {
+     "id": "q",
+     "accepted": [
+      "9"
+     ]
+    }
+   ]
+  },
+  "explanation": "$u = x$, $v = \\frac{1}{3}\\sin 3x$: $\\frac{x}{3}\\sin 3x - \\frac{1}{3}\\int\\sin 3x\\,dx = \\frac{x}{3}\\sin 3x + \\frac{1}{9}\\cos 3x + c$.",
+  "hints": [
+   "Integrate cos 3x to (1/3) sin 3x.",
+   "Then −(1/3) ∫ sin 3x dx = +(1/9) cos 3x."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p",
+     "text": "3"
+    },
+    {
+     "blankId": "q",
+     "text": "9"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p",
+      "text": "1"
+     },
+     {
+      "blankId": "q",
+      "text": "-9"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.by-parts.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Evaluate $\\displaystyle\\int_{1}^{\\mathrm{e}} x^{3}\\ln x\\,dx$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 10.299653131214543,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "$u = \\ln x$, $v = \\frac{x^{4}}{4}$: $\\Big[\\tfrac{x^{4}}{4}\\ln x\\Big]_{1}^{\\mathrm{e}} - \\int_{1}^{\\mathrm{e}}\\tfrac{x^{3}}{4}\\,dx = \\tfrac{\\mathrm{e}^{4}}{4} - \\tfrac{\\mathrm{e}^{4} - 1}{16} = \\tfrac{3\\mathrm{e}^{4} + 1}{16} \\approx 10.3$. (13.6 omits the second term.)",
+  "workedSolution": "1. $u = \\ln x$, $v = \\frac{x^{4}}{4}$: $\\Big[\\tfrac{x^{4}}{4}\\ln x\\Big]_{1}^{\\mathrm{e}} - \\int_{1}^{\\mathrm{e}}\\tfrac{x^{3}}{4}\\,dx = \\tfrac{\\mathrm{e}^{4}}{4} - \\tfrac{\\mathrm{e}^{4} - 1}{16} = \\tfrac{3\\mathrm{e}^{4} + 1}{16} \\approx 10.3$. (13.6 omits the second term.)",
+  "hints": [
+   "Take u = ln x.",
+   "ln e = 1 and ln 1 = 0."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10.3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "13.6"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "10.2"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "integ.by-parts.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int\\ln x\\,dx$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{1}{x} + c$",
+    "rationale": "That is the derivative of $\\ln x$, not its integral."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{(\\ln x)^{2}}{2} + c$",
+    "rationale": "That is $\\int\\frac{\\ln x}{x}\\,dx$, which has an extra factor $\\frac{1}{x}$."
+   },
+   {
+    "key": "C",
+    "content": "$x\\ln x + c$",
+    "rationale": "Its derivative is $\\ln x + 1$; the $-x$ term is missing."
+   },
+   {
+    "key": "D",
+    "content": "$x\\ln x - x + c$",
+    "correct": true,
+    "rationale": "Correct: write $\\ln x = 1 \\times \\ln x$ with $u = \\ln x$, $v = x$."
+   }
+  ],
+  "explanation": "$\\int 1 \\cdot \\ln x\\,dx = x\\ln x - \\int x \\cdot \\frac{1}{x}\\,dx = x\\ln x - x + c$.",
+  "hints": [
+   "Treat ln x as 1 × ln x."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.by-parts.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Evaluate $\\displaystyle\\int_{1}^{2}\\ln x\\,dx$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.3862943611198906,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\Big[x\\ln x - x\\Big]_{1}^{2} = (2\\ln 2 - 2) - (0 - 1) = 2\\ln 2 - 1 \\approx 0.386$. (1.39 omits the $-x$ term.)",
+  "workedSolution": "1. $\\Big[x\\ln x - x\\Big]_{1}^{2} = (2\\ln 2 - 2) - (0 - 1) = 2\\ln 2 - 1 \\approx 0.386$. (1.39 omits the $-x$ term.)",
+  "hints": [
+   "Use ∫ ln x dx = x ln x − x."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.386"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.39"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.693"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "integ.by-parts.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For $\\displaystyle\\int x\\sin x\\,dx$, choosing $u = \\sin x$ and $\\dfrac{dv}{dx} = x$ makes the integral simpler.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Then $v = \\frac{x^{2}}{2}$ and the new integral is $\\int\\frac{x^{2}}{2}\\cos x\\,dx$, which is harder. Choose $u = x$, so $\\frac{du}{dx} = 1$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "integ.by-parts.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Evaluate $\\displaystyle\\int_{0}^{1} x^{2}\\mathrm{e}^{x}\\,dx$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.7182818284590451,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Twice by parts: $\\int x^{2}\\mathrm{e}^{x}\\,dx = \\mathrm{e}^{x}(x^{2} - 2x + 2) + c$. $\\Big[\\mathrm{e}^{x}(x^{2} - 2x + 2)\\Big]_{0}^{1} = \\mathrm{e} - 2 \\approx 0.718$.",
+  "workedSolution": "1. Twice by parts: $\\int x^{2}\\mathrm{e}^{x}\\,dx = \\mathrm{e}^{x}(x^{2} - 2x + 2) + c$. $\\Big[\\mathrm{e}^{x}(x^{2} - 2x + 2)\\Big]_{0}^{1} = \\mathrm{e} - 2 \\approx 0.718$.",
+  "hints": [
+   "Apply integration by parts twice, with u = x² then u = 2x.",
+   "At x = 0 the bracket equals 2."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.718"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2.72"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "integ.by-parts.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each integrand with its indefinite integral (the + c is omitted).",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$x\\cos x$"
+    },
+    {
+     "id": "L2",
+     "content": "$x\\sin x$"
+    },
+    {
+     "id": "L3",
+     "content": "$x\\ln x$"
+    },
+    {
+     "id": "L4",
+     "content": "$x\\mathrm{e}^{-x}$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\tfrac{x^{2}}{2}\\ln x - \\tfrac{x^{2}}{4}$"
+    },
+    {
+     "id": "R4",
+     "content": "$-(x + 1)\\mathrm{e}^{-x}$"
+    },
+    {
+     "id": "R1",
+     "content": "$x\\sin x + \\cos x$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\sin x - x\\cos x$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each comes from one application of integration by parts; check by differentiating with the product rule.",
+  "hints": [
+   "Differentiate each answer to test it."
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.by-parts.q12",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use integration by parts to evaluate $\\displaystyle\\int_{0}^{1}\\tan^{-1}x\\,dx$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.43882457311747564,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$u = \\tan^{-1}x$, $v = x$: $\\Big[x\\tan^{-1}x\\Big]_{0}^{1} - \\int_{0}^{1}\\frac{x}{1 + x^{2}}\\,dx = \\frac{\\pi}{4} - \\frac{1}{2}\\ln 2 \\approx 0.439$.",
+  "workedSolution": "1. Write $\\tan^{-1}x = 1 \\times \\tan^{-1}x$: $u = \\tan^{-1}x$, $\\frac{du}{dx} = \\frac{1}{1 + x^{2}}$, $v = x$.\n2. $\\displaystyle\\int_{0}^{1}\\tan^{-1}x\\,dx = \\Big[x\\tan^{-1}x\\Big]_{0}^{1} - \\int_{0}^{1}\\frac{x}{1 + x^{2}}\\,dx$.\n3. The last integral is $\\Big[\\tfrac{1}{2}\\ln(1 + x^{2})\\Big]_{0}^{1} = \\tfrac{1}{2}\\ln 2$.\n4. Answer: $\\frac{\\pi}{4} - \\frac{1}{2}\\ln 2 \\approx 0.439$.",
+  "hints": [
+   "Treat tan⁻¹ x as 1 × tan⁻¹ x.",
+   "The remaining integral is of the form f′/f."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.439"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.785"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "1.13"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "integ.by-parts.q13",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 5,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Let $I = \\displaystyle\\int_{0}^{\\pi}\\mathrm{e}^{x}\\sin x\\,dx$. By integrating by parts twice, show that $I = \\dfrac{\\mathrm{e}^{\\pi} + 1}{2}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 first application: $I = \\Big[-\\mathrm{e}^{x}\\cos x\\Big]_{0}^{\\pi} + \\int_{0}^{\\pi}\\mathrm{e}^{x}\\cos x\\,dx = \\mathrm{e}^{\\pi} + 1 + \\int_{0}^{\\pi}\\mathrm{e}^{x}\\cos x\\,dx$",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 second application: $\\int_{0}^{\\pi}\\mathrm{e}^{x}\\cos x\\,dx = \\Big[\\mathrm{e}^{x}\\sin x\\Big]_{0}^{\\pi} - I = -I$",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 forms the equation $I = \\mathrm{e}^{\\pi} + 1 - I$",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 solves to $I = \\dfrac{\\mathrm{e}^{\\pi} + 1}{2}$",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "With $u = \\mathrm{e}^{x}$ both times (or $u = \\sin x$, then $u = \\cos x$, consistently):\n\n$$\nI = \\Big[-\\mathrm{e}^{x}\\cos x\\Big]_{0}^{\\pi} + \\int_{0}^{\\pi}\\mathrm{e}^{x}\\cos x\\,dx = (\\mathrm{e}^{\\pi} + 1) + \\int_{0}^{\\pi}\\mathrm{e}^{x}\\cos x\\,dx\n$$\n\n$$\n\\int_{0}^{\\pi}\\mathrm{e}^{x}\\cos x\\,dx = \\Big[\\mathrm{e}^{x}\\sin x\\Big]_{0}^{\\pi} - \\int_{0}^{\\pi}\\mathrm{e}^{x}\\sin x\\,dx = 0 - I\n$$\n\n$$\nI = \\mathrm{e}^{\\pi} + 1 - I \\Rightarrow I = \\frac{\\mathrm{e}^{\\pi} + 1}{2}\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The original integral reappears, so treat I as an unknown and solve for it.",
+  "hints": [
+   "Keep the same type of choice for u in both applications.",
+   "cos π = −1 and sin π = 0."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "integ.by-parts.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the area of the region between the curve $y = x\\mathrm{e}^{-x}$, the $x$-axis and the line $x = 2$, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "units²"
+  },
+  "answerSpec": {
+   "value": 0.5939941502901619,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "units²",
+     "units^2",
+     "square units",
+     "unit^2"
+    ]
+   }
+  },
+  "explanation": "$\\int x\\mathrm{e}^{-x}\\,dx = -x\\mathrm{e}^{-x} - \\mathrm{e}^{-x} = -(x + 1)\\mathrm{e}^{-x}$. $\\Big[-(x + 1)\\mathrm{e}^{-x}\\Big]_{0}^{2} = -3\\mathrm{e}^{-2} + 1 \\approx 0.594$.",
+  "workedSolution": "1. $\\int x\\mathrm{e}^{-x}\\,dx = -x\\mathrm{e}^{-x} - \\mathrm{e}^{-x} = -(x + 1)\\mathrm{e}^{-x}$. $\\Big[-(x + 1)\\mathrm{e}^{-x}\\Big]_{0}^{2} = -3\\mathrm{e}^{-2} + 1 \\approx 0.594$.",
+  "hints": [
+   "u = x, dv/dx = e^(−x), v = −e^(−x)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.594"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.729"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.27"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "integ.by-parts.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int x^{2}\\ln x\\,dx$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{x^{3}}{3}\\ln x - \\dfrac{x^{3}}{3} + c$",
+    "rationale": "The remaining integral is $\\int\\frac{x^{3}}{3} \\cdot \\frac{1}{x}\\,dx = \\frac{x^{3}}{9}$, not $\\frac{x^{3}}{3}$."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{x^{3}}{3}\\ln x + \\dfrac{x^{3}}{9} + c$",
+    "rationale": "The second term must be subtracted."
+   },
+   {
+    "key": "C",
+    "content": "$2x\\ln x + x + c$",
+    "rationale": "This differentiates x² ln x instead of integrating it."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{x^{3}}{3}\\ln x - \\dfrac{x^{3}}{9} + c$",
+    "correct": true,
+    "rationale": "Correct: $u = \\ln x$, $v = \\frac{x^{3}}{3}$, then $\\int\\frac{x^{2}}{3}\\,dx = \\frac{x^{3}}{9}$."
+   }
+  ],
+  "explanation": "$\\int x^{2}\\ln x\\,dx = \\frac{x^{3}}{3}\\ln x - \\int\\frac{x^{3}}{3} \\cdot \\frac{1}{x}\\,dx = \\frac{x^{3}}{3}\\ln x - \\frac{x^{3}}{9} + c$.",
+  "hints": [
+   "Choose u = ln x."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.by-parts.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The mean of an exponential distribution with parameter 2 is $\\displaystyle\\int_{0}^{\\infty} 2x\\mathrm{e}^{-2x}\\,dx$. Evaluate this improper integral, as an exact decimal.",
+  "answerSpec": {
+   "value": 0.5,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "$u = x$, $v = -\\mathrm{e}^{-2x}$: $\\int_{0}^{N} 2x\\mathrm{e}^{-2x}\\,dx = \\Big[-x\\mathrm{e}^{-2x}\\Big]_{0}^{N} + \\int_{0}^{N}\\mathrm{e}^{-2x}\\,dx = -N\\mathrm{e}^{-2N} + \\tfrac{1}{2}(1 - \\mathrm{e}^{-2N}) \\to \\tfrac{1}{2}$ as $N \\to \\infty$.",
+  "workedSolution": "1. $u = x$, $v = -\\mathrm{e}^{-2x}$: $\\int_{0}^{N} 2x\\mathrm{e}^{-2x}\\,dx = \\Big[-x\\mathrm{e}^{-2x}\\Big]_{0}^{N} + \\int_{0}^{N}\\mathrm{e}^{-2x}\\,dx = -N\\mathrm{e}^{-2N} + \\tfrac{1}{2}(1 - \\mathrm{e}^{-2N}) \\to \\tfrac{1}{2}$ as $N \\to \\infty$.",
+  "hints": [
+   "$N\\mathrm{e}^{-2N} \\to 0$ as $N \\to \\infty$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.25"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "integ.by-parts.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Let $I = \\displaystyle\\int_{0}^{2} x\\mathrm{e}^{-2x}\\,dx$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which choice of u and dv/dx should be used?",
+    "options": [
+     {
+      "key": "A",
+      "content": "$u = \\mathrm{e}^{-2x}$, $\\dfrac{dv}{dx} = x$",
+      "rationale": "This produces an integral of x² e^(−2x), which is harder."
+     },
+     {
+      "key": "B",
+      "content": "$u = x\\mathrm{e}^{-2x}$, $\\dfrac{dv}{dx} = 1$",
+      "rationale": "This does not simplify the integrand."
+     },
+     {
+      "key": "C",
+      "content": "$u = x$, $\\dfrac{dv}{dx} = \\mathrm{e}^{-2x}$",
+      "correct": true,
+      "rationale": "Correct: x simplifies to 1 on differentiation."
+     },
+     {
+      "key": "D",
+      "content": "$u = -2x$, $\\dfrac{dv}{dx} = \\mathrm{e}^{x}$",
+      "rationale": "These are not factors of the integrand."
+     }
+    ],
+    "explanation": "Choose $u = x$ so that $\\frac{du}{dx} = 1$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $I = \\dfrac{1 - 5\\mathrm{e}^{-4}}{4}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 obtains $\\Big[-\\tfrac{x}{2}\\mathrm{e}^{-2x}\\Big]_{0}^{2} + \\tfrac{1}{2}\\int_{0}^{2}\\mathrm{e}^{-2x}\\,dx$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 evaluates $-\\mathrm{e}^{-4} + \\tfrac{1}{4}(1 - \\mathrm{e}^{-4}) = \\tfrac{1 - 5\\mathrm{e}^{-4}}{4}$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nI = \\Big[-\\tfrac{x}{2}\\mathrm{e}^{-2x}\\Big]_{0}^{2} + \\tfrac{1}{2}\\int_{0}^{2}\\mathrm{e}^{-2x}\\,dx = -\\mathrm{e}^{-4} + \\tfrac{1}{2}\\Big[-\\tfrac{1}{2}\\mathrm{e}^{-2x}\\Big]_{0}^{2}\n$$\n\n$$\n= -\\mathrm{e}^{-4} + \\tfrac{1}{4}(1 - \\mathrm{e}^{-4}) = \\frac{1 - 5\\mathrm{e}^{-4}}{4}\n$$"
+    },
+    "explanation": "$v = -\\tfrac{1}{2}\\mathrm{e}^{-2x}$; keep track of the two minus signs."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find I correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.22710545138908228,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{1 - 5\\mathrm{e}^{-4}}{4} \\approx 0.227$.",
+    "workedSolution": "1. $\\frac{1 - 5\\mathrm{e}^{-4}}{4} \\approx 0.227$."
+   }
+  ],
+  "explanation": "One application of integration by parts on a definite integral, with the limits applied to uv.",
+  "hints": [
+   "$v = -\\frac{1}{2}\\mathrm{e}^{-2x}$.",
+   "Apply the limits to both parts."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.227"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.245"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "integ.by-parts.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 5,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The region $R$ is bounded by the curve $y = \\ln x$, the $x$-axis and the line $x = \\mathrm{e}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\displaystyle\\int(\\ln x)^{2}\\,dx = x(\\ln x)^{2} - 2\\int\\ln x\\,dx$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses $u = (\\ln x)^{2}$, $\\frac{du}{dx} = \\frac{2\\ln x}{x}$, $v = x$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 simplifies $\\int x \\cdot \\frac{2\\ln x}{x}\\,dx = 2\\int\\ln x\\,dx$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\int 1 \\cdot (\\ln x)^{2}\\,dx = x(\\ln x)^{2} - \\int x \\cdot \\frac{2\\ln x}{x}\\,dx = x(\\ln x)^{2} - 2\\int\\ln x\\,dx\n$$"
+    },
+    "explanation": "Chain rule for the derivative of (ln x)²."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Hence evaluate $\\displaystyle\\int_{1}^{\\mathrm{e}}(\\ln x)^{2}\\,dx$, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.7182818284590451,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\int(\\ln x)^{2}\\,dx = x(\\ln x)^{2} - 2(x\\ln x - x)$. $\\Big[x(\\ln x)^{2} - 2x\\ln x + 2x\\Big]_{1}^{\\mathrm{e}} = (\\mathrm{e} - 2\\mathrm{e} + 2\\mathrm{e}) - 2 = \\mathrm{e} - 2 \\approx 0.718$.",
+    "workedSolution": "1. $\\int(\\ln x)^{2}\\,dx = x(\\ln x)^{2} - 2(x\\ln x - x)$. $\\Big[x(\\ln x)^{2} - 2x\\ln x + 2x\\Big]_{1}^{\\mathrm{e}} = (\\mathrm{e} - 2\\mathrm{e} + 2\\mathrm{e}) - 2 = \\mathrm{e} - 2 \\approx 0.718$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "R is rotated through 360° about the x-axis. Find the volume, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "units³"
+    },
+    "answerSpec": {
+     "value": 2.25654891549398,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "units³",
+       "units^3",
+       "cubic units"
+      ]
+     }
+    },
+    "explanation": "$V = \\pi\\int_{1}^{\\mathrm{e}}(\\ln x)^{2}\\,dx = \\pi(\\mathrm{e} - 2) \\approx 2.26$.",
+    "workedSolution": "1. $V = \\pi\\int_{1}^{\\mathrm{e}}(\\ln x)^{2}\\,dx = \\pi(\\mathrm{e} - 2) \\approx 2.26$."
+   }
+  ],
+  "explanation": "Repeated integration by parts gives the integral needed for a volume of revolution.",
+  "hints": [
+   "Treat (ln x)² as 1 × (ln x)².",
+   "Use ∫ ln x dx = x ln x − x."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.718"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.26"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.282"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.718"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

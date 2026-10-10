@@ -1,0 +1,1051 @@
+[
+ {
+  "key": "normal.binomial-approximation.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{B}(n, p)$ and $q = 1 - p$. Under which conditions is the normal approximation to the distribution of $X$ usually used?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$np > 5$ and $nq > 5$",
+    "correct": true,
+    "rationale": "Correct: the mean must be far enough from both 0 and n for the distribution to be roughly symmetrical."
+   },
+   {
+    "key": "B",
+    "content": "$n > 50$ and $np < 5$",
+    "rationale": "These are the conditions for a Poisson approximation, not a normal one."
+   },
+   {
+    "key": "C",
+    "content": "$np > 5$ only",
+    "rationale": "If $nq$ is small the distribution is skewed towards $n$; both conditions are needed."
+   },
+   {
+    "key": "D",
+    "content": "$p = 0.5$ exactly",
+    "rationale": "$p$ need not be $\\frac12$; it only needs $n$ large enough that $np$ and $nq$ exceed 5."
+   }
+  ],
+  "explanation": "With $np > 5$ and $nq > 5$ the binomial histogram is close enough to a bell shape for $\\mathrm{N}(np, npq)$ to give good probabilities.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "normal.binomial-approximation.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For which of these distributions is the normal approximation suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\mathrm{B}(20, 0.1)$",
+    "rationale": "$np = 2$, which is less than 5."
+   },
+   {
+    "key": "B",
+    "content": "$\\mathrm{B}(50, 0.3)$",
+    "correct": true,
+    "rationale": "Correct: $np = 15 > 5$ and $nq = 35 > 5$."
+   },
+   {
+    "key": "C",
+    "content": "$\\mathrm{B}(200, 0.01)$",
+    "rationale": "$np = 2$ is too small (a Poisson approximation would suit this one)."
+   },
+   {
+    "key": "D",
+    "content": "$\\mathrm{B}(30, 0.9)$",
+    "rationale": "$np = 27$ is fine, but $nq = 3$ is less than 5."
+   }
+  ],
+  "explanation": "Work out np and nq for each and check that both exceed 5.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.binomial-approximation.q03",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "$X \\sim \\mathrm{B}(150, 0.2)$ is approximated by $\\mathrm{N}(\\mu, \\sigma^2)$. Find $\\mu$ and $\\sigma^2$.",
+  "payload": {
+   "template": "μ = {{blank:m}}, σ² = {{blank:v}}",
+   "blanks": [
+    {
+     "id": "m",
+     "input": "number"
+    },
+    {
+     "id": "v",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "m",
+     "accepted": [
+      "30"
+     ],
+     "tolerance": 0.001
+    },
+    {
+     "id": "v",
+     "accepted": [
+      "24"
+     ],
+     "tolerance": 0.001
+    }
+   ]
+  },
+  "explanation": "$\\mu = np = 150 \\times 0.2 = 30$ and $\\sigma^2 = npq = 150 \\times 0.2 \\times 0.8 = 24$.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "m",
+     "text": "30"
+    },
+    {
+     "blankId": "v",
+     "text": "24"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "m",
+      "text": "24"
+     },
+     {
+      "blankId": "v",
+      "text": "30"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "normal.binomial-approximation.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{B}(60, 0.5)$ is approximated by $Y \\sim \\mathrm{N}(30, 15)$. Which probability should be calculated for $\\mathrm{P}(X < 18)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\mathrm{P}(Y < 18.5)$",
+    "rationale": "This includes the bar for 18, so it represents X ≤ 18."
+   },
+   {
+    "key": "B",
+    "content": "$\\mathrm{P}(Y < 18)$",
+    "rationale": "This has no continuity correction."
+   },
+   {
+    "key": "C",
+    "content": "$\\mathrm{P}(Y < 17.5)$",
+    "correct": true,
+    "rationale": "Correct: X < 18 means X ≤ 17, and the bar for 17 ends at 17.5."
+   },
+   {
+    "key": "D",
+    "content": "$\\mathrm{P}(Y > 17.5)$",
+    "rationale": "This is the complement, X ≥ 18."
+   }
+  ],
+  "explanation": "Write the event with ≤ or ≥ in whole numbers first: X < 18 is X ≤ 17, giving the boundary 17.5.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "normal.binomial-approximation.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A fair coin is tossed 50 times. Use a normal approximation to find the probability of at most 20 heads. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.10154590000370338,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00095
+   }
+  },
+  "explanation": "$X \\sim \\mathrm{B}(50, 0.5)$, $np = nq = 25$: $Y \\sim \\mathrm{N}(25, 12.5)$. $\\mathrm{P}(X \\le 20) \\approx \\mathrm{P}(Y < 20.5)$, $z = \\frac{20.5 - 25}{\\sqrt{12.5}} = -1.273$, so the probability is $0.1015$, i.e. $0.102$. (19.5 would represent $X \\le 19$.)",
+  "workedSolution": "1. $X \\sim \\mathrm{B}(50, 0.5)$, $np = nq = 25$: $Y \\sim \\mathrm{N}(25, 12.5)$. $\\mathrm{P}(X \\le 20) \\approx \\mathrm{P}(Y < 20.5)$, $z = \\frac{20.5 - 25}{\\sqrt{12.5}} = -1.273$, so the probability is $0.1015$, i.e. $0.102$. (19.5 would represent $X \\le 19$.)",
+  "hints": [
+   "Variance npq = 12.5.",
+   "'At most 20' includes 20, so use 20.5."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.102"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.07864960611999666"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.059897464908118744"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "normal.binomial-approximation.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "25% of the learners at a large school in Gweru walk more than 3 km to school. A random sample of 120 learners is taken. Use a suitable approximation to find the probability that more than 35 of them walk more than 3 km. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.12312585830224232,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00063
+   }
+  },
+  "explanation": "$X \\sim \\mathrm{B}(120, 0.25)$: $np = 30$, $nq = 90$, both $> 5$, so $Y \\sim \\mathrm{N}(30, 22.5)$. \"More than 35\" is $X \\ge 36$: $\\mathrm{P}(Y > 35.5)$, $z = \\frac{5.5}{\\sqrt{22.5}} = 1.160$, giving $0.1231$, i.e. $0.123$.",
+  "workedSolution": "1. $X \\sim \\mathrm{B}(120, 0.25)$: $np = 30$, $nq = 90$, both $> 5$, so $Y \\sim \\mathrm{N}(30, 22.5)$. \"More than 35\" is $X \\ge 36$: $\\mathrm{P}(Y > 35.5)$, $z = \\frac{5.5}{\\sqrt{22.5}} = 1.160$, giving $0.1231$, i.e. $0.123$.",
+  "hints": [
+   "Check np and nq.",
+   "'More than 35' starts at 36."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.123"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.17139086103460577"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.1459202811617314"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.binomial-approximation.q07",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{B}(90, 0.6)$. Use a normal approximation to find $\\mathrm{P}(50 \\le X \\le 60)$. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.7525693008588099,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0011
+   }
+  },
+  "explanation": "$Y \\sim \\mathrm{N}(54, 21.6)$. Both ends are included: $\\mathrm{P}(49.5 < Y < 60.5)$. $z_1 = -0.9682$, $z_2 = 1.399$; probability $0.7526$, i.e. $0.753$.",
+  "workedSolution": "1. $np = 54$, $nq = 36$; $\\sigma^2 = 90 \\times 0.6 \\times 0.4 = 21.6$.\n2. $\\mathrm{P}(50 \\le X \\le 60) \\approx \\mathrm{P}(49.5 < Y < 60.5)$.\n3. $z_1 = \\dfrac{49.5 - 54}{\\sqrt{21.6}} = -0.9682$, $z_2 = \\dfrac{60.5 - 54}{\\sqrt{21.6}} = 1.399$.\n4. $\\Phi(z_2) - \\Phi(z_1) = 0.9190 - 0.1665 = 0.7526$.\n5. Answer $0.753$.",
+  "hints": [
+   "Both 50 and 60 are included: widen the interval by 0.5 at each end."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.753"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.6559760743193217"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.7069353453807676"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.binomial-approximation.q08",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{B}(80, 0.3)$. Use a normal approximation to estimate $\\mathrm{P}(X = 25)$. Give your answer correct to 2 significant figures.",
+  "answerSpec": {
+   "value": 0.09425792118101639,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$Y \\sim \\mathrm{N}(24, 16.8)$. A single value is the bar from 24.5 to 25.5: $z_1 = \\frac{0.5}{\\sqrt{16.8}} = 0.122$, $z_2 = \\frac{1.5}{\\sqrt{16.8}} = 0.366$. Probability $0.09426$, i.e. $0.094$ (exact binomial value $0.09307$). For a continuous variable $\\mathrm{P}(Y = 25) = 0$, which is why the interval is needed.",
+  "workedSolution": "1. $\\mu = 24$, $\\sigma^2 = 16.8$.\n2. $\\mathrm{P}(X = 25) \\approx \\mathrm{P}(24.5 < Y < 25.5)$.\n3. $z$-values $0.122$ and $0.366$.\n4. $\\Phi(0.366) - \\Phi(0.122) = 0.09426$, so $0.094$.",
+  "hints": [
+   "One whole number corresponds to an interval of width 1."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.094"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.04642858373081027"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.binomial-approximation.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "When $\\mathrm{B}(n, p)$ is approximated by a normal distribution, the standard deviation used is $npq$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "$npq$ is the **variance**; the standard deviation is $\\sqrt{npq}$. Dividing by $npq$ when standardising is a common error.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.binomial-approximation.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The normal approximation is suitable for $\\mathrm{B}(40, 0.1)$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "$np = 4 < 5$, so the distribution is too skewed for a normal approximation.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.binomial-approximation.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "A binomial variable $X$ is approximated by a normal variable $Y$. Match each binomial event with the normal event used.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$X \\ge 12$"
+    },
+    {
+     "id": "L2",
+     "content": "$X > 12$"
+    },
+    {
+     "id": "L3",
+     "content": "$X \\le 12$"
+    },
+    {
+     "id": "L4",
+     "content": "$X < 12$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$Y < 12.5$"
+    },
+    {
+     "id": "R4",
+     "content": "$Y < 11.5$"
+    },
+    {
+     "id": "R1",
+     "content": "$Y > 11.5$"
+    },
+    {
+     "id": "R2",
+     "content": "$Y > 12.5$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Include the half-bar of every whole number in the event and exclude the others: X ≥ 12 includes 12 (11.5); X > 12 starts at 13 (12.5); X ≤ 12 includes 12 (12.5); X < 12 stops at 11 (11.5).",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.binomial-approximation.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In a large ward in Masvingo, 35% of voters support a proposal to build a new clinic. A random sample of 400 voters is taken. Use a suitable approximation to find the probability that at least 150 of them support the proposal. Give your answer correct to 4 decimal places.",
+  "answerSpec": {
+   "value": 0.15965651945176373,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0015
+   }
+  },
+  "explanation": "$X \\sim \\mathrm{B}(400, 0.35)$, $np = 140$, $npq = 91$: $Y \\sim \\mathrm{N}(140, 91)$. $\\mathrm{P}(X \\ge 150) \\approx \\mathrm{P}(Y > 149.5)$, $z = \\frac{9.5}{\\sqrt{91}} = 0.9959$. From tables, $\\Phi(1.00) = 0.8413$, so the probability is about $0.1587$ (calculator: $0.1597$).",
+  "workedSolution": "1. $X \\sim \\mathrm{B}(400, 0.35)$, $np = 140$, $npq = 91$: $Y \\sim \\mathrm{N}(140, 91)$. $\\mathrm{P}(X \\ge 150) \\approx \\mathrm{P}(Y > 149.5)$, $z = \\frac{9.5}{\\sqrt{91}} = 0.9959$. From tables, $\\Phi(1.00) = 0.8413$, so the probability is about $0.1587$ (calculator: $0.1597$).",
+  "hints": [
+   "np = 140 and npq = 91.",
+   "'At least 150' includes 150."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.160"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.13551383257160143"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.14725370535364957"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "normal.binomial-approximation.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 5,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{B}(200, 0.45)$. Using a normal approximation, find the smallest integer $k$ such that $\\mathrm{P}(X \\ge k) < 0.01$.",
+  "answerSpec": {
+   "value": 107
+  },
+  "explanation": "$Y \\sim \\mathrm{N}(90, 49.5)$. $\\mathrm{P}(X \\ge k) \\approx \\mathrm{P}(Y > k - 0.5) < 0.01$ needs $\\frac{k - 0.5 - 90}{\\sqrt{49.5}} > 2.326$, so $k > 90.5 + 2.326\\sqrt{49.5} = 106.86$ and $k = 107$. Check: $\\mathrm{P}(Y > 106.5) = 0.00951$ and $\\mathrm{P}(Y > 105.5) = 0.0138$. (108 forgets the continuity correction in the other direction; 106 rounds down.)",
+  "workedSolution": "1. $Y \\sim \\mathrm{N}(90, 49.5)$. $\\mathrm{P}(X \\ge k) \\approx \\mathrm{P}(Y > k - 0.5) < 0.01$ needs $\\frac{k - 0.5 - 90}{\\sqrt{49.5}} > 2.326$, so $k > 90.5 + 2.326\\sqrt{49.5} = 106.86$ and $k = 107$. Check: $\\mathrm{P}(Y > 106.5) = 0.00951$ and $\\mathrm{P}(Y > 105.5) = 0.0138$. (108 forgets the continuity correction in the other direction; 106 rounds down.)",
+  "hints": [
+   "Write P(X ≥ k) as P(Y > k − 0.5).",
+   "Φ(2.326) = 0.99."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "107"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "106"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "108"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "normal.binomial-approximation.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For which of these variables would a normal distribution be the least suitable model?",
+  "options": [
+   {
+    "key": "A",
+    "content": "the heights of adult women in Bulawayo, with mean 162 cm and standard deviation 6 cm",
+    "rationale": "Heights are roughly symmetrical and bell-shaped; zero is 27 standard deviations below the mean."
+   },
+   {
+    "key": "B",
+    "content": "the masses of 2 kg bags of sugar from a machine, mean 2.01 kg, sd 0.02 kg",
+    "rationale": "Machine-filled masses vary symmetrically about the target: a classic normal model."
+   },
+   {
+    "key": "C",
+    "content": "the marks in a large national examination, with mean 55 and standard deviation 12",
+    "rationale": "Large-scale marks are often roughly bell-shaped, and 0 and 100 are over 3 standard deviations away."
+   },
+   {
+    "key": "D",
+    "content": "the waiting time at a clinic, with mean 4 minutes and standard deviation 5 minutes",
+    "correct": true,
+    "rationale": "Correct: a normal model would give a large probability to negative times (z = −0.8 at 0 minutes), and waiting times are skewed."
+   }
+  ],
+  "explanation": "A normal model suits variables that are roughly symmetrical and not bounded close to the mean. Waiting times cannot be negative, and with a standard deviation larger than the mean the distribution must be strongly skewed.",
+  "hints": [
+   "How many standard deviations below the mean is zero in each case?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "normal.binomial-approximation.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Explain why a continuity correction is needed when a binomial distribution is approximated by a normal distribution.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The binomial variable is discrete (whole numbers only) but the normal variable is continuous.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Each whole number k is represented by the interval from k − 0.5 to k + 0.5 (the bar of the histogram), so boundaries are moved by 0.5.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: X can only take whole-number values, while the normal distribution is continuous and gives probability zero to any single value. Each value k corresponds to the histogram bar from k − 0.5 to k + 0.5, so the boundaries of an event are moved by half a unit."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The correction matches the area under the curve to the area of the histogram bars.",
+  "hints": [
+   "Think about the histogram of the binomial distribution."
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.binomial-approximation.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A test has 50 multiple-choice questions, each with 4 options, one of them correct. Chipo guesses every answer at random. The pass mark is 20. Use a suitable approximation to find the probability that Chipo passes. Give your answer correct to 2 significant figures.",
+  "answerSpec": {
+   "value": 0.01112155935293102,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$X \\sim \\mathrm{B}(50, 0.25)$: $np = 12.5$, $nq = 37.5$, so $Y \\sim \\mathrm{N}(12.5, 9.375)$. Passing is $X \\ge 20$: $\\mathrm{P}(Y > 19.5)$, $z = \\frac{7}{\\sqrt{9.375}} = 2.286$, so the probability is $0.01112$, i.e. $0.011$.",
+  "workedSolution": "1. $X \\sim \\mathrm{B}(50, 0.25)$: $np = 12.5$, $nq = 37.5$, so $Y \\sim \\mathrm{N}(12.5, 9.375)$. Passing is $X \\ge 20$: $\\mathrm{P}(Y > 19.5)$, $z = \\frac{7}{\\sqrt{9.375}} = 2.286$, so the probability is $0.01112$, i.e. $0.011$.",
+  "hints": [
+   "p = 1/4 for a guess.",
+   "Passing means 20 or more."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.011"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.004490335453209093"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.007152938756439187"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.binomial-approximation.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "A biased coin shows heads with probability 0.6. It is tossed 150 times and $X$ is the number of heads.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "$X$ is approximated by $\\mathrm{N}(\\mu, \\sigma^2)$. State the values of $\\mu$ and $\\sigma^2$.",
+    "payload": {
+     "template": "μ = {{blank:m}}, σ² = {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "90"
+       ],
+       "tolerance": 0.001
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "36"
+       ],
+       "tolerance": 0.001
+      }
+     ]
+    },
+    "explanation": "$\\mu = 150 \\times 0.6 = 90$, $\\sigma^2 = 150 \\times 0.6 \\times 0.4 = 36$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Use the approximation to find the probability of at most 84 heads, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.17965867288137757,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0014
+     }
+    },
+    "explanation": "$\\mathrm{P}(Y < 84.5)$, $z = \\frac{84.5 - 90}{6} = -0.9167$, probability $0.1797$.",
+    "workedSolution": "1. $\\mathrm{P}(Y < 84.5)$, $z = \\frac{84.5 - 90}{6} = -0.9167$, probability $0.1797$."
+   }
+  ],
+  "explanation": "State the approximating distribution, apply the continuity correction, standardise.",
+  "hints": [
+   "σ = 6.",
+   "'At most 84' includes 84."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "90"
+      },
+      {
+       "blankId": "v",
+       "text": "36"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.180"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "60"
+       },
+       {
+        "blankId": "v",
+        "text": "6"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.15865526139567468"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "normal.binomial-approximation.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 4,
+  "marks": 14,
+  "estimatedSeconds": 1260,
+  "stem": "The masses of bags of cement filled by a machine at a factory in Bulawayo are normally distributed with mean 50.2 kg and standard deviation 0.25 kg. A bag is **underweight** if its mass is less than 49.8 kg.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that a randomly chosen bag is underweight, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.05479929075131874,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00015
+     }
+    },
+    "explanation": "$z = \\frac{49.8 - 50.2}{0.25} = -1.6$; $\\Phi(-1.6) = 1 - 0.9452 = 0.0548$.",
+    "workedSolution": "1. $z = \\frac{49.8 - 50.2}{0.25} = -1.6$; $\\Phi(-1.6) = 1 - 0.9452 = 0.0548$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 5,
+    "stem": "A lorry carries 200 bags. Use a suitable approximation to find the probability that more than 15 of the bags are underweight, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.07918079236217146,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00017
+     }
+    },
+    "explanation": "$X \\sim \\mathrm{B}(200, 0.0548)$; $np = 10.96$, $nq = 189.04$, both $> 5$, so $Y \\sim \\mathrm{N}(10.96, 10.36)$. $\\mathrm{P}(X > 15) \\approx \\mathrm{P}(Y > 15.5)$, $z = \\frac{4.54}{\\sqrt{10.36}} = 1.411$, probability $0.07918$.",
+    "workedSolution": "1. $X \\sim \\mathrm{B}(200, 0.0548)$; $np = 10.96$, $nq = 189.04$, both $> 5$, so $Y \\sim \\mathrm{N}(10.96, 10.36)$. $\\mathrm{P}(X > 15) \\approx \\mathrm{P}(Y > 15.5)$, $z = \\frac{4.54}{\\sqrt{10.36}} = 1.411$, probability $0.07918$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Justify the approximation used in (b), and state an assumption about the bags that is needed.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Quotes $np = 10.96 > 5$ and $nq = 189.04 > 5$ (so the normal approximation to the binomial is valid).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "States that the bags on the lorry are independent of each other (a random selection), each with the same probability 0.0548 of being underweight.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: np = 10.96 and nq = 189.04 are both greater than 5. We assume the 200 bags behave like a random sample: independent, each underweight with probability 0.0548."
+    },
+    "explanation": "Justify with numbers; the binomial model needs independence and a constant probability."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two reasons why a normal distribution is a sensible model for the masses of the bags.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The mass is a continuous variable that varies symmetrically about the target set on the machine.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Masses are not bounded close to the mean: the minimum possible (0 kg) is about 200 standard deviations below the mean, so negative masses have negligible probability.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Mass is continuous and machine filling gives small random variations either side of the set mean, so a symmetrical bell shape is expected; 0 kg is so many standard deviations below 50.2 kg that impossible values have essentially no probability."
+    },
+    "explanation": "A normal model needs a continuous, roughly symmetrical variable that is not bounded near the mean."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "The factory adjusts the mean, keeping the standard deviation 0.25 kg, so that only 2% of bags are underweight. Find the new mean, correct to 2 decimal places.",
+    "payload": {
+     "unitHint": "kg"
+    },
+    "answerSpec": {
+     "value": 50.3135,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "kg",
+       "kilograms",
+       "kilogram"
+      ]
+     }
+    },
+    "explanation": "$\\mathrm{P}(M < 49.8) = 0.02 \\Rightarrow \\frac{49.8 - \\mu}{0.25} = -2.054 \\Rightarrow \\mu = 49.8 + 2.054 \\times 0.25 = 50.31$, so $50.31$ kg.",
+    "workedSolution": "1. $\\mathrm{P}(M < 49.8) = 0.02 \\Rightarrow \\frac{49.8 - \\mu}{0.25} = -2.054 \\Rightarrow \\mu = 49.8 + 2.054 \\times 0.25 = 50.31$, so $50.31$ kg."
+   }
+  ],
+  "explanation": "A normal probability gives p; the count of underweight bags is binomial and is approximated by a normal distribution; the inverse normal finds a new mean.",
+  "hints": [
+   "In (b), find np and npq with p from (a).",
+   "'More than 15' starts at 16.",
+   "In (e), Φ(z) = 0.02 gives z = −2.054."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.0548"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.0792"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "50.31"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.9452007092486813"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.13568621407680737"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "49.2865"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

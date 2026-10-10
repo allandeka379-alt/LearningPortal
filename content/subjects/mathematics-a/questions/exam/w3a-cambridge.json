@@ -1,0 +1,1210 @@
+[
+ {
+  "key": "exam.w3a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.data.mean-sd"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "The times, $x$ minutes, taken by 20 learners in group A at a school in Kwekwe to complete a puzzle are summarised by $\\sum (x - 50) = 64$ and $\\sum (x - 50)^2 = 1004$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the mean and the standard deviation of the times for group A (standard deviation to 3 significant figures).",
+    "payload": {
+     "template": "mean {{blank:m}} minutes; standard deviation {{blank:s}} minutes",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "s",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "53.2"
+       ],
+       "marks": 1,
+       "tolerance": 0.005
+      },
+      {
+       "id": "s",
+       "accepted": [
+        "6.32"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$\\bar{x} = 50 + \\frac{64}{20} = 53.2$. $\\sigma^2 = \\frac{1004}{20} - 3.2^2 = 50.2 - 10.24 = 39.96$, so $\\sigma = 6.32$. ($7.09$ forgets to subtract $3.2^2$.)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The 30 learners in group B have mean time 52.5 minutes and standard deviation 4 minutes. Find the mean time of all 50 learners, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 52.78,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$\\sum x = 20 \\times 53.2 + 30 \\times 52.5 = 1064 + 1575 = 2639$; mean $= \\frac{2639}{50} = 52.78$. ($52.85$ averages the two means without weighting.)",
+    "workedSolution": "1. $\\sum x = 20 \\times 53.2 + 30 \\times 52.5 = 1064 + 1575 = 2639$; mean $= \\frac{2639}{50} = 52.78$. ($52.85$ averages the two means without weighting.)"
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the standard deviation of the times of all 50 learners, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 5.0696745457672,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\sum x^2$: group A $20(39.96 + 53.2^2) = 57404$; group B $30(16 + 52.5^2) = 83167.5$. Total 140571.5. $\\sigma^2 = \\frac{140571.5}{50} - 52.78^2 = 25.70$, $\\sigma = 5.07$.",
+    "workedSolution": "1. $\\sum x^2$: group A $20(39.96 + 53.2^2) = 57404$; group B $30(16 + 52.5^2) = 83167.5$. Total 140571.5. $\\sigma^2 = \\frac{140571.5}{50} - 52.78^2 = 25.70$, $\\sigma = 5.07$."
+   }
+  ],
+  "explanation": "Decode the summary for group A, then rebuild Σx and Σx² for each group and combine.",
+  "hints": [
+   "x̄ = 50 + Σ(x − 50)/n.",
+   "Σx² = n(σ² + x̄²) for each group."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "53.2"
+      },
+      {
+       "blankId": "s",
+       "text": "6.32"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "52.8"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "5.07"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "3.2"
+       },
+       {
+        "blankId": "s",
+        "text": "7.09"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "52.85"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "5.16"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 5"
+ },
+ {
+  "key": "exam.w3a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.counting.permutations",
+   "amaths.counting.combinations"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "This question is about arrangements and selections.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the number of different arrangements of the 8 letters of the word BULAWAYO.",
+    "answerSpec": {
+     "value": 20160
+    },
+    "explanation": "A appears twice: $\\frac{8!}{2!} = 20\\,160$.",
+    "workedSolution": "1. A appears twice: $\\frac{8!}{2!} = 20\\,160$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the number of these arrangements in which the four vowels U, A, A, O are all together.",
+    "answerSpec": {
+     "value": 1440
+    },
+    "explanation": "Treat the vowels as one block: the block with B, L, W, Y gives $5! = 120$ arrangements; inside the block U, A, A, O give $\\frac{4!}{2!} = 12$. Total $120 \\times 12 = 1440$.",
+    "workedSolution": "1. Treat the vowels as one block: the block with B, L, W, Y gives $5! = 120$ arrangements; inside the block U, A, A, O give $\\frac{4!}{2!} = 12$. Total $120 \\times 12 = 1440$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "A team of 5 is chosen from 6 men and 4 women. Find the number of different teams that contain at least 2 women.",
+    "answerSpec": {
+     "value": 186
+    },
+    "explanation": "2 women and 3 men: $6 \\times 20 = 120$; 3 women and 2 men: $4 \\times 15 = 60$; 4 women and 1 man: $1 \\times 6 = 6$. Total $186$. ($336$ chooses 2 women then any 3 others, which counts some teams more than once.)",
+    "workedSolution": "1. 2 women and 3 men: $6 \\times 20 = 120$; 3 women and 2 men: $4 \\times 15 = 60$; 4 women and 1 man: $1 \\times 6 = 6$. Total $186$. ($336$ chooses 2 women then any 3 others, which counts some teams more than once.)"
+   }
+  ],
+  "explanation": "Divide by 2! for the repeated A; treat letters that must be together as a block; split 'at least' into cases.",
+  "hints": [
+   "Count the vowels in BULAWAYO.",
+   "List the cases with 2, 3 and 4 women."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "20160"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1440"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "186"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "40320"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "2880"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "336"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 5"
+ },
+ {
+  "key": "exam.w3a-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.random-variables"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "The discrete random variable $X$ has the probability distribution below, and $\\mathrm{E}(X) = 2.6$.\n\n| x | 1 | 2 | 3 | 4 |\n| --- | --- | --- | --- | --- |\n| P(X = x) | 0.2 | p | q | 0.25 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the values of p and q.",
+    "payload": {
+     "template": "p = {{blank:p}}; q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "0.25"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "0.3"
+       ],
+       "marks": 2,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$0.2 + p + q + 0.25 = 1$ gives $p + q = 0.55$. $\\mathrm{E}(X) = 0.2 + 2p + 3q + 1 = 2.6$ gives $2p + 3q = 1.4$. Then $q = 1.4 - 2(0.55) = 0.3$ and $p = 0.25$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find Var(X).",
+    "answerSpec": {
+     "value": 1.1400000000000015,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\mathrm{E}(X^2) = 0.2 + 4(0.25) + 9(0.3) + 16(0.25) = 0.2 + 1 + 2.7 + 4 = 7.9$. $\\mathrm{Var}(X) = 7.9 - 2.6^2 = 1.14$.",
+    "workedSolution": "1. $\\mathrm{E}(X^2) = 0.2 + 4(0.25) + 9(0.3) + 16(0.25) = 0.2 + 1 + 2.7 + 4 = 7.9$. $\\mathrm{Var}(X) = 7.9 - 2.6^2 = 1.14$."
+   }
+  ],
+  "explanation": "Two equations from ΣP = 1 and E(X), then E(X²) − [E(X)]².",
+  "hints": [
+   "Form simultaneous equations in p and q."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "0.25"
+      },
+      {
+       "blankId": "q",
+       "text": "0.3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.14"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "0.3"
+       },
+       {
+        "blankId": "q",
+        "text": "0.25"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "7.9"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 5"
+ },
+ {
+  "key": "exam.w3a-cambridge.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.geometric",
+   "amaths.discrete.binomial"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "Tendai throws darts at a board. The probability that a dart hits the bull's-eye is 0.15, independently for each throw. Give probabilities correct to 3 significant figures.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that Tendai first hits the bull's-eye with his 5th throw.",
+    "answerSpec": {
+     "value": 0.07830093749999999,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$\\mathrm{Geo}(0.15)$: $0.85^4 \\times 0.15 = 0.0783$.",
+    "workedSolution": "1. $\\mathrm{Geo}(0.15)$: $0.85^4 \\times 0.15 = 0.0783$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that he needs more than 7 throws to hit the bull's-eye for the first time.",
+    "answerSpec": {
+     "value": 0.3205770882812499,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "The first 7 throws all miss: $0.85^7 = 0.321$.",
+    "workedSolution": "1. The first 7 throws all miss: $0.85^7 = 0.321$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that he hits the bull's-eye exactly twice in 10 throws.",
+    "answerSpec": {
+     "value": 0.2758966566020507,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{B}(10, 0.15)$: ${}^{10}C_2(0.15)^2(0.85)^8 = 45 \\times 0.0225 \\times 0.2725 = 0.276$.",
+    "workedSolution": "1. $\\mathrm{B}(10, 0.15)$: ${}^{10}C_2(0.15)^2(0.85)^8 = 45 \\times 0.0225 \\times 0.2725 = 0.276$."
+   }
+  ],
+  "explanation": "Waiting for the first hit is geometric; the number of hits in a fixed number of throws is binomial.",
+  "hints": [
+   "(a) and (b): Geo(0.15). (c): B(10, 0.15)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.0783"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.321"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.276"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.0666"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.377"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.00613"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 5"
+ },
+ {
+  "key": "exam.w3a-cambridge.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.data.histograms-cumulative",
+   "amaths.data.location-spread",
+   "amaths.data.mean-sd"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The times, $t$ minutes, that 100 customers waited at a bank in Harare are summarised below.\n\n| Time t (minutes) | 0 ≤ t < 10 | 10 ≤ t < 20 | 20 ≤ t < 30 | 30 ≤ t < 50 | 50 ≤ t < 90 |\n| --- | --- | --- | --- | --- | --- |\n| Frequency | 12 | 28 | 24 | 20 | 16 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "A histogram is drawn. Find the frequency densities of the classes 30 ≤ t < 50 and 50 ≤ t < 90.",
+    "payload": {
+     "template": "30 to 50: {{blank:a}}; 50 to 90: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0.4"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "Frequency density = frequency ÷ class width: $\\frac{20}{20} = 1$ and $\\frac{16}{40} = 0.4$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate an estimate of the mean waiting time, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 30
+    },
+    "explanation": "Mid-points 5, 15, 25, 40, 70: $\\sum ft = 60 + 420 + 600 + 800 + 1120 = 3000$; mean $\\approx \\frac{3000}{100} = 30$ minutes.",
+    "workedSolution": "1. Mid-points 5, 15, 25, 40, 70: $\\sum ft = 60 + 420 + 600 + 800 + 1120 = 3000$; mean $\\approx \\frac{3000}{100} = 30$ minutes."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Estimate the median waiting time by linear interpolation, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 24.166666666666668,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "The 50th customer is in $20 \\le t < 30$ (cumulative frequency 40 before it): median $\\approx 20 + \\frac{50 - 40}{24} \\times 10 = 24.2$ minutes.",
+    "workedSolution": "1. The 50th customer is in $20 \\le t < 30$ (cumulative frequency 40 before it): median $\\approx 20 + \\frac{50 - 40}{24} \\times 10 = 24.2$ minutes."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Compare the mean and the median and say what this tells you about the shape of the distribution.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Mean (30) is greater than the median (about 24.2).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the distribution is positively skewed: a few long waits pull the mean up.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The mean, 30 minutes, is larger than the median, about 24.2 minutes, so the distribution has a long right tail (positive skew): a few customers waited a long time."
+    }
+   }
+  ],
+  "explanation": "Densities for the histogram; mid-points for the mean; interpolation for the median.",
+  "hints": [
+   "Class widths are not all equal.",
+   "Find the class containing the 50th value."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "0.4"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "30"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "24.2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "20"
+       },
+       {
+        "blankId": "b",
+        "text": "16"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "600"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "25"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 5"
+ },
+ {
+  "key": "exam.w3a-cambridge.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.conditional",
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A bag contains 6 green and 4 white counters. Farai takes two counters at random from the bag, one after the other, without replacement.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that the two counters are the same colour. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.4666666666666667,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{6}{10} \\times \\frac{5}{9} + \\frac{4}{10} \\times \\frac{3}{9} = \\frac{30 + 12}{90} = \\frac{7}{15}$. (0.52 is $0.6^2 + 0.4^2$, with replacement.)",
+    "workedSolution": "1. $\\frac{6}{10} \\times \\frac{5}{9} + \\frac{4}{10} \\times \\frac{3}{9} = \\frac{30 + 12}{90} = \\frac{7}{15}$. (0.52 is $0.6^2 + 0.4^2$, with replacement.)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that the second counter is white.",
+    "answerSpec": {
+     "value": 0.4,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{6}{10} \\times \\frac{4}{9} + \\frac{4}{10} \\times \\frac{3}{9} = \\frac{24 + 12}{90} = 0.4$.",
+    "workedSolution": "1. $\\frac{6}{10} \\times \\frac{4}{9} + \\frac{4}{10} \\times \\frac{3}{9} = \\frac{24 + 12}{90} = 0.4$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Given that the two counters are the same colour, find the probability that they are both white. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.2857142857142857,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{12/90}{42/90} = \\frac{12}{42} = \\frac{2}{7}$.",
+    "workedSolution": "1. $\\frac{12/90}{42/90} = \\frac{12}{42} = \\frac{2}{7}$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Event A is 'the first counter is white' and event B is 'the second counter is white'. Determine, with a reason, whether A and B are independent.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Finds $\\mathrm{P}(A \\cap B) = \\frac{12}{90} = \\frac{2}{15}$ and $\\mathrm{P}(A)\\,\\mathrm{P}(B) = 0.4 \\times 0.4 = 0.16$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Concludes not independent, since the values differ.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: P(A) = 0.4 and P(B) = 0.4 from (b), so P(A)P(B) = 0.16. P(A ∩ B) = 4/10 × 3/9 = 2/15 ≈ 0.133 ≠ 0.16, so A and B are not independent."
+    }
+   }
+  ],
+  "explanation": "Multiply along branches; divide one path by the total of the paths in the condition; compare P(A ∩ B) with P(A)P(B).",
+  "hints": [
+   "Draw the tree: denominators 10 then 9.",
+   "P(B) = 0.4 from (b)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.467"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.400"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.286"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.52"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.3333333333333333"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.13333333333333333"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 5"
+ },
+ {
+  "key": "exam.w3a-cambridge.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.binomial"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "35% of the households in a district of Bulawayo use solar water heaters. A random sample of 12 households is chosen. Give probabilities correct to 3 significant figures.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that exactly 4 of the households use solar water heaters.",
+    "answerSpec": {
+     "value": 0.23669235431027713,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$X \\sim \\mathrm{B}(12, 0.35)$: ${}^{12}C_4(0.35)^4(0.65)^8 = 495 \\times 0.01500625 \\times 0.03186 = 0.237$.",
+    "workedSolution": "1. $X \\sim \\mathrm{B}(12, 0.35)$: ${}^{12}C_4(0.35)^4(0.65)^8 = 495 \\times 0.01500625 \\times 0.03186 = 0.237$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that at least 3 of the households use solar water heaters.",
+    "answerSpec": {
+     "value": 0.8487124216647326,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$1 - [\\mathrm{P}(0) + \\mathrm{P}(1) + \\mathrm{P}(2)] = 1 - (0.005688 + 0.03675 + 0.1088) = 0.849$.",
+    "workedSolution": "1. $1 - [\\mathrm{P}(0) + \\mathrm{P}(1) + \\mathrm{P}(2)] = 1 - (0.005688 + 0.03675 + 0.1088) = 0.849$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the least number of households that must be chosen so that the probability that at least one of them uses a solar water heater is greater than 0.99.",
+    "answerSpec": {
+     "value": 11
+    },
+    "explanation": "$1 - 0.65^n > 0.99 \\Rightarrow 0.65^n < 0.01 \\Rightarrow n > \\frac{\\ln 0.01}{\\ln 0.65} = 10.7$. Check: $1 - 0.65^{10} = 0.9865$, $1 - 0.65^{11} = 0.9912$. So 11.",
+    "workedSolution": "1. $1 - 0.65^n > 0.99 \\Rightarrow 0.65^n < 0.01 \\Rightarrow n > \\frac{\\ln 0.01}{\\ln 0.65} = 10.7$. Check: $1 - 0.65^{10} = 0.9865$, $1 - 0.65^{11} = 0.9912$. So 11."
+   }
+  ],
+  "explanation": "B(12, 0.35) for (a) and (b); for (c) use the complement and logarithms.",
+  "hints": [
+   "At least 3 = 1 − P(at most 2).",
+   "P(none) = 0.65ⁿ."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.237"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.849"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "11"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.000478"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.653"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "10"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 5"
+ },
+ {
+  "key": "exam.w3a-cambridge.q08",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.normal.inverse-parameters",
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The volumes, X ml, of milk in cartons filled at a dairy in Marondera are normally distributed with mean μ ml and standard deviation σ ml. 10% of the cartons contain less than 420 ml and 20% contain more than 480 ml.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Find μ and σ, each correct to 3 significant figures.",
+    "payload": {
+     "template": "μ = {{blank:m}}; σ = {{blank:s}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "s",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "456"
+       ],
+       "marks": 2,
+       "tolerance": 0.5014373789990145
+      },
+      {
+       "id": "s",
+       "accepted": [
+        "28.3"
+       ],
+       "marks": 2,
+       "tolerance": 0.061005451273458536
+      }
+     ]
+    },
+    "explanation": "$\\frac{420 - \\mu}{\\sigma} = -1.282$ and $\\frac{480 - \\mu}{\\sigma} = 0.842$. Subtracting $\\mu - 1.282\\sigma = 420$ from $\\mu + 0.842\\sigma = 480$: $2.124\\sigma = 60$, $\\sigma = 28.3$; $\\mu = 420 + 1.282 \\times 28.26 = 456$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that a carton contains between 440 ml and 470 ml, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.4040974701804897,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.003
+     }
+    },
+    "explanation": "$z = \\frac{440 - 456.2}{28.26} = -0.574$ and $\\frac{470 - 456.2}{28.26} = 0.488$; $\\Phi(0.49) - \\Phi(-0.57) = 0.404$.",
+    "workedSolution": "1. $z = \\frac{440 - 456.2}{28.26} = -0.574$ and $\\frac{470 - 456.2}{28.26} = 0.488$; $\\Phi(0.49) - \\Phi(-0.57) = 0.404$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "200 cartons are chosen at random. Find the expected number that contain more than 500 ml, to the nearest whole number.",
+    "answerSpec": {
+     "value": 12
+    },
+    "explanation": "$\\mathrm{P}(X > 500) = 1 - \\Phi\\left(\\frac{500 - 456.2}{28.26}\\right) = 0.0606$; $200 \\times 0.0606 = 12.1$, about 12 cartons.",
+    "workedSolution": "1. $\\mathrm{P}(X > 500) = 1 - \\Phi\\left(\\frac{500 - 456.2}{28.26}\\right) = 0.0606$; $200 \\times 0.0606 = 12.1$, about 12 cartons."
+   }
+  ],
+  "explanation": "Two percentages give two equations; then use the fitted model forwards.",
+  "hints": [
+   "420 is below the mean: its z value is negative.",
+   "Subtract the equations to eliminate μ."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "456"
+      },
+      {
+       "blankId": "s",
+       "text": "28.3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.404"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "12"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "450"
+       },
+       {
+        "blankId": "s",
+        "text": "136"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.687"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "40"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 5"
+ },
+ {
+  "key": "exam.w3a-cambridge.q09",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.random-variables",
+   "amaths.probability.events-rules"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "A fair spinner A is numbered 1, 2, 3, 4 and a fair spinner B is numbered 1, 2, 3. Both are spun once and X is the positive difference between the two scores (X = 0 if they are equal).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Draw up the probability distribution of X, giving each probability as a fraction.",
+    "payload": {
+     "template": "P(X = 0) = {{blank:a}}; P(X = 1) = {{blank:b}}; P(X = 2) = {{blank:c}}; P(X = 3) = {{blank:d}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1/4"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "5/12"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "1/4"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "1/12"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "12 equally likely pairs. Difference 0: (1,1), (2,2), (3,3): 3. Difference 1: (1,2), (2,1), (2,3), (3,2), (4,3): 5. Difference 2: (1,3), (3,1), (4,2): 3. Difference 3: (4,1): 1. So $\\frac{3}{12}, \\frac{5}{12}, \\frac{3}{12}, \\frac{1}{12}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find E(X). Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 1.1666666666666667,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\mathrm{E}(X) = \\frac{0 + 5 + 6 + 3}{12} = \\frac{14}{12} = \\frac{7}{6}$.",
+    "workedSolution": "1. $\\mathrm{E}(X) = \\frac{0 + 5 + 6 + 3}{12} = \\frac{14}{12} = \\frac{7}{6}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find Var(X). Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.8055555555555556,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{E}(X^2) = \\frac{0 + 5 + 12 + 9}{12} = \\frac{26}{12}$. $\\mathrm{Var}(X) = \\frac{26}{12} - \\left(\\frac{7}{6}\\right)^2 = \\frac{78 - 49}{36} = \\frac{29}{36} \\approx 0.806$.",
+    "workedSolution": "1. $\\mathrm{E}(X^2) = \\frac{0 + 5 + 12 + 9}{12} = \\frac{26}{12}$. $\\mathrm{Var}(X) = \\frac{26}{12} - \\left(\\frac{7}{6}\\right)^2 = \\frac{78 - 49}{36} = \\frac{29}{36} \\approx 0.806$."
+   }
+  ],
+  "explanation": "List the 12 outcomes in a table of differences, then use the moment formulas.",
+  "hints": [
+   "Draw a 4 by 3 table of differences."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1/4"
+      },
+      {
+       "blankId": "b",
+       "text": "5/12"
+      },
+      {
+       "blankId": "c",
+       "text": "1/4"
+      },
+      {
+       "blankId": "d",
+       "text": "1/12"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.17"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.806"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1/3"
+       },
+       {
+        "blankId": "b",
+        "text": "1/2"
+       },
+       {
+        "blankId": "c",
+        "text": "1/6"
+       },
+       {
+        "blankId": "d",
+        "text": "0"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1.5"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.08"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 5"
+ }
+]

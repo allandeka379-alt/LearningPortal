@@ -1,0 +1,1309 @@
+[
+ {
+  "key": "bivariate.regression-correlation.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Bivariate data (x, y) are collected, where x is the explanatory variable. Which line should be used to predict y for a given value of x?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The regression line of y on x",
+    "correct": true,
+    "rationale": "Correct: it minimises the squared vertical distances, the errors in predicting y."
+   },
+   {
+    "key": "B",
+    "content": "The regression line of x on y",
+    "rationale": "That line is for estimating x from a given y."
+   },
+   {
+    "key": "C",
+    "content": "Either line, because they are the same",
+    "rationale": "The two lines differ unless r = ±1."
+   },
+   {
+    "key": "D",
+    "content": "A line through the origin with gradient r",
+    "rationale": "The gradient of the y on x line is Sxy/Sxx, and the line need not pass through the origin."
+   }
+  ],
+  "explanation": "Predict y from x with the y on x line; estimate x from y with the x on y line.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q02",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The least-squares regression line of $y$ on $x$ always passes through the point $(\\bar{x}, \\bar{y})$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "$a = \\bar{y} - b\\bar{x}$, so when $x = \\bar{x}$, $y = a + b\\bar{x} = \\bar{y}$. The $x$ on $y$ line also passes through $(\\bar{x}, \\bar{y})$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For $5$ pairs of values, $\\sum x = 20$, $\\sum y = 35$ and $\\sum xy = 160$. Find $S_{xy}$.",
+  "answerSpec": {
+   "value": 20
+  },
+  "explanation": "$S_{xy} = \\sum xy - \\frac{\\sum x\\sum y}{n} = 160 - \\frac{20 \\times 35}{5} = 160 - 140 = 20$.",
+  "workedSolution": "1. $S_{xy} = \\sum xy - \\frac{\\sum x\\sum y}{n} = 160 - \\frac{20 \\times 35}{5} = 160 - 140 = 20$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "20"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "160"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "125"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "For a set of bivariate data, $S_{xx} = 40$, $S_{xy} = 25$, $\\bar{x} = 6$ and $\\bar{y} = 10$. The regression line of $y$ on $x$ is $y = a + bx$. Find $b$ and $a$.",
+  "payload": {
+   "template": "b = {{blank:b}}, a = {{blank:a}}",
+   "blanks": [
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "a",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "b",
+     "accepted": [
+      "0.625"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "a",
+     "accepted": [
+      "6.25"
+     ],
+     "tolerance": 0.005
+    }
+   ]
+  },
+  "explanation": "$b = \\frac{S_{xy}}{S_{xx}} = \\frac{25}{40} = 0.625$; $a = \\bar{y} - b\\bar{x} = 10 - 0.625 \\times 6 = 6.25$. ($1.6$ is $\\frac{S_{xx}}{S_{xy}}$, upside down.)",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "b",
+     "text": "0.625"
+    },
+    {
+     "blankId": "a",
+     "text": "6.25"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "b",
+      "text": "1.6"
+     },
+     {
+      "blankId": "a",
+      "text": "0.4"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a sample of Harare commuters, the correlation between distance from the city centre and the number of minutes early they arrive at work is r = −0.92. Which description is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Weak negative correlation, because r is negative",
+    "rationale": "The sign gives the direction; the size (0.92) shows the correlation is strong."
+   },
+   {
+    "key": "B",
+    "content": "Strong positive correlation: living further away causes earlier arrival",
+    "rationale": "A negative r means one variable tends to fall as the other rises, and correlation does not show cause."
+   },
+   {
+    "key": "C",
+    "content": "Living further away causes commuters to arrive later",
+    "rationale": "Correlation shows association only; other factors (such as transport) may be responsible."
+   },
+   {
+    "key": "D",
+    "content": "Strong negative linear correlation: further away tends to mean less early",
+    "correct": true,
+    "rationale": "Correct: r is close to −1, so the points lie close to a line sloping downwards."
+   }
+  ],
+  "explanation": "r = −0.92: strong negative linear correlation. It describes association, not cause.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a set of bivariate data, $S_{xx} = 24.5$, $S_{yy} = 60.8$ and $S_{xy} = -33.6$. Calculate the product moment correlation coefficient $r$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": -0.870571500132014,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$r = \\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}} = \\frac{-33.6}{\\sqrt{24.5 \\times 60.8}} = -0.871$. (Forgetting the square root gives a tiny value; $r$ keeps the sign of $S_{xy}$.)",
+  "workedSolution": "1. $r = \\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}} = \\frac{-33.6}{\\sqrt{24.5 \\times 60.8}} = -0.871$. (Forgetting the square root gives a tiny value; $r$ keeps the sign of $S_{xy}$.)",
+  "hints": [
+   "r has the same sign as Sxy."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-0.871"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.871"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-0.0226"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "bivariate.regression-correlation.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The ages $x$ (years) and resale values $y$ (thousands of US dollars) of six used pick-up trucks at a Bulawayo dealer are:\n\n| x | 2 | 4 | 5 | 7 | 8 | 10 |\n| --- | --- | --- | --- | --- | --- | --- |\n| y | 16 | 12 | 11 | 8 | 6 | 4 |\n\nFind the regression line of $y$ on $x$ in the form $y = a + bx$, giving $a$ and $b$ correct to 3 significant figures.",
+  "payload": {
+   "template": "a = {{blank:a}}, b = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "18.5"
+     ],
+     "tolerance": 0.05
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "-1.50"
+     ],
+     "tolerance": 0.005
+    }
+   ]
+  },
+  "explanation": "$\\bar{x} = 6$, $\\bar{y} = 9.500$, $S_{xx} = 42$, $S_{xy} = -63$. $b = \\frac{-63}{42} = -1.50$; $a = 9.500 - (-1.500)(6) = 18.5$. So $y = 18.5 - 1.50x$: each extra year reduces the value by about US\\$1500.",
+  "hints": [
+   "$\\sum x = 36$, $\\sum y = 57$.",
+   "b = Sxy/Sxx, then a = ȳ − b x̄."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "18.5"
+    },
+    {
+     "blankId": "b",
+     "text": "-1.50"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "12.3"
+     },
+     {
+      "blankId": "b",
+      "text": "-0.660"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "bivariate.regression-correlation.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A regression line of tobacco yield on fertiliser applied was found from farms using between 100 kg and 400 kg of fertiliser per hectare, with r = 0.94. Which prediction is least reliable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The yield for 250 kg of fertiliser per hectare",
+    "rationale": "250 kg is inside the data range (interpolation) and r is high, so this is reliable."
+   },
+   {
+    "key": "B",
+    "content": "The yield for 150 kg of fertiliser per hectare",
+    "rationale": "150 kg is inside the data range, so this is interpolation."
+   },
+   {
+    "key": "C",
+    "content": "The yield for 700 kg of fertiliser per hectare",
+    "correct": true,
+    "rationale": "Correct: 700 kg is far outside the data range (extrapolation); the linear pattern may not continue."
+   },
+   {
+    "key": "D",
+    "content": "The yield for 380 kg of fertiliser per hectare",
+    "rationale": "380 kg is inside the range of the data, so the line can be used."
+   }
+  ],
+  "explanation": "Extrapolating far beyond the observed range is unreliable even when r is high: too much fertiliser may stop increasing (or even reduce) the yield.",
+  "hints": [
+   "Which value lies outside 100 to 400 kg?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The correlation coefficient between the mass of maize seed planted and the yield on a set of plots is r = 0.8. What percentage of the variation in yield is explained by the linear relationship with the mass of seed?",
+  "payload": {
+   "unitHint": "%"
+  },
+  "answerSpec": {
+   "value": 64,
+   "units": {
+    "required": false,
+    "accepted": [
+     "%",
+     "percent",
+     "per cent"
+    ]
+   }
+  },
+  "explanation": "The coefficient of determination is $r^2 = 0.64$, so $64\\%$ of the variation is explained. ($80\\%$ uses $r$ instead of $r^2$.)",
+  "workedSolution": "1. The coefficient of determination is $r^2 = 0.64$, so $64\\%$ of the variation is explained. ($80\\%$ uses $r$ instead of $r^2$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "64"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "80"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "89.4"
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If every $x$ value is coded as $u = \\frac{x - 40}{5}$, the product moment correlation coefficient between $u$ and $y$ is the same as between $x$ and $y$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "Subtracting a constant and dividing by a positive constant scales $S_{xy}$ and $\\sqrt{S_{xx}}$ by the same factor, so $r$ is unchanged. (Dividing by a negative number would only change its sign.)",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "For $12$ pairs of values, $\\sum x = 96$, $\\sum y = 180$, $\\sum y^2 = 2850$ and $\\sum xy = 1490$. Find the regression line of $x$ on $y$ in the form $x = c + dy$.",
+  "payload": {
+   "template": "c = {{blank:c}}, d = {{blank:d}}",
+   "blanks": [
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "d",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "c",
+     "accepted": [
+      "3"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "0.333"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$S_{yy} = 2850 - \\frac{180^2}{12} = 150$; $S_{xy} = 1490 - \\frac{96 \\times 180}{12} = 50$. $d = \\frac{S_{xy}}{S_{yy}} = \\frac{50}{150} = \\frac{1}{3}$; $c = \\bar{x} - d\\bar{y} = 8 - \\frac{1}{3}(15) = 3$. So $x = 3 + \\frac{1}{3}y$. ($d = 3$ inverts the fraction.)",
+  "hints": [
+   "For x on y, divide Sxy by Syy.",
+   "The line passes through (x̄, ȳ) = (8, 15)."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "c",
+     "text": "3"
+    },
+    {
+     "blankId": "d",
+     "text": "0.333"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "c",
+      "text": "-37"
+     },
+     {
+      "blankId": "d",
+      "text": "3"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q12",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each value of the product moment correlation coefficient with its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "r = 0.96"
+    },
+    {
+     "id": "L2",
+     "content": "r = −0.93"
+    },
+    {
+     "id": "L3",
+     "content": "r = 0.04"
+    },
+    {
+     "id": "L4",
+     "content": "r = 0.52"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Little or no linear correlation"
+    },
+    {
+     "id": "R4",
+     "content": "Moderate positive linear correlation"
+    },
+    {
+     "id": "R1",
+     "content": "Strong positive linear correlation"
+    },
+    {
+     "id": "R2",
+     "content": "Strong negative linear correlation"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The sign gives the direction and the size gives the strength; values near 0 mean little LINEAR correlation (there may still be a curved pattern).",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "In a study of districts of Zimbabwe, the number of mobile phone shops and the number of road accidents per year have r = 0.88. A newspaper says that mobile phone shops cause accidents. Comment on this claim.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A high r shows strong (linear) association, not that one variable causes the other.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A third factor, such as population size or urbanisation, increases both the number of shops and the number of accidents.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: r = 0.88 shows a strong association, but correlation is not causation. Larger, more urban districts have both more shops and more traffic, so population is a likely common cause."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Look for a lurking third variable.",
+  "hints": [
+   "What could make both numbers large in the same district?"
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In an experiment, Thandeka sets the temperature of a water bath to 20, 30, 40, 50 and 60 °C and measures the time for a tablet to dissolve. Which statement is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Time is the explanatory variable because it is measured",
+    "rationale": "The measured, random variable is the response; the controlled one is explanatory."
+   },
+   {
+    "key": "B",
+    "content": "Temperature is explanatory; use only the line of time on temperature",
+    "correct": true,
+    "rationale": "Correct: temperature is controlled, so it is not random and the time on temperature line is the one to use."
+   },
+   {
+    "key": "C",
+    "content": "Both regression lines are equally appropriate",
+    "rationale": "When x is controlled, the x on y line has no sensible meaning."
+   },
+   {
+    "key": "D",
+    "content": "Neither variable is explanatory in a laboratory experiment",
+    "rationale": "Temperature is set by the experimenter, so it is the explanatory variable."
+   }
+  ],
+  "explanation": "A controlled variable is always the explanatory variable, and only the regression of the response on it is meaningful.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q15",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "The regression line of $y$ on $x$ is $y = 2 + 0.8x$ and the regression line of $x$ on $y$ is $x = 1.5 + 0.85y$. Find $\\bar{x}$, $\\bar{y}$ and the correlation coefficient $r$ (correct to 3 significant figures).",
+  "payload": {
+   "template": "x̄ = {{blank:x}}, ȳ = {{blank:y}}, r = {{blank:r}}",
+   "blanks": [
+    {
+     "id": "x",
+     "input": "number"
+    },
+    {
+     "id": "y",
+     "input": "number"
+    },
+    {
+     "id": "r",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "x",
+     "accepted": [
+      "10"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "y",
+     "accepted": [
+      "10"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "r",
+     "accepted": [
+      "0.825"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "Both lines pass through $(\\bar{x}, \\bar{y})$: $x = 1.5 + 0.85(2 + 0.8x) = 3.2 + 0.68x$, so $\\bar{x} = 10$ and $\\bar{y} = 10$. Also $b \\times b' = \\frac{S_{xy}}{S_{xx}} \\cdot \\frac{S_{xy}}{S_{yy}} = r^2 = 0.68$, so $r = +\\sqrt{0.68} = 0.825$ (positive, like the gradients). ($0.68$ is $r^2$.)",
+  "hints": [
+   "Solve the two equations simultaneously.",
+   "Multiply the two gradients."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "x",
+     "text": "10"
+    },
+    {
+     "blankId": "y",
+     "text": "10"
+    },
+    {
+     "blankId": "r",
+     "text": "0.825"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "x",
+      "text": "3.2"
+     },
+     {
+      "blankId": "y",
+      "text": "4.56"
+     },
+     {
+      "blankId": "r",
+      "text": "0.68"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "bivariate.regression-correlation.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A regression line of mark on revision hours was found from 10 learners who revised between 2 and 9 hours, with r = 0.51. Comment on the reliability of using it to predict the mark of a learner who revised for 6 hours.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "6 hours lies within the data range (interpolation), which supports the estimate.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "But r = 0.51 is only moderate (r² ≈ 0.26, about a quarter of the variation explained) and the sample is small, so the estimate is not very reliable.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The estimate is an interpolation, which is good, but the correlation is only moderate (r² ≈ 0.26) and n = 10, so individual marks may differ a lot from the prediction."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Reliability depends on both the range and the strength of the correlation.",
+  "hints": [
+   "Consider both the data range and the size of r."
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "bivariate.regression-correlation.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "For $9$ days, Sipho records the number $x$ of hours of sunshine and the number $y$ of litres of drinking water sold at his stall in Beitbridge: $\\sum x = 45$, $\\sum y = 126$, $\\sum x^2 = 285$, $\\sum y^2 = 1890$, $\\sum xy = 693$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the product moment correlation coefficient, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.724568837309472,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$S_{xx} = 60$, $S_{yy} = 126$, $S_{xy} = 63$; $r = \\frac{63}{\\sqrt{60 \\times 126}} = 0.725$.",
+    "workedSolution": "1. $S_{xx} = 60$, $S_{yy} = 126$, $S_{xy} = 63$; $r = \\frac{63}{\\sqrt{60 \\times 126}} = 0.725$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the regression line of y on x in the form y = a + bx.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "8.75"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1.05"
+       ],
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$b = \\frac{63}{60} = 1.05$; $a = 14 - 1.05 \\times 5 = 8.75$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Estimate the number of litres sold on a day with 7 hours of sunshine.",
+    "answerSpec": {
+     "value": 16.1,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$y = 8.75 + 1.05 \\times 7 = 16.1$ litres.",
+    "workedSolution": "1. $y = 8.75 + 1.05 \\times 7 = 16.1$ litres."
+   }
+  ],
+  "explanation": "Summary statistics first, then r and the y on x line.",
+  "hints": [
+   "Sxx = Σx² − (Σx)²/n."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.725"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "8.75"
+      },
+      {
+       "blankId": "b",
+       "text": "1.05"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "16.1"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.525"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "11.5"
+       },
+       {
+        "blankId": "b",
+        "text": "0.500"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "14.0"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "bivariate.regression-correlation.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.bivariate.regression-correlation"
+  ],
+  "difficulty": 4,
+  "marks": 14,
+  "estimatedSeconds": 1260,
+  "stem": "A school tuckshop in Kariba records the maximum temperature $x$ °C and the number $y$ of cold drinks sold on eight days.\n\n| x | 12 | 15 | 18 | 20 | 23 | 25 | 28 | 30 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| y | 41 | 47 | 50 | 57 | 61 | 66 | 70 | 77 |\n\n$\\sum x = 171$, $\\sum y = 469$, $\\sum x^2 = 3931$, $\\sum y^2 = 28545$, $\\sum xy = 10560$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Calculate Sxx, Syy and Sxy (exact values, or correct to 1 decimal place).",
+    "payload": {
+     "template": "Sxx = {{blank:a}}, Syy = {{blank:b}}, Sxy = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "275.875"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1049.875"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "535.125"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$S_{xx} = 3931 - \\frac{171^2}{8} = 275.875$; $S_{yy} = 28545 - \\frac{469^2}{8} = 1049.875$; $S_{xy} = 10560 - \\frac{171 \\times 469}{8} = 535.125$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the product moment correlation coefficient, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.9943293769776278,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$r = \\frac{535.125}{\\sqrt{275.875 \\times 1049.875}} = 0.994$.",
+    "workedSolution": "1. $r = \\frac{535.125}{\\sqrt{275.875 \\times 1049.875}} = 0.994$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the regression line of y on x in the form y = a + bx, giving a and b correct to 3 significant figures.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "17.2"
+       ],
+       "marks": 1,
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1.94"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$b = \\frac{535.125}{275.875} = 1.94$; $a = 58.625 - 1.940 \\times 21.375 = 17.2$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Interpret the value of b in context.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "For each extra $1$ °C of maximum temperature, about $1.94$ more cold drinks are sold (on average).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The statement refers to the context (temperature and drinks) with the correct direction.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Sales rise by about 1.94 drinks for every 1 °C increase in the day's maximum temperature."
+    },
+    "explanation": "The gradient is the change in y per unit increase in x."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Estimate the number of drinks sold on a day with maximum temperature 22 °C, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 59.83733574988672,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$y = 17.2 + 1.94 \\times 22 = 59.8$ drinks (about 60).",
+    "workedSolution": "1. $y = 17.2 + 1.94 \\times 22 = 59.8$ drinks (about 60)."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Comment on the reliability of using the line to estimate sales when the maximum temperature is 45 °C.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "45 °C is far outside the observed range 12 °C to 30 °C: extrapolation.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The linear pattern may not continue (stock or customer limits, very unusual weather), so the estimate is unreliable despite the high r.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Unreliable: $45$ °C is well beyond the data ($12$–$30$ °C), so the line is being extrapolated, and sales are unlikely to keep rising in a straight line (the tuckshop may run out of stock)."
+    },
+    "explanation": "Extrapolation is unreliable even with a strong correlation."
+   }
+  ],
+  "explanation": "Sums → S values → r and the y on x line → interpretation and prediction.",
+  "hints": [
+   "Keep Sxx, Syy, Sxy exact before dividing.",
+   "Is 45 °C inside the data range?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "275.875"
+      },
+      {
+       "blankId": "b",
+       "text": "1049.875"
+      },
+      {
+       "blankId": "c",
+       "text": "535.125"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.994"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "17.2"
+      },
+      {
+       "blankId": "b",
+       "text": "1.94"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "59.8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "999"
+       },
+       {
+        "blankId": "b",
+        "text": "999"
+       },
+       {
+        "blankId": "c",
+        "text": "999"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.989"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-8.51"
+       },
+       {
+        "blankId": "b",
+        "text": "0.510"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "2.71"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

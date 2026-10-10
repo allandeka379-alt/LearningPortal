@@ -1,0 +1,1813 @@
+[
+ {
+  "key": "exam.w1b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.coordinate.circles"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "The circle $C$ has equation $x^2 + y^2 - 8x + 2y - 8 = 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the centre and radius of C.",
+    "payload": {
+     "template": "Centre ({{blank:a}}, {{blank:b}}), radius {{blank:r}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "r",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-1"
+       ]
+      },
+      {
+       "id": "r",
+       "accepted": [
+        "5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$(x - 4)^2 + (y + 1)^2 = 8 + 16 + 1 = 25$: centre $(4, -1)$, radius 5."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "The point P(7, 3) lies on C. Find the equation of the tangent to C at P, in the form ax + by = c with integers a, b, c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "3x+4y=33"
+      },
+      {
+       "value": "4y+3x=33"
+      },
+      {
+       "value": "3x+4y-33=0"
+      },
+      {
+       "value": "-3x-4y=-33"
+      },
+      {
+       "value": "y=-3/4x+33/4"
+      },
+      {
+       "value": "y=-0.75x+8.25"
+      },
+      {
+       "value": "y=(-3/4)x+33/4"
+      },
+      {
+       "value": "y=33/4-3x/4"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "Radius gradient $\\frac{3 - (-1)}{7 - 4} = \\frac{4}{3}$, so the tangent gradient is $-\\frac{3}{4}$: $y - 3 = -\\frac{3}{4}(x - 7) \\Rightarrow 3x + 4y = 33$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the y-coordinate of the point where the tangent crosses the y-axis.",
+    "payload": {
+     "answerPrefix": "y ="
+    },
+    "answerSpec": {
+     "value": 8.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$x = 0$: $4y = 33$, $y = 8.25$.",
+    "workedSolution": "1. $x = 0$: $4y = 33$, $y = 8.25$."
+   }
+  ],
+  "explanation": "Complete the square for the centre and radius; the tangent is perpendicular to the radius.",
+  "hints": [
+   "Halve the coefficients of x and y to find the centre.",
+   "Perpendicular gradients multiply to −1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "4"
+      },
+      {
+       "blankId": "b",
+       "text": "-1"
+      },
+      {
+       "blankId": "r",
+       "text": "5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "3x+4y=33"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "8.25"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-4"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       },
+       {
+        "blankId": "r",
+        "text": "25"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "4x-3y=19"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "11"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.binomial-positive"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "This question is about the expansion of $(2 - 3x)^5$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the first three terms in the expansion of (2 − 3x)⁵ in ascending powers of x.",
+    "payload": {
+     "template": "Expansion: ({{blank:a}}) + ({{blank:b}})x + ({{blank:c}})x²",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "32"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-240"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "720"
+       ]
+      }
+     ]
+    },
+    "explanation": "$2^5 + 5(2^4)(-3x) + 10(2^3)(-3x)^2 = 32 - 240x + 720x^2$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Hence find the coefficient of $x^2$ in the expansion of $(1 + 4x)(2 - 3x)^5$.",
+    "answerSpec": {
+     "value": -240
+    },
+    "explanation": "$1 \\times 720 + 4 \\times (-240) = 720 - 960 = -240$.",
+    "workedSolution": "1. $1 \\times 720 + 4 \\times (-240) = 720 - 960 = -240$."
+   }
+  ],
+  "explanation": "Keep the −3 inside each power; the x² term of the product has two contributions.",
+  "hints": [
+   "$(-3x)^2 = 9x^2$.",
+   "x² comes from 1 × (x² term) and 4x × (x term)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "32"
+      },
+      {
+       "blankId": "b",
+       "text": "-240"
+      },
+      {
+       "blankId": "c",
+       "text": "720"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-240"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "240"
+       },
+       {
+        "blankId": "c",
+        "text": "-720"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "720"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.trig.basic-identities-equations"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "This question is about the equation $2\\sin^2\\theta + 3\\cos\\theta = 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the equation can be written as $2\\cos^2\\theta - 3\\cos\\theta - 2 = 0$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 replaces $\\sin^2\\theta$ by $1 - \\cos^2\\theta$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 rearranges to $2\\cos^2\\theta - 3\\cos\\theta - 2 = 0$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n2(1 - \\cos^2\\theta) + 3\\cos\\theta = 0 \\Rightarrow 2 - 2\\cos^2\\theta + 3\\cos\\theta = 0 \\Rightarrow 2\\cos^2\\theta - 3\\cos\\theta - 2 = 0\n$$"
+    },
+    "explanation": "Use sin²θ = 1 − cos²θ and multiply by −1."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence solve the equation for $0^\\circ \\le \\theta \\le 360^\\circ$, in ascending order.",
+    "payload": {
+     "template": "θ = {{blank:a}}° or θ = {{blank:b}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "120"
+       ],
+       "marks": 2
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "240"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "$(2\\cos\\theta + 1)(\\cos\\theta - 2) = 0$. $\\cos\\theta = 2$ is impossible; $\\cos\\theta = -\\frac{1}{2}$ gives $120^\\circ$ and $240^\\circ$."
+   }
+  ],
+  "explanation": "A quadratic in cos θ after the Pythagorean identity.",
+  "hints": [
+   "Factorise the quadratic in cos θ.",
+   "Reject any value outside −1 ≤ cos θ ≤ 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "120"
+      },
+      {
+       "blankId": "b",
+       "text": "240"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "60"
+       },
+       {
+        "blankId": "b",
+        "text": "300"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.geometric",
+   "amaths.series.arithmetic"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "An arithmetic progression has first term $a$ and common difference $d$, where $a > 0$ and $d \\neq 0$. The 1st, 4th and 13th terms of the arithmetic progression are the first three terms of a geometric progression.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $d = \\frac{2}{3}a$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses $(a + 3d)^2 = a(a + 12d)$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 expands to $6ad + 9d^2 = 12ad$, so $9d^2 = 6ad$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 divides by $3d$ ($d \\neq 0$) to get $d = \\frac{2}{3}a$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n(a + 3d)^2 = a(a + 12d) \\Rightarrow a^2 + 6ad + 9d^2 = a^2 + 12ad \\Rightarrow 9d^2 = 6ad\n$$\n\nSince $d \\neq 0$, $9d = 6a$, so $d = \\frac{2}{3}a$."
+    },
+    "explanation": "Three numbers in GP: (middle)² = first × third."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the common ratio of the geometric progression.",
+    "payload": {
+     "answerPrefix": "r ="
+    },
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "$r = \\frac{a + 3d}{a} = \\frac{a + 2a}{a} = 3$.",
+    "workedSolution": "1. $r = \\frac{a + 3d}{a} = \\frac{a + 2a}{a} = 3$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Given that $a = 9$, find the sum of the first 20 terms of the arithmetic progression.",
+    "answerSpec": {
+     "value": 1320
+    },
+    "explanation": "$d = 6$: $S_{20} = \\frac{20}{2}(18 + 19 \\times 6) = 10 \\times 132 = 1320$.",
+    "workedSolution": "1. $d = 6$: $S_{20} = \\frac{20}{2}(18 + 19 \\times 6) = 10 \\times 132 = 1320$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "With $a = 9$, find the least number of terms of the geometric progression whose sum exceeds $10^6$.",
+    "payload": {
+     "answerPrefix": "n ="
+    },
+    "answerSpec": {
+     "value": 12
+    },
+    "explanation": "$\\frac{9(3^n - 1)}{2} > 10^6 \\Rightarrow 3^n > 222\\,223.2 \\Rightarrow n > \\frac{\\ln 222\\,223.2}{\\ln 3} = 11.21$, so $n = 12$.",
+    "workedSolution": "1. $\\frac{9(3^n - 1)}{2} > 10^6 \\Rightarrow 3^n > 222\\,223.2 \\Rightarrow n > \\frac{\\ln 222\\,223.2}{\\ln 3} = 11.21$, so $n = 12$."
+   }
+  ],
+  "explanation": "Translate 'terms in GP' into an equation in a and d, then use AP and GP sum formulas.",
+  "hints": [
+   "The 4th term is $a + 3d$ and the 13th is $a + 12d$.",
+   "Use logarithms for (d)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1320"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "12"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1230"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "11"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.trig.radians-arcs-sectors"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "The sector $OAB$ of a circle with centre $O$ and radius 10 cm has perimeter 32 cm. The angle $AOB$ is $\\theta$ radians.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find θ.",
+    "payload": {
+     "unitHint": "rad",
+     "answerPrefix": "θ ="
+    },
+    "answerSpec": {
+     "value": 1.2,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "rad",
+       "radians",
+       "radian"
+      ]
+     }
+    },
+    "explanation": "$2(10) + 10\\theta = 32 \\Rightarrow \\theta = 1.2$.",
+    "workedSolution": "1. $2(10) + 10\\theta = 32 \\Rightarrow \\theta = 1.2$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the area of the sector.",
+    "payload": {
+     "unitHint": "cm²"
+    },
+    "answerSpec": {
+     "value": 60,
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm²",
+       "cm^2",
+       "square centimetres"
+      ]
+     }
+    },
+    "explanation": "$\\frac{1}{2} \\times 100 \\times 1.2 = 60$ cm$^2$.",
+    "workedSolution": "1. $\\frac{1}{2} \\times 100 \\times 1.2 = 60$ cm$^2$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the area of the segment cut off by the chord AB, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm²"
+    },
+    "answerSpec": {
+     "value": 13.398045701638683,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm²",
+       "cm^2",
+       "square centimetres"
+      ]
+     }
+    },
+    "explanation": "$60 - \\frac{1}{2} \\times 100 \\times \\sin 1.2 = 60 - 46.60 = 13.4$ cm$^2$.",
+    "workedSolution": "1. $60 - \\frac{1}{2} \\times 100 \\times \\sin 1.2 = 60 - 46.60 = 13.4$ cm$^2$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the length of the chord AB, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm"
+    },
+    "answerSpec": {
+     "value": 11.292849467900707,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres"
+      ]
+     }
+    },
+    "explanation": "$AB = 2 \\times 10\\sin 0.6 = 11.3$ cm.",
+    "workedSolution": "1. $AB = 2 \\times 10\\sin 0.6 = 11.3$ cm."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the perimeter of the segment, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm"
+    },
+    "answerSpec": {
+     "value": 23.29284946790071,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres"
+      ]
+     }
+    },
+    "explanation": "Arc $= 10 \\times 1.2 = 12$; perimeter $= 12 + 11.29 = 23.3$ cm.",
+    "workedSolution": "1. Arc $= 10 \\times 1.2 = 12$; perimeter $= 12 + 11.29 = 23.3$ cm."
+   }
+  ],
+  "explanation": "Perimeter 2r + rθ gives θ; segment = sector − triangle; chord from the isosceles triangle.",
+  "hints": [
+   "Use radian mode.",
+   "Chord $= 2r\\sin\\frac{\\theta}{2}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "1.20"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "60"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "13.4"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "11.3"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "23.3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "3.2"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "120"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "58.95287900583215"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "12"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "32"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.trig.graphs-exact-values"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "The function f is defined by $f(x) = a - b\\cos x$ for $0 \\le x \\le 2\\pi$, where $a$ and $b$ are positive constants. The range of f is $-1 \\le f(x) \\le 5$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find a and b.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "$a - b = -1$ and $a + b = 5$, so $a = 2$, $b = 3$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the exact value of $f\\left(\\frac{\\pi}{3}\\right)$, as a decimal.",
+    "answerSpec": {
+     "value": 0.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$2 - 3\\cos\\frac{\\pi}{3} = 2 - \\frac{3}{2} = \\frac{1}{2}$.",
+    "workedSolution": "1. $2 - 3\\cos\\frac{\\pi}{3} = 2 - \\frac{3}{2} = \\frac{1}{2}$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Solve $f(x) = 0$, giving the solutions in radians correct to 3 significant figures, in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}} or x = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0.841"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "5.44"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$\\cos x = \\frac{2}{3}$: $x = 0.841$ or $2\\pi - 0.841 = 5.44$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of points at which the line $y = 4$ meets the graph of $y = f(x)$.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "$2 - 3\\cos x = 4 \\Rightarrow \\cos x = -\\frac{2}{3}$, which has two solutions in $[0, 2\\pi]$.",
+    "workedSolution": "1. $2 - 3\\cos x = 4 \\Rightarrow \\cos x = -\\frac{2}{3}$, which has two solutions in $[0, 2\\pi]$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe a sequence of two transformations that maps $y = \\cos x$ onto $y = f(x)$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A stretch parallel to the y-axis with scale factor −3 (or: stretch factor 3 and reflection in the x-axis).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Then a translation of 2 units in the positive y-direction.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Stretch y = cos x by factor 3 parallel to the y-axis and reflect it in the x-axis (giving −3 cos x), then translate by (0, 2)."
+    }
+   }
+  ],
+  "explanation": "The maximum and minimum give a and b; solve a cos equation in radians; count intersections from the range.",
+  "hints": [
+   "The maximum is a + b and the minimum is a − b.",
+   "Radian mode."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2"
+      },
+      {
+       "blankId": "b",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.500"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0.841"
+      },
+      {
+       "blankId": "b",
+       "text": "5.44"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "3"
+       },
+       {
+        "blankId": "b",
+        "text": "6"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3.5"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2.30"
+       },
+       {
+        "blankId": "b",
+        "text": "3.98"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w1b-cambridge.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "This question is about the expression $5\\sin\\theta + 12\\cos\\theta$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Express $5\\sin\\theta + 12\\cos\\theta$ in the form $R\\sin(\\theta + \\alpha)$, where $R > 0$ and $0^\\circ < \\alpha < 90^\\circ$. Give $\\alpha$ correct to 2 decimal places.",
+    "payload": {
+     "template": "R = {{blank:R}}, α = {{blank:a}}°",
+     "blanks": [
+      {
+       "id": "R",
+       "input": "number"
+      },
+      {
+       "id": "a",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "R",
+       "accepted": [
+        "13"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "a",
+       "accepted": [
+        "67.38"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$R\\cos\\alpha = 5$, $R\\sin\\alpha = 12$: $R = 13$, $\\alpha = \\tan^{-1}\\frac{12}{5} = 67.38^\\circ$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence solve $5\\sin\\theta + 12\\cos\\theta = 6$ for $0^\\circ \\le \\theta \\le 360^\\circ$, giving answers to 1 decimal place in ascending order.",
+    "payload": {
+     "template": "θ = {{blank:a}}° or θ = {{blank:b}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "85.1"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "320.1"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\sin(\\theta + 67.38^\\circ) = \\frac{6}{13}$; $\\sin^{-1}\\frac{6}{13} = 27.49^\\circ$. With $67.38^\\circ \\le \\theta + 67.38^\\circ \\le 427.38^\\circ$: $\\theta + 67.38^\\circ = 152.51^\\circ$ or $387.49^\\circ$, so $\\theta = 85.1^\\circ$ or $320.1^\\circ$."
+   }
+  ],
+  "explanation": "Harmonic form, then solve over the shifted interval.",
+  "hints": [
+   "Expand R sin(θ + α) and compare coefficients.",
+   "27.49° itself is below the shifted interval."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "R",
+       "text": "13"
+      },
+      {
+       "blankId": "a",
+       "text": "67.38"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "85.1"
+      },
+      {
+       "blankId": "b",
+       "text": "320.1"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "R",
+        "text": "17"
+       },
+       {
+        "blankId": "a",
+        "text": "22.62"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "320.1"
+       },
+       {
+        "blankId": "b",
+        "text": "85.1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w1b-cambridge.q08",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.trig.compound-double-angle",
+   "amaths.trig.reciprocal-functions"
+  ],
+  "difficulty": 5,
+  "marks": 11,
+  "estimatedSeconds": 990,
+  "stem": "This question is about the expression $\\cot\\theta - \\tan\\theta$, for $0^\\circ < \\theta < 180^\\circ$, $\\theta \\neq 90^\\circ$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Prove that $\\cot\\theta - \\tan\\theta \\equiv 2\\cot 2\\theta$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes in sin and cos and combines: $\\frac{\\cos^2\\theta - \\sin^2\\theta}{\\sin\\theta\\cos\\theta}$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 uses $\\cos 2\\theta$ and $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 $\\frac{\\cos 2\\theta}{\\frac{1}{2}\\sin 2\\theta} = 2\\cot 2\\theta$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\cot\\theta - \\tan\\theta = \\frac{\\cos\\theta}{\\sin\\theta} - \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{\\cos^2\\theta - \\sin^2\\theta}{\\sin\\theta\\cos\\theta} = \\frac{\\cos 2\\theta}{\\frac{1}{2}\\sin 2\\theta} = 2\\cot 2\\theta\n$$"
+    },
+    "explanation": "Common denominator, then the double-angle formulae."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence solve $\\cot\\theta - \\tan\\theta = 5$, giving answers to 1 decimal place in ascending order.",
+    "payload": {
+     "template": "θ = {{blank:a}}° or θ = {{blank:b}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "10.9"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "100.9"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\cot 2\\theta = \\frac{5}{2}$, so $\\tan 2\\theta = \\frac{2}{5}$, with $0^\\circ < 2\\theta < 360^\\circ$: $2\\theta = 21.80^\\circ$ or $201.80^\\circ$, so $\\theta = 10.9^\\circ$ or $100.9^\\circ$. (Using $\\tan 2\\theta = \\frac{5}{2}$ gives $34.1^\\circ$.)"
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use the identity to find the exact value of $\\cot 15^\\circ - \\tan 15^\\circ$, and give it to 3 significant figures.",
+    "answerSpec": {
+     "value": 3.4641016151377544,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$2\\cot 30^\\circ = 2\\sqrt{3} = 3.46$.",
+    "workedSolution": "1. $2\\cot 30^\\circ = 2\\sqrt{3} = 3.46$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Solve $\\cot\\theta - \\tan\\theta = 2\\tan\\theta$, in ascending order.",
+    "payload": {
+     "template": "θ = {{blank:a}}° or θ = {{blank:b}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "30"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "150"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\cot\\theta = 3\\tan\\theta \\Rightarrow \\tan^2\\theta = \\frac{1}{3} \\Rightarrow \\tan\\theta = \\pm\\frac{1}{\\sqrt{3}}$: $\\theta = 30^\\circ$ or $150^\\circ$."
+   }
+  ],
+  "explanation": "Reciprocal functions in sin and cos, then double-angle formulae; 'hence' means use the identity.",
+  "hints": [
+   "$\\cos^2\\theta - \\sin^2\\theta = \\cos 2\\theta$.",
+   "For (b), $0^\\circ < 2\\theta < 360^\\circ$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "10.9"
+      },
+      {
+       "blankId": "b",
+       "text": "100.9"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3.46"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "30"
+      },
+      {
+       "blankId": "b",
+       "text": "150"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "34.1"
+       },
+       {
+        "blankId": "b",
+        "text": "124.1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1.7320508075688772"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "60"
+       },
+       {
+        "blankId": "b",
+        "text": "120"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w1b-cambridge.q09",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "This question is about the expansion of $(1 + 3x)^{-\\frac{1}{3}}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Expand (1 + 3x)^(−1/3) in ascending powers of x, up to and including the term in x².",
+    "payload": {
+     "template": "1 + ({{blank:a}})x + ({{blank:b}})x²",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-1"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ],
+       "marks": 2
+      }
+     ]
+    },
+    "explanation": "$1 + \\left(-\\frac{1}{3}\\right)(3x) + \\frac{\\left(-\\frac{1}{3}\\right)\\left(-\\frac{4}{3}\\right)}{2}(3x)^2 = 1 - x + \\frac{2}{9} \\times 9x^2 = 1 - x + 2x^2$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 1,
+    "stem": "State the set of values of x for which the expansion is valid.",
+    "payload": {
+     "template": "|x| < {{blank:k}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "1/3",
+        "0.3333",
+        "0.333"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$|3x| < 1$, i.e. $|x| < \\frac{1}{3}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Hence find the coefficient of $x^2$ in the expansion of $(2 - x)(1 + 3x)^{-\\frac{1}{3}}$.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "$2 \\times 2 + (-1) \\times (-1) = 4 + 1 = 5$.",
+    "workedSolution": "1. $2 \\times 2 + (-1) \\times (-1) = 4 + 1 = 5$."
+   }
+  ],
+  "explanation": "Binomial series with n = −1/3 and 3x in place of x.",
+  "hints": [
+   "$(3x)^2 = 9x^2$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-1"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "1/3"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "0.222"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "3"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w1b-cambridge.q10",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.series.binomial-rational"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "Let $f(x) = \\dfrac{7 + 4x}{(2 - x)(1 + 2x)}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Express $f(x)$ in partial fractions in the form $\\dfrac{A}{2 - x} + \\dfrac{B}{1 + 2x}$.",
+    "payload": {
+     "template": "A = {{blank:A}}, B = {{blank:B}}",
+     "blanks": [
+      {
+       "id": "A",
+       "input": "number"
+      },
+      {
+       "id": "B",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "A",
+       "accepted": [
+        "3"
+       ],
+       "marks": 2
+      },
+      {
+       "id": "B",
+       "accepted": [
+        "2"
+       ],
+       "marks": 1
+      }
+     ]
+    },
+    "explanation": "$7 + 4x = A(1 + 2x) + B(2 - x)$. $x = 2$: $15 = 5A$, $A = 3$. $x = -\\frac{1}{2}$: $5 = \\frac{5}{2}B$, $B = 2$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence obtain the expansion of f(x) in ascending powers of x, up to and including the term in x². Give coefficients as decimals or fractions.",
+    "payload": {
+     "template": "f(x) ≈ ({{blank:a}}) + ({{blank:b}})x + ({{blank:c}})x²",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "3.5",
+        "7/2"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-3.25",
+        "-13/4"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "8.375",
+        "67/8"
+       ],
+       "marks": 2,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$\\frac{3}{2 - x} = \\frac{3}{2}\\left(1 - \\frac{x}{2}\\right)^{-1} = \\frac{3}{2} + \\frac{3}{4}x + \\frac{3}{8}x^2$; $\\frac{2}{1 + 2x} = 2 - 4x + 8x^2$. Sum: $\\frac{7}{2} - \\frac{13}{4}x + \\frac{67}{8}x^2$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the set of values of x for which the expansion is valid.",
+    "payload": {
+     "template": "|x| < {{blank:k}}",
+     "blanks": [
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "k",
+       "accepted": [
+        "0.5",
+        "1/2"
+       ],
+       "marks": 2,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$\\frac{3}{2 - x}$ needs $|x| < 2$; $\\frac{2}{1 + 2x}$ needs $|x| < \\frac{1}{2}$. Both: $|x| < \\frac{1}{2}$."
+   }
+  ],
+  "explanation": "Partial fractions, then a binomial expansion of each; the narrower range of validity applies.",
+  "hints": [
+   "Take out $2^{-1}$ from $(2 - x)^{-1}$.",
+   "The expansion is valid only where both parts are valid."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "A",
+       "text": "3"
+      },
+      {
+       "blankId": "B",
+       "text": "2"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "3.5"
+      },
+      {
+       "blankId": "b",
+       "text": "-3.25"
+      },
+      {
+       "blankId": "c",
+       "text": "8.375"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "k",
+       "text": "0.5"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "A",
+        "text": "2"
+       },
+       {
+        "blankId": "B",
+        "text": "3"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "5"
+       },
+       {
+        "blankId": "b",
+        "text": "-4.75"
+       },
+       {
+        "blankId": "c",
+        "text": "8.75"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "k",
+        "text": "2"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 3"
+ }
+]

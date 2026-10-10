@@ -1,0 +1,1146 @@
+[
+ {
+  "key": "estimation.unbiased.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What does it mean to say that a statistic is an unbiased estimator of a population parameter?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Its mean value over all possible samples equals the parameter.",
+    "correct": true,
+    "rationale": "Correct: an unbiased estimator is right on average, although any one estimate may be too high or too low."
+   },
+   {
+    "key": "B",
+    "content": "It always gives exactly the value of the parameter for any sample.",
+    "rationale": "Estimates vary from sample to sample; unbiased does not mean exact."
+   },
+   {
+    "key": "C",
+    "content": "It is calculated from a sample that was chosen without any bias.",
+    "rationale": "A random sample is needed, but 'unbiased estimator' is about the formula's average value."
+   },
+   {
+    "key": "D",
+    "content": "It has the smallest possible variance of all estimators.",
+    "rationale": "That describes an efficient estimator, a different property."
+   }
+  ],
+  "explanation": "$T$ is an unbiased estimator of $\\theta$ if $\\mathrm{E}(T) = \\theta$. $\\bar{X}$ is unbiased for $\\mu$, and $s^2$ (divisor $n - 1$) is unbiased for $\\sigma^2$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.unbiased.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The masses, in kg, of five randomly chosen pockets of potatoes are 12.4, 13.1, 11.8, 12.9 and 13.6. Find an unbiased estimate of the population variance, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.472999999999999,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\bar{x} = 12.76$, $\\sum x^2 = 816.0$. $s^2 = \\frac{1}{4}\\left(\\sum x^2 - \\frac{(\\sum x)^2}{5}\\right) = \\frac{1}{4}\\left(816.0 - \\frac{63.8^2}{5}\\right) = 0.4730$. (Dividing by 5 gives the biased value $0.378$.)",
+  "workedSolution": "1. $\\bar{x} = 12.76$, $\\sum x^2 = 816.0$. $s^2 = \\frac{1}{4}\\left(\\sum x^2 - \\frac{(\\sum x)^2}{5}\\right) = \\frac{1}{4}\\left(816.0 - \\frac{63.8^2}{5}\\right) = 0.4730$. (Dividing by 5 gives the biased value $0.378$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.473"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.3783999999999992"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.6877499545619752"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "estimation.unbiased.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A random sample of 20 observations of $X$ gives $\\sum x = 310$ and $\\sum x^2 = 5100$. Find an unbiased estimate of the population variance, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 15.526315789473685,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "$s^2 = \\frac{1}{19}\\left(5100 - \\frac{310^2}{20}\\right) = \\frac{1}{19}(5100 - 4805) = \\frac{295}{19} = 15.53$, so $15.5$. (Dividing by 20 gives $14.75$, the biased sample variance.)",
+  "workedSolution": "1. $s^2 = \\frac{1}{19}\\left(5100 - \\frac{310^2}{20}\\right) = \\frac{1}{19}(5100 - 4805) = \\frac{295}{19} = 15.53$, so $15.5$. (Dividing by 20 gives $14.75$, the biased sample variance.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "15.5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "14.75"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "28.17105263157896"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "estimation.unbiased.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The times, $x$ seconds, of 12 sprinters are summarised by $\\sum (x - 50) = 30$ and $\\sum (x - 50)^2 = 210$. Find unbiased estimates of the population mean and variance of the times, each correct to 3 significant figures.",
+  "payload": {
+   "template": "mean = {{blank:m}} s, variance = {{blank:v}}",
+   "blanks": [
+    {
+     "id": "m",
+     "input": "number"
+    },
+    {
+     "id": "v",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "m",
+     "accepted": [
+      "52.5"
+     ],
+     "tolerance": 0.05
+    },
+    {
+     "id": "v",
+     "accepted": [
+      "12.3"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "Let $y = x - 50$: $\\bar{y} = \\frac{30}{12} = 2.5$, so $\\bar{x} = 52.5$. Subtracting a constant does not change the variance: $s^2 = \\frac{1}{11}\\left(210 - \\frac{30^2}{12}\\right) = \\frac{135}{11} = 12.27$, so $12.3$. (2.5 forgets to add back 50; 11.25 divides by 12.)",
+  "hints": [
+   "Work with y = x − 50, then add 50 back to the mean only.",
+   "Coding by subtraction does not change the variance."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "m",
+     "text": "52.5"
+    },
+    {
+     "blankId": "v",
+     "text": "12.3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "m",
+      "text": "2.5"
+     },
+     {
+      "blankId": "v",
+      "text": "11.25"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "estimation.unbiased.q05",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "An unbiased estimate of the population variance from a sample of size $n$ uses the divisor $n - 1$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "$s^2 = \\frac{1}{n - 1}\\sum (x - \\bar{x})^2 = \\frac{1}{n - 1}\\left(\\sum x^2 - \\frac{(\\sum x)^2}{n}\\right)$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "estimation.unbiased.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A student estimates the population variance using the divisor n instead of n − 1. Over many samples, what happens to her estimates?",
+  "options": [
+   {
+    "key": "A",
+    "content": "On average they are too large.",
+    "rationale": "Dividing by the larger number n makes the estimate smaller, not larger."
+   },
+   {
+    "key": "B",
+    "content": "On average they are too small.",
+    "correct": true,
+    "rationale": "Correct: $\\mathrm{E}\\left(\\frac{1}{n}\\sum (X - \\bar{X})^2\\right) = \\frac{n - 1}{n}\\sigma^2 < \\sigma^2$."
+   },
+   {
+    "key": "C",
+    "content": "On average they are exactly right.",
+    "rationale": "Only the divisor $n - 1$ gives estimates whose average is $\\sigma^2$."
+   },
+   {
+    "key": "D",
+    "content": "They are always exactly right for large samples.",
+    "rationale": "For large $n$ the bias is small but the estimates still vary from sample to sample."
+   }
+  ],
+  "explanation": "Deviations are measured from $\\bar{x}$, which is closer to the data than $\\mu$ is, so $\\sum (x - \\bar{x})^2$ tends to be too small; dividing by $n - 1$ corrects this.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.unbiased.q07",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The numbers of goals scored by a football club in Harare in 50 randomly chosen matches are: 0 goals in 14 matches, 1 in 18, 2 in 11, 3 in 5 and 4 in 2. Find an unbiased estimate of the population variance of the number of goals per match, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 1.2167346938775512,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$n = 50$, $\\sum fx = 63$, $\\sum fx^2 = 139$. $s^2 = \\frac{1}{49}\\left(139 - \\frac{63^2}{50}\\right) = 1.217$, so $1.22$.",
+  "workedSolution": "1. $\\sum f = 50$, $\\sum fx = 0 + 18 + 22 + 15 + 8 = 63$.\n2. $\\sum fx^2 = 0 + 18 + 44 + 45 + 32 = 139$.\n3. $\\bar{x} = \\frac{63}{50} = 1.260$.\n4. $s^2 = \\frac{1}{49}\\left(139 - \\frac{63^2}{50}\\right) = \\frac{59.62}{49} = 1.217$, so $1.22$.",
+  "hints": [
+   "Use Σf, Σfx and Σfx².",
+   "Divide by n − 1 = 49."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "1.22"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "1.1924000000000001"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "1.103056976714055"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "estimation.unbiased.q08",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The daily rainfall, in mm, at a weather station in Chimanimani on 8 randomly chosen days is 3.2, 2.8, 3.5, 4.1, 2.9, 3.6, 3.3 and 3.0. Find the sample variance (divisor $n$) and an unbiased estimate of the population variance (divisor $n - 1$). Give the second correct to 3 significant figures.",
+  "payload": {
+   "template": "sample variance = {{blank:a}}, unbiased estimate = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "0.16"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "0.183"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$\\sum x = 26.40$, $\\sum x^2 = 88.40$, $\\bar{x} = 3.3$. Sample variance $= \\frac{88.40}{8} - 3.3^2 = 0.16$. Unbiased estimate $= \\frac{8}{7} \\times 0.16 = 0.1829$, so $0.183$.",
+  "hints": [
+   "Unbiased estimate $= \\frac{n}{n - 1} \\times$ sample variance."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "0.16"
+    },
+    {
+     "blankId": "b",
+     "text": "0.183"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "0.183"
+     },
+     {
+      "blankId": "b",
+      "text": "0.16"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "estimation.unbiased.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Two random samples are taken from the same population. Sample A: $n = 10$, $\\sum x = 152$, $\\sum x^2 = 2350$. Sample B: $n = 15$, $\\sum x = 240$, $\\sum x^2 = 3900$. Combine the samples to find an unbiased estimate of the population variance, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 4.309999999999984,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "Combined: $n = 25$, $\\sum x = 392$, $\\sum x^2 = 6250$. $s^2 = \\frac{1}{24}\\left(6250 - \\frac{392^2}{25}\\right) = 4.310$, so $4.31$. (Averaging the two separate estimates, $4.34$, ignores the different sample sizes and the difference between the sample means.)",
+  "workedSolution": "1. Combined: $n = 25$, $\\sum x = 392$, $\\sum x^2 = 6250$. $s^2 = \\frac{1}{24}\\left(6250 - \\frac{392^2}{25}\\right) = 4.310$, so $4.31$. (Averaging the two separate estimates, $4.34$, ignores the different sample sizes and the difference between the sample means.)",
+  "hints": [
+   "Add the n's, the Σx's and the Σx²'s.",
+   "Then use the usual formula with n − 1 = 24."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4.31"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4.342857142857138"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4.137599999999984"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "estimation.unbiased.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A random sample of 10 observations has mean 12, and an unbiased estimate of the population variance from the sample is 4.5. Find $\\sum x^2$ for the sample.",
+  "answerSpec": {
+   "value": 1480.5,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "$s^2 = \\frac{1}{9}\\left(\\sum x^2 - 10 \\times 12^2\\right) = 4.5$, so $\\sum x^2 = 40.5 + 1440 = 1480.5$. (Using 10 instead of 9 gives 1485.)",
+  "workedSolution": "1. $s^2 = \\frac{1}{9}\\left(\\sum x^2 - 10 \\times 12^2\\right) = 4.5$, so $\\sum x^2 = 40.5 + 1440 = 1480.5$. (Using 10 instead of 9 gives 1485.)",
+  "hints": [
+   "$\\sum x = 10 \\times 12 = 120$, so $\\frac{(\\sum x)^2}{n} = 1440$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1480.5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1485"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "184.5"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "estimation.unbiased.q11",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The sample mean $\\bar{X}$ is an unbiased estimator of the population mean $\\mu$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "$\\mathrm{E}(\\bar{X}) = \\mu$ for a random sample of any size.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.unbiased.q12",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each quantity with its formula (sample of size n).",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "unbiased estimate of the population mean"
+    },
+    {
+     "id": "L2",
+     "content": "unbiased estimate of the population variance"
+    },
+    {
+     "id": "L3",
+     "content": "sample variance (divisor n)"
+    },
+    {
+     "id": "L4",
+     "content": "estimated standard error of the mean"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\frac{\\sum x^2}{n} - \\bar{x}^2$"
+    },
+    {
+     "id": "R4",
+     "content": "$\\sqrt{\\frac{s^2}{n}}$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\frac{\\sum x}{n}$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\frac{1}{n - 1}\\left(\\sum x^2 - \\frac{(\\sum x)^2}{n}\\right)$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The unbiased variance estimate is $\\frac{n}{n - 1}$ times the sample variance; the standard error of the mean is estimated by $\\frac{s}{\\sqrt{n}}$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "estimation.unbiased.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "From a sample of 5 values, an unbiased estimate of the population variance is 10. What is the sample variance with divisor $n$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "12.5",
+    "rationale": "$10 \\times \\frac{5}{4}$ converts in the wrong direction."
+   },
+   {
+    "key": "B",
+    "content": "10",
+    "rationale": "The two divisors give different values."
+   },
+   {
+    "key": "C",
+    "content": "8",
+    "correct": true,
+    "rationale": "Correct: $\\sum (x - \\bar{x})^2 = 4 \\times 10 = 40$, and $\\frac{40}{5} = 8$."
+   },
+   {
+    "key": "D",
+    "content": "2",
+    "rationale": "Dividing 10 by 5 confuses the variance with the variance of the mean."
+   }
+  ],
+  "explanation": "Sample variance $= \\frac{n - 1}{n}s^2 = \\frac{4}{5} \\times 10 = 8$.",
+  "hints": [
+   "Find $\\sum (x - \\bar{x})^2$ first."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "estimation.unbiased.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Explain what is meant by saying that $s^2 = \\frac{1}{n - 1}\\sum (x - \\bar{x})^2$ is an unbiased estimate of $\\sigma^2$, and why the divisor is $n - 1$ rather than $n$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "If many random samples were taken, the mean of all the values of $s^2$ would be $\\sigma^2$ (i.e. $\\mathrm{E}(S^2) = \\sigma^2$).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Deviations are measured from $\\bar{x}$, not $\\mu$, which makes $\\sum (x - \\bar{x})^2$ too small on average; dividing by $n - 1$ compensates.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Unbiased means that, over all possible samples, the average value of $s^2$ equals $\\sigma^2$. The sum of squared deviations is taken about the sample mean, which is always the closest point to the data, so it underestimates the spread about $\\mu$; dividing by $n - 1$ instead of $n$ corrects this exactly."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "An unbiased estimator is correct on average, not in every sample.",
+  "hints": [
+   "Think about the average over many samples."
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.unbiased.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Every value in a sample is increased by 5. What happens to the unbiased estimates of the population mean and variance?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Both estimates increase by 5.",
+    "rationale": "The spread of the data does not change when every value shifts by the same amount."
+   },
+   {
+    "key": "B",
+    "content": "The mean estimate increases by 5; the variance estimate increases by 25.",
+    "rationale": "Variance is multiplied by $a^2$ only when values are multiplied by $a$."
+   },
+   {
+    "key": "C",
+    "content": "Neither estimate changes.",
+    "rationale": "The centre of the data moves up by 5."
+   },
+   {
+    "key": "D",
+    "content": "The mean estimate increases by 5; the variance estimate is unchanged.",
+    "correct": true,
+    "rationale": "Correct: adding a constant shifts the data without changing their spread."
+   }
+  ],
+  "explanation": "For $y = x + 5$: $\\bar{y} = \\bar{x} + 5$ and $s_y^2 = s_x^2$. This is why coded sums such as $\\sum (x - a)$ make calculations easier.",
+  "hints": [
+   "Which of the two measures depends on position, and which on spread?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "estimation.unbiased.q16",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The values $x$ in a sample are converted using $y = 2x - 3$. The unbiased estimate of the variance of $x$ is 6. What is the unbiased estimate of the variance of $y$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "9",
+    "rationale": "$2 \\times 6 - 3$ applies the transformation to the variance as if it were a value."
+   },
+   {
+    "key": "B",
+    "content": "12",
+    "rationale": "Multiplying the values by 2 multiplies the variance by 4, not 2."
+   },
+   {
+    "key": "C",
+    "content": "21",
+    "rationale": "$4 \\times 6 - 3$: the constant $-3$ does not affect the variance."
+   },
+   {
+    "key": "D",
+    "content": "24",
+    "correct": true,
+    "rationale": "Correct: $s_y^2 = 2^2 s_x^2 = 4 \\times 6 = 24$."
+   }
+  ],
+  "explanation": "$\\mathrm{Var}(aX + b) = a^2\\mathrm{Var}(X)$, and the same holds for the estimates.",
+  "hints": [
+   "Constants added do not change the spread."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "estimation.unbiased.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The masses, $x$ grams, of 40 randomly chosen mangoes from an orchard in Mutoko are summarised by $\\sum x = 1880$ and $\\sum x^2 = 89200$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find unbiased estimates of the population mean and variance, each correct to 3 significant figures.",
+    "payload": {
+     "template": "mean = {{blank:m}} g, variance = {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "47"
+       ],
+       "marks": 1,
+       "tolerance": 0.05
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "21.5"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\bar{x} = \\frac{1880}{40} = 47$. $s^2 = \\frac{1}{39}\\left(89200 - \\frac{1880^2}{40}\\right) = \\frac{1}{39}(89200 - 88360) = \\frac{840}{39} = 21.54$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Estimate the standard deviation of the sample mean (the standard error), correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.7337993857053429,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\sqrt{\\frac{s^2}{n}} = \\sqrt{\\frac{21.54}{40}} = 0.7338$.",
+    "workedSolution": "1. $\\sqrt{\\frac{s^2}{n}} = \\sqrt{\\frac{21.54}{40}} = 0.7338$."
+   }
+  ],
+  "explanation": "Compute the mean and the unbiased variance from the sums, then the estimated standard error s/√n.",
+  "hints": [
+   "Divide by n − 1 for the variance.",
+   "Standard error = √(s²/n)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "47"
+      },
+      {
+       "blankId": "v",
+       "text": "21.5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.734"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "1880"
+       },
+       {
+        "blankId": "v",
+        "text": "21.0"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.5384615384615385"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "estimation.unbiased.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "The water level of Lake Kariba, $x$ metres above sea level, was recorded on 8 randomly chosen days: 478.2, 477.9, 478.6, 478.1, 477.7, 478.4, 478.0, 478.3. Let $y = x - 478$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $\\sum y$ and $\\sum y^2$.",
+    "payload": {
+     "template": "Σy = {{blank:a}}, Σy² = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1.2"
+       ],
+       "tolerance": 0.001
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0.76"
+       ],
+       "tolerance": 0.001
+      }
+     ]
+    },
+    "explanation": "$y$: $0.2, -0.1, 0.6, 0.1, -0.3, 0.4, 0, 0.3$. $\\sum y = 1.2$; $\\sum y^2 = 0.04 + 0.01 + 0.36 + 0.01 + 0.09 + 0.16 + 0 + 0.09 = 0.76$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find an unbiased estimate of the population mean water level, in metres.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 478.15,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.001
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "$\\bar{y} = 0.15$, so $\\bar{x} = 478.15$ m.",
+    "workedSolution": "1. $\\bar{y} = 0.15$, so $\\bar{x} = 478.15$ m."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find an unbiased estimate of the population variance of the water level, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.08285714285714287,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$s^2 = \\frac{1}{7}\\left(0.76 - \\frac{1.2^2}{8}\\right) = \\frac{0.58}{7} = 0.08286$, so $0.0829$ m$^2$ (unchanged by the coding).",
+    "workedSolution": "1. $s^2 = \\frac{1}{7}\\left(0.76 - \\frac{1.2^2}{8}\\right) = \\frac{0.58}{7} = 0.08286$, so $0.0829$ m$^2$ (unchanged by the coding)."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why coding the data as y = x − 478 does not change the estimate of the variance, and why it is useful.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Subtracting a constant moves every value by the same amount, so the deviations from the mean (the spread) are unchanged.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The coded values are small, which reduces arithmetic and rounding errors in Σy².",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Every level is reduced by 478, so all deviations from the mean are unchanged and so is the variance. The coded numbers are small, so squaring and adding them is quicker and avoids large-number rounding errors."
+    },
+    "explanation": "Coding by subtraction changes the mean only."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "On 12 further randomly chosen days the readings give $\\sum y = 0.6$ and $\\sum y^2 = 1.1$, with the same coding. Using all 20 readings, find an unbiased estimate of the population variance, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.08936842105263158,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "Combined: $n = 20$, $\\sum y = 1.8$, $\\sum y^2 = 1.86$. $s^2 = \\frac{1}{19}\\left(1.86 - \\frac{1.8^2}{20}\\right) = \\frac{1.698}{19} = 0.08937$, so $0.0894$.",
+    "workedSolution": "1. Combined: $n = 20$, $\\sum y = 1.8$, $\\sum y^2 = 1.86$. $s^2 = \\frac{1}{19}\\left(1.86 - \\frac{1.8^2}{20}\\right) = \\frac{1.698}{19} = 0.08937$, so $0.0894$."
+   }
+  ],
+  "explanation": "Code the data to simplify the sums, divide by n − 1 for the unbiased variance, and combine samples by adding their sums.",
+  "hints": [
+   "Coding by subtraction leaves the variance unchanged.",
+   "To combine samples, add the n's, Σy's and Σy²'s."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1.2"
+      },
+      {
+       "blankId": "b",
+       "text": "0.76"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "478.15"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.0829"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.0894"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "3824.2"
+       },
+       {
+        "blankId": "b",
+        "text": "1.44"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.15"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.07250000000000001"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.09006493506493507"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

@@ -1,0 +1,998 @@
+[
+ {
+  "key": "inference.errors.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is a Type I error in a hypothesis test?",
+  "options": [
+   {
+    "key": "A",
+    "content": "rejecting $H_0$ when $H_0$ is true",
+    "correct": true,
+    "rationale": "Correct: the data happen to fall in the critical region although H₀ is true."
+   },
+   {
+    "key": "B",
+    "content": "not rejecting $H_0$ when $H_0$ is false",
+    "rationale": "That is a Type II error."
+   },
+   {
+    "key": "C",
+    "content": "rejecting $H_0$ when $H_0$ is false",
+    "rationale": "That is a correct decision."
+   },
+   {
+    "key": "D",
+    "content": "using the wrong distribution for the test statistic",
+    "rationale": "That is a mistake in method, not a Type I error."
+   }
+  ],
+  "explanation": "Type I: reject a true $H_0$. Type II: fail to reject a false $H_0$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "inference.errors.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is a Type II error in a hypothesis test?",
+  "options": [
+   {
+    "key": "A",
+    "content": "rejecting $H_0$ when $H_0$ is true",
+    "rationale": "That is a Type I error."
+   },
+   {
+    "key": "B",
+    "content": "not rejecting $H_0$ when $H_0$ is false",
+    "correct": true,
+    "rationale": "Correct: the test misses a real change."
+   },
+   {
+    "key": "C",
+    "content": "not rejecting $H_0$ when $H_0$ is true",
+    "rationale": "That is a correct decision."
+   },
+   {
+    "key": "D",
+    "content": "choosing a one-tailed test when a two-tailed test was needed",
+    "rationale": "That is a mistake in method, not a Type II error."
+   }
+  ],
+  "explanation": "A Type II error can only happen when $H_0$ is not rejected; its probability depends on the true value of the parameter.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "inference.errors.q03",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a test based on a continuous test statistic, such as a z-test, the probability of a Type I error equals the significance level.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "The critical region is chosen to have probability exactly $\\alpha$ under $H_0$. For discrete tests, P(Type I error) is the actual significance level, usually below $\\alpha$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "inference.errors.q04",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "With the same sample size, reducing the significance level from 5% to 1% increases the probability of a Type II error.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "A smaller critical region makes it harder to reject H₀, so a false H₀ is more likely to survive. Only a larger sample can reduce both error probabilities.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "inference.errors.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A test of $H_0: p = 0.25$ against $H_1: p < 0.25$ uses $X \\sim \\mathrm{B}(20, 0.25)$ and the critical region $X \\le 1$. Find the probability of a Type I error, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.024312624865160615,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "P(Type I) $= \\mathrm{P}(X \\le 1 \\mid p = 0.25) = 0.75^{20} + 20(0.25)(0.75)^{19} = 0.02431$, so $0.0243$. It is less than 0.05 because $X$ is discrete.",
+  "workedSolution": "1. P(Type I) $= \\mathrm{P}(X \\le 1 \\mid p = 0.25) = 0.75^{20} + 20(0.25)(0.75)^{19} = 0.02431$, so $0.0243$. It is less than 0.05 because $X$ is discrete.",
+  "hints": [
+   "A Type I error happens when X falls in the critical region although p = 0.25."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0243"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.05"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.09126043246487825"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "inference.errors.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the test in the previous question ($H_0: p = 0.25$, critical region $X \\le 1$, $n = 20$), find the probability of a Type II error if in fact $p = 0.1$. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.6082530018748321,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "A Type II error means $X$ is **not** in the critical region although $p = 0.1$: $\\mathrm{P}(X \\ge 2 \\mid p = 0.1) = 1 - (0.9^{20} + 20(0.1)(0.9)^{19}) = 0.6083$, so $0.608$. ($0.392$ is the probability of correctly rejecting $H_0$, the power.)",
+  "workedSolution": "1. A Type II error means $X$ is **not** in the critical region although $p = 0.1$: $\\mathrm{P}(X \\ge 2 \\mid p = 0.1) = 1 - (0.9^{20} + 20(0.1)(0.9)^{19}) = 0.6083$, so $0.608$. ($0.392$ is the probability of correctly rejecting $H_0$, the power.)",
+  "hints": [
+   "Use the true value p = 0.1.",
+   "Type II: the result falls outside the critical region."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.608"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.3917469981251679"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.9756873751348394"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "inference.errors.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A test of $H_0: \\mu = 50$ against $H_1: \\mu > 50$ uses a sample of 16 from a normal population with $\\sigma = 4$. $H_0$ is rejected if $\\bar{x} > 51.645$. Find the probability of a Type II error if in fact $\\mu = 52$. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.3612947971436158,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0024
+   }
+  },
+  "explanation": "When $\\mu = 52$, $\\bar{X} \\sim \\mathrm{N}(52, 1)$. P(Type II) $= \\mathrm{P}(\\bar{X} \\le 51.645) = \\Phi(-0.355) = 0.3613$, i.e. $0.361$. (Using $\\sigma = 4$ instead of $\\frac{4}{\\sqrt{16}} = 1$ gives $0.465$.)",
+  "workedSolution": "1. When $\\mu = 52$, $\\bar{X} \\sim \\mathrm{N}(52, 1)$. P(Type II) $= \\mathrm{P}(\\bar{X} \\le 51.645) = \\Phi(-0.355) = 0.3613$, i.e. $0.361$. (Using $\\sigma = 4$ instead of $\\frac{4}{\\sqrt{16}} = 1$ gives $0.465$.)",
+  "hints": [
+   "Use the true mean, 52, with the same critical value.",
+   "The standard deviation of the sample mean is 4/√16."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.361"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.6387052028563842"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.4646402646073571"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.errors.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In a test of $H_0: \\mu = 50$, the sample mean has standard deviation 1.2 under $H_0$, and $H_0$ is accepted if $48 \\le \\bar{x} \\le 52$. Find the probability of a Type I error, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.09558070121012507,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0012
+   }
+  },
+  "explanation": "P(Type I) $= \\mathrm{P}(\\bar{X} < 48 \\text{ or } \\bar{X} > 52 \\mid \\mu = 50) = 2\\left(1 - \\Phi\\left(\\frac{2}{1.2}\\right)\\right) = 2(1 - \\Phi(1.667)) = 0.09558$, i.e. $0.0956$. (From tables with $z = 1.67$: $2 \\times 0.0475 = 0.0950$.)",
+  "workedSolution": "1. P(Type I) $= \\mathrm{P}(\\bar{X} < 48 \\text{ or } \\bar{X} > 52 \\mid \\mu = 50) = 2\\left(1 - \\Phi\\left(\\frac{2}{1.2}\\right)\\right) = 2(1 - \\Phi(1.667)) = 0.09558$, i.e. $0.0956$. (From tables with $z = 1.67$: $2 \\times 0.0475 = 0.0950$.)",
+  "hints": [
+   "The rejection region is outside the acceptance interval, in both tails."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0956"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.04779035060506254"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.05"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.errors.q09",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "A clinic tests $H_0$: \"a new malaria test is no more accurate than the old one\" against $H_1$: \"it is more accurate\". Match each outcome with its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Type I error"
+    },
+    {
+     "id": "L2",
+     "content": "Type II error"
+    },
+    {
+     "id": "L3",
+     "content": "correct rejection"
+    },
+    {
+     "id": "L4",
+     "content": "correct non-rejection"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "concluding the new test is more accurate when it is"
+    },
+    {
+     "id": "R4",
+     "content": "not concluding the new test is better, and it is not better"
+    },
+    {
+     "id": "R1",
+     "content": "concluding the new test is more accurate when it is not"
+    },
+    {
+     "id": "R2",
+     "content": "failing to conclude the new test is more accurate when it is"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Write errors in context by stating what is concluded and what is actually true.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.errors.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A test has H₀: 'the mean fill of cooking-oil bottles is 750 ml'. After a test, the factory concludes that the mean fill is less than 750 ml. Which error could have been made?",
+  "options": [
+   {
+    "key": "A",
+    "content": "a Type II error only",
+    "rationale": "A Type II error requires not rejecting $H_0$."
+   },
+   {
+    "key": "B",
+    "content": "either a Type I or a Type II error",
+    "rationale": "Only one type is possible for a given decision."
+   },
+   {
+    "key": "C",
+    "content": "no error is possible",
+    "rationale": "The sample might have been unusual by chance."
+   },
+   {
+    "key": "D",
+    "content": "a Type I error only",
+    "correct": true,
+    "rationale": "Correct: $H_0$ was rejected, so the only possible error is rejecting a true $H_0$."
+   }
+  ],
+  "explanation": "Rejecting H₀ risks a Type I error; not rejecting it risks a Type II error.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.errors.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A seed company tests H₀: p = 0.8 against H₁: p < 0.8, where p is the proportion of its maize seeds that germinate. Describe, in context, a Type I error and a Type II error.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Type I: concluding that fewer than 80% of seeds germinate when in fact 80% do.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Type II: not concluding that fewer than 80% germinate when in fact the proportion is less than 80%.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Type I error: the company decides the germination rate has fallen below 80% when it really is 80%. Type II error: the company finds no evidence of a fall although the true germination rate is below 80%."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Each description should say what is concluded and what is true, in context.",
+  "hints": [
+   "Type I: reject a true H₀. Type II: keep a false H₀."
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.errors.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "With a fixed significance level, which change reduces the probability of a Type II error?",
+  "options": [
+   {
+    "key": "A",
+    "content": "reducing the significance level",
+    "rationale": "That makes rejection harder and increases the Type II probability."
+   },
+   {
+    "key": "B",
+    "content": "changing to a two-tailed test when the direction is known",
+    "rationale": "Splitting α between two tails makes a one-directional change harder to detect."
+   },
+   {
+    "key": "C",
+    "content": "increasing the sample size",
+    "correct": true,
+    "rationale": "Correct: the sample mean becomes less variable, so a real difference is more likely to be detected."
+   },
+   {
+    "key": "D",
+    "content": "using fewer observations to save time",
+    "rationale": "Smaller samples make tests less powerful."
+   }
+  ],
+  "explanation": "Larger samples give a narrower distribution of the test statistic, separating the H₀ and H₁ distributions.",
+  "hints": [
+   "How does n affect the standard deviation of the sample mean?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "inference.errors.q13",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Under $H_0$, the number of breakdowns of minibuses in a fleet per month is $\\mathrm{Po}(5)$. A test of $H_0: \\lambda = 5$ against $H_1: \\lambda > 5$ at the 5% level uses one month's count. Find the critical region $X \\ge c$ and the probability of a Type I error (correct to 3 significant figures).",
+  "payload": {
+   "template": "c = {{blank:c}}, P(Type I error) = {{blank:a}}",
+   "blanks": [
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "a",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "c",
+     "accepted": [
+      "10"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "a",
+     "accepted": [
+      "0.0318"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$\\mathrm{P}(X \\ge 9) = 0.06809 > 0.05$; $\\mathrm{P}(X \\ge 10) = 0.03183 \\le 0.05$. Critical region $X \\ge 10$; P(Type I) $= 0.0318$.",
+  "hints": [
+   "Find the smallest c with P(X ≥ c) ≤ 0.05.",
+   "P(Type I) is the probability of the critical region under H₀."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "c",
+     "text": "10"
+    },
+    {
+     "blankId": "a",
+     "text": "0.0318"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "c",
+      "text": "9"
+     },
+     {
+      "blankId": "a",
+      "text": "0.05"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "inference.errors.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the test in the previous question (critical region $X \\ge 10$ under $H_0: \\lambda = 5$), find the probability of a Type II error if the true monthly rate is 8. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.7166242587270077,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Type II: $X \\le 9$ when $\\lambda = 8$: $\\mathrm{P}(X \\le 9) = 0.7166$, so $0.717$. The test misses a rise to 8 more often than not.",
+  "workedSolution": "1. Type II: $X \\le 9$ when $\\lambda = 8$: $\\mathrm{P}(X \\le 9) = 0.7166$, so $0.717$. The test misses a rise to 8 more often than not.",
+  "hints": [
+   "Use Po(8) and the acceptance region X ≤ 9."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.717"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.28337574127299225"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.5925473414375892"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "inference.errors.q15",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A Type II error can only occur when the null hypothesis is not rejected.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "By definition a Type II error is failing to reject a false $H_0$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.errors.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The marks in an aptitude test are normally distributed with standard deviation 3. A test of $H_0: \\mu = 80$ against $H_1: \\mu > 80$ at the 5% level uses the mean of 16 randomly chosen marks.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the critical value $c$ such that $H_0$ is rejected if $\\bar{x} > c$, correct to 4 significant figures.",
+    "answerSpec": {
+     "value": 81.23375,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$c = 80 + 1.645 \\times \\frac{3}{4} = 81.23$.",
+    "workedSolution": "1. $c = 80 + 1.645 \\times \\frac{3}{4} = 81.23$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability of a Type II error when μ = 81.5, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.36129479714361473,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0024
+     }
+    },
+    "explanation": "$\\bar{X} \\sim \\mathrm{N}(81.5, 0.75^2)$: $\\mathrm{P}(\\bar{X} \\le 81.23) = \\Phi\\left(\\frac{81.23 - 81.5}{0.75}\\right) = \\Phi(-0.355) = 0.3613$.",
+    "workedSolution": "1. $\\bar{X} \\sim \\mathrm{N}(81.5, 0.75^2)$: $\\mathrm{P}(\\bar{X} \\le 81.23) = \\Phi\\left(\\frac{81.23 - 81.5}{0.75}\\right) = \\Phi(-0.355) = 0.3613$."
+   }
+  ],
+  "explanation": "Find the critical value under H₀, then the probability of falling short of it under the true mean.",
+  "hints": [
+   "Standard deviation of the mean = 3/√16.",
+   "Type II: the sample mean does not exceed c."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "81.23"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.361"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "81.47"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.6387052028563853"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "inference.errors.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.errors"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "A health worker believes that more than 30% of households in a district in Manicaland use treated mosquito nets. She will survey 50 randomly chosen households and test $H_0: p = 0.3$ against $H_1: p > 0.3$ at the 5% level, where $X$ is the number using nets.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Using B(50, 0.3), find the critical region X ≥ c and the probability of a Type I error (correct to 3 significant figures).",
+    "payload": {
+     "template": "c = {{blank:c}}, P(Type I error) = {{blank:a}}",
+     "blanks": [
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "a",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "c",
+       "accepted": [
+        "21"
+       ],
+       "marks": 2,
+       "tolerance": 0
+      },
+      {
+       "id": "a",
+       "accepted": [
+        "0.0478"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$\\mathrm{P}(X \\ge 20) = 0.08480 > 0.05$, $\\mathrm{P}(X \\ge 21) = 0.04776 \\le 0.05$. So $c = 21$ and P(Type I) $= 0.0478$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability of a Type II error if in fact p = 0.45, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.2861696097466872,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "P(Type II) $= \\mathrm{P}(X \\le 20 \\mid p = 0.45) = 0.2862$.",
+    "workedSolution": "1. P(Type II) $= \\mathrm{P}(X \\le 20 \\mid p = 0.45) = 0.2862$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain, in context, the meaning of the probability found in (b).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It is the probability that the survey fails to give evidence that more than 30% use nets,",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "when in fact 45% of households use them.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: If really 45% of households use nets, there is a probability of 0.286 that the survey will not find significant evidence that more than 30% do."
+    },
+    "explanation": "Describe both the decision and the true situation."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "A colleague uses a normal approximation (without a continuity correction) to the distribution of X under H₀ to find a critical value k such that P(X > k) = 0.05. Find k, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 20.330409224440466,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$X \\approx \\mathrm{N}(15, 10.5)$: $k = 15 + 1.645\\sqrt{10.5} = 20.33$, consistent with the exact critical value 21.",
+    "workedSolution": "1. $X \\approx \\mathrm{N}(15, 10.5)$: $k = 15 + 1.645\\sqrt{10.5} = 20.33$, consistent with the exact critical value 21."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State one way of reducing the probability of a Type II error without increasing the probability of a Type I error, and explain why it works.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Increase the sample size (survey more households).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The distributions of the proportion under H₀ and under p = 0.45 overlap less, so a true difference is more likely to be detected at the same significance level.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Survey more households. With a larger sample the observed proportion varies less, so it is more likely to exceed the critical value when p = 0.45, while the significance level stays at 5%."
+    },
+    "explanation": "Only more data reduces both errors."
+   }
+  ],
+  "explanation": "P(Type I) is the probability of the critical region under H₀; P(Type II) is the probability of the acceptance region under the true value.",
+  "hints": [
+   "Work out the critical region first.",
+   "For Type II, use p = 0.45 with the acceptance region X ≤ 20."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "c",
+       "text": "21"
+      },
+      {
+       "blankId": "a",
+       "text": "0.0478"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.286"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "20.3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "c",
+        "text": "20"
+       },
+       {
+        "blankId": "a",
+        "text": "0.05"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.7138303902533127"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "21.351125884439703"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

@@ -1,0 +1,223 @@
+[
+ {
+  "key": "exam.w4a-zimsec-pure.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.vectors.lines",
+   "amaths.vectors.basics",
+   "amaths.vectors.scalar-product"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "Relative to the origin $O$, the points $A$, $B$ and $C$ have position vectors $\\mathbf{a} = 3\\mathbf{i} - \\mathbf{j} + 2\\mathbf{k}$, $\\mathbf{b} = 5\\mathbf{i} + 3\\mathbf{j} - 2\\mathbf{k}$ and $\\mathbf{c} = 8\\mathbf{i} + \\mathbf{k}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the length of AB.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "$\\overrightarrow{AB} = \\mathbf{b} - \\mathbf{a} = 2\\mathbf{i} + 4\\mathbf{j} - 4\\mathbf{k}$, so $AB = \\sqrt{4 + 16 + 16} = 6$.",
+    "workedSolution": "1. $\\overrightarrow{AB} = \\mathbf{b} - \\mathbf{a} = 2\\mathbf{i} + 4\\mathbf{j} - 4\\mathbf{k}$, so $AB = \\sqrt{4 + 16 + 16} = 6$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find angle AOB, in degrees correct to 1 decimal place.",
+    "payload": {
+     "unitHint": "°"
+    },
+    "answerSpec": {
+     "value": 69.7055996522299,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "°",
+       "degrees",
+       "degree",
+       "deg"
+      ]
+     }
+    },
+    "explanation": "$\\mathbf{a} \\cdot \\mathbf{b} = 15 - 3 - 4 = 8$, $|\\mathbf{a}| = \\sqrt{14}$, $|\\mathbf{b}| = \\sqrt{38}$. $\\cos AOB = \\frac{8}{\\sqrt{532}}$, so $AOB = 69.7°$.",
+    "workedSolution": "1. $\\mathbf{a} \\cdot \\mathbf{b} = 15 - 3 - 4 = 8$, $|\\mathbf{a}| = \\sqrt{14}$, $|\\mathbf{b}| = \\sqrt{38}$. $\\cos AOB = \\frac{8}{\\sqrt{532}}$, so $AOB = 69.7°$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the line $AB$ has Cartesian equations $\\dfrac{x - 3}{1} = \\dfrac{y + 1}{2} = \\dfrac{z - 2}{-2}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes $\\mathbf{r} = 3\\mathbf{i} - \\mathbf{j} + 2\\mathbf{k} + \\lambda(\\mathbf{i} + 2\\mathbf{j} - 2\\mathbf{k})$ (direction $\\frac{1}{2}\\overrightarrow{AB}$, or $\\overrightarrow{AB}$).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 writes $x = 3 + \\lambda$, $y = -1 + 2\\lambda$, $z = 2 - 2\\lambda$ and eliminates $\\lambda$ to reach the given form.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\mathbf{r} = 3\\mathbf{i} - \\mathbf{j} + 2\\mathbf{k} + \\lambda(\\mathbf{i} + 2\\mathbf{j} - 2\\mathbf{k})\n$$\n$$\nx = 3 + \\lambda, \\quad y = -1 + 2\\lambda, \\quad z = 2 - 2\\lambda\n$$\n$$\n\\lambda = \\frac{x - 3}{1} = \\frac{y + 1}{2} = \\frac{z - 2}{-2}\n$$"
+    },
+    "explanation": "Any multiple of AB is a direction vector; eliminate the parameter."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the position vector of the foot F of the perpendicular from C to the line AB.",
+    "payload": {
+     "template": "F = {{blank:x}}i + {{blank:y}}j + {{blank:z}}k",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      },
+      {
+       "id": "z",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "z",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "$F = (3 + \\lambda, -1 + 2\\lambda, 2 - 2\\lambda)$, $\\overrightarrow{CF} = (\\lambda - 5, 2\\lambda - 1, 1 - 2\\lambda)$. $\\overrightarrow{CF} \\cdot (1, 2, -2) = \\lambda - 5 + 4\\lambda - 2 - 2 + 4\\lambda = 9\\lambda - 9 = 0$, so $\\lambda = 1$ and $F = 4\\mathbf{i} + \\mathbf{j}$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Hence find the perpendicular distance from C to the line AB, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 4.242640687119285,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\overrightarrow{CF} = -4\\mathbf{i} + \\mathbf{j} - \\mathbf{k}$, so the distance is $\\sqrt{18} = 3\\sqrt{2} = 4.24$. ($|\\overrightarrow{AC}| = \\sqrt{27}$ is not the perpendicular distance.)",
+    "workedSolution": "1. $\\overrightarrow{CF} = -4\\mathbf{i} + \\mathbf{j} - \\mathbf{k}$, so the distance is $\\sqrt{18} = 3\\sqrt{2} = 4.24$. ($|\\overrightarrow{AC}| = \\sqrt{27}$ is not the perpendicular distance.)"
+   }
+  ],
+  "explanation": "Magnitudes, the scalar product for angles, the Cartesian form of a line and the foot of a perpendicular.",
+  "hints": [
+   "The angle AOB uses the position vectors a and b.",
+   "Write CF in terms of the parameter and set CF · direction = 0."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "69.7"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "4"
+      },
+      {
+       "blankId": "y",
+       "text": "1"
+      },
+      {
+       "blankId": "z",
+       "text": "0"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "4.24"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "6.324555320336759"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "110.2944003477701"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "8"
+       },
+       {
+        "blankId": "y",
+        "text": "0"
+       },
+       {
+        "blankId": "z",
+        "text": "1"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "5.196152422706632"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/pure-mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ }
+]

@@ -1,0 +1,882 @@
+[
+ {
+  "key": "normal.probabilities.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{N}(40, 25)$. What is the standard deviation of $X$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "5",
+    "correct": true,
+    "rationale": "Correct: the second parameter is the variance, $\\sigma^2 = 25$."
+   },
+   {
+    "key": "B",
+    "content": "25",
+    "rationale": "25 is the variance, not the standard deviation."
+   },
+   {
+    "key": "C",
+    "content": "40",
+    "rationale": "40 is the mean."
+   },
+   {
+    "key": "D",
+    "content": "625",
+    "rationale": "This squares the variance."
+   }
+  ],
+  "explanation": "$\\mathrm{N}(\\mu, \\sigma^2)$: $\\sigma^2 = 25$, so $\\sigma = 5$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "normal.probabilities.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{N}(60, 5^2)$. Find $\\mathrm{P}(X < 68)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.9452007092486813,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(X < 68) = \\mathrm{P}\\left(Z < \\frac{68 - 60}{5}\\right) = \\Phi(1.6) = 0.9452$, or $0.945$ to 3 s.f. ($0.626$ divides by the variance 25.)",
+  "workedSolution": "1. $\\mathrm{P}(X < 68) = \\mathrm{P}\\left(Z < \\frac{68 - 60}{5}\\right) = \\Phi(1.6) = 0.9452$, or $0.945$ to 3 s.f. ($0.626$ divides by the variance 25.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.945"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.0548"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.626"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "normal.probabilities.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The masses of oranges from an orchard in Mazowe are normally distributed with mean 72 g and standard deviation 6 g. Find the probability that an orange chosen at random has a mass greater than 81 g, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.06680720195906442,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.000057
+   }
+  },
+  "explanation": "$z = \\frac{81 - 72}{6} = 1.5$. $\\mathrm{P}(X > 81) = 1 - \\Phi(1.5) = 1 - 0.9332 = 0.0668$, or $0.0668$ to 3 s.f. ($0.933$ is $\\Phi(1.5)$, the wrong side.)",
+  "workedSolution": "1. $z = \\frac{81 - 72}{6} = 1.5$. $\\mathrm{P}(X > 81) = 1 - \\Phi(1.5) = 1 - 0.9332 = 0.0668$, or $0.0668$ to 3 s.f. ($0.933$ is $\\Phi(1.5)$, the wrong side.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0668"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.933"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "normal.probabilities.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the Mazowe oranges (mean 72 g, standard deviation 6 g), find the probability that an orange has a mass less than 63.6 g, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.08075666217906186,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.000093
+   }
+  },
+  "explanation": "$z = \\frac{63.6 - 72}{6} = -1.4$. $\\mathrm{P}(Z < -1.4) = 1 - \\Phi(1.4) = 1 - 0.9192 = 0.0808$, or $0.0808$. ($0.919$ forgets the symmetry step.)",
+  "workedSolution": "1. $z = \\frac{63.6 - 72}{6} = -1.4$. $\\mathrm{P}(Z < -1.4) = 1 - \\Phi(1.4) = 1 - 0.9192 = 0.0808$, or $0.0808$. ($0.919$ forgets the symmetry step.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0808"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.919"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.probabilities.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{N}(150, 400)$. Find $\\mathrm{P}(130 < X < 185)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.8012855839281738,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00059
+   }
+  },
+  "explanation": "$\\sigma = 20$. $z_1 = \\frac{130 - 150}{20} = -1$, $z_2 = \\frac{185 - 150}{20} = 1.75$. $\\mathrm{P} = \\Phi(1.75) - (1 - \\Phi(1)) = 0.9599 - 0.1587 = 0.8012$, or $0.801$. ($0.119$ treats $-1$ as $+1$.)",
+  "workedSolution": "1. $\\sigma = 20$. $z_1 = \\frac{130 - 150}{20} = -1$, $z_2 = \\frac{185 - 150}{20} = 1.75$. $\\mathrm{P} = \\Phi(1.75) - (1 - \\Phi(1)) = 0.9599 - 0.1587 = 0.8012$, or $0.801$. ($0.119$ treats $-1$ as $+1$.)",
+  "hints": [
+   "Sketch: the region straddles the mean.",
+   "Φ(−1) = 1 − Φ(1)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.801"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.119"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.619"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.probabilities.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{N}(90, 144)$. Find $\\mathrm{P}(96 \\le X \\le 105)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.20288773648840874,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00051
+   }
+  },
+  "explanation": "$z = 0.5$ and $1.25$, both above the mean: $\\Phi(1.25) - \\Phi(0.5) = 0.8944 - 0.6915 = 0.2029$, or $0.203$. ($\\le$ or $<$ makes no difference for a continuous variable.)",
+  "workedSolution": "1. $z = 0.5$ and $1.25$, both above the mean: $\\Phi(1.25) - \\Phi(0.5) = 0.8944 - 0.6915 = 0.2029$, or $0.203$. ($\\le$ or $<$ makes no difference for a continuous variable.)",
+  "hints": [
+   "Both values are above the mean: subtract two Φ values."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.203"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.586"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.probabilities.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$Z \\sim \\mathrm{N}(0, 1)$. Which expression equals $\\mathrm{P}(Z > -0.8)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$1 - \\Phi(0.8)$",
+    "rationale": "This is P(Z > 0.8), the small upper tail."
+   },
+   {
+    "key": "B",
+    "content": "$\\Phi(0.8)$",
+    "correct": true,
+    "rationale": "Correct: by symmetry the area above −0.8 equals the area below 0.8."
+   },
+   {
+    "key": "C",
+    "content": "$\\Phi(-0.8)$",
+    "rationale": "This is P(Z < −0.8), the opposite side."
+   },
+   {
+    "key": "D",
+    "content": "$2\\Phi(0.8) - 1$",
+    "rationale": "This is P(−0.8 < Z < 0.8)."
+   }
+  ],
+  "explanation": "Reflect in $z = 0$: $\\mathrm{P}(Z > -0.8) = \\mathrm{P}(Z < 0.8) = \\Phi(0.8)$.",
+  "hints": [
+   "Sketch and shade the region."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.probabilities.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{N}(\\mu, \\sigma^2)$. Approximately what proportion of values lie between $\\mu - 2\\sigma$ and $\\mu + 2\\sigma$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "68%",
+    "rationale": "That is the proportion within one standard deviation."
+   },
+   {
+    "key": "B",
+    "content": "99.7%",
+    "rationale": "That is the proportion within three standard deviations."
+   },
+   {
+    "key": "C",
+    "content": "95%",
+    "correct": true,
+    "rationale": "Correct: $2\\Phi(2) - 1 = 0.9545$."
+   },
+   {
+    "key": "D",
+    "content": "50%",
+    "rationale": "Half the values lie below the mean; this is not a ±2σ interval."
+   }
+  ],
+  "explanation": "$\\mathrm{P}(-2 < Z < 2) = 2\\Phi(2) - 1 = 2(0.9772) - 1 = 0.9544$, about 95%.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.probabilities.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $X \\sim \\mathrm{N}(\\mu, \\sigma^2)$, then $\\mathrm{P}(X < a) = \\mathrm{P}(X \\le a)$ for any value $a$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "$X$ is continuous, so $\\mathrm{P}(X = a) = 0$: including or excluding the end point changes nothing.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.probabilities.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a normal variable, $\\mathrm{P}(X > \\mu) = 0.5$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "The curve is symmetrical about $\\mu$, so half the area lies above the mean.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.probabilities.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "$Z \\sim \\mathrm{N}(0, 1)$ and $a > 0$. Match each probability with the expression in terms of $\\Phi(a)$.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\mathrm{P}(Z < a)$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\mathrm{P}(Z > a)$"
+    },
+    {
+     "id": "L3",
+     "content": "$\\mathrm{P}(-a < Z < a)$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\mathrm{P}(|Z| > a)$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$2\\Phi(a) - 1$"
+    },
+    {
+     "id": "R4",
+     "content": "$2 - 2\\Phi(a)$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\Phi(a)$"
+    },
+    {
+     "id": "R2",
+     "content": "$1 - \\Phi(a)$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The two tails beyond $\\pm a$ each have area $1 - \\Phi(a)$, so $\\mathrm{P}(|Z| > a) = 2(1 - \\Phi(a))$ and the middle is $2\\Phi(a) - 1$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.probabilities.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The times taken by a kombi to travel from Harare to Chitungwiza are normally distributed with mean 42 minutes and standard deviation 3.5 minutes. In a month the kombi makes 200 such trips. Find the expected number of trips that take more than 47 minutes, giving your answer to the nearest whole number.",
+  "answerSpec": {
+   "value": 15
+  },
+  "explanation": "$z = \\frac{47 - 42}{3.5} = 1.429$; $\\mathrm{P}(X > 47) = 1 - \\Phi(1.43) = 0.0764$ (calculator 0.0766). Expected number $= 200 \\times 0.0766 = 15.3$, about 15 trips.",
+  "workedSolution": "1. $z = \\frac{47 - 42}{3.5} = 1.429$; $\\mathrm{P}(X > 47) = 1 - \\Phi(1.43) = 0.0764$ (calculator 0.0766). Expected number $= 200 \\times 0.0766 = 15.3$, about 15 trips.",
+  "hints": [
+   "Find the probability for one trip, then multiply by 200."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "15"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "185"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.probabilities.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Bags of sugar are labelled 500 g. The actual masses are normally distributed with mean 500 g and standard deviation 8 g. Six bags are chosen at random. Find the probability that at least one of them has a mass less than 490 g, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.4882643092360306,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.000671
+   }
+  },
+  "explanation": "One bag: $\\mathrm{P}(X < 490) = \\mathrm{P}(Z < -1.25) = 1 - 0.8944 = 0.1056$. At least one of six: $1 - (1 - 0.1056)^6 = 1 - 0.8944^6 = 0.488$.",
+  "workedSolution": "1. One bag: $\\mathrm{P}(X < 490) = \\mathrm{P}(Z < -1.25) = 1 - 0.8944 = 0.1056$. At least one of six: $1 - (1 - 0.1056)^6 = 1 - 0.8944^6 = 0.488$.",
+  "hints": [
+   "Find p = P(one bag < 490 g).",
+   "At least one = 1 − P(none)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.488"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.106"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.634"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "normal.probabilities.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The diameters of bolts made at a factory in Bulawayo are normally distributed with mean 25 mm and standard deviation 2.4 mm. A bolt is rejected if its diameter differs from 25 mm by more than 3 mm. Find the proportion of bolts rejected, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.21129956086038604,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0006
+   }
+  },
+  "explanation": "$z = \\pm\\frac{3}{2.4} = \\pm 1.25$. Rejected: $2(1 - \\Phi(1.25)) = 2(1 - 0.8944) = 0.2112$, or $0.211$. ($0.106$ counts only one tail.)",
+  "workedSolution": "1. $z = \\pm\\frac{3}{2.4} = \\pm 1.25$. Rejected: $2(1 - \\Phi(1.25)) = 2(1 - 0.8944) = 0.2112$, or $0.211$. ($0.106$ counts only one tail.)",
+  "hints": [
+   "Both tails are rejected: too large and too small."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.211"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.106"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.789"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.probabilities.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The times taken by learners to complete a short quiz have mean 6 minutes and standard deviation 4 minutes. Explain why a normal distribution is unlikely to be a good model for these times.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Under a normal model, μ − 1.5σ = 0 so about 7% of times would be negative.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Times cannot be negative, so the distribution is probably positively skewed rather than symmetrical.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Zero is only 1.5 standard deviations below the mean, so N(6, 16) gives P(T < 0) = 1 − Φ(1.5) ≈ 0.067: about 7% of learners would take a negative time, which is impossible. The real distribution is likely to be skewed to the right."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Check where zero lies relative to the mean in standard deviations.",
+  "hints": [
+   "How many standard deviations below the mean is 0?"
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "normal.probabilities.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The daily rainfall on wet days at a station near Chimanimani in March is modelled by a normal distribution with mean 1.2 cm and standard deviation 0.15 cm.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that on a wet day the rainfall is more than 1.5 cm, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.022750129890124482,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0001
+     }
+    },
+    "explanation": "$z = \\frac{1.5 - 1.2}{0.15} = 2$; $1 - \\Phi(2) = 1 - 0.9772 = 0.0228$.",
+    "workedSolution": "1. $z = \\frac{1.5 - 1.2}{0.15} = 2$; $1 - \\Phi(2) = 1 - 0.9772 = 0.0228$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that on a wet day the rainfall is between 1.0 cm and 1.35 cm, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.7501335142170218,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0011
+     }
+    },
+    "explanation": "$z_1 = \\frac{1.0 - 1.2}{0.15} = -1.333$, $z_2 = \\frac{1.35 - 1.2}{0.15} = 1$. $\\Phi(1) - (1 - \\Phi(1.333)) = 0.8413 - 0.0918 = 0.7495$ (calculator 0.750).",
+    "workedSolution": "1. $z_1 = \\frac{1.0 - 1.2}{0.15} = -1.333$, $z_2 = \\frac{1.35 - 1.2}{0.15} = 1$. $\\Phi(1) - (1 - \\Phi(1.333)) = 0.8413 - 0.0918 = 0.7495$ (calculator 0.750)."
+   }
+  ],
+  "explanation": "Standardise each value; sketch to choose Φ or 1 − Φ.",
+  "hints": [
+   "σ = 0.15, so 1.5 cm is two standard deviations above the mean."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.0228"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.750"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.977"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-0.0674"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "normal.probabilities.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.normal.probabilities"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "The lengths of maize cobs harvested on a farm near Chinhoyi are normally distributed with mean 32 cm and standard deviation 4.5 cm. Cobs longer than 38 cm are graded 'large'; cobs shorter than 28 cm are graded 'small'.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the proportion of cobs graded 'large', correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.09121122438730378,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00064
+     }
+    },
+    "explanation": "$z = \\frac{38 - 32}{4.5} = 1.333$; $1 - \\Phi(1.333) = 0.0918$ (tables) or 0.0912.",
+    "workedSolution": "1. $z = \\frac{38 - 32}{4.5} = 1.333$; $1 - \\Phi(1.333) = 0.0918$ (tables) or 0.0912."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the proportion of cobs graded 'small', correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.18703140064067164,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00083
+     }
+    },
+    "explanation": "$z = \\frac{28 - 32}{4.5} = -0.889$; $1 - \\Phi(0.889) = 0.1867$ (tables) or 0.187.",
+    "workedSolution": "1. $z = \\frac{28 - 32}{4.5} = -0.889$; $1 - \\Phi(0.889) = 0.1867$ (tables) or 0.187."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that a cob is between 25 cm and 35 cm long, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.6876005743466106,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0021
+     }
+    },
+    "explanation": "$z_1 = \\frac{25 - 32}{4.5} = -1.556$, $z_2 = \\frac{35 - 32}{4.5} = 0.667$. $\\Phi(0.667) - (1 - \\Phi(1.556)) = 0.6892$ (tables) or 0.688.",
+    "workedSolution": "1. $z_1 = \\frac{25 - 32}{4.5} = -1.556$, $z_2 = \\frac{35 - 32}{4.5} = 0.667$. $\\Phi(0.667) - (1 - \\Phi(1.556)) = 0.6892$ (tables) or 0.688."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Eight cobs are chosen at random. Find the probability that at most one of them is graded 'large', correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.8388444721196957,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0022
+     }
+    },
+    "explanation": "The number of large cobs is $\\mathrm{B}(8, p)$ with $p = 0.0912$. $\\mathrm{P}(\\le 1) = (1 - p)^8 + 8p(1 - p)^7 = 0.839$.",
+    "workedSolution": "1. The number of large cobs is $\\mathrm{B}(8, p)$ with $p = 0.0912$. $\\mathrm{P}(\\le 1) = (1 - p)^8 + 8p(1 - p)^7 = 0.839$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Sketch the distribution of cob lengths, showing the regions for 'small' and 'large' cobs.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Symmetrical bell curve with the peak at 32 cm marked on the length axis.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Shaded left tail below 28 cm ('small') and a smaller shaded right tail above 38 cm ('large'), since 38 is further from the mean.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A bell-shaped curve centred on 32 cm. The region to the left of 28 cm is shaded as 'small' (about 19% of the area) and the region to the right of 38 cm as 'large' (about 9%); the right tail is thinner because 38 cm is 1.33 standard deviations from the mean, while 28 cm is only 0.89."
+    }
+   }
+  ],
+  "explanation": "Standardise each boundary; then treat 'large' as a success in a binomial model for (d).",
+  "hints": [
+   "Use σ = 4.5 in every z.",
+   "In (d) the number of large cobs among 8 is binomial."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.0912"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.187"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.688"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.839"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.909"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.813"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "-0.193"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.374"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

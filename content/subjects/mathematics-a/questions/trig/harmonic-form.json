@@ -1,0 +1,1510 @@
+[
+ {
+  "key": "trig.harmonic-form.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The expression $5\\sin\\theta + 12\\cos\\theta$ is written as $R\\sin(\\theta + \\alpha)$ with $R > 0$. What is $R$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "13",
+    "correct": true,
+    "rationale": "Correct: $R = \\sqrt{5^2 + 12^2} = \\sqrt{169} = 13$."
+   },
+   {
+    "key": "B",
+    "content": "17",
+    "rationale": "This adds the coefficients; $R$ is $\\sqrt{a^2 + b^2}$."
+   },
+   {
+    "key": "C",
+    "content": "169",
+    "rationale": "This is $R^2$; take the square root."
+   },
+   {
+    "key": "D",
+    "content": "7",
+    "rationale": "This subtracts the coefficients; signs do not matter in $\\sqrt{a^2 + b^2}$."
+   }
+  ],
+  "explanation": "$R\\cos\\alpha = 5$ and $R\\sin\\alpha = 12$; squaring and adding gives $R^2 = 169$, so $R = 13$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q02",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Express $4\\cos\\theta - 3\\sin\\theta$ in the form $R\\cos(\\theta + \\alpha)$, where $R > 0$ and $0^\\circ < \\alpha < 90^\\circ$. Give $\\alpha$ to 1 decimal place.",
+  "payload": {
+   "template": "R = {{blank:R}}, α = {{blank:a}}°",
+   "blanks": [
+    {
+     "id": "R",
+     "input": "number"
+    },
+    {
+     "id": "a",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "R",
+     "accepted": [
+      "5"
+     ]
+    },
+    {
+     "id": "a",
+     "accepted": [
+      "36.9"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "$R\\cos(\\theta + \\alpha) = R\\cos\\theta\\cos\\alpha - R\\sin\\theta\\sin\\alpha$, so $R\\cos\\alpha = 4$ and $R\\sin\\alpha = 3$. $R = 5$, $\\tan\\alpha = \\frac{3}{4}$, $\\alpha = 36.9^\\circ$. ($53.1^\\circ$ uses $\\tan\\alpha = \\frac{4}{3}$.)",
+  "hints": [
+   "Expand R cos(θ + α) and compare coefficients of cos θ and sin θ."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "R",
+     "text": "5"
+    },
+    {
+     "blankId": "a",
+     "text": "36.9"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "R",
+      "text": "25"
+     },
+     {
+      "blankId": "a",
+      "text": "53.1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "trig.harmonic-form.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the greatest value of $6\\sin x + 8\\cos x$.",
+  "answerSpec": {
+   "value": 10
+  },
+  "explanation": "$6\\sin x + 8\\cos x = 10\\sin(x + \\alpha)$ with $R = \\sqrt{36 + 64} = 10$, and the greatest value of $\\sin$ is 1. (14 adds the coefficients, but the two terms are never both at their maximum.)",
+  "workedSolution": "1. $6\\sin x + 8\\cos x = 10\\sin(x + \\alpha)$ with $R = \\sqrt{36 + 64} = 10$, and the greatest value of $\\sin$ is 1. (14 adds the coefficients, but the two terms are never both at their maximum.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "14"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the least value of $7 - 3\\sin x - 4\\cos x$.",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "$3\\sin x + 4\\cos x = 5\\sin(x + \\alpha)$ takes values from $-5$ to $5$. The least value of $7 - 5\\sin(x + \\alpha)$ is $7 - 5 = 2$. (12 is the greatest value.)",
+  "workedSolution": "1. $3\\sin x + 4\\cos x = 5\\sin(x + \\alpha)$ takes values from $-5$ to $5$. The least value of $7 - 5\\sin(x + \\alpha)$ is $7 - 5 = 2$. (12 is the greatest value.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "12"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Express $\\sqrt{3}\\sin x + \\cos x$ in the form $R\\sin(x + \\alpha)$, where $R > 0$ and $0^\\circ < \\alpha < 90^\\circ$.",
+  "payload": {
+   "template": "R = {{blank:R}}, α = {{blank:a}}°",
+   "blanks": [
+    {
+     "id": "R",
+     "input": "number"
+    },
+    {
+     "id": "a",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "R",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "a",
+     "accepted": [
+      "30"
+     ]
+    }
+   ]
+  },
+  "explanation": "$R\\cos\\alpha = \\sqrt{3}$, $R\\sin\\alpha = 1$. $R = \\sqrt{3 + 1} = 2$; $\\tan\\alpha = \\frac{1}{\\sqrt{3}}$, $\\alpha = 30^\\circ$.",
+  "hints": [
+   "$\\tan\\alpha = \\frac{1}{\\sqrt{3}}$ is an exact value."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "R",
+     "text": "2"
+    },
+    {
+     "blankId": "a",
+     "text": "30"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "R",
+      "text": "4"
+     },
+     {
+      "blankId": "a",
+      "text": "60"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "By first writing $4\\sin\\theta + 3\\cos\\theta$ in the form $R\\sin(\\theta + \\alpha)$, solve $4\\sin\\theta + 3\\cos\\theta = 1$ for $0^\\circ \\le \\theta \\le 360^\\circ$. Give answers to 1 decimal place in ascending order.",
+  "payload": {
+   "template": "θ = {{blank:a}}° or θ = {{blank:b}}°",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "131.6"
+     ],
+     "tolerance": 0.05
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "334.7"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "$R = 5$, $\\alpha = \\tan^{-1}\\frac{3}{4} = 36.87^\\circ$. $\\sin(\\theta + 36.87^\\circ) = 0.2$ with $36.87^\\circ \\le \\theta + 36.87^\\circ \\le 396.87^\\circ$: $\\theta + 36.87^\\circ = 168.46^\\circ$ or $371.54^\\circ$. So $\\theta = 131.6^\\circ$ or $334.7^\\circ$.",
+  "hints": [
+   "$\\sin^{-1}0.2 = 11.54^\\circ$, which is below the shifted interval: use $180^\\circ - 11.54^\\circ$ and $360^\\circ + 11.54^\\circ$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "131.6"
+    },
+    {
+     "blankId": "b",
+     "text": "334.7"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "11.5"
+     },
+     {
+      "blankId": "b",
+      "text": "168.5"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "trig.harmonic-form.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the greatest value of $\\dfrac{20}{15 - 5\\sin x - 12\\cos x}$.",
+  "answerSpec": {
+   "value": 10
+  },
+  "explanation": "$5\\sin x + 12\\cos x = 13\\sin(x + \\alpha)$ lies between $-13$ and $13$, so the denominator lies between $2$ and $28$ (always positive). The fraction is greatest when the denominator is least: $\\frac{20}{2} = 10$.",
+  "workedSolution": "1. $5\\sin x + 12\\cos x = 13\\sin(x + \\alpha)$ lies between $-13$ and $13$, so the denominator lies between $2$ and $28$ (always positive). The fraction is greatest when the denominator is least: $\\frac{20}{2} = 10$.",
+  "hints": [
+   "Write 5 sin x + 12 cos x in harmonic form.",
+   "A positive fraction is largest when its denominator is smallest."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.7142857142857143"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.3333333333333333"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given that $3\\cos\\theta + 4\\sin\\theta = 5\\cos(\\theta - 53.13^\\circ)$, for which value of $\\theta$ between $0^\\circ$ and $360^\\circ$ is $3\\cos\\theta + 4\\sin\\theta$ greatest?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$233.1^\\circ$",
+    "rationale": "Here $\\theta - 53.13^\\circ = 180^\\circ$, which gives the minimum, $-5$."
+   },
+   {
+    "key": "B",
+    "content": "$143.1^\\circ$",
+    "rationale": "Here the cosine is zero, so the expression is 0."
+   },
+   {
+    "key": "C",
+    "content": "$53.1^\\circ$",
+    "correct": true,
+    "rationale": "Correct: the maximum of $\\cos(\\theta - 53.13^\\circ)$ occurs when $\\theta - 53.13^\\circ = 0^\\circ$."
+   },
+   {
+    "key": "D",
+    "content": "$306.9^\\circ$",
+    "rationale": "This is $360^\\circ - 53.13^\\circ$; the shift is $-53.13^\\circ$, so the maximum is at $+53.13^\\circ$."
+   }
+  ],
+  "explanation": "$5\\cos(\\theta - \\alpha)$ is greatest (5) when $\\theta = \\alpha = 53.1^\\circ$. Check: $3\\cos 53.13^\\circ + 4\\sin 53.13^\\circ = 1.8 + 3.2 = 5$.",
+  "hints": [
+   "Where does cos u reach its maximum?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "trig.harmonic-form.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The equation $2\\sin x + \\cos x = 3$ has no real solutions.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "$2\\sin x + \\cos x = \\sqrt{5}\\sin(x + \\alpha)$, which never exceeds $\\sqrt{5} \\approx 2.24 < 3$. So no solutions.",
+  "hints": [
+   "Compare 3 with $\\sqrt{a^2 + b^2}$."
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "To write $2\\cos\\theta + 5\\sin\\theta$ as $R\\cos(\\theta - \\alpha)$, which pair of equations do you solve?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$R\\cos\\alpha = 5$ and $R\\sin\\alpha = 2$",
+    "rationale": "The coefficient of $\\cos\\theta$ is matched to $R\\cos\\alpha$, so this pair is swapped."
+   },
+   {
+    "key": "B",
+    "content": "$R\\cos\\alpha = 2$ and $R\\sin\\alpha = 5$",
+    "correct": true,
+    "rationale": "Correct: $R\\cos(\\theta - \\alpha) = R\\cos\\theta\\cos\\alpha + R\\sin\\theta\\sin\\alpha$; match the coefficients of $\\cos\\theta$ and $\\sin\\theta$."
+   },
+   {
+    "key": "C",
+    "content": "$R\\cos\\alpha = 2$ and $R\\sin\\alpha = -5$",
+    "rationale": "$\\cos(\\theta - \\alpha)$ expands with a plus sign, so $R\\sin\\alpha = +5$."
+   },
+   {
+    "key": "D",
+    "content": "$R = 2 + 5$ and $\\tan\\alpha = \\frac{2}{5}$",
+    "rationale": "$R$ is not the sum of the coefficients, and $\\tan\\alpha = \\frac{5}{2}$."
+   }
+  ],
+  "explanation": "Expanding gives $R\\cos\\alpha = 2$, $R\\sin\\alpha = 5$, so $R = \\sqrt{29}$ and $\\tan\\alpha = \\frac{5}{2}$.",
+  "hints": [
+   "Expand $R\\cos(\\theta - \\alpha)$ first."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the smallest positive solution of $\\sin x + \\sqrt{3}\\cos x = \\sqrt{2}$, in radians correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "rad"
+  },
+  "answerSpec": {
+   "value": 1.308996939,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "rad",
+     "radians",
+     "radian"
+    ]
+   }
+  },
+  "explanation": "$\\sin x + \\sqrt{3}\\cos x = 2\\sin\\left(x + \\frac{\\pi}{3}\\right)$. So $\\sin\\left(x + \\frac{\\pi}{3}\\right) = \\frac{\\sqrt{2}}{2}$. For $x > 0$, $x + \\frac{\\pi}{3} > \\frac{\\pi}{3}$, so $x + \\frac{\\pi}{3} = \\frac{3\\pi}{4}$ (not $\\frac{\\pi}{4}$): $x = \\frac{5\\pi}{12} = 1.31$.",
+  "workedSolution": "1. $\\sin x + \\sqrt{3}\\cos x = 2\\sin\\left(x + \\frac{\\pi}{3}\\right)$. So $\\sin\\left(x + \\frac{\\pi}{3}\\right) = \\frac{\\sqrt{2}}{2}$. For $x > 0$, $x + \\frac{\\pi}{3} > \\frac{\\pi}{3}$, so $x + \\frac{\\pi}{3} = \\frac{3\\pi}{4}$ (not $\\frac{\\pi}{4}$): $x = \\frac{5\\pi}{12} = 1.31$.",
+  "hints": [
+   "$R = 2$ and $\\alpha = \\frac{\\pi}{3}$.",
+   "The compound angle must exceed $\\frac{\\pi}{3}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1.31"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "6.021385919380437"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.7853981633974483"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "trig.harmonic-form.q12",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Show that $\\sqrt{3}\\cos x + \\sin x \\equiv 2\\cos\\left(x - \\frac{\\pi}{6}\\right)$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 expands $2\\cos\\left(x - \\frac{\\pi}{6}\\right) = 2\\cos x\\cos\\frac{\\pi}{6} + 2\\sin x\\sin\\frac{\\pi}{6}$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 uses $\\cos\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$ and $\\sin\\frac{\\pi}{6} = \\frac{1}{2}$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 obtains $\\sqrt{3}\\cos x + \\sin x$.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n2\\cos\\left(x - \\frac{\\pi}{6}\\right) = 2\\left(\\cos x \\cdot \\frac{\\sqrt{3}}{2} + \\sin x \\cdot \\frac{1}{2}\\right) = \\sqrt{3}\\cos x + \\sin x\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Expanding the right-hand side is the quickest proof.",
+  "hints": [
+   "Start from the right-hand side and expand."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Explain why the greatest value of $a\\sin\\theta + b\\cos\\theta$ is $\\sqrt{a^2 + b^2}$ and not $a + b$ (for positive $a$ and $b$).",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The expression equals $R\\sin(\\theta + \\alpha)$ with $R = \\sqrt{a^2 + b^2}$, and $\\sin$ is at most 1.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "$\\sin\\theta$ and $\\cos\\theta$ cannot both equal 1 at the same angle, so $a + b$ is never reached.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Writing a sin θ + b cos θ = R sin(θ + α) with R = √(a² + b²) shows the values range from −R to R. The sum a + b would need sin θ = cos θ = 1 together, which never happens (sin²θ + cos²θ = 1)."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The two waves peak at different angles, so their maxima do not add.",
+  "hints": [
+   "Can sin θ and cos θ both equal 1 at the same angle?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each harmonic form with its expansion.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$R\\sin(\\theta + \\alpha)$"
+    },
+    {
+     "id": "L2",
+     "content": "$R\\sin(\\theta - \\alpha)$"
+    },
+    {
+     "id": "L3",
+     "content": "$R\\cos(\\theta + \\alpha)$"
+    },
+    {
+     "id": "L4",
+     "content": "$R\\cos(\\theta - \\alpha)$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$R\\cos\\theta\\cos\\alpha - R\\sin\\theta\\sin\\alpha$"
+    },
+    {
+     "id": "R4",
+     "content": "$R\\cos\\theta\\cos\\alpha + R\\sin\\theta\\sin\\alpha$"
+    },
+    {
+     "id": "R1",
+     "content": "$R\\sin\\theta\\cos\\alpha + R\\cos\\theta\\sin\\alpha$"
+    },
+    {
+     "id": "R2",
+     "content": "$R\\sin\\theta\\cos\\alpha - R\\cos\\theta\\sin\\alpha$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "These are the compound-angle formulae multiplied by R; compare coefficients with the given expression to find R and α.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q15",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Find the greatest value of $2 + 5\\sin\\theta - 12\\cos\\theta$ and the value of $\\theta$, for $0^\\circ \\le \\theta \\le 360^\\circ$, at which it occurs (1 decimal place).",
+  "payload": {
+   "template": "greatest value {{blank:m}} at θ = {{blank:t}}°",
+   "blanks": [
+    {
+     "id": "m",
+     "input": "number"
+    },
+    {
+     "id": "t",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "m",
+     "accepted": [
+      "15"
+     ]
+    },
+    {
+     "id": "t",
+     "accepted": [
+      "157.4"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "$5\\sin\\theta - 12\\cos\\theta = 13\\sin(\\theta - \\alpha)$ with $\\tan\\alpha = \\frac{12}{5}$, $\\alpha = 67.38^\\circ$. Greatest value $2 + 13 = 15$ when $\\theta - 67.38^\\circ = 90^\\circ$: $\\theta = 157.4^\\circ$.",
+  "hints": [
+   "Use $R\\sin(\\theta - \\alpha)$.",
+   "sin u is greatest when u = 90°."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "m",
+     "text": "15"
+    },
+    {
+     "blankId": "t",
+     "text": "157.4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "m",
+      "text": "13"
+     },
+     {
+      "blankId": "t",
+      "text": "67.4"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "trig.harmonic-form.q16",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 5,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A model for the depth of water, $d$ metres, at a jetty on Lake Kariba during a storm surge is $d = 10 + 0.5\\cos(0.5t) + 1.2\\sin(0.5t)$, where $t$ is the time in hours after midnight and angles are in radians. Find the first time after midnight at which the depth is greatest, in hours correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "h"
+  },
+  "answerSpec": {
+   "value": 2.3520104141902705,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "h",
+     "hours",
+     "hour",
+     "hrs",
+     "hr"
+    ]
+   }
+  },
+  "explanation": "$0.5\\cos(0.5t) + 1.2\\sin(0.5t) = 1.3\\cos(0.5t - \\alpha)$ with $\\tan\\alpha = \\frac{1.2}{0.5}$, $\\alpha = 1.176$. Greatest when $0.5t = \\alpha$: $t = \\frac{1.176}{0.5} = 2.35$ hours. The greatest depth is $10 + 1.3 = 11.3$ m.",
+  "workedSolution": "1. $0.5\\cos(0.5t) + 1.2\\sin(0.5t) = 1.3\\cos(0.5t - \\alpha)$ with $\\tan\\alpha = \\frac{1.2}{0.5}$, $\\alpha = 1.176$. Greatest when $0.5t = \\alpha$: $t = \\frac{1.176}{0.5} = 2.35$ hours. The greatest depth is $10 + 1.3 = 11.3$ m.",
+  "hints": [
+   "Write the trigonometric part as $R\\cos(0.5t - \\alpha)$.",
+   "Do not forget to divide by 0.5 at the end."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "2.35"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "1.1760052070951352"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.7895822393995231"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "trig.harmonic-form.q17",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For which value of $k$ does the equation $3\\sin x + 4\\cos x = k$ have **no** solutions?",
+  "options": [
+   {
+    "key": "A",
+    "content": "5",
+    "rationale": "$k = 5$ is the greatest value, reached at one point in each cycle."
+   },
+   {
+    "key": "B",
+    "content": "−5",
+    "rationale": "$k = -5$ is the least value, reached at one point in each cycle."
+   },
+   {
+    "key": "C",
+    "content": "4",
+    "rationale": "$4 < 5$, so the line $y = 4$ cuts the curve twice in each cycle."
+   },
+   {
+    "key": "D",
+    "content": "6",
+    "correct": true,
+    "rationale": "Correct: $3\\sin x + 4\\cos x$ never exceeds $\\sqrt{9 + 16} = 5$."
+   }
+  ],
+  "explanation": "$3\\sin x + 4\\cos x = 5\\sin(x + \\alpha)$, so the possible values are $-5 \\le k \\le 5$.",
+  "hints": [
+   "Find $R = \\sqrt{a^2 + b^2}$."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "trig.harmonic-form.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "This question is about the expression $5\\cos x - 12\\sin x$, for $0^\\circ \\le x \\le 360^\\circ$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Express $5\\cos x - 12\\sin x$ in the form $R\\cos(x + \\alpha)$, where $R > 0$ and $0^\\circ < \\alpha < 90^\\circ$. Give $\\alpha$ to 2 decimal places.",
+    "payload": {
+     "template": "R = {{blank:R}}, α = {{blank:a}}°",
+     "blanks": [
+      {
+       "id": "R",
+       "input": "number"
+      },
+      {
+       "id": "a",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "R",
+       "accepted": [
+        "13"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "a",
+       "accepted": [
+        "67.38"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$R\\cos\\alpha = 5$, $R\\sin\\alpha = 12$: $R = 13$, $\\alpha = \\tan^{-1}\\frac{12}{5} = 67.38^\\circ$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence solve $5\\cos x - 12\\sin x = 6.5$, giving answers to 1 decimal place in ascending order.",
+    "payload": {
+     "template": "x = {{blank:a}}° or x = {{blank:b}}°",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "232.6"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "352.6"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\cos(x + 67.38^\\circ) = \\frac{1}{2}$ with $67.38^\\circ \\le x + 67.38^\\circ \\le 427.38^\\circ$: $x + 67.38^\\circ = 300^\\circ$ or $420^\\circ$ ($60^\\circ$ is too small). So $x = 232.6^\\circ$ or $352.6^\\circ$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the greatest and least values of $\\dfrac{1}{15 + 5\\cos x - 12\\sin x}$, giving the least value correct to 3 significant figures.",
+    "payload": {
+     "template": "greatest {{blank:g}}, least {{blank:l}}",
+     "blanks": [
+      {
+       "id": "g",
+       "input": "number"
+      },
+      {
+       "id": "l",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "g",
+       "accepted": [
+        "0.5"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "l",
+       "accepted": [
+        "0.0357"
+       ],
+       "marks": 2,
+       "tolerance": 0.00005
+      }
+     ]
+    },
+    "explanation": "The denominator $15 + 13\\cos(x + \\alpha)$ lies between $2$ and $28$. Greatest value $\\frac{1}{2} = 0.5$; least value $\\frac{1}{28} = 0.0357$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of x at which the least value in (c) occurs, to 1 decimal place.",
+    "payload": {
+     "unitHint": "°"
+    },
+    "answerSpec": {
+     "value": 292.6198649480404,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "°",
+       "degrees",
+       "degree",
+       "deg"
+      ]
+     }
+    },
+    "explanation": "Least value of the fraction when the denominator is greatest: $\\cos(x + 67.38^\\circ) = 1$, $x + 67.38^\\circ = 360^\\circ$, $x = 292.6^\\circ$.",
+    "workedSolution": "1. Least value of the fraction when the denominator is greatest: $\\cos(x + 67.38^\\circ) = 1$, $x + 67.38^\\circ = 360^\\circ$, $x = 292.6^\\circ$."
+   }
+  ],
+  "explanation": "Harmonic form, then shifted-interval solving, then extreme values of a reciprocal.",
+  "hints": [
+   "Keep α to 2 decimal places for the later parts.",
+   "A reciprocal is least when its denominator is greatest."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "R",
+       "text": "13"
+      },
+      {
+       "blankId": "a",
+       "text": "67.38"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "232.6"
+      },
+      {
+       "blankId": "b",
+       "text": "352.6"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "g",
+       "text": "0.5"
+      },
+      {
+       "blankId": "l",
+       "text": "0.0357"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "292.6"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "R",
+        "text": "17"
+       },
+       {
+        "blankId": "a",
+        "text": "22.62"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "352.6"
+       },
+       {
+        "blankId": "b",
+        "text": "232.6"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "g",
+        "text": "0.0357"
+       },
+       {
+        "blankId": "l",
+        "text": "0.5"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "67.38013505195958"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "trig.harmonic-form.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.trig.harmonic-form"
+  ],
+  "difficulty": 5,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "The function f is defined by $f(x) = \\sqrt{3}\\sin 2x + \\cos 2x$ for $0 < x < \\pi$. Give angles in radians.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Express $f(x)$ in the form $R\\sin(2x + \\alpha)$, where $R > 0$ and $0 < \\alpha < \\frac{\\pi}{2}$. Give $\\alpha$ as a multiple of π: α = kπ.",
+    "payload": {
+     "template": "R = {{blank:R}}, k = {{blank:k}}",
+     "blanks": [
+      {
+       "id": "R",
+       "input": "number"
+      },
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "R",
+       "accepted": [
+        "2"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "k",
+       "accepted": [
+        "1/6",
+        "0.1667",
+        "0.167"
+       ],
+       "marks": 2,
+       "tolerance": 0.002
+      }
+     ]
+    },
+    "explanation": "$R\\cos\\alpha = \\sqrt{3}$, $R\\sin\\alpha = 1$: $R = 2$, $\\tan\\alpha = \\frac{1}{\\sqrt{3}}$, $\\alpha = \\frac{\\pi}{6}$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence solve $f(x) = -1$. Give each solution as a multiple of π, x = kπ, in ascending order (fractions allowed).",
+    "payload": {
+     "template": "x = {{blank:a}}π or x = {{blank:b}}π",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1/2",
+        "0.5"
+       ],
+       "marks": 2,
+       "tolerance": 0.002
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "5/6",
+        "0.8333",
+        "0.833"
+       ],
+       "marks": 2,
+       "tolerance": 0.002
+      }
+     ]
+    },
+    "explanation": "$\\sin\\left(2x + \\frac{\\pi}{6}\\right) = -\\frac{1}{2}$ with $\\frac{\\pi}{6} < 2x + \\frac{\\pi}{6} < \\frac{13\\pi}{6}$: $2x + \\frac{\\pi}{6} = \\frac{7\\pi}{6}$ or $\\frac{11\\pi}{6}$, so $x = \\frac{\\pi}{2}$ or $\\frac{5\\pi}{6}$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "State the greatest value of $f(x)$ and the value of $x$ at which it occurs, as x = kπ.",
+    "payload": {
+     "template": "greatest value {{blank:m}} at x = {{blank:k}}π",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "2"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "k",
+       "accepted": [
+        "1/6",
+        "0.1667",
+        "0.167"
+       ],
+       "marks": 2,
+       "tolerance": 0.002
+      }
+     ]
+    },
+    "explanation": "Greatest value $R = 2$ when $2x + \\frac{\\pi}{6} = \\frac{\\pi}{2}$, i.e. $x = \\frac{\\pi}{6}$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the greatest value of $\\dfrac{1}{3 + f(x)}$ and the value of $x$ at which it occurs, as x = kπ.",
+    "payload": {
+     "template": "greatest value {{blank:m}} at x = {{blank:k}}π",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "k",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "1"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "k",
+       "accepted": [
+        "2/3",
+        "0.6667",
+        "0.667"
+       ],
+       "marks": 2,
+       "tolerance": 0.002
+      }
+     ]
+    },
+    "explanation": "$3 + f(x)$ lies between $1$ and $5$, so the greatest value is $\\frac{1}{1} = 1$, when $\\sin\\left(2x + \\frac{\\pi}{6}\\right) = -1$: $2x + \\frac{\\pi}{6} = \\frac{3\\pi}{2}$, $x = \\frac{2\\pi}{3}$."
+   }
+  ],
+  "explanation": "Exact harmonic form with α = π/6; solve over the shifted interval for 2x + π/6; extremes from sin = ±1.",
+  "hints": [
+   "For $0 < x < \\pi$, the compound angle $2x + \\frac{\\pi}{6}$ runs from $\\frac{\\pi}{6}$ to $\\frac{13\\pi}{6}$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "R",
+       "text": "2"
+      },
+      {
+       "blankId": "k",
+       "text": "1/6"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1/2"
+      },
+      {
+       "blankId": "b",
+       "text": "5/6"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "2"
+      },
+      {
+       "blankId": "k",
+       "text": "1/6"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "1"
+      },
+      {
+       "blankId": "k",
+       "text": "2/3"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "R",
+        "text": "4"
+       },
+       {
+        "blankId": "k",
+        "text": "1/3"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "7/12"
+       },
+       {
+        "blankId": "b",
+        "text": "11/12"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "4"
+       },
+       {
+        "blankId": "k",
+        "text": "1/4"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "0.2"
+       },
+       {
+        "blankId": "k",
+        "text": "1/6"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

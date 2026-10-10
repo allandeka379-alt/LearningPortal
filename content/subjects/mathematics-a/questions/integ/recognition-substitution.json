@@ -1,0 +1,1055 @@
+[
+ {
+  "key": "integ.recognition-substitution.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which result is correct for any differentiable function $f$ with $f(x) \\neq 0$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\displaystyle\\int\\frac{f'(x)}{f(x)}\\,dx = \\ln|f(x)| + c$",
+    "correct": true,
+    "rationale": "Correct: the derivative of ln|f(x)| is f′(x)/f(x)."
+   },
+   {
+    "key": "B",
+    "content": "$\\displaystyle\\int\\frac{f'(x)}{f(x)}\\,dx = \\frac{1}{f(x)} + c$",
+    "rationale": "Differentiating 1/f(x) gives −f′(x)/[f(x)]², not f′(x)/f(x)."
+   },
+   {
+    "key": "C",
+    "content": "$\\displaystyle\\int\\frac{f'(x)}{f(x)}\\,dx = \\ln|f'(x)| + c$",
+    "rationale": "The logarithm is of the function, not of its derivative."
+   },
+   {
+    "key": "D",
+    "content": "$\\displaystyle\\int\\frac{f'(x)}{f(x)}\\,dx = f(x)\\ln|f(x)| + c$",
+    "rationale": "This has an extra factor f(x); its derivative contains f′(x)ln|f(x)|."
+   }
+  ],
+  "explanation": "By the chain rule, $\\frac{d}{dx}\\ln|f(x)| = \\frac{f'(x)}{f(x)}$, so reversing it gives the result.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q02",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int\\frac{2x}{x^{2} + 5}\\,dx$. Type ln for the natural logarithm and include the constant, for example ln(x^2+1)+c.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "ln(x^2+5)+c"
+    },
+    {
+     "value": "ln|x^2+5|+c"
+    },
+    {
+     "value": "ln(5+x^2)+c"
+    },
+    {
+     "value": "ln(x²+5)+c"
+    },
+    {
+     "value": "ln(x^2+5)+k"
+    },
+    {
+     "value": "ln(x^2+5)+C"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The numerator $2x$ is the derivative of the denominator, so the integral is $\\ln(x^{2} + 5) + c$ (no modulus needed since $x^{2} + 5 > 0$).",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "ln(x^2+5)+c"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "2ln(x^2+5)+c"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int\\frac{\\cos x}{\\sin x + 3}\\,dx$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$-\\ln(\\sin x + 3) + c$",
+    "rationale": "The derivative of $\\sin x$ is $+\\cos x$, so no minus sign is needed."
+   },
+   {
+    "key": "B",
+    "content": "$\\ln(\\sin x + 3) + c$",
+    "correct": true,
+    "rationale": "Correct: $\\cos x$ is the derivative of $\\sin x + 3$."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{\\sin x}{\\sin x + 3} + c$",
+    "rationale": "Integrating the numerator alone does not integrate the fraction."
+   },
+   {
+    "key": "D",
+    "content": "$\\ln(\\cos x) + c$",
+    "rationale": "The logarithm is of the denominator, not of the numerator."
+   }
+  ],
+  "explanation": "$\\int\\frac{f'(x)}{f(x)}\\,dx = \\ln|f(x)|$ with $f(x) = \\sin x + 3 > 0$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Evaluate $\\displaystyle\\int_{0}^{2}\\frac{3x}{x^{2} + 4}\\,dx$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 1.0397207708399179,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$\\frac{3x}{x^{2} + 4} = \\frac{3}{2} \\cdot \\frac{2x}{x^{2} + 4}$. So the integral is $\\frac{3}{2}\\Big[\\ln(x^{2} + 4)\\Big]_{0}^{2} = \\frac{3}{2}(\\ln 8 - \\ln 4) = \\frac{3}{2}\\ln 2 \\approx 1.04$. (2.08 forgets the $\\frac{1}{2}$.)",
+  "workedSolution": "1. $\\frac{3x}{x^{2} + 4} = \\frac{3}{2} \\cdot \\frac{2x}{x^{2} + 4}$. So the integral is $\\frac{3}{2}\\Big[\\ln(x^{2} + 4)\\Big]_{0}^{2} = \\frac{3}{2}(\\ln 8 - \\ln 4) = \\frac{3}{2}\\ln 2 \\approx 1.04$. (2.08 forgets the $\\frac{1}{2}$.)",
+  "hints": [
+   "The derivative of x² + 4 is 2x.",
+   "ln 8 − ln 4 = ln 2."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1.04"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2.08"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.693"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "integ.recognition-substitution.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$\\displaystyle\\int x^{2}(x^{3} - 1)^{4}\\,dx = \\frac{(x^{3} - 1)^{5}}{k} + c$. Find $k$.",
+  "payload": {
+   "template": "k = {{blank:k}}",
+   "blanks": [
+    {
+     "id": "k",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "k",
+     "accepted": [
+      "15"
+     ]
+    }
+   ]
+  },
+  "explanation": "$x^{2} = \\frac{1}{3} \\cdot 3x^{2}$, so the integral is $\\frac{1}{3} \\cdot \\frac{(x^{3} - 1)^{5}}{5} + c$ and $k = 15$.",
+  "hints": [
+   "The derivative of x³ − 1 is 3x²."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "k",
+     "text": "15"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "k",
+      "text": "5"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Evaluate $\\displaystyle\\int_{0}^{\\pi/4}\\tan x\\,dx$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.3465735902799727,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\int \\tan x\\,dx = \\ln|\\sec x|$. $\\Big[\\ln\\sec x\\Big]_{0}^{\\pi/4} = \\ln\\sqrt{2} - \\ln 1 = \\frac{1}{2}\\ln 2 \\approx 0.347$.",
+  "workedSolution": "1. $\\int \\tan x\\,dx = \\ln|\\sec x|$. $\\Big[\\ln\\sec x\\Big]_{0}^{\\pi/4} = \\ln\\sqrt{2} - \\ln 1 = \\frac{1}{2}\\ln 2 \\approx 0.347$.",
+  "hints": [
+   "$\\tan x = \\frac{\\sin x}{\\cos x}$, and $-\\sin x$ is the derivative of $\\cos x$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.347"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.693"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "integ.recognition-substitution.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Using the substitution $u = 1 + x^{2}$, which integral is equal to $\\displaystyle\\int x\\sqrt{1 + x^{2}}\\,dx$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\displaystyle\\int\\sqrt{u}\\,du$",
+    "rationale": "$du = 2x\\,dx$, so $x\\,dx$ is half of $du$."
+   },
+   {
+    "key": "B",
+    "content": "$2\\displaystyle\\int\\sqrt{u}\\,du$",
+    "rationale": "This multiplies by $2$ instead of dividing: $x\\,dx = \\frac{1}{2}du$."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{1}{2}\\displaystyle\\int\\sqrt{u}\\,du$",
+    "correct": true,
+    "rationale": "Correct: $du = 2x\\,dx$, so $x\\,dx = \\frac{1}{2}du$."
+   },
+   {
+    "key": "D",
+    "content": "$\\displaystyle\\int x\\sqrt{u}\\,du$",
+    "rationale": "The $x$ must be absorbed into $du$; the integral cannot mix $x$ and $u$."
+   }
+  ],
+  "explanation": "$\\frac{du}{dx} = 2x$, so $x\\,dx = \\frac{1}{2}\\,du$, and the integral becomes $\\frac{1}{2}\\int u^{\\frac{1}{2}}\\,du = \\frac{1}{3}u^{\\frac{3}{2}} + c$.",
+  "hints": [
+   "Find du in terms of dx."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use the substitution $u = 1 - x$ to evaluate $\\displaystyle\\int_{0}^{1}x(1 - x)^{5}\\,dx$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.023809523809523808,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$x = 1 - u$, $dx = -du$; $x = 0 \\Rightarrow u = 1$, $x = 1 \\Rightarrow u = 0$. $\\int_{1}^{0}(1 - u)u^{5}(-du) = \\int_{0}^{1}(u^{5} - u^{6})\\,du = \\frac{1}{6} - \\frac{1}{7} = \\frac{1}{42} \\approx 0.0238$.",
+  "workedSolution": "1. $x = 1 - u$, $dx = -du$; $x = 0 \\Rightarrow u = 1$, $x = 1 \\Rightarrow u = 0$. $\\int_{1}^{0}(1 - u)u^{5}(-du) = \\int_{0}^{1}(u^{5} - u^{6})\\,du = \\frac{1}{6} - \\frac{1}{7} = \\frac{1}{42} \\approx 0.0238$.",
+  "hints": [
+   "dx = −du; the minus sign swaps the limits back.",
+   "Expand (1 − u)u⁵."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0238"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.167"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "-0.0238"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "integ.recognition-substitution.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$\\displaystyle\\int 2x\\,\\mathrm{e}^{x^{2}}\\,dx = \\mathrm{e}^{x^{2}} + c$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. $2x$ is the derivative of the power $x^{2}$, so this is a chain-rule derivative in reverse: $\\frac{d}{dx}\\mathrm{e}^{x^{2}} = 2x\\mathrm{e}^{x^{2}}$. (Without the factor $x$, $\\int \\mathrm{e}^{x^{2}}\\,dx$ has no elementary answer.)",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each integrand with its indefinite integral (the + c is omitted).",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\tan x$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\dfrac{\\mathrm{e}^{x}}{\\mathrm{e}^{x} + 2}$"
+    },
+    {
+     "id": "L3",
+     "content": "$\\sin^{3}x\\cos x$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\dfrac{2x}{(x^{2} + 1)^{2}}$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\tfrac{1}{4}\\sin^{4}x$"
+    },
+    {
+     "id": "R4",
+     "content": "$-\\dfrac{1}{x^{2} + 1}$"
+    },
+    {
+     "id": "R1",
+     "content": "$-\\ln|\\cos x|$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\ln(\\mathrm{e}^{x} + 2)$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each integrand is $f'(x)/f(x)$ or $f'(x)[f(x)]^{n}$ for a suitable $f$: $\\cos x$, $\\mathrm{e}^{x} + 2$, $\\sin x$ and $x^{2} + 1$.",
+  "hints": [
+   "For each, look for a function whose derivative is also present."
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q11",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Evaluate $\\displaystyle\\int_{0}^{\\pi/2}\\sin x\\cos^{3}x\\,dx$ exactly, as a decimal.",
+  "answerSpec": {
+   "value": 0.25,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$-\\sin x$ is the derivative of $\\cos x$: $\\int\\sin x\\cos^{3}x\\,dx = -\\frac{1}{4}\\cos^{4}x$. $\\Big[-\\tfrac{1}{4}\\cos^{4}x\\Big]_{0}^{\\pi/2} = 0 - (-\\tfrac{1}{4}) = 0.25$.",
+  "workedSolution": "1. With $u = \\cos x$, $du = -\\sin x\\,dx$.\n2. $\\displaystyle\\int\\sin x\\cos^{3}x\\,dx = -\\int u^{3}\\,du = -\\tfrac{1}{4}\\cos^{4}x + c$.\n3. $\\Big[-\\tfrac{1}{4}\\cos^{4}x\\Big]_{0}^{\\pi/2} = 0 + \\tfrac{1}{4} = 0.25$.",
+  "hints": [
+   "Which factor is (minus) the derivative of the other?"
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.25"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "-0.25"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Use the substitution $u = \\sqrt{x}$ to evaluate $\\displaystyle\\int_{1}^{4}\\frac{1}{\\sqrt{x}\\,(1 + \\sqrt{x})}\\,dx$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.8109302162163288,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$x = u^{2}$, $dx = 2u\\,du$; limits $u = 1$ to $u = 2$. The integral becomes $\\int_{1}^{2}\\frac{2u}{u(1 + u)}\\,du = 2\\Big[\\ln(1 + u)\\Big]_{1}^{2} = 2\\ln\\frac{3}{2} \\approx 0.811$. (0.405 loses the factor 2.)",
+  "workedSolution": "1. $x = u^{2}$, $dx = 2u\\,du$; limits $u = 1$ to $u = 2$. The integral becomes $\\int_{1}^{2}\\frac{2u}{u(1 + u)}\\,du = 2\\Big[\\ln(1 + u)\\Big]_{1}^{2} = 2\\ln\\frac{3}{2} \\approx 0.811$. (0.405 loses the factor 2.)",
+  "hints": [
+   "dx = 2u du.",
+   "New limits: √1 and √4."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.811"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.405"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.1"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "integ.recognition-substitution.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int\\frac{\\mathrm{e}^{x}}{\\mathrm{e}^{x} + 1}\\,dx$. Type e^x for the exponential and include the constant, for example ln(e^x+4)+c.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "ln(e^x+1)+c"
+    },
+    {
+     "value": "ln|e^x+1|+c"
+    },
+    {
+     "value": "ln(1+e^x)+c"
+    },
+    {
+     "value": "ln(e^x+1)+k"
+    },
+    {
+     "value": "ln(e^x+1)+C"
+    },
+    {
+     "value": "ln(e^(x)+1)+c"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The numerator $\\mathrm{e}^{x}$ is the derivative of the denominator $\\mathrm{e}^{x} + 1$, so the integral is $\\ln(\\mathrm{e}^{x} + 1) + c$.",
+  "hints": [
+   "Differentiate the denominator."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "ln(e^x+1)+c"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "x+c"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q14",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Use the substitution $u = 2x + 1$ to show that $\\displaystyle\\int_{0}^{4}\\frac{x}{\\sqrt{2x + 1}}\\,dx = \\frac{10}{3}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "B1 states $x = \\frac{u - 1}{2}$, $dx = \\frac{1}{2}du$ and the new limits $u = 1$, $u = 9$",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 obtains $\\frac{1}{4}\\displaystyle\\int_{1}^{9}\\left(u^{\\frac{1}{2}} - u^{-\\frac{1}{2}}\\right)du$",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 integrates to $\\frac{1}{4}\\Big[\\tfrac{2}{3}u^{\\frac{3}{2}} - 2u^{\\frac{1}{2}}\\Big]_{1}^{9}$",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 evaluates $\\frac{1}{4}\\left[(18 - 6) - \\left(\\tfrac{2}{3} - 2\\right)\\right] = \\frac{10}{3}$",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n\\int_{1}^{9}\\frac{u - 1}{2}u^{-\\frac{1}{2}} \\cdot \\frac{1}{2}\\,du = \\frac{1}{4}\\int_{1}^{9}\\left(u^{\\frac{1}{2}} - u^{-\\frac{1}{2}}\\right)du\n$$\n\n$$\n= \\frac{1}{4}\\Big[\\tfrac{2}{3}u^{\\frac{3}{2}} - 2u^{\\frac{1}{2}}\\Big]_{1}^{9} = \\frac{1}{4}\\left[(18 - 6) - \\left(\\tfrac{2}{3} - 2\\right)\\right] = \\frac{1}{4} \\cdot \\frac{40}{3} = \\frac{10}{3}\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Rearrange the substitution for x, replace dx, change the limits, then split the fraction.",
+  "hints": [
+   "x = (u − 1)/2.",
+   "When x = 4, u = 9."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find $\\displaystyle\\int\\frac{1}{x\\ln x}\\,dx$ for $x > 1$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{(\\ln x)^{2}}{2} + c$",
+    "rationale": "This is $\\int \\frac{\\ln x}{x}\\,dx$, with the logarithm in the numerator."
+   },
+   {
+    "key": "B",
+    "content": "$\\ln x \\cdot \\ln x + c$",
+    "rationale": "This is the same mistake as squaring ln x; its derivative is 2 ln x / x."
+   },
+   {
+    "key": "C",
+    "content": "$\\ln(x\\ln x) + c$",
+    "rationale": "Its derivative is $\\frac{\\ln x + 1}{x\\ln x}$, not $\\frac{1}{x\\ln x}$."
+   },
+   {
+    "key": "D",
+    "content": "$\\ln(\\ln x) + c$",
+    "correct": true,
+    "rationale": "Correct: $\\frac{1/x}{\\ln x}$ is $f'(x)/f(x)$ with $f(x) = \\ln x$."
+   }
+  ],
+  "explanation": "Write the integrand as $\\dfrac{1/x}{\\ln x}$. Since $\\frac{d}{dx}\\ln x = \\frac{1}{x}$, the integral is $\\ln|\\ln x| + c = \\ln(\\ln x) + c$ for $x > 1$.",
+  "hints": [
+   "Which function has derivative 1/x?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "This question uses the substitution $u = \\cos x$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\displaystyle\\int_{0}^{\\pi/2}\\sin^{3}x\\,dx = \\int_{0}^{1}(1 - u^{2})\\,du$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 writes $\\sin^{3}x = \\sin x(1 - \\cos^{2}x)$ and uses $du = -\\sin x\\,dx$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 changes the limits ($x = 0 \\to u = 1$, $x = \\frac{\\pi}{2} \\to u = 0$) and uses the minus sign to swap them",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\int_{0}^{\\pi/2}\\sin x(1 - \\cos^{2}x)\\,dx = \\int_{1}^{0}(1 - u^{2})(-du) = \\int_{0}^{1}(1 - u^{2})\\,du\n$$"
+    },
+    "explanation": "The minus sign from du = −sin x dx reverses the limits."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Hence evaluate the integral, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.6666666666666666,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\Big[u - \\tfrac{u^{3}}{3}\\Big]_{0}^{1} = \\tfrac{2}{3} \\approx 0.667$.",
+    "workedSolution": "1. $\\Big[u - \\tfrac{u^{3}}{3}\\Big]_{0}^{1} = \\tfrac{2}{3} \\approx 0.667$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Using a similar substitution, $u = \\sin x$, evaluate $\\displaystyle\\int_{0}^{\\pi/2}\\cos^{3}x\\,dx$, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.6666666666666666,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\cos^{3}x = \\cos x(1 - \\sin^{2}x)$ and $du = \\cos x\\,dx$: $\\int_{0}^{1}(1 - u^{2})\\,du = \\tfrac{2}{3}$.",
+    "workedSolution": "1. $\\cos^{3}x = \\cos x(1 - \\sin^{2}x)$ and $du = \\cos x\\,dx$: $\\int_{0}^{1}(1 - u^{2})\\,du = \\tfrac{2}{3}$."
+   }
+  ],
+  "explanation": "Odd powers of sine or cosine: keep one factor for du and write the rest with sin²x + cos²x = 1.",
+  "hints": [
+   "sin²x = 1 − cos²x.",
+   "Change the limits with u = cos x."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.667"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.667"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.333"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "-0.667"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "integ.recognition-substitution.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 5,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Use the substitution $x = 2\\sin\\theta$ to evaluate $\\displaystyle\\int_{0}^{1}\\frac{1}{\\sqrt{4 - x^{2}}}\\,dx$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the integral becomes $\\displaystyle\\int d\\theta$ between suitable limits.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses $dx = 2\\cos\\theta\\,d\\theta$ and $\\sqrt{4 - 4\\sin^{2}\\theta} = 2\\cos\\theta$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 simplifies the integrand to 1",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\frac{1}{\\sqrt{4 - 4\\sin^{2}\\theta}} \\cdot 2\\cos\\theta\\,d\\theta = \\frac{2\\cos\\theta}{2\\cos\\theta}\\,d\\theta = d\\theta\n$$"
+    },
+    "explanation": "$1 - \\sin^{2}\\theta = \\cos^{2}\\theta$, and $\\cos\\theta > 0$ for the angles used."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the new limits for θ, in radians to 3 decimal places.",
+    "payload": {
+     "template": "From θ = {{blank:a}} to θ = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0"
+       ],
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0.524"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$x = 0 \\Rightarrow \\sin\\theta = 0$, $\\theta = 0$. $x = 1 \\Rightarrow \\sin\\theta = \\frac{1}{2}$, $\\theta = \\frac{\\pi}{6} \\approx 0.524$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Hence evaluate the integral, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.5235987755982988,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\int_{0}^{\\pi/6} d\\theta = \\frac{\\pi}{6} \\approx 0.524$.",
+    "workedSolution": "1. $\\int_{0}^{\\pi/6} d\\theta = \\frac{\\pi}{6} \\approx 0.524$."
+   }
+  ],
+  "explanation": "A trigonometric substitution turns $\\sqrt{a^{2} - x^{2}}$ into $a\\cos\\theta$.",
+  "hints": [
+   "Replace dx as well as x.",
+   "Use radians for the limits."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0"
+      },
+      {
+       "blankId": "b",
+       "text": "0.524"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.524"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "30"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "30"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "integ.recognition-substitution.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Thandeka evaluates $\\displaystyle\\int_{0}^{\\pi/2}\\sin^{2}2x\\cos x\\,dx$ with $u = \\sin x$ but keeps the limits $0$ and $\\frac{\\pi}{2}$ for $u$. Explain her error and how to correct it.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The limits are $x$-values; after substituting, the integral is in $u$, so the limits must be $u$-values",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Correct limits: $u = \\sin 0 = 0$ and $u = \\sin\\frac{\\pi}{2} = 1$ (or substitute back to $x$ before using the original limits)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The limits 0 and π/2 belong to x. Once the integral is in terms of u, she must use the u-values: u = sin 0 = 0 and u = sin(π/2) = 1. Alternatively she could integrate, write the answer back in terms of x, and then use the x-limits."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A definite substitution changes the variable, so the limits must change with it.",
+  "hints": [
+   "What does u equal when x = π/2?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ }
+]

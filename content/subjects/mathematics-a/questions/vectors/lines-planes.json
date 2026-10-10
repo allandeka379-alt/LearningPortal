@@ -1,0 +1,1383 @@
+[
+ {
+  "key": "vectors.lines-planes.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A line has direction $\\mathbf{b}$ and a plane has normal $\\mathbf{n}$. Which formula gives the acute angle $\\phi$ between the line and the plane?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\sin\\phi = \\dfrac{|\\mathbf{b} \\cdot \\mathbf{n}|}{|\\mathbf{b}||\\mathbf{n}|}$",
+    "correct": true,
+    "rationale": "Correct: the angle between $\\mathbf{b}$ and the normal is $90° - \\phi$, and $\\cos(90° - \\phi) = \\sin\\phi$."
+   },
+   {
+    "key": "B",
+    "content": "$\\cos\\phi = \\dfrac{|\\mathbf{b} \\cdot \\mathbf{n}|}{|\\mathbf{b}||\\mathbf{n}|}$",
+    "rationale": "This gives the angle between the line and the NORMAL, not the plane."
+   },
+   {
+    "key": "C",
+    "content": "$\\sin\\phi = \\dfrac{|\\mathbf{b} \\times \\mathbf{n}|}{|\\mathbf{b}||\\mathbf{n}|}$",
+    "rationale": "This is $\\sin$ of the angle between $\\mathbf{b}$ and $\\mathbf{n}$, i.e. $\\cos\\phi$."
+   },
+   {
+    "key": "D",
+    "content": "$\\tan\\phi = \\dfrac{\\mathbf{b} \\cdot \\mathbf{n}}{|\\mathbf{b}|}$",
+    "rationale": "This is not a standard result and does not give an angle."
+   }
+  ],
+  "explanation": "$\\mathbf{b} \\cdot \\mathbf{n} = |\\mathbf{b}||\\mathbf{n}|\\cos(90° - \\phi) = |\\mathbf{b}||\\mathbf{n}|\\sin\\phi$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q02",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If a line's direction $\\mathbf{b}$ satisfies $\\mathbf{b} \\cdot \\mathbf{n} = 0$, where $\\mathbf{n}$ is the normal of a plane, then the line lies in the plane.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "$\\mathbf{b} \\cdot \\mathbf{n} = 0$ only shows the line is parallel to the plane. It lies IN the plane only if, in addition, one of its points satisfies the plane's equation; otherwise it never meets the plane.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the perpendicular distance from the point $(1, 2, 3)$ to the plane $2x + 2y - z = 10$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 2.3333333333333335,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$\\frac{|2(1) + 2(2) - 3 - 10|}{\\sqrt{4 + 4 + 1}} = \\frac{|-7|}{3} = \\frac{7}{3} = 2.33$. (Forgetting to divide by $|\\mathbf{n}| = 3$ gives $7$.)",
+  "workedSolution": "1. $\\frac{|2(1) + 2(2) - 3 - 10|}{\\sqrt{4 + 4 + 1}} = \\frac{|-7|}{3} = \\frac{7}{3} = 2.33$. (Forgetting to divide by $|\\mathbf{n}| = 3$ gives $7$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.33"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.778"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the acute angle between the planes $x + y + z = 1$ and $x - y + z = 5$, in degrees correct to 1 decimal place.",
+  "payload": {
+   "unitHint": "°"
+  },
+  "answerSpec": {
+   "value": 70.52877936550931,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "°",
+     "degrees",
+     "degree",
+     "deg"
+    ]
+   }
+  },
+  "explanation": "$\\mathbf{n}_1 \\cdot \\mathbf{n}_2 = 1 - 1 + 1 = 1$ and $|\\mathbf{n}_1| = |\\mathbf{n}_2| = \\sqrt{3}$, so $\\cos\\theta = \\frac{1}{3}$ and $\\theta = 70.5°$.",
+  "workedSolution": "1. $\\mathbf{n}_1 \\cdot \\mathbf{n}_2 = 1 - 1 + 1 = 1$ and $|\\mathbf{n}_1| = |\\mathbf{n}_2| = \\sqrt{3}$, so $\\cos\\theta = \\frac{1}{3}$ and $\\theta = 70.5°$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "70.5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "19.5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "vectors.lines-planes.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Find the coordinates of the point where the line $\\mathbf{r} = (2\\mathbf{i} + \\mathbf{k}) + t(\\mathbf{i} + 3\\mathbf{j} - \\mathbf{k})$ meets the plane $3x - y + 2z = 14$.",
+  "payload": {
+   "template": "({{blank:x}}, {{blank:y}}, {{blank:z}})",
+   "blanks": [
+    {
+     "id": "x",
+     "input": "number"
+    },
+    {
+     "id": "y",
+     "input": "number"
+    },
+    {
+     "id": "z",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "x",
+     "accepted": [
+      "-1"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "y",
+     "accepted": [
+      "-9"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "z",
+     "accepted": [
+      "4"
+     ],
+     "tolerance": 0
+    }
+   ]
+  },
+  "explanation": "General point $(2 + t, 3t, 1 - t)$: $3(2 + t) - 3t + 2(1 - t) = 8 - 2t = 14$, so $t = -3$ and the point is $(-1, -9, 4)$. Check: $-3 + 9 + 8 = 14$.",
+  "hints": [
+   "Substitute the general point of the line into the plane.",
+   "Solve for t, then substitute back."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "x",
+     "text": "-1"
+    },
+    {
+     "blankId": "y",
+     "text": "-9"
+    },
+    {
+     "blankId": "z",
+     "text": "4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "x",
+      "text": "5"
+     },
+     {
+      "blankId": "y",
+      "text": "9"
+     },
+     {
+      "blankId": "z",
+      "text": "-2"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the acute angle between the line $\\mathbf{r} = (3\\mathbf{i} - \\mathbf{k}) + t(\\mathbf{i} + 2\\mathbf{j} + 2\\mathbf{k})$ and the plane $2x - y + 2z = 5$, in degrees correct to 1 decimal place.",
+  "payload": {
+   "unitHint": "°"
+  },
+  "answerSpec": {
+   "value": 26.387799961242997,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "°",
+     "degrees",
+     "degree",
+     "deg"
+    ]
+   }
+  },
+  "explanation": "$\\mathbf{b} \\cdot \\mathbf{n} = 2 - 2 + 4 = 4$, $|\\mathbf{b}| = |\\mathbf{n}| = 3$. $\\sin\\phi = \\frac{4}{9}$, so $\\phi = 26.4°$. ($63.6°$ is the angle with the normal.)",
+  "workedSolution": "1. $\\mathbf{b} \\cdot \\mathbf{n} = 2 - 2 + 4 = 4$, $|\\mathbf{b}| = |\\mathbf{n}| = 3$. $\\sin\\phi = \\frac{4}{9}$, so $\\phi = 26.4°$. ($63.6°$ is the angle with the normal.)",
+  "hints": [
+   "Use sine, not cosine, for a line and a plane."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "26.4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "63.6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "vectors.lines-planes.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "How is the line $\\mathbf{r} = (\\mathbf{i} + \\mathbf{j} + \\mathbf{k}) + t(\\mathbf{i} - \\mathbf{j})$ related to the plane $x + y + 3z = 5$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It is parallel to the plane but does not meet it",
+    "rationale": "That would need the point (1, 1, 1) NOT to satisfy the equation, but it does."
+   },
+   {
+    "key": "B",
+    "content": "It lies in the plane",
+    "correct": true,
+    "rationale": "Correct: the direction is perpendicular to the normal ($1 - 1 + 0 = 0$) AND the point $(1, 1, 1)$ satisfies $1 + 1 + 3 = 5$."
+   },
+   {
+    "key": "C",
+    "content": "It meets the plane at exactly one point",
+    "rationale": "Substituting gives $(1 + t) + (1 - t) + 3 = 5$, true for every $t$, not for one value."
+   },
+   {
+    "key": "D",
+    "content": "It is perpendicular to the plane",
+    "rationale": "For that the direction would be parallel to the normal $(1, 1, 3)$."
+   }
+  ],
+  "explanation": "Substituting the general point $(1 + t, 1 - t, 1)$ gives $5 = 5$ for all $t$: every point of the line is in the plane.",
+  "hints": [
+   "Substitute the general point of the line into the plane."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q08",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "The planes $x + y - z = 1$ and $2x - y + z = 5$ meet in a line $L$. A direction vector of $L$ is $\\mathbf{j} + c\\mathbf{k}$. Find $c$, and the point of $L$ with $z = 0$.",
+  "payload": {
+   "template": "c = {{blank:c}}; point with z = 0: x = {{blank:x}}, y = {{blank:y}}",
+   "blanks": [
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "x",
+     "input": "number"
+    },
+    {
+     "id": "y",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "c",
+     "accepted": [
+      "1"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "x",
+     "accepted": [
+      "2"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "y",
+     "accepted": [
+      "-1"
+     ],
+     "tolerance": 0
+    }
+   ]
+  },
+  "explanation": "$(1, 1, -1) \\times (2, -1, 1) = (0, -3, -3)$, parallel to $\\mathbf{j} + \\mathbf{k}$, so $c = 1$. With $z = 0$: $x + y = 1$ and $2x - y = 5$ give $x = 2$, $y = -1$. Check: $2 - 1 - 0 = 1$ and $4 + 1 + 0 = 5$.",
+  "hints": [
+   "The direction of L is the cross product of the normals.",
+   "Set z = 0 and solve the two equations."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "c",
+     "text": "1"
+    },
+    {
+     "blankId": "x",
+     "text": "2"
+    },
+    {
+     "blankId": "y",
+     "text": "-1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "c",
+      "text": "-1"
+     },
+     {
+      "blankId": "x",
+      "text": "1"
+     },
+     {
+      "blankId": "y",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q09",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "Find the foot of the perpendicular from $P(3, 1, -2)$ to the plane $x + 2y + 2z = 10$, and the reflection of $P$ in the plane.",
+  "payload": {
+   "template": "foot = ({{blank:a}}, {{blank:b}}, {{blank:c}}); reflection = ({{blank:d}}, {{blank:e}}, {{blank:f}})",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "d",
+     "input": "number"
+    },
+    {
+     "id": "e",
+     "input": "number"
+    },
+    {
+     "id": "f",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "4"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "3"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "0"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "5"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "e",
+     "accepted": [
+      "5"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "f",
+     "accepted": [
+      "2"
+     ],
+     "tolerance": 0
+    }
+   ]
+  },
+  "explanation": "The normal line $\\mathbf{r} = (3, 1, -2) + t(1, 2, 2)$ meets the plane when $(3 + t) + 2(1 + 2t) + 2(-2 + 2t) = 10$, i.e. $1 + 9t = 10$, $t = 1$: foot $F = (4, 3, 0)$. Reflection: $t = 2$, giving $(5, 5, 2)$. (Distance $PF = 1 \\times 3 = 3$.)",
+  "hints": [
+   "Move from P along the normal until you reach the plane.",
+   "The reflection is twice as far along the normal."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "4"
+    },
+    {
+     "blankId": "b",
+     "text": "3"
+    },
+    {
+     "blankId": "c",
+     "text": "0"
+    },
+    {
+     "blankId": "d",
+     "text": "5"
+    },
+    {
+     "blankId": "e",
+     "text": "5"
+    },
+    {
+     "blankId": "f",
+     "text": "2"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "3"
+     },
+     {
+      "blankId": "b",
+      "text": "1"
+     },
+     {
+      "blankId": "c",
+      "text": "-2"
+     },
+     {
+      "blankId": "d",
+      "text": "4"
+     },
+     {
+      "blankId": "e",
+      "text": "3"
+     },
+     {
+      "blankId": "f",
+      "text": "0"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the distance between the parallel planes $2x - 3y + 6z = 4$ and $2x - 3y + 6z = 25$.",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "$|\\mathbf{n}| = \\sqrt{4 + 9 + 36} = 7$; distance $= \\frac{|25 - 4|}{7} = 3$. ($21$ forgets to divide by $|\\mathbf{n}|$; adding $25 + 4$ treats the planes as on opposite sides of the origin, which they are not.)",
+  "workedSolution": "1. $|\\mathbf{n}| = \\sqrt{4 + 9 + 36} = 7$; distance $= \\frac{|25 - 4|}{7} = 3$. ($21$ forgets to divide by $|\\mathbf{n}|$; adding $25 + 4$ treats the planes as on opposite sides of the origin, which they are not.)",
+  "hints": [
+   "Use $\\frac{|d_1 - d_2|}{|\\mathbf{n}|}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "21"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4.142857142857143"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each task with the key calculation.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Direction of the line of intersection of two planes"
+    },
+    {
+     "id": "L2",
+     "content": "Angle between two planes"
+    },
+    {
+     "id": "L3",
+     "content": "Point where a line meets a plane"
+    },
+    {
+     "id": "L4",
+     "content": "Distance from a point to a plane"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "substitute the line's general point into the plane"
+    },
+    {
+     "id": "R4",
+     "content": "|px₁ + qy₁ + sz₁ − d| ÷ |n|"
+    },
+    {
+     "id": "R1",
+     "content": "cross product of the two normals"
+    },
+    {
+     "id": "R2",
+     "content": "scalar product of the two normals"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Normals carry almost all the information about a plane: their scalar product gives angles, their cross product gives directions.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The acute angle between two planes is equal to the acute angle between their normal vectors.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "Turning both planes turns both normals by the same angle, so $\\cos\\theta = \\frac{|\\mathbf{n}_1 \\cdot \\mathbf{n}_2|}{|\\mathbf{n}_1||\\mathbf{n}_2|}$ gives the angle between the planes.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Two non-parallel planes have normals $\\mathbf{n}_1$ and $\\mathbf{n}_2$. Which vector gives the direction of their line of intersection?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\mathbf{n}_1 + \\mathbf{n}_2$",
+    "rationale": "The sum of the normals is not perpendicular to them in general."
+   },
+   {
+    "key": "B",
+    "content": "$\\mathbf{n}_1 - \\mathbf{n}_2$",
+    "rationale": "The difference of the normals is not perpendicular to them in general."
+   },
+   {
+    "key": "C",
+    "content": "$\\mathbf{n}_1 \\times \\mathbf{n}_2$",
+    "correct": true,
+    "rationale": "Correct: the line lies in both planes, so it is perpendicular to both normals."
+   },
+   {
+    "key": "D",
+    "content": "$\\mathbf{n}_1 \\cdot \\mathbf{n}_2$",
+    "rationale": "This is a scalar, used for the angle between the planes."
+   }
+  ],
+  "explanation": "A direction perpendicular to both $\\mathbf{n}_1$ and $\\mathbf{n}_2$ is their vector product.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q14",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Show that the line $\\mathbf{r} = (\\mathbf{i} + 2\\mathbf{k}) + t(2\\mathbf{i} + \\mathbf{j} - \\mathbf{k})$ lies in the plane $x - y + z = 3$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 substitutes the general point (1 + 2t, t, 2 − t) into the plane (or uses b · n and a point).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A1 obtains (1 + 2t) − t + (2 − t) = 3 for all t (or b · n = 0 and the point (1, 0, 2) satisfies the plane).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 concludes that every point of the line is in the plane.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "General point of the line: $(1 + 2t,\\; t,\\; 2 - t)$.\n$$\n(1 + 2t) - t + (2 - t) = 3\n$$\nThis holds for every value of $t$, so every point of the line lies in the plane. (Equivalently: $(2, 1, -1) \\cdot (1, -1, 1) = 0$ and $(1, 0, 2)$ satisfies $1 - 0 + 2 = 3$.)"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Either substitute the general point, or show both b · n = 0 and that one point is in the plane.",
+  "hints": [
+   "Write the general point of the line."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Describe how to find the foot of the perpendicular from a point P to a plane without using the distance formula.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Form the line through P with direction the normal n of the plane: r = p + tn.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Substitute its general point into the plane's equation, solve for t, and substitute back to get the foot F.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The perpendicular from P is along the normal, so write the line r = p + tn. Substituting (x, y, z) of this line into px + qy + sz = d gives one value of t; putting it back into the line gives the foot F, and |PF| is the distance."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The perpendicular from a point to a plane runs along the normal.",
+  "hints": [
+   "Which direction is perpendicular to the plane?"
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The line $\\mathbf{r} = (\\mathbf{i} + 2\\mathbf{j}) + t(k\\mathbf{i} + \\mathbf{j} + 2\\mathbf{k})$ is parallel to the plane $3x + y - 2z = 7$. Find $k$.",
+  "answerSpec": {
+   "value": 1
+  },
+  "explanation": "Parallel means the direction is perpendicular to the normal: $3k + 1 - 4 = 0$, so $k = 1$. (The point $(1, 2, 0)$ gives $3 + 2 = 5 \\ne 7$, so the line is parallel to the plane and does not lie in it.)",
+  "workedSolution": "1. Parallel means the direction is perpendicular to the normal: $3k + 1 - 4 = 0$, so $k = 1$. (The point $(1, 2, 0)$ gives $3 + 2 = 5 \\ne 7$, so the line is parallel to the plane and does not lie in it.)",
+  "hints": [
+   "b · n = 0."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "vectors.lines-planes.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The line $L$ has equation $\\mathbf{r} = (\\mathbf{j} - 2\\mathbf{k}) + t(3\\mathbf{i} + \\mathbf{j} + 4\\mathbf{k})$ and the plane $\\Pi$ has equation $2x + y + z = 21$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the coordinates of the point where L meets Π.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}}, {{blank:z}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      },
+      {
+       "id": "z",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "6"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "3"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "z",
+       "accepted": [
+        "6"
+       ],
+       "tolerance": 0
+      }
+     ]
+    },
+    "explanation": "$2(3t) + (1 + t) + (-2 + 4t) = 11t - 1 = 21$, so $t = 2$: point $(6, 3, 6)$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the acute angle between L and Π, in degrees correct to 1 decimal place.",
+    "payload": {
+     "unitHint": "°"
+    },
+    "answerSpec": {
+     "value": 61.72750578668795,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "°",
+       "degrees",
+       "degree",
+       "deg"
+      ]
+     }
+    },
+    "explanation": "$\\mathbf{b} \\cdot \\mathbf{n} = 6 + 1 + 4 = 11$; $\\sin\\phi = \\frac{11}{\\sqrt{26}\\sqrt{6}}$, $\\phi = 61.7°$.",
+    "workedSolution": "1. $\\mathbf{b} \\cdot \\mathbf{n} = 6 + 1 + 4 = 11$; $\\sin\\phi = \\frac{11}{\\sqrt{26}\\sqrt{6}}$, $\\phi = 61.7°$."
+   }
+  ],
+  "explanation": "Substitute the general point for the intersection; use sine for the angle with a plane.",
+  "hints": [
+   "Substitute (3t, 1 + t, −2 + 4t).",
+   "sin φ = |b · n| / (|b||n|)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "6"
+      },
+      {
+       "blankId": "y",
+       "text": "3"
+      },
+      {
+       "blankId": "z",
+       "text": "6"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "61.7"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "3"
+       },
+       {
+        "blankId": "y",
+        "text": "2"
+       },
+       {
+        "blankId": "z",
+        "text": "2"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "28.3"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "vectors.lines-planes.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.vectors.lines-planes"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "The planes $\\Pi_1$ and $\\Pi_2$ have equations $x + 2y + 2z = 9$ and $3y + 4z = 10$ respectively. The point $A$ is $(5, 6, -1)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the acute angle between Π₁ and Π₂, in degrees correct to 1 decimal place.",
+    "payload": {
+     "unitHint": "°"
+    },
+    "answerSpec": {
+     "value": 21.039469781317237,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "°",
+       "degrees",
+       "degree",
+       "deg"
+      ]
+     }
+    },
+    "explanation": "$\\mathbf{n}_1 \\cdot \\mathbf{n}_2 = 0 + 6 + 8 = 14$, $|\\mathbf{n}_1| = 3$, $|\\mathbf{n}_2| = 5$: $\\cos\\theta = \\frac{14}{15}$, $\\theta = 21.0°$.",
+    "workedSolution": "1. $\\mathbf{n}_1 \\cdot \\mathbf{n}_2 = 0 + 6 + 8 = 14$, $|\\mathbf{n}_1| = 3$, $|\\mathbf{n}_2| = 5$: $\\cos\\theta = \\frac{14}{15}$, $\\theta = 21.0°$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "The planes meet in the line $L$. A direction vector of $L$ is $2\\mathbf{i} + p\\mathbf{j} + q\\mathbf{k}$. Find $p$ and $q$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "-4"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "3"
+       ],
+       "tolerance": 0
+      }
+     ]
+    },
+    "explanation": "$(1, 2, 2) \\times (0, 3, 4) = (8 - 6,\\; 0 - 4,\\; 3 - 0) = (2, -4, 3)$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the point $(3, 2, 1)$ lies on $L$, and write down a vector equation of $L$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 substitutes into both planes: 3 + 4 + 2 = 9 and 6 + 4 = 10.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 r = (3i + 2j + k) + s(2i − 4j + 3k).",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$\\Pi_1$: $3 + 2(2) + 2(1) = 9$; $\\Pi_2$: $3(2) + 4(1) = 10$. The point is in both planes, so it is on $L$:\n$$\n\\mathbf{r} = (3\\mathbf{i} + 2\\mathbf{j} + \\mathbf{k}) + s(2\\mathbf{i} - 4\\mathbf{j} + 3\\mathbf{k})\n$$"
+    },
+    "explanation": "A point on the line of intersection must satisfy both plane equations."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the perpendicular distance from A to Π₁.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "$\\frac{|5 + 12 - 2 - 9|}{3} = \\frac{6}{3} = 2$.",
+    "workedSolution": "1. $\\frac{|5 + 12 - 2 - 9|}{3} = \\frac{6}{3} = 2$."
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the coordinates of the foot of the perpendicular from A to Π₁, correct to 3 significant figures.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}}, {{blank:z}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      },
+      {
+       "id": "z",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "4.33"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "4.67"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "z",
+       "accepted": [
+        "-2.33"
+       ],
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "Line $(5 + t, 6 + 2t, -1 + 2t)$ in $\\Pi_1$: $15 + 9t = 9$, $t = -\\frac{2}{3}$. Foot $= \\left(\\frac{13}{3}, \\frac{14}{3}, -\\frac{7}{3}\\right) = (4.33, 4.67, -2.33)$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the direction of L must be perpendicular to both normal vectors.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "L lies in Π₁, so its direction is perpendicular to the normal of Π₁.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "L also lies in Π₂, so it is perpendicular to the normal of Π₂ as well; hence it is parallel to n₁ × n₂.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Every direction within a plane is perpendicular to that plane's normal. L is in both planes, so its direction is perpendicular to n₁ and to n₂, which is the direction of n₁ × n₂."
+    },
+    "explanation": "Lines in a plane are perpendicular to its normal."
+   }
+  ],
+  "explanation": "Normals give the angle (dot product) and the direction of intersection (cross product); the normal line from A gives the distance and the foot.",
+  "hints": [
+   "n₁ = (1, 2, 2), n₂ = (0, 3, 4).",
+   "The perpendicular from A runs along n₁."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "21.0"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "-4"
+      },
+      {
+       "blankId": "q",
+       "text": "3"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "4.33"
+      },
+      {
+       "blankId": "y",
+       "text": "4.67"
+      },
+      {
+       "blankId": "z",
+       "text": "-2.33"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "69.0"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "4"
+       },
+       {
+        "blankId": "q",
+        "text": "-3"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "5"
+       },
+       {
+        "blankId": "y",
+        "text": "6"
+       },
+       {
+        "blankId": "z",
+        "text": "-1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

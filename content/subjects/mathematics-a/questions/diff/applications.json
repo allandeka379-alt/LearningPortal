@@ -1,0 +1,1232 @@
+[
+ {
+  "key": "diff.applications.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "At a point P on a curve the gradient of the tangent is 4. What is the gradient of the normal at P?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$-\\tfrac{1}{4}$",
+    "correct": true,
+    "rationale": "Correct: perpendicular gradients multiply to −1, so the normal gradient is −1 ÷ 4."
+   },
+   {
+    "key": "B",
+    "content": "$-4$",
+    "rationale": "Only the sign has been changed; the normal gradient is the negative reciprocal."
+   },
+   {
+    "key": "C",
+    "content": "$\\tfrac{1}{4}$",
+    "rationale": "The reciprocal is right but the sign must change too: 4 × 1/4 = 1, not −1."
+   },
+   {
+    "key": "D",
+    "content": "$4$",
+    "rationale": "That is the tangent's gradient; the normal is perpendicular to the tangent."
+   }
+  ],
+  "explanation": "The normal is perpendicular to the tangent, so $m_{\\text{normal}} = -\\dfrac{1}{m_{\\text{tangent}}} = -\\dfrac{1}{4}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The tangent to the curve $y = x^{2} - 5x + 3$ at the point where $x = 4$ meets the $y$-axis at $(0, c)$. Find $c$.",
+  "payload": {
+   "answerPrefix": "c ="
+  },
+  "answerSpec": {
+   "value": -13
+  },
+  "explanation": "At $x = 4$: $y = 16 - 20 + 3 = -1$ and $\\frac{dy}{dx} = 2x - 5 = 3$. Tangent: $y + 1 = 3(x - 4)$, i.e. $y = 3x - 13$, so $c = -13$.",
+  "workedSolution": "1. At $x = 4$: $y = 16 - 20 + 3 = -1$ and $\\frac{dy}{dx} = 2x - 5 = 3$. Tangent: $y + 1 = 3(x - 4)$, i.e. $y = 3x - 13$, so $c = -13$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-13"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "15"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q03",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Find the equation of the normal to the curve $y = \\dfrac{2}{x}$ at the point $(1, 2)$. Give it in the form ax + by + c = 0 with integers a, b, c.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "x-2y+3=0"
+    },
+    {
+     "value": "-x+2y-3=0"
+    },
+    {
+     "value": "2y-x-3=0"
+    },
+    {
+     "value": "x-2y=-3"
+    },
+    {
+     "value": "2y=x+3"
+    },
+    {
+     "value": "y=0.5x+1.5"
+    },
+    {
+     "value": "y=x/2+3/2"
+    },
+    {
+     "value": "y=1/2x+3/2"
+    },
+    {
+     "value": "y=(x+3)/2"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$\\dfrac{dy}{dx} = -\\dfrac{2}{x^{2}} = -2$ at $x = 1$, so the normal gradient is $\\frac{1}{2}$. Normal: $y - 2 = \\frac{1}{2}(x - 1)$, i.e. $2y - 4 = x - 1$, so $x - 2y + 3 = 0$. (2x + y − 4 = 0 is the tangent.)",
+  "hints": [
+   "Find the tangent gradient first.",
+   "The normal gradient is the negative reciprocal."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "x-2y+3=0"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "2x+y-4=0"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Find the $x$-coordinates of the two points on $y = x^{3} - 12x$ at which the gradient is 15. Give the smaller value first.",
+  "payload": {
+   "template": "x = {{blank:a}} and x = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "-3"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "3"
+     ]
+    }
+   ]
+  },
+  "explanation": "$\\dfrac{dy}{dx} = 3x^{2} - 12 = 15$ gives $x^{2} = 9$, so $x = -3$ or $x = 3$.",
+  "hints": [
+   "Set dy/dx equal to 15 and solve."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "-3"
+    },
+    {
+     "blankId": "b",
+     "text": "3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "3"
+     },
+     {
+      "blankId": "b",
+      "text": "9"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For which values of $x$ is $f(x) = 5 - 2x - x^{2}$ an increasing function?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$x > -1$",
+    "rationale": "This is where $f'(x) < 0$, so $f$ is decreasing there."
+   },
+   {
+    "key": "B",
+    "content": "$x < 1$",
+    "rationale": "Sign slip solving $-2 - 2x > 0$: it gives $-2x > 2$, so $x < -1$."
+   },
+   {
+    "key": "C",
+    "content": "$x < -1$",
+    "correct": true,
+    "rationale": "Correct: $f'(x) = -2 - 2x > 0$ when $x < -1$."
+   },
+   {
+    "key": "D",
+    "content": "$-1 - \\sqrt{6} < x < -1 + \\sqrt{6}$",
+    "rationale": "These are where $f(x) > 0$, not where $f'(x) > 0$."
+   }
+  ],
+  "explanation": "$f'(x) = -2 - 2x$. $f'(x) > 0 \\iff -2x > 2 \\iff x < -1$ (dividing by $-2$ reverses the inequality). The graph is an inverted parabola with vertex at $x = -1$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The function $f(x) = 2x^{3} - 3x^{2} - 36x + 1$ is decreasing for $p < x < q$. Find $p$ and $q$.",
+  "payload": {
+   "template": "p = {{blank:p}}, q = {{blank:q}}",
+   "blanks": [
+    {
+     "id": "p",
+     "input": "number"
+    },
+    {
+     "id": "q",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p",
+     "accepted": [
+      "-2"
+     ]
+    },
+    {
+     "id": "q",
+     "accepted": [
+      "3"
+     ]
+    }
+   ]
+  },
+  "explanation": "$f'(x) = 6x^{2} - 6x - 36 = 6(x - 3)(x + 2)$. This U-shaped quadratic is negative between its roots, so $f$ decreases for $-2 < x < 3$.",
+  "hints": [
+   "Factorise f′(x) after taking out 6.",
+   "A positive quadratic is negative between its roots."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p",
+     "text": "-2"
+    },
+    {
+     "blankId": "q",
+     "text": "3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p",
+      "text": "-3"
+     },
+     {
+      "blankId": "q",
+      "text": "2"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q07",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "Show that $f(x) = x^{3} + 3x^{2} + 5x - 4$ is an increasing function for all real $x$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "B1 differentiates: $f'(x) = 3x^{2} + 6x + 5$",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 completes the square: $f'(x) = 3(x + 1)^{2} + 2$",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 concludes $f'(x) \\geq 2 > 0$ for all $x$, so $f$ is increasing",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\nf'(x) = 3x^{2} + 6x + 5 = 3(x^{2} + 2x) + 5 = 3(x + 1)^{2} - 3 + 5 = 3(x + 1)^{2} + 2\n$$\n\nSince $(x + 1)^{2} \\geq 0$ for all $x$, $f'(x) \\geq 2 > 0$, so $f$ is an increasing function."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A completed square (or a negative discriminant, $36 - 60 < 0$, with a positive leading coefficient) shows $f'(x)$ is never zero or negative.",
+  "hints": [
+   "Complete the square on f′(x)."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The radius of a circular ink stain increases at $0.2$ cm s$^{-1}$. Find the rate at which its area is increasing when the radius is 6 cm. Give your answer correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "cm²/s"
+  },
+  "answerSpec": {
+   "value": 7.5398223686155035,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm²/s",
+     "cm^2/s",
+     "cm^2 s^-1"
+    ]
+   }
+  },
+  "explanation": "$A = \\pi r^{2}$, so $\\dfrac{dA}{dt} = 2\\pi r \\times \\dfrac{dr}{dt} = 2\\pi(6)(0.2) = 2.4\\pi \\approx 7.54$ cm$^2$ s$^{-1}$. (22.6 uses $\\pi r^{2} \\times 0.2$, the area instead of $\\frac{dA}{dr}$.)",
+  "workedSolution": "1. $A = \\pi r^{2}$, so $\\dfrac{dA}{dt} = 2\\pi r \\times \\dfrac{dr}{dt} = 2\\pi(6)(0.2) = 2.4\\pi \\approx 7.54$ cm$^2$ s$^{-1}$. (22.6 uses $\\pi r^{2} \\times 0.2$, the area instead of $\\frac{dA}{dr}$.)",
+  "hints": [
+   "dA/dt = dA/dr × dr/dt."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "7.54"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "22.6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "diff.applications.q09",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The volume of a spherical soap bubble increases at a constant rate of 20 cm$^3$ s$^{-1}$. Find the rate of increase of its radius when the radius is 4 cm, correct to 3 significant figures. ($V = \\frac{4}{3}\\pi r^{3}$.)",
+  "payload": {
+   "unitHint": "cm/s"
+  },
+  "answerSpec": {
+   "value": 0.0994718394324346,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm/s",
+     "cm s^-1",
+     "cms^-1"
+    ]
+   }
+  },
+  "explanation": "$\\dfrac{dV}{dr} = 4\\pi r^{2} = 64\\pi$ at $r = 4$. $\\dfrac{dr}{dt} = \\dfrac{dV/dt}{dV/dr} = \\dfrac{20}{64\\pi} \\approx 0.0995$ cm s$^{-1}$.",
+  "workedSolution": "1. $V = \\frac{4}{3}\\pi r^{3}$, so $\\dfrac{dV}{dr} = 4\\pi r^{2}$.\n2. At $r = 4$: $\\dfrac{dV}{dr} = 64\\pi$.\n3. $\\dfrac{dr}{dt} = 20 \\div 64\\pi = 0.0995$ cm s$^{-1}$ (3 s.f.).",
+  "hints": [
+   "Differentiate the volume formula with respect to r.",
+   "Divide the given rate by dV/dr."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.0995"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.298"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.398"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "diff.applications.q10",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The total surface area of a cube is increasing at 6 cm$^2$ s$^{-1}$. Find the rate at which the volume of the cube is increasing at the instant when the edge length is 5 cm.",
+  "payload": {
+   "unitHint": "cm³/s"
+  },
+  "answerSpec": {
+   "value": 7.5,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm³/s",
+     "cm^3/s",
+     "cm^3 s^-1"
+    ]
+   }
+  },
+  "explanation": "With edge $x$: $A = 6x^{2}$ and $V = x^{3}$. $\\dfrac{dx}{dt} = \\dfrac{6}{12x} = 0.1$ at $x = 5$; then $\\dfrac{dV}{dt} = 3x^{2} \\times 0.1 = 75 \\times 0.1 = 7.5$ cm$^3$ s$^{-1}$.",
+  "workedSolution": "1. $A = 6x^{2}$, so $\\dfrac{dA}{dx} = 12x = 60$ at $x = 5$.\n2. $\\dfrac{dx}{dt} = \\dfrac{6}{60} = 0.1$ cm s$^{-1}$.\n3. $V = x^{3}$, so $\\dfrac{dV}{dx} = 3x^{2} = 75$.\n4. $\\dfrac{dV}{dt} = 75 \\times 0.1 = 7.5$ cm$^3$ s$^{-1}$.",
+  "hints": [
+   "Use the edge length x as the link between A and V.",
+   "First find dx/dt from the area, then dV/dt."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "7.50"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "450"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.1"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The variables $x$ and $y$ are connected by $y = x^{3}$, and $x$ increases at $0.5$ units per second. How fast is $y$ increasing when $x = 2$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$24$ units per second",
+    "rationale": "This divides by the rate 0.5 instead of multiplying by it."
+   },
+   {
+    "key": "B",
+    "content": "$6$ units per second",
+    "correct": true,
+    "rationale": "Correct: $\\frac{dy}{dt} = 3x^{2} \\times 0.5 = 12 \\times 0.5$."
+   },
+   {
+    "key": "C",
+    "content": "$1.5$ units per second",
+    "rationale": "This uses $3x \\times 0.5$; the derivative of $x^{3}$ is $3x^{2}$."
+   },
+   {
+    "key": "D",
+    "content": "$4$ units per second",
+    "rationale": "This is $y \\times 0.5$, the value of $y$ instead of its derivative."
+   }
+  ],
+  "explanation": "$\\dfrac{dy}{dt} = \\dfrac{dy}{dx} \\times \\dfrac{dx}{dt} = 3x^{2} \\times 0.5$. At $x = 2$: $12 \\times 0.5 = 6$.",
+  "hints": [
+   "dy/dt = dy/dx × dx/dt."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "At a point where the tangent to a curve is horizontal, the normal is a vertical line.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The normal is perpendicular to the tangent, so a horizontal tangent ($m = 0$) has a vertical normal $x = x_{1}$. Its gradient $-\\frac{1}{0}$ is undefined, so write the equation directly.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q13",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $f'(2) = 0$, then $f$ cannot be an increasing function on an interval containing $x = 2$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. $f(x) = (x - 2)^{3}$ has $f'(2) = 0$, yet it increases on every interval: $f'(x) = 3(x - 2)^{2} \\geq 0$ with equality only at the single point $x = 2$.",
+  "hints": [
+   "Think of a cubic with a horizontal point of inflexion."
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each phrase with its mathematical meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "the area is decreasing"
+    },
+    {
+     "id": "L2",
+     "content": "f is increasing"
+    },
+    {
+     "id": "L3",
+     "content": "the tangent at the point is horizontal"
+    },
+    {
+     "id": "L4",
+     "content": "the radius grows at a steady rate"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\dfrac{dy}{dx} = 0$ there"
+    },
+    {
+     "id": "R4",
+     "content": "$\\dfrac{dr}{dt}$ is constant"
+    },
+    {
+     "id": "R1",
+     "content": "$\\dfrac{dA}{dt} < 0$"
+    },
+    {
+     "id": "R2",
+     "content": "$f'(x) > 0$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "A rate of change with time is a derivative with respect to t; its sign tells you whether the quantity is growing or shrinking.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The tangent to the curve $y = x^{2} + 3$ at the point $P(p, p^{2} + 3)$, where $p > 0$, passes through the origin. Find $p$, correct to 3 significant figures.",
+  "payload": {
+   "answerPrefix": "p ="
+  },
+  "answerSpec": {
+   "value": 1.7320508075688772,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "The tangent at $P$ has gradient $2p$: $y - (p^{2} + 3) = 2p(x - p)$. It passes through $(0, 0)$: $-(p^{2} + 3) = -2p^{2}$, so $p^{2} = 3$ and $p = \\sqrt{3} \\approx 1.73$.",
+  "workedSolution": "1. The tangent at $P$ has gradient $2p$: $y - (p^{2} + 3) = 2p(x - p)$. It passes through $(0, 0)$: $-(p^{2} + 3) = -2p^{2}$, so $p^{2} = 3$ and $p = \\sqrt{3} \\approx 1.73$.",
+  "hints": [
+   "Write the tangent at a general point P in terms of p.",
+   "Substitute x = 0, y = 0."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1.73"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.5"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "diff.applications.q16",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Water drains from an inverted conical funnel at 3 cm$^3$ s$^{-1}$. When the depth of water is $h$ cm, the radius of the water surface is $\\frac{1}{2}h$ cm, so the volume is $V = \\frac{1}{12}\\pi h^{3}$. Find the rate at which the depth is decreasing when $h = 6$, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "cm/s"
+  },
+  "answerSpec": {
+   "value": 0.1061032953945969,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "cm/s",
+     "cm s^-1",
+     "cms^-1"
+    ]
+   }
+  },
+  "explanation": "$\\dfrac{dV}{dh} = \\frac{1}{4}\\pi h^{2} = 9\\pi$ at $h = 6$. $\\dfrac{dh}{dt} = \\dfrac{-3}{9\\pi} = -0.106$, so the depth is decreasing at $0.106$ cm s$^{-1}$.",
+  "workedSolution": "1. $V = \\frac{1}{12}\\pi h^{3}$, so $\\dfrac{dV}{dh} = \\frac{1}{4}\\pi h^{2}$.\n2. At $h = 6$: $\\dfrac{dV}{dh} = 9\\pi$.\n3. $\\dfrac{dV}{dt} = -3$, so $\\dfrac{dh}{dt} = \\dfrac{-3}{9\\pi} = -0.106$ cm s$^{-1}$.\n4. The depth is decreasing at 0.106 cm per second.",
+  "hints": [
+   "The volume is falling, so dV/dt = −3.",
+   "Divide dV/dt by dV/dh."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.106"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.0265"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.333"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "diff.applications.q17",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The normal to the curve $y = x^{2}$ at the point $(1, 1)$ meets the curve again at the point $Q$. Find the coordinates of $Q$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "$(-1,\\ 1)$",
+    "rationale": "This is the reflection of the point in the y-axis; it does not lie on the normal."
+   },
+   {
+    "key": "B",
+    "content": "$(1.5,\\ 2.25)$",
+    "rationale": "Sign error: the other root of $2x^{2} + x - 3 = 0$ is $x = -\\frac{3}{2}$."
+   },
+   {
+    "key": "C",
+    "content": "$(-0.5,\\ 0.25)$",
+    "rationale": "This uses the tangent $y = 2x - 1$ or another slip; the tangent meets $y = x^{2}$ only at $(1, 1)$."
+   },
+   {
+    "key": "D",
+    "content": "$(-1.5,\\ 2.25)$",
+    "correct": true,
+    "rationale": "Correct: the normal $y = -\\frac{1}{2}x + \\frac{3}{2}$ meets $y = x^{2}$ where $2x^{2} + x - 3 = 0$."
+   }
+  ],
+  "explanation": "Gradient of the curve at $x = 1$: 2, so the normal gradient is $-\\frac{1}{2}$: $y = -\\frac{1}{2}x + \\frac{3}{2}$. Then $x^{2} = -\\frac{1}{2}x + \\frac{3}{2}$ gives $2x^{2} + x - 3 = (2x + 3)(x - 1) = 0$, so $x = -1.5$, $y = 2.25$.",
+  "hints": [
+   "Find the normal's equation.",
+   "Solve it simultaneously with y = x²; you already know one root."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The point $P(2, 1)$ lies on the curve $y = x^{3} - 4x + 1$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the equation of the tangent at P, in the form y = mx + c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "y=8x-15"
+      },
+      {
+       "value": "y=-15+8x"
+      },
+      {
+       "value": "8x-y-15=0"
+      },
+      {
+       "value": "8x-y=15"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\frac{dy}{dx} = 3x^{2} - 4 = 8$ at $x = 2$. Tangent: $y - 1 = 8(x - 2)$, so $y = 8x - 15$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the equation of the normal at P, in the form ax + by = c with integers a, b, c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "x+8y=10"
+      },
+      {
+       "value": "8y+x=10"
+      },
+      {
+       "value": "x+8y-10=0"
+      },
+      {
+       "value": "y=-x/8+5/4"
+      },
+      {
+       "value": "y=-1/8x+5/4"
+      },
+      {
+       "value": "y=-0.125x+1.25"
+      },
+      {
+       "value": "-x-8y=-10"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "Normal gradient $-\\frac{1}{8}$: $y - 1 = -\\frac{1}{8}(x - 2)$, so $8y - 8 = -x + 2$, i.e. $x + 8y = 10$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the x-coordinate of the point where the tangent crosses the x-axis, as an exact decimal.",
+    "payload": {
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 1.875,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$0 = 8x - 15$ gives $x = \\frac{15}{8} = 1.875$.",
+    "workedSolution": "1. $0 = 8x - 15$ gives $x = \\frac{15}{8} = 1.875$."
+   }
+  ],
+  "explanation": "Point, gradient, line: the same three steps for the tangent and the normal, with the negative reciprocal gradient for the normal.",
+  "hints": [
+   "Evaluate dy/dx at x = 2.",
+   "The normal gradient is −1/8."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "y=8x-15"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "x+8y=10"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.875"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "y=8x+1"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "x+8y=2"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "-1.875"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "diff.applications.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 5,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Oil leaking from a truck at a Hwange depot forms a circular patch. The area of the patch increases at a constant rate of 15 cm$^2$ s$^{-1}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the rate at which the radius is increasing when the radius is 4 cm, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "cm/s"
+    },
+    "answerSpec": {
+     "value": 0.5968310365946076,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm/s",
+       "cm s^-1",
+       "cms^-1"
+      ]
+     }
+    },
+    "explanation": "$\\dfrac{dA}{dr} = 2\\pi r = 8\\pi$, so $\\dfrac{dr}{dt} = \\dfrac{15}{8\\pi} \\approx 0.597$ cm s$^{-1}$. (1.875 divides by $2r$ instead of $2\\pi r$.)",
+    "workedSolution": "1. $\\dfrac{dA}{dr} = 2\\pi r = 8\\pi$, so $\\dfrac{dr}{dt} = \\dfrac{15}{8\\pi} \\approx 0.597$ cm s$^{-1}$. (1.875 divides by $2r$ instead of $2\\pi r$.)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the rate at which the circumference is increasing at the same instant.",
+    "payload": {
+     "unitHint": "cm/s"
+    },
+    "answerSpec": {
+     "value": 3.75,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm/s",
+       "cm s^-1",
+       "cms^-1"
+      ]
+     }
+    },
+    "explanation": "$C = 2\\pi r$, so $\\dfrac{dC}{dt} = 2\\pi\\dfrac{dr}{dt} = 2\\pi \\times \\dfrac{15}{8\\pi} = \\dfrac{15}{4} = 3.75$ cm s$^{-1}$.",
+    "workedSolution": "1. $C = 2\\pi r$, so $\\dfrac{dC}{dt} = 2\\pi\\dfrac{dr}{dt} = 2\\pi \\times \\dfrac{15}{8\\pi} = \\dfrac{15}{4} = 3.75$ cm s$^{-1}$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\dfrac{dr}{dt}$ is inversely proportional to $r$, and explain what this means as the patch grows.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 obtains $\\dfrac{dr}{dt} = \\dfrac{15}{2\\pi r}$, i.e. $\\dfrac{k}{r}$ with $k = \\dfrac{15}{2\\pi}$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 states that the radius grows more and more slowly as the patch gets bigger",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\frac{dr}{dt} = \\frac{dA/dt}{dA/dr} = \\frac{15}{2\\pi r}\n$$\n\nThis is a constant divided by r, so the rate is inversely proportional to r: the larger the patch, the more slowly its radius increases."
+    },
+    "explanation": "A constant area rate spread around a longer and longer edge means the edge moves outwards more slowly."
+   }
+  ],
+  "explanation": "Connected rates: $\\dfrac{dA}{dt} = \\dfrac{dA}{dr}\\dfrac{dr}{dt}$ links the given area rate to the radius rate.",
+  "hints": [
+   "Use A = πr².",
+   "dr/dt = (dA/dt) ÷ (dA/dr)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.597"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3.75"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "1.875"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.597"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "diff.applications.q20",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.diff.applications"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The volume $V$ m$^3$ of water in a Masvingo reservoir satisfies $\\dfrac{dV}{dt} = -40$ at noon, with $t$ in hours. Farai says \"the reservoir holds $-40$ m$^3$ at noon\". Explain his error and what the value means.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "States that −40 is a rate of change, not an amount of water",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Interprets it: at noon the volume is decreasing at 40 m³ per hour",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: dV/dt is the rate of change of the volume, not the volume itself. The value −40 means that at noon the amount of water is falling at 40 cubic metres per hour."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A derivative with respect to time is a rate; its sign shows whether the quantity is increasing or decreasing.",
+  "hints": [
+   "What does dV/dt measure?"
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ }
+]

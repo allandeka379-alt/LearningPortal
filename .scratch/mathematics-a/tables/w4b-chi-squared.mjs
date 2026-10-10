@@ -1,0 +1,13 @@
+import { chi2Stat, chi2Table, chi2Cdf, expectedTable, binom, poisson } from "../lib.mjs";
+const o1 = [32, 21, 18, 20, 29];
+console.log("Ex1", chi2Stat(o1, o1.map(() => 24)), chi2Table(4, 0.05));
+const o2 = [3, 10, 25, 28, 14];
+const p = (0 * 3 + 1 * 10 + 2 * 25 + 3 * 28 + 4 * 14) / 320;
+const e2 = [0, 1, 2, 3, 4].map((r) => 80 * binom.pmf(4, p, r));
+console.log("Ex2 p", p, e2);
+const oc = [3 + 10, 25, 28, 14], ec = [e2[0] + e2[1], e2[2], e2[3], e2[4]];
+console.log(" combined", ec, chi2Stat(oc, ec), "terms", oc.map((o, i) => (o - ec[i]) ** 2 / ec[i]), "crit nu2", chi2Table(2, 0.05));
+const t3 = [[28, 17, 35], [22, 23, 75]];
+const e3 = expectedTable(t3);
+console.log("Ex3", e3, chi2Stat(t3.flat(), e3.flat()), "terms", t3.flat().map((o, i) => (o - e3.flat()[i]) ** 2 / e3.flat()[i]), chi2Table(2, 0.05), chi2Table(2, 0.01));
+console.log("crits", [1, 2, 3, 4, 5, 6].map((n) => [chi2Table(n, 0.05), chi2Table(n, 0.01), chi2Table(n, 0.1)]));

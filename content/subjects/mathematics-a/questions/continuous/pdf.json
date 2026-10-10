@@ -1,0 +1,1125 @@
+[
+ {
+  "key": "continuous.pdf.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which statement is true for every probability density function $f$ of a continuous random variable $X$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$f(x) \\ge 0$ for all $x$, and the total area under the graph of $f$ is 1.",
+    "correct": true,
+    "rationale": "Correct: these are the two defining properties of a pdf."
+   },
+   {
+    "key": "B",
+    "content": "$0 \\le f(x) \\le 1$ for all $x$, since $f(x)$ is a probability.",
+    "rationale": "$f(x)$ is a density, not a probability; it can exceed 1 (for example $f(x) = 2x$ near $x = 1$)."
+   },
+   {
+    "key": "C",
+    "content": "$f(x) = \\mathrm{P}(X = x)$ for every value $x$ in the range of $X$.",
+    "rationale": "For a continuous variable $\\mathrm{P}(X = x) = 0$; probabilities are areas."
+   },
+   {
+    "key": "D",
+    "content": "The sum of the values of $f(x)$ over the range of $X$ equals 1.",
+    "rationale": "Values of a continuous density cannot be summed; the integral (area) equals 1."
+   }
+  ],
+  "explanation": "A pdf is non-negative and $\\int f(x)\\,\\mathrm{d}x = 1$ over all values. Probabilities are areas: $\\mathrm{P}(a < X < b) = \\int_a^b f(x)\\,\\mathrm{d}x$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q02",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The value of a probability density function at a point can be greater than 1.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "A density measures probability per unit of $x$. For example $f(x) = 4x$ on $0 \\le x \\le \\frac{1}{\\sqrt{2}}$ is a valid pdf with $f$ up to about 2.83.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The random variable $X$ has pdf $f(x) = kx$ for $0 \\le x \\le 4$ and $f(x) = 0$ otherwise. Find the value of $k$.",
+  "answerSpec": {
+   "value": 0.125,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\int_0^4 kx\\,\\mathrm{d}x = k\\left[\\frac{x^2}{2}\\right]_0^4 = 8k = 1$, so $k = \\frac{1}{8} = 0.125$. (0.25 uses the width of the interval; 8 inverts the wrong way.)",
+  "workedSolution": "1. $\\int_0^4 kx\\,\\mathrm{d}x = k\\left[\\frac{x^2}{2}\\right]_0^4 = 8k = 1$, so $k = \\frac{1}{8} = 0.125$. (0.25 uses the width of the interval; 8 inverts the wrong way.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.125"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.25"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.0625"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = \\frac{x}{18}$ for $0 \\le x \\le 6$ and $0$ otherwise. Find $\\mathrm{P}(2 < X < 4)$, giving your answer as a fraction or correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.3333333333333333,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\int_2^4 \\frac{x}{18}\\,\\mathrm{d}x = \\left[\\frac{x^2}{36}\\right]_2^4 = \\frac{16 - 4}{36} = \\frac{1}{3}$. (Subtracting $f(4) - f(2) = \\frac{1}{9}$ uses heights, not areas.)",
+  "workedSolution": "1. $\\int_2^4 \\frac{x}{18}\\,\\mathrm{d}x = \\left[\\frac{x^2}{36}\\right]_2^4 = \\frac{16 - 4}{36} = \\frac{1}{3}$. (Subtracting $f(4) - f(2) = \\frac{1}{9}$ uses heights, not areas.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.333"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.1111111111111111"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.1111111111111111"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = k(1 + x^2)$ for $0 \\le x \\le 3$ and $0$ otherwise. Find the exact value of $k$, as a fraction.",
+  "answerSpec": {
+   "value": 0.08333333333333333,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$\\int_0^3 k(1 + x^2)\\,\\mathrm{d}x = k\\left[x + \\frac{x^3}{3}\\right]_0^3 = k(3 + 9) = 12k = 1$, so $k = \\frac{1}{12}$. ($\\frac{1}{10}$ comes from $f$-values $1 + 9$ rather than integrating.)",
+  "workedSolution": "1. $\\int_0^3 k(1 + x^2)\\,\\mathrm{d}x = k\\left[x + \\frac{x^3}{3}\\right]_0^3 = k(3 + 9) = 12k = 1$, so $k = \\frac{1}{12}$. ($\\frac{1}{10}$ comes from $f$-values $1 + 9$ rather than integrating.)",
+  "hints": [
+   "Set the total area equal to 1.",
+   "Integrate 1 + x² term by term."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0833"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.3333333333333333"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "$X$ has pdf $f(x) = \\frac{3}{8}x^2$ for $0 \\le x \\le 2$ and $0$ otherwise. Find $\\mathrm{E}(X)$ and $\\mathrm{Var}(X)$.",
+  "payload": {
+   "template": "E(X) = {{blank:e}}, Var(X) = {{blank:v}}",
+   "blanks": [
+    {
+     "id": "e",
+     "input": "number"
+    },
+    {
+     "id": "v",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "e",
+     "accepted": [
+      "1.5"
+     ],
+     "tolerance": 0.001
+    },
+    {
+     "id": "v",
+     "accepted": [
+      "0.15"
+     ],
+     "tolerance": 0.001
+    }
+   ]
+  },
+  "explanation": "$\\mathrm{E}(X) = \\int_0^2 \\frac{3}{8}x^3\\,\\mathrm{d}x = \\frac{3}{8} \\times 4 = 1.5$. $\\mathrm{E}(X^2) = \\int_0^2 \\frac{3}{8}x^4\\,\\mathrm{d}x = \\frac{3}{8} \\times \\frac{32}{5} = 2.4$, so $\\mathrm{Var}(X) = 2.4 - 1.5^2 = 0.15$. (2.4 is $\\mathrm{E}(X^2)$, not the variance.)",
+  "hints": [
+   "Multiply $f(x)$ by $x$, then by $x^2$, and integrate.",
+   "Subtract $[\\mathrm{E}(X)]^2$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "e",
+     "text": "1.5"
+    },
+    {
+     "blankId": "v",
+     "text": "0.15"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "e",
+      "text": "1"
+     },
+     {
+      "blankId": "v",
+      "text": "2.4"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The time, in minutes, between buses at a stop in Chitungwiza has pdf $f(x) = \\frac{x}{8}$ for $0 \\le x \\le 4$ and $0$ otherwise. Find the median time, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "min"
+  },
+  "answerSpec": {
+   "value": 2.8284271247461903,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "min",
+     "minutes",
+     "mins"
+    ]
+   }
+  },
+  "explanation": "$\\int_0^m \\frac{x}{8}\\,\\mathrm{d}x = \\frac{m^2}{16} = 0.5$, so $m^2 = 8$ and $m = 2\\sqrt{2} = 2.828$, i.e. $2.83$ minutes. (2 is the midpoint of the range, which is the median only for a symmetrical pdf; $\\frac{8}{3}$ is the mean.)",
+  "workedSolution": "1. $\\int_0^m \\frac{x}{8}\\,\\mathrm{d}x = \\frac{m^2}{16} = 0.5$, so $m^2 = 8$ and $m = 2\\sqrt{2} = 2.828$, i.e. $2.83$ minutes. (2 is the midpoint of the range, which is the median only for a symmetrical pdf; $\\frac{8}{3}$ is the mean.)",
+  "hints": [
+   "Area from 0 to m equals 0.5."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.83"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2.6666666666666665"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "continuous.pdf.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = \\dfrac{k}{x^3}$ for $x \\ge 2$ and $0$ otherwise. Find $k$ by integration, and hence find $\\mathrm{P}(X > 5)$ (enter this probability).",
+  "answerSpec": {
+   "value": 0.16,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\int_2^\\infty kx^{-3}\\,\\mathrm{d}x = \\left[-\\frac{k}{2x^2}\\right]_2^\\infty = \\frac{k}{8} = 1$, so $k = 8$. $\\mathrm{P}(X > 5) = \\int_5^\\infty 8x^{-3}\\,\\mathrm{d}x = \\frac{8}{2 \\times 25} = 0.16$. (0.064 is $f(5)$; 0.84 is $\\mathrm{P}(X < 5)$.)",
+  "workedSolution": "1. $\\int_2^\\infty kx^{-3}\\,\\mathrm{d}x = \\left[-\\frac{k}{2x^2}\\right]_2^\\infty = \\frac{k}{8} = 1$, so $k = 8$. $\\mathrm{P}(X > 5) = \\int_5^\\infty 8x^{-3}\\,\\mathrm{d}x = \\frac{8}{2 \\times 25} = 0.16$. (0.064 is $f(5)$; 0.84 is $\\mathrm{P}(X < 5)$.)",
+  "hints": [
+   "$\\int x^{-3}\\,\\mathrm{d}x = -\\frac{1}{2}x^{-2}$.",
+   "As x → ∞ the term tends to 0."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.160"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.064"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.84"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = \\dfrac{8}{x^3}$ for $x \\ge 2$ and $0$ otherwise. Find $\\mathrm{E}(X)$.",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "$\\mathrm{E}(X) = \\int_2^\\infty x \\cdot \\frac{8}{x^3}\\,\\mathrm{d}x = \\int_2^\\infty 8x^{-2}\\,\\mathrm{d}x = \\left[-\\frac{8}{x}\\right]_2^\\infty = 0 + 4 = 4$.",
+  "workedSolution": "1. $\\mathrm{E}(X) = \\int_2^\\infty x \\cdot \\frac{8}{x^3}\\,\\mathrm{d}x = \\int_2^\\infty 8x^{-2}\\,\\mathrm{d}x = \\left[-\\frac{8}{x}\\right]_2^\\infty = 0 + 4 = 4$.",
+  "hints": [
+   "$x f(x) = 8x^{-2}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = \\frac{4}{27}x^2(3 - x)$ for $0 \\le x \\le 3$ and $0$ otherwise. What is the mode of $X$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1.5",
+    "rationale": "1.5 is the midpoint of the range, which is not where this skewed pdf is highest."
+   },
+   {
+    "key": "B",
+    "content": "3",
+    "rationale": "$f(3) = 0$; the density is zero at the right-hand end."
+   },
+   {
+    "key": "C",
+    "content": "0",
+    "rationale": "$f(0) = 0$; the density is lowest there, not highest."
+   },
+   {
+    "key": "D",
+    "content": "2",
+    "correct": true,
+    "rationale": "Correct: $f'(x) = \\frac{4}{27}(6x - 3x^2) = 0$ at $x = 2$ (in the interval), where $f$ has a maximum, $f(2) = \\frac{16}{27}$."
+   }
+  ],
+  "explanation": "The mode is where $f(x)$ is greatest. Differentiate, set $f'(x) = 0$ and check the value lies in $[0, 3]$.",
+  "hints": [
+   "Differentiate f(x) and solve f′(x) = 0."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Each function below is defined for $0 \\le x \\le 2$ and is zero elsewhere. Which one is a valid probability density function?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$f(x) = \\frac{1}{4}x$",
+    "rationale": "Non-negative, but the total area is $\\frac{1}{2}$, not 1."
+   },
+   {
+    "key": "B",
+    "content": "$f(x) = \\frac{3}{8}x^2$",
+    "correct": true,
+    "rationale": "Correct: it is never negative and $\\int_0^2 \\frac{3}{8}x^2\\,\\mathrm{d}x = 1$."
+   },
+   {
+    "key": "C",
+    "content": "$f(x) = x - \\frac{1}{2}$",
+    "rationale": "The area is 1, but $f(x) < 0$ for $0 \\le x < \\frac{1}{2}$, which is not allowed."
+   },
+   {
+    "key": "D",
+    "content": "$f(x) = 2 - x$",
+    "rationale": "Non-negative on the interval, but the area is 2."
+   }
+  ],
+  "explanation": "Check both conditions: non-negative everywhere, and total area exactly 1.",
+  "hints": [
+   "Find each area, and check for negative values."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a continuous random variable $X$ with pdf $f$, $\\mathrm{P}(X = 2) = f(2)$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "For a continuous random variable the probability of any single value is 0 (an area of zero width). $f(2)$ is the density there, not a probability. Hence $\\mathrm{P}(X \\le 2) = \\mathrm{P}(X < 2)$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q13",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "$X$ has pdf $f(x)$ for $0 \\le x \\le 3$ (and 0 elsewhere). Match each quantity with the integral or equation used to find it.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\mathrm{E}(X)$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\mathrm{E}(X^2)$"
+    },
+    {
+     "id": "L3",
+     "content": "the median m"
+    },
+    {
+     "id": "L4",
+     "content": "$\\mathrm{P}(X > 1)$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\int_0^m f(x)\\,\\mathrm{d}x = 0.5$"
+    },
+    {
+     "id": "R4",
+     "content": "$\\int_1^3 f(x)\\,\\mathrm{d}x$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\int_0^3 x f(x)\\,\\mathrm{d}x$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\int_0^3 x^2 f(x)\\,\\mathrm{d}x$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Means multiply by $x$ (or $x^2$) before integrating over the whole range; the median and probabilities use areas between limits.",
+  "hints": [
+   "Which quantities need an extra factor of x?"
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = \\dfrac{4}{x^5}$ for $x \\ge 1$ and $0$ otherwise. Find the upper quartile of $X$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 1.4142135623730951,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$\\int_1^q 4x^{-5}\\,\\mathrm{d}x = 1 - q^{-4} = 0.75$, so $q^{-4} = 0.25$, $q^4 = 4$ and $q = \\sqrt{2} = 1.41$. ($1.07$ is the lower quartile, from $1 - q^{-4} = 0.25$.)",
+  "workedSolution": "1. $\\int_1^q 4x^{-5}\\,\\mathrm{d}x = 1 - q^{-4} = 0.75$, so $q^{-4} = 0.25$, $q^4 = 4$ and $q = \\sqrt{2} = 1.41$. ($1.07$ is the lower quartile, from $1 - q^{-4} = 0.25$.)",
+  "hints": [
+   "Integrate from 1 (the lowest value) to q.",
+   "Set the area equal to 0.75."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1.41"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.3195079107728942"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.074569931823542"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "continuous.pdf.q15",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ has pdf $f(x) = \\frac{1}{8}(4 - x)$ for $0 \\le x \\le 4$ and $0$ otherwise. Find $\\mathrm{Var}(X)$, as a fraction or correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.8888888888889126,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{E}(X) = \\frac{1}{8}\\int_0^4 (4x - x^2)\\,\\mathrm{d}x = \\frac{1}{8}\\left(32 - \\frac{64}{3}\\right) = \\frac{4}{3}$. $\\mathrm{E}(X^2) = \\frac{1}{8}\\int_0^4 (4x^2 - x^3)\\,\\mathrm{d}x = \\frac{1}{8}\\left(\\frac{256}{3} - 64\\right) = \\frac{8}{3}$. $\\mathrm{Var}(X) = \\frac{8}{3} - \\frac{16}{9} = \\frac{8}{9} = 0.889$.",
+  "workedSolution": "1. $\\mathrm{E}(X) = \\frac{1}{8}\\left[2x^2 - \\frac{x^3}{3}\\right]_0^4 = \\frac{4}{3}$.\n2. $\\mathrm{E}(X^2) = \\frac{1}{8}\\left[\\frac{4x^3}{3} - \\frac{x^4}{4}\\right]_0^4 = \\frac{8}{3}$.\n3. $\\mathrm{Var}(X) = \\frac{8}{3} - \\left(\\frac{4}{3}\\right)^2 = \\frac{8}{9}$.",
+  "hints": [
+   "Find E(X) and E(X²) separately.",
+   "Var(X) = E(X²) − [E(X)]²."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.889"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "2.6666666666666665"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "1.3333333333333333"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q16",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "$X$ has pdf $f(x) = \\frac{1}{8}(4 - x)$ for $0 \\le x \\le 4$ and $0$ otherwise. Show that the median $m$ satisfies $m^2 - 8m + 8 = 0$, and hence find $m$ exactly.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 sets up $\\int_0^m \\frac{1}{8}(4 - x)\\,\\mathrm{d}x = \\frac{1}{2}$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A1 integrates to $\\frac{1}{8}\\left(4m - \\frac{m^2}{2}\\right) = \\frac{1}{2}$ and rearranges to $m^2 - 8m + 8 = 0$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 solves to $m = 4 - 2\\sqrt{2}$, rejecting $4 + 2\\sqrt{2}$ because it is outside $[0, 4]$.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n\\int_0^m \\tfrac{1}{8}(4 - x)\\,\\mathrm{d}x = \\tfrac{1}{8}\\left[4x - \\tfrac{x^2}{2}\\right]_0^m = \\tfrac{1}{8}\\left(4m - \\tfrac{m^2}{2}\\right) = \\tfrac{1}{2}\n$$\n$$\n4m - \\tfrac{m^2}{2} = 4 \\;\\Rightarrow\\; 8m - m^2 = 8 \\;\\Rightarrow\\; m^2 - 8m + 8 = 0\n$$\n$$\nm = \\frac{8 \\pm \\sqrt{64 - 32}}{2} = 4 \\pm 2\\sqrt{2}\n$$\nSince $0 \\le m \\le 4$, $m = 4 - 2\\sqrt{2} \\approx 1.17$."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Set the area up to m equal to one half; a quadratic gives two roots, only one inside the range.",
+  "hints": [
+   "Integrate from 0 to m and set equal to 1/2."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "For the continuous random variable $X$ in a model of daily rainfall (in mm) at a station in Masvingo, the mean is 7.4 and the median is 4.1. Describe the shape of the pdf and explain what this means in context.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "States that the distribution is positively skewed (mean greater than median, long tail to the right).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Interprets: most days have small amounts of rain, but a few days have very heavy rain, which pulls the mean up.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The mean (7.4 mm) is well above the median (4.1 mm), so the pdf is positively skewed with a long right-hand tail: on most days rainfall is light, but occasional very wet days raise the mean."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A mean larger than the median indicates positive skew.",
+  "hints": [
+   "Which way does a long tail pull the mean?"
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The random variable $X$ has pdf $f(x) = k(x + 1)$ for $0 \\le x \\le 2$ and $f(x) = 0$ otherwise.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of k.",
+    "answerSpec": {
+     "value": 0.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$k\\left[\\frac{x^2}{2} + x\\right]_0^2 = 4k = 1$, so $k = \\frac{1}{4}$.",
+    "workedSolution": "1. $k\\left[\\frac{x^2}{2} + x\\right]_0^2 = 4k = 1$, so $k = \\frac{1}{4}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find P(X > 1).",
+    "answerSpec": {
+     "value": 0.6250000000000003,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{1}{4}\\left[\\frac{x^2}{2} + x\\right]_1^2 = \\frac{1}{4}(4 - 1.5) = 0.625$.",
+    "workedSolution": "1. $\\frac{1}{4}\\left[\\frac{x^2}{2} + x\\right]_1^2 = \\frac{1}{4}(4 - 1.5) = 0.625$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find E(X), as a fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 1.1666666666666663,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\frac{1}{4}\\int_0^2 (x^2 + x)\\,\\mathrm{d}x = \\frac{1}{4}\\left(\\frac{8}{3} + 2\\right) = \\frac{7}{6} = 1.17$.",
+    "workedSolution": "1. $\\frac{1}{4}\\int_0^2 (x^2 + x)\\,\\mathrm{d}x = \\frac{1}{4}\\left(\\frac{8}{3} + 2\\right) = \\frac{7}{6} = 1.17$."
+   }
+  ],
+  "explanation": "Total area 1 gives k; probabilities and the mean are integrals.",
+  "hints": [
+   "Integrate x + 1 from 0 to 2.",
+   "E(X) = ∫ x f(x) dx."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.250"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.625"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.17"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.3333333333333333"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.375"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "continuous.pdf.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 4,
+  "marks": 14,
+  "estimatedSeconds": 1260,
+  "stem": "The time $X$ hours that a technician takes to repair a borehole pump is modelled by the pdf\n$$\nf(x) = \\begin{cases} kx & 0 \\le x \\le 2, \\\\ \\frac{1}{2}k(6 - x) & 2 < x \\le 6, \\\\ 0 & \\text{otherwise.} \\end{cases}\n$$",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $k = \\frac{1}{6}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 adds the two areas: $\\int_0^2 kx\\,\\mathrm{d}x + \\int_2^6 \\frac{1}{2}k(6 - x)\\,\\mathrm{d}x = 2k + 4k$ (or uses the triangle of base 6 and height $2k$).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 sets $6k = 1$ and concludes $k = \\frac{1}{6}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\int_0^2 kx\\,\\mathrm{d}x = 2k, \\qquad \\int_2^6 \\tfrac{1}{2}k(6 - x)\\,\\mathrm{d}x = \\tfrac{1}{2}k\\left[6x - \\tfrac{x^2}{2}\\right]_2^6 = \\tfrac{1}{2}k(18 - 10) = 4k\n$$\n$$\n2k + 4k = 1 \\;\\Rightarrow\\; k = \\tfrac{1}{6}\n$$"
+    },
+    "explanation": "The graph is a triangle with base 6 and height 2k, so its area 6k must be 1."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that a repair takes less than 3 hours.",
+    "answerSpec": {
+     "value": 0.6249999999999999,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(X < 3) = \\frac{1}{3} + \\int_2^3 \\frac{6 - x}{12}\\,\\mathrm{d}x = \\frac{1}{3} + \\frac{1}{12}\\left[6x - \\frac{x^2}{2}\\right]_2^3 = \\frac{1}{3} + \\frac{3.5}{12} = 0.625$.",
+    "workedSolution": "1. $\\mathrm{P}(X < 3) = \\frac{1}{3} + \\int_2^3 \\frac{6 - x}{12}\\,\\mathrm{d}x = \\frac{1}{3} + \\frac{1}{12}\\left[6x - \\frac{x^2}{2}\\right]_2^3 = \\frac{1}{3} + \\frac{3.5}{12} = 0.625$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of x at which f(x) is greatest.",
+    "payload": {
+     "unitHint": "h"
+    },
+    "answerSpec": {
+     "value": 2,
+     "units": {
+      "required": false,
+      "accepted": [
+       "h",
+       "hours",
+       "hour",
+       "hrs",
+       "hr"
+      ]
+     }
+    },
+    "explanation": "f increases on [0, 2] and decreases on [2, 6]: the peak of the triangle is at x = 2.",
+    "workedSolution": "1. f increases on [0, 2] and decreases on [2, 6]: the peak of the triangle is at x = 2."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the mean repair time, as a fraction or correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "h"
+    },
+    "answerSpec": {
+     "value": 2.6666666666666634,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "h",
+       "hours",
+       "hour",
+       "hrs",
+       "hr"
+      ]
+     }
+    },
+    "explanation": "$\\int_0^2 \\frac{x^2}{6}\\,\\mathrm{d}x + \\int_2^6 \\frac{x(6 - x)}{12}\\,\\mathrm{d}x = \\frac{4}{9} + \\frac{1}{12}\\left[3x^2 - \\frac{x^3}{3}\\right]_2^6 = \\frac{4}{9} + \\frac{1}{12}\\left(36 - \\frac{28}{3}\\right) = \\frac{8}{3}$ hours.",
+    "workedSolution": "1. $\\int_0^2 \\frac{x^2}{6}\\,\\mathrm{d}x + \\int_2^6 \\frac{x(6 - x)}{12}\\,\\mathrm{d}x = \\frac{4}{9} + \\frac{1}{12}\\left[3x^2 - \\frac{x^3}{3}\\right]_2^6 = \\frac{4}{9} + \\frac{1}{12}\\left(36 - \\frac{28}{3}\\right) = \\frac{8}{3}$ hours."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Find the median repair time, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "h"
+    },
+    "answerSpec": {
+     "value": 2.5358983848622456,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "h",
+       "hours",
+       "hour",
+       "hrs",
+       "hr"
+      ]
+     }
+    },
+    "explanation": "The area up to 2 is $\\frac{1}{3} < \\frac{1}{2}$, so the median is in $(2, 6]$. The area to the right of $m$ is the triangle $\\frac{(6 - m)^2}{24}$, so $\\frac{(6 - m)^2}{24} = \\frac{1}{2}$, $(6 - m)^2 = 12$, $m = 6 - 2\\sqrt{3} = 2.54$ hours. ($\\sqrt{6}$ comes from wrongly using the first piece.)",
+    "workedSolution": "1. The area up to 2 is $\\frac{1}{3} < \\frac{1}{2}$, so the median is in $(2, 6]$. The area to the right of $m$ is the triangle $\\frac{(6 - m)^2}{24}$, so $\\frac{(6 - m)^2}{24} = \\frac{1}{2}$, $(6 - m)^2 = 12$, $m = 6 - 2\\sqrt{3} = 2.54$ hours. ($\\sqrt{6}$ comes from wrongly using the first piece.)"
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Compare the mode, median and mean, and describe the skewness of the distribution in context.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Mode $2 <$ median $2.54 <$ mean $2.67$, so the distribution is positively skewed.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Interprets: most repairs are fairly quick, but a few take much longer (up to 6 hours), pulling the mean up.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: mode (2 h) < median (2.54 h) < mean (2.67 h): positive skew. Most repairs take around 2 hours, but occasional long repairs stretch the right-hand tail."
+    },
+    "explanation": "Mode < median < mean indicates positive skew."
+   }
+  ],
+  "explanation": "A triangular pdf: the area condition gives k; probabilities, the mean and the median use the correct piece.",
+  "hints": [
+   "Sketch the pdf: it is a triangle.",
+   "First find the area up to x = 2 to decide which piece contains the median."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.625"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2.67"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "2.54"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.2916666666666667"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "9.464101615137753"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

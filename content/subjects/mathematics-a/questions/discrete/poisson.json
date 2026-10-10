@@ -1,0 +1,1136 @@
+[
+ {
+  "key": "discrete.poisson.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which of these random variables is most suitably modelled by a Poisson distribution?",
+  "options": [
+   {
+    "key": "A",
+    "content": "the number of potholes in a randomly chosen 1 km stretch of a rural road",
+    "correct": true,
+    "rationale": "Correct: potholes occur singly and at random along the road, at a roughly constant average rate per km, and there is no fixed upper limit."
+   },
+   {
+    "key": "B",
+    "content": "the number of heads when a fair coin is tossed 20 times",
+    "rationale": "There is a fixed number of trials (20) with constant probability: this is binomial, B(20, 0.5)."
+   },
+   {
+    "key": "C",
+    "content": "the mass of a randomly chosen 50 kg bag of maize from a Grain Marketing Board depot",
+    "rationale": "Mass is a continuous measurement; the Poisson distribution models counts."
+   },
+   {
+    "key": "D",
+    "content": "the number of throws of a die needed to obtain the first six",
+    "rationale": "This is the trial on which the first success happens: a geometric distribution."
+   }
+  ],
+  "explanation": "A Poisson distribution models the number of random, independent events in a fixed interval of time or space when they occur singly at a constant average rate.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "discrete.poisson.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The random variable $X$ has the distribution $\\mathrm{Po}(9)$. What is the standard deviation of $X$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "9",
+    "rationale": "9 is the mean and the variance; the standard deviation is the square root of the variance."
+   },
+   {
+    "key": "B",
+    "content": "81",
+    "rationale": "$81 = 9^2$; squaring is the wrong way round."
+   },
+   {
+    "key": "C",
+    "content": "4.5",
+    "rationale": "Halving the mean has no meaning here; take the square root of the variance."
+   },
+   {
+    "key": "D",
+    "content": "3",
+    "correct": true,
+    "rationale": "Correct: $\\mathrm{Var}(X) = \\lambda = 9$, so the standard deviation is $\\sqrt{9} = 3$."
+   }
+  ],
+  "explanation": "For $\\mathrm{Po}(\\lambda)$, $\\mathrm{E}(X) = \\mathrm{Var}(X) = \\lambda$, so the standard deviation is $\\sqrt{\\lambda}$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "discrete.poisson.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Cars arrive at a fuel station in Mutare at random at an average rate of 3.4 per five-minute period. Find the probability that exactly 2 cars arrive in a given five-minute period. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.19289750037068454,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$X \\sim \\mathrm{Po}(3.4)$: $\\mathrm{P}(X = 2) = \\mathrm{e}^{-3.4}\\dfrac{3.4^{2}}{2!} = 0.1929$, so $0.193$. ($0.340$ is $\\mathrm{P}(X \\le 2)$; $5.78$ forgets the factor $\\mathrm{e}^{-3.4}$.)",
+  "workedSolution": "1. $X \\sim \\mathrm{Po}(3.4)$: $\\mathrm{P}(X = 2) = \\mathrm{e}^{-3.4}\\dfrac{3.4^{2}}{2!} = 0.1929$, so $0.193$. ($0.340$ is $\\mathrm{P}(X \\le 2)$; $5.78$ forgets the factor $\\mathrm{e}^{-3.4}$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.193"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.33973988819611933"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5.779999999999999"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "discrete.poisson.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The number of typing errors on a page of a report has the distribution $\\mathrm{Po}(2.2)$. Find the probability that a randomly chosen page has at most one error. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.3545701067594685,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(X \\le 1) = \\mathrm{e}^{-2.2}(1 + 2.2) = 3.2\\mathrm{e}^{-2.2} = 0.3546$, so $0.355$. ($0.244$ is $\\mathrm{P}(X = 1)$ only.)",
+  "workedSolution": "1. $\\mathrm{P}(X \\le 1) = \\mathrm{e}^{-2.2}(1 + 2.2) = 3.2\\mathrm{e}^{-2.2} = 0.3546$, so $0.355$. ($0.244$ is $\\mathrm{P}(X = 1)$ only.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.355"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.2437669483971345"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.11080315836233387"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "discrete.poisson.q05",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Emails arrive in a school office at random at a mean rate of 5.1 per hour. Find the probability that more than 3 emails arrive in an hour. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.7487317354221213,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "\"More than 3\" means $X \\ge 4$: $\\mathrm{P}(X > 3) = 1 - \\mathrm{P}(X \\le 3) = 1 - \\mathrm{e}^{-5.1}\\left(1 + 5.1 + \\frac{5.1^2}{2} + \\frac{5.1^3}{6}\\right) = 0.7487$, so $0.749$. ($0.884$ is $\\mathrm{P}(X \\ge 3)$, the wrong boundary.)",
+  "workedSolution": "1. $X \\sim \\mathrm{Po}(5.1)$; \"more than 3\" is $X \\ge 4$.\n2. $\\mathrm{P}(X \\le 3) = \\mathrm{e}^{-5.1}(1 + 5.1 + 13.005 + 22.1085) = 0.2513$.\n3. $\\mathrm{P}(X > 3) = 1 - 0.2513 = 0.7487$, so $0.749$.",
+  "hints": [
+   "Write 'more than 3' as an inequality on whole numbers.",
+   "Use 1 − P(X ≤ 3)."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.749"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.8835216568658238"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.25126826457787865"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "discrete.poisson.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A borehole pump in Masvingo needs a minor repair at random at an average rate of 0.8 per working day. Find the probability that exactly 4 repairs are needed in a 5-day working week. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.19536681481316487,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Scale the rate: $\\lambda = 0.8 \\times 5 = 4$, so $Y \\sim \\mathrm{Po}(4)$ and $\\mathrm{P}(Y = 4) = \\mathrm{e}^{-4}\\dfrac{4^4}{4!} = 0.1954$, so $0.195$. ($0.00767$ uses $\\lambda = 0.8$ without scaling to the week.)",
+  "workedSolution": "1. Scale the rate: $\\lambda = 0.8 \\times 5 = 4$, so $Y \\sim \\mathrm{Po}(4)$ and $\\mathrm{P}(Y = 4) = \\mathrm{e}^{-4}\\dfrac{4^4}{4!} = 0.1954$, so $0.195$. ($0.00767$ uses $\\lambda = 0.8$ without scaling to the week.)",
+  "hints": [
+   "Find the mean number of repairs in 5 days first."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.195"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.0076685476542672605"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.6288369351798736"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "discrete.poisson.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "The random variable $X$ has the distribution $\\mathrm{Po}(6.25)$. Write down the mean, the variance and the standard deviation of $X$.",
+  "payload": {
+   "template": "mean = {{blank:m}}, variance = {{blank:v}}, standard deviation = {{blank:s}}",
+   "blanks": [
+    {
+     "id": "m",
+     "input": "number"
+    },
+    {
+     "id": "v",
+     "input": "number"
+    },
+    {
+     "id": "s",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "m",
+     "accepted": [
+      "6.25"
+     ],
+     "tolerance": 0.001
+    },
+    {
+     "id": "v",
+     "accepted": [
+      "6.25"
+     ],
+     "tolerance": 0.001
+    },
+    {
+     "id": "s",
+     "accepted": [
+      "2.5"
+     ],
+     "tolerance": 0.001
+    }
+   ]
+  },
+  "explanation": "For $\\mathrm{Po}(\\lambda)$ the mean and variance are both $\\lambda = 6.25$, and the standard deviation is $\\sqrt{6.25} = 2.5$.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "m",
+     "text": "6.25"
+    },
+    {
+     "blankId": "v",
+     "text": "6.25"
+    },
+    {
+     "blankId": "s",
+     "text": "2.5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "m",
+      "text": "2.5"
+     },
+     {
+      "blankId": "v",
+      "text": "39.0625"
+     },
+     {
+      "blankId": "s",
+      "text": "6.25"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "discrete.poisson.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For any Poisson distribution, the variance is greater than the mean.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "For $\\mathrm{Po}(\\lambda)$ the mean and the variance are **equal** (both $\\lambda$). A sample whose variance is much larger than its mean suggests that a Poisson model is not suitable.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "discrete.poisson.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A Poisson random variable can take any non-negative whole-number value $0, 1, 2, 3, \\dots$, with no upper limit.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "Unlike $\\mathrm{B}(n, p)$, which stops at $n$, the Poisson distribution has no upper limit, although large values have very small probabilities.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "discrete.poisson.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A Poisson distribution is suggested as a model for the number of customers who arrive at a restaurant in Victoria Falls in a 10-minute period during an evening. Which observation gives the strongest reason to doubt the model?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The average number of customers arriving per 10-minute period is 3.6.",
+    "rationale": "Any positive mean is possible for a Poisson model; a mean of 3.6 is no reason to doubt it."
+   },
+   {
+    "key": "B",
+    "content": "Some 10-minute periods have no customers at all.",
+    "rationale": "Zero is a possible Poisson value; periods with no arrivals are expected."
+   },
+   {
+    "key": "C",
+    "content": "The number of customers in a period has no fixed maximum.",
+    "rationale": "No fixed upper limit is a feature of the Poisson model, not a problem."
+   },
+   {
+    "key": "D",
+    "content": "Customers usually arrive in groups of friends or families.",
+    "correct": true,
+    "rationale": "Correct: arrivals do not occur singly or independently when people come in groups."
+   }
+  ],
+  "explanation": "The Poisson conditions are that events occur singly, independently, at random and at a constant average rate. Group arrivals break the 'singly' and 'independently' conditions (and a busy dinner hour would break the constant rate).",
+  "hints": [
+   "List the conditions for a Poisson model and test each against the context."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "discrete.poisson.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "$X \\sim \\mathrm{Po}(\\lambda)$. Match each event with the probability expression that gives it.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "fewer than 3"
+    },
+    {
+     "id": "L2",
+     "content": "at least 3"
+    },
+    {
+     "id": "L3",
+     "content": "more than 3"
+    },
+    {
+     "id": "L4",
+     "content": "at most 3"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$1 - \\mathrm{P}(X \\le 3)$"
+    },
+    {
+     "id": "R4",
+     "content": "$\\mathrm{P}(X \\le 3)$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\mathrm{P}(X \\le 2)$"
+    },
+    {
+     "id": "R2",
+     "content": "$1 - \\mathrm{P}(X \\le 2)$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "For a whole-number variable: fewer than 3 is $X \\le 2$; at least 3 is $X \\ge 3$, the complement of $X \\le 2$; more than 3 is $X \\ge 4$, the complement of $X \\le 3$; at most 3 is $X \\le 3$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "discrete.poisson.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The number of faulty bulbs in a box has a Poisson distribution. The probability that a box contains no faulty bulbs is 0.3. Find the mean number of faulty bulbs per box, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 1.2039728043259361,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$\\mathrm{P}(X = 0) = \\mathrm{e}^{-\\lambda} = 0.3$, so $\\lambda = -\\ln 0.3 = \\ln\\frac{10}{3} = 1.204$, i.e. $1.20$. ($0.357$ solves $\\mathrm{e}^{-\\lambda} = 0.7$, mixing up \"none\" with \"at least one\".)",
+  "workedSolution": "1. $\\mathrm{P}(X = 0) = \\mathrm{e}^{-\\lambda} = 0.3$, so $\\lambda = -\\ln 0.3 = \\ln\\frac{10}{3} = 1.204$, i.e. $1.20$. ($0.357$ solves $\\mathrm{e}^{-\\lambda} = 0.7$, mixing up \"none\" with \"at least one\".)",
+  "hints": [
+   "Write $\\mathrm{P}(X = 0)$ from the formula.",
+   "Take natural logarithms."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1.20"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.35667494393873245"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "discrete.poisson.q13",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The random variable $X$ has a Poisson distribution, and $\\mathrm{P}(X = 3) = 2\\,\\mathrm{P}(X = 2)$. Find $\\mathrm{P}(X \\le 2)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.06196880441665891,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$\\dfrac{\\mathrm{P}(X = 3)}{\\mathrm{P}(X = 2)} = \\dfrac{\\mathrm{e}^{-\\lambda}\\lambda^3/6}{\\mathrm{e}^{-\\lambda}\\lambda^2/2} = \\dfrac{\\lambda}{3} = 2$, so $\\lambda = 6$. Then $\\mathrm{P}(X \\le 2) = \\mathrm{e}^{-6}(1 + 6 + 18) =0.06197$, so $0.0620$. (Using $\\lambda = 2$ copies the factor 2 as the mean.)",
+  "workedSolution": "1. Divide: $\\dfrac{\\mathrm{P}(X = 3)}{\\mathrm{P}(X = 2)} = \\dfrac{\\lambda}{3}$.\n2. $\\dfrac{\\lambda}{3} = 2 \\Rightarrow \\lambda = 6$.\n3. $\\mathrm{P}(X \\le 2) = \\mathrm{e}^{-6}(1 + 6 + 18) = 25\\mathrm{e}^{-6} = 0.06197$, so $0.0620$.",
+  "hints": [
+   "Divide one probability by the other: the e^(−λ) cancels.",
+   "The ratio simplifies to λ/3."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.0620"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.6766764161830634"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.8088468305380581"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "discrete.poisson.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{Po}(3.7)$. What is the most likely value of $X$ (the mode)?",
+  "options": [
+   {
+    "key": "A",
+    "content": "4",
+    "rationale": "Rounding 3.7 up gives 4, but $\\mathrm{P}(X = 4) = 0.193$ is less than $\\mathrm{P}(X = 3) = 0.209$."
+   },
+   {
+    "key": "B",
+    "content": "3",
+    "correct": true,
+    "rationale": "Correct: $\\mathrm{P}(X = r) = \\frac{3.7}{r}\\mathrm{P}(X = r - 1)$ increases while $\\frac{3.7}{r} > 1$, i.e. up to $r = 3$, and decreases from $r = 4$. $\\mathrm{P}(X = 3) = 0.209$ and $\\mathrm{P}(X = 4) = 0.193$."
+   },
+   {
+    "key": "C",
+    "content": "3.7",
+    "rationale": "The mean need not be a possible value; X takes whole-number values only."
+   },
+   {
+    "key": "D",
+    "content": "0",
+    "rationale": "$\\mathrm{P}(X = 0) = \\mathrm{e}^{-3.7} = 0.0247$ is small; 0 is the mode only when $\\lambda < 1$."
+   }
+  ],
+  "explanation": "The ratio of successive probabilities is $\\lambda / r$; the probabilities rise while this exceeds 1. For a non-integer $\\lambda$ the mode is the integer part of $\\lambda$.",
+  "hints": [
+   "Compare $\\mathrm{P}(X = 3)$ and $\\mathrm{P}(X = 4)$."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "discrete.poisson.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Nyasha counts the number of minibuses passing her gate in each of 60 one-minute periods during the morning rush. The sample mean is 2.4 and the sample variance is 5.9. Comment on whether a Poisson distribution is a suitable model, giving a reason from the context.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "States that for a Poisson model the mean and variance should be about equal, but 5.9 is much larger than 2.4, so the model is not suitable.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Gives a contextual reason, e.g. minibuses travel in bunches (not independently) or the rate is not constant during the rush hour.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A Poisson distribution has mean equal to variance, but here the variance (5.9) is more than twice the mean (2.4), so the model does not fit well. Minibuses tend to arrive in bunches after traffic lights, so they are not independent, and the rate changes during the rush hour."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Comparing the mean and variance is the standard quick check of a Poisson model; a large variance indicates clustering.",
+  "hints": [
+   "What is true of the mean and variance of any Poisson distribution?"
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "discrete.poisson.q16",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Calls to a helpline arrive at random at an average rate of 2.5 per hour. Find the probability that there are exactly 2 calls in **each** of three separate one-hour periods. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.01687879547570289,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "For one hour, $\\mathrm{P}(X = 2) = \\mathrm{e}^{-2.5}\\dfrac{2.5^2}{2} = 0.2565$. The hours are independent, so the probability is $0.2565^3 = 0.01688$, i.e. $0.0169$. ($0.137$ is the probability of 6 calls in 3 hours in total, which allows other splits such as 3, 1, 2.)",
+  "workedSolution": "1. One hour: $X \\sim \\mathrm{Po}(2.5)$, $\\mathrm{P}(X = 2) = 0.2565$.\n2. Three independent hours, each with exactly 2: $0.2565^3 = 0.01688$.\n3. Answer $0.0169$.",
+  "hints": [
+   "Find the probability for one hour first.",
+   "The three hours are independent: multiply."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.0169"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.13671824335319327"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.25651562069968353"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "discrete.poisson.q17",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 5,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Sightings of a rare bird at a dam near Kariba occur at random at an average rate of 0.35 per day. Find the smallest number of days for which the probability of at least one sighting is greater than 0.99.",
+  "answerSpec": {
+   "value": 14
+  },
+  "explanation": "In $n$ days the number of sightings is $\\mathrm{Po}(0.35n)$. We need $1 - \\mathrm{e}^{-0.35n} > 0.99$, i.e. $\\mathrm{e}^{-0.35n} < 0.01$, so $0.35n > \\ln 100$ and $n > 13.16$. The smallest whole number is $n = 14$. (13 rounds down; check: $\\mathrm{e}^{-0.35 \\times 13} = 0.0106$, which is not below 0.01.)",
+  "workedSolution": "1. In $n$ days the number of sightings is $\\mathrm{Po}(0.35n)$. We need $1 - \\mathrm{e}^{-0.35n} > 0.99$, i.e. $\\mathrm{e}^{-0.35n} < 0.01$, so $0.35n > \\ln 100$ and $n > 13.16$. The smallest whole number is $n = 14$. (13 rounds down; check: $\\mathrm{e}^{-0.35 \\times 13} = 0.0106$, which is not below 0.01.)",
+  "hints": [
+   "Write the mean for n days as 0.35n.",
+   "P(at least one) = 1 − P(none)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "14"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "13"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "discrete.poisson.q18",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{Po}(\\lambda)$. Which expression equals $\\mathrm{P}(X \\ge 2)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$1 - \\mathrm{e}^{-\\lambda}$",
+    "rationale": "This is $\\mathrm{P}(X \\ge 1)$; it leaves out $\\mathrm{P}(X = 1)$."
+   },
+   {
+    "key": "B",
+    "content": "$1 - \\mathrm{e}^{-\\lambda}\\left(1 + \\lambda + \\frac{\\lambda^2}{2}\\right)$",
+    "rationale": "This subtracts $\\mathrm{P}(X = 2)$ as well, giving $\\mathrm{P}(X \\ge 3)$."
+   },
+   {
+    "key": "C",
+    "content": "$1 - \\mathrm{e}^{-\\lambda}(1 + \\lambda)$",
+    "correct": true,
+    "rationale": "Correct: $\\mathrm{P}(X \\ge 2) = 1 - \\mathrm{P}(X = 0) - \\mathrm{P}(X = 1) = 1 - \\mathrm{e}^{-\\lambda} - \\lambda\\mathrm{e}^{-\\lambda}$."
+   },
+   {
+    "key": "D",
+    "content": "$\\mathrm{e}^{-\\lambda}\\frac{\\lambda^2}{2}$",
+    "rationale": "This is $\\mathrm{P}(X = 2)$ only, not the probability of 2 or more."
+   }
+  ],
+  "explanation": "\"At least 2\" is the complement of \"0 or 1\": $\\mathrm{P}(X \\ge 2) = 1 - \\mathrm{e}^{-\\lambda}(1 + \\lambda)$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "discrete.poisson.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Emergency calls to a fire station in Gweru occur at random at an average rate of 2.8 per day. Give answers correct to 3 significant figures.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the probability of exactly 2 calls on a particular day.",
+    "answerSpec": {
+     "value": 0.23837544549085418,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{e}^{-2.8}\\dfrac{2.8^2}{2} = 0.2384$.",
+    "workedSolution": "1. $\\mathrm{e}^{-2.8}\\dfrac{2.8^2}{2} = 0.2384$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability of more than 3 calls on a particular day.",
+    "answerSpec": {
+     "value": 0.3080625674085201,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$1 - \\mathrm{P}(X \\le 3) = 1 - \\mathrm{e}^{-2.8}\\left(1 + 2.8 + 3.92 + 3.6587\\right) = 0.3081$.",
+    "workedSolution": "1. $1 - \\mathrm{P}(X \\le 3) = 1 - \\mathrm{e}^{-2.8}\\left(1 + 2.8 + 3.92 + 3.6587\\right) = 0.3081$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that there is at least one call on each of two consecutive days.",
+    "answerSpec": {
+     "value": 0.8820777384660471,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "One day: $\\mathrm{P}(X \\ge 1) = 1 - \\mathrm{e}^{-2.8} = 0.9392$. Two independent days: $0.9392^2 = 0.8821$. ($1 - \\mathrm{e}^{-5.6}$ is \"at least one call in the two days altogether\".)",
+    "workedSolution": "1. One day: $\\mathrm{P}(X \\ge 1) = 1 - \\mathrm{e}^{-2.8} = 0.9392$. Two independent days: $0.9392^2 = 0.8821$. ($1 - \\mathrm{e}^{-5.6}$ is \"at least one call in the two days altogether\".)"
+   }
+  ],
+  "explanation": "Define X ~ Po(2.8) for one day; use complements for 'more than' and 'at least', and multiply for independent days.",
+  "hints": [
+   "'More than 3' is X ≥ 4.",
+   "'At least one on each day' is not the same as 'at least one in two days'."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.238"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.308"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.882"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.4694536834666825"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.5305463165333175"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.996302136283517"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "discrete.poisson.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A factory in Chitungwiza makes tarpaulin. Flaws occur at random in the tarpaulin at an average rate of 0.6 per square metre. Give probabilities correct to 3 significant figures.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two conditions, in context, needed for a Poisson distribution to be a suitable model for the number of flaws in a sheet.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Flaws occur independently of one another (one flaw does not make another nearby more likely).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Flaws occur singly and at a constant average rate per square metre (uniformly through the material).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Flaws must occur independently of each other, singly, and at a constant average rate of 0.6 per square metre throughout the tarpaulin."
+    },
+    "explanation": "Each condition should mention flaws or the tarpaulin."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the probability that a sheet of area 2 m$^2$ has no flaws.",
+    "answerSpec": {
+     "value": 0.3011942119122021,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\lambda = 0.6 \\times 2 = 1.2$: $\\mathrm{P}(X = 0) = \\mathrm{e}^{-1.2} = 0.3012$.",
+    "workedSolution": "1. $\\lambda = 0.6 \\times 2 = 1.2$: $\\mathrm{P}(X = 0) = \\mathrm{e}^{-1.2} = 0.3012$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that a sheet of area 5 m$^2$ has at least 3 flaws.",
+    "answerSpec": {
+     "value": 0.5768099188731568,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\lambda = 3$: $1 - \\mathrm{e}^{-3}(1 + 3 + 4.5) = 1 - 8.5\\mathrm{e}^{-3} = 0.5768$.",
+    "workedSolution": "1. $\\lambda = 3$: $1 - \\mathrm{e}^{-3}(1 + 3 + 4.5) = 1 - 8.5\\mathrm{e}^{-3} = 0.5768$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "A sheet of area $A$ m$^2$ has probability 0.05 of having no flaws. Find $A$.",
+    "payload": {
+     "unitHint": "m²"
+    },
+    "answerSpec": {
+     "value": 4.992887122589985,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m²",
+       "m^2",
+       "square metres"
+      ]
+     }
+    },
+    "explanation": "$\\mathrm{e}^{-0.6A} = 0.05 \\Rightarrow 0.6A = \\ln 20 \\Rightarrow A = 4.993$, i.e. $4.99$ m$^2$. ($3.00$ is the mean number of flaws, not the area.)",
+    "workedSolution": "1. $\\mathrm{e}^{-0.6A} = 0.05 \\Rightarrow 0.6A = \\ln 20 \\Rightarrow A = 4.993$, i.e. $4.99$ m$^2$. ($3.00$ is the mean number of flaws, not the area.)"
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Ten sheets, each of area 2 m$^2$, are chosen at random. Find the probability that exactly 2 of them have no flaws.",
+    "answerSpec": {
+     "value": 0.23214412932645,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "The number of flawless sheets is $\\mathrm{B}(10, p)$ with $p = 0.3012$ from (b): $\\binom{10}{2}p^2(1 - p)^8 = 0.2321$.",
+    "workedSolution": "1. The number of flawless sheets is $\\mathrm{B}(10, p)$ with $p = 0.3012$ from (b): $\\binom{10}{2}p^2(1 - p)^8 = 0.2321$."
+   }
+  ],
+  "explanation": "Scale λ to each area; part (e) combines the Poisson probability with a binomial count of sheets.",
+  "hints": [
+   "Mean flaws in A m² = 0.6A.",
+   "In (e), each sheet either has no flaws or not: a binomial situation."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.301"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.577"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "4.99"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.232"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.5488116360940265"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.3527681112177691"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.08333333333333334"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.22314820905281388"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

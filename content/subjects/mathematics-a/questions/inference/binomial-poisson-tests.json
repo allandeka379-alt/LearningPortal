@@ -1,0 +1,1226 @@
+[
+ {
+  "key": "inference.binomial-poisson-tests.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Road accidents at a junction in Harare occurred at an average rate of 3.2 per month. Speed humps are installed, and the council wants to test whether the rate has decreased. Which hypotheses should be used?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$H_0: \\lambda = 3.2$, $H_1: \\lambda < 3.2$",
+    "correct": true,
+    "rationale": "Correct: $\\lambda$ is the mean number of accidents per month; a decrease is suspected."
+   },
+   {
+    "key": "B",
+    "content": "$H_0: \\lambda = 3.2$, $H_1: \\lambda \\ne 3.2$",
+    "rationale": "The council has a direction in mind (a decrease), so the test is one-tailed."
+   },
+   {
+    "key": "C",
+    "content": "$H_0: \\lambda < 3.2$, $H_1: \\lambda = 3.2$",
+    "rationale": "H₀ must give the single value 3.2."
+   },
+   {
+    "key": "D",
+    "content": "$H_0: p = 3.2$, $H_1: p < 3.2$",
+    "rationale": "A rate of events is a Poisson mean λ, not a binomial probability p (which cannot exceed 1)."
+   }
+  ],
+  "explanation": "For a Poisson test the parameter is the mean rate $\\lambda$ (scaled to the period observed).",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Under $H_0$, $X \\sim \\mathrm{B}(12, 0.4)$, and $H_1: p < 0.4$. The observed value is $x = 1$. Find $\\mathrm{P}(X \\le 1)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.019591041023999993,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$\\mathrm{P}(X \\le 1) = 0.6^{12} + 12 \\times 0.4 \\times 0.6^{11} = 0.01959$, so $0.0196$. This is below 0.05, so the result is significant at the 5% level.",
+  "workedSolution": "1. $\\mathrm{P}(X \\le 1) = 0.6^{12} + 12 \\times 0.4 \\times 0.6^{11} = 0.01959$, so $0.0196$. This is below 0.05, so the result is significant at the 5% level.",
+  "hints": [
+   "Include P(X = 0)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0196"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.017414258687999996"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.002176782335999999"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q03",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A test of $H_0: p = 0.3$ against $H_1: p > 0.3$ uses $X \\sim \\mathrm{B}(20, 0.3)$ at the 5% significance level. The critical region is $X \\ge c$. Find $c$ and the actual significance level (correct to 3 significant figures).",
+  "payload": {
+   "template": "c = {{blank:c}}, actual significance level = {{blank:a}}",
+   "blanks": [
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "a",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "c",
+     "accepted": [
+      "10"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "a",
+     "accepted": [
+      "0.0480"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$\\mathrm{P}(X \\ge 9) = 0.1133 > 0.05$ but $\\mathrm{P}(X \\ge 10) = 0.04796 \\le 0.05$, so the critical region is $X \\ge 10$ with actual significance level $0.0480$.",
+  "hints": [
+   "Find the smallest c with P(X ≥ c) ≤ 0.05."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "c",
+     "text": "10"
+    },
+    {
+     "blankId": "a",
+     "text": "0.0480"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "c",
+      "text": "9"
+     },
+     {
+      "blankId": "a",
+      "text": "0.228"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A coin is tossed 25 times to test whether it is biased, using $H_0: p = 0.5$ and $H_1: p \\ne 0.5$ at the 5% significance level, where $X$ is the number of heads. The critical region is $X \\le a$ or $X \\ge b$. Find $a$ and $b$.",
+  "payload": {
+   "template": "a = {{blank:a}}, b = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "7"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "18"
+     ],
+     "tolerance": 0
+    }
+   ]
+  },
+  "explanation": "Use 2.5% in each tail. $\\mathrm{P}(X \\le 7) = 0.02164 \\le 0.025$ but $\\mathrm{P}(X \\le 8) = 0.05388 > 0.025$, so $a = 7$. By symmetry $\\mathrm{P}(X \\ge 18) = 0.02164$, so $b = 18$.",
+  "hints": [
+   "Two-tailed at 5%: 2.5% in each tail.",
+   "B(25, 0.5) is symmetrical about 12.5."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "7"
+    },
+    {
+     "blankId": "b",
+     "text": "18"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "8"
+     },
+     {
+      "blankId": "b",
+      "text": "17"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The number of complaints a phone company in Bulawayo receives per week has had mean 3.5. After a price rise there are 8 complaints in one week. Under $H_0: \\lambda = 3.5$, find $\\mathrm{P}(X \\ge 8)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.026738922091319783,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$\\mathrm{P}(X \\ge 8) = 1 - \\mathrm{P}(X \\le 7) = 0.02674$, so $0.0267$. Less than 0.05, so there is evidence at the 5% level of an increase. ($0.00987$ is $\\mathrm{P}(X \\ge 9)$.)",
+  "workedSolution": "1. $\\mathrm{P}(X \\ge 8) = 1 - \\mathrm{P}(X \\le 7) = 0.02674$, so $0.0267$. Less than 0.05, so there is evidence at the 5% level of an increase. ($0.00987$ is $\\mathrm{P}(X \\ge 9)$.)",
+  "hints": [
+   "'At least 8' is 1 − P(X ≤ 7)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0267"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.009873658056104961"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.016865264035214843"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Faults on a ZESA power line occur at an average rate of 2.5 per week. An engineer will count the faults in a 4-week period to test, at the 5% level, whether the rate has increased. Find the critical region $X \\ge c$ and the actual significance level (correct to 3 significant figures).",
+  "payload": {
+   "template": "c = {{blank:c}}, actual significance level = {{blank:a}}",
+   "blanks": [
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "a",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "c",
+     "accepted": [
+      "16"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "a",
+     "accepted": [
+      "0.0487"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "For 4 weeks, $X \\sim \\mathrm{Po}(10)$ under $H_0$. $\\mathrm{P}(X \\ge 15) = 0.08346 > 0.05$, $\\mathrm{P}(X \\ge 16) = 0.04874 \\le 0.05$. Critical region $X \\ge 16$, actual level $0.0487$. (Using $\\mathrm{Po}(2.5)$ for a 4-week count forgets to scale $\\lambda$.)",
+  "hints": [
+   "Scale λ to 4 weeks.",
+   "Find the smallest c with P(X ≥ c) ≤ 0.05."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "c",
+     "text": "16"
+    },
+    {
+     "blankId": "a",
+     "text": "0.0487"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "c",
+      "text": "6"
+     },
+     {
+      "blankId": "a",
+      "text": "0.0835"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Nationally, 30% of mobile-money users in Zimbabwe use a particular app. In a random sample of 100 users in Mutare, 40 use it. Using a normal approximation, find the probability under $H_0: p = 0.3$ of 40 or more users, $\\mathrm{P}(X \\ge 40)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.019082882945558155,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00017
+   }
+  },
+  "explanation": "$X \\sim \\mathrm{B}(100, 0.3) \\approx \\mathrm{N}(30, 21)$. With a continuity correction, $\\mathrm{P}(X \\ge 40) \\approx \\mathrm{P}(Y > 39.5)$: $z = \\frac{9.5}{\\sqrt{21}} = 2.073$, probability $0.01908$, i.e. $0.0191$. This is below 0.05: evidence that the proportion in Mutare is higher. (Without the continuity correction: $0.0145$.)",
+  "workedSolution": "1. $X \\sim \\mathrm{B}(100, 0.3) \\approx \\mathrm{N}(30, 21)$. With a continuity correction, $\\mathrm{P}(X \\ge 40) \\approx \\mathrm{P}(Y > 39.5)$: $z = \\frac{9.5}{\\sqrt{21}} = 2.073$, probability $0.01908$, i.e. $0.0191$. This is below 0.05: evidence that the proportion in Mutare is higher. (Without the continuity correction: $0.0145$.)",
+  "hints": [
+   "Mean np, variance np(1 − p).",
+   "Use 39.5 for 'at least 40'."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0191"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.01454816453192076"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.04141871045986234"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Under $H_0$, the number of customers at a fuel station in an hour is $\\mathrm{Po}(40)$. In one hour after a promotion, 52 customers arrive. Using a suitable normal approximation, find $\\mathrm{P}(X \\ge 52)$ under $H_0$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.03450840664840871,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00016
+   }
+  },
+  "explanation": "$\\lambda = 40 > 15$, so $X \\approx \\mathrm{N}(40, 40)$. $\\mathrm{P}(X \\ge 52) \\approx \\mathrm{P}(Y > 51.5)$, $z = \\frac{11.5}{\\sqrt{40}} = 1.818$, probability $0.0345$.",
+  "workedSolution": "1. $\\lambda = 40 > 15$, so $X \\approx \\mathrm{N}(40, 40)$. $\\mathrm{P}(X \\ge 52) \\approx \\mathrm{P}(Y > 51.5)$, $z = \\frac{11.5}{\\sqrt{40}} = 1.818$, probability $0.0345$.",
+  "hints": [
+   "Variance = mean for a Poisson variable.",
+   "Apply a continuity correction."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0345"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.02888978323726432"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.38686476528035885"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In a test based on a binomial distribution at the nominal 5% level, the actual significance level is usually a little less than 5%.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "A discrete variable cannot generally give a tail probability of exactly 0.05, so the critical region is chosen with probability as close as possible to, but not above, 0.05.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "To test $H_0: p = 0.2$ against $H_1: p > 0.2$ at the 5% level, 15 trials give 6 successes. Under $H_0$, $\\mathrm{P}(X \\ge 6) = 0.06105$. What is the correct conclusion?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Reject $H_0$: 6 is more than the expected value of 3, so $p > 0.2$.",
+    "rationale": "A result above the mean is not automatically significant."
+   },
+   {
+    "key": "B",
+    "content": "Do not reject $H_0$: $0.06105 > 0.05$; insufficient evidence that $p > 0.2$.",
+    "correct": true,
+    "rationale": "Correct: the p-value exceeds the significance level."
+   },
+   {
+    "key": "C",
+    "content": "Reject $H_0$: $0.06105 < 0.1$, so there is evidence that $p > 0.2$.",
+    "rationale": "The test is at the 5% level, not 10%."
+   },
+   {
+    "key": "D",
+    "content": "Do not reject $H_0$: the result proves that $p = 0.2$ exactly.",
+    "rationale": "Not rejecting H₀ never proves it."
+   }
+  ],
+  "explanation": "Compare the p-value with the significance level and conclude without certainty.",
+  "hints": [
+   "Compare the probability with 0.05."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A manufacturer claims that 10% of its light bulbs are faulty. A retailer believes the proportion is lower. Which tail of the binomial distribution contains the critical region?",
+  "options": [
+   {
+    "key": "A",
+    "content": "the upper tail (large numbers of faulty bulbs)",
+    "rationale": "Large counts would be evidence that p is higher, not lower."
+   },
+   {
+    "key": "B",
+    "content": "both tails",
+    "rationale": "The retailer has a direction in mind."
+   },
+   {
+    "key": "C",
+    "content": "the lower tail (small numbers of faulty bulbs)",
+    "correct": true,
+    "rationale": "Correct: $H_1: p < 0.1$, so small counts are evidence against $H_0$."
+   },
+   {
+    "key": "D",
+    "content": "the middle of the distribution",
+    "rationale": "Results near the expected value support H₀."
+   }
+  ],
+  "explanation": "The critical region lies in the direction of H₁.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q12",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Tendai tests whether a die is biased towards six by throwing it 30 times and counting the sixes, using B(30, 1/6) under H₀. State two assumptions needed for the binomial model to be valid.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The throws are independent of each other.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The probability of a six is the same on every throw (and each throw is either a six or not).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Each throw must be independent of the others, and the probability of a six must stay constant from throw to throw, with a fixed number (30) of throws."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The binomial conditions: fixed n, two outcomes, independence, constant p.",
+  "hints": [
+   "List the binomial conditions in context."
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q13",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each situation with the distribution of the test statistic under H₀.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "number of defective items in a sample of 50, when 4% are claimed defective"
+    },
+    {
+     "id": "L2",
+     "content": "number of calls in 2 hours, when calls arrive at 3 per hour"
+    },
+    {
+     "id": "L3",
+     "content": "number of sixes in 30 throws of a fair die"
+    },
+    {
+     "id": "L4",
+     "content": "number of flaws in 5 m of cloth, when flaws occur at 0.6 per metre"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\mathrm{B}\\left(30, \\frac{1}{6}\\right)$"
+    },
+    {
+     "id": "R4",
+     "content": "$\\mathrm{Po}(3)$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\mathrm{B}(50, 0.04)$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\mathrm{Po}(6)$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Fixed number of trials with a constant probability: binomial. Random events at a constant rate: Poisson, with λ scaled to the interval.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A test of $H_0: p = 0.2$ against $H_1: p < 0.2$ uses $X \\sim \\mathrm{B}(30, 0.2)$ and the critical region $X \\le 2$. Find the actual significance level of the test, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.044178985151997086,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "The actual significance level is $\\mathrm{P}(X \\le 2) = 0.8^{30} + 30(0.2)(0.8)^{29} + 435(0.2)^2(0.8)^{28} = 0.04418$, so $0.0442$.",
+  "workedSolution": "1. The actual significance level is $\\mathrm{P}(X \\le 2) = 0.8^{30} + 30(0.2)(0.8)^{29} + 435(0.2)^2(0.8)^{28} = 0.04418$, so $0.0442$.",
+  "hints": [
+   "The significance level is the probability of the critical region when H₀ is true."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0442"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.033656494818071335"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.010522490333925749"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A two-tailed test of $H_0: p = 0.15$ at the 5% level uses $X \\sim \\mathrm{B}(40, 0.15)$, with 2.5% in each tail. Which observed value of $X$ would lead to rejecting $H_0$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "2",
+    "rationale": "$\\mathrm{P}(X \\le 2) = 0.04860 > 0.025$, so 2 is not in the critical region."
+   },
+   {
+    "key": "B",
+    "content": "11",
+    "rationale": "$\\mathrm{P}(X \\ge 11) = 0.02992 > 0.025$; the upper critical region starts at 12."
+   },
+   {
+    "key": "C",
+    "content": "1",
+    "correct": true,
+    "rationale": "Correct: $\\mathrm{P}(X \\le 1) = 0.01211 \\le 0.025$, so 1 is in the lower critical region."
+   },
+   {
+    "key": "D",
+    "content": "6",
+    "rationale": "6 is the expected value under H₀, the least extreme result possible."
+   }
+  ],
+  "explanation": "The critical region is $X \\le 1$ or $X \\ge 12$.",
+  "hints": [
+   "Check each tail probability against 0.025."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q16",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If faults occur at 2.5 per week under H₀, then the number of faults in a 4-week period has the distribution Po(10) under H₀.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "The Poisson mean scales with the length of the interval: $4 \\times 2.5 = 10$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "A supplier of chicks to farmers in Mashonaland East claims that 20% of chicks die in the first week. A farmer who uses a new brooder believes the death rate is lower. Of 30 chicks raised with the brooder, 2 die in the first week.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which hypotheses should be tested?",
+    "options": [
+     {
+      "key": "A",
+      "content": "$H_0: p = 0.2$, $H_1: p > 0.2$",
+      "rationale": "The farmer suspects a lower rate."
+     },
+     {
+      "key": "B",
+      "content": "$H_0: p = 0.2$, $H_1: p < 0.2$",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "$H_0: p = 0.2$, $H_1: p \\ne 0.2$",
+      "rationale": "A direction is suspected."
+     },
+     {
+      "key": "D",
+      "content": "$H_0: p = \\frac{2}{30}$, $H_1: p < 0.2$",
+      "rationale": "H₀ is the claimed value 0.2."
+     }
+    ],
+    "explanation": "Lower-tail test."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the p-value P(X ≤ 2) under H₀, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.044178985151997086,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$X \\sim \\mathrm{B}(30, 0.2)$: $\\mathrm{P}(X \\le 2) = 0.04418$.",
+    "workedSolution": "1. $X \\sim \\mathrm{B}(30, 0.2)$: $\\mathrm{P}(X \\le 2) = 0.04418$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Carry out the test at the 5% significance level and state your conclusion in context.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Compares 0.0442 < 0.05 and rejects H₀.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "There is evidence at the 5% level that the death rate with the new brooder is less than 20%.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: P(X ≤ 2) = 0.0442 < 0.05, so reject H₀. There is evidence at the 5% level that fewer than 20% of chicks die in the first week when the new brooder is used."
+    },
+    "explanation": "Decision and contextual conclusion."
+   }
+  ],
+  "explanation": "A lower-tail binomial test: find P(X ≤ observed) and compare with the significance level.",
+  "hints": [
+   "Under H₀, X ~ B(30, 0.2).",
+   "Compare with 0.05."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.0442"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.033656494818071335"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "inference.binomial-poisson-tests.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "Before speed humps were built on a road in Gweru, accidents occurred at random at an average rate of 6 per month. In the first month after the humps were built there were no accidents.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State suitable hypotheses for a test of whether the accident rate has decreased, defining your parameter.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$H_0: \\lambda = 6$, $H_1: \\lambda < 6$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "$\\lambda$ is the mean number of accidents per month.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Let $\\lambda$ be the mean number of accidents per month. $H_0: \\lambda = 6$, $H_1: \\lambda < 6$."
+    },
+    "explanation": "Define λ in context."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the p-value of the observed result, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.0024787521766663607,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.000005
+     }
+    },
+    "explanation": "$\\mathrm{P}(X = 0) = \\mathrm{e}^{-6} = 0.002479$. (For a lower-tail test with an observed 0, the p-value is just $\\mathrm{P}(X = 0)$.)",
+    "workedSolution": "1. $\\mathrm{P}(X = 0) = \\mathrm{e}^{-6} = 0.002479$. (For a lower-tail test with an observed 0, the p-value is just $\\mathrm{P}(X = 0)$.)"
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Carry out the test at the 5% significance level, stating your conclusion in context.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "0.00248 < 0.05, so reject H₀.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "There is evidence at the 5% level that the accident rate has decreased.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: P(X = 0) = 0.00248 < 0.05: reject H₀. There is evidence at the 5% level that the mean number of accidents per month has decreased since the humps were built."
+    },
+    "explanation": "Decision then context."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the critical region X ≤ c for this one-month test at the 5% level, and its actual significance level (correct to 3 significant figures).",
+    "payload": {
+     "template": "c = {{blank:c}}, actual level = {{blank:a}}",
+     "blanks": [
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "a",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "c",
+       "accepted": [
+        "1"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "a",
+       "accepted": [
+        "0.0174"
+       ],
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$\\mathrm{P}(X \\le 1) = 0.01735 \\le 0.05$, $\\mathrm{P}(X \\le 2) = 0.06197 > 0.05$, so $X \\le 1$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "The council instead counts accidents over the first 3 months, finding 10. Using a suitable approximation, find the probability under H₀ of 10 or fewer accidents in 3 months, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.03854993362090837,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0002
+     }
+    },
+    "explanation": "Under $H_0$, $X \\sim \\mathrm{Po}(18) \\approx \\mathrm{N}(18, 18)$ ($\\lambda > 15$). $\\mathrm{P}(X \\le 10) \\approx \\mathrm{P}(Y < 10.5)$, $z = \\frac{-7.5}{\\sqrt{18}} = -1.768$, probability $0.0385$.",
+    "workedSolution": "1. Under $H_0$, $X \\sim \\mathrm{Po}(18) \\approx \\mathrm{N}(18, 18)$ ($\\lambda > 15$). $\\mathrm{P}(X \\le 10) \\approx \\mathrm{P}(Y < 10.5)$, $z = \\frac{-7.5}{\\sqrt{18}} = -1.768$, probability $0.0385$."
+   },
+   {
+    "label": "(f)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the conclusion of the 3-month test at the 5% level?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Do not reject H₀: 10 is close to 18.",
+      "rationale": "The probability, not closeness, decides."
+     },
+     {
+      "key": "B",
+      "content": "Reject H₀: evidence that the rate has increased.",
+      "rationale": "Ten is below the expected 18."
+     },
+     {
+      "key": "C",
+      "content": "The test is invalid because λ > 15.",
+      "rationale": "λ > 15 is what justifies the normal approximation."
+     },
+     {
+      "key": "D",
+      "content": "Reject H₀: evidence that the rate has decreased.",
+      "correct": true,
+      "rationale": "Correct: the probability is below 0.05."
+     }
+    ],
+    "explanation": "0.0385 < 0.05."
+   }
+  ],
+  "explanation": "A lower-tail Poisson test: scale λ to the period, use exact Poisson probabilities for small λ and a normal approximation with continuity correction for λ > 15.",
+  "hints": [
+   "For 3 months, λ = 18.",
+   "Use 10.5 for 'at most 10'."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.00248"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "c",
+       "text": "1"
+      },
+      {
+       "blankId": "a",
+       "text": "0.0174"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.0385"
+    },
+    "(f)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.014872513059998144"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "c",
+        "text": "2"
+       },
+       {
+        "blankId": "a",
+        "text": "0.0620"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.029673217055188418"
+     },
+     "(f)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true
+ }
+]

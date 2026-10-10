@@ -1,0 +1,1259 @@
+[
+ {
+  "key": "continuous.cdf.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X$ is a continuous random variable with cumulative distribution function $F$. What does $F(x)$ represent?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\mathrm{P}(X \\le x)$, the probability that $X$ takes a value of at most $x$",
+    "correct": true,
+    "rationale": "Correct: the cdf accumulates probability from the lowest value up to x."
+   },
+   {
+    "key": "B",
+    "content": "$\\mathrm{P}(X = x)$, the probability that $X$ takes exactly the value $x$",
+    "rationale": "For a continuous variable $\\mathrm{P}(X = x) = 0$ for every $x$."
+   },
+   {
+    "key": "C",
+    "content": "the height of the probability density curve at the point $x$",
+    "rationale": "That is the pdf $f(x)$, which is the derivative of $F(x)$."
+   },
+   {
+    "key": "D",
+    "content": "$\\mathrm{P}(X > x)$, the probability that $X$ is greater than $x$",
+    "rationale": "That is $1 - F(x)$, the complement of the cdf."
+   }
+  ],
+  "explanation": "By definition $F(x) = \\mathrm{P}(X \\le x) = \\int_{-\\infty}^{x} f(t)\\,\\mathrm{d}t$, the area under the pdf to the left of $x$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The continuous random variable $X$ has cdf $F(x) = \\frac{x^2}{9}$ for $0 \\le x \\le 3$, with $F(x) = 0$ for $x < 0$ and $F(x) = 1$ for $x > 3$. Which is the pdf of $X$ for $0 \\le x \\le 3$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$f(x) = \\frac{x^3}{27}$",
+    "rationale": "This integrates F instead of differentiating it."
+   },
+   {
+    "key": "B",
+    "content": "$f(x) = \\frac{x^2}{9}$",
+    "rationale": "This repeats the cdf; the pdf is its derivative."
+   },
+   {
+    "key": "C",
+    "content": "$f(x) = 2x$",
+    "rationale": "The factor $\\frac{1}{9}$ has been dropped; $\\int_0^3 2x\\,\\mathrm{d}x = 9 \\ne 1$."
+   },
+   {
+    "key": "D",
+    "content": "$f(x) = \\frac{2x}{9}$",
+    "correct": true,
+    "rationale": "Correct: $f(x) = F'(x) = \\frac{2x}{9}$."
+   }
+  ],
+  "explanation": "The pdf is the derivative of the cdf: $f(x) = \\frac{\\mathrm{d}}{\\mathrm{d}x}\\left(\\frac{x^2}{9}\\right) = \\frac{2x}{9}$ on $[0, 3]$ and 0 elsewhere. Check: $\\int_0^3 \\frac{2x}{9}\\,\\mathrm{d}x = 1$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The continuous random variable $X$ has cdf $F(x) = \\frac{x^2}{16}$ for $0 \\le x \\le 4$ (with $F = 0$ below 0 and $F = 1$ above 4). Find $\\mathrm{P}(1 < X < 3)$.",
+  "answerSpec": {
+   "value": 0.5,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(1 < X < 3) = F(3) - F(1) = \\frac{9}{16} - \\frac{1}{16} = \\frac{1}{2} = 0.5$. ($\\frac{9}{16}$ is $\\mathrm{P}(X < 3)$ alone.)",
+  "workedSolution": "1. $\\mathrm{P}(1 < X < 3) = F(3) - F(1) = \\frac{9}{16} - \\frac{1}{16} = \\frac{1}{2} = 0.5$. ($\\frac{9}{16}$ is $\\mathrm{P}(X < 3)$ alone.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.500"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.5625"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.375"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The continuous random variable $X$ has cdf $F(x) = \\frac{x^3}{27}$ for $0 \\le x \\le 3$ (with $F = 0$ below 0 and $F = 1$ above 3). Find the median of $X$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 2.381101577952299,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "The median $m$ satisfies $F(m) = 0.5$: $\\frac{m^3}{27} = 0.5$, so $m^3 = 13.5$ and $m = 2.381$, i.e. $2.38$. (1.5 is the midpoint of the range, which is the median only for a symmetrical distribution; $1.89$ is the lower quartile.)",
+  "workedSolution": "1. The median $m$ satisfies $F(m) = 0.5$: $\\frac{m^3}{27} = 0.5$, so $m^3 = 13.5$ and $m = 2.381$, i.e. $2.38$. (1.5 is the midpoint of the range, which is the median only for a symmetrical distribution; $1.89$ is the lower quartile.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.38"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1.8898815748423097"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "continuous.cdf.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The continuous random variable $X$ has pdf $f(x) = \\frac{3x^2}{8}$ for $0 \\le x \\le 2$ and $f(x) = 0$ otherwise. For $0 \\le x \\le 2$ its cdf has the form $F(x) = \\frac{x^a}{b}$. Find $a$ and $b$.",
+  "payload": {
+   "template": "a = {{blank:a}}, b = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "3"
+     ],
+     "tolerance": 0
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "8"
+     ],
+     "tolerance": 0
+    }
+   ]
+  },
+  "explanation": "$F(x) = \\displaystyle\\int_0^x \\frac{3t^2}{8}\\,\\mathrm{d}t = \\left[\\frac{t^3}{8}\\right]_0^x = \\frac{x^3}{8}$, so $a = 3$ and $b = 8$. Check: $F(2) = 1$.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "3"
+    },
+    {
+     "blankId": "b",
+     "text": "8"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "2"
+     },
+     {
+      "blankId": "b",
+      "text": "24"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q06",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The cumulative distribution function of a continuous random variable never decreases as x increases.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "$F'(x) = f(x) \\ge 0$, so $F$ is non-decreasing; it rises from 0 to 1 and is flat where the pdf is zero.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q07",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $F(2) = 0.6$ for a continuous random variable $X$, then $\\mathrm{P}(X \\ge 2) = 0.4$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "$\\mathrm{P}(X \\ge 2) = 1 - \\mathrm{P}(X < 2) = 1 - F(2) = 0.4$. For a continuous variable $\\mathrm{P}(X = 2) = 0$, so $<$ and $\\le$ give the same probability.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q08",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "$X$ is a continuous random variable with cdf $F$. Match each quantity with the expression or equation that gives it.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\mathrm{P}(X > 2)$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\mathrm{P}(1 < X < 2)$"
+    },
+    {
+     "id": "L3",
+     "content": "the median m"
+    },
+    {
+     "id": "L4",
+     "content": "the upper quartile q"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "the solution of $F(m) = 0.5$"
+    },
+    {
+     "id": "R4",
+     "content": "the solution of $F(q) = 0.75$"
+    },
+    {
+     "id": "R1",
+     "content": "$1 - F(2)$"
+    },
+    {
+     "id": "R2",
+     "content": "$F(2) - F(1)$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Probabilities are differences of $F$ values; percentiles solve $F(x) = \\frac{p}{100}$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q09",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The continuous random variable $X$ has pdf $f(x) = \\frac{x}{3}$ for $0 \\le x \\le 2$, $f(x) = \\frac{2}{3}(3 - x)$ for $2 < x \\le 3$, and $f(x) = 0$ otherwise. Find $\\mathrm{P}(X > 2.5)$, giving your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.08333333333333348,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "For $2 < x \\le 3$: $F(x) = F(2) + \\int_2^x \\frac{2}{3}(3 - t)\\,\\mathrm{d}t = \\frac{2}{3} + \\frac{2}{3}\\left(3x - \\frac{x^2}{2} - 4\\right) = 2x - \\frac{x^2}{3} - 2$. So $F(2.5) = 5 - \\frac{6.25}{3} - 2 = \\frac{11}{12}$ and $\\mathrm{P}(X > 2.5) = \\frac{1}{12} = 0.08333$, i.e. $0.0833$. (Forgetting to carry $F(2) = \\frac{2}{3}$ into the second piece gives a wrong cdf with $F(3) \\ne 1$.)",
+  "workedSolution": "1. $F(2) = \\int_0^2 \\frac{t}{3}\\,\\mathrm{d}t = \\frac{4}{6} = \\frac{2}{3}$.\n2. For $2 < x \\le 3$: $F(x) = \\frac{2}{3} + \\frac{2}{3}\\left[3t - \\frac{t^2}{2}\\right]_2^x = 2x - \\frac{x^2}{3} - 2$; check $F(3) = 1$.\n3. $F(2.5) = 5 - 2.0833 - 2 = 0.9167$.\n4. $\\mathrm{P}(X > 2.5) = 1 - 0.9167 = 0.0833$ (exactly $\\frac{1}{12}$).",
+  "hints": [
+   "Find F(2) first.",
+   "On the second piece, add the area from 2 to x to F(2)."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "0.0833"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "0.7500000000000001"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "0.3333333333333333"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the random variable in the previous question (pdf $\\frac{x}{3}$ on $[0, 2]$ and $\\frac{2}{3}(3 - x)$ on $(2, 3]$), the cdf on $(2, 3]$ is $F(x) = 2x - \\frac{x^2}{3} - 2$. Find the upper quartile of $X$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 2.1339745962155616,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$F(2) = \\frac{2}{3} < 0.75$, so the upper quartile lies in $(2, 3]$. Solve $2q - \\frac{q^2}{3} - 2 = 0.75$: $q^2 - 6q + 8.25 = 0$, $q = 3 \\pm \\sqrt{0.75}$. Only $3 - \\sqrt{0.75} = 2.134$ lies in the interval, so $q = 2.13$. ($2.12$ uses the first piece $\\frac{q^2}{6} = 0.75$, outside $[0, 2]$; $3.87$ is the rejected root.)",
+  "workedSolution": "1. $F(2) = \\frac{2}{3} < 0.75$, so the upper quartile lies in $(2, 3]$. Solve $2q - \\frac{q^2}{3} - 2 = 0.75$: $q^2 - 6q + 8.25 = 0$, $q = 3 \\pm \\sqrt{0.75}$. Only $3 - \\sqrt{0.75} = 2.134$ lies in the interval, so $q = 2.13$. ($2.12$ uses the first piece $\\frac{q^2}{6} = 0.75$, outside $[0, 2]$; $3.87$ is the rejected root.)",
+  "hints": [
+   "Evaluate F at the join, x = 2, to decide which piece contains the quartile.",
+   "Reject the root outside the piece."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2.13"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2.1213203435596424"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "3.8660254037844384"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "continuous.cdf.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The continuous random variable $X$ has cdf $F(x) = \\frac{x^2 + 2x}{8}$ for $0 \\le x \\le 2$, with $F(x) = 0$ for $x < 0$ and $F(x) = 1$ for $x > 2$. Find the pdf $f(x)$ for $0 \\le x \\le 2$. Type it as a fraction, e.g. (x+3)/5.",
+  "payload": {
+   "maxLength": 60
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "(x+1)/4"
+    },
+    {
+     "value": "(1+x)/4"
+    },
+    {
+     "value": "x/4+1/4"
+    },
+    {
+     "value": "1/4+x/4"
+    },
+    {
+     "value": "0.25x+0.25"
+    },
+    {
+     "value": "0.25(x+1)"
+    },
+    {
+     "value": "(1/4)(x+1)"
+    },
+    {
+     "value": "1/4(x+1)"
+    },
+    {
+     "value": "(2x+2)/8"
+    }
+   ],
+   "rejected": [
+    {
+     "value": "(x^2+2x)/8"
+    },
+    {
+     "value": "(x+2)/8"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "$f(x) = F'(x) = \\frac{2x + 2}{8} = \\frac{x + 1}{4}$ for $0 \\le x \\le 2$, and 0 otherwise. Check: $\\int_0^2 \\frac{x + 1}{4}\\,\\mathrm{d}x = \\frac{1}{4}(2 + 2) = 1$.",
+  "hints": [
+   "Differentiate F term by term."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "(x+1)/4"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "(2x+2)/16"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "x/4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The continuous random variable $X$ has cdf $F(x) = k(x^3 + x)$ for $0 \\le x \\le 2$, with $F(x) = 0$ for $x < 0$ and $F(x) = 1$ for $x > 2$. Find the value of $k$, and the median of $X$ correct to 3 significant figures.",
+  "payload": {
+   "template": "k = {{blank:k}}, median = {{blank:m}}",
+   "blanks": [
+    {
+     "id": "k",
+     "input": "number"
+    },
+    {
+     "id": "m",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "k",
+     "accepted": [
+      "0.1"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "m",
+     "accepted": [
+      "1.52"
+     ],
+     "tolerance": 0.005
+    }
+   ]
+  },
+  "explanation": "$F(2) = 1$: $k(8 + 2) = 1$, so $k = \\frac{1}{10}$. The median solves $\\frac{m^3 + m}{10} = 0.5$, i.e. $m^3 + m - 5 = 0$, giving $m = 1.516$, so $1.52$. (Using $F(2) = 1$ with $x^3$ only gives $k = 0.125$.)",
+  "hints": [
+   "A cdf reaches 1 at the top of the range.",
+   "Solve F(m) = 0.5 numerically."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "k",
+     "text": "0.1"
+    },
+    {
+     "blankId": "m",
+     "text": "1.52"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "k",
+      "text": "0.125"
+     },
+     {
+      "blankId": "m",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "continuous.cdf.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Each function below is proposed as the cdf $F(x)$ of a continuous random variable for $0 \\le x \\le 2$, with $F(x) = 0$ for $x < 0$ and $F(x) = 1$ for $x > 2$. Which one is a valid cdf?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$F(x) = \\frac{x}{4}$",
+    "rationale": "$F(2) = \\frac{1}{2}$, so $F$ would jump from 0.5 to 1 at $x = 2$; it must reach 1 continuously."
+   },
+   {
+    "key": "B",
+    "content": "$F(x) = \\frac{x^3 - x}{6}$",
+    "rationale": "$F(2) = 1$, but $F'(x) = \\frac{3x^2 - 1}{6} < 0$ for small $x$, so $F$ decreases (it is negative near 0)."
+   },
+   {
+    "key": "C",
+    "content": "$F(x) = \\frac{x^2}{4}$",
+    "correct": true,
+    "rationale": "Correct: $F(0) = 0$, $F(2) = 1$, and $F'(x) = \\frac{x}{2} \\ge 0$ on $[0, 2]$."
+   },
+   {
+    "key": "D",
+    "content": "$F(x) = \\frac{2x - x^2}{2}$",
+    "rationale": "$F(2) = 0$, not 1; this function rises and then falls back."
+   }
+  ],
+  "explanation": "A valid cdf is continuous, non-decreasing, and runs from $F = 0$ at the bottom of the range to $F = 1$ at the top.",
+  "hints": [
+   "Check F(0), F(2) and the sign of F'(x)."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q14",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The lifetime $X$, in years, of a borehole pump in Masvingo has cdf $F(x) = 1 - \\frac{16}{x^4}$ for $x \\ge 2$, and $F(x) = 0$ for $x < 2$. Find $\\mathrm{P}(X > 3)$ and the interquartile range of $X$, both correct to 3 significant figures.",
+  "payload": {
+   "template": "P(X > 3) = {{blank:p}}, interquartile range = {{blank:iqr}} years",
+   "blanks": [
+    {
+     "id": "p",
+     "input": "number"
+    },
+    {
+     "id": "iqr",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "p",
+     "accepted": [
+      "0.198"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "iqr",
+     "accepted": [
+      "0.679"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$\\mathrm{P}(X > 3) = 1 - F(3) = \\frac{16}{81} = 0.1975$, so $0.198$. Lower quartile: $1 - \\frac{16}{q^4} = 0.25 \\Rightarrow q^4 = \\frac{64}{3}$, $q_1 = 2.149$. Upper quartile: $\\frac{16}{q^4} = 0.25 \\Rightarrow q^4 = 64$, $q_3 = 2.828$. IQR $= 0.6793$, i.e. $0.679$ years.",
+  "hints": [
+   "P(X > 3) = 1 − F(3).",
+   "Quartiles solve F(q) = 0.25 and F(q) = 0.75."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "p",
+     "text": "0.198"
+    },
+    {
+     "blankId": "iqr",
+     "text": "0.679"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "p",
+      "text": "0.802"
+     },
+     {
+      "blankId": "iqr",
+      "text": "1.15"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "continuous.cdf.q15",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "The continuous random variable $X$ has cdf $F(x) = \\frac{x^3 + x}{10}$ for $0 \\le x \\le 2$. Show that the median of $X$ lies between 1.5 and 1.55.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 states that the median m satisfies F(m) = 0.5 (or m³ + m − 5 = 0).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 evaluates F(1.5) = 0.4875 and F(1.55) = 0.5274 (or the values of m³ + m − 5).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 states that F is continuous and increasing and 0.5 lies between the two values, so 1.5 < m < 1.55.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "The median satisfies $F(m) = 0.5$.\n$$\nF(1.5) = \\frac{3.375 + 1.5}{10} = 0.4875 < 0.5\n$$\n$$\nF(1.55) = \\frac{3.723875 + 1.55}{10} = 0.5274 > 0.5\n$$\n$F$ is continuous and increasing on $[0, 2]$, so $F(m) = 0.5$ for some $m$ with $1.5 < m < 1.55$."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A 'show that the median lies between' question needs F at both ends, a comparison with 0.5, and a conclusion.",
+  "hints": [
+   "Evaluate F at 1.5 and at 1.55 and compare each with 0.5."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "continuous.cdf.q16",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For a continuous random variable $X$ with cdf $F$, what is $\\mathrm{P}(X = 1.5)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$F(1.5)$",
+    "rationale": "$F(1.5)$ is $\\mathrm{P}(X \\le 1.5)$, the probability of all values up to 1.5."
+   },
+   {
+    "key": "B",
+    "content": "0",
+    "correct": true,
+    "rationale": "Correct: $\\mathrm{P}(X = 1.5) = F(1.5) - F(1.5) = 0$; a single point has no area under the pdf."
+   },
+   {
+    "key": "C",
+    "content": "the value of the pdf at 1.5",
+    "rationale": "The pdf value is a density (a height), not a probability."
+   },
+   {
+    "key": "D",
+    "content": "$1 - F(1.5)$",
+    "rationale": "This is $\\mathrm{P}(X > 1.5)$."
+   }
+  ],
+  "explanation": "For a continuous variable, probabilities are areas over intervals, and any single value has probability 0.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "continuous.cdf.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "The continuous random variable $X$ has pdf $f(x) = \\frac{1}{2}$ for $0 \\le x \\le 1$, $f(x) = \\frac{1}{4}(3 - x)$ for $1 < x \\le 3$, and $f(x) = 0$ otherwise.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Show that for $1 < x \\le 3$ the cdf is $F(x) = \\frac{ax - x^2 - b}{8}$, and state the integers $a$ and $b$. Also state $F(1)$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}, F(1) = {{blank:f}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "f",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "6"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "f",
+       "accepted": [
+        "0.5"
+       ],
+       "tolerance": 0.001
+      }
+     ]
+    },
+    "explanation": "$F(1) = \\frac{1}{2}$. For $1 < x \\le 3$: $F(x) = \\frac{1}{2} + \\int_1^x \\frac{3 - t}{4}\\,\\mathrm{d}t = \\frac{1}{2} + \\frac{1}{4}\\left[3t - \\frac{t^2}{2}\\right]_1^x = \\frac{1}{2} + \\frac{3x}{4} - \\frac{x^2}{8} - \\frac{5}{8} = \\frac{6x - x^2 - 1}{8}$. Check $F(3) = \\frac{18 - 9 - 1}{8} = 1$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the upper quartile of X, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 1.5857864376269049,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$F(1) = 0.5 < 0.75$, so solve $\\frac{6q - q^2 - 1}{8} = 0.75$: $q^2 - 6q + 7 = 0$, $q = 3 \\pm \\sqrt{2}$. Only $3 - \\sqrt{2} = 1.586$ is in $(1, 3]$, so $1.59$.",
+    "workedSolution": "1. $F(1) = 0.5 < 0.75$, so solve $\\frac{6q - q^2 - 1}{8} = 0.75$: $q^2 - 6q + 7 = 0$, $q = 3 \\pm \\sqrt{2}$. Only $3 - \\sqrt{2} = 1.586$ is in $(1, 3]$, so $1.59$."
+   }
+  ],
+  "explanation": "Carry F(1) into the second piece, check F(3) = 1, then solve F(q) = 0.75 in the correct piece.",
+  "hints": [
+   "F(1) is the area of the rectangle from 0 to 1.",
+   "Decide which piece contains the upper quartile."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "6"
+      },
+      {
+       "blankId": "b",
+       "text": "1"
+      },
+      {
+       "blankId": "f",
+       "text": "0.5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.59"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "3"
+       },
+       {
+        "blankId": "b",
+        "text": "5"
+       },
+       {
+        "blankId": "f",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4.414213562373095"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "continuous.cdf.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.continuous.cdf"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "The time, $X$ hours, that a kombi waits at a rank in Harare before it is full is modelled by the cdf $F(x) = ax + bx^2$ for $0 \\le x \\le 2$, with $F(x) = 0$ for $x < 0$ and $F(x) = 1$ for $x > 2$. It is known that $\\mathrm{P}(X \\le 1) = 0.3$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the values of the constants a and b.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0.1"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0.2"
+       ],
+       "marks": 2,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "$F(2) = 1$: $2a + 4b = 1$. $F(1) = 0.3$: $a + b = 0.3$. Subtracting twice the second from the first: $2b = 0.4$, so $b = 0.2$ and $a = 0.1$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the pdf f(x) for 0 ≤ x ≤ 2. Type it in the form p + qx, e.g. 0.3+0.5x.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "0.1+0.4x"
+      },
+      {
+       "value": "0.4x+0.1"
+      },
+      {
+       "value": "(1+4x)/10"
+      },
+      {
+       "value": "(4x+1)/10"
+      },
+      {
+       "value": "1/10+2x/5"
+      },
+      {
+       "value": "1/10+0.4x"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$f(x) = F'(x) = 0.1 + 0.4x$ for $0 \\le x \\le 2$ (0 otherwise)."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the median waiting time, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "h"
+    },
+    "answerSpec": {
+     "value": 1.3507810593582121,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "h",
+       "hours",
+       "hour",
+       "hrs",
+       "hr"
+      ]
+     }
+    },
+    "explanation": "$0.1m + 0.2m^2 = 0.5 \\Rightarrow 2m^2 + m - 5 = 0 \\Rightarrow m = \\frac{-1 + \\sqrt{41}}{4} = 1.351$, so $1.35$ hours.",
+    "workedSolution": "1. $0.1m + 0.2m^2 = 0.5 \\Rightarrow 2m^2 + m - 5 = 0 \\Rightarrow m = \\frac{-1 + \\sqrt{41}}{4} = 1.351$, so $1.35$ hours."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the mean waiting time E(X), correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "h"
+    },
+    "answerSpec": {
+     "value": 1.2666666666666702,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "h",
+       "hours",
+       "hour",
+       "hrs",
+       "hr"
+      ]
+     }
+    },
+    "explanation": "$\\mathrm{E}(X) = \\int_0^2 x(0.1 + 0.4x)\\,\\mathrm{d}x = \\left[0.05x^2 + \\frac{0.4x^3}{3}\\right]_0^2 = 0.2 + \\frac{3.2}{3} = 1.267$, so $1.27$ hours.",
+    "workedSolution": "1. $\\mathrm{E}(X) = \\int_0^2 x(0.1 + 0.4x)\\,\\mathrm{d}x = \\left[0.05x^2 + \\frac{0.4x^3}{3}\\right]_0^2 = 0.2 + \\frac{3.2}{3} = 1.267$, so $1.27$ hours."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Compare the mean and the median and state, with a reason, the skewness of the distribution.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "States mean (1.27) < median (1.35).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Concludes negative skew, e.g. the pdf increases so long waits are more common and the tail is to the left (short waits).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The mean 1.27 h is less than the median 1.35 h, so the distribution is negatively skewed: the pdf increases with x, with a longer tail towards short waiting times."
+    },
+    "explanation": "Mean < median indicates negative skew; mean > median positive skew."
+   }
+  ],
+  "explanation": "Use F(2) = 1 and the given probability for two equations, differentiate for the pdf, solve F(m) = 0.5, and integrate x f(x) for the mean.",
+  "hints": [
+   "F(2) = 1 gives one equation; F(1) = 0.3 gives the other.",
+   "E(X) needs the pdf, not the cdf."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0.1"
+      },
+      {
+       "blankId": "b",
+       "text": "0.2"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "0.1+0.4x"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.35"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "1.27"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0.2"
+       },
+       {
+        "blankId": "b",
+        "text": "0.1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "0.1x+0.2x^2"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

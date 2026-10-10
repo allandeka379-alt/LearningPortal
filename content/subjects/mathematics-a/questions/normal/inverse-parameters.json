@@ -1,0 +1,944 @@
+[
+ {
+  "key": "normal.inverse-parameters.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which value of $z$ satisfies $\\Phi(z) = 0.95$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1.645",
+    "correct": true,
+    "rationale": "Correct: 95% of the standard normal distribution lies below 1.645."
+   },
+   {
+    "key": "B",
+    "content": "1.960",
+    "rationale": "$\\Phi(1.960) = 0.975$; 1.960 cuts off 2.5% in each tail."
+   },
+   {
+    "key": "C",
+    "content": "0.8289",
+    "rationale": "This is $\\Phi(0.95)$, reading the table the wrong way round."
+   },
+   {
+    "key": "D",
+    "content": "−1.645",
+    "rationale": "$\\Phi(-1.645) = 0.05$, the lower tail."
+   }
+  ],
+  "explanation": "$\\Phi^{-1}(0.95) = 1.645$, one of the critical values printed in MF19.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "normal.inverse-parameters.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{N}(48, 7^2)$. Find the value of $a$ such that $\\mathrm{P}(X < a) = 0.8$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 53.89134858945984,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.053
+   }
+  },
+  "explanation": "$\\Phi^{-1}(0.8) = 0.842$. $\\frac{a - 48}{7} = 0.842$, so $a = 48 + 7 \\times 0.842 = 53.9$. ($53.6$ uses the probability 0.8 as if it were $z$.)",
+  "workedSolution": "1. $\\Phi^{-1}(0.8) = 0.842$. $\\frac{a - 48}{7} = 0.842$, so $a = 48 + 7 \\times 0.842 = 53.9$. ($53.6$ uses the probability 0.8 as if it were $z$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "53.9"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "42.1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "53.6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "normal.inverse-parameters.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The masses of potatoes from a farm in Nyanga are normally distributed with mean 250 g and standard deviation 12 g. Find the mass below which 7% of the potatoes lie, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 232.2905075558756,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.5
+   }
+  },
+  "explanation": "7% below means 93% above: $z = -\\Phi^{-1}(0.93) = -1.476$. $m = 250 - 12 \\times 1.476 = 232$ g. ($268$ has the wrong sign: it is above the mean.)",
+  "workedSolution": "1. 7% below means 93% above: $z = -\\Phi^{-1}(0.93) = -1.476$. $m = 250 - 12 \\times 1.476 = 232$ g. ($268$ has the wrong sign: it is above the mean.)",
+  "hints": [
+   "The value is below the mean, so z is negative."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "232"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "268"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "normal.inverse-parameters.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{N}(80, \\sigma^2)$ and $\\mathrm{P}(X > 95) = 0.04$. Find $\\sigma$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 8.568069663715951,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0065
+   }
+  },
+  "explanation": "$\\mathrm{P}(X < 95) = 0.96$, so $\\frac{95 - 80}{\\sigma} = 1.751$ and $\\sigma = \\frac{15}{1.751} = 8.57$. ($15.6$ divides by the probability instead of the $z$ value.)",
+  "workedSolution": "1. $\\mathrm{P}(X < 95) = 0.96$, so $\\frac{95 - 80}{\\sigma} = 1.751$ and $\\sigma = \\frac{15}{1.751} = 8.57$. ($15.6$ divides by the probability instead of the $z$ value.)",
+  "hints": [
+   "Find $z$ with $\\Phi(z) = 0.96$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8.57"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "15.6"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "73.4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.inverse-parameters.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The masses of newborn calves on a ranch near Gwanda are normally distributed with standard deviation 3 kg. Ten per cent of the calves weigh less than 25 kg. Find the mean mass, correct to 3 significant figures.",
+  "payload": {
+   "unitHint": "kg"
+  },
+  "answerSpec": {
+   "value": 28.84465479914834,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.051
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "kg",
+     "kilograms",
+     "kilogram"
+    ]
+   }
+  },
+  "explanation": "$\\frac{25 - \\mu}{3} = -1.282$, so $\\mu = 25 + 3 \\times 1.282 = 28.8$ kg. ($21.2$ kg has the wrong sign: the mean must be above 25 kg.)",
+  "workedSolution": "1. $\\frac{25 - \\mu}{3} = -1.282$, so $\\mu = 25 + 3 \\times 1.282 = 28.8$ kg. ($21.2$ kg has the wrong sign: the mean must be above 25 kg.)",
+  "hints": [
+   "25 kg is below the mean, so z = −1.282."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "28.8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "21.2"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.inverse-parameters.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 4,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The times taken by learners at a school in Mutare to run a cross-country course are normally distributed. 25% of learners take less than 105 minutes and 10% take more than 130 minutes. Find the mean and the standard deviation of the times, each correct to 3 significant figures.",
+  "payload": {
+   "template": "mean {{blank:m}} minutes; standard deviation {{blank:s}} minutes",
+   "blanks": [
+    {
+     "id": "m",
+     "input": "number"
+    },
+    {
+     "id": "s",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "m",
+     "accepted": [
+      "114"
+     ],
+     "tolerance": 0.51
+    },
+    {
+     "id": "s",
+     "accepted": [
+      "12.8"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "$\\frac{105 - \\mu}{\\sigma} = -0.674$ and $\\frac{130 - \\mu}{\\sigma} = 1.282$. So $105 = \\mu - 0.674\\sigma$ and $130 = \\mu + 1.282\\sigma$. Subtracting: $25 = 1.956\\sigma$, $\\sigma = 12.8$; then $\\mu = 130 - 1.282 \\times 12.78 = 114$. (A standard deviation of 41.2 comes from giving both $z$ values the same sign.)",
+  "hints": [
+   "Write two equations of the form x = μ + zσ.",
+   "The z for 105 is negative."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "m",
+     "text": "114"
+    },
+    {
+     "blankId": "s",
+     "text": "12.8"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "m",
+      "text": "118"
+     },
+     {
+      "blankId": "s",
+      "text": "41.2"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "normal.inverse-parameters.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{N}(\\mu, \\sigma^2)$ and $\\mathrm{P}(X < 40) = 0.3$. Which equation is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\frac{40 - \\mu}{\\sigma} = 0.524$",
+    "rationale": "The sign is wrong: less than 30% lie below 40, so 40 is below the mean."
+   },
+   {
+    "key": "B",
+    "content": "$\\frac{40 - \\mu}{\\sigma} = 0.3$",
+    "rationale": "0.3 is a probability, not a z value."
+   },
+   {
+    "key": "C",
+    "content": "$\\frac{40 - \\mu}{\\sigma} = -0.524$",
+    "correct": true,
+    "rationale": "Correct: 40 is below the mean, and $\\Phi(0.524) = 0.7$."
+   },
+   {
+    "key": "D",
+    "content": "$\\frac{40 - \\mu}{\\sigma} = -0.3$",
+    "rationale": "0.3 is a probability, not a z value."
+   }
+  ],
+  "explanation": "$\\Phi(z) = 0.3 < 0.5$, so $z < 0$: $z = -\\Phi^{-1}(0.7) = -0.524$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.inverse-parameters.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{N}(\\mu, 16)$ and $\\mathrm{P}(X > 30) = 0.5$. What is $\\mu$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "34",
+    "rationale": "This adds one standard deviation; z for a probability of 0.5 is 0."
+   },
+   {
+    "key": "B",
+    "content": "14",
+    "rationale": "This subtracts the variance from 30."
+   },
+   {
+    "key": "C",
+    "content": "32",
+    "rationale": "This adds half the standard deviation; z = 0 here."
+   },
+   {
+    "key": "D",
+    "content": "30",
+    "correct": true,
+    "rationale": "Correct: half the distribution lies above the mean, so μ = 30."
+   }
+  ],
+  "explanation": "$\\Phi(z) = 0.5$ gives $z = 0$, so $\\frac{30 - \\mu}{4} = 0$ and $\\mu = 30$.",
+  "hints": [
+   "Which z value has Φ(z) = 0.5?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "normal.inverse-parameters.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $\\mathrm{P}(X > a) = 0.2$ for $X \\sim \\mathrm{N}(\\mu, \\sigma^2)$, then $a$ is greater than $\\mu$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "Only 20% lie above $a$, less than the 50% above $\\mu$, so $a > \\mu$ (here $a = \\mu + 0.842\\sigma$).",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.inverse-parameters.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The interquartile range of any normal distribution is about 1.35 standard deviations.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "The quartiles are $\\mu \\pm 0.6745\\sigma$, so the IQR is $1.349\\sigma \\approx 1.35\\sigma$.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.inverse-parameters.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The marks in a large examination are normally distributed with interquartile range 18 marks. Find the standard deviation of the marks, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 13.343421087955027,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.06
+   }
+  },
+  "explanation": "The quartiles are $\\mu \\pm 0.674\\sigma$, so $2 \\times 0.674\\sigma = 18$ and $\\sigma = \\frac{18}{1.348} = 13.3$. ($26.7$ forgets the factor 2.)",
+  "workedSolution": "1. The quartiles are $\\mu \\pm 0.674\\sigma$, so $2 \\times 0.674\\sigma = 18$ and $\\sigma = \\frac{18}{1.348} = 13.3$. ($26.7$ forgets the factor 2.)",
+  "hints": [
+   "Upper quartile: Φ(z) = 0.75."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "13.3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "9"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "26.7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.inverse-parameters.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{N}(20, 4.2^2)$. Find the value of $k$ such that $\\mathrm{P}(20 - k < X < 20 + k) = 0.9$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 6.9083851735763115,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0056
+   }
+  },
+  "explanation": "The middle 90% leaves 5% in each tail, so $\\frac{k}{4.2} = \\Phi^{-1}(0.95) = 1.645$ and $k = 6.91$. ($5.38$ puts all 10% in one tail.)",
+  "workedSolution": "1. The middle 90% leaves 5% in each tail, so $\\frac{k}{4.2} = \\Phi^{-1}(0.95) = 1.645$ and $k = 6.91$. ($5.38$ puts all 10% in one tail.)",
+  "hints": [
+   "Split the remaining 10% equally between the two tails."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "6.91"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5.38"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "normal.inverse-parameters.q13",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each condition on $X \\sim \\mathrm{N}(\\mu, \\sigma^2)$ with the value of $\\frac{a - \\mu}{\\sigma}$.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\mathrm{P}(X < a) = 0.975$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\mathrm{P}(X > a) = 0.975$"
+    },
+    {
+     "id": "L3",
+     "content": "$\\mathrm{P}(X > a) = 0.1$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\mathrm{P}(X < a) = 0.1$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "1.282"
+    },
+    {
+     "id": "R4",
+     "content": "−1.282"
+    },
+    {
+     "id": "R1",
+     "content": "1.960"
+    },
+    {
+     "id": "R2",
+     "content": "−1.960"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Convert to an area on the left: $\\mathrm{P}(X < a) = 0.975 \\Rightarrow z = 1.960$; $\\mathrm{P}(X > a) = 0.975 \\Rightarrow \\Phi(z) = 0.025 \\Rightarrow z = -1.960$; and similarly for 0.1.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.inverse-parameters.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Explain why, when finding $\\mu$ and $\\sigma$ from two given probabilities, the two $z$ values usually have opposite signs, and say what it means if both are positive.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Opposite signs when one given value is below the mean and the other above (e.g. 'x% less than a', 'y% more than b').",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Both positive means both values are above the mean (e.g. 'less than a' with probability over 0.5); the equations still work, but the signs must follow the sketch.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A lower tail probability below 0.5 puts its value below the mean (negative z) while an upper tail probability below 0.5 puts its value above the mean (positive z). If both given values are above the mean, for example P(X < a) = 0.7 and P(X > b) = 0.1, both z values are positive; a sketch shows which sign each takes."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The sign of z follows from where the value lies relative to the mean.",
+  "hints": [
+   "Sketch both values on one curve."
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "normal.inverse-parameters.q15",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "A machine at a mill in Bulawayo fills bags with maize meal. The masses are normally distributed with mean 10.0 kg and standard deviation $\\sigma$ kg. 12% of bags contain less than 9.4 kg.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find σ, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.5106440200115763,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00051
+     }
+    },
+    "explanation": "$\\frac{9.4 - 10}{\\sigma} = -1.175$, so $\\sigma = \\frac{0.6}{1.175} = 0.511$ kg.",
+    "workedSolution": "1. $\\frac{9.4 - 10}{\\sigma} = -1.175$, so $\\sigma = \\frac{0.6}{1.175} = 0.511$ kg."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that a bag contains more than 10.5 kg, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.1637515349401688,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.002
+     }
+    },
+    "explanation": "$z = \\frac{10.5 - 10}{0.511} = 0.979$; $1 - \\Phi(0.98) = 0.164$.",
+    "workedSolution": "1. $z = \\frac{10.5 - 10}{0.511} = 0.979$; $1 - \\Phi(0.98) = 0.164$."
+   }
+  ],
+  "explanation": "Find σ from the given percentage, then use it forwards.",
+  "hints": [
+   "9.4 kg is below the mean: z is negative."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.511"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.164"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.682"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.836"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "normal.inverse-parameters.q16",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.normal.inverse-parameters"
+  ],
+  "difficulty": 4,
+  "marks": 14,
+  "estimatedSeconds": 1260,
+  "stem": "The marks in a Form 6 Statistics test taken by learners across Masvingo province are modelled by a normal distribution. 8% of learners scored less than 40 marks and 20% scored more than 64 marks.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\mu - 1.405\\sigma = 40$ and $\\mu + 0.842\\sigma = 64$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses $\\Phi^{-1}(0.92) = 1.405$ with a negative sign for 40.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 uses $\\Phi^{-1}(0.8) = 0.842$ for 64.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 rearranges both standardisations to the given equations.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\mathrm{P}(X < 40) = 0.08 \\Rightarrow \\frac{40 - \\mu}{\\sigma} = -1.405 \\Rightarrow \\mu - 1.405\\sigma = 40\n$$\n$$\n\\mathrm{P}(X > 64) = 0.2 \\Rightarrow \\frac{64 - \\mu}{\\sigma} = 0.842 \\Rightarrow \\mu + 0.842\\sigma = 64\n$$"
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Hence find μ and σ, each correct to 3 significant figures.",
+    "payload": {
+     "template": "μ = {{blank:m}}; σ = {{blank:s}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "s",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "55.0"
+       ],
+       "marks": 2,
+       "tolerance": 0.053
+      },
+      {
+       "id": "s",
+       "accepted": [
+        "10.7"
+       ],
+       "marks": 2,
+       "tolerance": 0.051
+      }
+     ]
+    },
+    "explanation": "Subtracting: $2.247\\sigma = 24$, so $\\sigma = 10.7$; $\\mu = 40 + 1.405 \\times 10.68 = 55.0$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the proportion of learners scoring between 50 and 60 marks, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.3602589383195123,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.003
+     }
+    },
+    "explanation": "$z_1 = \\frac{50 - 55.01}{10.68} = -0.469$, $z_2 = \\frac{60 - 55.01}{10.68} = 0.467$. Proportion $= \\Phi(z_2) - \\Phi(z_1) = 0.360$.",
+    "workedSolution": "1. $z_1 = \\frac{50 - 55.01}{10.68} = -0.469$, $z_2 = \\frac{60 - 55.01}{10.68} = 0.467$. Proportion $= \\Phi(z_2) - \\Phi(z_1) = 0.360$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "A distinction is awarded to the top 5% of learners. Find the least mark (to 3 significant figures) needed for a distinction according to the model.",
+    "answerSpec": {
+     "value": 72.58042416932855,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.15
+     }
+    },
+    "explanation": "$\\frac{d - \\mu}{\\sigma} = 1.645$, so $d = 55.01 + 1.645 \\times 10.68 = 72.6$ marks.",
+    "workedSolution": "1. $\\frac{d - \\mu}{\\sigma} = 1.645$, so $d = 55.01 + 1.645 \\times 10.68 = 72.6$ marks."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Give one reason why a normal model for test marks can only be approximate.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Marks are discrete (whole numbers) and bounded (0 to 100), whereas the normal distribution is continuous and unbounded.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Marks are whole numbers between 0 and the maximum, but a normal variable is continuous and can take any value, including impossible ones above the maximum or below 0."
+    }
+   }
+  ],
+  "explanation": "Two percentages give two equations in μ and σ; then use the model forwards and backwards.",
+  "hints": [
+   "40 is below the mean and 64 is above it.",
+   "Eliminate μ by subtracting the equations."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "55.0"
+      },
+      {
+       "blankId": "s",
+       "text": "10.7"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.360"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "72.6"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "52"
+       },
+       {
+        "blankId": "s",
+        "text": "42.6"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.68"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "37.4"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

@@ -1,0 +1,1091 @@
+[
+ {
+  "key": "inference.chi-squared.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A contingency table with 3 rows and 4 columns is used to test whether two classifications are independent. How many degrees of freedom does the test have?",
+  "options": [
+   {
+    "key": "A",
+    "content": "6",
+    "correct": true,
+    "rationale": "Correct: ν = (3 − 1)(4 − 1) = 2 × 3."
+   },
+   {
+    "key": "B",
+    "content": "12",
+    "rationale": "This is the number of cells; the row and column totals impose constraints."
+   },
+   {
+    "key": "C",
+    "content": "11",
+    "rationale": "This is the number of cells minus 1, the rule for a goodness-of-fit test with nothing estimated."
+   },
+   {
+    "key": "D",
+    "content": "5",
+    "rationale": "This adds (3 − 1) + (4 − 1); the degrees of freedom are the product."
+   }
+  ],
+  "explanation": "$\\nu = (r - 1)(c - 1) = 2 \\times 3 = 6$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q02",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A χ² goodness-of-fit test rejects the null hypothesis when the test statistic is larger than the upper critical value.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "A large $X^2 = \\sum \\frac{(O - E)^2}{E}$ means the observed and expected frequencies are far apart, so the test is upper-tailed.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In a contingency table with grand total 150, one cell is in a row with total 60 and a column with total 45. Find the expected frequency for this cell if the classifications are independent.",
+  "answerSpec": {
+   "value": 18
+  },
+  "explanation": "$E = \\frac{\\text{row total} \\times \\text{column total}}{\\text{grand total}} = \\frac{60 \\times 45}{150} = 18$.",
+  "workedSolution": "1. $E = \\frac{\\text{row total} \\times \\text{column total}}{\\text{grand total}} = \\frac{60 \\times 45}{150} = 18$.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "18"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "27.0"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "27"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Observed frequencies $18, 22, 20, 40$ are compared with expected frequencies of $25$ in each class. Calculate $X^2 = \\sum \\frac{(O - E)^2}{E}$.",
+  "answerSpec": {
+   "value": 12.32,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "$X^2 = \\frac{7^2 + 3^2 + 5^2 + 15^2}{25} = \\frac{308}{25} = 12.32$. ($308$ forgets to divide by $E$.)",
+  "workedSolution": "1. $X^2 = \\frac{7^2 + 3^2 + 5^2 + 15^2}{25} = \\frac{308}{25} = 12.32$. ($308$ forgets to divide by $E$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "12.3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3.08"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "308"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A Poisson model is fitted to a frequency distribution, with λ estimated from the sample mean. After combining classes with expected frequencies below 5, there are 6 classes. How many degrees of freedom does the χ² test have?",
+  "options": [
+   {
+    "key": "A",
+    "content": "5",
+    "rationale": "This forgets that λ was estimated from the data."
+   },
+   {
+    "key": "B",
+    "content": "4",
+    "correct": true,
+    "rationale": "Correct: ν = 6 − 1 − 1: one for the total and one for the estimated λ."
+   },
+   {
+    "key": "C",
+    "content": "6",
+    "rationale": "The total frequency is always a constraint, so subtract at least 1."
+   },
+   {
+    "key": "D",
+    "content": "3",
+    "rationale": "Only one parameter (λ) is estimated for a Poisson model."
+   }
+  ],
+  "explanation": "$\\nu = k - 1 - m = 6 - 1 - 1 = 4$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "State the upper 5% critical value of the χ² distribution with 3 degrees of freedom, correct to 3 decimal places.",
+  "answerSpec": {
+   "value": 7.815,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\chi^2_3(5\\%) = 7.815$. ($11.345$ is the 1% point; $9.488$ uses $\\nu = 4$.)",
+  "workedSolution": "1. $\\chi^2_3(5\\%) = 7.815$. ($11.345$ is the 1% point; $9.488$ uses $\\nu = 4$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "7.815"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "11.345"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "9.488"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.chi-squared.q07",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A theory predicts that four types of bean plant occur in the ratio $9 : 3 : 3 : 1$. In a sample of $160$ plants from a Chinhoyi research station the numbers were $97$, $28$, $25$ and $10$. Calculate the $\\chi^2$ test statistic for testing the theory, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 1.511111111111111,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "Expected: $\\frac{9}{16} \\times 160 = 90$, $30$, $30$, $10$. $X^2 = \\frac{7^2}{90} + \\frac{2^2}{30} + \\frac{5^2}{30} + 0 = 1.51$. (Using $40$ in each class ignores the ratio.)",
+  "workedSolution": "1. Expected frequencies: $90, 30, 30, 10$.\n2. Contributions: $\\frac{49}{90} = 0.5444$, $\\frac{4}{30} = 0.1333$, $\\frac{25}{30} = 0.8333$, $0$.\n3. $X^2 = 1.51$.",
+  "hints": [
+   "Share 160 in the ratio 9 : 3 : 3 : 1 first."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "1.51"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "113"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.chi-squared.q08",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "The number of breakdowns per day of the Harare–Mutare commuter train is to be tested against the model $\\mathrm{Po}(1.4)$ using records for $100$ days. Find the expected numbers of days with $0$ breakdowns and with $1$ breakdown, correct to 3 significant figures.",
+  "payload": {
+   "template": "0 breakdowns: {{blank:a}} days, 1 breakdown: {{blank:b}} days",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "24.7"
+     ],
+     "tolerance": 0.05
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "34.5"
+     ],
+     "tolerance": 0.05
+    }
+   ]
+  },
+  "explanation": "$E = 100\\,\\mathrm{P}(X = r)$: $100\\mathrm{e}^{-1.4} = 24.7$ and $100 \\times 1.4\\mathrm{e}^{-1.4} = 34.5$. ($140$ forgets the factor $\\mathrm{e}^{-1.4}$.)",
+  "hints": [
+   "Multiply each Poisson probability by the number of days."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "24.7"
+    },
+    {
+     "blankId": "b",
+     "text": "34.5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "0.247"
+     },
+     {
+      "blankId": "b",
+      "text": "140"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.chi-squared.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In a goodness-of-fit test, the last class has expected frequency 2.6. What should be done?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Leave it out of the calculation",
+    "rationale": "Dropping a class throws away data and makes the totals of O and E disagree."
+   },
+   {
+    "key": "B",
+    "content": "Combine it with a neighbouring class, adding both O and E",
+    "correct": true,
+    "rationale": "Correct: this keeps every E at least 5, and the degrees of freedom use the classes after combining."
+   },
+   {
+    "key": "C",
+    "content": "Combine only the expected frequencies, not the observed ones",
+    "rationale": "O and E must be combined in the same way, so each class has one O and one E."
+   },
+   {
+    "key": "D",
+    "content": "Round the expected frequency up to 5",
+    "rationale": "Expected frequencies come from the model; they cannot be changed."
+   }
+  ],
+  "explanation": "The χ² approximation needs every expected frequency to be at least 5, so merge small classes with a neighbour (O with O, E with E) and count the merged classes when finding ν.",
+  "hints": [
+   "What must stay true about O and E in each class?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q10",
+  "type": "CALCULATION",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A survey of $100$ farmers in Gokwe records whether they use irrigation and whether their cotton yield was above average:\n\n|  | Above average | Not above average |\n| --- | --- | --- |\n| Irrigation | 41 | 19 |\n| No irrigation | 14 | 26 |\n\nCalculate the $\\chi^2$ statistic for testing independence, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 10.774410774410775,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "Row totals $60, 40$; column totals $55, 45$. Expected: $33, 27, 22, 18$. $X^2 = \\frac{8^2}{33} + \\frac{8^2}{27} + \\frac{8^2}{22} + \\frac{8^2}{18} = 10.8$.",
+  "workedSolution": "1. $E_{11} = \\frac{60 \\times 55}{100} = 33$; then $27$, $22$, $18$ from the totals.\n2. Every $|O - E| = 8$.\n3. $X^2 = 64\\left(\\frac{1}{33} + \\frac{1}{27} + \\frac{1}{22} + \\frac{1}{18}\\right) = 10.8$.",
+  "hints": [
+   "E = row total × column total / 100."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "10.8"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "16.6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.chi-squared.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A goodness-of-fit test with $3$ degrees of freedom gives $X^2 = 5.2$. The critical value at the 5% level is $7.815$. What is the conclusion?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Reject H₀: the model does not fit",
+    "rationale": "Rejection needs X² greater than the critical value."
+   },
+   {
+    "key": "B",
+    "content": "Reject H₀, because 5.2 is greater than the number of degrees of freedom",
+    "rationale": "The comparison is with the critical value, not with ν."
+   },
+   {
+    "key": "C",
+    "content": "The model is proved correct",
+    "rationale": "Not rejecting H₀ shows only that there is insufficient evidence against the model."
+   },
+   {
+    "key": "D",
+    "content": "Do not reject H₀: the data are consistent with the model",
+    "correct": true,
+    "rationale": "Correct: $5.2 < 7.815$, so the statistic is not in the upper critical region."
+   }
+  ],
+  "explanation": "$5.2 < 7.815$: do not reject $H_0$ at the 5% level.",
+  "hints": [
+   "Is X² above the critical value?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q12",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each test with its number of degrees of freedom (classes counted after any combining).",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Uniform model, 6 classes"
+    },
+    {
+     "id": "L2",
+     "content": "Binomial model with p estimated, 5 classes"
+    },
+    {
+     "id": "L3",
+     "content": "Independence in a 3 × 3 table"
+    },
+    {
+     "id": "L4",
+     "content": "Poisson model with λ given, 7 classes"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "4"
+    },
+    {
+     "id": "R4",
+     "content": "6"
+    },
+    {
+     "id": "R1",
+     "content": "5"
+    },
+    {
+     "id": "R2",
+     "content": "3"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Goodness of fit: $\\nu = k - 1 - m$ ($6 - 1$; $5 - 1 - 1$; $7 - 1$ with nothing estimated). Contingency: $(3 - 1)(3 - 1) = 4$.",
+  "hints": [
+   "Subtract one for the total and one for each estimated parameter."
+  ],
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Explain why classes with small expected frequencies are combined before a χ² test is carried out.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The statistic Σ(O − E)²/E only approximately follows a χ² distribution, and the approximation is poor when expected frequencies are small (below 5).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A small E in the denominator can make one class's contribution very large, distorting the test.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The χ² distribution is only an approximation to the distribution of X², valid when every expected frequency is at least 5. With a small E, a small difference O − E gives a huge contribution, so the test becomes unreliable."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Rule of 5: every E ≥ 5.",
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q14",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Estimating a parameter of the model from the data increases the number of degrees of freedom by one.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "Each estimated parameter is an extra constraint on the expected frequencies, so it REDUCES the degrees of freedom by one.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Chipo throws $3$ maize seeds into each of $50$ planting holes and records how many germinate: $0$ in $6$ holes, $1$ in $19$, $2$ in $17$ and $3$ in $8$. To fit a model $\\mathrm{B}(3, p)$, estimate $p$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.5133333333333333,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Seeds germinated: $0(6) + 1(19) + 2(17) + 3(8) = 77$ out of $3 \\times 50 = 150$ seeds, so $\\hat{p} = \\frac{77}{150} = 0.513$. ($1.54$ is the mean number per hole, which is $3\\hat{p}$.)",
+  "workedSolution": "1. Seeds germinated: $0(6) + 1(19) + 2(17) + 3(8) = 77$ out of $3 \\times 50 = 150$ seeds, so $\\hat{p} = \\frac{77}{150} = 0.513$. ($1.54$ is the mean number per hole, which is $3\\hat{p}$.)",
+  "hints": [
+   "Mean number per hole = 3p."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.513"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.54"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.385"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "inference.chi-squared.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "In a test for independence between school type (boarding, day) and choice of A-Level stream (sciences, commercials, arts), $H_0$ is rejected. The largest contribution to $X^2$ comes from boarding schools and sciences, where $O = 48$ and $E = 35.2$. Comment on what this shows.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "More boarding-school learners choose sciences than would be expected if the classifications were independent (48 against 35.2).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "So the association is mainly that boarding schools have a higher proportion of science learners; this is association, not proof of cause.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Boarding-school learners are more likely to take sciences than independence would predict (48 observed vs 35.2 expected). This cell drives the association, but the test does not show that boarding causes the choice."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Interpret the sign of O − E in the largest cells.",
+  "hints": [
+   "Compare O with E: more or fewer than expected?"
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "inference.chi-squared.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "A Victoria Falls curio stall records 100 sales, classified by the part of the day: early morning 27, late morning 31, early afternoon 19, late afternoon 23. Tendai tests at the 5% level whether sales are equally likely in each slot.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the test statistic X².",
+    "answerSpec": {
+     "value": 3.2,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$E = 25$ each. $X^2 = \\frac{4 + 36 + 36 + 4}{25} = 3.2$. ($80$ forgets to divide by $E$.)",
+    "workedSolution": "1. $E = 25$ each. $X^2 = \\frac{4 + 36 + 36 + 4}{25} = 3.2$. ($80$ forgets to divide by $E$.)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of degrees of freedom.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "$\\nu = 4 - 1 = 3$; nothing is estimated.",
+    "workedSolution": "1. $\\nu = 4 - 1 = 3$; nothing is estimated."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "What is the conclusion?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Reject H₀: sales are not uniform",
+      "rationale": "$3.2$ is below the critical value $7.815$."
+     },
+     {
+      "key": "B",
+      "content": "Reject H₀ because the morning slot has the most sales",
+      "rationale": "A single large class does not decide the test; the total X² does."
+     },
+     {
+      "key": "C",
+      "content": "Do not reject H₀: no significant evidence that sales depend on the time slot",
+      "correct": true,
+      "rationale": "Correct: $3.2 < 7.815$."
+     },
+     {
+      "key": "D",
+      "content": "The test is invalid because the expected frequencies are too small",
+      "rationale": "Each expected frequency is 25, well above 5."
+     }
+    ],
+    "explanation": "$\\chi^2_3(5\\%) = 7.815$ and $3.2 < 7.815$, so do not reject $H_0$."
+   }
+  ],
+  "explanation": "Uniform model: equal expected frequencies, ν = k − 1.",
+  "hints": [
+   "E = 100/4."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3.20"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "80"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "inference.chi-squared.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.chi-squared"
+  ],
+  "difficulty": 4,
+  "marks": 15,
+  "estimatedSeconds": 1350,
+  "stem": "The number of text messages received per minute by a Bulawayo radio phone-in line was recorded for $200$ minutes. No minute had more than $5$ messages.\n\n| Messages | 0 | 1 | 2 | 3 | 4 | 5 |\n| --- | --- | --- | --- | --- | --- | --- |\n| Minutes | 57 | 53 | 45 | 27 | 12 | 6 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the mean number of messages per minute.",
+    "answerSpec": {
+     "value": 1.51,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\frac{0(57) + 1(53) + 2(45) + 3(27) + 4(12) + 5(6)}{200} = \\frac{302}{200} = 1.51$.",
+    "workedSolution": "1. $\\frac{0(57) + 1(53) + 2(45) + 3(27) + 4(12) + 5(6)}{200} = \\frac{302}{200} = 1.51$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "A Poisson distribution with this mean is fitted. Find the expected frequencies for 0, 1 and 2 messages, correct to 3 significant figures.",
+    "payload": {
+     "template": "0: {{blank:a}}, 1: {{blank:b}}, 2: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "44.2"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "66.7"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "50.4"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$200\\,\\mathrm{P}(X = r)$ with $\\lambda = 1.51$: $44.2$, $66.7$, $50.4$. Also $E_3 = 25.4$ and $E(\\ge 4) = 13.4$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the classes '4' and '5' must be combined (as '4 or more'), and state the expected frequency of the combined class.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The class \"5 or more\" has expected frequency $3.81 < 5$, so the $\\chi^2$ approximation would be unreliable.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Combined class \"4 or more\": $E = 200 - \\text{(sum of the others)} = 13.4$, with $O = 18$.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $E(\\ge 5) = 3.81$ is below 5, so it is merged with \"4\" to give \"4 or more\" with $O = 12 + 6 = 18$ and $E = 13.4$ (making the expected total 200)."
+    },
+    "explanation": "The last class must be 'r or more' so the expected frequencies add to 200."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 4,
+    "stem": "Calculate the test statistic X², correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 8.81223522208385,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "Contributions: 3.72, 2.82, 0.572, 0.107, 1.59; $X^2 = 8.81$.",
+    "workedSolution": "1. Contributions: 3.72, 2.82, 0.572, 0.107, 1.59; $X^2 = 8.81$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "State the number of degrees of freedom.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "5 classes after combining, minus 1 for the total, minus 1 for estimating $\\lambda$: $\\nu = 3$.",
+    "workedSolution": "1. 5 classes after combining, minus 1 for the total, minus 1 for estimating $\\lambda$: $\\nu = 3$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Test at the 5% significance level whether a Poisson distribution is a suitable model, and comment on whether the conclusion would be the same at the 1% level.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$8.81 > \\chi^2_3(5\\%) = 7.815$: reject $H_0$; the Poisson model is not a good fit at the 5% level.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "At 1%, $\\chi^2_3(1\\%) = 11.345 > 8.81$, so $H_0$ would not be rejected: the evidence against the model is not strong.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $X^2 = 8.81 > 7.815$, so at 5% there is evidence that the messages do not follow a Poisson distribution (there are more minutes with 0 messages than the model predicts). At 1% the critical value is $11.345$, so the conclusion would change."
+    },
+    "explanation": "Upper-tailed test; compare with both critical values."
+   }
+  ],
+  "explanation": "Estimate λ, compute expected frequencies, merge small classes, then ν = classes − 1 − 1.",
+  "hints": [
+   "The last class must be '4 or more'.",
+   "λ was estimated: subtract an extra degree of freedom."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "1.51"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "44.2"
+      },
+      {
+       "blankId": "b",
+       "text": "66.7"
+      },
+      {
+       "blankId": "c",
+       "text": "50.4"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "8.81"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "50.3"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0.221"
+       },
+       {
+        "blankId": "b",
+        "text": "999"
+       },
+       {
+        "blankId": "c",
+        "text": "999"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "7.83"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

@@ -1,0 +1,2554 @@
+[
+ {
+  "key": "exam.w3b-zimsec-statistics.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.continuous.cdf",
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The time, $X$ hours, that a borehole pump in Gwanda runs before it needs restarting has pdf $f(x) = \\frac{x}{6}$ for $0 \\le x \\le 2$, $f(x) = \\frac{1}{3}$ for $2 < x \\le 4$, and $f(x) = 0$ otherwise.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find the cumulative distribution function F(x) for 0 ≤ x ≤ 4. It has the forms F(x) = x²/a for 0 ≤ x ≤ 2 and F(x) = (x − b)/c for 2 < x ≤ 4. State a, b and c.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}, c = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "12"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "3"
+       ],
+       "tolerance": 0
+      }
+     ]
+    },
+    "explanation": "For $0 \\le x \\le 2$: $F(x) = \\int_0^x \\frac{t}{6}\\,\\mathrm{d}t = \\frac{x^2}{12}$, so $F(2) = \\frac{1}{3}$. For $2 < x \\le 4$: $F(x) = \\frac{1}{3} + \\frac{x - 2}{3} = \\frac{x - 1}{3}$. Check $F(4) = 1$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find P(1 < X < 3), correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.5833333333333333,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$F(3) - F(1) = \\frac{2}{3} - \\frac{1}{12} = \\frac{7}{12} = 0.5833$.",
+    "workedSolution": "1. $F(3) - F(1) = \\frac{2}{3} - \\frac{1}{12} = \\frac{7}{12} = 0.5833$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the median and the lower quartile of X, giving the lower quartile correct to 3 significant figures.",
+    "payload": {
+     "template": "median = {{blank:m}} h, lower quartile = {{blank:q}} h",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "2.5"
+       ],
+       "marks": 1,
+       "tolerance": 0.001
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "1.73"
+       ],
+       "marks": 1,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$F(2) = \\frac{1}{3} < 0.5$, so the median is in $(2, 4]$: $\\frac{m - 1}{3} = 0.5 \\Rightarrow m = 2.5$. $F(2) > 0.25$, so the lower quartile is in $[0, 2]$: $\\frac{q^2}{12} = 0.25 \\Rightarrow q = \\sqrt{3} = 1.732$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe the graph of y = F(x) for −1 ≤ x ≤ 5.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "F = 0 for x < 0 and F = 1 for x > 4 (horizontal lines).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "From (0, 0) to (2, 1/3): a curve (part of a parabola) getting steeper.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "From (2, 1/3) to (4, 1): a straight line of gradient 1/3, joining the curve continuously.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The graph is 0 for x < 0, rises along the parabola y = x²/12 from (0, 0) to (2, 1/3) with increasing slope, then continues as the straight line y = (x − 1)/3 from (2, 1/3) to (4, 1), and is 1 for x > 4. It is continuous and never decreases."
+    },
+    "explanation": "A cdf is continuous and non-decreasing; its slope equals the pdf."
+   }
+  ],
+  "explanation": "Integrate each piece, carrying forward F(2); locate percentiles by checking F at the join.",
+  "hints": [
+   "F(2) = area of the first piece.",
+   "Decide which piece contains each percentile."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "12"
+      },
+      {
+       "blankId": "b",
+       "text": "1"
+      },
+      {
+       "blankId": "c",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.583"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "2.5"
+      },
+      {
+       "blankId": "q",
+       "text": "1.73"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "6"
+       },
+       {
+        "blankId": "b",
+        "text": "2"
+       },
+       {
+        "blankId": "c",
+        "text": "6"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.6666666666666666"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "2"
+       },
+       {
+        "blankId": "q",
+        "text": "0.75"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.sampling.methods",
+   "amaths.estimation.unbiased"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A district education officer surveys the time, in minutes, that learners spend travelling to school. The district has three secondary schools with 480, 360 and 240 learners.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "A stratified sample of 54 learners is taken, in proportion to school size. Find the number of learners from each school.",
+    "payload": {
+     "template": "first school: {{blank:a}}, second: {{blank:b}}, third: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "24"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "18"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "12"
+       ],
+       "tolerance": 0
+      }
+     ]
+    },
+    "explanation": "Sampling fraction $\\frac{54}{1080} = \\frac{1}{20}$: $24$, $18$, $12$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The sample gives Σx = 1782 and Σx² = 60100. Find unbiased estimates of the population mean and variance, giving the variance correct to 3 significant figures.",
+    "payload": {
+     "template": "mean = {{blank:m}}, variance = {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "33"
+       ],
+       "marks": 1,
+       "tolerance": 0.001
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "24.4"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\bar{x} = 33$; $s^2 = \\frac{1}{53}(60100 - 58806) = \\frac{1294}{53} = 24.42$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain the difference between this stratified sample and a quota sample of the same sizes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "In the stratified sample, learners within each school are chosen at random (e.g. random numbers from a school list).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "In a quota sample the interviewer chooses any learners until each quota is filled, so selection is not random and may be biased.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Both give 24, 18 and 12 learners from the schools, but stratified sampling chooses them at random from each school's register, while quota sampling lets the interviewer pick convenient learners, which can introduce bias."
+    },
+    "explanation": "The key difference is random selection within groups."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State one advantage of stratified sampling here and one practical difficulty.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Advantage: each school is represented in proportion, so differences in travel time between schools (e.g. rural vs urban) are reflected.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Difficulty: needs an up-to-date register of each school to choose randomly.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Travel times may differ greatly between schools, and stratifying guarantees each school's share. But the officer needs accurate lists of the learners at every school."
+    },
+    "explanation": "Link the advantage to the variable studied."
+   }
+  ],
+  "explanation": "Proportional allocation, then unbiased estimates with divisor n − 1.",
+  "hints": [
+   "Sampling fraction = 54/1080.",
+   "Divide by 53 for the variance."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "24"
+      },
+      {
+       "blankId": "b",
+       "text": "18"
+      },
+      {
+       "blankId": "c",
+       "text": "12"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "33"
+      },
+      {
+       "blankId": "v",
+       "text": "24.4"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "18"
+       },
+       {
+        "blankId": "b",
+        "text": "18"
+       },
+       {
+        "blankId": "c",
+        "text": "18"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "1782"
+       },
+       {
+        "blankId": "v",
+        "text": "24.0"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.normal.binomial-approximation"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "At a tobacco auction floor in Harare, 35% of bales are graded \"top quality\", independently. A random sample of 80 bales is inspected, and $X$ is the number graded top quality.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a normal distribution can be used to approximate the distribution of X, and state its parameters.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "np = 28 > 5 and nq = 52 > 5 (n large, p not too close to 0 or 1).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "X ≈ N(28, 18.2).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: X ~ B(80, 0.35) with np = 28 and nq = 52, both greater than 5, so X ≈ N(28, 18.2)."
+    },
+    "explanation": "Quote both conditions with numbers."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that at least 30 bales are top quality, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.36256710099318945,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0011
+     }
+    },
+    "explanation": "$\\mathrm{P}(X \\ge 30) \\approx \\mathrm{P}(Y > 29.5)$: $z = \\frac{1.5}{\\sqrt{18.2}} = 0.3516$, probability $0.3626$.",
+    "workedSolution": "1. $\\mathrm{P}(X \\ge 30) \\approx \\mathrm{P}(Y > 29.5)$: $z = \\frac{1.5}{\\sqrt{18.2}} = 0.3516$, probability $0.3626$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that between 25 and 35 bales inclusive are top quality, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.7546381060612595,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00056
+     }
+    },
+    "explanation": "$\\mathrm{P}(24.5 < Y < 35.5)$: $z = -0.8204$ and $1.758$, probability $0.7546$.",
+    "workedSolution": "1. $\\mathrm{P}(24.5 < Y < 35.5)$: $z = -0.8204$ and $1.758$, probability $0.7546$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that fewer than 20 bales are top quality, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.023161907058249127,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00019
+     }
+    },
+    "explanation": "$\\mathrm{P}(X \\le 19) \\approx \\mathrm{P}(Y < 19.5)$: $z = \\frac{-8.5}{\\sqrt{18.2}} = -1.992$, probability $0.02316$.",
+    "workedSolution": "1. $\\mathrm{P}(X \\le 19) \\approx \\mathrm{P}(Y < 19.5)$: $z = \\frac{-8.5}{\\sqrt{18.2}} = -1.992$, probability $0.02316$."
+   }
+  ],
+  "explanation": "Check np and nq, use N(np, npq), and apply a continuity correction to every discrete event.",
+  "hints": [
+   "Variance = np(1 − p).",
+   "'Fewer than 20' means at most 19."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.363"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.755"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.0232"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.3196036966368385"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.7086209947923708"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.039371445598015975"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.binomial-poisson-tests",
+   "amaths.inference.hypothesis-basics",
+   "amaths.inference.errors"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A seed company states that 15% of its sorghum seeds fail to germinate. A farmer in Matabeleland South suspects the failure rate is higher. She plants 25 randomly chosen seeds and 8 fail to germinate.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State suitable hypotheses for a test at the 5% significance level.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$H_0: p = 0.15$, $H_1: p > 0.15$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "p is the proportion of seeds that fail to germinate.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Let $p$ be the proportion of seeds that fail. $H_0: p = 0.15$, $H_1: p > 0.15$."
+    },
+    "explanation": "One-tailed: 'higher'."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the p-value of the observed result, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.02546763852162226,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "Under $H_0$, $X \\sim \\mathrm{B}(25, 0.15)$: $\\mathrm{P}(X \\ge 8) = 1 - \\mathrm{P}(X \\le 7) = 0.02547$.",
+    "workedSolution": "1. Under $H_0$, $X \\sim \\mathrm{B}(25, 0.15)$: $\\mathrm{P}(X \\ge 8) = 1 - \\mathrm{P}(X \\le 7) = 0.02547$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State the conclusion of the test in context.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "0.0255 < 0.05, so reject H₀.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "There is evidence at the 5% level that more than 15% of the seeds fail to germinate.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: P(X ≥ 8) = 0.0255 < 0.05: reject H₀. There is evidence at the 5% level that the failure rate is higher than the company states."
+    },
+    "explanation": "Decision and context."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the critical region X ≥ c for this test. State c.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "$\\mathrm{P}(X \\ge 7) = 0.06953 > 0.05$, $\\mathrm{P}(X \\ge 8) = 0.02547 \\le 0.05$, so $c = 8$.",
+    "workedSolution": "1. $\\mathrm{P}(X \\ge 7) = 0.06953 > 0.05$, $\\mathrm{P}(X \\ge 8) = 0.02547 \\le 0.05$, so $c = 8$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the probability of a Type I error for this test, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.02546763852162226,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "P(Type I) $= \\mathrm{P}(X \\ge 8 \\mid p = 0.15) = 0.02547$.",
+    "workedSolution": "1. P(Type I) $= \\mathrm{P}(X \\ge 8 \\mid p = 0.15) = 0.02547$."
+   }
+  ],
+  "explanation": "Upper-tail binomial test: p-value P(X ≥ 8), critical region, and its size as P(Type I).",
+  "hints": [
+   "Under H₀, X ~ B(25, 0.15).",
+   "P(Type I) is the size of the critical region."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.0255"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.0255"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.017494778562141575"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.05"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.estimation.confidence-intervals",
+   "amaths.estimation.unbiased",
+   "amaths.sampling.sample-mean-clt"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The daily maize yield, $x$ kg, from 64 randomly chosen plots of a demonstration farm in Mashonaland Central gives $\\sum x = 2880$ and $\\sum x^2 = 131000$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find unbiased estimates of the population mean and variance, giving the variance correct to 3 significant figures.",
+    "payload": {
+     "template": "mean = {{blank:m}}, variance = {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "45"
+       ],
+       "marks": 1,
+       "tolerance": 0.001
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "22.2"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\bar{x} = 45$; $s^2 = \\frac{1}{63}\\left(131000 - \\frac{2880^2}{64}\\right) = \\frac{1400}{63} = 22.22$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find a 95% confidence interval for the population mean, giving the limits correct to 3 significant figures.",
+    "payload": {
+     "template": "{{blank:lo}} kg to {{blank:hi}} kg",
+     "blanks": [
+      {
+       "id": "lo",
+       "input": "number"
+      },
+      {
+       "id": "hi",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "lo",
+       "accepted": [
+        "43.8"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "hi",
+       "accepted": [
+        "46.2"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$45 \\pm 1.96\\sqrt{\\frac{22.22}{64}} = 45 \\pm 1.155$: $(43.8, 46.2)$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the central limit theorem is used in (b).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The distribution of yields is not known to be normal.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "n = 64 is large, so the sample mean is approximately normal by the central limit theorem.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The yields may not be normally distributed, but with 64 plots the central limit theorem says the sample mean is approximately normal, so the z-based interval is valid."
+    },
+    "explanation": "Not known normal + large n."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The farm manager claims the mean daily yield is 47 kg. Is this supported by the interval?",
+    "options": [
+     {
+      "key": "A",
+      "content": "No: 47 lies outside the interval.",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "Yes: 47 is close to 45.",
+      "rationale": "Closeness is not the test."
+     },
+     {
+      "key": "C",
+      "content": "Yes: the interval is only 95%.",
+      "rationale": "Values outside a 95% interval are not supported."
+     },
+     {
+      "key": "D",
+      "content": "It cannot be judged.",
+      "rationale": "It can: 47 is outside."
+     }
+    ],
+    "explanation": "46.2 < 47."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the width of a 90% confidence interval from the same data, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 1.938651091753118,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$2 \\times 1.645 \\times 0.5893 = 1.939$.",
+    "workedSolution": "1. $2 \\times 1.645 \\times 0.5893 = 1.939$."
+   }
+  ],
+  "explanation": "Estimate, then x̄ ± z s/√n by the central limit theorem; judge claims by the interval.",
+  "hints": [
+   "Divide by 63 for the variance.",
+   "90%: z = 1.645."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "45"
+      },
+      {
+       "blankId": "v",
+       "text": "22.2"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "lo",
+       "text": "43.8"
+      },
+      {
+       "blankId": "hi",
+       "text": "46.2"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "1.94"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "2880"
+       },
+       {
+        "blankId": "v",
+        "text": "21.9"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "lo",
+        "text": "35.8"
+       },
+       {
+        "blankId": "hi",
+        "text": "54.2"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.969325545876559"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.rv.linear-combinations",
+   "amaths.discrete.poisson"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "(1) The numbers of cars, $X$, and of lorries, $Y$, passing a checkpoint near Beitbridge in a minute are independent with $X \\sim \\mathrm{Po}(1.6)$ and $Y \\sim \\mathrm{Po}(2.9)$. (2) Independent random variables $A \\sim \\mathrm{N}(30, 4)$ and $B \\sim \\mathrm{N}(50, 9)$; $W = 2A - B$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that exactly 5 vehicles pass in a minute, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.1708268584861117,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$X + Y \\sim \\mathrm{Po}(4.5)$: $\\mathrm{e}^{-4.5}\\frac{4.5^5}{5!} = 0.1708$.",
+    "workedSolution": "1. $X + Y \\sim \\mathrm{Po}(4.5)$: $\\mathrm{e}^{-4.5}\\frac{4.5^5}{5!} = 0.1708$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that at least 3 vehicles pass in a minute, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.826421929089964,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$1 - \\mathrm{e}^{-4.5}\\left(1 + 4.5 + \\frac{4.5^2}{2}\\right) = 0.8264$.",
+    "workedSolution": "1. $1 - \\mathrm{e}^{-4.5}\\left(1 + 4.5 + \\frac{4.5^2}{2}\\right) = 0.8264$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find E(W) and Var(W).",
+    "payload": {
+     "template": "E(W) = {{blank:m}}, Var(W) = {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "10"
+       ],
+       "tolerance": 0.001
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "25"
+       ],
+       "tolerance": 0.001
+      }
+     ]
+    },
+    "explanation": "$\\mathrm{E}(W) = 60 - 50 = 10$; $\\mathrm{Var}(W) = 4 \\times 4 + 9 = 25$ (variances add even for a difference)."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find P(W > 12), correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.3445782505511259,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00052
+     }
+    },
+    "explanation": "$W \\sim \\mathrm{N}(10, 25)$: $z = 0.4$, $1 - \\Phi(0.4) = 0.3446$.",
+    "workedSolution": "1. $W \\sim \\mathrm{N}(10, 25)$: $z = 0.4$, $1 - \\Phi(0.4) = 0.3446$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why $\\mathrm{Var}(A_1 + A_2) \\ne \\mathrm{Var}(2A)$, where $A_1$ and $A_2$ are independent observations of $A$, and give both values.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$\\mathrm{Var}(A_1 + A_2) = 4 + 4 = 8$ but $\\mathrm{Var}(2A) = 2^2 \\times 4 = 16$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Two independent observations partly cancel each other's variation, whereas doubling one observation doubles its deviation.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $\\mathrm{Var}(A_1 + A_2) = 8$ and $\\mathrm{Var}(2A) = 16$. In $2A$ one random deviation is doubled; in $A_1 + A_2$ two independent deviations are added and can partly cancel."
+    },
+    "explanation": "Sum of independent copies vs a multiple of one copy."
+   }
+  ],
+  "explanation": "Sums of independent Poisson variables are Poisson; Var(aX + bY) = a²Var(X) + b²Var(Y) for independent X, Y.",
+  "hints": [
+   "Add the Poisson means.",
+   "Variances add, with coefficients squared."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.171"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.826"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "10"
+      },
+      {
+       "blankId": "v",
+       "text": "25"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.345"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.11169110902412638"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.6577040441654091"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "-20"
+       },
+       {
+        "blankId": "v",
+        "text": "-1"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.22484588895348723"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The continuous random variable $X$ has pdf $f(x) = kx(3 - x)$ for $0 \\le x \\le 3$, and $f(x) = 0$ otherwise.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of k, correct to 3 significant figures (or as a fraction).",
+    "answerSpec": {
+     "value": 0.2222222222222222,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\int_0^3 k(3x - x^2)\\,\\mathrm{d}x = k\\left(\\frac{27}{2} - 9\\right) = 4.5k = 1$, so $k = \\frac{2}{9} = 0.2222$.",
+    "workedSolution": "1. $\\int_0^3 k(3x - x^2)\\,\\mathrm{d}x = k\\left(\\frac{27}{2} - 9\\right) = 4.5k = 1$, so $k = \\frac{2}{9} = 0.2222$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the mode of X.",
+    "answerSpec": {
+     "value": 1.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$f'(x) = k(3 - 2x) = 0$ at $x = 1.5$, a maximum.",
+    "workedSolution": "1. $f'(x) = k(3 - 2x) = 0$ at $x = 1.5$, a maximum."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find E(X).",
+    "answerSpec": {
+     "value": 1.4999999999999944,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\frac{2}{9}\\int_0^3 (3x^2 - x^3)\\,\\mathrm{d}x = \\frac{2}{9}\\left(27 - \\frac{81}{4}\\right) = 1.5$ (also clear by symmetry about 1.5).",
+    "workedSolution": "1. $\\frac{2}{9}\\int_0^3 (3x^2 - x^3)\\,\\mathrm{d}x = \\frac{2}{9}\\left(27 - \\frac{81}{4}\\right) = 1.5$ (also clear by symmetry about 1.5)."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find Var(X).",
+    "answerSpec": {
+     "value": 0.4500000000000135,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{E}(X^2) = \\frac{2}{9}\\int_0^3 (3x^3 - x^4)\\,\\mathrm{d}x = \\frac{2}{9}\\left(\\frac{243}{4} - \\frac{243}{5}\\right) = 2.7$, so $\\mathrm{Var}(X) = 2.7 - 1.5^2 = 0.45$. (2.7 is $\\mathrm{E}(X^2)$.)",
+    "workedSolution": "1. $\\mathrm{E}(X^2) = \\frac{2}{9}\\int_0^3 (3x^3 - x^4)\\,\\mathrm{d}x = \\frac{2}{9}\\left(\\frac{243}{4} - \\frac{243}{5}\\right) = 2.7$, so $\\mathrm{Var}(X) = 2.7 - 1.5^2 = 0.45$. (2.7 is $\\mathrm{E}(X^2)$.)"
+   }
+  ],
+  "explanation": "Total area 1; the mode maximises f; E(X) and E(X²) by integration.",
+  "hints": [
+   "Integrate 3x − x² from 0 to 3.",
+   "Var(X) = E(X²) − [E(X)]²."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.222"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.50"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.50"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.450"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.3333333333333333"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2.7"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q08",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.normal-mean-test",
+   "amaths.inference.hypothesis-basics"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 720,
+  "stem": "The lengths of steel rods cut by a machine in Kwekwe are normally distributed with standard deviation 12 mm. The machine is set to a mean of 150 mm. A random sample of 36 rods has mean length 154.5 mm. Test, at the 5% significance level, whether the mean length differs from 150 mm.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State the hypotheses, explaining your choice of a one- or two-tailed test.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$H_0: \\mu = 150$, $H_1: \\mu \\ne 150$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Two-tailed because the question asks whether the mean differs, in either direction.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $H_0: \\mu = 150$, $H_1: \\mu \\ne 150$, where $\\mu$ is the mean length in mm; two-tailed since any change matters."
+    },
+    "explanation": "'Differs' means two-tailed."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Calculate the test statistic z.",
+    "answerSpec": {
+     "value": 2.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$z = \\frac{154.5 - 150}{12/\\sqrt{36}} = \\frac{4.5}{2} = 2.25$.",
+    "workedSolution": "1. $z = \\frac{154.5 - 150}{12/\\sqrt{36}} = \\frac{4.5}{2} = 2.25$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Complete the test and state your conclusion in context.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "2.25 > 1.96, so reject H₀.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "There is evidence at the 5% level that the mean length of rods is not 150 mm (it appears to be too long).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: z = 2.25 > 1.96, so the result is in the critical region: reject H₀. There is evidence at the 5% level that the machine's mean length differs from 150 mm."
+    },
+    "explanation": "Compare with ±1.96."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Would the same conclusion be reached at the 1% level?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Yes: 2.25 > 1.96.",
+      "rationale": "1.96 is the 5% value."
+     },
+     {
+      "key": "B",
+      "content": "No: 2.25 < 2.576.",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "Yes: 2.25 > 2.326.",
+      "rationale": "2.326 is the one-tailed 1% value."
+     },
+     {
+      "key": "D",
+      "content": "No: z must be negative to reject.",
+      "rationale": "Two-tailed tests use both tails."
+     }
+    ],
+    "explanation": "Two-tailed 1%: ±2.576."
+   }
+  ],
+  "explanation": "Two-tailed z-test: standardise with σ/√n and compare with ±1.96 (±2.576 at 1%).",
+  "hints": [
+   "σ/√n = 2.",
+   "Two-tailed 5%: ±1.96."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "2.25"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.375"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q09",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.poisson",
+   "amaths.rv.linear-combinations"
+  ],
+  "difficulty": 4,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "Breakdowns of a borehole pump serving a village near Masvingo occur at random at an average rate of 1.2 per week. Give probabilities correct to 3 significant figures.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two conditions, in context, for a Poisson distribution to model the number of breakdowns per week.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Breakdowns occur independently of one another.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Breakdowns occur singly and at a constant average rate (1.2 per week).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: One breakdown must not make another more likely (independence), and breakdowns must happen one at a time at a constant average rate of 1.2 per week."
+    },
+    "explanation": "Conditions in context."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability of exactly 2 breakdowns in a week.",
+    "answerSpec": {
+     "value": 0.2168598325767853,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{e}^{-1.2}\\frac{1.2^2}{2} = 0.2169$.",
+    "workedSolution": "1. $\\mathrm{e}^{-1.2}\\frac{1.2^2}{2} = 0.2169$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability of more than 3 breakdowns in a week.",
+    "answerSpec": {
+     "value": 0.03376896818565556,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$1 - \\mathrm{P}(X \\le 3) = 0.03377$.",
+    "workedSolution": "1. $1 - \\mathrm{P}(X \\le 3) = 0.03377$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability of at most 1 breakdown in a fortnight.",
+    "answerSpec": {
+     "value": 0.3084410411840026,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{Po}(2.4)$: $\\mathrm{e}^{-2.4}(1 + 2.4) = 0.3084$.",
+    "workedSolution": "1. $\\mathrm{Po}(2.4)$: $\\mathrm{e}^{-2.4}(1 + 2.4) = 0.3084$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Over 10 separate weeks, find the probability that there are at least 3 weeks with no breakdown.",
+    "answerSpec": {
+     "value": 0.6203973431694747,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(\\text{no breakdown in a week}) = \\mathrm{e}^{-1.2} = 0.3012$. The number of such weeks is $\\mathrm{B}(10, 0.3012)$: $1 - \\mathrm{P}(0) - \\mathrm{P}(1) - \\mathrm{P}(2) = 0.6204$.",
+    "workedSolution": "1. $\\mathrm{P}(\\text{no breakdown in a week}) = \\mathrm{e}^{-1.2} = 0.3012$. The number of such weeks is $\\mathrm{B}(10, 0.3012)$: $1 - \\mathrm{P}(0) - \\mathrm{P}(1) - \\mathrm{P}(2) = 0.6204$."
+   },
+   {
+    "label": "(f)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the mean and the variance of the number of breakdowns in 4 weeks.",
+    "payload": {
+     "template": "mean = {{blank:m}}, variance = {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "4.8"
+       ],
+       "tolerance": 0.001
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "4.8"
+       ],
+       "tolerance": 0.001
+      }
+     ]
+    },
+    "explanation": "$\\mathrm{Po}(4.8)$: mean $=$ variance $= 4.8$."
+   },
+   {
+    "label": "(g)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the largest whole number of weeks n for which the probability of no breakdown in n weeks is greater than 0.05.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "$\\mathrm{e}^{-1.2n} > 0.05 \\Rightarrow n < \\frac{\\ln 20}{1.2} = 2.496$, so $n = 2$.",
+    "workedSolution": "1. $\\mathrm{e}^{-1.2n} > 0.05 \\Rightarrow n < \\frac{\\ln 20}{1.2} = 2.496$, so $n = 2$."
+   }
+  ],
+  "explanation": "Scale λ to the period; combine a Poisson probability with a binomial count of weeks.",
+  "hints": [
+   "Fortnight: λ = 2.4.",
+   "In (e), each week either has no breakdown or not."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.217"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.0338"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.308"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.620"
+    },
+    "(f)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "4.8"
+      },
+      {
+       "blankId": "v",
+       "text": "4.8"
+      }
+     ]
+    },
+    "(g)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.8794870987836302"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.12051290121636982"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.4390748939207569"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.3535784576768257"
+     },
+     "(f)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "1.2"
+       },
+       {
+        "blankId": "v",
+        "text": "19.2"
+       }
+      ]
+     },
+     "(g)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q10",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.continuous.cdf",
+   "amaths.continuous.pdf"
+  ],
+  "difficulty": 4,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "The time, $X$ minutes, that a learner at a school in Bindura takes to answer a quiz question has cdf $F(x) = k(x^2 + 3x)$ for $0 \\le x \\le 3$, with $F(x) = 0$ for $x < 0$ and $F(x) = 1$ for $x > 3$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of k (as a fraction or correct to 3 significant figures).",
+    "answerSpec": {
+     "value": 0.05555555555555555,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "$F(3) = 1$: $k(9 + 9) = 1$, so $k = \\frac{1}{18}$.",
+    "workedSolution": "1. $F(3) = 1$: $k(9 + 9) = 1$, so $k = \\frac{1}{18}$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the pdf f(x) for 0 ≤ x ≤ 3. Type it as a fraction, e.g. (3x+1)/20.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "(2x+3)/18"
+      },
+      {
+       "value": "(3+2x)/18"
+      },
+      {
+       "value": "2x/18+3/18"
+      },
+      {
+       "value": "x/9+1/6"
+      },
+      {
+       "value": "1/6+x/9"
+      },
+      {
+       "value": "(1/18)(2x+3)"
+      },
+      {
+       "value": "1/18(2x+3)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$f(x) = F'(x) = \\frac{2x + 3}{18}$ for $0 \\le x \\le 3$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the median of X, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "min"
+    },
+    "answerSpec": {
+     "value": 1.8541019662496847,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "min",
+       "minutes",
+       "mins"
+      ]
+     }
+    },
+    "explanation": "$\\frac{m^2 + 3m}{18} = 0.5 \\Rightarrow m^2 + 3m - 9 = 0 \\Rightarrow m = \\frac{-3 + \\sqrt{45}}{2} = 1.854$.",
+    "workedSolution": "1. $\\frac{m^2 + 3m}{18} = 0.5 \\Rightarrow m^2 + 3m - 9 = 0 \\Rightarrow m = \\frac{-3 + \\sqrt{45}}{2} = 1.854$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Find the lower and upper quartiles of X, each correct to 3 significant figures.",
+    "payload": {
+     "template": "lower quartile = {{blank:l}}, upper quartile = {{blank:u}}",
+     "blanks": [
+      {
+       "id": "l",
+       "input": "number"
+      },
+      {
+       "id": "u",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "l",
+       "accepted": [
+        "1.10"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      },
+      {
+       "id": "u",
+       "accepted": [
+        "2.47"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$q^2 + 3q = 4.5 \\Rightarrow q = \\frac{-3 + \\sqrt{27}}{2} = 1.098$; $q^2 + 3q = 13.5 \\Rightarrow q = \\frac{-3 + \\sqrt{63}}{2} = 2.469$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find E(X).",
+    "payload": {
+     "unitHint": "min"
+    },
+    "answerSpec": {
+     "value": 1.7499999999999991,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "min",
+       "minutes",
+       "mins"
+      ]
+     }
+    },
+    "explanation": "$\\int_0^3 x \\cdot \\frac{2x + 3}{18}\\,\\mathrm{d}x = \\frac{1}{18}\\left[\\frac{2x^3}{3} + \\frac{3x^2}{2}\\right]_0^3 = \\frac{18 + 13.5}{18} = 1.75$.",
+    "workedSolution": "1. $\\int_0^3 x \\cdot \\frac{2x + 3}{18}\\,\\mathrm{d}x = \\frac{1}{18}\\left[\\frac{2x^3}{3} + \\frac{3x^2}{2}\\right]_0^3 = \\frac{18 + 13.5}{18} = 1.75$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Comment on the skewness of the distribution, giving a reason.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Mean 1.75 < median 1.85 (or the median is nearer the upper quartile than the lower).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the distribution is negatively skewed.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The mean (1.75) is less than the median (1.85), and the median is nearer the upper quartile (2.47) than the lower quartile (1.10), so the distribution is negatively skewed."
+    },
+    "explanation": "Compare mean with median, or the quartile gaps."
+   }
+  ],
+  "explanation": "F(3) = 1 gives k; differentiate for f; solve F(x) = 0.25, 0.5, 0.75 for the quartiles; integrate x f(x) for the mean.",
+  "hints": [
+   "Solve each percentile equation as a quadratic.",
+   "E(X) needs the pdf."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.0556"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "(2x+3)/18"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.85"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "l",
+       "text": "1.10"
+      },
+      {
+       "blankId": "u",
+       "text": "2.47"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "1.75"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.1111111111111111"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "(x^2+3x)/18"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1.5"
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "l",
+        "text": "0.75"
+       },
+       {
+        "blankId": "u",
+        "text": "2.25"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1.5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q11",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.sampling.methods",
+   "amaths.estimation.unbiased",
+   "amaths.estimation.confidence-intervals"
+  ],
+  "difficulty": 4,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "A health officer studies the systolic blood pressure of adults in a district in Manicaland. The district register lists 2,500 adults in three wards: 1,250 in Ward A, 750 in Ward B and 500 in Ward C.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain what is meant by a sampling frame, and describe how a systematic sample of 80 adults could be taken from the register.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A sampling frame is a list of all members of the population (here, the district register).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Interval k = 2500/80 = 31.25, so use 31 (or 32) and choose a random start between 1 and k.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Then take every kth adult on the register until 80 are chosen.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The sampling frame is the full list of the 2,500 adults. Use an interval of about 2500 ÷ 80 ≈ 31: choose a random number from 1 to 31 as the start, then select every 31st adult on the register."
+    },
+    "explanation": "Interval, random start, every kth member."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Instead, a stratified sample of 80 is taken in proportion to ward size. Find the number from each ward.",
+    "payload": {
+     "template": "Ward A: {{blank:a}}, Ward B: {{blank:b}}, Ward C: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "40"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "24"
+       ],
+       "tolerance": 0
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "16"
+       ],
+       "tolerance": 0
+      }
+     ]
+    },
+    "explanation": "Sampling fraction $\\frac{80}{2500} = 0.032$: $40$, $24$, $16$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The 80 readings, x (in mm Hg above 40), give Σx = 6560 and Σx² = 548000. Find unbiased estimates of the population mean and variance of x, giving the variance correct to 4 significant figures.",
+    "payload": {
+     "template": "mean = {{blank:m}}, variance = {{blank:v}}",
+     "blanks": [
+      {
+       "id": "m",
+       "input": "number"
+      },
+      {
+       "id": "v",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "m",
+       "accepted": [
+        "82"
+       ],
+       "marks": 1,
+       "tolerance": 0.001
+      },
+      {
+       "id": "v",
+       "accepted": [
+        "127.6"
+       ],
+       "marks": 2,
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$\\bar{x} = 82$; $s^2 = \\frac{1}{79}(548000 - 537920) = \\frac{10080}{79} = 127.6$."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Find a 95% confidence interval for the population mean of x, giving the limits correct to 3 significant figures.",
+    "payload": {
+     "template": "{{blank:lo}} to {{blank:hi}}",
+     "blanks": [
+      {
+       "id": "lo",
+       "input": "number"
+      },
+      {
+       "id": "hi",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "lo",
+       "accepted": [
+        "79.5"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "hi",
+       "accepted": [
+        "84.5"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "$82 \\pm 1.96\\sqrt{\\frac{127.6}{80}} = 82 \\pm 2.475$: $(79.5, 84.5)$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Using the variance estimate from (c), find the smallest sample size for which a 95% confidence interval would have a half-width of at most 2.",
+    "answerSpec": {
+     "value": 123
+    },
+    "explanation": "$1.96\\sqrt{\\frac{127.6}{n}} \\le 2 \\Rightarrow n \\ge \\frac{1.96^2 \\times 127.6}{4} = 122.5$, so $n = 123$.",
+    "workedSolution": "1. $1.96\\sqrt{\\frac{127.6}{n}} \\le 2 \\Rightarrow n \\ge \\frac{1.96^2 \\times 127.6}{4} = 122.5$, so $n = 123$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Interpret the interval found in (d).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "If the sampling were repeated many times, about 95% of intervals calculated this way would contain the true mean.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So we are 95% confident the district's mean of x lies between the limits (not that 95% of adults lie in it).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: In repeated sampling, 95% of such intervals would contain the population mean, so we can be 95% confident that the mean of x for the district's adults lies in the interval. It does not describe individual adults' readings."
+    },
+    "explanation": "Confidence describes the method."
+   }
+  ],
+  "explanation": "Sampling frame and systematic interval; proportional allocation; unbiased estimates; interval and sample size.",
+  "hints": [
+   "Sampling fraction = 80/2500.",
+   "Round the sample size up."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "40"
+      },
+      {
+       "blankId": "b",
+       "text": "24"
+      },
+      {
+       "blankId": "c",
+       "text": "16"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "m",
+       "text": "82"
+      },
+      {
+       "blankId": "v",
+       "text": "127.6"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "lo",
+       "text": "79.5"
+      },
+      {
+       "blankId": "hi",
+       "text": "84.5"
+      }
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "123"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "27"
+       },
+       {
+        "blankId": "b",
+        "text": "27"
+       },
+       {
+        "blankId": "c",
+        "text": "26"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "m",
+        "text": "6560"
+       },
+       {
+        "blankId": "v",
+        "text": "126.0"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "lo",
+        "text": "59.9"
+       },
+       {
+        "blankId": "hi",
+        "text": "104"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "122"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3b-zimsec-statistics.q12",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.inference.normal-mean-test",
+   "amaths.inference.errors",
+   "amaths.inference.hypothesis-basics"
+  ],
+  "difficulty": 4,
+  "marks": 16,
+  "estimatedSeconds": 1440,
+  "stem": "Bags of maize meal from a mill in Chegutu are labelled 10 kg. Their masses are normally distributed with standard deviation 0.15 kg. A consumer council suspects underfilling and weighs a random sample of 25 bags; the sample mean is 9.94 kg. The test is at the 5% significance level.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State the null and alternative hypotheses.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$H_0: \\mu = 10$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "$H_1: \\mu < 10$, where $\\mu$ is the mean mass in kg.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $H_0: \\mu = 10$, $H_1: \\mu < 10$ (lower-tail test for underfilling)."
+    },
+    "explanation": "Suspected direction: less."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Calculate the test statistic z.",
+    "answerSpec": {
+     "value": -2
+    },
+    "explanation": "$z = \\frac{9.94 - 10}{0.15/\\sqrt{25}} = \\frac{-0.06}{0.03} = -2$.",
+    "workedSolution": "1. $z = \\frac{9.94 - 10}{0.15/\\sqrt{25}} = \\frac{-0.06}{0.03} = -2$."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Complete the test and state the conclusion in context.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "−2 < −1.645, so reject H₀.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "There is evidence at the 5% level that bags are underfilled (mean less than 10 kg).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: z = −2 < −1.645, so reject H₀: there is evidence at the 5% level that the mean mass of the bags is less than 10 kg."
+    },
+    "explanation": "Lower-tail critical value −1.645."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the critical value c such that H₀ is rejected when the sample mean is less than c. Give c correct to 4 significant figures.",
+    "answerSpec": {
+     "value": 9.95065,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$c = 10 - 1.645 \\times 0.03 = 9.951$, i.e. $9.951$ kg.",
+    "workedSolution": "1. $c = 10 - 1.645 \\times 0.03 = 9.951$, i.e. $9.951$ kg."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "The true mean mass is 9.92 kg. Find the probability of a Type II error, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.15346935441197107,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00093
+     }
+    },
+    "explanation": "Type II: $\\bar{X} \\ge 9.951$ when $\\bar{X} \\sim \\mathrm{N}(9.92, 0.03^2)$: $1 - \\Phi\\left(\\frac{9.951 - 9.92}{0.03}\\right) = 1 - \\Phi(1.02) = 0.1535$.",
+    "workedSolution": "1. Type II: $\\bar{X} \\ge 9.951$ when $\\bar{X} \\sim \\mathrm{N}(9.92, 0.03^2)$: $1 - \\Phi\\left(\\frac{9.951 - 9.92}{0.03}\\right) = 1 - \\Phi(1.02) = 0.1535$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe, in context, what a Type I error would be in this test, and state its probability.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Concluding the bags are underfilled when the true mean really is 10 kg.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "P(Type I error) = 0.05.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A Type I error would be to accuse the mill of underfilling when the mean mass is in fact 10 kg; its probability is the significance level, 0.05."
+    },
+    "explanation": "Continuous test: P(Type I) = α."
+   },
+   {
+    "label": "(g)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "If the test were carried out at the 1% level instead, what would happen to the probability of a Type II error?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It would decrease.",
+      "rationale": "Harder rejection means more Type II errors."
+     },
+     {
+      "key": "B",
+      "content": "It would be unchanged.",
+      "rationale": "The critical value moves."
+     },
+     {
+      "key": "C",
+      "content": "It would increase.",
+      "correct": true,
+      "rationale": "Correct: the critical region shrinks, so a false H₀ is accepted more often."
+     },
+     {
+      "key": "D",
+      "content": "It would equal 0.01.",
+      "rationale": "0.01 would be P(Type I)."
+     }
+    ],
+    "explanation": "Lower α ⇒ higher β for fixed n."
+   }
+  ],
+  "explanation": "Lower-tail z-test; critical value from H₀; Type II probability from the true mean.",
+  "hints": [
+   "σ/√n = 0.03.",
+   "Type II: the sample mean is not below c."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-2"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "9.951"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.153"
+    },
+    "(g)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-0.4"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "9.9412"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.8465306455880289"
+     },
+     "(g)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ }
+]

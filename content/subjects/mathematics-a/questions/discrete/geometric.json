@@ -1,0 +1,1054 @@
+[
+ {
+  "key": "discrete.geometric.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{Geo}(p)$. Which expression gives $\\mathrm{P}(X = r)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$(1 - p)^{r - 1}p$",
+    "correct": true,
+    "rationale": "Correct: r − 1 failures, then the first success."
+   },
+   {
+    "key": "B",
+    "content": "$(1 - p)^r p$",
+    "rationale": "This has one failure too many: it is P(X = r + 1)."
+   },
+   {
+    "key": "C",
+    "content": "$p^{r - 1}(1 - p)$",
+    "rationale": "Success and failure are swapped."
+   },
+   {
+    "key": "D",
+    "content": "${}^rC_1(1 - p)^{r - 1}p$",
+    "rationale": "The success must come last, so there is only one order: no coefficient."
+   }
+  ],
+  "explanation": "The first success on trial $r$ needs failures on trials $1$ to $r - 1$: $(1 - p)^{r - 1}p$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "discrete.geometric.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{Geo}(0.25)$. Find $\\mathrm{P}(X = 5)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.0791015625,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$\\mathrm{P}(X = 5) = 0.75^4 \\times 0.25 = 0.31640625 \\times 0.25 = 0.0791$. ($0.0593$ uses $0.75^5$, one failure too many.)",
+  "workedSolution": "1. $\\mathrm{P}(X = 5) = 0.75^4 \\times 0.25 = 0.31640625 \\times 0.25 = 0.0791$. ($0.0593$ uses $0.75^5$, one failure too many.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0791"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.0593"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.00293"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "discrete.geometric.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Sipho throws a fair six-sided die until he gets a six. Find the probability that he needs more than 4 throws, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.4822530864197532,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "More than 4 throws means the first 4 throws are not sixes: $\\left(\\frac{5}{6}\\right)^4 = 0.482$. ($0.579$ is $\\left(\\frac{5}{6}\\right)^3$, which is P(more than 3).)",
+  "workedSolution": "1. More than 4 throws means the first 4 throws are not sixes: $\\left(\\frac{5}{6}\\right)^4 = 0.482$. ($0.579$ is $\\left(\\frac{5}{6}\\right)^3$, which is P(more than 3).)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.482"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.579"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.0804"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "discrete.geometric.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A borehole pump near Masvingo starts at the first press of the switch with probability 0.15, independently each time. Find the probability that it starts within the first 6 presses, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.622850484375,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(X \\le 6) = 1 - 0.85^6 = 1 - 0.377 = 0.623$. ($0.377$ is $\\mathrm{P}(X > 6)$.)",
+  "workedSolution": "1. $\\mathrm{P}(X \\le 6) = 1 - 0.85^6 = 1 - 0.377 = 0.623$. ($0.377$ is $\\mathrm{P}(X > 6)$.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.623"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.377"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.556"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "discrete.geometric.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{Geo}(0.2)$. Find $\\mathrm{P}(3 \\le X \\le 6)$, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.377856,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(3 \\le X \\le 6) = \\mathrm{P}(X > 2) - \\mathrm{P}(X > 6) = 0.8^2 - 0.8^6 = 0.64 - 0.262144 = 0.378$. ($0.250$ uses $0.8^3$ and so leaves out $X = 3$.)",
+  "workedSolution": "1. $\\mathrm{P}(3 \\le X \\le 6) = \\mathrm{P}(X > 2) - \\mathrm{P}(X > 6) = 0.8^2 - 0.8^6 = 0.64 - 0.262144 = 0.378$. ($0.250$ uses $0.8^3$ and so leaves out $X = 3$.)",
+  "hints": [
+   "$X \\ge 3$ is the same as $X > 2$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.378"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.25"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.43"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "discrete.geometric.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "The probability that a call to a busy clinic in Harare is answered is 0.125 on each attempt, independently. Find the expected number of attempts needed to get through.",
+  "answerSpec": {
+   "value": 8
+  },
+  "explanation": "$X \\sim \\mathrm{Geo}(0.125)$; $\\mathrm{E}(X) = \\frac{1}{0.125} = 8$ attempts.",
+  "workedSolution": "1. $X \\sim \\mathrm{Geo}(0.125)$; $\\mathrm{E}(X) = \\frac{1}{0.125} = 8$ attempts.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.125"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "discrete.geometric.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "$X \\sim \\mathrm{Geo}(0.4)$. Find $\\mathrm{Var}(X)$ and the standard deviation of $X$ (3 significant figures).",
+  "payload": {
+   "template": "Var(X) = {{blank:v}}; sd = {{blank:s}}",
+   "blanks": [
+    {
+     "id": "v",
+     "input": "number"
+    },
+    {
+     "id": "s",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "v",
+     "accepted": [
+      "3.75"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "s",
+     "accepted": [
+      "1.94"
+     ],
+     "tolerance": 0.005
+    }
+   ]
+  },
+  "explanation": "$\\mathrm{Var}(X) = \\frac{1 - p}{p^2} = \\frac{0.6}{0.16} = 3.75$; sd $= \\sqrt{3.75} = 1.94$. (1.5 is $\\frac{0.6}{0.4}$, dividing by $p$ instead of $p^2$.)",
+  "hints": [
+   "ZIMSEC formula: Var(X) = (1 − p)/p²."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "v",
+     "text": "3.75"
+    },
+    {
+     "blankId": "s",
+     "text": "1.94"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "v",
+      "text": "1.5"
+     },
+     {
+      "blankId": "s",
+      "text": "1.22"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec/a-level/statistics"
+  ],
+  "calculator": true
+ },
+ {
+  "key": "discrete.geometric.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{Geo}(p)$ and $\\mathrm{P}(X > 2) = 0.49$. Find $p$ and hence $\\mathrm{E}(X)$, correct to 3 significant figures. Give the value of $\\mathrm{E}(X)$.",
+  "answerSpec": {
+   "value": 3.3333333333333335,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   }
+  },
+  "explanation": "$(1 - p)^2 = 0.49$, so $1 - p = 0.7$ and $p = 0.3$. $\\mathrm{E}(X) = \\frac{1}{0.3} = 3.33$ (3 s.f.). ($\\frac{1}{0.7} = 1.43$ uses $1 - p$ in place of $p$.)",
+  "workedSolution": "1. $(1 - p)^2 = 0.49$, so $1 - p = 0.7$ and $p = 0.3$. $\\mathrm{E}(X) = \\frac{1}{0.3} = 3.33$ (3 s.f.). ($\\frac{1}{0.7} = 1.43$ uses $1 - p$ in place of $p$.)",
+  "hints": [
+   "$\\mathrm{P}(X > r) = (1 - p)^r$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3.33"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.4285714285714286"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.3"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "discrete.geometric.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "8% of the scratch cards sold at a shop in Kadoma win a prize. Chipo buys cards one at a time until she wins. Find the least number n such that the probability that she wins on or before her nth card is greater than 0.75.",
+  "answerSpec": {
+   "value": 17
+  },
+  "explanation": "$1 - 0.92^n > 0.75 \\Rightarrow 0.92^n < 0.25 \\Rightarrow n > \\frac{\\ln 0.25}{\\ln 0.92} = 16.6$. Check: $1 - 0.92^{16} = 0.737$, $1 - 0.92^{17} = 0.758$. So $n = 17$. (16 rounds down.)",
+  "workedSolution": "1. $1 - 0.92^n > 0.75 \\Rightarrow 0.92^n < 0.25 \\Rightarrow n > \\frac{\\ln 0.25}{\\ln 0.92} = 16.6$. Check: $1 - 0.92^{16} = 0.737$, $1 - 0.92^{17} = 0.758$. So $n = 17$. (16 rounds down.)",
+  "hints": [
+   "P(X ≤ n) = 1 − 0.92ⁿ.",
+   "ln 0.92 is negative: the inequality reverses."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "17"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "16"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "13"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "discrete.geometric.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In each option X is the number of the items described. Which X is best modelled by a geometric distribution?",
+  "options": [
+   {
+    "key": "A",
+    "content": "seeds that germinate in a row of 20 seeds",
+    "rationale": "A fixed number of trials and a count of successes: binomial."
+   },
+   {
+    "key": "B",
+    "content": "weeds counted in one square metre of a field",
+    "rationale": "Counts in an area suit a Poisson model."
+   },
+   {
+    "key": "C",
+    "content": "the height of a maize plant after six weeks",
+    "rationale": "Height is continuous, not a count of trials."
+   },
+   {
+    "key": "D",
+    "content": "seeds planted until the first one germinates",
+    "correct": true,
+    "rationale": "Correct: independent trials until the first success."
+   }
+  ],
+  "explanation": "A geometric variable counts trials up to and including the first success.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "discrete.geometric.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$X \\sim \\mathrm{Geo}(p)$. Which expression equals $\\mathrm{P}(X \\ge 5)$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$(1 - p)^5$",
+    "rationale": "This is P(X > 5) = P(X ≥ 6)."
+   },
+   {
+    "key": "B",
+    "content": "$(1 - p)^4$",
+    "correct": true,
+    "rationale": "Correct: X ≥ 5 means the first 4 trials fail."
+   },
+   {
+    "key": "C",
+    "content": "$1 - (1 - p)^5$",
+    "rationale": "This is P(X ≤ 5)."
+   },
+   {
+    "key": "D",
+    "content": "$1 - (1 - p)^4$",
+    "rationale": "This is P(X ≤ 4), the complement of the required event."
+   }
+  ],
+  "explanation": "$\\mathrm{P}(X \\ge 5) = \\mathrm{P}(X > 4) = (1 - p)^4$.",
+  "hints": [
+   "Rewrite X ≥ 5 as X > 4."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "discrete.geometric.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For $X \\sim \\mathrm{Geo}(p)$, the most likely value of $X$ is always 1, whatever the value of $p$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "$\\mathrm{P}(X = r + 1) = (1 - p)\\,\\mathrm{P}(X = r) < \\mathrm{P}(X = r)$, so the probabilities decrease from $r = 1$: the mode is 1.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "discrete.geometric.q13",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For $X \\sim \\mathrm{Geo}(p)$, $\\mathrm{P}(X = 0) = p$.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "X counts trials up to and including the first success, so its smallest value is 1 and P(X = 0) = 0.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "discrete.geometric.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "$X \\sim \\mathrm{Geo}(0.3)$. Match each probability with its value.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "$\\mathrm{P}(X = 2)$"
+    },
+    {
+     "id": "L2",
+     "content": "$\\mathrm{P}(X > 2)$"
+    },
+    {
+     "id": "L3",
+     "content": "$\\mathrm{P}(X \\le 2)$"
+    },
+    {
+     "id": "L4",
+     "content": "$\\mathrm{P}(X \\ge 2)$"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$1 - 0.7^2 = 0.51$"
+    },
+    {
+     "id": "R4",
+     "content": "$0.7^1 = 0.7$"
+    },
+    {
+     "id": "R1",
+     "content": "$0.7 \\times 0.3 = 0.21$"
+    },
+    {
+     "id": "R2",
+     "content": "$0.7^2 = 0.49$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "$\\mathrm{P}(X = r) = 0.7^{r - 1}(0.3)$; $\\mathrm{P}(X > r) = 0.7^r$; $\\mathrm{P}(X \\le r) = 1 - 0.7^r$; $X \\ge 2$ is $X > 1$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "discrete.geometric.q15",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A fair die is thrown repeatedly. Find, to 3 significant figures, (i) the probability that the first six occurs on the 4th throw, and (ii) the probability that exactly two sixes occur in the first 10 throws.",
+  "payload": {
+   "template": "(i) {{blank:a}}; (ii) {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "0.0965"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "0.291"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "(i) Geometric: $\\left(\\frac{5}{6}\\right)^3 \\frac{1}{6} = 0.0965$. (ii) Binomial $\\mathrm{B}(10, \\frac{1}{6})$: ${}^{10}C_2\\left(\\frac{1}{6}\\right)^2\\left(\\frac{5}{6}\\right)^8 = 0.291$.",
+  "hints": [
+   "The first part waits for a first success; the second fixes the number of throws."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "0.0965"
+    },
+    {
+     "blankId": "b",
+     "text": "0.291"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "0.00386"
+     },
+     {
+      "blankId": "b",
+      "text": "0.00646"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "discrete.geometric.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Tendai keeps asking friends to lend him a calculator until one agrees, and models the number of friends asked by Geo(0.3). State two assumptions of this model and comment on whether they are realistic.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Each friend agrees with the same probability 0.3 — unrealistic if some friends are much more willing than others.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Friends' answers are independent — may fail if friends talk to each other or he asks the most likely friend first.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The model assumes every friend agrees with the same probability, 0.3, and that the answers are independent. Both are doubtful: friends differ in willingness, and Tendai probably asks his closest friends first, so p is not constant."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "State the geometric conditions in context and judge them.",
+  "hints": [
+   "Constant p and independence are the key assumptions."
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "discrete.geometric.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "In a game at a school fête in Gweru, a player throws a beanbag at a target until it lands in the target. The probability of landing in the target is 0.35 on each throw, independently.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that the beanbag first lands in the target on the 3rd throw, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.147875,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$0.65^2 \\times 0.35 = 0.4225 \\times 0.35 = 0.148$.",
+    "workedSolution": "1. $0.65^2 \\times 0.35 = 0.4225 \\times 0.35 = 0.148$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that more than 5 throws are needed, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.11602906250000002,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$0.65^5 = 0.116$: the first five throws all miss.",
+    "workedSolution": "1. $0.65^5 = 0.116$: the first five throws all miss."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the expected number of throws, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 2.857142857142857,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\frac{1}{0.35} = 2.86$.",
+    "workedSolution": "1. $\\frac{1}{0.35} = 2.86$."
+   }
+  ],
+  "explanation": "Geo(0.35): P(X = r) = 0.65^(r−1)(0.35), P(X > r) = 0.65^r, E(X) = 1/0.35.",
+  "hints": [
+   "Define X ~ Geo(0.35)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.148"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.116"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.86"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.0961"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.179"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1.54"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": true
+ },
+ {
+  "key": "discrete.geometric.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.discrete.geometric"
+  ],
+  "difficulty": 5,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "Rudo and Farai take turns to throw a fair six-sided die, with Rudo throwing first. The first person to throw a six wins. Let X be the number of the throw (counting both players' throws) on which the first six occurs.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "State the distribution of X.",
+    "options": [
+     {
+      "key": "A",
+      "content": "$\\mathrm{B}\\left(2, \\frac{1}{6}\\right)$",
+      "rationale": "There is no fixed number of throws."
+     },
+     {
+      "key": "B",
+      "content": "$\\mathrm{Geo}\\left(\\frac{5}{6}\\right)$",
+      "rationale": "p is the probability of success, a six: 1/6."
+     },
+     {
+      "key": "C",
+      "content": "$\\mathrm{Geo}\\left(\\frac{1}{6}\\right)$",
+      "correct": true,
+      "rationale": "Correct: independent throws until the first six."
+     },
+     {
+      "key": "D",
+      "content": "$\\mathrm{B}\\left(6, \\frac{1}{6}\\right)$",
+      "rationale": "There is no fixed number of throws."
+     }
+    ],
+    "explanation": "Each throw is independent with P(six) = 1/6; X counts throws until the first six."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that Rudo wins on his third throw, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.08037551440329219,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "Rudo's third throw is throw number 5 overall: $\\mathrm{P}(X = 5) = \\left(\\frac{5}{6}\\right)^4 \\frac{1}{6} = 0.0804$. ($0.116$ forgets Farai's throws.)",
+    "workedSolution": "1. Rudo's third throw is throw number 5 overall: $\\mathrm{P}(X = 5) = \\left(\\frac{5}{6}\\right)^4 \\frac{1}{6} = 0.0804$. ($0.116$ forgets Farai's throws.)"
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that the game lasts more than 6 throws, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.3348979766803842,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(X > 6) = \\left(\\frac{5}{6}\\right)^6 = 0.335$.",
+    "workedSolution": "1. $\\mathrm{P}(X > 6) = \\left(\\frac{5}{6}\\right)^6 = 0.335$."
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Show that the probability that Rudo wins is $\\frac{6}{11}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 Rudo wins if X = 1, 3, 5, …",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 writes $\\frac{1}{6} + \\left(\\frac{5}{6}\\right)^2\\frac{1}{6} + \\left(\\frac{5}{6}\\right)^4\\frac{1}{6} + \\cdots$",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "M1 identifies a geometric series with first term $\\frac{1}{6}$ and ratio $\\frac{25}{36}$ and uses $\\frac{a}{1 - r}$.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A1 obtains $\\frac{1/6}{11/36} = \\frac{6}{11}$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\mathrm{P}(\\text{Rudo wins}) = \\frac{1}{6} + \\left(\\frac{5}{6}\\right)^2\\frac{1}{6} + \\left(\\frac{5}{6}\\right)^4\\frac{1}{6} + \\cdots\n$$\n$$\n= \\frac{\\frac{1}{6}}{1 - \\frac{25}{36}} = \\frac{1}{6} \\times \\frac{36}{11} = \\frac{6}{11}\n$$"
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Given that Rudo wins, find the probability that he wins on his first throw. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.3055555555555556,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(X = 1 \\mid \\text{Rudo wins}) = \\frac{1/6}{6/11} = \\frac{11}{36} \\approx 0.306$.",
+    "workedSolution": "1. $\\mathrm{P}(X = 1 \\mid \\text{Rudo wins}) = \\frac{1/6}{6/11} = \\frac{11}{36} \\approx 0.306$."
+   }
+  ],
+  "explanation": "The game is one geometric sequence of throws; Rudo has the odd-numbered throws, which form a geometric series.",
+  "hints": [
+   "Rudo throws on throws 1, 3, 5, …",
+   "Sum to infinity: a/(1 − r)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.0804"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.335"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.306"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.116"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.402"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "0.16666666666666666"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true
+ }
+]

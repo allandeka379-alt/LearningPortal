@@ -1,0 +1,2106 @@
+[
+ {
+  "key": "exam.w2a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.stationary-points",
+   "amaths.diff.powers-chain"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "A curve has equation $y = 3\\sqrt{x} + \\dfrac{12}{x}$ for $x > 0$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $\\dfrac{dy}{dx}$ in the form $px^{-\\frac{1}{2}} + qx^{-2}$.",
+    "payload": {
+     "template": "p = {{blank:p}}, q = {{blank:q}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "q",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "1.5"
+       ],
+       "tolerance": 0.05
+      },
+      {
+       "id": "q",
+       "accepted": [
+        "-12"
+       ]
+      }
+     ]
+    },
+    "explanation": "$y = 3x^{\\frac{1}{2}} + 12x^{-1}$, so $\\frac{dy}{dx} = \\frac{3}{2}x^{-\\frac{1}{2}} - 12x^{-2}$: $p = 1.5$, $q = -12$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the stationary point.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "9"
+       ]
+      }
+     ]
+    },
+    "explanation": "$\\frac{3}{2}x^{-\\frac{1}{2}} = 12x^{-2}$ gives $x^{\\frac{3}{2}} = 8$, so $x = 4$ and $y = 3 \\times 2 + 3 = 9$."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Determine the nature of the stationary point.",
+    "options": [
+     {
+      "key": "A",
+      "content": "Minimum, since $\\frac{d^{2}y}{dx^{2}} = \\frac{9}{32} > 0$ at $x = 4$",
+      "correct": true,
+      "rationale": "Correct: $\\frac{d^{2}y}{dx^{2}} = -\\frac{3}{4}x^{-\\frac{3}{2}} + 24x^{-3} = -\\frac{3}{32} + \\frac{12}{32}$."
+     },
+     {
+      "key": "B",
+      "content": "Maximum, since $\\frac{d^{2}y}{dx^{2}} = -\\frac{3}{32} < 0$ at $x = 4$",
+      "rationale": "Only the first term of the second derivative has been used."
+     },
+     {
+      "key": "C",
+      "content": "Maximum, since $\\frac{d^{2}y}{dx^{2}} = \\frac{9}{32} > 0$ at $x = 4$",
+      "rationale": "A positive second derivative indicates a minimum."
+     },
+     {
+      "key": "D",
+      "content": "Minimum, since $y = 9 > 0$ at $x = 4$",
+      "rationale": "The sign of y says nothing about the nature of a stationary point."
+     }
+    ],
+    "explanation": "$\\frac{d^{2}y}{dx^{2}} = -\\frac{3}{4}x^{-\\frac{3}{2}} + 24x^{-3}$; at $x = 4$ this is $-\\frac{3}{32} + \\frac{24}{64} = \\frac{9}{32} > 0$, a minimum."
+   }
+  ],
+  "explanation": "Rewrite in index form, differentiate, solve dy/dx = 0, and classify with the second derivative.",
+  "hints": [
+   "Write √x and 12/x as powers of x.",
+   "x^(3/2) = 8 gives x = 4."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "1.5"
+      },
+      {
+       "blankId": "q",
+       "text": "-12"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "4"
+      },
+      {
+       "blankId": "y",
+       "text": "9"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "3"
+       },
+       {
+        "blankId": "q",
+        "text": "12"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "2"
+       },
+       {
+        "blankId": "y",
+        "text": "0"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.definite-area"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "The curve $y = x^{2} - 4x + 5$ and the line $y = 2x$ intersect at the points $A$ and $B$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the x-coordinates of A and B, smaller first.",
+    "payload": {
+     "template": "x = {{blank:a}} and x = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "5"
+       ]
+      }
+     ]
+    },
+    "explanation": "$x^{2} - 4x + 5 = 2x$ gives $x^{2} - 6x + 5 = (x - 1)(x - 5) = 0$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Show that the area of the region enclosed by the curve and the line is $\\displaystyle\\int_{1}^{5}(6x - x^{2} - 5)\\,dx$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 states the line is above the curve between the intersections and writes $\\int_{1}^{5}\\left[2x - (x^{2} - 4x + 5)\\right]dx$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "Between $x = 1$ and $x = 5$ the line is above the curve (at $x = 3$: $6 > 2$), so the area is $\\int_{1}^{5}\\left[2x - (x^{2} - 4x + 5)\\right]dx = \\int_{1}^{5}(6x - x^{2} - 5)\\,dx$."
+    },
+    "explanation": "Upper minus lower."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find this area, giving your answer as an exact fraction or to 3 significant figures.",
+    "payload": {
+     "unitHint": "units²"
+    },
+    "answerSpec": {
+     "value": 10.666666666666666,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "units²",
+       "units^2",
+       "square units",
+       "unit^2"
+      ]
+     }
+    },
+    "explanation": "$\\Big[3x^{2} - \\tfrac{x^{3}}{3} - 5x\\Big]_{1}^{5} = \\left(75 - \\tfrac{125}{3} - 25\\right) - \\left(3 - \\tfrac{1}{3} - 5\\right) = \\tfrac{25}{3} + \\tfrac{7}{3} = \\tfrac{32}{3}$.",
+    "workedSolution": "1. $\\Big[3x^{2} - \\tfrac{x^{3}}{3} - 5x\\Big]_{1}^{5} = \\left(75 - \\tfrac{125}{3} - 25\\right) - \\left(3 - \\tfrac{1}{3} - 5\\right) = \\tfrac{25}{3} + \\tfrac{7}{3} = \\tfrac{32}{3}$."
+   }
+  ],
+  "explanation": "Find the intersections, then integrate upper minus lower between them.",
+  "hints": [
+   "Set the two expressions equal.",
+   "Check which graph is on top at x = 3."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "5"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "10.7"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-1"
+       },
+       {
+        "blankId": "b",
+        "text": "-5"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "-10.67"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.stationary-points",
+   "amaths.diff.applications"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "An open water tank at a fish farm near Kariba has a square base of side $x$ m and height $h$ m. Its volume is 32 m$^3$. The tank has no lid.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that the total outer surface area is $A = x^{2} + \\dfrac{128}{x}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses $x^{2}h = 32$ to write $h = \\dfrac{32}{x^{2}}$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 substitutes into $A = x^{2} + 4xh$ to reach the given result",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nx^{2}h = 32 \\Rightarrow h = \\frac{32}{x^{2}}, \\qquad A = x^{2} + 4xh = x^{2} + 4x \\cdot \\frac{32}{x^{2}} = x^{2} + \\frac{128}{x}\n$$"
+    },
+    "explanation": "The base plus four vertical sides; no lid."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the value of x for which A is stationary.",
+    "payload": {
+     "unitHint": "m",
+     "answerPrefix": "x ="
+    },
+    "answerSpec": {
+     "value": 4,
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "$\\frac{dA}{dx} = 2x - \\frac{128}{x^{2}} = 0$ gives $x^{3} = 64$, $x = 4$.",
+    "workedSolution": "1. $\\frac{dA}{dx} = 2x - \\frac{128}{x^{2}} = 0$ gives $x^{3} = 64$, $x = 4$."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Determine whether this stationary value is a maximum or a minimum.",
+    "options": [
+     {
+      "key": "A",
+      "content": "Maximum: $\\frac{d^{2}A}{dx^{2}} = 2 - \\frac{256}{x^{3}} = -2 < 0$",
+      "rationale": "Sign slip: $\\frac{d}{dx}(-128x^{-2}) = +256x^{-3}$."
+     },
+     {
+      "key": "B",
+      "content": "Minimum: $\\frac{d^{2}A}{dx^{2}} = 2x = 8 > 0$",
+      "rationale": "The derivative of $-\\frac{128}{x^{2}}$ has been left out."
+     },
+     {
+      "key": "C",
+      "content": "Minimum: $\\frac{d^{2}A}{dx^{2}} = 2 + \\frac{256}{x^{3}} = 6 > 0$",
+      "correct": true,
+      "rationale": "Correct: the second derivative is positive."
+     },
+     {
+      "key": "D",
+      "content": "Maximum: $\\frac{dA}{dx} = 0$ there",
+      "rationale": "dA/dx = 0 only shows that the point is stationary."
+     }
+    ],
+    "explanation": "$\\frac{d^{2}A}{dx^{2}} = 2 + 256x^{-3} = 2 + 4 = 6 > 0$ at $x = 4$, so $A$ is a minimum."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the least possible surface area.",
+    "payload": {
+     "unitHint": "m²"
+    },
+    "answerSpec": {
+     "value": 48,
+     "units": {
+      "required": false,
+      "accepted": [
+       "m²",
+       "m^2",
+       "square metres"
+      ]
+     }
+    },
+    "explanation": "$A = 16 + 32 = 48$ m$^2$.",
+    "workedSolution": "1. $A = 16 + 32 = 48$ m$^2$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "A design is tested in which x increases at 0.05 m per second. Find the rate of change of A, in m² per second, at the instant when x = 2.",
+    "answerSpec": {
+     "value": -1.4000000000000001,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\frac{dA}{dt} = \\frac{dA}{dx} \\times \\frac{dx}{dt} = (4 - 32) \\times 0.05 = -1.4$ m$^2$ per second, i.e. decreasing.",
+    "workedSolution": "1. $\\frac{dA}{dt} = \\frac{dA}{dx} \\times \\frac{dx}{dt} = (4 - 32) \\times 0.05 = -1.4$ m$^2$ per second, i.e. decreasing."
+   }
+  ],
+  "explanation": "Optimisation with a constraint, followed by a connected rate of change.",
+  "hints": [
+   "Eliminate h using the volume.",
+   "dA/dt = dA/dx × dx/dt."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "48"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "-1.40"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "16"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1.4"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-cambridge.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.reverse-powers",
+   "amaths.integ.definite-area",
+   "amaths.diff.stationary-points"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "A curve has $\\dfrac{dy}{dx} = 3\\sqrt{x} - 4$ for $x \\geq 0$, and passes through the point $P(4, 5)$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Find the equation of the curve. Type it as y = …, for example y=3x^(3/2)-x+2.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "y=2x^(3/2)-4x+5"
+      },
+      {
+       "value": "y=2x^1.5-4x+5"
+      },
+      {
+       "value": "y=2x√x-4x+5"
+      },
+      {
+       "value": "y=2xsqrt(x)-4x+5"
+      },
+      {
+       "value": "y=2xsqrtx-4x+5"
+      },
+      {
+       "value": "y=2x√(x)-4x+5"
+      },
+      {
+       "value": "y=5-4x+2x^(3/2)"
+      },
+      {
+       "value": "y=2x^(3/2)+5-4x"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$y = \\frac{3x^{3/2}}{3/2} - 4x + c = 2x^{\\frac{3}{2}} - 4x + c$. At $P$: $16 - 16 + c = 5$, so $c = 5$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find the coordinates of the stationary point, correct to 3 significant figures.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "1.78"
+       ],
+       "tolerance": 0.005
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "2.63"
+       ],
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$3\\sqrt{x} = 4$ gives $x = \\frac{16}{9} \\approx 1.78$; $y = 2\\left(\\frac{4}{3}\\right)^{3} - \\frac{64}{9} + 5 = \\frac{71}{27} \\approx 2.63$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the area of the region bounded by the curve, the axes and the line x = 4.",
+    "payload": {
+     "unitHint": "units²"
+    },
+    "answerSpec": {
+     "value": 13.600000000000001,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "units²",
+       "units^2",
+       "square units",
+       "unit^2"
+      ]
+     }
+    },
+    "explanation": "$\\int_{0}^{4}\\left(2x^{\\frac{3}{2}} - 4x + 5\\right)dx = \\Big[\\tfrac{4}{5}x^{\\frac{5}{2}} - 2x^{2} + 5x\\Big]_{0}^{4} = 25.6 - 32 + 20 = 13.6$. (The curve is above the axis throughout, since its minimum value is positive.)",
+    "workedSolution": "1. $\\int_{0}^{4}\\left(2x^{\\frac{3}{2}} - 4x + 5\\right)dx = \\Big[\\tfrac{4}{5}x^{\\frac{5}{2}} - 2x^{2} + 5x\\Big]_{0}^{4} = 25.6 - 32 + 20 = 13.6$. (The curve is above the axis throughout, since its minimum value is positive.)"
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the equation of the normal to the curve at P, in the form y = mx + c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "y=-0.5x+7"
+      },
+      {
+       "value": "y=-x/2+7"
+      },
+      {
+       "value": "y=-1/2x+7"
+      },
+      {
+       "value": "y=7-x/2"
+      },
+      {
+       "value": "y=7-0.5x"
+      },
+      {
+       "value": "y=(-1/2)x+7"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "At $x = 4$: $\\frac{dy}{dx} = 6 - 4 = 2$, so the normal gradient is $-\\frac{1}{2}$: $y - 5 = -\\frac{1}{2}(x - 4)$, $y = -\\frac{1}{2}x + 7$."
+   }
+  ],
+  "explanation": "Integrate the gradient with the point to fix c, then use the curve for a stationary point, an area and a normal.",
+  "hints": [
+   "∫ 3x^(1/2) dx = 2x^(3/2).",
+   "The minimum of the curve is above the x-axis."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "y=2x^(3/2)-4x+5"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "1.78"
+      },
+      {
+       "blankId": "y",
+       "text": "2.63"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "13.6"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "y=-0.5x+7"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "y=2x^(3/2)-4x"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "1.33"
+       },
+       {
+        "blankId": "y",
+        "text": "5"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "6.4"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "y=2x-3"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 1"
+ },
+ {
+  "key": "exam.w2a-cambridge.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.product-quotient",
+   "amaths.diff.exp-log-trig"
+  ],
+  "difficulty": 3,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "A curve has equation $y = x^{2}\\mathrm{e}^{-\\frac{x}{2}}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $\\dfrac{dy}{dx}$ in the form $\\mathrm{e}^{-\\frac{x}{2}}(ax + bx^{2})$.",
+    "payload": {
+     "template": "a = {{blank:a}}, b = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "-0.5"
+       ],
+       "tolerance": 0.05
+      }
+     ]
+    },
+    "explanation": "Product rule: $2x\\mathrm{e}^{-\\frac{x}{2}} + x^{2} \\cdot \\left(-\\tfrac{1}{2}\\right)\\mathrm{e}^{-\\frac{x}{2}} = \\mathrm{e}^{-\\frac{x}{2}}\\left(2x - \\tfrac{1}{2}x^{2}\\right)$."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "The curve has a stationary point other than the origin. Find its coordinates, giving y correct to 3 significant figures.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "2.17"
+       ],
+       "tolerance": 0.005
+      }
+     ]
+    },
+    "explanation": "$x\\left(2 - \\tfrac{x}{2}\\right) = 0$ gives $x = 4$; $y = 16\\mathrm{e}^{-2} \\approx 2.17$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the gradient of the normal to the curve at the point where x = 2, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": -1.3591409142295225,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "At $x = 2$: $\\frac{dy}{dx} = \\mathrm{e}^{-1}(4 - 2) = \\frac{2}{\\mathrm{e}}$, so the normal gradient is $-\\frac{\\mathrm{e}}{2} \\approx -1.36$.",
+    "workedSolution": "1. At $x = 2$: $\\frac{dy}{dx} = \\mathrm{e}^{-1}(4 - 2) = \\frac{2}{\\mathrm{e}}$, so the normal gradient is $-\\frac{\\mathrm{e}}{2} \\approx -1.36$."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the nature of the stationary point at the origin?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A maximum",
+      "rationale": "y is never negative, so the origin cannot be a maximum."
+     },
+     {
+      "key": "B",
+      "content": "Neither, because dy/dx is not zero there",
+      "rationale": "dy/dx = 0 at x = 0."
+     },
+     {
+      "key": "C",
+      "content": "A point where the curve crosses the x-axis",
+      "rationale": "The curve touches the x-axis at the origin but does not cross it."
+     },
+     {
+      "key": "D",
+      "content": "A minimum",
+      "correct": true,
+      "rationale": "Correct: $y = x^{2}\\mathrm{e}^{-x/2} \\geq 0$ with $y = 0$ only at the origin."
+     }
+    ],
+    "explanation": "$\\frac{dy}{dx} = x\\mathrm{e}^{-x/2}(2 - \\frac{x}{2})$ changes from negative to positive at $x = 0$, so the origin is a minimum."
+   }
+  ],
+  "explanation": "Product rule with an exponential factor; factorise before solving dy/dx = 0.",
+  "hints": [
+   "d/dx e^(−x/2) = −(1/2)e^(−x/2).",
+   "Factorise x e^(−x/2) out of the derivative."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2"
+      },
+      {
+       "blankId": "b",
+       "text": "-0.5"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "4"
+      },
+      {
+       "blankId": "y",
+       "text": "2.17"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "-1.36"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "0.5"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "2"
+       },
+       {
+        "blankId": "y",
+        "text": "16"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.736"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2a-cambridge.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.implicit-parametric"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 630,
+  "stem": "A curve has equation $x^{2} + 2xy - 3y^{2} = 9$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\dfrac{dy}{dx} = \\dfrac{x + y}{3y - x}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 differentiates $2xy$ correctly: $2x\\frac{dy}{dx} + 2y$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "B1 differentiates $3y^{2}$ correctly: $6y\\frac{dy}{dx}$",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 rearranges to the given result",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n2x + 2x\\frac{dy}{dx} + 2y - 6y\\frac{dy}{dx} = 0 \\Rightarrow (2x - 6y)\\frac{dy}{dx} = -(2x + 2y) \\Rightarrow \\frac{dy}{dx} = \\frac{x + y}{3y - x}\n$$"
+    },
+    "explanation": "Product rule on 2xy and the chain rule on y²."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Find the gradient of the curve at the point (3, 0).",
+    "answerSpec": {
+     "value": -1
+    },
+    "explanation": "$\\frac{3 + 0}{0 - 3} = -1$.",
+    "workedSolution": "1. $\\frac{3 + 0}{0 - 3} = -1$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The tangent to the curve is parallel to the y-axis at two points. Find the coordinates of the one with x > 0, correct to 3 significant figures.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "2.60"
+       ],
+       "marks": 2,
+       "tolerance": 0.005
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "0.866"
+       ],
+       "marks": 1,
+       "tolerance": 0.0005
+      }
+     ]
+    },
+    "explanation": "Vertical tangent: $3y - x = 0$, so $x = 3y$. Then $9y^{2} + 6y^{2} - 3y^{2} = 12y^{2} = 9$, $y = \\frac{\\sqrt{3}}{2} \\approx 0.866$ and $x = \\frac{3\\sqrt{3}}{2} \\approx 2.60$."
+   }
+  ],
+  "explanation": "Implicit differentiation; a vertical tangent is where the denominator of dy/dx is zero.",
+  "hints": [
+   "Use the product rule on 2xy.",
+   "Substitute x = 3y into the curve's equation."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-1"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "2.60"
+      },
+      {
+       "blankId": "y",
+       "text": "0.866"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "3"
+       },
+       {
+        "blankId": "y",
+        "text": "1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2a-cambridge.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.standard-functions"
+  ],
+  "difficulty": 4,
+  "marks": 11,
+  "estimatedSeconds": 990,
+  "stem": "This question is about four definite integrals. Give exact answers where asked.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\displaystyle\\int_{0}^{\\pi/4}(\\sin x + \\cos x)^{2}\\,dx = \\frac{\\pi}{4} + \\frac{1}{2}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 expands and uses $\\sin^{2}x + \\cos^{2}x = 1$ and $2\\sin x\\cos x = \\sin 2x$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 integrates to $\\Big[x - \\tfrac{1}{2}\\cos 2x\\Big]$",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 substitutes the limits to obtain $\\frac{\\pi}{4} + \\frac{1}{2}$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n(\\sin x + \\cos x)^{2} = 1 + \\sin 2x\n$$\n\n$$\n\\int_{0}^{\\pi/4}(1 + \\sin 2x)\\,dx = \\Big[x - \\tfrac{1}{2}\\cos 2x\\Big]_{0}^{\\pi/4} = \\left(\\tfrac{\\pi}{4} - 0\\right) - \\left(0 - \\tfrac{1}{2}\\right) = \\tfrac{\\pi}{4} + \\tfrac{1}{2}\n$$"
+    },
+    "explanation": "Expanding the square and using two identities leaves 1 + sin 2x."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Find the exact value of $\\displaystyle\\int_{0}^{\\ln 3}(\\mathrm{e}^{x} + 1)^{2}\\,dx$, in the form $a + \\ln b$. Type it as, for example, 5+ln2.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "8+ln3"
+      },
+      {
+       "value": "ln3+8"
+      },
+      {
+       "value": "8+ln(3)"
+      },
+      {
+       "value": "ln(3)+8"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\int(\\mathrm{e}^{2x} + 2\\mathrm{e}^{x} + 1)\\,dx = \\Big[\\tfrac{1}{2}\\mathrm{e}^{2x} + 2\\mathrm{e}^{x} + x\\Big]_{0}^{\\ln 3} = (4.5 + 6 + \\ln 3) - (0.5 + 2) = 8 + \\ln 3$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the area of the region bounded by $y = \\dfrac{1}{2x + 1}$, the axes and the line $x = 4$, correct to 3 significant figures.",
+    "payload": {
+     "unitHint": "units²"
+    },
+    "answerSpec": {
+     "value": 1.0986122886681096,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "units²",
+       "units^2",
+       "square units",
+       "unit^2"
+      ]
+     }
+    },
+    "explanation": "$\\Big[\\tfrac{1}{2}\\ln(2x + 1)\\Big]_{0}^{4} = \\tfrac{1}{2}\\ln 9 = \\ln 3 \\approx 1.10$. (2.20 forgets the $\\frac{1}{2}$.)",
+    "workedSolution": "1. $\\Big[\\tfrac{1}{2}\\ln(2x + 1)\\Big]_{0}^{4} = \\tfrac{1}{2}\\ln 9 = \\ln 3 \\approx 1.10$. (2.20 forgets the $\\frac{1}{2}$.)"
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Evaluate $\\displaystyle\\int_{0}^{\\pi/3}\\tan^{2}x\\,dx$, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.6848532563722796,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\tan^{2}x = \\sec^{2}x - 1$: $\\Big[\\tan x - x\\Big]_{0}^{\\pi/3} = \\sqrt{3} - \\frac{\\pi}{3} \\approx 0.685$.",
+    "workedSolution": "1. $\\tan^{2}x = \\sec^{2}x - 1$: $\\Big[\\tan x - x\\Big]_{0}^{\\pi/3} = \\sqrt{3} - \\frac{\\pi}{3} \\approx 0.685$."
+   }
+  ],
+  "explanation": "Each integral needs an identity or an expansion before a standard result applies.",
+  "hints": [
+   "(sin x + cos x)² = 1 + sin 2x.",
+   "tan²x = sec²x − 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "8+ln3"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.10"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.685"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "10.5+ln3"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.2"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2.78"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w2a-cambridge.q08",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.by-parts"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "Let $I = \\displaystyle\\int_{0}^{\\pi/2} x^{2}\\sin x\\,dx$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $I = 2\\displaystyle\\int_{0}^{\\pi/2} x\\cos x\\,dx$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses $u = x^{2}$, $v = -\\cos x$: $\\Big[-x^{2}\\cos x\\Big]_{0}^{\\pi/2} + \\int_{0}^{\\pi/2} 2x\\cos x\\,dx$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 notes $\\Big[-x^{2}\\cos x\\Big]_{0}^{\\pi/2} = 0$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nI = \\Big[-x^{2}\\cos x\\Big]_{0}^{\\pi/2} + \\int_{0}^{\\pi/2} 2x\\cos x\\,dx = (0 - 0) + 2\\int_{0}^{\\pi/2} x\\cos x\\,dx\n$$"
+    },
+    "explanation": "$\\cos\\frac{\\pi}{2} = 0$ makes the boundary term vanish."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Hence find the exact value of I. Type pi for π, for example 2pi-3.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "π-2"
+      },
+      {
+       "value": "pi-2"
+      },
+      {
+       "value": "-2+π"
+      },
+      {
+       "value": "-2+pi"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\int_{0}^{\\pi/2} x\\cos x\\,dx = \\Big[x\\sin x + \\cos x\\Big]_{0}^{\\pi/2} = \\frac{\\pi}{2} - 1$, so $I = \\pi - 2$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Give the value of I correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 1.1415926535897931,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$\\pi - 2 \\approx 1.14$.",
+    "workedSolution": "1. $\\pi - 2 \\approx 1.14$."
+   }
+  ],
+  "explanation": "Integration by parts twice, the second time on x cos x.",
+  "hints": [
+   "Take u = x² first.",
+   "Then u = x for the remaining integral."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "π-2"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.14"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "π+2"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "5.14"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w2a-cambridge.q09",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.recognition-substitution"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 540,
+  "stem": "Use the substitution $u = \\sqrt{x - 1}$ to evaluate $\\displaystyle\\int_{2}^{5}\\frac{x}{\\sqrt{x - 1}}\\,dx$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that the integral becomes $2\\displaystyle\\int_{1}^{2}(u^{2} + 1)\\,du$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 writes $x = u^{2} + 1$ and $dx = 2u\\,du$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "B1 changes the limits: $x = 2 \\to u = 1$, $x = 5 \\to u = 2$",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 simplifies $\\dfrac{u^{2} + 1}{u} \\cdot 2u$ to $2(u^{2} + 1)$",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\int_{2}^{5}\\frac{x}{\\sqrt{x - 1}}\\,dx = \\int_{1}^{2}\\frac{u^{2} + 1}{u} \\cdot 2u\\,du = 2\\int_{1}^{2}(u^{2} + 1)\\,du\n$$"
+    },
+    "explanation": "Replace x, dx and the limits."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Hence find the value of the integral, as an exact fraction or correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 6.666666666666667,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$2\\Big[\\tfrac{u^{3}}{3} + u\\Big]_{1}^{2} = 2\\left(\\tfrac{8}{3} + 2 - \\tfrac{1}{3} - 1\\right) = 2 \\times \\tfrac{10}{3} = \\tfrac{20}{3} \\approx 6.67$.",
+    "workedSolution": "1. $2\\Big[\\tfrac{u^{3}}{3} + u\\Big]_{1}^{2} = 2\\left(\\tfrac{8}{3} + 2 - \\tfrac{1}{3} - 1\\right) = 2 \\times \\tfrac{10}{3} = \\tfrac{20}{3} \\approx 6.67$."
+   }
+  ],
+  "explanation": "A given substitution: change x, dx and the limits, then integrate a polynomial.",
+  "hints": [
+   "u² = x − 1, so 2u du = dx.",
+   "When x = 5, u = 2."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "6.67"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3.33"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w2a-cambridge.q10",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.partial-fractions"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "Let $f(x) = \\dfrac{3x^{2} + 10x + 10}{(x + 2)(x + 1)^{2}}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Express $f(x)$ in the form $\\dfrac{A}{x + 2} + \\dfrac{B}{x + 1} + \\dfrac{C}{(x + 1)^{2}}$.",
+    "payload": {
+     "template": "A = {{blank:A}}, B = {{blank:B}}, C = {{blank:C}}",
+     "blanks": [
+      {
+       "id": "A",
+       "input": "number"
+      },
+      {
+       "id": "B",
+       "input": "number"
+      },
+      {
+       "id": "C",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "A",
+       "accepted": [
+        "2"
+       ],
+       "marks": 1
+      },
+      {
+       "id": "B",
+       "accepted": [
+        "1"
+       ],
+       "marks": 2
+      },
+      {
+       "id": "C",
+       "accepted": [
+        "3"
+       ],
+       "marks": 1
+      }
+     ]
+    },
+    "explanation": "$3x^{2} + 10x + 10 \\equiv A(x + 1)^{2} + B(x + 2)(x + 1) + C(x + 2)$. $x = -2$: $12 - 20 + 10 = 2 = A$. $x = -1$: $3 = C$. $x^{2}$: $3 = A + B$, $B = 1$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Hence find $\\displaystyle\\int_{0}^{1} f(x)\\,dx$ in the form $p + \\ln q$. Type it as, for example, 2.5+ln(7/2).",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "1.5+ln(9/2)"
+      },
+      {
+       "value": "3/2+ln(9/2)"
+      },
+      {
+       "value": "1.5+ln4.5"
+      },
+      {
+       "value": "ln(9/2)+3/2"
+      },
+      {
+       "value": "ln(9/2)+1.5"
+      },
+      {
+       "value": "ln4.5+1.5"
+      },
+      {
+       "value": "3/2+ln4.5"
+      },
+      {
+       "value": "1.5+ln(4.5)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\Big[2\\ln(x + 2) + \\ln(x + 1) - \\tfrac{3}{x + 1}\\Big]_{0}^{1} = (2\\ln 3 + \\ln 2 - \\tfrac{3}{2}) - (2\\ln 2 - 3) = \\tfrac{3}{2} + \\ln\\tfrac{9}{2}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Give the value of the integral correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 3.004077396776274,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$1.5 + \\ln 4.5 \\approx 3.00$.",
+    "workedSolution": "1. $1.5 + \\ln 4.5 \\approx 3.00$."
+   }
+  ],
+  "explanation": "Partial fractions with a repeated factor; the squared term integrates to a power, not a logarithm.",
+  "hints": [
+   "Substitute x = −2 and x = −1, then compare x² coefficients.",
+   "∫ 3/(x + 1)² dx = −3/(x + 1)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "A",
+       "text": "2"
+      },
+      {
+       "blankId": "B",
+       "text": "1"
+      },
+      {
+       "blankId": "C",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "1.5+ln(9/2)"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3.00"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "A",
+        "text": "6"
+       },
+       {
+        "blankId": "B",
+        "text": "-1"
+       },
+       {
+        "blankId": "C",
+        "text": "-3"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "1.5+ln(9/4)"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.31"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w2a-cambridge.q11",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.diff.implicit-parametric"
+  ],
+  "difficulty": 4,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "A curve has parametric equations $x = 3t - t^{3}$, $y = 3t^{2}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find dy/dx in terms of t. Type it as a single fraction, for example 3t/(2-t^2).",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2t/(1-t^2)"
+      },
+      {
+       "value": "6t/(3-3t^2)"
+      },
+      {
+       "value": "-2t/(t^2-1)"
+      },
+      {
+       "value": "2t/(1-t²)"
+      },
+      {
+       "value": "2t/((1-t)(1+t))"
+      },
+      {
+       "value": "2t/((1+t)(1-t))"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "$\\frac{dx}{dt} = 3 - 3t^{2}$, $\\frac{dy}{dt} = 6t$, so $\\frac{dy}{dx} = \\frac{6t}{3 - 3t^{2}} = \\frac{2t}{1 - t^{2}}$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "stem": "Find the equation of the tangent at the point where t = 2, in the form ax + by = c with integers a, b, c.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "4x+3y=28"
+      },
+      {
+       "value": "3y+4x=28"
+      },
+      {
+       "value": "4x+3y-28=0"
+      },
+      {
+       "value": "-4x-3y=-28"
+      },
+      {
+       "value": "y=-4/3x+28/3"
+      },
+      {
+       "value": "y=(28-4x)/3"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "At $t = 2$: $(-2, 12)$ and $\\frac{dy}{dx} = \\frac{4}{-3}$. Tangent: $y - 12 = -\\frac{4}{3}(x + 2)$, so $3y - 36 = -4x - 8$, i.e. $4x + 3y = 28$."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "The tangent is parallel to the y-axis at two points. Find the coordinates of the one with x > 0.",
+    "payload": {
+     "template": "({{blank:x}}, {{blank:y}})",
+     "blanks": [
+      {
+       "id": "x",
+       "input": "number"
+      },
+      {
+       "id": "y",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "x",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "y",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "Vertical tangent: $1 - t^{2} = 0$, $t = \\pm 1$. $t = 1$ gives $(2, 3)$; $t = -1$ gives $(-2, 3)$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the gradient of the normal at the point where t = 1/2.",
+    "answerSpec": {
+     "value": -0.75,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "At $t = \\frac{1}{2}$: $\\frac{dy}{dx} = \\frac{1}{3/4} = \\frac{4}{3}$, so the normal gradient is $-\\frac{3}{4}$.",
+    "workedSolution": "1. At $t = \\frac{1}{2}$: $\\frac{dy}{dx} = \\frac{1}{3/4} = \\frac{4}{3}$, so the normal gradient is $-\\frac{3}{4}$."
+   }
+  ],
+  "explanation": "Parametric gradient, then tangents and normals identified by the parameter.",
+  "hints": [
+   "dy/dx = (dy/dt) ÷ (dx/dt).",
+   "A vertical tangent has dx/dt = 0."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "2t/(1-t^2)"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "4x+3y=28"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "x",
+       "text": "2"
+      },
+      {
+       "blankId": "y",
+       "text": "3"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "-0.750"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "(1-t^2)/(2t)"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "4x+3y=36"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "x",
+        "text": "-2"
+       },
+       {
+        "blankId": "y",
+        "text": "12"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1.33"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": false,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w2a-cambridge.q12",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.integ.by-parts",
+   "amaths.diff.product-quotient"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 810,
+  "stem": "The curve $y = \\dfrac{\\ln x}{\\sqrt{x}}$, for $x > 0$, has one maximum point $M$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Find the exact x-coordinate of M. Type e^ for powers of e, for example e^3.",
+    "payload": {
+     "maxLength": 60
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "e^2"
+      },
+      {
+       "value": "e²"
+      },
+      {
+       "value": "exp(2)"
+      },
+      {
+       "value": "e^(2)"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "Quotient rule: $\\frac{dy}{dx} = \\dfrac{\\sqrt{x} \\cdot \\frac{1}{x} - \\ln x \\cdot \\frac{1}{2\\sqrt{x}}}{x} = \\dfrac{2 - \\ln x}{2x^{3/2}}$, zero when $\\ln x = 2$, $x = \\mathrm{e}^{2}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the y-coordinate of M, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.7357588823428847,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$y = \\dfrac{2}{\\mathrm{e}} \\approx 0.736$.",
+    "workedSolution": "1. $y = \\dfrac{2}{\\mathrm{e}} \\approx 0.736$."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that $\\displaystyle\\int\\frac{\\ln x}{\\sqrt{x}}\\,dx = 2\\sqrt{x}\\ln x - 4\\sqrt{x} + c$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 uses $u = \\ln x$, $v = 2\\sqrt{x}$: $2\\sqrt{x}\\ln x - \\int 2\\sqrt{x} \\cdot \\frac{1}{x}\\,dx$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A1 integrates $2x^{-\\frac{1}{2}}$ to $4\\sqrt{x}$ and reaches the given result",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\n\\int x^{-\\frac{1}{2}}\\ln x\\,dx = 2x^{\\frac{1}{2}}\\ln x - \\int 2x^{\\frac{1}{2}} \\cdot \\frac{1}{x}\\,dx = 2\\sqrt{x}\\ln x - \\int 2x^{-\\frac{1}{2}}\\,dx = 2\\sqrt{x}\\ln x - 4\\sqrt{x} + c\n$$"
+    },
+    "explanation": "Take u = ln x so that it simplifies to 1/x."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Hence find the area of the region bounded by the curve, the $x$-axis and the line $x = \\mathrm{e}^{2}$.",
+    "payload": {
+     "unitHint": "units²"
+    },
+    "answerSpec": {
+     "value": 4,
+     "units": {
+      "required": false,
+      "accepted": [
+       "units²",
+       "units^2",
+       "square units",
+       "unit^2"
+      ]
+     }
+    },
+    "explanation": "The curve meets the $x$-axis at $x = 1$. Area $= \\Big[2\\sqrt{x}\\ln x - 4\\sqrt{x}\\Big]_{1}^{\\mathrm{e}^{2}} = (4\\mathrm{e} - 4\\mathrm{e}) - (0 - 4) = 4$.",
+    "workedSolution": "1. The curve meets the $x$-axis at $x = 1$. Area $= \\Big[2\\sqrt{x}\\ln x - 4\\sqrt{x}\\Big]_{1}^{\\mathrm{e}^{2}} = (4\\mathrm{e} - 4\\mathrm{e}) - (0 - 4) = 4$."
+   }
+  ],
+  "explanation": "Quotient rule for the maximum; integration by parts for the area, starting where the curve crosses the axis.",
+  "hints": [
+   "Use the quotient rule or write y = x^(−1/2) ln x.",
+   "The region starts at x = 1, where ln x = 0."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "e^2"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.736"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "2"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.27"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/mathematics"
+  ],
+  "calculator": true,
+  "paper": "Paper 3"
+ }
+]

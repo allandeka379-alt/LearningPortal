@@ -1,0 +1,1281 @@
+[
+ {
+  "key": "proof.induction.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "What is the first step (the basis) of a proof by mathematical induction for a statement about all positive integers n?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Show that the statement is true for n = 1.",
+    "correct": true,
+    "rationale": "Correct: the basis starts the chain, like the first domino falling."
+   },
+   {
+    "key": "B",
+    "content": "Assume that the statement is true for n = k.",
+    "rationale": "That is the inductive hypothesis, the second step."
+   },
+   {
+    "key": "C",
+    "content": "Show that the statement is true for n = k + 1.",
+    "rationale": "That is the target of the inductive step."
+   },
+   {
+    "key": "D",
+    "content": "Check the statement for the first ten values of n.",
+    "rationale": "Checking cases gives evidence, not a proof; the basis needs only n = 1."
+   }
+  ],
+  "explanation": "Basis (n = 1), hypothesis (assume n = k), inductive step (deduce n = k + 1), conclusion.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In the inductive step of a proof by induction, what are you allowed to assume?",
+  "options": [
+   {
+    "key": "A",
+    "content": "That the statement is true for n = k + 1.",
+    "rationale": "This is what must be proved; assuming it is circular."
+   },
+   {
+    "key": "B",
+    "content": "That the statement is true for n = k, for some positive integer k.",
+    "correct": true,
+    "rationale": "Correct: this is the inductive hypothesis; you then deduce the case n = k + 1."
+   },
+   {
+    "key": "C",
+    "content": "That the statement is true for every positive integer n.",
+    "rationale": "This is the final conclusion, so it cannot be assumed."
+   },
+   {
+    "key": "D",
+    "content": "That the statement is false for n = k + 1.",
+    "rationale": "That is the start of a proof by contradiction, a different method."
+   }
+  ],
+  "explanation": "Assume P(k) and show that P(k + 1) follows.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q03",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If P(1) is true, and P(k) true implies P(k + 1) true for every positive integer k, then P(n) is true for every positive integer n.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "This is the principle of mathematical induction: P(1) gives P(2), which gives P(3), and so on for ever.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A student checks $\\displaystyle\\sum_{r=1}^{n} r^3 = \\frac{n^2(n + 1)^2}{4}$ for $n = 3$. What value do both sides take?",
+  "answerSpec": {
+   "value": 36
+  },
+  "explanation": "LHS $= 1 + 8 + 27 = 36$; RHS $= \\frac{9 \\times 16}{4} = 36$. A check like this is useful, but it is not a proof.",
+  "workedSolution": "1. LHS $= 1 + 8 + 27 = 36$; RHS $= \\frac{9 \\times 16}{4} = 36$. A check like this is useful, but it is not a proof.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "36"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "27"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "9"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In proving $\\displaystyle\\sum_{r=1}^{n}(2r - 1) = n^2$ by induction, the hypothesis is $\\sum_{r=1}^{k}(2r - 1) = k^2$. What must be added to $k^2$ in the inductive step?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$2k - 1$",
+    "rationale": "This is the $k$th term, already included in $k^2$."
+   },
+   {
+    "key": "B",
+    "content": "$(k + 1)^2$",
+    "rationale": "This is the target sum, not the next term."
+   },
+   {
+    "key": "C",
+    "content": "$2k + 1$",
+    "correct": true,
+    "rationale": "Correct: the $(k + 1)$th term is $2(k + 1) - 1 = 2k + 1$, and $k^2 + 2k + 1 = (k + 1)^2$."
+   },
+   {
+    "key": "D",
+    "content": "$2k + 3$",
+    "rationale": "This is the $(k + 2)$th term."
+   }
+  ],
+  "explanation": "$\\sum_{r=1}^{k+1}(2r - 1) = k^2 + (2k + 1) = (k + 1)^2$, which is the statement for $n = k + 1$.",
+  "hints": [
+   "Substitute r = k + 1 into the general term."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "A sequence has $u_1 = 1$ and $u_{n+1} = u_n + 2n + 1$. Find $u_4$ and $u_5$, and hence conjecture a formula of the form $u_n = n^p$.",
+  "payload": {
+   "template": "u₄ = {{blank:a}}, u₅ = {{blank:b}}, p = {{blank:p}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "p",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "16"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "25"
+     ]
+    },
+    {
+     "id": "p",
+     "accepted": [
+      "2"
+     ]
+    }
+   ]
+  },
+  "explanation": "$u_2 = 1 + 3 = 4$, $u_3 = 4 + 5 = 9$, $u_4 = 9 + 7 = 16$, $u_5 = 16 + 9 = 25$: the squares, so conjecture $u_n = n^2$. (Proof: $k^2 + 2k + 1 = (k + 1)^2$.)",
+  "hints": [
+   "Use the rule with $n = 1, 2, 3, 4$ in turn."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "16"
+    },
+    {
+     "blankId": "b",
+     "text": "25"
+    },
+    {
+     "blankId": "p",
+     "text": "2"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "10"
+     },
+     {
+      "blankId": "b",
+      "text": "17"
+     },
+     {
+      "blankId": "p",
+      "text": "3"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Let $f(n) = 5^n + 3$. Simplify $f(k + 1) - 5f(k)$ to a single number.",
+  "answerSpec": {
+   "value": -12
+  },
+  "explanation": "$5^{k+1} + 3 - 5(5^k + 3) = 5^{k+1} + 3 - 5^{k+1} - 15 = -12$. Since $f(1) = 8$ and $-12$ are both multiples of 4, this is the key step in proving $4 \\mid f(n)$.",
+  "workedSolution": "1. $5^{k+1} + 3 - 5(5^k + 3) = 5^{k+1} + 3 - 5^{k+1} - 15 = -12$. Since $f(1) = 8$ and $-12$ are both multiples of 4, this is the key step in proving $4 \\mid f(n)$.",
+  "hints": [
+   "$5 \\times 5^k = 5^{k+1}$."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-12"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "12"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q08",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Prove by induction that $\\displaystyle\\sum_{r=1}^{n}(2r - 1) = n^2$ for all positive integers $n$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "B1 basis: $n = 1$, LHS $= 1$, RHS $= 1$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 assumes $\\sum_{r=1}^{k}(2r - 1) = k^2$ and adds the $(k + 1)$th term $2k + 1$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 obtains $(k + 1)^2$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 complete conclusion: true for n = 1 and P(k) ⇒ P(k + 1), so true for all positive integers n.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "**Basis.** $n = 1$: LHS $= 2(1) - 1 = 1$, RHS $= 1^2 = 1$. True.\n\n**Hypothesis.** Assume $\\sum_{r=1}^{k}(2r - 1) = k^2$.\n\n**Step.**\n\n$$\n\\sum_{r=1}^{k+1}(2r - 1) = k^2 + \\left[2(k + 1) - 1\\right] = k^2 + 2k + 1 = (k + 1)^2\n$$\n\nwhich is the statement for $n = k + 1$.\n\n**Conclusion.** The result is true for $n = 1$, and if it is true for $n = k$ it is true for $n = k + 1$; hence by induction it is true for all positive integers $n$."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The sum of the first n odd numbers is n².",
+  "hints": [
+   "The $(k + 1)$th term is $2(k + 1) - 1$."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q09",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Prove by induction that $\\displaystyle\\sum_{r=1}^{n} r^2 = \\frac{n(n + 1)(2n + 1)}{6}$ for all positive integers $n$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "B1 basis checked for n = 1 (both sides 1).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 hypothesis stated and $(k + 1)^2$ added.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 takes out the common factor $\\frac{k + 1}{6}$: $\\frac{k + 1}{6}\\left[k(2k + 1) + 6(k + 1)\\right]$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 factorises $2k^2 + 7k + 6 = (k + 2)(2k + 3)$ to reach $\\frac{(k + 1)(k + 2)(2k + 3)}{6}$.",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "A1 full conclusion.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "**Basis.** $n = 1$: LHS $= 1$, RHS $= \\frac{1 \\cdot 2 \\cdot 3}{6} = 1$.\n\n**Hypothesis.** Assume $\\sum_{r=1}^{k} r^2 = \\frac{k(k + 1)(2k + 1)}{6}$.\n\n**Step.**\n\n$$\n\\sum_{r=1}^{k+1} r^2 = \\frac{k(k + 1)(2k + 1)}{6} + (k + 1)^2 = \\frac{(k + 1)\\left[k(2k + 1) + 6(k + 1)\\right]}{6}\n$$\n\n$$\n= \\frac{(k + 1)(2k^2 + 7k + 6)}{6} = \\frac{(k + 1)(k + 2)(2k + 3)}{6}\n$$\n\nwhich is the formula with $n = k + 1$, since $2(k + 1) + 1 = 2k + 3$.\n\n**Conclusion.** True for $n = 1$; true for $n = k$ implies true for $n = k + 1$; so true for all positive integers $n$ by induction."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Factorising early avoids expanding a cubic.",
+  "hints": [
+   "Write the target $\\frac{(k + 1)(k + 2)(2k + 3)}{6}$ before you start."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q10",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Prove by induction that $3^{2n} - 1$ is divisible by 8 for all positive integers $n$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "B1 basis: $3^2 - 1 = 8$, divisible by 8.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 hypothesis: $3^{2k} - 1 = 8m$ for some integer $m$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 writes $3^{2k + 2} - 1 = 9 \\times 3^{2k} - 1$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 substitutes $3^{2k} = 8m + 1$: $9(8m + 1) - 1 = 72m + 8 = 8(9m + 1)$, a multiple of 8.",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "A1 full conclusion.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "Let $f(n) = 3^{2n} - 1$.\n\n**Basis.** $f(1) = 9 - 1 = 8$, divisible by 8.\n\n**Hypothesis.** Assume $f(k) = 3^{2k} - 1 = 8m$ for some integer $m$, so $3^{2k} = 8m + 1$.\n\n**Step.**\n\n$$\nf(k + 1) = 3^{2k + 2} - 1 = 9 \\times 3^{2k} - 1 = 9(8m + 1) - 1 = 72m + 8 = 8(9m + 1)\n$$\n\nwhich is divisible by 8 because $9m + 1$ is an integer.\n\n**Conclusion.** True for $n = 1$, and true for $n = k$ implies true for $n = k + 1$, so $3^{2n} - 1$ is divisible by 8 for all positive integers $n$."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Write f(k + 1) using f(k), then show the result is 8 × (an integer).",
+  "hints": [
+   "$3^{2(k + 1)} = 9 \\times 3^{2k}$."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q11",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Given $\\mathbf{M} = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$, prove by induction that $\\mathbf{M}^n = \\begin{pmatrix} 1 & 2n \\\\ 0 & 1 \\end{pmatrix}$ for all positive integers $n$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "B1 basis: $n = 1$ gives $\\mathbf{M}$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 hypothesis and $\\mathbf{M}^{k+1} = \\mathbf{M}^k\\mathbf{M}$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 multiplies to $\\begin{pmatrix} 1 & 2 + 2k \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 2(k + 1) \\\\ 0 & 1 \\end{pmatrix}$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 full conclusion.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "**Basis.** $n = 1$: $\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix} = \\mathbf{M}$. True.\n\n**Hypothesis.** Assume $\\mathbf{M}^k = \\begin{pmatrix} 1 & 2k \\\\ 0 & 1 \\end{pmatrix}$.\n\n**Step.**\n\n$$\n\\mathbf{M}^{k+1} = \\mathbf{M}^k\\mathbf{M} = \\begin{pmatrix} 1 & 2k \\\\ 0 & 1 \\end{pmatrix}\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 2 + 2k \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 2(k + 1) \\\\ 0 & 1 \\end{pmatrix}\n$$\n\n**Conclusion.** By induction, $\\mathbf{M}^n = \\begin{pmatrix} 1 & 2n \\\\ 0 & 1 \\end{pmatrix}$ for all positive integers $n$."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Multiply the hypothesis by M once more.",
+  "hints": [
+   "$\\mathbf{M}^{k+1} = \\mathbf{M}^k \\times \\mathbf{M}$."
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q12",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 5,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "A sequence is defined by $u_1 = 5$ and $u_{n+1} = 2u_n - 3$. Prove by induction that $u_n = 2^n + 3$ for all positive integers $n$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "B1 basis: $2^1 + 3 = 5 = u_1$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "M1 hypothesis $u_k = 2^k + 3$ substituted into the recurrence.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A1 $u_{k+1} = 2(2^k + 3) - 3 = 2^{k+1} + 3$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 full conclusion.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "**Basis.** $n = 1$: $2^1 + 3 = 5 = u_1$.\n\n**Hypothesis.** Assume $u_k = 2^k + 3$.\n\n**Step.**\n\n$$\n{u_{k+1}} = 2u_k - 3 = 2(2^k + 3) - 3 = 2^{k+1} + 6 - 3 = 2^{k+1} + 3\n$$\n\n**Conclusion.** True for $n = 1$, and true for $n = k$ implies true for $n = k + 1$; by induction $u_n = 2^n + 3$ for all positive integers $n$."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "In recurrence proofs, the rule itself gives the step from k to k + 1.",
+  "hints": [
+   "Substitute the hypothesis into u(k+1) = 2u(k) − 3."
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Given that $\\begin{pmatrix} 2 & 1 \\\\ 0 & 1 \\end{pmatrix}^n = \\begin{pmatrix} 2^n & 2^n - 1 \\\\ 0 & 1 \\end{pmatrix}$ (proved by induction), find the top-right entry of $\\begin{pmatrix} 2 & 1 \\\\ 0 & 1 \\end{pmatrix}^5$.",
+  "answerSpec": {
+   "value": 31
+  },
+  "explanation": "$2^5 - 1 = 31$.",
+  "workedSolution": "1. $2^5 - 1 = 31$.",
+  "hints": [
+   "Substitute n = 5 into the proved formula."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "31"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "32"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q14",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Let $f(n) = 3^{2n} - 1$. Which expression for $f(k + 1)$ is most useful in proving by induction that $f(n)$ is divisible by 8?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$3f(k) + 2$",
+    "rationale": "$3^{2(k+1)} = 9 \\times 3^{2k}$, not $3 \\times 3^{2k}$."
+   },
+   {
+    "key": "B",
+    "content": "$f(k) + 8$",
+    "rationale": "$f(2) = 80$ but $f(1) + 8 = 16$, so this is false."
+   },
+   {
+    "key": "C",
+    "content": "$9f(k)$",
+    "rationale": "$9f(k) = 9 \\times 3^{2k} - 9$, which is 8 less than $f(k + 1)$."
+   },
+   {
+    "key": "D",
+    "content": "$9f(k) + 8$",
+    "correct": true,
+    "rationale": "Correct: $3^{2k+2} - 1 = 9 \\times 3^{2k} - 1 = 9(3^{2k} - 1) + 8$; both parts are multiples of 8 if $f(k)$ is."
+   }
+  ],
+  "explanation": "$f(k + 1) = 9f(k) + 8$: if $8 \\mid f(k)$ then $8 \\mid f(k + 1)$.",
+  "hints": [
+   "Write $3^{2k + 2}$ as $9 \\times 3^{2k}$, then add and subtract to make $f(k)$ appear."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Chipo checks that $n^2 + n + 41$ is prime for $n = 1, 2, \\ldots, 20$ and claims this proves it is prime for every positive integer $n$. Explain why she is wrong.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Checking finitely many cases cannot prove a statement about all positive integers; a later case may fail.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "For example $n = 40$ gives $1600 + 40 + 41 = 1681 = 41^2$, which is not prime.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Evidence from cases is not a proof; there are infinitely many n. In fact n = 40 gives 1681 = 41 × 41, so the claim is false."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A single counter-example disproves a general claim; only a valid proof (such as induction) establishes it.",
+  "hints": [
+   "Try n = 40."
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q16",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "Let $S_n = \\displaystyle\\sum_{r=1}^{n} \\frac{1}{r(r + 1)}$. Then $S_1 = \\frac{1}{2}$, $S_2 = \\frac{2}{3}$ and $S_3 = \\frac{3}{4}$. Find $S_4$ and, using the pattern (which can be proved by induction), $S_9$. Give decimals or fractions.",
+  "payload": {
+   "template": "S₄ = {{blank:a}}, S₉ = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "0.8",
+      "4/5"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "0.9",
+      "9/10"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "$S_4 = \\frac{3}{4} + \\frac{1}{20} = \\frac{4}{5}$. Conjecture $S_n = \\frac{n}{n + 1}$, so $S_9 = \\frac{9}{10}$.",
+  "hints": [
+   "$S_4 = S_3 + \\frac{1}{4 \\times 5}$."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "0.8"
+    },
+    {
+     "blankId": "b",
+     "text": "0.9"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "0.75"
+     },
+     {
+      "blankId": "b",
+      "text": "0.8"
+     }
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q17",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Match each stage of an induction proof with what it does.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Basis"
+    },
+    {
+     "id": "L2",
+     "content": "Hypothesis"
+    },
+    {
+     "id": "L3",
+     "content": "Inductive step"
+    },
+    {
+     "id": "L4",
+     "content": "Conclusion"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Use the assumption to show the statement for n = k + 1."
+    },
+    {
+     "id": "R4",
+     "content": "State that the statement is true for all positive integers n by induction."
+    },
+    {
+     "id": "R1",
+     "content": "Show the statement is true for n = 1."
+    },
+    {
+     "id": "R2",
+     "content": "Assume the statement is true for n = k."
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "All four stages are needed for a complete proof.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "Let $f(n) = 7^n - 3^n$, where $n$ is a positive integer.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Find $f(1)$ and $f(2)$.",
+    "payload": {
+     "template": "f(1) = {{blank:a}}, f(2) = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "4"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "40"
+       ]
+      }
+     ]
+    },
+    "explanation": "$f(1) = 7 - 3 = 4$; $f(2) = 49 - 9 = 40$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Show that $f(k + 1) = 7f(k) + 4 \\times 3^k$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "M1 $f(k + 1) = 7 \\times 7^k - 3 \\times 3^k$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 writes $7 \\times 7^k = 7(f(k) + 3^k)$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A1 $7f(k) + 7 \\times 3^k - 3 \\times 3^k = 7f(k) + 4 \\times 3^k$.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "$$\nf(k + 1) = 7^{k+1} - 3^{k+1} = 7 \\cdot 7^k - 3 \\cdot 3^k = 7(7^k - 3^k) + 7 \\cdot 3^k - 3 \\cdot 3^k = 7f(k) + 4 \\times 3^k\n$$"
+    },
+    "explanation": "Add and subtract 7 × 3ᵏ to make f(k) appear."
+   },
+   {
+    "label": "(c)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "Hence prove by induction that $f(n)$ is divisible by 4 for all positive integers $n$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 basis: $f(1) = 4$, divisible by 4.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 hypothesis: $f(k) = 4m$ for some integer $m$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "M1 uses (b): $f(k + 1) = 7(4m) + 4 \\times 3^k$.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A1 $= 4(7m + 3^k)$, a multiple of 4 since $7m + 3^k$ is an integer.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "A1 full conclusion.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "**Basis.** $f(1) = 4 = 4 \\times 1$.\n\n**Hypothesis.** Assume $f(k) = 4m$ for some integer $m$.\n\n**Step.** By (b),\n\n$$\nf(k + 1) = 7f(k) + 4 \\times 3^k = 28m + 4 \\times 3^k = 4(7m + 3^k)\n$$\n\nwhich is divisible by 4.\n\n**Conclusion.** True for $n = 1$, and true for $n = k$ implies true for $n = k + 1$, so $f(n)$ is divisible by 4 for all positive integers $n$."
+    },
+    "explanation": "The identity in (b) splits f(k + 1) into two multiples of 4."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "State the largest integer that divides $f(n)$ for every positive integer $n$.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "Every $f(n)$ is a multiple of 4, and $f(1) = 4$ itself, so no larger integer divides them all.",
+    "workedSolution": "1. Every $f(n)$ is a multiple of 4, and $f(1) = 4$ itself, so no larger integer divides them all."
+   }
+  ],
+  "explanation": "Find a recurrence linking f(k + 1) to f(k), then use it in the inductive step.",
+  "hints": [
+   "Write $7^{k+1}$ as $7 \\times 7^k$ and $7^k$ as $f(k) + 3^k$."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "4"
+      },
+      {
+       "blankId": "b",
+       "text": "40"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "10"
+       },
+       {
+        "blankId": "b",
+        "text": "58"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "proof.induction.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.proof.induction"
+  ],
+  "difficulty": 5,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "Let $S_n = \\displaystyle\\sum_{r=1}^{n} r \\times 2^{r-1}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Find $S_1$, $S_2$, $S_3$ and $S_4$.",
+    "payload": {
+     "template": "S₁ = {{blank:a}}, S₂ = {{blank:b}}, S₃ = {{blank:c}}, S₄ = {{blank:d}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "5"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "17"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "49"
+       ]
+      }
+     ]
+    },
+    "explanation": "$1$; $1 + 4 = 5$; $5 + 12 = 17$; $17 + 32 = 49$. These fit $(n - 1)2^n + 1$: $1, 5, 17, 49$."
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Prove by induction that $S_n = (n - 1)2^n + 1$ for all positive integers $n$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B1 basis: $S_1 = 1 = 0 \\times 2 + 1$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "M1 hypothesis $S_k = (k - 1)2^k + 1$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "M1 adds the $(k + 1)$th term $(k + 1)2^k$.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "M1 collects: $2^k\\left[(k - 1) + (k + 1)\\right] + 1 = 2k \\cdot 2^k + 1$.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "A1 $= k \\cdot 2^{k+1} + 1$, the formula with $n = k + 1$.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "A1 full conclusion.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "**Basis.** $S_1 = 1 \\times 2^0 = 1$ and $(1 - 1)2^1 + 1 = 1$.\n\n**Hypothesis.** Assume $S_k = (k - 1)2^k + 1$.\n\n**Step.**\n\n$$\nS_{k+1} = (k - 1)2^k + 1 + (k + 1)2^k = 2^k(k - 1 + k + 1) + 1 = 2k \\cdot 2^k + 1 = k \\cdot 2^{k+1} + 1\n$$\n\nwhich is $\\left((k + 1) - 1\\right)2^{k+1} + 1$, the formula for $n = k + 1$.\n\n**Conclusion.** True for $n = 1$, and true for $n = k$ implies true for $n = k + 1$; by induction, $S_n = (n - 1)2^n + 1$ for all positive integers $n$."
+    },
+    "explanation": "The (k + 1)th term is (k + 1)·2ᵏ; it combines with (k − 1)·2ᵏ."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the value of $n$ for which $S_n = 1793$.",
+    "payload": {
+     "answerPrefix": "n ="
+    },
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "$(n - 1)2^n = 1792 = 7 \\times 256 = 7 \\times 2^8$, so $n = 8$.",
+    "workedSolution": "1. $(n - 1)2^n = 1792 = 7 \\times 256 = 7 \\times 2^8$, so $n = 8$."
+   }
+  ],
+  "explanation": "Calculate cases, prove the general formula by induction, then use it.",
+  "hints": [
+   "The $(k + 1)$th term is $(k + 1) \\times 2^k$.",
+   "Factorise 1792 as (odd number) × (power of 2)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "5"
+      },
+      {
+       "blankId": "c",
+       "text": "17"
+      },
+      {
+       "blankId": "d",
+       "text": "49"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "4"
+       },
+       {
+        "blankId": "c",
+        "text": "12"
+       },
+       {
+        "blankId": "d",
+        "text": "32"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

@@ -1,0 +1,1023 @@
+[
+ {
+  "key": "probability.bayes.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Bayes' theorem uses events $A_1, A_2, \\ldots, A_n$ that form a partition of the sample space. What does this mean?",
+  "options": [
+   {
+    "key": "A",
+    "content": "They are mutually exclusive and exhaustive.",
+    "correct": true,
+    "rationale": "Correct: exactly one of them must happen."
+   },
+   {
+    "key": "B",
+    "content": "They are independent of each other.",
+    "rationale": "Partition events are exclusive, so (with non-zero probabilities) they are not independent."
+   },
+   {
+    "key": "C",
+    "content": "They all have the same probability.",
+    "rationale": "The probabilities can be anything that adds to 1."
+   },
+   {
+    "key": "D",
+    "content": "They are exclusive but need not be exhaustive.",
+    "rationale": "Without exhaustiveness the law of total probability fails."
+   }
+  ],
+  "explanation": "A partition splits $S$ into non-overlapping pieces that cover it, so $\\sum \\mathrm{P}(A_i) = 1$ and $\\mathrm{P}(B) = \\sum \\mathrm{P}(A_i)\\,\\mathrm{P}(B \\mid A_i)$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "Which expression equals $\\mathrm{P}(A \\mid B)$, where $A'$ is the complement of $A$?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$\\dfrac{\\mathrm{P}(A)\\mathrm{P}(B \\mid A)}{\\mathrm{P}(A)\\mathrm{P}(B \\mid A) + \\mathrm{P}(A)\\mathrm{P}(B' \\mid A)}$",
+    "rationale": "The denominator is $\\mathrm{P}(A)$, not $\\mathrm{P}(B)$: it uses the wrong paths."
+   },
+   {
+    "key": "B",
+    "content": "$\\dfrac{\\mathrm{P}(A)\\mathrm{P}(B \\mid A)}{\\mathrm{P}(A')\\mathrm{P}(B \\mid A')}$",
+    "rationale": "The denominator must be all of $\\mathrm{P}(B)$, including the path through $A$."
+   },
+   {
+    "key": "C",
+    "content": "$\\dfrac{\\mathrm{P}(B \\mid A)}{\\mathrm{P}(B \\mid A) + \\mathrm{P}(B \\mid A')}$",
+    "rationale": "The prior probabilities $\\mathrm{P}(A)$ and $\\mathrm{P}(A')$ are missing."
+   },
+   {
+    "key": "D",
+    "content": "$\\dfrac{\\mathrm{P}(A)\\mathrm{P}(B \\mid A)}{\\mathrm{P}(A)\\mathrm{P}(B \\mid A) + \\mathrm{P}(A')\\mathrm{P}(B \\mid A')}$",
+    "correct": true,
+    "rationale": "Correct: one path over all the paths that end in B."
+   }
+  ],
+  "explanation": "Numerator $\\mathrm{P}(A \\cap B) = \\mathrm{P}(A)\\,\\mathrm{P}(B \\mid A)$; denominator $\\mathrm{P}(B)$ by the law of total probability.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "A bakery in Gweru bakes 65% of its loaves in oven P and the rest in oven Q. 4% of loaves from oven P and 9% of loaves from oven Q are burnt. Find the probability that a loaf chosen at random is burnt.",
+  "answerSpec": {
+   "value": 0.0575,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.00005
+   }
+  },
+  "explanation": "$\\mathrm{P}(\\text{burnt}) = 0.65 \\times 0.04 + 0.35 \\times 0.09 = 0.026 + 0.0315 = 0.0575$. (0.13 adds the two percentages.)",
+  "workedSolution": "1. $\\mathrm{P}(\\text{burnt}) = 0.65 \\times 0.04 + 0.35 \\times 0.09 = 0.026 + 0.0315 = 0.0575$. (0.13 adds the two percentages.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.0575"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.13"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.065"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the Gweru bakery (65% of loaves from oven P with 4% burnt, 35% from oven Q with 9% burnt), a loaf chosen at random is burnt. Find the probability that it came from oven Q, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.5478260869565217,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(Q \\mid \\text{burnt}) = \\frac{0.35 \\times 0.09}{0.0575} = \\frac{0.0315}{0.0575} = 0.548$. (0.0315 is the joint probability, not the conditional one.)",
+  "workedSolution": "1. $\\mathrm{P}(Q \\mid \\text{burnt}) = \\frac{0.35 \\times 0.09}{0.0575} = \\frac{0.0315}{0.0575} = 0.548$. (0.0315 is the joint probability, not the conditional one.)",
+  "hints": [
+   "Find P(burnt) first: it is the denominator."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.548"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.0315"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.09"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q05",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 270,
+  "stem": "A co-operative in Mashonaland buys bags of fertiliser from three suppliers: 45% from X, 35% from Y and 20% from Z. The proportions of underweight bags are 3% from X, 6% from Y and 10% from Z. A bag is found to be underweight. Find the probability that it came from each supplier, correct to 3 significant figures.",
+  "payload": {
+   "template": "P(X | underweight) = {{blank:x}}; P(Y | underweight) = {{blank:y}}; P(Z | underweight) = {{blank:z}}",
+   "blanks": [
+    {
+     "id": "x",
+     "input": "number"
+    },
+    {
+     "id": "y",
+     "input": "number"
+    },
+    {
+     "id": "z",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "x",
+     "accepted": [
+      "0.248"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "y",
+     "accepted": [
+      "0.385"
+     ],
+     "tolerance": 0.0005
+    },
+    {
+     "id": "z",
+     "accepted": [
+      "0.367"
+     ],
+     "tolerance": 0.0005
+    }
+   ]
+  },
+  "explanation": "Paths: $0.45 \\times 0.03 = 0.0135$, $0.35 \\times 0.06 = 0.021$, $0.2 \\times 0.1 = 0.02$; total $\\mathrm{P}(U) = 0.0545$. Posteriors: $\\frac{0.0135}{0.0545} = 0.248$, $\\frac{0.021}{0.0545} = 0.385$, $\\frac{0.02}{0.0545} = 0.367$ (they add to 1).",
+  "hints": [
+   "Work out the three joint probabilities, then divide each by their total."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "x",
+     "text": "0.248"
+    },
+    {
+     "blankId": "y",
+     "text": "0.385"
+    },
+    {
+     "blankId": "z",
+     "text": "0.367"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "x",
+      "text": "0.45"
+     },
+     {
+      "blankId": "y",
+      "text": "0.35"
+     },
+     {
+      "blankId": "z",
+      "text": "0.2"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q06",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "2% of a population have a certain condition. A screening test gives a positive result for 90% of people with the condition and for 5% of people without it. Find the probability that a person who tests positive has the condition, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.26865671641791045,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "$\\mathrm{P}(+) = 0.02 \\times 0.9 + 0.98 \\times 0.05 = 0.018 + 0.049 = 0.067$. $\\mathrm{P}(C \\mid +) = \\frac{0.018}{0.067} = 0.269$. (0.9 is $\\mathrm{P}(+ \\mid C)$, the reverse conditional.)",
+  "workedSolution": "1. $\\mathrm{P}(+) = 0.02 \\times 0.9 + 0.98 \\times 0.05 = 0.018 + 0.049 = 0.067$. $\\mathrm{P}(C \\mid +) = \\frac{0.018}{0.067} = 0.269$. (0.9 is $\\mathrm{P}(+ \\mid C)$, the reverse conditional.)",
+  "hints": [
+   "Healthy people are 49 times as numerous: include their false positives."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.269"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.9"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.018"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "For the same screening test (2% have the condition; positive for 90% of those with it and 5% of those without), find the probability that a person who tests negative has the condition. Give your answer correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.0021436227224008574,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.000005
+   }
+  },
+  "explanation": "$\\mathrm{P}(C \\cap -) = 0.02 \\times 0.1 = 0.002$ and $\\mathrm{P}(-) = 1 - 0.067 = 0.933$. $\\mathrm{P}(C \\mid -) = \\frac{0.002}{0.933} = 0.00214$. (0.002 is the joint probability.)",
+  "workedSolution": "1. $\\mathrm{P}(C \\cap -) = 0.02 \\times 0.1 = 0.002$ and $\\mathrm{P}(-) = 1 - 0.067 = 0.933$. $\\mathrm{P}(C \\mid -) = \\frac{0.002}{0.933} = 0.00214$. (0.002 is the joint probability.)",
+  "hints": [
+   "P(negative) = 1 − P(positive)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.00214"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.002"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$\\mathrm{P}(A) = 0.25$, $\\mathrm{P}(B \\mid A) = 0.6$ and $\\mathrm{P}(B \\mid A') = 0.2$. Find $\\mathrm{P}(A \\mid B)$.",
+  "options": [
+   {
+    "key": "A",
+    "content": "0.15",
+    "rationale": "This is $\\mathrm{P}(A \\cap B)$, the numerator only."
+   },
+   {
+    "key": "B",
+    "content": "0.75",
+    "rationale": "This is $\\frac{0.6}{0.6 + 0.2}$, which leaves out the priors."
+   },
+   {
+    "key": "C",
+    "content": "0.5",
+    "correct": true,
+    "rationale": "Correct: $\\frac{0.15}{0.15 + 0.15} = 0.5$."
+   },
+   {
+    "key": "D",
+    "content": "0.3",
+    "rationale": "This is $\\mathrm{P}(B)$, the denominator only."
+   }
+  ],
+  "explanation": "$\\mathrm{P}(A \\cap B) = 0.25 \\times 0.6 = 0.15$; $\\mathrm{P}(B) = 0.15 + 0.75 \\times 0.2 = 0.3$; $\\mathrm{P}(A \\mid B) = \\frac{0.15}{0.3} = 0.5$.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If a test detects a disease in 99% of people who have it, then a person who tests positive has the disease with probability 0.99.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "0.99 is $\\mathrm{P}(+ \\mid D)$. $\\mathrm{P}(D \\mid +)$ also depends on how common the disease is and on the false-positive rate; for a rare disease it can be much smaller than 0.99.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "If $A_1, A_2, A_3$ form a partition and $\\mathrm{P}(B) > 0$, then $\\mathrm{P}(A_1 \\mid B) + \\mathrm{P}(A_2 \\mid B) + \\mathrm{P}(A_3 \\mid B) = 1$.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "The three joint probabilities $\\mathrm{P}(A_i \\cap B)$ add to $\\mathrm{P}(B)$, so the three posteriors add to $\\frac{\\mathrm{P}(B)}{\\mathrm{P}(B)} = 1$. This is a good check on your answers.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "In Chimanimani 40% of days in March are misty. A weather app predicts mist on 70% of the misty days and on 20% of the clear days. On a day when the app predicts mist, what is the probability that it is misty?",
+  "options": [
+   {
+    "key": "A",
+    "content": "0.28",
+    "rationale": "This is the joint probability of a misty day with a mist prediction."
+   },
+   {
+    "key": "B",
+    "content": "0.7",
+    "correct": true,
+    "rationale": "Correct: $\\frac{0.4 \\times 0.7}{0.4 \\times 0.7 + 0.6 \\times 0.2} = \\frac{0.28}{0.4}$."
+   },
+   {
+    "key": "C",
+    "content": "0.4",
+    "rationale": "This is the prior; the prediction is evidence that changes it."
+   },
+   {
+    "key": "D",
+    "content": "0.778",
+    "rationale": "This is $\\frac{0.7}{0.7 + 0.2}$, which leaves out the prior probabilities."
+   }
+  ],
+  "explanation": "$\\mathrm{P}(\\text{predict}) = 0.28 + 0.12 = 0.4$; $\\mathrm{P}(M \\mid \\text{predict}) = \\frac{0.28}{0.4} = 0.7$. That it equals $\\mathrm{P}(\\text{predict} \\mid M)$ here is a coincidence of these numbers.",
+  "hints": [
+   "Draw a tree: misty or clear, then prediction or not."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "$\\mathrm{P}(B \\mid A) = 0.5$, $\\mathrm{P}(B \\mid A') = 0.2$ and $\\mathrm{P}(A \\mid B) = 0.625$. Find $\\mathrm{P}(A)$.",
+  "answerSpec": {
+   "value": 0.4,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Let $\\mathrm{P}(A) = p$. Bayes: $\\frac{0.5p}{0.5p + 0.2(1 - p)} = 0.625$. So $0.5p = 0.625(0.3p + 0.2) = 0.1875p + 0.125$, giving $0.3125p = 0.125$ and $p = 0.4$.",
+  "workedSolution": "1. Let $\\mathrm{P}(A) = p$. Bayes: $\\frac{0.5p}{0.5p + 0.2(1 - p)} = 0.625$. So $0.5p = 0.625(0.3p + 0.2) = 0.1875p + 0.125$, giving $0.3125p = 0.125$ and $p = 0.4$.",
+  "hints": [
+   "Write Bayes' theorem with P(A) = p and solve the linear equation."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.400"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.625"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.25"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 5,
+  "marks": 1,
+  "estimatedSeconds": 90,
+  "stem": "10% of the cattle in a herd near Gokwe carry a parasite. A blood test is positive for 80% of carriers and 10% of non-carriers, and repeated tests on the same animal are independent given its status. An animal tests positive twice. Find the probability that it is a carrier, correct to 3 significant figures.",
+  "answerSpec": {
+   "value": 0.8767123287671232,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0005
+   }
+  },
+  "explanation": "Given carrier, $\\mathrm{P}(++) = 0.8^2 = 0.64$; given non-carrier, $0.1^2 = 0.01$. $\\mathrm{P}(\\text{carrier} \\mid ++) = \\frac{0.1 \\times 0.64}{0.1 \\times 0.64 + 0.9 \\times 0.01} = \\frac{0.064}{0.073} = 0.877$. (After one positive test it is only $0.471$.)",
+  "workedSolution": "1. Given carrier, $\\mathrm{P}(++) = 0.8^2 = 0.64$; given non-carrier, $0.1^2 = 0.01$. $\\mathrm{P}(\\text{carrier} \\mid ++) = \\frac{0.1 \\times 0.64}{0.1 \\times 0.64 + 0.9 \\times 0.01} = \\frac{0.064}{0.073} = 0.877$. (After one positive test it is only $0.471$.)",
+  "hints": [
+   "Find P(two positives | carrier) and P(two positives | non-carrier).",
+   "Or update the prior after the first test and use the posterior as the new prior."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.877"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.471"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.64"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "A clinic tests people for a disease D. Match each phrase with its probability notation.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "the proportion of people who have the disease"
+    },
+    {
+     "id": "L2",
+     "content": "the chance that a person with the disease tests positive"
+    },
+    {
+     "id": "L3",
+     "content": "the chance that a person who tests positive has the disease"
+    },
+    {
+     "id": "L4",
+     "content": "the chance that a healthy person tests positive"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "$\\mathrm{P}(D \\mid +)$"
+    },
+    {
+     "id": "R4",
+     "content": "$\\mathrm{P}(+ \\mid D')$"
+    },
+    {
+     "id": "R1",
+     "content": "$\\mathrm{P}(D)$"
+    },
+    {
+     "id": "R2",
+     "content": "$\\mathrm{P}(+ \\mid D)$"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The prior is $\\mathrm{P}(D)$; the test's sensitivity is $\\mathrm{P}(+ \\mid D)$ and its false-positive rate $\\mathrm{P}(+ \\mid D')$; Bayes' theorem gives the posterior $\\mathrm{P}(D \\mid +)$.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q15",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 360,
+  "stem": "Events $A_1, A_2, \\ldots, A_n$ are mutually exclusive and exhaustive, and $\\mathrm{P}(B) > 0$. Starting from the definition of conditional probability, prove Bayes' theorem: $\\mathrm{P}(A_j \\mid B) = \\dfrac{\\mathrm{P}(A_j)\\,\\mathrm{P}(B \\mid A_j)}{\\sum_{i=1}^{n} \\mathrm{P}(A_i)\\,\\mathrm{P}(B \\mid A_i)}$.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "M1 writes $\\mathrm{P}(A_j \\cap B) = \\mathrm{P}(B)\\,\\mathrm{P}(A_j \\mid B)$ and $= \\mathrm{P}(A_j)\\,\\mathrm{P}(B \\mid A_j)$.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A1 obtains $\\mathrm{P}(A_j \\mid B) = \\frac{\\mathrm{P}(A_j)\\,\\mathrm{P}(B \\mid A_j)}{\\mathrm{P}(B)}$.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M1 uses the partition: $B$ is the union of the exclusive events $A_i \\cap B$, so $\\mathrm{P}(B) = \\sum \\mathrm{P}(A_i \\cap B)$.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A1 substitutes the law of total probability to reach the given result.",
+      "marks": 1
+     }
+    ]
+   },
+   "modelAnswer": "$$\n\\mathrm{P}(A_j \\cap B) = \\mathrm{P}(B)\\,\\mathrm{P}(A_j \\mid B) = \\mathrm{P}(A_j)\\,\\mathrm{P}(B \\mid A_j)\n$$\n$$\n\\mathrm{P}(A_j \\mid B) = \\frac{\\mathrm{P}(A_j)\\,\\mathrm{P}(B \\mid A_j)}{\\mathrm{P}(B)}\n$$\nSince the $A_i$ are exclusive and exhaustive, $B = (A_1 \\cap B) \\cup \\cdots \\cup (A_n \\cap B)$ with the pieces exclusive, so\n$$\n\\mathrm{P}(B) = \\sum_{i=1}^{n} \\mathrm{P}(A_i \\cap B) = \\sum_{i=1}^{n} \\mathrm{P}(A_i)\\,\\mathrm{P}(B \\mid A_i)\n$$\n$$\n\\mathrm{P}(A_j \\mid B) = \\frac{\\mathrm{P}(A_j)\\,\\mathrm{P}(B \\mid A_j)}{\\sum_{i=1}^{n} \\mathrm{P}(A_i)\\,\\mathrm{P}(B \\mid A_i)}\n$$"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Write the joint probability two ways, then expand P(B) over the partition.",
+  "hints": [
+   "Write $\\mathrm{P}(A_j \\cap B)$ in two ways using the definition."
+  ],
+  "skill": "UNDERSTANDING",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 180,
+  "stem": "A test for a rare disease is positive for 98% of people who have it and for 3% of people who do not. Explain why most people who test positive in a large random screening may still be healthy.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Because the disease is rare, healthy people far outnumber those with the disease.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "So the false positives (3% of a very large group) can outnumber the true positives (98% of a small group), making P(disease | positive) small.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: If, say, 1 in 1000 people has the disease, then in 100 000 people about 98 true positives occur but about 3% of 99 900 ≈ 2997 false positives. So only about 98/3095 ≈ 3% of positives have the disease: the low prior probability dominates."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Bayes' theorem weights each likelihood by its prior probability.",
+  "hints": [
+   "Imagine 100 000 people and count the two kinds of positive result."
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 450,
+  "stem": "Of the learners at a college in Harare, 60% travel by kombi and the rest walk. 10% of those who travel by kombi and 25% of those who walk arrive late on a rainy day.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Find the probability that a learner chosen at random arrives late on a rainy day.",
+    "answerSpec": {
+     "value": 0.16,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$0.6 \\times 0.1 + 0.4 \\times 0.25 = 0.06 + 0.1 = 0.16$. (0.35 adds the two percentages.)",
+    "workedSolution": "1. $0.6 \\times 0.1 + 0.4 \\times 0.25 = 0.06 + 0.1 = 0.16$. (0.35 adds the two percentages.)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "A learner arrives late on a rainy day. Find the probability that the learner travelled by kombi, correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.375,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(K \\mid L) = \\frac{0.06}{0.16} = 0.375$.",
+    "workedSolution": "1. $\\mathrm{P}(K \\mid L) = \\frac{0.06}{0.16} = 0.375$."
+   }
+  ],
+  "explanation": "Law of total probability, then Bayes' theorem.",
+  "hints": [
+   "Draw a tree with the travel method first."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.160"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.375"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.35"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.06"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "probability.bayes.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "amaths.probability.bayes"
+  ],
+  "difficulty": 4,
+  "marks": 13,
+  "estimatedSeconds": 1170,
+  "stem": "Tatenda throws a fair die. If it shows 1, 2 or 3 she takes a ball at random from box 1 (3 red, 2 white); if it shows 4 or 5 she uses box 2 (1 red, 4 white); if it shows 6 she uses box 3 (4 red, 4 white).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Find the probability that the ball is red. Give your answer as a fraction or a decimal.",
+    "answerSpec": {
+     "value": 0.44999999999999996,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{1}{2} \\times \\frac{3}{5} + \\frac{1}{3} \\times \\frac{1}{5} + \\frac{1}{6} \\times \\frac{1}{2} = \\frac{18}{60} + \\frac{4}{60} + \\frac{5}{60} = \\frac{27}{60} = \\frac{9}{20} = 0.45$. (Averaging the three proportions ignores the unequal box probabilities.)",
+    "workedSolution": "1. $\\frac{1}{2} \\times \\frac{3}{5} + \\frac{1}{3} \\times \\frac{1}{5} + \\frac{1}{6} \\times \\frac{1}{2} = \\frac{18}{60} + \\frac{4}{60} + \\frac{5}{60} = \\frac{27}{60} = \\frac{9}{20} = 0.45$. (Averaging the three proportions ignores the unequal box probabilities.)"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Given that the ball is red, find the probability that it came from box 3. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.1851851851851852,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\mathrm{P}(\\text{box }3 \\mid R) = \\frac{5/60}{27/60} = \\frac{5}{27} \\approx 0.185$.",
+    "workedSolution": "1. $\\mathrm{P}(\\text{box }3 \\mid R) = \\frac{5/60}{27/60} = \\frac{5}{27} \\approx 0.185$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Given that the ball is red, find the probability that it came from box 1. Give your answer as a fraction or a decimal correct to 3 significant figures.",
+    "answerSpec": {
+     "value": 0.6666666666666667,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$\\frac{18/60}{27/60} = \\frac{2}{3}$. (Check: $\\frac{2}{3} + \\frac{4}{27} + \\frac{5}{27} = 1$.)",
+    "workedSolution": "1. $\\frac{18/60}{27/60} = \\frac{2}{3}$. (Check: $\\frac{2}{3} + \\frac{4}{27} + \\frac{5}{27} = 1$.)"
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "Instead, Tatenda throws the die and takes two balls at random, without replacement, from the box chosen. Both balls are red.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 3,
+      "stem": "Find the probability that both balls are red. Give your answer correct to 3 significant figures.",
+      "answerSpec": {
+       "value": 0.18571428571428572,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "Box 1: $\\frac{3}{5} \\times \\frac{2}{4} = \\frac{3}{10}$; box 2: impossible (only 1 red); box 3: $\\frac{4}{8} \\times \\frac{3}{7} = \\frac{3}{14}$. $\\mathrm{P}(RR) = \\frac{1}{2} \\times \\frac{3}{10} + \\frac{1}{6} \\times \\frac{3}{14} = \\frac{3}{20} + \\frac{1}{28} = 0.186$. (0.2025 is $0.45^2$.)",
+      "workedSolution": "1. Box 1: $\\frac{3}{5} \\times \\frac{2}{4} = \\frac{3}{10}$; box 2: impossible (only 1 red); box 3: $\\frac{4}{8} \\times \\frac{3}{7} = \\frac{3}{14}$. $\\mathrm{P}(RR) = \\frac{1}{2} \\times \\frac{3}{10} + \\frac{1}{6} \\times \\frac{3}{14} = \\frac{3}{20} + \\frac{1}{28} = 0.186$. (0.2025 is $0.45^2$.)"
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Hence find the probability that the balls came from box 1, correct to 3 significant figures.",
+      "answerSpec": {
+       "value": 0.8076923076923076,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "$\\frac{3/20}{3/20 + 1/28} = \\frac{0.15}{0.186} = 0.808$.",
+      "workedSolution": "1. $\\frac{3/20}{3/20 + 1/28} = \\frac{0.15}{0.186} = 0.808$."
+     }
+    ]
+   }
+  ],
+  "explanation": "Priors come from the die; likelihoods from the box contents. Two red balls rule out box 2 completely.",
+  "hints": [
+   "The priors are 1/2, 1/3 and 1/6.",
+   "Box 2 has only one red ball."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.450"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.185"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "0.667"
+    },
+    "(d)(i)": {
+     "type": "NUMERICAL",
+     "value": "0.186"
+    },
+    "(d)(ii)": {
+     "type": "NUMERICAL",
+     "value": "0.808"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.43333333333333335"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.16666666666666666"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0.3"
+     },
+     "(d)(i)": {
+      "type": "NUMERICAL",
+      "value": "0.2025"
+     },
+     "(d)(ii)": {
+      "type": "NUMERICAL",
+      "value": "0.667"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]
