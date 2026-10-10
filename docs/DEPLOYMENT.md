@@ -635,45 +635,43 @@ environment variables; never in images (the Dockerfile reads the build database 
 
 ## Appendix: Railway (owner decision 2026-10-10)
 
-Production runs on Railway: three services in one project, on Railway's private network. (A Vercel + Neon plan was
-dropped the same day; `GET /api/cron/jobs` and `after()` for email sends came from it and stay: the route is unused
-while a worker runs, and `after()` is harmless in a long-running server.)
+Production runs on Railway, project `caring-stillness` (environment `production`), three services in **EU West
+(Amsterdam)** on Railway's private network. Railway has no African region; put Cloudflare in front (§1). (A Vercel +
+Neon plan was dropped the same day; `GET /api/cron/jobs` and `after()` for email sends came from it and stay: the
+route is unused while a worker runs, and `after()` is harmless in a long-running server.)
 
-| Service | Source | Start | Notes |
-|---|---|---|---|
-| `postgres` | Railway Postgres template, image `ghcr.io/railwayapp-templates/postgres-ssl:18`, with a volume | — | Enable the public TCP proxy (builds and the migrate step use it). Set it up once with `scripts/sql/railway-setup.sql` |
-| `web` | this repo, config file `railway/web.json` (`Dockerfile.railway`) | `node server.js` | Public domain; health check `/api/ready`; 45 s draining |
-| `worker` | this repo, config file `railway/worker.json` | `node --enable-source-maps worker/index.mjs` | No public domain; restart ALWAYS; LISTEN/NOTIFY over the private network |
+| Service | Source | Settings (Railway dashboard) |
+|---|---|---|
+| `Postgres` | image `ghcr.io/railwayapp-templates/postgres-ssl:18`, volume `postgres-volume` | Public TCP proxy on (builds and the release script use it) |
+| `LearningPortal` (web) | GitHub `main`, builder Dockerfile, path `/Dockerfile.railway` | Public domain on port 8080; healthcheck `/api/ready`; watch paths `/src/**`, `/public/**`, `/prisma/**`, `/scripts/**`, `/package.json`, `/package-lock.json`, `/next.config.ts`, `/Dockerfile.railway` (content and scratch commits do not rebuild) |
+| `worker` | duplicate of web | Start command `node --enable-source-maps worker/index.mjs`; no healthcheck; no public domain |
 
-Set the config-file path of each app service in its Railway settings (both read the same repository).
+Settings live in the dashboard: Railway's config-as-code is deprecated and services that never used it cannot opt in
+(since 2026-08-28), so there are no `railway.json` files.
 
-**Region.** Railway has no African region: use Europe West (Amsterdam) for all three services, and put Cloudflare in
-front (§1 "CDN", "Client IP"). Every service must be in the same region.
+**Variables.** Web and worker: everything in §7 for production. `DATABASE_URL` = `app_rw` on the **private** host
+(`postgres.railway.internal:5432/dzidza`); `PORT=8080`; `EMAIL_PROVIDER=resend`; `PAYMENTS_ENABLED_PROVIDERS=paynow`;
+`STORAGE_DRIVER=s3`; `CLIENT_IP_HEADER=x-real-ip` (`cf-connecting-ip` once Cloudflare is in front). Web builds also
+need `APP_URL`, `NEXT_PUBLIC_APP_NAME`, `NEXT_PUBLIC_SUPPORT_EMAIL` and `BUILD_DATABASE_URL` = `app_build` (read-only)
+through the **public proxy**: Railway passes variables to Docker builds as build arguments (no secret mounts) and builds
+cannot reach the private network. Never put the owner or `app_rw` URL there, and never set `MIGRATION_DATABASE_URL` on a
+service.
 
-**Variables** (Railway service variables; reference the database with `${{postgres.…}}` where possible):
+**First release** (owner, from this repo on a trusted machine; every password is typed into a hidden prompt):
 
-- `web` and `worker`: everything in §7 for production. `DATABASE_URL` = `app_rw` on the **private** host
-  (`postgres.railway.internal:5432/dzidza`), `NODE_ENV=production`, `EMAIL_PROVIDER=resend`, `PAYMENTS_ENABLED_PROVIDERS=paynow`,
-  `STORAGE_DRIVER=s3` (R2) or a volume with `local` on a single web replica, `CLIENT_IP_HEADER=cf-connecting-ip` when
-  Cloudflare is in front (otherwise `TRUSTED_PROXY_HOPS` per §1).
-- `web` build only: `APP_URL`, `NEXT_PUBLIC_APP_NAME`, `NEXT_PUBLIC_SUPPORT_EMAIL`, and `BUILD_DATABASE_URL` =
-  `app_build` (read-only) through the **public proxy**: Railway passes variables to Docker builds as build arguments
-  (no secret mounts), and builds cannot reach the private network. Never put the owner or `app_rw` URL there.
-- Never on Railway services: `MIGRATION_DATABASE_URL` (owner). The migrate step runs from a trusted machine.
+1. `psql "<Postgres DATABASE_PUBLIC_URL>" -f scripts/sql/railway-setup.sql`: roles `dzidza_owner`, `app_rw`,
+   `app_build`, `app_maintenance`, database `dzidza`, production guards.
+2. `powershell -ExecutionPolicy Bypass -File scripts/railway-release.ps1 -FirstRun`: migrations, grants and section D
+   (`scripts/db-deploy.ts` as the owner), the catalogue seed and the content import (IN REVIEW).
+3. Deploy web and worker; register on the site with the owner's email and verify it.
+4. `scripts/railway-release.ps1 -BootstrapEmail <email>`: makes that account the first SUPER_ADMIN
+   (`src/server/accounts/bootstrap-admin.ts`; refused once any active super admin exists; audited).
+5. `scripts/railway-release.ps1 -PublishAs <email>`: dry run, then publish after the reviewer types PUBLISH (§41).
 
-**Release order** (first deploy and every release with a new migration):
-
-```bash
-# 1. Migrations, grants and section D as the owner, through the public proxy (from a trusted machine):
-MIGRATION_DATABASE_URL="<owner URL, public proxy>" DB_APP_ENVIRONMENT=production npx tsx scripts/db-deploy.ts
-# 2. First deploy only: the catalogue seed (never the demo seed), then content import and a HUMAN publish (§41).
-# 3. Deploy web and worker (railway up, or a push if the services are connected to GitHub).
-```
+Later releases with a new migration: `scripts/railway-release.ps1` (no switch) before the deploy.
 
 `app_build` is read-only: if a prerendered page ever writes during the build, the build fails loudly rather than
-writing as the build role. Builds take the 4 GB heap of `scripts/next-build.mjs`: give the web service's builds at
-least 8 GB (Railway plan limits).
-
+writing as the build role. Builds take the 4 GB heap of `scripts/next-build.mjs` (the plan allows 8 GB per replica).
 
 ## Appendix: local verification of the production setup
 

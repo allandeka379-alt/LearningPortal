@@ -6,8 +6,8 @@
 # - No secret mount: `next build` prerenders public pages from the database, and Railway passes service variables to the
 #   build only as build arguments. BUILD_DATABASE_URL must therefore be a READ-ONLY role (`app_build`, SELECT only)
 #   through the database's public TCP proxy (builds cannot reach the private network). Never the owner or app_rw URL.
-# - The last stage (runtime) is what Railway runs: web (`node server.js`, railway/web.json) and worker
-#   (`node worker/index.mjs`, railway/worker.json) are two services built from this file.
+# - The last stage (runtime) is what Railway runs: web (`node server.js`) and worker (start command
+#   `node --enable-source-maps worker/index.mjs`) are two services built from this file (settings in the dashboard).
 #
 # Migrations and the catalogue seed run from a trusted machine, not from the image (DEPLOYMENT.md "Appendix: Railway").
 
