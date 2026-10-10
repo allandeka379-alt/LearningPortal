@@ -1,0 +1,74 @@
+# syntax=docker/dockerfile:1.7
+#
+# Railway image (docs/DEPLOYMENT.md "Appendix: Railway"). The same build as ./Dockerfile, adapted to Railway's builder:
+#
+# - No BuildKit cache mounts (Railway requires ids of the form s/<service-id>-<path>, which differ per service).
+# - No secret mount: `next build` prerenders public pages from the database, and Railway passes service variables to the
+#   build only as build arguments. BUILD_DATABASE_URL must therefore be a READ-ONLY role (`app_build`, SELECT only)
+#   through the database's public TCP proxy (builds cannot reach the private network). Never the owner or app_rw URL.
+# - The last stage (runtime) is what Railway runs: web (`node server.js`, railway/web.json) and worker
+#   (`node worker/index.mjs`, railway/worker.json) are two services built from this file.
+#
+# Migrations and the catalogue seed run from a trusted machine, not from the image (DEPLOYMENT.md "Appendix: Railway").
+
+ARG NODE_IMAGE=node:24-bookworm-slim
+
+FROM ${NODE_IMAGE} AS deps
+WORKDIR /app
+ENV NEXT_TELEMETRY_DISABLED=1
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends openssl ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+
+FROM deps AS build
+ARG APP_URL
+ARG NEXT_PUBLIC_APP_NAME=Dzidza
+ARG NEXT_PUBLIC_SUPPORT_EMAIL=
+ARG RAILWAY_GIT_COMMIT_SHA=
+ARG BUILD_DATABASE_URL
+ENV NEXT_PUBLIC_APP_NAME=${NEXT_PUBLIC_APP_NAME} \
+    NEXT_PUBLIC_SUPPORT_EMAIL=${NEXT_PUBLIC_SUPPORT_EMAIL}
+COPY . .
+RUN MIGRATION_DATABASE_URL=postgresql://build@127.0.0.1:1/unused npx prisma generate
+RUN test -n "${APP_URL}" || { echo "Service variable APP_URL is required (public https origin)." >&2; exit 1; }; \
+    test -n "${BUILD_DATABASE_URL}" || { echo "Service variable BUILD_DATABASE_URL is required (read-only app_build role, public proxy)." >&2; exit 1; }; \
+    DATABASE_URL="${BUILD_DATABASE_URL}" \
+    SESSION_SECRET="$(node -e "process.stdout.write(require('node:crypto').randomBytes(32).toString('hex'))")" \
+    APP_URL="${APP_URL}" \
+    NEXT_DEPLOYMENT_ID="${RAILWAY_GIT_COMMIT_SHA}" \
+    NODE_ENV=production \
+    npm run build \
+ && node scripts/build-worker.mjs --outdir=build/worker
+
+FROM ${NODE_IMAGE} AS runtime
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends tini \
+ && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+ARG RAILWAY_GIT_COMMIT_SHA=
+ENV NODE_ENV=production \
+    NEXT_TELEMETRY_DISABLED=1 \
+    HOSTNAME=0.0.0.0 \
+    APP_RELEASE=${RAILWAY_GIT_COMMIT_SHA}
+
+COPY --from=build /app/.next/standalone/server.js /app/.next/standalone/package.json ./
+COPY --from=build /app/.next/standalone/node_modules ./node_modules
+COPY --from=build /app/public ./public
+COPY --from=build /app/node_modules/sharp ./node_modules/sharp
+COPY --from=build /app/node_modules/@img ./node_modules/@img
+COPY --from=build /app/node_modules/@node-rs ./node_modules/@node-rs
+COPY --from=build /app/node_modules/detect-libc ./node_modules/detect-libc
+COPY --from=build /app/node_modules/semver ./node_modules/semver
+COPY --from=build /app/build/worker ./worker
+COPY --from=build /app/prisma/schema.prisma ./prisma/schema.prisma
+COPY --from=build /app/prisma/migrations ./prisma/migrations
+COPY --from=build --chown=node:node /app/.next/standalone/.next ./.next
+COPY --from=build --chown=node:node /app/.next/static ./.next/static
+RUN mkdir -p /app/storage && chown node:node /app/storage
+
+USER node
+EXPOSE 3000
+ENTRYPOINT ["/usr/bin/tini", "--"]
+CMD ["node", "server.js"]

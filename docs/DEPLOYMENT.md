@@ -443,7 +443,7 @@ production adds rules (listed under Purpose). A test (`tests/deployment-docs.tes
 | `S3_FORCE_PATH_STYLE` | No | `false` | `true` for MinIO / R2 path-style URLs |
 | `TRUSTED_PROXY_HOPS` | Production (or `CLIENT_IP_HEADER`) | `2` | Proxies in front that append to `X-Forwarded-For` (CDN + load balancer = 2). Every IP rate limit depends on it |
 | `CLIENT_IP_HEADER` | Alternative to hops | `cf-connecting-ip` | Header the edge overwrites with the client IP; only if the origin accepts traffic from the edge alone |
-| `CRON_SECRET` | On Vercel | 64 hex chars | Bearer secret for `GET /api/cron/jobs` (Vercel Cron sends it); unset = the route refuses every request. Not needed with a worker process |
+| `CRON_SECRET` | On Vercel | 64 hex chars | Bearer secret for `GET /api/cron/jobs`, a job runner for serverless hosts without a worker (e.g. Vercel Cron); unset = the route refuses every request. Not needed with a worker process (Railway, containers) |
 
 ### Process, build and tooling variables (read outside `env.ts`)
 
@@ -633,26 +633,46 @@ environment variables; never in images (the Dockerfile reads the build database 
 
 ---
 
-## Appendix: Vercel (owner decision 2026-10-10)
+## Appendix: Railway (owner decision 2026-10-10)
 
-The first production host is Vercel with Neon Postgres 18 (Vercel Marketplace). Differences from the container
-topology above:
+Production runs on Railway: three services in one project, on Railway's private network. (A Vercel + Neon plan was
+dropped the same day; `GET /api/cron/jobs` and `after()` for email sends came from it and stay: the route is unused
+while a worker runs, and `after()` is harmless in a long-running server.)
 
-| Concern | Containers (§1–§10) | Vercel |
-|---|---|---|
-| Region | South Africa | Functions in `fra1` (Frankfurt, `vercel.json`) next to Neon `aws-eu-central-1`: Neon has no African region, and the app makes several database round trips per request, so functions must sit next to the database. Expect ~150–200 ms extra per navigation from Zimbabwe; revisit (§1) if that hurts |
-| Build | Dockerfile, `output: "standalone"` | `vercel.json` `buildCommand` (`db:generate` then `build`); `next.config.ts` skips standalone when `VERCEL` is set. The build prerenders from the database, so `DATABASE_URL` must be available to Production **builds** too |
-| Worker | `node worker/index.mjs`, LISTEN/NOTIFY | No worker process: Vercel Cron calls `GET /api/cron/jobs` every minute (`src/app/api/cron/jobs/route.ts` → `src/server/ops/cron-drain.ts`): one scheduler tick, then a drain of due jobs for up to 270 s and a graceful stop. Needs `CRON_SECRET` and a plan with per-minute crons (Pro; Hobby crons run once a day and Hobby is for non-commercial use) |
-| Background sends | Process keeps running | Code, notice and account-exists emails are registered with Next's `after()` (`src/server/lib/background.ts`) so the function is not frozen mid-send |
-| Storage | S3 or one-host local | `STORAGE_DRIVER=s3` is required (functions have no persistent disk): e.g. Cloudflare R2 (`S3_REGION=auto`, `S3_ENDPOINT`) |
-| Client IP | `TRUSTED_PROXY_HOPS` / CDN header | `CLIENT_IP_HEADER=x-real-ip` (Vercel's edge overwrites it on every request) |
-| Database URLs | PgBouncer + direct | `DATABASE_URL`: `app_rw` through Neon's **pooled** host (`-pooler`); `MIGRATION_DATABASE_URL`: the owner role on the **direct** host, used only by `scripts/db-deploy.ts` run from a trusted machine, never set in Vercel |
-| Audit purge | Scheduled ops task | Run `scripts/maintenance/purge-audit.ts` from a trusted machine (or add a separate cron) |
+| Service | Source | Start | Notes |
+|---|---|---|---|
+| `postgres` | Railway Postgres template, image `ghcr.io/railwayapp-templates/postgres-ssl:18`, with a volume | — | Enable the public TCP proxy (builds and the migrate step use it). Set it up once with `scripts/sql/railway-setup.sql` |
+| `web` | this repo, config file `railway/web.json` (`Dockerfile.railway`) | `node server.js` | Public domain; health check `/api/ready`; 45 s draining |
+| `worker` | this repo, config file `railway/worker.json` | `node --enable-source-maps worker/index.mjs` | No public domain; restart ALWAYS; LISTEN/NOTIFY over the private network |
 
-Neon roles: create `dzidza_owner` and `app_rw` with SQL as in §4 (roles made in the Neon console join
-`neon_superuser`, which can bypass row-level security, so the app must not use one). If Neon refuses
-`GRANT SET ON PARAMETER` / `ALTER DATABASE … SET app.*` for these roles, ask Neon support or set them as the Neon
-admin; `/api/ready` and the boot assertions refuse to start until `app.environment = 'production'` holds.
+Set the config-file path of each app service in its Railway settings (both read the same repository).
+
+**Region.** Railway has no African region: use Europe West (Amsterdam) for all three services, and put Cloudflare in
+front (§1 "CDN", "Client IP"). Every service must be in the same region.
+
+**Variables** (Railway service variables; reference the database with `${{postgres.…}}` where possible):
+
+- `web` and `worker`: everything in §7 for production. `DATABASE_URL` = `app_rw` on the **private** host
+  (`postgres.railway.internal:5432/dzidza`), `NODE_ENV=production`, `EMAIL_PROVIDER=resend`, `PAYMENTS_ENABLED_PROVIDERS=paynow`,
+  `STORAGE_DRIVER=s3` (R2) or a volume with `local` on a single web replica, `CLIENT_IP_HEADER=cf-connecting-ip` when
+  Cloudflare is in front (otherwise `TRUSTED_PROXY_HOPS` per §1).
+- `web` build only: `APP_URL`, `NEXT_PUBLIC_APP_NAME`, `NEXT_PUBLIC_SUPPORT_EMAIL`, and `BUILD_DATABASE_URL` =
+  `app_build` (read-only) through the **public proxy**: Railway passes variables to Docker builds as build arguments
+  (no secret mounts), and builds cannot reach the private network. Never put the owner or `app_rw` URL there.
+- Never on Railway services: `MIGRATION_DATABASE_URL` (owner). The migrate step runs from a trusted machine.
+
+**Release order** (first deploy and every release with a new migration):
+
+```bash
+# 1. Migrations, grants and section D as the owner, through the public proxy (from a trusted machine):
+MIGRATION_DATABASE_URL="<owner URL, public proxy>" DB_APP_ENVIRONMENT=production npx tsx scripts/db-deploy.ts
+# 2. First deploy only: the catalogue seed (never the demo seed), then content import and a HUMAN publish (§41).
+# 3. Deploy web and worker (railway up, or a push if the services are connected to GitHub).
+```
+
+`app_build` is read-only: if a prerendered page ever writes during the build, the build fails loudly rather than
+writing as the build role. Builds take the 4 GB heap of `scripts/next-build.mjs`: give the web service's builds at
+least 8 GB (Railway plan limits).
 
 
 ## Appendix: local verification of the production setup
