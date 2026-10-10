@@ -1,0 +1,11 @@
+import { linFit, worstLines, sfStr, dpStr } from "../lib.mjs";
+const k = 0.12, c0 = 0.05;
+const xs = [0.12, 0.17, 0.24, 0.32, 0.42, 0.54];
+const nz = [0.01, -0.012, 0.008, -0.006, 0.012, -0.009];
+const I = xs.map((x, i) => Number(sfStr((k / (x + c0) ** 2) * (1 + nz[i]), 3)));
+const Y = I.map((v) => 1 / Math.sqrt(v));
+const dY = I.map((v) => 0.5 * 0.03 * (1 / Math.sqrt(v)));
+const fit = linFit(xs, Y);
+const w = worstLines(xs.map((x, i) => ({ x, y: Y[i], dy: dY[i] })));
+console.log(I, Y.map((y) => y.toFixed(3)), dY.map((d) => d.toFixed(3)));
+console.log(fit, w, "c", fit.c / fit.m, "k", 1 / fit.m ** 2, Y[3], dY[3]);

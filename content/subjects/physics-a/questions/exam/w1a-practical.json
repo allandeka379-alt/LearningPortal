@@ -1,0 +1,1439 @@
+[
+ {
+  "key": "exam.w1a-practical.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.skills.tables-graphs",
+   "aphys.measurement.instruments"
+  ],
+  "difficulty": 4,
+  "marks": 20,
+  "estimatedSeconds": 3600,
+  "stem": "In this experiment you investigate how the period of a simple pendulum depends on its length.\n\nMethod: (1) Hang a small steel bob on a thread from a split cork clamped to a stand. (2) Measure the length $l$ from the bottom of the cork to the **top** of the bob with a metre rule. (3) Displace the bob through a small angle and release it. Using a stop-watch and a fiducial mark at the centre of the swing, time 20 complete oscillations; repeat. (4) Repeat for other values of $l$.\n\nRudo's results:\n\n| $l\\,/\\,\\text{m}$ | $20T_1\\,/\\,\\text{s}$ | $20T_2\\,/\\,\\text{s}$ |\n| --- | --- | --- |\n| 0.250 | 20.6 | 20.4 |\n| 0.350 | 24.0 | 24.3 |\n| 0.450 | 27.4 | 27.0 |\n| 0.550 | 30.0 | 30.2 |\n| 0.650 | 32.8 | 32.5 |\n| 0.750 | 35.1 | 34.9 |\n\nTheory: $T^2 = \\dfrac{4\\pi^2}{g}(l + r)$, where $r$ is the radius of the bob.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why 20 oscillations are timed, and why the timing is started and stopped as the bob passes a fiducial mark at the centre of the swing.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The reaction-time uncertainty (≈0.2 s) is shared over 20 oscillations, so the percentage uncertainty in T is much smaller",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "At the centre the bob moves fastest, so the instant it passes the mark is judged most precisely",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Reaction time adds an uncertainty of about 0.2 s to each timing, whatever its length; over 20 oscillations this is a much smaller fraction of the time measured, so T is more precise. The bob moves fastest at the centre of its swing, so the moment it passes a mark there can be judged most precisely."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the period $T$ for $l = 0.450\\ \\text{m}$, in s.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 1.3599999999999999,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "Mean $20T = (27.4 + 27.0)/2 = 27.2\\ \\text{s}$; $T = 27.2/20 = 1.36\\ \\text{s}$.",
+    "workedSolution": "1. Mean $20T = (27.4 + 27.0)/2 = 27.2\\ \\text{s}$; $T = 27.2/20 = 1.36\\ \\text{s}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate $T^2$ for $l = 0.450\\ \\text{m}$, in $\\text{s}^2$, to three significant figures.",
+    "answerSpec": {
+     "value": 1.8495999999999997,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$1.36^2 = 1.85\\ \\text{s}^2$.",
+    "workedSolution": "1. $1.36^2 = 1.85\\ \\text{s}^2$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the extra columns for $T$ and $T^2$ should be headed and recorded in the results table.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Headings with quantity and unit: $T\\,/\\,\\text{s}$ and $T^2\\,/\\,\\text{s}^2$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Calculated values to the same number of significant figures as the raw times (3) or one more, e.g. $T^2 = 1.65$; all values in a column to the same precision",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Head the columns $T\\,/\\,\\text{s}$ and $T^2\\,/\\,\\text{s}^2$, with no units in the body. Since the raw times have three significant figures, give $T$ and $T^2$ to three (or four) significant figures, consistently down each column."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State the graph you would plot to test the theory, and the features you would expect it to show.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Plot $T^2$ (y-axis) against $l$ (x-axis)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Expect a straight line with gradient $4\\pi^2/g$ and a small positive intercept on the $T^2$ axis equal to $4\\pi^2 r/g$ (not through the origin)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Plot $T^2$ against $l$. The theory predicts a straight line of gradient $4\\pi^2/g$ which does not pass exactly through the origin: it cuts the $T^2$ axis at $4\\pi^2 r/g$, a small positive value, because $l$ was measured to the top of the bob."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Rudo plots the graph and draws the best-fit line. Determine its gradient, in $\\text{s}^2\\ \\text{m}^{-1}$.",
+    "answerSpec": {
+     "value": 4.027371428571429,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.1
+     }
+    },
+    "explanation": "Using two points on the line far apart, gradient $\\approx 4.03\\ \\text{s}^2\\ \\text{m}^{-1}$ (any value from a good line within about $\\pm 0.1$ is accepted).",
+    "workedSolution": "1. Using two points on the line far apart, gradient $\\approx 4.03\\ \\text{s}^2\\ \\text{m}^{-1}$ (any value from a good line within about $\\pm 0.1$ is accepted)."
+   },
+   {
+    "label": "(g)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Determine the intercept on the $T^2$ axis, in $\\text{s}^2$.",
+    "answerSpec": {
+     "value": 0.044791369047619156,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.04
+     }
+    },
+    "explanation": "$c = T^2 - (\\text{gradient}) \\times l$ using a point on the line: about $0.045\\ \\text{s}^2$ (accepted within about $\\pm 0.04$).",
+    "workedSolution": "1. $c = T^2 - (\\text{gradient}) \\times l$ using a point on the line: about $0.045\\ \\text{s}^2$ (accepted within about $\\pm 0.04$)."
+   },
+   {
+    "label": "(h)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Use your gradient to determine $g$, in $\\text{m s}^{-2}$.",
+    "payload": {
+     "unitHint": "m/s²"
+    },
+    "answerSpec": {
+     "value": 9.802527108447268,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.25
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m/s²",
+       "m/s^2",
+       "m s^-2",
+       "m s-2",
+       "ms^-2",
+       "ms-2"
+      ]
+     }
+    },
+    "explanation": "Gradient $= 4\\pi^2/g$, so $g = \\dfrac{4\\pi^2}{\\text{gradient}} = \\dfrac{39.48}{4.03} = 9.80\\ \\text{m s}^{-2}$ (unit: $\\text{m}\\ \\text{s}^{-2}$ from $\\text{m}/\\text{s}^2$).",
+    "workedSolution": "1. Gradient $= 4\\pi^2/g$, so $g = \\dfrac{4\\pi^2}{\\text{gradient}} = \\dfrac{39.48}{4.03} = 9.80\\ \\text{m s}^{-2}$ (unit: $\\text{m}\\ \\text{s}^{-2}$ from $\\text{m}/\\text{s}^2$)."
+   },
+   {
+    "label": "(i)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use the gradient and the intercept to determine the radius $r$ of the bob, in m.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 0.01112173779896615,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.008
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "Intercept $= \\dfrac{4\\pi^2}{g}r = \\text{gradient} \\times r$, so $r = \\dfrac{\\text{intercept}}{\\text{gradient}} = \\dfrac{0.045}{4.03} \\approx 0.011\\ \\text{m}$ (about a centimetre, sensible for a small bob).",
+    "workedSolution": "1. Intercept $= \\dfrac{4\\pi^2}{g}r = \\text{gradient} \\times r$, so $r = \\dfrac{\\text{intercept}}{\\text{gradient}} = \\dfrac{0.045}{4.03} \\approx 0.011\\ \\text{m}$ (about a centimetre, sensible for a small bob)."
+   },
+   {
+    "label": "(j)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the line does not pass through the origin even if there are no random errors.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "l is measured to the top of the bob, but the pendulum's effective length is to the centre of the bob (l + r)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So every point is shifted by the same amount (a systematic effect): T² is not zero when l = 0, giving a positive intercept",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The pendulum behaves as if its length were measured to the centre of mass of the bob, l + r, but l was measured only to the top of the bob. Every length is therefore too short by r, a constant (systematic) amount, so the line is shifted and cuts the T² axis at a positive value instead of passing through the origin."
+    }
+   },
+   {
+    "label": "(k)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the unit of the gradient of the graph of T² against l?",
+    "options": [
+     {
+      "key": "A",
+      "content": "$\\text{s}^2\\ \\text{m}^{-1}$",
+      "correct": true,
+      "rationale": "Correct: s² divided by m."
+     },
+     {
+      "key": "B",
+      "content": "$\\text{m s}^{-2}$",
+      "rationale": "This is the unit of g, the inverse."
+     },
+     {
+      "key": "C",
+      "content": "$\\text{s m}^{-1}$",
+      "rationale": "The y-quantity is T², with unit s², not s."
+     },
+     {
+      "key": "D",
+      "content": "no unit",
+      "rationale": "s² and m do not cancel."
+     }
+    ],
+    "explanation": "Gradient $= \\Delta(T^2)/\\Delta l$: $\\text{s}^2/\\text{m} = \\text{s}^2\\ \\text{m}^{-1}$, consistent with $4\\pi^2/g$."
+   }
+  ],
+  "explanation": "Plot $T^2$ against $l$: gradient $\\approx 4.03\\ \\text{s}^2\\ \\text{m}^{-1}$ gives $g \\approx 9.80\\ \\text{m s}^{-2}$; the intercept $\\approx 0.045\\ \\text{s}^2$ gives a bob radius of about $0.011\\ \\text{m}$.",
+  "hints": [
+   "T = (mean of the two times) ÷ 20.",
+   "Compare T² = (4π²/g)l + (4π²/g)r with y = mx + c.",
+   "r = intercept ÷ gradient."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1.36"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1.85"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "4.03"
+    },
+    "(g)": {
+     "type": "NUMERICAL",
+     "value": "0.0448"
+    },
+    "(h)": {
+     "type": "NUMERICAL",
+     "value": "9.80"
+    },
+    "(i)": {
+     "type": "NUMERICAL",
+     "value": "0.0111"
+    },
+    "(k)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "27.2"
+     },
+     "(h)": {
+      "type": "NUMERICAL",
+      "value": "4.027371428571429"
+     },
+     "(i)": {
+      "type": "NUMERICAL",
+      "value": "0.044791369047619156"
+     },
+     "(k)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w1a-practical.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.skills.tables-graphs",
+   "aphys.kinematics.suvat"
+  ],
+  "difficulty": 4,
+  "marks": 20,
+  "estimatedSeconds": 3600,
+  "stem": "In this experiment you investigate the motion of a ball rolling down a ramp.\n\nMethod: (1) Set up a straight grooved ramp $1.500\\ \\text{m}$ long with its upper end raised $0.090\\ \\text{m}$ above its lower end. (2) Release a steel ball from rest at the top and start a stop-watch. (3) Stop the watch when the ball passes a mark a distance $d$ down the ramp. Time each distance three times. (4) Repeat for other values of $d$.\n\nNyasha's results:\n\n| $d\\,/\\,\\text{m}$ | $t_1\\,/\\,\\text{s}$ | $t_2\\,/\\,\\text{s}$ | $t_3\\,/\\,\\text{s}$ |\n| --- | --- | --- | --- |\n| 0.220 | 1.05 | 0.99 | 1.02 |\n| 0.370 | 1.35 | 1.30 | 1.34 |\n| 0.520 | 1.55 | 1.61 | 1.58 |\n| 0.670 | 1.80 | 1.76 | 1.81 |\n| 0.820 | 1.95 | 2.01 | 1.97 |\n| 0.970 | 2.17 | 2.13 | 2.16 |\n\nTheory: the ball accelerates uniformly from rest, so $d = \\tfrac{1}{2}at^2$, where for a solid ball rolling without slipping $a = \\tfrac{5}{7}g\\dfrac{h}{L}$ ($h = 0.090\\ \\text{m}$, $L = 1.500\\ \\text{m}$).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the mean time for $d = 0.520\\ \\text{m}$, in s.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 1.58,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "$(1.55 + 1.61 + 1.58)/3 = 1.58\\ \\text{s}$.",
+    "workedSolution": "1. $(1.55 + 1.61 + 1.58)/3 = 1.58\\ \\text{s}$."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why each time was measured three times, and estimate the absolute uncertainty in the mean time for $d = 0.520\\ \\text{m}$.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Hand timing has random errors (reaction time); averaging repeats reduces their effect / identifies anomalies",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Uncertainty ≈ half the range: $(1.61 - 1.55)/2 = 0.03\\ \\text{s}$",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Starting and stopping the watch by hand introduces random errors from reaction time, so repeating and taking the mean reduces their effect and shows up any anomalous reading. The uncertainty in the mean is about half the range, $(1.61 - 1.55)/2 = 0.03\\ \\text{s}$."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate $t^2$ for $d = 0.520\\ \\text{m}$, in $\\text{s}^2$, to three significant figures.",
+    "answerSpec": {
+     "value": 2.4964000000000004,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$1.58^2 = 2.50\\ \\text{s}^2$.",
+    "workedSolution": "1. $1.58^2 = 2.50\\ \\text{s}^2$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the mean-time and $t^2$ columns should be headed and to what precision they should be recorded.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Headings quantity/unit: mean $t\\,/\\,\\text{s}$ and $t^2\\,/\\,\\text{s}^2$",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Mean $t$ to the same 2 d.p. as the raw times; $t^2$ to 3 (or 4) significant figures, consistently in each column",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Head them \"mean $t\\,/\\,\\text{s}$\" and \"$t^2\\,/\\,\\text{s}^2$\". Record the mean times to two decimal places like the raw times, and $t^2$ to three (or four) significant figures, the same for every row."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which graph should Nyasha plot to obtain a straight line whose gradient gives the acceleration?",
+    "options": [
+     {
+      "key": "A",
+      "content": "$d$ against $t$",
+      "rationale": "d is proportional to t², so this curves."
+     },
+     {
+      "key": "B",
+      "content": "$\\sqrt{d}$ against $t^2$",
+      "rationale": "√d is proportional to t, not t²."
+     },
+     {
+      "key": "C",
+      "content": "$d$ against $t^2$",
+      "correct": true,
+      "rationale": "Correct: d = (a/2)t², a straight line through the origin of gradient a/2."
+     },
+     {
+      "key": "D",
+      "content": "$t$ against $d$",
+      "rationale": "t is proportional to √d, so this curves."
+     }
+    ],
+    "explanation": "$d = \\left(\\tfrac{a}{2}\\right)t^2$ has the form $y = mx$ with $y = d$ and $x = t^2$."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "She plots $d$ against $t^2$ and draws the best-fit line. Determine its gradient, in $\\text{m s}^{-2}$.",
+    "payload": {
+     "unitHint": "m/s²"
+    },
+    "answerSpec": {
+     "value": 0.20911412827867273,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.015
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m/s²",
+       "m/s^2",
+       "m s^-2",
+       "m s-2",
+       "ms^-2",
+       "ms-2"
+      ]
+     }
+    },
+    "explanation": "From two well-separated points on the line, gradient $\\approx 0.209\\ \\text{m s}^{-2}$ (accepted within about $\\pm 0.015$).",
+    "workedSolution": "1. From two well-separated points on the line, gradient $\\approx 0.209\\ \\text{m s}^{-2}$ (accepted within about $\\pm 0.015$)."
+   },
+   {
+    "label": "(g)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Determine the intercept on the $d$ axis, in m.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 0.0006329769515998063,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.03
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "$c = d - (\\text{gradient})t^2$ for a point on the line: about $0.0006\\ \\text{m}$, close to zero (accepted within about $\\pm 0.03\\ \\text{m}$).",
+    "workedSolution": "1. $c = d - (\\text{gradient})t^2$ for a point on the line: about $0.0006\\ \\text{m}$, close to zero (accepted within about $\\pm 0.03\\ \\text{m}$)."
+   },
+   {
+    "label": "(h)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use your gradient to determine the acceleration $a$ of the ball, in $\\text{m s}^{-2}$.",
+    "payload": {
+     "unitHint": "m/s²"
+    },
+    "answerSpec": {
+     "value": 0.41822825655734547,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.03
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m/s²",
+       "m/s^2",
+       "m s^-2",
+       "m s-2",
+       "ms^-2",
+       "ms-2"
+      ]
+     }
+    },
+    "explanation": "Gradient $= a/2$, so $a = 2 \\times 0.209 = 0.418\\ \\text{m s}^{-2}$.",
+    "workedSolution": "1. Gradient $= a/2$, so $a = 2 \\times 0.209 = 0.418\\ \\text{m s}^{-2}$."
+   },
+   {
+    "label": "(i)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use $a = \\tfrac{5}{7}g\\dfrac{h}{L}$ and your value of $a$ to determine $g$, in $\\text{m s}^{-2}$.",
+    "payload": {
+     "unitHint": "m/s²"
+    },
+    "answerSpec": {
+     "value": 9.758659319671395,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m/s²",
+       "m/s^2",
+       "m s^-2",
+       "m s-2",
+       "ms^-2",
+       "ms-2"
+      ]
+     }
+    },
+    "explanation": "$g = \\dfrac{7aL}{5h} = \\dfrac{7 \\times 0.418 \\times 1.500}{5 \\times 0.090} = 9.76\\ \\text{m s}^{-2}$. Leaving out the $\\tfrac{5}{7}$ (treating the ball as sliding) gives a value well below 9.81.",
+    "workedSolution": "1. $g = \\dfrac{7aL}{5h} = \\dfrac{7 \\times 0.418 \\times 1.500}{5 \\times 0.090} = 9.76\\ \\text{m s}^{-2}$. Leaving out the $\\tfrac{5}{7}$ (treating the ball as sliding) gives a value well below 9.81."
+   },
+   {
+    "label": "(j)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Comment on whether the intercept is consistent with the theory, and suggest one systematic error that would produce a non-zero intercept.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The theory predicts a line through the origin; the intercept is close to zero (within the scatter), so it is consistent",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A systematic error such as a constant reaction-time delay in stopping the watch (times too long) or measuring d from the wrong point on the ball shifts the line",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Theory predicts zero intercept; her intercept, about $0.0006\\ \\text{m}$, is small compared with the distances, so it is consistent with the theory. A constant error in every time, such as consistently stopping the watch late, or measuring $d$ from the front rather than the centre of the ball, would shift the line and give a non-zero intercept."
+    }
+   },
+   {
+    "label": "(k)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe one significant limitation of the method and two specific improvements.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Limitation: times of 1–2 s are short compared with reaction time, so hand timing (start and stop) is a large source of uncertainty; or the release may give the ball a push",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Improvement: use light gates at the release point and at the mark connected to an electronic timer (or a data logger / video with timer)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Improvement: release the ball by removing a card or using an electromagnet, so it starts from rest without a push",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The times are only 1–2 s, so the reaction time in starting and stopping the stop-watch is a large part of each reading. Placing light gates at the start and at each mark, connected to an electronic timer, would remove this. Holding the ball against a card that is pulled away (or an electromagnet) would ensure it starts from rest without being pushed."
+    }
+   }
+  ],
+  "explanation": "Plot $d$ against $t^2$: gradient $\\approx 0.209\\ \\text{m s}^{-2}$ so $a \\approx 0.418\\ \\text{m s}^{-2}$, giving $g \\approx 9.76\\ \\text{m s}^{-2}$ from $a = \\tfrac{5}{7}g h/L$.",
+  "hints": [
+   "Mean of three timings, then square.",
+   "d = ½at² has the form y = mx.",
+   "a = 2 × gradient; then rearrange a = (5/7)g h/L."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "1.58"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.50"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "0.209"
+    },
+    "(g)": {
+     "type": "NUMERICAL",
+     "value": "6.33 × 10^-4"
+    },
+    "(h)": {
+     "type": "NUMERICAL",
+     "value": "0.418"
+    },
+    "(i)": {
+     "type": "NUMERICAL",
+     "value": "9.76"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(h)": {
+      "type": "NUMERICAL",
+      "value": "0.20911412827867273"
+     },
+     "(i)": {
+      "type": "NUMERICAL",
+      "value": "6.970470942622425"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w1a-practical.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.skills.evaluation-improvements",
+   "aphys.kinematics.suvat"
+  ],
+  "difficulty": 4,
+  "marks": 20,
+  "estimatedSeconds": 3600,
+  "stem": "In this experiment you investigate how the time taken by a trolley to roll down a slope depends on the height of the slope.\n\nMethod: a runway $1.00\\ \\text{m}$ long has its upper end raised a height $h$ above its lower end, measured with a metre rule. A trolley is released by hand from rest at the top and timed with a stop-watch until it reaches the bottom.\n\n| $h\\,/\\,\\text{m}$ | $t_1\\,/\\,\\text{s}$ | $t_2\\,/\\,\\text{s}$ | $t_3\\,/\\,\\text{s}$ |\n| --- | --- | --- | --- |\n| 0.080 | 1.69 | 1.59 | 1.65 |\n| 0.200 | 1.09 | 1.03 | 1.06 |\n\nThe heights were measured to $\\pm 0.002\\ \\text{m}$. It is suggested that $t = \\dfrac{k}{\\sqrt{h}}$, where $k$ is a constant.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the mean time for $h = 0.080\\ \\text{m}$, in s.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 1.6433333333333333,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "$(1.69 + 1.59 + 1.65)/3 = 1.64\\ \\text{s}$.",
+    "workedSolution": "1. $(1.69 + 1.59 + 1.65)/3 = 1.64\\ \\text{s}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Estimate the absolute uncertainty in this mean time, in s.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 0.04999999999999993,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "Half the range: $(1.69 - 1.59)/2 = 0.05\\ \\text{s}$.",
+    "workedSolution": "1. Half the range: $(1.69 - 1.59)/2 = 0.05\\ \\text{s}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the percentage uncertainty in this mean time, to two significant figures.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 3.0425963488843775,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "$\\dfrac{0.05}{1.64} \\times 100 = 3.0\\,\\%$.",
+    "workedSolution": "1. $\\dfrac{0.05}{1.64} \\times 100 = 3.0\\,\\%$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the percentage uncertainty in $h = 0.080\\ \\text{m}$, to two significant figures.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 2.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "$\\dfrac{0.002}{0.080} \\times 100 = 2.5\\,\\%$.",
+    "workedSolution": "1. $\\dfrac{0.002}{0.080} \\times 100 = 2.5\\,\\%$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the percentage uncertainty in $k = t\\sqrt{h}$ for this set of readings, to two significant figures.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 4.292596348884377,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "$\\%\\,\\Delta k = \\%\\,\\Delta t + \\tfrac{1}{2}\\%\\,\\Delta h = 3.0 + \\tfrac{1}{2}(2.5) = 4.3\\,\\%$.",
+    "workedSolution": "1. $\\%\\,\\Delta k = \\%\\,\\Delta t + \\tfrac{1}{2}\\%\\,\\Delta h = 3.0 + \\tfrac{1}{2}(2.5) = 4.3\\,\\%$."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate $k_1$ for $h = 0.080\\ \\text{m}$, in $\\text{s m}^{1/2}$, to three significant figures.",
+    "answerSpec": {
+     "value": 0.4648048574999572,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "$k = t\\sqrt{h} = 1.64 \\times \\sqrt{0.080} = 0.465\\ \\text{s m}^{1/2}$.",
+    "workedSolution": "1. $k = t\\sqrt{h} = 1.64 \\times \\sqrt{0.080} = 0.465\\ \\text{s m}^{1/2}$."
+   },
+   {
+    "label": "(g)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate $k_2$ for $h = 0.200\\ \\text{m}$, in $\\text{s m}^{1/2}$, to three significant figures.",
+    "answerSpec": {
+     "value": 0.47404641122995544,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Mean $t = 1.06\\ \\text{s}$; $k = 1.06 \\times \\sqrt{0.200} = 0.474\\ \\text{s m}^{1/2}$.",
+    "workedSolution": "1. Mean $t = 1.06\\ \\text{s}$; $k = 1.06 \\times \\sqrt{0.200} = 0.474\\ \\text{s m}^{1/2}$."
+   },
+   {
+    "label": "(h)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the percentage difference between $k_1$ and $k_2$, to two significant figures.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 1.9686938789570594,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "$\\dfrac{|0.465 - 0.474|}{\\tfrac{1}{2}(0.465 + 0.474)} \\times 100 = 2.0\\,\\%$.",
+    "workedSolution": "1. $\\dfrac{|0.465 - 0.474|}{\\tfrac{1}{2}(0.465 + 0.474)} \\times 100 = 2.0\\,\\%$."
+   },
+   {
+    "label": "(i)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain whether your results support the suggested relationship.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Criterion stated: the percentage uncertainty in k (about 4.3 %) or an estimated experimental uncertainty (e.g. 10 %)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The percentage difference (2.0 %) is less than the criterion, so the results support the relationship (within the uncertainty)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: My estimated uncertainty in k is about 4.3 %. The two values of k differ by only 2.0 %, which is less than this, so the results are consistent with (support) t = k/√h. (Two readings cannot prove it.)"
+    }
+   },
+   {
+    "label": "(j)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Identify four sources of uncertainty or limitations of this procedure (quantity and reason).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Only two values of h: too few to draw a valid conclusion",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Starting and stopping the stop-watch by hand: reaction time is significant for times of 1–2 s",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Releasing the trolley by hand may give it a push (not starting from rest)",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Difficult to judge exactly when the trolley reaches the bottom; or h difficult to measure because the rule is not vertical / runway sags; or friction varies",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: (1) Only two heights were used, so the relationship cannot be tested properly. (2) The times are short, so reaction time in starting and stopping the watch is large compared with them. (3) Releasing the trolley by hand may push it, so it does not start from rest. (4) It is hard to judge the moment the trolley reaches the end of the runway; also h is hard to measure accurately with a hand-held rule that may not be vertical."
+    }
+   },
+   {
+    "label": "(k)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Suggest four improvements that could be made to this experiment. You may suggest the use of other apparatus or different procedures.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Take readings for at least six heights and plot a graph of t against 1/√h (or lg t against lg h)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Use light gates at the top and bottom connected to an electronic timer (or a video with a timer)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Release the trolley by removing a card/pin (or with an electromagnet) so that it starts from rest",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Use a set square to keep the rule vertical when measuring h (or a stop at the end to define the finish; or compensate friction / clean runway)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: (1) Use six or more heights and plot t against 1/√h to test for a straight line through the origin. (2) Time the trolley with light gates at the top and bottom connected to a timer. (3) Hold the trolley with a card at the top and release it by sliding the card away. (4) Measure h with the metre rule held vertical against a set square, to the top surface of the runway at its end."
+    }
+   }
+  ],
+  "explanation": "$k_1 = 0.465$, $k_2 = 0.474\\ \\text{s m}^{1/2}$: a 2.0 % difference, within the 4.3 % uncertainty, so the data support $t = k/\\sqrt{h}$. Limitations and improvements must be specific and paired.",
+  "hints": [
+   "Half the range gives the uncertainty in the mean.",
+   "k = t√h: the √ halves the percentage uncertainty in h.",
+   "Compare the percentage difference with a stated criterion."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "1.64"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.05"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3.0"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2.5"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "4.3"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "0.465"
+    },
+    "(g)": {
+     "type": "NUMERICAL",
+     "value": "0.474"
+    },
+    "(h)": {
+     "type": "NUMERICAL",
+     "value": "2.0"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.09999999999999987"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "5.542596348884377"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "5.810060718749465"
+     },
+     "(g)": {
+      "type": "NUMERICAL",
+      "value": "2.3702320561497774"
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w1a-practical.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.skills.evaluation-improvements",
+   "aphys.dynamics.drag-terminal-velocity"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 3600,
+  "stem": "In this experiment you investigate how the time taken for paper cones to fall depends on their mass.\n\nMethod: identical paper cones are nested together in a stack of $n$ cones. The stack is held, point down, at a height of $1.80\\ \\text{m}$ above the floor, released by hand and timed with a stop-watch until it lands.\n\n| $n$ | $t_1\\,/\\,\\text{s}$ | $t_2\\,/\\,\\text{s}$ | $t_3\\,/\\,\\text{s}$ |\n| --- | --- | --- | --- |\n| 1 | 1.62 | 1.55 | 1.71 |\n| 4 | 0.88 | 0.94 | 0.85 |\n\nIt is suggested that the cones fall at terminal velocity for the whole distance, so that $t^2 n = k$, where $k$ is a constant.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the mean time for $n = 1$, in s.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 1.6266666666666667,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "$(1.62 + 1.55 + 1.71)/3 = 1.63\\ \\text{s}$.",
+    "workedSolution": "1. $(1.62 + 1.55 + 1.71)/3 = 1.63\\ \\text{s}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Estimate the absolute uncertainty in the mean time for $n = 1$, in s.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 0.07999999999999996,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "Half the range: $(1.71 - 1.55)/2 = 0.08\\ \\text{s}$.",
+    "workedSolution": "1. Half the range: $(1.71 - 1.55)/2 = 0.08\\ \\text{s}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the percentage uncertainty in this mean time, to two significant figures.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 4.918032786885243,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "$\\dfrac{0.08}{1.627} \\times 100 = 4.9\\,\\%$.",
+    "workedSolution": "1. $\\dfrac{0.08}{1.627} \\times 100 = 4.9\\,\\%$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the mean time for $n = 4$, in s.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 0.89,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "$(0.88 + 0.94 + 0.85)/3 = 0.89\\ \\text{s}$.",
+    "workedSolution": "1. $(0.88 + 0.94 + 0.85)/3 = 0.89\\ \\text{s}$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate $k = t^2 n$ for $n = 1$, in $\\text{s}^2$, to three significant figures.",
+    "answerSpec": {
+     "value": 2.6460444444444446,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$1.627^2 \\times 1 = 2.65\\ \\text{s}^2$.",
+    "workedSolution": "1. $1.627^2 \\times 1 = 2.65\\ \\text{s}^2$."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate $k$ for $n = 4$, in $\\text{s}^2$, to three significant figures.",
+    "answerSpec": {
+     "value": 3.1684,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "$0.8900^2 \\times 4 = 3.17\\ \\text{s}^2$.",
+    "workedSolution": "1. $0.8900^2 \\times 4 = 3.17\\ \\text{s}^2$."
+   },
+   {
+    "label": "(g)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the percentage difference between the two values of $k$, to two significant figures.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 17.967513854385626,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "$\\dfrac{3.17 - 2.65}{\\tfrac{1}{2}(2.65 + 3.17)} \\times 100 = 18\\,\\%$.",
+    "workedSolution": "1. $\\dfrac{3.17 - 2.65}{\\tfrac{1}{2}(2.65 + 3.17)} \\times 100 = 18\\,\\%$."
+   },
+   {
+    "label": "(h)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the percentage uncertainty in $k$ for $n = 1$, to two significant figures.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 9.836065573770487,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "$k \\propto t^2$, so $\\%\\,\\Delta k = 2 \\times 4.9 = 9.8\\,\\%$ ($n$ is exact).",
+    "workedSolution": "1. $k \\propto t^2$, so $\\%\\,\\Delta k = 2 \\times 4.9 = 9.8\\,\\%$ ($n$ is exact)."
+   },
+   {
+    "label": "(i)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain whether the results support the suggestion, and suggest a physical reason for your conclusion.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The percentage difference (18 %) is larger than the uncertainty in k (about 9.8 %), so the results do not support t²n = k",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Reason: the cones start from rest and accelerate before reaching terminal velocity (heavier stacks take longer to reach it), so they do not fall at terminal velocity for the whole distance",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The values of k differ by 18 %, more than the 9.8 % uncertainty in k, so the results do not support the suggestion. The cones start from rest and must accelerate before they reach terminal velocity; the heavier stack takes longer and falls further before doing so, so the assumption of terminal velocity throughout the fall is not valid."
+    }
+   },
+   {
+    "label": "(j)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Identify four sources of uncertainty or limitations of this procedure (quantity and reason).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Only two values of n: too few to test the relationship",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The fall time is short (≈1–2 s), so reaction time in starting and stopping the watch is significant",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The cones are not at terminal velocity at the start (they accelerate from rest), so t is not simply height ÷ terminal velocity",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Cones drift sideways or tilt / air currents; or it is hard to release them without a push or to judge when they land; or the release height is hard to keep constant",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: (1) Only two values of n were used. (2) The times are short, so reaction time in operating the stop-watch is a large fraction of each. (3) The cones accelerate from rest at first, so they are not at terminal velocity for the whole fall. (4) The cones drift and wobble in air currents, and it is hard to release them at exactly 1.80 m without a push."
+    }
+   },
+   {
+    "label": "(k)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Suggest four improvements that could be made to this experiment.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Use at least six values of n and plot a graph (e.g. t² against 1/n)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Time with light gates / video with a timer (frame by frame) instead of a hand-held stop-watch",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Measure the time over a lower section only (e.g. between two light gates 1.0 m apart, starting well below the release point) so the cones are at terminal velocity, or drop from a greater height",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Release from a fixed clamp or a card that is pulled away, shield from draughts (close windows, switch off fans), and use a vertical metre rule/marker to fix the height",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: (1) Use six or more values of n and plot t² against 1/n. (2) Film the fall beside a vertical scale with a timer in view, or use light gates, instead of a hand stop-watch. (3) Time the cones only over the lower metre, between two light gates, so they have reached terminal velocity, or release them from a greater height. (4) Release the cones from a clamp or a card pulled away at a fixed, measured height, with windows closed and fans off to avoid draughts."
+    }
+   }
+  ],
+  "explanation": "$k$ changes from $2.65$ to $3.17\\ \\text{s}^2$, a 18 % difference, larger than the 9.8 % uncertainty: the cones are not at terminal velocity for the whole fall.",
+  "hints": [
+   "Half the range gives the uncertainty.",
+   "t is squared in k, so double its percentage uncertainty.",
+   "Do the cones start at terminal velocity?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "1.63"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.08"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4.9"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.89"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "2.65"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "3.17"
+    },
+    "(g)": {
+     "type": "NUMERICAL",
+     "value": "18"
+    },
+    "(h)": {
+     "type": "NUMERICAL",
+     "value": "9.8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.15999999999999992"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "0.7921"
+     },
+     "(h)": {
+      "type": "NUMERICAL",
+      "value": "4.918032786885243"
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "calculator": true,
+  "paper": "Paper 3"
+ }
+]

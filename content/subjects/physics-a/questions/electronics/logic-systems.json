@@ -1,0 +1,1403 @@
+[
+ {
+  "key": "electronics.logic-systems.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A kombi's warning buzzer W must sound when the engine is running (E = 1) and the driver's seat belt is not fastened. The belt sensor gives B = 1 when the belt is fastened. Which expression gives W?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$W = E \\cdot \\overline{B}$",
+    "correct": true,
+    "rationale": "Correct: engine running AND belt NOT fastened."
+   },
+   {
+    "key": "B",
+    "content": "$W = E \\cdot B$",
+    "rationale": "This sounds the buzzer when the belt IS fastened."
+   },
+   {
+    "key": "C",
+    "content": "$W = E + \\overline{B}$",
+    "rationale": "OR would sound the buzzer whenever the engine runs, even with the belt on."
+   },
+   {
+    "key": "D",
+    "content": "$W = \\overline{E \\cdot B}$",
+    "rationale": "This NAND is 1 whenever the engine is off, so the buzzer would sound in a parked kombi."
+   }
+  ],
+  "explanation": "'And' → AND; 'not fastened' → NOT B: W = E·B̄.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "electronics.logic-systems.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A half adder has inputs A = 1 and B = 1. What are its outputs?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Sum 0, carry 1",
+    "correct": true,
+    "rationale": "Correct: 1 + 1 = 10 in binary."
+   },
+   {
+    "key": "B",
+    "content": "Sum 1, carry 1",
+    "rationale": "That would represent three; 1 + 1 is two."
+   },
+   {
+    "key": "C",
+    "content": "Sum 1, carry 0",
+    "rationale": "That is one; it misses the carry."
+   },
+   {
+    "key": "D",
+    "content": "Sum 0, carry 0",
+    "rationale": "That is zero."
+   }
+  ],
+  "explanation": "S = A ⊕ B = 0; C = A·B = 1; CS = 10 (binary two).",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "electronics.logic-systems.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which gate gives the sum bit S of a half adder?",
+  "options": [
+   {
+    "key": "A",
+    "content": "OR",
+    "rationale": "OR gives 1 for 1 + 1, but the sum bit must then be 0."
+   },
+   {
+    "key": "B",
+    "content": "AND",
+    "rationale": "AND gives the carry bit."
+   },
+   {
+    "key": "C",
+    "content": "NAND",
+    "rationale": "NAND gives 1 for 0 + 0, but the sum bit must be 0."
+   },
+   {
+    "key": "D",
+    "content": "EXOR",
+    "correct": true,
+    "rationale": "Correct: S = 1 when exactly one input is 1."
+   }
+  ],
+  "explanation": "S = A ⊕ B; C = A·B.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "electronics.logic-systems.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A system with inputs A and B gives Q = 1 only for AB = 01 and AB = 11. Which is the simplest expression for Q?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$Q = \\overline{A} \\cdot B$",
+    "rationale": "This misses the row 11, where Q is also 1."
+   },
+   {
+    "key": "B",
+    "content": "$Q = A + B$",
+    "rationale": "This gives 1 for AB = 10, where Q is 0."
+   },
+   {
+    "key": "C",
+    "content": "$Q = A \\cdot B$",
+    "rationale": "This misses the row 01."
+   },
+   {
+    "key": "D",
+    "content": "$Q = B$",
+    "correct": true,
+    "rationale": "Correct: Q = Ā·B + A·B = B (A makes no difference)."
+   }
+  ],
+  "explanation": "Q follows B in every row, so A is irrelevant: Q = B.",
+  "hints": [
+   "Compare the Q column with each input column."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "electronics.logic-systems.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A bistable latch made of two NOR gates has its set and reset inputs both at 0. What is its output Q?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Always 0",
+    "rationale": "Q = 0 is forced only by R = 1."
+   },
+   {
+    "key": "B",
+    "content": "Always 1",
+    "rationale": "Q = 1 is forced only by S = 1."
+   },
+   {
+    "key": "C",
+    "content": "Whatever it was last set or reset to",
+    "correct": true,
+    "rationale": "Correct: S = R = 0 is the hold (memory) state."
+   },
+   {
+    "key": "D",
+    "content": "It switches rapidly between 0 and 1",
+    "rationale": "With S = R = 0 the cross-coupled gates hold a stable state."
+   }
+  ],
+  "explanation": "The feedback between the gates keeps the last state: a one-bit memory.",
+  "hints": [
+   "Which inputs force Q to 1 or to 0?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.logic-systems.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A greenhouse fan F must run when it is hot (H = 1), or when it is humid (U = 1) during the day (D = 1). Which expression is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$F = (H + U) \\cdot D$",
+    "rationale": "This stops the fan on a hot night, when H = 1 but D = 0."
+   },
+   {
+    "key": "B",
+    "content": "$F = H \\cdot U \\cdot D$",
+    "rationale": "This needs all three conditions together."
+   },
+   {
+    "key": "C",
+    "content": "$F = H + U \\cdot D$",
+    "correct": true,
+    "rationale": "Correct: hot, OR (humid AND day)."
+   },
+   {
+    "key": "D",
+    "content": "$F = H + U + D$",
+    "rationale": "This would run the fan every day even when it is cool and dry."
+   }
+  ],
+  "explanation": "The specification groups 'humid during the day' as one condition: U·D, ORed with H.",
+  "hints": [
+   "Which conditions must happen together?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "electronics.logic-systems.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "For which input combination is $Q = (A + B) \\cdot \\overline{C}$ equal to 1?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A = 1, B = 1, C = 1",
+    "rationale": "C = 1 makes C̄ = 0, so Q = 0."
+   },
+   {
+    "key": "B",
+    "content": "A = 0, B = 1, C = 0",
+    "correct": true,
+    "rationale": "Correct: A + B = 1 and C̄ = 1."
+   },
+   {
+    "key": "C",
+    "content": "A = 0, B = 0, C = 0",
+    "rationale": "A + B = 0, so Q = 0."
+   },
+   {
+    "key": "D",
+    "content": "A = 1, B = 0, C = 1",
+    "rationale": "C = 1 makes Q = 0."
+   }
+  ],
+  "explanation": "Q = 1 needs at least one of A, B to be 1 AND C to be 0.",
+  "hints": [
+   "Both brackets must be 1."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "electronics.logic-systems.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A light sensor stage gives logic 1 in daylight. A security lamp must come on only at night. How should the sensor signal be used?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Connect it directly to the lamp.",
+    "rationale": "The lamp would then be lit in daylight."
+   },
+   {
+    "key": "B",
+    "content": "Connect it to both inputs of an AND gate.",
+    "rationale": "AND with joined inputs leaves the signal unchanged."
+   },
+   {
+    "key": "C",
+    "content": "Pass it through an OR gate with a 0 on the other input.",
+    "rationale": "OR with 0 leaves the signal unchanged."
+   },
+   {
+    "key": "D",
+    "content": "Pass it through a NOT gate before it enters the rest of the logic.",
+    "correct": true,
+    "rationale": "Correct: 'dark' is the inverse of the daylight signal."
+   }
+  ],
+  "explanation": "Inverting the daylight signal gives a signal that is 1 when dark.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.logic-systems.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A half adder can add two binary digits and a carry from a previous column.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. A half adder has only two inputs; accepting a carry as well needs a full adder.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.logic-systems.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The output of a combinational logic circuit depends only on the present states of its inputs.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. That is what 'combinational' means; a bistable, which remembers earlier inputs, is not combinational.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "electronics.logic-systems.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each phrase in a written specification with the gate it usually needs.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "'… and …' (both conditions needed)"
+    },
+    {
+     "id": "L2",
+     "content": "'… or …' (either condition is enough)"
+    },
+    {
+     "id": "L3",
+     "content": "'… unless …' / '… never when …'"
+    },
+    {
+     "id": "L4",
+     "content": "'… one or the other, but not both'"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "NOT (feeding an AND)"
+    },
+    {
+     "id": "R4",
+     "content": "EXOR"
+    },
+    {
+     "id": "R1",
+     "content": "AND"
+    },
+    {
+     "id": "R2",
+     "content": "OR"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Words translate directly into gates.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.logic-systems.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Complete the half-adder outputs for A = 0 and B = 1.",
+  "payload": {
+   "template": "Sum S = {{blank:s}}; carry C = {{blank:c}}.",
+   "blanks": [
+    {
+     "id": "s",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "s",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "explanation": "0 + 1 = 1: S = 0 ⊕ 1 = 1, C = 0·1 = 0.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "s",
+     "text": "1"
+    },
+    {
+     "blankId": "c",
+     "text": "0"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "s",
+      "text": "0"
+     },
+     {
+      "blankId": "c",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "electronics.logic-systems.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the circuit, made from two cross-coupled NOR (or NAND) gates, that stores one bit of information.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "bistable"
+    },
+    {
+     "value": "latch"
+    },
+    {
+     "value": "bistable latch"
+    },
+    {
+     "value": "SR latch"
+    },
+    {
+     "value": "flip-flop"
+    },
+    {
+     "value": "flip flop"
+    },
+    {
+     "value": "a bistable"
+    },
+    {
+     "value": "a latch"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "A bistable (latch) holds its last state when both inputs are inactive.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "bistable"
+  },
+  "skill": "RECALL"
+ },
+ {
+  "key": "electronics.logic-systems.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "For $Q = (A + B) \\cdot \\overline{C}$, how many of the eight input combinations give Q = 1?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "C must be 0 (4 rows) and A + B must be 1, which excludes only A = B = 0: 4 − 1 = 3 rows (010, 100, 110).",
+  "workedSolution": "1. C must be 0 (4 rows) and A + B must be 1, which excludes only A = B = 0: 4 − 1 = 3 rows (010, 100, 110).",
+  "hints": [
+   "Count the rows with C = 0 first."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "electronics.logic-systems.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A security lamp at a school gate must come on when it is dark and either a movement sensor detects someone or a test switch is pressed. Design the logic: define the inputs, give a Boolean expression and describe the gates.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Inputs defined: D = 1 when dark (or L = 1 in daylight, inverted), M = 1 when movement is detected, T = 1 when the test switch is pressed; output Q = 1 lamp on.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Expression: $Q = D \\cdot (M + T)$ (or $Q = \\overline{L} \\cdot (M + T)$).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "M and T go to an OR gate (L through a NOT gate if the sensor gives 1 in daylight).",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The OR output and D go to an AND gate whose output switches the lamp through a relay.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Let D = 1 when it is dark (from an LDR divider and comparator, inverted if it gives 1 in daylight), M = 1 when movement is detected and T = 1 when the test switch is pressed; Q = 1 means the lamp is on. Then Q = D·(M + T). M and T go into an OR gate, and its output and D go into an AND gate, whose output drives the lamp through a relay."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Define inputs, translate the words, then gates.",
+  "hints": [
+   "Which two inputs are joined by 'or'?"
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "electronics.logic-systems.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain how a bistable latch lets a burglar alarm keep sounding after an intruder has closed the door again.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Opening the door gives a brief S = 1, which sets the latch: Q = 1 and the siren sounds.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "When the door is closed, S returns to 0 with R = 0: the hold state, so Q stays at 1 (memory).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The siren stops only when R = 1 is applied (key switch), resetting Q to 0.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The door sensor gives S = 1 while the door is open, setting the latch so that Q = 1 and the siren sounds. When the door is shut, S goes back to 0, but with R also 0 the latch is in its hold state and Q stays at 1, so the siren continues. Only a reset signal, R = 1 from the owner's key switch, makes Q = 0 again."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Set, hold, reset.",
+  "hints": [
+   "What happens when S goes back to 0?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.logic-systems.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain how a thermistor can provide a logic input that is 1 when a tank of water is hot and 0 when it is cool.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Thermistor in a potential divider with a fixed resistor: the divider voltage changes with temperature (NTC resistance falls as it warms).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The divider output goes to a comparator with a reference voltage set for the chosen temperature.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The comparator output switches high when hot; it is limited to the logic levels (e.g. 0 V and +5 V) to give 1 and 0.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Place the NTC thermistor in a potential divider with a fixed resistor so that the divider voltage rises as the water warms. Feed this to a comparator whose reference is set at the voltage for the chosen temperature; when the water is hotter than this, the comparator output switches high. Its output is then limited to the logic levels, 0 V and +5 V, so it gives logic 1 when hot and 0 when cool."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Divider → comparator → logic level.",
+  "hints": [
+   "Start with a potential divider."
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "electronics.logic-systems.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 960,
+  "stem": "A solar geyser in Bulawayo has an electric back-up element. The element E must switch on only when the water is cold, and then only at night or when an override switch is on. Sensor stages give C = 1 when the water is cold and N = 1 at night; the override gives V = 1 when on.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write a Boolean expression for E and explain how it follows from the specification.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "$E = C \\cdot (N + V)$.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "'Only when cold' → C must be 1 (AND); 'at night or when the override is on' → N OR V.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: $E = C \\cdot (N + V)$: the water must be cold (C AND …), and then either it is night or the override is on (N OR V)."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 8,
+    "stem": "Complete the output E for each input combination CNV.",
+    "payload": {
+     "template": "CNV = 000: E = {{blank:r0}}; CNV = 001: E = {{blank:r1}}; CNV = 010: E = {{blank:r2}}; CNV = 011: E = {{blank:r3}}; CNV = 100: E = {{blank:r4}}; CNV = 101: E = {{blank:r5}}; CNV = 110: E = {{blank:r6}}; CNV = 111: E = {{blank:r7}}.",
+     "blanks": [
+      {
+       "id": "r0",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r0",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r1",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "E = 1 only when C = 1 and at least one of N, V is 1: 0, 0, 0, 0, 0, 1, 1, 1."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the gates needed and how the output can switch the 2 kW element.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "N and V into an OR gate; its output and C into an AND gate.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The AND output drives a relay (with protective diode) whose contacts switch the mains element.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Feed N and V into an OR gate, and feed its output with C into an AND gate. The AND gate's output operates a relay, with a diode across its coil, whose contacts switch the mains supply to the element."
+    }
+   }
+  ],
+  "explanation": "E = C·(N + V): two gates and a relay.",
+  "hints": [
+   "The heater needs cold water in every 'on' row."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r0",
+       "text": "0"
+      },
+      {
+       "blankId": "r1",
+       "text": "0"
+      },
+      {
+       "blankId": "r2",
+       "text": "0"
+      },
+      {
+       "blankId": "r3",
+       "text": "0"
+      },
+      {
+       "blankId": "r4",
+       "text": "0"
+      },
+      {
+       "blankId": "r5",
+       "text": "1"
+      },
+      {
+       "blankId": "r6",
+       "text": "1"
+      },
+      {
+       "blankId": "r7",
+       "text": "1"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r0",
+        "text": "1"
+       },
+       {
+        "blankId": "r1",
+        "text": "1"
+       },
+       {
+        "blankId": "r2",
+        "text": "1"
+       },
+       {
+        "blankId": "r3",
+        "text": "1"
+       },
+       {
+        "blankId": "r4",
+        "text": "1"
+       },
+       {
+        "blankId": "r5",
+        "text": "0"
+       },
+       {
+        "blankId": "r6",
+        "text": "0"
+       },
+       {
+        "blankId": "r7",
+        "text": "0"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "electronics.logic-systems.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.electronics.logic-systems"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "Part 1 concerns a half adder made from an EXOR gate and an AND gate, both fed with inputs A and B. Part 2 concerns a NOR-gate bistable with set input S and reset input R, which starts with Q = 0.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the half-adder outputs.",
+    "payload": {
+     "template": "A = 1, B = 0: S = {{blank:a}}, C = {{blank:b}}. A = 1, B = 1: S = {{blank:c}}, C = {{blank:d}}.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "d",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "1 + 0 = 01; 1 + 1 = 10."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why two half adders alone cannot add two 2-bit binary numbers.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The second column must add its two bits and the carry from the first column: three inputs.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A half adder has only two inputs, so a full adder (two half adders and an OR gate) is needed.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: In the second column the circuit has to add two bits plus the carry from the first column, three inputs in all. A half adder accepts only two, so a full adder, made from two half adders and an OR gate, is needed."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "S is pulsed to 1 and then returned to 0, with R = 0 throughout. What is Q now?",
+    "options": [
+     {
+      "key": "A",
+      "content": "0",
+      "rationale": "Q returns to 0 only when R = 1."
+     },
+     {
+      "key": "B",
+      "content": "1",
+      "correct": true,
+      "rationale": "Correct: the pulse set Q = 1 and S = R = 0 holds it."
+     },
+     {
+      "key": "C",
+      "content": "It is undefined.",
+      "rationale": "Only S = R = 1 is the forbidden state."
+     },
+     {
+      "key": "D",
+      "content": "It alternates between 0 and 1.",
+      "rationale": "The latch is stable in either state."
+     }
+    ],
+    "explanation": "Set, then hold: Q = 1."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "R is then pulsed to 1 and returned to 0, with S = 0. What is Q now?",
+    "options": [
+     {
+      "key": "A",
+      "content": "1",
+      "rationale": "The reset pulse has cleared the stored 1."
+     },
+     {
+      "key": "B",
+      "content": "It is undefined.",
+      "rationale": "S = R = 1 never occurred."
+     },
+     {
+      "key": "C",
+      "content": "0",
+      "correct": true,
+      "rationale": "Correct: R = 1 resets Q to 0, and S = R = 0 then holds it."
+     },
+     {
+      "key": "D",
+      "content": "It alternates between 0 and 1.",
+      "rationale": "The latch is stable in either state."
+     }
+    ],
+    "explanation": "Reset, then hold: Q = 0."
+   }
+  ],
+  "explanation": "Half adder: S = A ⊕ B, C = A·B. Latch: set, hold, reset.",
+  "hints": [
+   "1 + 1 in binary is 10."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "1"
+      },
+      {
+       "blankId": "b",
+       "text": "0"
+      },
+      {
+       "blankId": "c",
+       "text": "0"
+      },
+      {
+       "blankId": "d",
+       "text": "1"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       },
+       {
+        "blankId": "c",
+        "text": "1"
+       },
+       {
+        "blankId": "d",
+        "text": "0"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ }
+]

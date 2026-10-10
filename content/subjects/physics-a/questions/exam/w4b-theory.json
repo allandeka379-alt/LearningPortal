@@ -1,0 +1,1265 @@
+[
+ {
+  "key": "exam.w4b-theory.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.electronics.op-amp-amplifiers",
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "An inverting amplifier for a microphone signal uses an op-amp powered from $\\pm 15\\ \\text{V}$; its output saturates at $\\pm 13.5\\ \\text{V}$. The input resistor is $3.9\\ \\text{k}\\Omega$ and the feedback resistor is $56\\ \\text{k}\\Omega$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two properties of an ideal op-amp and, for each, why it matters in this amplifier.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Infinite open-loop gain: V⁺ ≈ V⁻, so the inverting input is a virtual earth and the gain is set by the resistors only.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Infinite input resistance: no current enters the inputs, so the current in R_in equals that in R_f (or zero output resistance: the output voltage does not depend on the load).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Its open-loop gain is infinite, so V⁺ and V⁻ are equal and the inverting input is a virtual earth, making the gain depend only on the resistors. Its input resistance is infinite, so no current enters the op-amp and the current in the input resistor all flows through the feedback resistor."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the voltage gain, to three significant figures.",
+    "answerSpec": {
+     "value": -14.35897435897436,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$G = -\\dfrac{56}{3.9} = −14.4$.",
+    "workedSolution": "1. $G = -\\dfrac{56}{3.9} = −14.4$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the output voltage for an input of $+0.45\\ \\text{V}$, in V, to three significant figures.",
+    "payload": {
+     "unitHint": "V"
+    },
+    "answerSpec": {
+     "value": -6.461538461538462,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "V",
+       "volts",
+       "volt",
+       "J/C"
+      ]
+     }
+    },
+    "explanation": "$V_{\\text{out}} = −14.4 \\times 0.45 = −6.46\\ \\text{V}$ (within the saturation limits).",
+    "workedSolution": "1. $V_{\\text{out}} = −14.4 \\times 0.45 = −6.46\\ \\text{V}$ (within the saturation limits)."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the largest input voltage that can be amplified without the output saturating, in V, to three significant figures.",
+    "payload": {
+     "unitHint": "V"
+    },
+    "answerSpec": {
+     "value": 0.9401785714285714,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "V",
+       "volts",
+       "volt",
+       "J/C"
+      ]
+     }
+    },
+    "explanation": "$\\dfrac{13.5}{14.4} = 0.940\\ \\text{V}$.",
+    "workedSolution": "1. $\\dfrac{13.5}{14.4} = 0.940\\ \\text{V}$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the inverting input is called a virtual earth.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The non-inverting input is at 0 V and the open-loop gain is very large, so V⁺ − V⁻ = V_out/A₀ ≈ 0.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the inverting input is held at (almost) 0 V by the feedback, although it is not connected to 0 V.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The non-inverting input is at 0 V, and with a very large open-loop gain the difference between the inputs, V_out/A₀, is tiny, so the inverting input sits at almost 0 V. It is held there by the feedback, not by a connection to 0 V."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "A sinusoidal input of peak 1.2 V is applied. Which describes the output?",
+    "options": [
+     {
+      "key": "A",
+      "content": "An inverted sine wave of peak 17 V",
+      "rationale": "The output cannot exceed the saturation voltage."
+     },
+     {
+      "key": "B",
+      "content": "An inverted wave with its peaks clipped at ±13.5 V",
+      "correct": true,
+      "rationale": "Correct: 1.2 V exceeds the largest unclipped input."
+     },
+     {
+      "key": "C",
+      "content": "A sine wave in phase with the input, of peak 13.5 V",
+      "rationale": "The inverting amplifier's output is in antiphase and is clipped."
+     },
+     {
+      "key": "D",
+      "content": "A constant output of −13.5 V",
+      "rationale": "The output follows the input except near the peaks."
+     }
+    ],
+    "explanation": "$14.4 \\times 1.2 = 17.2\\ \\text{V}$ would exceed 13.5 V, so the peaks are clipped."
+   }
+  ],
+  "explanation": "G = −R_f/R_in; saturation limits the output; the inverting input is a virtual earth.",
+  "hints": [
+   "Check every output against ±13.5 V.",
+   "Use the two ideal-op-amp assumptions."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-14.4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "-6.46"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.940"
+    },
+    "(f)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "14.35897435897436"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "6.461538461538462"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1.0446428571428572"
+     },
+     "(f)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC P2"
+ },
+ {
+  "key": "exam.w4b-theory.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.electronics.logic-systems",
+   "aphys.electronics.logic-gates",
+   "aphys.electronics.sensors-output-devices"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A garden irrigation pump P near Chinhoyi must run when the soil is dry, but not while it is raining. A moisture sensor stage gives D = 1 when the soil is dry; a rain sensor stage gives R = 1 when it is raining. Both stages use a sensor in a potential divider feeding a comparator. The logic output (5.0 V for logic 1) drives an LED indicator and, through a relay, the pump.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how a sensor in a potential divider and a comparator can give a logic output that switches at a chosen level.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The sensor's resistance changes with the quantity, so the divider output voltage changes.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The comparator compares this with a reference voltage (set with a variable resistor) and its output switches between two levels when the divider voltage crosses the reference.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The sensor's resistance changes with the quantity being sensed, so the potential divider's output voltage changes. A comparator compares this voltage with a reference set by a variable resistor, and its output switches from one level to the other when the divider voltage crosses the reference, giving logic 0 or 1."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the truth table for the pump P.",
+    "payload": {
+     "template": "DR = 00: P = {{blank:a}}; DR = 01: P = {{blank:b}}; DR = 10: P = {{blank:c}}; DR = 11: P = {{blank:d}}.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "d",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "P = 1 only when the soil is dry (D = 1) and it is not raining (R = 0)."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which arrangement of gates gives P?",
+    "options": [
+     {
+      "key": "A",
+      "content": "D and R both into a single two-input NOR gate",
+      "rationale": "NOR gives 1 only for D = R = 0: the pump would run only when the soil is wet."
+     },
+     {
+      "key": "B",
+      "content": "D and R into an AND gate",
+      "rationale": "This runs the pump only when it is raining."
+     },
+     {
+      "key": "C",
+      "content": "D through a NOT gate, then its output and R into an AND gate",
+      "rationale": "This gives D̄·R: the pump would run when the soil is wet and it is raining."
+     },
+     {
+      "key": "D",
+      "content": "R through a NOT gate, then its output and D into an AND gate",
+      "correct": true,
+      "rationale": "Correct: P = D · R̄."
+     }
+    ],
+    "explanation": "'Dry and not raining' → D AND (NOT R)."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The indicator LED needs 10 mA with 2.0 V across it. Calculate the resistance needed in series with it, in Ω.",
+    "payload": {
+     "unitHint": "Ω"
+    },
+    "answerSpec": {
+     "value": 300,
+     "units": {
+      "required": false,
+      "accepted": [
+       "Ω",
+       "ohm",
+       "ohms"
+      ]
+     }
+    },
+    "explanation": "$R = \\dfrac{5.0 - 2.0}{0.010} = 300\\ \\Omega$.",
+    "workedSolution": "1. $R = \\dfrac{5.0 - 2.0}{0.010} = 300\\ \\Omega$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a relay is needed to switch the pump.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The logic output can supply only a few milliamperes; the relay lets this small current switch the pump's large current in a separate (mains) circuit, isolating the electronics.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The logic output gives only a few milliamperes, while the pump needs a large current from its own supply; the relay lets the small current switch the pump circuit and keeps the two circuits isolated."
+    }
+   }
+  ],
+  "explanation": "P = D·R̄; sensors give logic inputs through comparators; LED resistor and relay at the output.",
+  "hints": [
+   "'Not raining' means R̄."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0"
+      },
+      {
+       "blankId": "b",
+       "text": "0"
+      },
+      {
+       "blankId": "c",
+       "text": "1"
+      },
+      {
+       "blankId": "d",
+       "text": "0"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "300"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       },
+       {
+        "blankId": "c",
+        "text": "0"
+       },
+       {
+        "blankId": "d",
+        "text": "1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "500"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC P2"
+ },
+ {
+  "key": "exam.w4b-theory.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.communication.modulation"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A medium-wave AM station broadcasts on a carrier of $702\\ \\text{kHz}$ with audio frequencies up to $4.0\\ \\text{kHz}$. A VHF FM station's carrier frequency deviates by $60\\ \\text{kHz}$ when its input signal has a peak of $2.4\\ \\text{V}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State what is meant by amplitude modulation.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The amplitude of the carrier wave is varied in synchrony with the displacement of the information signal (carrier frequency constant).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The amplitude of the carrier varies in step with the instantaneous value of the signal, while the carrier frequency stays constant."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 2,
+    "stem": "For a 4.0 kHz audio tone, calculate:",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "the lower side frequency, in kHz",
+      "payload": {
+       "unitHint": "kHz"
+      },
+      "answerSpec": {
+       "value": 698,
+       "units": {
+        "required": false,
+        "accepted": [
+         "kHz",
+         "kilohertz"
+        ]
+       }
+      },
+      "explanation": "$702 - 4.0 = 698\\ \\text{kHz}$.",
+      "workedSolution": "1. $702 - 4.0 = 698\\ \\text{kHz}$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "the upper side frequency, in kHz",
+      "payload": {
+       "unitHint": "kHz"
+      },
+      "answerSpec": {
+       "value": 706,
+       "units": {
+        "required": false,
+        "accepted": [
+         "kHz",
+         "kilohertz"
+        ]
+       }
+      },
+      "explanation": "$702 + 4.0 = 706\\ \\text{kHz}$.",
+      "workedSolution": "1. $702 + 4.0 = 706\\ \\text{kHz}$."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate how many such AM stations could share a waveband 360 kHz wide without overlapping.",
+    "answerSpec": {
+     "value": 45
+    },
+    "explanation": "Bandwidth $= 2 \\times 4.0 = 8.0\\ \\text{kHz}$; $\\dfrac{360}{8.0} = 45$ stations.",
+    "workedSolution": "1. Bandwidth $= 2 \\times 4.0 = 8.0\\ \\text{kHz}$; $\\dfrac{360}{8.0} = 45$ stations."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the frequency deviation of the FM transmitter per volt of signal, in kHz V⁻¹.",
+    "answerSpec": {
+     "value": 25
+    },
+    "explanation": "$\\dfrac{60}{2.4} = 25\\ \\text{kHz V}^{-1}$; doubling the signal amplitude would double the deviation.",
+    "workedSolution": "1. $\\dfrac{60}{2.4} = 25\\ \\text{kHz V}^{-1}$; doubling the signal amplitude would double the deviation."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why FM reception is less noisy than AM reception.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Noise (electrical interference) mainly adds to the amplitude of the received wave.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "In FM the information is in the frequency, so the receiver can limit/ignore amplitude variations; in AM the amplitude carries the signal, so noise is heard.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Electrical noise mostly alters the amplitude of the received wave. In AM the amplitude carries the information, so the noise is reproduced; in FM the information is in the frequency, so the receiver can remove amplitude variations and the noise with them."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State one disadvantage of FM compared with AM.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Much larger bandwidth per station (fewer stations per waveband) / shorter range (VHF line of sight) / more complex, expensive equipment.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: FM needs a much larger bandwidth for each station, so fewer stations fit into a waveband."
+    }
+   }
+  ],
+  "explanation": "AM: side frequencies f_c ± f_m, bandwidth 2f_m. FM: deviation ∝ signal amplitude.",
+  "hints": [
+   "Bandwidth = 2f_m."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)(i)": {
+     "type": "NUMERICAL",
+     "value": "698"
+    },
+    "(b)(ii)": {
+     "type": "NUMERICAL",
+     "value": "706"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "45"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "25"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)(i)": {
+      "type": "NUMERICAL",
+      "value": "694"
+     },
+     "(b)(ii)": {
+      "type": "NUMERICAL",
+      "value": "710"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "90"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "144"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC P2"
+ },
+ {
+  "key": "exam.w4b-theory.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.communication.digital-signals",
+   "aphys.communication.channels-attenuation"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A telephone link digitises speech by sampling it 9600 times per second with 12 bits per sample, and sends it along an optical fibre of attenuation $0.35\\ \\text{dB km}^{-1}$. The transmitter launches $1.8\\ \\text{mW}$ into the fibre.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the number of quantisation levels.",
+    "answerSpec": {
+     "value": 4096
+    },
+    "explanation": "$2^{12} = 4096$.",
+    "workedSolution": "1. $2^{12} = 4096$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the bit rate, in bits per second.",
+    "payload": {
+     "unitHint": "bit/s"
+    },
+    "answerSpec": {
+     "value": 115200,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bit/s",
+       "bits per second",
+       "bps",
+       "bit s^-1"
+      ]
+     }
+    },
+    "explanation": "$9600 \\times 12 = 115200\\ \\text{bit s}^{-1}$.",
+    "workedSolution": "1. $9600 \\times 12 = 115200\\ \\text{bit s}^{-1}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the highest audio frequency that this sampling rate can reproduce, in Hz.",
+    "payload": {
+     "unitHint": "Hz"
+    },
+    "answerSpec": {
+     "value": 4800,
+     "units": {
+      "required": false,
+      "accepted": [
+       "Hz",
+       "hertz",
+       "s^-1",
+       "s-1"
+      ]
+     }
+    },
+    "explanation": "$f_{\\max} = f_{\\text{s}}/2 = 4800\\ \\text{Hz}$.",
+    "workedSolution": "1. $f_{\\max} = f_{\\text{s}}/2 = 4800\\ \\text{Hz}$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the power reaching the end of a 40 km length of fibre, in mW, to three significant figures.",
+    "payload": {
+     "unitHint": "mW"
+    },
+    "answerSpec": {
+     "value": 0.07165929069962952,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "mW",
+       "milliwatts"
+      ]
+     }
+    },
+    "explanation": "Loss $= 0.35 \\times 40 = 14\\ \\text{dB}$; $P = 1.8 \\times 10^{-1.4} = 0.0717\\ \\text{mW}$.",
+    "workedSolution": "1. Loss $= 0.35 \\times 40 = 14\\ \\text{dB}$; $P = 1.8 \\times 10^{-1.4} = 0.0717\\ \\text{mW}$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The receiver needs at least $0.50\\ \\mu\\text{W}$. Calculate the maximum length of fibre between regenerators, in km, to three significant figures.",
+    "payload": {
+     "unitHint": "km"
+    },
+    "answerSpec": {
+     "value": 101.60864287906534,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "km",
+       "kilometres"
+      ]
+     }
+    },
+    "explanation": "Allowed loss $= 10\\lg\\dfrac{1.8 \\times 10^{-3}}{5.0 \\times 10^{-7}} = 35.6\\ \\text{dB}$; length $= \\dfrac{35.6}{0.35} = 102\\ \\text{km}$.",
+    "workedSolution": "1. Allowed loss $= 10\\lg\\dfrac{1.8 \\times 10^{-3}}{5.0 \\times 10^{-7}} = 35.6\\ \\text{dB}$; length $= \\dfrac{35.6}{0.35} = 102\\ \\text{km}$."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the signal is regenerated rather than simply amplified at intervals along the route.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Amplifiers boost the noise picked up as well as the signal, so noise builds up.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A regenerator recognises each pulse as 1 or 0 and sends a new clean pulse, removing the noise.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: An amplifier boosts the noise along with the signal, so noise accumulates along the route. A regenerator decides whether each pulse is a 1 or a 0 and transmits a fresh, clean pulse, so the noise is removed."
+    }
+   }
+  ],
+  "explanation": "Levels 2ⁿ; bit rate f_s × n; dB losses add; regeneration removes noise.",
+  "hints": [
+   "dB loss = attenuation per km × length.",
+   "f_s ≥ 2 f_max."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "4096"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "115200"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4800"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.0717"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "102"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "24"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "9600"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "9600"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.40000000000000013"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "10285.714285714286"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC P2"
+ },
+ {
+  "key": "exam.w4b-theory.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.astro.stellar-radii",
+   "aphys.astro.luminosity-standard-candles"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The spectrum of a star peaks at a wavelength of $450\\ \\text{nm}$. The radiant flux intensity received from it at the Earth is $6.2 \\times 10^{-10}\\ \\text{W m}^{-2}$, and its distance is $2.2 \\times 10^{17}\\ \\text{m}$. Wien's displacement constant is $2.9 \\times 10^{-3}\\ \\text{m K}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Define the luminosity of a star.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The total power of electromagnetic radiation emitted by the star.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Luminosity is the total power of electromagnetic radiation emitted by a star."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the surface temperature of the star, in K, to two significant figures.",
+    "payload": {
+     "unitHint": "K"
+    },
+    "answerSpec": {
+     "value": 6444.444444444444,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 50
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "K",
+       "kelvin",
+       "kelvins"
+      ]
+     }
+    },
+    "explanation": "$T = \\dfrac{2.9 \\times 10^{-3}}{4.5 \\times 10^{-7}} = 6400\\ \\text{K}$.",
+    "workedSolution": "1. $T = \\dfrac{2.9 \\times 10^{-3}}{4.5 \\times 10^{-7}} = 6400\\ \\text{K}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the luminosity of the star, in W, to two significant figures.",
+    "payload": {
+     "unitHint": "W"
+    },
+    "answerSpec": {
+     "value": 3.7709164939569006e+26,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 5e+24
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "W",
+       "watts",
+       "watt"
+      ]
+     }
+    },
+    "explanation": "$L = 4\\pi d^{2}F = 4\\pi(2.2 \\times 10^{17})^{2} \\times 6.2 \\times 10^{-10} = 3.8 \\times 10^{26}\\ \\text{W}$.",
+    "workedSolution": "1. $L = 4\\pi d^{2}F = 4\\pi(2.2 \\times 10^{17})^{2} \\times 6.2 \\times 10^{-10} = 3.8 \\times 10^{26}\\ \\text{W}$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Calculate the radius of the star, in m, to two significant figures.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 553931455.7866689,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 5000000
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "$r = \\sqrt{\\dfrac{L}{4\\pi\\sigma T^{4}}} = \\sqrt{\\dfrac{3.8 \\times 10^{26}}{4\\pi \\times 5.67 \\times 10^{-8} \\times 6440^{4}}} = 5.5 \\times 10^{8}\\ \\text{m}$.",
+    "workedSolution": "1. $r = \\sqrt{\\dfrac{L}{4\\pi\\sigma T^{4}}} = \\sqrt{\\dfrac{3.8 \\times 10^{26}}{4\\pi \\times 5.67 \\times 10^{-8} \\times 6440^{4}}} = 5.5 \\times 10^{8}\\ \\text{m}$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "This star and the Sun have similar luminosities. Using your answers, explain how their sizes compare.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The star is hotter than the Sun (about 6400 K against 5800 K), so each square metre radiates more (σT⁴).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "With similar L, L ∝ r²T⁴ means the hotter star must be smaller than the Sun (r ∝ 1/T²).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The star is hotter than the Sun, so each square metre of its surface radiates more power. Since L = 4πσr²T⁴ and the luminosities are similar, the hotter star must have a smaller surface area, so it is somewhat smaller than the Sun (r ∝ 1/T² for equal L)."
+    }
+   }
+  ],
+  "explanation": "Wien gives T; L = 4πd²F; Stefan-Boltzmann gives r.",
+  "hints": [
+   "Find T, then L, then r = √(L/4πσT⁴)."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "6400"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3.8 × 10^26"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "5.5 × 10^8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.000006444444444444444"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3.0008e+25"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "306840057709938300"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/physics"
+  ],
+  "calculator": true,
+  "paper": "Cambridge P4"
+ },
+ {
+  "key": "exam.w4b-theory.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.medical.pet"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A hospital PET scanner is used to locate a tumour. The patient is injected with a glucose-like compound containing a β⁺-emitting isotope, and lies inside a ring of gamma-ray detectors.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain what is meant by a tracer and why the isotope must emit β⁺ particles.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A tracer is a substance containing radioactive nuclei introduced into the body and absorbed by the tissue being studied.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "β⁺ particles (positrons) annihilate with electrons, producing gamma photons that leave the body and can be detected.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A tracer is a compound containing radioactive nuclei which is put into the body and absorbed by the tissue being studied. The isotope must emit positrons, which annihilate with electrons to produce gamma photons that escape from the body to the detectors."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the energy of each photon produced when a positron and an electron annihilate at rest, in MeV, to three significant figures.",
+    "payload": {
+     "unitHint": "MeV"
+    },
+    "answerSpec": {
+     "value": 0.5124375,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "MeV",
+       "megaelectronvolts"
+      ]
+     }
+    },
+    "explanation": "$m_ec^2 = 8.20 \\times 10^{-14}\\ \\text{J} = 0.512\\ \\text{MeV}$.",
+    "workedSolution": "1. $m_ec^2 = 8.20 \\times 10^{-14}\\ \\text{J} = 0.512\\ \\text{MeV}$."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the wavelength of each photon, in pm, to three significant figures.",
+    "payload": {
+     "unitHint": "pm"
+    },
+    "answerSpec": {
+     "value": 2.425905598243688,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "pm",
+       "picometres"
+      ]
+     }
+    },
+    "explanation": "$\\lambda = \\dfrac{hc}{E} = \\dfrac{6.63 \\times 10^{-34} \\times 3.00 \\times 10^{8}}{8.20 \\times 10^{-14}} = 2.43\\ \\text{pm}$.",
+    "workedSolution": "1. $\\lambda = \\dfrac{hc}{E} = \\dfrac{6.63 \\times 10^{-34} \\times 3.00 \\times 10^{8}}{8.20 \\times 10^{-14}} = 2.43\\ \\text{pm}$."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the two photons travel in opposite directions.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The positron and electron are (almost) at rest, so the total momentum before annihilation is zero.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Momentum is conserved, so the photons' momenta must be equal and opposite: they move in opposite directions.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Before annihilation the total momentum is almost zero. Momentum is conserved, so the two photons must have equal and opposite momenta and therefore travel in opposite directions."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "For one annihilation, the photons reach two opposite detectors $0.60\\ \\text{ns}$ apart. Calculate how far the annihilation was from the midpoint of the line joining the detectors, in cm.",
+    "payload": {
+     "unitHint": "cm"
+    },
+    "answerSpec": {
+     "value": 9,
+     "units": {
+      "required": false,
+      "accepted": [
+       "cm",
+       "centimetres",
+       "centimetre"
+      ]
+     }
+    },
+    "explanation": "$x = \\dfrac{c\\Delta t}{2} = \\dfrac{3.00 \\times 10^{8} \\times 0.60 \\times 10^{-9}}{2} = 9.0\\ \\text{cm}$.",
+    "workedSolution": "1. $x = \\dfrac{c\\Delta t}{2} = \\dfrac{3.00 \\times 10^{8} \\times 0.60 \\times 10^{-9}}{2} = 9.0\\ \\text{cm}$."
+   }
+  ],
+  "explanation": "Tracer with a β⁺ emitter; annihilation gives two 0.51 MeV photons back to back; x = cΔt/2.",
+  "hints": [
+   "Each photon has energy m_e c².",
+   "The path difference is 2x."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "0.512"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.43"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "9"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1.024875"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1.212952799121844"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "18"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/physics"
+  ],
+  "calculator": true,
+  "paper": "Cambridge P4"
+ }
+]

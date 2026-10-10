@@ -1,0 +1,955 @@
+[
+ {
+  "key": "exam.w4b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.electronics.op-amp-amplifiers",
+   "aphys.electronics.op-amp-properties",
+   "aphys.electronics.sensors-output-devices"
+  ],
+  "difficulty": 5,
+  "marks": 20,
+  "estimatedSeconds": 1800,
+  "stem": "Part 1: a load cell on a weighbridge gives an output from 0 to $24\\ \\text{mV}$, which must be amplified to 0 to $4.8\\ \\text{V}$ by a non-inverting amplifier with $R_1 = 1.0\\ \\text{k}\\Omega$, using an op-amp with a gain-bandwidth product of $1.0\\ \\text{MHz}$.\n\nPart 2: an overheat warning uses an op-amp comparator powered from $\\pm 10\\ \\text{V}$ (saturating at $\\pm 10\\ \\text{V}$). The inverting input is connected to the junction of a $33\\ \\text{k}\\Omega$ resistor (to $+10\\ \\text{V}$) and a $27\\ \\text{k}\\Omega$ resistor (to 0 V). The non-inverting input is connected to the junction of an NTC thermistor (to $+10\\ \\text{V}$) and a $5.6\\ \\text{k}\\Omega$ resistor (to 0 V). A red LED and series resistor are connected from the output to 0 V.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "State the properties of an ideal operational amplifier, and explain what is meant by negative feedback and two of its effects on an amplifier.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Infinite open-loop gain and infinite input resistance.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Zero output resistance; infinite bandwidth and slew rate.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Negative feedback: a fraction of the output is returned to the inverting input, opposing the change that produced it.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Effect: gain reduced but stable and set by resistor values (independent of A₀).",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Effect: bandwidth increased (gain × bandwidth constant) / less distortion.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: An ideal op-amp has infinite open-loop gain, infinite input resistance, zero output resistance, and infinite bandwidth and slew rate. Negative feedback means returning a fraction of the output voltage to the inverting input, so that it opposes the change that caused it. It reduces the gain, but makes it stable and fixed by resistor values instead of by A₀, and it increases the bandwidth, since gain × bandwidth is roughly constant, while also reducing distortion."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "Describe the circuit of a non-inverting amplifier and derive the expression $G = 1 + R_f/R_1$ for its gain.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Input to the non-inverting input; R_f from output to inverting input; R₁ from inverting input to 0 V.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "No current enters the inverting input, so R_f and R₁ form a potential divider: V⁻ = V_out R₁/(R₁ + R_f).",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Very large A₀ and output not saturated, so V⁻ ≈ V⁺.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "V⁺ = V_in, so V_in = V_out R₁/(R₁ + R_f).",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "G = V_out/V_in = (R₁ + R_f)/R₁ = 1 + R_f/R₁.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The input is applied to the non-inverting input. R_f connects the output to the inverting input and R₁ connects the inverting input to 0 V. Because no current enters the op-amp, R_f and R₁ form a potential divider across the output, so V⁻ = V_out R₁/(R₁ + R_f). The open-loop gain is very large and the output is not saturated, so V⁻ ≈ V⁺ = V_in. Hence V_in = V_out R₁/(R₁ + R_f) and G = (R₁ + R_f)/R₁ = 1 + R_f/R₁."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "For the load-cell amplifier in Part 1:",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "calculate the gain needed",
+      "answerSpec": {
+       "value": 200
+      },
+      "explanation": "$\\dfrac{4.8}{0.024} = 200$.",
+      "workedSolution": "1. $\\dfrac{4.8}{0.024} = 200$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "calculate the value of R_f needed, in kΩ",
+      "payload": {
+       "unitHint": "kΩ"
+      },
+      "answerSpec": {
+       "value": 199,
+       "units": {
+        "required": false,
+        "accepted": [
+         "kΩ",
+         "kilohms",
+         "kohm"
+        ]
+       }
+      },
+      "explanation": "$R_f = (G - 1)R_1 = 199\\ \\text{k}\\Omega$.",
+      "workedSolution": "1. $R_f = (G - 1)R_1 = 199\\ \\text{k}\\Omega$."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "with the standard value $R_f = 200\\ \\text{k}\\Omega$, estimate the bandwidth of the amplifier, in kHz, to two significant figures",
+      "payload": {
+       "unitHint": "kHz"
+      },
+      "answerSpec": {
+       "value": 4.975124378109452,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "kHz",
+         "kilohertz"
+        ]
+       }
+      },
+      "explanation": "$G = 1 + 200 = 201$; bandwidth $\\approx \\dfrac{1.0 \\times 10^{6}}{201} = 5.0\\ \\text{kHz}$.",
+      "workedSolution": "1. $G = 1 + 200 = 201$; bandwidth $\\approx \\dfrac{1.0 \\times 10^{6}}{201} = 5.0\\ \\text{kHz}$."
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "For the comparator in Part 2:",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "calculate the thermistor resistance at which the output switches, in kΩ, to three significant figures",
+      "payload": {
+       "unitHint": "kΩ"
+      },
+      "answerSpec": {
+       "value": 6.844444444444444,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "kΩ",
+         "kilohms",
+         "kohm"
+        ]
+       }
+      },
+      "explanation": "$V^{-} = 10 \\times \\dfrac{27}{60} = 4.5\\ \\text{V}$; switching when $10 \\times \\dfrac{5.6}{R + 5.6} = 4.5$, so $R = 5.6 \\times \\dfrac{10 - 4.5}{4.5} = 6.84\\ \\text{k}\\Omega$.",
+      "workedSolution": "1. $V^{-} = 10 \\times \\dfrac{27}{60} = 4.5\\ \\text{V}$; switching when $10 \\times \\dfrac{5.6}{R + 5.6} = 4.5$, so $R = 5.6 \\times \\dfrac{10 - 4.5}{4.5} = 6.84\\ \\text{k}\\Omega$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "state the output voltage, in V, when the thermistor's resistance is $9.1\\ \\text{k}\\Omega$",
+      "payload": {
+       "unitHint": "V"
+      },
+      "answerSpec": {
+       "value": -10,
+       "units": {
+        "required": false,
+        "accepted": [
+         "V",
+         "volts",
+         "volt",
+         "J/C"
+        ]
+       }
+      },
+      "explanation": "$V^{+} = 10 \\times \\dfrac{5.6}{14.7} = 3.81\\ \\text{V} < 4.5\\ \\text{V}$, so the output is at $-10\\ \\text{V}$ (LED off).",
+      "workedSolution": "1. $V^{+} = 10 \\times \\dfrac{5.6}{14.7} = 3.81\\ \\text{V} < 4.5\\ \\text{V}$, so the output is at $-10\\ \\text{V}$ (LED off)."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "calculate the series resistance for an LED that needs 20 mA with 1.9 V across it, in Ω",
+      "payload": {
+       "unitHint": "Ω"
+      },
+      "answerSpec": {
+       "value": 405,
+       "units": {
+        "required": false,
+        "accepted": [
+         "Ω",
+         "ohm",
+         "ohms"
+        ]
+       }
+      },
+      "explanation": "$R = \\dfrac{10 - 1.9}{0.020} = 405\\ \\Omega$.",
+      "workedSolution": "1. $R = \\dfrac{10 - 1.9}{0.020} = 405\\ \\Omega$."
+     }
+    ]
+   }
+  ],
+  "explanation": "Non-inverting gain 1 + R_f/R₁; gain × bandwidth ≈ constant; comparator switches when the divider voltages are equal.",
+  "hints": [
+   "R_f = (G − 1)R₁.",
+   "Find the reference voltage first."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)(i)": {
+     "type": "NUMERICAL",
+     "value": "200"
+    },
+    "(c)(ii)": {
+     "type": "NUMERICAL",
+     "value": "199"
+    },
+    "(c)(iii)": {
+     "type": "NUMERICAL",
+     "value": "5.0"
+    },
+    "(d)(i)": {
+     "type": "NUMERICAL",
+     "value": "6.84"
+    },
+    "(d)(ii)": {
+     "type": "NUMERICAL",
+     "value": "-10"
+    },
+    "(d)(iii)": {
+     "type": "NUMERICAL",
+     "value": "405"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)(i)": {
+      "type": "NUMERICAL",
+      "value": "0.005"
+     },
+     "(c)(ii)": {
+      "type": "NUMERICAL",
+      "value": "200"
+     },
+     "(c)(iii)": {
+      "type": "NUMERICAL",
+      "value": "201000"
+     },
+     "(d)(i)": {
+      "type": "NUMERICAL",
+      "value": "4.581818181818182"
+     },
+     "(d)(ii)": {
+      "type": "NUMERICAL",
+      "value": "10"
+     },
+     "(d)(iii)": {
+      "type": "NUMERICAL",
+      "value": "500"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC P3"
+ },
+ {
+  "key": "exam.w4b-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.communication.modulation",
+   "aphys.communication.channels-attenuation"
+  ],
+  "difficulty": 4,
+  "marks": 20,
+  "estimatedSeconds": 1800,
+  "stem": "Part 1: a medium-wave station broadcasts by amplitude modulation on a carrier of $909\\ \\text{kHz}$, with audio frequencies up to $4.5\\ \\text{kHz}$.\n\nPart 2: a geostationary satellite $3.6 \\times 10^{7}\\ \\text{m}$ above the equator transmits $20\\ \\text{W}$ on its downlink; a ground station directly below receives $5.0 \\times 10^{-14}\\ \\text{W}$. The ground station is joined to an exchange by $3.0\\ \\text{km}$ of coaxial cable of attenuation $6.0\\ \\text{dB km}^{-1}$, followed by an amplifier of gain $20\\ \\text{dB}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "Explain why information is transmitted on a carrier wave, and describe amplitude modulation and frequency modulation.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Audio-frequency waves have very long wavelengths, so aerials would be impractically long; a high-frequency carrier needs a short aerial.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Each station uses a different carrier frequency so receivers can tune to one station without interference.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "AM: the amplitude of the carrier varies in synchrony with the signal's displacement.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "AM: the carrier frequency is constant.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "FM: the carrier frequency varies with the signal's displacement (deviation ∝ signal amplitude, rate = signal frequency) while the amplitude is constant.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Audio signals have wavelengths of many kilometres, so they would need impossibly long aerials, and if every station sent audio directly they would all interfere; giving each station its own high-frequency carrier solves both problems and lets a receiver tune to one station. In amplitude modulation the carrier's amplitude varies in step with the signal's displacement while its frequency stays constant. In frequency modulation the carrier's frequency varies in step with the signal, the size of the deviation depending on the signal amplitude and its rate on the signal frequency, while the carrier amplitude stays constant."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "Describe how radio waves of different frequencies travel from transmitter to receiver, and explain why satellite links use microwaves with different uplink and downlink frequencies.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Surface (ground) waves, below about 3 MHz, follow the curvature of the Earth.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Sky waves, about 3-30 MHz, are reflected by the ionosphere.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Space waves, above about 30 MHz, pass through the ionosphere and travel in straight lines (line of sight).",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Satellites use microwaves because they pass through the ionosphere and can be focused into narrow beams by dishes.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Uplink and downlink frequencies differ so the satellite's strong transmission does not swamp the very weak signal it receives.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Below about 3 MHz, surface waves follow the curvature of the Earth; between about 3 and 30 MHz, sky waves are reflected by the ionosphere; above about 30 MHz, space waves pass through the ionosphere in straight lines. Satellite links therefore use microwaves, which pass through the ionosphere and can be focused into narrow beams by dish aerials. The uplink and downlink use different frequencies so that the satellite's powerful transmission does not swamp the very weak signal it is receiving."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "For the AM station in Part 1, calculate:",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "the lowest frequency transmitted, in kHz",
+      "payload": {
+       "unitHint": "kHz"
+      },
+      "answerSpec": {
+       "value": 904.5,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "kHz",
+         "kilohertz"
+        ]
+       }
+      },
+      "explanation": "$909 - 4.5 = 904.5\\ \\text{kHz}$.",
+      "workedSolution": "1. $909 - 4.5 = 904.5\\ \\text{kHz}$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "the highest frequency transmitted, in kHz",
+      "payload": {
+       "unitHint": "kHz"
+      },
+      "answerSpec": {
+       "value": 913.5,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "kHz",
+         "kilohertz"
+        ]
+       }
+      },
+      "explanation": "$909 + 4.5 = 913.5\\ \\text{kHz}$.",
+      "workedSolution": "1. $909 + 4.5 = 913.5\\ \\text{kHz}$."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "the bandwidth, in kHz",
+      "payload": {
+       "unitHint": "kHz"
+      },
+      "answerSpec": {
+       "value": 9,
+       "units": {
+        "required": false,
+        "accepted": [
+         "kHz",
+         "kilohertz"
+        ]
+       }
+      },
+      "explanation": "$2 \\times 4.5 = 9\\ \\text{kHz}$.",
+      "workedSolution": "1. $2 \\times 4.5 = 9\\ \\text{kHz}$."
+     },
+     {
+      "label": "(iv)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "the number of stations of this bandwidth that fit in a long-wave band from 153 kHz to 279 kHz",
+      "answerSpec": {
+       "value": 14
+      },
+      "explanation": "$\\dfrac{279 - 153}{9.0} = 14$.",
+      "workedSolution": "1. $\\dfrac{279 - 153}{9.0} = 14$."
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "For the satellite link in Part 2, calculate:",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "the loss between the satellite and the ground station, in dB, to three significant figures",
+      "payload": {
+       "unitHint": "dB"
+      },
+      "answerSpec": {
+       "value": 146.02059991327963,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.5
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "dB",
+         "decibels",
+         "decibel"
+        ]
+       }
+      },
+      "explanation": "$10\\lg\\dfrac{20}{5.0 \\times 10^{-14}} = 146\\ \\text{dB}$.",
+      "workedSolution": "1. $10\\lg\\dfrac{20}{5.0 \\times 10^{-14}} = 146\\ \\text{dB}$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "the time for the signal to travel down from the satellite, in s",
+      "payload": {
+       "unitHint": "s"
+      },
+      "answerSpec": {
+       "value": 0.12,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "s",
+         "seconds",
+         "second",
+         "sec",
+         "secs"
+        ]
+       }
+      },
+      "explanation": "$\\dfrac{3.6 \\times 10^{7}}{3.0 \\times 10^{8}} = 0.12\\ \\text{s}$.",
+      "workedSolution": "1. $\\dfrac{3.6 \\times 10^{7}}{3.0 \\times 10^{8}} = 0.12\\ \\text{s}$."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "the power leaving the amplifier when 2.5 mW enters the coaxial cable, in mW, to three significant figures",
+      "payload": {
+       "unitHint": "mW"
+      },
+      "answerSpec": {
+       "value": 3.962232981152784,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "mW",
+         "milliwatts"
+        ]
+       }
+      },
+      "explanation": "Cable loss $= 6.0 \\times 3.0 = 18\\ \\text{dB}$; net change $= -18 + 20 = +2\\ \\text{dB}$; $P = 2.5 \\times 10^{0.2} = 3.96\\ \\text{mW}$.",
+      "workedSolution": "1. Cable loss $= 6.0 \\times 3.0 = 18\\ \\text{dB}$; net change $= -18 + 20 = +2\\ \\text{dB}$; $P = 2.5 \\times 10^{0.2} = 3.96\\ \\text{mW}$."
+     }
+    ]
+   }
+  ],
+  "explanation": "AM side frequencies f_c ± f_m; dB losses and gains add.",
+  "hints": [
+   "Bandwidth = 2f_m.",
+   "Add the decibel changes, then undo the logarithm."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)(i)": {
+     "type": "NUMERICAL",
+     "value": "904.5"
+    },
+    "(c)(ii)": {
+     "type": "NUMERICAL",
+     "value": "913.5"
+    },
+    "(c)(iii)": {
+     "type": "NUMERICAL",
+     "value": "9"
+    },
+    "(c)(iv)": {
+     "type": "NUMERICAL",
+     "value": "14"
+    },
+    "(d)(i)": {
+     "type": "NUMERICAL",
+     "value": "146"
+    },
+    "(d)(ii)": {
+     "type": "NUMERICAL",
+     "value": "0.120"
+    },
+    "(d)(iii)": {
+     "type": "NUMERICAL",
+     "value": "3.96"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)(i)": {
+      "type": "NUMERICAL",
+      "value": "900"
+     },
+     "(c)(ii)": {
+      "type": "NUMERICAL",
+      "value": "918"
+     },
+     "(c)(iii)": {
+      "type": "NUMERICAL",
+      "value": "4.5"
+     },
+     "(c)(iv)": {
+      "type": "NUMERICAL",
+      "value": "28"
+     },
+     "(d)(i)": {
+      "type": "NUMERICAL",
+      "value": "400000000000000"
+     },
+     "(d)(ii)": {
+      "type": "NUMERICAL",
+      "value": "0.24"
+     },
+     "(d)(iii)": {
+      "type": "NUMERICAL",
+      "value": "0.0003962232981152786"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC P3"
+ },
+ {
+  "key": "exam.w4b-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.electronics.logic-systems",
+   "aphys.electronics.logic-gates",
+   "aphys.communication.digital-signals"
+  ],
+  "difficulty": 4,
+  "marks": 20,
+  "estimatedSeconds": 1800,
+  "stem": "Part 1: a maize mill's motor must run only when the start switch is on, the safety guard is closed and the motor is not overheated.\n\nPart 2: a 4-bit analogue-to-digital converter has levels $0.40\\ \\text{V}$ apart (0000 = 0 V, 1111 = 6.0 V) and rounds each sample to the nearest level. A music recorder samples each of two stereo channels 32 000 times per second with 14 bits per sample.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "Define: (i) a logic gate, (ii) a truth table, (iii) a digital signal, (iv) sampling, (v) a bistable.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Logic gate: a circuit whose digital output depends only on the present states of its inputs according to a fixed rule.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Truth table: a list of every combination of input states with the corresponding output.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Digital signal: a signal with only discrete values (two levels, 1 and 0).",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Sampling: measuring an analogue signal at regular time intervals.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Bistable: a circuit with two stable states that holds the state last set (a one-bit memory).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: (i) A logic gate is a circuit whose digital output depends only on the present states of its inputs according to a fixed rule. (ii) A truth table lists every possible combination of inputs with the output for each. (iii) A digital signal takes only discrete values, in logic just 1 and 0. (iv) Sampling is measuring the value of an analogue signal at regular intervals of time. (v) A bistable is a circuit with two stable output states that stays in the state it was last set to, storing one bit."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "Design the logic system for the maize mill motor in Part 1: define the inputs, give a Boolean expression, describe the gates, and explain how the overheating input and the output stage work.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Inputs: S = 1 start on, G = 1 guard closed, H = 1 overheated; output M = 1 motor runs.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "$M = S \\cdot G \\cdot \\overline{H}$.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "H through a NOT gate; S, G and H̄ into a three-input AND gate (or two two-input AND gates).",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "H from a thermistor on the motor in a potential divider feeding a comparator set (variable resistor) to switch at the safe temperature.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Output drives a relay (with protective diode) that switches the motor's high-current supply.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Let S = 1 when the start switch is on, G = 1 when the guard is closed and H = 1 when the motor is overheated; M = 1 means the motor runs. Then M = S·G·H̄: H passes through a NOT gate, and S, G and H̄ go into an AND gate (or two two-input AND gates). H comes from a thermistor on the motor casing in a potential divider whose output goes to a comparator, with a variable resistor setting the switching temperature. The AND gate's output drives a relay, with a diode across its coil, which switches the motor's high-current supply."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "For the ADC in Part 2:",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "state the number of quantisation levels",
+      "answerSpec": {
+       "value": 16
+      },
+      "explanation": "2⁴ = 16.",
+      "workedSolution": "1. 2⁴ = 16."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "stem": "write the code produced for a sample of 3.3 V",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "1000"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      "explanation": "$3.3/0.40 = 8.25$ → level 8 → 1000."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "calculate the voltage that a matching DAC outputs for the code 1011, in V, to two significant figures",
+      "payload": {
+       "unitHint": "V"
+      },
+      "answerSpec": {
+       "value": 4.4,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "V",
+         "volts",
+         "volt",
+         "J/C"
+        ]
+       }
+      },
+      "explanation": "1011 = 8 + 2 + 1 = 11; $11 \\times 0.40 = 4.4\\ \\text{V}$.",
+      "workedSolution": "1. 1011 = 8 + 2 + 1 = 11; $11 \\times 0.40 = 4.4\\ \\text{V}$."
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "For the music recorder in Part 2:",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "calculate the total bit rate for both channels, in bits per second",
+      "payload": {
+       "unitHint": "bit/s"
+      },
+      "answerSpec": {
+       "value": 896000,
+       "units": {
+        "required": false,
+        "accepted": [
+         "bit/s",
+         "bits per second",
+         "bps",
+         "bit s^-1"
+        ]
+       }
+      },
+      "explanation": "$32\\,000 \\times 14 \\times 2 = 896000\\ \\text{bit s}^{-1}$.",
+      "workedSolution": "1. $32\\,000 \\times 14 \\times 2 = 896000\\ \\text{bit s}^{-1}$."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "state the highest audio frequency it can record, in kHz",
+      "payload": {
+       "unitHint": "kHz"
+      },
+      "answerSpec": {
+       "value": 16,
+       "units": {
+        "required": false,
+        "accepted": [
+         "kHz",
+         "kilohertz"
+        ]
+       }
+      },
+      "explanation": "Half the sampling rate: 32/2 = 16 kHz.",
+      "workedSolution": "1. Half the sampling rate: 32/2 = 16 kHz."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "calculate the number of bits needed to store 3.0 minutes of music, to three significant figures",
+      "answerSpec": {
+       "value": 161280000,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 500000
+       }
+      },
+      "explanation": "$896000 \\times 180 = 1.61 \\times 10^{8}$ bits.",
+      "workedSolution": "1. $896000 \\times 180 = 1.61 \\times 10^{8}$ bits."
+     }
+    ]
+   }
+  ],
+  "explanation": "M = S·G·H̄; ADC: level = sample/step, code in binary; bit rate = f_s × n × channels.",
+  "hints": [
+   "n bits give 2ⁿ levels.",
+   "Convert minutes to seconds."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)(i)": {
+     "type": "NUMERICAL",
+     "value": "16"
+    },
+    "(c)(ii)": {
+     "type": "SHORT_ANSWER",
+     "text": "1000"
+    },
+    "(c)(iii)": {
+     "type": "NUMERICAL",
+     "value": "4.4"
+    },
+    "(d)(i)": {
+     "type": "NUMERICAL",
+     "value": "896000"
+    },
+    "(d)(ii)": {
+     "type": "NUMERICAL",
+     "value": "16"
+    },
+    "(d)(iii)": {
+     "type": "NUMERICAL",
+     "value": "1.61 × 10^8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)(i)": {
+      "type": "NUMERICAL",
+      "value": "15"
+     },
+     "(c)(iii)": {
+      "type": "NUMERICAL",
+      "value": "404.40000000000003"
+     },
+     "(d)(i)": {
+      "type": "NUMERICAL",
+      "value": "448000"
+     },
+     "(d)(ii)": {
+      "type": "NUMERICAL",
+      "value": "32"
+     },
+     "(d)(iii)": {
+      "type": "NUMERICAL",
+      "value": "2688000"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC P3"
+ }
+]

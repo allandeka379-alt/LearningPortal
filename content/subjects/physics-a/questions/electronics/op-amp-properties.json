@@ -1,0 +1,1450 @@
+[
+ {
+  "key": "electronics.op-amp-properties.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which pair of values describes the input resistance and the output resistance of an ideal operational amplifier?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Input resistance infinite; output resistance zero",
+    "correct": true,
+    "rationale": "Correct: it draws no input current and its output voltage does not depend on the load."
+   },
+   {
+    "key": "B",
+    "content": "Input resistance zero; output resistance infinite",
+    "rationale": "This is the reverse: a zero input resistance would short-circuit the source."
+   },
+   {
+    "key": "C",
+    "content": "Input resistance infinite; output resistance infinite",
+    "rationale": "An infinite output resistance would mean the output voltage collapses whenever a load draws current."
+   },
+   {
+    "key": "D",
+    "content": "Input resistance zero; output resistance zero",
+    "rationale": "A zero input resistance would draw a large current from a sensor and change its voltage."
+   }
+  ],
+  "explanation": "Ideal op-amp: infinite open-loop gain, infinite input resistance, zero output resistance, infinite bandwidth and slew rate.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "electronics.op-amp-properties.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An op-amp input is connected to the junction of a thermistor and a fixed resistor. Which property of the op-amp ensures that connecting it does not change the voltage at the junction?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Its very high input resistance",
+    "correct": true,
+    "rationale": "Correct: it draws almost no current from the divider, so the divider is not loaded."
+   },
+   {
+    "key": "B",
+    "content": "Its very high open-loop gain",
+    "rationale": "The gain decides how the output responds; it does not stop current being drawn from the divider."
+   },
+   {
+    "key": "C",
+    "content": "Its very low output resistance",
+    "rationale": "This concerns the output and the load, not the input side."
+   },
+   {
+    "key": "D",
+    "content": "Its very high slew rate",
+    "rationale": "Slew rate is how fast the output can change; it has nothing to do with loading the input."
+   }
+  ],
+  "explanation": "A very high input resistance means negligible input current, so the potential divider's output is unchanged.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.op-amp-properties.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An op-amp with open-loop gain $5.0 \\times 10^{4}$ runs from a $\\pm 15\\ \\text{V}$ supply and saturates at the supply voltages. $V^{+} = 3.0\\ \\text{V}$ and $V^{-} = 3.3\\ \\text{V}$. What is the output voltage?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$+15\\ \\text{V}$",
+    "rationale": "The output is positive only when the non-inverting input is higher."
+   },
+   {
+    "key": "B",
+    "content": "$-15\\ \\text{V}$",
+    "correct": true,
+    "rationale": "Correct: V⁻ > V⁺, and 0.3 V × 5.0 × 10⁴ is far beyond the supply, so the output saturates negatively."
+   },
+   {
+    "key": "C",
+    "content": "$-1.5 \\times 10^{4}\\ \\text{V}$",
+    "rationale": "A₀(V⁺ − V⁻) is impossible here: the output cannot exceed the supply voltage."
+   },
+   {
+    "key": "D",
+    "content": "$-0.3\\ \\text{V}$",
+    "rationale": "This is just the input difference; the op-amp multiplies it by the open-loop gain until it saturates."
+   }
+  ],
+  "explanation": "$A_0(V^{+} - V^{-}) = -1.5 \\times 10^{4}\\ \\text{V}$, far beyond the supply, so the output saturates at $-15\\ \\text{V}$ (negative because $V^{-} > V^{+}$).",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "electronics.op-amp-properties.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An op-amp has an open-loop gain of $4.0 \\times 10^{5}$ and its output saturates at $\\pm 14\\ \\text{V}$. What is the largest input difference $|V^{+} - V^{-}|$ for which the output is not saturated?",
+  "options": [
+   {
+    "key": "A",
+    "content": "$70\\ \\mu\\text{V}$",
+    "rationale": "This uses the full swing of 28 V; saturation is reached at 14 V on either side of zero."
+   },
+   {
+    "key": "B",
+    "content": "$35\\ \\mu\\text{V}$",
+    "correct": true,
+    "rationale": "Correct: 14 / (4.0 × 10⁵) = 3.5 × 10⁻⁵ V."
+   },
+   {
+    "key": "C",
+    "content": "$5.6 \\times 10^{6}\\ \\text{V}$",
+    "rationale": "This multiplies by the gain instead of dividing."
+   },
+   {
+    "key": "D",
+    "content": "$14\\ \\text{V}$",
+    "rationale": "This is the output at saturation, not the input difference that causes it."
+   }
+  ],
+  "explanation": "$|V^{+} - V^{-}|_{\\max} = \\dfrac{V_{\\text{sat}}}{A_0} = \\dfrac{14}{4.0 \\times 10^{5}} = 3.5 \\times 10^{-5}\\ \\text{V} = 35\\ \\mu\\text{V}$.",
+  "hints": [
+   "Divide the saturation voltage by the open-loop gain."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "electronics.op-amp-properties.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which description fits the graph of $V_{\\text{out}}$ against $(V^{+} - V^{-})$ for an op-amp used without feedback?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A straight line through the origin with gradient A₀ for every input difference",
+    "rationale": "The output cannot go beyond the supply voltages, so the line must level off."
+   },
+   {
+    "key": "B",
+    "content": "A horizontal line at zero until the inputs differ by about 1 V, then a step to saturation",
+    "rationale": "Any difference above a few tens of microvolts already saturates the output."
+   },
+   {
+    "key": "C",
+    "content": "A steep line through the origin over a few microvolts, flat at the two saturation voltages outside it",
+    "correct": true,
+    "rationale": "Correct: linear with gradient A₀ only for tiny differences, then saturated."
+   },
+   {
+    "key": "D",
+    "content": "A curve that rises steeply at first and then levels off gradually towards one supply voltage",
+    "rationale": "The characteristic is linear and then abruptly flat, and it is symmetrical about the origin."
+   }
+  ],
+  "explanation": "With A₀ ≈ 10⁵, the linear region is only tens of microvolts wide; outside it the output is at ±V_sat.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.op-amp-properties.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a dusk switch, an LDR is connected between $+9\\ \\text{V}$ and the inverting input, and a fixed resistor between the inverting input and 0 V. The non-inverting input is held at a fixed $4.5\\ \\text{V}$. What happens to the output as it gets dark?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It switches from $+9\\ \\text{V}$ to $-9\\ \\text{V}$.",
+    "rationale": "This would happen if V⁻ rose in the dark; the LDR is at the top of the divider, so V⁻ falls."
+   },
+   {
+    "key": "B",
+    "content": "It falls gradually in proportion to the light level.",
+    "rationale": "Without feedback the op-amp is a comparator: it switches between saturation levels."
+   },
+   {
+    "key": "C",
+    "content": "It stays constant because the reference voltage is fixed.",
+    "rationale": "The output depends on the difference V⁺ − V⁻, and V⁻ changes with the light."
+   },
+   {
+    "key": "D",
+    "content": "It switches from $-9\\ \\text{V}$ to $+9\\ \\text{V}$.",
+    "correct": true,
+    "rationale": "Correct: in the dark the LDR resistance rises, V⁻ falls below 4.5 V and the output goes positive."
+   }
+  ],
+  "explanation": "Darker → LDR resistance up → smaller share of 9 V across the fixed resistor → V⁻ < V⁺ → output +9 V.",
+  "hints": [
+   "Work out which way V⁻ moves when the LDR resistance increases."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "electronics.op-amp-properties.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why is a diode connected in reverse across the coil of a relay driven by an op-amp?",
+  "options": [
+   {
+    "key": "A",
+    "content": "To let the relay operate on both positive and negative op-amp output voltages",
+    "rationale": "A reverse diode across the coil does not conduct from the supply at all; it acts only on the induced e.m.f."
+   },
+   {
+    "key": "B",
+    "content": "To limit the current through the relay coil during normal operation",
+    "rationale": "Reverse-biased, it carries no current in normal operation; a series resistor would limit current."
+   },
+   {
+    "key": "C",
+    "content": "To protect the op-amp from the e.m.f. induced when the coil current is switched off",
+    "correct": true,
+    "rationale": "Correct: the diode conducts the induced current and clamps the voltage."
+   },
+   {
+    "key": "D",
+    "content": "To make the relay switch on more quickly",
+    "rationale": "It slightly slows the release of the relay; its purpose is protection."
+   }
+  ],
+  "explanation": "Switching off the coil current causes a rapidly falling flux and a large back e.m.f.; the diode provides a path for this current and protects the op-amp.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.op-amp-properties.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A real op-amp with a slew rate of $0.5\\ \\text{V}\\,\\mu\\text{s}^{-1}$ is used as a comparator with a square-wave input of rising frequency. What happens to the output at high frequency?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Its amplitude doubles because the gain rises with frequency.",
+    "rationale": "The gain of a real op-amp falls with frequency; it never rises."
+   },
+   {
+    "key": "B",
+    "content": "It becomes a sine wave of the same amplitude.",
+    "rationale": "The limited slew rate gives straight sloping edges, not a sinusoid."
+   },
+   {
+    "key": "C",
+    "content": "Nothing changes, because a comparator output is always at saturation.",
+    "rationale": "A real op-amp needs time to move between the saturation levels."
+   },
+   {
+    "key": "D",
+    "content": "Its edges slope instead of being vertical, so it becomes trapezoidal and then triangular.",
+    "correct": true,
+    "rationale": "Correct: the output can change only at the slew rate, so fast switching cannot be followed."
+   }
+  ],
+  "explanation": "Finite slew rate: the output takes a time ΔV/(slew rate) to switch, which becomes a large fraction of each half-cycle at high frequency.",
+  "hints": [
+   "How long does the output take to swing between the saturation levels?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "electronics.op-amp-properties.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An op-amp with open-loop gain $1.0 \\times 10^{5}$ saturates at $\\pm 15\\ \\text{V}$. Calculate the output voltage, in V, when $V^{+} - V^{-} = 80\\ \\mu\\text{V}$.",
+  "payload": {
+   "unitHint": "V"
+  },
+  "answerSpec": {
+   "value": 8,
+   "units": {
+    "required": false,
+    "accepted": [
+     "V",
+     "volts",
+     "volt",
+     "J/C"
+    ]
+   }
+  },
+  "explanation": "$V_{\\text{out}} = A_0(V^{+} - V^{-}) = 1.0 \\times 10^{5} \\times 80 \\times 10^{-6} = 8\\ \\text{V}$, which is below 15 V, so the op-amp is not saturated.",
+  "workedSolution": "1. $V_{\\text{out}} = A_0(V^{+} - V^{-}) = 1.0 \\times 10^{5} \\times 80 \\times 10^{-6} = 8\\ \\text{V}$, which is below 15 V, so the op-amp is not saturated.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.8"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "15"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": true
+ },
+ {
+  "key": "electronics.op-amp-properties.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The same op-amp (gain $1.0 \\times 10^{5}$, saturation $\\pm 15\\ \\text{V}$) has $V^{+} - V^{-} = -0.25\\ \\text{mV}$. State the output voltage, in V.",
+  "payload": {
+   "unitHint": "V"
+  },
+  "answerSpec": {
+   "value": -15,
+   "units": {
+    "required": false,
+    "accepted": [
+     "V",
+     "volts",
+     "volt",
+     "J/C"
+    ]
+   }
+  },
+  "explanation": "$A_0(V^{+} - V^{-}) = 1.0 \\times 10^{5} \\times (-2.5 \\times 10^{-4}) = -25\\ \\text{V}$, which is beyond the supply, so the output saturates at $-15\\ \\text{V}$.",
+  "workedSolution": "1. $A_0(V^{+} - V^{-}) = 1.0 \\times 10^{5} \\times (-2.5 \\times 10^{-4}) = -25\\ \\text{V}$, which is beyond the supply, so the output saturates at $-15\\ \\text{V}$.",
+  "hints": [
+   "Compare A₀(V⁺ − V⁻) with the saturation voltage."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-15"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "-25"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "15"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "electronics.op-amp-properties.q11",
+  "type": "CALCULATION",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An op-amp comparator switches its output from $-13\\ \\text{V}$ to $+13\\ \\text{V}$. Its slew rate is $0.50\\ \\text{V}\\,\\mu\\text{s}^{-1}$. Calculate the time taken for the output to change, in µs.",
+  "payload": {
+   "unitHint": "µs"
+  },
+  "answerSpec": {
+   "value": 52,
+   "units": {
+    "required": false,
+    "accepted": [
+     "µs",
+     "μs",
+     "us",
+     "microseconds"
+    ]
+   }
+  },
+  "explanation": "1. Change in output $= 13 - (-13) = 26\\ \\text{V}$.\n2. Time $= \\dfrac{\\Delta V}{\\text{slew rate}} = \\dfrac{26}{0.50} = 52\\ \\mu\\text{s}$. Using 13 V instead of the full 26 V swing gives half this.",
+  "workedSolution": "1. 1. Change in output $= 13 - (-13) = 26\\ \\text{V}$.\n2. Time $= \\dfrac{\\Delta V}{\\text{slew rate}} = \\dfrac{26}{0.50} = 52\\ \\mu\\text{s}$. Using 13 V instead of the full 26 V swing gives half this.",
+  "hints": [
+   "The output changes by 26 V, not 13 V."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "52"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "26"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "13"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "electronics.op-amp-properties.q12",
+  "type": "CALCULATION",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a comparator powered from $+12\\ \\text{V}$, $0$ and $-12\\ \\text{V}$, the inverting input is connected to the junction of a $12\\ \\text{k}\\Omega$ resistor (to $+12\\ \\text{V}$) and a $6.8\\ \\text{k}\\Omega$ resistor (to 0 V). The non-inverting input is connected to the junction of a $4.7\\ \\text{k}\\Omega$ resistor (to $+12\\ \\text{V}$) and an LDR (to 0 V). Calculate the resistance of the LDR, in kΩ, at which the output switches, to three significant figures.",
+  "payload": {
+   "unitHint": "kΩ"
+  },
+  "answerSpec": {
+   "value": 2.6633333333333336,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "kΩ",
+     "kilohms",
+     "kohm"
+    ]
+   }
+  },
+  "explanation": "1. Reference: $V^{-} = 12 \\times \\dfrac{6.8}{12 + 6.8} = 4.34\\ \\text{V}$.\n2. Switching when $V^{+} = V^{-}$: $\\dfrac{R_{\\text{LDR}}}{4.7 + R_{\\text{LDR}}} = \\dfrac{6.8}{18.8}$, which means $\\dfrac{R_{\\text{LDR}}}{4.7} = \\dfrac{6.8}{12}$.\n3. $R_{\\text{LDR}} = 4.7 \\times \\dfrac{6.8}{12} = 2.66\\ \\text{k}\\Omega$. Inverting the ratio gives $8.29\\ \\text{k}\\Omega$, the wrong way round.",
+  "workedSolution": "1. 1. Reference: $V^{-} = 12 \\times \\dfrac{6.8}{12 + 6.8} = 4.34\\ \\text{V}$.\n2. Switching when $V^{+} = V^{-}$: $\\dfrac{R_{\\text{LDR}}}{4.7 + R_{\\text{LDR}}} = \\dfrac{6.8}{18.8}$, which means $\\dfrac{R_{\\text{LDR}}}{4.7} = \\dfrac{6.8}{12}$.\n3. $R_{\\text{LDR}} = 4.7 \\times \\dfrac{6.8}{12} = 2.66\\ \\text{k}\\Omega$. Inverting the ratio gives $8.29\\ \\text{k}\\Omega$, the wrong way round.",
+  "hints": [
+   "The two dividers give equal voltages when their resistance ratios are equal."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "2.66"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "8.294117647058824"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "electronics.op-amp-properties.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Nyasha calibrates a comparator alarm by heating the thermistor slowly in a water bath and noting the temperature at which the LED lights. Five trials give $37.5$, $38.5$, $38.0$, $37.0$ and $38.5\\ ^\\circ\\text{C}$. State the absolute uncertainty in the switching temperature, in °C, as half the range.",
+  "payload": {
+   "unitHint": "°C"
+  },
+  "answerSpec": {
+   "value": 0.75,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "°C",
+     "degrees Celsius",
+     "deg C"
+    ]
+   }
+  },
+  "explanation": "Range $= 38.5 - 37.0 = 1.5\\ ^\\circ\\text{C}$; uncertainty $= \\tfrac{1}{2} \\times 1.5 = 0.75\\ ^\\circ\\text{C}$, so the switching temperature is $37.9 \\pm 0.8\\ ^\\circ\\text{C}$. Heating slowly and stirring keeps the thermistor at the thermometer's temperature.",
+  "workedSolution": "1. Range $= 38.5 - 37.0 = 1.5\\ ^\\circ\\text{C}$; uncertainty $= \\tfrac{1}{2} \\times 1.5 = 0.75\\ ^\\circ\\text{C}$, so the switching temperature is $37.9 \\pm 0.8\\ ^\\circ\\text{C}$. Heating slowly and stirring keeps the thermistor at the thermometer's temperature.",
+  "hints": [
+   "Half of (largest − smallest)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.75"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1.5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   }
+  ],
+  "skill": "EVALUATION",
+  "calculator": false
+ },
+ {
+  "key": "electronics.op-amp-properties.q14",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The output of an op-amp used as a comparator is proportional to the difference between its input voltages.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Without feedback the op-amp is almost always saturated: the output is +V_sat or −V_sat depending only on which input is higher.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.op-amp-properties.q15",
+  "type": "MATCHING",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each property of an ideal op-amp with its value.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Open-loop voltage gain"
+    },
+    {
+     "id": "L2",
+     "content": "Output resistance"
+    },
+    {
+     "id": "L3",
+     "content": "Current drawn by each input"
+    },
+    {
+     "id": "L4",
+     "content": "Time for the output to change"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Zero (infinite input resistance)"
+    },
+    {
+     "id": "R4",
+     "content": "Zero (infinite slew rate)"
+    },
+    {
+     "id": "R1",
+     "content": "Infinite"
+    },
+    {
+     "id": "R2",
+     "content": "Zero"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Ideal op-amp: infinite gain, input resistance, bandwidth and slew rate; zero output resistance and zero input current.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "electronics.op-amp-properties.q16",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Complete the description of a comparator.",
+  "payload": {
+   "template": "When the voltage at the non-inverting input is greater than the voltage at the inverting input, the output saturates at the {{blank:a}} supply voltage. A rise in the voltage at the {{blank:b}} input makes the output fall.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "positive",
+      "negative",
+      "zero"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "inverting",
+      "non-inverting"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "positive"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "inverting"
+     ]
+    }
+   ]
+  },
+  "explanation": "V_out = A₀(V⁺ − V⁻): positive when V⁺ > V⁻; increasing V⁻ lowers the output.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "positive"
+    },
+    {
+     "blankId": "b",
+     "text": "inverting"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "negative"
+     },
+     {
+      "blankId": "b",
+      "text": "non-inverting"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.op-amp-properties.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What name is given to the op-amp input marked with a minus sign (−)?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "inverting input"
+    },
+    {
+     "value": "inverting"
+    },
+    {
+     "value": "the inverting input"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "The − input is the inverting input: raising its voltage lowers the output.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "inverting input"
+  },
+  "skill": "RECALL"
+ },
+ {
+  "key": "electronics.op-amp-properties.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why an op-amp used without feedback is almost always saturated.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The open-loop gain is very large (about 10⁵ or more).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The output cannot exceed (about) the supply voltage, so the linear range of input difference is only V_sat/A₀, tens of microvolts.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Almost any real input difference (or noise/offset) is larger than this, so the output is driven to +V_sat or −V_sat.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The open-loop gain is about 10⁵, but the output cannot go beyond about the supply voltage. The input difference that keeps the output in range is therefore only about V_sat/A₀, tens of microvolts. Practically any real difference between the inputs, even noise or offset, is bigger than that, so the output sits at one of the saturation levels."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Huge gain + limited output → microvolt linear range.",
+  "hints": [
+   "Divide the supply voltage by the gain."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.op-amp-properties.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A greenhouse fan is controlled by a comparator. An NTC thermistor is connected between +12 V and the non-inverting input, with a fixed resistor from that input to 0 V; the inverting input is held at a fixed reference voltage. The output drives the fan through a relay. Explain how the circuit switches the fan on when the greenhouse becomes too hot.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "As the temperature rises the thermistor's resistance falls.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "So a larger share of the 12 V is across the fixed resistor: V⁺ rises.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "When V⁺ becomes greater than the reference V⁻, the output switches to positive saturation.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The relay coil is energised and its contacts close the separate (high-current) fan circuit.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: When the temperature rises, the NTC thermistor's resistance falls, so a larger fraction of the 12 V appears across the fixed resistor and V⁺ rises. When V⁺ passes the fixed reference voltage at the inverting input, the output switches from negative to positive saturation. Current then flows in the relay coil, which closes its contacts and switches on the fan's own high-current circuit."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Chain: temperature → thermistor resistance → V⁺ → comparison with reference → output state → relay → fan.",
+  "hints": [
+   "Start with what happens to the thermistor's resistance."
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "electronics.op-amp-properties.q20",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Explain why a low output resistance is desirable for an op-amp that drives a load such as a relay coil.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Little p.d. is lost across the output resistance when the load draws current.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "So the output voltage stays (almost) the same whatever load is connected.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: With a very low output resistance, hardly any voltage is lost inside the op-amp when the load draws current, so the voltage delivered to the load stays almost the same whatever is connected."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Zero output resistance: the output behaves like an ideal voltage source.",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "electronics.op-amp-properties.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 960,
+  "stem": "An overheat alarm for a maize-mill motor uses an op-amp powered from $+12\\ \\text{V}$, $0$ and $-12\\ \\text{V}$, saturating at $\\pm 12\\ \\text{V}$. The inverting input is connected to the junction of a $15\\ \\text{k}\\Omega$ resistor (to $+12\\ \\text{V}$) and a $10\\ \\text{k}\\Omega$ resistor (to 0 V). The non-inverting input is connected to the junction of an NTC thermistor (to $+12\\ \\text{V}$) and a $2.2\\ \\text{k}\\Omega$ resistor (to 0 V). A red LED in series with a resistor is connected from the output to 0 V. The thermistor's resistance is:\n\n| $\\theta\\,/\\,^\\circ\\text{C}$ | 30 | 40 | 50 | 60 | 70 |\n| --- | --- | --- | --- | --- | --- |\n| $R\\,/\\,\\text{k}\\Omega$ | 8.04 | 5.30 | 3.59 | 2.49 | 1.76 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the voltage at the inverting input, in V.",
+    "payload": {
+     "unitHint": "V"
+    },
+    "answerSpec": {
+     "value": 4.8,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "V",
+       "volts",
+       "volt",
+       "J/C"
+      ]
+     }
+    },
+    "explanation": "$V^{-} = 12 \\times \\dfrac{10}{15 + 10} = 4.80\\ \\text{V}$.",
+    "workedSolution": "1. $V^{-} = 12 \\times \\dfrac{10}{15 + 10} = 4.80\\ \\text{V}$."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the voltage at the non-inverting input at 50 °C, in V, to three significant figures.",
+    "payload": {
+     "unitHint": "V"
+    },
+    "answerSpec": {
+     "value": 4.5595854922279795,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "V",
+       "volts",
+       "volt",
+       "J/C"
+      ]
+     }
+    },
+    "explanation": "$V^{+} = 12 \\times \\dfrac{2.2}{3.59 + 2.2} = 4.56\\ \\text{V}$.",
+    "workedSolution": "1. $V^{+} = 12 \\times \\dfrac{2.2}{3.59 + 2.2} = 4.56\\ \\text{V}$."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "State the output voltage and the state of the LED at 50 °C.",
+    "options": [
+     {
+      "key": "A",
+      "content": "$+12\\ \\text{V}$; LED on",
+      "rationale": "This needs V⁺ > V⁻; at 50 °C V⁺ is still below the reference."
+     },
+     {
+      "key": "B",
+      "content": "$0\\ \\text{V}$; LED off",
+      "rationale": "A comparator output is at one of the saturation levels, not zero."
+     },
+     {
+      "key": "C",
+      "content": "$-12\\ \\text{V}$; LED on",
+      "rationale": "With the output negative the LED is reverse-biased and does not light."
+     },
+     {
+      "key": "D",
+      "content": "$-12\\ \\text{V}$; LED off",
+      "correct": true,
+      "rationale": "Correct: V⁺ < V⁻, negative saturation, and the LED is reverse-biased."
+     }
+    ],
+    "explanation": "$4.56\\ \\text{V} < 4.80\\ \\text{V}$, so the output is at $-12\\ \\text{V}$."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the thermistor resistance at which the output switches, in kΩ.",
+    "payload": {
+     "unitHint": "kΩ"
+    },
+    "answerSpec": {
+     "value": 3.3000000000000007,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "kΩ",
+       "kilohms",
+       "kohm"
+      ]
+     }
+    },
+    "explanation": "$12 \\times \\dfrac{2.2}{R + 2.2} = 4.80$, so $R + 2.2 = 5.50$ and $R = 3.30\\ \\text{k}\\Omega$.",
+    "workedSolution": "1. $12 \\times \\dfrac{2.2}{R + 2.2} = 4.80$, so $R + 2.2 = 5.50$ and $R = 3.30\\ \\text{k}\\Omega$."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use the table to estimate the temperature at which the alarm sounds, in °C.",
+    "payload": {
+     "unitHint": "°C"
+    },
+    "answerSpec": {
+     "value": 52.22865466859474,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 2.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "°C",
+       "degrees Celsius",
+       "deg C"
+      ]
+     }
+    },
+    "explanation": "$3.30\\ \\text{k}\\Omega$ lies between $3.59\\ \\text{k}\\Omega$ (50 °C) and $2.49\\ \\text{k}\\Omega$ (60 °C), about a quarter of the way along, so about $52\\ ^\\circ\\text{C}$ (the resistance falls non-linearly, so a value from 51 to 54 °C is reasonable).",
+    "workedSolution": "1. $3.30\\ \\text{k}\\Omega$ lies between $3.59\\ \\text{k}\\Omega$ (50 °C) and $2.49\\ \\text{k}\\Omega$ (60 °C), about a quarter of the way along, so about $52\\ ^\\circ\\text{C}$ (the resistance falls non-linearly, so a value from 51 to 54 °C is reasonable)."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The LED needs 15 mA and has 2.0 V across it when lit. Calculate the resistance of its series resistor, in Ω, to three significant figures.",
+    "payload": {
+     "unitHint": "Ω"
+    },
+    "answerSpec": {
+     "value": 666.6666666666667,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "Ω",
+       "ohm",
+       "ohms"
+      ]
+     }
+    },
+    "explanation": "$R = \\dfrac{12 - 2.0}{0.015} = 667\\ \\Omega$.",
+    "workedSolution": "1. $R = \\dfrac{12 - 2.0}{0.015} = 667\\ \\Omega$."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Suggest how the circuit could be changed so that the switching temperature can be adjusted, and explain why the op-amp's high input resistance matters here.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Replace the 15 kΩ or 10 kΩ reference resistor (or the 2.2 kΩ resistor) with a variable resistor, which changes the switching point.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The inputs draw (almost) no current, so the divider voltages are not altered by connecting the op-amp.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Replace one of the reference resistors with a variable resistor so that the reference voltage, and therefore the switching temperature, can be set. Because the op-amp inputs draw almost no current, connecting them does not change the voltages of either divider."
+    }
+   }
+  ],
+  "explanation": "Comparator: compare V⁺ (sensor) with V⁻ (reference); switching when the divider ratios are equal.",
+  "hints": [
+   "Find the reference voltage first.",
+   "Switching happens when V⁺ = V⁻."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "4.80"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4.56"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "3.30"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "52.2"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "667"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "7.2"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "7.4404145077720205"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "5.500000000000001"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "40"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "800"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "electronics.op-amp-properties.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aphys.electronics.op-amp-properties"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "Farai measures the output of an op-amp, used without feedback and powered from a $\\pm 15\\ \\text{V}$ supply, for small input differences produced by a potential divider:\n\n| $(V^{+} - V^{-})\\,/\\,\\mu\\text{V}$ | $V_{\\text{out}}\\,/\\,\\text{V}$ |\n| --- | --- |\n| -100 | −13.4 |\n| -60 | −10.9 |\n| -40 | −7.1 |\n| -20 | −3.6 |\n| 0 | 0.1 |\n| 20 | 3.5 |\n| 40 | 7.3 |\n| 60 | 10.7 |\n| 100 | 13.4 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use the linear part of the data to determine the open-loop gain $A_0$.",
+    "answerSpec": {
+     "value": 179821.42857142855,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 8000
+     }
+    },
+    "explanation": "Gradient of the straight section (−60 to +60 µV): about $\\dfrac{10.7 - (-10.9)}{120 \\times 10^{-6}} \\approx 1.8 \\times 10^{5}$. Convert microvolts to volts.",
+    "workedSolution": "1. Gradient of the straight section (−60 to +60 µV): about $\\dfrac{10.7 - (-10.9)}{120 \\times 10^{-6}} \\approx 1.8 \\times 10^{5}$. Convert microvolts to volts."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the positive saturation voltage, in V.",
+    "payload": {
+     "unitHint": "V"
+    },
+    "answerSpec": {
+     "value": 13.4,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "V",
+       "volts",
+       "volt",
+       "J/C"
+      ]
+     }
+    },
+    "explanation": "The output stops rising at +13.4 V.",
+    "workedSolution": "1. The output stops rising at +13.4 V."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the saturation voltage is less than 15 V, and why the output for an input difference of +100 µV would also be obtained for +1 V.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The output transistors need a small p.d. across them, so the output cannot reach the supply rail (about 1-2 V less).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Once saturated, the output is fixed at V_sat whatever the size of the difference, so +100 µV and +1 V both give +13.4 V.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The output stage inside the op-amp needs a volt or two across it, so the output can only get to about 13.4 V with a 15 V supply. Beyond about 75 µV the op-amp is saturated, so any larger difference, whether 100 µV or 1 V, gives the same 13.4 V."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the largest input difference for which the output is not saturated, in µV, to two significant figures.",
+    "answerSpec": {
+     "value": 74.51837140019862,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 4
+     }
+    },
+    "explanation": "$\\dfrac{13.4}{1.8 \\times 10^{5}} = 75\\ \\mu\\text{V}$.",
+    "workedSolution": "1. $\\dfrac{13.4}{1.8 \\times 10^{5}} = 75\\ \\mu\\text{V}$."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Suggest how input differences of a few microvolts can be produced from a 1.5 V cell, and one reason why the measured values near zero are unreliable.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Use a potential divider with a very large ratio (e.g. 1 MΩ and 10 Ω) across the cell, feeding one input, with the other input at 0 V.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Input offset voltage / noise / pick-up of the same size (microvolts) as the signal makes readings near zero unreliable.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Connect a 1 MΩ resistor and a 10 Ω resistor in series across the cell and take the small voltage across the 10 Ω resistor (about 15 µV) to one input, with the other input at 0 V; a variable resistor adjusts it. Near zero, the op-amp's own offset voltage and electrical noise are of the same microvolt size as the signal, so those readings are unreliable."
+    }
+   }
+  ],
+  "explanation": "Open-loop gain from the gradient of the linear region; saturation just inside the supply.",
+  "hints": [
+   "Use only the straight section for the gradient.",
+   "Convert µV to V."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "180000"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "13.4"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "74.5"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.17982142857142855"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "15"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "83.41608738828204"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ }
+]
