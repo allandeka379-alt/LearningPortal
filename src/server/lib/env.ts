@@ -89,7 +89,7 @@ const shape = {
   GOOGLE_CLIENT_SECRET: z.string().optional(),
 
   EMAIL_PROVIDER: providerName.default("console"),
-  /** Sender, e.g. `Dzidza <no-reply@mail.example.org>`; the domain must be verified at the email provider. */
+  /** Sender, e.g. `BvunzoHub <no-reply@mail.example.org>`; the domain must be verified at the email provider. */
   EMAIL_FROM: z
     .string()
     .trim()

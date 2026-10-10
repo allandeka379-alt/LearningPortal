@@ -59,3 +59,17 @@ $$;
 -- Timestamps: the app stores and reads UTC. The pg adapter also sends `-c TimeZone=UTC` at connect time
 -- (src/server/db.ts); this role default is the backstop for poolers that drop startup options.
 ALTER ROLE app_rw SET TimeZone = 'UTC';
+
+-- Purpose: optional read-only build role (Railway: `next build` prerenders through the public proxy as app_build,
+-- docs/DEPLOYMENT.md "Appendix: Railway"). SELECT only, re-applied after every migration so new tables are readable;
+-- skipped where the role does not exist (local dev, containers).
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'app_build') THEN
+    EXECUTE format('GRANT CONNECT ON DATABASE %I TO app_build', current_database());
+    GRANT USAGE ON SCHEMA public TO app_build;
+    GRANT SELECT ON ALL TABLES IN SCHEMA public TO app_build;
+    ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO app_build;
+  END IF;
+END
+$$;

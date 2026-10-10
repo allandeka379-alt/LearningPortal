@@ -1,9 +1,9 @@
-# Dzidza — ZIMSEC & Cambridge O/A-Level study platform
+# BvunzoHub — ZIMSEC & Cambridge O/A-Level study platform
 
 Scope and requirements live in `docs/PRODUCT_SPEC.md` (cite sections as §N). Architecture decisions live in
 `docs/ARCHITECTURE.md`. Read the relevant spec sections before building a feature.
 
-"Dzidza" (Shona: "learn") is a placeholder brand, configured via `NEXT_PUBLIC_APP_NAME` — never hard-code it in UI copy;
+"BvunzoHub" is the brand (owner decision 2026-10-10), configured via `NEXT_PUBLIC_APP_NAME` — never hard-code it in UI copy;
 use `APP_NAME` from `src/lib/config.ts`.
 
 ## Owner decisions in force (2026-10-07) — these SUPERSEDE any task prompt that says otherwise

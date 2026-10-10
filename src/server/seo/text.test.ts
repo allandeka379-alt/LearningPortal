@@ -24,12 +24,12 @@ describe("titles", () => {
   it("builds the subject title pattern of §44", () => {
     const title = subjectTitle("ZIMSEC O-Level", { name: "Mathematics", metaTitle: null });
     expect(title).toBe("ZIMSEC O-Level Mathematics — topics, lessons and practice");
-    expect(withBrand(title, "Dzidza")).toBe("ZIMSEC O-Level Mathematics — topics, lessons and practice · Dzidza");
+    expect(withBrand(title, "BvunzoHub")).toBe("ZIMSEC O-Level Mathematics — topics, lessons and practice · BvunzoHub");
   });
 
   it("prefers an editor's meta title and never doubles the brand", () => {
     expect(subjectTitle("ZIMSEC O-Level", { name: "Mathematics", metaTitle: "  O-Level Maths revision  " })).toBe("O-Level Maths revision");
-    expect(withBrand("Maths revision on Dzidza", "Dzidza")).toBe("Maths revision on Dzidza");
+    expect(withBrand("Maths revision on BvunzoHub", "BvunzoHub")).toBe("Maths revision on BvunzoHub");
   });
 
   it("builds board, qualification and topic titles", () => {

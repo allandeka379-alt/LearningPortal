@@ -32,7 +32,7 @@ const LINK: ShareLinkData = {
   shareId: "share-1",
   url: `https://example.test/s/${"a".repeat(43)}`,
   headline: "I scored 82% in O-Level Mathematics",
-  message: "I scored 82% in O-Level Mathematics on Dzidza.",
+  message: "I scored 82% in O-Level Mathematics on BvunzoHub.",
   whatsappHref: "https://wa.me/?text=I%20scored",
   expiresAt: "2027-04-04T10:00:00.000Z",
 };

@@ -44,7 +44,7 @@ RUN --mount=type=cache,target=/root/.npm npm ci --no-audit --no-fund
 FROM deps AS build
 # Inlined into client bundles and prerendered HTML at build time, so they are build arguments.
 ARG APP_URL
-ARG NEXT_PUBLIC_APP_NAME=Dzidza
+ARG NEXT_PUBLIC_APP_NAME=BvunzoHub
 ARG NEXT_PUBLIC_SUPPORT_EMAIL=
 # Release id (git SHA): Next.js deploymentId (version-skew protection during rolling deploys) + /api/health.
 ARG GIT_SHA=

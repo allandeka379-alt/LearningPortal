@@ -14,7 +14,7 @@ describe("public config", () => {
     vi.stubEnv("NEXT_PUBLIC_APP_NAME", "");
     vi.stubEnv("NEXT_PUBLIC_SUPPORT_EMAIL", "  ");
     const config = await loadConfig();
-    expect(config.APP_NAME).toBe("Dzidza");
+    expect(config.APP_NAME).toBe("BvunzoHub");
     expect(config.SUPPORT_EMAIL).toBe("support@example.com");
     expect(config.SUPPORT_EMAIL_CONFIGURED).toBe(false);
   });

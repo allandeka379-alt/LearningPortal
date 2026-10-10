@@ -8,7 +8,7 @@ import { FakeCacheStorage, htmlResponse, publicFileUrl } from "./testing";
  */
 
 const ORIGIN = "https://dzidza.example";
-const OFFLINE_HTML = `<!DOCTYPE html><html><head><title>Offline · Dzidza</title>
+const OFFLINE_HTML = `<!DOCTYPE html><html><head><title>Offline · BvunzoHub</title>
   <link rel="stylesheet" href="/_next/static/css/app-1.css"/>
   <script src="/_next/static/chunks/main-1.js" async=""></script></head><body>offline</body></html>`;
 
@@ -111,7 +111,7 @@ const VIEWER_STATE_KEY = `${ORIGIN}/__dz/active-viewer`;
 /** A student-area lesson page rendered for `viewer` (`null`: no viewer tag, e.g. signed out). */
 function lessonHtml(title: string, body = "lesson body", viewer: string | null = VIEWER_A): string {
   const meta = viewer === null ? "" : `<meta name="dz-viewer" content="${viewer}"/>`;
-  return `<!DOCTYPE html><html><head>${meta}<title>${title} · Dzidza</title></head><body>${body}</body></html>`;
+  return `<!DOCTYPE html><html><head>${meta}<title>${title} · BvunzoHub</title></head><body>${body}</body></html>`;
 }
 
 function route(path: string, handler: Handler): void {
@@ -244,7 +244,7 @@ describe("lesson pages", () => {
     const saved = await scope.caches.peek(CACHE_NAMES.lessons)?.match(`${ORIGIN}/app/lessons/l1`);
     expect(saved).toBeDefined();
     expect(await saved?.text()).toBe(lessonHtml("Quadratic equations"));
-    expect(decodeURIComponent(saved?.headers.get(META_HEADERS.title) ?? "")).toBe("Quadratic equations · Dzidza");
+    expect(decodeURIComponent(saved?.headers.get(META_HEADERS.title) ?? "")).toBe("Quadratic equations · BvunzoHub");
     expect(Number.isNaN(Date.parse(saved?.headers.get(META_HEADERS.cachedAt) ?? ""))).toBe(false);
   });
 

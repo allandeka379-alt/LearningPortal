@@ -116,8 +116,8 @@ describe("buildAttribution (§27)", () => {
   };
 
   it("labels original platform content with the configured brand", () => {
-    expect(buildAttribution(base, "Dzidza")).toEqual({
-      statement: "Original content by Dzidza.",
+    expect(buildAttribution(base, "BvunzoHub")).toEqual({
+      statement: "Original content by BvunzoHub.",
       author: "A. Moyo",
       attribution: null,
       source: null,
@@ -146,7 +146,7 @@ describe("buildAttribution (§27)", () => {
           requiresAttribution: true,
         },
       },
-      "Dzidza",
+      "BvunzoHub",
     );
     expect(result).toEqual({
       statement: "Shared under the CC-BY-4.0 licence.",
@@ -168,7 +168,7 @@ describe("buildAttribution (§27)", () => {
         sourceUrl: "javascript:alert(1)",
         source: { name: "Partner Press", type: "LICENSED", publisher: null, url: "ftp://x", licenceCode: null, licenceUrl: "javascript:x", attributionText: "Used with permission", requiresAttribution: false },
       },
-      "Dzidza",
+      "BvunzoHub",
     );
     expect(result.statement).toBe("Used under licence from Partner Press.");
     expect(result.licence).toBeNull();
@@ -178,11 +178,11 @@ describe("buildAttribution (§27)", () => {
     expect(result.attribution).toBeNull();
 
     const ownSource = { name: "Original content", type: "ORIGINAL" as const, url: null, publisher: null, licenceCode: null, licenceUrl: null, attributionText: null, requiresAttribution: false };
-    expect(buildAttribution({ ...base, source: ownSource }, "Dzidza").source).toBeNull();
+    expect(buildAttribution({ ...base, source: ownSource }, "BvunzoHub").source).toBeNull();
   });
 
   it("words public-domain content", () => {
-    expect(buildAttribution({ ...base, copyrightStatus: "PUBLIC_DOMAIN" }, "Dzidza").statement).toBe("This content is in the public domain.");
+    expect(buildAttribution({ ...base, copyrightStatus: "PUBLIC_DOMAIN" }, "BvunzoHub").statement).toBe("This content is in the public domain.");
   });
 });
 

@@ -357,8 +357,8 @@ describe("precache and Data Saver", () => {
 
 describe("saved page metadata", () => {
   it("extracts and decodes the document title", () => {
-    expect(sw.extractTitle("<html><head><title>Quadratic equations &amp; graphs · Dzidza</title></head></html>")).toBe(
-      "Quadratic equations & graphs · Dzidza",
+    expect(sw.extractTitle("<html><head><title>Quadratic equations &amp; graphs · BvunzoHub</title></head></html>")).toBe(
+      "Quadratic equations & graphs · BvunzoHub",
     );
     expect(sw.extractTitle('<title data-x="1">\n  Circle   theorems &#8211; &#x3C0;r&#178; \n</title>')).toBe(
       "Circle theorems – πr²",

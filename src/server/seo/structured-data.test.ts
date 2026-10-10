@@ -9,7 +9,7 @@ import {
   siteOrganization,
 } from "./structured-data";
 
-const provider = siteOrganization("Dzidza", "https://dzidza.example");
+const provider = siteOrganization("BvunzoHub", "https://dzidza.example");
 
 describe("serializeJsonLd", () => {
   it("cannot be broken out of a script element by CMS text", () => {
@@ -58,7 +58,7 @@ describe("builders", () => {
       teaches: Array.from({ length: JSON_LD_LIST_LIMIT + 10 }, (_, i) => `Topic ${i + 1}`),
       about: { "@type": "Organization", name: "Zimbabwe School Examinations Council" },
     });
-    expect(course).toMatchObject({ "@type": "Course", courseCode: "4004", provider: { "@type": "EducationalOrganization", name: "Dzidza" } });
+    expect(course).toMatchObject({ "@type": "Course", courseCode: "4004", provider: { "@type": "EducationalOrganization", name: "BvunzoHub" } });
     expect(course.teaches).toHaveLength(JSON_LD_LIST_LIMIT);
     const json = JSON.stringify(course);
     for (const forbidden of ["aggregateRating", "review", "offers", "ratingValue"]) expect(json).not.toContain(forbidden);

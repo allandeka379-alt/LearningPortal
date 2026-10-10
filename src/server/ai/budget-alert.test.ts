@@ -94,7 +94,7 @@ describe("gateway hook", () => {
 describe("composeBudgetAlert", () => {
   it("states the day, the spend and the ceiling in dollars, with no personal data", () => {
     expect(formatUsdMicros(50_000_000)).toBe("US$50.00");
-    const text = composeBudgetAlert({ platformDate: "2026-10-05", spentMicros: 50_123_456, ceilingMicros: 50_000_000 }, "Dzidza");
+    const text = composeBudgetAlert({ platformDate: "2026-10-05", spentMicros: 50_123_456, ceilingMicros: 50_000_000 }, "BvunzoHub");
     expect(text.title).toBe("AI daily budget reached");
     expect(text.body).toContain("2026-10-05");
     expect(text.body).toContain("US$50.12");

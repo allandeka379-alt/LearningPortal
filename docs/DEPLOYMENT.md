@@ -154,7 +154,7 @@ BUILD_DATABASE_URL='postgresql://app_build:…@db-replica.example:5432/dzidza?ss
 docker build \
   --secret id=build_database_url,env=BUILD_DATABASE_URL \
   --build-arg APP_URL=https://learn.example.com \
-  --build-arg NEXT_PUBLIC_APP_NAME=Dzidza \
+  --build-arg NEXT_PUBLIC_APP_NAME=BvunzoHub \
   --build-arg GIT_SHA=$SHA \
   -t registry.example.com/dzidza:$SHA .
 # Tools image (migrations, section D, seed). No database or secret needed.
@@ -395,7 +395,7 @@ production adds rules (listed under Purpose). A test (`tests/deployment-docs.tes
 |---|---|---|---|
 | `NODE_ENV` | Yes (`production`) | `production` | Enables production rules: env policy below, HSTS, database boot assertions, no demo data. The image sets it |
 | `APP_URL` | Yes; build | `https://learn.example.com` | Public origin for links, emails, OAuth and payment return URLs, canonical URLs. `https://` in production |
-| `NEXT_PUBLIC_APP_NAME` | No; build | `Dzidza` | Brand name (placeholder brand); inlined into client bundles at build time |
+| `NEXT_PUBLIC_APP_NAME` | No; build | `BvunzoHub` | Brand name (BvunzoHub); inlined into client bundles at build time |
 | `NEXT_PUBLIC_SUPPORT_EMAIL` | No; build | `support@example.com` | Support address shown in the UI; inlined at build time |
 | `DATABASE_URL` | Yes | `postgresql://app_rw:…@pgbouncer:5432/dzidza` | App role connection. Web: through the pooler. Worker: DIRECT (LISTEN/NOTIFY) |
 | `DATABASE_URL_TEST` | Tests only | `postgresql://app_rw@localhost:5433/zimstudy_test` | Test database; its name must end in `_test`. Never set in production |
@@ -408,7 +408,7 @@ production adds rules (listed under Purpose). A test (`tests/deployment-docs.tes
 | `GOOGLE_CLIENT_ID` | No (with secret) | `…apps.googleusercontent.com` | Google sign-in; both Google keys or neither |
 | `GOOGLE_CLIENT_SECRET` | No (with id) | — | Google sign-in client secret |
 | `EMAIL_PROVIDER` | **Yes in production** | `resend` | Email adapter (`src/server/messaging/providers.ts`). Accounts are email-based (owner decision 2026-10-07): verification and sign-in codes, password resets, security notices and invitations always go by email, so production refuses an unset value, `console` (dev/test capture) and unknown names. Only `resend` exists; verify it against Resend's docs on staging (§11) |
-| `EMAIL_FROM` | With `resend` | `Dzidza <no-reply@mail.learn.example.org>` | Sender: `address` or `Name <address>` on a domain verified at the provider (SPF/DKIM). `example.com` placeholders are refused in production |
+| `EMAIL_FROM` | With `resend` | `BvunzoHub <no-reply@mail.learn.example.org>` | Sender: `address` or `Name <address>` on a domain verified at the provider (SPF/DKIM). `example.com` placeholders are refused in production |
 | `EMAIL_REPLY_TO` | No | `support@learn.example.org` | Reply-To for outbound email |
 | `RESEND_API_KEY` | With `resend` | `re_…` | Resend API key (sending access only). Required whenever `EMAIL_PROVIDER=resend` |
 | `SMS_PROVIDER` | No (SMS is off) | unset (= `none`) | SMS is switched off (`features.sms`, default off) and nothing in sign-in uses it. Unset in production means `none`. Set `twilio` or `africastalking` (with its keys) only before switching SMS on in `/admin/settings`; `console` and unknown names are refused in production. Neither adapter has been run against the live service |

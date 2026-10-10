@@ -29,7 +29,7 @@ const PROD: EnvSource = {
   SESSION_SECRET: STRONG_SECRET,
   EMAIL_PROVIDER: "resend",
   RESEND_API_KEY: "re_live_key_value",
-  EMAIL_FROM: "Dzidza <no-reply@mail.learn.dzidza.test>",
+  EMAIL_FROM: "BvunzoHub <no-reply@mail.learn.dzidza.test>",
   SMS_PROVIDER: "africastalking",
   AFRICASTALKING_USERNAME: "dzidza",
   AFRICASTALKING_API_KEY: "at-api-key-value",
@@ -193,7 +193,7 @@ describe("parseEnv", () => {
   it("validates messaging key formats without echoing them", () => {
     const issues = issuesOf({
       ...DEV,
-      EMAIL_FROM: "Dzidza <no-reply@x.test>\r\nBcc: victim@x.test",
+      EMAIL_FROM: "BvunzoHub <no-reply@x.test>\r\nBcc: victim@x.test",
       EMAIL_REPLY_TO: "not-an-email",
       TWILIO_ACCOUNT_SID: "SK0123",
       TWILIO_FROM: "A-sender-id-that-is-too-long",
@@ -204,7 +204,7 @@ describe("parseEnv", () => {
       ["AFRICASTALKING_SENDER_ID", "EMAIL_FROM", "EMAIL_REPLY_TO", "TWILIO_ACCOUNT_SID", "TWILIO_FROM", "TWILIO_MESSAGING_SERVICE_SID"].sort(),
     );
     expect(JSON.stringify(issues)).not.toContain("victim");
-    expect(parseEnv({ ...DEV, EMAIL_FROM: '"Dzidza Team" <no-reply@mail.dzidza.test>' }).EMAIL_FROM).toBe('"Dzidza Team" <no-reply@mail.dzidza.test>');
+    expect(parseEnv({ ...DEV, EMAIL_FROM: '"BvunzoHub Team" <no-reply@mail.dzidza.test>' }).EMAIL_FROM).toBe('"BvunzoHub Team" <no-reply@mail.dzidza.test>');
     expect(parseEnv({ ...DEV, EMAIL_FROM: "no-reply@mail.dzidza.test" }).EMAIL_FROM).toBe("no-reply@mail.dzidza.test");
   });
 
@@ -271,7 +271,7 @@ describe("parseEnv", () => {
         { key: "EMAIL_PROVIDER", message: "must name an email adapter in production (allowed: resend)" },
         { key: "SMS_PROVIDER", message: 'must be "none" (no SMS) or name an SMS adapter in production (allowed: twilio, africastalking)' },
       ]);
-      expect(issuesOf({ ...PROD, EMAIL_FROM: "Dzidza <no-reply@example.com>", AFRICASTALKING_USERNAME: "sandbox" })).toEqual([
+      expect(issuesOf({ ...PROD, EMAIL_FROM: "BvunzoHub <no-reply@example.com>", AFRICASTALKING_USERNAME: "sandbox" })).toEqual([
         { key: "EMAIL_FROM", message: "still uses a placeholder domain (example.com); use your verified sending domain" },
         { key: "AFRICASTALKING_USERNAME", message: 'must not be "sandbox" in production (the sandbox delivers nothing)' },
       ]);

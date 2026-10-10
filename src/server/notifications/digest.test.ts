@@ -108,23 +108,23 @@ describe("composeChannelMessage", () => {
     body: "Form 4 mock examinations start on Monday 12 October. Bring two pens and a calculator.",
     link: "https://dzidza.example/app/notifications/abc",
     settingsLink: "https://dzidza.example/app/notifications/settings",
-    appName: "Dzidza",
+    appName: "BvunzoHub",
   };
 
   it("writes a plain email with the link and how to opt out", () => {
     const email = composeChannelMessage({ ...input, channel: "EMAIL" });
     expect(email.subject).toBe("Mock exams start Monday");
     expect(email.text).toContain(input.body);
-    expect(email.text).toContain(`Open in Dzidza: ${input.link}`);
+    expect(email.text).toContain(`Open in BvunzoHub: ${input.link}`);
     expect(email.text).toContain(`Change your notification settings: ${input.settingsLink}`);
   });
 
   it("keeps SMS to two segments and always includes the link", () => {
     const sms = composeChannelMessage({ ...input, channel: "SMS", body: "x ".repeat(400) });
     expect(sms.text.length).toBeLessThanOrEqual(320);
-    expect(sms.text.startsWith("Dzidza: Mock exams start Monday. ")).toBe(true);
+    expect(sms.text.startsWith("BvunzoHub: Mock exams start Monday. ")).toBe(true);
     expect(sms.text.endsWith(input.link)).toBe(true);
-    expect(composeChannelMessage({ ...input, channel: "SMS", link: null }).text).toBe(`Dzidza: Mock exams start Monday. ${input.body}`);
+    expect(composeChannelMessage({ ...input, channel: "SMS", link: null }).text).toBe(`BvunzoHub: Mock exams start Monday. ${input.body}`);
   });
 
   it("formats WhatsApp with a bold title", () => {

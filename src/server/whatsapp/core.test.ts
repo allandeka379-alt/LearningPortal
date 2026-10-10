@@ -348,7 +348,7 @@ describe("question rendering and answers", () => {
   });
 
   it("renders the help menu and the streak", () => {
-    const help = helpMessage("Dzidza");
+    const help = helpMessage("BvunzoHub");
     expect(help.kind === "buttons" && help.buttons.map((b) => b.id)).toEqual(["cmd:question", "cmd:streak"]);
     const streak = renderStreak({ current: 5, longest: 12, status: "AT_RISK", targetMinutes: 30, minutesToday: 12, goalMet: false, appLink: "http://x/app" });
     expect(streak.kind === "text" && streak.text).toContain("*Streak:* 5 days (best 12 days).");

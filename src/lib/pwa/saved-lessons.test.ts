@@ -14,7 +14,7 @@ import {
 import { FakeCacheStorage } from "./testing";
 
 const ORIGIN = "https://dzidza.example";
-const APP = "Dzidza";
+const APP = "BvunzoHub";
 
 function metaHeaders(title: string | null, cachedAt: string | null): Headers {
   const headers = new Headers({ "content-type": "text/html" });
@@ -30,13 +30,13 @@ async function saveLesson(storage: FakeCacheStorage, path: string, title: string
 
 describe("cleanLessonTitle", () => {
   it("removes the app-name suffix added by the title template", () => {
-    expect(cleanLessonTitle("Quadratic equations · Dzidza", APP)).toBe("Quadratic equations");
-    expect(cleanLessonTitle("Circle theorems | Dzidza", APP)).toBe("Circle theorems");
+    expect(cleanLessonTitle("Quadratic equations · BvunzoHub", APP)).toBe("Quadratic equations");
+    expect(cleanLessonTitle("Circle theorems | BvunzoHub", APP)).toBe("Circle theorems");
     expect(cleanLessonTitle("Photosynthesis", APP)).toBe("Photosynthesis");
   });
 
   it("returns null for empty titles or the bare app name", () => {
-    expect(cleanLessonTitle("Dzidza", APP)).toBeNull();
+    expect(cleanLessonTitle("BvunzoHub", APP)).toBeNull();
     expect(cleanLessonTitle("   ", APP)).toBeNull();
     expect(cleanLessonTitle(null, APP)).toBeNull();
   });
@@ -46,7 +46,7 @@ describe("toSavedLesson", () => {
   it("reads the title and save time from the stored headers", () => {
     const lesson = toSavedLesson(
       `${ORIGIN}/app/lessons/abc`,
-      metaHeaders("Ohm’s law · Dzidza", "2026-10-05T08:30:00.000Z"),
+      metaHeaders("Ohm’s law · BvunzoHub", "2026-10-05T08:30:00.000Z"),
       ORIGIN,
       APP,
     );
@@ -86,8 +86,8 @@ describe("sortSavedLessons", () => {
 describe("listSavedLessons", () => {
   it("lists saved lessons newest first, skipping foreign entries", async () => {
     const storage = new FakeCacheStorage();
-    await saveLesson(storage, "/app/lessons/old", "Old · Dzidza", "2026-09-01T00:00:00.000Z");
-    await saveLesson(storage, "/app/lessons/new", "New · Dzidza", "2026-10-05T00:00:00.000Z");
+    await saveLesson(storage, "/app/lessons/old", "Old · BvunzoHub", "2026-09-01T00:00:00.000Z");
+    await saveLesson(storage, "/app/lessons/new", "New · BvunzoHub", "2026-10-05T00:00:00.000Z");
     const cache = await storage.open(CACHE_NAMES.lessons);
     await cache.put(`${ORIGIN}/app/settings`, new Response("x"));
 

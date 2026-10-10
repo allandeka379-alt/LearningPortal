@@ -3,11 +3,11 @@ import { buildPageMetadata, NOT_FOUND_METADATA, OG_LOCALE } from "./metadata";
 
 describe("buildPageMetadata", () => {
   const input = {
-    title: "ZIMSEC O-Level Mathematics — topics, lessons and practice | Dzidza",
+    title: "ZIMSEC O-Level Mathematics — topics, lessons and practice | BvunzoHub",
     socialTitle: "ZIMSEC O-Level Mathematics — topics, lessons and practice",
     description: "The syllabus topic list.",
     path: "/zimsec/o-level/mathematics",
-    appName: "Dzidza",
+    appName: "BvunzoHub",
   };
 
   it("sets an absolute title, canonical URL, Open Graph and Twitter cards", () => {
@@ -17,7 +17,7 @@ describe("buildPageMetadata", () => {
       alternates: { canonical: input.path },
       openGraph: {
         type: "website",
-        siteName: "Dzidza",
+        siteName: "BvunzoHub",
         title: input.socialTitle,
         description: input.description,
         url: input.path,
@@ -28,7 +28,7 @@ describe("buildPageMetadata", () => {
   });
 
   it("lists the social image on Open Graph and switches Twitter to the large card", () => {
-    const image = { url: "/opengraph-image", width: 1200, height: 630, alt: "Dzidza: Master Your Exams." };
+    const image = { url: "/opengraph-image", width: 1200, height: 630, alt: "BvunzoHub: Master Your Exams." };
     const meta = buildPageMetadata({ ...input, image });
     expect(meta.openGraph).toMatchObject({ images: [image] });
     expect(meta.twitter).toMatchObject({ card: "summary_large_image", images: [image] });

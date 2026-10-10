@@ -38,7 +38,7 @@ export function qualificationLabel(boardShortName: string, qualificationShortNam
 }
 
 /**
- * Appends the product name as the title suffix, exactly as the root layout's title template does ("… · Dzidza"), unless
+ * Appends the product name as the title suffix, exactly as the root layout's title template does ("… · BvunzoHub"), unless
  * an editor's meta title already contains it. SEO pages set absolute titles (so the template is not applied twice).
  */
 export function withBrand(title: string, appName: string): string {

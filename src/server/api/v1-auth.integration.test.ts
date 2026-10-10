@@ -44,7 +44,7 @@ interface CallOptions {
 function call(handler: Handler, path: string, options: CallOptions = {}): Promise<Response> {
   const headers: Record<string, string> = {
     "x-forwarded-for": options.ip ?? randomIp(),
-    "user-agent": "DzidzaMobile/1.0 (Android 14)",
+    "user-agent": "BvunzoHubMobile/1.0 (Android 14)",
     ...(options.token ? { authorization: `Bearer ${options.token}` } : {}),
     ...(options.cookie ? { cookie: options.cookie, origin: ORIGIN } : {}),
     ...(options.body !== undefined ? { "content-type": "application/json" } : {}),

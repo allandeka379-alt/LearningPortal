@@ -4,7 +4,7 @@
 > the code on 2026-10-07** (phases 1–18 are built). Requirements are cited as §N. Where a design was not built, or was
 > built differently, the text says so ("Not built", "As built"). Per-section delivery status, go-live blockers and open
 > decisions: **[STATUS.md](STATUS.md)**. Operations: [DEPLOYMENT.md](DEPLOYMENT.md). REST contract: [API.md](API.md).
-> The brand ("Dzidza") is a placeholder configured via `NEXT_PUBLIC_APP_NAME`.
+> The brand ("BvunzoHub", owner decision 2026-10-10) is configured via `NEXT_PUBLIC_APP_NAME`.
 >
 > Legend: **Decided** = adopted for implementation. **TBC** = needs owner confirmation (budget, accounts, legal).
 > Section 4 (detailed data model) was written by the schema finalizer and matches `prisma/schema.prisma`.

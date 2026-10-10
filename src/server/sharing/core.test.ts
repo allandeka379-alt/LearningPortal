@@ -76,8 +76,8 @@ describe("links", () => {
     expect(isShareTokenFormat(`${"a".repeat(42)}/`)).toBe(false);
     const url = shareUrl("https://example.test/", token);
     expect(url).toBe(`https://example.test/s/${token}`);
-    const text = shareMessage("I scored 82% in O-Level Mathematics", "Dzidza");
-    expect(text).toBe("I scored 82% in O-Level Mathematics on Dzidza.");
+    const text = shareMessage("I scored 82% in O-Level Mathematics", "BvunzoHub");
+    expect(text).toBe("I scored 82% in O-Level Mathematics on BvunzoHub.");
     const href = whatsappShareHref(text, url);
     expect(href.startsWith("https://wa.me/?text=")).toBe(true);
     expect(decodeURIComponent(href.slice("https://wa.me/?text=".length))).toBe(`${text} ${url}`);

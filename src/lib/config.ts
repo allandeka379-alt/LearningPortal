@@ -13,8 +13,8 @@ function nonEmpty(value: string | undefined): string | undefined {
   return trimmed ? trimmed : undefined;
 }
 
-/** Product name shown in UI copy. "Dzidza" is a placeholder brand; configure via `NEXT_PUBLIC_APP_NAME`. */
-export const APP_NAME: string = nonEmpty(process.env.NEXT_PUBLIC_APP_NAME) ?? "Dzidza";
+/** Product name shown in UI copy: "BvunzoHub" (owner decision 2026-10-10); configured via `NEXT_PUBLIC_APP_NAME`. */
+export const APP_NAME: string = nonEmpty(process.env.NEXT_PUBLIC_APP_NAME) ?? "BvunzoHub";
 
 /**
  * Between a page title and the product name in the document title. The root layout's title template is

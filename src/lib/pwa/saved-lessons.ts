@@ -42,7 +42,7 @@ export function isPersonalCacheName(cacheName: string): boolean {
 
 /**
  * Removes the ` · <app name>` suffix the root layout's title template adds (and the same with other common
- * separators), so lists show "Quadratic equations", not "Quadratic equations · Dzidza".
+ * separators), so lists show "Quadratic equations", not "Quadratic equations · BvunzoHub".
  */
 export function cleanLessonTitle(title: string | null, appName: string): string | null {
   if (title === null) return null;

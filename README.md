@@ -1,11 +1,11 @@
-# Dzidza
+# BvunzoHub
 
 A mobile-first study and exam-preparation platform for ZIMSEC and Cambridge O-Level and A-Level students in
 Zimbabwe: structured lessons, an adaptive question bank with instant marking, timed tests and mock exams, progress
 tracking, personalised study plans, flashcards, and areas for parents, teachers and schools. Built to work on slow
 and intermittent mobile connections.
 
-"Dzidza" (Shona: "learn") is a placeholder brand, configured with `NEXT_PUBLIC_APP_NAME`.
+"BvunzoHub" is the brand (owner decision 2026-10-10), configured with `NEXT_PUBLIC_APP_NAME`.
 
 **Accounts, pricing and switched-off features (owner decisions, 2026-10-07):**
 

@@ -51,7 +51,7 @@ function checkout(overrides: Partial<CheckoutRequest> = {}): CheckoutRequest {
     paymentId,
     amountMinor: 500,
     currency: "USD",
-    description: "Dzidza Student - 1 month",
+    description: "BvunzoHub Student - 1 month",
     payer: { email: "payer@example.test" },
     returnUrl: `http://localhost:3000/billing/return?paymentId=${paymentId}&provider=paynow`,
     webhookUrl: "http://localhost:3000/api/webhooks/payments/paynow",

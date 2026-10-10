@@ -14,7 +14,7 @@ async function saveLesson(storage: FakeCacheStorage, path: string, title: string
   await cache.put(
     `${window.location.origin}${path}`,
     new Response("<html></html>", {
-      headers: { [META_HEADERS.title]: encodeURIComponent(`${title} · Dzidza`), [META_HEADERS.cachedAt]: cachedAt },
+      headers: { [META_HEADERS.title]: encodeURIComponent(`${title} · BvunzoHub`), [META_HEADERS.cachedAt]: cachedAt },
     }),
   );
 }
@@ -42,7 +42,7 @@ describe("SavedLessonsList", () => {
     expect(links.map((link) => link.getAttribute("href"))).toEqual(["/app/lessons/b", "/app/lessons/a"]);
     expect(links[0]?.textContent).toContain("Photosynthesis");
     expect(links[1]?.textContent).toContain("Quadratic equations");
-    expect(links[0]?.textContent).not.toContain("Dzidza");
+    expect(links[0]?.textContent).not.toContain("BvunzoHub");
     expect(screen.getAllByText(/^Saved /)).toHaveLength(2);
   });
 

@@ -12,7 +12,7 @@ import { createScopedGuide } from "./testing";
  * `Lesson_scope_chk`) live at `/guides/[slug]`, which is also where search results and the sitemap link to.
  */
 
-const SITE = { appName: "Dzidza", appUrl: "https://dzidza.test" };
+const SITE = { appName: "BvunzoHub", appUrl: "https://dzidza.test" };
 
 describe("general guides (/guides/[slug])", () => {
   it("loads a PUBLISHED scope-less PUBLIC guide, and nothing else, by slug", async () => {
