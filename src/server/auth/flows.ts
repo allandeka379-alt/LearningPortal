@@ -3,6 +3,7 @@ import { Prisma, type AuthMethod, type Role, type SessionKind, type UserStatus }
 import { APP_NAME } from "@/lib/config";
 import { db, type DbClient } from "@/server/db";
 import { audit } from "@/server/lib/audit";
+import { keepAliveAfterResponse } from "@/server/lib/background";
 import { hmacSha256, randomToken, timingSafeEqualStr } from "@/server/lib/crypto";
 import { AppError } from "@/server/lib/errors";
 import { logger } from "@/server/lib/logger";
@@ -387,7 +388,7 @@ function verifiedFieldFor(contact: LoginIdentifier, now: Date): Prisma.UserUpdat
  * email: sent whatever `features.email` says, with no flag read (the code path does none either).
  */
 function sendAccountExistsNotice(contact: LoginIdentifier): void {
-  sendMessage({
+  keepAliveAfterResponse(sendMessage({
     channel: "email",
     to: contact.value,
     subject: `Your ${APP_NAME} account`,
@@ -396,7 +397,7 @@ function sendAccountExistsNotice(contact: LoginIdentifier): void {
       "Sign in instead, or reset your password if you have forgotten it. If this wasn't you, you can ignore this message.",
     tag: "auth.account_exists",
     transactional: true,
-  }).catch((error: unknown) => logger.error("account-exists notice delivery failed", { err: error }));
+  }).catch((error: unknown) => logger.error("account-exists notice delivery failed", { err: error })));
 }
 
 // ---------------------------------------------------------------------------------------------------------------------

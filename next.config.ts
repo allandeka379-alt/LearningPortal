@@ -72,8 +72,9 @@ const nextConfig: NextConfig = {
   // Parallel dev servers (one per verifier / workflow) each get their own build directory: NEXT_DIST_DIR=.next-<label>.
   distDir: process.env.NEXT_DIST_DIR || ".next",
   // Self-contained server bundle for the container image (ARCHITECTURE §10): `<distDir>/standalone/server.js` plus
-  // only the node_modules files it traces. The Dockerfile copies `public/` and `<distDir>/static/` next to it.
-  output: "standalone",
+  // only the node_modules files it traces. The Dockerfile copies `public/` and `<distDir>/static/` next to it. Vercel
+  // (VERCEL=1 during its builds) packages functions itself, so the standalone bundle is skipped there.
+  output: process.env.VERCEL ? undefined : "standalone",
   // The local storage driver resolves `<cwd>/storage` at runtime, which the file tracer cannot see through: without
   // these excludes it copies the whole dev `storage/` directory (uploads, generated reports) and the source of
   // src/server/lib (tests included) into the standalone output. Neither is read at runtime; production storage is an

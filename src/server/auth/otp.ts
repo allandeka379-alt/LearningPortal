@@ -1,6 +1,7 @@
 import "server-only";
 import type { Prisma, VerificationChannel, VerificationPurpose } from "@/generated/prisma/client";
 import { db } from "@/server/db";
+import { keepAliveAfterResponse } from "@/server/lib/background";
 import { generateNumericCode, hashIp, hmacSha256, randomToken, timingSafeEqualStr } from "@/server/lib/crypto";
 import { logger } from "@/server/lib/logger";
 import {
@@ -191,7 +192,9 @@ export async function issueOtp(input: IssueOtpInput): Promise<{ codeId: string; 
   );
   if (input.delivery === "background") {
     // Never log the destination or the code.
-    sending.catch((error: unknown) => logger.error("one-time code delivery failed", { purpose: input.purpose, channel, err: error }));
+    keepAliveAfterResponse(
+      sending.catch((error: unknown) => logger.error("one-time code delivery failed", { purpose: input.purpose, channel, err: error })),
+    );
   } else {
     await sending;
   }

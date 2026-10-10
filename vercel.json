@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "buildCommand": "npm run db:generate && npm run build",
+  "regions": ["fra1"],
+  "functions": {
+    "src/app/api/cron/jobs/route.ts": { "maxDuration": 300 }
+  },
+  "crons": [{ "path": "/api/cron/jobs", "schedule": "* * * * *" }]
+}

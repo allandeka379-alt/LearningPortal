@@ -1,5 +1,6 @@
 import "server-only";
 import { APP_NAME, SUPPORT_EMAIL, SUPPORT_EMAIL_CONFIGURED } from "@/lib/config";
+import { keepAliveAfterResponse } from "@/server/lib/background";
 import { absoluteUrl } from "@/server/lib/env";
 import { logger } from "@/server/lib/logger";
 import { sendMessage } from "@/server/messaging";
@@ -59,8 +60,10 @@ export function renderSecurityNotice(input: Pick<SecurityNoticeInput, "kind" | "
 export function sendSecurityNotice(input: SecurityNoticeInput): void {
   if (input.to === null) return;
   const { subject, text } = renderSecurityNotice(input);
-  sendMessage({ channel: "email", to: input.to, subject, text, tag: `auth.security.${input.kind}`, transactional: true }).catch((error: unknown) =>
-    logger.error("security notice delivery failed", { kind: input.kind, err: error }),
+  keepAliveAfterResponse(
+    sendMessage({ channel: "email", to: input.to, subject, text, tag: `auth.security.${input.kind}`, transactional: true }).catch((error: unknown) =>
+      logger.error("security notice delivery failed", { kind: input.kind, err: error }),
+    ),
   );
 }
 

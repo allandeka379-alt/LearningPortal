@@ -443,6 +443,7 @@ production adds rules (listed under Purpose). A test (`tests/deployment-docs.tes
 | `S3_FORCE_PATH_STYLE` | No | `false` | `true` for MinIO / R2 path-style URLs |
 | `TRUSTED_PROXY_HOPS` | Production (or `CLIENT_IP_HEADER`) | `2` | Proxies in front that append to `X-Forwarded-For` (CDN + load balancer = 2). Every IP rate limit depends on it |
 | `CLIENT_IP_HEADER` | Alternative to hops | `cf-connecting-ip` | Header the edge overwrites with the client IP; only if the origin accepts traffic from the edge alone |
+| `CRON_SECRET` | On Vercel | 64 hex chars | Bearer secret for `GET /api/cron/jobs` (Vercel Cron sends it); unset = the route refuses every request. Not needed with a worker process |
 
 ### Process, build and tooling variables (read outside `env.ts`)
 
@@ -631,6 +632,28 @@ environment variables; never in images (the Dockerfile reads the build database 
   port could be added for orchestrators that need one.
 
 ---
+
+## Appendix: Vercel (owner decision 2026-10-10)
+
+The first production host is Vercel with Neon Postgres 18 (Vercel Marketplace). Differences from the container
+topology above:
+
+| Concern | Containers (§1–§10) | Vercel |
+|---|---|---|
+| Region | South Africa | Functions in `fra1` (Frankfurt, `vercel.json`) next to Neon `aws-eu-central-1`: Neon has no African region, and the app makes several database round trips per request, so functions must sit next to the database. Expect ~150–200 ms extra per navigation from Zimbabwe; revisit (§1) if that hurts |
+| Build | Dockerfile, `output: "standalone"` | `vercel.json` `buildCommand` (`db:generate` then `build`); `next.config.ts` skips standalone when `VERCEL` is set. The build prerenders from the database, so `DATABASE_URL` must be available to Production **builds** too |
+| Worker | `node worker/index.mjs`, LISTEN/NOTIFY | No worker process: Vercel Cron calls `GET /api/cron/jobs` every minute (`src/app/api/cron/jobs/route.ts` → `src/server/ops/cron-drain.ts`): one scheduler tick, then a drain of due jobs for up to 270 s and a graceful stop. Needs `CRON_SECRET` and a plan with per-minute crons (Pro; Hobby crons run once a day and Hobby is for non-commercial use) |
+| Background sends | Process keeps running | Code, notice and account-exists emails are registered with Next's `after()` (`src/server/lib/background.ts`) so the function is not frozen mid-send |
+| Storage | S3 or one-host local | `STORAGE_DRIVER=s3` is required (functions have no persistent disk): e.g. Cloudflare R2 (`S3_REGION=auto`, `S3_ENDPOINT`) |
+| Client IP | `TRUSTED_PROXY_HOPS` / CDN header | `CLIENT_IP_HEADER=x-real-ip` (Vercel's edge overwrites it on every request) |
+| Database URLs | PgBouncer + direct | `DATABASE_URL`: `app_rw` through Neon's **pooled** host (`-pooler`); `MIGRATION_DATABASE_URL`: the owner role on the **direct** host, used only by `scripts/db-deploy.ts` run from a trusted machine, never set in Vercel |
+| Audit purge | Scheduled ops task | Run `scripts/maintenance/purge-audit.ts` from a trusted machine (or add a separate cron) |
+
+Neon roles: create `dzidza_owner` and `app_rw` with SQL as in §4 (roles made in the Neon console join
+`neon_superuser`, which can bypass row-level security, so the app must not use one). If Neon refuses
+`GRANT SET ON PARAMETER` / `ALTER DATABASE … SET app.*` for these roles, ask Neon support or set them as the Neon
+admin; `/api/ready` and the boot assertions refuse to start until `app.environment = 'production'` holds.
+
 
 ## Appendix: local verification of the production setup
 

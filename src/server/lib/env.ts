@@ -149,6 +149,12 @@ const shape = {
   /** Graph API version of the WhatsApp Cloud API (e.g. v23.0); defaults to the driver's DEFAULT_GRAPH_VERSION. */
   WHATSAPP_GRAPH_VERSION: z.string().regex(/^v\d{1,3}\.\d{1,2}$/, "must look like v23.0").optional(),
 
+  /**
+   * Shared secret for scheduled requests to /api/cron/jobs (Vercel sends `Authorization: Bearer <CRON_SECRET>`). Unset:
+   * the route refuses every request (deployments with a worker process do not need it).
+   */
+  CRON_SECRET: z.string().min(32, { error: "must be at least 32 characters" }).optional(),
+
   STORAGE_DRIVER: z.enum(STORAGE_DRIVERS).default("local"),
   /**
    * S3-compatible object storage (`STORAGE_DRIVER=s3`; src/server/lib/s3.ts). One PRIVATE bucket: every object is
