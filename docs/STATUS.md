@@ -90,7 +90,8 @@ questions, 846 flashcards, 9 topic tests and 2 mocks, smoke 31/31. additional-ma
 questions, 923 flashcards, 34 topic tests and 9 mocks, smoke 104/104. mathematics-a (ZIMSEC Pure Mathematics, Statistics, Mechanics 2015-2022; Cambridge 9709 2026-2027):
 110 lessons, 2,262 questions, 944 flashcards, 43 topic tests and 12 mocks, smoke 146/146. physics-a (ZIMSEC A-Level Physics 2015-2022, Cambridge 9702 2025-2027): 99 lessons, 2,218 questions,
 870 flashcards, 33 topic tests and 9 mocks, smoke 102/102. chemistry-a (ZIMSEC A-Level Chemistry 2015-2022, Cambridge 9701 2025-2027): 111 lessons, 2,473
-questions, 975 flashcards, 55 topic tests and 9 mocks, smoke 146/146.
+questions, 975 flashcards, 55 topic tests and 9 mocks, smoke 146/146. religious-studies-o (ZIMSEC Family and Religious Studies 2015-2022, first family written on Sonnet):
+89 lessons, 1,670 questions, 783 flashcards, 15 topic tests and 2 mocks, smoke 43/43.
 Hand-off notes: `.scratch/active-runs.md`. Each family's `content/subjects/<family>/README.md` lists coverage, tests, known gaps and specialist checks;
 `content/README.md` has the overview. Marking fix the same day: a numerical answer typed with the text the answer box
 already shows ("US$16.20", "x = 5", "×400", "pH 7", "12:1" when ": 1" follows the box) was unreadable and scored 0;
