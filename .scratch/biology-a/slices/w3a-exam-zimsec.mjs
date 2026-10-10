@@ -1,0 +1,205 @@
+// W3a: ZIMSEC-only exam-format items: Paper 3 essays (ZIM_P3_ESSAY) and a Paper 4 investigation (ZIM_P4_INVESTIGATION).
+import { concept, P, t, chk, table, EXAM, checkExam, ZIM, mean, dpStr, sfStr } from "../lib.mjs";
+
+const A = (k) => `abio.${k}`;
+const essay = (b, { concepts, d = 5, stem, a, bb, hints }) =>
+  b.struct({
+    d, examStyle: true, skill: EXAM.ZIM_P3_ESSAY.skill, secs: EXAM.ZIM_P3_ESSAY.secs, applies: EXAM.ZIM_P3_ESSAY.applies, paper: "ZIMSEC Paper 3",
+    concepts, stem,
+    parts: checkExam(EXAM.ZIM_P3_ESSAY, [
+      P.manual({ label: "(a)", marks: 8, type: "EXTENDED_RESPONSE", wordLimit: { max: 350 }, ...a }),
+      P.manual({ label: "(b)", marks: 12, type: "EXTENDED_RESPONSE", wordLimit: { max: 550 }, ...bb }),
+    ]),
+    explanation: "Mark each part against the points: one mark for each point clearly made, up to the marks for the part.",
+    hints,
+  });
+
+concept(A("respiration.glycolysis-krebs"), { file: "exam/w3a-zimsec", keyPrefix: "exam.w3a-zimsec", applies: ZIM }, (b) => {
+  // ---------------------------------------------------------------- E1: aerobic respiration
+  essay(b, {
+    concepts: [A("respiration.glycolysis-krebs"), A("respiration.oxidative-phosphorylation")],
+    stem: "Answer both parts.",
+    hints: ["In (a) follow one glucose molecule to pyruvate, counting ATP and reduced NAD.", "In (b) start with reduced NAD arriving at the inner membrane and end with water."],
+    a: {
+      stem: "Describe glycolysis.",
+      points: [
+        "Takes place in the cytoplasm; does not need oxygen",
+        "Glucose is phosphorylated using ATP",
+        "A second ATP is used to form fructose 1,6-bisphosphate (two ATP used in total)",
+        "Phosphorylation makes the sugar more reactive / prevents it leaving the cell",
+        "Fructose 1,6-bisphosphate splits (lysis) into two triose phosphate molecules",
+        "Each triose phosphate is oxidised by dehydrogenation; NAD is reduced (two reduced NAD per glucose)",
+        "Each triose phosphate is converted to pyruvate (3C)",
+        "Four ATP made by substrate-linked phosphorylation, a net gain of two ATP per glucose",
+      ],
+      modelAnswer: "Glycolysis takes place in the cytoplasm and does not need oxygen. Glucose is first phosphorylated using a molecule of ATP and, after rearrangement, a second ATP is used to form fructose 1,6-bisphosphate. Phosphorylation makes the sugar more reactive and traps it in the cell. Fructose 1,6-bisphosphate then splits into two molecules of triose phosphate, each with three carbon atoms.\n\nEach triose phosphate is oxidised by the removal of hydrogen, which is accepted by NAD, so two reduced NAD are formed per glucose. Each triose phosphate is then converted to pyruvate. During these steps phosphate groups are transferred to ADP, so four ATP are made by substrate-linked phosphorylation. Because two ATP were used at the start, the net gain is two ATP per glucose, together with two reduced NAD and two pyruvate.",
+    },
+    bb: {
+      stem: "Explain how ATP is produced by oxidative phosphorylation, and explain the role of oxygen in aerobic respiration.",
+      points: [
+        "Reduced NAD and reduced FAD (from glycolysis, link reaction, Krebs cycle) carry hydrogen to the inner mitochondrial membrane / cristae",
+        "Hydrogen atoms split into protons (H⁺) and electrons",
+        "Electrons pass along a chain of carriers (electron transport chain) in the inner membrane",
+        "Electrons lose energy in small steps as they pass from carrier to carrier",
+        "The energy is used to pump protons from the matrix into the intermembrane space",
+        "A high proton concentration / electrochemical gradient builds up; the inner membrane is impermeable to protons",
+        "Protons diffuse back into the matrix through ATP synthase (chemiosmosis)",
+        "The flow of protons drives the phosphorylation of ADP to ATP",
+        "Oxygen is the final electron acceptor",
+        "Oxygen combines with electrons and protons to form water",
+        "Without oxygen, electrons cannot leave the chain, so electron flow and ATP synthesis stop",
+        "NAD and FAD are not regenerated, so the Krebs cycle and link reaction stop; cristae give a large surface area for carriers and ATP synthase",
+      ],
+      modelAnswer: "Reduced NAD and reduced FAD, produced in glycolysis, the link reaction and the Krebs cycle, carry hydrogen to carriers in the inner mitochondrial membrane, which is folded into cristae to give a large surface area. Each hydrogen atom splits into a proton and an electron. The electrons pass along a chain of carrier molecules, the electron transport chain, and lose energy in small steps as they move from one carrier to the next. This energy is used to pump protons from the matrix into the intermembrane space.\n\nBecause the inner membrane is impermeable to protons, a high concentration builds up in the intermembrane space, forming an electrochemical gradient. Protons diffuse back into the matrix through channels in ATP synthase, and this flow drives the phosphorylation of ADP to ATP. This is chemiosmosis.\n\nOxygen is the final electron acceptor. At the end of the chain it combines with electrons and protons to form water. Without oxygen, electrons cannot leave the chain, so the carriers remain reduced, electron flow stops, no more protons are pumped and ATP synthesis by this route stops. Reduced NAD and FAD can then no longer be oxidised, so NAD and FAD are not regenerated and the link reaction and Krebs cycle also stop, leaving only glycolysis to make ATP.",
+    },
+  });
+
+  // ---------------------------------------------------------------- E2: chloroplast and the light-dependent stage
+  essay(b, {
+    concepts: [A("photosynthesis.chloroplasts-pigments"), A("photosynthesis.light-dependent"), A("photosynthesis.calvin-c4")],
+    stem: "Answer both parts.",
+    hints: ["In (a) work from the envelope inwards, giving a function for each structure.", "In (b) follow the electrons from water to NADP, then say how ATP and reduced NADP are used."],
+    a: {
+      stem: "Describe the structure of a chloroplast and relate it to the functions of the chloroplast.",
+      points: [
+        "Double membrane / envelope controls entry and exit of substances",
+        "Thylakoids: flattened membrane sacs, stacked into grana, linked by intergranal lamellae",
+        "Thylakoid membranes hold photosynthetic pigments in photosystems: site of the light-dependent stage",
+        "Large surface area of thylakoid membranes for pigments, electron carriers and ATP synthase",
+        "Thylakoid space where protons accumulate for chemiosmosis",
+        "Stroma: fluid with enzymes of the Calvin cycle (e.g. rubisco): site of the light-independent stage",
+        "Starch grains (store of carbohydrate) and lipid droplets in the stroma",
+        "Circular DNA and 70S ribosomes to make some of the chloroplast's proteins",
+      ],
+      modelAnswer: "A chloroplast is surrounded by an envelope of two membranes, which controls the movement of substances in and out. Inside is a system of flattened membrane sacs called thylakoids, stacked into grana and linked by intergranal lamellae. The thylakoid membranes contain the photosynthetic pigments arranged in photosystems, electron carriers and ATP synthase, and are the site of the light-dependent stage; stacking gives a very large surface area. Protons accumulate in the thylakoid space, providing the gradient for ATP synthesis.\n\nThe thylakoids are surrounded by the stroma, a fluid containing the enzymes of the Calvin cycle, including rubisco, so it is the site of the light-independent stage, close to the ATP and reduced NADP made on the thylakoids. The stroma also contains starch grains, which store carbohydrate, lipid droplets, and circular DNA with 70S ribosomes, which allow the chloroplast to make some of its own proteins.",
+    },
+    bb: {
+      stem: "Explain how ATP and reduced NADP are produced in non-cyclic photophosphorylation, and how these products are used in the light-independent stage.",
+      points: [
+        "Light energy absorbed by pigments is passed to chlorophyll a in the reaction centre of photosystem II",
+        "Electrons are excited to a higher energy level and leave chlorophyll; taken up by an electron acceptor (photoactivation)",
+        "Photolysis: water is split (oxygen-evolving complex) into protons, electrons and oxygen",
+        "Electrons from water replace those lost by photosystem II; oxygen is released as a by-product",
+        "Excited electrons pass along an electron transport chain to photosystem I, releasing energy",
+        "Energy used to pump protons into the thylakoid space; protons also come from photolysis",
+        "Protons diffuse through ATP synthase into the stroma, making ATP (photophosphorylation / chemiosmosis)",
+        "Light excites electrons in photosystem I, which are passed to NADP; NADP reduced (with protons from the stroma)",
+        "In the stroma, rubisco fixes CO₂ with RuBP, forming two molecules of GP",
+        "GP is reduced to triose phosphate using ATP and reduced NADP",
+        "Most triose phosphate is used to regenerate RuBP, using ATP",
+        "Remaining triose phosphate used to make glucose / sucrose / starch / lipids / amino acids",
+      ],
+      modelAnswer: "Light is absorbed by pigments in photosystem II and the energy is passed to chlorophyll a in the reaction centre. Electrons are excited to a higher energy level, leave the chlorophyll and are taken up by an electron acceptor. They are replaced by electrons from water, which is split by photolysis in the oxygen-evolving complex into protons, electrons and oxygen; the oxygen is released.\n\nThe excited electrons pass along an electron transport chain to photosystem I, releasing energy that is used to pump protons into the thylakoid space, where protons from photolysis also accumulate. The protons diffuse back into the stroma through ATP synthase, producing ATP by chemiosmosis. Meanwhile light excites electrons in photosystem I, and these are passed to NADP, which also takes up protons from the stroma to form reduced NADP.\n\nIn the stroma, rubisco fixes carbon dioxide with ribulose bisphosphate to form two molecules of glycerate 3-phosphate. GP is reduced to triose phosphate using ATP for energy and reduced NADP as the source of hydrogen. Most of the triose phosphate is used, with more ATP, to regenerate RuBP so that the cycle continues, and the rest is used to make glucose, sucrose, starch, lipids and amino acids.",
+    },
+  });
+
+  // ---------------------------------------------------------------- E3: C4 plants and limiting factors
+  essay(b, {
+    concepts: [A("photosynthesis.calvin-c4"), A("photosynthesis.limiting-factors")],
+    stem: "Answer both parts.",
+    hints: ["In (a) start with the problem of photorespiration, then describe the two cell types.", "In (b) treat each factor in turn, explain the mechanism, then apply it to greenhouses."],
+    a: {
+      stem: "Describe how C4 plants such as maize fix carbon dioxide.",
+      points: [
+        "Rubisco can combine with oxygen (photorespiration), especially at high temperature and light, wasting fixed carbon",
+        "Leaves have Kranz anatomy: bundle sheath cells tightly packed around the vascular bundles, mesophyll cells outside them",
+        "In mesophyll cells CO₂ is fixed by PEP carboxylase",
+        "CO₂ combines with phosphoenolpyruvate (PEP, 3C) to form oxaloacetate (4C)",
+        "PEP carboxylase does not react with oxygen / works at low CO₂ concentrations",
+        "Oxaloacetate is converted to malate, which passes to the bundle sheath cells",
+        "In bundle sheath cells malate is decarboxylated, giving a high CO₂ concentration around rubisco; the Calvin cycle runs here",
+        "Pyruvate returns to the mesophyll and is converted back to PEP using ATP; photorespiration is almost avoided",
+      ],
+      modelAnswer: "In most plants rubisco can combine RuBP with oxygen instead of carbon dioxide, a wasteful process called photorespiration that increases at high temperatures and light intensities. Maize, sorghum and sugar cane avoid this. Their leaves have Kranz anatomy: each vascular bundle is surrounded by a ring of tightly packed bundle sheath cells, with mesophyll cells arranged around them.\n\nIn the mesophyll cells carbon dioxide is fixed by PEP carboxylase, which combines it with phosphoenolpyruvate, a 3C compound, to form oxaloacetate, a 4C compound. PEP carboxylase does not react with oxygen and works well at low carbon dioxide concentrations. Oxaloacetate is converted to malate, which passes into the bundle sheath cells. There malate is decarboxylated, releasing carbon dioxide at a high concentration around rubisco, so the Calvin cycle runs with little photorespiration. The remaining pyruvate returns to the mesophyll cells and is converted back into PEP using ATP.",
+    },
+    bb: {
+      stem: "Explain how light intensity, carbon dioxide concentration and temperature can each limit the rate of photosynthesis, and discuss how growers use this knowledge in greenhouses.",
+      points: [
+        "A limiting factor is the factor in shortest supply; only increasing it increases the rate",
+        "Low light: little ATP and reduced NADP from the light-dependent stage",
+        "So GP cannot be reduced to TP / RuBP regenerated quickly; rate rises with light intensity until light saturation",
+        "CO₂ is the substrate of rubisco; at low concentrations little RuBP is carboxylated",
+        "In bright light CO₂ (about 0.04% in air) is often limiting; raising it increases the plateau",
+        "Temperature affects the enzyme-controlled light-independent stage (rubisco) more than the light-dependent stage",
+        "Rate rises with temperature to an optimum (kinetic energy, more enzyme-substrate complexes)",
+        "Above the optimum enzymes denature / stomata close / photorespiration increases, so the rate falls",
+        "Greenhouses: artificial lighting to raise light intensity and lengthen the day",
+        "CO₂ enrichment (burning paraffin or propane, bottled CO₂) to about 0.1%",
+        "Heating in cold periods (and ventilation / shading in hot periods) to keep temperature near the optimum",
+        "Only worthwhile if that factor is limiting and the value of the extra yield exceeds the cost",
+      ],
+      modelAnswer: "A limiting factor is the factor in shortest supply, so that only increasing it raises the rate of photosynthesis. In low light the light-dependent stage produces little ATP and reduced NADP, so GP cannot be reduced to triose phosphate and RuBP is regenerated slowly; the rate rises with light intensity until light saturation, when another factor limits it.\n\nCarbon dioxide is the substrate of rubisco. At low concentrations little RuBP is carboxylated, so in bright light the low concentration in air, about 0.04%, often limits the rate; raising it increases the maximum rate. Temperature affects the enzyme-controlled light-independent stage much more than the light-dependent stage. The rate increases with temperature to an optimum because molecules have more kinetic energy and form more enzyme-substrate complexes, but above the optimum enzymes begin to denature, stomata close and photorespiration increases, so the rate falls.\n\nGrowers use this in greenhouses. Artificial lighting raises light intensity in dull weather and lengthens the day. Burning paraffin or propane, or releasing bottled carbon dioxide, raises its concentration to about 0.1%. Heaters keep the temperature near the optimum in cold periods, and ventilation or shading prevents overheating. Each measure is worthwhile only when that factor is actually limiting, and only if the value of the extra yield is greater than the cost of fuel and electricity.",
+    },
+  });
+
+  // ---------------------------------------------------------------- P4: yeast fermentation and glucose concentration
+  const glu = [0, 1, 2, 4, 6, 8];
+  const vol = [[0.6, 0.8, 0.7], [3.6, 3.4, 3.5], [6.3, 6.7, 6.5], [11.2, 11.8, 11.5], [13.6, 6.2, 13.8], [14.1, 14.5, 14.3]];
+  const m6 = mean([13.6, 13.8]);
+  chk(m6, 13.7);
+  const m4 = mean(vol[3]);
+  chk(m4, 11.5);
+  const rate4 = m4 / 10;
+  b.struct({
+    d: 4, examStyle: true, skill: EXAM.ZIM_P4_INVESTIGATION.skill, secs: EXAM.ZIM_P4_INVESTIGATION.secs, applies: EXAM.ZIM_P4_INVESTIGATION.applies, paper: "ZIMSEC Paper 4",
+    concepts: [A("respiration.anaerobic"), A("skills.practical-investigation")],
+    stem: `Tatenda investigated the effect of glucose concentration on the rate of fermentation by yeast.
+
+1. 5 cm³ of yeast suspension was added to 10 cm³ of glucose solution in a boiling tube, and the mixture was covered with a thin layer of oil.
+2. The tube was connected by a delivery tube to an inverted, water-filled measuring cylinder and placed in a water bath at 30 °C for 5 minutes.
+3. The volume of gas collected in the next 10 minutes was recorded.
+4. Steps 1 to 3 were carried out three times for each concentration of glucose.
+
+${table(["Glucose concentration / %", "Volume 1 / cm³", "Volume 2 / cm³", "Volume 3 / cm³"], glu.map((g, i) => [g, ...vol[i].map((x) => x.toFixed(1))]))}`,
+    parts: checkExam(EXAM.ZIM_P4_INVESTIGATION, [
+      P.group({
+        label: "(a)", stem: "Variables.",
+        parts: [
+          P.short({ label: "(i)", marks: 1, stem: "State the independent variable.", accepted: ["glucose concentration", "concentration of glucose", "the concentration of glucose", "glucose concentration (%)", "concentration of glucose solution"], wrong: ["volume of gas"], explanation: "The **glucose concentration** was changed." }),
+          P.manual({ label: "(ii)", marks: 1, stem: "State the dependent variable.", points: ["Volume of gas (carbon dioxide) collected in 10 minutes / rate of fermentation"], modelAnswer: "The volume of carbon dioxide collected in 10 minutes." }),
+          P.manual({ label: "(iii)", marks: 2, stem: "State two variables that were standardised.", points: ["Temperature (30 °C) / time of collection (10 min)", "Volume of yeast suspension (5 cm³) / volume of glucose solution (10 cm³) / equilibration time (5 min)"], modelAnswer: "The temperature was kept at 30 °C, and the same volume of yeast suspension (5 cm³) was used each time." }),
+        ],
+      }),
+      P.manual({
+        label: "(b)", marks: 2, stem: "Explain the purpose of the layer of oil, and of the 5 minutes in the water bath before collecting gas.",
+        points: ["Oil stops oxygen dissolving, so respiration is anaerobic (fermentation)", "5 minutes lets the mixture reach 30 °C (equilibrate) before measuring"],
+        modelAnswer: "The oil stops oxygen from the air dissolving in the mixture, so the yeast respires anaerobically. The 5 minutes allows the mixture to reach 30 °C before gas is collected.",
+      }),
+      P.group({
+        label: "(c)", stem: "Processing the results.",
+        parts: [
+          P.mcq({
+            label: "(i)", stem: "Which reading is anomalous?",
+            options: [["6.2 cm³ at 6% glucose", "Correct: far below 13.6 and 13.8."], ["14.1 cm³ at 8% glucose", "Close to 14.5 and 14.3."], ["0.8 cm³ at 0% glucose", "Close to 0.6 and 0.7."], ["11.2 cm³ at 4% glucose", "Close to 11.8 and 11.5."]],
+            answer: "A", explanation: "6.2 cm³ is less than half of the other two readings at 6%.",
+          }),
+          P.num({ label: "(ii)", marks: 1, stem: "Calculate the mean volume at 6% glucose, leaving out the anomalous reading, in cm³.", value: m6, dp: 1, unit: "cm³", wrong: [dpStr(mean(vol[4]), 1)], explanation: t`$(13.6 + 13.8) \div 2 = ${dpStr(m6, 1)}$ cm³. Including 6.2 gives ${dpStr(mean(vol[4]), 1)} cm³.` }),
+          P.num({ label: "(iii)", marks: 2, stem: "Calculate the mean rate of gas production at 4% glucose, in cm³/min, to two decimal places.", value: rate4, dp: 2, unit: "cm³/min", wrong: [dpStr(m4, 2), dpStr(10 / m4, 2)], explanation: t`Mean $= (11.2 + 11.8 + 11.5) \div 3 = ${dpStr(m4, 1)}$ cm³; rate $= ${dpStr(m4, 1)} \div 10 = ${dpStr(rate4, 2)}$ cm³ min⁻¹.` }),
+        ],
+      }),
+      P.manual({
+        label: "(d)", marks: 3, stem: "Describe the shape of the graph you would expect if mean volume of gas were plotted against glucose concentration.",
+        points: ["Almost no gas at 0% glucose (about 0.7 cm³)", "Volume rises steeply and roughly in proportion from 0 to 4% (to about 11.5 cm³)", "Then levels off / plateau at about 13.7-14.3 cm³ between 6 and 8%"],
+        modelAnswer: "The line starts close to zero (0.7 cm³ at 0%), rises steeply and almost in a straight line to 11.5 cm³ at 4%, then rises much less and levels off at about 13.7-14.3 cm³ between 6% and 8%.",
+      }),
+      P.manual({
+        label: "(e)", marks: 3, stem: "Explain the results.",
+        points: ["Glucose is the respiratory substrate; more glucose molecules give more frequent collisions with enzymes of glycolysis / fermentation, so faster CO₂ release", "CO₂ released when pyruvate is decarboxylated to ethanal in ethanol fermentation", "At high concentrations the rate levels off because enzymes are saturated / another factor (amount of yeast, temperature) is limiting"],
+        modelAnswer: "Glucose is the substrate for fermentation, so higher concentrations mean more frequent collisions with the enzymes of glycolysis and fermentation and faster production of carbon dioxide, which is released when pyruvate is decarboxylated to ethanal. Above about 4-6% the enzymes are working at their maximum rate and the amount of yeast becomes the limiting factor, so the rate levels off.",
+      }),
+      P.manual({
+        label: "(f)", marks: 2, stem: "Identify two sources of error in this investigation.",
+        points: ["Some CO₂ dissolves in the water of the cylinder / leaks from joints, so volumes are underestimated", "Difficulty reading the volume accurately / yeast not evenly suspended, so different numbers of cells / gas in the tube at the start (or temperature of water bath fluctuates)"],
+        modelAnswer: "Some carbon dioxide dissolves in the water in the measuring cylinder, so the volumes are too low, and the yeast suspension may not have been mixed evenly, so different tubes contained different numbers of yeast cells.",
+      }),
+      P.manual({
+        label: "(g)", marks: 2, stem: "Suggest two improvements to the method.",
+        points: ["Collect gas in a gas syringe (more precise) / use a thermostatically controlled water bath", "Stir the yeast suspension before each sample / include more concentrations between 4 and 8% / leave longer to equilibrate"],
+        modelAnswer: "Collect the gas in a gas syringe instead of over water, and stir the yeast suspension before taking each 5 cm³ sample so that each tube receives the same number of cells.",
+      }),
+    ]),
+    explanation: "Rate rises with substrate concentration until another factor limits it; means exclude anomalies.",
+    hints: ["Rate = mean volume ÷ time.", "Why might the curve level off?"],
+    calculator: true,
+  });
+});

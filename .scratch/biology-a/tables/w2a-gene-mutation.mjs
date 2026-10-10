@@ -1,0 +1,13 @@
+import { translate, CODE } from "./w2a-code.mjs";
+import { table } from "../lib.mjs";
+const g = (s) => s.match(/.{1,3}/g).join(" ");
+const orig = "AUGUUCGGACAGUGGAAAUAA";
+const show = (label, m) => [label, g(m), translate(m).join("-") + (m.length % 3 ? "" : "")];
+const silent = orig.replace("GGA", "GGC");
+const mis = orig.replace("CAG", "CCG");
+const non = orig.replace("CAG", "UAG");
+const del = orig.slice(0, 4) + orig.slice(5) + "";
+const ins = orig.slice(0, 7) + "A" + orig.slice(7);
+const trunc = (m) => m.slice(0, m.length - (m.length % 3));
+console.log(table(["Version", "mRNA (5' to 3')", "Amino acid sequence"], [show("Original", orig), show("Substitution (silent)", silent), show("Substitution (missense)", mis), show("Substitution (nonsense)", non), ["Deletion of base 5", g(del), translate(trunc(del)).join("-")], ["Insertion after base 7", g(ins), translate(trunc(ins)).join("-")]]));
+console.log(CODE["GAG"], CODE["GUG"], CODE["GGC"], CODE["CCG"], CODE["UAG"]);

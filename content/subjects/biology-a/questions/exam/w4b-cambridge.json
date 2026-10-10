@@ -1,0 +1,244 @@
+[
+ {
+  "key": "exam.w4b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "abio.evolution.t-test",
+   "abio.skills.descriptive-statistics",
+   "abio.genetech.gmo-agriculture"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1800,
+  "stem": "A researcher compared the yield of an insect-resistant (Bt) cotton variety with a conventional variety of similar genetic background. Sixteen plots of equal size on one farm were used: eight were sown with each variety. All plots received the same fertiliser and irrigation, and no insecticide was sprayed. The yield of seed cotton from each plot was recorded, in tonnes per hectare.\n\n| Plot | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |\n|---|---|---|---|---|---|---|---|---|\n| Bt cotton | 2.33 | 2.05 | 2.48 | 2.19 | 2.36 | 2.13 | 2.27 | 2.42 |\n| Conventional cotton | 2.02 | 2.21 | 1.88 | 2.08 | 1.95 | 2.24 | 2.04 | 1.99 |\n\nThe standard deviation is $s = \\sqrt{\\dfrac{\\sum (x - \\bar{x})^2}{n - 1}}$ and $t = \\dfrac{|\\bar{x}_1 - \\bar{x}_2|}{\\sqrt{\\dfrac{s_1^2}{n_1} + \\dfrac{s_2^2}{n_2}}}$.\n\n| Degrees of freedom | 13 | 14 | 15 |\n|---|---|---|---|\n| Critical value of t at p = 0.05 | 2.16 | 2.14 | 2.13 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a t-test is a suitable statistical test for these data.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The data are continuous (measured) values, probably normally distributed",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The test compares the means of two independent samples (two varieties)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Yield is continuous, measured data that is likely to be approximately normally distributed, and the aim is to compare the means of two independent samples, the Bt and the conventional plots."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State a null hypothesis for this investigation.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "There is no significant difference between the mean yields of Bt and conventional cotton; any difference is due to chance",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: There is no significant difference between the mean yield of Bt cotton and that of conventional cotton; any difference is due to chance."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the mean yield of the Bt cotton plots, in tonnes per hectare, to three significant figures.",
+    "answerSpec": {
+     "value": 2.2787499999999996,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "Sum ÷ 8 = 2.28 tonnes per hectare.",
+    "workedSolution": "1. Sum ÷ 8 = 2.28 tonnes per hectare."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the standard deviation of the Bt cotton yields, to three significant figures.",
+    "answerSpec": {
+     "value": 0.14740008722618086,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Using n − 1 = 7: s = 0.147. Dividing by n (8) gives 0.138, which underestimates s for a sample.",
+    "workedSolution": "1. Using n − 1 = 7: s = 0.147. Dividing by n (8) gives 0.138, which underestimates s for a sample."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The standard deviation of the conventional yields is 0.123 and their mean is 2.051. Calculate t, to three significant figures.",
+    "answerSpec": {
+     "value": 3.3505671147309672,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "$t = \\dfrac{|2.279 - 2.051|}{\\sqrt{\\dfrac{0.147^2}{8} + \\dfrac{0.123^2}{8}}} = 3.35$. Forgetting to divide each variance by n gives a much smaller value.",
+    "workedSolution": "1. $t = \\dfrac{|2.279 - 2.051|}{\\sqrt{\\dfrac{0.147^2}{8} + \\dfrac{0.123^2}{8}}} = 3.35$. Forgetting to divide each variance by n gives a much smaller value."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of degrees of freedom.",
+    "answerSpec": {
+     "value": 14
+    },
+    "explanation": "n₁ + n₂ − 2 = 8 + 8 − 2 = 14.",
+    "workedSolution": "1. n₁ + n₂ − 2 = 8 + 8 − 2 = 14."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Use your value of t to reach a conclusion about the null hypothesis.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "t (3.35) is greater than the critical value of 2.14 at 14 degrees of freedom and p = 0.05",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the difference is significant (probability of it being due to chance is less than 0.05); reject the null hypothesis: Bt cotton gave a higher mean yield",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: t = 3.35, which is greater than the critical value of 2.14 for 14 degrees of freedom at p = 0.05. The probability that the difference is due to chance is less than 0.05, so the difference is significant and the null hypothesis is rejected: Bt cotton gave a significantly higher mean yield."
+    }
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Suggest a biological explanation for the difference in yield.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Bt cotton makes Bt (Cry) toxin, killing bollworm larvae that feed on it",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "No insecticide was sprayed, so conventional plots suffered more boll damage, reducing yield",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The Bt cotton produces a Cry toxin that kills bollworm larvae feeding on it. Because no insecticide was sprayed, the conventional plots suffered more bollworm damage to their bolls, lowering their yield."
+    }
+   },
+   {
+    "label": "(i)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Evaluate the method, suggesting two ways in which the confidence in the conclusion could be increased.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Plots may differ in soil, water or pest pressure: allocate varieties to plots at random / use a block design; measure bollworm numbers",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Only one farm and one season: repeat at several sites and seasons / use more plots",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The plots may differ in soil, water and pest pressure, so the varieties should be allocated to plots at random, ideally in blocks, and bollworm numbers recorded. The trial used one farm in one season, so it should be repeated at several sites and in several seasons with more plots."
+    }
+   }
+  ],
+  "explanation": "Choose the t-test, state the null hypothesis, calculate the mean, SD and t, compare with the critical value, explain and evaluate.",
+  "hints": [
+   "Degrees of freedom for a t-test: n₁ + n₂ − 2.",
+   "Use n − 1 in the standard deviation."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.28"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0.147"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "3.35"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "14"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.05"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0.138"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1.18"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "16"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/biology"
+  ],
+  "calculator": true,
+  "paper": "Cambridge Paper 5"
+ }
+]

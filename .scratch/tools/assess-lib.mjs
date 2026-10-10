@@ -193,7 +193,7 @@ export const examRule = (topic, type, marks, count = 1, difficulty = [3, 5], ext
  * validator's sense (a rule's pool minus what earlier rules may take from the same questions >= its count): an item
  * tagged under two topics can otherwise be drawn by the earlier rule and leave the later one short.
  */
-function spreadAlloc(s, makeRule, n, topics, label) {
+function spreadAlloc(s, makeRule, n, topics, label, full = false) {
   const sets = topics.map((k) => new Set(pool(s, makeRule(k, 1)).map((r) => r.key)));
   const overlap = topics.map((_, i) => topics.map((__, j) => (j < i ? [...sets[j]].filter((x) => sets[i].has(x)).length : 0)));
   const alloc = topics.map(() => 0);
@@ -210,7 +210,7 @@ function spreadAlloc(s, makeRule, n, topics, label) {
     let bestScore = -Infinity;
     for (let i = 0; i < topics.length; i += 1) {
       const size = sets[i].size;
-      if (size === 0 || alloc[i] + 1 > Math.max(1, Math.floor(size / 2))) continue;
+      if (size === 0 || alloc[i] + 1 > (full ? size : Math.max(1, Math.floor(size / 2)))) continue;
       alloc[i] += 1;
       const ok = guaranteed();
       alloc[i] -= 1;
@@ -229,8 +229,9 @@ function spreadAlloc(s, makeRule, n, topics, label) {
 }
 
 /** Spreads `n` exam-format draws (type + exact marks + examStyle) over the given topics. */
-export function examSpread(s, { type, marks, n, topics, difficulty = [3, 5], skill }) {
-  return spreadAlloc(s, (k, c) => examRule(k, type, marks, c, difficulty, skill ? { skill } : {}), n, topics, `examSpread ${type} ${marks}${skill ? " " + skill : ""}`);
+export function examSpread(s, { type, marks, n, topics, difficulty = [3, 5], skill, full = false }) {
+  // full: allow a topic's whole pool (thin exam banks); every attempt then repeats more items.
+  return spreadAlloc(s, (k, c) => examRule(k, type, marks, c, difficulty, skill ? { skill } : {}), n, topics, `examSpread ${type} ${marks}${skill ? " " + skill : ""}`, full);
 }
 
 /** Spreads `n` one-mark single-answer MCQ draws over the given topics. */
