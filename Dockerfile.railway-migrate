@@ -1,0 +1,16 @@
+# Railway one-off "migrate" service (docs/DEPLOYMENT.md "Appendix: Railway"): migrations, grants and production guards
+# (scripts/db-deploy.ts as the owner), then optionally the catalogue seed and the content import as app_rw, all over the
+# private network. Full source + dev dependencies (tsx, prisma CLI); never serves traffic. Entry: scripts/railway-migrate.sh.
+ARG NODE_IMAGE=node:24-bookworm-slim
+FROM ${NODE_IMAGE}
+WORKDIR /app
+ENV NEXT_TELEMETRY_DISABLED=1 CHECKPOINT_DISABLE=1
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends openssl ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+COPY . .
+RUN MIGRATION_DATABASE_URL=postgresql://build@127.0.0.1:1/unused npx prisma generate
+USER node
+CMD ["sh", "scripts/railway-migrate.sh"]
