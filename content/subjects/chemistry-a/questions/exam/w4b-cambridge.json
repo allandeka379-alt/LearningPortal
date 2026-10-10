@@ -1,0 +1,650 @@
+[
+ {
+  "key": "exam.w4b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "achem.skills.planning-evaluation",
+   "achem.analysis.chromatography-glc"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1800,
+  "stem": "A student used gas-liquid chromatography to find the ethanol content of a home-brewed sorghum beer. To each standard ethanol solution, and to the beer, the same volume of propan-1-ol was added as an internal standard. For each run the peak areas of ethanol and of propan-1-ol were recorded.\n\n| ethanol / % by volume | 1.0 | 2.0 | 3.0 | 4.0 | 5.0 |\n|---|---|---|---|---|---|\n| area of ethanol peak | 21.6 | 42.2 | 64.0 | 91.7 | 105.5 |\n| area of propan-1-ol peak | 50.2 | 49.6 | 50.4 | 49.8 | 50.0 |\n| ratio = ethanol area ÷ propan-1-ol area | 0.430 | ? | 1.270 | 1.841 | 2.110 |\n\nA graph of the ratio (y) against ethanol % (x) is expected to be a straight line, y = mx + c. The beer sample gave a ratio of 1.31.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the missing ratio for 2.0% ethanol, to three decimal places.",
+    "answerSpec": {
+     "value": 0.8508064516129032,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "42.2 ÷ 49.6 = 0.851.",
+    "workedSolution": "1. 42.2 ÷ 49.6 = 0.851."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the ratio to an internal standard is plotted, rather than the ethanol peak area alone.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The volume injected (and detector response) varies slightly from run to run, changing all peak areas",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Both peaks are affected equally, so the ratio cancels these variations and is reproducible",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Small differences in the volume injected or in the detector sensitivity change the size of every peak in a run. Because the ethanol and propan-1-ol peaks are affected in the same proportion, their ratio cancels these variations and depends only on the ethanol concentration."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Identify the anomalous result (give the ethanol %).",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "4.0"
+      },
+      {
+       "value": "4"
+      },
+      {
+       "value": "4.0%"
+      },
+      {
+       "value": "4%"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "At 4.0% the ratio (1.841) lies well above the line through the other points (expected about 1.69)."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Suggest a cause of the anomalous result.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "e.g. too much ethanol added when making that standard / too little internal standard added / some propan-1-ol evaporated / peak area misintegrated",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The 4.0% standard may have been made up with too much ethanol, or too little propan-1-ol added to it, giving a ratio that is too high."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Using the other four points, determine the gradient, m, of the line.",
+    "answerSpec": {
+     "value": 0.41987056353621394,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.01
+     }
+    },
+    "explanation": "Best-fit gradient = 0.420 (for example (2.110 − 0.430) ÷ (5.0 − 1.0) = 0.420).",
+    "workedSolution": "1. Best-fit gradient = 0.420 (for example (2.110 − 0.430) ÷ (5.0 − 1.0) = 0.420)."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Determine the intercept, c, of the line.",
+    "answerSpec": {
+     "value": 0.010587601754493026,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.02
+     }
+    },
+    "explanation": "c ≈ 0.011; the line passes very close to the origin, as expected when no ethanol gives no ethanol peak.",
+    "workedSolution": "1. c ≈ 0.011; the line passes very close to the origin, as expected when no ethanol gives no ethanol peak."
+   },
+   {
+    "label": "(g)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use your line to find the ethanol content of the beer, in % by volume, to two significant figures.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 3.0947928030525826,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.06
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "x = (y − c) ÷ m = (1.31 − 0.011) ÷ 0.420 = 3.1%.",
+    "workedSolution": "1. x = (y − c) ÷ m = (1.31 − 0.011) ÷ 0.420 = 3.1%."
+   },
+   {
+    "label": "(h)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The 10.0 cm³ pipette used for the internal standard has an uncertainty of ±0.04 cm³. Calculate the percentage uncertainty.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 0.4,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "0.04 ÷ 10.0 × 100 = 0.4%.",
+    "workedSolution": "1. 0.04 ÷ 10.0 × 100 = 0.4%."
+   },
+   {
+    "label": "(i)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why is it better to use a calibration line than to compare the beer with a single standard?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It removes the need to add an internal standard to every sample.",
+      "rationale": "The internal standard is still needed for the ratios."
+     },
+     {
+      "key": "B",
+      "content": "Several standards show up a faulty point and reduce random error.",
+      "correct": true,
+      "rationale": "Correct: a line through several points is more reliable and checks linearity."
+     },
+     {
+      "key": "C",
+      "content": "It makes the retention times of all the peaks longer and clearer.",
+      "rationale": "The calibration does not affect retention times."
+     },
+     {
+      "key": "D",
+      "content": "It allows ethanol to be identified without GLC.",
+      "rationale": "GLC is still needed to measure the areas."
+     }
+    ],
+    "explanation": "Several standards check linearity, reveal anomalies and reduce random error."
+   },
+   {
+    "label": "(j)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Suggest two improvements to the procedure.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Repeat each standard (and the sample) injection and use mean ratios",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Use standards that bracket the sample closely (more points between 2% and 4%) / check retention time of ethanol with a pure sample / dilute beer so it lies in the range",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Inject each standard and the beer at least twice and use mean ratios, and prepare extra standards close to the beer's value (between 2% and 4%) so that the line is best defined where it is used."
+    }
+   },
+   {
+    "label": "(k)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State how the student could confirm that the peak used for the beer really is ethanol.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Compare its retention time with that of pure ethanol under the same conditions (or add ethanol and see the same peak grow / use GC-MS)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Run pure ethanol under the same conditions and check that it has the same retention time (or spike the beer with ethanol and see the same peak increase)."
+    }
+   }
+  ],
+  "explanation": "Ratio at 2.0% = 0.851; anomaly at 4.0%; m ≈ 0.420, c ≈ 0.011; beer ≈ 3.1% ethanol.",
+  "hints": [
+   "Ratio = ethanol area ÷ internal-standard area.",
+   "x = (y − c) ÷ m."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.851"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "4.0"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.420"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "0.0106"
+    },
+    "(g)": {
+     "type": "NUMERICAL",
+     "value": "3.09"
+    },
+    "(h)": {
+     "type": "NUMERICAL",
+     "value": "0.4"
+    },
+    "(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "1.1753554502369667"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "5.0"
+     },
+     "(g)": {
+      "type": "NUMERICAL",
+      "value": "3.044537037037037"
+     },
+     "(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/chemistry"
+  ],
+  "calculator": true,
+  "paper": "Paper 5"
+ },
+ {
+  "key": "exam.w4b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "achem.skills.planning-evaluation",
+   "achem.kinetics.rate-equations"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1800,
+  "stem": "A student measured the rate constant, k, of a reaction between two ions in solution at five temperatures. The rate constant is related to temperature by the equation ln k = −Eₐ/(RT) + ln A, where Eₐ is the activation energy in J mol⁻¹, R = 8.31 J K⁻¹ mol⁻¹ and A is a constant.\n\n| T / K | 293 | 303 | 313 | 323 | 333 |\n|---|---|---|---|---|---|\n| k / dm³ mol⁻¹ s⁻¹ | 2.12 × 10⁻³ | 4.30 × 10⁻³ | 6.81 × 10⁻³ | 1.54 × 10⁻² | 2.76 × 10⁻² |\n| (1/T) / 10⁻³ K⁻¹ | ? | 3.3003 | 3.1949 | 3.0960 | 3.0030 |\n| ln k | −6.156 | −5.449 | −4.989 | −4.173 | ? |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate 1/T at 293 K, in units of 10⁻³ K⁻¹, to four decimal places (for example 3.3003).",
+    "answerSpec": {
+     "value": 3.4129692832764507,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.00005
+     }
+    },
+    "explanation": "1/293 = 3.4130e-3 K⁻¹ = 3.4130 × 10⁻³ K⁻¹.",
+    "workedSolution": "1. 1/293 = 3.4130e-3 K⁻¹ = 3.4130 × 10⁻³ K⁻¹."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate ln k at 333 K, to three decimal places.",
+    "answerSpec": {
+     "value": -3.5899395062590327,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "ln(2.76 × 10⁻²) = −3.590. Using lg instead of ln gives −1.559.",
+    "workedSolution": "1. ln(2.76 × 10⁻²) = −3.590. Using lg instead of ln gives −1.559."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a graph of ln k against 1/T should be a straight line, and what its gradient represents.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "ln k = −(Eₐ/R)(1/T) + ln A has the form y = mx + c with y = ln k and x = 1/T",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The gradient is −Eₐ/R (and the intercept is ln A)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The equation can be written ln k = (−Eₐ/R) × (1/T) + ln A, which is y = mx + c with y = ln k and x = 1/T. The points should lie on a straight line whose gradient is −Eₐ/R."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Identify the anomalous result (give the temperature in K).",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "313"
+      },
+      {
+       "value": "313 K"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "At 313 K ln k lies below the line through the other points."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Using the other four points, determine the gradient of the graph, in K.",
+    "payload": {
+     "unitHint": "K"
+    },
+    "answerSpec": {
+     "value": -6256.636941818328,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 200
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "K",
+       "kelvin",
+       "kelvins"
+      ]
+     }
+    },
+    "explanation": "Best-fit gradient = -6260 K (for example from the 293 K and 333 K points: (−3.590 − (−6.156)) ÷ (3.0030e-3 − 3.4130e-3) = -6260 K).",
+    "workedSolution": "1. Best-fit gradient = -6260 K (for example from the 293 K and 333 K points: (−3.590 − (−6.156)) ÷ (3.0030e-3 − 3.4130e-3) = -6260 K)."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Hence calculate the activation energy, in kJ mol⁻¹, to two significant figures.",
+    "payload": {
+     "unitHint": "kJ/mol"
+    },
+    "answerSpec": {
+     "value": 51.99265298651031,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 2
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "kJ/mol",
+       "kJ mol^-1",
+       "kJ mol-1",
+       "kJ mol⁻¹"
+      ]
+     }
+    },
+    "explanation": "Eₐ = −gradient × R = 6260 × 8.31 = 52000 J mol⁻¹ = 52 kJ mol⁻¹. Forgetting to convert J to kJ, or dividing by R, are common errors.",
+    "workedSolution": "1. Eₐ = −gradient × R = 6260 × 8.31 = 52000 J mol⁻¹ = 52 kJ mol⁻¹. Forgetting to convert J to kJ, or dividing by R, are common errors."
+   },
+   {
+    "label": "(g)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "A more precise method gives Eₐ = 55 kJ mol⁻¹. Calculate the percentage difference between the student's value and this value.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 5.46790366089035,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 2.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "|52.0 − 55| ÷ 55 × 100 ≈ 5.5%.",
+    "workedSolution": "1. |52.0 − 55| ÷ 55 × 100 ≈ 5.5%."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Suggest a cause of the anomalous point at 313 K and explain its effect on k.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "e.g. the actual temperature of the reaction mixture was lower than 313 K (solutions not equilibrated in the water bath / heat lost while mixing)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A lower temperature gives a smaller rate constant, so ln k is below the line",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The reactants may not have reached 313 K before mixing, or the mixture cooled during the run, so the reaction was slower than it should have been at 313 K and the measured k was too small, putting the point below the line."
+    }
+   },
+   {
+    "label": "(i)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What does the negative sign of the gradient show?",
+    "options": [
+     {
+      "key": "A",
+      "content": "k decreases as temperature increases.",
+      "rationale": "A negative gradient against 1/T means k rises with T."
+     },
+     {
+      "key": "B",
+      "content": "The activation energy is negative.",
+      "rationale": "Eₐ = −gradient × R is positive."
+     },
+     {
+      "key": "C",
+      "content": "k increases as temperature increases.",
+      "correct": true,
+      "rationale": "Correct: as T rises, 1/T falls and ln k rises."
+     },
+     {
+      "key": "D",
+      "content": "The reaction is exothermic.",
+      "rationale": "The gradient concerns Eₐ, not the sign of ΔH."
+     }
+    ],
+    "explanation": "Smaller 1/T (higher T) gives larger ln k."
+   },
+   {
+    "label": "(j)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Suggest two improvements to make the value of Eₐ more reliable.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Use a thermostatted water bath and equilibrate both solutions at the set temperature before mixing; measure the temperature of the mixture",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Repeat each measurement (and/or use more temperatures over a wider range) and use mean values",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Equilibrate both reactant solutions in a thermostatted water bath before mixing and record the actual temperature of the mixture; repeat each run and use more temperatures over a wider range, so that the gradient is better defined."
+    }
+   }
+  ],
+  "explanation": "Gradient ≈ -6260 K; Eₐ ≈ 52 kJ mol⁻¹, about 5.5% from 55 kJ mol⁻¹; anomaly at 313 K.",
+  "hints": [
+   "ln k = −(Eₐ/R)(1/T) + ln A.",
+   "Eₐ = −gradient × R; convert J to kJ."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3.4130"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "-3.590"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "313"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "-6260"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "52.0"
+    },
+    "(g)": {
+     "type": "NUMERICAL",
+     "value": "5.47"
+    },
+    "(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "0.293"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "-1.5590909179347823"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "333"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "51992.65298651031"
+     },
+     "(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/chemistry"
+  ],
+  "calculator": true,
+  "paper": "Paper 5"
+ }
+]

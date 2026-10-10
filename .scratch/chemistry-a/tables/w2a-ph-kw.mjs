@@ -1,0 +1,10 @@
+import { pH, hFromPH, pOH, pHStrongBase, molesFromSolution, sfStr, dpStr, KW } from "../lib.mjs";
+console.log("HNO3 0.0250", pH(0.025));
+console.log("H2SO4 0.0150", pH(0.03));
+console.log("NaOH 0.0400 pOH", pOH(0.04), "pH", pHStrongBase(0.04));
+const nH = molesFromSolution(25, 0.1), nOH = molesFromSolution(20, 0.1);
+console.log("mix excess H", nH - nOH, "conc", (nH - nOH) / 0.045, "pH", pH((nH - nOH) / 0.045));
+const nH2 = molesFromSolution(20, 0.1), nOH2 = molesFromSolution(25, 0.1);
+console.log("mix excess OH", nOH2 - nH2, "conc", (nOH2 - nH2) / 0.045, "pH", pHStrongBase((nOH2 - nH2) / 0.045));
+console.log("Kw50 neutral", pH(Math.sqrt(5.48e-14)), Math.sqrt(5.48e-14));
+console.log("H from pH 3.40", hFromPH(3.4));

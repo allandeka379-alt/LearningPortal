@@ -1,0 +1,446 @@
+[
+ {
+  "key": "exam.w2b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "achem.group2.reactions-uses",
+   "achem.skills.quantitative-practical"
+  ],
+  "difficulty": 5,
+  "marks": 25,
+  "estimatedSeconds": 4200,
+  "stem": "Rudo determines the relative formula mass of a Group 2 carbonate, $\\ce{MCO3}$, by heating it until it has fully decomposed:\n\n$\\ce{MCO3(s) -> MO(s) + CO2(g)}$\n\nFor each experiment she weighs an empty crucible, adds the carbonate and weighs again, then heats the crucible strongly with a Bunsen burner, lets it cool on a heat-resistant mat with the lid on, and reweighs. She repeats the heating, cooling and weighing until two consecutive masses agree (constant mass). In experiment 4 she ran out of time and heated the crucible only once. The balance reads to 0.01 g and each reading has an uncertainty of ±0.005 g.\n\n| Experiment | 1 | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|---|\n| Mass of empty crucible / g | 15.62 | 16.08 | 15.87 | 16.31 | 15.94 |\n| Mass of crucible + carbonate / g | 16.64 | 17.59 | 17.89 | 18.80 | 18.97 |\n| Mass of crucible + residue after heating / g | 16.11 | 16.80 | 16.84 | 17.85 | 17.39 |\n\nUse Mr of $\\ce{CO2}$ = 44.0, Ar: C 12.0, O 16.0.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 2,
+    "stem": "Process the results of experiment 3.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "Calculate the mass of carbonate used, in g, to two decimal places.",
+      "payload": {
+       "unitHint": "g"
+      },
+      "answerSpec": {
+       "value": 2.02,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "g",
+         "grams",
+         "gram"
+        ]
+       }
+      },
+      "explanation": "17.89 − 15.87 = 2.02 g.",
+      "workedSolution": "1. 17.89 − 15.87 = 2.02 g."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "Calculate the mass of carbon dioxide lost, in g, to two decimal places.",
+      "payload": {
+       "unitHint": "g"
+      },
+      "answerSpec": {
+       "value": 1.05,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "g",
+         "grams",
+         "gram"
+        ]
+       }
+      },
+      "explanation": "17.89 − 16.84 = 1.05 g. (0.97 g is the mass of the residue, not the gas lost.)",
+      "workedSolution": "1. 17.89 − 16.84 = 1.05 g. (0.97 g is the mass of the residue, not the gas lost.)"
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why Rudo heats to constant mass, and why the crucible is cooled with its lid on before each weighing.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Constant mass shows that decomposition is complete, so all the CO₂ has been lost",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Weighing hot gives a false (low) reading because of convection currents / the lid stops the oxide absorbing water vapour or CO₂ from the air (and stops solid spitting out)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Two equal consecutive masses show that no more carbon dioxide is being lost, so the decomposition is complete. The crucible is cooled before weighing because convection currents above a hot crucible make the reading unreliable, and the lid stops the oxide absorbing moisture or carbon dioxide from the air while it cools."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Which experiment number gives the anomalous result?",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "4"
+      },
+      {
+       "value": "experiment 4"
+      },
+      {
+       "value": "four"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Experiment 4 lost only 0.95 g of CO₂ from 2.49 g; about 1.30 g was expected from the line through the other points. It was heated only once, so decomposition was incomplete."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Rudo plots mass of carbon dioxide lost against mass of carbonate. Describe the graph she should draw.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Mass of CO₂ lost / g on the y-axis against mass of carbonate / g on the x-axis, labelled with units, scales using more than half the grid in each direction",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A straight line of best fit passing through the origin, ignoring the anomalous point (experiment 4)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Plot mass of carbon dioxide lost / g (y) against mass of carbonate / g (x), with scales chosen so the points fill more than half of the grid, then draw a straight best-fit line through the origin that ignores experiment 4."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Determine the gradient of the best-fit line through the origin (no unit; exclude the anomaly).",
+    "answerSpec": {
+     "value": 0.5211677863681867,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.01
+     }
+    },
+    "explanation": "Line through the origin fitted to experiments 1, 2, 3 and 5: gradient ≈ 0.521 (for example 1.58 ÷ 3.03 = 0.521). Any value from 0.511 to 0.531 is accepted.",
+    "workedSolution": "1. Line through the origin fitted to experiments 1, 2, 3 and 5: gradient ≈ 0.521 (for example 1.58 ÷ 3.03 = 0.521). Any value from 0.511 to 0.531 is accepted."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Use your gradient to calculate the relative formula mass of MCO₃.",
+    "answerSpec": {
+     "value": 84.42578599613512,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 2
+     }
+    },
+    "explanation": "1 mol MCO₃ (Mr g) loses 1 mol CO₂ (44.0 g), so mass lost = (44.0 ÷ Mr) × mass of carbonate and the gradient = 44.0 ÷ Mr. Mr = 44.0 ÷ 0.521 = 84.4. Multiplying instead of dividing gives a meaningless 22.9.",
+    "workedSolution": "1. 1 mol MCO₃ (Mr g) loses 1 mol CO₂ (44.0 g), so mass lost = (44.0 ÷ Mr) × mass of carbonate and the gradient = 44.0 ÷ Mr. Mr = 44.0 ÷ 0.521 = 84.4. Multiplying instead of dividing gives a meaningless 22.9."
+   },
+   {
+    "label": "(g)",
+    "type": "STRUCTURED",
+    "marks": 2,
+    "stem": "Identify the metal.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "Calculate the relative atomic mass of M.",
+      "answerSpec": {
+       "value": 24.42578599613512,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 2
+       }
+      },
+      "explanation": "Ar(M) = 84.4 − (12.0 + 3 × 16.0) = 24.4. Subtracting 44.0 (CO₂) instead of 60.0 (CO₃) is a common slip.",
+      "workedSolution": "1. Ar(M) = 84.4 − (12.0 + 3 × 16.0) = 24.4. Subtracting 44.0 (CO₂) instead of 60.0 (CO₃) is a common slip."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Name metal M.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "magnesium"
+        },
+        {
+         "value": "Mg"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      "explanation": "Ar ≈ 24: magnesium (Ar 24.3). Calcium (40.1) would give Mr ≈ 100."
+     }
+    ]
+   },
+   {
+    "label": "(h)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the percentage uncertainty in the mass of carbon dioxide lost in experiment 1, to two significant figures.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 1.8867924528301887,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "The mass lost is a difference of two readings, so the uncertainty is 2 × 0.005 = 0.01 g; 0.01 ÷ 0.53 × 100 = 1.9%. Using ±0.005 g once gives 0.94%.",
+    "workedSolution": "1. The mass lost is a difference of two readings, so the uncertainty is 2 × 0.005 = 0.01 g; 0.01 ÷ 0.53 × 100 = 1.9%. Using ±0.005 g once gives 0.94%."
+   },
+   {
+    "label": "(i)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain the effect on the calculated Mr if every sample had been heated only once, as in experiment 4.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Less CO₂ is lost than the full amount, so the gradient (mass lost ÷ mass of carbonate) is smaller",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Mr = 44.0 ÷ gradient, so the calculated Mr is too high",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Incomplete decomposition means less carbon dioxide is lost from each sample, so the gradient is smaller. Since Mr = 44.0 ÷ gradient, the calculated Mr would be too high."
+    }
+   },
+   {
+    "label": "(j)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Identify one systematic error and one random error in this method, and state the direction of the effect of the systematic error on Mr.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Systematic: e.g. the oxide absorbs water/CO₂ from the air while cooling, or solid is lost by spitting, or the carbonate is damp / partly basic carbonate",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Direction consistent with the error: absorption gives a smaller mass loss so Mr too high; spitting or a damp sample gives a larger mass loss so Mr too low",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Random: e.g. reading the balance / small differences in heating and cooling time between experiments / variation in the amount of solid lost from the crucible",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A systematic error is the oxide absorbing moisture from the air as it cools: every residue weighs a little too much, the mass lost is too small, the gradient is too small and Mr too high. A random error is the variation in heating and cooling times from one experiment to another, which scatters the points about the line."
+    }
+   },
+   {
+    "label": "(k)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Suggest three improvements to the method.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Heat every sample to constant mass (repeat heating until two readings agree), including experiment 4",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Cool in a desiccator before weighing to stop the oxide absorbing moisture",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Use a balance reading to 0.001 g or larger masses of carbonate to reduce the percentage uncertainty; repeat experiments / use more data points",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Repeat experiment 4, heating to constant mass; cool each crucible in a desiccator so the oxide cannot absorb water from the air; and use a balance reading to 0.001 g (or larger samples) to reduce the percentage uncertainty in the small mass losses."
+    }
+   },
+   {
+    "label": "(l)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Rudo's friend suggests repeating the experiment with barium carbonate. Suggest why this method would not work well, and state one safety precaution for the original experiment.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Thermal stability of Group 2 carbonates increases down the group, so barium carbonate does not decompose (or decomposes only very slowly) at Bunsen temperature",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Wear eye protection / use tongs and a heat-resistant mat for the hot crucible / keep the lid partly on to avoid spitting solid",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Group 2 carbonates become more thermally stable down the group, so barium carbonate would hardly decompose at the temperature of a Bunsen flame. Wear eye protection and handle the hot crucible with tongs."
+    }
+   }
+  ],
+  "explanation": "Gradient ≈ 0.521; Mr(MCO₃) ≈ 84.4; Ar(M) ≈ 24.4, so M is magnesium. Experiment 4 is anomalous (heated only once).",
+  "hints": [
+   "Gradient = 44.0 ÷ Mr(MCO₃).",
+   "A mass found by difference has twice the uncertainty of one reading."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "NUMERICAL",
+     "value": "2.02"
+    },
+    "(a)(ii)": {
+     "type": "NUMERICAL",
+     "value": "1.05"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "4"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "0.521"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "84.4"
+    },
+    "(g)(i)": {
+     "type": "NUMERICAL",
+     "value": "24.4"
+    },
+    "(g)(ii)": {
+     "type": "SHORT_ANSWER",
+     "text": "magnesium"
+    },
+    "(h)": {
+     "type": "NUMERICAL",
+     "value": "1.9"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "NUMERICAL",
+      "value": "1.05"
+     },
+     "(a)(ii)": {
+      "type": "NUMERICAL",
+      "value": "0.97"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "5"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1.9187678635485255"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "22.931382600200216"
+     },
+     "(g)(i)": {
+      "type": "NUMERICAL",
+      "value": "40.42578599613512"
+     },
+     "(g)(ii)": {
+      "type": "SHORT_ANSWER",
+      "text": "calcium"
+     },
+     "(h)": {
+      "type": "NUMERICAL",
+      "value": "0.9433962264150944"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/chemistry"
+  ],
+  "calculator": true,
+  "paper": "Paper 3"
+ }
+]

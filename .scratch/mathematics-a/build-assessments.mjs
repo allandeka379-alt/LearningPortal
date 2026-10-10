@@ -2,7 +2,7 @@
 // (2015-2022) and Cambridge AS & A Level Mathematics 9709 (2026-2027). Paper plan: .scratch/mathematics-a/BRIEF.md.
 // Inputs: npx tsx --conditions=react-server .scratch/tools/inventory.ts mathematics-a .scratch/mathematics-a/inventory.json
 // Run: node .scratch/mathematics-a/build-assessments.mjs [--report] [--write]
-import { setup, autoTopicTests, topicTest, examSpread, mock, finish, SELF_MARK } from "../tools/assess-lib.mjs";
+import { disambiguateTitles, setup, autoTopicTests, topicTest, examSpread, mock, finish, SELF_MARK } from "../tools/assess-lib.mjs";
 
 const S = setup(
   "mathematics-a",
@@ -232,7 +232,7 @@ finish(
     zp: { tests: tests(S.zp, "zimsec-pure", MERGE.zp), mocks: zimPair(S.zp, "pure", "Pure Mathematics", true), file: "zimsec-pure" },
     zs: { tests: tests(S.zs, "zimsec-statistics", MERGE.zs), mocks: zimPair(S.zs, "statistics", "Statistics", false), file: "zimsec-statistics" },
     zm: { tests: tests(S.zm, "zimsec-mechanics", MERGE.zm), mocks: zmMocks, file: "zimsec-mechanics" },
-    cam: { tests: tests(S.cam, "9709", MERGE.cam), mocks: camMocks, file: "cambridge" },
+    cam: { tests: disambiguateTitles(tests(S.cam, "9709", MERGE.cam), (t) => (t.key.includes(".pure-1.") ? "Pure 1" : "Pure 2 and 3")), mocks: camMocks, file: "cambridge" },
   },
   {
     expectedMarks: {

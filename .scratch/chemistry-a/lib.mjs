@@ -14,7 +14,9 @@
 // EVERY number in an answer, a mark scheme or a data table you invent is computed in code with these helpers and passed
 // EXACT to the builders; the builders round for display and set a tolerance that accepts every correctly rounded answer.
 // Never type a computed value by hand: use chk(...) to assert a value you also write in prose.
-export const t = String.raw;
+// String.raw keeps a typed "\n" as two characters, which renders as a visible "\n": turn it into a real newline
+// (LaTeX commands such as \nu or \neq have a lower-case letter after the n, so they are left alone).
+export const t = (strings, ...values) => String.raw(strings, ...values).replace(/\\n(?![a-z])/g, "\n");
 /** mhchem inline: ce("2H2 + O2 -> 2H2O") → "$\ce{2H2 + O2 -> 2H2O}$". */
 export const ce = (s) => `$\\ce{${s}}$`;
 

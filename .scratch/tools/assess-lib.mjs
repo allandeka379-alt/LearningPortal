@@ -295,3 +295,16 @@ export function finish(S, plan, opts = {}) {
     console.log("written");
   }
 }
+
+/**
+ * Topic tests whose titles clash within one syllabus (e.g. AS and A Level "Chemical energetics") get a qualifier so
+ * students can tell them apart: "Chemical energetics (A Level): topic test". `qualify(test)` returns the label.
+ */
+export function disambiguateTitles(tests, qualify) {
+  const count = new Map();
+  for (const t of tests) count.set(t.title, (count.get(t.title) ?? 0) + 1);
+  for (const t of tests) {
+    if (count.get(t.title) > 1) t.title = t.title.replace(/: topic test$/, ` (${qualify(t)}): topic test`);
+  }
+  return tests;
+}
