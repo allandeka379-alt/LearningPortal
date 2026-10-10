@@ -49,8 +49,9 @@ The marks per question are our convention; real papers vary question by question
 
 ## DEV preview
 
-Imported in the DEV database on 2026-10-10 (110 lessons, 2,262 questions, 944 flashcards, 55 tests). Publishing and the
-smoke test (`npx tsx --conditions=react-server .scratch/tools/smoke-family.ts mathematics-a`): see `.scratch/mathematics-a/smoke.log`.
+Imported and published in the DEV database on 2026-10-10 (DEV-preview note, `--approver demo.admin@example.test`):
+110 lessons, 2,262 questions, 944 flashcards and 55 tests; 3,371 items published, 0 failed. Smoke test
+`npx tsx --conditions=react-server .scratch/tools/smoke-family.ts mathematics-a`: **146/146 checks passed** (all four syllabi).
 
 ## Known gaps
 
