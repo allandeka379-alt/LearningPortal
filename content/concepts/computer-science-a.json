@@ -1,0 +1,557 @@
+{
+  "family": "computer-science-a",
+  "name": "Computer Science (A-Level / AS & A Level)",
+  "level": "A",
+  "prefix": "acs",
+  "subjects": [
+    "zimsec/a-level/computer-science",
+    "cambridge/a-level/computer-science"
+  ],
+  "concepts": [
+    {
+      "key": "acs.data.number-bases",
+      "name": "Number systems: binary, denary, hexadecimal, octal and BCD",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Place value and conversion between binary, denary and hexadecimal (octal is ZIMSEC detail) for non-negative integers, grouping bits in fours and threes, practical uses of hexadecimal (colours, MAC addresses, memory dumps, error codes) and of Binary Coded Decimal (digit-by-digit 4-bit encoding, BCD addition is OUT, uses such as digital clocks and calculators), and the binary prefixes kibi, mebi, gibi, tebi (powers of 2) against the decimal prefixes kilo, mega, giga, tera. Negative numbers and arithmetic are acs.data.binary-arithmetic; characters are acs.data.character-sets."
+    },
+    {
+      "key": "acs.data.binary-arithmetic",
+      "name": "Negative binary integers and binary arithmetic",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Sign-and-magnitude is mentioned only to be rejected; one's complement and two's complement (finding the representation of a negative number, the value of a two's complement pattern, range for n bits, why two's complement is used), binary addition and subtraction (subtraction as addition of the two's complement), carries, overflow in a fixed-width register and how to detect it, and binary multiplication and long division of small values (ZIMSEC detail, by shift-and-add). Fractions and floating point are acs.data.floating-point-representation."
+    },
+    {
+      "key": "acs.data.character-sets",
+      "name": "Character sets: ASCII, extended ASCII, Unicode and EBCDIC",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). How a character is stored as a binary code, 7-bit ASCII and its ordering (codes for digits, upper and lower case, control characters), extended 8-bit ASCII, Unicode with code points and the encodings UTF-8 and UTF-16 (outline: variable width, why Unicode covers Shona, Ndebele and other scripts), comparing the sets (range, storage per character, compatibility), EBCDIC and where it is still found (ZIMSEC detail); candidates are not asked to memorise particular codes (a code table is given). Encoding of numbers is acs.data.number-bases."
+    },
+    {
+      "key": "acs.data.floating-point-representation",
+      "name": "Floating-point real numbers: mantissa and exponent",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge A Level only). The format of a binary floating-point number: two's complement mantissa with an implied binary point after the sign bit and a two's complement exponent, converting between binary floating-point and denary in both directions (positive and negative values, positive and negative exponents), normalisation (first two mantissa bits differ) and why numbers are normalised (maximum precision, unique representation), and the effect of changing how a fixed number of bits is split between mantissa and exponent (range against precision). Errors, overflow, underflow and rounding are acs.data.floating-point-errors."
+    },
+    {
+      "key": "acs.data.floating-point-errors",
+      "name": "Computer arithmetic errors: overflow, underflow and rounding",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge A Level only). Why a binary representation can only approximate some real numbers (0.1 in binary, finite mantissa), absolute and relative rounding error, comparing results of floating-point arithmetic, how overflow (value too large for the exponent) and underflow (value too small to represent, rounded to zero or a denormal) occur, overflow of fixed-width integers, truncation against rounding, and practical consequences (equality tests on reals, accumulating error in loops, money stored as integer cents). Format and conversion are acs.data.floating-point-representation."
+    },
+    {
+      "key": "acs.data.file-organisation",
+      "name": "File organisation, access and hashing",
+      "description": "Cambridge only (A Level only). Serial, sequential (ordered on a key field) and random (placed by a record key) file organisation, choosing an organisation and access method (sequential access for serial and sequential files, direct access for sequential and random files) for a described problem, hashing algorithms (modulo division, folding of characters) to compute a record address, collisions and ways of resolving them (next free slot, overflow area), reading from and writing to a random or sequential file by key. Pseudocode and Python file handling are acs.prog.file-processing-exceptions."
+    },
+    {
+      "key": "acs.media.graphics",
+      "name": "Bitmap images and vector graphics",
+      "description": "Cambridge only (AS Level). How a bitmap is encoded (pixels, file header, image resolution, screen resolution, colour depth or bit depth), estimating a file size in bytes and KiB from width, height and colour depth, how changing resolution and bit depth affects quality and size, how a vector graphic is encoded (drawing objects, properties, drawing list), and justifying bitmap against vector for a task (photographs, logos, diagrams, scaling). Compression of images is acs.media.compression."
+    },
+    {
+      "key": "acs.media.sound",
+      "name": "Sound: sampling, sampling rate and resolution",
+      "description": "Cambridge only (AS Level). Analogue against digital sound, sampling at regular intervals, sampling rate (Hz) and sampling resolution (bits), calculating the file size for a given duration, rate, resolution and number of channels, the effect of raising or lowering rate and resolution on accuracy (quality) and file size, why a low sampling rate loses high frequencies (aliasing outline only). Compression of sound is acs.media.compression."
+    },
+    {
+      "key": "acs.media.compression",
+      "name": "Data compression: lossless, lossy and run-length encoding",
+      "description": "Cambridge only (AS Level). The need for compression (storage, bandwidth, transfer time), lossless and lossy compression and choosing between them for a situation, run-length encoding (encode and decode text and bitmap data, when it saves space and when it does not), outline of how a text file, bitmap image, vector graphic and sound file can be compressed (for example lossy JPEG-style reduction of detail, MP3-style removal of inaudible sound, dictionary and Huffman ideas as outline only), computing compression ratios."
+    },
+    {
+      "key": "acs.network.lan-wan-models",
+      "name": "LANs, WANs and network models",
+      "description": "Cambridge only (AS Level). Characteristics of a LAN and a WAN, the client-server and peer-to-peer models (roles of the computers, benefits and drawbacks, justify a model for a given situation), thin-client and thick-client computing and their differences, how packets travel between two hosts on a given topology. Topologies and transmission media are acs.network.topologies-media; cloud is acs.network.cloud-computing."
+    },
+    {
+      "key": "acs.network.topologies-media",
+      "name": "Network topologies, wired and wireless transmission media",
+      "description": "Cambridge only (AS Level). Bus, star, mesh and hybrid topologies (how data travels, failure of a cable or device, cost, performance, justify a topology), the differences and implications of wired against wireless networks (security, range, speed, interference, mobility), and the characteristics of copper cable, fibre-optic cable, radio waves including WiFi, microwaves and satellite links (bandwidth, range, attenuation, cost). Network hardware is acs.network.lan-hardware."
+    },
+    {
+      "key": "acs.network.lan-hardware",
+      "name": "LAN hardware, routers and Ethernet",
+      "description": "Cambridge only (AS Level). The purpose and function of a switch, server, network interface card (NIC), wireless NIC, wireless access point, cabling, bridge and repeater in supporting a LAN, the role of a router (connecting networks, forwarding packets, default gateway, NAT outline), and how Ethernet works including CSMA/CD (listen, transmit, detect a collision, jam, random back-off) and how collisions are avoided on a switched network. Internet access hardware is acs.network.internet-hardware-streaming."
+    },
+    {
+      "key": "acs.network.internet-hardware-streaming",
+      "name": "The internet, the WWW, internet hardware and bit streaming",
+      "description": "Cambridge only (AS Level). The difference between the internet (a network of networks) and the World Wide Web (a service on it), hardware that supports internet access (modem, PSTN, dedicated lines, cell phone network, ISP), real-time and on-demand bit streaming, and the importance of bit rate and broadband speed for streaming (buffering, resolution, quality), with simple calculations of download time from a size and a rate. URLs are acs.network.url-dns."
+    },
+    {
+      "key": "acs.network.ip-addressing",
+      "name": "IP addresses: IPv4, IPv6, subnets, public and private, static and dynamic",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The format of an IPv4 address (four decimal octets, 32 bits) and an IPv6 address (eight hexadecimal groups, 128 bits, abbreviation rules), why IPv6 was introduced, subnetting (network and host portions, subnet mask, dividing a network, number of hosts), public against private IP addresses (private ranges, NAT, implications for security), static against dynamic addresses (DHCP, when each is used), how an address is associated with a device. DNS and URLs are acs.network.url-dns."
+    },
+    {
+      "key": "acs.network.url-dns",
+      "name": "URLs and the Domain Name System",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The parts of a URL (protocol, domain name, path, port, query string and fragment), how a URL locates a resource on the WWW, and the role of the Domain Name System: the resolver, recursive and iterative lookup through root, top-level domain and authoritative servers, caching, why a lookup can fail, and simple DNS-based attacks as an outline (pharming is acs.security.threats-vulnerabilities). IP addressing is acs.network.ip-addressing."
+    },
+    {
+      "key": "acs.network.cloud-computing",
+      "name": "Cloud computing: service models and types",
+      "description": "Both boards (ZIMSEC Form 6; Cambridge AS Level). Cloud computing as on-demand, internet-delivered storage and processing, the service models SaaS and PaaS (and IaaS as the third layer) with examples such as online office suites and hosted development platforms, public, private and hybrid clouds, benefits and drawbacks (scalability, cost, access, backup against security, privacy, dependence on connectivity and the provider), and storing data off-site in the cloud as a recovery measure (ZIMSEC detail: Google Drive, OneDrive-type services, cloud use in Zimbabwean schools and businesses). Risk and disaster recovery planning is acs.security.risk-recovery-policies."
+    },
+    {
+      "key": "acs.network.osi-tcpip-models",
+      "name": "The OSI model and the TCP/IP protocol stack",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge A Level only). Why protocols are needed and how a protocol suite is viewed as a stack of layers; the four TCP/IP layers (Application, Transport, Internet, Link) with the purpose and function of each as a message passes from one host to another (data, segment, packet, frame encapsulation), the seven OSI layers (ZIMSEC detail) with their functions and a mapping of OSI to TCP/IP, and comparing the two models. Individual protocols are acs.network.application-protocols; routing is acs.network.routing-protocols."
+    },
+    {
+      "key": "acs.network.application-protocols",
+      "name": "Application-layer protocols: HTTP, FTP, SMTP, POP3, IMAP and BitTorrent",
+      "description": "Cambridge only (A Level only). The purpose of HTTP and HTTPS, FTP, SMTP, POP3 and IMAP (and how an email moves from sender to recipient's mailbox), and the BitTorrent protocol for peer-to-peer file sharing (tracker, swarm, seeders and leechers, pieces, advantages and disadvantages, legal and ethical uses), choosing a protocol for a task. Layering is acs.network.osi-tcpip-models."
+    },
+    {
+      "key": "acs.network.switching",
+      "name": "Circuit switching and packet switching",
+      "description": "Cambridge only (A Level only). Circuit switching (dedicated path set up before communication, constant bandwidth, benefits, drawbacks and uses such as traditional telephone calls) and packet switching (messages split into packets with header, payload and trailer, routed independently by routers, reassembled in order at the destination, benefits, drawbacks and uses), the function of a router in packet switching and how a message crosses a network including the internet, hop counts and routing tables as outline. Routing protocols are acs.network.routing-protocols."
+    },
+    {
+      "key": "acs.network.routing-protocols",
+      "name": "Routing protocols: RIP and OSPF",
+      "description": "ZIMSEC only (Form 5). How routers learn routes: static against dynamic routing, routing tables, hop count and cost metrics, the Routing Information Protocol (distance-vector, hop count, maximum of 15 hops, periodic updates), Open Shortest Path First (link-state, cost, link-state database, shortest-path calculation with Dijkstra's idea, areas), comparing RIP and OSPF for a network of a given size. Packet switching in general is acs.network.switching."
+    },
+    {
+      "key": "acs.hardware.io-devices",
+      "name": "Input and output devices",
+      "description": "Cambridge only (AS Level). The principal operation of a laser printer, 3D printer, microphone, speakers, touchscreen (resistive and capacitive), virtual reality headset and other devices in a range of systems (point of sale, ATM, mobile money kiosks, classrooms, clinics), choosing a device for a task and giving the benefits and drawbacks. Sensors and actuators are acs.hardware.embedded-control; storage is acs.hardware.secondary-storage."
+    },
+    {
+      "key": "acs.hardware.secondary-storage",
+      "name": "Secondary storage devices",
+      "description": "Cambridge only (AS Level). How a magnetic hard disk, a solid-state (flash) drive, an optical disc reader or writer and removable storage store and retrieve data (platters and read-write heads, floating-gate cells, pits and lands with a laser), comparing capacity, speed, durability, cost and portability, and choosing storage for a described use including backup. Primary memory is acs.hardware.primary-memory."
+    },
+    {
+      "key": "acs.hardware.primary-memory",
+      "name": "Primary memory: RAM, ROM, buffers and cache",
+      "description": "Cambridge only (AS Level). The need for primary memory, the differences between RAM and ROM, SRAM and DRAM (refresh, speed, cost, use as cache and main memory), PROM, EPROM and EEPROM, flash memory, the use of buffers (keyboard, printer, streaming) to match device speeds, and why each kind is chosen for a device. Cache as a performance factor is acs.cpu.performance."
+    },
+    {
+      "key": "acs.hardware.embedded-control",
+      "name": "Embedded systems, monitoring and control",
+      "description": "Cambridge only (AS Level). Embedded systems (dedicated function, in a washing machine, car, smart meter, alarm) and their benefits and drawbacks, the difference between monitoring and control systems, sensors (temperature, pressure, infra-red, sound, light, moisture) and actuators (motors, heaters, valves, buzzers), analogue-to-digital conversion in outline, the role of a microprocessor and feedback in a closed loop, with examples such as greenhouse or borehole-pump control. Bit manipulation of control registers is acs.asm.bit-manipulation."
+    },
+    {
+      "key": "acs.hardware.electronic-components",
+      "name": "Passive and active electronic components",
+      "description": "ZIMSEC only (Form 5). the principle of operation of passive components (resistor, capacitor, inductor) and active components (diode, LED, transistor as a switch or amplifier, integrated circuit), their circuit symbols and units (ohm, farad, henry), Ohm's law applied to simple series and parallel circuits (computed), and testing and replacing components on a circuit board (multimeter, continuity, polarity, soldering safety). Logic gates are acs.logic.gates-truth-tables."
+    },
+    {
+      "key": "acs.logic.gates-truth-tables",
+      "name": "Logic gates and truth tables",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The symbols, functions and truth tables of NOT, AND, OR, NAND, NOR and XOR (and XNOR, ZIMSEC detail), two inputs for every gate except NOT, constructing a truth table for a single gate or a small circuit, the universal property of NAND and NOR, and reading a gate from its truth table. Building circuits from statements and expressions is acs.logic.circuits-expressions."
+    },
+    {
+      "key": "acs.logic.circuits-expressions",
+      "name": "Logic circuits, expressions and truth tables",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Building a logic circuit, a logic expression and a truth table from each other and from a problem statement (up to three inputs for ZIMSEC; Cambridge may use more at A Level), calculating the output of a circuit for given inputs, designing a circuit for a practical task (safety interlock, alarm, door control), and checking two circuits are equivalent by truth table. Boolean algebra is acs.logic.boolean-algebra."
+    },
+    {
+      "key": "acs.logic.adders-flip-flops",
+      "name": "Half adders, full adders and flip-flops",
+      "description": "Cambridge only (A Level only). The half adder (sum from XOR, carry from AND) and full adder (two half adders and an OR, with carry in) as circuits and truth tables, chaining full adders into a ripple-carry adder, the SR flip-flop built from NOR or NAND gates and the JK flip-flop (circuit, truth table, set, reset, hold, toggle), and the role of flip-flops as one-bit storage in registers and memory."
+    },
+    {
+      "key": "acs.logic.boolean-algebra",
+      "name": "Boolean algebra and De Morgan's laws",
+      "description": "Cambridge only (A Level only). Boolean identities and laws (commutative, associative, distributive, identity, null, idempotent, complement, absorption), De Morgan's laws, simplifying a logic expression or a logic circuit step by step with algebra (with each step justified), converting an expression to NAND-only or NOR-only form, proving two expressions equivalent. Karnaugh maps are acs.logic.karnaugh-maps."
+    },
+    {
+      "key": "acs.logic.karnaugh-maps",
+      "name": "Karnaugh maps",
+      "description": "Cambridge only (A Level only). Drawing a Karnaugh map for two, three or four variables from a truth table or expression using Gray-code ordering, grouping 1s in rectangles of 1, 2, 4, 8 or 16 cells including wrap-around, finding the simplified sum-of-products expression, handling don't-care conditions as an extension, and the benefits of K-maps over algebraic simplification. Algebraic simplification is acs.logic.boolean-algebra."
+    },
+    {
+      "key": "acs.cpu.architecture-registers",
+      "name": "CPU architecture: the Von Neumann model, Harvard architecture and registers",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The stored-program concept and the Von Neumann model; the Harvard architecture (separate instruction and data memory, ZIMSEC detail) compared with Von Neumann; the roles of the ALU, control unit, system clock and immediate access store; general-purpose and special-purpose registers (program counter, memory address register, memory data register, accumulator, index register, current instruction register, status register) and what each holds during execution. Buses and ports are acs.cpu.buses-ports; the cycle itself is acs.cpu.fetch-execute-interrupts."
+    },
+    {
+      "key": "acs.cpu.buses-ports",
+      "name": "Buses and ports",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The address bus (one-way), data bus (two-way) and control bus (read, write, clock, interrupt, reset lines) and how data is transferred between components, how bus width limits addressable memory and word size (computed: 2^n locations), and how USB, HDMI and VGA ports connect peripherals (what each carries, digital against analogue, hot-plugging). Processor performance factors are acs.cpu.performance."
+    },
+    {
+      "key": "acs.cpu.performance",
+      "name": "Processor performance",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). How processor type and number of cores, clock speed, bus width and cache memory contribute to the performance of a computer system (with reasoning about when more cores help, diminishing returns of a faster clock, cache hits and misses), and ways of improving performance. Pipelining and instruction sets are acs.cpu.risc-cisc-pipelining."
+    },
+    {
+      "key": "acs.cpu.fetch-execute-interrupts",
+      "name": "The fetch-execute cycle and interrupts",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The stages of the fetch-decode-execute cycle described in words and in register transfer notation (for example MAR <- [PC]), the effect on each register for an example instruction, the purpose of interrupts, possible causes (hardware faults, I/O completion, software errors and traps, timers, user action), when interrupts are detected in the cycle, saving and restoring registers, the interrupt service routine and how interrupts are handled, priorities and the types internal, external and software (ZIMSEC wording)."
+    },
+    {
+      "key": "acs.cpu.risc-cisc-pipelining",
+      "name": "RISC and CISC processors and pipelining",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge A Level only). The differences between Reduced and Complex Instruction Set Computers (instruction count, length, cycles per instruction, registers, hardware complexity), pipelining (named by ZIMSEC; RISC against CISC is Cambridge detail) and why it improves throughput (fetch, decode and execute of different instructions overlapped, a worked timing table), pipeline hazards (branches) in outline, the importance of registers in RISC, and interrupt handling on CISC and RISC processors."
+    },
+    {
+      "key": "acs.cpu.parallel-processing",
+      "name": "Parallel processing and computer architectures",
+      "description": "Cambridge only (A Level only). The four basic architectures SISD, SIMD, MISD and MIMD with an example of each, the characteristics of massively parallel computers (many processors, shared or distributed memory, communication overhead, uses such as weather forecasting and simulation), speed-up and its limits (Amdahl's idea, computed from a fraction), and when a problem suits parallel processing."
+    },
+    {
+      "key": "acs.cpu.virtual-machines",
+      "name": "Virtual machines",
+      "description": "Cambridge only (A Level only). The concept of a virtual machine (emulation of a computer or a language runtime on a host, hypervisors, the Java virtual machine), examples such as running a different operating system in a window or testing software safely, benefits (isolation, portability, consolidation of servers, testing) and limitations (slower than native, host resources, licensing)."
+    },
+    {
+      "key": "acs.asm.assembly-language",
+      "name": "Assembly language, machine code and the assembler",
+      "description": "Cambridge only (AS Level). The relationship between assembly language and machine code (opcode and operand, one mnemonic per instruction, symbolic addresses and labels), why instructions are grouped (data movement, input and output, arithmetic, unconditional and conditional jumps, compare), the stages of a two-pass assembler (pass 1 builds the symbol table, pass 2 generates the code) applied to a short program with computed addresses, and the advantages and uses of low-level languages. Writing and tracing programs is acs.asm.assembly-programs."
+    },
+    {
+      "key": "acs.asm.addressing-modes",
+      "name": "Addressing modes",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Immediate, direct, indirect, indexed and relative addressing: how the operand is interpreted and how the effective address is formed (computed with register and memory contents), the instructions of the 9618 instruction set that use each mode (LDM, LDD, LDI, LDX, CMI, JMP and relative jumps), when each mode is useful (constants, variables, pointers, arrays and tables, position-independent code), and comparing modes for a given task."
+    },
+    {
+      "key": "acs.asm.assembly-programs",
+      "name": "Writing and tracing assembly programs",
+      "description": "Cambridge only (AS Level). Tracing and writing programs in the Cambridge 9618 instruction set (one accumulator, index register, instructions LDM LDD LDI LDX LDR MOV STO ADD SUB INC DEC JMP CMP CMI JPE JPN IN OUT END, labels and data labels, #n, Bn and &n operands): loops with a counter, array processing with the index register, comparing and branching, input and output of characters, and tracing a program in a table of memory, ACC and IX contents (every trace computed by running the program in code)."
+    },
+    {
+      "key": "acs.asm.bit-manipulation",
+      "name": "Bit manipulation: shifts, masks and bitwise operations",
+      "description": "Cambridge only (AS Level). Logical, arithmetic and cyclic shifts and their effect on value and sign, left and right shifts as multiplication and division by powers of 2, bitwise AND, OR and XOR with masks to test, set, clear and toggle individual bits, using a status or port register to monitor and control a device (for example a sensor bit and a pump bit), and the instructions AND, OR, XOR, LSL and LSR of the 9618 instruction set; all values computed in code."
+    },
+    {
+      "key": "acs.os.functions-utilities",
+      "name": "Operating system functions, utility software and libraries",
+      "description": "Cambridge only (AS Level). Why a computer needs an operating system, the key management tasks (memory, file, security, hardware and input-output, process management), utility software (disk formatter, virus checker, defragmentation, disk analysis and repair, file compression, back-up), program libraries and Dynamic Link Library (DLL) files and the benefits to a developer, and how the operating system provides a user interface."
+    },
+    {
+      "key": "acs.os.process-scheduling",
+      "name": "Process management and scheduling",
+      "description": "Cambridge only (A Level only). How an OS maximises the use of resources, how the user interface hides hardware complexity, multi-tasking and a process, the process states running, ready and blocked and the transitions between them, the need for scheduling and the scheduling routines round robin, shortest job first, first come first served and shortest remaining time (each applied to a table of arrival and burst times and the waiting and turnaround times computed), and how the kernel acts as an interrupt handler for low-level scheduling."
+    },
+    {
+      "key": "acs.os.memory-management",
+      "name": "Memory management: paging, segmentation and virtual memory",
+      "description": "Cambridge only (A Level only). Paging (fixed-size pages and frames, the page table), segmentation (variable-size logical segments), the difference between them, virtual memory and swapping to disk, page replacement (FIFO, LRU and optimal on a reference string, page faults counted by code), and how disk thrashing arises and is reduced."
+    },
+    {
+      "key": "acs.translation.translators-ide",
+      "name": "Language translators and integrated development environments",
+      "description": "Cambridge only (AS Level). The need for an assembler, a compiler and an interpreter, the benefits and drawbacks of compiling against interpreting and when to use each, high-level programs that are partly compiled and partly interpreted (such as Java byte code), source code against object code, and the features of a typical IDE (context-sensitive prompts, dynamic syntax checks, pretty-print, collapsing code blocks, single stepping, breakpoints, variable and expression report windows)."
+    },
+    {
+      "key": "acs.translation.compilation-stages",
+      "name": "Stages of compilation and how interpreters work",
+      "description": "Cambridge only (A Level only). How an interpreter executes a program without producing a translated copy, and the stages of compiling: lexical analysis (tokens, symbol table, removing comments and white space), syntax analysis (parse tree and error reporting), code generation (including intermediate code) and optimisation (for example constant folding and removing redundant code), each shown on a short program or expression; how a compiler translates recursive code (use of a stack)."
+    },
+    {
+      "key": "acs.translation.bnf-syntax-diagrams",
+      "name": "Syntax diagrams and Backus-Naur Form",
+      "description": "Cambridge only (A Level only). Expressing the grammar of a language with syntax diagrams and Backus-Naur Form (terminals, non-terminals, alternatives, recursion in rules), writing rules for a simple language (identifiers, numbers, expressions, statements), checking whether a string is valid by deriving it, converting between a syntax diagram and BNF."
+    },
+    {
+      "key": "acs.translation.rpn",
+      "name": "Reverse Polish Notation",
+      "description": "Cambridge only (A Level only). Reverse Polish (postfix) notation and why it suits a stack machine, converting infix expressions to postfix (shunting-yard idea, operator precedence and brackets) and postfix to infix, evaluating postfix expressions with a stack and showing each stack state, and the use of RPN in compilers and calculators; all conversions and evaluations computed in code."
+    },
+    {
+      "key": "acs.security.privacy-integrity",
+      "name": "Security, privacy and integrity of data",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The difference between the security, privacy and integrity of data (and between data security and computer-system security), why each matters for individuals and organisations (school records, mobile-money and bank data, health records), data protection principles in outline (lawful and fair collection, purpose, accuracy, limited retention, safeguards), and how security measures protect privacy and integrity. Threats are acs.security.threats-vulnerabilities; checks on data are acs.security.validation-verification."
+    },
+    {
+      "key": "acs.security.threats-vulnerabilities",
+      "name": "Threats and vulnerabilities to computer systems and data",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Threats posed by networks and the internet and their effects: malware (virus, worm, trojan, ransomware, spyware), hacking and unauthorised access, phishing, pharming, social engineering, denial of service, interception of data, insider threats, accidental loss; software vulnerabilities (unpatched software, buffer overflow, SQL injection in outline, weak configuration, default passwords) and their sources, and the risk each poses to a stand-alone PC and to a network. Countermeasures are acs.security.protection-methods."
+    },
+    {
+      "key": "acs.security.protection-methods",
+      "name": "Protecting systems and data: authentication, access control and defences",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). User accounts and access rights, strong passwords and password policies, authentication techniques (passwords, two-factor, biometrics, digital signatures, tokens), firewalls, anti-virus and anti-spyware software, updates and patches, secure configuration, physical security, backup, and how to restrict the risk of each threat, from a stand-alone PC to a network; tools used to remove vulnerabilities and basic system security administration (creating accounts, setting permissions). Encryption is acs.security.encryption."
+    },
+    {
+      "key": "acs.security.validation-verification",
+      "name": "Data validation and verification",
+      "description": "Cambridge only (AS Level). Validation checks (range, format, length, presence, existence, limit and check digit, with a check digit calculation computed in code) and test data for them, verification during data entry (visual check, double entry), verification during data transfer (parity check on bytes and blocks, checksum), why validation cannot guarantee correctness, writing a validation routine in pseudocode, and how these protect integrity."
+    },
+    {
+      "key": "acs.security.encryption",
+      "name": "Encryption: symmetric and asymmetric keys",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge A Level only). Plain text, cipher text, encryption and decryption, symmetric key cryptography (one shared key, key distribution problem), asymmetric cryptography with a public and a private key (confidentiality: encrypt with the recipient's public key; authenticity: sign with the sender's private key), a simple cipher worked by code (Caesar and a transposition cipher, with why they are weak), encryption of stored data and data in transit, and the purpose, benefits and drawbacks of quantum cryptography (Cambridge detail). SSL/TLS and certificates are acs.security.ssl-tls-certificates."
+    },
+    {
+      "key": "acs.security.ssl-tls-certificates",
+      "name": "SSL/TLS, digital certificates and digital signatures",
+      "description": "Cambridge only (A Level only). The purpose of Secure Socket Layer / Transport Layer Security, how a client and a server set up a secure session (handshake, certificate check, session key), the situations in which it is appropriate (online banking, mobile-money web sites, email, shopping), how a digital certificate is acquired from a certificate authority and what it contains, how it is used to produce digital signatures, and why a browser warns about an invalid certificate."
+    },
+    {
+      "key": "acs.security.risk-recovery-policies",
+      "name": "Risk management, disaster recovery and security policies",
+      "description": "ZIMSEC only (Form 5). identifying risks to computer systems (fire, flood, power cuts and load-shedding, theft, malware, staff error), risk analysis (likelihood against impact) and techniques of risk management (avoid, reduce, transfer, accept), a disaster recovery plan for system failure (backup schedule, off-site and cloud copies, hot, warm and cold sites, restoring and testing), and the contents of an organisation's security policy (acceptable use, access control, incident response, staff training)."
+    },
+    {
+      "key": "acs.security.legislation-crime",
+      "name": "Computer crime and legislation",
+      "description": "ZIMSEC only (Form 5). types of computer crime (unauthorised access, fraud, identity theft, software piracy, cyberbullying, distribution of illegal material, data theft) and control measures for each, the purpose of legislation on computer security and crime, the legal frameworks that apply in Zimbabwe described in outline (the Cyber and Data Protection Act and the Computer Crime provisions of the criminal law, the Copyright and Neighbouring Rights Act) with the exact titles and sections to be confirmed by a reviewer, and the role of ICT regulators; no legal advice. Ethics are acs.ethics.professional-ethics."
+    },
+    {
+      "key": "acs.ethics.professional-ethics",
+      "name": "Professional ethics and codes of conduct",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The need for and purpose of ethics for a computing professional, joining a professional body (BCS, IEEE, and in Zimbabwe the Computer Society of Zimbabwe), the main points of a code of ethics (public interest, competence, confidentiality, honesty), acting ethically or unethically in a described situation and the impact of each, business ethics such as fairness, firmness, honesty and self-motivation, and unhu/ubuntu as an ethical principle (ZIMSEC detail), applied to existing and emerging technologies."
+    },
+    {
+      "key": "acs.ethics.copyright-licensing",
+      "name": "Copyright, software licences and intellectual property",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The need for copyright legislation and what it protects, software licensing types (free software, open source, shareware, commercial, freeware, site licences) and justifying a licence for a situation, piracy and plagiarism and how they are detected (similarity checkers), patents and trademarks (ZIMSEC detail), and respecting others' work when developing software."
+    },
+    {
+      "key": "acs.ethics.ai-impact",
+      "name": "Artificial intelligence: applications and social impact",
+      "description": "Cambridge only (AS Level). What is meant by artificial intelligence, its applications (speech recognition, image recognition in agriculture and medicine, recommendation, robotics, translation including African languages, chatbots), and its social, economic and environmental impact (jobs, bias in data, privacy, safety, energy use), discussed with balanced arguments. The technology itself is acs.ai.graphs-search and acs.ai.machine-learning."
+    },
+    {
+      "key": "acs.ethics.social-environment",
+      "name": "Social media, e-waste and the environment",
+      "description": "ZIMSEC only (Form 5). the benefits and dangers of social media (communication, enterprise, misinformation, addiction, cyberbullying, privacy, defamation), environmental effects of computer use (energy, e-waste, toxic materials), e-waste management and the 3Rs (reduce, reuse, recycle), environmental laws and the role of the Environmental Management Agency (EMA) described in outline, and responsible disposal of equipment."
+    },
+    {
+      "key": "acs.db.relational-concepts",
+      "name": "File-based and relational databases: concepts and terminology",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The limitations of a file-based approach (redundancy, inconsistency, no sharing, program-data dependence, poor security), the features of a relational database that remove them, and the terminology: entity, table, record, field, tuple, attribute, primary key, candidate key, secondary key, foreign key, relationships (one-to-one, one-to-many, many-to-many), referential integrity and indexing, applied to a school or clinic scenario."
+    },
+    {
+      "key": "acs.db.er-diagrams",
+      "name": "Entity-relationship diagrams and database design",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Analysing a scenario into entities, attributes and relationships, drawing and reading an E-R diagram (crow's foot notation described in words), resolving many-to-many relationships with a link table, choosing primary and foreign keys, and converting an E-R diagram to a relational schema in standard normal form. Normalisation is acs.db.normalisation."
+    },
+    {
+      "key": "acs.db.normalisation",
+      "name": "Normalisation to 3NF",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The purpose of normalisation (removing redundancy and update, insertion and deletion anomalies), functional dependency, first, second and third normal form (ZIMSEC requires up to second), explaining why given tables are or are not in 3NF, and producing a normalised design for a description, a data set or a set of tables, with the keys marked."
+    },
+    {
+      "key": "acs.db.dbms",
+      "name": "Database management systems",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The features of a DBMS that address the issues of a file-based approach: data management and the data dictionary, data modelling and the logical schema, data integrity and security (backup, access rights for individuals and groups), the developer interface, the query processor, and how DDL and DML are used by the DBMS. SQL itself is acs.db.sql-ddl and acs.db.sql-dml."
+    },
+    {
+      "key": "acs.db.sql-ddl",
+      "name": "SQL data definition language",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). CREATE DATABASE, CREATE TABLE with data types CHARACTER, VARCHAR(n), BOOLEAN, INTEGER, REAL, DATE and TIME, ALTER TABLE, PRIMARY KEY and FOREIGN KEY ... REFERENCES, reading and writing simple DDL scripts for a given design, and understanding a given statement; every statement tested on SQLite or a similar engine where it is portable (the dialect differences stated)."
+    },
+    {
+      "key": "acs.db.sql-dml",
+      "name": "SQL data manipulation language",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). SELECT ... FROM, WHERE, ORDER BY, GROUP BY, INNER JOIN, SUM, COUNT and AVG on at most two tables, INSERT INTO, UPDATE and DELETE FROM, predicting the output of a query on a given table (every result computed by running the query on a test database) and writing queries for a requirement."
+    },
+    {
+      "key": "acs.db.application-interfaces",
+      "name": "Database applications and accessing data from programs",
+      "description": "ZIMSEC only (Form 5). developing forms, queries and reports with DBMS tools, linking a high-level language (such as Python) to a database to read and modify records, parameterised queries to avoid SQL injection, and the stages of building a small database application for a school or small business."
+    },
+    {
+      "key": "acs.algo.algorithm-design",
+      "name": "Computational thinking and designing algorithms",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Abstraction (purpose, benefits, producing an abstract model by keeping only essential details), decomposition into sub-problems and program modules, what an algorithm is, an identifier table, the three constructs sequence, selection and iteration, documenting an algorithm in structured English, a flowchart or pseudocode and converting between the three, stepwise refinement, and logic statements; pseudocode in the 9618 guide style. Constructs in a language are acs.prog.selection and acs.prog.iteration."
+    },
+    {
+      "key": "acs.algo.trace-tables",
+      "name": "Dry runs, trace tables and finding errors in algorithms",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Dry running an algorithm with a trace table (one column per variable and one for output, correct row-by-row updating), choosing test data for a dry run, locating and correcting logic errors in pseudocode, stating the purpose of an algorithm from its trace, and trace tables with nested loops (up to three); every trace is generated by running a JavaScript or Python mirror of the pseudocode."
+    },
+    {
+      "key": "acs.algo.linear-search-bubble-sort",
+      "name": "Linear search and bubble sort",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Writing and tracing a linear search of a 1D array (found flag, early exit, not-found case) and a bubble sort (swap with a temporary variable, passes and comparisons counted, improved version that stops when no swap occurs), the effect of the initial order of the data, and performance in the best, worst and average case in words."
+    },
+    {
+      "key": "acs.algo.binary-search-insertion-sort",
+      "name": "Binary search and insertion sort",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge A Level only). Writing and tracing a binary search of a sorted array (low, high, mid, the conditions needed for its use, number of comparisons about log2 n, computed), and an insertion sort (shifting elements, passes, comparisons), how the performance of each depends on the data and the number of items, and choosing between linear and binary search."
+    },
+    {
+      "key": "acs.algo.quick-sort",
+      "name": "Quick sort",
+      "description": "ZIMSEC only (Form 5). the divide-and-conquer idea, choosing a pivot, partitioning, recursive sorting of sub-lists, tracing a quick sort on a small array with the partitions shown, the best and worst cases (already-sorted data and a poor pivot), and comparing it with bubble sort; every trace computed in code."
+    },
+    {
+      "key": "acs.algo.complexity-big-o",
+      "name": "Comparing algorithms and Big O notation",
+      "description": "Cambridge only (A Level only). Criteria for comparing algorithms (time taken, memory used), Big O notation for time and space complexity (O(1), O(log n), O(n), O(n log n), O(n^2), O(2^n)), identifying the order of an algorithm from its loops, comparing growth for increasing n with computed tables, and best, average and worst case."
+    },
+    {
+      "key": "acs.algo.recursion",
+      "name": "Recursion",
+      "description": "Both boards (ZIMSEC Form 6; Cambridge A Level only). The essential features of recursion (base case, general case that moves toward it), writing and tracing recursive functions in pseudocode and Python (factorial, powers, Fibonacci, counting down, summing a list, binary search, tree traversal), the use of the call stack and unwinding (stack states shown), when recursion is beneficial and when iteration is better, and what a compiler does to translate recursive code."
+    },
+    {
+      "key": "acs.ds.data-types-records",
+      "name": "Data types and records",
+      "description": "Both boards (ZIMSEC Form 6; Cambridge AS Level). The built-in types INTEGER, REAL, CHAR, STRING, BOOLEAN and DATE (primitive data types, ZIMSEC wording), choosing the right type for data, the purpose of a record structure holding items of different types under one identifier, defining a record type in pseudocode, reading from and writing to a record, and records in an array."
+    },
+    {
+      "key": "acs.ds.arrays",
+      "name": "One- and two-dimensional arrays",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The terms array, element, index, lower and upper bound, declaring and initialising 1D and 2D arrays in pseudocode and Python (list of lists), choosing a 1D or 2D array for a task, processing array data with loops (totals, maximum, searching, counting, tables of marks), and static against dynamic data structures (ZIMSEC wording). Sorting and searching are acs.algo.linear-search-bubble-sort."
+    },
+    {
+      "key": "acs.ds.text-files",
+      "name": "Text files",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Why files are needed (persistence), opening a text file for read, write or append, reading and writing lines in pseudocode (OPENFILE, READFILE, WRITEFILE, CLOSEFILE, EOF) and Python (open, read, readline, write, with), processing a file of one or more lines until the end, and writing results back. Random and serial record files and exceptions are acs.prog.file-processing-exceptions."
+    },
+    {
+      "key": "acs.ds.adt-introduction",
+      "name": "Abstract data types: stack, queue and linked list",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). An ADT as a collection of data and a set of operations, the key features of a stack (LIFO, push, pop, peek, stack pointer), queue (FIFO, enqueue, dequeue, front and rear pointers, circular queue) and linked list (nodes, pointers, free list), justifying each for a situation, adding, editing and deleting items by hand-tracing, and implementing each with arrays (static) and the contrast with dynamic structures; pseudocode for these is not required at AS Level."
+    },
+    {
+      "key": "acs.ds.user-defined-types",
+      "name": "User-defined data types",
+      "description": "Cambridge only (A Level only). Why user-defined types are needed; non-composite types (enumerated, pointer) and composite types (set, record, class or object); defining and using them in pseudocode (TYPE ... ENDTYPE) and Python, and choosing and designing a suitable user-defined type for a given problem."
+    },
+    {
+      "key": "acs.ds.stack-queue-algorithms",
+      "name": "Stack and queue algorithms",
+      "description": "Cambridge only (A Level only). Writing algorithms in pseudocode and Python to implement a stack and a queue using arrays (push, pop, enqueue, dequeue with pointers, full and empty tests, wrap-around in a circular queue) and tracing them with the pointers shown, with uses such as undo, browser history, print queues and call stacks."
+    },
+    {
+      "key": "acs.ds.linked-list-algorithms",
+      "name": "Linked list algorithms",
+      "description": "Cambridge only (A Level only). Implementing a linked list with arrays of data and pointers (start pointer, free list pointer), algorithms to find, insert (at the front, middle and end) and delete an item with the pointer arrays traced, comparing a linked list with an array, and the idea of an object-based list in Python."
+    },
+    {
+      "key": "acs.ds.binary-tree-algorithms",
+      "name": "Binary trees and their algorithms",
+      "description": "Both boards (ZIMSEC Form 6; Cambridge A Level only). A binary tree implemented with left and right pointers (arrays or objects), building a binary search tree by insertion, searching, deleting a leaf and a node with children (ZIMSEC: sorting, deletion, insertion and searching), traversals (pre-order, in-order, post-order) producing a sorted list, and the performance of a balanced against a degenerate tree; each tree and traversal computed in code."
+    },
+    {
+      "key": "acs.ds.graphs-dictionaries",
+      "name": "Graphs, dictionaries and implementing ADTs",
+      "description": "Cambridge only (A Level only). A graph as an ADT (vertices, edges, directed and weighted, adjacency matrix and adjacency list, uses such as road and network maps), the key features of a dictionary (key-value pairs, lookup, hash-table implementation), and how an ADT can be implemented from built-in types or from another ADT (a queue from a linked list, a stack from an array); code for graphs is not required."
+    },
+    {
+      "key": "acs.prog.programming-basics",
+      "name": "Programming basics: variables, constants, expressions and input-output",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Declaring and initialising constants and variables, data types, assignment, expressions with arithmetic and logical operators, input from the keyboard and output to the console, built-in functions and library routines (string functions, DIV, MOD, rounding, random numbers), scope in outline (local and global variables, block structure, ZIMSEC wording), written in 9618-style pseudocode and Python."
+    },
+    {
+      "key": "acs.prog.selection",
+      "name": "Selection: IF and CASE",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). IF ... THEN ... ELSE ... ENDIF with nested conditions, compound Boolean conditions, CASE OF ... OTHERWISE ... ENDCASE (multiple selection) and its Python equivalent (if/elif/else, match), choosing between IF and CASE, and common errors in conditions."
+    },
+    {
+      "key": "acs.prog.iteration",
+      "name": "Iteration: count-controlled, pre-condition and post-condition loops",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). FOR ... TO ... STEP ... NEXT, WHILE ... DO ... ENDWHILE and REPEAT ... UNTIL and their Python equivalents, nested loops up to three levels (ZIMSEC), choosing and justifying the right loop for a problem, loops with totals, counters, flags and validation of input, and tracing loop output."
+    },
+    {
+      "key": "acs.prog.procedures-functions",
+      "name": "Procedures, functions and parameters",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Defining and calling a procedure and a function, header, interface, parameters and arguments, return value, passing by value and by reference, local and global variables, where in an algorithm a procedure or function is appropriate, and writing efficient pseudocode and Python with modular structure (ZIMSEC: parameter passing)."
+    },
+    {
+      "key": "acs.prog.language-paradigms",
+      "name": "Programming languages and paradigms",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge A Level only). Types of high-level language (imperative or procedural, declarative, general purpose, special purpose, object oriented, ZIMSEC wording) and the characteristics of the paradigms low-level, imperative (procedural), object oriented and declarative, with a typical use of each and choosing a paradigm for a problem."
+    },
+    {
+      "key": "acs.prog.oop-concepts",
+      "name": "Object-oriented programming: classes, objects, inheritance and polymorphism",
+      "description": "Both boards (ZIMSEC Form 6; Cambridge A Level only). The terminology of OOP: object, class, instance, property or attribute, method, constructor, encapsulation (private data, getters and setters), inheritance, polymorphism and overriding, containment (aggregation); designing classes for a problem with a class diagram described in words and a table; benefits of OOP. Writing and running the code is acs.prog.oop-programming."
+    },
+    {
+      "key": "acs.prog.oop-programming",
+      "name": "Writing object-oriented programs",
+      "description": "Both boards (ZIMSEC Form 6; Cambridge A Level only). Writing classes, constructors, methods, inheritance and polymorphism in 9618-style pseudocode (CLASS, INHERITS, NEW) and in Python, creating and using objects, arrays or lists of objects, a singleton (ZIMSEC detail), and tracing the output of an OOP program; every program run and its output pasted."
+    },
+    {
+      "key": "acs.prog.declarative-programming",
+      "name": "Declarative programming: facts, rules and goals",
+      "description": "Cambridge only (A Level only). writing facts and rules in a Prolog-style language for supplied information (family trees, flights, a student register), stating and satisfying a goal with variables, how a query is resolved by matching and backtracking (traced by hand and by a small interpreter), and comparing the declarative with the imperative approach."
+    },
+    {
+      "key": "acs.prog.file-processing-exceptions",
+      "name": "File processing and exception handling",
+      "description": "Cambridge only (A Level only). Opening a file in read, write and append mode, reading and writing records on serial, sequential and random files (with SEEK, GETRECORD and PUTRECORD in the 9618 guide, and struct or JSON in Python), what an exception is, why exception handling matters, when to use it, and writing code with try/except/finally in Python (TRY ... EXCEPT ... ENDTRY in pseudocode); programs run and outputs pasted."
+    },
+    {
+      "key": "acs.prog.interface-design",
+      "name": "User interface design: user profiling, input and output design",
+      "description": "ZIMSEC only (Form 5). building a user profile, designing input forms and screens (labels, validation messages, tab order, consistency) and output reports and screens (layout, readability, colour, accessibility), usability criteria, and evaluating a given interface; designs described in words and tables."
+    },
+    {
+      "key": "acs.prog.mobile-games-apps",
+      "name": "Designing games and mobile applications",
+      "description": "ZIMSEC only (Form 6). the structure of a simple game (game loop, state, input, collision, score), the features of a mobile app (screens, touch input, sensors, permissions, offline use, low-data design), designing a game or app with an indigenous or local theme, and a small game written in Python (text-based or a turtle-style loop); programs run and outputs pasted."
+    },
+    {
+      "key": "acs.sdlc.life-cycles",
+      "name": "Development life cycles: waterfall, iterative and RAD",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). The purpose of a development life cycle, the analysis, design, coding, testing and maintenance stages, the waterfall model (and the ZIMSEC stages: preliminary investigation, feasibility study, analysis, design, development, testing, implementation, maintenance and evaluation), the iterative model and rapid application development, the principles, benefits and drawbacks of each, and choosing a model for a described project."
+    },
+    {
+      "key": "acs.sdlc.fact-finding-feasibility",
+      "name": "Preliminary investigation, fact finding and feasibility",
+      "description": "ZIMSEC only (Form 5). identifying an opportunity for software development, fact-finding techniques (interviews, questionnaires, observation, document inspection) with advantages and disadvantages, a feasibility study (technical, economic, operational, legal, schedule), the user requirements specification, and the documents each stage produces."
+    },
+    {
+      "key": "acs.sdlc.analysis-design-documentation",
+      "name": "System analysis, design, implementation, documentation and evaluation",
+      "description": "ZIMSEC only (Form 5). analysing the current system (data flow diagrams, flowcharts and E-R diagrams in outline), design deliverables (data capture forms, file and data structure design, output design, test plan), implementation and changeover (direct, parallel, phased, pilot), technical and user documentation, training, and evaluating a system against its objectives."
+    },
+    {
+      "key": "acs.sdlc.program-design",
+      "name": "Program design: structure charts and state-transition diagrams",
+      "description": "Cambridge only (AS Level). Using a structure chart to decompose a problem into sub-tasks and show the parameters passed between modules, deriving equivalent pseudocode from a structure chart, and using a state-transition diagram or table to document an algorithm; diagrams described in words, tables and lists."
+    },
+    {
+      "key": "acs.sdlc.testing-maintenance",
+      "name": "Testing, errors and maintenance",
+      "description": "Both boards (ZIMSEC Form 5; Cambridge AS Level). Ways of exposing and avoiding faults: syntax, logic and run-time errors and how to locate and correct them, dry run, walkthrough, white-box and black-box testing, integration, alpha, beta, acceptance and stub testing, normal, abnormal and extreme (boundary) test data, a test strategy and test plan and their contents, and perfective, adaptive and corrective maintenance, including amending an existing program to enhance it."
+    },
+    {
+      "key": "acs.sdlc.prototyping-oom",
+      "name": "Prototyping and object-oriented methodology",
+      "description": "ZIMSEC only (Form 6). software process models, prototyping (throwaway and evolutionary, benefits and drawbacks), object-oriented methodology (identify objects and classes, use case and class diagrams in words, reuse), comparing prototyping, OOM and the waterfall model for a given project."
+    },
+    {
+      "key": "acs.sdlc.software-architecture",
+      "name": "Software architecture design",
+      "description": "ZIMSEC only (Form 6). architectural design from user requirements for a given scenario: layered (presentation, logic, data), client-server and three-tier styles, components and their interfaces, choosing an architecture and documenting it as a diagram described in words and a table."
+    },
+    {
+      "key": "acs.ai.graphs-search",
+      "name": "Graphs and path finding: Dijkstra's algorithm and A*",
+      "description": "Cambridge only (A Level only). the purpose and structure of a graph used in AI (nodes, edges, weights), Dijkstra's algorithm (distance table, visiting order, shortest path) and the A* algorithm (heuristic, f = g + h, open and closed lists) performed by hand on a given graph with every result computed in code; writing the algorithms is not required."
+    },
+    {
+      "key": "acs.ai.machine-learning",
+      "name": "Machine learning: neural networks, deep learning and regression",
+      "description": "Cambridge only (A Level only). machine learning categories (supervised, unsupervised, reinforcement), artificial neural networks (layers, weights, activation, a small forward pass computed), deep learning, back propagation of errors (the idea and one weight update), regression methods (a least-squares line computed from data), and the reasons for choosing each method."
+    },
+    {
+      "key": "acs.enterprise.application-areas",
+      "name": "Application areas of computer science and global trends",
+      "description": "ZIMSEC only (Form 5). how computer science is applied in engineering, research and development, agricultural mechanisation (precision farming, drones, irrigation control), e-learning, telecommunications and other sectors, with local examples, and analysing global trends in computing (cloud, AI, internet of things, blockchain, green computing) and what they mean for Zimbabwe."
+    },
+    {
+      "key": "acs.enterprise.e-business",
+      "name": "E-business, e-commerce and financial literacy",
+      "description": "ZIMSEC only (Form 5). the importance of e-business and e-commerce models (B2C, B2B, C2C), payment systems including mobile money and cards, benefits and risks for a small business, and basic financial literacy for an ICT business (income, costs, profit, break-even and cash flow, computed examples in US dollars)."
+    },
+    {
+      "key": "acs.enterprise.marketing",
+      "name": "Marketing and business strategies",
+      "description": "ZIMSEC only (Form 5). the elements of marketing (the 4Ps: product, price, place, promotion), market research, branding, digital marketing, writing a simple marketing plan and a strategy for an ICT product or service, and safeguarding an innovation."
+    },
+    {
+      "key": "acs.enterprise.business-proposal",
+      "name": "Developing an ICT business proposal",
+      "description": "ZIMSEC only (Form 5). the parts of a business proposal or plan (executive summary, problem, solution, market, operations, staffing, finance, risks), designing a viable ICT business such as a repair shop, web design service or school software supplier, presenting it, and evaluating its viability with simple financial figures."
+    },
+    {
+      "key": "acs.skills.python-practical",
+      "name": "Practical programming in Python: planning, coding, testing and evidence",
+      "description": "Both boards (ZIMSEC Forms 5-6; Cambridge A Level only). Planning a program from a scenario, writing console-mode Python from the pseudocode design (the practical language used for Cambridge Paper 4 and ZIMSEC Paper 2), reading input safely, structuring code with functions and classes, testing with normal, abnormal and boundary data, debugging, commenting, and producing evidence (program listing and screenshots of runs) for a task; taught with small tasks, never with whole past tasks."
+    },
+    {
+      "key": "acs.skills.project-report",
+      "name": "The ZIMSEC computer science project report",
+      "description": "ZIMSEC only (Forms 5-6). choosing a problem, and the five sections of the project report as the guide structures them (selection, investigation and analysis; design; software development; testing and evaluation; general expectations), what evidence earns marks in each, the page limit and layout, documentation of code, user documentation, test plans with standard, extreme and abnormal data, and evaluating the system; the project itself is not simulated."
+    }
+  ]
+}
