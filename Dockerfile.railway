@@ -32,15 +32,8 @@ ENV NEXT_PUBLIC_APP_NAME=${NEXT_PUBLIC_APP_NAME} \
     NEXT_PUBLIC_SUPPORT_EMAIL=${NEXT_PUBLIC_SUPPORT_EMAIL}
 COPY . .
 RUN MIGRATION_DATABASE_URL=postgresql://build@127.0.0.1:1/unused npx prisma generate
-RUN test -n "${APP_URL}" || { echo "Service variable APP_URL is required (public https origin)." >&2; exit 1; }; \
-    test -n "${BUILD_DATABASE_URL}" || { echo "Service variable BUILD_DATABASE_URL is required (read-only app_build role, public proxy)." >&2; exit 1; }; \
-    DATABASE_URL="${BUILD_DATABASE_URL}" \
-    SESSION_SECRET="$(node -e "process.stdout.write(require('node:crypto').randomBytes(32).toString('hex'))")" \
-    APP_URL="${APP_URL}" \
-    NEXT_DEPLOYMENT_ID="${RAILWAY_GIT_COMMIT_SHA}" \
-    NODE_ENV=production \
-    npm run build \
- && node scripts/build-worker.mjs --outdir=build/worker
+# The build commands live in a script so the log never shows the expanded build arguments (database URL).
+RUN sh scripts/railway-build.sh
 
 FROM ${NODE_IMAGE} AS runtime
 RUN apt-get update \
