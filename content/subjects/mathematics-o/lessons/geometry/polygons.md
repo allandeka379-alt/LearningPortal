@@ -65,6 +65,8 @@ $$
 
 Imagine walking all the way round a polygon. At each vertex you turn through the exterior angle, and when you are back at the start facing the same way you have made one complete turn.
 
+![Left: a hexagon split from one vertex into 4 triangles, so its interior angles add up to 4 × 180° = 720°, and each angle of a regular hexagon is 120°. Right: a regular hexagon with each side extended, giving six exterior angles of 60° that add up to 360°.](media:diagrams/polygon-hexagon-angle-sums.png "Figure: interior angle sum from triangles, and exterior angles that total 360°")
+
 :::keyfact{title="Exterior angles"}
 The exterior angles of any convex polygon add up to $360^\circ$, whatever the number of sides.
 :::

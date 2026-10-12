@@ -102,6 +102,8 @@ A CRO also measures a **time interval** between two pulses, for example an ultra
 
 Some sensors do not read the quantity directly. A thermistor's resistance, a thermocouple's voltage or a light-dependent resistor's resistance is first measured at known values (melting ice, boiling water, a standard thermometer), and a graph of sensor reading against the known quantity is drawn. Later readings are converted using the graph. A calibration curve is needed whenever the sensor's response is non-linear.
 
+![Calibration curve for an NTC thermistor (illustrative values): resistance plotted against temperature measured with a standard thermometer falls in a curve from about 33 kΩ at 0 °C to under 1 kΩ at 100 °C; a later resistance reading is converted to a temperature by reading across to the curve and down to the axis.](media:diagrams/thermistor-calibration-curve.png "Figure: a calibration curve converts a sensor reading into a value of the quantity")
+
 ## Common mistakes
 
 :::mistake{title="Adding a negative zero error"}

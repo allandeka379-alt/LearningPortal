@@ -70,6 +70,8 @@ When a force acts at an angle to a lever, there are two equivalent ways to work:
 :::worked-solution[Moment of a force at an angle]
 Rudo pulls on the end of a spanner $0.30\ \text{m}$ long with a force of $150\ \text{N}$ at $60^\circ$ to the spanner. Calculate the moment about the nut.
 
+![A spanner 0.30 m long is pulled at its end by a 150 N force at 60° to the spanner. The perpendicular distance from the nut to the line of action of the force is 0.30 sin 60° = 0.260 m, so the moment is 150 × 0.260 = 39.0 N m, less than the 45 N m from a force at 90°.](media:diagrams/spanner-moment-angled-force.png "Figure: only the perpendicular distance to the line of action counts")
+
 1. Perpendicular distance: $d_\perp = r\sin\theta = 0.30 \times \sin 60^\circ = 0.260\ \text{m}$.
 2. Moment $= F d_\perp = 150 \times 0.260 = 39.0\ \text{N m}$.
 3. Check by components: perpendicular component $= 150\sin 60^\circ = 129.9\ \text{N}$; moment $= 129.9 \times 0.30 = 39.0\ \text{N m}$.

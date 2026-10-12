@@ -85,6 +85,8 @@ For the $y$-direction, the order matters: $2f(x) - 3$ (stretch then translate) i
 4. Greatest value $3 + 1 = 4$; least value $-3 + 1 = -2$.
 :::
 
+![Graphs of y = sin x (grey) and y = 3 sin 2x + 1 (blue) for 0 to 360 degrees: the stretch of factor 1/2 in x halves the period to 180 degrees, the stretch of factor 3 in y gives amplitude 3, and the translation up 1 puts the centre line at y = 1, so the greatest value is 4 and the least is -2.](media:diagrams/transform-sine-to-3sin2x-plus-1.png "Figure: sin x becomes 3 sin 2x + 1: period 180°, amplitude 3, centre line y = 1")
+
 ## The graph of y = |f(x)| (ZIMSEC)
 
 $|f(x)|$ leaves non-negative values alone and changes the sign of negative ones. So to sketch $y = |f(x)|$: draw $y = f(x)$, then **reflect every part below the $x$-axis in the $x$-axis**. Points on the axis stay where they are, and the graph never goes below the $x$-axis.
@@ -96,6 +98,8 @@ $|f(x)|$ leaves non-negative values alone and changes the sign of negative ones.
 4. The graph is W-shaped: it touches the $x$-axis at $(0, 0)$ and $(4, 0)$, where it has sharp corners, and rises steeply for $x < 0$ and $x > 4$.
 5. Consequence: $|x^{2} - 4x| = 3$ has four solutions, because the line $y = 3$ lies between $0$ and $4$.
 :::
+
+![Graph of y = |x^2 - 4x|: the dashed part of y = x^2 - 4x below the x-axis (vertex (2, -4)) is reflected to give a maximum at (2, 4), so the graph is W-shaped touching the axis at (0, 0) and (4, 0); the line y = 3 meets it at four points, so |x^2 - 4x| = 3 has four solutions.](media:diagrams/modulus-quadratic-w-shape.png "Figure: reflecting the dashed part in the x-axis gives a W shape; y = 3 cuts it four times")
 
 :::keyfact{title="ZIMSEC and Cambridge"}
 Both boards examine the four basic transformations and reflections, including combinations, for algebraic and trigonometric graphs. Cambridge expects two transformations at a time and the exact words translation, reflection and stretch. The graph of $y = |f(x)|$ for non-linear $f$ is ZIMSEC only.

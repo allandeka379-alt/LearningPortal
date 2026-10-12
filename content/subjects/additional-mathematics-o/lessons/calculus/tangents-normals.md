@@ -50,6 +50,8 @@ Two special cases: if $m = 0$ the tangent is horizontal, $y = y_1$, and the norm
 4. $y = 4x - 7$.
 :::
 
+![Graph of y = x^3 - 2x^2 + 1 with its tangent y = 4x - 7 touching the curve at P(2, 1), where the gradient 3x^2 - 4x equals 4.](media:diagrams/tangent-to-cubic.png "Figure: the tangent y = 4x − 7 touches the cubic at P(2, 1)")
+
 :::worked-solution[Example 2: find the equation of the normal to $y = \dfrac{4}{x}$ at the point $(4, 1)$]
 1. $y = 4x^{-1}$, so $\dfrac{dy}{dx} = -4x^{-2} = -\dfrac{4}{x^2}$.
 2. At $x = 4$: gradient of tangent $= -\dfrac{4}{16} = -\dfrac{1}{4}$.

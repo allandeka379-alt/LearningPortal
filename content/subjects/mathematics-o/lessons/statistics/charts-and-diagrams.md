@@ -60,7 +60,10 @@ A bar chart for categories (such as favourite subjects) has gaps between the bar
 2. Maize: $27 \times 6^\circ = 162^\circ$. Tobacco: $15 \times 6^\circ = 90^\circ$.
 3. Cotton: $10 \times 6^\circ = 60^\circ$. Groundnuts: $8 \times 6^\circ = 48^\circ$.
 4. Check: $162 + 90 + 60 + 48 = 360$. Draw each sector with a protractor, starting from a radius.
+
 :::
+
+![Pie chart of the main income crop of 60 farmers: maize 27 farmers (162°), tobacco 15 (90°), cotton 10 (60°) and groundnuts 8 (48°); each farmer is 6° and the angles add up to 360°.](media:diagrams/pie-chart-farmers-crops.png "Figure: sector angle = frequency ÷ total × 360°")
 
 :::worked-solution[Example 2: reading a pie chart]
 In a pie chart about transport to work, the sector for "kombi" has an angle of $72^\circ$ and represents 30 people. How many people were surveyed?

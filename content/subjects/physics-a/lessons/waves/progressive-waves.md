@@ -97,6 +97,10 @@ The table gives a snapshot of a wave on a rope with amplitude $3.0\ \text{cm}$ a
 
 Plotted, the points form one full sine curve: the shape repeats after $0.80\ \text{m}$, so $\lambda = 0.80\ \text{m}$, and the largest displacement is $3.0\ \text{cm}$, the amplitude. Points $0.40\ \text{m}$ apart (half a wavelength) are in antiphase: a phase difference of $180^\circ$ or $\pi$ rad.
 
+![Snapshot of a wave on a rope (displacement against distance): one full sine curve of amplitude 3.0 cm repeating every 0.80 m, so the wavelength is read from the horizontal axis as the distance between adjacent crests.](media:diagrams/wave-displacement-distance-graph.png "Figure: displacement-distance graph; the horizontal gap between crests is the wavelength")
+
+![Displacement-time graph for one point on the wave: the same sine shape, but now the horizontal gap between crests is the period T, the time for one oscillation, and the frequency is 1/T.](media:diagrams/wave-displacement-time-graph.png "Figure: displacement-time graph; the horizontal gap between crests is the period")
+
 The phase difference between two points a distance $\Delta x$ apart along a progressive wave is
 
 $$

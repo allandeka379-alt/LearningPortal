@@ -62,9 +62,13 @@ A ripple tank vibrator makes water waves with a frequency of $2.5\ \text{Hz}$ an
 
 The vibrations are at **right angles** to the direction the wave travels. Waves on a rope shaken from side to side, water waves, all **electromagnetic waves** (including light) and seismic **S-waves** (secondary waves) are transverse. They have **crests** and **troughs**.
 
+![Transverse wave drawn as displacement against distance: crests and troughs repeat every 0.40 m, so the wavelength is 0.40 m; the amplitude is the height of a crest above the rest line. With a frequency of 2.5 Hz the wave speed is 2.5 times 0.40, 1.0 m/s.](media:diagrams/wave-transverse-wavelength.png "Figure: wavelength is crest to crest; amplitude is rest position to crest")
+
 ### Longitudinal waves
 
 The vibrations are **parallel** to the direction the wave travels. Push and pull one end of a stretched slinky spring: regions where the coils are squashed together (**compressions**) and spread apart (**rarefactions**) travel along it. **Sound** and seismic **P-waves** (primary waves) are longitudinal.
+
+![Longitudinal wave on a spring: the coils are drawn as vertical lines that bunch up at compressions (C) and spread apart at rarefactions (R). The vibration is along the direction the wave travels, and the wavelength is the distance between two neighbouring compressions.](media:diagrams/wave-longitudinal-compressions.png "Figure: a longitudinal wave has compressions and rarefactions")
 
 :::example{title="A slinky shows both"}
 Moving one end of a stretched slinky from side to side sends a transverse wave along it. Pushing and pulling the end along its length sends a longitudinal wave. In both cases the coils only vibrate about their rest positions; it is the energy that travels along the spring.

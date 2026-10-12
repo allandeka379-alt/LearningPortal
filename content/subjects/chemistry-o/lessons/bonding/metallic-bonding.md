@@ -42,6 +42,8 @@ Electrons that do not belong to any one atom and are free to move throughout the
 
 In a solid metal, the atoms are packed closely together in a regular arrangement, in **layers**. Each atom releases its outer-shell electrons, becoming a **positive ion**. The released electrons are **delocalised**: they move freely through the whole lattice, forming a "sea" of electrons.
 
+![Metallic bonding: a regular lattice of positive metal ions surrounded by a sea of delocalised electrons that are free to move; when a force is applied, layers of ions slide over each other while the electrons still hold the structure together, so the metal bends instead of shattering.](media:diagrams/metallic-bonding-sea-of-electrons.png "Figure: positive ions in a sea of delocalised electrons, and layers sliding")
+
 The negative sea of electrons attracts all the positive ions around it. This strong **electrostatic attraction** holds the metal together. It acts in all directions throughout the giant lattice, so most metals have high melting points.
 
 ## Explaining the properties of metals

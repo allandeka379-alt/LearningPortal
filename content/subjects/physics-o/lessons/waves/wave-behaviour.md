@@ -38,6 +38,8 @@ When plane wavefronts hit a straight barrier, they reflect: the reflected waves 
 
 Water waves travel **more slowly in shallow water**. A glass plate placed in the tank makes a shallow region. As waves pass from deep to shallow water:
 
+![Water waves crossing from deep to shallow water at an angle: the wavefronts are closer together in the shallow region (wavelength 4.0 cm against 6.0 cm) and bend towards the normal, because the waves slow from 0.30 to 0.20 m/s while the frequency stays 5.0 Hz.](media:diagrams/wave-refraction-ripple-tank.png "Figure: waves slow down in shallow water, so the wavelength shortens and they bend")
+
 - their **speed decreases**;
 - their **wavelength decreases** (the wavefronts get closer together);
 - their **frequency stays the same** (it is set by the source);
@@ -59,6 +61,8 @@ When plane waves pass through a gap in a barrier, they spread out beyond it into
 
 - Diffraction through a gap is **greatest when the gap is about the same size as the wavelength**. A gap much wider than the wavelength lets the waves through almost straight, with only slight spreading at the edges.
 - At an edge, **longer wavelengths diffract more**.
+
+![Two ripple-tank sketches of plane waves meeting a barrier with a gap. When the gap is about one wavelength wide the waves spread out into almost semicircular wavefronts; when the gap is much wider than the wavelength the waves go through nearly straight, with slight bending only at the edges. The wavelength is unchanged.](media:diagrams/wave-diffraction-gap-size.png "Figure: diffraction is greatest when the gap is about one wavelength")
 
 :::example{title="Hearing round corners"}
 Sound waves have wavelengths of about a metre, similar to the width of a doorway, so sound diffracts strongly through doors and around buildings. Light has a wavelength of under a millionth of a metre, far smaller than a doorway, so light passes through almost straight: you can hear a person around a corner but not see them.

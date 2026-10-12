@@ -86,6 +86,8 @@ Light from a laser falls on two narrow parallel slits a fraction of a millimetre
 
 Because $x$ is only a few millimetres, measure across several fringes: for example, across 10 fringe spacings, and divide by 10. This reduces the percentage uncertainty in $x$.
 
+![Fringe pattern from Young's double slit (slit separation 0.50 mm, screen 1.80 m away, laser light of wavelength 600 nm): equally spaced bright fringes with centres 2.16 mm apart, found from x = λD/a, with dark fringes midway between them.](media:diagrams/double-slit-fringe-pattern.png "Figure: the double-slit intensity pattern has equally spaced bright fringes of separation x = λD/a")
+
 :::worked-solution[Wavelength of a laser]
 Slits $0.50\ \text{mm}$ apart are $1.80\ \text{m}$ from a screen. Ten fringe spacings measure $21.6\ \text{mm}$.
 

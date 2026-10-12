@@ -44,6 +44,8 @@ A root from a squared factor, such as $x = 2$ in $(x - 2)^2(x + 1)$. At a repeat
 5. Signs: $y < 0$ for $x < -2$, $y > 0$ for $-2 < x < 1$, $y < 0$ for $1 < x < 3$, $y > 0$ for $x > 3$.
 :::
 
+![Graph of y = (x + 2)(x - 1)(x - 3): the cubic rises from the bottom left, crosses the x-axis at -2, 1 and 3 and the y-axis at (0, 6), and ends at the top right; it is positive between -2 and 1 and beyond 3.](media:diagrams/cubic-three-roots.png "Figure: y = (x + 2)(x − 1)(x − 3) crosses the x-axis at −2, 1 and 3")
+
 The sign pattern alternates at each single root. A test value confirms it: at $x = 2$, $y = (4)(1)(-1) = -4 < 0$.
 
 :::worked-solution[Example 2: sketch $y = x(3 - x)(x + 2)$]

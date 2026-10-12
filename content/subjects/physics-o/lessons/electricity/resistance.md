@@ -55,11 +55,15 @@ A $220\ \Omega$ resistor is connected to a $5.5\ \text{V}$ supply.
 
 Plotting current $I$ (vertical axis) against p.d. $V$ (horizontal axis):
 
+![Current-voltage graph of a fixed resistor: a straight line through the origin, reaching 0.40 A at 12 V; the current is proportional to the p.d., so the resistance is constant at 30 ohms (12 V divided by 0.40 A).](media:diagrams/iv-graph-resistor.png "Figure: an ohmic conductor gives a straight I-V line")
+
 - **Fixed resistor (metal wire at constant temperature)**: a straight line through the origin. $I$ is proportional to $V$, so the resistance is constant: it obeys Ohm's law (an **ohmic** conductor).
 - **Filament lamp**: a curve that gets less steep as $V$ increases. As the current rises, the filament gets hotter and its resistance **increases**, so it does not obey Ohm's law (non-ohmic). The graph has the same shape for negative values of $V$.
 - **Diode**: almost no current flows in the reverse direction. In the forward direction, current flows once the p.d. passes a small value (about $0.6\ \text{V}$ for a silicon diode) and then rises steeply. A diode lets current flow in one direction only.
 
 Ohm's law therefore has limits: it applies to metallic conductors kept at constant temperature, not to filament lamps, diodes or thermistors.
+
+![Two current-voltage graphs. Filament lamp: an S-shaped curve through the origin that gets less steep as V increases, in both directions, because the hot filament has higher resistance. Diode: almost no current for negative V and below about 0.6 V, then the current rises steeply.](media:diagrams/iv-graph-lamp-diode.png "Figure: I-V graphs of a filament lamp and a diode")
 
 ## Resistance of a wire
 

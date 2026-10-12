@@ -44,6 +44,8 @@ This works because a freely hanging object comes to rest with its centre of grav
 
 An object topples when the vertical line through its centre of gravity falls **outside its base**. Then the weight produces a moment that turns the object further over.
 
+![Two sketches of a tall block tilted about its bottom corner. At 15 degrees the vertical line down from the centre of gravity still lands inside the base, so the weight turns the block back upright. At 45 degrees the line falls outside the base, so the weight turns the block over.](media:diagrams/centre-of-gravity-toppling.png "Figure: an object topples when the line of its weight falls outside its base")
+
 :::example{title="Tilting a bottle"}
 Tilt a full bottle a little and let go: the line of its weight still passes through the base, so the weight's moment turns it back upright. Tilt it further, until the line of the weight passes outside the edge of the base, and the moment now turns it over: it topples.
 :::

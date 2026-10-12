@@ -86,6 +86,8 @@ Complete the square to find the vertex. If the vertex lies inside the domain, it
 4. Range: $1 \leq f(x) \leq 10$.
 :::
 
+![Graph of f(x) = x^2 - 6x + 10 for 0 to 5: it falls from (0, 10) to the minimum (3, 1) and rises to (5, 5), so the range is 1 to 10; the highest value comes from the end point x = 0, not from x = 5.](media:diagrams/domain-range-quadratic.png "Figure: for 0 ≤ x ≤ 5 the range of f is 1 ≤ f(x) ≤ 10")
+
 ## Exponential and logarithmic functions
 
 The graph of $y = \mathrm{e}^x$ is always above the $x$-axis and approaches it as $x \to -\infty$, so $\mathrm{e}^x > 0$ for every $x$, but it never equals 0. The graph of $y = \ln x$ exists only for $x > 0$ and takes every real value.

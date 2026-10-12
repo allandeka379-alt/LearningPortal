@@ -195,7 +195,7 @@ concept("amath.statistics.data-presentation", { file: "statistics/data-presentat
           explanation: "Widths 5, 5, 10, 20: densities 6/5 = 1.2, 14/5 = 2.8, 18/10 = 1.8, 12/20 = 0.6." }),
         P.num({ label: "(b)", marks: 1, stem: "How many bags have a mass less than 40 kg?", value: G.cf[2], wrong: [18],
           explanation: "6 + 14 + 18 = 38." }),
-        P.manual({ label: "(c)", marks: 1, stem: "Which class has the tallest bar in the histogram? Explain briefly.",
+        P.manual({ label: "(c)", marks: 1, stem: "Which class would have the tallest bar if these data were drawn as a histogram? Explain briefly.",
           points: ["25 ≤ m < 30, because it has the greatest frequency density (2.8), even though 30 ≤ m < 40 has a larger frequency."],
           modelAnswer: "The bar for 25 ≤ m < 30 is tallest, as its frequency density 2.8 is the greatest; the class 30 ≤ m < 40 has more bags but is twice as wide.",
           explanation: "Height is frequency density, not frequency." }),

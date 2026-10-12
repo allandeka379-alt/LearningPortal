@@ -100,6 +100,10 @@ Readings from a short-lived gas source, background $0.5\ \text{s}^{-1}$:
 
 A graph of $R$ against $t$ is a curve that falls by the same fraction in equal times. Taking logs, $\ln R = \ln R_0 - \lambda t$: a graph of $\ln R$ against $t$ is a **straight line** of gradient $-\lambda$ and intercept $\ln R_0$. Here the gradient is $(2.22 - 3.69)/120 = -0.01225\ \text{s}^{-1}$, so $\lambda = 0.0123\ \text{s}^{-1}$ and $t_{1/2} = 0.693/0.01225 = 56.6\ \text{s}$.
 
+![Corrected count rate against time for the short-lived gas source: an exponential fall from 40.0 per second, with equal fractions lost in equal times; the rate halves to 20 per second after about 56.6 s, the half-life.](media:diagrams/decay-count-rate-graph.png "Figure: radioactive decay is exponential; the half-life is read from the curve")
+
+![Graph of ln R against t for the decay data: a straight line from 3.69 at t = 0 to 2.22 at 120 s, with gradient −0.01225 per second, so the decay constant is 0.0123 per second and the half-life 56.6 s.](media:diagrams/decay-ln-graph.png "Figure: ln R against t is a straight line of gradient −λ")
+
 ## Applications
 
 - **Carbon dating.** Living things keep the same ratio of carbon-14 to carbon-12 as the atmosphere. After death, carbon-14 ($t_{1/2} = 5730$ years) decays and is not replaced, so the activity per gram of carbon falls exponentially; comparing it with that of living material gives the age (useful for a few hundred to about 50 000 years).

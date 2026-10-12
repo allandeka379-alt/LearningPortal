@@ -80,10 +80,14 @@ The table follows the mass-spring system of the first worked example below ($x_0
 
 Against time, $x$ is a sine curve, $v$ a cosine curve (a quarter cycle, $\pi/2$, **ahead** of $x$), and $a$ is an inverted sine curve, in **antiphase** with $x$ ($\pi$ out of phase). The gradient of the $x$-$t$ graph is $v$; the gradient of the $v$-$t$ graph is $a$.
 
+![Graphs of s.h.m. for a 0.50 kg mass on a 20 N/m spring (amplitude 8.0 cm, period 0.993 s) against time in periods: displacement is a sine curve, velocity a cosine curve a quarter cycle ahead (maximum 0.51 m/s), and acceleration an inverted sine curve in antiphase with displacement (maximum 3.20 m/s²).](media:diagrams/shm-x-v-a-graphs.png "Figure: displacement, velocity and acceleration in s.h.m. over one period")
+
 Against displacement:
 
 - $a$ against $x$ is a **straight line through the origin with negative gradient** $-\omega^2$, running from $x = -x_0$ to $x = +x_0$. This graph is the test for s.h.m.
 - $v$ against $x$ is an **ellipse** (a circle with suitable scales): $v = 0$ at $x = \pm x_0$ and $v = \pm v_0$ at $x = 0$.
+
+![Acceleration against displacement for the spring oscillator: a straight line through the origin from +3.2 m/s² at x = −8.0 cm to −3.2 m/s² at x = +8.0 cm, with gradient −ω² = −40 per s², which is the defining test for simple harmonic motion.](media:diagrams/shm-acceleration-displacement-graph.png "Figure: a = −ω²x is a straight line of negative gradient through the origin")
 
 ## Worked examples
 

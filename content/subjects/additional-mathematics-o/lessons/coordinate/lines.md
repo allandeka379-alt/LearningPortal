@@ -116,6 +116,8 @@ A tidy way to set this out is to write the coordinates in two columns, repeat th
 4. Area $= \frac{1}{2}\left|-10 + 51 - 3\right| = \frac{1}{2}(38) = 19$ square units.
 :::
 
+![Triangle with vertices A(1, 2), B(7, 4) and C(3, 9) drawn on a coordinate grid; the shoelace method gives its area as 19 square units.](media:diagrams/triangle-coordinates-area.png "Figure: the triangle ABC whose area is found from its coordinates")
+
 :::worked-solution[Example 6: a maize field has corners at $(0, 0)$, $(8, 1)$, $(9, 7)$ and $(2, 6)$, in units of 10 metres. Find its area in square metres]
 1. Products in order: $0(1) - 8(0) = 0$; $8(7) - 9(1) = 47$; $9(6) - 2(7) = 40$; $2(0) - 0(6) = 0$.
 2. Area $= \frac{1}{2}\left|0 + 47 + 40 + 0\right| = 43.5$ square units.

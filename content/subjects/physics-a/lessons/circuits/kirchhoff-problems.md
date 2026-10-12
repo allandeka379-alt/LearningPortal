@@ -51,6 +51,8 @@ Both boards expect multi-loop and multi-source problems solved with Kirchhoff's 
 
 ## Worked example: two sources
 
+![Circuit for the Kirchhoff worked example: three branches between X (top) and Y (bottom), a 6.0 V battery with 2.0 ohms, a 4.0 V battery with 4.0 ohms, and a 6.0 ohm resistor; the currents are I1 = 0.818 A and I3 = 0.727 A, with I2 = −0.091 A, negative because current actually flows down through the 4.0 V battery.](media:diagrams/kirchhoff-two-batteries-circuit.png "Figure: the three-branch circuit with the currents from the worked solution")
+
 :::worked-solution[Two batteries supplying one resistor]
 Three branches connect two points X (top) and Y (bottom). Branch 1: a $6.0\ \text{V}$ battery (positive terminal towards X) in series with $2.0\ \Omega$. Branch 2: a $4.0\ \text{V}$ battery (positive terminal towards X) in series with $4.0\ \Omega$. Branch 3: a $6.0\ \Omega$ resistor. The batteries have negligible internal resistance. Find the current in each branch.
 

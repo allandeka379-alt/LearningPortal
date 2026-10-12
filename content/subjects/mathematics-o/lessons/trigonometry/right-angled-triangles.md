@@ -21,6 +21,8 @@ Before you start, set your calculator to **degree** mode (a small D or DEG on th
 
 In a right-angled triangle, name the sides **relative to the angle** $\theta$ you are using:
 
+![A right-angled triangle with a 35° angle: the hypotenuse H is 12 cm, A is the side next to the 35° angle, O is the side opposite it, and x = O = 12 sin 35° = 6.88 cm; the ratios are sin = O/H, cos = A/H, tan = O/A.](media:diagrams/trig-soh-cah-toa-labels.png "Figure: name the sides from the angle you are using, then pick sin, cos or tan")
+
 :::definition{term="Hypotenuse (H)"}
 The longest side, opposite the right angle. It never changes.
 :::
@@ -101,6 +103,8 @@ A roof rises to a ridge 3.2 m above the tops of the walls. Each side of the roof
 3. The sloping side is the hypotenuse: $\sin 28^\circ = \dfrac{3.2}{s}$, so $s = \dfrac{3.2}{\sin 28^\circ} = 6.82$ m (3 s.f.).
 4. Check with Pythagoras: $\sqrt{6.018^2 + 3.2^2} = 6.82$ m.
 :::
+
+![Cross-section of a roof: each side slopes at 28° and the ridge is 3.2 m above the walls; the right-angled triangle gives the horizontal distance x = 3.2 ÷ tan 28° = 6.02 m and the sloping side s = 3.2 ÷ sin 28° = 6.82 m.](media:diagrams/trig-roof-pitch.png "Figure: the roof splits into right-angled triangles for tan and sin")
 
 Bearing problems work the same way once you have drawn north lines and found a right angle (see the lesson on bearings).
 

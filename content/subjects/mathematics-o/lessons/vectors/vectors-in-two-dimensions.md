@@ -98,6 +98,8 @@ Multiplying by a positive scalar $k$ keeps the direction and multiplies the leng
 
 Equal vectors need not start at the same place. In a parallelogram $PQRS$, the opposite sides are equal vectors: $\overrightarrow{PQ} = \overrightarrow{SR}$ and $\overrightarrow{PS} = \overrightarrow{QR}$.
 
+![Parallelogram PQRS with P(1, 1), Q(5, 2), R(6, 5) and S(2, 4): the opposite sides PQ and SR are equal vectors (4, 1) and PS and QR are equal vectors (1, 3), so S is found by moving (4, 1) back from R.](media:diagrams/vectors-parallelogram-pqrs.png "Figure: opposite sides of a parallelogram are equal vectors")
+
 :::worked-solution[Example 5: the fourth vertex of a parallelogram]
 $P(1, 1)$, $Q(5, 2)$ and $R(6, 5)$ are three vertices of parallelogram $PQRS$. Find $S$.
 1. $\overrightarrow{PQ} = \begin{pmatrix} 5 - 1 \\ 2 - 1 \end{pmatrix} = \begin{pmatrix} 4 \\ 1 \end{pmatrix}$.

@@ -30,6 +30,8 @@ Unit: the pascal, $1\ \text{Pa} = 1\ \text{N/m}^2$.
 
 For the same force, a **small area** gives a **large pressure** and a large area gives a small pressure.
 
+![A 600 N crate resting on two faces: on its largest face, 0.20 square metres, it exerts a pressure of 3000 Pa; stood on its smallest face, 0.050 square metres, the same weight gives 12 000 Pa, four times the pressure from a quarter of the area.](media:diagrams/pressure-crate-two-faces.png "Figure: the same force on a smaller area gives a larger pressure")
+
 | Small area: high pressure | Large area: low pressure |
 | --- | --- |
 | sharp knife blade, needle, nail point | wide tractor tyres on a muddy field |
@@ -47,6 +49,8 @@ A crate weighs $600\ \text{N}$. Its largest face has an area of $0.20\ \text{m}^
 ## Pressure in liquids
 
 A liquid presses on every surface it touches, and the pressure at a point acts **equally in all directions**. Beneath the surface:
+
+![Tank of water 8.0 m deep with arrows pushing sideways on the wall that get longer with depth: pressure increases with depth. At 8.0 m, with a density of 1000 kg per cubic metre and g of 9.8 N per kg, the pressure from the water is 78 400 Pa.](media:diagrams/pressure-depth-liquid.png "Figure: liquid pressure increases with depth")
 
 - pressure **increases with depth**, because there is more liquid above pushing down;
 - pressure is **greater in a denser liquid** at the same depth.

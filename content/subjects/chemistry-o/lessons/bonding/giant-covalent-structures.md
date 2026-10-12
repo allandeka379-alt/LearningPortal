@@ -53,6 +53,8 @@ Electrons that are not fixed between two particular atoms and are free to move t
 - The layers are held together only by **weak forces**, so they can slide over each other.
 - Each carbon atom's fourth outer electron is **delocalised**: free to move along the layers.
 
+![Giant covalent structures: in diamond each carbon atom bonds to four others in a rigid three-dimensional network; in graphite each carbon bonds to three others in flat hexagonal layers, with only weak forces between the layers so they slide over each other.](media:diagrams/giant-covalent-diamond-graphite.png "Figure: the structures of diamond and graphite")
+
 | Property | Explanation |
 | --- | --- |
 | Soft and slippery | The layers slide over each other because the forces between layers are weak |

@@ -78,6 +78,8 @@ Find the $x$-coordinates of the points of intersection: they are the limits. The
 5. Area $= \tfrac{28}{3} + \tfrac{80}{3} = 36$ square units.
 :::
 
+![Graphs of y = 8 - x^2 and the line y = 2x meeting at (-4, -8) and (2, 4): the parabola is above the line between them, and the shaded region has area 36 square units, found by integrating upper minus lower.](media:diagrams/area-between-parabola-and-line.png "Figure: the area between the curves from x = −4 to x = 2 is 36 square units")
+
 ### Areas against the y-axis
 
 For a region between a curve, the $y$-axis and two horizontal lines, integrate with respect to $y$: area $= \int_{c}^{d} x\,dy$, with $x$ written in terms of $y$. For example, the region between $y = x^{2}$ ($x \geq 0$), the $y$-axis and the lines $y = 1$ and $y = 4$ has area $\int_{1}^{4}\sqrt{y}\,dy = \Big[\tfrac{2}{3}y^{\frac{3}{2}}\Big]_{1}^{4} = \tfrac{2}{3}(8 - 1) = \tfrac{14}{3}$.

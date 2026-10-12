@@ -68,6 +68,8 @@ For $y = -x^2 + 4$ at $x = -3$: $-(-3)^2 + 4 = -9 + 4 = -5$. Square first, then 
 
 ## Other curves you must know
 
+![Graph of y = 6/x: two separate smooth branches, one in the first quadrant through (1, 6), (2, 3), (3, 2) and (6, 1) and one in the third quadrant through (−2, −3); neither branch touches the axes.](media:diagrams/reciprocal-6-over-x.png "Figure: the reciprocal graph has two branches that never touch the axes")
+
 :::worked-solution[Example 2: a reciprocal graph $y = \frac{6}{x}$]
 1. For positive $x$: $x = 1, 2, 3, 4, 5, 6$ gives $y = 6, 3, 2, 1.5, 1.2, 1$.
 2. For negative $x$ the values are negative: $x = -2$ gives $y = -3$, and so on.
@@ -81,6 +83,8 @@ For $y = -x^2 + 4$ at $x = -3$: $-(-3)^2 + 4 = -9 + 4 = -5$. Square first, then 
 :::
 
 For an exponential such as $y = 2^x$: $x = -2, -1, 0, 1, 2, 3$ gives $y = 0.25, 0.5, 1, 2, 4, 8$. The curve passes through $(0, 1)$ and is always above the $x$-axis (Cambridge Extended).
+
+![Graph of the cubic y = x³ − 3x + 1 for x from −2 to 2: the curve rises from the bottom left to a maximum near (−1, 3), falls to a minimum near (1, −1), then rises again, passing through (0, 1).](media:diagrams/cubic-x3-minus-3x-plus-1.png "Figure: a cubic curve has a maximum and a minimum")
 
 ## Solving equations graphically
 
@@ -99,6 +103,8 @@ The solutions of an equation are the $x$-coordinates where two graphs meet.
 ### Choosing a suitable straight line
 
 If you have the graph of $y = x^2 - 2x - 3$ and must solve a **different** equation, such as $x^2 - 3x - 1 = 0$, rearrange the new equation so that the curve's expression is on one side.
+
+![Graph of y = x² − 2x − 3: a U-shaped curve with minimum (1, −4) that crosses the x-axis at x = −1 and x = 3; the dashed line y = 2 meets it at about x = −1.4 and x = 3.4, the solutions of x² − 2x − 3 = 2.](media:diagrams/quadratic-solve-graphically.png "Figure: roots and the solutions of x² − 2x − 3 = 2 read from the curve")
 
 :::worked-solution[Example 5: which line should you draw?]
 1. Start with $x^2 - 3x - 1 = 0$.

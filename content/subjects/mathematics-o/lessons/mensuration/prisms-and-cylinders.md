@@ -51,6 +51,8 @@ $$
 
 The curved surface of a cylinder unrolls into a rectangle whose length is the circumference $2\pi r$ and whose width is the height $h$. That is why its area is $2\pi rh$.
 
+![A cylindrical tank of radius 1.2 m and height 2 m next to its curved surface unrolled into a rectangle 7.54 m long (the circumference 2π × 1.2) and 2 m high, with area 2πrh = 15.1 m².](media:diagrams/cylinder-curved-surface-rectangle.png "Figure: the curved surface of a cylinder unrolls into a rectangle")
+
 ## Cuboids and prisms
 
 :::worked-solution[Example 1: a cuboid box 8 cm by 5 cm by 3 cm]
@@ -58,6 +60,8 @@ The curved surface of a cylinder unrolls into a rectangle whose length is the ci
 2. The faces come in three pairs: $8 \times 5 = 40$, $8 \times 3 = 24$ and $5 \times 3 = 15$.
 3. Surface area $= 2(40 + 24 + 15) = 2 \times 79 = 158\ \text{cm}^2$.
 :::
+
+![Two prisms: a cuboid 8 cm by 5 cm by 3 cm with volume 8 × 5 × 3 = 120 cm³ and surface area 158 cm², and a ridge tent that is a triangular prism 3 m long whose triangular cross-section (base 2.4 m, height 1.6 m) has area 1.92 m², giving a volume of 5.76 m³.](media:diagrams/solids-cuboid-and-tent-prism.png "Figure: volume of a prism = area of cross-section × length")
 
 :::worked-solution[Example 2: a ridge tent]
 A tent is a triangular prism 3 m long. Its cross-section is a triangle with base 2.4 m and height 1.6 m.

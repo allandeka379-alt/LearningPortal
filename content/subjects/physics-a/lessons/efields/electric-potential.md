@@ -95,6 +95,8 @@ For a charge of $+12\ \text{nC}$ the potential at distance $r$ is:
 
 The graph of $V$ against $r$ is a $1/r$ curve: doubling $r$ halves $V$, and the curve approaches zero without reaching it. The **gradient of the tangent** at any point is $\Delta V/\Delta r$, and the field strength is minus this gradient. At $r = 0.20\ \text{m}$ the tangent gradient is $-2.70 \times 10^{3}\ \text{V m}^{-1}$, so $E = 2.70 \times 10^{3}\ \text{V m}^{-1}$ outwards, exactly what $E = Q/(4\pi\varepsilon_0r^2)$ gives. The curve is steepest close to the charge, where the field is strongest. A negative charge gives the same shape reflected below the $r$-axis.
 
+![Graph of electric potential against distance from a +12 nC point charge: a 1/r curve from 1080 V at 0.10 m to 180 V at 0.60 m; the tangent at 0.20 m has gradient about -2698 V/m, so the field strength there is about 2698 V/m (N/C).](media:diagrams/point-charge-potential-graph.png "Figure: the field strength is minus the gradient of the tangent to the V-r curve")
+
 The minus sign in $E = -\Delta V/\Delta r$ says that the field points from high potential to low potential, the direction in which a positive charge would "roll downhill".
 
 ## Equipotentials

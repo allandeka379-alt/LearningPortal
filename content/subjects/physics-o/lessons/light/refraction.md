@@ -48,6 +48,8 @@ Light travels at about $3.0 \times 10^{8}\ \text{m/s}$ in air but more slowly in
 
 Place a rectangular glass block on paper and draw its outline. Shine a ray from a ray box into one side at a measured angle of incidence, mark the ray coming out of the opposite side with crosses, remove the block and join up the path. Draw normals and measure the angles. The ray leaving a parallel-sided block is **parallel** to the ray entering it, but shifted sideways.
 
+![Ray through a glass block: entering from air at an angle of incidence of 40 degrees it bends towards the normal to an angle of refraction of 25 degrees, so the refractive index is sin 40 over sin 25, 1.52. It leaves the opposite face at 40 degrees, parallel to the incident ray but shifted sideways.](media:diagrams/refraction-glass-block.png "Figure: light bends towards the normal on entering glass and away on leaving")
+
 ## Calculating refractive index
 
 :::worked-solution[Refractive index of a glass block]

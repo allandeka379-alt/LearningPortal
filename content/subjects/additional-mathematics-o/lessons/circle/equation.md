@@ -52,6 +52,8 @@ Watch the signs: a centre at $(3, -2)$ gives $(x - 3)^2 + (y + 2)^2$. The circle
 3. Expanded form: $x^2 + y^2 - 6x + 4y - 12 = 0$.
 :::
 
+![Circle with centre (3, -2) and radius 5, equation (x - 3)^2 + (y + 2)^2 = 25; the point (7, 1) is at distance 5 from the centre (a 3-4-5 triangle) and (-2, -2) lies on the circle too.](media:diagrams/circle-centre-radius.png "Figure: the circle (x − 3)² + (y + 2)² = 25")
+
 ## Finding the centre and radius
 
 An expanded equation is recognisable as a circle when the $x^2$ and $y^2$ terms have **equal coefficients** (divide through if they are both 2, say) and there is **no $xy$ term**. Complete the square in $x$ and in $y$ separately.

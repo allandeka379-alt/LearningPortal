@@ -36,6 +36,8 @@ $y = a^x$ and $y = \log_a x$ are inverse functions, so each graph is the reflect
 
 The graph of $y = 2^x$ and the graph of its inverse $y = \log_2 x$ can be drawn from these tables. Notice that the rows swap over.
 
+![Graphs of y = 2^x (through (0, 1), approaching the x-axis on the left) and y = log base 2 of x (through (1, 0), approaching the y-axis downwards); they are reflections of each other in the dashed line y = x.](media:diagrams/exponential-and-log-inverse.png "Figure: y = 2ˣ and y = log₂ x are mirror images in y = x")
+
 | $x$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |
 | --- | --- | --- | --- | --- | --- | --- |
 | $2^x$ | $0.25$ | $0.5$ | $1$ | $2$ | $4$ | $8$ |

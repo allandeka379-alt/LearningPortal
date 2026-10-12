@@ -60,6 +60,8 @@ An atom has **no overall charge**, because it has the same number of electrons a
 
 A nuclide symbol shows the mass number at the top left and the proton number at the bottom left of the element's symbol:
 
+![Atom of potassium-39: a nucleus of 19 protons and 20 neutrons (mass number 39) surrounded by 19 electrons in shells of 2, 8, 8 and 1; the numbers of protons and electrons are equal so the atom is neutral.](media:diagrams/atom-structure-potassium-39.png "Figure: the particles in an atom of potassium-39")
+
 $$
 \ce{^{A}_{Z}X}
 $$

@@ -69,6 +69,8 @@ To get from $A$ to $B$, go from $A$ back to $O$ and then out to $B$: $\overright
 3. Unit vector: $\dfrac{1}{10}(6\mathbf{i} + 8\mathbf{j}) = 0.6\mathbf{i} + 0.8\mathbf{j}$.
 :::
 
+![Vector AB from A(2, -1) to B(8, 7): 6 units across and 8 units up, so AB = 6i + 8j, and its length is the square root of 36 + 64, which is 10.](media:diagrams/vector-ab-components.png "Figure: the vector AB drawn with its components 6i and 8j")
+
 A vector of a given magnitude in a given direction is that magnitude times the unit vector.
 
 :::worked-solution[Example 3: find the vector of magnitude 26 in the direction of $5\mathbf{i} - 12\mathbf{j}$]

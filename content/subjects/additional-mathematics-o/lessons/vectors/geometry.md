@@ -45,6 +45,8 @@ If $\mathbf{a}$ and $\mathbf{b}$ are non-zero and **not parallel**, and $p\mathb
 
 In triangle $OAB$ let $\overrightarrow{OA} = \mathbf{a}$ and $\overrightarrow{OB} = \mathbf{b}$. Then:
 
+![Triangle OAB with OA = a and OB = b; N is the midpoint of OA and M the midpoint of AB, and the dashed line NM equals half of b, so NM is parallel to OB and half its length (the midpoint theorem).](media:diagrams/vectors-midpoint-theorem.png "Figure: NM = ½b, so the line joining two midpoints is parallel to the third side")
+
 - $\overrightarrow{AB} = -\mathbf{a} + \mathbf{b} = \mathbf{b} - \mathbf{a}$;
 - if $M$ is the midpoint of $AB$, $\overrightarrow{OM} = \mathbf{a} + \frac{1}{2}(\mathbf{b} - \mathbf{a}) = \frac{1}{2}(\mathbf{a} + \mathbf{b})$;
 - if $N$ is the midpoint of $OA$, $\overrightarrow{NM} = \overrightarrow{NA} + \overrightarrow{AM} = \frac{1}{2}\mathbf{a} + \frac{1}{2}(\mathbf{b} - \mathbf{a}) = \frac{1}{2}\mathbf{b}$.

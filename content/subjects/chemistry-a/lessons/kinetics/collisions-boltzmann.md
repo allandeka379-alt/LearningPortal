@@ -41,6 +41,8 @@ Both boards need all of this lesson (ZIMSEC Form 5; Cambridge AS Level, Papers 1
 
 The rate at any moment is the **gradient of a concentration–time (or volume–time) graph** at that moment. At the start the gradient is steepest (initial rate); it falls as reactants are used up.
 
+![Volume of carbon dioxide against time for 0.300 g of calcium carbonate with excess acid: the curve rises steeply then levels at 72 cm³, and a dashed tangent at t = 0 through (30 s, 54 cm³) has gradient 1.8 cm³ per second, the initial rate.](media:diagrams/rate-gas-volume-time-graph.png "Figure: gas volume against time; the tangent at t = 0 gives the initial rate (1.8 cm³ s⁻¹)")
+
 :::worked-solution[Example 1: rates from gas-volume data]
 Rudo added 0.300 g of powdered calcium carbonate to excess dilute hydrochloric acid and collected the carbon dioxide in a gas syringe.
 
@@ -95,9 +97,13 @@ In a gas the molecules have a **range** of energies because they constantly exch
 
 At a higher temperature the curve is **flatter and broader**, and its peak moves **to the right** (higher most probable energy) and **lower**. The area under the curve is unchanged because the number of molecules is the same. Crucially, the area beyond Ea becomes much larger. A rise of 10 °C near room temperature roughly doubles the rate of many reactions, far more than the small increase in collision frequency could explain; the main reason is the larger proportion of molecules with energy ≥ Ea.
 
+![Maxwell-Boltzmann distribution at two temperatures: both curves start at the origin and have the same area; the higher-temperature curve is lower and broader with its peak to the right, so the area beyond the activation energy Ea (the molecules able to react) is much larger.](media:diagrams/boltzmann-temperature.png "Figure: Boltzmann distributions at T₁ and a higher T₂; the area beyond Ea grows with temperature")
+
 ### Effect of a catalyst
 
 A catalyst does **not** change the Boltzmann distribution at a given temperature. It provides a different route with a **lower activation energy**, so the Ea line moves to the left and a larger area of the curve lies beyond it.
+
+![Boltzmann distribution at one temperature with two activation energies: the catalysed Ea line lies to the left of the uncatalysed Ea line, so the area of the curve beyond it, the molecules with enough energy to react, is larger, while the curve itself is unchanged.](media:diagrams/boltzmann-catalyst.png "Figure: a catalyst lowers Ea, so more molecules have enough energy; the distribution itself is unchanged")
 
 :::example{title="Example 2: explaining a temperature change with the Boltzmann distribution"}
 Question: explain why the reaction between magnesium and hydrochloric acid is faster at 40 °C than at 20 °C.
@@ -110,6 +116,8 @@ Question: explain why the reaction between magnesium and hydrochloric acid is fa
 ## Reaction pathway diagrams
 
 A reaction pathway (energy profile) diagram plots energy against the progress of the reaction. Reactants and products are shown as levels; the curve rises to a peak (the transition state) between them. The activation energy is the height from the reactants to the peak. For an exothermic reaction the products lie below the reactants; ΔH is the difference. With a catalyst the peak is **lower** (often with an intermediate dip between two smaller peaks), but the reactant and product levels, and ΔH, are **unchanged**.
+
+![Energy profile of an exothermic reaction: reactants at a higher energy than products; the catalysed path has a lower peak, so a smaller activation energy, but starts and ends at the same energy levels, so the enthalpy change is unchanged.](media:diagrams/energy-profile-catalyst.png "Figure: a catalyst lowers the activation energy; reactant and product levels, and ΔH, are the same")
 
 ## Common mistakes
 

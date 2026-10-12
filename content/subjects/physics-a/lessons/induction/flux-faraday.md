@@ -115,6 +115,10 @@ A $500$-turn coil of area $4.0 \times 10^{-4}\ \text{m}^2$ sits in a field that 
 
 The e.m.f. is the **gradient** of the $N\Phi$-$t$ graph. From 0 to 0.2 s the gradient is $0.10\ \text{V}$; from 0.2 to 0.4 s it is zero (large flux, but no e.m.f.); from 0.4 to 0.6 s it is $0.10\ \text{V}$ in the opposite direction. The **area** under an $E$-$t$ graph equals the total change in flux linkage.
 
+![Flux linkage against time for a 500-turn coil: NΦ rises steadily from 0 to 2.0 × 10⁻² Wb in 0.2 s, stays constant until 0.4 s, then falls to zero by 0.6 s; the gradient (the e.m.f.) is 0.10 V, then zero, then −0.10 V.](media:diagrams/flux-linkage-time-graph.png "Figure: the induced e.m.f. is the gradient of the flux-linkage graph")
+
+![Induced e.m.f. against time for the same coil: +0.10 V from 0 to 0.2 s while the flux linkage rises, zero from 0.2 to 0.4 s while it is constant, and −0.10 V from 0.4 to 0.6 s while it falls.](media:diagrams/induced-emf-time-graph.png "Figure: e.m.f. against time for the flux-linkage graph above")
+
 ## Worked examples
 
 :::worked-solution[Flux and flux linkage at an angle]

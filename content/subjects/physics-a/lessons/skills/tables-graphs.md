@@ -112,6 +112,8 @@ Chipo's best-fit line passes through $(0.150\ \text{kg},\ 0.236\ \text{s}^2)$ an
 
 When the $x$-axis starts at a value other than zero, the intercept cannot be read from the graph. Substitute the gradient and one point on the line into $y = mx + c$.
 
+![Graph of resistance against temperature with a false origin (the temperature axis starts at 20 °C): seven points lie on a straight line; the large gradient triangle between (25.0 °C, 13.20 Ω) and (75.0 °C, 15.61 Ω) gives a gradient of 0.0482 Ω per °C, and the intercept 12.0 Ω must be calculated, not read from the graph.](media:diagrams/false-origin-gradient-graph.png "Figure: choose points far apart on the line for the gradient; with a false origin calculate the intercept")
+
 :::worked-solution[Intercept with a false origin]
 Nyasha measures the resistance $R$ of a coil of copper wire at temperatures $\theta$ from $20\ ^\circ\text{C}$ to $80\ ^\circ\text{C}$. Theory: $R = R_0 + R_0\alpha\theta$. Her line passes through $(25.0\ ^\circ\text{C},\ 13.20\ \Omega)$ and $(75.0\ ^\circ\text{C},\ 15.61\ \Omega)$, and the $\theta$-axis starts at $20\ ^\circ\text{C}$.
 

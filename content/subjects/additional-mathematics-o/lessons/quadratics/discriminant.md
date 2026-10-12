@@ -100,6 +100,8 @@ To find where the line $y = mx + c$ meets the curve $y = ax^2 + bx + d$, set the
 5. $y = 2(3) - 2 = 4$. The point of contact is $(3, 4)$. (Check on the curve: $9 - 12 + 7 = 4$.)
 :::
 
+![The line y = 2x - 2 touches the curve y = x^2 - 4x + 7 at exactly one point, (3, 4): equal roots (discriminant 0) means the line is a tangent.](media:diagrams/discriminant-tangent-line.png "Figure: with c = −2 the line y = 2x + c just touches the curve at (3, 4)")
+
 :::worked-solution[Example 5: find the set of values of $k$ for which $y = kx + 1$ meets $y = x^2 + 2x + 5$ at two distinct points]
 1. Equate: $x^2 + 2x + 5 = kx + 1$, so $x^2 + (2 - k)x + 4 = 0$.
 2. Two distinct points: $(2 - k)^2 - 4(1)(4) > 0$, so $(2 - k)^2 > 16$.

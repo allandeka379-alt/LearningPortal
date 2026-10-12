@@ -83,6 +83,8 @@ The third fact gives a method for the circle through three points: the centre li
 5. The tangent is $3x + 4y = 30$.
 :::
 
+![Circle with centre C(3, -1) and radius 5 through A(-1, 2), B(7, 2) and (6, -5), with the tangent 3x + 4y = 30 touching it at P(6, 3): the radius CP has gradient 4/3 and the tangent, perpendicular to it, has gradient -3/4.](media:diagrams/circle-tangent-at-point.png "Figure: the tangent at P(6, 3) is perpendicular to the radius CP")
+
 ## Lines and circles: the discriminant method
 
 To find where a line meets a circle, make $y$ (or $x$) the subject of the line and substitute into the circle. The result is a quadratic equation, and its discriminant $b^2 - 4ac$ tells you how the line and circle meet:

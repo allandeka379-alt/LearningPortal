@@ -93,6 +93,8 @@ Triangle $ABC$ has vertices $A(2, 1)$, $B(5, 1)$ and $C(5, 3)$.
 3. In the same way $B(5, 1) \to (-7, 1)$ and $C(5, 3) \to (-7, 3)$. The $y$-coordinates do not change for a vertical mirror line.
 :::
 
+![Triangle ABC with vertices (2, 1), (5, 1) and (5, 3) reflected in the line y = x to give (1, 2), (1, 5) and (3, 5), and in the line x = −1 to give (−4, 1), (−7, 1) and (−7, 3); each image is the same distance behind the mirror line as the object is in front.](media:diagrams/reflection-y-x-and-x-minus-1.png "Figure: reflecting a triangle in y = x and in x = −1")
+
 :::worked-solution[Example 2: rotate about a centre that is not the origin]
 Rotate $P(5, 1)$ through $90^\circ$ anticlockwise about $(2, 1)$.
 
@@ -109,6 +111,8 @@ Triangle $S$ has vertices $(1, 2)$, $(3, 2)$, $(3, 3)$ and triangle $T$ has vert
 2. Test $(x, y) \to (-y, x)$: $(1, 2) \to (-2, 1)$, $(3, 2) \to (-2, 3)$, $(3, 3) \to (-3, 3)$. All three match.
 3. Answer: **rotation, $90^\circ$ anticlockwise, about the origin $(0, 0)$**.
 :::
+
+![Triangle S with vertices (1, 2), (3, 2) and (3, 3) is mapped onto triangle T with vertices (−2, 1), (−2, 3) and (−3, 3) by a rotation of 90° anticlockwise about the origin; the dashed lines from the origin to (1, 2) and (−2, 1) meet at 90°.](media:diagrams/rotation-90-anticlockwise-origin.png "Figure: S maps onto T by a quarter turn anticlockwise about the origin")
 
 ## Combined transformations (Extended)
 

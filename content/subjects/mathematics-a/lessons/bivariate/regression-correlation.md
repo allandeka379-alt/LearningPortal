@@ -66,6 +66,8 @@ Find the regression line of $y$ on $x$, estimate the yield for 700 mm of rain, a
 6. At $x = 11$ the line gives $6.19$, but $11$ is far outside the data: **extrapolation**. The straight-line pattern may not continue (very heavy rain can waterlog crops), so this estimate is unreliable.
 :::
 
+![Scatter diagram of rainfall and maize yield for eight farms with the regression line y = -0.445 + 0.603x: the points lie close to the line, which passes through the mean point (6.5, 3.475) and predicts a yield of about 3.78 tonnes per hectare at x = 7.](media:diagrams/scatter-rainfall-yield-regression.png "Figure: the regression line y = −0.445 + 0.603x passes through the mean point (6.5, 3.475)")
+
 The gradient has a meaning: each extra 100 mm of rain is associated with about $0.603$ more tonnes per hectare. The intercept ($-0.445$ at zero rainfall) has no sensible meaning here, because $x = 0$ is far outside the data.
 
 :::worked-solution[Example 2: For 10 learners, $x$ is the hours spent revising and $y$ the test mark: $\sum x = 52$, $\sum y = 412$, $\sum x^2 = 300$, $\sum y^2 = 17\,760$, $\sum xy = 2220$. Find $r$, both regression lines, the mark predicted for 6 hours of revision, and the revision time estimated for a mark of 50.]

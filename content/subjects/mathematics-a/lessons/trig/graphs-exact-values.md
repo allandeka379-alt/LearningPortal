@@ -81,6 +81,8 @@ To sketch a transformed graph, find the period and the amplitude, then plot the 
 4. It crosses the $x$-axis where $\cos x = \frac{1}{2}$: $x = \frac{\pi}{3}$ and $x = \frac{5\pi}{3}$.
 :::
 
+![Graph of y = 1 - 2 cos x for 0 to 2 pi: it starts at a minimum of -1 when x = 0, crosses the x-axis at x = pi/3, reaches a maximum of 3 at x = pi, crosses the axis again at x = 5pi/3 and returns to -1 at x = 2pi; the range is -1 to 3.](media:diagrams/trig-one-minus-two-cos.png "Figure: y = 1 − 2cos x has range −1 ≤ y ≤ 3 and crosses the x-axis at π/3 and 5π/3")
+
 :::worked-solution[Example 4: the graph of $y = a + b\sin x$ ($b > 0$) has maximum value 7 and minimum value $-1$. Find $a$ and $b$]
 1. The maximum is $a + b = 7$ and the minimum is $a - b = -1$.
 2. Adding: $2a = 6$, so $a = 3$. Subtracting: $2b = 8$, so $b = 4$.
@@ -88,6 +90,8 @@ To sketch a transformed graph, find the period and the amplitude, then plot the 
 :::
 
 The number of solutions of an equation such as $\sin 2x = 0.3$ is the number of times the line $y = 0.3$ crosses the graph. For $0^\circ \le x \le 360^\circ$, $y = \sin 2x$ has two cycles, each crossing $y = 0.3$ twice, so there are 4 solutions ($8.7^\circ$, $81.3^\circ$, $188.7^\circ$, $261.3^\circ$).
+
+![Graph of y = sin 2x for 0 to 360 degrees with the horizontal line y = 0.3: the line cuts the two waves at four points, x = 8.7, 81.3, 188.7 and 261.3 degrees, so sin 2x = 0.3 has 4 solutions in this interval.](media:diagrams/trig-sin2x-line-four-solutions.png "Figure: the line y = 0.3 crosses y = sin 2x four times in 0° to 360°")
 
 ## Inverse trigonometric functions
 

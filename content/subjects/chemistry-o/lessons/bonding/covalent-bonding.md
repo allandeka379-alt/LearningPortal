@@ -42,6 +42,8 @@ One shared pair of electrons is a single bond ($\ce{H-H}$); two shared pairs a d
 
 In a dot-and-cross diagram of a molecule, the outer shells of neighbouring atoms **overlap**, and each shared pair (one dot and one cross) sits in the overlap. Electrons that are not shared are called **non-bonding pairs** (or lone pairs). Count the electrons around each atom, including the shared ones: hydrogen should have 2 and every other atom 8.
 
+![Dot-and-cross diagrams: ammonia NH3 has nitrogen sharing one pair with each of three hydrogen atoms, leaving one non-bonding pair; carbon dioxide has carbon sharing two pairs with each oxygen atom (two double bonds); every atom ends with a full outer shell.](media:diagrams/covalent-dot-cross-nh3-co2.png "Figure: shared pairs in ammonia and carbon dioxide (outer shells only)")
+
 | Molecule | Shared pairs | Non-bonding pairs | What the diagram shows |
 | --- | --- | --- | --- |
 | Hydrogen, $\ce{H2}$ | 1 | 0 | One pair in the overlap; each H has 2 electrons |

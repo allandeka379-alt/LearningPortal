@@ -53,6 +53,8 @@ A correlation shows that two variables are linked, not that one causes the other
 
 Other examples: the age of a car and its value show negative correlation; a learner's shoe size and their mark in a history test show no correlation.
 
+![Scatter diagram of test mark against hours of revision for eight learners, from (1, 35) to (8, 72): the points rise steadily, showing strong positive correlation; the line of best fit passes through the mean point (4.5, 54) with a gradient of about 5.25 marks per hour.](media:diagrams/scatter-revision-marks.png "Figure: strong positive correlation, with the line of best fit through the mean point")
+
 ## The mean point and the line of best fit
 
 The mean point is $(\bar{x}, \bar{y})$, where $\bar{x}$ is the mean of the $x$-values and $\bar{y}$ the mean of the $y$-values. Plot it first, then draw your line through it.

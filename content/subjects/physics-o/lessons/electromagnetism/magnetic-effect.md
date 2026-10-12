@@ -27,6 +27,8 @@ A rule for finding the direction of the magnetic field produced by a current (de
 
 Pass a vertical wire through a horizontal card and switch on a large current. Iron filings sprinkled on the card form **concentric circles** around the wire; small plotting compasses placed on the card point along the circles and show their direction.
 
+![Magnetic field around a straight wire carrying a current towards the viewer: concentric circular field lines centred on the wire, directed anticlockwise by the right-hand grip rule, with the circles drawn further apart at greater distance because the field gets weaker.](media:diagrams/magnetic-field-straight-wire.png "Figure: field lines around a straight current-carrying wire")
+
 - The field lines are circles centred on the wire.
 - **Right-hand grip rule**: grip the wire with your right hand with the **thumb pointing along the conventional current**; your **fingers curl in the direction of the field**.
 - Reversing the current reverses the direction of the field (the compasses turn round).
@@ -39,6 +41,8 @@ A vertical wire carries a current upwards. Looking down on the card from above, 
 ## The field of a solenoid
 
 Thread a coil of wire through a card and sprinkle iron filings around it.
+
+![Magnetic field of a solenoid: outside the coil the field lines loop from one end to the other like a bar magnet, with a north pole at one end and a south pole at the other; inside the coil the lines are straight, parallel and close together, so the field is strong and almost uniform.](media:diagrams/magnetic-field-solenoid.png "Figure: the field of a solenoid is like that of a bar magnet")
 
 - Outside the solenoid, the field has the same shape as that of a **bar magnet**: one end acts as a north pole and the other as a south pole.
 - Inside the solenoid, the field lines are **straight, parallel and close together**: the field is strong and almost uniform.

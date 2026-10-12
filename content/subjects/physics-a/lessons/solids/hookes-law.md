@@ -72,6 +72,8 @@ Masses are added to a spring of original length $15.0\ \text{cm}$.
 
 If you plot extension against load instead, the gradient is $1/k$. Either is acceptable; say which you plotted.
 
+![Force-extension graph for the spring: the first six points (0 to 5.0 N, extension up to 12.5 cm) lie on a straight line through the origin of gradient 40 N/m, so Hooke's law holds; the 6.0 N point at 16.2 cm lies below that line, past the limit of proportionality.](media:diagrams/spring-force-extension-graph.png "Figure: Hooke's law holds up to the limit of proportionality, where the graph bends")
+
 ## Force-extension graphs for different materials
 
 | Material | Shape of the force-extension graph | What it shows |

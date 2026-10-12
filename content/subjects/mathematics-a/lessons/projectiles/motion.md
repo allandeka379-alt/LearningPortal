@@ -53,6 +53,8 @@ At any time the velocity has components $(\dot{x}, \dot{y})$. Its **speed** is $
 4. Range: $x = 19.151 \times 3.2795 = 62.8$ m.
 :::
 
+![Trajectory of a ball kicked at 25 metres per second at 40 degrees above the horizontal from level ground: a parabola rising to a greatest height of 13.2 m halfway along, and landing 62.8 m away after 3.28 s.](media:diagrams/projectile-ball-kicked-40-degrees.png "Figure: the path is a parabola: greatest height 13.2 m, range 62.8 m, time of flight 3.28 s")
+
 ## Projection from a height
 
 When a body is projected from above the ground, the time of flight comes from the vertical equation with $y$ equal to minus the height. A body projected **horizontally** has $u\sin\alpha = 0$, so it starts with no vertical velocity.
@@ -93,6 +95,8 @@ using $\sec^2\alpha = 1 + \tan^2\alpha$. The path is a **parabola**. The second 
 4. Quadratic formula: $\tan\alpha = \dfrac{60 \pm \sqrt{3600 - 4(19.6)(29.6)}}{39.2} = 0.6182$ or $2.4431$.
 5. So $\alpha = 31.7°$ (a flatter path) or $\alpha = 67.7°$ (a higher, lob path).
 :::
+
+![Two trajectories of water leaving a nozzle at 30 metres per second that both pass through the window at (60, 10): the flatter path at 31.7 degrees and the higher lob at 67.7 degrees, the two roots of the quadratic in tan alpha.](media:diagrams/projectile-two-angles-same-target.png "Figure: two launch angles, 31.7° and 67.7°, reach the same point (60, 10)")
 
 If the discriminant of the quadratic is negative, the point is out of reach at that speed; if it is zero, exactly one angle just reaches it.
 

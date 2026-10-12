@@ -50,6 +50,8 @@ Field lines run from north poles to south poles outside a magnet, never cross, a
 
 A useful notation on flat drawings: a dot (⊙) for a current coming out of the page, a cross (⊗) for a current going into it. For a current into the page the field circles are clockwise when viewed from the front.
 
+![Magnetic field of a long straight wire carrying current out of the page: concentric circles around the wire, drawn anticlockwise, with spacing that grows with distance because the field weakens.](media:diagrams/straight-wire-field-lines.png "Figure: field lines of a long straight wire (current out of the page)")
+
 ### Flat circular coil
 
 - Near each side of the coil the lines are circles round the wire, as for a straight wire.
@@ -92,6 +94,8 @@ A Hall probe is moved away from a long straight wire carrying $12\ \text{A}$:
 | 8 | 30.0 |
 
 Each doubling of distance halves $B$: $B \propto 1/r$. A graph of $B$ against $1/r$ is a straight line through the origin. The standard results, for reference only, are $B = \mu_0 I/(2\pi r)$ for a long wire and $B = \mu_0 nI$ inside a long solenoid with $n$ turns per unit length, where $\mu_0 = 4\pi \times 10^{-7}\ \text{H m}^{-1}$.
+
+![Magnetic flux density near a long wire carrying 12 A against 1/r: the points (r = 1, 2, 4 and 8 cm, B = 240, 120, 60 and 30 microtesla) lie on a straight line through the origin of gradient 240 µT cm, showing B is inversely proportional to the distance.](media:diagrams/wire-field-against-inverse-distance.png "Figure: B against 1/r is a straight line through the origin")
 
 ## Worked examples
 

@@ -70,6 +70,8 @@ When the curve is **below** the axis, $y$ is negative, so the integral comes out
 4. The integral is negative because the region is below the axis. Area $= \tfrac{32}{3}$ square units.
 :::
 
+![Graph of y = x^2 - 4x from x = 0 to x = 4: the shaded region lies below the x-axis, so the integral is negative (-32/3) but the area enclosed is 32/3 square units.](media:diagrams/area-below-axis.png "Figure: the region below the axis gives a negative integral; its area is 32/3")
+
 ### Regions on both sides of the axis
 
 If the curve crosses the axis between the limits, positive and negative parts cancel in a single integral. **Split the integral at every root** inside the interval and add the sizes of the parts.
@@ -94,6 +96,8 @@ Between two graphs, the height of a thin vertical strip is (upper $y$) $-$ (lowe
 4. Upper: $9 + 9 - 9 = 9$. Lower: $1 - 3 + \tfrac{1}{3} = -\tfrac{5}{3}$.
 5. Area $= 9 - \left(-\tfrac{5}{3}\right) = \tfrac{32}{3}$ square units.
 :::
+
+![The line y = 2x + 3 lies above the curve y = x^2 between their intersection points (-1, 1) and (3, 9); the shaded region between them has area 32/3 square units, found by integrating (2x + 3 - x^2) from -1 to 3.](media:diagrams/area-between-line-curve.png "Figure: the area between a line and a curve is the integral of top minus bottom")
 
 Some regions are bounded by a curve, a line **and** the axis. Sketch them (in your head or on paper), find every point where two boundaries meet, and split the region into parts, each with one upper and one lower boundary. A triangle or trapezium under a straight line can be found with the usual area formulas instead of integration.
 

@@ -66,13 +66,15 @@ To estimate a value, go **across** from the cumulative frequency on the vertical
 :::worked-solution[Example 2: median, quartiles and IQR]
 For the 80 waiting times:
 
-1. Median: read at $\frac{1}{2} \times 80 = 40$. The 40th value is in $60 < t \leq 70$, which holds the 33rd to 48th values. It is the 8th of 16 values in that class: $60 + \frac{8}{16} \times 10 = 65$ minutes.
-2. Lower quartile: read at 20. The 20th value is the 4th of 16 values in $50 < t \leq 60$: $50 + \frac{4}{16} \times 10 = 52.5$ minutes.
-3. Upper quartile: read at 60. The 60th value is the 12th of 20 values in $70 < t \leq 80$: $70 + \frac{12}{20} \times 10 = 76$ minutes.
-4. $\text{IQR} = 76 - 52.5 = 23.5$ minutes, and the semi-interquartile range is $11.75$ minutes.
+1. Median: read at $\frac{1}{2} \times 80 = 40$. Across from 40 to the curve and down gives $65.2$ minutes. Check: the 40th value is in $60 < t \leq 70$ (the 33rd to 48th values), the 8th of 16 values in that class, so assuming an even spread $60 + \frac{8}{16} \times 10 = 65$ minutes.
+2. Lower quartile: read at 20, which gives $52.7$ minutes from the curve. Check: the 20th value is the 4th of 16 values in $50 < t \leq 60$, so $50 + \frac{4}{16} \times 10 = 52.5$ minutes with an even spread.
+3. Upper quartile: read at 60, which gives $75.8$ minutes from the curve. Check: the 60th value is the 12th of 20 values in $70 < t \leq 80$, so $70 + \frac{12}{20} \times 10 = 76$ minutes with an even spread.
+4. $\text{IQR} = 75.8 - 52.7 = 23.1$ minutes, and the semi-interquartile range is $11.55$ minutes. (The even-spread checks give $76 - 52.5 = 23.5$ and $11.75$, within a small tolerance of the curve readings.)
 :::
 
-A smooth curve drawn by hand gives readings close to these values, and examiners accept answers within a small tolerance.
+A smooth curve drawn by hand gives readings close to the even-spread checks, and examiners accept answers within a small tolerance. In the figure below the reading lines meet the curve exactly.
+
+![Cumulative frequency curve for the waiting times of 80 patients through (30, 0), (40, 4), (50, 16), (60, 32), (70, 48), (80, 68) and (90, 80); dashed reading lines from 20, 40 and 60 on the vertical axis meet the curve at the lower quartile 52.7, the median 65.2 and the upper quartile 75.8 minutes.](media:diagrams/cumulative-frequency-waiting-times.png "Figure: read across from n/4, n/2 and 3n/4, then down to the time axis")
 
 :::worked-solution[Example 3: how many are above a value?]
 How many patients waited more than 75 minutes?

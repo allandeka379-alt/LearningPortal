@@ -65,6 +65,8 @@ Now the first counter is **not** put back. After a red counter is taken, 2 red a
 Cambridge Core questions use tree diagrams **with replacement** (independent events). Choosing without replacement, and other trees in which the second probabilities depend on the first outcome, are Cambridge Extended. ZIMSEC candidates need both.
 :::
 
+![Tree diagram for two counters taken without replacement from 3 red and 7 blue: first branches red 3/10 and blue 7/10; after red the second branches are red 2/9 and blue 7/9, after blue they are red 3/9 and blue 6/9; the four path probabilities are 6/90, 21/90, 21/90 and 42/90, which add up to 1.](media:diagrams/tree-without-replacement.png "Figure: multiply along the branches; add the paths that give the result you want")
+
 :::worked-solution[Example 2: the same bag, without replacement]
 Find the probability that both counters are red, and the probability that they are different colours.
 

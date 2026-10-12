@@ -58,6 +58,8 @@ $|z - a| = |z - b|$ says $z$ is equally far from $a$ and $b$, so $z$ lies on the
 5. Check: the midpoint $(-2, 1)$ lies on it ($-2(-2) - 3 = 1$), and the gradient $-2$ is perpendicular to the gradient $\frac{1}{2}$ of the segment.
 :::
 
+![Argand diagram with the points 2i and -4 joined by a dashed segment and the locus |z - 2i| = |z + 4|, the perpendicular bisector y = -2x - 3, passing through the midpoint (-2, 1): every point on this line is equally far from 2i and from -4.](media:diagrams/locus-perpendicular-bisector.png "Figure: points equidistant from 2i and −4 lie on the perpendicular bisector y = −2x − 3")
+
 ## Half-lines
 
 $\arg(z - a) = \alpha$ is a ray starting at $a$ and going off at angle $\alpha$. The point $a$ itself is excluded, because $\arg 0$ is undefined. For example $\arg(z - 1 - \mathrm{i}) = \frac{\pi}{4}$ starts at $(1, 1)$ and goes up and to the right at $45^\circ$; $\arg(z + 2) = -\frac{\pi}{2}$ starts at $(-2, 0)$ and goes straight down. A region such as $0 \le \arg(z - a) \le \frac{\pi}{3}$ is the sector between two half-lines from $a$.
@@ -81,6 +83,8 @@ Two facts do most of the work:
 5. Greatest $\arg z = 2.2143 + 0.2014 = 2.42$ radians (3 s.f.).
 6. Similarly the least argument is $2.2143 - 0.2014 = 2.01$ radians.
 :::
+
+![Argand diagram of the disc |z + 3 - 4i| <= 1, centre -3 + 4i radius 1, with the line from the origin through the centre of length 5: the point of the disc nearest the origin has |z| = 4 and the farthest has |z| = 6, and the two tangents from the origin touch the circle where arg z is greatest (2.42 radians) and least (2.01 radians).](media:diagrams/locus-disc-extreme-modulus-argument.png "Figure: the disc, the nearest and farthest points from O, and the two tangents from O")
 
 The point of the region nearest the origin lies on the line $Oc$ at distance 4, that is $\frac{4}{5}(-3 + 4\mathrm{i}) = -2.4 + 3.2\mathrm{i}$.
 

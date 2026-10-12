@@ -26,6 +26,8 @@ For the point $P(x, y)$ on the arm of $\theta$:
 $\sin\theta = \dfrac{y}{r}$, $\cos\theta = \dfrac{x}{r}$, $\tan\theta = \dfrac{y}{x}$ (undefined when $x = 0$).
 :::
 
+![Unit circle with the angle theta measured anticlockwise to the point (cos theta, sin theta) and the angle minus theta measured clockwise to (cos theta, minus sin theta): the two points have the same x-coordinate and opposite y-coordinates, so cos(-theta) = cos theta and sin(-theta) = -sin theta. Quadrants are labelled with the functions that are positive.](media:diagrams/unit-circle-angle-and-negative.png "Figure: the unit circle shows cos(−θ) = cos θ and sin(−θ) = −sin θ")
+
 :::definition{term="Reciprocal functions"}
 Secant, cosecant and cotangent are the reciprocals of cosine, sine and tangent.
 :::
@@ -63,7 +65,7 @@ Every angle has a **related acute angle** (also called the basic or reference an
 
 For example, $160°$ has related angle $20°$, so $\sin 160° = \sin 20°$; $250°$ has related angle $70°$, so $\cos 250° = -\cos 70°$; $325°$ has related angle $35°$, so $\tan 325° = -\tan 35°$. Angles larger than $360°$ or negative angles are first brought into $0°$ to $360°$ by adding or subtracting $360°$, because the arm ends in the same place.
 
-Two results follow straight from the diagram: $\cos(-\theta) = \cos\theta$ and $\sin(-\theta) = -\sin\theta$.
+Two results follow straight from the unit-circle figure above: $\cos(-\theta) = \cos\theta$ and $\sin(-\theta) = -\sin\theta$.
 
 ## Exact values and radians
 

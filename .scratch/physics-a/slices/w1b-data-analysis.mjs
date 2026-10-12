@@ -169,7 +169,7 @@ concept("aphys.skills.data-analysis", { file: "skills/data-analysis", keyPrefix:
   }
   b.tf({
     d: 2, skill: "UNDERSTANDING", daily: true,
-    stem: "A worst acceptable line must pass through every error bar on the graph.",
+    stem: "A worst acceptable line must pass through every error bar of the plotted points.",
     answer: true,
     explanation: "True. The worst acceptable line is the steepest (or shallowest) straight line that is still consistent with every point, so it must pass through all the error bars. Its gradient minus the best gradient gives the uncertainty.",
   });

@@ -63,6 +63,8 @@ Lifting an object increases its gravitational potential energy by $mg\Delta h$; 
 
 When an object falls freely, the gravitational potential energy it loses becomes kinetic energy (ignoring air resistance):
 
+![Energy of a 1.0 kg stone falling 5.0 m, ignoring air resistance: at the top it has 49.0 J of potential energy and no kinetic energy; halfway down each is 24.5 J; at the bottom all 49.0 J is kinetic, a speed of 9.9 m/s. The total stays 49.0 J.](media:diagrams/energy-falling-stone.png "Figure: potential energy changes into kinetic energy as a stone falls")
+
 $$
 mg\Delta h = \tfrac{1}{2}mv^2 \quad \Rightarrow \quad v = \sqrt{2g\Delta h}
 $$

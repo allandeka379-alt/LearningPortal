@@ -74,6 +74,8 @@ A crate is pulled with $9.0\ \text{N}$ due east and $4.0\ \text{N}$ due north.
 3. Draw the second vector from the head of the first.
 4. Draw the resultant from the tail of the first to the head of the second, measure its length and convert it with the scale; measure its angle with a protractor.
 
+![Velocity triangle for a boat crossing a river: 3.0 m/s straight across and 1.6 m/s downstream, drawn nose to tail. The resultant is 3.4 m/s (square root of 3.0 squared plus 1.6 squared) at 28 degrees downstream of straight across, since tan of the angle is 1.6 over 3.0.](media:diagrams/vectors-boat-river.png "Figure: adding two velocities at right angles, nose to tail")
+
 A scale drawing is less precise than a calculation but works for any angle, which is why ZIMSEC asks for the graphical method for coplanar vectors.
 
 ## Common mistakes

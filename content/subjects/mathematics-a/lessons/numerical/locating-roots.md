@@ -59,6 +59,8 @@ Rearrange $f(x) = 0$ into the form $x = F(x)$, choose a starting value $x_1$ nea
 4. Check: $f(2.275) = -0.050$ and $f(2.285) = 0.075$. The sign changes, so the root lies in $[2.275, 2.285)$ and rounds to $2.28$.
 :::
 
+![Graphs of y = x (dashed) and y = cube root of (3x + 5) with the iteration staircase starting at x1 = 2: the steps go up to the curve and across to the line, giving x2 = 2.2240, x3 = 2.2684 and so on, closing in on the intersection at x = 2.279, the root.](media:diagrams/iteration-staircase-converging.png "Figure: the iteration x(n+1) = ∛(3xn + 5) climbs a staircase to the root 2.28")
+
 The final check, an interval of half a unit either side of the answer, is how you **prove** a stated accuracy. "Iterates agreeing to 2 d.p." is accepted by the examiners as the stopping rule, but the sign check is safer.
 
 ## When iteration fails
@@ -80,6 +82,8 @@ Cambridge (Paper 2, AS, and Paper 3, A Level) always gives you the iteration or 
 4. To 3 decimal places, $\alpha = 1.492$.
 5. Check: $g(1.4915) = -0.00046 < 0$ and $g(1.4925) = 0.0027 > 0$, confirming $\alpha = 1.492$ to 3 d.p.
 :::
+
+![Graphs of y = x^2 and y = 2 + e^(-x) for x from 0 to 2.6: they cross once for x > 0 at x = alpha, about 1.492, between 1 and 2; the parabola is below the exponential curve before alpha and above it afterwards.](media:diagrams/intersection-parabola-and-exponential.png "Figure: y = x² and y = 2 + e⁻ˣ meet at x = α ≈ 1.492, between 1 and 2")
 
 Always show the iterates to at least one more decimal place than the answer requires, as in step 3.
 

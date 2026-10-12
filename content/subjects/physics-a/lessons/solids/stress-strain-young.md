@@ -85,6 +85,8 @@ A copper wire ($E = 1.2 \times 10^{11}\ \text{Pa}$) is $1.80\ \text{m}$ long wit
 
 A **ductile** material, such as copper or mild steel, shows a large plastic region: it can be drawn into wires and gives warning before it fails. A **brittle** material, such as glass, cast iron or concrete under tension, is linear right up to fracture with no plastic region, so it snaps suddenly. A stiffer material has a steeper straight region; a stronger material has a higher ultimate tensile stress. These are different properties.
 
+![Stress-strain graph for a ductile metal such as copper or mild steel: a straight line from the origin whose gradient is the Young modulus up to the limit of proportionality, then a yield point where strain rises with little extra stress, a maximum at the ultimate tensile stress, and a breaking point below it as the wire necks.](media:diagrams/stress-strain-ductile-metal.png "Figure: stress-strain curve of a ductile metal (shape only; no scale)")
+
 ## The Young modulus experiment
 
 1. Hang two long, identical wires from a rigid beam: a **test wire** carrying the load, and a **reference wire** carrying a fixed weight to keep it straight. A vernier scale joins them (or use a single wire over a pulley, with a marker read against a fixed scale).

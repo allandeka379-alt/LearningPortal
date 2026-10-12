@@ -58,6 +58,8 @@ Lines parallel to the axes are the easiest of all. $x \geq 2$ is the region on o
 
 ## Several inequalities together
 
+![Region for x ≥ 0, y ≥ 1 and x + y ≤ 5: the unwanted areas are shaded grey and the unshaded triangle R has vertices (0, 1), (0, 5) and (4, 1).](media:diagrams/inequality-region-triangle.png "Figure: shade the unwanted regions; the unshaded triangle R is the answer")
+
 :::worked-solution[Example 3: the region $x \geq 0$, $y \geq 1$, $x + y \leq 5$]
 1. Draw $x = 0$ (the $y$-axis), $y = 1$ and $x + y = 5$, all solid.
 2. Shade to the left of the $y$-axis, below $y = 1$, and above $x + y = 5$ (the origin satisfies $x + y \leq 5$).

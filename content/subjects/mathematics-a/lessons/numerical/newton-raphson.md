@@ -60,6 +60,8 @@ This crossing point is the next approximation, $x_{n+1}$. Equivalently, the grad
 6. To 3 decimal places the root is $2.095$. Check: $f(2.0945) = -0.00057 < 0$ and $f(2.0955) = 0.0106 > 0$.
 :::
 
+![Graph of y = x^3 - 2x - 5 near its root: the tangent at x1 = 2 (gradient 10) meets the x-axis at x2 = 2.1, and the tangent at x2 meets it at x3 = 2.0946, very close to the root 2.0946.](media:diagrams/newton-raphson-tangent-steps.png "Figure: each tangent meets the x-axis closer to the root: 2, 2.1, 2.0946")
+
 Notice how fast the error shrinks: $x_2$ is wrong in the second decimal place, $x_3$ in the fifth, $x_4$ in the eleventh.
 
 :::worked-solution[Example 2: use the method to find $\sqrt{10}$ correct to 5 decimal places]

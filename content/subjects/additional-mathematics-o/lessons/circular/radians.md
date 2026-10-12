@@ -70,6 +70,8 @@ In degrees the same fractions give $\frac{\theta}{360} \times 2\pi r$ and $\frac
 3. Perimeter: two radii plus the arc: $8 + 8 + 9.6 = 25.6$ cm.
 :::
 
+![Sector OAB of radius 8 cm and angle 1.2 radians: the arc length is 8 times 1.2 = 9.6 cm, the area is half of 8 squared times 1.2 = 38.4 square centimetres, and the perimeter is 8 + 8 + 9.6 = 25.6 cm.](media:diagrams/sector-radians-arc-area.png "Figure: a sector of radius 8 cm and angle 1.2 radians")
+
 :::worked-solution[Example 3: find the exact arc length and area of a sector with radius 6 cm and angle $\frac{2\pi}{3}$]
 1. $s = 6 \times \dfrac{2\pi}{3} = 4\pi$ cm.
 2. $A = \frac{1}{2} \times 36 \times \dfrac{2\pi}{3} = 12\pi$ cm$^2$.

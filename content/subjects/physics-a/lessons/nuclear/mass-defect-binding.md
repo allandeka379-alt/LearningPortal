@@ -93,6 +93,8 @@ A graph of binding energy per nucleon against nucleon number:
 
 Nuclei near the peak are the most tightly bound. Any reaction that moves nuclei **towards** the peak increases the total binding energy and releases energy: light nuclei joining (**fusion**) or heavy nuclei splitting (**fission**).
 
+![Binding energy per nucleon against nucleon number, from the nuclide values in the lesson: 1.11 MeV for deuterium, a local peak of 7.07 MeV for helium-4, rising to a broad maximum of 8.79 MeV at iron-56, then falling slowly to about 7.6 MeV for uranium; fusion of light nuclei and fission of heavy nuclei both move towards the peak and release energy.](media:diagrams/binding-energy-per-nucleon-curve.png "Figure: iron-56 is near the peak of the binding-energy curve (lines join the tabulated nuclides)")
+
 ## Energy in nuclear reactions
 
 For any reaction,

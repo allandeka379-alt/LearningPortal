@@ -88,6 +88,8 @@ Time goes on the horizontal axis and velocity on the vertical axis.
 5. Check by parts: $\frac{1}{2}(10)(20) + 60(20) + \frac{1}{2}(8)(20) = 100 + 1200 + 80 = 1380$ m.
 :::
 
+![Velocity-time graph of the kombi: it accelerates at 2 m/s^2 from rest to 20 m/s in 10 s, travels at 20 m/s until 70 s, then decelerates at 2.5 m/s^2 to rest at 78 s; the area under the graph, 1380 m, is the total distance.](media:diagrams/velocity-time-kombi.png "Figure: the area under the velocity-time graph is the distance travelled, 1380 m")
+
 ### Working backwards to an unknown
 
 Exam questions usually give the total distance and ask for a speed or time. Write the area in terms of the unknown and solve.

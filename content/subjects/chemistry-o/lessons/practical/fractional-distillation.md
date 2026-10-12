@@ -45,6 +45,8 @@ Described in words, from the bottom up:
 - a **Liebig condenser** with cold water entering at the bottom and leaving at the top;
 - a conical flask (the **receiver**) to collect each fraction, changed when the temperature changes.
 
+![Fractional distillation apparatus: a flask of ethanol and water is heated below a fractionating column packed with glass beads; the thermometer at the top reads 78 degrees Celsius while ethanol, the lower-boiling liquid, reaches the top first, passes into the Liebig condenser and is collected, while water (100 degrees Celsius) condenses in the column and runs back.](media:diagrams/fractional-distillation-apparatus.png "Figure: fractional distillation of ethanol and water")
+
 ## How the fractionating column works
 
 When the mixture boils, the vapour contains both liquids, but it is richer in the liquid with the **lower boiling point** (the more volatile one). As the vapour rises, the column gets **cooler towards the top**.

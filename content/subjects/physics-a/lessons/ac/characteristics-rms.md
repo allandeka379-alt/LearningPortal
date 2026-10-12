@@ -62,6 +62,8 @@ A sinusoidal voltage $V = V_0\sin\omega t$ starts at zero, rises to $+V_0$ after
 
 For the Zimbabwean mains: $f = 50\ \text{Hz}$, so $T = 1/50 = 0.020\ \text{s} = 20\ \text{ms}$ and $\omega = 2\pi \times 50 = 314\ \text{rad s}^{-1}$.
 
+![Mains voltage against time: a sine wave of peak 325 V and period 20 ms (50 Hz) that swings between +325 V and −325 V; the dashed line at 230 V is the r.m.s. value, the steady d.c. voltage that would give the same heating power.](media:diagrams/mains-voltage-waveform.png "Figure: 230 V r.m.s. mains has a peak of 325 V and a period of 20 ms")
+
 ## Why the r.m.s. value?
 
 The **mean** of a sinusoidal current over a whole cycle is zero, because it is positive for half the cycle and negative for the other half. That is useless for describing heating. But the heating effect depends on $I^2$, which is never negative. The power in a resistor is $P = I^2R = I_0^2R\sin^2\omega t$.

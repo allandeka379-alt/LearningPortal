@@ -47,6 +47,8 @@ A fictional economy, Country X, produces only consumer goods (such as food and c
 
 Every combination of the two goods is a point somewhere on the diagram. Where it lies tells you how well the economy is using its resources.
 
+![Production possibility curve of Country X, consumer goods against capital goods: points A to F lie on the curve from 50 thousand capital goods to 100 thousand consumer goods; G (40, 30) lies inside the curve so resources are unused, and H (60, 44) lies outside so it is unattainable.](media:diagrams/ppc-country-x.png "Figure: Country X's PPC with points on, inside and beyond the curve")
+
 | Position of the point | Meaning | Example for Country X |
 | --- | --- | --- |
 | On the curve | All resources fully and efficiently used: productively efficient | C (40, 44) |

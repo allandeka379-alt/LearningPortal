@@ -35,6 +35,8 @@ In power stations the arrangement is usually reversed: an electromagnet spins in
 
 As the coil turns steadily, the induced e.m.f. varies smoothly between a positive peak and a negative peak.
 
+![Output of an a.c. generator against time for a coil turning 25 times a second: the e.m.f. is zero when the coil is vertical, peaks after a quarter turn (0.01 s) when the coil is horizontal, is zero again at half a turn, reaches a trough at three-quarters of a turn, and repeats every 0.04 s, a frequency of 25 Hz.](media:diagrams/generator-emf-time-graph.png "Figure: one turn of the coil gives one cycle of alternating e.m.f.")
+
 | Coil position | Motion of the sides | Induced e.m.f. |
 | --- | --- | --- |
 | plane of the coil at right angles to the field (vertical) | moving along the field lines, not cutting them | **zero** |

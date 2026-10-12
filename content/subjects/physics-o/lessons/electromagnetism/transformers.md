@@ -36,6 +36,8 @@ A transformer does **not** work with steady d.c.: a constant current gives a con
 
 ## The transformer equations
 
+![Step-down transformer: a primary coil of 2000 turns connected to a 240 V a.c. supply and a secondary coil of 100 turns giving 12 V, both wound on a soft-iron core. The voltage ratio equals the turns ratio, 240 to 12 equals 2000 to 100.](media:diagrams/transformer-step-down.png "Figure: a step-down transformer with 2000 and 100 turns")
+
 :::formula{name="Turns ratio"}
 $$
 \frac{V_p}{V_s} = \frac{N_p}{N_s}

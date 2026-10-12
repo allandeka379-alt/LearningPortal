@@ -54,6 +54,8 @@ A local maximum is not necessarily the highest point of the whole curve; it is o
 6. At $x = 3$: $\dfrac{d^2y}{dx^2} = 6 > 0$, so $(3, 1)$ is a minimum.
 :::
 
+![Graph of y = x^3 - 6x^2 + 9x + 1: the curve rises to a maximum at (1, 5), falls to a minimum at (3, 1) and then rises again; it crosses the y-axis at (0, 1).](media:diagrams/stationary-points-cubic.png "Figure: y = x³ − 6x² + 9x + 1 has a maximum at (1, 5) and a minimum at (3, 1)")
+
 So the curve rises to a maximum at $(1, 5)$, falls to a minimum at $(3, 1)$ and then rises for ever. It crosses the $y$-axis at $(0, 1)$. That is enough to sketch it.
 
 ## Why the second-derivative test works

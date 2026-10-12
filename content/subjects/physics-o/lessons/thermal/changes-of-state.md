@@ -30,6 +30,8 @@ The escape of the more energetic particles from the surface of a liquid.
 
 While a substance melts or boils, energy is supplied but the **temperature does not rise**. The energy is used to **break the bonds** (overcome the forces) between particles, not to make them move faster. A **heating curve** (temperature against time for steady heating) therefore has two flat sections: one at the melting point and one at the boiling point.
 
+![Heating curve for water heated steadily: temperature rises as a solid, then stays flat at 0 degrees Celsius while the ice melts, rises as a liquid, stays flat at 100 degrees Celsius while it boils, then rises again as a gas. The energy supplied during the flat sections breaks bonds instead of raising the temperature.](media:diagrams/heating-curve-water.png "Figure: the temperature stays constant while a substance melts or boils")
+
 **Condensation** and **solidification** are the reverse: as a gas condenses, its particles move closer and form bonds again; as a liquid freezes, its particles settle into fixed positions. Energy is **given out** in both, again at constant temperature.
 
 ## Evaporation and cooling

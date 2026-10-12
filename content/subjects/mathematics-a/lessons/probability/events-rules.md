@@ -79,6 +79,8 @@ A Venn diagram shows overlapping events. Fill it from the **middle outwards**: t
 4. Biology and Chemistry are not mutually exclusive, because $\mathrm{P}(B \cap C) = \frac{6}{30} \ne 0$.
 :::
 
+![Venn diagram of 30 learners: 11 take Biology only, 6 take both Biology and Chemistry, 6 take Chemistry only and 7 take neither; the Biology circle totals 17 and the Chemistry circle totals 12.](media:diagrams/venn-biology-chemistry.png "Figure: fill the Venn diagram from the middle outwards: 6, then 11 and 6, then 7 outside")
+
 Adding $\mathrm{P}(A)$ and $\mathrm{P}(B)$ counts the overlap twice, which is why the general rule subtracts $\mathrm{P}(A \cap B)$ once. When $A$ and $B$ are mutually exclusive the overlap is empty and the simple rule applies.
 
 ## Probability by counting

@@ -145,7 +145,7 @@ concept("aphys.solids.elastic-plastic-energy", { file: "solids/elastic-plastic-e
     const squares = 46, perSquare = 0.5 * 1e-3; // 0.5 N by 1 mm
     b.num({
       d: 3, skill: "APPLICATION", calculator: true,
-      stem: t`The force-extension graph for a rubber cord is curved. On the graph paper each small square represents $0.50\ \text{N}$ (vertically) by $1.0\ \text{mm}$ (horizontally). The area under the loading curve is estimated as ${squares} squares. Calculate the work done in stretching the cord, in J, to two significant figures.`,
+      stem: t`The force-extension graph for a rubber cord is curved. When it is plotted on graph paper, each small square represents $0.50\ \text{N}$ (vertically) by $1.0\ \text{mm}$ (horizontally). The area under the loading curve is estimated as ${squares} squares. Calculate the work done in stretching the cord, in J, to two significant figures.`,
       value: squares * perSquare, sf: 2, unit: "J", wrong: [squares * 0.5, squares * perSquare * 0.5],
       explanation: t`One square $= 0.50\ \text{N} \times 1.0 \times 10^{-3}\ \text{m} = 5.0 \times 10^{-4}\ \text{J}$. Work done $= ${squares} \times 5.0 \times 10^{-4} = ${sfStr(squares * perSquare, 2)}\ \text{J}$. There is no ½: counting squares already gives the area.`,
       hints: ["Find the energy one square represents."],

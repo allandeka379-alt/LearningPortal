@@ -69,6 +69,8 @@ The same rules hold for cosine. For tangent, $a$ stretches vertically, the perio
 | $y$ | 1 | 4 | 1 | $-2$ | 1 | 4 | 1 | $-2$ | 1 |
 :::
 
+![Graph of y = 3 sin 2x + 1 for 0 to 360 degrees: two complete waves of period 180 degrees about the centre line y = 1, with maxima of 4 at 45 and 225 degrees and minima of -2 at 135 and 315 degrees.](media:diagrams/trig-sine-2x-plus-1.png "Figure: y = 3 sin 2x + 1 has amplitude 3, period 180° and centre line y = 1")
+
 :::worked-solution[Example 2: describe the graph of $y = 2\cos\dfrac{x}{2} - 1$ for $0 \leq x \leq 2\pi$]
 1. $a = 2$, $b = \frac{1}{2}$, $c = -1$. Period $\frac{2\pi}{1/2} = 4\pi$, so only **half** a wave fits in $0$ to $2\pi$.
 2. At $x = 0$: $y = 2(1) - 1 = 1$, the maximum. At $x = \pi$: $y = 2\cos\frac{\pi}{2} - 1 = -1$. At $x = 2\pi$: $y = 2\cos\pi - 1 = -3$, the minimum.

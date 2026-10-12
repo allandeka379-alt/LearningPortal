@@ -41,6 +41,8 @@ The height measured at right angles ($90^\circ$) to the base. It is **not** the 
 
 Only the triangle formula is printed on Cambridge papers, so learn the others. A parallelogram can be cut and rearranged into a rectangle, which is why its area is base times perpendicular height. A trapezium is two triangles, or "the mean of the parallel sides times the height".
 
+![The four area formulas with the lesson's values: rectangle 12.5 m by 8 m has area 100 m²; triangle with base 9 cm and perpendicular height 6 cm has area 27 cm²; parallelogram with base 14 cm and perpendicular height 5 cm has area 70 cm²; trapezium with parallel sides 7 m and 11 m, 4 m apart, has area 36 m². Marked heights are perpendicular to the base, not the sloping sides.](media:diagrams/mensuration-area-formulas.png "Figure: use the perpendicular height, not the sloping side")
+
 ## Rectangles and perimeter
 
 :::worked-solution[Example 1: a vegetable garden]

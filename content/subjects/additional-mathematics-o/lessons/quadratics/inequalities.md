@@ -53,6 +53,8 @@ For $\leq$ and $\geq$ the critical values are **included**; for $<$ and $>$ they
 4. Solution: $-3 < x < 4$.
 :::
 
+![Graph of y = x^2 - x - 12 crossing the x-axis at -3 and 4; the part of the curve below the axis, marked in red on the axis, lies between the roots, so x^2 - x - 12 < 0 for -3 < x < 4.](media:diagrams/quadratic-inequality-sign.png "Figure: the curve is below the x-axis between its roots, so x² − x − 12 < 0 there")
+
 A sign table gives the same result. Choose a test value in each region:
 
 | Region | $x < -3$ | $-3 < x < 4$ | $x > 4$ |

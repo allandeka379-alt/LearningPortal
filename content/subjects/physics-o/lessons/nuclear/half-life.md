@@ -28,6 +28,8 @@ Each half-life, the number of undecayed nuclei, and so the count rate, halves:
 
 The amount never quite reaches zero; it just keeps halving. A graph of count rate against time is a smooth **decay curve** that falls steeply at first and then more and more slowly.
 
+![Decay curve for a source with a half-life of 6.0 hours and an initial count rate of 1200 counts per minute: the count rate falls to 600 after 6 hours, 300 after 12, 150 after 18 and 75 after 24 hours, halving in every equal 6-hour step, falling steeply at first and then more slowly.](media:diagrams/half-life-decay-curve.png "Figure: the count rate halves every half-life")
+
 :::worked-solution[Count rate after several half-lives]
 A source has a half-life of 6.0 hours and an initial count rate of 1200 counts/min (background is negligible).
 

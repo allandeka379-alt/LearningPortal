@@ -40,7 +40,7 @@ concept("aphys.waves.transverse-longitudinal", { file: "waves/transverse-longitu
   });
   b.mcq({
     d: 3, skill: "ANALYSIS",
-    stem: "A displacement-distance graph for a longitudinal wave travelling in the +x direction is a sine curve, with displacement to the right taken as positive. Where on the graph is the centre of a compression?",
+    stem: "A displacement-distance graph for a longitudinal wave travelling in the +x direction is a sine curve, with displacement to the right taken as positive. Where on such a curve is the centre of a compression?",
     options: [
       ["where the curve crosses zero going from positive to negative as x increases", "Correct: particles on the left move right and those on the right move left, so they crowd together."],
       ["at a maximum positive displacement", "Particles here are displaced most, but their neighbours are displaced almost equally, so the spacing is normal."],

@@ -52,6 +52,8 @@ A force that **stretches** an object puts it in **tension**; a force that **squa
 
 For a spring obeying Hooke's law, the graph is a **straight line through the origin**. At larger loads the line curves: that point is the **limit of proportionality**. Stretched too far, the spring will not return to its original length.
 
+![Load-extension graph for a spring: a straight line through the origin up to 6 N (a spring with 4.0 N giving 4.0 cm, so k = 100 N per m), then the line curves upwards beyond the limit of proportionality, where Hooke's law no longer applies.](media:diagrams/hookes-law-load-extension.png "Figure: extension is proportional to load up to the limit of proportionality")
+
 :::worked-solution[Finding the spring constant]
 A spring is $8.0\ \text{cm}$ long. With a load of $4.0\ \text{N}$ it is $12.0\ \text{cm}$ long.
 

@@ -50,6 +50,8 @@ Make a table of $x$ and $y$ values, keep at least 4 decimal places in the $y$ va
 5. To 3 significant figures, the integral is approximately $3.28$.
 :::
 
+![Graph of y = sqrt(1 + x^3) from x = 0 to 2 divided into four strips of width 0.5: the ordinates are 1, 1.0607, 1.4142, 2.0917 and 3, and the tops of the trapezia are straight chords that lie slightly above the curve, so the trapezium rule estimate is 3.2833.](media:diagrams/trapezium-rule-four-strips.png "Figure: four trapezia of width 0.5 under y = √(1 + x³)")
+
 A common slip is to use $n = 5$ because there are five ordinates: the number of **strips** is one less than the number of ordinates.
 
 ## Over-estimate or under-estimate?
@@ -62,6 +64,8 @@ The tops of the trapezia are chords of the curve. Where the curve is **convex** 
 3. $y = \ln x$ has $y'' = -\frac{1}{x^2} < 0$: the curve is concave, so the chords lie below it.
 4. The estimate $1.28$ is therefore an **under-estimate**. (The exact value, by parts, is $3\ln 3 - 2 = 1.2958$.)
 :::
+
+![Graph of y = ln x from x = 1 to 3 with four trapezia: because the curve is concave (bends downwards) every chord lies below it, so the trapezium estimate 1.2821 is an under-estimate of the true area 1.2958.](media:diagrams/trapezium-rule-concave-underestimate.png "Figure: for the concave curve y = ln x the chords lie below the curve, so the rule under-estimates")
 
 Using more strips makes the chords hug the curve more closely, so the error shrinks: doubling $n$ divides the error by roughly 4.
 

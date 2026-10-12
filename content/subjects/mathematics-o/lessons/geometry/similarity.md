@@ -60,6 +60,8 @@ In triangle $ABC$, $D$ is on $AB$ and $E$ is on $AC$ with $DE \parallel BC$. $AD
 4. $AC = 2.5 \times 3 = 7.5$ cm, so $EC = 7.5 - 3 = 4.5$ cm.
 :::
 
+![Triangle ABC with DE parallel to BC: AD = 4, DB = 6, AE = 3, EC = 4.5, DE = 5 and BC = 12.5 cm; the small triangle ADE is similar to ABC with scale factor 10 ÷ 4 = 2.5.](media:diagrams/similar-triangles-parallel-line.png "Figure: a line parallel to one side makes a smaller similar triangle")
+
 :::example{title="Showing that two triangles are similar"}
 The lines $AE$ and $BD$ cross at $C$, and $AB \parallel DE$. In triangles $ABC$ and $EDC$: angle $ACB$ = angle $ECD$ (vertically opposite angles are equal), and angle $BAC$ = angle $DEC$ (alternate angles are equal). Two pairs of angles are equal, so the triangles are similar, with $A \leftrightarrow E$, $B \leftrightarrow D$ and $C \leftrightarrow C$. Write the reasons: they carry the marks.
 :::

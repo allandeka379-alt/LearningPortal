@@ -60,6 +60,8 @@ A beam resting on supports receives an upward **reaction** from each support. Wh
 6. The beam stays horizontal for a load of at most 40 kg at $B$.
 :::
 
+![Uniform beam AB of length 6 m resting on supports at C (1 m from A) and D (4.5 m from A) with its weight 392 N at the midpoint and a 245 N load at B: taking moments about C gives the reaction at D as 574 N, and resolving vertically gives the reaction at C as 63 N.](media:diagrams/beam-two-supports-and-load.png "Figure: forces on the beam: R_C = 63 N, R_D = 574 N, weight 392 N and load 245 N")
+
 Check every answer by taking moments about a second point: about $A$, $R_C(1) + R_D(4.5) = 63 + 2583 = 2646$ and $392(3) + 245(6) = 1176 + 1470 = 2646$. The checks agree.
 
 ## Hinged rods and the hinge reaction
@@ -87,6 +89,8 @@ A ladder problem has four forces: the weight, the normal reaction and friction a
 5. No slipping needs $F \le \mu R$: $\mu \ge \dfrac{381.05}{900} = 0.423$.
 6. The least coefficient of friction is 0.423 (3 s.f.).
 :::
+
+![Forces on a 5 m ladder of weight 200 N at 60 degrees against a smooth wall with a 700 N painter 4 m up it: at the foot the normal reaction R = 900 N upwards and friction F = 381 N towards the wall, and at the top the wall reaction S = 381 N horizontally away from the wall.](media:diagrams/ladder-smooth-wall-rough-ground.png "Figure: R = 900 N and F = S = 381 N; moments about the foot give S")
 
 As the painter climbs, the moment of his weight about the foot grows, so the friction needed grows too: ladders usually slip when the person is near the top.
 

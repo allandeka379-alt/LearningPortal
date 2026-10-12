@@ -26,6 +26,8 @@ An unbroken path from one terminal of the source, through the components, back t
 
 Each symbol is described below. Learn to draw every one neatly.
 
+![Sheet of standard circuit symbols, each labelled: cell, battery, d.c. supply, open and closed switch, lamp, fixed and variable resistor, heater, NTC thermistor, LDR, fuse, ammeter (A), voltmeter (V), motor (M), generator (G), potential divider, diode and LED.](media:diagrams/circuit-symbols-sheet.png "Figure: the standard circuit symbols")
+
 | Component | What the symbol looks like | What it does |
 | --- | --- | --- |
 | cell | a long thin line (positive terminal) beside a short thick line (negative terminal) | provides an e.m.f. |
@@ -59,6 +61,8 @@ Each symbol is described below. Learn to draw every one neatly.
 :::example{title="Reading a circuit diagram"}
 A diagram shows a battery, a closed switch, a lamp and an ammeter in a single loop, with a voltmeter connected across the lamp. The lamp, switch and ammeter are in **series**, so the same current passes through each and the ammeter measures it. The voltmeter is in **parallel** with the lamp, so it measures the p.d. across the lamp. Opening the switch breaks the only path, so the lamp goes out and the ammeter reads zero.
 :::
+
+![Circuit diagram: a cell, closed switch, ammeter and lamp in a single series loop, with a voltmeter connected in parallel across the lamp; the ammeter measures the current through the lamp and the voltmeter the p.d. across it.](media:diagrams/lamp-circuit-meters.png "Figure: an ammeter in series and a voltmeter in parallel with the lamp")
 
 :::example{title="A circuit for testing a thermistor"}
 To see how a thermistor behaves, connect it in series with a battery and an ammeter, and place it in a beaker of water with a thermometer. As the water is heated, the ammeter reading rises, because the thermistor's resistance falls as its temperature rises.

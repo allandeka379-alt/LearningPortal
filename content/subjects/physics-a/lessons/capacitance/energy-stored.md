@@ -82,6 +82,8 @@ A battery of e.m.f. $V$ charging a capacitor moves charge $Q$ through its full e
 
 The graphs show why. Plot the battery's e.m.f. against the charge it moves: a horizontal line at height $E$, so the energy it supplies is the rectangle $QE$. The p.d. across the capacitor rises along a straight line from zero to $E$, so the energy stored is the triangle under that line, exactly half the rectangle. The difference between the two areas is the energy converted to thermal energy while the current flows. Only if the capacitor were charged in many tiny steps, each with the supply p.d. barely above the capacitor's p.d., would the loss become small.
 
+![Graphs for charging a 2200 µF capacitor from a 12 V battery: the capacitor p.d. rises along a straight line from 0 to 12 V as the charge rises to 26.4 mC; the triangle under it is the energy stored, 158 mJ, and the rectangle under the battery's 12 V line is the energy supplied, 317 mJ, so half is dissipated.](media:diagrams/capacitor-energy-vq-graph.png "Figure: the triangle is the energy stored; the rectangle is the energy supplied by the battery")
+
 For the $2200\ \mu\text{F}$ capacitor charged to $12\ \text{V}$: charge $= 2200 \times 10^{-6} \times 12 = 0.0264\ \text{C}$; energy from the battery $= 0.0264 \times 12 = 0.317\ \text{J}$; energy stored $= 0.158\ \text{J}$.
 
 :::worked-solution[Energy lost when capacitors share charge]

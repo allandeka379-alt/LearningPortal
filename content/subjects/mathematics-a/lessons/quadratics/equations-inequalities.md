@@ -46,6 +46,8 @@ Solve the equation to find the critical values, then use a sketch of the parabol
 3. Answer: $-\dfrac{1}{3} \leq x \leq 2$.
 :::
 
+![Graph of y = 3x^2 - 5x - 2, a U-shaped parabola crossing the x-axis at x = -1/3 and x = 2: the curve is on or below the axis between these roots, so 3x^2 - 5x - 2 <= 0 gives -1/3 <= x <= 2.](media:diagrams/quadratic-inequality-parabola.png "Figure: the parabola is on or below the x-axis between its roots, so −1/3 ≤ x ≤ 2")
+
 If the coefficient of $x^{2}$ is negative, multiply through by $-1$ and **reverse the inequality sign** before using the rule.
 
 ## Simultaneous equations: one linear, one quadratic

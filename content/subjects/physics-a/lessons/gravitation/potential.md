@@ -58,6 +58,8 @@ The values below are for the Earth, $M_E = 5.97 \times 10^{24}\ \text{kg}$, $R_E
 
 A graph of $\phi$ against $r$ is a curve that rises from $-6.25 \times 10^{7}\ \text{J kg}^{-1}$ at the surface towards zero, getting less steep with distance; it is a $-1/r$ curve, so doubling $r$ halves the magnitude of $\phi$ (compare $g$, which falls to a quarter).
 
+![Gravitational potential of the Earth against distance from its centre: a −1/r curve starting at −6.25 × 10⁷ J/kg at the surface (6.37 × 10⁶ m), −3.13 × 10⁷ at twice that distance, and rising ever more gently towards zero at infinity.](media:diagrams/earth-gravitational-potential-graph.png "Figure: potential is negative everywhere and rises towards zero with distance")
+
 ## Field strength and potential gradient
 
 The field strength at a point equals the **negative of the potential gradient** there:

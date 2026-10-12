@@ -79,6 +79,8 @@ For a **major** sector, use $360^\circ$ minus the minor angle. A circle of radiu
 
 A segment is a sector with the triangle removed. Use the area of a triangle $\frac{1}{2}ab\sin C$, with $a = b = r$.
 
+![Left: a sector of radius 9 cm and angle 40° (one ninth of the circle) with arc length 2π ≈ 6.28 cm and area 9π ≈ 28.3 cm². Right: a segment of a circle of radius 8 cm cut off by a chord at 60°, whose area is the sector 33.51 cm² minus the triangle 27.71 cm², about 5.80 cm².](media:diagrams/circle-sector-and-segment.png "Figure: a sector is a fraction θ/360 of the circle; a segment is a sector minus a triangle")
+
 :::worked-solution[Example 4: the area of a segment]
 A chord cuts off a segment of a circle of radius 8 cm. The chord subtends an angle of $60^\circ$ at the centre.
 

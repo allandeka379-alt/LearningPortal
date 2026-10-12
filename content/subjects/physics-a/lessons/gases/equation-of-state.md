@@ -63,6 +63,8 @@ For a fixed amount of an ideal gas, $pV/T$ is constant. Holding one quantity fix
 
 Plotting $V$ against $\theta$ in degrees Celsius for Charles's law gives a straight line that meets the temperature axis at about $-273\ ^\circ\text{C}$: extrapolating gas behaviour is one way absolute zero was first estimated.
 
+![Charles's law: volume of a fixed mass of gas at constant pressure against Celsius temperature is a straight line; extrapolated backwards (dashed) it meets the temperature axis at about −273 °C, the estimate of absolute zero, where the volume would be zero.](media:diagrams/charles-law-absolute-zero.png "Figure: extrapolating V against θ to zero volume gives about −273 °C")
+
 ## Using the equation
 
 Always:
@@ -114,6 +116,8 @@ Air is trapped in a sealed glass tube above a column of oil. A pump raises the p
 | 10.0 | 3.01 | 30.1 | 0.1000 |
 
 The product $pV$ is constant within about 1%, and a graph of $p$ against $1/V$ is a straight line through the origin with gradient $pV \approx 30 \times 10^{5}\ \text{Pa cm}^3$ ($3.0\ \text{J}$). The gradient equals $nRT$, so it gives the amount of trapped air: $n = 3.0/(8.31 \times 293) \approx 1.2 \times 10^{-3}\ \text{mol}$ at a room temperature of 20 °C.
+
+![Boyle's law data: pressure against 1/volume for trapped air at constant temperature gives a straight line through the origin; the six readings from 1.00 × 10⁵ Pa at 30.0 cm³ to 3.01 × 10⁵ Pa at 10.0 cm³ lie on it, and the gradient pV is about 30 × 10⁵ Pa cm³, or 3.0 J.](media:diagrams/boyle-p-against-inverse-v.png "Figure: p against 1/V is a straight line through the origin, so pV is constant")
 
 Charles's law is investigated similarly with a capillary tube of air trapped by a bead of concentrated sulfuric acid (which also keeps the air dry) in a water bath; the pressure law with a flask of air connected to a pressure gauge in a water bath. In both, stir the bath and wait for equilibrium at each temperature.
 

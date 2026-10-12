@@ -58,6 +58,9 @@ At US\$8, 600 crates are demanded and 600 supplied: the **equilibrium price** is
 - At a price **above** Pe, draw a horizontal line: it meets D first (at a smaller quantity) and S further right. The gap between them is the **surplus**.
 - At a price **below** Pe, the horizontal line meets S first and D further right. The gap is the **shortage**.
 
+![Demand and supply diagram for the tomato market: the downward demand curve D and upward supply curve S cross at a price of US\$8 and 600 crates a day; at US\$4 the gap between 300 crates supplied and 900 demanded is a shortage of 600.](media:diagrams/tomato-market-equilibrium.png "Figure: the tomato market finds its equilibrium at US\$8 and 600 crates")
+
+
 ## How the market returns to equilibrium
 
 **At a price above equilibrium (surplus).** Sellers cannot sell all they have brought, and stocks pile up (tomatoes start to go soft). To clear them, sellers cut their prices. As the price falls, quantity demanded **extends** and quantity supplied **contracts**, until they meet at the equilibrium.

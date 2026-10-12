@@ -52,6 +52,8 @@ Take the curve $y = x^2$ and the point $P(3, 9)$ on it. We cannot find the gradi
 4. As $h$ approaches 0 the chord gradients approach 6. The gradient of the curve at $P$ is $6$.
 :::
 
+![Graph of y = x^2 with P(3, 9): the chord to Q(4, 16) has gradient 7, the chord to the point with x = 3.1 has gradient 6.1, and as Q moves towards P the chords approach the tangent at P, whose gradient is 6.](media:diagrams/chords-approach-tangent.png "Figure: chord gradients 7, 6.1, ... close in on the tangent gradient 6 at P")
+
 | $h$ | $x$-coordinate of $Q$ | gradient of $PQ$ |
 | --- | --- | --- |
 | 1 | 4 | 7 |

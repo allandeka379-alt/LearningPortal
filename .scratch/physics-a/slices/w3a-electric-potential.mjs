@@ -70,7 +70,7 @@ concept("aphys.efields.electric-potential", { file: "efields/electric-potential"
   }
   b.mcq({
     d: 3, skill: "ANALYSIS",
-    stem: "A graph shows the electric potential V against distance r from a point charge. Which quantity is given by the negative of the gradient of the tangent at a point on the graph?",
+    stem: "A graph shows the electric potential V against distance r from a point charge. Which quantity is given by the negative of the gradient of the tangent to such a V–r curve at a point?",
     options: [
       ["the electric field strength at that distance", "Correct: E = −ΔV/Δr."],
       ["the electric potential energy of a unit charge there", "That is V itself, read off the vertical axis."],

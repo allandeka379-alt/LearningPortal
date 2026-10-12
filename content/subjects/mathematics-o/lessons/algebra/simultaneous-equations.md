@@ -78,6 +78,8 @@ The same method finds a straight line through two points. If $y = mx + c$ passes
 
 Each linear equation is a straight line. The solution is the point that lies on **both** lines: their point of intersection. For example $y = 2x - 3$ and $y = -x + 9$ meet where $2x - 3 = -x + 9$, at $(4, 5)$.
 
+![Graphs of y = 2x − 3 and y = −x + 9: the two straight lines cross at (4, 5), so x = 4 and y = 5 is the solution of the simultaneous equations.](media:diagrams/simultaneous-lines-intersect.png "Figure: the solution is where the two lines meet")
+
 If two lines are parallel, such as $y = 2x + 1$ and $y = 2x - 4$, they never meet and the equations have **no solution**. Trying to solve them leads to a false statement like $1 = -4$.
 
 ## Common mistakes

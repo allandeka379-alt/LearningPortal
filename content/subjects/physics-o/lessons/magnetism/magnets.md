@@ -62,6 +62,8 @@ Field lines show the shape and direction of a magnetic field.
 - Lines never cross. Around a bar magnet they loop out from the N pole and curve round into the S pole.
 - (Cambridge Supplement) The **closer** the lines, the **stronger** the field, so the field is strongest near the poles.
 
+![Magnetic field of a bar magnet: field lines loop out of the north pole and curve round into the south pole, never crossing, and are closest together near the poles where the field is strongest.](media:diagrams/magnet-field-lines.png "Figure: the magnetic field of a bar magnet")
+
 Between two magnets with **unlike** poles facing, the lines run straight across the gap. With **like** poles facing, the lines bend away from each other and there is a **neutral point** midway where the fields cancel.
 
 ### Plotting the field

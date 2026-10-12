@@ -58,6 +58,8 @@ The rate of loss is proportional to the charge remaining, which is the definitio
 - **Current against time**: starts at $I_0 = V_0/R$ and decays with the same shape. The area under the $I$-$t$ graph is the charge that has flowed, $Q_0$ in total.
 - After $t = RC$: 37% remains. After $2RC$: 13.5%. After $5RC$: under 1%, so the capacitor is effectively discharged.
 
+![Discharge curve of a 1000 µF capacitor through 47 kΩ from 12 V: the p.d. falls exponentially, V = 12e^(−t/47), to 4.41 V (37%) after one time constant RC = 47 s and 1.62 V (13.5%) after 94 s, never quite reaching zero.](media:diagrams/capacitor-discharge-curve.png "Figure: exponential decay of p.d. in a discharging capacitor, with one time constant marked")
+
 The unit check is reassuring: $\Omega \times \text{F} = \dfrac{\text{V}}{\text{A}} \times \dfrac{\text{C}}{\text{V}} = \dfrac{\text{C}}{\text{A}} = \text{s}$.
 
 :::worked-solution[Discharge through a resistor]
@@ -98,11 +100,15 @@ A graph of $\ln(V/\text{V})$ against $t$ is a straight line with gradient $-\dfr
 
 The $\ln V$ values fall by almost exactly $0.213$ every $10\ \text{s}$, so the graph is a straight line with gradient $-0.0213\ \text{s}^{-1}$, giving $RC = \dfrac{1}{0.0213} = 47\ \text{s}$, as expected from $47 \times 10^{3} \times 1000 \times 10^{-6}$. A straight line confirms the decay is exponential, and using the gradient averages over all the readings. The half-life here is $0.693 \times 47 = 32.6\ \text{s}$.
 
+![Graph of ln V against t for the discharge data: a straight line from an intercept of ln 12 = 2.485 falling by about 0.213 every 10 s, so the gradient is −1/RC = −0.0213 per s and RC = 47 s.](media:diagrams/capacitor-discharge-ln-graph.png "Figure: ln V against t is a straight line whose gradient is −1/RC")
+
 In the laboratory, the p.d. is read from a high-resistance voltmeter (or a data logger) every few seconds, starting a stop-watch as the switch is moved from "charge" to "discharge". Choosing $RC$ of about a minute makes manual timing practical; reaction time is then a small fraction of each interval.
 
 ## Charging through a resistor
 
 When an uncharged capacitor is connected to a supply of e.m.f. $E$ through a resistor $R$, the current starts at $E/R$ and decays exponentially with the same time constant $RC$, because the growing p.d. across the capacitor opposes the supply. The charge and the p.d. **rise** along an inverted exponential curve towards $Q_0 = CE$ and $E$: steeply at first, then levelling off. After $RC$ the capacitor has reached 63% of its final p.d. (ZIMSEC detail, to be confirmed:)
+
+![Charging a capacitor through a resistor: the p.d. and charge rise from zero towards their final values, reaching 63% after one time constant RC, while the current falls from its initial value to 37% in the same time; after 5RC both are within 1% of their limits.](media:diagrams/capacitor-charging-curves.png "Figure: charging curves share the time constant RC; current decays as p.d. and charge grow")
 
 $$
 V = E\left(1 - e^{-t/RC}\right), \qquad Q = Q_0\left(1 - e^{-t/RC}\right), \qquad I = I_0e^{-t/RC}

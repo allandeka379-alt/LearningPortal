@@ -95,6 +95,8 @@ A sketch is a clear diagram, not an accurate plot, but it must show the key feat
 5. The sketch is a U-shaped curve crossing the $x$-axis at $-1$ and $3$, crossing the $y$-axis at $-6$, lowest at $(1, -8)$, symmetrical about $x = 1$.
 :::
 
+![Graph of y = 2x^2 - 4x - 6 = 2(x - 1)^2 - 8: a U-shaped curve with minimum point (1, -8), x-intercepts (-1, 0) and (3, 0), y-intercept (0, -6), symmetrical about the dashed line x = 1.](media:diagrams/completing-square-sketch.png "Figure: y = 2(x − 1)² − 8 with its vertex, intercepts and line of symmetry")
+
 A table of values confirms the symmetry about $x = 1$:
 
 | $x$ | -2 | -1 | 0 | 1 | 2 | 3 | 4 |

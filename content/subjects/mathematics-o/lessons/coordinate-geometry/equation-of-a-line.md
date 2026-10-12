@@ -55,6 +55,8 @@ There are three common situations. In each one, the aim is to find $m$ and then 
 
 Read $c$ where the line crosses the $y$-axis, and find $m$ from two points on the line.
 
+![A line crossing the y-axis at (0, −2) and passing through (4, 6): c is −2, the run is 4 and the rise is 8, so the gradient m is 2 and the equation is y = 2x − 2.](media:diagrams/equation-from-graph-y-2x-minus-2.png "Figure: read c at the y-axis, then find m from rise over run")
+
 :::worked-solution[Example 2: from a graph]
 A straight line crosses the $y$-axis at $(0, -2)$ and passes through the grid point $(4, 6)$. Find its equation.
 1. $c = -2$ (the $y$-intercept).

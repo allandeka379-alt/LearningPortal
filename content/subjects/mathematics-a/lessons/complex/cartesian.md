@@ -52,6 +52,8 @@ Treat $\mathrm{i}$ like an algebraic letter, collect real and imaginary parts, a
 4. Replace $\mathrm{i}^2$ by $-1$: $zw = 2 + 5\mathrm{i} + 12 = 14 + 5\mathrm{i}$.
 :::
 
+![Argand diagram showing z = 2 - 3i, w = 1 + 4i and their sum z + w = 3 + i: the sum is the fourth vertex of the parallelogram formed by the arrows from the origin to z and to w, so real parts add (2 + 1 = 3) and imaginary parts add (-3 + 4 = 1).](media:diagrams/argand-sum-of-two-numbers.png "Figure: adding complex numbers is vector addition on the Argand diagram")
+
 ## Dividing
 
 To divide, multiply the numerator and the denominator by the conjugate of the denominator. The denominator becomes the real number $x^2 + y^2$, and you can split the answer into real and imaginary parts.
@@ -75,6 +77,8 @@ When the discriminant $b^2 - 4ac$ is negative, the quadratic formula still works
 3. $z = \dfrac{6 \pm 4\mathrm{i}}{2} = 3 \pm 2\mathrm{i}$.
 4. Check $z = 3 + 2\mathrm{i}$: $z^2 = 9 + 12\mathrm{i} - 4 = 5 + 12\mathrm{i}$, and $5 + 12\mathrm{i} - 18 - 12\mathrm{i} + 13 = 0$.
 :::
+
+![Argand diagram of the roots 3 + 2i and 3 - 2i of z^2 - 6z + 13 = 0: they are mirror images of each other in the real axis, so complex roots of a real quadratic form a conjugate pair with the same real part 3.](media:diagrams/argand-conjugate-roots.png "Figure: the roots 3 ± 2i are reflections of each other in the real axis")
 
 Completing the square gives the same result: $(z - 3)^2 = -4$, so $z - 3 = \pm 2\mathrm{i}$.
 

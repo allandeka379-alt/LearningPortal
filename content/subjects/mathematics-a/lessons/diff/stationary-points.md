@@ -64,9 +64,13 @@ A point where the curve changes from bending one way (concave) to bending the ot
 5. Negative on both sides: $(0, 0)$ is a stationary point of inflexion.
 :::
 
+![Graph of y = x^4 - 4x^3: the curve falls through the origin with a horizontal tangent but no turning point there, a stationary point of inflexion at (0, 0), then reaches a minimum at (3, -27) and rises.](media:diagrams/quartic-inflexion-and-minimum.png "Figure: y = x⁴ − 4x³ flattens at (0, 0) without turning, then has a minimum at (3, −27)")
+
 ## Curve sketching
 
 Stationary points, intercepts and the behaviour for large $|x|$ give a reliable sketch. For Example 1: the curve crosses the $y$-axis at $(0, 1)$; it rises to the maximum $(1, 5)$, falls to the minimum $(3, 1)$, then rises again. Because the $x^{3}$ term dominates, $y \to -\infty$ as $x \to -\infty$ and $y \to +\infty$ as $x \to +\infty$. The minimum value 1 is above the $x$-axis, so the curve crosses the $x$-axis only once, to the left of the origin.
+
+![Graph of y = x^3 - 6x^2 + 9x + 1 with its maximum (1, 5) and minimum (3, 1): a horizontal line y = k cuts the curve three times when k lies between 1 and 5, shown here for k = 3 at x = 0.27, 2 and 3.73.](media:diagrams/cubic-turning-points-three-roots.png "Figure: y = k meets the cubic three times when 1 < k < 5 (shown for k = 3)")
 
 Stationary points also tell you how many roots an equation has. The equation $x^{3} - 6x^{2} + 9x + 1 = k$ has three real roots exactly when the horizontal line $y = k$ cuts the curve three times, that is when $1 < k < 5$.
 
@@ -88,6 +92,8 @@ A closed cylindrical tin has radius $r$ cm and volume $128\pi\ \text{cm}^3$. Sho
 4. $\dfrac{d^{2}A}{dr^{2}} = 4\pi + \dfrac{512\pi}{r^{3}} > 0$, so this is a minimum.
 5. Least area: $A = 2\pi(4)^{2} + \dfrac{256\pi}{4} = 96\pi \approx 302\ \text{cm}^2$ (with height $8$ cm).
 :::
+
+![Graph of the surface area A = 2 pi r^2 + 256 pi / r of a closed tin of volume 128 pi cm^3 against the radius r: A falls to a minimum of 96 pi, about 302 cm^2, at r = 4 cm and rises again for larger r.](media:diagrams/tin-surface-area-minimum.png "Figure: the surface area of the tin is least, 96π ≈ 302 cm², when r = 4 cm")
 
 ## Points of inflexion (ZIMSEC)
 

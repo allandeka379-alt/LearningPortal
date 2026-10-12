@@ -82,6 +82,8 @@ The point $F$ on a line closest to a point $P$ is the **foot of the perpendicula
 5. $\overrightarrow{PF} = -2\mathbf{i} - 2\mathbf{j} + 2\mathbf{k}$, so the distance is $\sqrt{12} = 2\sqrt{3} = 3.46$.
 :::
 
+![Sketch of the line l1 with direction 2i - j + k and the point P(5, 3, -1) off the line: the foot of the perpendicular F(3, 1, 1) is the point of l1 with s = 1, where PF is perpendicular to the line, and the perpendicular distance is the length of PF, root 12, about 3.46.](media:diagrams/vector-line-foot-of-perpendicular.png "Figure: F(3, 1, 1) is where PF meets l₁ at a right angle; the distance PF is √12")
+
 ## Cartesian equations (ZIMSEC)
 
 Writing $\mathbf{r} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$ and eliminating $t$ from $\mathbf{r} = \mathbf{a} + t\mathbf{b}$ gives the Cartesian form

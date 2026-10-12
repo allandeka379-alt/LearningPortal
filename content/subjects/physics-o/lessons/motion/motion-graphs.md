@@ -41,6 +41,8 @@ A straight line on a distance-time graph rises from the origin to $300\ \text{m}
 2. So the speed is $7.5\ \text{m/s}$, constant over those $40\ \text{s}$.
 :::
 
+![Distance-time graph: a straight line from the origin to 300 m at 40 s. A gradient triangle with 150 m up and 20 s across gives the speed, 7.5 m/s, which is constant because the line is straight.](media:diagrams/motion-distance-time-gradient.png "Figure: the gradient of a distance-time graph is the speed")
+
 ## Speed-time graphs
 
 | Shape of the line | Motion |
@@ -52,6 +54,8 @@ A straight line on a distance-time graph rises from the origin to $300\ \text{m}
 | curve getting less steep | acceleration decreasing (Supplement: changing acceleration) |
 
 A horizontal line on a **speed-time** graph does not mean "at rest" unless it lies on the time axis. This is the most common confusion between the two kinds of graph.
+
+![Speed-time graph of a trolley: speeds up from 0 to 12 m/s in 6 s (gradient 2.0 m/s squared), moves at a steady 12 m/s for 10 s, then slows to rest in 4 s (gradient minus 3.0 m/s squared). The areas under the three sections are 36 m, 120 m and 24 m, a total distance of 180 m.](media:diagrams/motion-speed-time-three-stage.png "Figure: gradient gives acceleration; area under the line gives distance")
 
 :::worked-solution[A three-stage journey]
 A trolley's speed-time graph has three straight sections: it speeds up from $0$ to $12\ \text{m/s}$ in the first $6\ \text{s}$, keeps $12\ \text{m/s}$ for the next $10\ \text{s}$, then slows steadily to rest in $4\ \text{s}$.
@@ -70,6 +74,8 @@ When you plot a graph from data: choose scales that use most of the grid, label 
 ### Gradient of a curve
 
 To find the speed at one instant on a curved distance-time graph, draw a **tangent** to the curve at that point and find the tangent's gradient.
+
+![Curved distance-time graph that gets steeper with time. A straight tangent drawn at 20 s rises 64 m over 16 s, so the speed at that instant is 4.0 m/s; the curve means the speed is increasing.](media:diagrams/motion-tangent-curve.png "Figure: a tangent to the curve gives the speed at one instant")
 
 ## Common mistakes
 

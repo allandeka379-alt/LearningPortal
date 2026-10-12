@@ -82,6 +82,8 @@ Triangle $ABC$ with $A(0, 1)$, $B(1, 1)$, $C(0, 2)$ is mapped onto $A'(2, 3)$, $
 
 With a negative scale factor, go from the centre to the vertex, then go $|k|$ times as far in the **opposite** direction. The image is on the other side of the centre and is turned upside down.
 
+![Triangle ABC with A(0, 1), B(1, 1), C(0, 2) is enlarged with scale factor 3 about the centre (−1, 0) to give A′(2, 3), B′(5, 3), C′(2, 6); the rays from the centre through each vertex pass through the matching image vertex.](media:diagrams/enlargement-scale-factor-3.png "Figure: rays from the centre through each vertex find the enlarged image")
+
 :::worked-solution[Example 4: scale factor $-2$ with centre the origin]
 Find the image of $T(3, 1)$.
 

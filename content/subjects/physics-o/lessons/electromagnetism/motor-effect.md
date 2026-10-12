@@ -38,6 +38,8 @@ The force arises because the circular field around the current interacts with th
 
 Hold the thumb and first two fingers of your **left** hand at right angles to each other:
 
+![Motor effect: a wire carrying current into the page lies between a north pole on the left and a south pole on the right, so the field points right. By Fleming's left-hand rule (first finger field, second finger current) the thumb points down: the wire is pushed downwards.](media:diagrams/motor-effect-left-hand-rule.png "Figure: Fleming's left-hand rule gives the force on the wire")
+
 - **F**irst finger: **F**ield (from N to S);
 - se**C**ond finger: **C**urrent (conventional, + to −);
 - th**u**mb: thr**u**st, the force or **motion**.

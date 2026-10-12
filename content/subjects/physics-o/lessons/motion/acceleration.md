@@ -68,7 +68,9 @@ A cyclist moving at $4.0\ \text{m/s}$ accelerates at $0.6\ \text{m/s}^2$ for $5.
 
 Because velocity is a vector, an object accelerates if its speed changes **or** its direction changes. A car going round a roundabout at a steady $20\ \text{km/h}$ is accelerating, because its direction keeps changing. (This idea returns in the lesson on circular motion.)
 
-Acceleration is found in the laboratory from ticker tape or light gates: measure the velocity at two moments and the time between them, then use $a = \Delta v / \Delta t$. It is also the **gradient** of a speed-time graph, covered in the graphs lesson.
+Acceleration is found in the laboratory from ticker tape or light gates: measure the velocity at two moments and the time between them, then use $a = \Delta v / \Delta t$. It is also the **gradient** of a speed-time graph, as the figure shows (the next lesson covers motion graphs in full).
+
+![Speed-time graph of a car pulling away: speed rises in a straight line from 0 to 18 m/s in 7.5 s, so the gradient, which is the acceleration, is 2.4 m/s squared (every 3 s the speed rises by 7.2 m/s); after 7.5 s the speed stays at 18 m/s.](media:diagrams/acceleration-speed-time-gradient.png "Figure: the gradient of a speed-time graph is the acceleration")
 
 ## Common mistakes
 

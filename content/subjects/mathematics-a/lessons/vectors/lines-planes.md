@@ -57,6 +57,8 @@ A quicker test for the last two: $\mathbf{b} \cdot \mathbf{n} = 0$ means the lin
 5. $\sin\phi = \dfrac{7}{\sqrt{14}\sqrt{6}} = \dfrac{7}{\sqrt{84}} = 0.7638$, so $\phi = 49.8°$.
 :::
 
+![Side view of the plane x + y + 2z = 15 seen edge-on and the line with direction (2, -1, 3) meeting it at (5, 0, 5): the angle phi between the line and the plane is 49.8 degrees, while the angle between the line and the normal n = (1, 1, 2) is 40.2 degrees, so sin phi, not cos, comes from the dot product.](media:diagrams/vector-line-meets-plane-angle.png "Figure: the angle with the plane (49.8°) and the angle with the normal (40.2°) add to 90°")
+
 The most common slip is to use $\cos$ here: $\cos^{-1}(0.7638) = 40.2°$ is the angle between the line and the **normal**, not the plane.
 
 ## Two planes
@@ -85,6 +87,8 @@ The shortest distance from a point $P$ to a plane is along the normal. Either us
 4. $F = \left(4 - \dfrac{8}{3},\; -1 + \dfrac{4}{3},\; 3 - \dfrac{8}{3}\right) = \left(\dfrac{4}{3}, \dfrac{1}{3}, \dfrac{1}{3}\right)$.
 5. Check: $|PF| = \dfrac{4}{3} \times |\mathbf{n}| = \dfrac{4}{3} \times 3 = 4$.
 :::
+
+![Sketch of the plane 2x - y + 2z = 3 and the point P(4, -1, 3) above it: the shortest distance is along the normal n = (2, -1, 2) to the foot F(4/3, 1/3, 1/3), and the distance PF is 4, the same as the formula gives.](media:diagrams/vector-point-to-plane-distance.png "Figure: the shortest distance from P to the plane is along the normal, meeting the plane at F")
 
 The same idea finds the **reflection** of $P$ in the plane: go twice as far along the normal, $P' = P + 2(F - P)$. The distance between two **parallel** planes $\mathbf{r} \cdot \mathbf{n} = d_1$ and $\mathbf{r} \cdot \mathbf{n} = d_2$ is $\dfrac{|d_1 - d_2|}{|\mathbf{n}|}$.
 

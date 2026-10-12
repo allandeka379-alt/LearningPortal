@@ -69,7 +69,7 @@ concept("aphys.induction.flux-faraday", { file: "induction/flux-faraday", keyPre
   });
   b.mcq({
     d: 3, skill: "ANALYSIS",
-    stem: "A graph of the flux linkage of a coil against time is a curve. How is the induced e.m.f. at a particular time found from the graph?",
+    stem: "A graph of the flux linkage of a coil against time is a curve. How is the induced e.m.f. at a particular time found from such a curve?",
     options: [
       ["from the gradient of the tangent to the curve at that time", "Correct: E = d(NΦ)/dt."],
       ["from the value of the flux linkage at that time", "The size of the flux linkage does not set the e.m.f."],

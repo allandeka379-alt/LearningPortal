@@ -55,6 +55,8 @@ A graph made by plotting the frequency of each class against its **midpoint** an
 
 Notice that the class $20 < a \leq 40$ has the largest frequency (28) but not the tallest bar: its 28 patients are spread over 20 years, so they are less concentrated than the 16 children in $0 < a \leq 10$.
 
+![Histogram of the ages of 100 patients with bars of unequal width: heights are frequency densities 1.6 (0 to 10 years), 1.2 (10 to 20), 1.4 (20 to 40), 1.2 (40 to 60) and 1.0 (60 to 80); the 20 to 40 bar holds the most patients (28) but is not the tallest.](media:diagrams/histogram-patient-ages.png "Figure: the area of each bar, not its height, is the frequency")
+
 Check the areas: the bar for $0 < a \leq 10$ has area $1.6 \times 10 = 16$ and the bar for $20 < a \leq 40$ has area $1.4 \times 20 = 28$, exactly the frequencies. Frequency density has units of "frequency per unit of the variable", here "patients per year of age".
 
 ## Reading a histogram

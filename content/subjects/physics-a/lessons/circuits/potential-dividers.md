@@ -40,6 +40,8 @@ Both boards require the principle of the potential divider, the formula and its 
 
 The same current $I = \dfrac{V_{\text{in}}}{R_1 + R_2}$ passes through both resistors, so the p.d. across $R_2$ is $IR_2 = V_{\text{in}}\dfrac{R_2}{R_1 + R_2}$. Equivalently, the p.d.s are in the ratio of the resistances: $\dfrac{V_1}{V_2} = \dfrac{R_1}{R_2}$. Doubling both resistors leaves the output unchanged: only their **ratio** matters, though the size affects how much current is wasted and how easily the output is loaded.
 
+![Potential divider: a 9.0 V battery across a 4.7 kΩ resistor in series with a 2.2 kΩ resistor; the output taken across the 2.2 kΩ resistor is 9.0 × 2.2/6.9 = 2.87 V, and the other resistor has 6.13 V across it.](media:diagrams/potential-divider-circuit.png "Figure: the supply p.d. divides in proportion to resistance; the output is taken across R₂")
+
 :::worked-solution[A fixed divider]
 A $9.0\ \text{V}$ battery of negligible internal resistance is connected across a $4.7\ \text{k}\Omega$ resistor in series with a $2.2\ \text{k}\Omega$ resistor. Find the p.d. across the $2.2\ \text{k}\Omega$ resistor.
 

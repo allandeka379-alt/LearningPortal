@@ -54,6 +54,8 @@ In a class of 40 learners, 25 play football, 18 play netball and 7 play both. Ho
 4. Neither: $40 - 36 = 4$.
 :::
 
+![Venn diagram for 40 learners: 18 play football only, 7 play both football and netball, 11 play netball only and 4 play neither; the football circle totals 25 and the netball circle totals 18.](media:diagrams/venn-football-netball.png "Figure: fill the overlap first, then the 'only' regions, then the outside")
+
 :::worked-solution[Example 2: an unknown overlap]
 In a group of 30 learners, 19 like Mathematics, 15 like Science, $x$ like both and 3 like neither. Find $x$.
 1. Regions: Mathematics only $19 - x$; both $x$; Science only $15 - x$; neither $3$.

@@ -57,6 +57,8 @@ A metal contains **free electrons** that can drift between the fixed positive io
 
 Before electrons were discovered, scientists chose to say that current flows from the **positive** terminal round the circuit to the **negative** terminal. This **conventional current** direction is still used on circuit diagrams. The electrons in a metal actually move the opposite way, from **negative to positive**.
 
+![Circuit loop with a cell and lamp: conventional current is drawn leaving the positive terminal and flowing round to the negative terminal, while the electrons in the wire drift the opposite way, from negative to positive.](media:diagrams/current-direction-loop.png "Figure: conventional current and electron flow go opposite ways")
+
 ## Direct and alternating current
 
 A cell drives a d.c.: the current always flows the same way round the circuit. The mains supply is a.c.: the current reverses direction many times each second. In Zimbabwe, as in most of Africa and Europe, the mains frequency is $50\ \text{Hz}$, so the current goes back and forth 50 times every second.

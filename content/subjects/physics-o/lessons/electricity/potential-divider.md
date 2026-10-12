@@ -28,6 +28,8 @@ A resistor whose resistance decreases as the light falling on it gets brighter.
 
 ## Sharing the p.d.
 
+![Potential divider: a 2.0 kilohm and a 1.0 kilohm resistor in series across a 9.0 V supply. The p.d.s are in the ratio of the resistances, 6.0 V across the larger resistor and 3.0 V across the smaller, adding to 9.0 V.](media:diagrams/potential-divider-9v.png "Figure: a potential divider shares 9.0 V in the ratio 2 : 1")
+
 :::keyfact
 For a fixed current, the p.d. across a conductor **increases** as its resistance increases ($V = IR$). In a series pair, the larger resistor gets the larger share of the supply p.d.
 :::
@@ -61,6 +63,8 @@ A **potentiometer** is a resistance track with a sliding contact. The whole trac
 ## Sensing circuits
 
 Replace one resistor of a potential divider with a sensor:
+
+![Light-sensing potential divider: a fixed resistor in series with an LDR across a 6 V supply, with a voltmeter taking the output across the LDR. In the dark the LDR's resistance is high so its share of the p.d. is high; in bright light it falls.](media:diagrams/potential-divider-ldr.png "Figure: an LDR potential divider gives a high output in the dark")
 
 - **Temperature sensor**: a thermistor in series with a fixed resistor. As the temperature **rises**, the thermistor's resistance **falls**, so its share of the p.d. **falls** and the p.d. across the fixed resistor **rises**.
 - **Light sensor**: an LDR in series with a fixed resistor. In **darkness** the LDR's resistance is **high**, so the p.d. across the LDR is **high**.

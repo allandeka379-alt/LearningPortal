@@ -77,6 +77,8 @@ You can solve the triangle by scale drawing, by resolving, or with trigonometry 
 :::worked-solution[A lamp hanging from two cables]
 A lamp of weight $50\ \text{N}$ hangs from two cables at $30^\circ$ and $60^\circ$ to the horizontal. Find the tensions.
 
+![A 50 N lamp hangs from two cables at 30° and 60° to the horizontal. The three forces, drawn tip to tail, form a closed right-angled triangle with the weight (50 N) as hypotenuse, giving tensions of 25.0 N and 43.3 N; the steeper cable carries more.](media:diagrams/lamp-two-cables-triangle.png "Figure: the cable tensions from a closed triangle of forces")
+
 1. The cables are at $90^\circ$ to each other, so the vector triangle is right-angled with the weight as its hypotenuse.
 2. The tension in the cable at $30^\circ$: $T_1 = 50\sin 30^\circ = 25\ \text{N}$.
 3. The tension in the cable at $60^\circ$: $T_2 = 50\cos 30^\circ = 43.3\ \text{N}$.
@@ -91,6 +93,8 @@ A ladder leaning on a wall has four forces: its weight at the centre, the normal
 
 :::worked-solution[A ladder against a smooth wall]
 A uniform ladder $5.0\ \text{m}$ long, weight $200\ \text{N}$, rests at $60^\circ$ to rough horizontal ground against a smooth vertical wall. Find the force of the wall and the friction at the ground.
+
+![Free-body diagram of a 5.0 m, 200 N ladder at 60° to rough ground against a smooth wall: the weight 200 N acts down at the centre, the wall pushes horizontally with 57.7 N, and at the foot the ground gives an upward reaction of 200 N and friction of 57.7 N towards the wall.](media:diagrams/ladder-forces.png "Figure: the four forces on the ladder (arrow lengths drawn to one scale)")
 
 1. Moments about the foot (removes both ground forces). The weight's perpendicular distance is $2.5\cos 60^\circ = 1.25\ \text{m}$; the wall force's is $5.0\sin 60^\circ = 4.33\ \text{m}$.
 2. $N_w \times 4.33 = 200 \times 1.25$, so $N_w = 57.7\ \text{N}$.

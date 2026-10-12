@@ -55,6 +55,8 @@ For an equation such as $y = mx + c$:
 
 Notice the pattern in the table: each time $x$ increases by 1, $y$ increases by 2. Equal steps in $x$ always give equal steps in $y$ for a straight line, which is a quick way to spot an arithmetic slip.
 
+![Graph of y = 2x − 3 for x from −2 to 3: the six table points (−2, −7), (−1, −5), (0, −3), (1, −1), (2, 1) and (3, 3) lie on one straight line that rises 2 units for every 1 unit across.](media:diagrams/linear-y-2x-minus-3.png "Figure: the six points of the table lie on one ruled line")
+
 ## Horizontal and vertical lines
 
 Some lines have only one variable in their equation.
@@ -83,6 +85,8 @@ When the equation has the form $ax + by = c$, the quickest points to find are wh
 :::
 
 This is sometimes called the **cover-up method**: cover the $x$ term to find the $y$-intercept, and cover the $y$ term to find the $x$-intercept.
+
+![Graph of 2x + 3y = 12: the line crosses the y-axis at (0, 4) and the x-axis at (6, 0), and the check point (3, 2) also lies on it.](media:diagrams/linear-2x-3y-12-intercepts.png "Figure: the intercepts and a check point fix the line 2x + 3y = 12")
 
 :::worked-solution[Example 3: draw $x - 2y = 4$ for $-2 \leq x \leq 6$]
 1. Rearrange to make $y$ the subject: $2y = x - 4$, so $y = \frac{x - 4}{2}$.

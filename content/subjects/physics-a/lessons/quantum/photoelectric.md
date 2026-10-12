@@ -109,6 +109,8 @@ The graph of $E_{k\,\text{max}}$ against $f$ is a **straight line** with:
 - **intercept on the frequency axis $f_0$** ($5.50 \times 10^{14}\ \text{Hz}$ here);
 - **intercept on the energy axis $-\Phi$** when the line is extended back to $f = 0$.
 
+![Maximum kinetic energy of photoelectrons against frequency for a metal of work function 2.28 eV: a straight line with gradient h/e (about 4.1 × 10⁻¹⁵ V s), crossing the frequency axis at the threshold frequency 5.51 × 10¹⁴ Hz and the energy axis at −2.28 eV; no electrons are emitted below the threshold.](media:diagrams/photoelectric-ek-frequency-graph.png "Figure: Einstein's equation as a straight line: gradient h/e, intercepts f₀ and −Φ")
+
 ## Worked examples
 
 :::worked-solution[Threshold frequency and wavelength]

@@ -45,6 +45,8 @@ A straight dipper vibrating at constant frequency sends plane (straight) wavefro
 
 In every case the **spacing of the wavefronts stays the same** on both sides of the gap: the speed and frequency are unchanged, so the wavelength is unchanged. Reducing the gap width or increasing the wavelength (lowering the dipper frequency) both increase the spreading.
 
+![Ripple-tank wavefronts meeting a barrier: through a gap of 10 wavelengths the waves continue almost straight with only slight bending at the edges and a clear shadow; through a gap of one wavelength they spread out as nearly semicircular wavefronts; the wavelength is the same before and after the gap.](media:diagrams/ripple-tank-diffraction-gaps.png "Figure: diffraction is strongest when the gap is about one wavelength")
+
 Obstacles behave in the same way: waves bend round the edges of a small obstacle and close up behind it, but leave a clear shadow behind an obstacle much larger than the wavelength.
 
 :::worked-solution[Reading a ripple-tank photograph]

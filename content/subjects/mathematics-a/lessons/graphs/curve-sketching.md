@@ -59,6 +59,8 @@ For a cubic $y = ax^{3} + \ldots$ with $a > 0$, the graph comes up from the bott
 5. Expanded form for reference: $y = x^{3} - 2x^{2} - 5x + 6$.
 :::
 
+![Graph of y = (x + 2)(x - 1)(x - 3), a cubic with a positive x^3 coefficient: it crosses the x-axis at -2, 1 and 3 and the y-axis at (0, 6), rising from bottom left to a maximum, falling to a minimum between 1 and 3 and rising again; it is above the axis for -2 < x < 1 and for x > 3.](media:diagrams/cubic-three-roots-sketch.png "Figure: the cubic crosses the x-axis at −2, 1 and 3 and the y-axis at (0, 6)")
+
 :::worked-solution[Example 2: sketch $y = x^{2}(3 - x)$]
 1. Roots: $x = 0$ (repeated, so the curve touches the axis) and $x = 3$ (crossed).
 2. The $x^{3}$ coefficient is $-1$: the curve comes down from the top left and goes to the bottom right.
@@ -76,6 +78,8 @@ For $y = \dfrac{ax + b}{cx + d}$, divide to write it as a constant plus a fracti
 3. Intercepts: $x = 0$ gives $y = -1$; $y = 0$ gives $2x + 1 = 0$, $x = -\frac{1}{2}$.
 4. Shape: the graph of $y = \frac{3}{x}$ translated by $\begin{pmatrix} 1 \\ 2 \end{pmatrix}$, with branches to the top right and bottom left of the point $(1, 2)$. The left branch passes through $\left(-\frac{1}{2}, 0\right)$ and $(0, -1)$.
 :::
+
+![Graph of y = (2x + 1)/(x - 1): a hyperbola with vertical asymptote x = 1 and horizontal asymptote y = 2; the left branch passes through (-1/2, 0) and (0, -1), and the right branch lies above y = 2.](media:diagrams/rational-two-x-plus-one-over-x-minus-one.png "Figure: y = 2 + 3/(x − 1) has asymptotes x = 1 and y = 2")
 
 ## Using sketches to solve equations and inequalities
 

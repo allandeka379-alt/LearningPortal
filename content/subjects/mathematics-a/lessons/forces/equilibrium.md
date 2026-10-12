@@ -90,6 +90,8 @@ Choose the directions to make the algebra easy: resolving perpendicular to an un
 7. Sense check: the steeper string carries more of the weight, so $T_2 > T_1$.
 :::
 
+![Left, a particle of weight 20 N held by two strings at 30 and 50 degrees to the horizontal with tensions T1 = 13.1 N and T2 = 17.6 N; right, the same three forces drawn nose to tail form a closed triangle, which shows they are in equilibrium.](media:diagrams/equilibrium-two-strings-and-triangle.png "Figure: three forces in equilibrium form a closed triangle when drawn nose to tail")
+
 :::worked-solution[Example 3: a small crate of mass $4$ kg rests on a smooth plane inclined at $25°$ to the horizontal. It is held in equilibrium by a horizontal force $P$ N. Taking $g = 10$ m s$^{-2}$, find $P$ and the normal reaction $R$.]
 1. Forces: weight $40$ N vertically down, $R$ perpendicular to the plane, $P$ horizontal (towards the plane).
 2. Resolve **along** the plane, so that $R$ does not appear: $P\cos 25° = 40\sin 25°$.

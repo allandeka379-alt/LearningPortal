@@ -31,6 +31,8 @@ Reducing the rise and fall of a rectified voltage, usually with a capacitor, so 
 
 On a voltage–time graph, an a.c. supply is a smooth wave: the voltage rises to a positive peak, falls through zero to a negative peak, and returns to zero, $50$ times every second for the mains.
 
+![Four voltage-time graphs over two cycles of 50 Hz mains. The a.c. input swings above and below zero. Half-wave rectification keeps only the positive humps, with gaps between them. Full-wave rectification gives a continuous row of humps, twice as many. Adding a smoothing capacitor gives an almost steady output with a small ripple.](media:diagrams/rectification-waveforms.png "Figure: a.c. input, half-wave, full-wave and smoothed outputs")
+
 ## Half-wave rectification
 
 A single diode is connected in series with the load (for example a resistor).

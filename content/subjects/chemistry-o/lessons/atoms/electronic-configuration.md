@@ -60,6 +60,8 @@ For the first 20 elements, fill the shells from the nucleus outwards:
 
 A **shell diagram** shows the same information: the nucleus in the middle, a circle for each shell and the electrons drawn as dots or crosses on the circles. For aluminium, 2,8,3, you would draw 2 electrons on the first circle, 8 on the second and 3 on the third.
 
+![Shell diagrams: lithium 2,1 has two occupied shells and one outer electron; aluminium 2,8,3 has three shells and three outer electrons; chlorine 2,8,7 has three shells and seven outer electrons. The number of shells gives the period and the outer electrons give the group.](media:diagrams/electron-shell-diagrams-li-al-cl.png "Figure: electrons in shells for lithium (2,1), aluminium (2,8,3) and chlorine (2,8,7)")
+
 ## Configuration and the Periodic Table
 
 :::keyfact{title="Reading the Periodic Table from a configuration"}

@@ -9,7 +9,7 @@ const tCount = (fn, A, C, k, lo = 0, hi = 360) => new Set([...solveTrig({ fn, k:
 concept("amath.graphs.modulus-functions", { file: "graphs/modulus-functions", keyPrefix: "graphs.modulus-functions" }, (b) => {
   b.mcq({
     d: 1, skill: "RECALL", calculator: false,
-    stem: t`How is the graph of $y = |f(x)|$ obtained from the graph of $y = f(x)$?`,
+    stem: t`Which description gives the way the curve $y = |f(x)|$ is obtained from the curve $y = f(x)$?`,
     options: [
       [t`Parts below the $x$-axis are reflected in the $x$-axis; the rest is unchanged.`, "Correct: the modulus makes every negative y-value positive."],
       [t`Parts to the left of the $y$-axis are reflected in the $y$-axis; the rest is unchanged.`, t`That describes $y = f(|x|)$, a different graph.`],

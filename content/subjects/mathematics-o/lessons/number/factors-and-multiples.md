@@ -71,6 +71,8 @@ Index form means repeated primes are written as powers: $2 \times 2 \times 2 = 2
 
 You can also show the prime factors in a Venn diagram. For 84 and 120, the overlap holds the shared factors $2, 2, 3$; the "84 only" region holds $7$; the "120 only" region holds $2$ and $5$. The HCF is the product of the overlap, $2 \times 2 \times 3 = 12$, and the LCM is the product of everything in the diagram, $7 \times 2 \times 2 \times 3 \times 2 \times 5 = 840$.
 
+![Venn diagram of the prime factors of 84 and 120: the overlap holds 2, 2 and 3, so the HCF is 12; 84 alone has 7; 120 alone has 2 and 5; multiplying all the numbers in the diagram gives the LCM 840.](media:diagrams/venn-prime-factors-84-120.png "Figure: the overlap multiplies to the HCF; everything multiplies to the LCM")
+
 For small numbers, listing works well too: multiples of 8 are $8, 16, 24, \ldots$ and multiples of 12 are $12, 24, \ldots$, so LCM$(8, 12) = 24$.
 
 ## Solving problems

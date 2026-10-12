@@ -61,6 +61,8 @@ A filter paper is folded into a cone and placed in a filter funnel resting in a 
 - The liquid collected in the flask is the **filtrate**.
 - Washing the residue with a little distilled water removes any solution left on it.
 
+![Filtration apparatus: a mixture of sand and salt solution is poured into a filter paper cone in a funnel; the insoluble sand stays on the paper as the residue and the salt solution runs through into the conical flask as the filtrate.](media:diagrams/separating-filtration-apparatus.png "Figure: filtration separates an insoluble solid (residue) from a liquid (filtrate)")
+
 Filtration **cannot** remove a dissolved substance: dissolved salt particles pass straight through the paper. That is why filtered borehole water may still taste salty. Water works use beds of sand and gravel as giant filters to remove suspended mud, but not dissolved substances.
 
 ## Evaporation and crystallisation
@@ -83,11 +85,14 @@ Rock salt is a mixture of sodium chloride with sand and clay. Describe how to ob
 
 The amount of solid that crystallises can be worked out from **solubility** data, given in grams of solute per $100\ \text{g}$ of water.
 
+![Solubility curve of potassium nitrate: solubility rises from 13.3 g per 100 g of water at 0 degrees Celsius to 31.6 g at 20 degrees and 110 g at 60 degrees, so cooling a saturated solution from 60 to 20 degrees crystallises 78.4 g per 100 g of water.](media:diagrams/solubility-curve-potassium-nitrate.png "Figure: solubility of potassium nitrate in water against temperature")
+
 :::worked-solution[Example 2: mass of crystals formed on cooling]
 At $60\ ^\circ\text{C}$, $110\ \text{g}$ of potassium nitrate dissolves in $100\ \text{g}$ of water to give a saturated solution. At $20\ ^\circ\text{C}$ only $31.6\ \text{g}$ dissolves. The solution is cooled from $60\ ^\circ\text{C}$ to $20\ ^\circ\text{C}$. What mass of crystals forms?
 1. The water can hold $110\ \text{g}$ at $60\ ^\circ\text{C}$ but only $31.6\ \text{g}$ at $20\ ^\circ\text{C}$.
 2. The rest must come out of solution: $110 - 31.6 = 78.4\ \text{g}$ of crystals.
 3. If the solution had contained only $50\ \text{g}$ of water, both masses would halve, giving $39.2\ \text{g}$.
+
 :::
 
 ## Simple distillation
@@ -100,6 +105,8 @@ The apparatus, described in words:
 - a **thermometer** with its bulb level with the **side arm**, so it reads the temperature of the vapour leaving the flask;
 - a **Liebig condenser**: a tube surrounded by a water jacket, with cold water entering at the **bottom** and leaving at the **top**, so the jacket stays full of cold water;
 - a beaker or conical flask to collect the **distillate**.
+
+![Simple distillation apparatus: salt solution is heated in a flask with a thermometer bulb level with the side arm; steam passes into a Liebig condenser with cold water entering at the bottom and leaving at the top, and pure water (distillate) drips into a beaker while the salt stays in the flask.](media:diagrams/separating-simple-distillation.png "Figure: simple distillation separates a solvent from a solution")
 
 The water boils, the steam passes into the condenser, cools and **condenses** back to liquid, and pure water drips into the collecting flask. The dissolved salt has a much higher boiling point, so it stays behind in the flask. The thermometer reads $100\ ^\circ\text{C}$ while water distils. Distilled water is used for experiments and for topping up car batteries because it contains no dissolved impurities.
 

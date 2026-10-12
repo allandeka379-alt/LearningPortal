@@ -62,6 +62,8 @@ Translate the words carefully. "The rate of change of $N$" is $\frac{\mathrm{d}N
 5. Check: $\frac{\mathrm{d}y}{\mathrm{d}x} = 2x\mathrm{e}^{\frac{1}{2}x^2} = xy$.
 :::
 
+![Family of solution curves y = A e^(x^2/2) of dy/dx = xy for A = 0.5, 1, 2 and 3: each curve is symmetrical about the y-axis with a minimum at x = 0, and the initial condition y = 2 when x = 0 picks out the single curve y = 2 e^(x^2/2).](media:diagrams/solution-curves-dy-dx-equals-xy.png "Figure: the general solution is a family of curves; y = 2 at x = 0 selects A = 2")
+
 Step 4 shows a useful trick: writing the constant as $\ln A$ lets you combine logarithms, so $\ln y = \frac{1}{2}x^2 + \ln A$ becomes $y = A\mathrm{e}^{\frac{1}{2}x^2}$ directly.
 
 ## Modelling and interpretation
@@ -89,6 +91,8 @@ Notice that the model says the tank empties in a **finite** time, unlike the coo
 ## Families of solution curves (ZIMSEC)
 
 Each value of the arbitrary constant gives one curve; together they form a family. To sketch typical members, find the general solution and draw it for two or three values of the constant.
+
+![Concentric circles x^2 + y^2 = 2c centred at the origin, the family of solution curves of dy/dx = -x/y, shown for radii 1, 2 and 3; the short amber segments show the gradient -x/y at points on the circle of radius 2, each perpendicular to the radius.](media:diagrams/solution-curves-circles-minus-x-over-y.png "Figure: the solutions of dy/dx = −x/y are circles about the origin; the gradient is perpendicular to the radius")
 
 For example, $\frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{x}{y}$ separates to $\int y\,\mathrm{d}y = -\int x\,\mathrm{d}x$, so $\frac{1}{2}y^2 = -\frac{1}{2}x^2 + c$, i.e. $x^2 + y^2 = 2c$. The family is a set of circles centred at the origin; the condition $y = 3$ at $x = 0$ picks out the circle of radius 3. Similarly, $\frac{\mathrm{d}y}{\mathrm{d}x} = ky$ gives the family $y = A\mathrm{e}^{kx}$: exponential curves through $(0, A)$.
 

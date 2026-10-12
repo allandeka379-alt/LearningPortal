@@ -55,6 +55,8 @@ Atoms are most stable with a full outer shell, like a noble gas. Metal atoms hav
 
 In a dot-and-cross diagram, the electrons of one atom are drawn as dots and those of the other as crosses, so you can see where each electron came from. Each ion is drawn in square brackets with its charge at the top right. Often only the outer shells are drawn.
 
+![Dot-and-cross diagrams: sodium transfers its one outer electron to chlorine, giving Na+ (outer shell of 8 crosses) and Cl- (8 outer electrons, 7 dots and 1 cross), formula NaCl; magnesium transfers two electrons to oxygen, giving Mg2+ and O2- each with a full outer shell, formula MgO.](media:diagrams/ionic-bonding-dot-cross-nacl-mgo.png "Figure: electron transfer in sodium chloride and magnesium oxide")
+
 :::worked-solution[Example 1: sodium chloride, $\ce{NaCl}$ (Group I with Group VII)]
 1. Sodium is 2,8,1 and chlorine is 2,8,7.
 2. The sodium atom transfers its one outer electron (a cross) to the chlorine atom.
@@ -85,6 +87,8 @@ The total positive charge must equal the total negative charge.
 ## The giant ionic lattice (Supplement)
 
 An ionic compound is not made of separate molecules. The ions form a **giant ionic lattice**: a regular, three-dimensional arrangement of alternating positive and negative ions. In sodium chloride each $\ce{Na+}$ ion is surrounded by six $\ce{Cl-}$ ions, and each $\ce{Cl-}$ ion by six $\ce{Na+}$ ions. The formula $\ce{NaCl}$ only gives the **ratio** of ions, 1 : 1.
+
+![A slice through a sodium chloride lattice: smaller positive sodium ions and larger negative chloride ions alternate in rows and columns, each ion surrounded by ions of opposite charge, in the ratio 1 to 1.](media:diagrams/ionic-lattice-sodium-chloride.png "Figure: a layer of the giant ionic lattice of sodium chloride")
 
 ## Properties of ionic compounds
 

@@ -53,6 +53,8 @@ From the second stage on, branch probabilities are **conditional** probabilities
 5. Second sweet lemon: $\mathrm{P}(OL) + \mathrm{P}(LL) = \frac{32}{132} + \frac{12}{132} = \frac{44}{132} = \frac{1}{3}$. Without knowing the first sweet, the second is lemon with the same probability as the first.
 :::
 
+![Tree diagram for two sweets taken without replacement from 8 orange and 4 lemon: the first-stage branches are 8/12 and 4/12; after an orange the second branches are 7/11 and 4/11, after a lemon 8/11 and 3/11; the four outcomes OO, OL, LO and LL have probabilities 56/132, 32/132, 32/132 and 12/132.](media:diagrams/tree-diagram-sweets-no-replacement.png "Figure: multiply along each path; the second-stage probabilities change because there is no replacement")
+
 With replacement, the second stage is identical to the first, so the two picks are independent: $\mathrm{P}(OO) = \left(\frac{2}{3}\right)^2 = \frac{4}{9}$, compared with $\frac{56}{132} = \frac{14}{33}$ without replacement.
 
 ## Conditional probability from a tree

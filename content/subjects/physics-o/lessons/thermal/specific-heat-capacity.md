@@ -63,6 +63,8 @@ How much energy is needed to heat $2.0\ \text{kg}$ of water from $20\ ^\circ\tex
 4. Switch off, wait for the highest temperature, and find the temperature rise.
 5. Energy supplied $= IVt$ (ZIMSEC writes $\Delta Q = mc(\theta_2 - \theta_1) = IVt$); then $c = \dfrac{IVt}{m\Delta\theta}$.
 
+![Apparatus for measuring the specific heat capacity of a 1.0 kg aluminium block: an electric heater and a thermometer in holes in the block, insulation round it, and a circuit with an ammeter to find the power. A 50 W heater for 300 s supplies 15 000 J, giving a 16.5 degree rise and c of about 909 J per kg per degree Celsius.](media:diagrams/shc-block-experiment.png "Figure: measuring the specific heat capacity of a metal block")
+
 :::worked-solution[Results for an aluminium block]
 A $1.0\ \text{kg}$ block is heated by a $50\ \text{W}$ heater for $300\ \text{s}$, and its temperature rises by $16.5\ ^\circ\text{C}$.
 

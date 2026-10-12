@@ -98,6 +98,8 @@ The function $f$ is defined by $f(x) = 2x^{2} - 8x + 5$ for $x \geq 2$.
 
 Because $f^{-1}$ swaps inputs and outputs, its graph is the mirror image of $y = f(x)$ in $y = x$. In Example 4, the graph of $f$ starts at $(2, 5)$ and rises steeply; the graph of $f^{-1}$ starts at $(5, 2)$ and rises slowly. If the graphs meet, they often meet on $y = x$, so solving $f(x) = x$ is a common shortcut for $f(x) = f^{-1}(x)$ when $f$ is increasing.
 
+![Graphs of f(x) = (x - 2)^2 + 5 for x >= 2, starting at (2, 5), and its inverse f^-1(x) = 2 + sqrt(x - 5) starting at (5, 2): the two curves are mirror images in the dashed line y = x.](media:diagrams/inverse-reflection-in-y-equals-x.png "Figure: f starts at (2, 5), f⁻¹ at (5, 2); each is the reflection of the other in y = x")
+
 :::keyfact{title="ZIMSEC and Cambridge"}
 Both boards examine composite and inverse functions and the reflection in $y = x$. ZIMSEC also frames inverses in terms of bijective functions and asks you to model situations with relations.
 :::

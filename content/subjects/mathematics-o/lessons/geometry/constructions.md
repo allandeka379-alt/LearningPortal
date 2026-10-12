@@ -54,6 +54,8 @@ A flat shape that folds up, without overlaps or gaps, to make a solid.
 
 A triangle is only possible if the two shorter sides add up to **more** than the longest side. With sides 3 cm, 4 cm and 9 cm the arcs never meet, because $3 + 4 < 9$.
 
+![Constructing triangle ABC from three sides: draw AB = 8 cm, then an arc of radius 7 cm from A and an arc of radius 6 cm from B; where the arcs cross is vertex C, and the construction arcs are left showing.](media:diagrams/construct-triangle-three-sides.png "Figure: two arcs fix the third vertex of a triangle")
+
 When an angle is given (for example $PQ = 7.5$ cm, $PR = 6$ cm and angle $QPR = 50^\circ$), draw $PQ$, measure $50^\circ$ at $P$ with the protractor, and mark $R$ on that arm $6$ cm from $P$. This is a drawing, not a ruler-and-compasses construction.
 
 ## Nets of solids
@@ -79,6 +81,8 @@ The constructions in this section are in the ZIMSEC O-Level syllabus. Cambridge 
 3. With the **same radius** and the point on $B$, draw arcs crossing the first two.
 4. Join the two crossing points. This line cuts $AB$ in half at right angles, and every point on it is the same distance from $A$ and $B$.
 :::
+
+![Constructing the perpendicular bisector of AB: arcs of the same radius, more than half of AB, are drawn from A and from B above and below the line; joining the crossing points P and Q gives a line through the midpoint M at a right angle to AB.](media:diagrams/construct-perpendicular-bisector.png "Figure: the perpendicular bisector of a line segment AB")
 
 :::example{title="The bisector of an angle ABC"}
 1. With the point on $B$, draw an arc cutting $BA$ at $P$ and $BC$ at $Q$.

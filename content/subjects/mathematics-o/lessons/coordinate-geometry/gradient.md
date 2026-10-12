@@ -40,9 +40,13 @@ $$
 
 The bigger the size of the gradient (ignoring its sign), the steeper the line. A line with gradient $-4$ is steeper than one with gradient $3$, but it slopes the other way.
 
+![Four sketches of lines: a line rising left to right has a positive gradient, one falling has a negative gradient, a horizontal line has gradient zero, and a vertical line has an undefined gradient.](media:diagrams/gradient-four-kinds.png "Figure: the four kinds of gradient")
+
 ## Finding the gradient from a grid
 
 On a grid, pick two points where the line crosses the grid exactly. Draw a right-angled triangle under (or over) the line, with a horizontal side and a vertical side.
+
+![A line through (0, 1) and (2, 7) with a right-angled triangle drawn under it: the run is 2 units across and the rise is 6 units up, so the gradient is 6 divided by 2, which is 3.](media:diagrams/gradient-triangle-rise-run.png "Figure: gradient is rise over run, here 6 ÷ 2 = 3")
 
 1. Count the horizontal distance (the **run**), always moving to the right.
 2. Count the vertical distance (the **rise**): up is positive, down is negative.

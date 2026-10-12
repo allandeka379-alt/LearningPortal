@@ -72,6 +72,8 @@ Once the expression is a single cosine (or sine), the equation is a standard one
 7. Solutions: $\theta = 107.6^\circ$ and $319.8^\circ$.
 :::
 
+![Graph of y = 3 cos t + 2 sin t = sqrt(13) cos(t - 33.69 degrees) for 0 to 360 degrees: a cosine wave of amplitude sqrt(13), about 3.61, with its maximum at 33.69 degrees; the line y = 1 meets it at 107.6 and 319.8 degrees, the two solutions of 3 cos t + 2 sin t = 1.](media:diagrams/harmonic-form-3cos-2sin-equals-1.png "Figure: the wave √13 cos(θ − 33.69°) meets y = 1 at 107.6° and 319.8°")
+
 ## Maximum and minimum values
 
 Because $-1 \le \cos(\theta - \alpha) \le 1$, the expression $R\cos(\theta - \alpha)$ lies between $-R$ and $R$. The maximum occurs where the compound angle is $0^\circ$ (or $360^\circ$), the minimum where it is $180^\circ$. The same idea answers questions about reciprocals: a fraction is greatest when its denominator is least (provided the denominator stays positive).

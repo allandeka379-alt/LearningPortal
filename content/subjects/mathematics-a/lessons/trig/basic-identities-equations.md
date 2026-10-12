@@ -63,6 +63,8 @@ When the angle is a multiple such as $2x$, first change the interval: if $-\pi <
 5. Divide by 2: $x = -1.40, -0.170, 1.74, 2.97$ (3 significant figures).
 :::
 
+![Graph of y = sin 2x for x between minus pi and pi with the line y = -1/3: the line meets the curve four times, at x = -1.40, -0.170, 1.74 and 2.97, the four solutions of 3 sin 2x + 1 = 0.](media:diagrams/trig-sin2x-minus-third-solutions.png "Figure: the four solutions of sin 2x = −1/3 are where the line meets the curve")
+
 ## Equations that need an identity
 
 If an equation contains both $\sin^2\theta$ and $\cos\theta$, use $\sin^2\theta = 1 - \cos^2\theta$ to make a quadratic in $\cos\theta$, then factorise. If it contains $\sin\theta$ and $\cos\theta$ to the first power only, divide by $\cos\theta$ to get $\tan\theta$.

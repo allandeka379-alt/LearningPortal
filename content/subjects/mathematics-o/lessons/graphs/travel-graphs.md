@@ -59,6 +59,8 @@ Tatenda's distance–time graph has three straight sections: from $(0\ \text{min
 
 Notice step 1: the time was converted to **hours** so that the speed came out in km/h. Always check what units the answer needs.
 
+![Distance-time graph of Tatenda's cycle ride: 9 km out in 30 minutes (18 km/h), stationary for 15 minutes (the horizontal section), then 9 km back home in 30 minutes, reaching home at 75 minutes.](media:diagrams/travel-distance-time-tatenda.png "Figure: gradient is speed; the flat section is time at rest")
+
 :::example{title="Converting between km/h and m/s"}
 $1\ \text{km/h} = \frac{1000\ \text{m}}{3600\ \text{s}}$, so to change km/h to m/s, multiply by $1000$ and divide by $3600$:
 
@@ -70,6 +72,8 @@ $72\ \text{km/h} = \frac{72 \times 1000}{3600}\ \text{m/s} = 20\ \text{m/s}$, an
 - A sloping line upwards means the object is **accelerating**; downwards means **decelerating**.
 - A **horizontal** line means **constant speed** (not stationary!).
 - The line on the time axis (speed $0$) means the object is at rest.
+
+![Speed-time graph of a car: it accelerates from rest to 20 m/s in 10 s, holds 20 m/s until 40 s, then slows to rest at 48 s; the areas under the graph are 100 m, 600 m and 80 m, giving a total distance of 780 m.](media:diagrams/travel-speed-time-car.png "Figure: the area under a speed-time graph is the distance travelled")
 
 :::worked-solution[Example 2: a car between two stops]
 A car starts from rest and accelerates uniformly to $20\ \text{m/s}$ in $10\ \text{s}$. It travels at $20\ \text{m/s}$ for $30\ \text{s}$, then decelerates uniformly to rest in $8\ \text{s}$.

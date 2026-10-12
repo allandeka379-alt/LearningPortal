@@ -44,6 +44,8 @@ To write a vector in terms of $\mathbf{a}$ and $\mathbf{b}$, find any route alon
 3. $\overrightarrow{OM} = \overrightarrow{OA} + \overrightarrow{AM} = \mathbf{a} + \frac{1}{2}\mathbf{b} - \frac{1}{2}\mathbf{a} = \frac{1}{2}\mathbf{a} + \frac{1}{2}\mathbf{b}$.
 :::
 
+![Triangle OAB with OA = a and OB = b: AB = b − a, the midpoint M of AB has OM = ½a + ½b, and the point P with AP : PB = 1 : 2 has OP = ⅔a + ⅓b.](media:diagrams/vector-geometry-midpoint-ratio.png "Figure: routes from O to the midpoint M and to the point P that divides AB in the ratio 1 : 2")
+
 ## Dividing a line in a ratio
 
 If $P$ lies on $AB$ with $AP : PB = m : n$, then $P$ is $\frac{m}{m + n}$ of the way from $A$ to $B$, so $\overrightarrow{AP} = \frac{m}{m + n}\overrightarrow{AB}$.

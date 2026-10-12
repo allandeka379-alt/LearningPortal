@@ -50,6 +50,8 @@ Both boards: ZIMSEC Form 5 (electric fields) and Cambridge A Level (topic 18, Pa
 
 Field lines show the direction of the force on a small **positive** test charge; their spacing shows the field strength.
 
+![Uniform electric field between two parallel plates a distance d apart: equally spaced parallel field lines run from the positive plate to the negative plate, and the field strength is E = V/d.](media:diagrams/parallel-plates-uniform-field.png "Figure: the field between parallel plates is uniform, E = V/d")
+
 - **Isolated positive point charge:** straight radial lines pointing outwards. **Negative point charge:** radial lines pointing inwards.
 - **Two equal positive charges:** lines leave both and curve away from each other; midway between them there is a **neutral point** where the field is zero.
 - **A positive and a negative charge:** lines leave the positive charge and curve round to end on the negative charge, most densely along the line joining them.

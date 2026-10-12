@@ -63,6 +63,8 @@ Once you have two points on the line (read from a graph, or given), find the gra
 4. $A = 10^{0.6} = 3.98$ (3 s.f.). So $y = 3.98x^{2.5}$.
 :::
 
+![Straight-line graph of lg y against lg x through (0.2, 1.1) and (0.8, 2.6): the gradient 1.5 divided by 0.6 is 2.5, which is the power n, and the intercept on the vertical axis is 0.6, which is lg A.](media:diagrams/linear-law-lg-graph.png "Figure: for y = Axⁿ the line of lg y against lg x has gradient n and intercept lg A")
+
 :::worked-solution[Example 2: the variables satisfy $y = Ab^x$. The graph of $\ln y$ against $x$ is a straight line through $(1, 2.3)$ and $(4, 3.5)$. Find $A$ and $b$]
 1. Taking natural logarithms: $\ln y = (\ln b)x + \ln A$.
 2. Gradient: $\ln b = \dfrac{3.5 - 2.3}{4 - 1} = 0.4$, so $b = \mathrm{e}^{0.4} = 1.49$ (3 s.f.).

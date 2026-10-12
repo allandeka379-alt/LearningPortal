@@ -46,6 +46,8 @@ Take the direction of motion as positive **for each particle**: down for the hea
 6. Greatest height above its start: $1.6 + 0.4 = 2.0$ m (provided the string is long enough not to reach the pulley).
 :::
 
+![Two particles of mass 5 kg and 3 kg hanging over a smooth pulley: the heavier one accelerates downwards and the lighter one upwards, each at 2.5 m per second squared, with the same tension 37.5 N throughout the string; the weights are 50 N and 30 N.](media:diagrams/pulley-two-particles-5kg-3kg.png "Figure: the string tension is 37.5 N on both sides; the particles have the same acceleration size, 2.5 m/s²")
+
 Adding the two equations in step 3 removes $T$: it is the same as treating the string and the particles as one system of mass $8$ kg driven by the difference in weights.
 
 ## One particle on a table
@@ -58,6 +60,8 @@ Adding the two equations in step 3 removes $T$: it is the same as treating the s
 5. Then $T = 20 - 2 \times \dfrac{5}{3} = \dfrac{50}{3} = 16.7$ N.
 6. Check: the tension is less than the hanging weight ($20$ N), as it must be when the particle accelerates downwards.
 :::
+
+![A 4 kg block on a rough table (friction 10 N) joined by a string over a smooth pulley to a hanging 2 kg particle (weight 20 N): both move with acceleration 5/3 m per second squared, the string tension is 16.7 N, less than the 20 N weight of the hanging particle.](media:diagrams/pulley-block-on-table-and-hanging-mass.png "Figure: forces on the 4 kg block and the 2 kg particle, with the shared tension T = 16.7 N")
 
 Before writing step 2, check that motion actually happens: the hanging weight ($20$ N) must exceed the greatest friction ($10$ N). If it did not, the system would stay at rest and $T$ would equal the hanging weight.
 

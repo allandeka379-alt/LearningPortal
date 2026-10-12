@@ -73,6 +73,8 @@ A body resting on a rough plane with no other forces has $F = mg\sin\alpha$ and 
 5. Along the plane: $P = 30\sin 20° + 12.69 = 10.26 + 12.69 = 22.9$ N.
 :::
 
+![Forces on a 3 kg block at rest on a rough plane inclined at 20 degrees: weight 30 N vertically down, normal reaction R = 28.19 N perpendicular to the plane and friction F = 10.26 N up the plane, which is less than the greatest friction available, 12.69 N.](media:diagrams/forces-on-block-rough-incline.png "Figure: friction (10.26 N) acts up the plane and balances the component of weight down the plane")
+
 The direction of friction changed between the two parts. That is the single most important idea in limiting-equilibrium problems.
 
 :::worked-solution[Example 3 (exam style): a particle of mass $5$ kg is held at rest on a rough plane inclined at $40°$ by a horizontal force of magnitude $P$ N. The coefficient of friction is $0.3$ and $g = 10$ m s$^{-2}$. Find the range of values of $P$.]

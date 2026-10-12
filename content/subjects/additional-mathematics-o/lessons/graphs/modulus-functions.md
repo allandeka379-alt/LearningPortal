@@ -56,6 +56,8 @@ For a U-shaped parabola that crosses the $x$-axis twice, the part between the ro
 6. $k = 12$: the line is above the arch and meets only the outer branches: **2** solutions.
 :::
 
+![Graph of y = |x^2 - 2x - 8|: cusps at (-2, 0) and (4, 0), the reflected arch peaking at (1, 9) and crossing the y-axis at (0, 8). The line y = 5 meets it four times, y = 9 three times, y = 12 twice.](media:diagrams/modulus-quadratic-arch.png "Figure: y = |x² − 2x − 8| and the lines y = 5, 9 and 12")
+
 :::keyfact{title="Counting solutions of |f(x)| = k for a quadratic with roots"}
 If the reflected arch has height $h$: $k < 0$ gives none; $k = 0$ gives 2 (the roots); $0 < k < h$ gives 4; $k = h$ gives 3; $k > h$ gives 2.
 :::
@@ -72,6 +74,8 @@ For $y = |a \sin bx + c|$, $y = |a \cos bx + c|$ and $y = |a \tan bx + c|$, sket
 3. Between $120^\circ$ and $240^\circ$ it is below the axis, so that part is reflected: the minimum $-1$ at $180^\circ$ becomes a maximum of $1$.
 4. The graph of $y = |2\cos x + 1|$ falls from $(0, 3)$ to a cusp at $(120^\circ, 0)$, rises to $(180^\circ, 1)$, falls to a cusp at $(240^\circ, 0)$ and rises to $(360^\circ, 3)$.
 :::
+
+![Graph of y = |2cos x + 1| for 0 to 360 degrees: starts at 3, falls to a cusp at 120 degrees, rises to 1 at 180 degrees (the reflected minimum), falls to a cusp at 240 degrees and rises back to 3 at 360 degrees.](media:diagrams/modulus-cosine-graph.png "Figure: y = |2cos x + 1| with cusps at 120° and 240°")
 
 | $x$ | $0^\circ$ | $60^\circ$ | $90^\circ$ | $120^\circ$ | $180^\circ$ | $240^\circ$ | $270^\circ$ | $300^\circ$ | $360^\circ$ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

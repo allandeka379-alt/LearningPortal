@@ -81,6 +81,8 @@ $PQ$ and $RS$ are parallel horizontal lines, with $PQ$ above $RS$, and $P$ and $
 
 The facts also work backwards: if a pair of alternate angles (or corresponding angles) are equal, or a pair of co-interior angles add up to $180^\circ$, then the two lines **are** parallel.
 
+![Two parallel lines PQ and RS cut by a transversal XY: angle PXY is 64°, the alternate angle XYS is also 64°, and the co-interior angle XYR is 116°, so 64° + 116° = 180°.](media:diagrams/angles-parallel-transversal.png "Figure: alternate angles are equal; co-interior angles add up to 180°")
+
 ## Triangles and quadrilaterals
 
 :::keyfact{title="Angle sums"}

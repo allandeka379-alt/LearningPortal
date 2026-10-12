@@ -93,6 +93,8 @@ Work them out each time by rearranging rate = k × concentrations and cancelling
 - **first order**: a straight line through the origin (gradient = k);
 - **second order**: a curve through the origin rising ever more steeply (rate ∝ [X]²; a plot of rate against [X]² is a straight line).
 
+![Two graph panels for orders 0, 1 and 2. Concentration against time: zero order is a straight falling line, first order a curve with constant half-life, second order a curve that flattens more slowly. Rate against concentration: zero order is horizontal, first order a straight line through the origin, second order curves upward.](media:diagrams/rate-order-graphs.png "Figure: concentration-time and rate-concentration graphs for zero, first and second order")
+
 ## First-order reactions and half-life
 
 For a first-order reaction the half-life does not depend on the starting concentration, and
@@ -110,6 +112,8 @@ A compound decomposes in a first-order reaction with a half-life of 345 s at a c
 :::
 
 To show from a graph that a reaction is first order, read off at least two successive half-lives (from different starting points) and show that they are equal.
+
+![Concentration-time curve for a first-order reaction with half-life 345 s starting at 0.0800 mol per dm³: the concentration is 0.0400 at 345 s, 0.0200 at 690 s and 0.0100 at 1035 s, so every half-life is the same length, which proves first order.](media:diagrams/first-order-half-life.png "Figure: a first-order reaction has a constant half-life (345 s here)")
 
 ## Temperature and the rate constant
 

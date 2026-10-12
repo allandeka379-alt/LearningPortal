@@ -51,6 +51,8 @@ A segment is a sector with the isosceles triangle $OAB$ removed. The triangle ha
 4. Perimeter of the segment $=$ arc $+$ chord $= 14 + 12.88\ldots = 26.9$ cm (3 s.f.).
 :::
 
+![Sector OAB with radius 10 cm and angle 1.4 radians: the chord AB is 12.9 cm, the arc is 14 cm, and the shaded minor segment between the chord and the arc has area 20.7 square centimetres (sector area minus triangle area).](media:diagrams/sector-segment-chord.png "Figure: the minor segment lies between the chord AB and the arc AB")
+
 :::worked-solution[Example 2: find the exact area of the minor segment cut off by a chord that subtends $\frac{\pi}{3}$ at the centre of a circle of radius 6 cm]
 1. Sector area: $\frac{1}{2}(36)\left(\frac{\pi}{3}\right) = 6\pi$.
 2. Triangle area: $\frac{1}{2}(36)\sin\frac{\pi}{3} = 18 \times \frac{\sqrt{3}}{2} = 9\sqrt{3}$.

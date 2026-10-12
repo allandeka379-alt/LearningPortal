@@ -35,6 +35,8 @@ The same distance from two (or more) things.
 
 ## The four standard loci
 
+![The four standard loci: a circle for a fixed distance from a point; two parallel lines joined by semicircles for a fixed distance from a line segment; the perpendicular bisector for points equidistant from two points A and B; and the angle bisector for points equidistant from two lines meeting at O.](media:diagrams/loci-four-standard.png "Figure: the four standard loci")
+
 :::keyfact{title="1. A fixed distance from a point"}
 The locus of points $r$ cm from a fixed point $P$ is a **circle** with centre $P$ and radius $r$ cm. Points **less than** $r$ cm from $P$ fill the inside of the circle.
 :::
@@ -67,6 +69,8 @@ A rectangular garden $ABCD$ has $AB = 8$ m and $BC = 6$ m. A tap $T$ must be equ
 3. Where they meet, $T$ is 4 m along from $AD$, and by Pythagoras its distance from $AB$ is $\sqrt{5^2 - 4^2} = 3$ m.
 4. So $T$ is 4 m from $AD$ and 3 m from $AB$: the centre of the garden. (The other crossing point is outside the garden.)
 :::
+
+![Rectangular garden ABCD with AB = 8 m and BC = 6 m: the dashed perpendicular bisector of AB meets the quarter-circle of radius 5 m centred on A at the tap T, which is 4 m from AD and 3 m from AB, the centre of the garden.](media:diagrams/loci-garden-tap.png "Figure: two loci cross at the tap T")
 
 :::worked-solution[Example 3: points 2 cm from a line segment]
 $AB$ is a line segment 6 cm long. Describe the locus of points 2 cm from $AB$ and find its length.

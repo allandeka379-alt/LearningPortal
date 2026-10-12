@@ -75,6 +75,8 @@ Two consequences matter in exams:
 
 At half the amplitude, only a quarter of the energy is potential. The two energies are equal where $x^2 = x_0^2/2$, at $x = \pm x_0/\sqrt{2} \approx \pm 0.71x_0$.
 
+![Energy against displacement for a 0.40 kg s.h.m. oscillator (ω = 5.0 rad/s, amplitude 0.10 m): the total energy 0.050 J is constant; potential energy is an upward parabola from zero at x = 0, kinetic energy an inverted parabola reaching 0.050 J at x = 0, and they are equal (0.025 J) at x = ±0.071 m.](media:diagrams/shm-energy-displacement-graph.png "Figure: kinetic and potential energy trade places while the total stays constant")
+
 **Against time**, with $x = x_0\sin\omega t$: $E_p = E\sin^2\omega t$ and $E_k = E\cos^2\omega t$. Both vary between 0 and $E$, never become negative, and repeat **twice per oscillation**: their period is $T/2$ and their frequency $2f$. The curves are mirror images, crossing at $E/2$, and their sum is always $E$.
 
 ## Worked examples

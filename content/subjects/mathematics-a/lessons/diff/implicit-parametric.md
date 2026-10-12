@@ -90,6 +90,8 @@ The curve $C$ has parametric equations $x = 3\cos\theta$, $y = 2\sin\theta$. Fin
 4. At $\theta = \frac{\pi}{4}$: $\cot\frac{\pi}{4} = 1$, so the gradient is $-\dfrac{2}{3}$.
 :::
 
+![The ellipse x = 3 cos theta, y = 2 sin theta, with x-intercepts at plus and minus 3 and y-intercepts at plus and minus 2: at theta = pi/4 the point is (2.12, 1.41) and the tangent has gradient -2/3.](media:diagrams/parametric-ellipse-tangent.png "Figure: the ellipse x²/9 + y²/4 = 1 and its tangent at θ = π/4, gradient −2/3")
+
 A simpler algebraic example: $x = 2t$, $y = t^{2} - 1$ gives $t = \frac{x}{2}$, so $y = \frac{x^{2}}{4} - 1$, a parabola. Always state any restriction on $x$ that the parameter imposes, for example $x \geq 0$ if $x = t^{2}$.
 
 :::keyfact{title="ZIMSEC and Cambridge"}

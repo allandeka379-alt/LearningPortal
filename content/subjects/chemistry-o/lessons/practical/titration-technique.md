@@ -53,6 +53,8 @@ Fill the burette using a funnel, with the burette below eye level, then **remove
 6. Record the **final reading**. Titre $=$ final reading $-$ initial reading.
 7. Repeat until you have at least two **concordant** titres (within 0.10 cm³ of each other).
 
+![Titration set-up: acid in a burette with a tap above a conical flask holding 25.0 cm3 of alkali and a few drops of indicator, standing on a white tile so the end-point colour change is easy to see.](media:diagrams/titration-apparatus.png "Figure: titration apparatus")
+
 ## Choosing an indicator
 
 | Indicator | Colour in acid | Colour in alkali |

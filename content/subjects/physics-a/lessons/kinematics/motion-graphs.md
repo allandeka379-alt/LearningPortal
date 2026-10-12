@@ -66,6 +66,8 @@ A car pulls away from rest. Its displacement $s$ is recorded:
 
 The graph curves upwards (the gradient keeps increasing). The tangent drawn at $t = 4.0\ \text{s}$ passes through $(2.0\ \text{s},\ 0\ \text{m})$ and $(6.0\ \text{s},\ 24.0\ \text{m})$.
 
+![Displacement-time graph of the accelerating car (s = 0.75t²): the curve steepens, and the tangent at t = 4.0 s passes through (2.0 s, 0 m) and (6.0 s, 24.0 m), so its gradient, the velocity at that instant, is 6.0 m/s.](media:diagrams/car-displacement-time-tangent.png "Figure: the velocity at an instant is the gradient of the tangent")
+
 1. Gradient of the tangent $= \dfrac{24.0 - 0}{6.0 - 2.0} = 6.0\ \text{m s}^{-1}$.
 2. The velocity at $t = 4.0\ \text{s}$ is $6.0\ \text{m s}^{-1}$.
 3. Compare the average velocity over the first 4 s: $12.0/4.0 = 3.0\ \text{m s}^{-1}$, only half the instantaneous value, because the car is still speeding up.
@@ -81,6 +83,8 @@ The graph curves upwards (the gradient keeps increasing). The tangent drawn at $
 :::worked-solution[A kombi journey]
 A kombi accelerates uniformly from rest to $20\ \text{m s}^{-1}$ in $8.0\ \text{s}$, travels at $20\ \text{m s}^{-1}$ for $30\ \text{s}$, then decelerates uniformly to rest in $12\ \text{s}$.
 
+![Velocity-time graph of the kombi: it accelerates uniformly from rest to 20 m/s in 8 s (gradient 2.5 m/s²), moves at 20 m/s for 30 s, then slows to rest in 12 s; the areas under the three sections are 80 m, 600 m and 120 m, a total displacement of 800 m.](media:diagrams/kombi-velocity-time-graph.png "Figure: the area under the v-t graph is the displacement, 800 m")
+
 1. Acceleration in the first stage: $a = \dfrac{20 - 0}{8.0} = 2.5\ \text{m s}^{-2}$; in the last stage $a = \dfrac{0 - 20}{12} = -1.7\ \text{m s}^{-2}$.
 2. Displacement = area: $\tfrac{1}{2}(8.0)(20) + (30)(20) + \tfrac{1}{2}(12)(20) = 80 + 600 + 120 = 800\ \text{m}$.
 3. Average velocity $= \dfrac{800\ \text{m}}{50\ \text{s}} = 16\ \text{m s}^{-1}$.
@@ -89,6 +93,8 @@ A kombi accelerates uniformly from rest to $20\ \text{m s}^{-1}$ in $8.0\ \text{
 ## Motion with a change of direction
 
 A ball thrown straight up at $12\ \text{m s}^{-1}$ (taking upwards as positive and ignoring air resistance) has a velocity-time graph that is a **single straight line** of gradient $-9.81\ \text{m s}^{-2}$:
+
+![Velocity-time graph for a ball thrown up at 12 m/s: one straight line of gradient −9.81 m/s² crossing zero at the top of the flight (t = 1.22 s); the triangle above the axis is +7.3 m (maximum height) and the equal triangle below is −7.3 m, so the net displacement is zero.](media:diagrams/thrown-ball-velocity-time-graph.png "Figure: one straight line for the whole flight; areas above and below the axis cancel")
 
 | $t\,/\,\text{s}$ | 0 | 0.50 | 1.00 | 1.22 | 1.50 | 2.00 | 2.45 |
 | --- | --- | --- | --- | --- | --- | --- | --- |

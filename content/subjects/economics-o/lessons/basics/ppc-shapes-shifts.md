@@ -62,6 +62,9 @@ Work out the clothing given up for each extra 10 thousand tonnes of food.
 
 **Describing the diagrams.** Food on the horizontal axis, clothing on the vertical axis. The straight-line PPC is a straight line from 80 on the clothing axis to 40 on the food axis. The concave curve joins the same end points but bulges away from the origin, flat at first and steep at the end. The convex curve sags towards the origin, steep at first and flat at the end.
 
+![Three production possibility curves for food and clothing with the same end points, 80 thousand units of clothing or 40 thousand tonnes of food: the straight line loses 20 thousand units of clothing for every 10 thousand tonnes of food, the concave curve loses 4, 10, 20 then 46 (rising cost) and the convex curve loses 34, 24, 14 then 8 (falling cost).](media:diagrams/ppc-three-shapes.png "Figure: straight-line, concave and convex PPCs through the same end points")
+
+
 ### Why the usual PPC is concave
 
 Resources are **not equally suited** to producing every good. When an economy makes only a little food, it uses the land and workers best suited to farming, so the first tonnes of food cost little clothing. As food output grows, it must use resources better suited to making clothing: skilled tailors and factory machines moved onto farms produce little extra food, while a lot of clothing is lost. The opportunity cost rises, and the curve bends outwards. This is the shape you should draw unless a question tells you otherwise.
@@ -97,6 +100,9 @@ After a programme of investment and training, a fictional economy can produce mo
 1. At every food output, the maximum clothing is higher: the new curve PPC2 lies outside the old curve PPC1.
 2. A combination such as 40 thousand tonnes of food with 50 thousand units of clothing was unattainable before and is attainable now.
 3. The diagram shows PPC1 and PPC2 with an arrow pointing outwards from PPC1 to PPC2.
+
+![Production possibility curves before and after investment and training: PPC1 runs from 80 thousand units of clothing to 40 thousand tonnes of food, PPC2 lies outside it from 100 units of clothing to 50 thousand tonnes of food, so the combination of 40 thousand tonnes of food and 50 thousand units of clothing, impossible before, is now attainable.](media:diagrams/ppc-outward-shift.png "Figure: an outward shift from PPC1 to PPC2 makes new combinations attainable")
+
 :::
 
 ### Causes of an inward shift

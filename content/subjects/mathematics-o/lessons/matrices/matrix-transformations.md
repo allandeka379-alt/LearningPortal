@@ -68,6 +68,8 @@ Triangle $ABC$ has $A(1, 1)$, $B(3, 1)$ and $C(1, 2)$.
 
 You do not need to memorise the table blindly: each matrix can be rebuilt from the images of $I(1, 0)$ and $J(0, 1)$. For example, a quarter turn anticlockwise sends $I$ to $(0, 1)$ and $J$ to $(-1, 0)$, so the columns are $\begin{pmatrix} 0 \\ 1 \end{pmatrix}$ and $\begin{pmatrix} -1 \\ 0 \end{pmatrix}$.
 
+![Two unit squares and their images: a quarter turn anticlockwise sends I(1, 0) to (0, 1) and J(0, 1) to (−1, 0), giving the matrix with columns (0, 1) and (−1, 0); a shear with the x-axis invariant and factor 3 keeps I fixed and sends J to (3, 1), giving the columns (1, 0) and (3, 1).](media:diagrams/matrix-columns-images-of-i-j.png "Figure: the columns of a matrix are the images of I and J")
+
 ## Finding the matrix of a transformation
 
 :::worked-solution[Example 2: from the images of the unit vectors]

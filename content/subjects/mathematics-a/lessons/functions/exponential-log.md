@@ -43,6 +43,8 @@ A model $y = A\mathrm{e}^{kt}$ with $A > 0$. If $k > 0$ it is **growth**; if $k 
 
 Because $\ln x$ is the inverse of $\mathrm{e}^{x}$, their graphs are reflections of each other in $y = x$.
 
+![Graphs of y = e^x through (0, 1) with asymptote y = 0, and y = ln x through (1, 0) with asymptote x = 0: they are reflections of each other in the dashed line y = x.](media:diagrams/exp-and-ln-graphs.png "Figure: y = eˣ and y = ln x are reflections in y = x")
+
 | | $y = \mathrm{e}^{x}$ | $y = \ln x$ |
 | :--- | :--- | :--- |
 | Domain | all real $x$ | $x > 0$ |
@@ -103,6 +105,8 @@ A cup of tea cools according to $\theta = 20 + 75\mathrm{e}^{-0.04t}$, where $\t
 3. When $\theta = 50$: $75\mathrm{e}^{-0.04t} = 30$, so $\mathrm{e}^{-0.04t} = 0.4$.
 4. $-0.04t = \ln 0.4 = -0.91629\ldots$, so $t = 22.9$ minutes (3 s.f.).
 :::
+
+![Graph of the temperature of a cup of tea, theta = 20 + 75e^(-0.04t): it starts at 95 degrees C, falls to 50 degrees C after 22.9 minutes and levels off towards the room temperature of 20 degrees C, which is the horizontal asymptote.](media:diagrams/cooling-tea-exponential-decay.png "Figure: θ = 20 + 75e^(−0.04t) falls from 95 °C towards the asymptote 20 °C")
 
 Interpreting the constants is often worth marks: in Example 4, 20 is the long-term (room) temperature, 75 the initial excess temperature, and 0.04 measures how fast the tea cools.
 

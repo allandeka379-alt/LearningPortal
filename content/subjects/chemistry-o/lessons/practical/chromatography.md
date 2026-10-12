@@ -46,6 +46,8 @@ The **base line** is the pencil line on which the samples are spotted. The **sol
 4. Cover the beaker with a **lid**, so the air inside is saturated with solvent vapour and the solvent does not evaporate from the paper.
 5. The solvent soaks up the paper, carrying the dissolved substances with it. Remove the paper before the solvent reaches the top, **mark the solvent front** with a pencil and let the paper dry.
 
+![Paper chromatography: a pencil base line above the solvent level in a covered beaker, and a chromatogram where the solvent front is 8.0 cm above the base line; dye A has moved 3.6 cm (Rf = 0.45), dye B 5.6 cm (Rf = 0.70), and the mixture separates into both spots.](media:diagrams/chromatography-paper-rf.png "Figure: set-up and chromatogram; Rf = distance moved by the spot ÷ distance moved by the solvent front")
+
 ## Why the substances separate
 
 Each substance in the mixture has a different **solubility** in the solvent and a different attraction to the paper. A substance that is very soluble in the solvent spends more time dissolved in it and travels further up the paper. A substance that is strongly attracted to the paper travels a shorter distance. A substance that is **insoluble** in the solvent stays on the base line; a different solvent must be used to separate it.

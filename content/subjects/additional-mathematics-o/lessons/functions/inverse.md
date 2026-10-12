@@ -69,6 +69,8 @@ A quadratic on all real numbers is many-one, so it has no inverse. Restricted to
 5. Domain of $f^{-1}$: $x \geq 4$ (the range of $f$). Range of $f^{-1}$: $f^{-1}(x) \geq 1$ (the domain of $f$).
 :::
 
+![Graphs of f(x) = (x - 1)^2 + 4 for x at least 1 (vertex at (1, 4)) and its inverse f^-1(x) = 1 + square root of (x - 4) (starting at (4, 1)); the two curves are mirror images in the dashed line y = x.](media:diagrams/inverse-quadratic-reflection.png "Figure: f and its inverse are reflections in the line y = x")
+
 Choosing the sign of the square root is where most marks are lost: use the original domain to decide.
 
 ## Exponential and logarithmic functions

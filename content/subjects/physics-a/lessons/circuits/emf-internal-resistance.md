@@ -112,6 +112,8 @@ These readings were taken for a battery pack:
 
 The points lie on a straight line sloping downwards. Its intercept is about $4.51\ \text{V}$ and its gradient about $-1.21\ \text{V A}^{-1}$, so $E \approx 4.5\ \text{V}$ and $r \approx 1.2\ \Omega$. Include a fixed protective resistor in series so the current never becomes large, and switch off between readings, because $E$ and $r$ can change as the cells warm or run down.
 
+![Terminal p.d. against current for a battery pack: six points fall on a straight line sloping down; the intercept on the V axis, about 4.51 V, is the e.m.f., and the gradient, about −1.21 V per A, gives the internal resistance, about 1.2 ohms.](media:diagrams/emf-internal-resistance-vi-graph.png "Figure: V = E − Ir, so the intercept is the e.m.f. and the gradient is minus the internal resistance")
+
 :::worked-solution[E and r from two readings]
 With one load, a battery gives $V = 2.76\ \text{V}$ at $I = 0.30\ \text{A}$; with another, $V = 2.40\ \text{V}$ at $I = 0.75\ \text{A}$.
 

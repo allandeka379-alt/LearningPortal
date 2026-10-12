@@ -41,9 +41,13 @@ Starts at $(0^\circ, 0)$, rises to a maximum of $1$ at $90^\circ$, falls through
 Starts at its maximum $(0^\circ, 1)$, falls through $0$ at $90^\circ$ to a minimum of $-1$ at $180^\circ$, rises through $0$ at $270^\circ$ and returns to $1$ at $360^\circ$. Period $360^\circ$. It is the sine curve shifted $90^\circ$ to the left.
 :::
 
+![Graphs of y = sin x and y = cos x from 0° to 360°: sine starts at 0, peaks at 1 at 90°, crosses 0 at 180°, bottoms at −1 at 270°; cosine starts at 1, crosses 0 at 90°, reaches −1 at 180° and returns to 1 at 360°; both have period 360°.](media:diagrams/trig-sine-cosine-graphs.png "Figure: sine and cosine are the same wave shifted by 90°")
+
 :::keyfact{title="y = tan x"}
 Passes through $0$ at $0^\circ$, $180^\circ$ and $360^\circ$ and increases steadily between the asymptotes, but it is **undefined** at $90^\circ$ and $270^\circ$, where the graph has vertical asymptotes. Period $180^\circ$. Unlike sine and cosine, it takes every value, however large.
 :::
+
+![Graph of y = tan x from 0° to 360°: three rising branches through (0, 0), (180, 0) and (360, 0), with vertical asymptotes (dashed) at x = 90° and x = 270° where tan x is undefined; the period is 180°.](media:diagrams/trig-tangent-graph.png "Figure: tan x repeats every 180° and has asymptotes at 90° and 270°")
 
 | $x$ | $0^\circ$ | $90^\circ$ | $180^\circ$ | $270^\circ$ | $360^\circ$ |
 | --- | :---: | :---: | :---: | :---: | :---: |
@@ -70,6 +74,8 @@ If the calculator gives a negative angle $\alpha$ (this happens with $\sin^{-1}$
 2. Second solution: $180^\circ - 23.578^\circ = 156.421\ldots^\circ$.
 3. $x = 23.6^\circ$ or $x = 156.4^\circ$ (1 d.p.). Both are where the line $y = 0.4$ crosses the first hump of the sine curve.
 :::
+
+![Graph of y = sin x with the horizontal line y = 0.4: the line crosses the first hump at x = 23.6° and x = 156.4° (that is 180° − 23.6°), the two solutions of sin x = 0.4 between 0° and 360°.](media:diagrams/trig-solve-sin-0-4.png "Figure: the line y = 0.4 meets the sine curve twice, symmetrically about 90°")
 
 :::worked-solution[Example 2: solve $\cos x = -0.6$ for $0^\circ \leq x \leq 360^\circ$]
 1. Calculator: $\alpha = \cos^{-1}(-0.6) = 126.869\ldots^\circ$.

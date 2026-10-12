@@ -38,6 +38,8 @@ The bearing of $A$ from $B$, when the bearing of $B$ from $A$ is known. It diffe
 | East | $090^\circ$ | West | $270^\circ$ |
 | South-east | $135^\circ$ | North-west | $315^\circ$ |
 
+![A compass with the eight directions and their three-figure bearings, all measured clockwise from north: north 000°, north-east 045°, east 090°, south-east 135°, south 180°, south-west 225°, west 270° and north-west 315°.](media:diagrams/bearings-compass-rose.png "Figure: three-figure bearings run clockwise from north through 360°")
+
 To measure the bearing of $B$ from $A$: draw a north line at $A$, put the protractor on $A$, and measure clockwise from north to the line $AB$. For a bearing over $180^\circ$, measure the anticlockwise angle $\theta$ from north instead and subtract it from $360^\circ$.
 
 :::note{title="ZIMSEC: compass bearings"}
@@ -60,6 +62,8 @@ If the bearing of $B$ from $A$ is $\theta$, the bearing of $A$ from $B$ is $\the
 ## Solving bearing problems
 
 Always start with a **sketch**: draw a north arrow at every point where a bearing is taken, mark the bearings, and look for a right-angled triangle.
+
+![Farai walks 5 km due east from A to C, then 8 km due north to B: AB is 9.43 km, the bearing of B from A is 032° (tan θ = 5/8), and the back bearing of A from B is 212°, measured clockwise from the north line at B.](media:diagrams/bearings-walk-east-north.png "Figure: bearings are measured clockwise from the north line at the starting point")
 
 :::worked-solution[Example 2: a boat on Lake Kariba]
 A boat sails 12 km from a harbour $H$ on a bearing of $040^\circ$. How far north and how far east of $H$ is it?

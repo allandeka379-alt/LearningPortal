@@ -42,6 +42,8 @@ For a quadratic $y = ax^2 + bx + c$:
 - The **roots** come from solving $ax^2 + bx + c = 0$, usually by factorising.
 - The **line of symmetry** is halfway between the roots, and the turning point lies on it.
 
+![Sketch of y = x² − 6x + 8: a U-shaped curve through (0, 8), crossing the x-axis at (2, 0) and (4, 0), with its minimum at (3, −1) on the dashed line of symmetry x = 3.](media:diagrams/sketch-quadratic-x2-6x-8.png "Figure: sketch with the intercepts, line of symmetry and turning point labelled")
+
 :::worked-solution[Example 1: sketch $y = x^2 - 6x + 8$]
 1. $a = 1 > 0$, so the curve is $\cup$-shaped.
 2. $y$-intercept: $(0, 8)$.
@@ -81,6 +83,8 @@ For $y = ax^3 + \ldots$ with $a > 0$, the curve starts at the **bottom left** an
 :::
 
 A **repeated** factor means the curve **touches** the $x$-axis there instead of crossing it. For $y = x^2(x - 3)$ the curve touches the axis at the origin (a maximum point) and crosses it at $x = 3$.
+
+![Sketch of y = (x + 2)(x − 1)(x − 3): a cubic that starts at the bottom left, crosses the x-axis at x = −2, rises to a maximum, passes through (0, 6), crosses at x = 1, dips to a minimum, then crosses at x = 3 and rises.](media:diagrams/sketch-cubic-three-roots.png "Figure: a cubic with three roots, crossing the axis at each")
 
 ## Reciprocal and exponential graphs (Extended)
 

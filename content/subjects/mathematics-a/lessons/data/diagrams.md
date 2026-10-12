@@ -87,6 +87,8 @@ The numbers of rainy days in a month at 11 weather stations are 3, 5, 6, 6, 7, 8
 4. Draw the box from 6 to 11 with the median at 8, the lower whisker to 3, the upper whisker to 12 (the largest value that is not an outlier), and a cross at 29.
 :::
 
+![Box-and-whisker plot of the rainy days at 11 weather stations: the box runs from Q1 = 6 to Q3 = 11 with the median at 8, the whiskers reach 3 and 12, and the value 29, above the upper fence 18.5, is marked as an outlier with a cross.](media:diagrams/box-plot-with-outlier.png "Figure: box plot with the outlier 29 beyond the upper fence 18.5")
+
 The **shape** shows in a box plot: if the median is nearer $Q_1$ and the upper whisker is longer, the data are **positively skewed** (a long tail of high values); the mirror image is negative skew; a central median with equal whiskers suggests a symmetrical distribution.
 
 ## Bar graphs, pie charts, pictograms and line graphs (ZIMSEC)

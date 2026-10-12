@@ -54,6 +54,8 @@ A straight line joining two points on a curve. Its gradient is the **average** r
 
 Different students' tangents differ slightly, so answers such as $3.8$ or $4.3$ would also be accepted for this estimate. (In the Cambridge Extended course you will meet differentiation, which gives the exact value: $4$.)
 
+![Graph of y = x² with the tangent at P(2, 4) drawn as a straight line touching the curve only at P and passing through (1, 0) and (3, 8); its gradient is 8 divided by 2, which is 4.](media:diagrams/tangent-gradient-x-squared.png "Figure: the gradient of the tangent at P estimates the gradient of the curve")
+
 :::worked-solution[Example 2: a negative gradient]
 Estimate the gradient of $y = \frac{12}{x}$ at the point $(2, 6)$.
 1. The curve is falling here, so expect a negative answer.
@@ -75,6 +77,8 @@ A kombi's distance $d$ metres after $t$ seconds is given by $d = 0.5t^2$ for $0 
 :::
 
 Compare this with the **average** speed over the whole 10 seconds: the chord from $(0, 0)$ to $(10, 50)$ has gradient $\frac{50}{10} = 5\ \text{m/s}$. At $t = 6$ the kombi is going faster than its average, because it is still speeding up.
+
+![Distance-time curve d = 0.5t² for 0 to 10 s: the tangent at t = 6 s (through (3, 0) and (10, 42)) has gradient 6 m/s, steeper than the dashed chord from (0, 0) to (10, 50), whose gradient is the average speed of 5 m/s.](media:diagrams/kombi-tangent-speed.png "Figure: the tangent gives speed at one instant, the chord gives average speed")
 
 :::example{title="A growing maize plant"}
 A graph of the height $h$ cm of a maize plant against time $t$ days is a curve. The tangent at $t = 20$ passes through $(10, 30)$ and $(30, 90)$. Its gradient is $\frac{60}{20} = 3$, so on day 20 the plant is growing at about $3\ \text{cm}$ per day.

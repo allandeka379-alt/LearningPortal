@@ -67,6 +67,8 @@ Lead compounds (from old leaded petrol) are strongly adsorbed and **poison** the
 
 A homogeneous catalyst offers a different route of two (or more) steps, each with a lower activation energy than the uncatalysed reaction. It is used up in one step and re-formed in another, so it cancels from the overall equation.
 
+![Energy profile for homogeneous catalysis: the uncatalysed route has one high peak; the catalysed route has two lower peaks with a dip between them for an intermediate, the catalyst reacting in step 1 and being regenerated in step 2, and both end at the same product energy.](media:diagrams/energy-profile-two-step-catalysis.png "Figure: homogeneous catalysis gives a two-step route with two lower activation energies")
+
 ### Oxides of nitrogen and sulfur dioxide
 
 In polluted air, nitrogen dioxide catalyses the oxidation of sulfur dioxide, a step in the formation of acid rain:

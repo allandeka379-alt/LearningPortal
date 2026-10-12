@@ -43,6 +43,8 @@ A ray of light strikes a plane mirror making an angle of $35^\circ$ with the sur
 3. The ray turns through $180^\circ - 2 \times 55^\circ = 70^\circ$.
 :::
 
+![Law of reflection: a ray meets a plane mirror at 35 degrees to the surface, so its angle of incidence from the normal is 55 degrees; the reflected ray leaves at 55 degrees on the other side of the normal. Angles are measured from the dashed normal, not from the mirror.](media:diagrams/reflection-law-35-degrees.png "Figure: angles of incidence and reflection are measured from the normal")
+
 ### Verifying the law
 
 Place a plane mirror upright along a line on paper. Draw a normal. Shine a narrow ray from a ray box at the mirror along a line at a measured angle of incidence, mark the reflected ray with crosses, and measure the angle of reflection with a protractor. Repeat for several angles: $i$ always equals $r$.
@@ -66,6 +68,8 @@ Light from an object reflects from the mirror into your eye. Your brain assumes 
 ### Constructing an image (Cambridge Supplement; ZIMSEC)
 
 To locate the image of a point object, draw the normal from the object to the mirror and extend it the same distance behind the mirror: that point is the image. Then draw reflected rays from the mirror to the eye; when extended backwards (as dashed lines) they meet at the image.
+
+![Plane mirror image: an object stands 1.5 m in front of a mirror and its image appears 1.5 m behind it, upright and the same size. A ray from the object reflects into the eye; extended backwards as a dashed line it meets at the virtual image.](media:diagrams/plane-mirror-image.png "Figure: the image is as far behind the mirror as the object is in front")
 
 ## Common mistakes
 

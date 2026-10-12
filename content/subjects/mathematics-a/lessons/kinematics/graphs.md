@@ -52,6 +52,8 @@ The displacement over any interval is the area between the graph and the time ax
 6. Average speed $= \dfrac{3720}{190} = 19.6$ m s$^{-1}$.
 :::
 
+![Velocity-time graph of a train: a line from (0, 0) up to (30, 24), horizontal to (150, 24), then down to (190, 0); the areas of the two triangles and the rectangle are 360 m, 2880 m and 480 m, so the total distance is 3720 m.](media:diagrams/vt-train-trapezium.png "Figure: the area under the velocity–time graph is the distance, 3720 m")
+
 A quicker route for step 2 to 5: the area of a trapezium is $\tfrac{1}{2}(\text{sum of parallel sides}) \times \text{height}$, here $\tfrac{1}{2}(190 + 120) \times 24 = 3720$.
 
 ## Finding an unknown from the graph
@@ -74,6 +76,8 @@ Many questions give the total distance and ask for an unknown speed or time. Wri
 4. Displacement $= 9 - 4 = 5$ m in the original direction.
 5. Distance $= 9 + 4 = 13$ m.
 :::
+
+![Velocity-time graph v = 6 - 2t from (0, 6) to (5, -4), crossing the time axis at t = 3: the area above the axis is 9 m forward and the area below is 4 m backward, so the displacement is 5 m but the distance travelled is 13 m.](media:diagrams/vt-direction-change.png "Figure: area above the axis (9 m) minus area below (4 m) gives displacement 5 m; the sum gives distance 13 m")
 
 Using $s = ut + \tfrac{1}{2}at^2$ for the whole $5$ s gives $30 - 25 = 5$ m: the **displacement**. A suvat formula never gives the distance when the direction changes.
 

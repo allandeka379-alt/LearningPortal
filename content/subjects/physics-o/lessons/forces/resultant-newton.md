@@ -62,6 +62,8 @@ A boat of mass $900\ \text{kg}$ has an engine thrust of $2400\ \text{N}$ forward
 3. The acceleration must use the **resultant** force, not the engine force alone.
 :::
 
+![Free-body diagram of a 900 kg boat: an engine thrust of 2400 N forwards and water resistance of 600 N backwards. The resultant force is 1800 N forwards, so the acceleration is 1800 divided by 900, which is 2.0 m/s squared.](media:diagrams/resultant-force-boat.png "Figure: use the resultant force in F = ma")
+
 ## Newton's third law
 
 When object A exerts a force on object B, object B exerts an **equal and opposite** force on object A. The two forces are of the same type and act on **different** objects.

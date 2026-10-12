@@ -67,6 +67,8 @@ To find the p.d. across a lamp and the current through it, connect a cell, a swi
 
 In a series circuit, the energy given to each coulomb by the source is shared between the components, so the p.d.s across them **add up** to the e.m.f. (ignoring any losses inside the source). For example, a lamp and a resistor in series with a $6.0\ \text{V}$ battery might have $4.0\ \text{V}$ and $2.0\ \text{V}$ across them.
 
+![Circuit: a 6.0 V battery in series with a lamp and a resistor; a voltmeter across each reads 4.0 V and 2.0 V, so the p.d.s across the components add up to the 6.0 V e.m.f.](media:diagrams/series-pd-add-up.png "Figure: in series the p.d.s add up to the e.m.f.")
+
 ## Common mistakes
 
 :::mistake{title="Voltage flows"}

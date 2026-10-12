@@ -53,6 +53,8 @@ Square the two shorter sides, **add**, then take the square root.
 
 Square the hypotenuse and the known side, **subtract**, then take the square root.
 
+![A 6.5 m ladder leans against a vertical wall with its foot 2.5 m from the wall on level ground: the right-angled triangle gives h² = 6.5² − 2.5² = 36, so the ladder reaches 6 m up the wall.](media:diagrams/pythagoras-ladder.png "Figure: the ladder is the hypotenuse of a right-angled triangle")
+
 :::worked-solution[Example 2: a ladder against a wall]
 A ladder 6.5 m long leans against a vertical wall. Its foot is 2.5 m from the wall on level ground. How high up the wall does it reach?
 1. The wall and the ground meet at a right angle, so the ladder is the hypotenuse.
@@ -70,6 +72,8 @@ A rectangular plot is 40 m long and 25 m wide. Find the length of its diagonal.
 ## Pythagorean triples
 
 These whole-number triples appear often in examinations, so recognising them saves time:
+
+![A right-angled triangle with sides 3, 4 and 5 and a square drawn on each side: the squares have areas 9, 16 and 25, and 9 + 16 = 25, which is Pythagoras' theorem.](media:diagrams/pythagoras-squares-3-4-5.png "Figure: the squares on the two shorter sides add up to the square on the hypotenuse")
 
 | Triple | Check |
 | --- | --- |

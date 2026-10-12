@@ -50,6 +50,8 @@ Cut the solid at a point $x$ into a thin slice of thickness $\delta x$. The slic
 3. $V = \pi \times \tfrac{32}{5} = \tfrac{32\pi}{5}$ cubic units (about 20.1).
 :::
 
+![Region under y = x^2 for 0 to 2, shown with its mirror image below the x-axis to represent the solid formed by rotating it about the x-axis: each thin slice at x is a disc of radius y = x^2, so the volume is the integral of pi y^2 dx, which is 32 pi over 5.](media:diagrams/volume-of-revolution-x-squared.png "Figure: rotating the region about the x-axis; each slice is a disc of radius x²")
+
 ## Rotation about the y-axis
 
 Rewrite the curve as $x$ in terms of $y$, square it, and use $y$-limits.
@@ -77,6 +79,8 @@ Square each function **separately**; $(y_{1} - y_{2})^{2}$ is wrong.
 4. $= \pi\Big[56x - 6x^{3} + \tfrac{x^{5}}{5}\Big]_{-2}^{2} = 2\pi\left(112 - 48 + \tfrac{32}{5}\right)$.
 5. $V = 2\pi \times \tfrac{352}{5} = \tfrac{704\pi}{5}$ cubic units.
 :::
+
+![Region between y = 9 - x^2 and the line y = 5 for x from -2 to 2, with its reflection in the x-axis: rotating about the x-axis gives a solid with a hole, with outer radius 9 - x^2 and inner radius 5, so the volume is pi times the integral of (9 - x^2)^2 minus 25.](media:diagrams/volume-of-revolution-washer.png "Figure: outer radius 9 − x², inner radius 5; subtract the inner solid")
 
 Because the integrand is even (it has only even powers of $x$), integrating from 0 to 2 and doubling gives the same result with less arithmetic.
 

@@ -26,6 +26,8 @@ Springy carbon (or metal) contacts that press against the commutator and carry t
 
 A rectangular coil carrying a current sits between the poles of a magnet, with its plane along the field.
 
+![End view of a d.c. motor coil with its plane along the magnetic field between a north pole on the left and a south pole on the right. Current goes into the page on the left side and out on the right side, so Fleming's left-hand rule gives a downward force on the left and an upward force on the right, turning the coil anticlockwise.](media:diagrams/dc-motor-coil-forces.png "Figure: the forces on opposite sides of the coil give a turning effect")
+
 - The current flows **one way** along one side of the coil and **the opposite way** along the other side.
 - By Fleming's left-hand rule, one side is pushed **up** and the other side is pushed **down**.
 - These two forces make a **turning effect** (a moment) about the axle, so the coil rotates.

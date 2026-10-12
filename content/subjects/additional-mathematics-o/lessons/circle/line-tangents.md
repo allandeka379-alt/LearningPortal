@@ -68,6 +68,8 @@ The discriminant of the quadratic tells you how many points the line and circle 
 5. The tangent is $3x + 4y - 19 = 0$.
 :::
 
+![Circle (x - 2)^2 + (y + 3)^2 = 25 with centre C(2, -3) and the tangent 3x + 4y - 19 = 0 touching it at P(5, 1); the tangent is perpendicular to the radius CP, which has gradient 4/3 while the tangent has gradient -3/4.](media:diagrams/circle-tangent-radius.png "Figure: the tangent at P is perpendicular to the radius CP")
+
 ## Tangents from an external point
 
 From a point $P$ outside a circle, two tangents can be drawn, and they have equal length. If $T$ is a point of contact, triangle $CTP$ has a right angle at $T$, so by Pythagoras

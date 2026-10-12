@@ -104,6 +104,8 @@ When one side is a straight line, such as $|2x - 1| < x + 4$, sketch both graphs
 4. Answer: $-1 < x < 5$. The intersection points are $(-1, 3)$ and $(5, 9)$, where the line meets the two arms of the V.
 :::
 
+![Graphs of the V-shaped y = |2x - 1| with vertex (1/2, 0) and the line y = x + 4: they meet at (-1, 3) and (5, 9), and the V lies below the line between x = -1 and x = 5, so |2x - 1| < x + 4 for -1 < x < 5.](media:diagrams/modulus-v-and-line.png "Figure: the V lies below the line between the intersections, so −1 < x < 5")
+
 :::keyfact{title="ZIMSEC and Cambridge"}
 Both boards examine $|ax + b|$, equations and inequalities. Cambridge sets these on Papers 2 and 3. ZIMSEC also asks for $y = |f(x)|$ when $f$ is not linear (see transformations of graphs).
 :::

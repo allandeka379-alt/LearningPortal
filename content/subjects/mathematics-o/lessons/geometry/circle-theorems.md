@@ -59,6 +59,8 @@ $O$ is the centre of a circle. A tangent from the point $P$ touches the circle a
 2. Angle $OPT = 180^\circ - 90^\circ - 58^\circ = 32^\circ$ (angles in a triangle).
 :::
 
+![Left: AB is a diameter and C is on the circle, so angle ACB is 90°; with angle CAB 34°, angle ABC is 56°. Right: the tangent at T meets the radius OT at 90°; with angle TOP 58°, angle OPT is 32°.](media:diagrams/circle-semicircle-and-tangent.png "Figure: the angle in a semicircle and the tangent-radius angle are both 90°")
+
 :::worked-solution[Example 3: the angle at the centre]
 $A$ and $B$ are points on a circle with centre $O$, and angle $AOB = 130^\circ$. $C$ is on the major arc $AB$ and $D$ is on the minor arc $AB$. Find angle $ACB$ and angle $ADB$.
 1. Angle $ACB = 130^\circ \div 2 = 65^\circ$ (angle at the centre is twice the angle at the circumference).
@@ -70,6 +72,8 @@ $A$ and $B$ are points on a circle with centre $O$, and angle $AOB = 130^\circ$.
 :::example{title="Angles in the same segment"}
 $A$, $B$, $C$ and $D$ lie on a circle, with $C$ and $D$ on the same side of the chord $AB$. Angles $ACB$ and $ADB$ are both subtended by $AB$ from the same segment, so they are equal. If angle $ACB = 40^\circ$, then angle $ADB = 40^\circ$ (angles in the same segment are equal).
 :::
+
+![A circle with centre O and chord AB: angle AOB at the centre is 130°; angle ACB at the circumference on the major arc is half of it, 65°; angle ADB on the minor arc is 115°, and 65° + 115° = 180° because ACBD is a cyclic quadrilateral.](media:diagrams/circle-angle-at-centre.png "Figure: the angle at the centre is twice the angle at the circumference")
 
 :::worked-solution[Example 4: a cyclic quadrilateral]
 $ABCD$ is a cyclic quadrilateral with angle $A = (3x + 10)^\circ$ and angle $C = 2x^\circ$. Find both angles.

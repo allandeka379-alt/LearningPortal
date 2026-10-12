@@ -52,6 +52,8 @@ Use any two of these three rays from the top of the object:
 
 Where the rays meet is the top of the image.
 
+![Ray diagram for a converging lens with the object beyond 2F (200 units from the lens, focal length 80): a ray parallel to the axis passes through the far focus and a ray through the centre goes straight on; they meet at a real image 133 units behind the lens, inverted and diminished.](media:diagrams/lens-ray-diagram-beyond-2f.png "Figure: converging lens with the object beyond 2F")
+
 ## Describing images
 
 Use three pairs of words: **enlarged / same size / diminished**, **upright / inverted** and **real / virtual**. A **real** image is formed where light rays actually meet and can be shown on a screen; a **virtual** image is where rays only appear to come from, found by tracing diverging rays backwards, and cannot be shown on a screen.
@@ -70,6 +72,8 @@ A distant tree is far beyond 2F of a camera lens. The image formed on the sensor
 ### The magnifying glass (Cambridge Supplement; ZIMSEC)
 
 When an object is placed **closer to a converging lens than its focal length**, the rays leave the lens diverging. They never meet, but traced backwards they appear to come from a point behind the object: the image is **virtual, upright and enlarged**. This is a magnifying glass. (ZIMSEC describes magnification without calculations and does not require images formed by diverging lenses.)
+
+![Ray diagram for a converging lens used as a magnifying glass: the object is 50 units from the lens, inside the focal length of 80. The rays leave the lens diverging; traced backwards as dashed lines they appear to come from an upright, enlarged, virtual image on the same side as the object.](media:diagrams/lens-ray-diagram-magnifier.png "Figure: a converging lens as a magnifying glass")
 
 ## Correcting sight (Cambridge Supplement; ZIMSEC)
 

@@ -40,6 +40,8 @@ $$
 
 - **Cells in series**: their e.m.f.s add (a cell connected the wrong way round subtracts).
 
+![Series circuit: a 6.0 V battery with 4.0 ohm and 8.0 ohm resistors in one loop. The same 0.50 A flows everywhere, and the p.d.s of 2.0 V and 4.0 V add up to 6.0 V.](media:diagrams/series-circuit-example.png "Figure: current is the same in series; p.d.s add")
+
 :::worked-solution[A series circuit]
 A $4.0\ \Omega$ resistor and an $8.0\ \Omega$ resistor are connected in series to a $6.0\ \text{V}$ battery.
 
@@ -60,6 +62,8 @@ $$
 \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2}
 $$
 :::
+
+![Parallel circuit: a 12 V supply connected directly across a 6.0 ohm and a 3.0 ohm resistor. Each branch has 12 V across it; the branch currents are 2.0 A and 4.0 A, which add to the 6.0 A supply current. Combined resistance 2.0 ohms.](media:diagrams/parallel-circuit-example.png "Figure: same p.d. in each branch; branch currents add")
 
 :::worked-solution[Two resistors in parallel]
 A $6.0\ \Omega$ resistor and a $3.0\ \Omega$ resistor are connected in parallel to a $12\ \text{V}$ supply.

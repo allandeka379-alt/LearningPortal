@@ -56,6 +56,8 @@ A child of weight $300\ \text{N}$ sits $2.0\ \text{m}$ from the pivot of a see-s
 3. Balanced: $750d = 600$, so $d = 0.80\ \text{m}$ from the pivot on the other side.
 :::
 
+![See-saw balanced about a pivot: the child's 300 N weight acts 2.0 m to the left and her father's 750 N weight acts 0.80 m to the right. The anticlockwise moment, 300 times 2.0, is 600 N m and equals the clockwise moment, 750 times 0.80, also 600 N m.](media:diagrams/moments-seesaw-balance.png "Figure: a see-saw balances when clockwise and anticlockwise moments are equal")
+
 :::worked-solution[More than one force on a side]
 A uniform beam is pivoted at its centre. On the left, $4.0\ \text{N}$ hangs $30\ \text{cm}$ from the pivot. On the right, $2.0\ \text{N}$ hangs $20\ \text{cm}$ from the pivot and a third weight $W$ hangs $40\ \text{cm}$ from the pivot.
 
@@ -65,6 +67,8 @@ A uniform beam is pivoted at its centre. On the left, $4.0\ \text{N}$ hangs $30\
 :::
 
 Because the beam is uniform and pivoted at its centre, its own weight acts at the pivot and has no moment. If the pivot is not at the centre, the beam's weight acting at its centre of gravity must be included as one of the moments.
+
+![Uniform beam pivoted at its centre: 4.0 N hangs 30 cm to the left; 2.0 N hangs 20 cm and an unknown weight W hangs 40 cm to the right. Anticlockwise moment is 120 N cm, so 40 plus 40W equals 120 and W is 2.0 N.](media:diagrams/moments-beam-three-weights.png "Figure: balancing a beam with more than one weight on a side")
 
 ## Verifying the principle of moments
 

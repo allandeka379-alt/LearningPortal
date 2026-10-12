@@ -58,6 +58,8 @@ The standardised value $z$ says how many standard deviations $x$ lies from the m
 5. $= 0.7734 - (1 - 0.9332) = 0.7734 - 0.0668 = 0.7066$, or $0.707$ to 3 s.f.
 :::
 
+![Normal curve for heights X ~ N(165, 64) with the area between 153 cm (z = -1.5) and 171 cm (z = 0.75) shaded: the shaded area is the probability 0.7066.](media:diagrams/normal-area-between-two-heights.png "Figure: P(153 < X < 171) is the shaded area, 0.7066")
+
 Sketch for step 4: a bell curve centred on 165 with the area shaded from 153 (on the left, 1.5 standard deviations below) to 171 (on the right, 0.75 above). The shaded part is "everything left of 171" minus "everything left of 153".
 
 :::worked-solution[Example 2: a machine fills cans with X ml of drink, where X ~ N(330, 2.5²). A can is underweight if it holds less than 326 ml. Find the probability that a can is underweight, and the expected number of underweight cans in a crate of 500]
@@ -65,6 +67,8 @@ Sketch for step 4: a bell curve centred on 165 with the area shaded from 153 (on
 2. $\mathrm{P}(X < 326) = \mathrm{P}(Z < -1.6) = 1 - \Phi(1.6) = 1 - 0.9452 = 0.0548$.
 3. Expected number in 500 cans: $500 \times 0.0548 = 27.4$, so about 27 cans.
 :::
+
+![Normal curve for can volumes X ~ N(330, 2.5 squared) with the lower tail below 326 ml (z = -1.6) shaded: this is the probability that a can is underweight, 0.0548.](media:diagrams/normal-lower-tail-underweight-cans.png "Figure: the shaded lower tail, P(X < 326) = 0.0548")
 
 :::worked-solution[Example 3: for the same machine, find the probability that a can holds within 3 ml of 330 ml, and the probability that three cans chosen at random are all underweight]
 1. Within 3 ml means $327 < X < 333$: $z = \pm\frac{3}{2.5} = \pm 1.2$.

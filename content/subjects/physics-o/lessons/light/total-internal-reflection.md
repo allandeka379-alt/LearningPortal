@@ -26,6 +26,8 @@ The complete reflection of light back into a denser medium when it meets the bou
 
 Consider light inside a glass block travelling towards the boundary with air:
 
+![Three rays inside glass (refractive index 1.50, critical angle 41.8 degrees) meeting the glass-air boundary. At 30 degrees most light refracts out, bending away from the normal to 49 degrees; at 41.8 degrees the refracted ray skims along the surface; at 60 degrees all the light is reflected back into the glass.](media:diagrams/tir-three-angles.png "Figure: the critical angle separates refraction from total internal reflection")
+
 1. At small angles of incidence, most light **refracts out** into the air, bending away from the normal, and a little is reflected inside.
 2. As the angle of incidence increases, the refracted ray bends further from the normal. At the **critical angle**, the refracted ray skims along the surface (angle of refraction $90^\circ$).
 3. Above the critical angle, **no light** refracts out: all of it is reflected back into the glass. This is total internal reflection.
@@ -58,6 +60,8 @@ Diamond has a very high refractive index (about 2.4), so its critical angle is s
 ### Optical fibres
 
 An optical fibre is a very thin, flexible strand of glass. Light entering one end hits the side at angles larger than the critical angle and is totally internally reflected again and again along the fibre, even round bends, with very little loss. Uses:
+
+![Optical fibre: a ray zigzags along a glass core, meeting the wall each time at an angle of incidence of 60 degrees, which is greater than the critical angle of about 42 degrees, so it is totally internally reflected every time and stays inside.](media:diagrams/optical-fibre-tir.png "Figure: light is trapped in a fibre by repeated total internal reflection")
 
 - **telecommunications**: fibres carry telephone, TV and internet signals as pulses of light or infrared, with huge amounts of data and little loss over long distances;
 - **medicine**: an **endoscope** uses a bundle of fibres to carry light into the body and an image back out.

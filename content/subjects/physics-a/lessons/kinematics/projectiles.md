@@ -77,6 +77,9 @@ A goalkeeper kicks a ball from the ground at $18\ \text{m s}^{-1}$ at $35^\circ$
 2. Time of flight: $T = \dfrac{2 \times 10.32}{9.81} = 2.10\ \text{s}$.
 3. Range: $R = 14.74 \times 2.105 = 31.0\ \text{m}$.
 4. Maximum height: $H = \dfrac{10.32^2}{2 \times 9.81} = 5.43\ \text{m}$.
+
+![Path of the goalkeeper's kick (18 m/s at 35° above the horizontal): a parabola of range 31.0 m and maximum height 5.43 m, with a constant horizontal velocity component 14.7 m/s and a vertical component that is zero at the top and negative on the way down.](media:diagrams/kick-projectile-path.png "Figure: a parabolic path; horizontal velocity stays constant while vertical velocity changes")
+
 :::
 
 Carry unrounded values through the calculation (store them in the calculator) and round only the final answers.

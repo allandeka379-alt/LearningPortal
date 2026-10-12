@@ -62,9 +62,13 @@ Draw both waves at an instant, then a quarter of a period later (each having mov
 
 **A string fixed at both ends** must have a node at each end. The fundamental is one loop: $L = \lambda/2$. The $n$th harmonic has $n$ loops: $L = n\lambda/2$, so $f_n = \dfrac{nv}{2L}$ with $n = 1, 2, 3, \ldots$
 
+![A string 0.80 m long fixed at both ends, with waves travelling at 120 m/s: the first three stationary-wave patterns have 1, 2 and 3 loops, with nodes at the ends and between loops, wavelengths 1.60 m, 0.80 m and 0.53 m, and frequencies 75 Hz, 150 Hz and 225 Hz.](media:diagrams/string-harmonics.png "Figure: the first three harmonics of a string fixed at both ends")
+
 **A pipe closed at one end** has a node at the closed end (air cannot move) and an antinode at the open end. The fundamental is a quarter wavelength: $L = \lambda/4$, so $f_1 = \dfrac{v}{4L}$. Only odd harmonics occur: $3f_1$, $5f_1$, ...
 
 **A pipe open at both ends** has antinodes at both ends: $L = \lambda/2$ for the fundamental, $f_1 = \dfrac{v}{2L}$, and all harmonics occur.
+
+![Stationary waves in a 0.33 m pipe with sound at 340 m/s: a pipe closed at one end has a node at the closed end and an antinode at the open end, giving 258 Hz (a quarter wavelength) then 773 Hz (three quarters of a wavelength); a pipe open at both ends has antinodes at both ends, giving 515 Hz for a half wavelength.](media:diagrams/pipe-standing-waves.png "Figure: the displacement pattern in closed and open pipes (L = 0.33 m)")
 
 | System | Ends | Fundamental | Frequencies present |
 | --- | --- | --- | --- |

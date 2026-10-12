@@ -58,6 +58,8 @@ Because the area of each bar represents frequency, the **height** of a bar is th
 4. The tallest bar ($20 \le t < 40$) is the **modal class**: it has the greatest frequency per minute of width.
 :::
 
+![Histogram of the homework times of 80 learners with unequal classes: the bar heights are frequency densities 0.8, 1.4, 1.5, 0.9 and 0.25 for the classes 0-10, 10-20, 20-40, 40-60 and 60-100 minutes, and the area of each bar equals its frequency 8, 14, 30, 18 and 10; the 20 to 40 class is the modal class.](media:diagrams/histogram-unequal-class-widths.png "Figure: bar height is frequency density, so the area of each bar is its frequency")
+
 To read a frequency from a histogram, reverse the process: **frequency = frequency density × class width**.
 
 :::worked-solution[Example 2: reading a frequency from a bar]
@@ -95,6 +97,8 @@ With straight-line segments, a reading is the same as **linear interpolation** w
 4. $\text{IQR} \approx 44.0 - 27.8 = 16.2$ kg.
 5. The 90th percentile is the 108th value, which is exactly the cumulative frequency at 50 kg: 50 kg.
 :::
+
+![Cumulative frequency graph of the masses of 120 goats through the points (10, 0), (20, 9), (30, 36), (40, 78), (50, 108) and (70, 120): reading across from 30, 60 and 90 gives the lower quartile 27.8 kg, the median 35.7 kg and the upper quartile 44.0 kg.](media:diagrams/cumulative-frequency-goat-masses.png "Figure: reading across from 30, 60 and 90 on the cumulative frequency graph gives Q₁, the median and Q₃")
 
 :::worked-solution[Example 4: how many goats are heavier than 45 kg?]
 1. Up to 40 kg there are 78 goats and up to 50 kg there are 108.
