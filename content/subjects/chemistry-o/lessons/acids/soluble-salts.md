@@ -59,6 +59,8 @@ When choosing the solid, remember the reactivity series. Very reactive metals su
 
 This method is used with a metal (such as magnesium, zinc or iron), an insoluble base (a metal oxide or hydroxide) or an insoluble carbonate.
 
+![Flow chart for making a soluble salt from an acid and an excess of an insoluble solid: warm the dilute acid, add the solid until some is left over, filter off the excess, heat the filtrate until crystals form on a cold glass rod, cool so crystals form, then filter, wash with a little cold distilled water and dry the crystals.](media:diagrams/soluble-salt-preparation-flow.png "Figure: Method A, acid plus excess insoluble solid")
+
 1. Pour some dilute acid into a beaker and warm it gently (this speeds up the reaction with an oxide).
 2. Add the solid a little at a time, stirring, until **no more dissolves** and some is left over. With a metal or a carbonate, fizzing stops. The excess shows that all the acid has reacted.
 3. **Filter** to remove the excess solid. The filtrate is a solution of the salt in water.

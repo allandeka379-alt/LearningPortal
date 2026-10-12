@@ -57,6 +57,8 @@ $q$ in kJ; $n$ = amount in moles of fuel burnt, water formed or solute dissolved
 
 **Combustion** of a liquid fuel such as ethanol or paraffin:
 
+![Apparatus for the enthalpy change of combustion: a spirit burner containing the fuel, weighed before and after, heats a copper can holding a measured mass of water, with a thermometer and stirrer in the water and a draught shield around the flame; the rise in water temperature gives q = m c ΔT.](media:diagrams/calorimetry-spirit-burner-apparatus.png "Figure: measuring the energy released when a fuel burns")
+
 - a **spirit burner** containing the fuel, with a cap to stop the fuel evaporating, weighed before and after burning;
 - a **copper can** (calorimeter) containing a measured volume of water, clamped a few centimetres above the wick (copper conducts heat well to the water);
 - a **thermometer** and a stirrer;

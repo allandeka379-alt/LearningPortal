@@ -47,6 +47,8 @@ A reaction that needs light: here, ultraviolet light provides the activation ene
 
 All the bonds in an alkane are strong single covalent bonds, $\ce{C-C}$ and $\ce{C-H}$, and there is no functional group for other substances to attack. Alkanes do not react with acids, alkalis or most other reagents, and they are insoluble in water. They have two important reactions: **combustion** and, in ultraviolet light, **substitution** by chlorine.
 
+![Displayed formulae of the first four alkanes, methane CH4, ethane C2H6, propane C3H8 and butane C4H10: every carbon atom has four single bonds, each straight-chain alkane differs from the next by one CH2 group, and the molecular formula fits CnH2n+2.](media:diagrams/alkanes-displayed-formulae.png "Figure: methane, ethane, propane and butane; each carbon forms four single bonds")
+
 ## Combustion
 
 ### Complete combustion

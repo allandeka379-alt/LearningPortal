@@ -74,6 +74,8 @@ A small rise in temperature makes many more particles reach the activation energ
 :::example{title="Example 1: lumps or powder?"}
 Two flasks contain the same volume and concentration of dilute hydrochloric acid. One gets 5 g of marble chips, the other 5 g of powdered marble. The powder fizzes much more vigorously.
 
+![Graph of mass of carbon dioxide lost against time for 5 g of marble: the powder curve is steeper and levels off sooner than the chips curve, but both level off at the same 2.2 g because the same amount of calcium carbonate is used and the acid is in excess.](media:diagrams/rate-marble-chips-vs-powder.png "Figure: powder reacts faster (steeper curve) but gives the same total CO₂")
+
 **Explanation (Supplement):** powdering the marble increases its surface area, so many more calcium carbonate particles are exposed to the acid particles. The frequency of collisions between acid particles and the solid increases, so the rate increases. The same total amount of carbon dioxide is made in each flask, because the masses of marble and the amounts of acid are the same.
 :::
 

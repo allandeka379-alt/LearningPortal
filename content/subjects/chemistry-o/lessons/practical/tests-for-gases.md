@@ -76,7 +76,13 @@ $$
 | chlorine | electrolysis of concentrated sodium chloride solution or molten chlorides (at the positive electrode) |
 | sulfur dioxide | burning sulfur in air; a sulfite with a dilute acid |
 
+![Three ways of collecting a gas: over water in an upturned jar for gases that are insoluble in water such as hydrogen and oxygen; by downward delivery into an upright jar for gases denser than air such as carbon dioxide, chlorine and sulfur dioxide; and by upward delivery into an upturned jar for gases less dense than air such as hydrogen and ammonia.](media:diagrams/gas-collection-methods.png "Figure: choosing how to collect a gas")
+
 Chlorine and sulfur dioxide are toxic, and ammonia is harmful, so they are made in small amounts in a fume cupboard.
+
+## Collecting the gas
+
+How a gas is collected depends on its **solubility** and its **density** compared with air (the average relative molecular mass of air is about 29). A gas that is insoluble or only slightly soluble in water can be collected **over water**, which also shows when the jar is full. A gas that is denser than air (carbon dioxide, chlorine, sulfur dioxide, hydrogen chloride) can be collected by **downward delivery** into an upright jar. A gas that is less dense than air (hydrogen, ammonia) is collected by **upward delivery** into an inverted jar. Ammonia and hydrogen chloride are very soluble in water, so they cannot be collected over water. A gas syringe can also be used to measure the volume of any gas as it forms.
 
 ## Worked examples
 

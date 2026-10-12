@@ -44,6 +44,8 @@ The steepness of a line on a graph: the change in the vertical quantity divided 
 
 **Apparatus (in words).** The reactants are mixed in a conical flask closed with a bung. A delivery tube leads to a **gas syringe**, whose plunger is pushed out as gas collects. (Instead, the gas can be collected in an upturned measuring cylinder or burette filled with water and standing in a trough of water.) A stopwatch is started as the reactants are mixed and the volume is read every 10 or 20 seconds.
 
+![Apparatus for measuring the volume of gas: magnesium and dilute hydrochloric acid in a conical flask closed with a bung, a delivery tube leading to a gas syringe whose plunger moves out as hydrogen collects, with the volume read at regular times.](media:diagrams/measuring-rates-gas-syringe.png "Figure: following a reaction by collecting the gas in a gas syringe")
+
 A typical reaction is magnesium with dilute hydrochloric acid:
 
 $$
@@ -58,6 +60,9 @@ $$
 1. Average rate in the first 20 s $= \dfrac{36}{20} = 1.8\ \text{cm}^3/\text{s}$.
 2. Average rate from 20 s to 40 s $= \dfrac{56 - 36}{40 - 20} = \dfrac{20}{20} = 1.0\ \text{cm}^3/\text{s}$: slower, because the acid is being used up.
 3. The volume stops changing at 60 s, so the reaction has finished. Average rate for the whole reaction $= \dfrac{62}{60} = 1.03\ \text{cm}^3/\text{s}$ (3 significant figures).
+
+![Volume of hydrogen against time from the worked example: 0, 20, 36, 48, 56, 60, 62, 62 cm³ at 10 s intervals; the curve is steepest at the start (average rate 1.8 cm³/s over the first 20 s), the gradient falls as the acid is used up and the curve is flat at 62 cm³ from 60 s when the reaction has finished.](media:diagrams/measuring-rates-volume-time-graph.png "Figure: the rate graph from Example 1; the dashed line shows the average rate over the first 20 s")
+
 :::
 
 ## Method 2: measuring the loss in mass

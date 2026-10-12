@@ -48,6 +48,8 @@ Fuming sulfuric acid, $\ce{H2S2O7}$, formed when sulfur trioxide dissolves in co
 
 Sulfur dioxide is made in either of two ways:
 
+![Flow chart of the Contact process: sulfur is burned or sulfide ore roasted in air to make sulfur dioxide, the gases are cleaned and dried, sulfur dioxide and oxygen react over a vanadium(V) oxide catalyst at about 450 °C and 2 atm to make sulfur trioxide, which is absorbed in 98% sulfuric acid to form oleum, and water is then added to make concentrated sulfuric acid.](media:diagrams/contact-process-flow.png "Figure: the Contact process in three stages")
+
 - **burning sulfur** in air: $\ce{S(s) + O2(g) -> SO2(g)}$. Much of this sulfur is removed from natural gas and crude oil when they are purified.
 - **roasting sulfide ores**, for example $\ce{2ZnS + 3O2 -> 2ZnO + 2SO2}$ for zinc sulfide or $\ce{4FeS2 + 11O2 -> 2Fe2O3 + 8SO2}$ for iron pyrites.
 

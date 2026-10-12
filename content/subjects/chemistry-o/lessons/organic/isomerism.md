@@ -37,6 +37,8 @@ A carbon chain with at least one carbon atom joined to the side of the main chai
 
 Isomers are easiest to find by drawing only the carbon atoms (the **carbon skeleton**) and adding the hydrogen atoms afterwards, so that every carbon has four bonds.
 
+![Displayed formulae of the two isomers of C4H10: butane, a straight chain of four carbon atoms with a boiling point of −1 °C, and methylpropane, a chain of three carbon atoms with a CH3 branch on the middle carbon and a boiling point of −12 °C; the same molecular formula but different structural formulae.](media:diagrams/isomers-butane-methylpropane.png "Figure: structural isomers of C₄H₁₀")
+
 ### The isomers of $\ce{C4H10}$ (Supplement and ZIMSEC)
 
 ```

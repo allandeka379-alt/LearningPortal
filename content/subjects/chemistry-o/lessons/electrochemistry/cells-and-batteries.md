@@ -39,6 +39,8 @@ A measure of how strongly the cell pushes electrons round the circuit, measured 
 
 **Apparatus (in words).** Clean a strip of zinc and a strip of copper with sandpaper. Stand them in a beaker of dilute sulfuric acid so that they do not touch. Join them with wires to a voltmeter (or to a small bulb or LED).
 
+![A simple cell: a zinc strip and a copper strip in dilute sulfuric acid joined through a voltmeter; zinc, the more reactive metal, loses electrons and dissolves, so it is the negative electrode, the electrons flow through the wire from zinc to copper, and hydrogen ions gain electrons at the copper, which is the positive electrode, forming hydrogen bubbles.](media:diagrams/simple-cell-zinc-copper.png "Figure: a zinc–copper cell; electrons flow through the wire from the more reactive metal")
+
 **What happens.**
 
 - Zinc is more reactive than copper, so zinc atoms give up electrons more readily. Zinc slowly dissolves as zinc ions: $\ce{Zn -> Zn^2+ + 2e-}$. This is **oxidation**, and it makes zinc the **negative electrode**.

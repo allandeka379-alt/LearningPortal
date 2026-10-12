@@ -48,6 +48,8 @@ The steepness of a line: change in the $y$ quantity divided by the change in the
 4. Plot each point accurately with a small cross.
 5. Draw a straight line or a smooth curve of best fit, ignoring anomalous points.
 
+![Volume of gas against time from the lesson's magnesium and acid experiment: crosses at 0, 28, 48, 62, 70, 72 and 72 cm³ every 20 s with a smooth curve of best fit through them, steepest at the start (28 cm³ in the first 20 s, 1.4 cm³/s) and level at 72 cm³ from 100 s when the magnesium is used up.](media:diagrams/plotting-volume-time-curve.png "Figure: points plotted as crosses with one smooth curve of best fit")
+
 :::worked-solution[Example 1: describing a volume–time graph]
 Magnesium ribbon reacts with excess acid. The volume of hydrogen is recorded every 20 s.
 

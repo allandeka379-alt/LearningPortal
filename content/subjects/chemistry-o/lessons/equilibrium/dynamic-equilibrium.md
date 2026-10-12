@@ -49,6 +49,8 @@ Suppose only reactants are put in a sealed flask.
 
 On a graph of concentration against time, the reactant line falls and the product line rises until both become flat.
 
+![Two schematic graphs for a reversible reaction in a closed container: on the left the reactant concentration falls and the product concentration rises until both become constant (not equal) at equilibrium; on the right the forward rate falls and the reverse rate rises until they are equal at the same moment.](media:diagrams/dynamic-equilibrium-graphs.png "Figure: at equilibrium the concentrations stop changing because the forward and reverse rates are equal")
+
 ## The iodine sealed tube (ZIMSEC)
 
 A few crystals of iodine are sealed inside a glass tube, and the tube is warmed in a water bath. Purple iodine vapour forms above the crystals. After a few minutes the colour of the vapour stops getting deeper, although crystals are still present:

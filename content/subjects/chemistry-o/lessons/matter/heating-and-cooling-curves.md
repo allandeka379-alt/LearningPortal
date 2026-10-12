@@ -39,6 +39,8 @@ For a **pure** substance, the temperature stays constant during a change of stat
 
 Imagine ice from a freezer at $-20\ ^\circ\text{C}$ heated steadily until it becomes steam above $100\ ^\circ\text{C}$. The curve has five sections:
 
+![Heating curve of water from ice at −20 °C to steam: temperature rises from A to B, stays flat at 0 °C from B to C while ice melts, rises from C to D (0 to 100 °C), stays flat at 100 °C from D to E while water boils (a longer flat section than melting), then steam warms from E to F.](media:diagrams/heating-curve-water.png "Figure: heating curve of water; the flat sections are the changes of state")
+
 | Section | What the graph does | State(s) present | What is happening |
 | --- | --- | --- | --- |
 | A to B | Rises from $-20\ ^\circ\text{C}$ to $0\ ^\circ\text{C}$ | Solid | Ice warms up; its particles vibrate faster |

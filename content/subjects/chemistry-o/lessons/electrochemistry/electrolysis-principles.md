@@ -68,6 +68,8 @@ A simple electrolysis circuit has these parts:
 - two **graphite electrodes** dipping into the electrolyte: the one joined to the positive terminal is the anode, the one joined to the negative terminal is the cathode;
 - the **electrolyte** in a container: a crucible or boiling tube for a molten salt, a beaker for a solution.
 
+![Electrolysis of molten lead(II) bromide: graphite electrodes dip into the melt, connected through a bulb to a d.c. supply; positive lead ions move to the negative cathode and form molten lead, negative bromide ions move to the positive anode and form brown bromine vapour.](media:diagrams/electrolysis-molten-lead-bromide-cell.png "Figure: an electrolytic cell for molten lead(II) bromide")
+
 ## What happens at the electrodes
 
 - **At the cathode (−):** positive ions are attracted. They **gain electrons** and become atoms. This is **reduction**. Metals (or hydrogen) are formed at the cathode.

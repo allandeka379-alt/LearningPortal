@@ -60,7 +60,9 @@ The temperature at which a pure liquid turns into a gas throughout the liquid, w
 
 ## The particles in each state
 
-Particle diagrams are usually drawn as circles in a box. In words, they show this:
+Particle diagrams are usually drawn as circles in a box. The figure shows them, and the table lists the details:
+
+![Particle diagrams of the three states: in a solid the particles are in a regular pattern and touching; in a liquid they are close together in an irregular arrangement; in a gas they are far apart and move randomly and quickly in all directions.](media:diagrams/states-of-matter-particles.png "Figure: the arrangement of particles in a solid, a liquid and a gas")
 
 | | Solid | Liquid | Gas |
 | --- | --- | --- | --- |

@@ -86,6 +86,8 @@ The volume of hydrogen is **twice** the volume of oxygen. At first the oxygen vo
 
 Equal volumes of gases at the same temperature and pressure contain equal numbers of molecules.
 
+![Hofmann voltameter electrolysing acidified water: hydrogen collects at the negative electrode and oxygen at the positive electrode, and the volume of hydrogen, 40.0 cm3, is twice the volume of oxygen, 20.0 cm3, which shows the formula of water is H2O.](media:diagrams/electrolysis-hofmann-voltameter.png "Figure: a Hofmann voltameter; the gas volumes are read from the scale beside each tube")
+
 :::worked-solution[Example 1: from gas volumes to a formula]
 After ten minutes a Hofmann voltameter holds $40.0\ \text{cm}^3$ of hydrogen and $20.0\ \text{cm}^3$ of oxygen.
 

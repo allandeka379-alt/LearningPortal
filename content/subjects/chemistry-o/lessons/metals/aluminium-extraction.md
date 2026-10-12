@@ -44,6 +44,8 @@ For electrolysis, the ions must be free to move, so the aluminium oxide must be 
 - The **cathode** (negative electrode) is the carbon (graphite) lining of the steel tank.
 - The **anodes** (positive electrodes) are large blocks of carbon (graphite) that dip into the electrolyte.
 
+![Electrolysis cell for aluminium: purified aluminium oxide dissolved in molten cryolite at about 950 degrees Celsius in a steel tank lined with carbon, which is the negative cathode; carbon anodes dip in from above; aluminium ions gain electrons to form molten aluminium that sinks to the bottom and is tapped off, oxide ions lose electrons to form oxygen which burns the carbon anodes away as carbon dioxide.](media:diagrams/aluminium-electrolysis-cell.png "Figure: the cell used to extract aluminium")
+
 :::keyfact{title="The role of cryolite"}
 Dissolving aluminium oxide in molten cryolite **lowers the operating temperature** from over 2000 °C to about 950 °C, saving a great deal of energy, and the solution **conducts electricity better** than molten aluminium oxide alone.
 :::

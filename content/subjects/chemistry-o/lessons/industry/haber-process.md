@@ -64,6 +64,8 @@ The gases are purified first, because impurities such as sulfur compounds would 
 5. The mixture is **cooled**. Ammonia liquefies at $-33\ ^\circ\text{C}$, while nitrogen ($-196\ ^\circ\text{C}$) and hydrogen ($-253\ ^\circ\text{C}$) stay as gases, so liquid ammonia is run off.
 6. The unreacted nitrogen and hydrogen are **recycled** to the converter, so almost all of them are eventually turned into ammonia.
 
+![Flow chart of the Haber process: nitrogen from air and hydrogen from methane and steam are mixed 1 to 3 by volume and compressed to about 200 atm, pass over an iron catalyst at about 450 °C in the converter where about 15% becomes ammonia, are cooled so that ammonia liquefies and is run off, and the unreacted nitrogen and hydrogen are recycled back to the compressor.](media:diagrams/haber-process-flow.png "Figure: the Haber process; unreacted gases are recycled")
+
 ## Why these conditions? (Supplement)
 
 :::worked-solution[Example 1: explaining the temperature and pressure]

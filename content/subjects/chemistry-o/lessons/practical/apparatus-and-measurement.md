@@ -56,6 +56,8 @@ A beaker or conical flask has rough volume markings only: never use one to measu
 3. Estimate to the nearest **half division** if the reading lies between two marks.
 4. Record the value with its unit, to the precision of the instrument.
 
+![Two scale readings worked out in the lesson: a thermometer with one small division equal to 1 degree Celsius whose liquid stops halfway between the third and fourth marks above 20 degrees, reading 23.5 degrees Celsius; and a measuring cylinder with five small divisions between each 10 cm3 mark, so one division is 2 cm3, with the bottom of the meniscus on the second small mark above 70, reading 74 cm3.](media:diagrams/reading-thermometer-measuring-cylinder.png "Figure: find the value of one division first, then count up from the last numbered mark")
+
 :::worked-solution[Example 1: a thermometer described in words]
 The marks labelled 20 °C and 30 °C have ten small divisions between them, and the top of the liquid column is halfway between the 3rd and 4th small marks above 20 °C.
 

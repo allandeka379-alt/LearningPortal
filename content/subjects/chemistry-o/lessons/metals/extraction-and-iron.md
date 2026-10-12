@@ -82,6 +82,8 @@ The blast furnace is a tall steel tower, often more than 30 metres high, lined w
 4. **Limestone is thermally decomposed** by the heat: $\ce{CaCO3 -> CaO + CO2}$.
 5. **Calcium oxide reacts with silicon dioxide** (the sandy impurity) to form slag. This is a basic oxide neutralising an acidic oxide: $\ce{CaO + SiO2 -> CaSiO3}$.
 
+![Blast furnace: haematite, coke and limestone are fed in at the top and hot air is blown in near the bottom; carbon burns to carbon dioxide (C + O2), carbon dioxide is reduced to carbon monoxide (C + CO2), carbon monoxide reduces iron(III) oxide to iron (Fe2O3 + 3CO), limestone decomposes and its calcium oxide reacts with silicon dioxide to make slag; molten slag floats on molten iron and both are tapped off at the bottom, while waste gases leave at the top.](media:diagrams/blast-furnace-schematic.png "Figure: the blast furnace with its main reactions")
+
 The molten slag is less dense than molten iron, so it floats on top. Iron and slag are tapped off separately from the bottom of the furnace. Waste gases (mainly nitrogen, with carbon dioxide and some unused carbon monoxide) leave at the top. Slag is used for building roads and making cement.
 
 :::note{title="From iron to steel"}

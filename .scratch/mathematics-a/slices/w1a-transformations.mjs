@@ -165,7 +165,7 @@ concept("amaths.functions.transformations", { file: "functions/transformations",
   same(quad.completeSquare(1, -2, -8).vertex, [1, -9]);
   b.num({
     d: 3, skill: "APPLICATION", calculator: false, applies: ZP,
-    stem: t`Find the $y$-coordinate of the local maximum point on the graph of $y = |x^{2} - 2x - 8|$.`,
+    stem: t`Find the $y$-coordinate of the local maximum point of the curve $y = |x^{2} - 2x - 8|$.`,
     value: 9, wrong: [-9, 8],
     explanation: t`$x^{2} - 2x - 8 = (x - 1)^{2} - 9$, with minimum point $(1, -9)$ below the axis. Taking the modulus reflects it to the local maximum $(1, 9)$.`,
     hints: ["Complete the square to find the vertex of the parabola."],

@@ -62,6 +62,8 @@ Air also contains a variable amount of **water vapour**.
 
 The liquid air is fed into a tall **fractionating column**, which is slightly warmer at the bottom than at the top.
 
+![Flow chart of air separation: air is filtered, carbon dioxide and water vapour are removed, the air is compressed and cooled, then expanded through a valve until it liquefies at about −200 °C, and the liquid air is fractionally distilled in a column where nitrogen (−196 °C) leaves as a gas at the top, argon (−186 °C) part-way up and oxygen (−183 °C) as a liquid at the bottom.](media:diagrams/air-separation-flow.png "Figure: liquefying and fractionally distilling air")
+
 :::worked-solution[Example 1: the order of separation]
 Boiling points: nitrogen −196 °C, argon −186 °C, oxygen −183 °C.
 

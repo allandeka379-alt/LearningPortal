@@ -41,7 +41,9 @@ A substance that increases the rate of a reaction and is unchanged at the end. I
 
 ## Reading a reaction pathway diagram
 
-Picture the diagram as follows (it is described in words here, as you would describe it in an exam answer):
+The figure below shows two reaction pathway diagrams. Their features, as you would describe them in an exam answer, are:
+
+![Two reaction pathway diagrams with energies relative to the reactants: reaction A is exothermic, the products lie 45 kJ/mol below the reactants (ΔH = −45) and the peak is 120 kJ/mol above the reactants (Ea = 120); reaction B is endothermic, the products lie 65 kJ/mol above the reactants (ΔH = +65) and the peak is 210 kJ/mol above (Ea = 210).](media:diagrams/energy-profiles-exo-endo.png "Figure: Ea is measured from the reactants to the peak; ΔH is measured from the reactants to the products")
 
 - The **vertical axis** is labelled "energy". The **horizontal axis** is labelled "progress of reaction".
 - A short horizontal line on the left shows the energy of the **reactants**, labelled with their formulae.
@@ -95,6 +97,8 @@ Two diagrams give these energies, measured relative to the reactants (in kJ/mol)
 ## Catalysts on the diagram
 
 A catalyst gives the reaction a different route with a **lower activation energy**, so the peak is lower. It does not change the energy of the reactants or of the products, so $\Delta H$ stays the same. Examples are iron in the Haber process, vanadium(V) oxide in the Contact process, manganese(IV) oxide for decomposing hydrogen peroxide, and enzymes in living things.
+
+![Reaction pathway diagram with and without a catalyst: the reactants are at 0 and the products at −40 kJ/mol in both cases, so ΔH = −40 is unchanged, but the catalysed pathway (dashed) peaks at +110 kJ/mol instead of +180 kJ/mol, so the activation energy is 70 kJ/mol lower.](media:diagrams/energy-profiles-catalyst.png "Figure: a catalyst lowers the peak (Ea) but leaves the reactant and product levels, and so ΔH, unchanged")
 
 :::worked-solution[Example 3: the effect of a catalyst]
 For one reaction, the energies relative to the reactants are: peak without a catalyst $+180$ kJ/mol, peak with a catalyst $+110$ kJ/mol, products $-40$ kJ/mol.

@@ -38,14 +38,14 @@ const g = 9.8;
   const A = [50, 290], B = [490, 290], Cc = [490, 290 - 440 * Math.tan(rad(a))];
   const P0 = [A[0] + 250 * ca, A[1] - 250 * sa], up = [ca, -sa], nrm = [-sa, -ca];
   const corner = (s, t) => [P0[0] + up[0] * s + nrm[0] * t, P0[1] + up[1] * s + nrm[1] * t];
-  const cen = corner(0, 25), k = 2.2;
+  const cen = corner(0, 25), k = 3.2;
   const arrowFrom = (dx, dy, len, col) => D.arrow(cen[0], cen[1], cen[0] + dx * len, cen[1] + dy * len, { stroke: col, width: 2.8 });
   const body = D.polyline([A, B, Cc], { fill: C.fillGrey, stroke: C.axis, width: 2, close: true }) +
     D.polyline([corner(-38, 0), corner(38, 0), corner(38, 50), corner(-38, 50)], { fill: "#ffffff", stroke: C.ink, width: 2.2, close: true }) +
     arrowFrom(0, 1, 30 * k, C.ink) + arrowFrom(nrm[0], nrm[1], 28.19 * k, C.blue) + arrowFrom(up[0], up[1], 10.26 * k, C.red) +
-    D.dot(cen[0], cen[1], { r: 3 }) + D.text(cen[0] + 8, cen[1] + 30 * k + 14, "weight 30 N", { size: 14, weight: 700 }) +
+    D.dot(cen[0], cen[1], { r: 3 }) + D.text(cen[0] + 10, cen[1] + 55, "weight 30 N", { size: 14, weight: 700 }) +
     D.text(cen[0] + nrm[0] * 28.19 * k - 40, cen[1] + nrm[1] * 28.19 * k - 8, "R = 28.19 N", { size: 14, fill: C.blue, weight: 700 }) +
-    D.text(cen[0] + 62, cen[1] - 50, "F = 10.26 N (up the plane)", { size: 14, fill: C.red, weight: 700 }) +
+    D.text(cen[0] + 20, cen[1] - 75, "F = 10.26 N\n(friction, up the plane)", { size: 14, fill: C.red, weight: 700 }) +
     D.path_(`M${A[0] + 80},${A[1]} A80,80 0 0 0 ${A[0] + 80 * ca},${A[1] - 80 * sa}`, { stroke: C.muted, width: 1.6 }) + D.text(A[0] + 90, A[1] - 8, "20°", { size: 14 }) +
     D.text(20, 28, "3 kg block at rest; μ = 0.45, so the most friction available is 12.69 N", { size: 14, fill: C.muted });
   await fig("forces/friction", "forces-on-block-rough-incline", D.svg(w, h, body),

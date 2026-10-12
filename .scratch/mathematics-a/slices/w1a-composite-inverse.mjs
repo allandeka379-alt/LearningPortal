@@ -113,7 +113,7 @@ concept("amaths.functions.composite-inverse", { file: "functions/composite-inver
 
   b.mcq({
     d: 2, skill: "UNDERSTANDING", daily: true, calculator: false,
-    stem: t`The point $(2, 7)$ lies on the graph of the one-one function $y = f(x)$. Which point must lie on the graph of $y = f^{-1}(x)$?`,
+    stem: t`The point $(2, 7)$ lies on the curve $y = f(x)$, where $f$ is one-one. Which point must lie on the curve $y = f^{-1}(x)$?`,
     options: [
       [t`$(7, 2)$`, "Correct: the inverse swaps the coordinates."],
       [t`$(-2, -7)$`, "That is a rotation through 180° about the origin."],

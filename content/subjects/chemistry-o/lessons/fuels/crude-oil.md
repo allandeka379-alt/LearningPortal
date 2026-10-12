@@ -50,6 +50,8 @@ Natural gas is mainly **methane**, $\ce{CH4}$. Coal is mainly carbon. Both, like
 
 Crude oil cannot be used as it is: it is a mixture of thousands of compounds with different boiling points. It is separated in a tall steel tower called a **fractionating column**.
 
+![Fractionating column for crude oil: hot vapour enters near the bottom and the column is cooler towards the top; from the top down the fractions drawn off are refinery gas (1 to 4 carbon atoms), gasoline, naphtha, kerosene, diesel oil, fuel oil, lubricating oil and bitumen (more than 50), so chain length and boiling point increase down the column.](media:diagrams/crude-oil-fractionating-column.png "Figure: the fractions of crude oil, top to bottom")
+
 1. The crude oil is heated in a furnace until most of it turns into **vapour**.
 2. The hot vapour enters the column near the **bottom**. The column is **hot at the bottom and cooler towards the top**.
 3. The vapour rises through the column, passing through trays with bubble caps. As it rises it cools.

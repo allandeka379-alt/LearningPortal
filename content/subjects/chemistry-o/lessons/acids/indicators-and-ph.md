@@ -66,6 +66,9 @@ Many school laboratories also use **phenolphthalein**. Like thymolphthalein it i
 
 Universal indicator gives a different colour for each part of the pH scale. The exact colours on the chart vary a little from one manufacturer to another, but the pattern is always the same:
 
+![The pH scale from 0 to 14 with universal indicator colours: red for pH 0 to 2 (strongly acidic), orange for 3 and 4, yellow for 5 and 6, green at pH 7 (neutral), blue for 8 to 10, and purple for 11 to 14 (strongly alkaline).](media:diagrams/universal-indicator-ph-scale.png "Figure: universal indicator colours on the pH scale (the colour is also named above each group)")
+
+
 | pH | 0–2 | 3–4 | 5–6 | 7 | 8–10 | 11–14 |
 | --- | --- | --- | --- | --- | --- | --- |
 | Colour | red | orange | yellow | green | blue | purple (violet) |

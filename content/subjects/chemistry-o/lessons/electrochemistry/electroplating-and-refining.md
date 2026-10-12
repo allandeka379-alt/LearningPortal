@@ -50,6 +50,8 @@ Purifying a metal. Copper is refined by electrolysis.
 
 Three rules decide the set-up:
 
+![Cell for copper-plating an iron key: the key is connected to the negative terminal and is the cathode, a strip of copper joined to the positive terminal is the anode, and the electrolyte is copper(II) sulfate solution; copper ions gain electrons and coat the key while the copper anode dissolves to replace them.](media:diagrams/electroplating-copper-key-cell.png "Figure: the object to be plated is the cathode and the anode is the plating metal")
+
 1. The **object to be plated is the cathode** (negative electrode).
 2. The **anode is made of the plating metal**.
 3. The **electrolyte is a solution containing ions of the plating metal**.
