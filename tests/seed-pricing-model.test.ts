@@ -147,7 +147,7 @@ describe("applyMonthlyPricing", () => {
     const updateMany = vi.fn(async () => ({ count: 1 }));
     const create = vi.fn(async () => ({}));
     const db = {
-      plan: { findUnique: vi.fn(async () => ({ id: "plan-full" })) },
+      plan: { findUnique: vi.fn(async () => ({ id: "plan-full", tagline: "Pay once, keep it", description: "Admin text" })), update: vi.fn(async () => ({})) },
       planPrice: { findFirst: vi.fn(async () => (prices.monthly ? { id: "price-monthly" } : null)), updateMany, create },
     } as unknown as PrismaClient;
     const log = { info: vi.fn(), warn: vi.fn() } as never;
@@ -160,12 +160,14 @@ describe("applyMonthlyPricing", () => {
     expect(await applyMonthlyPricing(db, log, now)).toBe(true);
     expect(updateMany).toHaveBeenCalledWith(expect.objectContaining({ where: expect.objectContaining({ periodDays: null, interval: "ONE_OFF" }), data: { isActive: false, validTo: now } }));
     expect(create).toHaveBeenCalledWith({ data: expect.objectContaining({ planId: "plan-full", currency: "USD", amountMinor: 100, interval: "ONE_OFF", periodDays: 30 }) });
+    // The lifetime tagline is replaced; an admin-written description is kept.
+    expect((db as unknown as { plan: { update: ReturnType<typeof vi.fn> } }).plan.update).toHaveBeenCalledWith({ where: { id: "plan-full" }, data: { tagline: "Every subject, every level" } });
   });
 
   it("is idempotent: nothing is written once a monthly price is on sale", async () => {
     const { db, log, updateMany, create } = stub({ monthly: true });
     expect(await applyMonthlyPricing(db, log)).toBe(false);
-    expect(updateMany).not.toHaveBeenCalled();
+    expect(updateMany).not.toHaveBeenCalledWith(expect.objectContaining({ data: expect.objectContaining({ isActive: false }) }));
     expect(create).not.toHaveBeenCalled();
   });
 });

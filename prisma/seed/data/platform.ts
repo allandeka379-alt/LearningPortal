@@ -39,6 +39,16 @@ export type SeedPlan = {
 /** Code of the one-off "Full access" plan (seed data; the app finds the offer by its one-off price, not by this code). */
 export const FULL_ACCESS_PLAN_CODE = "FULL_ACCESS";
 
+/** Plan copy for the monthly price (2026-10-12); the 2026-10-07 lifetime copy it replaces is kept to migrate it. */
+export const FULL_ACCESS_TAGLINE = "Every subject, every level";
+export const FULL_ACCESS_DESCRIPTION =
+  "Every lesson in every subject, unlimited practice and topic tests, mock exams, flashcards, a personal study plan, " +
+  "detailed progress analytics and progress reports for parents. Renew each month through Paynow.";
+export const LEGACY_LIFETIME_TAGLINE = "Pay once, keep it";
+export const LEGACY_LIFETIME_DESCRIPTION =
+  "Every lesson in every subject, unlimited practice and topic tests, mock exams, flashcards, a personal study plan, " +
+  "detailed progress analytics and progress reports for parents. One payment, no renewals.";
+
 /** Days of Full access one payment buys (owner decision 2026-10-12: US$1 a month, renewed through Paynow). */
 export const MONTHLY_PASS_DAYS = 30;
 /** Plans retired by the 2026-10-07 pricing decision (taken off sale and off /pricing on existing databases). */
@@ -133,10 +143,8 @@ export const PLANS: SeedPlan[] = [
   {
     code: FULL_ACCESS_PLAN_CODE,
     name: "Full access",
-    tagline: "Pay once, keep it",
-    description:
-      "Every lesson in every subject, unlimited practice and topic tests, mock exams, flashcards, a personal study plan, " +
-      "detailed progress analytics and progress reports for parents. One payment, no renewals.",
+    tagline: FULL_ACCESS_TAGLINE,
+    description: FULL_ACCESS_DESCRIPTION,
     highlights: [
       "Every lesson in every subject",
       "Unlimited practice questions and topic tests",
@@ -149,7 +157,7 @@ export const PLANS: SeedPlan[] = [
     sortOrder: 2,
     isPublic: true,
     entitlements: FULL_ACCESS,
-    oneOffPrice: { currency: "USD", amountMinor: 100, label: "per month", periodDays: MONTHLY_PASS_DAYS },
+    oneOffPrice: { currency: "USD", amountMinor: 100, label: null, periodDays: MONTHLY_PASS_DAYS },
     devSamplePrices: [],
   },
   {

@@ -2,7 +2,7 @@ import { Prisma, type PrismaClient } from "@/generated/prisma/client";
 import { entitlementsSchema } from "@/lib/billing/entitlements";
 import { SETTING_DEFINITIONS } from "@/server/lib/settings";
 import { ORIGINAL_CONTENT_SOURCE } from "./data/catalogue-extra";
-import { ACHIEVEMENTS, FULL_ACCESS_PLAN_CODE, PLANS, RETIRED_PLAN_CODES, SETTINGS, type SeedAchievement } from "./data/platform";
+import { ACHIEVEMENTS, FULL_ACCESS_DESCRIPTION, FULL_ACCESS_PLAN_CODE, FULL_ACCESS_TAGLINE, LEGACY_LIFETIME_DESCRIPTION, LEGACY_LIFETIME_TAGLINE, PLANS, RETIRED_PLAN_CODES, SETTINGS, type SeedAchievement } from "./data/platform";
 import { EXTRA_SETTINGS } from "./data/settings-extra";
 import type { SeedLog, SeedTally } from "./util";
 
@@ -111,8 +111,18 @@ export async function applyOneOffPricingModel(db: PrismaClient, log: SeedLog): P
 export async function applyMonthlyPricing(db: PrismaClient, log: SeedLog, now: Date = new Date()): Promise<boolean> {
   const seeded = PLANS.find((plan) => plan.code === FULL_ACCESS_PLAN_CODE)?.oneOffPrice;
   if (!seeded || seeded.periodDays === null) return false;
-  const plan = await db.plan.findUnique({ where: { code: FULL_ACCESS_PLAN_CODE }, select: { id: true } });
+  const plan = await db.plan.findUnique({ where: { code: FULL_ACCESS_PLAN_CODE }, select: { id: true, tagline: true, description: true } });
   if (!plan) return false;
+  // The lifetime copy ("Pay once, keep it", "One payment, no renewals") is replaced; an admin's own wording is kept.
+  const copy: { tagline?: string; description?: string } = {};
+  if (plan.tagline === LEGACY_LIFETIME_TAGLINE) copy.tagline = FULL_ACCESS_TAGLINE;
+  if (plan.description === LEGACY_LIFETIME_DESCRIPTION) copy.description = FULL_ACCESS_DESCRIPTION;
+  if (Object.keys(copy).length > 0) {
+    await db.plan.update({ where: { id: plan.id }, data: copy });
+    log.info("platform: Full access copy updated for the monthly price");
+  }
+  // The first monthly price was seeded with the label "per month", which repeats the period on the checkout.
+  await db.planPrice.updateMany({ where: { planId: plan.id, interval: "ONE_OFF", periodDays: seeded.periodDays, label: "per month" }, data: { label: null } });
   const live = { planId: plan.id, currency: seeded.currency, interval: "ONE_OFF" as const, isActive: true, OR: [{ validTo: null }, { validTo: { gt: now } }] };
   const monthly = await db.planPrice.findFirst({ where: { ...live, periodDays: seeded.periodDays }, select: { id: true } });
   if (monthly) return false;

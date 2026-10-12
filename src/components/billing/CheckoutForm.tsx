@@ -255,7 +255,7 @@ export function CheckoutForm({
           {selectedMethod?.needsPhone
             ? "You'll get a prompt on your phone to approve the payment with your PIN."
             : "You'll pay on the provider's secure page, then come back here."}{" "}
-          Plans are prepaid: nothing renews or is charged automatically.
+          Each payment adds its period of access, and nothing is ever charged without you.
         </p>
       </div>
     </form>

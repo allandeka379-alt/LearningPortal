@@ -321,8 +321,8 @@ export function StepScreen({ view, saveAction, finishAction, next = null }: Step
                     <p className="text-sm text-muted">The diagnostic test isn&rsquo;t included in your current plan. You can still start studying straight away.</p>
                   ) : (
                     <p className="text-sm text-muted">
-                      Your account is ready. Full access opens every lesson, practice question, test and the diagnostic in your subjects: one
-                      payment through Paynow, and nothing renews.
+                      Your account is ready. Full access opens every lesson, practice question, test and the diagnostic in your subjects, paid
+                      monthly through Paynow.
                     </p>
                   )}
                 </div>

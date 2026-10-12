@@ -25,8 +25,8 @@ export function LockedLessonNotice({ upgradeHref, backHref, backLabel, className
         Unlock full access to read this lesson
       </h2>
       <p className="mx-auto mt-2 max-w-md text-sm text-muted">
-        Full access opens every lesson in every subject, with practice, topic tests, mock exams and flashcards. One payment
-        through Paynow, and nothing renews.
+        Full access opens every lesson in every subject, with practice, topic tests, mock exams and flashcards. Pay monthly
+        through Paynow; nothing is charged without you.
       </p>
       <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
         <UpgradeButton fallbackHref={upgradeHref} variant="accent" />
