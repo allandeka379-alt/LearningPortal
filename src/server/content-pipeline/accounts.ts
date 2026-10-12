@@ -73,9 +73,56 @@ export async function resolveAuthor(client: DbClient, email?: string | null): Pr
   return { actor: toActor(created), email: wanted, isSystem: true, created: true };
 }
 
-/** The human approver of `content:publish` (four-eyes: never the pipeline account). */
+/**
+ * SYSTEM PUBLISHER (owner decision 2026-10-12: no human content review, no superuser needed to publish). `--approver
+ * system` (or the publisher's own address) publishes as a dedicated password-less account, separate from the pipeline
+ * author so the database's four-eyes rule (approver != creator) still holds. It has the ADMIN role because publishing
+ * syllabus versions and opening subjects in the catalogue need `curriculum.manage`; nobody can sign in as it (no
+ * password, an `.invalid` address cannot receive a code) and it is never SUPER_ADMIN.
+ */
+export const SYSTEM_APPROVER = "system";
+export const DEFAULT_PUBLISHER_EMAIL = "content-publisher@system.invalid";
+const PUBLISHER_DISPLAY_NAME = "Content publisher";
+
+export function publisherEmail(): string {
+  return (process.env.CONTENT_PUBLISHER_EMAIL ?? DEFAULT_PUBLISHER_EMAIL).trim().toLowerCase();
+}
+
+/** The system publisher account; created (ADMIN, password-less) on first use and audited. */
+export async function resolveSystemPublisher(client: DbClient): Promise<ResolvedAccount> {
+  const email = publisherEmail();
+  if (email === pipelineEmail()) throw new AppError("FORBIDDEN", "The publisher account must differ from the pipeline author (four-eyes).");
+  const existing = await client.user.findUnique({ where: { emailNormalized: email }, select: { id: true, roles: true, status: true, passwordHash: true } });
+  if (existing) {
+    if (existing.status !== "ACTIVE") throw new AppError("FORBIDDEN", `The publisher account ${email} is not active.`);
+    if (existing.passwordHash) throw new AppError("FORBIDDEN", `The publisher account ${email} has a password: it must stay a system account.`);
+    return { actor: toActor(existing), email, isSystem: true, created: false };
+  }
+  const created = await client.user.create({
+    data: {
+      emailNormalized: email,
+      roles: ["ADMIN"],
+      status: "ACTIVE",
+      profile: { create: { displayName: PUBLISHER_DISPLAY_NAME, firstName: PUBLISHER_DISPLAY_NAME } },
+    },
+    select: { id: true, roles: true },
+  });
+  await auditInTx(client, {
+    actorUserId: null,
+    action: AUDIT_ACTIONS.ROLE_GRANT,
+    entityType: "User",
+    entityId: created.id,
+    targetUserId: created.id,
+    after: { roles: ["ADMIN"] },
+    metadata: { operation: "content.publisher_account", note: "Password-less system approver of imported content (owner decision 2026-10-12: no human review). Cannot sign in." },
+  });
+  return { actor: toActor(created), email, isSystem: true, created: true };
+}
+
+/** The approver of `content:publish`: a staff account, or `system` for the system publisher (never the pipeline account). */
 export async function resolveApprover(client: DbClient, email: string, options: { needAdmin?: boolean } = {}): Promise<ResolvedAccount> {
   const wanted = email.trim().toLowerCase();
+  if (wanted === SYSTEM_APPROVER || wanted === publisherEmail()) return resolveSystemPublisher(client);
   if (wanted === pipelineEmail()) throw new AppError("FORBIDDEN", "The pipeline account cannot approve content: name the person who reviewed it.");
   const user = await client.user.findUnique({ where: { emailNormalized: wanted }, select: { id: true, roles: true, status: true } });
   if (!user) throw AppError.notFound(`No account with the email ${wanted}.`);

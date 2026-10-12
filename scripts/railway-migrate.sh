@@ -7,11 +7,13 @@
 #   IMPORT_FAMILIES=a,b       import these content families, then publish them (below). combined-science-o must be
 #                             listed together with mathematics-o,biology-o,physics-o,chemistry-o (its tests borrow
 #                             their question banks; alone it fails validation).
-#   CONTENT_PUBLISH_APPROVER  email of an existing ADMIN account (content.review + content.publish; ADMIN also
-#                             publishes DRAFT syllabus versions and makes subjects AVAILABLE). Unset = import only.
+#   CONTENT_PUBLISH_APPROVER  who approves the publish: "system" (default) = the password-less system publisher
+#                             account (content-publisher@system.invalid, ADMIN, cannot sign in), or the email of a
+#                             staff ADMIN account. "none" = import only (items stay IN REVIEW).
+#   STORAGE_DRIVER / S3_*     same references as the web service, so lesson images (media/media.json) upload.
 #
 # Owner decision 2026-10-12: human content review before production publishing is removed, so every deploy imports
-# AND publishes. The importer's author is the pipeline system account and the approver is this human ADMIN, so
+# AND publishes. The importer's author is the pipeline system account and the approver is the system publisher, so
 # production's four-eyes rule (app.four_eyes = on) still holds. A family with nothing new is a fast no-op; changed
 # files (CONFLICT draft copies) are merged into the live items as a new revision; students keep what they saw.
 set -eu
@@ -25,14 +27,16 @@ fi
 
 if [ -n "${IMPORT_FAMILIES:-}" ]; then
   echo "[migrate] 3/4 content import: ${IMPORT_FAMILIES}"
-  env -u MIGRATION_DATABASE_URL npm run content:import -- --family "${IMPORT_FAMILIES}" --no-cache
-
-  if [ -n "${CONTENT_PUBLISH_APPROVER:-}" ]; then
-    echo "[migrate] 4/4 content publish: ${IMPORT_FAMILIES} (approver ${CONTENT_PUBLISH_APPROVER})"
-    env -u MIGRATION_DATABASE_URL npm run content:publish -- --approver "${CONTENT_PUBLISH_APPROVER}" --family "${IMPORT_FAMILIES}" \
-      --note "Published automatically on deploy (owner decision 2026-10-12: no human review step before production)."
+  APPROVER="${CONTENT_PUBLISH_APPROVER:-system}"
+  if [ "${APPROVER}" = "none" ]; then
+    env -u MIGRATION_DATABASE_URL npm run content:import -- --family "${IMPORT_FAMILIES}" --no-cache
+    echo "[migrate] 4/4 content publish SKIPPED: CONTENT_PUBLISH_APPROVER=none, so the imported items stay IN REVIEW"
   else
-    echo "[migrate] 4/4 content publish SKIPPED: CONTENT_PUBLISH_APPROVER is not set, so the imported items stay IN REVIEW"
+    # The approver also publishes DRAFT syllabus versions during the import (the publish step needs them).
+    env -u MIGRATION_DATABASE_URL npm run content:import -- --family "${IMPORT_FAMILIES}" --no-cache --approver "${APPROVER}"
+    echo "[migrate] 4/4 content publish: ${IMPORT_FAMILIES} (approver ${APPROVER})"
+    env -u MIGRATION_DATABASE_URL npm run content:publish -- --approver "${APPROVER}" --family "${IMPORT_FAMILIES}" \
+      --note "Published automatically on deploy (owner decision 2026-10-12: no human review step before production)."
   fi
 fi
 echo "[migrate] done"
