@@ -137,3 +137,57 @@ WebFetch cannot resolve any host), so source the syllabi locally, the same way a
 - history-o DONE: imported, DEV-published 3372, AVAILABLE; smoke 64/64. Committed + pushed.
 - waveD foundations DONE (~1.76M tokens), validate 0/0: mathematics-a 110 concepts (ZIM pure 30 nodes/95 obj, statistics 24/51, mechanics 18/41; 9709 46/132, AS/A routes), biology-a 106, chemistry-a 111, physics-a (ZIM tree from teacher's guide, flagged), religious-studies-o 89 (ZIM FRS 106 nodes). Committed. NEXT: writers for mathematics-a, biology-a, chemistry-a, physics-a, religious-studies-o (generic writer script, 8 assignments each) as add-maths/heritage writers finish (cap 4 agents).
 - heritage-studies-o DONE: DEV-published 2709, AVAILABLE; smoke 31/31. Committed + pushed. mathematics-a writers running (task w6ojaxs2o).
+
+## 2026-10-09 — A-level final push plan (owner: "plan other a level subjects, final push, then launch")
+Sources downloaded (all verified PDFs, ZIMSEC Forms 5-6 2015-2022 from zimsake + Cambridge current syllabi):
+accounting-a (zimsake 24 + 9706 2026-28), economics-a (8 + 9708 2026-28), business-a (16 Business Studies, 17 BES + 9609 2026-28),
+computer-science-a (13 + 9618 2027-29), geography-a (4 + 9696 2027-29), history-a (2 + 9489 2027-29). In <family>/sources/.
+Order (max 4 writer agents at once, commit+push each subject when DEV-smoked):
+ 1. In flight: additional-mathematics-o, mathematics-a writers -> assess/import/publish/smoke/commit.
+ 2. Writers for biology-a, chemistry-a, physics-a, religious-studies-o (foundations already committed).
+ 3. One foundations workflow (2 agents): accounting-a, economics-a, business-a | computer-science-a, geography-a, history-a.
+ 4. Writers for those six (8 per subject, ~same size as O-level families).
+ Deferred unless owner asks: Literature in English (38), Sociology (32), further maths, indigenous languages.
+Then launch track: §41 human publish; Resend domain + inbox tests; Paynow merchant + real USD 1 buy/refund;
+Docker/CI/deploy dry-run; terms/privacy drafts; owner decisions list (README Known gaps).
+- 2026-10-09: additional-mathematics-o DONE (888302e): 89 lessons, 1,767 q, 766 cards, 31 topic tests + 4 mocks, smoke 88/88.
+  biology-a writers launched: task wgn4lw8ct, run wf_d60a3d7d-4fe (script writers-biology-a-*.js; same generic prompt).
+  mathematics-a writers still running (w6ojaxs2o / wf_2ba8080b-ae5). Next when a slot frees: chemistry-a, physics-a, religious-studies, then A-level foundations wave.
+# Resumed 2026-10-10 after OAuth expiry: math-a w11hd9p7s, biology-a wyyaw5jrt (same run ids, RESUMING note on W3a/W3b)
+- 2026-10-10 Railway (caring-stillness): brand -> BvunzoHub (a84f327; NEXT_PUBLIC_APP_NAME set on web+worker). Bucket
+  `ergonomic-wardrobe` (EU West) created; S3_* on web+worker are ${{ergonomic-wardrobe.*}} references. Paynow ID/key added
+  by owner on both. Running SQL in the Postgres console was BLOCKED by the permission classifier: owner runs
+  scripts/sql/railway-setup.sql + scripts/railway-release.ps1 and enters every password/secret. Still missing: DATABASE_URL,
+  BUILD_DATABASE_URL (web), SESSION_SECRET (shared, same on both), RESEND_API_KEY + EMAIL_FROM (needs a domain).
+- 2026-10-10 Railway: migrate service (71065b9c…, Dockerfile.railway-migrate, start `sh scripts/railway-migrate.sh`, c533630)
+  with MIGRATION_DATABASE_URL=${{shared.DZIDZA_OWNER_PASSWORD}} ref, DB_APP_ENVIRONMENT, RUN_SEED=1, IMPORT_FAMILIES=15 complete
+  O-level families. Web+worker now have DATABASE_URL / SESSION_SECRET / BUILD_DATABASE_URL as shared refs. 45 changes staged,
+  NOT deployed: waiting for owner to add shared DZIDZA_OWNER_PASSWORD (+ check APP_RW/APP_BUILD/SESSION_SECRET) and Resend vars.
+  After migrate succeeds: set RUN_SEED=0 and clear IMPORT_FAMILIES; worker has an unneeded public domain to remove.
+- 2026-10-10 09:05: Railway prod: migrations+seed+15 O-level families imported (25,975 q, 0 errors, IN REVIEW). migrate rerun
+  importing +biology-a,mathematics-a. Web build now SUCCEEDS (log fix 55ee47e); container refuses to start only for missing
+  RESEND_API_KEY + EMAIL_FROM (owner: Resend/domain). Owner must rotate app_build password (it leaked in an old build log).
+  Content: biology-a DONE (631b6fe, smoke 104/104), mathematics-a DONE (f4e76c3/52bd213, smoke 146/146).
+  Writers running: chemistry-a (w8tdoc6sr / wf_c4f793cb-1f9), physics-a (wblgk1x1c / wf_ad6586a6-0fb). Next: religious-studies-o
+  writers, then A-level foundations wave (accounting/economics/business/CS/geography/history-a; sources in .scratch/<x>-a/sources).
+- 2026-10-10 OWNER: after chemistry-a/physics-a, all workflow agents use model 'sonnet' (Sonnet 5.5).
+- 2026-10-10 resumed chem-a (wf_c4f793cb-1f9) + phys-a (wf_ad6586a6-0fb) after restart; RESUMING note on W2b,W3a
+- 2026-10-10 literal \n bug (String.raw t``): .scratch/tools/literal-newlines.mjs; only chemistry-a affected (20 in 5 files: equilibria/dynamic-le-chatelier, kc-kp, kinetics/mechanisms-rds, organic/isomerism, synthesis-as) -> fix slices after the chem-a run, then rebuild. Run this check for every family before import.
+- 2026-10-10 Sonnet runs: religious-studies-o writers (wqoft138y / wf_ded5d0d0-b9b); foundations wave E for accounting/economics/business/computer-science/geography/history-a (wbc7qnx41 / wf_8f4786e8-2b4, script .scratch/tools/foundations-wave-e.js). chem-a + phys-a writers DONE.
+- 2026-10-10 chemistry-a DONE (smoke 146/146) + title disambiguation; physics-a DONE (acdeb3b). Railway migrate IMPORT_FAMILIES still needs ,chemistry-a,physics-a (browser signed out).
+- 2026-10-10 foundations wave E DONE (795b5c0). Writers wave 1 (Sonnet): accounting-a, economics-a, business-a in one run, script .scratch/tools/writers-wave.js (RESUME list uses 'family:ID'). Next when religious-studies finishes: copy the script for computer-science-a, geography-a, history-a.
+- 2026-10-10 religious-studies-o writers DONE (Sonnet). Writers wave 2 (Sonnet): computer-science-a, geography-a, history-a (.scratch/tools/writers-wave-2.js).
+
+## 2026-10-12 — website redesign + paid-only + go-live prep (OWNER: no free tier, no human review, Form 3-6 learning platform, go live)
+- Brief: .scratch/website/DESIGN-BRIEF.md. Marketing redesign DONE (home, /how-it-works, /exam-candidates, /pricing, /about, nav, no "free" copy).
+- Paid-only (paywall /app/unlock + PaywallGuard + proxy x-dz-request-path; FREE plan grants nothing via applyNoFreeTier in seed) DONE by agent; railway-migrate.sh now publishes after import when CONTENT_PUBLISH_APPROVER is set.
+- Student app learning-first (Learn tab, course outline, ContinueLearning, ExamPrepPanel, WeekPlan, lesson NextSteps) DONE by agent. Owner 2026-10-12: students choose ANY topic -> TopicJump picker on the course page (no sequential gating exists anywhere).
+- typecheck clean, eslint clean on all changed files; full vitest re-running (.scratch/website/full-test.log).
+- accounting-a + computer-science-a: assessments built, imported, DEV-published, smoke 70/70 and 86/86. README/STATUS rows still to write.
+- DIAGRAM AUDIT (.scratch/tools/diagram-audit.mjs -> .scratch/website/diagram-audit.md): 0 images in 2,182 lessons / 43,552 questions. 52 questions + 55 lessons refer to a visual that is missing; 81 drawing tasks; ~658 lessons on diagram-heavy topics. Awaiting owner go-ahead for a diagram pass (SVG->PNG via sharp, media/media.json). NB the Railway migrate service needs STORAGE_DRIVER/S3_* refs to upload media.
+- NOT committed / pushed yet. Production blocked on: owner `railway login` + `railway link` (CLI signed out), CONTENT_PUBLISH_APPROVER email, IMPORT_FAMILIES = all complete families.
+- OWNER 2026-10-12: diagram pass "Option 2" (fix all category-A items + ~235 priority lessons). Brief .scratch/website/DIAGRAM-BRIEF.md, kit .scratch/tools/diagram-kit.mjs (example .scratch/economics-o/diagrams/markets.mjs). Agent tool, Sonnet, max 4 at once.
+  Running: physics-o (30), physics-a (30), mathematics-o (30), additional-mathematics-o (25).
+  Queue: mathematics-a (30), chemistry-o (20), chemistry-a (20), economics-o (25), geography-o (25), then a FIXER for category-A items in the other families (accounting-o, agriculture-o, biology-a, biology-o, business-commerce-o, computer-science-a/o, english-language-o, heritage-studies-o, history-o, religious-studies-o; economics-a/geography-a are mid-writing).
+  After: validate all, re-import (science+maths families TOGETHER with combined-science-o), DEV publish, smoke, commit.
+- OWNER 2026-10-12: connect domain bvunzohub.com (Namecheap) to Railway; owner signs in to Railway (CLI `railway login` in terminal tab) + Namecheap in the browser pane.
