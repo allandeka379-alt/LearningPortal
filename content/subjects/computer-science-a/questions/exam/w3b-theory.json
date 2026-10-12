@@ -1,0 +1,1450 @@
+[
+ {
+  "key": "exam.w3b-theory.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A training college in Mutare stores course entries in one table. A trainee may enter several courses, and a course has many trainees. Each course has one title and one fee. The primary key is the combination of `TraineeID` and `CourseCode`.\n\n| TraineeID | CourseCode | TraineeName | CourseTitle | Fee | DateEntered |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| T11 | WD | Tatenda Moyo | Welding | 120.00 | 2026-02-03 |\n| T11 | EL | Tatenda Moyo | Electrical | 150.00 | 2026-02-10 |\n| T12 | WD | Rudo Chuma | Welding | 120.00 | 2026-02-12 |\n| T13 | PL | Farai Dube | Plumbing | 130.00 | 2026-02-17 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "How many fields make up the primary key of the table?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Two",
+      "correct": true,
+      "rationale": "Correct: TraineeID and CourseCode together."
+     },
+     {
+      "key": "B",
+      "content": "One",
+      "rationale": "No single field is unique."
+     },
+     {
+      "key": "C",
+      "content": "Three",
+      "rationale": "Only two fields are needed to identify each record."
+     },
+     {
+      "key": "D",
+      "content": "Six",
+      "rationale": "A key does not need to include every field."
+     }
+    ],
+    "explanation": "The key is the pair (TraineeID, CourseCode)."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Select the three attributes that depend on only part of the primary key.",
+    "payload": {
+     "selectMode": "multiple"
+    },
+    "options": [
+     {
+      "key": "A",
+      "content": "DateEntered",
+      "rationale": "DateEntered depends on both fields: when this trainee entered this course."
+     },
+     {
+      "key": "B",
+      "content": "CourseCode",
+      "rationale": "CourseCode is part of the primary key."
+     },
+     {
+      "key": "C",
+      "content": "TraineeID",
+      "rationale": "TraineeID is part of the primary key."
+     },
+     {
+      "key": "D",
+      "content": "Fee",
+      "correct": true,
+      "rationale": "Correct: depends on CourseCode alone."
+     },
+     {
+      "key": "E",
+      "content": "TraineeName",
+      "correct": true,
+      "rationale": "Correct: depends on TraineeID alone."
+     },
+     {
+      "key": "F",
+      "content": "CourseTitle",
+      "correct": true,
+      "rationale": "Correct: depends on CourseCode alone."
+     }
+    ],
+    "explanation": "TraineeName, CourseTitle and Fee are partially dependent; DateEntered depends on the whole key."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the highest normal form that the table is in. Give your answer as 1NF, 2NF or 3NF.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "1NF"
+      },
+      {
+       "value": "first normal form"
+      },
+      {
+       "value": "1"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The table is in 1NF but has partial dependencies, so it is not in 2NF."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The fee for a new course cannot be stored until a trainee has entered it. What type of anomaly is this?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Deletion anomaly",
+      "rationale": "No record is being deleted."
+     },
+     {
+      "key": "B",
+      "content": "Update anomaly",
+      "rationale": "No existing value is being changed."
+     },
+     {
+      "key": "C",
+      "content": "Referential anomaly",
+      "rationale": "This is not a standard anomaly."
+     },
+     {
+      "key": "D",
+      "content": "Insertion anomaly",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "A fact cannot be stored without another: an insertion anomaly."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the tables that put the data into second normal form, marking the primary keys.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Trainee(TraineeID, TraineeName) with TraineeID as the primary key",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Course(CourseCode, CourseTitle, Fee) with CourseCode as the primary key",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Entry(TraineeID, CourseCode, DateEntered) with the composite primary key (TraineeID, CourseCode)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Trainee(TraineeID, TraineeName); Course(CourseCode, CourseTitle, Fee); Entry(TraineeID, CourseCode, DateEntered) with the primary key (TraineeID, CourseCode)."
+    },
+    "explanation": "Each partially dependent attribute moves to a table keyed on its determinant."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two benefits of storing the data in the three tables instead of the single table.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each course title and fee, and each trainee's name, is stored once, so there is less redundancy",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A fee is changed in one place only, so the data stays consistent (or a course can be stored before anyone enters it)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each title, fee and name is stored once, so there is less redundancy, and a fee is changed in one place only so the data stays consistent."
+    },
+    "explanation": "Less redundancy and no anomalies."
+   }
+  ],
+  "explanation": "The key is the pair (TraineeID, CourseCode); TraineeName, CourseTitle and Fee are partial dependencies; the table is in 1NF.",
+  "hints": [
+   "Which fields identify one record?",
+   "Does the attribute depend on both parts of the key, or on one part?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "E",
+      "F",
+      "D"
+     ]
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "1NF"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w3b-theory.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.db.sql-dml"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A clinic stores its data in two tables. `PatientID` in `Visit` is a foreign key to `Patient`.\n\n**Patient**\n\n| PatientID | Surname | Town |\n|:-:|:-:|:-:|\n| P01 | Moyo | Gweru |\n| P02 | Ncube | Kwekwe |\n| P03 | Banda | Gweru |\n| P04 | Chuma | Kadoma |\n\n**Visit**\n\n| VisitID | PatientID | Reason | Cost |\n|:-:|:-:|:-:|:-:|\n| 1 | P01 | Check-up | 15 |\n| 2 | P02 | Injury | 40 |\n| 3 | P01 | Injury | 35 |\n| 4 | P03 | Check-up | 15 |\n| 5 | P04 | Fever | 25 |\n| 6 | P02 | Check-up | 15 |\n| 7 | P03 | Fever | 25 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number returned by:\n\n```\nSELECT COUNT(*)\nFROM Visit\nWHERE Cost > 20;\n```",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "The visits costing more than 20 are visits 2, 3, 5 and 7: four.",
+    "workedSolution": "1. The visits costing more than 20 are visits 2, 3, 5 and 7: four."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the result of the query:\n\n```\nSELECT Reason, SUM(Cost)\nFROM Visit\nGROUP BY Reason\nORDER BY Reason;\n```",
+    "payload": {
+     "template": "Check-up: {{blank:a}}\n\nFever: {{blank:b}}\n\nInjury: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "45"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "50"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "75"
+       ]
+      }
+     ]
+    },
+    "explanation": "Check-up 15 + 15 + 15 = 45; Fever 25 + 25 = 50; Injury 40 + 35 = 75."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the SQL clause in the query in part (b) that puts the result in alphabetical order of reason.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "ORDER BY"
+      },
+      {
+       "value": "order by"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "ORDER BY sorts the result."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write an SQL query that shows the surname and the reason of every visit by a patient from Gweru, in alphabetical order of surname. Use both tables.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "SELECT Patient.Surname, Visit.Reason FROM Patient",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "INNER JOIN Visit ON Patient.PatientID = Visit.PatientID",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "WHERE Patient.Town = 'Gweru' and ORDER BY Patient.Surname",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: \n```\nSELECT Patient.Surname, Visit.Reason\nFROM Patient\nINNER JOIN Visit ON Patient.PatientID = Visit.PatientID\nWHERE Patient.Town = 'Gweru'\nORDER BY Patient.Surname;\n```"
+    },
+    "explanation": "Join, filter, sort."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The cost of every check-up is changed to 20. Write the SQL statement to make this change.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "UPDATE Visit SET Cost = 20",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "WHERE Reason = 'Check-up'",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: \n```\nUPDATE Visit\nSET Cost = 20\nWHERE Reason = 'Check-up';\n```"
+    },
+    "explanation": "UPDATE ... SET ... WHERE."
+   }
+  ],
+  "explanation": "Four visits cost more than 20; the totals by reason are 45, 50 and 75.",
+  "hints": [
+   "Select the matching visits first, then count or add.",
+   "A join links the foreign key to the primary key."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "45"
+      },
+      {
+       "blankId": "b",
+       "text": "50"
+      },
+      {
+       "blankId": "c",
+       "text": "75"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "ORDER BY"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0"
+       },
+       {
+        "blankId": "b",
+        "text": "0"
+       },
+       {
+        "blankId": "c",
+        "text": "0"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w3b-theory.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.sdlc.life-cycles",
+   "acs.sdlc.testing-maintenance"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A school in Gweru wants a program to record the results of inter-school sports matches. The sports master is not sure what the program should show, but he will try a new version every week. The program accepts the number of players in a team, which must be a whole number from 5 to 11 inclusive.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which life cycle model is the most suitable for this project?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Waterfall",
+      "rationale": "The requirements are not known at the start."
+     },
+     {
+      "key": "B",
+      "content": "No model",
+      "rationale": "Every project benefits from a model."
+     },
+     {
+      "key": "C",
+      "content": "Iterative",
+      "correct": true,
+      "rationale": "Correct: a working version is improved each week using the sports master's feedback."
+     },
+     {
+      "key": "D",
+      "content": "Maintenance",
+      "rationale": "Maintenance is a stage, not a model."
+     }
+    ],
+    "explanation": "Unclear requirements and frequent feedback suit an iterative approach."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two reasons for your answer to part (a).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The requirements are unclear, so each version can be changed after the sports master has tried it",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "He can try a version every week, so feedback is frequent",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The requirements are unclear so each version can be changed after he has tried it, and he can try a version every week so feedback is frequent."
+    },
+    "explanation": "Link to the scenario."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The rule for the number of players is 5 to 11 inclusive. State the type of test data for each value.",
+    "payload": {
+     "template": "8 players: {{blank:a}}\n\n11 players: {{blank:b}}\n\n12 players: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Normal",
+        "Extreme",
+        "Abnormal"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Normal",
+        "Extreme",
+        "Abnormal"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "Normal",
+        "Extreme",
+        "Abnormal"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Normal"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Extreme"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "Abnormal"
+       ]
+      }
+     ]
+    },
+    "explanation": "8 is a typical valid value, 11 is at the limit and 12 is outside the range."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The program runs but adds up the players of the two teams wrongly. What type of error is this?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Syntax error",
+      "rationale": "A syntax error stops the program starting."
+     },
+     {
+      "key": "B",
+      "content": "Run-time error",
+      "rationale": "The program does not stop."
+     },
+     {
+      "key": "C",
+      "content": "Hardware error",
+      "rationale": "Nothing suggests a hardware fault."
+     },
+     {
+      "key": "D",
+      "content": "Logic error",
+      "correct": true,
+      "rationale": "Correct: the algorithm is wrong."
+     }
+    ],
+    "explanation": "A wrong result without a message is a logic error."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The sports master tries the nearly finished program in his own office for a week and reports faults. What type of testing is this?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Stub testing",
+      "rationale": "Stub testing uses stand-ins for modules."
+     },
+     {
+      "key": "B",
+      "content": "Beta testing",
+      "correct": true,
+      "rationale": "Correct: a real user tests it in his own setting."
+     },
+     {
+      "key": "C",
+      "content": "White-box testing",
+      "rationale": "White-box tests are chosen from the code."
+     },
+     {
+      "key": "D",
+      "content": "Integration testing",
+      "rationale": "Integration testing joins the modules."
+     }
+    ],
+    "explanation": "Real users testing in their own setting is beta testing."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why 5 and 11 should be used as test values.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "They are the boundary values of the range, where mistakes such as writing < instead of <= are most likely",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "They show that the limits are correctly accepted",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: They are the boundary values, where mistakes such as writing < instead of <= are most likely, and they show that the limits are correctly accepted."
+    },
+    "explanation": "Boundary values catch comparison errors."
+   }
+  ],
+  "explanation": "Iterative model; 8 normal, 11 extreme, 12 abnormal; logic error; beta testing.",
+  "hints": [
+   "Are the requirements clear?",
+   "A value at the edge of the valid range is extreme data."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Normal"
+      },
+      {
+       "blankId": "b",
+       "text": "Extreme"
+      },
+      {
+       "blankId": "c",
+       "text": "Abnormal"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Extreme"
+       },
+       {
+        "blankId": "b",
+        "text": "Normal"
+       },
+       {
+        "blankId": "c",
+        "text": "Normal"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w3b-theory.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.sdlc.fact-finding-feasibility",
+   "acs.sdlc.analysis-design-documentation"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A bus company in Mutare keeps its bookings in a paper register. It wants a computer booking system that will cost US\\$4800 to set up and will save US\\$400 a month in clerks' time.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each type of feasibility to the question the analyst asks.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Economic"
+      },
+      {
+       "id": "L2",
+       "content": "Legal"
+      },
+      {
+       "id": "L3",
+       "content": "Operational"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Will the booking clerks accept and use the system?"
+      },
+      {
+       "id": "X1",
+       "content": "Can the system be finished in the time allowed?"
+      },
+      {
+       "id": "R1",
+       "content": "Do the savings outweigh the cost of the system?"
+      },
+      {
+       "id": "R2",
+       "content": "Does the system keep the law on personal data?"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Economic: cost and benefit; legal: the law; operational: acceptance by the users."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the payback period, in months.",
+    "answerSpec": {
+     "value": 12
+    },
+    "explanation": "4800 ÷ 400 = 12 months.",
+    "workedSolution": "4800 ÷ 400 = 12."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The analyst gives a questionnaire to 200 regular passengers. State one advantage and one disadvantage of using a questionnaire.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Advantage: many people can be asked cheaply and the answers are easy to compare",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Disadvantage: many are not returned and the answers give little detail",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Many people can be asked cheaply and the answers are easy to compare, but many questionnaires are not returned and the answers give little detail."
+    },
+    "explanation": "One advantage and one disadvantage."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The company's income depends on bookings. Which changeover method is the safest?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Direct changeover",
+      "rationale": "No back-up if the new system fails."
+     },
+     {
+      "key": "B",
+      "content": "Parallel running",
+      "correct": true,
+      "rationale": "Correct: the paper register is a back-up."
+     },
+     {
+      "key": "C",
+      "content": "No changeover",
+      "rationale": "The old system is being replaced."
+     },
+     {
+      "key": "D",
+      "content": "Direct changeover with no training",
+      "rationale": "Neither safe nor sensible."
+     }
+    ],
+    "explanation": "Parallel running keeps the old system as a back-up."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Distinguish between technical documentation and user documentation.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Technical documentation is for programmers and administrators and describes the design, files and programs so the system can be maintained",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "User documentation is for the booking clerks and explains how to use the system",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Technical documentation is for the programmers and administrators and describes the design, files and programs so the system can be maintained. User documentation is for the clerks and explains how to use the system."
+    },
+    "explanation": "Audience and contents."
+   }
+  ],
+  "explanation": "Payback 12 months; parallel running is the safest changeover.",
+  "hints": [
+   "Payback = cost ÷ monthly saving.",
+   "Think about the audience of each kind of documentation."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "12"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "10"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "ZIMSEC Paper 1"
+ },
+ {
+  "key": "exam.w3b-theory.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.db.dbms"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A school stores its records in a database managed by a database management system (DBMS).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each feature of a DBMS to its purpose.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Data dictionary"
+      },
+      {
+       "id": "L2",
+       "content": "Access rights"
+      },
+      {
+       "id": "L3",
+       "content": "Backup"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Makes a copy so that lost data can be restored"
+      },
+      {
+       "id": "X1",
+       "content": "Carries out the instructions of a program"
+      },
+      {
+       "id": "R1",
+       "content": "Stores the names, types and rules of the fields"
+      },
+      {
+       "id": "R2",
+       "content": "Control which users may read or change which tables"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Each feature has its own role."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how access rights help to keep the learners' records secure.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each user or group is given only the access they need, such as read only or read and write",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A teacher can see marks but not fees, so users cannot see or change data that is not theirs",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each user or group is given only the access they need, so a teacher can see marks but not fees, and users cannot see or change data that is not theirs."
+    },
+    "explanation": "Least access needed."
+   }
+  ],
+  "explanation": "Data dictionary, access rights and backup; access rights limit what each group can do.",
+  "hints": [
+   "Which feature describes the data? Which controls users?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w3b-theory.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.db.relational-concepts",
+   "acs.db.er-diagrams"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A secondary school database has two tables.\n\n`Form(FormID, FormTeacher, Room)`\n\n`Learner(LearnerID, Surname, FormID)`\n\nEach learner is in one form and a form has many learners.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the primary key of the `Form` table.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "FormID"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "FormID identifies each form."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the foreign key in the `Learner` table.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "FormID"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "FormID in Learner refers to Form."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the relationship between `Form` and `Learner`.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "one-to-many"
+      },
+      {
+       "value": "one to many"
+      },
+      {
+       "value": "1:m"
+      },
+      {
+       "value": "1:many"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "One form, many learners."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain what referential integrity means for these two tables.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Every FormID in Learner must match an existing FormID in Form",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The DBMS refuses to add a learner in a form that does not exist (or to delete a form that still has learners)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Every FormID in Learner must match an existing FormID in Form, so the DBMS refuses to add a learner in a form that does not exist or to delete a form that still has learners."
+    },
+    "explanation": "Valid links between the tables."
+   }
+  ],
+  "explanation": "FormID is the primary key of Form and the foreign key in Learner; the relationship is one-to-many.",
+  "hints": [
+   "Which table is on the many side?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "FormID"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "FormID"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "one-to-many"
+    }
+   }
+  },
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w3b-theory.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.sdlc.testing-maintenance"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A payroll program has been used by a company in Harare for two years and now needs changes.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each change to the type of maintenance.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "A total is wrong when an employee has no overtime"
+      },
+      {
+       "id": "L2",
+       "content": "The tax rates are changed by law"
+      },
+      {
+       "id": "L3",
+       "content": "The payslip report is changed to print faster and show a new column"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Perfective"
+      },
+      {
+       "id": "R1",
+       "content": "Corrective"
+      },
+      {
+       "id": "R2",
+       "content": "Adaptive"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Corrective fixes a fault, adaptive responds to a change and perfective improves."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "After a change has been made to the program, the programmer repeats the earlier tests. Explain why.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "To check that the change has not stopped any other part of the program from working",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "To make sure the original faults and features still behave as expected (regression testing)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: To check that the change has not stopped any other part of the program from working, so that earlier features still behave as expected."
+    },
+    "explanation": "Regression testing."
+   }
+  ],
+  "explanation": "Corrective, adaptive and perfective; earlier tests are repeated to check nothing else broke.",
+  "hints": [
+   "Why is each change needed?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 1"
+ }
+]

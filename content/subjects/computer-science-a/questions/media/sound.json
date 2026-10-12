@@ -1,0 +1,1182 @@
+[
+ {
+  "key": "media.sound.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is meant by the sampling rate of a sound recording?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The number of samples taken each second",
+    "correct": true,
+    "rationale": "Correct: it is measured in hertz (Hz)."
+   },
+   {
+    "key": "B",
+    "content": "The number of bits used for each sample",
+    "rationale": "That is the sampling resolution."
+   },
+   {
+    "key": "C",
+    "content": "The length of the recording in seconds",
+    "rationale": "The duration is a separate quantity in the file-size formula."
+   },
+   {
+    "key": "D",
+    "content": "The loudness of the recorded sound",
+    "rationale": "Loudness is the amplitude of the wave, not the rate."
+   }
+  ],
+  "explanation": "The sampling rate is how often the amplitude is measured per second, measured in hertz.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "media.sound.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is meant by the sampling resolution of a sound recording?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The number of bits used to store each sample",
+    "correct": true,
+    "rationale": "Correct: with n bits each sample has one of 2^n values."
+   },
+   {
+    "key": "B",
+    "content": "The number of samples taken every second",
+    "rationale": "That is the sampling rate."
+   },
+   {
+    "key": "C",
+    "content": "The number of speakers that can play the sound",
+    "rationale": "Speakers do not decide how the sound is sampled."
+   },
+   {
+    "key": "D",
+    "content": "The highest frequency in the recording",
+    "rationale": "Frequency is a property of the original sound."
+   }
+  ],
+  "explanation": "Sampling resolution is the number of bits per sample; more bits give a more accurate measurement of the wave.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "media.sound.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A mono recording is sampled at 4000 Hz with 8 bits per sample. How many bits are needed to store one second of the sound?",
+  "payload": {
+   "unitHint": "bits"
+  },
+  "answerSpec": {
+   "value": 32000,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bits",
+     "bit",
+     "b"
+    ]
+   }
+  },
+  "explanation": "4000 samples per second × 8 bits = 32000 bits.",
+  "workedSolution": "1. Samples in one second = 4000.\n2. Bits = 4000 × 8 = 32000.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "32000"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "media.sound.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A mono sound is sampled at 2000 Hz with 8-bit samples and lasts 5 seconds. What is the file size in bytes?",
+  "payload": {
+   "unitHint": "bytes"
+  },
+  "answerSpec": {
+   "value": 10000,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bytes",
+     "byte",
+     "B"
+    ]
+   }
+  },
+  "explanation": "2000 × 8 × 5 = 80000 bits; ÷ 8 = 10000 bytes.",
+  "workedSolution": "1. Bits = 2000 × 8 × 5 = 80000.\n2. Bytes = 80000 ÷ 8 = 10000.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10000"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "media.sound.q05",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A stereo recording lasts 30 seconds. It is sampled at 24000 Hz with a sampling resolution of 16 bits. Calculate the file size in bytes.",
+  "payload": {
+   "unitHint": "bytes"
+  },
+  "answerSpec": {
+   "value": 2880000,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bytes",
+     "byte",
+     "B"
+    ]
+   }
+  },
+  "explanation": "24000 × 16 × 30 × 2 = 23040000 bits; ÷ 8 = 2880000 bytes.",
+  "workedSolution": "1. 24000 × 16 × 30 × 2 = 23040000 bits; ÷ 8 = 2880000 bytes.",
+  "hints": [
+   "Stereo means two channels.",
+   "Multiply rate × resolution × time × channels, then divide by 8."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "2880000"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "media.sound.q06",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A mono sound clip lasting 24 seconds is sampled at 8192 Hz with 8-bit samples. Calculate the file size in KiB. (1 KiB = 1024 bytes.)",
+  "payload": {
+   "unitHint": "KiB"
+  },
+  "answerSpec": {
+   "value": 192,
+   "units": {
+    "required": false,
+    "accepted": [
+     "KiB",
+     "kibibytes",
+     "kibibyte"
+    ]
+   }
+  },
+  "explanation": "8192 samples × 24 s × 1 byte = 196608 bytes; ÷ 1024 = 192 KiB.",
+  "workedSolution": "1. 8192 samples × 24 s × 1 byte = 196608 bytes; ÷ 1024 = 192 KiB.",
+  "hints": [
+   "Work out the bytes first: 8 bits is one byte per sample.",
+   "Then divide by 1024."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "192"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "media.sound.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A recording is changed from mono to stereo and its sampling rate is doubled. The sampling resolution and the length are unchanged. By what factor does the file size increase?",
+  "payload": {
+   "unitHint": "×"
+  },
+  "answerSpec": {
+   "value": 4,
+   "units": {
+    "required": false,
+    "accepted": [
+     "×",
+     "x",
+     "times"
+    ]
+   }
+  },
+  "explanation": "File size is proportional to the number of channels and to the sampling rate, so the size is multiplied by 2 × 2 = 4.",
+  "workedSolution": "1. Mono to stereo doubles the number of channels: × 2.\n2. Doubling the rate: × 2.\n3. Together: 2 × 2 = 4.",
+  "hints": [
+   "Each change multiplies the size by a factor; combine them."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "media.sound.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A recording is re-made with a higher sampling resolution but the same sampling rate. What is the effect?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It is a less accurate recording and the file is larger",
+    "rationale": "More bits per sample cannot reduce accuracy."
+   },
+   {
+    "key": "B",
+    "content": "It is a more accurate recording and the file is smaller",
+    "rationale": "More bits per sample increase the file size."
+   },
+   {
+    "key": "C",
+    "content": "It is a more accurate recording and the file is larger",
+    "correct": true,
+    "rationale": "Correct: each sample is measured more precisely and uses more bits."
+   },
+   {
+    "key": "D",
+    "content": "It has more samples per second and the file is unchanged",
+    "rationale": "The rate has not changed, so the number of samples per second is the same."
+   }
+  ],
+  "explanation": "More bits per sample means each measurement is closer to the real height of the wave, so accuracy rises, and the file size rises in proportion.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.sound.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A radio station in Bulawayo records music at a very low sampling rate. What is the most likely effect on the sound?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The recording is louder than the original",
+    "rationale": "Loudness comes from amplitude, not rate."
+   },
+   {
+    "key": "B",
+    "content": "High-frequency sounds are lost or distorted",
+    "correct": true,
+    "rationale": "Correct: a low rate cannot follow rapid changes in the wave."
+   },
+   {
+    "key": "C",
+    "content": "The file is larger than at a high rate",
+    "rationale": "A lower rate means fewer samples and a smaller file."
+   },
+   {
+    "key": "D",
+    "content": "Only the bass sounds are removed",
+    "rationale": "It is the high frequencies that are lost first."
+   }
+  ],
+  "explanation": "A low sampling rate misses fast changes in the wave, so high-pitched sounds are lost or heard at the wrong pitch.",
+  "hints": [
+   "Which frequencies change fastest and need the most samples?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "media.sound.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Increasing the sampling rate makes a recorded sound louder.",
+  "answerSpec": {
+   "correct": false,
+   "feedbackTrue": "Loudness depends on the amplitude of the wave, not on how often it is sampled.",
+   "feedbackFalse": "Correct: a higher rate captures the wave shape more accurately, but it does not change the loudness."
+  },
+  "explanation": "Sampling rate affects accuracy and file size, not volume.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.sound.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each term to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Sampling"
+    },
+    {
+     "id": "L2",
+     "content": "Sampling rate"
+    },
+    {
+     "id": "L3",
+     "content": "Sampling resolution"
+    },
+    {
+     "id": "L4",
+     "content": "Analogue signal"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The number of bits used to store each sample"
+    },
+    {
+     "id": "R4",
+     "content": "A signal that varies continuously"
+    },
+    {
+     "id": "R1",
+     "content": "Measuring the amplitude of a sound wave at regular intervals"
+    },
+    {
+     "id": "R2",
+     "content": "The number of samples per second, in hertz"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Digital sound is made by sampling an analogue signal; rate and resolution control the accuracy.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "media.sound.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "A stereo recording lasts 10 seconds and is sampled at 6000 Hz with 8-bit samples. Complete the calculation.",
+  "payload": {
+   "template": "Size in bits = {{blank:bits}}\n\nSize in bytes = {{blank:bytes}}",
+   "blanks": [
+    {
+     "id": "bits",
+     "input": "number"
+    },
+    {
+     "id": "bytes",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "bits",
+     "accepted": [
+      "960000"
+     ]
+    },
+    {
+     "id": "bytes",
+     "accepted": [
+      "120000"
+     ]
+    }
+   ]
+  },
+  "explanation": "6000 × 8 × 10 × 2 = 960000 bits; ÷ 8 = 120000 bytes.",
+  "hints": [
+   "Multiply rate × resolution × time × channels.",
+   "Divide the bits by 8 for bytes."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "bits",
+     "text": "960000"
+    },
+    {
+     "blankId": "bytes",
+     "text": "120000"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "bits",
+      "text": "999"
+     },
+     {
+      "blankId": "bytes",
+      "text": "999"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "media.sound.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A mono recording of 4 minutes is sampled at R Hz with S-bit samples. Which expression gives the file size in bits?",
+  "options": [
+   {
+    "key": "A",
+    "content": "R × S × 4",
+    "rationale": "This uses 4 minutes as if it were 4 seconds."
+   },
+   {
+    "key": "B",
+    "content": "R × S × 4 × 60",
+    "correct": true,
+    "rationale": "Correct: the time must be in seconds, 4 × 60."
+   },
+   {
+    "key": "C",
+    "content": "R × S × 4 × 60 × 2",
+    "rationale": "This includes a second channel, but the recording is mono."
+   },
+   {
+    "key": "D",
+    "content": "R × S × 4 × 60 ÷ 8",
+    "rationale": "Dividing by 8 would give the size in bytes."
+   }
+  ],
+  "explanation": "File size (bits) = rate × resolution × time in seconds × channels. Four minutes is 4 × 60 seconds and mono has one channel.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "media.sound.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A mono sound file is 240000 bytes. It was sampled at 6000 Hz with 8-bit samples. How many seconds long is the recording?",
+  "payload": {
+   "unitHint": "s"
+  },
+  "answerSpec": {
+   "value": 40,
+   "units": {
+    "required": false,
+    "accepted": [
+     "s",
+     "seconds",
+     "second",
+     "sec",
+     "secs"
+    ]
+   }
+  },
+  "explanation": "One second needs 6000 bytes, so 240000 bytes last 40 seconds.",
+  "workedSolution": "1. Bytes per second = 6000 × 8 ÷ 8 = 6000.\n2. Time = 240000 ÷ 6000 = 40 seconds.",
+  "hints": [
+   "Work out the number of bytes recorded every second.",
+   "Divide the file size by that number."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "40"
+  },
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "media.sound.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain the effect on the quality and the file size of a sound recording of increasing the sampling rate.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "More samples are taken each second, so the shape of the wave is followed more closely.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The recording is a more accurate representation of the original sound.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The file size increases because there are more samples to store.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A higher sampling rate takes more measurements every second, so the digital recording follows the original wave more closely and is more accurate. There are more samples to store, so the file is larger."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Both accuracy and file size increase with the rate.",
+  "hints": [
+   "Give an effect on accuracy and an effect on the file size."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.sound.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A school in Masvingo records lessons as speech so that absent pupils can listen later. Suggest suitable sampling settings and justify them.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A low or medium sampling rate and resolution are enough for speech.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Mono is enough, which halves the file size compared with stereo.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Smaller files save storage and are quicker to download on slow connections.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Speech does not need the high rate or resolution used for music, so a modest sampling rate and resolution in mono are suitable. The files stay small, which saves storage space and downloads quickly on slow connections."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Choose the lowest settings that still give clear speech.",
+  "hints": [
+   "Compare the needs of speech with the needs of music."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "media.sound.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Describe how an analogue sound is converted into a digital sound file.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The amplitude of the sound wave is measured at regular time intervals (sampled).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Each measurement is stored as a binary number using a fixed number of bits.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The height of the wave is measured at regular intervals. Each measurement is rounded to the nearest value available and stored as a binary number."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "This is sampling followed by storing each sample in binary.",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.sound.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why a very low sampling rate loses the high-frequency sounds in a recording.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "High-frequency sounds change very quickly, in a short time.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A low rate does not take enough samples to follow these quick changes.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "So the high frequencies are lost or are reproduced wrongly.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: High-pitched sounds are waves that rise and fall very quickly. If the samples are far apart in time, they miss these quick changes, so the high frequencies are lost or heard as a different pitch."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "This effect is called aliasing; for this course only the outline is needed.",
+  "hints": [
+   "Think about how often the wave changes direction for a high-pitched sound."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.sound.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A voice message from a customer in Kariba is recorded as a mono sound file lasting 20 seconds. It is sampled at 12000 Hz with a sampling resolution of 8 bits.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Calculate the number of bits used for one second of the recording.",
+    "payload": {
+     "unitHint": "bits"
+    },
+    "answerSpec": {
+     "value": 96000,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bits",
+       "bit",
+       "b"
+      ]
+     }
+    },
+    "explanation": "12000 × 8 = 96000 bits.",
+    "workedSolution": "1. 12000 × 8 = 96000 bits."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the size of the whole file in bytes.",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 240000,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "96000 × 20 = 1920000 bits; ÷ 8 = 240000 bytes.",
+    "workedSolution": "1. 96000 × 20 = 1920000 bits; ÷ 8 = 240000 bytes."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The company changes to stereo with a higher sampling rate. Describe two effects on the sound file.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The file size increases (two channels and more samples).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The sound is a more accurate representation of the original.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "More storage space or transfer time is needed.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The recording follows the original more closely, so it is more accurate, but the file is larger and needs more storage and more time to send."
+    }
+   }
+  ],
+  "explanation": "12000 × 8 × 20 = 1920000 bits = 240000 bytes.",
+  "hints": [
+   "Remember to divide by 8 to get bytes.",
+   "Think about accuracy as well as size."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "96000"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "240000"
+    }
+   }
+  },
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "media.sound.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A Harare call centre wants to store recorded calls of 60 seconds. Setting A is mono, 8000 Hz, 8-bit samples. Setting B is stereo, 16000 Hz, 16-bit samples.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the size of a one-minute call stored using Setting A.",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 480000,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "8000 × 8 × 60 × 1 ÷ 8 = 480000 bytes.",
+    "workedSolution": "1. 8000 × 8 × 60 × 1 ÷ 8 = 480000 bytes."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the size of a one-minute call stored using Setting B.",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 3840000,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "16000 × 16 × 60 × 2 ÷ 8 = 3840000 bytes.",
+    "workedSolution": "1. 16000 × 16 × 60 × 2 ÷ 8 = 3840000 bytes."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "How many times larger is the file from Setting B than from Setting A?",
+    "payload": {
+     "unitHint": "×"
+    },
+    "answerSpec": {
+     "value": 8,
+     "units": {
+      "required": false,
+      "accepted": [
+       "×",
+       "x",
+       "times"
+      ]
+     }
+    },
+    "explanation": "3840000 ÷ 480000 = 8.",
+    "workedSolution": "1. 3840000 ÷ 480000 = 8."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Recommend a setting for storing thousands of recorded calls and justify your answer.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Setting A is recommended.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Speech is clear enough at the lower rate and resolution, in mono.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Its files are eight times smaller, so much less storage is needed.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Setting A. Speech is clear at 8000 Hz and 8 bits in mono, and each file is one eighth of the size, so thousands of calls need far less storage."
+    }
+   }
+  ],
+  "explanation": "A: 480000 bytes. B: 3840000 bytes, 8 times larger. Speech needs only Setting A.",
+  "hints": [
+   "Use the same formula for both settings.",
+   "Compare sizes, then think about what the recordings are used for."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "480000"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "3840000"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "8"
+    }
+   }
+  },
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "media.sound.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which change makes a recorded sound file larger, if nothing else changes?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Reducing the sampling resolution",
+    "rationale": "Fewer bits per sample make the file smaller."
+   },
+   {
+    "key": "B",
+    "content": "Lowering the sampling rate",
+    "rationale": "Fewer samples per second make the file smaller."
+   },
+   {
+    "key": "C",
+    "content": "Changing from stereo to mono",
+    "rationale": "Mono has one channel, so the file is smaller."
+   },
+   {
+    "key": "D",
+    "content": "Recording for a longer time",
+    "correct": true,
+    "rationale": "Correct: more seconds mean more samples."
+   }
+  ],
+  "explanation": "File size is proportional to the time, the rate, the resolution and the number of channels.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "media.sound.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Two recordings of the same length have the same sampling rate and resolution. One is mono and the other is stereo. How do the file sizes compare?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The two files are the same size",
+    "rationale": "Each channel has its own samples."
+   },
+   {
+    "key": "B",
+    "content": "The mono file is twice the size of the stereo file",
+    "rationale": "Stereo has more data, not less."
+   },
+   {
+    "key": "C",
+    "content": "The stereo file is four times the size of the mono file",
+    "rationale": "Two channels double the size; they do not quadruple it."
+   },
+   {
+    "key": "D",
+    "content": "The stereo file is twice the size of the mono file",
+    "correct": true,
+    "rationale": "Correct: stereo has two channels."
+   }
+  ],
+  "explanation": "The number of channels is a multiplier in the file-size calculation, so stereo (2) is twice mono (1).",
+  "hints": [
+   "How many channels does each recording have?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ }
+]

@@ -1,0 +1,1532 @@
+[
+ {
+  "key": "exam.w4b-theory.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.procedures-functions",
+   "acs.prog.iteration",
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A minibus operator in Chitungwiza calculates fares in USD with this pseudocode. The age of the passenger and the number of the zone travelled to decide the fare.\n\n```\nFUNCTION Fee(Age : INTEGER, Zone : INTEGER) RETURNS REAL\n    DECLARE Base : REAL\n    Base ← Zone * 0.5\n    IF Age < 12 THEN\n        RETURN Base / 2\n    ELSE\n        RETURN Base\n    ENDIF\nENDFUNCTION\n\nPROCEDURE AddTo(BYREF Total : REAL, BYVAL Amount : REAL)\n    Total ← Total + Amount\nENDPROCEDURE\n\nTotal ← 0\nFOR Zone ← 1 TO 3\n    Age ← Zone * 5\n    CALL AddTo(Total, Fee(Age, Zone))\nNEXT Zone\nOUTPUT Total\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which of the routines is a function?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`Fee`",
+      "correct": true,
+      "rationale": "It has a RETURNS clause and returns a value."
+     },
+     {
+      "key": "B",
+      "content": "`AddTo`",
+      "rationale": "AddTo is called with CALL and returns nothing."
+     },
+     {
+      "key": "C",
+      "content": "`Total`",
+      "rationale": "Total is a variable."
+     },
+     {
+      "key": "D",
+      "content": "`Zone`",
+      "rationale": "Zone is the loop variable."
+     }
+    ],
+    "explanation": "`Fee` returns a value; `AddTo` is a procedure."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "State the value returned by `Fee(Age, Zone)` on each of the three passes of the loop.",
+    "payload": {
+     "template": "Zone 1: {{blank:a}}\n\nZone 2: {{blank:b}}\n\nZone 3: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0.25"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "0.5"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "1.5"
+       ]
+      }
+     ]
+    },
+    "explanation": "Zone 1: age 5 is under 12, so 0.5 / 2 = 0.25. Zone 2: age 10, so 1.0 / 2 = 0.5. Zone 3: age 15, so the base 1.5."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value output at the end.",
+    "answerSpec": {
+     "value": 2.25,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "The total is 2.25.",
+    "workedSolution": "0.25 + 0.5 + 1.5 = 2.25."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the effect of passing `Total` to `AddTo` by reference?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The procedure receives only a copy of Total",
+      "rationale": "That is passing by value."
+     },
+     {
+      "key": "B",
+      "content": "The procedure changes the main program variable",
+      "correct": true,
+      "rationale": "BYREF gives the procedure access to the original variable."
+     },
+     {
+      "key": "C",
+      "content": "The procedure cannot read the value of Total at all",
+      "rationale": "It can read and change it."
+     },
+     {
+      "key": "D",
+      "content": "The procedure returns a value to the main program as a result",
+      "rationale": "A procedure does not return a value."
+     }
+    ],
+    "explanation": "BYREF lets the procedure change the original variable."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State and explain what would be output if `Total` were passed by value instead.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The output would be 0",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Because the procedure would add to a copy of Total, and the Total in the main program would not change",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The output would be 0, because the procedure would add to a copy and the main program's Total would stay at 0."
+    },
+    "explanation": "BYVAL changes only the copy."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two benefits of dividing the program into the routines `Fee` and `AddTo`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each routine does one job and can be tested separately",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The routines can be reused (or changed) without rewriting the rest of the program",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each routine does one job and can be tested on its own, and a routine can be reused or changed without rewriting the rest of the program."
+    },
+    "explanation": "Modular design."
+   }
+  ],
+  "explanation": "The fares are 0.25, 0.5 and 1.5 and the total is 2.25; AddTo changes Total because it is passed by reference.",
+  "hints": [
+   "A function is called inside an expression and returns a value.",
+   "Work through each pass of the loop in turn."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0.25"
+      },
+      {
+       "blankId": "b",
+       "text": "0.5"
+      },
+      {
+       "blankId": "c",
+       "text": "1.5"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2.25"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0.5"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       },
+       {
+        "blankId": "c",
+        "text": "1.5"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2.5"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w4b-theory.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.oop-concepts",
+   "acs.prog.oop-programming"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A farm record system in Bindura uses this Python program.\n\n```python\nclass Animal:\n    def __init__(self, name):\n        self.__name = name\n\n    def describe(self):\n        return self.__name + \" is an animal\"\n\n    def produce(self):\n        return 0\n\nclass Cow(Animal):\n    def __init__(self, name, litres):\n        super().__init__(name)\n        self.__litres = litres\n\n    def describe(self):\n        return super().describe() + \" that gives milk\"\n\n    def produce(self):\n        return self.__litres\n\nclass Hen(Animal):\n    def __init__(self, name, eggs):\n        super().__init__(name)\n        self.__eggs = eggs\n\n    def produce(self):\n        return self.__eggs\n\nfarm = [Cow(\"Mbuya\", 12), Hen(\"Pepe\", 3), Animal(\"Rex\")]\ntotal = 0\nfor a in farm:\n    print(a.describe())\n    total = total + a.produce()\nprint(total)\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which class is the superclass in the program?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`Cow`",
+      "rationale": "Cow is a subclass."
+     },
+     {
+      "key": "B",
+      "content": "`Hen`",
+      "rationale": "Hen is a subclass."
+     },
+     {
+      "key": "C",
+      "content": "`Animal`",
+      "correct": true,
+      "rationale": "Cow and Hen inherit from Animal."
+     },
+     {
+      "key": "D",
+      "content": "`farm`",
+      "rationale": "farm is a list of objects."
+     }
+    ],
+    "explanation": "`Animal` is the class from which the others inherit."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the second line of output.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Pepe is an animal"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "Hen does not override describe, so the version in Animal is used."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the last number output.",
+    "answerSpec": {
+     "value": 15
+    },
+    "explanation": "The total is 15.",
+    "workedSolution": "12 litres from the cow + 3 eggs from the hen + 0 from the animal = 15."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What name is given to the way `Cow` provides its own version of `describe`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Encapsulation",
+      "rationale": "Encapsulation hides the data."
+     },
+     {
+      "key": "B",
+      "content": "Instantiation",
+      "rationale": "Instantiation is creating an object."
+     },
+     {
+      "key": "C",
+      "content": "Containment",
+      "rationale": "Containment is a has-a relationship."
+     },
+     {
+      "key": "D",
+      "content": "Overriding",
+      "correct": true,
+      "rationale": "A subclass replaces an inherited method."
+     }
+    ],
+    "explanation": "A subclass method with the same name replaces the inherited one: overriding."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the term for creating an object from a class, such as `Cow(\"Mbuya\", 12)`.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "instantiation"
+      },
+      {
+       "value": "instantiating"
+      },
+      {
+       "value": "creating an instance"
+      },
+      {
+       "value": "instance creation"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Instantiation."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain how the loop in the program shows polymorphism.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The same method calls (describe and produce) are made on every object in the list",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Each object responds in the way defined by its own class, giving different results",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The loop makes the same calls, describe and produce, on every object, and each object responds as its own class defines, giving different results."
+    },
+    "explanation": "One call, different behaviour."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the header and constructor of the class `Hen` in 9618-style pseudocode.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "CLASS Hen INHERITS Animal with a private Eggs property",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A constructor NEW with parameters for the name and the eggs",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Calls SUPER.NEW with the name and then sets Eggs",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nCLASS Hen INHERITS Animal\n    PRIVATE Eggs : INTEGER\n    PUBLIC PROCEDURE NEW(GivenName : STRING, GivenEggs : INTEGER)\n        SUPER.NEW(GivenName)\n        Eggs ← GivenEggs\n    ENDPROCEDURE\nENDCLASS\n```"
+    },
+    "explanation": "Inherit, call the superclass constructor, then set the new property."
+   }
+  ],
+  "explanation": "Hen inherits describe from Animal, so the second line is Pepe is an animal; the total is 12 + 3 + 0 = 15.",
+  "hints": [
+   "Which class do the other classes inherit from?",
+   "Check which classes override each method."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "Pepe is an animal"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "15"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(e)": {
+     "type": "SHORT_ANSWER",
+     "text": "instantiation"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "12"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P3"
+ },
+ {
+  "key": "exam.w4b-theory.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.language-paradigms",
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A market association keeps a program of the stalls in a Prolog-style language.\n\n```\nsells(chipo, tomatoes).\nsells(rudo, onions).\nsells(farai, tomatoes).\nsells(farai, onions).\nsells(tendai, rice).\ncheap(tomatoes).\ncheap(rice).\nbargain(S) :- sells(S, P), cheap(P).\n```\n\nThe facts `sells(Owner, Product).` and `cheap(Product).` give the data, and the rule says that a stall is a bargain if it sells a cheap product.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which programming paradigm does this program use?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Low-level",
+      "rationale": "Low-level code uses processor instructions."
+     },
+     {
+      "key": "B",
+      "content": "Imperative",
+      "rationale": "There is no sequence of statements."
+     },
+     {
+      "key": "C",
+      "content": "Object-oriented",
+      "rationale": "There are no classes or objects."
+     },
+     {
+      "key": "D",
+      "content": "Declarative",
+      "correct": true,
+      "rationale": "It states facts and rules, and the system finds the answers."
+     }
+    ],
+    "explanation": "Facts, rules and goals are declarative programming."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "State the three solutions of the goal `bargain(S).` in the order the system gives them.",
+    "payload": {
+     "template": "First: {{blank:a}}\n\nSecond: {{blank:b}}\n\nThird: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "chipo",
+        "rudo",
+        "farai",
+        "tendai"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "chipo",
+        "rudo",
+        "farai",
+        "tendai"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "chipo",
+        "rudo",
+        "farai",
+        "tendai"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "chipo"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "farai"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "tendai"
+       ]
+      }
+     ]
+    },
+    "explanation": "The stalls are tested in the order of the facts: chipo (tomatoes), rudo (onions are not cheap), farai (tomatoes), tendai (rice)."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of solutions of the goal `sells(farai, P).`",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "There are two solutions.",
+    "workedSolution": "Two facts have farai as the owner: tomatoes and onions."
+   },
+   {
+    "label": "(d)",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "stem": "The goal `sells(rudo, tomatoes).` succeeds.",
+    "answerSpec": {
+     "correct": false
+    },
+    "explanation": "False. There is no such fact, and no rule defines sells."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write a rule `mixed(S)` that is true when the stall S sells both tomatoes and onions.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The head mixed(S) followed by :-",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The two goals sells(S, tomatoes) and sells(S, onions) separated by a comma and ending with a full stop",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nmixed(S) :- sells(S, tomatoes), sells(S, onions).\n```"
+    },
+    "explanation": "A comma means and."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe how an imperative program would differ from this program in finding the bargain stalls.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The imperative program would contain statements such as loops and conditions that say how to search the data",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "In this program only facts, a rule and a goal are given, and the system decides how to find the solutions",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: An imperative program would use loops and conditions to say how to search the data. Here only facts, a rule and a goal are given, and the system decides how to find the solutions."
+    },
+    "explanation": "How versus what."
+   }
+  ],
+  "explanation": "The bargain stalls are chipo, farai and tendai; the paradigm is declarative.",
+  "hints": [
+   "Test the stalls in the order of the facts.",
+   "A rule's body goals must all be true."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "chipo"
+      },
+      {
+       "blankId": "b",
+       "text": "farai"
+      },
+      {
+       "blankId": "c",
+       "text": "tendai"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(d)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "rudo"
+       },
+       {
+        "blankId": "b",
+        "text": "chipo"
+       },
+       {
+        "blankId": "c",
+        "text": "chipo"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(d)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 3"
+ },
+ {
+  "key": "exam.w4b-theory.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A shop in Zvishavane stores each day's takings, one per line, in a text file. This Python program was run.\n\n```python\nwith open(\"sales.txt\", \"w\") as f:\n    print(40, file=f)\n    print(25, file=f)\n    print(\"n/a\", file=f)\n    print(35, file=f)\n\ntotal = 0\nbad = 0\ntry:\n    with open(\"sales.txt\") as f:\n        for line in f:\n            try:\n                total = total + int(line)\n            except ValueError:\n                bad = bad + 1\n    print(\"Total:\", total)\nexcept FileNotFoundError:\n    print(\"No file\")\nfinally:\n    print(\"Bad lines:\", bad)\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number printed after `Total:`.",
+    "answerSpec": {
+     "value": 100
+    },
+    "explanation": "The total is 100.",
+    "workedSolution": "40 + 25 + 35 = 100; the line n/a is skipped."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number printed after `Bad lines:`.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "One bad line.",
+    "workedSolution": "Only the line n/a cannot be converted to an integer."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which exception is handled by the inner `except` block?",
+    "options": [
+     {
+      "key": "A",
+      "content": "FileNotFoundError",
+      "rationale": "That is handled by the outer except block."
+     },
+     {
+      "key": "B",
+      "content": "ValueError",
+      "correct": true,
+      "rationale": "int(\"n/a\") cannot be converted."
+     },
+     {
+      "key": "C",
+      "content": "ZeroDivisionError",
+      "rationale": "There is no division."
+     },
+     {
+      "key": "D",
+      "content": "IndexError",
+      "rationale": "No list index is used."
+     }
+    ],
+    "explanation": "A failed conversion raises ValueError."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the effect of opening `sales.txt` with the mode `\"w\"` in the first lines?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The file is opened for reading only",
+      "rationale": "That is read mode."
+     },
+     {
+      "key": "B",
+      "content": "New lines are added at the end of the existing lines",
+      "rationale": "That is append mode."
+     },
+     {
+      "key": "C",
+      "content": "The file is created, or emptied if it already exists",
+      "correct": true,
+      "rationale": "Write mode starts with an empty file."
+     },
+     {
+      "key": "D",
+      "content": "The file is deleted when the program ends",
+      "rationale": "Write mode does not delete the file."
+     }
+    ],
+    "explanation": "Write mode overwrites the existing contents."
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the pseudocode that reads every line of the file.",
+    "payload": {
+     "template": "OPENFILE \"Sales.txt\" FOR READ\n\nWHILE NOT {{blank:a}}(\"Sales.txt\") DO\n\n    {{blank:b}} \"Sales.txt\", Line",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "EOF",
+        "READFILE",
+        "OPENFILE",
+        "SEEK"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "EOF",
+        "READFILE",
+        "OPENFILE",
+        "SEEK"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "EOF"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "READFILE"
+       ]
+      }
+     ]
+    },
+    "explanation": "EOF tests for the end of the file and READFILE reads a line."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the program uses an inner `try ... except` statement inside the loop.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A line that is not a number would raise a ValueError and stop the program",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The inner handler counts the bad line and lets the loop go on to the next line",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A line that is not a number raises a ValueError and would stop the program. The inner handler counts the bad line and lets the loop carry on with the next line."
+    },
+    "explanation": "Handle the exception where it occurs."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State what the program would output if the file `sales.txt` could not be found when it is opened for reading, and give the reason the `finally` block still runs.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It would output No file, and then Bad lines: 0",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The finally block runs whether or not an exception occurred",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It would output \"No file\" and then \"Bad lines: 0\". The finally block always runs, whether or not an exception occurred."
+    },
+    "explanation": "finally is for clean-up that always happens."
+   }
+  ],
+  "explanation": "Total 100 and one bad line; the inner handler stops one bad line ending the program.",
+  "hints": [
+   "Follow the lines of the file one at a time.",
+   "Which handler catches which exception?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "100"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "EOF"
+      },
+      {
+       "blankId": "b",
+       "text": "READFILE"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "125"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "READFILE"
+       },
+       {
+        "blankId": "b",
+        "text": "EOF"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 3"
+ },
+ {
+  "key": "exam.w4b-theory.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.programming-basics"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A program for a school in Rusape stores data about each learner.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each item of data to the most suitable data type.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "The number of subjects taken"
+      },
+      {
+       "id": "L2",
+       "content": "The average mark, such as 61.5"
+      },
+      {
+       "id": "L3",
+       "content": "Whether the fees are paid"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "BOOLEAN"
+      },
+      {
+       "id": "X1",
+       "content": "STRING"
+      },
+      {
+       "id": "R1",
+       "content": "INTEGER"
+      },
+      {
+       "id": "R2",
+       "content": "REAL"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "A count is INTEGER, an average has a fraction (REAL) and paid/unpaid is BOOLEAN."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `MOD(47, 8) + DIV(47, 8)`.",
+    "answerSpec": {
+     "value": 12
+    },
+    "explanation": "The value is 12.",
+    "workedSolution": "MOD(47, 8) is 7 and DIV(47, 8) is 5; 7 + 5 = 12."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "In a Python program, `age = input()` is followed by `age + 1`. Why does this cause an error?",
+    "options": [
+     {
+      "key": "A",
+      "content": "input() returns a real number that is too large",
+      "rationale": "It always returns a string."
+     },
+     {
+      "key": "B",
+      "content": "1 is not a valid number to use in Python",
+      "rationale": "1 is valid."
+     },
+     {
+      "key": "C",
+      "content": "age was not declared as an integer before use",
+      "rationale": "Python does not need a declaration."
+     },
+     {
+      "key": "D",
+      "content": "input() gives a string; a string plus 1 fails",
+      "correct": true,
+      "rationale": "The value must be converted with int()."
+     }
+    ],
+    "explanation": "Convert the input with int() before the addition."
+   }
+  ],
+  "explanation": "Data types are matched to the data; MOD(47, 8) + DIV(47, 8) = 7 + 5 = 12; input() returns a string.",
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "12"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w4b-theory.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.interface-design"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A clinic in Mutare is developing a screen on which a nurse registers a new patient. The nurse uses the screen all day and wants to work quickly.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two items that would be included in a profile of the nurse as a user.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Uses the system all day, so is experienced (skill level)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Needs speed, e.g. few clicks or keyboard use (needs), or the device and place of use",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The nurse uses the system all day, so is experienced, and needs to work quickly, with few clicks and keyboard use."
+    },
+    "explanation": "A profile lists skills, needs, device and conditions."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which input control is the most suitable for the field `Ward`, which has the choices A, B and C?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A drop-down list",
+      "correct": true,
+      "rationale": "Only the listed wards can be chosen."
+     },
+     {
+      "key": "B",
+      "content": "A text box",
+      "rationale": "Anything could be typed."
+     },
+     {
+      "key": "C",
+      "content": "A heading",
+      "rationale": "A heading is only a title."
+     },
+     {
+      "key": "D",
+      "content": "A scroll bar",
+      "rationale": "A scroll bar is not used to choose a value from a list."
+     }
+    ],
+    "explanation": "A fixed choice is best made from a list."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The nurse types a phone number with only 9 digits instead of 10. Describe a suitable validation check and message.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A length check (or format check) that the number has exactly 10 digits",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A message that says what is wrong and how to fix it, such as \"Enter 10 digits\"",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A length check that the number has exactly 10 digits, with the message \"Enter 10 digits\"."
+    },
+    "explanation": "A helpful message says what to do."
+   }
+  ],
+  "explanation": "A user profile, a drop-down list for a fixed choice, and a length check with a helpful message.",
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "ZIMSEC Paper 1"
+ },
+ {
+  "key": "exam.w4b-theory.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ds.user-defined-types"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A program for a clinic in Gweru stores the following.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Choose the most suitable user-defined type for each item of data.",
+    "payload": {
+     "template": "The days of the week on which the clinic is open: {{blank:a}}\n\nA patient's name, age and ward: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "enumerated",
+        "record",
+        "pointer",
+        "set"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "enumerated",
+        "record",
+        "pointer",
+        "set"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "enumerated"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "record"
+       ]
+      }
+     ]
+    },
+    "explanation": "A fixed list of names is enumerated; fields of different types form a record."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the pseudocode keyword that ends the definition of a record type.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "ENDTYPE"
+      },
+      {
+       "value": "endtype"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "A record type is closed with ENDTYPE."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two reasons why a record is better than separate arrays for storing a patient's details.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The fields of one patient are kept together as one item",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The data cannot get out of step, and the record can be passed to a routine as a single item",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The fields of one patient are kept together as one item, so the data cannot get out of step, and the record can be passed to a routine as one item."
+    },
+    "explanation": "Related data in one structure."
+   }
+  ],
+  "explanation": "An enumerated type for the days, a record for the patient, and ENDTYPE closes the record.",
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "enumerated"
+      },
+      {
+       "blankId": "b",
+       "text": "record"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "ENDTYPE"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "record"
+       },
+       {
+        "blankId": "b",
+        "text": "enumerated"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 3"
+ }
+]

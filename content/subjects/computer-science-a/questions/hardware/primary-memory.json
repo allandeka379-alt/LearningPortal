@@ -1,0 +1,1307 @@
+[
+ {
+  "key": "hardware.primary-memory.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which type of memory loses its contents when the power is switched off?",
+  "options": [
+   {
+    "key": "A",
+    "content": "RAM",
+    "correct": true,
+    "rationale": "Correct: RAM is volatile."
+   },
+   {
+    "key": "B",
+    "content": "ROM",
+    "rationale": "ROM is non-volatile: it keeps its contents without power."
+   },
+   {
+    "key": "C",
+    "content": "EEPROM",
+    "rationale": "EEPROM is non-volatile and keeps its contents."
+   },
+   {
+    "key": "D",
+    "content": "Flash memory",
+    "rationale": "Flash memory is non-volatile and keeps its contents."
+   }
+  ],
+  "explanation": "RAM is volatile; ROM, EEPROM and flash are non-volatile.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why is the bootstrap program stored in ROM rather than in RAM?",
+  "options": [
+   {
+    "key": "A",
+    "content": "ROM keeps its contents when the power is off",
+    "correct": true,
+    "rationale": "Correct: the program must be present at start-up, before anything can be loaded."
+   },
+   {
+    "key": "B",
+    "content": "ROM is faster than every type of RAM when it is running",
+    "rationale": "ROM is not faster than RAM, and speed is not the reason."
+   },
+   {
+    "key": "C",
+    "content": "RAM cannot hold a program as small as the bootstrap",
+    "rationale": "RAM can hold programs of any size up to its capacity."
+   },
+   {
+    "key": "D",
+    "content": "ROM can be rewritten every time the computer starts",
+    "rationale": "ROM is read-only in normal use."
+   }
+  ],
+  "explanation": "At switch-on RAM is empty. The bootstrap must come from non-volatile memory so that the processor can load the operating system.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why must the cells of DRAM be refreshed?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The flip-flops in each cell lose their state when the clock stops",
+    "rationale": "That would describe SRAM, which is not refreshed."
+   },
+   {
+    "key": "B",
+    "content": "The charge in each capacitor leaks away",
+    "correct": true,
+    "rationale": "Correct: the stored charge must be read and rewritten before it is lost."
+   },
+   {
+    "key": "C",
+    "content": "The laser drifts away from the correct track on the disc",
+    "rationale": "Lasers are used in optical drives, not memory chips."
+   },
+   {
+    "key": "D",
+    "content": "The memory is erased by ultraviolet light in normal use",
+    "rationale": "Ultraviolet light erases EPROM, not DRAM."
+   }
+  ],
+  "explanation": "DRAM stores each bit as charge in a capacitor. Capacitors leak, so each cell is refreshed many times per second.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A processor designer wants a very small memory next to the processor that responds as quickly as possible, even though it costs more per bit. Which technology is suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "DRAM",
+    "rationale": "DRAM is cheaper and slower; it is used for the large main memory."
+   },
+   {
+    "key": "B",
+    "content": "EPROM",
+    "rationale": "EPROM is a read-mostly memory used for firmware, not for speed."
+   },
+   {
+    "key": "C",
+    "content": "SRAM",
+    "correct": true,
+    "rationale": "Correct: it is fast and needs no refresh; it is used for cache."
+   },
+   {
+    "key": "D",
+    "content": "Flash memory",
+    "rationale": "Flash is non-volatile storage and is slower to write."
+   }
+  ],
+  "explanation": "Cache is built from SRAM because it is faster than DRAM; its higher cost per bit is acceptable for a small size.",
+  "hints": [
+   "Which RAM is fast but costs more per bit?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A device keeps a table of bus fares that the operator changes twice a year. The table must survive power cuts and be changed without removing the chip. Which memory is most suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Mask ROM",
+    "rationale": "Mask ROM can never be changed after manufacture."
+   },
+   {
+    "key": "B",
+    "content": "DRAM",
+    "rationale": "DRAM is volatile and loses the table when the power is off."
+   },
+   {
+    "key": "C",
+    "content": "EPROM",
+    "rationale": "EPROM must be removed and exposed to ultraviolet light to be erased."
+   },
+   {
+    "key": "D",
+    "content": "EEPROM",
+    "correct": true,
+    "rationale": "Correct: non-volatile and erasable electrically while in the circuit."
+   }
+  ],
+  "explanation": "The table must be kept without power and rewritten rarely, in circuit, which describes EEPROM.",
+  "hints": [
+   "Look for non-volatile and electrically erasable."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why is a buffer used between a processor and a printer?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The buffer makes the printer print faster than its mechanism allows",
+    "rationale": "The printer is still limited by its own speed."
+   },
+   {
+    "key": "B",
+    "content": "The buffer converts the document into toner",
+    "rationale": "A buffer only holds data; it does not change it."
+   },
+   {
+    "key": "C",
+    "content": "The buffer keeps a permanent copy of every printed page",
+    "rationale": "A buffer is temporary and its contents are replaced."
+   },
+   {
+    "key": "D",
+    "content": "The processor can send the data quickly and then carry on with other work",
+    "correct": true,
+    "rationale": "Correct: the printer takes the data from the buffer at its own slower speed."
+   }
+  ],
+  "explanation": "A buffer lets a fast device hand over data and move on, while a slow device collects it at its own pace.",
+  "hints": [
+   "Which of the two devices is faster, and what is it free to do?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How does an EEPROM differ from an EPROM?",
+  "options": [
+   {
+    "key": "A",
+    "content": "An EEPROM loses its contents when the power is off, but an EPROM does not",
+    "rationale": "Both are non-volatile."
+   },
+   {
+    "key": "B",
+    "content": "An EEPROM can only be programmed once, but an EPROM many times",
+    "rationale": "That describes PROM, which is programmed once."
+   },
+   {
+    "key": "C",
+    "content": "An EEPROM can be erased electrically while still in the circuit",
+    "correct": true,
+    "rationale": "Correct: an EPROM needs ultraviolet light and removal from the circuit."
+   },
+   {
+    "key": "D",
+    "content": "An EEPROM has no address lines, but an EPROM has",
+    "rationale": "Both are addressed in the same way as any memory chip."
+   }
+  ],
+  "explanation": "EPROM is erased with ultraviolet light through a window; EEPROM is erased with electrical signals, so it can be reprogrammed in place.",
+  "hints": [
+   "The first E in EEPROM stands for electrically."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Static RAM needs to be refreshed many times each second.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. SRAM holds its state in flip-flops as long as power is on. DRAM is the type that needs refreshing.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The contents of ROM are lost when the computer is switched off.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. ROM is non-volatile: it keeps its contents without power, which is why it holds the bootstrap.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each memory type to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "SRAM"
+    },
+    {
+     "id": "L2",
+     "content": "DRAM"
+    },
+    {
+     "id": "L3",
+     "content": "PROM"
+    },
+    {
+     "id": "L4",
+     "content": "EPROM"
+    },
+    {
+     "id": "L5",
+     "content": "Flash"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Programmed once after manufacture"
+    },
+    {
+     "id": "R4",
+     "content": "Erased by ultraviolet light"
+    },
+    {
+     "id": "R5",
+     "content": "Erased electrically in blocks, used in SSDs"
+    },
+    {
+     "id": "R1",
+     "content": "Flip-flops, no refresh, used for cache"
+    },
+    {
+     "id": "R2",
+     "content": "Capacitors that are refreshed, used for main memory"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each type is defined by how a cell stores data and by how (or whether) it can be erased.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the sentences about memory.",
+  "payload": {
+   "template": "The first program run when a computer is switched on is the {{blank:a}}, and it is stored in {{blank:b}}. A temporary store that matches the speed of two devices is a {{blank:c}}.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "bootstrap",
+      "buffer",
+      "compiler",
+      "driver"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "ROM",
+      "DRAM",
+      "SRAM",
+      "cache"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "buffer",
+      "register",
+      "bootstrap",
+      "platter"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "bootstrap"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "ROM"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "buffer"
+     ]
+    }
+   ]
+  },
+  "explanation": "The bootstrap is stored in ROM, and a buffer is the temporary store that matches speeds.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "bootstrap"
+    },
+    {
+     "blankId": "b",
+     "text": "ROM"
+    },
+    {
+     "blankId": "c",
+     "text": "buffer"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "buffer"
+     },
+     {
+      "blankId": "b",
+      "text": "DRAM"
+     },
+     {
+      "blankId": "c",
+      "text": "register"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A ROM chip has 14 address lines and each location holds 8 bits. How many bytes can it store?",
+  "payload": {
+   "unitHint": "bytes"
+  },
+  "answerSpec": {
+   "value": 16384,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bytes",
+     "byte",
+     "B"
+    ]
+   }
+  },
+  "explanation": "2^14 locations of one byte each is 16 384 bytes.",
+  "workedSolution": "1. Locations = 2^14 = 16 384.\n2. Each location is 8 bits = 1 byte.\n3. Capacity = 16 384 bytes (16 KiB).",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "16384"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "112"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "8192"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "hardware.primary-memory.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A memory chip has 10 address lines and each location holds 16 bits. Calculate its capacity in bytes.",
+  "payload": {
+   "unitHint": "bytes"
+  },
+  "answerSpec": {
+   "value": 2048,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bytes",
+     "byte",
+     "B"
+    ]
+   }
+  },
+  "explanation": "1024 locations × 2 bytes each = 2048 bytes.",
+  "workedSolution": "1. Locations = 2^10 = 1024.\n2. Bits = 1024 × 16 = 16 384.\n3. Bytes = 16 384 ÷ 8 = 2048.",
+  "hints": [
+   "Bits = locations × width; divide by 8 for bytes."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2048"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1024"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "16384"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "hardware.primary-memory.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A video is streamed at 4 Mbit/s (4 000 000 bits per second). The buffer holds 8 seconds of video. How many bytes does the buffer hold?",
+  "payload": {
+   "unitHint": "bytes"
+  },
+  "answerSpec": {
+   "value": 4000000,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bytes",
+     "byte",
+     "B"
+    ]
+   }
+  },
+  "explanation": "32 000 000 bits is 4 000 000 bytes.",
+  "workedSolution": "1. Bits = 4 000 000 × 8 = 32 000 000.\n2. Bytes = 32 000 000 ÷ 8 = 4 000 000.",
+  "hints": [
+   "Bits in the buffer = rate × seconds; then divide by 8."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4000000"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "32000000"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "500000"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "hardware.primary-memory.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A 2 MiB document is held in a printer buffer. The printer takes data from the buffer at 0.25 MiB per second. How many seconds does the printer need to print the whole document?",
+  "payload": {
+   "unitHint": "s"
+  },
+  "answerSpec": {
+   "value": 8,
+   "units": {
+    "required": false,
+    "accepted": [
+     "s",
+     "seconds",
+     "second",
+     "sec",
+     "secs"
+    ]
+   }
+  },
+  "explanation": "2 MiB at 0.25 MiB per second takes 8 s.",
+  "workedSolution": "1. Time = size ÷ rate.\n2. 2 ÷ 0.25 = 8 seconds.",
+  "hints": [
+   "Time = size ÷ rate."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.125"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "50"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "hardware.primary-memory.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Explain why DRAM needs to be refreshed. [2]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Each bit is stored as charge in a capacitor",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The charge leaks away, so it must be read and rewritten regularly",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Each bit is a charge on a capacitor. The charge leaks away, so the cell is read and rewritten many times a second."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Capacitor charge and leakage.",
+  "hints": [
+   "Say what the cell is made of and why that needs refreshing."
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Compare SRAM and DRAM. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "SRAM does not need refreshing but DRAM does",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "SRAM is faster than DRAM",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "SRAM costs more per bit (and uses more space) than DRAM",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "SRAM is used for cache; DRAM is used for main memory",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: SRAM needs no refresh and is faster, but costs more per bit and takes more space, so it is used for cache. DRAM must be refreshed, is slower and cheaper, and is used for main memory."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Four matching comparisons.",
+  "hints": [
+   "Use matching comparisons: refresh, speed, cost, use."
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain how a buffer prevents a video from pausing when the network connection slows briefly. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The player downloads data ahead of the part being watched",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The data is held in the buffer",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "When the network slows, playback uses the stored data until the download catches up",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The player downloads ahead and keeps the data in a buffer. If the network slows, the video plays from the stored data until the download recovers."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Download ahead, hold in buffer, play from buffer.",
+  "hints": [
+   "Name the two speeds, then say what the buffer holds."
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A prepaid water meter in Bulawayo has a processor that runs a fixed program, stores a tariff table that the council updates each year, and keeps the number of litres used since the last reading.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which type of memory should hold the fixed program?",
+    "options": [
+     {
+      "key": "A",
+      "content": "DRAM",
+      "rationale": "DRAM is volatile."
+     },
+     {
+      "key": "B",
+      "content": "ROM",
+      "correct": true,
+      "rationale": "Correct: the program never changes and must remain without power."
+     },
+     {
+      "key": "C",
+      "content": "SRAM",
+      "rationale": "SRAM is volatile."
+     },
+     {
+      "key": "D",
+      "content": "A buffer",
+      "rationale": "A buffer holds data temporarily and is not used to store the program."
+     }
+    ],
+    "explanation": "The program is fixed and must be kept without power, so ROM."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name a type of memory that keeps the tariff table without power and allows the council to update it electrically.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "EEPROM"
+      },
+      {
+       "value": "flash"
+      },
+      {
+       "value": "flash memory"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "EEPROM or flash can be erased and rewritten electrically and keep data without power."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The tariff table is held in a chip with 11 address lines and 8 bits per location. Calculate its capacity in bytes.",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 2048,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "2^11 = 2048 locations of one byte each.",
+    "workedSolution": "1. Locations = 2^11 = 2048.\n2. One byte per location, so 2048 bytes."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the litres-used value is held in RAM while the meter is working.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It changes constantly and RAM can be read and written quickly",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "ROM cannot be written during normal use",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The value changes constantly, so it needs memory that can be read and written quickly. ROM cannot be written to in normal use."
+    },
+    "explanation": "Needs read-write memory."
+   }
+  ],
+  "explanation": "Fixed code goes in ROM, rarely changed data in EEPROM or flash, and working data in RAM; capacity is 2^addresses × width.",
+  "hints": [
+   "Which data never changes, which changes rarely, which changes constantly?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "EEPROM"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2048"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "ROM"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "88"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "hardware.primary-memory.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.hardware.primary-memory"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A 2 MiB report is sent to a printer buffer at 40 MiB per second. The printer takes data from the buffer at 0.25 MiB per second.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Calculate the time taken to fill the buffer, in seconds.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 0.05,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.001
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "2 MiB at 40 MiB/s takes 0.05 s.",
+    "workedSolution": "1. Time = 2 ÷ 40.\n2. = 0.05 seconds."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the time taken by the printer to print the report from the buffer, in seconds.",
+    "payload": {
+     "unitHint": "s"
+    },
+    "answerSpec": {
+     "value": 8,
+     "units": {
+      "required": false,
+      "accepted": [
+       "s",
+       "seconds",
+       "second",
+       "sec",
+       "secs"
+      ]
+     }
+    },
+    "explanation": "2 MiB at 0.25 MiB/s takes 8 s.",
+    "workedSolution": "1. Time = 2 ÷ 0.25 = 8 seconds."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain the benefit of the buffer to the user of the computer.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The processor is free after about 0.05 s to do other tasks",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It does not have to wait for the slow printer to finish",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The computer is free to do other work after only 0.05 s instead of waiting 8 s for the printer."
+    },
+    "explanation": "The processor is released early."
+   }
+  ],
+  "explanation": "Filling the buffer takes 0.05 s but printing takes 8 s, so the buffer frees the processor.",
+  "hints": [
+   "Time = size ÷ rate for each device."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "0.05"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "20"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "0.125"
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ }
+]

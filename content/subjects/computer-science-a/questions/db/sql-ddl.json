@@ -1,0 +1,1263 @@
+[
+ {
+  "key": "db.sql-ddl.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which SQL statement is used to create a new table?",
+  "options": [
+   {
+    "key": "A",
+    "content": "CREATE TABLE",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "INSERT INTO",
+    "rationale": "INSERT INTO adds a record to an existing table."
+   },
+   {
+    "key": "C",
+    "content": "SELECT",
+    "rationale": "SELECT reads data from a table."
+   },
+   {
+    "key": "D",
+    "content": "UPDATE",
+    "rationale": "UPDATE changes records already in a table."
+   }
+  ],
+  "explanation": "CREATE TABLE defines a new table.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "db.sql-ddl.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which of these is part of the data definition language (DDL)?",
+  "options": [
+   {
+    "key": "A",
+    "content": "ALTER TABLE",
+    "correct": true,
+    "rationale": "Correct: it changes the structure of a table."
+   },
+   {
+    "key": "B",
+    "content": "DELETE FROM",
+    "rationale": "DELETE FROM removes records, which is data manipulation."
+   },
+   {
+    "key": "C",
+    "content": "UPDATE",
+    "rationale": "UPDATE changes records, which is data manipulation."
+   },
+   {
+    "key": "D",
+    "content": "SELECT",
+    "rationale": "SELECT reads data, which is data manipulation."
+   }
+  ],
+  "explanation": "DDL defines structure; SELECT, INSERT, UPDATE and DELETE are DML.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "db.sql-ddl.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which data type is the most suitable for a field that stores a Zimbabwean mobile phone number such as `0771234567`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`INTEGER`",
+    "rationale": "An integer would remove the leading zero."
+   },
+   {
+    "key": "B",
+    "content": "`REAL`",
+    "rationale": "A real number would lose digits and the leading zero."
+   },
+   {
+    "key": "C",
+    "content": "`BOOLEAN`",
+    "rationale": "A boolean holds only true or false."
+   },
+   {
+    "key": "D",
+    "content": "`VARCHAR(15)`",
+    "correct": true,
+    "rationale": "Correct: it is a label that starts with a zero and is never used in a calculation."
+   }
+  ],
+  "explanation": "Phone numbers are text, so leading zeros are kept.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "db.sql-ddl.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the effect of `NOT NULL` on a field?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The field must contain only numbers",
+    "rationale": "NOT NULL does not restrict the data type."
+   },
+   {
+    "key": "B",
+    "content": "A value must always be entered in the field",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "C",
+    "content": "The value must be different in every record",
+    "rationale": "That describes a primary key."
+   },
+   {
+    "key": "D",
+    "content": "The field is linked to another table",
+    "rationale": "That is a foreign key."
+   }
+  ],
+  "explanation": "NOT NULL stops a record being saved without a value in that field.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.sql-ddl.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A `Patient` table has a field `DoctorID` that must match a `DoctorID` in the `Doctor` table. Which clause enforces this?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`PRIMARY KEY (DoctorID) REFERENCES Doctor(DoctorID)`",
+    "rationale": "A primary key cannot refer to another table."
+   },
+   {
+    "key": "B",
+    "content": "`FOREIGN KEY (Doctor) REFERENCES DoctorID(Doctor)`",
+    "rationale": "The table and field names are the wrong way round."
+   },
+   {
+    "key": "C",
+    "content": "`NOT NULL (DoctorID) LINKS Doctor`",
+    "rationale": "There is no such clause."
+   },
+   {
+    "key": "D",
+    "content": "`FOREIGN KEY (DoctorID) REFERENCES Doctor(DoctorID)`",
+    "correct": true,
+    "rationale": "Correct."
+   }
+  ],
+  "explanation": "The foreign key names the field in this table and the table and field it refers to.",
+  "hints": [
+   "Which field refers to which table?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.sql-ddl.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which statement adds a field `Email` of up to 50 characters to an existing table `Patient`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`INSERT INTO Patient ADD Email VARCHAR(50);`",
+    "rationale": "INSERT INTO adds records."
+   },
+   {
+    "key": "B",
+    "content": "`CREATE TABLE Patient ADD Email VARCHAR(50);`",
+    "rationale": "CREATE TABLE makes a new table."
+   },
+   {
+    "key": "C",
+    "content": "`ALTER TABLE Patient ADD Email VARCHAR(50);`",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "D",
+    "content": "`UPDATE Patient SET Email VARCHAR(50);`",
+    "rationale": "UPDATE changes values, not structure."
+   }
+  ],
+  "explanation": "ALTER TABLE changes the structure of an existing table.",
+  "hints": [
+   "Is the structure or the data being changed?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.sql-ddl.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A script creates the table `Patient` with a foreign key to `Doctor`, but `Doctor` is created after `Patient`. What happens in most systems?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The tables are created and the order of creation never matters",
+    "rationale": "The referred-to table must exist."
+   },
+   {
+    "key": "B",
+    "content": "The statement fails, because `Doctor` does not exist yet",
+    "correct": true,
+    "rationale": "Correct: create the referred-to table first."
+   },
+   {
+    "key": "C",
+    "content": "The `Doctor` table is created automatically",
+    "rationale": "The DBMS does not create tables by itself."
+   },
+   {
+    "key": "D",
+    "content": "The foreign key is changed into a primary key",
+    "rationale": "The DBMS does not change keys."
+   }
+  ],
+  "explanation": "A foreign key refers to an existing table, so that table must be created first.",
+  "hints": [
+   "Can a key refer to a table that does not exist?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "db.sql-ddl.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which statement about `CHARACTER(4)` and `VARCHAR(4)` is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`VARCHAR(4)` always holds exactly 4 characters; `CHARACTER(4)` holds up to 4",
+    "rationale": "The two are the wrong way round."
+   },
+   {
+    "key": "B",
+    "content": "Both hold only numbers",
+    "rationale": "Both hold text."
+   },
+   {
+    "key": "C",
+    "content": "`CHARACTER(4)` always holds exactly 4 characters; `VARCHAR(4)` holds up to 4",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "D",
+    "content": "`CHARACTER(4)` holds 4 numbers and `VARCHAR(4)` holds 4 dates",
+    "rationale": "Neither type is for numbers or dates."
+   }
+  ],
+  "explanation": "CHARACTER is fixed length; VARCHAR is variable length.",
+  "hints": [
+   "Think about the word VARiable."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "db.sql-ddl.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A field declared as PRIMARY KEY may contain the same value in two records.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. A primary key must be unique and cannot be empty.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "db.sql-ddl.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A student number such as S0042 should be stored in an INTEGER field.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. It contains a letter and is a label, so it needs a text type.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.sql-ddl.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each SQL data type to the data it is best suited to.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "INTEGER"
+    },
+    {
+     "id": "L2",
+     "content": "REAL"
+    },
+    {
+     "id": "L3",
+     "content": "DATE"
+    },
+    {
+     "id": "L4",
+     "content": "BOOLEAN"
+    },
+    {
+     "id": "L5",
+     "content": "VARCHAR(30)"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "A person's date of birth"
+    },
+    {
+     "id": "R4",
+     "content": "Whether a patient is insured"
+    },
+    {
+     "id": "R5",
+     "content": "A surname"
+    },
+    {
+     "id": "R1",
+     "content": "The number of seats in a room"
+    },
+    {
+     "id": "R2",
+     "content": "The price of an item in dollars and cents"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each type fits the kind of value stored.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.sql-ddl.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Complete the missing keywords in the table definition.",
+  "payload": {
+   "template": "CREATE TABLE Patient (PatientID CHARACTER(6) {{blank:a}}, Surname VARCHAR(30) {{blank:b}}, DoctorID CHARACTER(4), {{blank:c}} (DoctorID) {{blank:d}} Doctor(DoctorID));",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "PRIMARY KEY",
+      "FOREIGN KEY",
+      "NOT NULL",
+      "REFERENCES"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "PRIMARY KEY",
+      "FOREIGN KEY",
+      "NOT NULL",
+      "REFERENCES"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "PRIMARY KEY",
+      "FOREIGN KEY",
+      "NOT NULL",
+      "REFERENCES"
+     ]
+    },
+    {
+     "id": "d",
+     "input": "select",
+     "choices": [
+      "PRIMARY KEY",
+      "FOREIGN KEY",
+      "NOT NULL",
+      "REFERENCES"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "PRIMARY KEY"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "NOT NULL"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "FOREIGN KEY"
+     ]
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "REFERENCES"
+     ]
+    }
+   ]
+  },
+  "explanation": "PRIMARY KEY identifies records, NOT NULL requires a value, FOREIGN KEY ... REFERENCES links to the other table.",
+  "hints": [
+   "The table must refer to the Doctor table."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "PRIMARY KEY"
+    },
+    {
+     "blankId": "b",
+     "text": "NOT NULL"
+    },
+    {
+     "blankId": "c",
+     "text": "FOREIGN KEY"
+    },
+    {
+     "blankId": "d",
+     "text": "REFERENCES"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "FOREIGN KEY"
+     },
+     {
+      "blankId": "b",
+      "text": "PRIMARY KEY"
+     },
+     {
+      "blankId": "c",
+      "text": "PRIMARY KEY"
+     },
+     {
+      "blankId": "d",
+      "text": "PRIMARY KEY"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.sql-ddl.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Write the SQL keyword (two words) that begins a statement to change the structure of a table.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "ALTER TABLE"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "ALTER TABLE changes a table's structure.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "ALTER TABLE"
+  },
+  "skill": "RECALL"
+ },
+ {
+  "key": "db.sql-ddl.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Here is part of a script.\n\n```\nCREATE TABLE Doctor (\n    DoctorID CHARACTER(4) PRIMARY KEY,\n    Surname VARCHAR(30) NOT NULL,\n    Room INTEGER\n);\n\nCREATE TABLE Patient (\n    PatientID CHARACTER(6) PRIMARY KEY,\n    Surname VARCHAR(30) NOT NULL,\n    DateOfBirth DATE,\n    Phone VARCHAR(15),\n    Insured BOOLEAN,\n    DoctorID CHARACTER(4),\n    FOREIGN KEY (DoctorID) REFERENCES Doctor(DoctorID)\n);\n```\n\nName the field in the `Patient` table that is the foreign key.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "DoctorID"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "DoctorID in Patient refers to Doctor(DoctorID).",
+  "hints": [
+   "Look at the CREATE TABLE statement for Patient."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "DoctorID"
+  },
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.sql-ddl.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Here is a script.\n\n```\nCREATE TABLE Doctor (\n    DoctorID CHARACTER(4) PRIMARY KEY,\n    Surname VARCHAR(30) NOT NULL,\n    Room INTEGER\n);\n\nCREATE TABLE Patient (\n    PatientID CHARACTER(6) PRIMARY KEY,\n    Surname VARCHAR(30) NOT NULL,\n    DateOfBirth DATE,\n    Phone VARCHAR(15),\n    Insured BOOLEAN,\n    DoctorID CHARACTER(4),\n    FOREIGN KEY (DoctorID) REFERENCES Doctor(DoctorID)\n);\n```\n\nHow many fields does the `Patient` table have?",
+  "answerSpec": {
+   "value": 6
+  },
+  "explanation": "Six fields; the FOREIGN KEY line is not a field.",
+  "workedSolution": "1. The fields are PatientID, Surname, DateOfBirth, Phone, Insured and DoctorID.\n2. The FOREIGN KEY line is a constraint, not a field.\n3. Total = 6.",
+  "hints": [
+   "Count the fields listed for Patient, not the FOREIGN KEY line."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "6"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "db.sql-ddl.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Here is a script.\n\n```\nCREATE TABLE Doctor (\n    DoctorID CHARACTER(4) PRIMARY KEY,\n    Surname VARCHAR(30) NOT NULL,\n    Room INTEGER\n);\n\nCREATE TABLE Patient (\n    PatientID CHARACTER(6) PRIMARY KEY,\n    Surname VARCHAR(30) NOT NULL,\n    DateOfBirth DATE,\n    Phone VARCHAR(15),\n    Insured BOOLEAN,\n    DoctorID CHARACTER(4),\n    FOREIGN KEY (DoctorID) REFERENCES Doctor(DoctorID)\n);\n```\n\nHow many fields in the two tables together are declared NOT NULL (not counting the primary keys)?",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "Surname in each table.",
+  "workedSolution": "1. Doctor: Surname is NOT NULL.\n2. Patient: Surname is NOT NULL.\n3. Total = 2.",
+  "hints": [
+   "Look for NOT NULL in both tables."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "db.sql-ddl.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A bookshop stores books in a table `Book` with the fields `BookID` (always 5 characters), `Title` (up to 60 characters, must always be entered), `Price` (dollars and cents), `Published` (a date) and `InStock` (true or false). `BookID` is the primary key. Write the SQL statement to create the table. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "CREATE TABLE Book with the five fields in brackets, separated by commas",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "BookID declared as CHARACTER(5) and as the PRIMARY KEY",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Title declared as VARCHAR(60) NOT NULL",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Price as REAL, Published as DATE and InStock as BOOLEAN",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: \n```\nCREATE TABLE Book (\n    BookID CHARACTER(5) PRIMARY KEY,\n    Title VARCHAR(60) NOT NULL,\n    Price REAL,\n    Published DATE,\n    InStock BOOLEAN\n);\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One mark for the statement, then the key, the text field and the other types.",
+  "hints": [
+   "Choose a data type for each field.",
+   "Mark the primary key."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "db.sql-ddl.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Write an SQL statement to add a field `Email`, of up to 50 characters, to the table `Patient`. [2]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "ALTER TABLE Patient",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "ADD Email VARCHAR(50);",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: \n```\nALTER TABLE Patient ADD Email VARCHAR(50);\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "ALTER TABLE ... ADD field type.",
+  "hints": [
+   "Which statement changes a table's structure?"
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.sql-ddl.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A developer stores phone numbers in a field of type `INTEGER`. Explain two problems this could cause. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A leading zero would be lost, so the number would be stored wrongly",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A phone number is never used in calculations, so a numeric type has no benefit",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Characters such as + or spaces cannot be stored, so some numbers cannot be entered",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The leading zero would be lost, so the number would be changed. Phone numbers are never used in calculations, so an integer has no benefit. Characters like + cannot be stored."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Phone numbers are text labels.",
+  "hints": [
+   "Think about leading zeros and about calculations."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.sql-ddl.q20",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A script creates `Loan` with the clause `FOREIGN KEY (MemberID) REFERENCES Member(MemberID)`. Explain what this clause does and why the `Member` table must be created first. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "It makes MemberID in Loan a foreign key that refers to MemberID in the Member table",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The DBMS then refuses a loan whose MemberID does not exist in Member (referential integrity)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Member must already exist, because a key cannot refer to a table that has not been created",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The clause makes MemberID in Loan a foreign key that refers to Member. The DBMS then refuses a loan for a MemberID that does not exist in Member. Member must be created first because the key cannot refer to a table that does not yet exist."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Link, integrity and order.",
+  "hints": [
+   "Which table does the foreign key refer to?"
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "db.sql-ddl.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A clinic's database is built with this script.\n\n```\nCREATE TABLE Doctor (\n    DoctorID CHARACTER(4) PRIMARY KEY,\n    Surname VARCHAR(30) NOT NULL,\n    Room INTEGER\n);\n\nCREATE TABLE Patient (\n    PatientID CHARACTER(6) PRIMARY KEY,\n    Surname VARCHAR(30) NOT NULL,\n    DateOfBirth DATE,\n    Phone VARCHAR(15),\n    Insured BOOLEAN,\n    DoctorID CHARACTER(4),\n    FOREIGN KEY (DoctorID) REFERENCES Doctor(DoctorID)\n);\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the primary key of the `Doctor` table.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "DoctorID"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "DoctorID is declared PRIMARY KEY."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "How many fields does the `Patient` table have?",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "Six fields.",
+    "workedSolution": "1. Six fields."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Which data type is used for the field that records whether a patient is insured?",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "BOOLEAN"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Insured is BOOLEAN."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain what happens if the clinic tries to add a patient whose `DoctorID` is `D999` when no doctor has that identifier.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The DoctorID in Patient is a foreign key referring to Doctor",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "D999 does not match any DoctorID in Doctor",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The DBMS refuses to add the record, protecting referential integrity",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: DoctorID is a foreign key referring to Doctor. D999 does not match any doctor, so the DBMS refuses to add the patient, which protects referential integrity."
+    },
+    "explanation": "Foreign key, no match, refused."
+   }
+  ],
+  "explanation": "The script creates Doctor (3 fields) and Patient (6 fields); DoctorID is the foreign key.",
+  "hints": [
+   "Read the script line by line.",
+   "A foreign key line is a constraint, not a field."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "DoctorID"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "BOOLEAN"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "db.sql-ddl.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.db.sql-ddl"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A library has two tables. `Member(MemberID, Surname)`: `MemberID` is 4 characters and is the primary key; `Surname` is up to 30 characters and must be entered. `Loan(LoanID, MemberID, BookID, DateOut)`: `LoanID` is a whole number and the primary key; `MemberID` is a foreign key to `Member` and must be entered; `BookID` is 5 characters; `DateOut` is a date.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write the SQL statement to create the table `Member`, and the statement to create the table `Loan`, in the order in which they must be run. Show the key clauses.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Member is created before Loan",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Member: MemberID CHARACTER(4) PRIMARY KEY and Surname VARCHAR(30) NOT NULL",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Loan: LoanID INTEGER PRIMARY KEY, MemberID CHARACTER(4) NOT NULL, BookID CHARACTER(5) and DateOut DATE",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "FOREIGN KEY (MemberID) REFERENCES Member(MemberID) in Loan",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: \n```\nCREATE TABLE Member (\n    MemberID CHARACTER(4) PRIMARY KEY,\n    Surname VARCHAR(30) NOT NULL\n);\n\nCREATE TABLE Loan (\n    LoanID INTEGER PRIMARY KEY,\n    MemberID CHARACTER(4) NOT NULL,\n    BookID CHARACTER(5),\n    DateOut DATE,\n    FOREIGN KEY (MemberID) REFERENCES Member(MemberID)\n);\n```"
+    },
+    "explanation": "Correct order, types, primary keys and the foreign key."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The library now wants to record the date each book is due back. Write an SQL statement to add the field `DateDue`, of type DATE, to `Loan`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "ALTER TABLE Loan",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "ADD DateDue DATE;",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: \n```\nALTER TABLE Loan ADD DateDue DATE;\n```"
+    },
+    "explanation": "ALTER TABLE ... ADD."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State why the new field cannot be declared NOT NULL when records already exist in `Loan`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The existing records have no value for the new field",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "NOT NULL would be broken by those records, so the field must allow NULL (or have a default)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The existing loans have no due date, so the new field must be allowed to hold NULL for them."
+    },
+    "explanation": "Existing records hold NULL."
+   }
+  ],
+  "explanation": "Member is created first; Loan has a foreign key to Member.",
+  "hints": [
+   "Create Member before Loan.",
+   "LoanID is the primary key of Loan; MemberID is the foreign key."
+  ],
+  "skill": "CREATION",
+  "examStyle": true
+ }
+]

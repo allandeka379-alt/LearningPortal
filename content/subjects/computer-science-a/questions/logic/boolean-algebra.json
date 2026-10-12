@@ -1,0 +1,1701 @@
+[
+ {
+  "key": "logic.boolean-algebra.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "According to De Morgan's laws, which expression is equivalent to NOT (A AND B)?",
+  "options": [
+   {
+    "key": "A",
+    "content": "(NOT A) AND (NOT B)",
+    "rationale": "The operation must change from AND to OR."
+   },
+   {
+    "key": "B",
+    "content": "(NOT A) OR (NOT B)",
+    "correct": true,
+    "rationale": "Correct: the AND becomes OR and each term is inverted."
+   },
+   {
+    "key": "C",
+    "content": "NOT A OR B",
+    "rationale": "Only A has been inverted."
+   },
+   {
+    "key": "D",
+    "content": "A OR B",
+    "rationale": "Neither term has been inverted."
+   }
+  ],
+  "explanation": "De Morgan: NOT (A AND B) = (NOT A) OR (NOT B). Change the operation and invert each term.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.boolean-algebra.q02",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The expression `A OR 1` always has the value 1, whatever the value of A.",
+  "answerSpec": {
+   "correct": true,
+   "feedbackTrue": "Correct: this is the null (domination) law: A + 1 = 1.",
+   "feedbackFalse": "An OR gate with one input permanently 1 always outputs 1."
+  },
+  "explanation": "Null law: A OR 1 = 1 and A AND 0 = 0.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.boolean-algebra.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the value of the expression `A OR (NOT A)` for any value of A, as 0 or 1?",
+  "answerSpec": {
+   "value": 1
+  },
+  "explanation": "A OR NOT A is always 1: one of A and NOT A must be 1.",
+  "workedSolution": "1. If A = 0 then NOT A = 1, so 0 OR 1 = 1.\n2. If A = 1 then 1 OR 0 = 1.\n3. The value is always 1 (the complement law).",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "logic.boolean-algebra.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Using the absorption law, what does `A OR (A AND B)` simplify to?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A",
+    "correct": true,
+    "rationale": "Correct: whenever A is 1 the whole expression is 1, and when A is 0 the AND term is 0."
+   },
+   {
+    "key": "B",
+    "content": "B",
+    "rationale": "B only matters when A is 1, and then the result is already 1."
+   },
+   {
+    "key": "C",
+    "content": "A AND B",
+    "rationale": "This is the second term only."
+   },
+   {
+    "key": "D",
+    "content": "A OR B",
+    "rationale": "This would be 1 when B = 1 and A = 0, but the original gives 0 there."
+   }
+  ],
+  "explanation": "Absorption law: A + A·B = A(1 + B) = A.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "logic.boolean-algebra.q05",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each Boolean law to an example of it.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Idempotent law"
+    },
+    {
+     "id": "L2",
+     "content": "Complement law"
+    },
+    {
+     "id": "L3",
+     "content": "Identity law"
+    },
+    {
+     "id": "L4",
+     "content": "Null law"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "A OR 0 = A"
+    },
+    {
+     "id": "R4",
+     "content": "A AND 0 = 0"
+    },
+    {
+     "id": "R1",
+     "content": "A AND A = A"
+    },
+    {
+     "id": "R2",
+     "content": "A AND (NOT A) = 0"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each law gives a simple identity involving 0, 1, a variable and its complement.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.boolean-algebra.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which expression is equivalent to `(A AND B) OR (A AND (NOT B) AND C) OR ((NOT A) AND B)`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "(A AND C) OR B",
+    "correct": true,
+    "rationale": "Correct: B absorbs the first and third terms, and A AND (NOT B) AND C leaves A AND C."
+   },
+   {
+    "key": "B",
+    "content": "A OR B",
+    "rationale": "Its truth table differs from the original in at least one row."
+   },
+   {
+    "key": "C",
+    "content": "(A AND B) OR C",
+    "rationale": "Its truth table differs from the original in at least one row."
+   },
+   {
+    "key": "D",
+    "content": "B AND C",
+    "rationale": "Its truth table differs from the original in at least one row."
+   }
+  ],
+  "explanation": "(A AND B) OR ((NOT A) AND B) = B. Then B OR (A AND (NOT B) AND C) = B OR (A AND C), because a term is absorbed when B is 1 and otherwise NOT B is 1.",
+  "hints": [
+   "The first and third terms together are B AND (A OR NOT A).",
+   "Then use B OR (A AND (NOT B) AND C) = B OR (A AND C)."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "logic.boolean-algebra.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Complete the truth table for `X = NOT (A OR (NOT B))`.",
+  "payload": {
+   "template": "A = 0, B = 0: X = {{blank:r1}}\n\nA = 0, B = 1: X = {{blank:r2}}\n\nA = 1, B = 0: X = {{blank:r3}}\n\nA = 1, B = 1: X = {{blank:r4}}",
+   "blanks": [
+    {
+     "id": "r1",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r2",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r4",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "r1",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r2",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r4",
+     "accepted": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "explanation": "By De Morgan's law X = (NOT A) AND B, which is 1 only when A = 0 and B = 1.",
+  "hints": [
+   "Find NOT B first, then OR it with A, then invert."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "r1",
+     "text": "0"
+    },
+    {
+     "blankId": "r2",
+     "text": "1"
+    },
+    {
+     "blankId": "r3",
+     "text": "0"
+    },
+    {
+     "blankId": "r4",
+     "text": "0"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "r1",
+      "text": "1"
+     },
+     {
+      "blankId": "r2",
+      "text": "0"
+     },
+     {
+      "blankId": "r3",
+      "text": "1"
+     },
+     {
+      "blankId": "r4",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.boolean-algebra.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Use De Morgan's laws to find an expression equivalent to `NOT (A AND (B OR C))`.",
+  "options": [
+   {
+    "key": "A",
+    "content": "(NOT A) AND ((NOT B) OR (NOT C))",
+    "rationale": "The operations are not all changed correctly, so the truth table differs."
+   },
+   {
+    "key": "B",
+    "content": "(NOT A) OR (NOT B) OR C",
+    "rationale": "The operations are not all changed correctly, so the truth table differs."
+   },
+   {
+    "key": "C",
+    "content": "A OR ((NOT B) AND (NOT C))",
+    "rationale": "The operations are not all changed correctly, so the truth table differs."
+   },
+   {
+    "key": "D",
+    "content": "(NOT A) OR ((NOT B) AND (NOT C))",
+    "correct": true,
+    "rationale": "Correct: NOT (A AND X) = (NOT A) OR (NOT X), and NOT (B OR C) = (NOT B) AND (NOT C)."
+   }
+  ],
+  "explanation": "NOT (A AND (B OR C)) = (NOT A) OR (NOT (B OR C)) = (NOT A) OR ((NOT B) AND (NOT C)).",
+  "hints": [
+   "Apply the law to the outer AND first, then to the OR inside the bracket."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.boolean-algebra.q09",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the justification of each step in the simplification of `A OR ((NOT A) AND B)`.",
+  "payload": {
+   "template": "Step 1: A OR ((NOT A) AND B)\n\nStep 2: (A OR (NOT A)) AND (A OR B). Law: {{blank:l1}}\n\nStep 3: 1 AND (A OR B). Law: {{blank:l2}}\n\nStep 4: A OR B. Law: {{blank:l3}}",
+   "blanks": [
+    {
+     "id": "l1",
+     "input": "select",
+     "choices": [
+      "Distributive law",
+      "Complement law",
+      "Identity law",
+      "Absorption law"
+     ]
+    },
+    {
+     "id": "l2",
+     "input": "select",
+     "choices": [
+      "Distributive law",
+      "Complement law",
+      "Identity law",
+      "Absorption law"
+     ]
+    },
+    {
+     "id": "l3",
+     "input": "select",
+     "choices": [
+      "Distributive law",
+      "Complement law",
+      "Identity law",
+      "Absorption law"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "l1",
+     "accepted": [
+      "Distributive law"
+     ]
+    },
+    {
+     "id": "l2",
+     "accepted": [
+      "Complement law"
+     ]
+    },
+    {
+     "id": "l3",
+     "accepted": [
+      "Identity law"
+     ]
+    }
+   ]
+  },
+  "explanation": "The OR distributes over AND in step 2; A OR NOT A = 1 is the complement law; 1 AND X = X is the identity law.",
+  "hints": [
+   "A OR (NOT A) = 1 is the complement law; X AND 1 = X is the identity law."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "l1",
+     "text": "Distributive law"
+    },
+    {
+     "blankId": "l2",
+     "text": "Complement law"
+    },
+    {
+     "blankId": "l3",
+     "text": "Identity law"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "l1",
+      "text": "Complement law"
+     },
+     {
+      "blankId": "l2",
+      "text": "Distributive law"
+     },
+     {
+      "blankId": "l3",
+      "text": "Distributive law"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.boolean-algebra.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which expression uses only NAND gates to give `A OR B`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "(A NAND B) NAND (A NAND B)",
+    "rationale": "Its truth table differs from OR in at least one row."
+   },
+   {
+    "key": "B",
+    "content": "(A NAND B) NAND B",
+    "rationale": "Its truth table differs from OR in at least one row."
+   },
+   {
+    "key": "C",
+    "content": "(A NAND A) NAND B",
+    "rationale": "Its truth table differs from OR in at least one row."
+   },
+   {
+    "key": "D",
+    "content": "(A NAND A) NAND (B NAND B)",
+    "correct": true,
+    "rationale": "Correct: each input is inverted by a NAND with joined inputs; NAND of the inverted inputs gives OR (De Morgan)."
+   }
+  ],
+  "explanation": "A OR B = NOT ((NOT A) AND (NOT B)) = (NOT A) NAND (NOT B), and NOT A = A NAND A.",
+  "hints": [
+   "OR = NOT (NOT A AND NOT B)."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.boolean-algebra.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How many NAND gates are needed to build an OR gate if only NAND gates may be used?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "Two NAND gates act as inverters and one combines the two results: 3 gates.",
+  "workedSolution": "1. A NAND A gives NOT A (one gate).\n2. B NAND B gives NOT B (one gate).\n3. (NOT A) NAND (NOT B) gives A OR B (one gate).\n4. Total = 3 gates.",
+  "hints": [
+   "Two gates invert the inputs; one more combines them."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "logic.boolean-algebra.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why do engineers simplify a Boolean expression before building the circuit?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The simplified circuit gives a different, more useful output",
+    "rationale": "The simplified expression must be equivalent to the original."
+   },
+   {
+    "key": "B",
+    "content": "Simplified expressions never need to be tested",
+    "rationale": "Every circuit is tested after it is designed."
+   },
+   {
+    "key": "C",
+    "content": "A simpler expression needs fewer gates, so the circuit costs less and works faster",
+    "correct": true,
+    "rationale": "Correct: fewer gates mean less cost, less power and a shorter signal delay."
+   },
+   {
+    "key": "D",
+    "content": "Gates cannot be joined unless the expression is simplified first",
+    "rationale": "Any expression can be built, but not as efficiently."
+   }
+  ],
+  "explanation": "Each term in an expression is a gate. Fewer gates means lower cost, less power and less delay, and the behaviour is unchanged.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.boolean-algebra.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Simplify `(A AND (NOT B) AND C) OR (A AND B) OR (A AND (NOT B) AND (NOT C))`. Name the law used at each step.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Group the first and third terms and factorise: A AND (NOT B) AND (C OR (NOT C)) (distributive law).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "C OR (NOT C) = 1 (complement law), giving A AND (NOT B) AND 1 = A AND (NOT B) (identity law).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The expression is now (A AND (NOT B)) OR (A AND B); factorise A: A AND ((NOT B) OR B) (distributive law).",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "(NOT B) OR B = 1 and A AND 1 = A (complement and identity laws). The answer is A.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: (A AND (NOT B) AND C) OR (A AND B) OR (A AND (NOT B) AND (NOT C)) = (A AND (NOT B) AND (C OR (NOT C))) OR (A AND B) (distributive) = (A AND (NOT B) AND 1) OR (A AND B) (complement) = (A AND (NOT B)) OR (A AND B) (identity) = A AND ((NOT B) OR B) (distributive) = A AND 1 (complement) = A (identity)."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The three terms cover every case where A = 1: with B = 1, or B = 0 with either value of C.",
+  "hints": [
+   "Start by pairing the two terms that differ only in C.",
+   "The result is a single variable."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "logic.boolean-algebra.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe how a truth table can be used to prove that NOT (A OR B) is equivalent to (NOT A) AND (NOT B).",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Write all four combinations of A and B.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Work out NOT (A OR B) and (NOT A) AND (NOT B) for each row.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The two output columns are identical in every row, so the expressions are equivalent.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: List the rows 00, 01, 10 and 11 for A and B. For each row calculate NOT (A OR B) and (NOT A) AND (NOT B). Both are 1 only in the row 00 and 0 in the others, so the columns are identical and the expressions are equivalent."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Equivalent expressions have identical output columns.",
+  "hints": [
+   "Say how many rows and what must be true of the two output columns."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.boolean-algebra.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Show how `NOT (A AND B)` can be built using only NOR gates.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A NOR A gives NOT A, and B NOR B gives NOT B.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "NOT A and NOT B go into a NOR gate, which gives NOT ((NOT A) OR (NOT B)) = A AND B.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The output of that gate is joined to both inputs of a further NOR gate, which inverts it to give NOT (A AND B).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Join both inputs of a NOR gate to A to give NOT A, and the same for B. These feed a third NOR gate, whose output is A AND B (De Morgan). A fourth NOR gate with its inputs joined inverts this, giving NOT (A AND B)."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "NOR with joined inputs is NOT; two inverted inputs through NOR give AND; a final inverter gives NAND.",
+  "hints": [
+   "First build AND from NOR gates, then add an inverter."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "logic.boolean-algebra.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "State De Morgan's two laws.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "NOT (A AND B) = (NOT A) OR (NOT B).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "NOT (A OR B) = (NOT A) AND (NOT B).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: NOT (A AND B) is equal to (NOT A) OR (NOT B), and NOT (A OR B) is equal to (NOT A) AND (NOT B)."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "In both laws the operation changes and each term is inverted.",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.boolean-algebra.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A logic circuit has inputs A, B and C. Inputs A and B go into an OR gate (output P). Input A goes into a NOT gate and its output and input C go into an OR gate (output Q). The outputs P and Q go into an AND gate, whose output is X. So `X = (A OR B) AND ((NOT A) OR C)`.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the truth table for X.",
+    "payload": {
+     "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r8",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "Work out P and Q for each row, then X = P AND Q."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "In how many rows is X equal to 1?",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "Count the 1s in the output column.",
+    "workedSolution": "1. Count the 1s in the output column."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which expression is equivalent to X?",
+    "options": [
+     {
+      "key": "A",
+      "content": "(A AND C) OR (B AND (NOT A))",
+      "correct": true,
+      "rationale": "Correct: same table."
+     },
+     {
+      "key": "B",
+      "content": "(A OR C) AND (B OR C) AND B",
+      "rationale": "It differs from X in the row 110, where it gives 1 but X is 0."
+     },
+     {
+      "key": "C",
+      "content": "A AND B AND C AND (A OR B)",
+      "rationale": "This is 1 in only one row."
+     },
+     {
+      "key": "D",
+      "content": "(A AND B) OR C",
+      "rationale": "This differs from X in several rows."
+     }
+    ],
+    "explanation": "The simplified form from the truth table is (A AND C) OR (NOT A AND B)."
+   }
+  ],
+  "explanation": "X = (A AND C) OR (NOT A AND B).",
+  "hints": [
+   "Fill the table column by column: P, Q, then X.",
+   "Compare the options by testing a row where X = 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "0"
+      },
+      {
+       "blankId": "r2",
+       "text": "0"
+      },
+      {
+       "blankId": "r3",
+       "text": "1"
+      },
+      {
+       "blankId": "r4",
+       "text": "1"
+      },
+      {
+       "blankId": "r5",
+       "text": "0"
+      },
+      {
+       "blankId": "r6",
+       "text": "1"
+      },
+      {
+       "blankId": "r7",
+       "text": "0"
+      },
+      {
+       "blankId": "r8",
+       "text": "1"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "1"
+       },
+       {
+        "blankId": "r2",
+        "text": "1"
+       },
+       {
+        "blankId": "r3",
+        "text": "0"
+       },
+       {
+        "blankId": "r4",
+        "text": "0"
+       },
+       {
+        "blankId": "r5",
+        "text": "1"
+       },
+       {
+        "blankId": "r6",
+        "text": "0"
+       },
+       {
+        "blankId": "r7",
+        "text": "1"
+       },
+       {
+        "blankId": "r8",
+        "text": "0"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "logic.boolean-algebra.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A circuit is described by `X = NOT ((A AND B) OR (NOT A))`.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the truth table for X.",
+    "payload": {
+     "template": "A = 0, B = 0: X = {{blank:r1}}\n\nA = 0, B = 1: X = {{blank:r2}}\n\nA = 1, B = 0: X = {{blank:r3}}\n\nA = 1, B = 1: X = {{blank:r4}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "(A AND B) OR NOT A is 0 only when A = 1 and B = 0; X is the inverse."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which single expression is equivalent to X?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A AND (NOT B)",
+      "correct": true,
+      "rationale": "Correct: X is 1 only when A = 1 and B = 0."
+     },
+     {
+      "key": "B",
+      "content": "A AND B",
+      "rationale": "This is 1 for A = 1, B = 1, where X is 0."
+     },
+     {
+      "key": "C",
+      "content": "(NOT A) AND B",
+      "rationale": "This is 1 for A = 0, B = 1, where X is 0."
+     },
+     {
+      "key": "D",
+      "content": "A OR B",
+      "rationale": "This is 1 for three rows."
+     }
+    ],
+    "explanation": "From the truth table X is 1 only for A = 1, B = 0."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Use De Morgan's law and other laws to show algebraically that the expression simplifies to your answer to part (b).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "De Morgan: NOT (P OR Q) = (NOT P) AND (NOT Q), giving (NOT (A AND B)) AND A.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "De Morgan again: ((NOT A) OR (NOT B)) AND A.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Distribute: (NOT A AND A) OR (NOT B AND A) = 0 OR (A AND NOT B) = A AND (NOT B).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: NOT ((A AND B) OR (NOT A)) = (NOT (A AND B)) AND (NOT (NOT A)) = ((NOT A) OR (NOT B)) AND A = ((NOT A) AND A) OR ((NOT B) AND A) = 0 OR (A AND (NOT B)) = A AND (NOT B)."
+    }
+   }
+  ],
+  "explanation": "X = A AND (NOT B).",
+  "hints": [
+   "Apply De Morgan's law to the whole expression first.",
+   "Remember that A AND (NOT A) = 0."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "0"
+      },
+      {
+       "blankId": "r2",
+       "text": "0"
+      },
+      {
+       "blankId": "r3",
+       "text": "1"
+      },
+      {
+       "blankId": "r4",
+       "text": "0"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "1"
+       },
+       {
+        "blankId": "r2",
+        "text": "1"
+       },
+       {
+        "blankId": "r3",
+        "text": "0"
+       },
+       {
+        "blankId": "r4",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "logic.boolean-algebra.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 720,
+  "stem": "A designer wants to build the expression `X = NOT ((NOT A) AND (B OR (NOT C)))` using only NAND gates.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Apply De Morgan's laws to rewrite X without any OR gates, using only AND, NOT and the outer inversion.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "B OR (NOT C) = NOT ((NOT B) AND C) by De Morgan.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So X = NOT ((NOT A) AND NOT ((NOT B) AND C)).",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The inner part NOT ((NOT B) AND C) is (NOT B) NAND C.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: B OR (NOT C) = NOT((NOT B) AND C). So X = NOT((NOT A) AND ((NOT B) NAND C)) = (NOT A) NAND ((NOT B) NAND C)."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which expression uses NAND gates for every operation, with NOT A written as (A NAND A)?",
+    "options": [
+     {
+      "key": "A",
+      "content": "(A NAND A) NAND (B NAND C)",
+      "rationale": "The input B must be inverted first."
+     },
+     {
+      "key": "B",
+      "content": "A NAND ((B NAND B) NAND C)",
+      "rationale": "The input A must be inverted first."
+     },
+     {
+      "key": "C",
+      "content": "(A NAND A) NAND (B NAND B NAND C)",
+      "rationale": "A NAND gate has two inputs, so this is not a valid expression."
+     },
+     {
+      "key": "D",
+      "content": "(A NAND A) NAND (((B NAND B)) NAND C)",
+      "correct": true,
+      "rationale": "Correct: NOT A = A NAND A and NOT B = B NAND B; X = (NOT A) NAND ((NOT B) NAND C)."
+     }
+    ],
+    "explanation": "Replace each NOT by a NAND with joined inputs."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "How many NAND gates does the expression in part (b) need?",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "A NAND A, B NAND B, (B NAND B) NAND C, and the final NAND: four gates.",
+    "workedSolution": "1. A NAND A, B NAND B, (B NAND B) NAND C, and the final NAND: four gates."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how you would check that the NAND-only circuit has the same behaviour as the original expression.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Write the truth table for the original expression (eight rows).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Write the truth table for the NAND-only expression with the same input order.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The output columns must be identical in every row.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Complete an eight-row truth table for each version using the same order of A, B and C. If the two output columns match in every row the circuits are equivalent."
+    }
+   }
+  ],
+  "explanation": "X = (NOT A) NAND ((NOT B) NAND C); with inverters made from NAND gates it uses four gates.",
+  "hints": [
+   "De Morgan: NOT (P OR Q) = (NOT P) AND (NOT Q) and NOT (P AND Q) = (NOT P) OR (NOT Q).",
+   "A NAND A is NOT A."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true
+ },
+ {
+  "key": "logic.boolean-algebra.q20",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What does `NOT (NOT A)` simplify to?",
+  "options": [
+   {
+    "key": "A",
+    "content": "NOT A",
+    "rationale": "One inversion has been lost."
+   },
+   {
+    "key": "B",
+    "content": "A",
+    "correct": true,
+    "rationale": "Correct: two inversions cancel (double negation)."
+   },
+   {
+    "key": "C",
+    "content": "0",
+    "rationale": "The result depends on A."
+   },
+   {
+    "key": "D",
+    "content": "1",
+    "rationale": "The result depends on A."
+   }
+  ],
+  "explanation": "Inverting twice returns the original value: NOT (NOT A) = A.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.boolean-algebra.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which law is shown by `A OR A = A`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Complement law",
+    "rationale": "The complement law involves A and NOT A."
+   },
+   {
+    "key": "B",
+    "content": "Idempotent law",
+    "correct": true,
+    "rationale": "Correct: repeating a variable with OR or AND gives the variable."
+   },
+   {
+    "key": "C",
+    "content": "Absorption law",
+    "rationale": "Absorption involves a second variable."
+   },
+   {
+    "key": "D",
+    "content": "Distributive law",
+    "rationale": "The distributive law involves three terms."
+   }
+  ],
+  "explanation": "A OR A = A and A AND A = A are the idempotent laws.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.boolean-algebra.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.boolean-algebra"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Using the distributive law, which expression is equivalent to `A AND (B OR C)`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "(A AND B) OR (A AND C)",
+    "correct": true,
+    "rationale": "Correct: AND distributes over OR."
+   },
+   {
+    "key": "B",
+    "content": "(A OR B) AND (A OR C)",
+    "rationale": "This is the other distributive law, for A OR (B AND C)."
+   },
+   {
+    "key": "C",
+    "content": "(A AND B) AND (A AND C)",
+    "rationale": "This is A AND B AND C, which needs both B and C."
+   },
+   {
+    "key": "D",
+    "content": "A OR (B AND C)",
+    "rationale": "The operations have been swapped."
+   }
+  ],
+  "explanation": "A AND (B OR C) = (A AND B) OR (A AND C).",
+  "hints": [
+   "Multiply A into each term of the bracket."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ }
+]

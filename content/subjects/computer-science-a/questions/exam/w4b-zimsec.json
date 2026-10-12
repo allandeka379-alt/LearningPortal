@@ -1,0 +1,1278 @@
+[
+ {
+  "key": "exam.w4b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.skills.python-practical",
+   "acs.prog.procedures-functions",
+   "acs.prog.file-processing-exceptions",
+   "acs.ds.arrays"
+  ],
+  "difficulty": 4,
+  "marks": 40,
+  "estimatedSeconds": 3600,
+  "stem": "A grain depot in Shurugwi records the number of bags delivered on each day of a week. The seven numbers are stored, one per line, in the text file `bags.txt`:\n\n```\n34\n28\n41\n19\n52\n47\n30\n```\n\nThe manager wants a Python program that reads the file into a list, and outputs the total number of bags, the average per day, the number of the busiest day (the first day if there is a tie) and the number of days above the average. The program must not stop if the file is missing.\n\nAn algorithm to find the busiest day is designed in pseudocode, with the array `Bags` holding the seven numbers (indexes 1 to 7).\n\n```\nMax ← Bags[1]\nMaxDay ← 1\nTotal ← Bags[1]\nFOR Day ← 2 TO 7\n    Total ← Total + Bags[Day]\n    IF Bags[Day] > Max THEN\n        Max ← Bags[Day]\n        MaxDay ← Day\n    ENDIF\nNEXT Day\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 4,
+    "stem": "Match each variable in the program to the most suitable data type.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "The list of bags delivered each day"
+      },
+      {
+       "id": "L2",
+       "content": "The number of the busiest day"
+      },
+      {
+       "id": "L3",
+       "content": "The average number of bags per day"
+      },
+      {
+       "id": "L4",
+       "content": "The name of the file, `bags.txt`"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "REAL"
+      },
+      {
+       "id": "R4",
+       "content": "STRING"
+      },
+      {
+       "id": "X1",
+       "content": "BOOLEAN"
+      },
+      {
+       "id": "R1",
+       "content": "List (array) of INTEGER"
+      },
+      {
+       "id": "R2",
+       "content": "INTEGER"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "A list of whole numbers, a whole-number day, an average with a fraction and a name as text."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 6,
+    "stem": "Complete the values of the variables of the pseudocode after the passes of the loop for `Day` = 3 and `Day` = 5.",
+    "payload": {
+     "template": "After Day = 3: Total = {{blank:a}}, Max = {{blank:b}}, MaxDay = {{blank:c}}\n\nAfter Day = 5: Total = {{blank:d}}, Max = {{blank:e}}, MaxDay = {{blank:f}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      },
+      {
+       "id": "e",
+       "input": "number"
+      },
+      {
+       "id": "f",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "103"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "41"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "3"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "174"
+       ]
+      },
+      {
+       "id": "e",
+       "accepted": [
+        "52"
+       ]
+      },
+      {
+       "id": "f",
+       "accepted": [
+        "5"
+       ]
+      }
+     ]
+    },
+    "explanation": "After day 3: 34 + 28 + 41 = 103, the largest so far is 41 on day 3. After day 5: 103 + 19 + 52 = 174, and the largest is 52 on day 5."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 10,
+    "markingMode": "MANUAL",
+    "stem": "Write a Python program that does what the manager wants. Use a function `read_bags(filename)` that returns the list of numbers and outputs `File not found` if the file is missing, a function `average(values)`, and a function `busiest_day(values)` that returns the day number.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A function read_bags with a parameter and an empty list to hold the numbers",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Opens the file and reads every line, converting each to an integer, and adds it to the list",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Handles a missing file with try and except FileNotFoundError, outputs File not found and still returns the list",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A function average that divides the total by the number of values and returns it",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "A function busiest_day that loops through the list comparing each value with the largest so far",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "busiest_day uses a strict comparison so the first of equal days is kept, and returns the day number (index + 1)",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "The main program calls read_bags and tests that the list is not empty before calculating",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Outputs the total with a suitable message",
+        "marks": 1
+       },
+       {
+        "id": "p9",
+        "description": "Outputs the average and the busiest day with messages",
+        "marks": 1
+       },
+       {
+        "id": "p10",
+        "description": "Counts the days above the average with a loop or a comprehension and outputs the count",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\ndef read_bags(filename):\n    bags = []\n    try:\n        with open(filename) as f:\n            for line in f:\n                bags.append(int(line))\n    except FileNotFoundError:\n        print(\"File not found\")\n    return bags\n\n\ndef average(values):\n    return sum(values) / len(values)\n\n\ndef busiest_day(values):\n    best = 0\n    for i in range(1, len(values)):\n        if values[i] > values[best]:\n            best = i\n    return best + 1\n\n\nbags = read_bags(\"bags.txt\")\nif len(bags) > 0:\n    print(\"Total:\", sum(bags))\n    print(\"Average:\", round(average(bags), 1))\n    print(\"Busiest day:\", busiest_day(bags))\n    print(\"Days above average:\", sum(1 for b in bags if b > average(bags)))\n```"
+    },
+    "explanation": "Functions for the three jobs, an exception handler for the file and a test for an empty list."
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "The program from part (c) is run with the file `bags.txt` above. State each line of output.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Line 1 of the output.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "Total: 251"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      },
+      "explanation": "34 + 28 + 41 + 19 + 52 + 47 + 30 = 251."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Line 2 of the output.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "Average: 35.9"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      },
+      "explanation": "251 ÷ 7 = 35.857, which rounds to 35.9."
+     },
+     {
+      "label": "(iii)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Line 3 of the output.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "Busiest day: 5"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      },
+      "explanation": "The largest number is 52, on day 5."
+     },
+     {
+      "label": "(iv)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Line 4 of the output.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "Days above average: 3"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      },
+      "explanation": "The days above 35.857 are the days with 41, 52 and 47: three days."
+     }
+    ]
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 6,
+    "stem": "The program is tested with other files. Complete the expected results.",
+    "payload": {
+     "template": "File holding only 10: the average output is {{blank:a}}\n\nFile holding 20, 20, 20: the busiest day output is {{blank:b}}\n\nFile holding 20, 20, 20: the number of days above the average is {{blank:c}}\n\nFile holding only 10: the number of days above the average is {{blank:d}}\n\nFile missing: the number of lines output is {{blank:e}}\n\nFile exists but is empty: the number of lines output is {{blank:f}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      },
+      {
+       "id": "e",
+       "input": "number"
+      },
+      {
+       "id": "f",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "10"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "e",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "f",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "One value of 10 gives the average 10.0 and no day above it. Equal values keep the first day (1), and none is above the average. A missing file outputs one line (File not found); an empty file outputs nothing because the list is empty."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "Write the Python statements that ask the user for today's number of bags, repeat the request until a whole number of 0 or more is typed, and then add the number as a new line at the end of `bags.txt`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A loop that repeats until a valid value is entered",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Reads the input and tests that it is a whole number of 0 or more (for example isdigit())",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Outputs a message when the input is not valid",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Opens bags.txt in append mode",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Writes the number as a new line and closes the file",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\nwhile True:\n    text = input(\"Bags delivered today: \")\n    if text.isdigit():\n        break\n    print(\"Enter a whole number, 0 or more\")\nwith open(\"bags.txt\", \"a\") as f:\n    print(int(text), file=f)\n```"
+    },
+    "explanation": "Validation, then append mode."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "The depot later wants to store the deliveries of several depots for a whole year. Discuss two limitations of storing this data in text files and why a database would be better.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A text file has to be read from the beginning to find a record, which is slow when there is a lot of data",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "There is no way to link or query the data by depot, month or day without writing code for every question",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Several users cannot safely change the same file at the same time",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A database stores the data in related tables with validation and keys, which reduces duplication and errors",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "A database allows queries (for example SQL) to answer new questions without changing the program",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A text file must be read from the beginning to find data, which is slow with a lot of data, and there is no way to query the data by depot or month without writing new code. Several users cannot safely change one file at the same time. A database stores the data in related tables with keys and validation, supports many users, and answers new questions with queries such as SQL."
+    },
+    "explanation": "Files suit small data; databases suit large, shared, related data."
+   }
+  ],
+  "explanation": "Trace: total 103, max 41 on day 3 after three days, then 174, 52 on day 5; the program outputs Total 251, Average 35.9, Busiest day 5 and 3 days above average.",
+  "hints": [
+   "Follow the pseudocode one day at a time for the trace.",
+   "Test the program with a single value, equal values and no file."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "103"
+      },
+      {
+       "blankId": "b",
+       "text": "41"
+      },
+      {
+       "blankId": "c",
+       "text": "3"
+      },
+      {
+       "blankId": "d",
+       "text": "174"
+      },
+      {
+       "blankId": "e",
+       "text": "52"
+      },
+      {
+       "blankId": "f",
+       "text": "5"
+      }
+     ]
+    },
+    "(d)(i)": {
+     "type": "SHORT_ANSWER",
+     "text": "Total: 251"
+    },
+    "(d)(ii)": {
+     "type": "SHORT_ANSWER",
+     "text": "Average: 35.9"
+    },
+    "(d)(iii)": {
+     "type": "SHORT_ANSWER",
+     "text": "Busiest day: 5"
+    },
+    "(d)(iv)": {
+     "type": "SHORT_ANSWER",
+     "text": "Days above average: 3"
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "10"
+      },
+      {
+       "blankId": "b",
+       "text": "1"
+      },
+      {
+       "blankId": "c",
+       "text": "0"
+      },
+      {
+       "blankId": "d",
+       "text": "0"
+      },
+      {
+       "blankId": "e",
+       "text": "1"
+      },
+      {
+       "blankId": "f",
+       "text": "0"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R4"
+       },
+       {
+        "leftId": "L4",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "34"
+       },
+       {
+        "blankId": "b",
+        "text": "34"
+       },
+       {
+        "blankId": "c",
+        "text": "1"
+       },
+       {
+        "blankId": "d",
+        "text": "34"
+       },
+       {
+        "blankId": "e",
+        "text": "34"
+       },
+       {
+        "blankId": "f",
+        "text": "1"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "0"
+       },
+       {
+        "blankId": "b",
+        "text": "3"
+       },
+       {
+        "blankId": "c",
+        "text": "3"
+       },
+       {
+        "blankId": "d",
+        "text": "1"
+       },
+       {
+        "blankId": "e",
+        "text": "0"
+       },
+       {
+        "blankId": "f",
+        "text": "4"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "ZIMSEC Paper 2 Section B"
+ },
+ {
+  "key": "exam.w4b-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.oop-programming",
+   "acs.prog.oop-concepts",
+   "acs.skills.python-practical"
+  ],
+  "difficulty": 5,
+  "marks": 40,
+  "estimatedSeconds": 3600,
+  "stem": "A savings club in Chiredzi wants a program to manage the accounts of its members. An account has an owner and a balance. A deposit is accepted only when the amount is greater than zero. A withdrawal is accepted only when the amount is greater than zero and not more than the balance. Each of these methods returns `True` when it was accepted and `False` otherwise. A savings account is an account that also has an interest rate and a method `add_interest` that adds the balance multiplied by the rate (rounded to 2 decimal places) as a deposit. The program is written in Python with private properties.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 4,
+    "stem": "Match each object-oriented term to the item of the design that it describes.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Superclass"
+      },
+      {
+       "id": "L2",
+       "content": "Subclass"
+      },
+      {
+       "id": "L3",
+       "content": "Private property"
+      },
+      {
+       "id": "L4",
+       "content": "Method that only the subclass has"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "The balance of an account"
+      },
+      {
+       "id": "R4",
+       "content": "add_interest"
+      },
+      {
+       "id": "X1",
+       "content": "deposit"
+      },
+      {
+       "id": "R1",
+       "content": "Account"
+      },
+      {
+       "id": "R2",
+       "content": "SavingsAccount"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Account is the superclass, SavingsAccount inherits from it, the balance is private, and add_interest is added in the subclass."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Write the Python class `Account` with a constructor that sets the owner and balance as private properties, a method `get_balance`, a method `deposit(amount)` and a method `withdraw(amount)` that follow the rules above.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Class header and a constructor with owner and balance parameters",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Owner and balance stored as private properties",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "get_balance returns the balance",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "deposit tests that the amount is greater than zero",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "deposit adds the amount to the balance and returns True, otherwise False",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "withdraw tests that the amount is greater than zero and not more than the balance",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "withdraw subtracts the amount and returns True, otherwise False",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Methods use self and the private property correctly",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\nclass Account:\n    def __init__(self, owner, balance):\n        self.__owner = owner\n        self.__balance = balance\n\n    def get_balance(self):\n        return self.__balance\n\n    def deposit(self, amount):\n        if amount > 0:\n            self.__balance = self.__balance + amount\n            return True\n        return False\n\n    def withdraw(self, amount):\n        if 0 < amount <= self.__balance:\n            self.__balance = self.__balance - amount\n            return True\n        return False\n```"
+    },
+    "explanation": "Validation lives in the methods, so the balance can never become invalid."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Write the Python class `SavingsAccount` as a subclass of `Account`, with a constructor that takes the owner, the balance and the interest rate, and the method `add_interest`. `add_interest` must use the `deposit` method.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Class header showing inheritance from Account",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Constructor with owner, balance and rate parameters",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Calls the superclass constructor with the owner and the balance",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Stores the rate as a private property of the subclass",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "add_interest is a method of SavingsAccount",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Calculates the balance multiplied by the rate using get_balance",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Rounds the interest to 2 decimal places",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Adds the interest by calling deposit",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\nclass SavingsAccount(Account):\n    def __init__(self, owner, balance, rate):\n        super().__init__(owner, balance)\n        self.__rate = rate\n\n    def add_interest(self):\n        self.deposit(round(self.get_balance() * self.__rate, 2))\n```"
+    },
+    "explanation": "The subclass reuses the superclass methods instead of touching the private balance."
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "The classes from parts (b) and (c) are correct. This main program is run.\n\n```python\na = Account(\"Tendai\", 100)\nprint(a.deposit(50))\nprint(a.withdraw(300))\nprint(a.withdraw(30))\nprint(a.get_balance())\ns = SavingsAccount(\"Rudo\", 200, 0.05)\ns.add_interest()\nprint(s.deposit(-10))\nprint(s.get_balance())\n```\n\nState each line of output.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Line 1 of the output.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "True"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      },
+      "explanation": "The deposit of 50 is accepted."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Line 2 of the output.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "False"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      },
+      "explanation": "The withdrawal of 300 is more than the balance of 150."
+     },
+     {
+      "label": "(iii)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Line 3 of the output.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "True"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      },
+      "explanation": "The withdrawal of 30 is accepted."
+     },
+     {
+      "label": "(iv)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Line 4 of the output.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "120"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      },
+      "explanation": "150 - 30 = 120."
+     },
+     {
+      "label": "(v)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Line 5 of the output.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "False"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      },
+      "explanation": "The deposit of -10 is not greater than zero, so it is refused."
+     },
+     {
+      "label": "(vi)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Line 6 of the output.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "210.0"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "collapse_whitespace"
+       ]
+      },
+      "explanation": "The interest is 200 × 0.05 = 10.0, so the balance is 210.0."
+     }
+    ]
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 6,
+    "stem": "The classes are tested. Complete the expected result of each test.",
+    "payload": {
+     "template": "An account with balance 10: deposit(0) returns {{blank:a}}\n\nAn account with balance 100: withdraw(100) returns {{blank:b}}\n\nThe balance of that account afterwards is {{blank:c}}\n\nA savings account with balance 80 and rate 0.1, after add_interest, has balance {{blank:d}}\n\nAn account with balance 50: withdraw(-5) returns {{blank:e}}\n\nAn account with balance 10 after deposit(25.5) has balance {{blank:f}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "True",
+        "False"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "True",
+        "False"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "number"
+      },
+      {
+       "id": "d",
+       "input": "number"
+      },
+      {
+       "id": "e",
+       "input": "select",
+       "choices": [
+        "True",
+        "False"
+       ]
+      },
+      {
+       "id": "f",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "False"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "True"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "88.0"
+       ]
+      },
+      {
+       "id": "e",
+       "accepted": [
+        "False"
+       ]
+      },
+      {
+       "id": "f",
+       "accepted": [
+        "35.5"
+       ]
+      }
+     ]
+    },
+    "explanation": "A deposit of 0 is refused; a withdrawal equal to the balance is allowed and leaves 0; the interest on 80 at 0.1 is 8.0, giving 88.0; a negative withdrawal is refused; 10 + 25.5 = 35.5."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the balance is a private property that can be changed only through the methods.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Private data cannot be changed directly by other parts of the program",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "All changes pass through deposit and withdraw, which check the amount",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "So the balance cannot become invalid (for example negative) by mistake",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A fault in the rules can be corrected in one place",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A private property cannot be changed directly by other parts of the program. Every change must pass through deposit or withdraw, which check the amount, so the balance cannot become invalid by mistake, and any fault in the rules is corrected in one place."
+    },
+    "explanation": "Encapsulation protects the data."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "The club adds a `FixedAccount` from which withdrawals are never allowed. Describe how the class is written and how a list of both kinds of account can be processed without testing the class of each object.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "FixedAccount inherits from Account",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It overrides withdraw so that it always returns False",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A loop can call withdraw on every object in one list",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Each object uses the version of withdraw from its own class (polymorphism)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: FixedAccount inherits from Account and overrides withdraw so that it always returns False. A loop can call withdraw on every object in a list, and each object uses the version from its own class, which is polymorphism."
+    },
+    "explanation": "Overriding and polymorphism."
+   }
+  ],
+  "explanation": "Account validates deposits and withdrawals, SavingsAccount inherits and uses deposit for interest; the program outputs True, False, True, 120, False and 210.0.",
+  "hints": [
+   "Keep the balance private and change it only through the methods.",
+   "A subclass calls the superclass constructor first."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ]
+    },
+    "(d)(i)": {
+     "type": "SHORT_ANSWER",
+     "text": "True"
+    },
+    "(d)(ii)": {
+     "type": "SHORT_ANSWER",
+     "text": "False"
+    },
+    "(d)(iii)": {
+     "type": "SHORT_ANSWER",
+     "text": "True"
+    },
+    "(d)(iv)": {
+     "type": "SHORT_ANSWER",
+     "text": "120"
+    },
+    "(d)(v)": {
+     "type": "SHORT_ANSWER",
+     "text": "False"
+    },
+    "(d)(vi)": {
+     "type": "SHORT_ANSWER",
+     "text": "210.0"
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "False"
+      },
+      {
+       "blankId": "b",
+       "text": "True"
+      },
+      {
+       "blankId": "c",
+       "text": "0"
+      },
+      {
+       "blankId": "d",
+       "text": "88.0"
+      },
+      {
+       "blankId": "e",
+       "text": "False"
+      },
+      {
+       "blankId": "f",
+       "text": "35.5"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R4"
+       },
+       {
+        "leftId": "L4",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "True"
+       },
+       {
+        "blankId": "b",
+        "text": "False"
+       },
+       {
+        "blankId": "c",
+        "text": "100"
+       },
+       {
+        "blankId": "d",
+        "text": "80"
+       },
+       {
+        "blankId": "e",
+        "text": "True"
+       },
+       {
+        "blankId": "f",
+        "text": "10"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "ZIMSEC Paper 2 Section B"
+ }
+]

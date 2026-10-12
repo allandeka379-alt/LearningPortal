@@ -1,0 +1,1412 @@
+[
+ {
+  "key": "prog.selection.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which keyword ends an `IF` statement in 9618-style pseudocode?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`ENDIF`",
+    "correct": true,
+    "rationale": "Every IF is closed with ENDIF."
+   },
+   {
+    "key": "B",
+    "content": "`END IF`",
+    "rationale": "The keyword is one word."
+   },
+   {
+    "key": "C",
+    "content": "`NEXT`",
+    "rationale": "NEXT ends a FOR loop."
+   },
+   {
+    "key": "D",
+    "content": "`ENDCASE`",
+    "rationale": "ENDCASE ends a CASE statement."
+   }
+  ],
+  "explanation": "IF is closed by ENDIF; CASE by ENDCASE; FOR by NEXT.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.selection.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A discount is given to customers aged at least 60. Which condition is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Age >= 60`",
+    "correct": true,
+    "rationale": "At least 60 includes 60."
+   },
+   {
+    "key": "B",
+    "content": "`Age > 60`",
+    "rationale": "That excludes a customer who is exactly 60."
+   },
+   {
+    "key": "C",
+    "content": "`Age < 60`",
+    "rationale": "That is the opposite group."
+   },
+   {
+    "key": "D",
+    "content": "`Age = 60`",
+    "rationale": "That tests only one age."
+   }
+  ],
+  "explanation": "At least means greater than or equal to.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.selection.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which condition is TRUE only when `Temp` is from 18 to 25 inclusive?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Temp >= 18 OR Temp <= 25`",
+    "rationale": "Every number satisfies at least one of these."
+   },
+   {
+    "key": "B",
+    "content": "`Temp > 18 AND Temp < 25`",
+    "rationale": "The boundary values 18 and 25 are excluded."
+   },
+   {
+    "key": "C",
+    "content": "`Temp <= 18 AND Temp >= 25`",
+    "rationale": "No number is both at most 18 and at least 25."
+   },
+   {
+    "key": "D",
+    "content": "`Temp >= 18 AND Temp <= 25`",
+    "correct": true,
+    "rationale": "Both comparisons must be true for a value in the range."
+   }
+  ],
+  "explanation": "A range needs AND with >= and <=.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.selection.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A mobile menu has six fixed options numbered 1 to 6 and an error message for any other number. Which construct is the most suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A single `IF` with no `ELSE`",
+    "rationale": "That handles one outcome only."
+   },
+   {
+    "key": "B",
+    "content": "`CASE OF` with `OTHERWISE`",
+    "correct": true,
+    "rationale": "One value is compared with several fixed alternatives."
+   },
+   {
+    "key": "C",
+    "content": "`REPEAT ... UNTIL`",
+    "rationale": "That is iteration, not selection."
+   },
+   {
+    "key": "D",
+    "content": "Six unrelated `IF` statements, each with an `ELSE`",
+    "rationale": "Each ELSE would print the error for the other five numbers."
+   }
+  ],
+  "explanation": "CASE is for one expression against fixed values; OTHERWISE is the default.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.selection.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is output by this Python code?\n\n```python\nscore = 72\nif score >= 50:\n    print(\"Merit\")\nelif score >= 70:\n    print(\"Distinction\")\nelse:\n    print(\"Fail\")\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "Distinction",
+    "rationale": "That branch is never reached because the earlier condition is true."
+   },
+   {
+    "key": "B",
+    "content": "Fail",
+    "rationale": "72 is above 50."
+   },
+   {
+    "key": "C",
+    "content": "Merit and Distinction",
+    "rationale": "Only one branch of an if/elif chain runs."
+   },
+   {
+    "key": "D",
+    "content": "Merit",
+    "correct": true,
+    "rationale": "The first true condition, score >= 50, runs and the rest are skipped."
+   }
+  ],
+  "explanation": "The first true condition decides; the order of the tests matters.",
+  "hints": [
+   "Which condition is tested first?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.selection.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which condition is equivalent to `NOT (Age >= 13 AND HasPermission = TRUE)`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Age < 13 AND HasPermission = FALSE`",
+    "rationale": "NOT turns AND into OR."
+   },
+   {
+    "key": "B",
+    "content": "`Age >= 13 OR HasPermission = FALSE`",
+    "rationale": "The first comparison must be reversed as well."
+   },
+   {
+    "key": "C",
+    "content": "`Age < 13 OR HasPermission = FALSE`",
+    "correct": true,
+    "rationale": "De Morgan's law: NOT (A AND B) = (NOT A) OR (NOT B)."
+   },
+   {
+    "key": "D",
+    "content": "`Age < 13 OR HasPermission = TRUE`",
+    "rationale": "The second comparison must be reversed as well."
+   }
+  ],
+  "explanation": "Reverse each condition and swap AND for OR.",
+  "hints": [
+   "Apply De Morgan's laws."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.selection.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which Python line correctly tests whether `x` equals 5?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`if x = 5:`",
+    "rationale": "= is assignment and is a syntax error here."
+   },
+   {
+    "key": "B",
+    "content": "`if x := 5`",
+    "rationale": "That is an assignment expression with no colon."
+   },
+   {
+    "key": "C",
+    "content": "`if x == 5:`",
+    "correct": true,
+    "rationale": "== compares; a colon ends the line."
+   },
+   {
+    "key": "D",
+    "content": "`if (x equals 5)`",
+    "rationale": "equals is not a Python operator."
+   }
+  ],
+  "explanation": "Python uses == for equality.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.selection.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program accepts a whole number of kilograms from 1 to 50 inclusive. Which value is a boundary test for the upper limit?",
+  "options": [
+   {
+    "key": "A",
+    "content": "50",
+    "correct": true,
+    "rationale": "It is the largest valid value."
+   },
+   {
+    "key": "B",
+    "content": "25",
+    "rationale": "A value in the middle is normal data."
+   },
+   {
+    "key": "C",
+    "content": "0",
+    "rationale": "That is outside the lower limit."
+   },
+   {
+    "key": "D",
+    "content": "-10",
+    "rationale": "That is abnormal data far outside the range."
+   }
+  ],
+  "explanation": "Boundary data lies at the edge of the range (50 and also 51, just outside).",
+  "hints": [
+   "The boundary of a range is its largest or smallest allowed value."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.selection.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a chain of nested `IF ... ELSE` statements (Python `if/elif/else`), once a condition is found to be true the remaining conditions in the chain are not tested.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The chain stops at the first true condition, which is why the order of the conditions matters.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.selection.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A `CASE` statement is the best way to test whether a mark is 40 or more.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. CASE compares one value with fixed values or ranges; a single comparison such as `Mark >= 40` is an IF statement.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.selection.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A bus fare in USD is set by this algorithm.\n\n```\nIF Age < 5 THEN\n    Fare ← 0\nELSE\n    IF Age < 17 OR Age >= 60 THEN\n        Fare ← 1\n    ELSE\n        Fare ← 2\n    ENDIF\nENDIF\n```\nState the value of `Fare` for each age.",
+  "payload": {
+   "template": "Age 4: Fare = {{blank:f0}}\n\nAge 5: Fare = {{blank:f1}}\n\nAge 16: Fare = {{blank:f2}}\n\nAge 17: Fare = {{blank:f3}}\n\nAge 59: Fare = {{blank:f4}}\n\nAge 60: Fare = {{blank:f5}}",
+   "blanks": [
+    {
+     "id": "f0",
+     "input": "number"
+    },
+    {
+     "id": "f1",
+     "input": "number"
+    },
+    {
+     "id": "f2",
+     "input": "number"
+    },
+    {
+     "id": "f3",
+     "input": "number"
+    },
+    {
+     "id": "f4",
+     "input": "number"
+    },
+    {
+     "id": "f5",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "f0",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "f1",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "f2",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "f3",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "f4",
+     "accepted": [
+      "2"
+     ]
+    },
+    {
+     "id": "f5",
+     "accepted": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "explanation": "Ages under 5 travel free; ages 5 to 16 and 60 or over pay 1; all other ages pay 2.",
+  "hints": [
+   "Follow the conditions from the top for each age."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "f0",
+     "text": "0"
+    },
+    {
+     "blankId": "f1",
+     "text": "1"
+    },
+    {
+     "blankId": "f2",
+     "text": "1"
+    },
+    {
+     "blankId": "f3",
+     "text": "2"
+    },
+    {
+     "blankId": "f4",
+     "text": "2"
+    },
+    {
+     "blankId": "f5",
+     "text": "1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "f0",
+      "text": "2"
+     },
+     {
+      "blankId": "f1",
+      "text": "2"
+     },
+     {
+      "blankId": "f2",
+      "text": "2"
+     },
+     {
+      "blankId": "f3",
+      "text": "2"
+     },
+     {
+      "blankId": "f4",
+      "text": "2"
+     },
+     {
+      "blankId": "f5",
+      "text": "2"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.selection.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Find the value of `Bonus` after this algorithm is run with `Sales` = 180 and `Years` = 3.\n\n```\nIF Sales >= 200 THEN\n    Bonus ← 50\nELSE\n    IF Sales >= 150 AND Years >= 2 THEN\n        Bonus ← 30\n    ELSE\n        IF Sales >= 150 THEN\n            Bonus ← 20\n        ELSE\n            Bonus ← 5\n        ENDIF\n    ENDIF\nENDIF\n```",
+  "answerSpec": {
+   "value": 30
+  },
+  "explanation": "Bonus is 30.",
+  "workedSolution": "Sales >= 200 is false. Sales >= 150 AND Years >= 2 is true (180 >= 150 and 3 >= 2), so Bonus is 30 and the rest is skipped.",
+  "hints": [
+   "Test the conditions in order until one is true."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "30"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "50"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "20"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.selection.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "State the keyword used in a `CASE` statement for the branch that runs when no other value matches.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "OTHERWISE"
+    },
+    {
+     "value": "otherwise"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "OTHERWISE is the default branch of CASE.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "OTHERWISE"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "ELSE"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.selection.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each description to the correct condition for a variable `N`.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "N is at least 5"
+    },
+    {
+     "id": "L2",
+     "content": "N is more than 5"
+    },
+    {
+     "id": "L3",
+     "content": "N is at most 5"
+    },
+    {
+     "id": "L4",
+     "content": "N is not equal to 5"
+    },
+    {
+     "id": "L5",
+     "content": "N is less than 5"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "`N <= 5`"
+    },
+    {
+     "id": "R4",
+     "content": "`N <> 5`"
+    },
+    {
+     "id": "R5",
+     "content": "`N < 5`"
+    },
+    {
+     "id": "R1",
+     "content": "`N >= 5`"
+    },
+    {
+     "id": "R2",
+     "content": "`N > 5`"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "At least and at most include the value; more than and less than do not.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.selection.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A cinema in Bulawayo charges 3 for a child under 12, 5 for a person aged 12 to 59 and 3 for a person aged 60 or over. Write pseudocode that inputs an age and outputs the price. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Inputs the age",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Correct condition for the child price (Age < 12)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Correct condition for the age 60 and over, or the adult range with both limits",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Outputs the correct price in every branch (using ELSE or all cases covered)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nINPUT Age\nIF Age < 12 OR Age >= 60 THEN\n    Price ← 3\nELSE\n    Price ← 5\nENDIF\nOUTPUT \"Price: \", Price\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Two groups pay the same price, so one OR condition covers both.",
+  "hints": [
+   "Test the highest class first, or give each test both limits."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.selection.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "This Python code should output Pass for 40 or more and Distinction for 80 or more, but a mark of 95 outputs only Pass.\n\n```python\nif mark >= 40:\n    print(\"Pass\")\nelif mark >= 80:\n    print(\"Distinction\")\n```\nExplain the error and write the corrected code. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The condition mark >= 40 is true for 95, so the elif is never tested",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The most restrictive condition (80) must be tested first",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Corrected: test mark >= 80 first, then mark >= 40",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```python\nif mark >= 80:\n    print(\"Distinction\")\nelif mark >= 40:\n    print(\"Pass\")\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The order of an elif chain matters.",
+  "hints": [
+   "Dry run the code with the mark 95."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.selection.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Compare the use of a `CASE` statement and a nested `IF` statement. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "CASE compares one expression with a list of fixed values or ranges, so it is clearer for menus and codes",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "IF can test ranges, different variables and compound conditions that CASE cannot",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Either can express the same choice; CASE avoids long deeply indented nests (or IF is needed where conditions are not about one value)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: CASE compares a single expression against fixed values, which makes menus easier to read. Nested IF statements can test ranges, several variables and compound conditions. CASE avoids deep nesting."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Choose the construct that matches the form of the decision.",
+  "hints": [
+   "Think about the number of values compared and the type of comparison."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "prog.selection.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Write a Python program that reads the temperature of a classroom as a whole number and outputs Too cold if it is below 16, Too hot if it is above 30, and Comfortable otherwise. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Reads the input and converts it to an integer",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Correct condition and output for below 16",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Correct condition and output for above 30",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Outputs Comfortable in the else branch",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```python\ntemperature = int(input())\nif temperature < 16:\n    print(\"Too cold\")\nelif temperature > 30:\n    print(\"Too hot\")\nelse:\n    print(\"Comfortable\")\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Two tests and a default branch cover every value.",
+  "hints": [
+   "Use int(input()) and an if/elif/else chain."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.selection.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A borehole pump at a farm near Gweru is controlled by this algorithm. `Level` is the percentage of water in the tank and `PowerAvailable` is TRUE when the electricity supply is on.\n\n```\nIF Level < 20 THEN\n    IF PowerAvailable = TRUE THEN\n        OUTPUT \"PUMP ON\"\n    ELSE\n        OUTPUT \"WAIT\"\n    ENDIF\nELSE\n    IF Level > 90 THEN\n        OUTPUT \"PUMP OFF\"\n    ELSE\n        OUTPUT \"NO CHANGE\"\n    ENDIF\nENDIF\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "State the output for each set of values.",
+    "payload": {
+     "template": "Level 15, PowerAvailable TRUE: {{blank:c0}}\n\nLevel 15, PowerAvailable FALSE: {{blank:c1}}\n\nLevel 50, PowerAvailable TRUE: {{blank:c2}}\n\nLevel 95, PowerAvailable TRUE: {{blank:c3}}",
+     "blanks": [
+      {
+       "id": "c0",
+       "input": "select",
+       "choices": [
+        "PUMP ON",
+        "PUMP OFF",
+        "WAIT",
+        "NO CHANGE"
+       ]
+      },
+      {
+       "id": "c1",
+       "input": "select",
+       "choices": [
+        "PUMP ON",
+        "PUMP OFF",
+        "WAIT",
+        "NO CHANGE"
+       ]
+      },
+      {
+       "id": "c2",
+       "input": "select",
+       "choices": [
+        "PUMP ON",
+        "PUMP OFF",
+        "WAIT",
+        "NO CHANGE"
+       ]
+      },
+      {
+       "id": "c3",
+       "input": "select",
+       "choices": [
+        "PUMP ON",
+        "PUMP OFF",
+        "WAIT",
+        "NO CHANGE"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "c0",
+       "accepted": [
+        "PUMP ON"
+       ]
+      },
+      {
+       "id": "c1",
+       "accepted": [
+        "WAIT"
+       ]
+      },
+      {
+       "id": "c2",
+       "accepted": [
+        "NO CHANGE"
+       ]
+      },
+      {
+       "id": "c3",
+       "accepted": [
+        "PUMP OFF"
+       ]
+      }
+     ]
+    },
+    "explanation": "A level below 20 starts the pump if there is power and waits if not; above 90 stops it; otherwise nothing changes."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which Level value is a boundary test for the condition `Level < 20`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "10",
+      "rationale": "A value well inside the range is normal data."
+     },
+     {
+      "key": "B",
+      "content": "20",
+      "correct": true,
+      "rationale": "20 is just outside the condition and 19 just inside."
+     },
+     {
+      "key": "C",
+      "content": "50",
+      "rationale": "A middle value is normal data for the whole algorithm."
+     },
+     {
+      "key": "D",
+      "content": "100",
+      "rationale": "That is the largest possible value, not the boundary of this condition."
+     }
+    ],
+    "explanation": "Boundary tests use the value at the edge of the condition."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State why the pump does not need a test for power when the tank is above 90 percent.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The pump is being switched off, which does not need electricity (or the output is PUMP OFF)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Switching the pump off does not need power."
+    },
+    "explanation": "Only starting the pump needs power."
+   }
+  ],
+  "explanation": "A nested selection for a borehole pump.",
+  "hints": [
+   "Follow the outer condition first.",
+   "A boolean variable is already TRUE or FALSE."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "c0",
+       "text": "PUMP ON"
+      },
+      {
+       "blankId": "c1",
+       "text": "WAIT"
+      },
+      {
+       "blankId": "c2",
+       "text": "NO CHANGE"
+      },
+      {
+       "blankId": "c3",
+       "text": "PUMP OFF"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "c0",
+        "text": "PUMP OFF"
+       },
+       {
+        "blankId": "c1",
+        "text": "PUMP ON"
+       },
+       {
+        "blankId": "c2",
+        "text": "PUMP ON"
+       },
+       {
+        "blankId": "c3",
+        "text": "PUMP ON"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "prog.selection.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.selection"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A bus company in Masvingo writes this algorithm to work out a fare in USD for a passenger from their age.\n\n```\nIF Age < 5 THEN\n    Fare ← 0\nELSE\n    IF Age < 17 OR Age >= 60 THEN\n        Fare ← 1\n    ELSE\n        Fare ← 2\n    ENDIF\nENDIF\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "State the fare for the ages 4, 17 and 60.",
+    "payload": {
+     "template": "Age 4: {{blank:a}}\n\nAge 17: {{blank:b}}\n\nAge 60: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "Age 4 is free; 17 is not under 17 and not 60 or over, so it pays 2; 60 pays 1."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which age is a boundary value for the free-travel rule?",
+    "options": [
+     {
+      "key": "A",
+      "content": "2",
+      "rationale": "A normal value well inside the free group."
+     },
+     {
+      "key": "B",
+      "content": "5",
+      "correct": true,
+      "rationale": "It is the smallest age that is not free."
+     },
+     {
+      "key": "C",
+      "content": "30",
+      "rationale": "A normal adult value."
+     },
+     {
+      "key": "D",
+      "content": "-1",
+      "rationale": "An abnormal value."
+     }
+    ],
+    "explanation": "5 is just outside the condition Age < 5."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State one abnormal test value for the algorithm and describe what the algorithm does with it.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A negative age such as -3 or a very large age such as 200",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The algorithm does not reject it: a negative age is treated as under 5 and gets a free fare (a large age gets 1)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: An age of -3. The algorithm accepts it and gives a free fare, because -3 is less than 5."
+    },
+    "explanation": "The algorithm has no validation of the age."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write the lines to add before the algorithm so that an age below 0 or above 120 outputs an error message and the fare is not calculated.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A condition rejecting Age < 0 OR Age > 120",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Outputs an error message and puts the fare calculation in the ELSE branch (or stops)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nIF Age < 0 OR Age > 120 THEN\n    OUTPUT \"Invalid age\"\nELSE\n    // the fare algorithm goes here\nENDIF\n```"
+    },
+    "explanation": "Validation protects the calculation."
+   }
+  ],
+  "explanation": "Test data and a trace for a fare algorithm.",
+  "hints": [
+   "Check each age against the conditions in order.",
+   "Use a table of test data with expected results."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "0"
+      },
+      {
+       "blankId": "b",
+       "text": "2"
+      },
+      {
+       "blankId": "c",
+       "text": "1"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "1"
+       },
+       {
+        "blankId": "b",
+        "text": "1"
+       },
+       {
+        "blankId": "c",
+        "text": "2"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ }
+]

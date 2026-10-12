@@ -1,0 +1,569 @@
+[
+ {
+  "key": "exam.w4a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.quick-sort",
+   "acs.algo.binary-search-insertion-sort",
+   "acs.algo.algorithm-design",
+   "acs.ds.arrays"
+  ],
+  "difficulty": 4,
+  "marks": 40,
+  "estimatedSeconds": 3600,
+  "stem": "A school in Gweru wants a program to rank the marks of eight candidates in a Computer Science test. The marks are stored in the array `Marks`, indexes 1 to 8.\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Marks | 42 | 86 | 68 | 98 | 53 | 37 | 93 | 75 |\n\nThe program will calculate the average and the highest mark, sort the marks into ascending order with a quick sort and then let a teacher search for a mark with a binary search.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Complete an identifier table for the first part of the program, listing four identifiers with a data type and purpose for each: the array, a loop counter, the running total and the average.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Marks: ARRAY of INTEGER, holds the eight marks",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Index (or Count): INTEGER, the loop counter used as the array index",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Total: INTEGER, the running total of the marks",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Average: REAL, the total divided by 8 (it can have a fractional part)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: | Identifier | Data type | Purpose |\n|:-:|:-:|:-:|\n| Marks | ARRAY[1:8] OF INTEGER | the eight marks |\n| Index | INTEGER | loop counter and array index |\n| Total | INTEGER | running total of the marks |\n| Average | REAL | Total divided by 8 |"
+    },
+    "explanation": "One mark for each identifier with a suitable type and purpose."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that calculates and outputs the average of the eight marks and the highest mark.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Sets Total to 0 before the loop",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Sets the highest mark to Marks[1] (or a very low value) before the loop",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A loop from 1 to 8 using Index as the array index",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Adds each mark to the total inside the loop",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Compares each mark with the highest so far and updates it when larger",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Calculates the average as Total / 8 and outputs the average and the highest mark after the loop",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nTotal ← 0\nHighest ← Marks[1]\nFOR Index ← 1 TO 8\n    Total ← Total + Marks[Index]\n    IF Marks[Index] > Highest THEN\n        Highest ← Marks[Index]\n    ENDIF\nNEXT Index\nAverage ← Total / 8\nOUTPUT \"Average: \", Average\nOUTPUT \"Highest: \", Highest\n```\n\nFor the data given, the total is 552, the average is 69 and the highest mark is 91."
+    },
+    "explanation": "A total, a maximum and the average in one loop."
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "The marks are sorted into ascending order using a quick sort. The pivot of each partition is the last item of the sub-list being sorted, and items smaller than the pivot are moved before it.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the pivot used in the first partition.",
+      "answerSpec": {
+       "value": 75
+      },
+      "explanation": "67.",
+      "workedSolution": "The last item of the whole list is 67."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the position (1 to 8) of the pivot in the list after the first partition.",
+      "answerSpec": {
+       "value": 5
+      },
+      "explanation": "Position 5.",
+      "workedSolution": "Four marks (42, 68, 53 and 37) are smaller than 75, so the pivot is fifth."
+     },
+     {
+      "label": "(iii)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 2,
+      "stem": "State the first two marks in the list after the first partition, in the order produced by the algorithm.",
+      "payload": {
+       "template": "{{blank:a}}, {{blank:b}}",
+       "blanks": [
+        {
+         "id": "a",
+         "input": "number"
+        },
+        {
+         "id": "b",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "a",
+         "accepted": [
+          "42"
+         ]
+        },
+        {
+         "id": "b",
+         "accepted": [
+          "68"
+         ]
+        }
+       ]
+      },
+      "explanation": "After the first partition the list is 42, 68, 53, 37, 75, 98, 93, 78."
+     },
+     {
+      "label": "(iv)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the total number of partitions made to sort all eight marks (a sub-list of one item needs none).",
+      "answerSpec": {
+       "value": 6
+      },
+      "explanation": "6 partitions.",
+      "workedSolution": "Sub-lists partitioned: the whole list, 42 68 53 37, 68 53 42, 53 68, 98 93 86 and 93 91."
+     },
+     {
+      "label": "(v)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the total number of comparisons made with a pivot.",
+      "answerSpec": {
+       "value": 16
+      },
+      "explanation": "16 comparisons.",
+      "workedSolution": "7 + 3 + 2 + 1 + 2 + 1 = 16."
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Write a Python program that sorts the list `marks = [42, 86, 68, 98, 53, 37, 93, 75]` into ascending order using a quick sort, with a function `partition` and a recursive function `quick_sort`, and then prints the list.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "partition takes the list and the low and high positions and sets the pivot to the last item",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Sets a boundary to low",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A loop from low to high - 1 comparing each item with the pivot",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Swaps an item smaller than the pivot with the item at the boundary and adds 1 to the boundary",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "After the loop swaps the pivot into the boundary position and returns the boundary",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "quick_sort only works when low < high (the base case)",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "quick_sort calls partition and then calls itself on the items before the pivot and on the items after it (leaving out the pivot)",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Calls quick_sort for the whole list and prints the sorted list",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\ndef partition(marks, low, high):\n    pivot = marks[high]\n    boundary = low\n    for index in range(low, high):\n        if marks[index] < pivot:\n            marks[index], marks[boundary] = marks[boundary], marks[index]\n            boundary = boundary + 1\n    marks[boundary], marks[high] = marks[high], marks[boundary]\n    return boundary\n\ndef quick_sort(marks, low, high):\n    if low < high:\n        p = partition(marks, low, high)\n        quick_sort(marks, low, p - 1)\n        quick_sort(marks, p + 1, high)\n\nmarks = [42, 86, 68, 98, 53, 37, 93, 75]\nquick_sort(marks, 0, len(marks) - 1)\nprint(marks)\n```\n\nThe output of this program, when run, is:\n\n```\n[37, 42, 53, 68, 75, 86, 93, 98]\n```"
+    },
+    "explanation": "Partition around the last item, then sort the two parts recursively."
+   },
+   {
+    "label": "(e)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "The sorted list is searched using the Python function below.\n\n```python\ndef binary_search(items, target):\n    low = 0\n    high = len(items) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if items[mid] == target:\n            return mid\n        if items[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n\nsorted_marks = [37, 42, 53, 68, 75, 86, 93, 98]\n```",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the value returned by `binary_search(sorted_marks, 93)`.",
+      "answerSpec": {
+       "value": 6
+      },
+      "explanation": "6.",
+      "workedSolution": "93 is at index 6 of the list (counting from 0)."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the number of times the body of the `while` loop is executed in the search for 84.",
+      "answerSpec": {
+       "value": 3
+      },
+      "explanation": "3 times.",
+      "workedSolution": "mid = 3 (68), then mid = 5 (86), then mid = 6 (93)."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the value returned by `binary_search(sorted_marks, 100)`.",
+      "answerSpec": {
+       "value": -1
+      },
+      "explanation": "-1.",
+      "workedSolution": "100 is larger than every mark, so the loop ends with low > high and -1 is returned."
+     },
+     {
+      "label": "(iv)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which condition makes the loop stop when the mark is not in the list?",
+      "options": [
+       {
+        "key": "A",
+        "content": "`low <= high` becomes false",
+        "correct": true,
+        "rationale": "Correct."
+       },
+       {
+        "key": "B",
+        "content": "`items[mid] == target` becomes true",
+        "rationale": "That stops the loop when the item is found."
+       },
+       {
+        "key": "C",
+        "content": "`mid` becomes zero",
+        "rationale": "mid is not used as a stop condition."
+       },
+       {
+        "key": "D",
+        "content": "`target` becomes -1",
+        "rationale": "The target does not change."
+       }
+      ],
+      "explanation": "When low is greater than high no items remain."
+     }
+    ]
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write Python statements that ask the teacher to enter a mark, search for it with `binary_search` and output either its position in the list (counting the first item as position 1) or the message \"Not found\".",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Inputs the mark and converts it to an integer",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Calls binary_search with the sorted list and the mark and stores the result",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Tests whether the result is not -1 and outputs the position as result + 1",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Outputs \"Not found\" otherwise",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\nmark = int(input(\"Enter a mark: \"))\nposition = binary_search(sorted_marks, mark)\nif position != -1:\n    print(\"Found at position\", position + 1)\nelse:\n    print(\"Not found\")\n```\n\nEntering 93 gives `Found at position 7`; entering 50 gives `Not found`."
+    },
+    "explanation": "Position = index + 1."
+   },
+   {
+    "label": "(g)",
+    "type": "STRUCTURED",
+    "marks": 3,
+    "stem": "A tester checks `binary_search(sorted_marks, target)` with three values of `target`. State the value the function should return for each.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "The smallest mark in the list, 38.",
+      "answerSpec": {
+       "value": 0
+      },
+      "explanation": "0.",
+      "workedSolution": "37 is the first item, index 0."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "The largest mark in the list, 91.",
+      "answerSpec": {
+       "value": 7
+      },
+      "explanation": "7.",
+      "workedSolution": "98 is the last of eight items, index 7."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "A mark that is not in the list, 50.",
+      "answerSpec": {
+       "value": -1
+      },
+      "explanation": "-1.",
+      "workedSolution": "50 is not in the list."
+     }
+    ]
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "The school later wants to use the program for 10 000 marks. Discuss whether a quick sort or a bubble sort should be used, and whether a linear search or a binary search should be used.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A quick sort is much faster than a bubble sort for a long list in a random order",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A bubble sort makes about n squared ÷ 2 comparisons (about fifty million for 10 000 marks), whereas a quick sort makes about n × log₂ n (about 130 000)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A bubble sort is simpler to write, but that is outweighed by its slowness for a large list",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A binary search needs at most about 14 comparisons for 10 000 sorted marks, whereas a linear search may need 10 000",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "The binary search can be used because the list has been sorted first, and the saving is large if many searches are made",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A quick sort should be used, because it makes about n × log₂ n comparisons (about 130 000) whereas a bubble sort makes about n²/2 (about 50 million) for 10 000 marks, although the bubble sort is simpler to write. A binary search should be used because the marks are sorted, and it needs at most about 14 comparisons instead of up to 10 000, which matters when many searches are made."
+    },
+    "explanation": "Compare the growth of the work."
+   }
+  ],
+  "explanation": "Total 552, average 69, highest 98; the first partition has pivot 75 and gives 42, 68, 53, 37, 75, 98, 93, 86; the sort makes 6 partitions and 16 comparisons; binary_search returns 6, -1, 0 and 7.",
+  "hints": [
+   "The pivot is the last item of each sub-list.",
+   "A binary search starts at the middle of the sorted list."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(c)(i)": {
+     "type": "NUMERICAL",
+     "value": "75"
+    },
+    "(c)(ii)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(c)(iii)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "42"
+      },
+      {
+       "blankId": "b",
+       "text": "68"
+      }
+     ]
+    },
+    "(c)(iv)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(c)(v)": {
+     "type": "NUMERICAL",
+     "value": "16"
+    },
+    "(e)(i)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(e)(ii)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(e)(iii)": {
+     "type": "NUMERICAL",
+     "value": "-1"
+    },
+    "(e)(iv)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(g)(i)": {
+     "type": "NUMERICAL",
+     "value": "0"
+    },
+    "(g)(ii)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    },
+    "(g)(iii)": {
+     "type": "NUMERICAL",
+     "value": "-1"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)(i)": {
+      "type": "NUMERICAL",
+      "value": "42"
+     },
+     "(c)(ii)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(c)(iii)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "86"
+       },
+       {
+        "blankId": "b",
+        "text": "68"
+       }
+      ]
+     },
+     "(c)(iv)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     },
+     "(c)(v)": {
+      "type": "NUMERICAL",
+      "value": "28"
+     },
+     "(e)(i)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     },
+     "(e)(ii)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(e)(iii)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(e)(iv)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(g)(i)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(g)(ii)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     },
+     "(g)(iii)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     }
+    }
+   }
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "ZIMSEC Paper 2"
+ }
+]

@@ -1,0 +1,590 @@
+[
+ {
+  "key": "exam.w3b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.sdlc.testing-maintenance"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A teacher's program counts the marks entered and how many of them are passes. The specification says that a valid mark is a whole number from 0 to 100 inclusive, that a mark of 50 or more is a pass, and that -1 ends the input (it is not a mark). This pseudocode was written.\n\n```\nDECLARE Mark, Count, Passes : INTEGER\nCount ← 0\nPasses ← 0\nREPEAT\n    INPUT Mark\n    IF Mark >= 0 AND Mark < 100 THEN\n        Count ← Count + 1\n        IF Mark >= 50 THEN\n            Passes ← Passes + 1\n        ENDIF\n    ENDIF\nUNTIL Mark = -1\nOUTPUT \"Passes: \", Passes, \" of \", Count\n```\n\nThe teacher enters the values 62, 100, 49, 50 and -1. According to the specification, the correct output is `Passes: 3 of 4`.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the output of the pseudocode as written for these inputs.",
+    "payload": {
+     "template": "Passes: {{blank:a}} of {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "62, 49 and 50 are counted (3) and 62 and 50 are passes (2); 100 is rejected because the test is Mark < 100."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the type of error in the pseudocode.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "logic error"
+      },
+      {
+       "value": "logic"
+      },
+      {
+       "value": "a logic error"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The program runs but gives a wrong result."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Rewrite the condition `Mark < 100` so that the program meets the specification.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Mark <= 100"
+      },
+      {
+       "value": "Mark < 101"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "100 must be accepted, so use <= 100."
+   },
+   {
+    "label": "(d)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The error is corrected. Complete the expected result for each test: state whether the mark is counted by the corrected program.",
+    "payload": {
+     "template": "Test 1, mark 0: {{blank:a}}\n\nTest 2, mark 100: {{blank:b}}\n\nTest 3, mark 101: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "counted",
+        "not counted"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "counted",
+        "not counted"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "counted",
+        "not counted"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "counted"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "counted"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "not counted"
+       ]
+      }
+     ]
+    },
+    "explanation": "0 and 100 are valid boundary values; 101 is invalid."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why 100 was a good choice of test data to find this error.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "100 is the upper boundary of the valid range (extreme data)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Errors with < and <= occur at the boundary, and the test with 100 shows that a valid mark was wrongly rejected",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 100 is the upper boundary of the valid range. Mistakes with < and <= happen at the boundary, and the test with 100 shows that a valid mark was wrongly rejected."
+    },
+    "explanation": "Boundary data finds comparison errors."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the programmer could use a dry run to find the error.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Follow the pseudocode by hand with the inputs 62, 100, 49, 50 and -1",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Record the values of Mark, Count and Passes in a trace table after each input",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Compare the final values with the expected result and see that the input 100 was not counted at the IF statement",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Follow the pseudocode by hand with the inputs, recording Mark, Count and Passes in a trace table after each input. Comparing the final values with the expected result shows that the input 100 was not counted at the IF statement."
+    },
+    "explanation": "Trace table and comparison."
+   }
+  ],
+  "explanation": "As written the program outputs Passes: 2 of 3, because 100 is rejected; the correct condition is Mark <= 100.",
+  "hints": [
+   "Is 100 accepted by the condition Mark < 100?",
+   "A valid mark is 0 to 100 inclusive."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2"
+      },
+      {
+       "blankId": "b",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "logic error"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "Mark <= 100"
+    },
+    "(d)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "counted"
+      },
+      {
+       "blankId": "b",
+       "text": "counted"
+      },
+      {
+       "blankId": "c",
+       "text": "not counted"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "999"
+       },
+       {
+        "blankId": "b",
+        "text": "999"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "not counted"
+       },
+       {
+        "blankId": "b",
+        "text": "not counted"
+       },
+       {
+        "blankId": "c",
+        "text": "counted"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w3b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.sdlc.program-design",
+   "acs.sdlc.life-cycles"
+  ],
+  "difficulty": 3,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A football club in Gweru is developing a program to report on the entry gates and the scores of its matches. The club secretary is not sure which reports she needs and will try a new version of the program every two weeks.\n\nPart of the program is designed with this structure chart, shown as a table.\n\n| Module | Data passed in | Data returned |\n|:-:|:-:|:-:|\n| ReadScores | none | Scores |\n| FindTotal | Scores | Total |\n| FindAverage | Total, Count | Average |\n| PrintReport | Average | none |\n\nA turnstile at a gate is controlled by this state-transition table. It starts in the state Locked.\n\n| Current state | Input: Coin | Input: Push |\n|:-:|:-:|:-:|\n| Locked | Unlocked | Locked |\n| Unlocked | Unlocked | Locked |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the structure chart by choosing the missing data items.",
+    "payload": {
+     "template": "ReadScores returns: {{blank:a}}\n\nFindTotal is passed: {{blank:b}}\n\nFindAverage returns: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Scores",
+        "Total",
+        "Average",
+        "Count"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Scores",
+        "Total",
+        "Average",
+        "Count"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "Scores",
+        "Total",
+        "Average",
+        "Count"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Scores"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Scores"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "Average"
+       ]
+      }
+     ]
+    },
+    "explanation": "The table gives ReadScores returning Scores, FindTotal passed Scores, FindAverage returning Average."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the pseudocode for the module `FindAverage` as a function that returns 0 if `Count` is 0.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Function header with the parameters Total and Count and RETURNS REAL",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Selection testing Count = 0 and returning 0",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Otherwise returns Total / Count, with ENDIF and ENDFUNCTION",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: \n```\nFUNCTION FindAverage(Total : INTEGER, Count : INTEGER) RETURNS REAL\n    IF Count = 0 THEN\n        RETURN 0\n    ELSE\n        RETURN Total / Count\n    ENDIF\nENDFUNCTION\n```"
+    },
+    "explanation": "A guard against dividing by zero."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The turnstile receives the inputs Push, Coin, Push, Push, Coin in that order. State the state after the 2nd, 3rd and 5th inputs.",
+    "payload": {
+     "template": "After the 2nd input: {{blank:a}}\n\nAfter the 3rd input: {{blank:b}}\n\nAfter the 5th input: {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Locked",
+        "Unlocked"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Locked",
+        "Unlocked"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "Locked",
+        "Unlocked"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Unlocked"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Locked"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "Unlocked"
+       ]
+      }
+     ]
+    },
+    "explanation": "Locked → Locked (Push) → Unlocked (Coin) → Locked (Push) → Locked (Push) → Unlocked (Coin)."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "State which development life cycle model is the most suitable for the club's program and justify your choice.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Iterative (or RAD)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The secretary is not sure of the requirements, so each version can be changed after she has tried it",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "She will test a new version every two weeks, so feedback is frequent (waterfall would show the program too late)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: An iterative model is suitable. The secretary is unsure of the requirements, so each version can be changed after she has tried it, and she tests a new version every two weeks, so feedback is frequent."
+    },
+    "explanation": "Choice linked to the scenario."
+   }
+  ],
+  "explanation": "Structure chart items; the turnstile ends Unlocked after the fifth input; an iterative model suits unclear requirements.",
+  "hints": [
+   "Read the data in the table for each module.",
+   "Follow the inputs one at a time."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Scores"
+      },
+      {
+       "blankId": "b",
+       "text": "Scores"
+      },
+      {
+       "blankId": "c",
+       "text": "Average"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Unlocked"
+      },
+      {
+       "blankId": "b",
+       "text": "Locked"
+      },
+      {
+       "blankId": "c",
+       "text": "Unlocked"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Total"
+       },
+       {
+        "blankId": "b",
+        "text": "Total"
+       },
+       {
+        "blankId": "c",
+        "text": "Scores"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Locked"
+       },
+       {
+        "blankId": "b",
+        "text": "Unlocked"
+       },
+       {
+        "blankId": "c",
+        "text": "Locked"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ }
+]

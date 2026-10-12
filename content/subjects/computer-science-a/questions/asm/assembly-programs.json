@@ -1,0 +1,1436 @@
+[
+ {
+  "key": "asm.assembly-programs.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which instruction loads the accumulator with the contents of the address formed by adding the index register to the address in the instruction?",
+  "options": [
+   {
+    "key": "A",
+    "content": "LDX",
+    "correct": true,
+    "rationale": "Correct: LDX is the indexed load."
+   },
+   {
+    "key": "B",
+    "content": "LDD",
+    "rationale": "LDD uses the address in the instruction only."
+   },
+   {
+    "key": "C",
+    "content": "LDR",
+    "rationale": "LDR loads a number into the index register."
+   },
+   {
+    "key": "D",
+    "content": "LDI",
+    "rationale": "LDI is indirect: the address is read from memory."
+   }
+  ],
+  "explanation": "LDX addr loads the contents of addr + IX into ACC.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which instruction sets the index register to zero before a loop starts?",
+  "options": [
+   {
+    "key": "A",
+    "content": "LDR #0",
+    "correct": true,
+    "rationale": "Correct: LDR loads a number into IX."
+   },
+   {
+    "key": "B",
+    "content": "LDM #0",
+    "rationale": "LDM loads ACC, not IX."
+   },
+   {
+    "key": "C",
+    "content": "STO IX",
+    "rationale": "STO stores ACC at an address."
+   },
+   {
+    "key": "D",
+    "content": "DEC IX",
+    "rationale": "DEC subtracts 1 from IX; it does not set it to zero."
+   }
+  ],
+  "explanation": "LDR #n loads the number n into IX.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the lines CMP #0 followed by JPN Loop, when is the jump made?",
+  "options": [
+   {
+    "key": "A",
+    "content": "When ACC equals 0",
+    "rationale": "That is JPE."
+   },
+   {
+    "key": "B",
+    "content": "When ACC is greater than 0",
+    "rationale": "The instruction set tests only for equal and not equal."
+   },
+   {
+    "key": "C",
+    "content": "Every time, whatever the flag",
+    "rationale": "That is JMP."
+   },
+   {
+    "key": "D",
+    "content": "When ACC does not equal 0",
+    "correct": true,
+    "rationale": "Correct: JPN jumps when the comparison found the values not equal."
+   }
+  ],
+  "explanation": "JPN jumps when the last CMP gave not equal.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why are data items and tables normally written after the END instruction?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Because END copies them into the index register",
+    "rationale": "END does not move data."
+   },
+   {
+    "key": "B",
+    "content": "So that they are not executed as instructions",
+    "correct": true,
+    "rationale": "Correct: the processor would try to run them if they came among the instructions."
+   },
+   {
+    "key": "C",
+    "content": "Because data must have higher addresses than the stack",
+    "rationale": "No such rule exists in this instruction set."
+   },
+   {
+    "key": "D",
+    "content": "Because labels can only be placed after END",
+    "rationale": "Labels can be placed on any line."
+   }
+  ],
+  "explanation": "Execution runs on in order, so data placed among instructions would be run as code.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program starts at address 700 with LDR #2 and then LDX Tbl, where the table Tbl holds 8, 3, 9 and 4 in successive locations. What does ACC hold after the LDX?",
+  "options": [
+   {
+    "key": "A",
+    "content": "8",
+    "rationale": "That is the first element, which is read when IX is 0."
+   },
+   {
+    "key": "B",
+    "content": "3",
+    "rationale": "That would need IX = 1."
+   },
+   {
+    "key": "C",
+    "content": "4",
+    "rationale": "That would need IX = 3."
+   },
+   {
+    "key": "D",
+    "content": "9",
+    "correct": true,
+    "rationale": "Correct: IX = 2, so the element at Tbl + 2 is read, the third value."
+   }
+  ],
+  "explanation": "Tbl + 2 holds the third element, 9.",
+  "hints": [
+   "Count from zero: IX = 0 gives the first element."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The program LDM #72, OUT, INC ACC, OUT, END is run. The code for H is 72 and the codes of the letters follow in alphabetical order. What is displayed?",
+  "options": [
+   {
+    "key": "A",
+    "content": "H",
+    "rationale": "The second OUT displays another character."
+   },
+   {
+    "key": "B",
+    "content": "HI",
+    "correct": true,
+    "rationale": "Correct: OUT shows H, INC makes the code 73 and OUT shows I."
+   },
+   {
+    "key": "C",
+    "content": "72 73",
+    "rationale": "OUT shows the character for the code, not the number."
+   },
+   {
+    "key": "D",
+    "content": "IH",
+    "rationale": "The characters are displayed in the order of the OUT instructions."
+   }
+  ],
+  "explanation": "H then I.",
+  "hints": [
+   "OUT displays the character for the code in ACC."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A loop that totals a table is meant to start at the first element, but the programmer leaves out the LDR #0 before it. IX happens to hold 1 from earlier. What is the effect?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The loop never ends because the flag is never set by the CMP",
+    "rationale": "The flag is set by CMP, which is not affected by IX."
+   },
+   {
+    "key": "B",
+    "content": "The program stops with an error at the first LDX",
+    "rationale": "The processor has no check on IX at that point."
+   },
+   {
+    "key": "C",
+    "content": "The loop starts one place along and skips the first element",
+    "correct": true,
+    "rationale": "Correct: every access is one location further along than intended."
+   },
+   {
+    "key": "D",
+    "content": "The total is correct because IX is reset by END",
+    "rationale": "END does not run until after the loop."
+   }
+  ],
+  "explanation": "An index register not reset leaves the loop starting from the wrong place.",
+  "hints": [
+   "LDX reads the location at Table + IX."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The instruction JPE jumps when the value in ACC is greater than the value it was compared with.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. JPE jumps when the last comparison found the values equal. The 9618 set has no greater-than jump.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "If IX holds 0, LDX Table loads the same value as LDD Table.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The effective address is Table + 0, which is Table.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each instruction to what it does.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "LDR #5"
+    },
+    {
+     "id": "L2",
+     "content": "INC IX"
+    },
+    {
+     "id": "L3",
+     "content": "STO Total"
+    },
+    {
+     "id": "L4",
+     "content": "OUT"
+    },
+    {
+     "id": "L5",
+     "content": "JPN Back"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Copies ACC into the location Total"
+    },
+    {
+     "id": "R4",
+     "content": "Displays the character whose code is in ACC"
+    },
+    {
+     "id": "R5",
+     "content": "Jumps to Back if the last comparison gave not equal"
+    },
+    {
+     "id": "R1",
+     "content": "Loads the number 5 into the index register"
+    },
+    {
+     "id": "R2",
+     "content": "Adds 1 to the index register"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each is an instruction of the 9618 set.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the loop-control lines of a program that repeats its loop while the counter Left is not zero.",
+  "payload": {
+   "template": "LDD Left\n\n{{blank:a}} ACC\n\nSTO Left\n\nCMP {{blank:b}}\n\n{{blank:c}} Loop",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "DEC",
+      "INC",
+      "OUT",
+      "LDR"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "#0",
+      "#1",
+      "Left",
+      "Loop"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "JPN",
+      "JPE",
+      "STO",
+      "END"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "DEC"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "#0"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "JPN"
+     ]
+    }
+   ]
+  },
+  "explanation": "Decrease the count, store it, compare with 0 and jump back while it is not equal.",
+  "hints": [
+   "The counter is decreased, stored, then tested against zero."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "DEC"
+    },
+    {
+     "blankId": "b",
+     "text": "#0"
+    },
+    {
+     "blankId": "c",
+     "text": "JPN"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "INC"
+     },
+     {
+      "blankId": "b",
+      "text": "#1"
+     },
+     {
+      "blankId": "c",
+      "text": "JPE"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program starts at address 100:\n\n```\n100  Start: LDM #0\n101  STO Result\n102  Loop: LDD Result\n103  ADD Num\n104  STO Result\n105  LDD Times\n106  DEC ACC\n107  STO Times\n108  CMP #0\n109  JPN Loop\n110  END\n111  Num: 7\n112  Times: 3\n113  Result: 0\n```\n\nWhat value is held in `Result` when the program ends?",
+  "answerSpec": {
+   "value": 21
+  },
+  "explanation": "The program multiplies Num by Times by repeated addition: 7 × 3 = 21.",
+  "workedSolution": "1. Result is cleared to 0.\n2. Each pass adds Num (7) to Result and reduces Times by 1.\n3. The loop runs while Times is not 0: 3 passes.\n4. Result = 7 + 7 + 7 = 21.",
+  "hints": [
+   "Num is added to Result once for every pass, and Times controls the passes."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "21"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "10"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "asm.assembly-programs.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Using the program in the previous question, how many times is the instruction at address 104 (`STO Result`) executed?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "Three passes of the loop.",
+  "workedSolution": "1. The instruction at 104 is inside the loop.\n2. The loop runs once for each value of Times: 3, 2 and 1.\n3. So it is executed 3 times.",
+  "hints": [
+   "Count only the STO Result inside the loop (address 104)."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "asm.assembly-programs.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How many instructions are executed altogether, from `LDM #0` at address 100 to `END` at address 110 inclusive, in the program in the previous questions?",
+  "answerSpec": {
+   "value": 27
+  },
+  "explanation": "2 + 3 × 8 + 1 = 27 instructions.",
+  "workedSolution": "1. Before the loop: 2 instructions (100, 101).\n2. Each pass runs 8 instructions (102 to 109); there are 3 passes = 24.\n3. END = 1.\n4. Total = 2 + 24 + 1 = 27.",
+  "hints": [
+   "Work out the number of instructions in one pass and the instructions outside the loop."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "27"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "14"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "11"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "asm.assembly-programs.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The program `IN`, `SUB #32`, `OUT`, `END` is run and the user types the letter k, whose code is 107. Write the value in ACC when the program ends as an 8-bit binary number.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "01001011"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "107 - 32 = 75, which is 01001011 in 8 bits (the code for K).",
+  "hints": [
+   "Subtract 32 from the code of k, then write the result in binary."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "01001011"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "01001100"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "asm.assembly-programs.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the register whose contents are added to the address in an LDX instruction.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "IX"
+    },
+    {
+     "value": "index register"
+    },
+    {
+     "value": "the index register"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "LDX uses the index register, IX, to form the address.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "IX"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "ACC"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "accumulator"
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe the purpose of the program at address 100 (listed in the earlier question) and explain how it works. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "It multiplies Num by Times / calculates 7 × 3",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "By adding Num to Result once for each pass of the loop",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Times is used as a counter that is decreased until it is 0, and Result holds the product",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: It multiplies Num by Times using repeated addition. Num is added to Result on every pass and Times is decreased as the loop counter until it reaches 0, so Result holds the product."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Purpose, method, role of the counter.",
+  "hints": [
+   "Say what the loop does with Num and Times, then what Result holds."
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Explain the purpose of the index register when a program processes a table of values. [2]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "It is added to the address in an indexed instruction such as LDX to give the address that is used",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Adding 1 to it each time moves to the next element, so one loop can process the whole table",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The index register is added to the address in LDX to give the address used. Increasing it by 1 each pass moves to the next element, so one loop can process the whole table."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Effective address and stepping through the table.",
+  "hints": [
+   "Mention the address and what changes each time."
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A and B are labelled locations holding numbers. Write assembly language instructions to store the sum of A and B in the location C, followed by `END`. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Loads one of the numbers into ACC with LDD",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Adds the other number from its address with ADD",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Stores ACC at C with STO C (and ends with END)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: \n```\nLDD A\nADD B\nSTO C\nEND\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "LDD A, ADD B, STO C.",
+  "hints": [
+   "Load, add, store: three instructions."
+  ],
+  "skill": "CREATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q20",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A programmer adds 50 test marks by writing 50 pairs of LDD and ADD instructions. Explain why a loop with the index register is better. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The loop program is much shorter and uses less memory",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "It is easier to write and to check for mistakes",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "To change the number of marks only the counter and the table need to change",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The same instructions work for a table of any size",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A loop is much shorter, so it uses less memory and is easier to write and check. To handle a different number of marks only the counter and the table change, so the same instructions work for any size of table."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Shorter, easier, flexible.",
+  "hints": [
+   "Think about the number of instructions and the changes needed to handle more values."
+  ],
+  "skill": "EVALUATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A program starts at address 600. It examines a table of five codes and counts how many of them equal the code in `Wanted`.\n\n```\n600  LDR #0\n601  LDM #0\n602  STO Count\n603  Next: LDX Codes\n604  CMP Wanted\n605  JPN Skip\n606  LDD Count\n607  INC ACC\n608  STO Count\n609  Skip: INC IX\n610  LDD Left\n611  DEC ACC\n612  STO Left\n613  CMP #0\n614  JPN Next\n615  END\n616  Codes: 5\n617  2\n618  5\n619  5\n620  9\n621  Left: 5\n622  Wanted: 5\n623  Count: 0\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "What address does the assembler give to the label `Skip`?",
+    "answerSpec": {
+     "value": 609
+    },
+    "explanation": "Skip is at 609.",
+    "workedSolution": "1. The lines are numbered from 600.\n2. The line `Skip: INC IX` has the address 609."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the contents of IX and of `Count` at the end of each of the first two passes (when `JPN Next` is reached).",
+    "payload": {
+     "template": "Pass 1: IX = {{blank:i1}}, Count = {{blank:c1}}\n\nPass 2: IX = {{blank:i2}}, Count = {{blank:c2}}",
+     "blanks": [
+      {
+       "id": "i1",
+       "input": "number"
+      },
+      {
+       "id": "c1",
+       "input": "number"
+      },
+      {
+       "id": "i2",
+       "input": "number"
+      },
+      {
+       "id": "c2",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "i1",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "c1",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "i2",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "c2",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "Pass 1: element 5 equals Wanted, so Count = 1 and IX = 1. Pass 2: element 2 does not, so Count stays 1 and IX = 2."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "What is the value of `Count` when the program ends?",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Three codes equal 5.",
+    "workedSolution": "1. The codes are 5, 2, 5, 5, 9 and Wanted is 5.\n2. Three codes are equal to Wanted."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "How many times is the instruction `INC ACC` at address 607 executed?",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "3 times.",
+    "workedSolution": "1. It is executed only when a code equals Wanted.\n2. That happens 3 times."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain the purpose of the instructions at addresses 605 and 609.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "JPN Skip jumps over the instructions that add 1 to Count when the code is not equal to Wanted",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The jump is made when the comparison gave not equal",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "INC IX at 609 moves to the next element of the table and is executed on every pass",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: JPN Skip jumps past the lines that increase Count when the element is not equal to Wanted. INC IX at 609 is executed on every pass to move on to the next element."
+    },
+    "explanation": "Skip the count for non-matching codes; step the index on every pass."
+   }
+  ],
+  "explanation": "The program counts how many entries equal Wanted: 3 of the 5 codes are 5.",
+  "hints": [
+   "Trace the pass with IX = 1: the element is 2, which is not equal to Wanted.",
+   "Count is increased only when the element equals Wanted."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "609"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "i1",
+       "text": "1"
+      },
+      {
+       "blankId": "c1",
+       "text": "1"
+      },
+      {
+       "blankId": "i2",
+       "text": "2"
+      },
+      {
+       "blankId": "c2",
+       "text": "1"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "608"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "i1",
+        "text": "0"
+       },
+       {
+        "blankId": "c1",
+        "text": "0"
+       },
+       {
+        "blankId": "i2",
+        "text": "0"
+       },
+       {
+        "blankId": "c2",
+        "text": "0"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.assembly-programs.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A programmer in Masvingo writes this program, which starts at address 200:\n\n```\n200  IN\n201  SUB #32\n202  OUT\n203  END\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What does the instruction `IN` do?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Displays the character whose code is in ACC",
+      "rationale": "That is OUT."
+     },
+     {
+      "key": "B",
+      "content": "Loads the number 0 into ACC",
+      "rationale": "That would be LDM #0."
+     },
+     {
+      "key": "C",
+      "content": "Puts the code of the key pressed into ACC",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "Stores ACC in the index register",
+      "rationale": "That is MOV IX."
+     }
+    ],
+    "explanation": "IN reads a character into ACC."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "The user types the letter b (code 98). What character is displayed?",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "B"
+      },
+      {
+       "value": "capital B"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "98 - 32 = 66, which is B."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "What is the value in ACC when `END` is reached, if the user types the letter b?",
+    "answerSpec": {
+     "value": 66
+    },
+    "explanation": "98 - 32 = 66.",
+    "workedSolution": "1. ACC = 98 after IN.\n2. SUB #32 gives 66."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State why the program gives a wrong result if the user types a letter that is already upper case.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Subtracting 32 would give the code of a different character (not a letter)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Subtracting 32 from an upper-case code gives a character that is not the intended letter."
+    },
+    "explanation": "The program assumes lower-case input."
+   }
+  ],
+  "explanation": "SUB #32 turns a lower-case letter into the upper-case letter; the program displays it.",
+  "hints": [
+   "IN gives the code of the typed key in ACC."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "B"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "66"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "b"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "98"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ }
+]

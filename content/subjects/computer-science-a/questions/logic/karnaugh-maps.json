@@ -1,0 +1,1330 @@
+[
+ {
+  "key": "logic.karnaugh-maps.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In which order are the row and column labels written on a Karnaugh map for two variables?",
+  "options": [
+   {
+    "key": "A",
+    "content": "00, 01, 10, 11 (binary order)",
+    "rationale": "In binary order two bits change between 01 and 10."
+   },
+   {
+    "key": "B",
+    "content": "11, 10, 01, 00 (reverse binary)",
+    "rationale": "This is just binary counting backwards; two bits change between 10 and 01."
+   },
+   {
+    "key": "C",
+    "content": "00, 01, 11, 10 (Gray code)",
+    "correct": true,
+    "rationale": "Correct: only one variable changes between neighbouring cells."
+   },
+   {
+    "key": "D",
+    "content": "Any order, as long as every label is used",
+    "rationale": "The order matters because neighbouring cells must differ in one variable."
+   }
+  ],
+  "explanation": "Gray code makes each label differ from the next in one bit, so adjacent cells can be merged.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.karnaugh-maps.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How many cells does a Karnaugh map for four variables have?",
+  "answerSpec": {
+   "value": 16
+  },
+  "explanation": "One cell for each combination of the inputs: 2^4 = 16.",
+  "workedSolution": "1. Four variables have 2^4 combinations.\n2. 2^4 = 16 cells.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "16"
+  },
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "logic.karnaugh-maps.q03",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A group of three adjacent 1s may be drawn on a Karnaugh map.",
+  "answerSpec": {
+   "correct": false,
+   "feedbackTrue": "Groups must contain 1, 2, 4, 8 or 16 cells.",
+   "feedbackFalse": "Correct: group sizes are powers of 2; three adjacent 1s must be covered by a group of two and another group that overlaps."
+  },
+  "explanation": "A group of size 2^k removes exactly k variables, so sizes are 1, 2, 4, 8, 16.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.karnaugh-maps.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a Karnaugh map for four variables, a group of 8 cells is formed. How many of the four variables appear in the term for that group?",
+  "answerSpec": {
+   "value": 1
+  },
+  "explanation": "A group of 8 cells removes 3 variables, leaving 1.",
+  "workedSolution": "1. A group of 2^k cells removes k variables.\n2. 8 = 2^3, so 3 variables are removed.\n3. 4 − 3 = 1 variable remains.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "logic.karnaugh-maps.q05",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "In a four-variable Karnaugh map, match the size of a group to the number of variables left in its term.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "A single cell"
+    },
+    {
+     "id": "L2",
+     "content": "A group of 2 cells"
+    },
+    {
+     "id": "L3",
+     "content": "A group of 4 cells"
+    },
+    {
+     "id": "L4",
+     "content": "A group of 8 cells"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "2 variables"
+    },
+    {
+     "id": "R4",
+     "content": "1 variable"
+    },
+    {
+     "id": "R1",
+     "content": "4 variables"
+    },
+    {
+     "id": "R2",
+     "content": "3 variables"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each doubling of the group removes one more variable from the term.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.karnaugh-maps.q06",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Complete the column labels for the K-map of a two-variable expression written in Gray code order.",
+  "payload": {
+   "template": "00, 01, {{blank:c3}}, {{blank:c4}}",
+   "blanks": [
+    {
+     "id": "c3",
+     "input": "select",
+     "choices": [
+      "10",
+      "11",
+      "00"
+     ]
+    },
+    {
+     "id": "c4",
+     "input": "select",
+     "choices": [
+      "10",
+      "11",
+      "00"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "c3",
+     "accepted": [
+      "11"
+     ]
+    },
+    {
+     "id": "c4",
+     "accepted": [
+      "10"
+     ]
+    }
+   ]
+  },
+  "explanation": "After 01 the next label that changes one bit is 11, and then 10.",
+  "hints": [
+   "Each label differs from the one before it in exactly one bit."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "c3",
+     "text": "11"
+    },
+    {
+     "blankId": "c4",
+     "text": "10"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "c3",
+      "text": "10"
+     },
+     {
+      "blankId": "c4",
+      "text": "11"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.karnaugh-maps.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The Karnaugh map for an expression X is shown.\n\n| A ↓ / BC → | 00 | 01 | 11 | 10 |\n|:-:|:-:|:-:|:-:|:-:|\n| 0 | 0 | 1 | 0 | 1 |\n| 1 | 0 | 1 | 0 | 1 |\n\nWhich expression is the simplified form of X?",
+  "options": [
+   {
+    "key": "A",
+    "content": "(B AND NOT C) OR (NOT B AND C)",
+    "correct": true,
+    "rationale": "Correct: the pairs 001 + 101 and 010 + 110 give these terms."
+   },
+   {
+    "key": "B",
+    "content": "(B AND C) OR (NOT B AND NOT C)",
+    "rationale": "Its truth table does not match the map in at least one cell."
+   },
+   {
+    "key": "C",
+    "content": "B OR C",
+    "rationale": "Its truth table does not match the map in at least one cell."
+   },
+   {
+    "key": "D",
+    "content": "A AND (B OR C)",
+    "rationale": "Its truth table does not match the map in at least one cell."
+   }
+  ],
+  "explanation": "The 1s in cells 001 and 101 give NOT B AND C (A changes). The 1s in cells 010 and 110 give B AND NOT C. X = (B AND NOT C) OR (NOT B AND C).",
+  "hints": [
+   "Look for pairs of adjacent 1s, including cells in the first and last columns.",
+   "In each pair, keep the variables that stay the same."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.karnaugh-maps.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The Karnaugh map for a four-variable expression X is shown.\n\n| AB ↓ / CD → | 00 | 01 | 11 | 10 |\n|:-:|:-:|:-:|:-:|:-:|\n| 00 | 1 | 1 | 0 | 0 |\n| 01 | 1 | 1 | 0 | 0 |\n| 11 | 0 | 0 | 1 | 1 |\n| 10 | 0 | 0 | 1 | 1 |\n\nWhich expression is the simplified form of X?",
+  "options": [
+   {
+    "key": "A",
+    "content": "(A AND C) OR (NOT A AND NOT C)",
+    "correct": true,
+    "rationale": "Correct: the top-left block gives NOT A AND NOT C and the bottom-right block gives A AND C."
+   },
+   {
+    "key": "B",
+    "content": "(A AND NOT C) OR (NOT A AND C)",
+    "rationale": "Its truth table does not match the map."
+   },
+   {
+    "key": "C",
+    "content": "(B AND D) OR (NOT B AND NOT D)",
+    "rationale": "Its truth table does not match the map."
+   },
+   {
+    "key": "D",
+    "content": "A OR C",
+    "rationale": "Its truth table does not match the map."
+   }
+  ],
+  "explanation": "The block of cells 0000, 0001, 0100, 0101 has A = 0 and C = 0. The block 1010, 1011, 1110, 1111 has A = 1 and C = 1.",
+  "hints": [
+   "Look for two blocks of four cells.",
+   "For each block find which variables do not change."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "logic.karnaugh-maps.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A four-variable Karnaugh map is shown.\n\n| AB ↓ / CD → | 00 | 01 | 11 | 10 |\n|:-:|:-:|:-:|:-:|:-:|\n| 00 | 0 | 1 | 1 | 0 |\n| 01 | 1 | 0 | 0 | 1 |\n| 11 | 1 | 0 | 0 | 1 |\n| 10 | 0 | 1 | 1 | 0 |\n\nThe four 1s in the rows AB = 01 and AB = 11, in the columns CD = 00 and CD = 10, form one group using wrap-around. How many variables appear in the term for this group?",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "B = 1 and D = 0 throughout the group, so the term is B AND NOT D with 2 variables.",
+  "workedSolution": "1. In the four cells B is 1 and D is 0 in every cell.\n2. A and C change.\n3. The term is B AND NOT D, which has 2 variables.",
+  "hints": [
+   "Find which variables have the same value in all four cells."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "logic.karnaugh-maps.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The Karnaugh map for X is shown. A cell marked X is a don't care condition.\n\n| AB ↓ / CD → | 00 | 01 | 11 | 10 |\n|:-:|:-:|:-:|:-:|:-:|\n| 00 | X | 1 | 1 | 0 |\n| 01 | 0 | 1 | 1 | 0 |\n| 11 | 0 | 1 | X | 0 |\n| 10 | 0 | 1 | 0 | 0 |\n\nWhich is the simplest expression for X?",
+  "options": [
+   {
+    "key": "A",
+    "content": "(NOT A AND D) OR (NOT C AND D)",
+    "correct": true,
+    "rationale": "Correct: cells 0001, 0011, 0101, 0111 give NOT A AND D and cells 0001, 0101, 1001, 1101 give NOT C AND D."
+   },
+   {
+    "key": "B",
+    "content": "D",
+    "rationale": "D would also be 1 for cell 1011, which is a 0 in the map."
+   },
+   {
+    "key": "C",
+    "content": "(NOT A AND NOT B AND NOT C) OR (B AND D)",
+    "rationale": "This misses the 1s in cells 0011 and 1001."
+   },
+   {
+    "key": "D",
+    "content": "NOT C AND D",
+    "rationale": "This does not cover the 1s in cells 0011 and 0111."
+   }
+  ],
+  "explanation": "The 1s are in cells with D = 1 and either A = 0 or C = 0. The don't care cells 0000 and 1111 are not needed in any group.",
+  "hints": [
+   "Find the largest groups of 1s; use a don't care only if it makes a group larger.",
+   "Test D alone against the cells that are 0."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "logic.karnaugh-maps.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the purpose of a don't care condition (X) in a Karnaugh map?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It must always be included in some group in case it is really a 1",
+    "rationale": "A don't care need not be covered by any group."
+   },
+   {
+    "key": "B",
+    "content": "It shows that the circuit contains an error for that row of inputs",
+    "rationale": "It means the output for that input does not matter."
+   },
+   {
+    "key": "C",
+    "content": "It must be treated as a 0 in every map that has one",
+    "rationale": "A don't care can be either 0 or 1, whichever helps."
+   },
+   {
+    "key": "D",
+    "content": "It may join a group if that enlarges it, or be ignored",
+    "correct": true,
+    "rationale": "Correct: it lets the designer choose 0 or 1 to get the simplest expression."
+   }
+  ],
+  "explanation": "Because the output does not matter, the cell may be taken as 1 to enlarge a group, or ignored.",
+  "hints": [
+   "Think about why the designer does not care about those cells."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.karnaugh-maps.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why are the row and column labels of a Karnaugh map written in Gray code?",
+  "options": [
+   {
+    "key": "A",
+    "content": "So that the whole map takes up less space on the paper",
+    "rationale": "The size of the map is the same."
+   },
+   {
+    "key": "B",
+    "content": "So that the cells run in the numerical order of the minterms",
+    "rationale": "In Gray code the minterm numbers are not in order along a row."
+   },
+   {
+    "key": "C",
+    "content": "So neighbouring cells differ in one variable",
+    "correct": true,
+    "rationale": "Correct: this is what makes the simplification by grouping work."
+   },
+   {
+    "key": "D",
+    "content": "So that no row of the map has more than one 1 in it",
+    "rationale": "A map can have any number of 1s."
+   }
+  ],
+  "explanation": "Adjacent cells differing in one variable means that a pair of 1s can be combined, removing that variable.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.karnaugh-maps.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "State three rules for forming groups on a Karnaugh map.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Groups must contain 1, 2, 4, 8 or 16 cells, forming a rectangle of adjacent cells.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Groups may wrap around the edges of the map and may overlap.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Every 1 must be in a group, and each group should be as large as possible (with the fewest groups).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A group must be a rectangle of adjacent cells containing 1, 2, 4, 8 or 16 cells. Groups can wrap round the edges and can overlap. All 1s must be covered, using as few and as large groups as possible."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "These are the standard grouping rules.",
+  "hints": [
+   "Think about the size, the shape and the coverage of groups."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.karnaugh-maps.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Give three benefits of using a Karnaugh map instead of Boolean algebra to simplify an expression.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "It shows the groupings visually, so patterns can be found quickly.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The method is systematic and does not depend on spotting which law to use.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "It is less likely that a possible simplification is missed or that a mistake is made.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A map shows the adjacent 1s at a glance, so it is quicker. It follows fixed rules for grouping, so it does not rely on the user guessing which algebraic law to apply next. This makes errors and missed simplifications less likely."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A Karnaugh map turns simplification into a visual, rule-based task.",
+  "hints": [
+   "Compare speed, method and reliability."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "logic.karnaugh-maps.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A four-variable expression is shown on this Karnaugh map.\n\n| AB ↓ / CD → | 00 | 01 | 11 | 10 |\n|:-:|:-:|:-:|:-:|:-:|\n| 00 | 0 | 0 | 1 | 0 |\n| 01 | 0 | 0 | 1 | 0 |\n| 11 | 1 | 1 | 1 | 0 |\n| 10 | 0 | 0 | 1 | 0 |\n\nList the groups that you would draw, giving the rows and columns that each covers, and write the simplified expression.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A group of four cells 0011, 0111, 1011, 1111 (C = 1, D = 1).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The term for this group is C AND D.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A group of the remaining cells 1100 and 1101 (A = 1, B = 1, C = 0), giving A AND B AND NOT C.",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Expression: (C AND D) OR (A AND B AND NOT C).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Group 1 is the four cells 0011, 0111, 1011, 1111 where C = 1 and D = 1, so the term is C AND D. Group 2 is the pair 1100 and 1101 where A = 1, B = 1 and C = 0 (D changes), so the term is A AND B AND NOT C. X = (C AND D) OR (A AND B AND NOT C)."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The simplified expression is (A AND B AND NOT C) OR (C AND D).",
+  "hints": [
+   "The largest group is a column of four cells.",
+   "Cell 1111 can also be used for a pair with 1101, but this is not the simplest cover."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "logic.karnaugh-maps.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain how a don't care condition can make the simplified expression shorter. Use an example from a BCD digit decoder.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "In BCD the inputs 1010 to 1111 never occur, so the output for them does not matter.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "These cells can be treated as 1s to make a group larger.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A larger group removes more variables, so the term is shorter and fewer gates are needed.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A BCD digit decoder never receives the patterns 1010 to 1111, so those outputs are don't cares. They can be used as 1s to make groups larger, and a larger group has fewer variables in its term, so the circuit needs fewer gates."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Don't cares give extra freedom in grouping.",
+  "hints": [
+   "Say which cells are don't cares and what you do with them."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.karnaugh-maps.q17",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A controller at a bottling plant in Mutare has four inputs A, B, C and D. Its output X is 1 for the input combinations marked 1 on the Karnaugh map for X, and 0 for every other combination.\n\n| AB ↓ / CD → | 00 | 01 | 11 | 10 |\n|:-:|:-:|:-:|:-:|:-:|\n| 00 | 1 | 0 | 1 | 1 |\n| 01 | 0 | 0 | 0 | 0 |\n| 11 | 0 | 0 | 0 | 0 |\n| 10 | 1 | 0 | 1 | 1 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "How many cells of the map contain a 1?",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "The 1s are in 6 cells.",
+    "workedSolution": "1. The 1s are in 6 cells."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Which expression is the simplified form of X?",
+    "options": [
+     {
+      "key": "A",
+      "content": "(NOT B AND NOT D) OR (NOT B AND C)",
+      "correct": true,
+      "rationale": "Correct: the corner group gives NOT B AND NOT D; the group 0011, 0010, 1011, 1010 gives NOT B AND C."
+     },
+     {
+      "key": "B",
+      "content": "(NOT B AND D) OR (B AND NOT C)",
+      "rationale": "This does not match the cells containing a 1."
+     },
+     {
+      "key": "C",
+      "content": "NOT B",
+      "rationale": "NOT B would also be 1 for cell 0001, which is a 0 in the map."
+     },
+     {
+      "key": "D",
+      "content": "(NOT A AND NOT C) OR (B AND D)",
+      "rationale": "This is 1 for cells that are 0 in the map."
+     }
+    ],
+    "explanation": "X = (NOT B AND C) OR (NOT B AND NOT D)."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe the two groups used, giving the cells in each group.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Group 1: the four corner cells 0000, 0010, 1000, 1010 (B = 0, D = 0) using wrap-around.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Group 2: the cells 0010, 0011, 1010, 1011 (B = 0, C = 1).",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The two groups overlap in cells 0010 and 1010, which is allowed.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Group 1 is the four corners 0000, 0010, 1000 and 1010, where B and D are both 0. Group 2 is the four cells 0010, 0011, 1010 and 1011, where B is 0 and C is 1. The groups overlap in two cells."
+    }
+   }
+  ],
+  "explanation": "The simplified expression is (NOT B AND C) OR (NOT B AND NOT D).",
+  "hints": [
+   "Look at the corners and at the cells next to them.",
+   "Check that every 1 is in a group."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "6"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "logic.karnaugh-maps.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A safety system has four sensor inputs A, B, C and D. Its output X is 1 when B is 1, or when both C and D are 0. The Karnaugh map for X is:\n\n| AB ↓ / CD → | 00 | 01 | 11 | 10 |\n|:-:|:-:|:-:|:-:|:-:|\n| 00 | 1 | 0 | 0 | 0 |\n| 01 | 1 | 1 | 1 | 1 |\n| 11 | 1 | 1 | 1 | 1 |\n| 10 | 1 | 0 | 0 | 0 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which cells make the group for the term B?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Only the four corner cells of the map",
+      "rationale": "The corners have B = 0 or B = 1 and give a different term."
+     },
+     {
+      "key": "B",
+      "content": "The eight cells in the two middle rows",
+      "correct": true,
+      "rationale": "Correct: the rows AB = 01 and AB = 11 have B = 1 and form one group of eight."
+     },
+     {
+      "key": "C",
+      "content": "The left-hand column of the map",
+      "rationale": "The left-hand column is C = 0 and D = 0."
+     },
+     {
+      "key": "D",
+      "content": "The cells in the top row only",
+      "rationale": "The top row has A = 0 and B = 0."
+     }
+    ],
+    "explanation": "A group of 8 cells with B = 1 removes three variables."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the second group and its term.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The group of cells where C = 0 and D = 0 (the left-hand column: 0000, 0100, 1100, 1000).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The term is NOT C AND NOT D.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The left-hand column of four cells 0000, 0100, 1100 and 1000, in which C = 0 and D = 0. The term is NOT C AND NOT D."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Write the simplified expression for X, using AND, OR and NOT.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "B OR (NOT C AND NOT D)"
+      },
+      {
+       "value": "B OR NOT C AND NOT D"
+      },
+      {
+       "value": "(NOT C AND NOT D) OR B"
+      },
+      {
+       "value": "NOT C AND NOT D OR B"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "X = B OR (NOT C AND NOT D)."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The cell 1100 is in both groups. Explain why this is allowed and whether it changes the expression.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Groups are allowed to overlap.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A cell that is 1 can be covered by more than one group.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The expression is the OR of the terms, so a cell covered twice does not change the output.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Groups may overlap, because each group only has to cover 1s and the final expression is the OR of the terms. A cell covered twice still gives 1, so the expression is not changed."
+    }
+   }
+  ],
+  "explanation": "X = B OR (NOT C AND NOT D).",
+  "hints": [
+   "The row labels are AB and the column labels are CD.",
+   "A group with B = 1 spans two rows of the map."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "B OR (NOT C AND NOT D)"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "logic.karnaugh-maps.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 720,
+  "stem": "A decoder for a four-bit code (A is the most significant bit) has the Karnaugh map shown. A cell marked 1 must give X = 1. A cell marked X is a don't care condition: that code never occurs.\n\n| AB ↓ / CD → | 00 | 01 | 11 | 10 |\n|:-:|:-:|:-:|:-:|:-:|\n| 00 | 0 | 0 | 1 | 1 |\n| 01 | 0 | 0 | 1 | 1 |\n| 11 | 0 | X | X | 1 |\n| 10 | 0 | 0 | 1 | 1 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "How many cells are 1s or don't cares in total?",
+    "answerSpec": {
+     "value": 9
+    },
+    "explanation": "7 ones plus 2 don't cares.",
+    "workedSolution": "1. 7 ones plus 2 don't cares."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the don't care cells are used to form the group for the simplest expression.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The eight cells where C = 1 form one group.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The don't care cell 1111 is included, so the group is a complete block of eight.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The group needs only the variable C.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: All eight cells in which C = 1 are grouped. This group includes the don't care cell 1111, treated as a 1, which makes the block complete. Every cell in the group has C = 1, so the term is just C."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the simplified expression for X.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "C"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "X = C."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain how the answer would be different if the don't care cells were not used, and why the designer prefers the answer using them.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Without the don't care cells, the 1s would need smaller groups (several terms with more variables).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The expression would need more gates.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Using the don't cares gives a single variable and so a much simpler and cheaper circuit.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Without the don't care cells the 1s could not form one group of eight, so the expression would need several terms with more than one variable each, and more gates. Using the don't cares gives X = C, which needs no gates at all, so it is simpler and cheaper."
+    }
+   }
+  ],
+  "explanation": "With the don't care cells X = C.",
+  "hints": [
+   "Count the cells where C = 1.",
+   "Compare the group sizes with and without the don't care cells."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "9"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "C"
+    }
+   }
+  },
+  "skill": "EVALUATION",
+  "examStyle": true
+ },
+ {
+  "key": "logic.karnaugh-maps.q20",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a three-variable Karnaugh map, a group of four adjacent 1s is formed. How many variables appear in the term for this group?",
+  "options": [
+   {
+    "key": "A",
+    "content": "2",
+    "rationale": "That would be the term for a group of 2."
+   },
+   {
+    "key": "B",
+    "content": "3",
+    "rationale": "A single cell gives a term with all 3 variables."
+   },
+   {
+    "key": "C",
+    "content": "0",
+    "rationale": "A term with no variables corresponds to all 8 cells."
+   },
+   {
+    "key": "D",
+    "content": "1",
+    "correct": true,
+    "rationale": "Correct: a group of 4 removes 2 of the 3 variables."
+   }
+  ],
+  "explanation": "A group of 2^k cells removes k variables: 4 = 2^2 removes 2, leaving 1 of the 3.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.karnaugh-maps.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A group in a three-variable Karnaugh map covers the two cells in which A = 1 and C = 0 (B is 0 in one cell and 1 in the other). What is the term for this group?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A AND (NOT C)",
+    "correct": true,
+    "rationale": "Correct: A and C are the same in both cells; B changes and is left out."
+   },
+   {
+    "key": "B",
+    "content": "A AND B AND (NOT C)",
+    "rationale": "B changes between the cells, so it must be left out."
+   },
+   {
+    "key": "C",
+    "content": "A OR (NOT C)",
+    "rationale": "A group gives an AND term, not an OR."
+   },
+   {
+    "key": "D",
+    "content": "(NOT A) AND C",
+    "rationale": "A is 1 and C is 0 in the cells, so the letters are inverted wrongly."
+   }
+  ],
+  "explanation": "A = 1 and C = 0 in both cells, so the term is A AND NOT C.",
+  "hints": [
+   "Which variables have the same value in both cells?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.karnaugh-maps.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Every cell of a three-variable Karnaugh map contains a 1. What is the simplified expression?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1",
+    "correct": true,
+    "rationale": "Correct: one group of all 8 cells removes all three variables."
+   },
+   {
+    "key": "B",
+    "content": "0",
+    "rationale": "A map full of 0s would give 0."
+   },
+   {
+    "key": "C",
+    "content": "A OR B OR C",
+    "rationale": "This would be 0 when all three inputs are 0."
+   },
+   {
+    "key": "D",
+    "content": "A AND B AND C",
+    "rationale": "This would be 1 in only one cell."
+   }
+  ],
+  "explanation": "A single group of eight cells has no variable that stays constant, so the term is the constant 1.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ }
+]

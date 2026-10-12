@@ -1,0 +1,1313 @@
+[
+ {
+  "key": "security.ssl-tls-certificates.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the main purpose of SSL/TLS?",
+  "options": [
+   {
+    "key": "A",
+    "content": "To give an encrypted, authenticated connection between a client and a server",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "To make web pages load faster",
+    "rationale": "SSL/TLS adds work; speed is not its purpose."
+   },
+   {
+    "key": "C",
+    "content": "To translate domain names into the IP addresses of the web servers it visits",
+    "rationale": "That is the purpose of DNS."
+   },
+   {
+    "key": "D",
+    "content": "To block all incoming connections",
+    "rationale": "That is the role of a firewall."
+   }
+  ],
+  "explanation": "SSL/TLS protects data in transit and authenticates the server.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which key does the client use to encrypt the session key sent to the server?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The server's public key, taken from its certificate",
+    "correct": true,
+    "rationale": "Correct: only the server's private key can decrypt it."
+   },
+   {
+    "key": "B",
+    "content": "The server's private key, which the server keeps secret",
+    "rationale": "The client does not have the server's private key."
+   },
+   {
+    "key": "C",
+    "content": "The client's private key",
+    "rationale": "The client's private key is not used to send a secret to the server."
+   },
+   {
+    "key": "D",
+    "content": "The certificate authority's private key",
+    "rationale": "This key is used to sign certificates."
+   }
+  ],
+  "explanation": "The session key is sent encrypted with the server's public key.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "security.ssl-tls-certificates.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which item is NOT normally contained in a digital certificate?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The owner's public key",
+    "rationale": "The public key is included."
+   },
+   {
+    "key": "B",
+    "content": "The private key of the owner",
+    "correct": true,
+    "rationale": "Correct: the private key must stay secret."
+   },
+   {
+    "key": "C",
+    "content": "The validity dates",
+    "rationale": "The dates are included."
+   },
+   {
+    "key": "D",
+    "content": "The digital signature of the CA",
+    "rationale": "The signature is included."
+   }
+  ],
+  "explanation": "A certificate holds the public key, never the private key.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "security.ssl-tls-certificates.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which organisation issues a digital certificate?",
+  "options": [
+   {
+    "key": "A",
+    "content": "An internet service provider",
+    "rationale": "An ISP provides a connection, not certificates."
+   },
+   {
+    "key": "B",
+    "content": "A web browser maker",
+    "rationale": "A browser holds the list of trusted CAs; it does not issue certificates."
+   },
+   {
+    "key": "C",
+    "content": "A certificate authority",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "D",
+    "content": "A domain registrar only",
+    "rationale": "A registrar registers names; certificates are issued by CAs."
+   }
+  ],
+  "explanation": "A CA checks the applicant and signs the certificate.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A browser shows a warning that the certificate of a bank's web site has expired. What does this mean?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The private key of the bank has been stolen",
+    "rationale": "An expired certificate does not mean the key was stolen."
+   },
+   {
+    "key": "B",
+    "content": "The user typed the wrong password when logging in to the web site of the bank",
+    "rationale": "A password is not checked at this stage."
+   },
+   {
+    "key": "C",
+    "content": "The current date is after the end of the certificate's validity period",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "D",
+    "content": "The bank's web server has been switched off",
+    "rationale": "The server answered by sending its certificate."
+   }
+  ],
+  "explanation": "Certificates are valid only between two dates.",
+  "hints": [
+   "What is checked against today's date?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why is the digest of a message encrypted with the sender's private key to make a digital signature?",
+  "options": [
+   {
+    "key": "A",
+    "content": "So that the message cannot be read by anyone else",
+    "rationale": "Keeping the message secret is done with the receiver's public key."
+   },
+   {
+    "key": "B",
+    "content": "Only the key's owner can produce it, but anyone can check it with the public key",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "C",
+    "content": "So that the digest becomes longer",
+    "rationale": "The digest stays short."
+   },
+   {
+    "key": "D",
+    "content": "So that the receiver does not need to know the sender's public key to check the signature",
+    "rationale": "The receiver needs the sender's public key to check the signature."
+   }
+  ],
+  "explanation": "A signature proves the origin because only the owner has the private key.",
+  "hints": [
+   "Who holds the private key?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A student argues: \"A web site with a padlock and a valid certificate must be honest.\" Which response is best?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The student is right, because a CA only gives certificates to honest organisations",
+    "rationale": "A CA checks identity, not honesty."
+   },
+   {
+    "key": "B",
+    "content": "The student is wrong, because a certificate never encrypts anything",
+    "rationale": "TLS does encrypt the connection."
+   },
+   {
+    "key": "C",
+    "content": "The student is right, because the padlock shows that the web site contains no malware",
+    "rationale": "The padlock says nothing about the content of the pages."
+   },
+   {
+    "key": "D",
+    "content": "It shows an encrypted connection with the named owner, not that the owner is honest",
+    "correct": true,
+    "rationale": "Correct."
+   }
+  ],
+  "explanation": "A certificate proves identity and encryption, not good intentions.",
+  "hints": [
+   "What does a CA check?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "After the handshake, the data of the session is encrypted with a symmetric session key.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Asymmetric encryption is used only to share the key, since symmetric encryption is faster.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "security.ssl-tls-certificates.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A digital signature is made by encrypting the message with the receiver's public key.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. A signature is a digest of the message encrypted with the sender's private key.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each term to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Certificate authority"
+    },
+    {
+     "id": "L2",
+     "content": "Session key"
+    },
+    {
+     "id": "L3",
+     "content": "Digest"
+    },
+    {
+     "id": "L4",
+     "content": "Digital signature"
+    },
+    {
+     "id": "L5",
+     "content": "Certificate signing request"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "A short fixed-size value produced from a message by a hash function"
+    },
+    {
+     "id": "R4",
+     "content": "A digest encrypted with the sender's private key"
+    },
+    {
+     "id": "R5",
+     "content": "A request to a CA containing the applicant's public key and identity"
+    },
+    {
+     "id": "R1",
+     "content": "A trusted organisation that issues and signs certificates"
+    },
+    {
+     "id": "R2",
+     "content": "A symmetric key used to encrypt the data of one session"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Vocabulary of secure sessions and certificates.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the steps of checking a digital signature.",
+  "payload": {
+   "template": "The receiver decrypts the signature with the sender's {{blank:a}} key to recover the digest. The receiver then applies the same {{blank:b}} function to the message received. If the two digests are {{blank:c}}, the message is unchanged.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "public",
+      "private",
+      "session",
+      "secret"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "hash",
+      "sorting",
+      "routing",
+      "compression"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "equal",
+      "different",
+      "longer",
+      "encrypted"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "public"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "hash"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "equal"
+     ]
+    }
+   ]
+  },
+  "explanation": "Public key, hash function, equal digests.",
+  "hints": [
+   "Which key can anyone use to check a signature?"
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "public"
+    },
+    {
+     "blankId": "b",
+     "text": "hash"
+    },
+    {
+     "blankId": "c",
+     "text": "equal"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "private"
+     },
+     {
+      "blankId": "b",
+      "text": "sorting"
+     },
+     {
+      "blankId": "c",
+      "text": "different"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A browser trusts only Midlands Trust CA. It visits www.mutarefees.example on 10 October 2026 and receives these certificates.\n\n| Certificate | Domain in the certificate | Issuer | Valid from | Valid to |\n|:-:|:-:|:-:|:-:|:-:|\n| 1 | www.mutarefees.example | Midlands Trust CA | 2026-03-01 | 2027-03-01 |\n| 2 | www.mutarefees.example | Midlands Trust CA | 2025-03-01 | 2026-03-01 |\n| 3 | www.mutare-fees.example | Midlands Trust CA | 2026-03-01 | 2027-03-01 |\n| 4 | www.mutarefees.example | Unknown Issuer | 2026-03-01 | 2027-03-01 |\n\nChoose the result for each certificate.",
+  "payload": {
+   "template": "Certificate 1: {{blank:c1}}\n\nCertificate 2: {{blank:c2}}\n\nCertificate 3: {{blank:c3}}\n\nCertificate 4: {{blank:c4}}",
+   "blanks": [
+    {
+     "id": "c1",
+     "input": "select",
+     "choices": [
+      "accepted",
+      "expired",
+      "domain does not match",
+      "issuer not trusted"
+     ]
+    },
+    {
+     "id": "c2",
+     "input": "select",
+     "choices": [
+      "accepted",
+      "expired",
+      "domain does not match",
+      "issuer not trusted"
+     ]
+    },
+    {
+     "id": "c3",
+     "input": "select",
+     "choices": [
+      "accepted",
+      "expired",
+      "domain does not match",
+      "issuer not trusted"
+     ]
+    },
+    {
+     "id": "c4",
+     "input": "select",
+     "choices": [
+      "accepted",
+      "expired",
+      "domain does not match",
+      "issuer not trusted"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "c1",
+     "accepted": [
+      "accepted"
+     ]
+    },
+    {
+     "id": "c2",
+     "accepted": [
+      "expired"
+     ]
+    },
+    {
+     "id": "c3",
+     "accepted": [
+      "domain does not match"
+     ]
+    },
+    {
+     "id": "c4",
+     "accepted": [
+      "issuer not trusted"
+     ]
+    }
+   ]
+  },
+  "explanation": "Certificate 1 passes all checks; 2 ended on 1 March 2026; 3 names a different domain; 4 was issued by an authority that is not trusted.",
+  "hints": [
+   "Compare the date, the domain, the issuer and the dates in each row."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "c1",
+     "text": "accepted"
+    },
+    {
+     "blankId": "c2",
+     "text": "expired"
+    },
+    {
+     "blankId": "c3",
+     "text": "domain does not match"
+    },
+    {
+     "blankId": "c4",
+     "text": "issuer not trusted"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "c1",
+      "text": "expired"
+     },
+     {
+      "blankId": "c2",
+      "text": "accepted"
+     },
+     {
+      "blankId": "c3",
+      "text": "issuer not trusted"
+     },
+     {
+      "blankId": "c4",
+      "text": "domain does not match"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the SSL/TLS handshake, which key does the server use to decrypt the session key that the client has sent?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "its private key"
+    },
+    {
+     "value": "private key"
+    },
+    {
+     "value": "the server's private key"
+    },
+    {
+     "value": "server's private key"
+    },
+    {
+     "value": "the private key"
+    },
+    {
+     "value": "servers private key"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace"
+   ]
+  },
+  "explanation": "The client encrypted the session key with the server's public key, so only the server's private key can decrypt it.",
+  "hints": [
+   "Which key can only the server use?"
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "its private key"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "public key"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A bank clerk signs the message \"Transfer 500 dollars to account 4471\". The first 8 hex digits of its digest are 4ef66f21. The message that arrives reads \"Transfer 500 dollars to account 4417\", and its digest is 8f57d2c1. Has the message been changed? Answer yes or no.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "yes"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace"
+   ]
+  },
+  "explanation": "The digest of the received message (8f57d2c1) is different from the signed digest (4ef66f21), so the message was changed.",
+  "hints": [
+   "Compare the digests."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "yes"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "no"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Describe how a client and a server set up a secure session using SSL/TLS. [5]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The client asks for a secure connection and the server replies, sending its digital certificate",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The client checks the certificate (trusted CA, valid dates, matching domain name)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The client creates a session key and encrypts it with the server's public key",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The server decrypts the session key using its private key",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Both then encrypt the data of the session with the session key (symmetric encryption)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The client asks for a secure connection and the server sends its digital certificate. The client checks the certificate: a trusted CA, valid dates and a matching domain name. It then creates a session key and encrypts it with the server's public key. The server decrypts it with its private key. Both then encrypt the data with the session key."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Request and certificate, check, session key, decrypt, symmetric encryption.",
+  "hints": [
+   "Five steps in order."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "State four items of information contained in a digital certificate. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The name (domain name) of the owner",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The owner's public key",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The name of the certificate authority that issued it",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The validity dates / serial number / the digital signature of the CA",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The domain name of the owner, the owner's public key, the name of the certificate authority, and the dates between which it is valid."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Any four of: owner, public key, issuer, dates, serial number, signature.",
+  "hints": [
+   "Four items."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Describe how a digital signature is produced and checked. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The sender applies a hash function to the message to make a digest",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The sender encrypts the digest with their private key; this is the signature, sent with the message",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The receiver decrypts the signature with the sender's public key to get the digest",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The receiver hashes the message received and compares: if the digests match the message is unchanged and from the sender",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The sender hashes the message to make a digest and encrypts the digest with their private key; this is the signature, sent with the message. The receiver decrypts the signature with the sender's public key and hashes the message received. If the two digests match, the message is unchanged and came from the sender."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Hash, sign, decrypt, compare.",
+  "hints": [
+   "Sender steps and receiver steps."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Give three reasons why a browser might warn a user about a certificate. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The certificate has expired (or is not yet valid)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The domain name in the certificate does not match the address visited",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The certificate was not issued by a trusted certificate authority (or it has been revoked)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The certificate may have expired, the domain name in it may not match the site visited, or it may not have been issued by a trusted certificate authority."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Dates, domain, issuer.",
+  "hints": [
+   "Think of the checks made by the browser."
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "security.ssl-tls-certificates.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A parent in Mutare opens the school fees page at www.mutarefees.example on 10 October 2026. The browser trusts only Midlands Trust CA. The server presents the certificate below.\n\n| Certificate | Domain in the certificate | Issuer | Valid from | Valid to |\n|:-:|:-:|:-:|:-:|:-:|\n| 1 | www.mutarefees.example | Midlands Trust CA | 2026-03-01 | 2027-03-01 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "State three checks that the browser makes on the certificate before using it.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "That it was signed by a trusted certificate authority",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "That the current date is within its validity dates",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "That the domain name in the certificate matches the address of the site",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: That it was signed by a trusted CA, that the date is within its validity period, and that the domain name matches the address."
+    },
+    "explanation": "Issuer, dates, domain."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The browser accepts the certificate. What does it do next?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It sends the user's password to the server",
+      "rationale": "No password is sent at this stage."
+     },
+     {
+      "key": "B",
+      "content": "It decrypts the certificate with the server's private key before sending it",
+      "rationale": "The client does not have the server's private key."
+     },
+     {
+      "key": "C",
+      "content": "It asks the CA to create a new certificate",
+      "rationale": "The CA is not contacted at each visit."
+     },
+     {
+      "key": "D",
+      "content": "It creates a session key and encrypts it with the server's public key",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "The client sends a session key encrypted with the server's public key."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the data of the session is encrypted with a session key and not with the server's public key.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Symmetric encryption with a session key is much faster than asymmetric encryption",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Asymmetric encryption is slow for large amounts of data, so it is used only to share the key",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Symmetric encryption with a session key is much faster than asymmetric encryption, which is too slow for large amounts of data and so is used only to share the key."
+    },
+    "explanation": "Speed."
+   }
+  ],
+  "explanation": "The browser checks the issuer, the dates and the domain, then sends a session key encrypted with the server's public key.",
+  "hints": [
+   "Use the browser's checks: issuer, dates and domain."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "security.ssl-tls-certificates.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "The education office in Harare sends a digitally signed message to a school: \"Send the exam papers to Gweru\". The first 8 hex digits of the digest of this message are c7d31d58. A criminal changes the word Gweru to Mutare before the school receives it.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which key does the education office use to make the signature?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Its public key",
+      "rationale": "Anyone has the public key, so it would prove nothing."
+     },
+     {
+      "key": "B",
+      "content": "Its private key",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "The school's public key",
+      "rationale": "That would give confidentiality, not a signature."
+     },
+     {
+      "key": "D",
+      "content": "The school's private key",
+      "rationale": "The education office does not have this key."
+     }
+    ],
+    "explanation": "Signed with the sender's private key."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "The school computes the digest of the message it received and gets f00d16e9. Are the two digests equal? Answer yes or no.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "no"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase"
+     ]
+    },
+    "explanation": "f00d16e9 is not the same as c7d31d58."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State what the school should conclude and give a reason.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The message has been changed (it should not be trusted)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The digest of the received message is different from the digest in the signature",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The message has been changed on the way, because the digest of the received message is different from the one in the signature."
+    },
+    "explanation": "Unequal digests."
+   }
+  ],
+  "explanation": "The message is signed with the sender's private key and checked with the sender's public key; unequal digests mean it was changed.",
+  "hints": [
+   "Which key signs and which key checks?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "no"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "yes"
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true
+ }
+]

@@ -1,0 +1,1360 @@
+[
+ {
+  "key": "exam.w2b-theory.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.network.ip-addressing"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A school in Gweru uses the private network 172.20.8.0 and divides it into subnets for the administration offices and the computer laboratories. A laboratory computer has the IP address 172.20.8.150 in a subnet with the prefix length /26.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the subnet mask in dotted decimal form.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "255.255.255.192"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "/26 means 26 one-bits: three octets of 255 (24 bits) and 11000000 = 192."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Write the network address of the subnet.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "172.20.8.128"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "150 = 10010110 and 192 = 11000000. AND = 10000000 = 128, so 172.20.8.128."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the broadcast address of the subnet.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "172.20.8.191"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The six host bits are all 1: 10111111 = 191, so 172.20.8.191."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the number of usable host addresses in the subnet.",
+    "payload": {
+     "unitHint": "hosts"
+    },
+    "answerSpec": {
+     "value": 62,
+     "units": {
+      "required": false,
+      "accepted": [
+       "hosts",
+       "host",
+       "addresses",
+       "devices"
+      ]
+     }
+    },
+    "explanation": "64 addresses less the network and broadcast addresses: 62.",
+    "workedSolution": "1. Host bits = 32 − 26 = 6.\n2. 2^6 − 2 = 62."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two benefits of dividing the school network into subnets.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Broadcast traffic is limited to each subnet, which reduces congestion",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Departments can be separated, so security rules can be applied between them",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Broadcast traffic is limited to each subnet, which reduces congestion, and departments can be separated so security rules can be applied between them."
+    },
+    "explanation": "Traffic and security."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The laboratory file server has a static IP address and the students' laptops use DHCP. Explain why.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The server must be found at the same address every time, so its address is set by hand and does not change",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Laptops join and leave, so DHCP gives them addresses automatically, avoiding manual set-up and clashes",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The server must always be found at the same address, so it has a fixed address. Laptops come and go, so DHCP gives them addresses automatically, which avoids manual set-up and address clashes."
+    },
+    "explanation": "Static for services, dynamic for clients."
+   }
+  ],
+  "explanation": "255.255.255.192; network 172.20.8.128; broadcast 172.20.8.191; 62 usable hosts.",
+  "hints": [
+   "AND the last octet of the address with the last octet of the mask.",
+   "Usable hosts = 2^h − 2."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "255.255.255.192"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "172.20.8.128"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "172.20.8.191"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "62"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "255.255.255.128"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "172.20.8.0"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "172.20.8.255"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "64"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w2b-theory.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.network.osi-tcpip-models"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A student in Mutare sends a 3000-byte report to a teacher in Harare by email. The data passes down the layers of the TCP/IP stack on the student's computer. Each segment carries at most 1000 bytes of data. The TCP header, the IP header and the Ethernet frame header and trailer together add 58 bytes to each segment's data.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which TCP/IP layer adds the source and destination IP addresses?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Internet",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "Application",
+      "rationale": "The application layer produces the data."
+     },
+     {
+      "key": "C",
+      "content": "Transport",
+      "rationale": "The transport layer adds port numbers."
+     },
+     {
+      "key": "D",
+      "content": "Link",
+      "rationale": "The link layer adds MAC addresses."
+     }
+    ],
+    "explanation": "The internet layer makes packets with IP addresses."
+   },
+   {
+    "label": "(b)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each layer to its purpose.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Application"
+      },
+      {
+       "id": "L2",
+       "content": "Transport"
+      },
+      {
+       "id": "L3",
+       "content": "Link"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Adds MAC addresses and sends the frame over the medium"
+      },
+      {
+       "id": "R1",
+       "content": "Provides the rules for the email service"
+      },
+      {
+       "id": "R2",
+       "content": "Splits the data into numbered segments and uses port numbers"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Application: the service. Transport: segments and ports. Link: frames and MAC addresses."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the total number of bytes sent over the link, including the 58 bytes added to each segment's data.",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 3174,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "3 segments each add 58 bytes: 3000 + 174 = 3174.",
+    "workedSolution": "1. 3000 ÷ 1000 = 3 segments.\n2. Added bytes = 3 × 58 = 174.\n3. Total = 3000 + 174 = 3174."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The MAC addresses in the frame change at each router but the IP addresses do not. Explain why.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A MAC address identifies the devices at the two ends of one link only, so a new frame is made for each link",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The IP address identifies the final destination, so it stays the same on the whole journey",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A MAC address only identifies the devices at the two ends of one link, so a new frame is made for each link. The IP address identifies the final destination, so it stays the same."
+    },
+    "explanation": "Link addressing and end-to-end addressing."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe what the teacher's computer does with the frames it receives.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each layer removes its own header as the data passes up the stack",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The transport layer puts the segments in order, so that the application receives the complete report",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each layer removes its header as the data passes up the stack. The transport layer puts the segments in order, so the application receives the complete report."
+    },
+    "explanation": "Decapsulation and reassembly."
+   }
+  ],
+  "explanation": "3 segments; 3000 + 3 × 58 = 3174 bytes; each layer removes its header at the receiver.",
+  "hints": [
+   "Divide 3000 by 1000 to find the number of segments.",
+   "Every segment adds 58 bytes."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "3174"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "3058"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P3"
+ },
+ {
+  "key": "exam.w2b-theory.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.security.encryption",
+   "acs.security.ssl-tls-certificates"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A farmer in Chinhoyi pays for seed on the web site of a supplier. The browser shows the address begins with `https` and the web server presents a digital certificate that was issued by a certificate authority (CA). Data is sent with symmetric encryption once the session has been set up.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which key does the browser use to encrypt the session key before sending it to the web server?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The server's public key",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "The server's private key",
+      "rationale": "The browser does not have this key."
+     },
+     {
+      "key": "C",
+      "content": "The farmer's password",
+      "rationale": "A password is not a key for the session key."
+     },
+     {
+      "key": "D",
+      "content": "The CA's private key",
+      "rationale": "This key is used to sign certificates."
+     }
+    ],
+    "explanation": "The session key is encrypted with the server's public key."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "A simple Caesar cipher with key 3 is used to encrypt the plain text PAY NOW. Write the cipher text, keeping the space.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "SDB QRZ"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "P → S, A → D, Y → B; N → Q, O → R, W → Z: SDB QRZ."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "Complete the description of the session.",
+    "payload": {
+     "template": "The browser checks that the certificate was signed by a trusted {{blank:a}}, that its {{blank:b}} are current and that the domain name matches. Once the session key has been sent, the data is encrypted using {{blank:c}} encryption.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "certificate authority",
+        "ISP",
+        "router",
+        "web server"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "dates",
+        "passwords",
+        "ports",
+        "keys"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "symmetric",
+        "asymmetric",
+        "quantum",
+        "no"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "certificate authority"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "dates"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "symmetric"
+       ]
+      }
+     ]
+    },
+    "explanation": "A trusted certificate authority, current dates, then symmetric encryption."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two items of information held in a digital certificate.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The owner's name or domain name",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The owner's public key / the issuing CA / the validity dates",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The domain name of the owner and the owner's public key."
+    },
+    "explanation": "Any two items."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the Caesar cipher in (b) would not be suitable for protecting the farmer's payment.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "There are only 25 possible keys, so every key can be tried quickly",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Letter frequencies are unchanged, so frequency analysis reveals the key",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: There are only 25 possible keys, so they can all be tried quickly, and the frequency of letters is unchanged, so frequency analysis reveals the key."
+    },
+    "explanation": "Weak cipher."
+   }
+  ],
+  "explanation": "Server's public key; SDB QRZ; trusted CA, dates, symmetric; certificate contents; Caesar weaknesses.",
+  "hints": [
+   "Which key can only the server use?",
+   "Move each letter 3 places on."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "SDB QRZ"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "certificate authority"
+      },
+      {
+       "blankId": "b",
+       "text": "dates"
+      },
+      {
+       "blankId": "c",
+       "text": "symmetric"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "MXV KLT"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "ISP"
+       },
+       {
+        "blankId": "b",
+        "text": "passwords"
+       },
+       {
+        "blankId": "c",
+        "text": "asymmetric"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 3"
+ },
+ {
+  "key": "exam.w2b-theory.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.network.topologies-media",
+   "acs.network.lan-hardware"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A clinic in Kariba has six computers in one building. The manager is choosing between a star network with a central switch and a full mesh network. Later she wants to add a wireless access point for visiting nurses.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the number of links needed to join the six computers in a full mesh.",
+    "answerSpec": {
+     "value": 15
+    },
+    "explanation": "n(n − 1) ÷ 2 = 15.",
+    "workedSolution": "1. 6 × 5 ÷ 2 = 15."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which device forwards each frame only to the port of its destination?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A repeater",
+      "rationale": "A repeater regenerates a signal and sends it on."
+     },
+     {
+      "key": "B",
+      "content": "A hub",
+      "rationale": "A hub sends every frame to every port."
+     },
+     {
+      "key": "C",
+      "content": "A modem",
+      "rationale": "A modem converts signals for a telephone line."
+     },
+     {
+      "key": "D",
+      "content": "A switch",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "A switch uses MAC addresses to forward frames to one port."
+   },
+   {
+    "label": "(c)",
+    "type": "MATCHING",
+    "marks": 3,
+    "stem": "Match each device to its purpose.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Wireless access point"
+      },
+      {
+       "id": "L2",
+       "content": "Router"
+      },
+      {
+       "id": "L3",
+       "content": "Repeater"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Regenerates a weakened signal"
+      },
+      {
+       "id": "R1",
+       "content": "Lets wireless devices join the wired network"
+      },
+      {
+       "id": "R2",
+       "content": "Joins the LAN to other networks using IP addresses"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Each device has one main purpose."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Justify the choice of a star network and not a full mesh for the clinic.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A star needs only 6 cables compared with 15 links, so it costs less",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A failed cable affects only one computer, which is acceptable for six computers",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "It is simple to add another computer by connecting it to the switch",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A star needs only 6 cables compared with 15 links for a mesh, so it costs less. A failed cable affects only one computer, and another computer can be added simply by connecting it to the switch."
+    },
+    "explanation": "Cost, failures, expansion."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The clinic's old hub is replaced by a switch. Explain why there are fewer collisions.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A hub sends every frame to all ports, so devices share the capacity and collide",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A switch sends each frame only to the port of the destination, so each link carries only its own traffic",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A hub sends every frame to all ports, so devices share the capacity and collide. A switch sends each frame only to the destination port, so each link carries only its own traffic."
+    },
+    "explanation": "Shared against separate links."
+   }
+  ],
+  "explanation": "15 links in a mesh against 6 cables in a star; the switch removes shared collisions.",
+  "hints": [
+   "Links in a full mesh = n(n − 1) ÷ 2.",
+   "A star needs one cable for each computer."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "15"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(c)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 1"
+ },
+ {
+  "key": "exam.w2b-theory.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A student types `https://library.mutare-school.co.zw/books/search?topic=physics` into a browser.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the path in the URL.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "/books/search"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The path follows the domain name: /books/search."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What does the Domain Name System do for the browser?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It stores the pages of the web site on a server that the school owns",
+      "rationale": "Pages are stored on the web server."
+     },
+     {
+      "key": "B",
+      "content": "It encrypts the connection between the browser and the web server",
+      "rationale": "Encryption is done by TLS."
+     },
+     {
+      "key": "C",
+      "content": "It finds the IP address that belongs to the domain name",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "It gives the computer a MAC address",
+      "rationale": "MAC addresses are set in the network card."
+     }
+    ],
+    "explanation": "DNS translates a name into an IP address."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the resolver finds the IP address when it has no cached answer.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It asks a root server, which gives the address of the TLD server",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It asks the TLD server, which gives the address of the authoritative server",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "It asks the authoritative server, which returns the IP address, and the resolver caches the answer",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The resolver asks a root server, which gives the address of the TLD server. The TLD server gives the address of the authoritative server, which returns the IP address. The resolver caches the answer."
+    },
+    "explanation": "Root, TLD, authoritative."
+   }
+  ],
+  "explanation": "Path /books/search; DNS translates names to addresses; root, TLD, authoritative.",
+  "hints": [
+   "The path comes after the domain name."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "/books/search"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "topic=physics"
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w2b-theory.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.network.cloud-computing"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A school in Bulawayo is considering storing its records and using web-based software supplied by a provider through the internet.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Staff will use web-based email that is installed and maintained by the provider. Which service model is this?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Platform as a Service",
+      "rationale": "PaaS is for building applications."
+     },
+     {
+      "key": "B",
+      "content": "Software as a Service",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "Infrastructure as a Service",
+      "rationale": "IaaS provides virtual servers."
+     },
+     {
+      "key": "D",
+      "content": "A private cloud",
+      "rationale": "This is a type of cloud, not a service model."
+     }
+    ],
+    "explanation": "SaaS."
+   },
+   {
+    "label": "(b)",
+    "type": "MATCHING",
+    "marks": 2,
+    "stem": "Match each type of cloud to its description.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Public cloud"
+      },
+      {
+       "id": "L2",
+       "content": "Private cloud"
+      }
+     ],
+     "right": [
+      {
+       "id": "R1",
+       "content": "Hardware shared between many customers"
+      },
+      {
+       "id": "R2",
+       "content": "Used by one organisation only"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Public: shared. Private: one organisation."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two drawbacks to the school of storing its records in the cloud.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The records cannot be reached when the internet connection fails",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The records are held on the provider's servers, so security and privacy are a concern",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The records cannot be reached when the connection fails, and they are held on the provider's servers, so security and privacy are a concern."
+    },
+    "explanation": "Connectivity and security."
+   }
+  ],
+  "explanation": "SaaS; public is shared and private is one organisation; connectivity and security.",
+  "hints": [
+   "Which model is a finished application?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w2b-theory.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.network.application-protocols",
+   "acs.network.switching"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A clerk at a bank in Masvingo emails a 2600-byte report to the head office. The network uses packet switching and each packet carries at most 1000 bytes of data.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which protocol is used to send the email from the clerk's program to the mail server?",
+    "options": [
+     {
+      "key": "A",
+      "content": "POP3",
+      "rationale": "POP3 downloads email."
+     },
+     {
+      "key": "B",
+      "content": "SMTP",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "FTP",
+      "rationale": "FTP transfers files."
+     },
+     {
+      "key": "D",
+      "content": "IMAP",
+      "rationale": "IMAP manages a mailbox on the server."
+     }
+    ],
+    "explanation": "SMTP sends email."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the number of packets needed for the report.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "3 packets.",
+    "workedSolution": "1. 2600 ÷ 1000 = 2.6.\n2. Round up to 3 packets."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the packets reach the head office and the report is rebuilt.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each packet has a header with the destination address and a packet number",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Routers read the address and forward each packet, which may take a different route",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "At the destination the packets are put in order using their numbers and reassembled",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each packet has a header with the destination address and a packet number. Routers forward each packet, possibly by different routes. At the destination the packets are put in order using their numbers and reassembled."
+    },
+    "explanation": "Header, routing, reassembly."
+   }
+  ],
+  "explanation": "SMTP; 3 packets; headers, routing, reassembly.",
+  "hints": [
+   "Round the number of packets up."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 3"
+ }
+]

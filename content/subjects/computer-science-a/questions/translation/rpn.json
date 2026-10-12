@@ -1,0 +1,1381 @@
+[
+ {
+  "key": "translation.rpn.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In Reverse Polish Notation, where is the operator written?",
+  "options": [
+   {
+    "key": "A",
+    "content": "After its operands",
+    "correct": true,
+    "rationale": "Correct: for example 3 4 + means 3 + 4."
+   },
+   {
+    "key": "B",
+    "content": "Before its operands",
+    "rationale": "That is prefix (Polish) notation."
+   },
+   {
+    "key": "C",
+    "content": "Between its operands",
+    "rationale": "That is infix notation."
+   },
+   {
+    "key": "D",
+    "content": "At the end of the line only",
+    "rationale": "Each operator follows its own operands."
+   }
+  ],
+  "explanation": "Postfix places each operator after its operands.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which data structure is used to evaluate a postfix expression?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A queue",
+    "rationale": "A queue would give the operands in the wrong order."
+   },
+   {
+    "key": "B",
+    "content": "A binary tree",
+    "rationale": "A tree is used to build the expression, not to evaluate postfix."
+   },
+   {
+    "key": "C",
+    "content": "A stack",
+    "correct": true,
+    "rationale": "Correct: operands are pushed and popped by operators."
+   },
+   {
+    "key": "D",
+    "content": "A linked list of operators",
+    "rationale": "The operands are held, not only the operators."
+   }
+  ],
+  "explanation": "Numbers are pushed; an operator pops two values and pushes the result.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is an advantage of Reverse Polish Notation for a compiler?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The expressions are shorter than in infix because every operator is removed",
+    "rationale": "The same operators are used."
+   },
+   {
+    "key": "B",
+    "content": "Operators can be written in any order",
+    "rationale": "The order is fixed by the postfix form."
+   },
+   {
+    "key": "C",
+    "content": "It can be evaluated without any memory",
+    "rationale": "A stack is needed."
+   },
+   {
+    "key": "D",
+    "content": "No brackets or precedence rules are needed when the expression is evaluated",
+    "correct": true,
+    "rationale": "Correct."
+   }
+  ],
+  "explanation": "The order of evaluation is built into the order of the tokens.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the postfix form of the infix expression 7 + 3 × 4 - 2?",
+  "options": [
+   {
+    "key": "A",
+    "content": "7 3 4 * + 2 -",
+    "correct": true,
+    "rationale": "Correct: 3 4 * is done first, then added to 7, then 2 is subtracted."
+   },
+   {
+    "key": "B",
+    "content": "7 3 + 4 * 2 -",
+    "rationale": "That would give (7 + 3) × 4 - 2."
+   },
+   {
+    "key": "C",
+    "content": "7 3 4 + * 2 -",
+    "rationale": "That would give 7 × (3 + 4) - 2."
+   },
+   {
+    "key": "D",
+    "content": "7 3 4 * 2 - +",
+    "rationale": "That would give 7 + (3 × 4 - 2)."
+   }
+  ],
+  "explanation": "The multiplication has higher precedence, so it comes first in the postfix.",
+  "hints": [
+   "Which operator is applied first?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the value of the postfix expression 5 1 2 + 4 * + 3 -?",
+  "options": [
+   {
+    "key": "A",
+    "content": "17",
+    "rationale": "That ignores the final - 3."
+   },
+   {
+    "key": "B",
+    "content": "14",
+    "correct": true,
+    "rationale": "Correct: 1 2 + = 3; 3 4 * = 12; 5 + 12 = 17; 17 - 3 = 14."
+   },
+   {
+    "key": "C",
+    "content": "29",
+    "rationale": "That adds 5, 1 and 2 before multiplying by 4."
+   },
+   {
+    "key": "D",
+    "content": "12",
+    "rationale": "That is 3 × 4 only."
+   }
+  ],
+  "explanation": "Work through the stack: 5, then 1 2 + gives 3, ...",
+  "hints": [
+   "Push the numbers, apply each operator to the top two values."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "translation.rpn.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the infix expression 20 / 4 / 5 the operators have the same precedence. Which is the correct postfix form?",
+  "options": [
+   {
+    "key": "A",
+    "content": "20 4 5 / /",
+    "rationale": "That would give 20 ÷ (4 ÷ 5)."
+   },
+   {
+    "key": "B",
+    "content": "4 5 / 20 /",
+    "rationale": "That would give (4 ÷ 5) ÷ 20."
+   },
+   {
+    "key": "C",
+    "content": "20 4 / 5 /",
+    "correct": true,
+    "rationale": "Correct: operators of equal precedence are applied from left to right."
+   },
+   {
+    "key": "D",
+    "content": "/ / 20 4 5",
+    "rationale": "The operators cannot all come first."
+   }
+  ],
+  "explanation": "Equal precedence: the left operator is output first.",
+  "hints": [
+   "Which division is performed first?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "While converting infix to postfix, what happens when a closing bracket is read?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The closing bracket is added to the output",
+    "rationale": "Brackets never appear in postfix."
+   },
+   {
+    "key": "B",
+    "content": "Operators are popped to the output down to the opening bracket",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "C",
+    "content": "All the numbers are popped from the stack and output",
+    "rationale": "The stack holds operators in this method."
+   },
+   {
+    "key": "D",
+    "content": "Conversion starts again from the first token read",
+    "rationale": "The conversion carries on."
+   }
+  ],
+  "explanation": "The operators inside the brackets are completed first.",
+  "hints": [
+   "What does the opening bracket mark on the stack?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "When evaluating the postfix expression 10 4 -, which calculation is carried out?",
+  "options": [
+   {
+    "key": "A",
+    "content": "4 - 10",
+    "rationale": "The operands would then be in the wrong order."
+   },
+   {
+    "key": "B",
+    "content": "10 + 4",
+    "rationale": "The operator is a subtraction."
+   },
+   {
+    "key": "C",
+    "content": "10 × 4",
+    "rationale": "The operator is a subtraction."
+   },
+   {
+    "key": "D",
+    "content": "10 - 4",
+    "correct": true,
+    "rationale": "Correct: the first value popped is the right-hand operand, 4."
+   }
+  ],
+  "explanation": "The second operand is the one popped first.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A correct postfix expression may contain brackets to show the order of operations.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The order of the tokens already fixes the order of the operations, so brackets are never needed.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Evaluating a valid postfix expression leaves exactly one value on the stack at the end.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. That value is the result.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each infix expression to its postfix form.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "3 + 4 * 2"
+    },
+    {
+     "id": "L2",
+     "content": "( 3 + 4 ) * 2"
+    },
+    {
+     "id": "L3",
+     "content": "3 * 4 + 2"
+    },
+    {
+     "id": "L4",
+     "content": "3 - 4 - 2"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "3 4 * 2 +"
+    },
+    {
+     "id": "R4",
+     "content": "3 4 - 2 -"
+    },
+    {
+     "id": "R1",
+     "content": "3 4 2 * +"
+    },
+    {
+     "id": "R2",
+     "content": "3 4 + 2 *"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Convert with an operator stack; brackets and precedence decide the order.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the postfix form of `( 15 + 5 ) / ( 7 - 3 )`.",
+  "payload": {
+   "template": "15 5 {{blank:a}} 7 3 {{blank:b}} {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "+",
+      "-",
+      "*",
+      "/"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "+",
+      "-",
+      "*",
+      "/"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "+",
+      "-",
+      "*",
+      "/"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "+"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "-"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "/"
+     ]
+    }
+   ]
+  },
+  "explanation": "15 5 + 7 3 - /",
+  "hints": [
+   "Which operations are done before the final one?"
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "+"
+    },
+    {
+     "blankId": "b",
+     "text": "-"
+    },
+    {
+     "blankId": "c",
+     "text": "/"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "-"
+     },
+     {
+      "blankId": "b",
+      "text": "+"
+     },
+     {
+      "blankId": "c",
+      "text": "+"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Evaluate the postfix expression `9 5 - 2 6 + *`.",
+  "answerSpec": {
+   "value": 32
+  },
+  "explanation": "The two brackets give 4 and 8, and 4 × 8 = 32.",
+  "workedSolution": "1. 9 5 - = 4.\n2. 2 6 + = 8.\n3. 4 × 8 = 32.",
+  "hints": [
+   "Use a stack: push numbers, and for each operator pop two values."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "32"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "20"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "translation.rpn.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Evaluate the postfix expression `4 6 + 3 2 - *`.",
+  "answerSpec": {
+   "value": 10
+  },
+  "explanation": "(4 + 6) × (3 - 2) = 10.",
+  "workedSolution": "1. 4 6 + = 10.\n2. 3 2 - = 1.\n3. 10 × 1 = 10.",
+  "hints": [
+   "10 below 4 means 10 − 4... apply the operator to the right operands."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "9"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "24"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "translation.rpn.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The postfix expression `5 1 2 + 4 * + 3 -` is evaluated using a stack. What is the greatest number of values on the stack at any time?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "The stack holds 5, 1 and 2 together: 3 values.",
+  "workedSolution": "Stack sizes after each token: 1, 2, 3, 2, 3, 2, 1, 2, 1. The greatest is 3.",
+  "hints": [
+   "Count the values on the stack after each token and find the largest."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "translation.rpn.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Convert `6 * 2 - ( 8 - 3 ) * 2` to postfix and evaluate it. What is the value?",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "12 - 10 = 2.",
+  "workedSolution": "1. Postfix: 6 2 * 8 3 - 2 * -.\n2. 6 × 2 = 12; (8 - 3) = 5; 5 × 2 = 10.\n3. 12 - 10 = 2.",
+  "hints": [
+   "Convert to postfix, then evaluate it."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "translation.rpn.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the data structure that holds the values while a postfix expression is evaluated.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "stack"
+    },
+    {
+     "value": "a stack"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "A stack.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "stack"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "queue"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "array"
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why Reverse Polish Notation is used by compilers and calculators. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "No brackets or precedence rules are needed when the expression is evaluated",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "It can be evaluated with a simple stack in one pass from left to right",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "It is simple for the compiler to generate code in the order that the operations are to be done",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: No brackets or precedence rules are needed during evaluation, because the order of the tokens gives the order of the operations. It can be evaluated in one left-to-right pass with a stack, and code can be generated in the same order."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "No brackets, one pass with a stack, easy code generation.",
+  "hints": [
+   "Think about brackets, precedence and the number of passes."
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Show how the postfix expression `4 6 + 3 2 - *` is evaluated using a stack. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "4 and 6 are pushed, then the `+` replaces them by 10",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "3 and 2 are pushed",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The `-` replaces 3 and 2 by 1 (3 - 2)",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The `*` replaces 10 and 1 by 10; the final value is 10",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Push 4, 6; + gives 10. Push 3, 2; - gives 1 (stack 10, 1). * gives 10. The result is 10."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The stack contents are shown at each step.",
+  "hints": [
+   "Show the stack after each token."
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q20",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Convert the infix expression `( 15 + 5 ) / ( 7 - 3 )` to postfix using an operator stack. Show the output and the stack as you go. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The opening bracket is pushed; 15 goes to the output; `+` is pushed",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "5 goes to the output; `)` pops `+` to the output, giving `15 5 +`",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "`/` is pushed; `(` is pushed; 7 is output; `-` is pushed; 3 is output; `)` pops `-` to the output",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "At the end `/` is popped, giving `15 5 + 7 3 - /`",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Output grows as 15, 5, +, then 7, 3, -, and finally /, giving 15 5 + 7 3 - /. The brackets force the + and - to be output before the /."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Operands to the output; operators wait on the stack.",
+  "hints": [
+   "Use an output list and an operator stack."
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A program in Mutare evaluates the postfix expression\n\n```\n5 1 2 + 4 * + 3 -\n```\nusing a stack. The values pushed are whole numbers.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the top value on the stack after the token `+` (the first operator) has been processed.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "1 + 2 = 3.",
+    "workedSolution": "The stack was 5, 1, 2. + pops 2 and 1 and pushes 3."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the top value on the stack after the token `*` has been processed.",
+    "answerSpec": {
+     "value": 12
+    },
+    "explanation": "3 × 4 = 12.",
+    "workedSolution": "The stack was 5, 3, 4. * pops 4 and 3 and pushes 12."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the final result.",
+    "answerSpec": {
+     "value": 14
+    },
+    "explanation": "14.",
+    "workedSolution": "5 + 12 = 17; 17 - 3 = 14."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "What is the greatest number of values on the stack?",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "3.",
+    "workedSolution": "5, 1 and 2 are on the stack together."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write the infix expression, using brackets where needed.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "5 + ((1 + 2) * 4) - 3 (or equivalent) with the correct operations",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Brackets give (1 + 2) before the multiplication",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 5 + (1 + 2) * 4 - 3"
+    },
+    "explanation": "The bracket forces the addition before the multiplication."
+   }
+  ],
+  "explanation": "Evaluating the postfix expression with a stack.",
+  "hints": [
+   "Operators in the postfix expression are applied in order from the left."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "12"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "14"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "17"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "translation.rpn.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.translation.rpn"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "An expression `( 9 - 5 ) * ( 2 + 6 )` is converted to postfix by a compiler. The conversion is shown below:\n\n| Token read | Output so far | Operator stack |\n|:-:|:-:|:-:|\n| `(` |  | `(` |\n| `9` | `9` | `(` |\n| `-` | `9` | `( -` |\n| `5` | `9 5` | `( -` |\n| `)` | `9 5 -` | (empty) |\n| `*` | `9 5 -` | `*` |\n| `(` | `9 5 -` | `* (` |\n| `2` | `9 5 - 2` | `* (` |\n| `+` | `9 5 - 2` | `* ( +` |\n| `6` | `9 5 - 2 6` | `* ( +` |\n| `)` | `9 5 - 2 6 +` | `*` |\n| `(end)` | `9 5 - 2 6 + *` | (empty) |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the postfix expression.",
+    "payload": {
+     "template": "9 5 {{blank:a}} 2 6 {{blank:b}} {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "-",
+        "+",
+        "*",
+        "/"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "-",
+        "+",
+        "*",
+        "/"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "-",
+        "+",
+        "*",
+        "/"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "-"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "+"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "*"
+       ]
+      }
+     ]
+    },
+    "explanation": "9 5 - 2 6 + *"
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Evaluate the expression.",
+    "answerSpec": {
+     "value": 32
+    },
+    "explanation": "32.",
+    "workedSolution": "(9 - 5) = 4; (2 + 6) = 8; 4 × 8 = 32."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the operator stack was empty after the first closing bracket.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The closing bracket pops operators to the output until the opening bracket",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The + was popped to the output",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The opening bracket was then discarded, leaving the stack empty",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The closing bracket pops operators to the output until the opening bracket. The + was popped and the opening bracket discarded, leaving the stack empty."
+    },
+    "explanation": "Brackets mark the start of a sub-expression."
+   }
+  ],
+  "explanation": "Conversion with an operator stack.",
+  "hints": [
+   "Operators wait on the stack until one of lower precedence arrives."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "-"
+      },
+      {
+       "blankId": "b",
+       "text": "+"
+      },
+      {
+       "blankId": "c",
+       "text": "*"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "32"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "+"
+       },
+       {
+        "blankId": "b",
+        "text": "-"
+       },
+       {
+        "blankId": "c",
+        "text": "-"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ }
+]

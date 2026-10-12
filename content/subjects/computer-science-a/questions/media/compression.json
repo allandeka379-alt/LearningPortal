@@ -1,0 +1,1269 @@
+[
+ {
+  "key": "media.compression.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which of these is a reason for compressing a file before sending it by email?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It reduces the time taken to send it",
+    "correct": true,
+    "rationale": "Correct: a smaller file needs fewer bits to be transmitted."
+   },
+   {
+    "key": "B",
+    "content": "It increases the quality of the file",
+    "rationale": "Compression does not improve quality; lossy compression reduces it."
+   },
+   {
+    "key": "C",
+    "content": "It makes the file easier to read without a program",
+    "rationale": "A compressed file must usually be decompressed first."
+   },
+   {
+    "key": "D",
+    "content": "It protects the file from being copied",
+    "rationale": "Compression is not a security method."
+   }
+  ],
+  "explanation": "A smaller file uses less storage space and less bandwidth, and takes less time to transmit.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "media.compression.q02",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "After lossy compression, the original file can be restored exactly.",
+  "answerSpec": {
+   "correct": false,
+   "feedbackTrue": "Lossy compression permanently removes data, so the original cannot be restored exactly.",
+   "feedbackFalse": "Correct: that is the property of lossless compression. Lossy compression discards data permanently."
+  },
+  "explanation": "Lossless compression can be reversed exactly; lossy compression cannot.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "media.compression.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A software company in Harare sends a program installer to customers as a compressed file. Which type of compression must be used?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Lossy, because it gives the smallest file",
+    "rationale": "Removing data would corrupt the program."
+   },
+   {
+    "key": "B",
+    "content": "Either, because programs are only text",
+    "rationale": "Programs are sensitive to every bit; a changed instruction can crash them."
+   },
+   {
+    "key": "C",
+    "content": "Lossless, because any missing data would damage the program",
+    "correct": true,
+    "rationale": "Correct: the decompressed file must be identical to the original."
+   },
+   {
+    "key": "D",
+    "content": "Neither, because programs cannot be compressed",
+    "rationale": "Program files can be compressed with lossless methods."
+   }
+  ],
+  "explanation": "Programs, documents and data files need an exact copy, so lossless compression is used.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "media.compression.q04",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Use run-length encoding to compress the string **KKKKKPPPKKKKKKKKR**. Write each run as the count followed by the character.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "5K3P8K1R"
+    },
+    {
+     "value": "5K 3P 8K 1R"
+    },
+    {
+     "value": "5K,3P,8K,1R"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The runs are KKKKK, PPP, KKKKKKKK, R. Each is written as count then character: 5K3P8K1R.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "5K3P8K1R"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "KKKKKPPPKKKKKKKKR"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "media.compression.q05",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Compress the string **TTTTTTTTHHZZZZZZ** using run-length encoding, writing each run as the count followed by the character.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "8T2H6Z"
+    },
+    {
+     "value": "8T 2H 6Z"
+    },
+    {
+     "value": "8T,2H,6Z"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The runs are 8 T, 2 H, 6 Z, giving 8T2H6Z.",
+  "hints": [
+   "Count each run of identical characters separately.",
+   "Write the count before the character."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "8T2H6Z"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "7T2H6Z"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "media.compression.q06",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The text **5X3Y2X** has been compressed using run-length encoding (count then character). Write the original text.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "XXXXXYYYXX"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "5X means XXXXX, 3Y means YYY, 2X means XX. The original text is XXXXXYYYXX.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "XXXXXYYYXX"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "5X3Y2X"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "media.compression.q07",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A black-and-white bitmap row is stored as these 32 bits: **00000000111100000000111111110000**. After run-length encoding, each run is stored as a pair: one byte for the count and one byte for the bit value. How many bytes does the encoded row use?",
+  "payload": {
+   "unitHint": "bytes"
+  },
+  "answerSpec": {
+   "value": 10,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bytes",
+     "byte",
+     "B"
+    ]
+   }
+  },
+  "explanation": "5 runs × 2 bytes = 10 bytes (the original row needs 4 bytes when packed as bits, so RLE with whole-byte pairs is not always a saving).",
+  "workedSolution": "1. The runs are 8×0, 4×1, 8×0, 8×1, 4×0: 5 runs.\n2. Each run uses 2 bytes: 5 × 2 = 10 bytes.",
+  "hints": [
+   "Count the number of runs of identical bits."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "media.compression.q08",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A video clip of 12 MiB is compressed to 3 MiB. Calculate the compression ratio (original size ÷ compressed size).",
+  "payload": {
+   "unitHint": "×"
+  },
+  "answerSpec": {
+   "value": 4,
+   "units": {
+    "required": false,
+    "accepted": [
+     "×",
+     "x",
+     "times"
+    ]
+   }
+  },
+  "explanation": "12 ÷ 3 = 4, a ratio of 4 : 1.",
+  "workedSolution": "1. 12 ÷ 3 = 4, a ratio of 4 : 1.",
+  "hints": [
+   "Divide the original size by the compressed size."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "4"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "media.compression.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A byte is used for each count and for each character in run-length encoding. Which of these 16-character strings would be **larger** after encoding than before?",
+  "options": [
+   {
+    "key": "A",
+    "content": "AAAAAAAABBBBBBBB",
+    "rationale": "Two runs: 2 pairs (4 bytes), a big saving."
+   },
+   {
+    "key": "B",
+    "content": "WWWWWWWWWWWWWWWW",
+    "rationale": "One run of 16: a single pair (2 bytes)."
+   },
+   {
+    "key": "C",
+    "content": "AAAABBBBCCCCDDDD",
+    "rationale": "Four runs of 4: 4 pairs (8 bytes), smaller than 16."
+   },
+   {
+    "key": "D",
+    "content": "ABCDEFGHABCDEFGH",
+    "correct": true,
+    "rationale": "Correct: there are no runs, so 16 pairs (32 bytes) replace 16 bytes."
+   }
+  ],
+  "explanation": "RLE makes data larger when there are no repeated neighbours, because every single character becomes a count and a character.",
+  "hints": [
+   "Count the runs in each string; each run needs two bytes."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "media.compression.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each method or type to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Lossless compression"
+    },
+    {
+     "id": "L2",
+     "content": "Lossy compression"
+    },
+    {
+     "id": "L3",
+     "content": "Run-length encoding"
+    },
+    {
+     "id": "L4",
+     "content": "Compression ratio"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Runs of identical items are replaced by a count and the item"
+    },
+    {
+     "id": "R4",
+     "content": "Original size divided by compressed size"
+    },
+    {
+     "id": "R1",
+     "content": "The original can be restored exactly"
+    },
+    {
+     "id": "R2",
+     "content": "Some data is permanently removed to give a smaller file"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "These are the basic terms for data compression.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "media.compression.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why is lossy compression often used for music streamed over a mobile network?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It keeps every sample of the original recording intact",
+    "rationale": "That is lossless compression."
+   },
+   {
+    "key": "B",
+    "content": "Smaller files, and the lost sound is hard to hear",
+    "correct": true,
+    "rationale": "Correct: the sounds removed are those the ear is unlikely to notice."
+   },
+   {
+    "key": "C",
+    "content": "It makes the recording louder than the original",
+    "rationale": "Compression does not change the loudness."
+   },
+   {
+    "key": "D",
+    "content": "It increases the sampling rate of the recording",
+    "rationale": "Compression does not raise the sampling rate."
+   }
+  ],
+  "explanation": "Smaller files stream faster and use less data. Lossy methods remove sounds the listener is unlikely to notice.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.compression.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "The bitmap row **1111000000111111** is compressed using run-length encoding, written as (count, bit) pairs. Complete the pairs.",
+  "payload": {
+   "template": "First run: {{blank:n1}} of {{blank:b1}}\n\nSecond run: {{blank:n2}} of {{blank:b2}}\n\nThird run: {{blank:n3}} of {{blank:b3}}",
+   "blanks": [
+    {
+     "id": "n1",
+     "input": "number"
+    },
+    {
+     "id": "b1",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "n2",
+     "input": "number"
+    },
+    {
+     "id": "b2",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "n3",
+     "input": "number"
+    },
+    {
+     "id": "b3",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "n1",
+     "accepted": [
+      "4"
+     ]
+    },
+    {
+     "id": "b1",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "n2",
+     "accepted": [
+      "6"
+     ]
+    },
+    {
+     "id": "b2",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "n3",
+     "accepted": [
+      "6"
+     ]
+    },
+    {
+     "id": "b3",
+     "accepted": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "explanation": "The row has 3 runs: 4 of 1, 6 of 0, 6 of 1.",
+  "hints": [
+   "Write down each group of identical digits and count it."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "n1",
+     "text": "4"
+    },
+    {
+     "blankId": "b1",
+     "text": "1"
+    },
+    {
+     "blankId": "n2",
+     "text": "6"
+    },
+    {
+     "blankId": "b2",
+     "text": "0"
+    },
+    {
+     "blankId": "n3",
+     "text": "6"
+    },
+    {
+     "blankId": "b3",
+     "text": "1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "n1",
+      "text": "999"
+     },
+     {
+      "blankId": "b1",
+      "text": "0"
+     },
+     {
+      "blankId": "n2",
+      "text": "999"
+     },
+     {
+      "blankId": "b2",
+      "text": "1"
+     },
+     {
+      "blankId": "n3",
+      "text": "999"
+     },
+     {
+      "blankId": "b3",
+      "text": "0"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "media.compression.q13",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Run-length encoding is a lossless method of compression.",
+  "answerSpec": {
+   "correct": true,
+   "feedbackTrue": "Correct: the runs can be expanded again to give exactly the original data.",
+   "feedbackFalse": "Run-length encoding stores every run, so the original can be rebuilt exactly. It is lossless."
+  },
+  "explanation": "Decoding repeats each item by its count and restores the original.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.compression.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe the difference between lossless and lossy compression.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Lossless compression allows the original data to be restored exactly.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Lossy compression permanently removes some data, so the original cannot be restored.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Lossy compression usually gives a smaller file than lossless compression.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: With lossless compression, no data is lost, so the original file can be rebuilt exactly. With lossy compression, data that is judged to be unimportant is removed for ever, so the original cannot be recovered, but the file is generally smaller."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The key difference is whether the original can be recovered.",
+  "hints": [
+   "Say what happens to the original data in each type."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.compression.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A news website in Bulawayo wants to display a large number of photographs on a page. Justify the use of lossy compression for the photographs.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Lossy compression reduces the file size a great deal, so pages load faster.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Small losses of detail in photographs are usually not noticed by viewers.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Smaller files save the site's storage and the visitors' data.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Lossy compression makes the photograph files much smaller, so the page loads quickly and uses less of the visitors' mobile data. The detail it removes is generally too small for viewers to notice, so the pictures still look good."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A smaller file matters more than perfect accuracy for photographs on web pages.",
+  "hints": [
+   "Link the answer to the size of the files and to what viewers notice."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "media.compression.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Give two reasons why files are compressed.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "To reduce the storage space needed.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "To reduce the time and bandwidth needed to transmit the file.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Compressed files take up less storage space, and they take less time and bandwidth to send over a network."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The two main reasons are storage and transmission.",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.compression.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain how run-length encoding reduces the size of a bitmap image, and state one kind of image for which it would not reduce the size.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Each run of pixels of the same colour is stored once, with a count of how many there are.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "An image with large areas of one colour has long runs, so there are far fewer items to store.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A photograph (many different neighbouring colours) has very short runs, so there may be no saving.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: RLE stores each run of identical pixels as a count and one colour value instead of storing every pixel, so images with large blocks of one colour become much smaller. A photograph, where neighbouring pixels differ, has almost no runs and may even become larger."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "RLE saves space only when there are long runs.",
+  "hints": [
+   "Think about what is stored for a long run of the same colour."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "media.compression.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Describe how lossy compression of music (such as MP3) reduces the file size.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "It removes sounds that the human ear is unlikely to notice (very high or quiet sounds hidden by louder ones).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The remaining sound data needs fewer bits, so the file is smaller.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: It removes parts of the sound that the human ear cannot easily hear, such as very high frequencies and quiet sounds masked by louder ones, so less data has to be stored."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Lossy audio compression is based on the limits of human hearing.",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.compression.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A map file stores one row of a bitmap as the text **NNNNNNNNNNNNBBBNNNNNNNNNNNN** (N = no road, B = border). The row is compressed using run-length encoding. Each count and each character takes one byte.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Write the compressed form of the row (count then character).",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "12N3B12N"
+      },
+      {
+       "value": "12N 3B 12N"
+      },
+      {
+       "value": "12N,3B,12N"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The runs are 12 N, 3 B, 12 N: 12N3B12N."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "How many bytes does the compressed row use?",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 6,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "3 pairs × 2 bytes = 6 bytes.",
+    "workedSolution": "1. 3 pairs × 2 bytes = 6 bytes."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "How many bytes does the original row use?",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 27,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "The row has 27 characters at one byte each.",
+    "workedSolution": "1. The row has 27 characters at one byte each."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State whether this compression is lossless or lossy and justify your answer.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Lossless.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The original row can be rebuilt exactly by repeating each character by its count.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It is lossless, because decoding the counts gives back exactly the same row of characters."
+    }
+   }
+  ],
+  "explanation": "12N3B12N uses 6 bytes instead of 27. RLE is lossless.",
+  "hints": [
+   "Count each run separately, then count the pairs.",
+   "Decide whether any data is discarded."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "12N3B12N"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "6"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "27"
+    }
+   }
+  },
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "media.compression.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A health clinic in Mutare keeps scanned X-ray images and also records voice notes for patients. A technician is choosing a compression method for each. An X-ray image file of 36 MiB can be compressed to 9 MiB.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the compression ratio for the X-ray image (original ÷ compressed).",
+    "payload": {
+     "unitHint": "×"
+    },
+    "answerSpec": {
+     "value": 4,
+     "units": {
+      "required": false,
+      "accepted": [
+       "×",
+       "x",
+       "times"
+      ]
+     }
+    },
+    "explanation": "36 ÷ 9 = 4.",
+    "workedSolution": "1. 36 ÷ 9 = 4."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the percentage reduction in the size of the file.",
+    "payload": {
+     "unitHint": "%"
+    },
+    "answerSpec": {
+     "value": 75,
+     "units": {
+      "required": false,
+      "accepted": [
+       "%",
+       "percent",
+       "per cent"
+      ]
+     }
+    },
+    "explanation": "(36 − 9) ÷ 36 × 100 = 75%.",
+    "workedSolution": "1. (36 − 9) ÷ 36 × 100 = 75%."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Recommend a type of compression for the X-ray images and justify it.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Lossless compression.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Nothing may be lost because a diagnosis depends on the detail.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Lossless compression, because the doctors need every detail of the original image and no data may be permanently removed."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The voice notes are only for the clinic's own reference. Suggest a type of compression for them and give a reason.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Lossy compression.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Speech remains understandable and the files are much smaller.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Lossy compression, because the voice notes are still clear after small details are removed and the files take much less storage."
+    }
+   }
+  ],
+  "explanation": "The ratio is 4 : 1 and the reduction is 75%. X-rays need lossless compression; voice notes can use lossy compression.",
+  "hints": [
+   "The ratio is original ÷ compressed.",
+   "Ask whether any detail may be lost in each case."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "4"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "75"
+    }
+   }
+  },
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "media.compression.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A web designer saves a large photograph so that it loads quickly on a slow connection. Which type of compression is most appropriate?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Lossless",
+    "rationale": "A lossless file is larger than a lossy one and loads more slowly."
+   },
+   {
+    "key": "B",
+    "content": "Run-length encoding",
+    "rationale": "A photograph has few long runs of the same colour."
+   },
+   {
+    "key": "C",
+    "content": "No compression",
+    "rationale": "An uncompressed photograph would be slow to load."
+   },
+   {
+    "key": "D",
+    "content": "Lossy",
+    "correct": true,
+    "rationale": "Correct: a much smaller file is possible, and small losses of detail are hardly noticed."
+   }
+  ],
+  "explanation": "For web photographs a small file is more important than perfect detail, so lossy compression is used.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "media.compression.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A student says that run-length encoding always makes data smaller. Which string shows that she is wrong?",
+  "options": [
+   {
+    "key": "A",
+    "content": "WWWWWWWW",
+    "rationale": "This has one long run and becomes very short (8W)."
+   },
+   {
+    "key": "B",
+    "content": "PQPQPQPQ",
+    "correct": true,
+    "rationale": "Correct: it has no runs, so it becomes 1P1Q1P1Q1P1Q1P1Q, which is twice as long."
+   },
+   {
+    "key": "C",
+    "content": "AAAABBBB",
+    "rationale": "This has two runs and becomes 4A4B."
+   },
+   {
+    "key": "D",
+    "content": "XXXXYYYYZZZZ",
+    "rationale": "This has three runs and is shorter when encoded."
+   }
+  ],
+  "explanation": "RLE stores a count and a character for every run. With no runs longer than one, every character gains a count and the data doubles in size.",
+  "hints": [
+   "Which string has no repeated neighbouring characters?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ }
+]

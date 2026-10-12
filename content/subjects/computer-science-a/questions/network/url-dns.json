@@ -1,0 +1,1257 @@
+[
+ {
+  "key": "network.url-dns.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the main job of the Domain Name System (DNS)?",
+  "options": [
+   {
+    "key": "A",
+    "content": "To translate a domain name into an IP address",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "To store the web pages of a website",
+    "rationale": "Web pages are stored on web servers."
+   },
+   {
+    "key": "C",
+    "content": "To encrypt the data sent by a browser",
+    "rationale": "Encryption is done by protocols such as TLS."
+   },
+   {
+    "key": "D",
+    "content": "To give each computer a MAC address",
+    "rationale": "MAC addresses are set in the network card."
+   }
+  ],
+  "explanation": "DNS looks up the IP address that belongs to a name.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "network.url-dns.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A URL begins with https and gives no port number. Which port does the browser use?",
+  "options": [
+   {
+    "key": "A",
+    "content": "443",
+    "correct": true,
+    "rationale": "Correct: the default port for HTTPS."
+   },
+   {
+    "key": "B",
+    "content": "80",
+    "rationale": "80 is the default for HTTP."
+   },
+   {
+    "key": "C",
+    "content": "21",
+    "rationale": "21 is used by FTP."
+   },
+   {
+    "key": "D",
+    "content": "25",
+    "rationale": "25 is used by SMTP."
+   }
+  ],
+  "explanation": "HTTPS uses port 443 by default.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "network.url-dns.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the URL below, which part is the query string?\n\n`https://shop.example.co.zw/items/pumps?size=30&colour=blue#reviews`",
+  "options": [
+   {
+    "key": "A",
+    "content": "/items/pumps",
+    "rationale": "This is the path."
+   },
+   {
+    "key": "B",
+    "content": "reviews",
+    "rationale": "This is the fragment."
+   },
+   {
+    "key": "C",
+    "content": "size=30&colour=blue",
+    "correct": true,
+    "rationale": "Correct: the part after the ? and before the #."
+   },
+   {
+    "key": "D",
+    "content": "shop.example.co.zw",
+    "rationale": "This is the domain name."
+   }
+  ],
+  "explanation": "The query string follows the ? and ends at the # (or the end of the URL).",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "network.url-dns.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "When the resolver has no cached answer, which server does it ask first?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The authoritative server for the domain",
+    "rationale": "It cannot know which server is authoritative until the root and TLD servers have referred it."
+   },
+   {
+    "key": "B",
+    "content": "A root server",
+    "correct": true,
+    "rationale": "Correct: the root server refers it to the correct TLD server."
+   },
+   {
+    "key": "C",
+    "content": "The web server",
+    "rationale": "The web server cannot be contacted until its address is known."
+   },
+   {
+    "key": "D",
+    "content": "The user's printer",
+    "rationale": "A printer plays no part in DNS."
+   }
+  ],
+  "explanation": "Root, then TLD, then authoritative.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.url-dns.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the effect of DNS caching?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Every request is sent to the root server",
+    "rationale": "Caching avoids repeating that work."
+   },
+   {
+    "key": "B",
+    "content": "The IP address of the website can never change once it has been cached",
+    "rationale": "A cached record is discarded when its TTL runs out."
+   },
+   {
+    "key": "C",
+    "content": "The website is stored on the resolver",
+    "rationale": "Only the address record is stored."
+   },
+   {
+    "key": "D",
+    "content": "Repeated requests for the same name are answered faster",
+    "correct": true,
+    "rationale": "Correct: the stored answer is used until the TTL expires."
+   }
+  ],
+  "explanation": "A cached record saves the whole chain of requests until it expires.",
+  "hints": [
+   "What does the resolver do with an answer?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.url-dns.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A student can open a website by typing its IP address but not by typing its name. What is the most likely fault?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The student's network cable is unplugged",
+    "rationale": "If the cable were unplugged the IP address would not work either."
+   },
+   {
+    "key": "B",
+    "content": "The name cannot be resolved to an address",
+    "correct": true,
+    "rationale": "Correct: the connection works, so name resolution is failing."
+   },
+   {
+    "key": "C",
+    "content": "The web server is switched off",
+    "rationale": "The server answers when the IP address is used."
+   },
+   {
+    "key": "D",
+    "content": "The browser has run out of memory",
+    "rationale": "That would not depend on whether a name or an address is typed."
+   }
+  ],
+  "explanation": "The route to the server works; only the DNS lookup fails.",
+  "hints": [
+   "What does typing the IP address skip?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "network.url-dns.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is DNS cache poisoning?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A virus that fills a hard disk with large files",
+    "rationale": "That does not involve DNS."
+   },
+   {
+    "key": "B",
+    "content": "The deletion of every record from a resolver",
+    "rationale": "Poisoning inserts false records; it does not delete them."
+   },
+   {
+    "key": "C",
+    "content": "A false record in a resolver's cache sends users to the wrong address",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "D",
+    "content": "The loss of the domain registration because the owner did not renew it",
+    "rationale": "That is a lapsed registration, not an attack."
+   }
+  ],
+  "explanation": "The resolver stores a false answer and passes it on to users.",
+  "hints": [
+   "What does the user receive when asking for a real site?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.url-dns.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The fragment part of a URL is sent to the web server in the request.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The browser uses the fragment to go to a position in the page; it is not sent to the server.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "network.url-dns.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A DNS resolver may keep an answer in its cache until the time to live (TTL) runs out.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. When the TTL has expired the record is discarded and a new lookup is needed.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.url-dns.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each part of a URL to its purpose.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Protocol"
+    },
+    {
+     "id": "L2",
+     "content": "Domain name"
+    },
+    {
+     "id": "L3",
+     "content": "Port"
+    },
+    {
+     "id": "L4",
+     "content": "Path"
+    },
+    {
+     "id": "L5",
+     "content": "Query string"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Selects the service on the server; has a default for each protocol"
+    },
+    {
+     "id": "R4",
+     "content": "Locates the resource on the server"
+    },
+    {
+     "id": "R5",
+     "content": "Name and value pairs passed to the server"
+    },
+    {
+     "id": "R1",
+     "content": "States how the resource is fetched, for example https"
+    },
+    {
+     "id": "R2",
+     "content": "Identifies the server"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each part answers a different question: how, where, which service, which resource, which extra values.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.url-dns.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the order in which a resolver finds an address that is not in its cache.",
+  "payload": {
+   "template": "The resolver asks a {{blank:a}} server, which refers it to a {{blank:b}} server. This server refers it to the {{blank:c}} server, which gives the IP address.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "root",
+      "authoritative",
+      "TLD",
+      "web"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "TLD",
+      "root",
+      "web",
+      "mail"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "authoritative",
+      "root",
+      "TLD",
+      "proxy"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "root"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "TLD"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "authoritative"
+     ]
+    }
+   ]
+  },
+  "explanation": "Root, TLD, authoritative.",
+  "hints": [
+   "Think of the hierarchy from the top."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "root"
+    },
+    {
+     "blankId": "b",
+     "text": "TLD"
+    },
+    {
+     "blankId": "c",
+     "text": "authoritative"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "authoritative"
+     },
+     {
+      "blankId": "b",
+      "text": "root"
+     },
+     {
+      "blankId": "c",
+      "text": "root"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.url-dns.q12",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Write the path in this URL.\n\n`https://results.kwekwe-high.ac.zw/form4/marks?term=2&year=2026#summary`",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "/form4/marks"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The path is /form4/marks.",
+  "hints": [
+   "The path starts with a / after the domain name."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "/form4/marks"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "term=2&year=2026"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "network.url-dns.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Write the query string in this URL.\n\n`https://results.kwekwe-high.ac.zw/form4/marks?term=2&year=2026#summary`",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "term=2&year=2026"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The query string is term=2&year=2026.",
+  "hints": [
+   "Find the part between the ? and the #."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "term=2&year=2026"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "summary"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "network.url-dns.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A resolver caches each answer for a TTL of 200 s. The same domain name is requested at 0 s, 90 s, 250 s, 310 s and 600 s.\n\nHow many of the five requests need a full lookup?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "| Request at (s) | Result |\n|:-:|:-:|\n| 0 | full lookup |\n| 90 | answered from cache |\n| 250 | full lookup |\n| 310 | answered from cache |\n| 600 | full lookup |\n\n3 full lookups.",
+  "workedSolution": "1. 0 s: full lookup (valid until 200 s).\n2. 90 s: cached.\n3. 250 s: expired, full lookup (valid until 450 s).\n4. 310 s: cached.\n5. 600 s: expired, full lookup.\n6. 3 full lookups.",
+  "hints": [
+   "A record is valid for 200 s after a full lookup.",
+   "Work through the times in order."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "network.url-dns.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "State the default port number of HTTP.",
+  "answerSpec": {
+   "value": 80
+  },
+  "explanation": "HTTP uses port 80; HTTPS uses 443.",
+  "workedSolution": "HTTP uses port 80 by default.",
+  "hints": [
+   "One port for HTTP, one for HTTPS."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "80"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "443"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "8080"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "network.url-dns.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Describe how a browser finds the IP address for a domain name that is not in any cache. [5]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The browser (computer) sends the name to the DNS resolver",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The resolver asks a root server, which gives the address of the correct TLD server",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The resolver asks the TLD server, which gives the address of the authoritative name server",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The resolver asks the authoritative server, which returns the IP address",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "The resolver stores the answer in its cache and returns it to the browser, which connects to that address",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The browser sends the domain name to the resolver. The resolver asks a root server, which gives the address of the TLD server. The TLD server gives the address of the authoritative server, which returns the IP address. The resolver caches the answer and returns it to the browser, which connects to that address."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Five stages in order.",
+  "hints": [
+   "Browser, resolver, root, TLD, authoritative."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.url-dns.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Explain one benefit of DNS caching. [2]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A stored answer can be returned immediately without asking the other servers",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "This speeds up page loading and reduces traffic on the DNS servers",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A stored answer is returned straight away, without asking the root, TLD and authoritative servers, so pages load faster and there is less traffic on the DNS servers."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Speed and reduced load.",
+  "hints": [
+   "Think about time and traffic."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.url-dns.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Give three reasons why a DNS lookup could fail. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The domain name is mistyped or does not exist",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A DNS server is not working or cannot be reached",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The user's device has no network connection or uses a wrong DNS server",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The name might be mistyped or not registered, the DNS server might be down, or the device might have no network connection."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Name, server, connection.",
+  "hints": [
+   "Give three different causes."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.url-dns.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain how DNS cache poisoning could lead to a customer of a bank's web site giving away their login details. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A false record for the bank's domain name is placed in a resolver's cache",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The customer types the correct name but is sent to the attacker's copy of the site",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The copy looks like the bank, so the customer enters the login details, which the attacker collects",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A false record for the bank's domain is placed in the resolver's cache. The customer types the correct name but is sent to the attacker's copy of the site, which looks real, and enters their login details, which the attacker collects."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "False record, redirected user, details collected.",
+  "hints": [
+   "Describe what is changed and what the user sees."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "network.url-dns.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A school in Kwekwe publishes examination results at this URL.\n\n`https://results.kwekwe-high.ac.zw/form4/marks?term=2&year=2026#summary`",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which part of the URL is the protocol?",
+    "options": [
+     {
+      "key": "A",
+      "content": "results",
+      "rationale": "This is a subdomain within the domain name."
+     },
+     {
+      "key": "B",
+      "content": "/form4/marks",
+      "rationale": "This is the path."
+     },
+     {
+      "key": "C",
+      "content": "summary",
+      "rationale": "This is the fragment."
+     },
+     {
+      "key": "D",
+      "content": "https",
+      "correct": true,
+      "rationale": "Correct: the part before ://."
+     }
+    ],
+    "explanation": "The protocol is https."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the domain name.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "results.kwekwe-high.ac.zw"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The domain name is results.kwekwe-high.ac.zw."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Which port number will the browser use?",
+    "answerSpec": {
+     "value": 443
+    },
+    "explanation": "No port is given, so the default for HTTPS, 443, is used.",
+    "workedSolution": "1. The protocol is https.\n2. No port is given, so the default port for HTTPS is used: 443."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the query string.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "term=2&year=2026"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The query string is term=2&year=2026."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State the purpose of the part `#summary`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It is the fragment, which identifies a position within the page",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The browser scrolls to it; it is not sent to the server",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It is a fragment that identifies a position in the page. The browser scrolls to it and does not send it to the server."
+    },
+    "explanation": "Fragment."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State what the browser needs from DNS before it can fetch the page, and why.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The IP address of the server for the domain name",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Packets are routed using IP addresses, not names",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It needs the IP address of the server for the domain name, because packets are routed using IP addresses, not names."
+    },
+    "explanation": "Name to address."
+   }
+  ],
+  "explanation": "Protocol https, domain results.kwekwe-high.ac.zw, path /form4/marks, query term=2&year=2026, fragment summary.",
+  "hints": [
+   "Read the URL from left to right."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "results.kwekwe-high.ac.zw"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "443"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "term=2&year=2026"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "kwekwe-high"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "80"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "summary"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "network.url-dns.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.network.url-dns"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A resolver in a Gweru ISP caches each DNS answer for 150 s. Customers request the same domain name at these times: 0 s, 60 s, 200 s, 400 s and 480 s.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "State the number of requests that were answered from the cache.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "The requests at 60 s and 480 s were answered from the cache.",
+    "workedSolution": "1. 0 s: full lookup (valid until 150 s). 60 s: cached.\n2. 200 s: expired, full lookup (valid until 350 s). 400 s: expired, full lookup (valid until 550 s).\n3. 480 s: cached.\n4. Two requests (60 s and 480 s) were answered from the cache."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "At what time in seconds does the record stored at 400 s expire?",
+    "answerSpec": {
+     "value": 550
+    },
+    "explanation": "400 + 150 = 550 s.",
+    "workedSolution": "1. Record stored at 400 s.\n2. Expiry = 400 + 150 = 550 s."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a very long TTL could cause a problem if a website moves to a new server.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Resolvers keep the old IP address until the TTL expires",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Users are sent to the old server, so the site appears unavailable or out of date",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Resolvers keep the old address until the TTL runs out, so users are sent to the old server and the site appears unavailable or out of date."
+    },
+    "explanation": "Stale records."
+   }
+  ],
+  "explanation": "Full lookups at 0, 200 and 400 s; cached answers at 60 and 480 s.",
+  "hints": [
+   "Check when each record expires."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "550"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "400"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ }
+]

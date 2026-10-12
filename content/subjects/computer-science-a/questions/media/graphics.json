@@ -1,0 +1,1217 @@
+[
+ {
+  "key": "media.graphics.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is a pixel?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The smallest element of a bitmap, with a binary colour",
+    "correct": true,
+    "rationale": "Correct: a bitmap is a grid of pixels, each with its own colour value."
+   },
+   {
+    "key": "B",
+    "content": "A drawing object stored in the list of a vector graphic",
+    "rationale": "Drawing objects belong to vector graphics, not bitmaps."
+   },
+   {
+    "key": "C",
+    "content": "The number of bits used for each colour",
+    "rationale": "That is the colour depth."
+   },
+   {
+    "key": "D",
+    "content": "The total number of dots on a screen",
+    "rationale": "That is the screen resolution."
+   }
+  ],
+  "explanation": "A pixel is the smallest picture element. Each pixel is stored as a binary number that represents its colour.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "media.graphics.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What does the colour depth of a bitmap image measure?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The number of bits used for each pixel colour",
+    "correct": true,
+    "rationale": "Correct: with n bits each pixel can have one of 2^n colours."
+   },
+   {
+    "key": "B",
+    "content": "The number of pixels in the whole image, width by height",
+    "rationale": "That is the image resolution."
+   },
+   {
+    "key": "C",
+    "content": "The number of colours that the screen can show at one time",
+    "rationale": "This depends on the screen, not the image file."
+   },
+   {
+    "key": "D",
+    "content": "The size of the file header",
+    "rationale": "The header is a separate part of the file."
+   }
+  ],
+  "explanation": "Colour depth (bit depth) is the number of bits per pixel. More bits allow more colours.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "media.graphics.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A bitmap image has a colour depth of 6 bits. How many different colours can it contain?",
+  "answerSpec": {
+   "value": 64
+  },
+  "explanation": "With n bits there are 2^n values: 2^6 = 64.",
+  "workedSolution": "1. Each pixel has 6 bits.\n2. The number of colours is 2^6 = 64.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "64"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "media.graphics.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the smallest colour depth, in bits, that can represent 200 different colours?",
+  "payload": {
+   "unitHint": "bits"
+  },
+  "answerSpec": {
+   "value": 8,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bits",
+     "bit",
+     "b"
+    ]
+   }
+  },
+  "explanation": "2^7 = 128 is too small and 2^8 = 256 is enough, so 8 bits.",
+  "workedSolution": "1. 2^7 = 128, which is fewer than 200.\n2. 2^8 = 256, which is at least 200.\n3. So 8 bits are needed.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "media.graphics.q05",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A bitmap image is 800 pixels wide and 600 pixels high, with a colour depth of 4 bits. Calculate the file size in bytes, ignoring the file header.",
+  "payload": {
+   "unitHint": "bytes"
+  },
+  "answerSpec": {
+   "value": 240000,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bytes",
+     "byte",
+     "B"
+    ]
+   }
+  },
+  "explanation": "800 × 600 = 480000 pixels; × 4 bits = 1920000 bits; ÷ 8 = 240000 bytes.",
+  "workedSolution": "1. 800 × 600 = 480000 pixels; × 4 bits = 1920000 bits; ÷ 8 = 240000 bytes.",
+  "hints": [
+   "Multiply width × height × colour depth to get the size in bits.",
+   "Divide by 8 to change bits to bytes."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "240000"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "media.graphics.q06",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A photograph is 1152 × 864 pixels with a colour depth of 16 bits. Calculate the file size in KiB, ignoring the header. (1 KiB = 1024 bytes.)",
+  "payload": {
+   "unitHint": "KiB"
+  },
+  "answerSpec": {
+   "value": 1944,
+   "units": {
+    "required": false,
+    "accepted": [
+     "KiB",
+     "kibibytes",
+     "kibibyte"
+    ]
+   }
+  },
+  "explanation": "1152 × 864 = 995328 pixels × 2 bytes = 1990656 bytes; ÷ 1024 = 1944 KiB.",
+  "workedSolution": "1. 1152 × 864 = 995328 pixels × 2 bytes = 1990656 bytes; ÷ 1024 = 1944 KiB.",
+  "hints": [
+   "16 bits is 2 bytes per pixel.",
+   "Divide the bytes by 1024 to get KiB."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "1944"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "media.graphics.q07",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An icon is 480 × 360 pixels with 16 possible colours. The file also has a header of 128 bytes. Calculate the total file size in bytes.",
+  "payload": {
+   "unitHint": "bytes"
+  },
+  "answerSpec": {
+   "value": 86528,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bytes",
+     "byte",
+     "B"
+    ]
+   }
+  },
+  "explanation": "16 colours need 4 bits per pixel. 480 × 360 = 172800 pixels; × 4 bits = 691200 bits = 86400 bytes. Adding the header: 86400 + 128 = 86528 bytes.",
+  "workedSolution": "1. 16 colours need 4 bits per pixel. 480 × 360 = 172800 pixels; × 4 bits = 691200 bits = 86400 bytes. Adding the header: 86400 + 128 = 86528 bytes.",
+  "hints": [
+   "Work out the colour depth from the number of colours.",
+   "Add the header to the pixel data."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "86528"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "media.graphics.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The width and the height of a bitmap image are both doubled and the colour depth is kept the same. What happens to the file size?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It becomes exactly twice as large as before",
+    "rationale": "Doubling both dimensions doubles each, so the total pixels are multiplied by 2 × 2."
+   },
+   {
+    "key": "B",
+    "content": "Four times as large",
+    "correct": true,
+    "rationale": "Correct: there are twice as many pixels across and twice as many down, so four times as many pixels."
+   },
+   {
+    "key": "C",
+    "content": "It stays the same",
+    "rationale": "More pixels need more data."
+   },
+   {
+    "key": "D",
+    "content": "It becomes eight times as large as before",
+    "rationale": "Only the pixel count changes, by a factor of 4."
+   }
+  ],
+  "explanation": "Pixels = width × height. Doubling both multiplies the pixels by 2 × 2 = 4, and the file size is proportional to the number of pixels.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.graphics.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A photographer in Kariba reduces the colour depth of a photograph from 24 bits to 8 bits. What are the effects?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The file is larger, because the number of pixels has been increased",
+    "rationale": "Fewer bits per pixel make a smaller file."
+   },
+   {
+    "key": "B",
+    "content": "The file is the same size but the image has fewer pixels in it",
+    "rationale": "The number of pixels is unchanged; the bits per pixel change."
+   },
+   {
+    "key": "C",
+    "content": "The file is smaller and the picture is unchanged",
+    "rationale": "Fewer colours must reduce the quality of a photograph."
+   },
+   {
+    "key": "D",
+    "content": "Smaller file, but fewer shades so banding may show",
+    "correct": true,
+    "rationale": "Correct: 8 bits give only 256 colours, so smooth changes of shade look stepped."
+   }
+  ],
+  "explanation": "Reducing the depth from 24 to 8 bits cuts the file to a third, but there are only 256 colours, so gradual colour changes show visible steps.",
+  "hints": [
+   "Think about the number of colours that 8 bits can give."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "media.graphics.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A vector graphic is stored as a grid of pixels, each with its own colour value.",
+  "answerSpec": {
+   "correct": false,
+   "feedbackTrue": "That describes a bitmap. A vector graphic is a list of drawing objects and their properties.",
+   "feedbackFalse": "Correct: a vector graphic is stored as a drawing list of objects and their properties."
+  },
+  "explanation": "Pixels are used to display a vector graphic, but the file stores shapes and properties.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "media.graphics.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each term to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Image resolution"
+    },
+    {
+     "id": "L2",
+     "content": "Colour depth"
+    },
+    {
+     "id": "L3",
+     "content": "File header"
+    },
+    {
+     "id": "L4",
+     "content": "Drawing list"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The part of the file that stores information such as width, height and colour depth"
+    },
+    {
+     "id": "R4",
+     "content": "The list of objects and properties that makes up a vector graphic"
+    },
+    {
+     "id": "R1",
+     "content": "The number of pixels in the image, width × height"
+    },
+    {
+     "id": "R2",
+     "content": "The number of bits used for each pixel"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "These terms describe how bitmap and vector images are stored.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "media.graphics.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which image is best stored as a vector graphic?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A photograph of a crowd at a football match in Harare",
+    "rationale": "Photographs have continuous changes of colour and are stored as bitmaps."
+   },
+   {
+    "key": "B",
+    "content": "A scanned page of a handwritten letter from a pupil",
+    "rationale": "A scanner produces a bitmap of pixels."
+   },
+   {
+    "key": "C",
+    "content": "A screenshot of a website, saved as an image file",
+    "rationale": "A screenshot is a grid of screen pixels, so it is a bitmap."
+   },
+   {
+    "key": "D",
+    "content": "A logo printed on a small card and a large banner",
+    "correct": true,
+    "rationale": "Correct: a vector can be scaled to any size without losing quality."
+   }
+  ],
+  "explanation": "Vector graphics are made of shapes, so they scale without loss of quality. Photographs, scans and screenshots are bitmaps.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "media.graphics.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The colour depth of an image is increased from 2 bits to 8 bits and its resolution is not changed. By what factor does the file size increase (ignoring the header)?",
+  "payload": {
+   "unitHint": "×"
+  },
+  "answerSpec": {
+   "value": 4,
+   "units": {
+    "required": false,
+    "accepted": [
+     "×",
+     "x",
+     "times"
+    ]
+   }
+  },
+  "explanation": "The number of pixels is unchanged, so the size is multiplied by 8 ÷ 2 = 4.",
+  "workedSolution": "1. Size is proportional to colour depth when the number of pixels is fixed.\n2. 8 ÷ 2 = 4.",
+  "hints": [
+   "The file size is proportional to the colour depth when the pixels do not change."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "media.graphics.q14",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Complete the description of how a vector graphic is stored.",
+  "payload": {
+   "template": "A vector graphic is stored as a {{blank:a}} of drawing objects. Each object has a type, such as a rectangle or an ellipse, and a set of {{blank:b}}, such as its position, size and colour.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "list",
+      "grid",
+      "table of pixels",
+      "sound wave"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "properties",
+      "pixels",
+      "headers",
+      "samples"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "list"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "properties"
+     ]
+    }
+   ]
+  },
+  "explanation": "A vector graphic is a drawing list: objects with properties. It is turned into pixels only when displayed.",
+  "hints": [
+   "The picture is calculated from the objects each time it is displayed."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "list"
+    },
+    {
+     "blankId": "b",
+     "text": "properties"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "grid"
+     },
+     {
+      "blankId": "b",
+      "text": "pixels"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.graphics.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A school wants a crest for its website and for printing on banners. Justify the choice of a vector graphic rather than a bitmap.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A vector graphic can be enlarged to any size without losing quality, as the shapes are recalculated.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The file is usually smaller than a bitmap because only the objects and properties are stored.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A bitmap enlarged for a banner would show square pixels and look blurred.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A vector crest can be scaled to the size of a banner or a web page and stay sharp because the shapes are recalculated. Its file is small as it only stores objects and properties. A bitmap would become blocky when enlarged."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The scenario needs the picture at several sizes, which is the strength of a vector graphic.",
+  "hints": [
+   "Think about scaling and about file size."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "media.graphics.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain the effect on image quality and on file size of increasing the resolution of a bitmap image.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "There are more pixels, so the image can show more detail and looks sharper.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Each pixel needs the same number of bits, so the file size increases.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The file size is proportional to the number of pixels (width × height).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A higher resolution means more pixels, so more detail can be shown and the image is sharper. Because every pixel needs colour data, the file size increases in proportion to the number of pixels."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Resolution raises both the quality and the file size.",
+  "hints": [
+   "Give one effect on quality and one on size."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "media.graphics.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why a bitmap loses quality when it is enlarged but a vector graphic does not.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A bitmap has a fixed number of pixels, so enlarging stretches each pixel and makes it visible.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A vector graphic stores objects and properties, which are recalculated at the new size.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The recalculated shapes still have sharp edges because the number of pixels used to draw them increases.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A bitmap holds a fixed grid of pixels, so when it is enlarged the pixels are stretched and become visible as blocks. A vector graphic holds objects and their properties, so the shapes are recalculated for the new size and edges stay sharp."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Bitmaps store pixels; vectors store a recipe for drawing.",
+  "hints": [
+   "Compare what is stored in each type of file."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.graphics.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Describe what is stored in the file header of a bitmap image.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Information about the image such as its width and height in pixels.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The colour depth (and the file type).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The header stores information about the file: the width and height of the image in pixels, the colour depth, and the file type."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The header tells the program how to interpret the pixel data that follows.",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "media.graphics.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A student at a Gweru school takes a photograph of 600 × 400 pixels with a colour depth of 24 bits for the school magazine.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Calculate the number of pixels in the photograph.",
+    "answerSpec": {
+     "value": 240000
+    },
+    "explanation": "600 × 400 = 240000.",
+    "workedSolution": "1. 600 × 400 = 240000."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the file size in bytes, ignoring the header.",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 720000,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "240000 × 24 = 5760000 bits; ÷ 8 = 720000 bytes (24 bits is 3 bytes per pixel).",
+    "workedSolution": "1. 240000 × 24 = 5760000 bits; ÷ 8 = 720000 bytes (24 bits is 3 bytes per pixel)."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Convert your answer to part (b) to KiB.",
+    "payload": {
+     "unitHint": "KiB"
+    },
+    "answerSpec": {
+     "value": 703.125,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.5
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "KiB",
+       "kibibytes",
+       "kibibyte"
+      ]
+     }
+    },
+    "explanation": "720000 ÷ 1024 = 703.13 KiB.",
+    "workedSolution": "1. 720000 ÷ 1024 = 703.13 KiB."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The student halves the resolution to 300 × 200. State and explain the effect on the file size.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The file size becomes a quarter of the original.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "There are half as many pixels across and half as many down, so one quarter of the pixels.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The file size is divided by four, because the number of pixels across and down are both halved, so there are a quarter as many pixels."
+    }
+   }
+  ],
+  "explanation": "240000 pixels × 24 bits = 5760000 bits = 720000 bytes = 703.1 KiB. Halving both dimensions gives a quarter of the size.",
+  "hints": [
+   "Remember to divide by 8 to change bits to bytes.",
+   "Halving both dimensions changes the pixel count by a factor of 4."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "240000"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "720000"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "703"
+    }
+   }
+  },
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "media.graphics.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A Hwange tourist office compares two ways of storing a map picture. Image A is 1000 × 800 pixels with a colour depth of 8 bits. Image B is 500 × 400 pixels with a colour depth of 16 bits.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the file size of Image A in bytes (ignore headers).",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 800000,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "1000 × 800 × 8 = 6400000 bits; ÷ 8 = 800000 bytes.",
+    "workedSolution": "1. 1000 × 800 × 8 = 6400000 bits; ÷ 8 = 800000 bytes."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the file size of Image B in bytes (ignore headers).",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 400000,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "500 × 400 × 16 = 3200000 bits; ÷ 8 = 400000 bytes.",
+    "workedSolution": "1. 500 × 400 × 16 = 3200000 bits; ÷ 8 = 400000 bytes."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "How many times larger is the file for Image A than the file for Image B?",
+    "options": [
+     {
+      "key": "A",
+      "content": "4 times",
+      "rationale": "Image A has four times the pixels, but only half the bits per pixel."
+     },
+     {
+      "key": "B",
+      "content": "2 times",
+      "correct": true,
+      "rationale": "Correct: four times the pixels at half the depth gives twice the size."
+     },
+     {
+      "key": "C",
+      "content": "8 times",
+      "rationale": "This is too large for the sizes calculated."
+     },
+     {
+      "key": "D",
+      "content": "The same size",
+      "rationale": "The two sizes calculated are different."
+     }
+    ],
+    "explanation": "800000 ÷ 400000 = 2."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The map is made of straight roads, labels and coloured regions. Explain why a vector graphic may be better than either bitmap.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It is made of lines, shapes and text, which are drawing objects.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It can be enlarged without loss of quality.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The file is likely to be smaller than the bitmap.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The map consists of lines, shapes and text, which a vector graphic stores as objects with properties. It can be zoomed to any size without blurring and the file is likely to be smaller than a bitmap of the same map."
+    }
+   }
+  ],
+  "explanation": "Image A is 800000 bytes and Image B is 400000 bytes, a ratio of 2. A vector graphic suits a map of lines and shapes.",
+  "hints": [
+   "Compare the number of pixels in the two images and the bits per pixel.",
+   "Think about what a vector graphic stores."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "800000"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "400000"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "media.graphics.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A bitmap is shown on screen at the same size. Which change makes its file smaller?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Increasing the image resolution",
+    "rationale": "More pixels mean more data."
+   },
+   {
+    "key": "B",
+    "content": "Adding more colours to the image",
+    "rationale": "More colours need a greater colour depth."
+   },
+   {
+    "key": "C",
+    "content": "Reducing the colour depth",
+    "correct": true,
+    "rationale": "Correct: fewer bits per pixel mean less data to store."
+   },
+   {
+    "key": "D",
+    "content": "Converting the picture to a larger screen size",
+    "rationale": "Screen size does not change the stored data."
+   }
+  ],
+  "explanation": "File size = width × height × colour depth, so reducing the colour depth reduces the file size.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "media.graphics.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.media.graphics"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why is a vector graphic of a simple logo usually much smaller than a bitmap of the same logo?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It always uses far fewer colours than the bitmap does",
+    "rationale": "The number of colours is not the main reason."
+   },
+   {
+    "key": "B",
+    "content": "It is always compressed with a lossy method when saved",
+    "rationale": "Vector files are small because of how they are stored."
+   },
+   {
+    "key": "C",
+    "content": "It stores a few objects, not a colour for every pixel",
+    "correct": true,
+    "rationale": "Correct: the drawing list is short."
+   },
+   {
+    "key": "D",
+    "content": "It has a lower pixel resolution than the bitmap has",
+    "rationale": "A vector graphic has no fixed resolution."
+   }
+  ],
+  "explanation": "A bitmap stores every pixel. A simple vector logo is just a list of shapes with properties, which takes far less data.",
+  "hints": [
+   "Think about what is stored in each type of file."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ }
+]

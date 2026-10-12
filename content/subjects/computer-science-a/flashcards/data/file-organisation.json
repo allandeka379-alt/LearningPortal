@@ -1,0 +1,83 @@
+[
+ {
+  "key": "data.file-organisation.c01",
+  "cardType": "DEFINITION",
+  "front": "Serial file",
+  "back": "Records stored in the order in which they were added; no ordering on a field.",
+  "concepts": [
+   "acs.data.file-organisation"
+  ]
+ },
+ {
+  "key": "data.file-organisation.c02",
+  "cardType": "DEFINITION",
+  "front": "Sequential file",
+  "back": "Records stored in order of the key field.",
+  "concepts": [
+   "acs.data.file-organisation"
+  ]
+ },
+ {
+  "key": "data.file-organisation.c03",
+  "cardType": "DEFINITION",
+  "front": "Random file",
+  "back": "Each record is stored at an address calculated from its key (hashing), so it can be accessed directly.",
+  "concepts": [
+   "acs.data.file-organisation"
+  ]
+ },
+ {
+  "key": "data.file-organisation.c04",
+  "cardType": "CONCEPT",
+  "front": "Sequential access versus direct access",
+  "back": "Sequential access reads records from the start in order. Direct access goes straight to a record's address.",
+  "concepts": [
+   "acs.data.file-organisation"
+  ]
+ },
+ {
+  "key": "data.file-organisation.c05",
+  "cardType": "CONCEPT",
+  "front": "Choosing an organisation",
+  "back": "Processing every record in turn: serial or sequential. Quick access to single records: random with direct access.",
+  "concepts": [
+   "acs.data.file-organisation"
+  ]
+ },
+ {
+  "key": "data.file-organisation.c06",
+  "cardType": "CONCEPT",
+  "front": "Hashing by modulo division",
+  "back": "Divide the key by the number of slots; the remainder is the slot number. For text keys, add the character codes first (folding).",
+  "concepts": [
+   "acs.data.file-organisation"
+  ]
+ },
+ {
+  "key": "data.file-organisation.c07",
+  "cardType": "DEFINITION",
+  "front": "Collision",
+  "back": "Two different keys produce the same hash value and so the same address.",
+  "concepts": [
+   "acs.data.file-organisation"
+  ]
+ },
+ {
+  "key": "data.file-organisation.c08",
+  "cardType": "CONCEPT",
+  "front": "Ways to resolve a collision",
+  "back": "Use the next free slot (wrapping round), or put the record in an overflow area.",
+  "concepts": [
+   "acs.data.file-organisation"
+  ]
+ },
+ {
+  "key": "data.file-organisation.c09",
+  "cardType": "FACT",
+  "front": "How is a hashed record searched for?",
+  "back": "Calculate the slot; if its key does not match, continue to the next slot (or the overflow area) until the key is found or an empty slot is reached.",
+  "concepts": [
+   "acs.data.file-organisation"
+  ]
+ }
+]

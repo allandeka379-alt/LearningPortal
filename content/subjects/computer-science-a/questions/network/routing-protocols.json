@@ -1,0 +1,1179 @@
+[
+ {
+  "key": "network.routing-protocols.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What metric does the Routing Information Protocol (RIP) use?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The number of hops",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "The bandwidth of the link",
+    "rationale": "Bandwidth-based cost is used by OSPF."
+   },
+   {
+    "key": "C",
+    "content": "The length of the cable in metres",
+    "rationale": "RIP does not measure the length of a cable."
+   },
+   {
+    "key": "D",
+    "content": "The number of users on the network",
+    "rationale": "The number of users is not a routing metric."
+   }
+  ],
+  "explanation": "RIP counts routers (hops).",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "network.routing-protocols.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the largest number of hops that RIP allows for a reachable route?",
+  "options": [
+   {
+    "key": "A",
+    "content": "15",
+    "correct": true,
+    "rationale": "Correct: 16 means unreachable."
+   },
+   {
+    "key": "B",
+    "content": "8",
+    "rationale": "The limit is higher than 8."
+   },
+   {
+    "key": "C",
+    "content": "16",
+    "rationale": "A route of 16 hops is treated as unreachable."
+   },
+   {
+    "key": "D",
+    "content": "255",
+    "rationale": "The limit is much smaller than 255."
+   }
+  ],
+  "explanation": "RIP allows at most 15 hops.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "network.routing-protocols.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What type of protocol is OSPF?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Distance-vector",
+    "rationale": "That is RIP."
+   },
+   {
+    "key": "B",
+    "content": "Static",
+    "rationale": "Static routes are set by hand, not by a protocol."
+   },
+   {
+    "key": "C",
+    "content": "Application-layer",
+    "rationale": "OSPF is a routing protocol, not an application protocol such as HTTP."
+   },
+   {
+    "key": "D",
+    "content": "Link-state",
+    "correct": true,
+    "rationale": "Correct: each router has a map of the network."
+   }
+  ],
+  "explanation": "OSPF is link-state.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "network.routing-protocols.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is meant by dynamic routing?",
+  "options": [
+   {
+    "key": "A",
+    "content": "An administrator types every route into each router by hand each time",
+    "rationale": "That describes static routing."
+   },
+   {
+    "key": "B",
+    "content": "Packets always take the same route",
+    "rationale": "Dynamic routing allows the route to change."
+   },
+   {
+    "key": "C",
+    "content": "Routers learn and update routes automatically using a protocol",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "D",
+    "content": "Routers do not use routing tables",
+    "rationale": "All routers use routing tables."
+   }
+  ],
+  "explanation": "Routers exchange information so that the tables change when the network changes.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.routing-protocols.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which is a weakness of RIP?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It needs all the routers to build a full map of the whole network",
+    "rationale": "That is how OSPF works."
+   },
+   {
+    "key": "B",
+    "content": "It sends an update only when a link fails",
+    "rationale": "RIP also sends its table at regular intervals."
+   },
+   {
+    "key": "C",
+    "content": "It uses areas to divide large networks",
+    "rationale": "Areas belong to OSPF."
+   },
+   {
+    "key": "D",
+    "content": "It ignores the speed of the links when choosing a route",
+    "correct": true,
+    "rationale": "Correct: it counts hops only."
+   }
+  ],
+  "explanation": "A short route over slow links can be chosen.",
+  "hints": [
+   "What does RIP measure?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "network.routing-protocols.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In OSPF what is stored in the link-state database?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The web pages recently visited by users",
+    "rationale": "Routers do not store web pages in the database."
+   },
+   {
+    "key": "B",
+    "content": "Only the hop count from the router to each of its direct neighbours",
+    "rationale": "Hop count is the RIP metric."
+   },
+   {
+    "key": "C",
+    "content": "The state and cost of the links of all the routers in the area",
+    "correct": true,
+    "rationale": "Correct: it gives each router a map."
+   },
+   {
+    "key": "D",
+    "content": "The user names and passwords",
+    "rationale": "Routing databases do not hold passwords of users."
+   }
+  ],
+  "explanation": "Every router in the area holds the same map.",
+  "hints": [
+   "What does each router need to build a map?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.routing-protocols.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A company in Mutare has 40 routers in five towns, with links ranging from 1 Mbit/s to 1 Gbit/s, and some routes of more than 15 hops. Which protocol is the better choice?",
+  "options": [
+   {
+    "key": "A",
+    "content": "RIP, because it is simple to set up and has no limit on the size of the network or the hops",
+    "rationale": "RIP has a limit of 15 hops."
+   },
+   {
+    "key": "B",
+    "content": "OSPF, because it uses link costs, adjusts quickly and divides the network into areas",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "C",
+    "content": "RIP, because it chooses the fastest links",
+    "rationale": "RIP counts hops and ignores link speed."
+   },
+   {
+    "key": "D",
+    "content": "Static routing only, because routes never change",
+    "rationale": "Links fail and change; static routes would not adjust."
+   }
+  ],
+  "explanation": "Large networks with mixed link speeds need link-state routing.",
+  "hints": [
+   "Compare the number of hops with the limit of RIP."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "network.routing-protocols.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "OSPF chooses the route with the lowest total cost.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Cost is based on link bandwidth and the costs along the route are added.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "network.routing-protocols.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In RIP each router builds a map of the whole network.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. RIP routers only know what their neighbours tell them. Building a map is what OSPF routers do.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.routing-protocols.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each feature to RIP or OSPF.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Distance-vector"
+    },
+    {
+     "id": "L2",
+     "content": "Link-state"
+    },
+    {
+     "id": "L3",
+     "content": "Maximum of 15 hops"
+    },
+    {
+     "id": "L4",
+     "content": "Cost based on bandwidth"
+    },
+    {
+     "id": "L5",
+     "content": "Sends its whole table every 30 seconds"
+    }
+   ],
+   "right": [
+    {
+     "id": "R1",
+     "content": "RIP"
+    },
+    {
+     "id": "R2",
+     "content": "OSPF"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R1"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "RIP: distance-vector, 15 hops, whole table. OSPF: link-state, cost.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R1"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.routing-protocols.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the sentences about routing.",
+  "payload": {
+   "template": "Routes typed in by an administrator are called {{blank:a}} routes. RIP uses the {{blank:b}} count as its metric. OSPF uses the idea of {{blank:c}} algorithm to find the shortest path.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "static",
+      "dynamic",
+      "default",
+      "private"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "hop",
+      "cost",
+      "packet",
+      "port"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "Dijkstra's",
+      "Caesar's",
+      "Euclid's",
+      "Boole's"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "static"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "hop"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "Dijkstra's"
+     ]
+    }
+   ]
+  },
+  "explanation": "Static, hop, Dijkstra's.",
+  "hints": [
+   "OSPF computes shortest paths on a map."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "static"
+    },
+    {
+     "blankId": "b",
+     "text": "hop"
+    },
+    {
+     "blankId": "c",
+     "text": "Dijkstra's"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "dynamic"
+     },
+     {
+      "blankId": "b",
+      "text": "cost"
+     },
+     {
+      "blankId": "c",
+      "text": "Caesar's"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.routing-protocols.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An OSPF router uses the rule cost = 100 ÷ bandwidth in Mbit/s. What is the cost of a 20 Mbit/s link?",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "100 ÷ 20 = 5.",
+  "workedSolution": "1. Cost = 100 ÷ 20.\n2. = 5.",
+  "hints": [
+   "Cost = 100 ÷ bandwidth in Mbit/s."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "20"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "2000"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "network.routing-protocols.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A network has these links, with OSPF costs.\n\n| Link | OSPF cost |\n|:-:|:-:|\n| P - Q | 20 |\n| Q - T | 20 |\n| P - R | 5 |\n| R - S | 5 |\n| S - T | 5 |\n| T - U | 10 |\n\nRIP chooses the route with the fewest hops from P to U. How many hops does it use?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "P-Q-T-U has 3 hops.",
+  "workedSolution": "1. The routes are P-Q-T-U (3 hops) and P-R-S-T-U (4 hops).\n2. RIP chooses P-Q-T-U: 3 hops.",
+  "hints": [
+   "Count the routers or links between P and U for the shortest number of hops."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "25"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "network.routing-protocols.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Use the network below.\n\n| Link | OSPF cost |\n|:-:|:-:|\n| P - Q | 20 |\n| Q - T | 20 |\n| P - R | 5 |\n| R - S | 5 |\n| S - T | 5 |\n| T - U | 10 |\n\nCalculate the total cost of the route that OSPF chooses from P to U.",
+  "answerSpec": {
+   "value": 25
+  },
+  "explanation": "The route via R and S costs 25, less than 50.",
+  "workedSolution": "1. P-Q-T-U costs 20 + 20 + 10 = 50.\n2. P-R-S-T-U costs 5 + 5 + 5 + 10 = 25.\n3. OSPF chooses the lower cost: 25.",
+  "hints": [
+   "Add the costs of the links on each route.",
+   "OSPF picks the lower total."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "25"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "50"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "40"
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "network.routing-protocols.q15",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The network has these links.\n\n| Link | OSPF cost |\n|:-:|:-:|\n| P - Q | 20 |\n| Q - T | 20 |\n| P - R | 5 |\n| R - S | 5 |\n| S - T | 5 |\n| T - U | 10 |\n\nWhich statement about the routes from P to U is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "RIP and OSPF choose the same route",
+    "rationale": "RIP prefers the route with fewer hops, which is not the cheapest route."
+   },
+   {
+    "key": "B",
+    "content": "RIP and OSPF choose different routes",
+    "correct": true,
+    "rationale": "Correct: RIP uses P-Q-T-U, OSPF uses P-R-S-T-U."
+   },
+   {
+    "key": "C",
+    "content": "Both choose P-R-S-T-U because it has fewer hops",
+    "rationale": "P-R-S-T-U has more hops than P-Q-T-U."
+   },
+   {
+    "key": "D",
+    "content": "Both choose P-Q-T-U because its links are faster",
+    "rationale": "Its links have the higher costs, so they are slower."
+   }
+  ],
+  "explanation": "RIP chooses the 3-hop route, OSPF chooses the 25-cost route.",
+  "hints": [
+   "Compare the hop count and the cost of each route."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "network.routing-protocols.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Describe how a router using RIP learns routes. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Each router sends its routing table to its neighbours at regular intervals (every 30 seconds)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A router receiving a table adds 1 to the hop count of each route",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "It keeps the route with the fewest hops to each network",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A route of 16 hops is treated as unreachable",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Each router sends its routing table to its neighbours every 30 seconds. A receiving router adds 1 to the hop count of each route and keeps the route with the fewest hops to each network. A route of 16 hops is treated as unreachable."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Regular tables, add one hop, keep the best, 16 is unreachable.",
+  "hints": [
+   "Two differences in how they work."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.routing-protocols.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Describe how a router using OSPF decides on the best route to a network. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Each router tells the other routers in its area the state and cost of its links",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Each router stores this in its link-state database, giving it a map of the network",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The router calculates the lowest-cost path to each network using a shortest-path (Dijkstra) algorithm",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "It puts the next hop of the lowest-cost path in its routing table",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Each router tells the other routers in its area the state and cost of its links. Each router stores this in its link-state database, which gives it a map of the network. It then calculates the lowest-cost path to each network with a shortest-path algorithm and puts the next hop in its routing table."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Advertise, database, calculate, table.",
+  "hints": [
+   "Link-state database, cost, Dijkstra."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.routing-protocols.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Give three reasons why OSPF is better than RIP for a large network. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "It is not limited to 15 hops and the network can be divided into areas",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "It uses a cost based on the speed of the links so it chooses faster routes",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "It adjusts quickly to a change because only changes are sent to all the routers in the area",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: It has no 15-hop limit and the network can be divided into areas. It uses a cost based on link speed so it chooses faster routes, and it adjusts quickly because changes are sent at once to all routers in the area."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Size, cost metric, speed of adjusting.",
+  "hints": [
+   "Think about size, adjusting after a failure and link speed."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "network.routing-protocols.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "State two disadvantages of static routing in a large network. [2]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Every route must be entered and changed by hand, which takes a lot of work",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "If a link fails the routes are not updated and packets are lost until the administrator corrects them",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Every route has to be entered and changed by hand, and if a link fails the routes are not updated, so packets are lost until the administrator corrects them."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Manual work and no automatic repair.",
+  "hints": [
+   "What happens when a link fails?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "network.routing-protocols.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A bank links its branch offices through routers P, Q, R, S, T and U. The links and their OSPF costs are shown.\n\n| Link | OSPF cost |\n|:-:|:-:|\n| P - Q | 20 |\n| Q - T | 20 |\n| P - R | 5 |\n| R - S | 5 |\n| S - T | 5 |\n| T - U | 10 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of hops on the route P-Q-T-U.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Three links: P-Q, Q-T, T-U.",
+    "workedSolution": "1. The links are P-Q, Q-T and T-U.\n2. That is 3 hops."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the OSPF cost of the route P-Q-T-U.",
+    "answerSpec": {
+     "value": 50
+    },
+    "explanation": "20 + 20 + 10 = 50.",
+    "workedSolution": "1. 20 + 20 + 10 = 50."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the OSPF cost of the route P-R-S-T-U.",
+    "answerSpec": {
+     "value": 25
+    },
+    "explanation": "5 + 5 + 5 + 10 = 25.",
+    "workedSolution": "1. 5 + 5 + 5 + 10 = 25."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "State the route chosen by RIP and the route chosen by OSPF, and explain why they are different.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "RIP chooses P-Q-T-U because it has the fewest hops (3)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "OSPF chooses P-R-S-T-U because its total cost (25) is lower than 50",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "RIP ignores link speed but OSPF's cost is based on the speed of the links",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: RIP chooses P-Q-T-U because it has the fewest hops (3). OSPF chooses P-R-S-T-U because its cost of 25 is lower than 50. RIP ignores link speed, but OSPF's cost is based on the speed of the links."
+    },
+    "explanation": "Different metrics, different routes."
+   }
+  ],
+  "explanation": "RIP chooses P-Q-T-U (3 hops); OSPF chooses P-R-S-T-U (cost 25).",
+  "hints": [
+   "Add the costs for OSPF; count the links for RIP."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "50"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "25"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "network.routing-protocols.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.network.routing-protocols"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A school group in Masvingo has a campus network with 5 routers, all within 3 hops of each other, managed by one part-time technician. A hospital group has a network of 90 routers over many towns, with routes of up to 20 hops and links of different speeds.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Recommend a routing protocol for the school and give one reason.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "RIP",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It is simple to set up and the network is well within the 15-hop limit",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: RIP, because it is simple to set up and the network is well within the 15-hop limit."
+    },
+    "explanation": "Small network."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why RIP is unsuitable for the hospital network.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Routes of 20 hops are more than the maximum of 15 hops, so those routers would be unreachable",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "RIP ignores the speed of the links and adjusts slowly in a big network",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Routes of 20 hops are more than RIP's maximum of 15, so some routers would be unreachable, and RIP ignores link speed and adjusts slowly in a large network."
+    },
+    "explanation": "Hop limit."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe two features of OSPF that suit the hospital network.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The network can be divided into areas, so databases and calculations stay small",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The cost is based on link speed and updates are sent only when something changes",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The network can be divided into areas to keep each database small, and the cost is based on link speed with updates sent only when something changes."
+    },
+    "explanation": "Areas and cost."
+   }
+  ],
+  "explanation": "A single campus with a few routers suits RIP; a large national network needs OSPF.",
+  "hints": [
+   "Link each answer to the numbers in the scenario."
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true
+ }
+]

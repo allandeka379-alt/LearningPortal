@@ -1,0 +1,1283 @@
+[
+ {
+  "key": "cpu.performance.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What does the clock speed of a processor measure?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The number of cycles per second",
+    "correct": true,
+    "rationale": "Correct: it is measured in hertz."
+   },
+   {
+    "key": "B",
+    "content": "The number of cores in the processor chip",
+    "rationale": "Cores are counted separately from clock speed."
+   },
+   {
+    "key": "C",
+    "content": "The size of the cache in megabytes of memory",
+    "rationale": "Cache size is measured in bytes."
+   },
+   {
+    "key": "D",
+    "content": "The width of the data bus in bits",
+    "rationale": "Bus width is measured in bits, not hertz."
+   }
+  ],
+  "explanation": "Clock speed is the number of cycles per second, in hertz (Hz, MHz, GHz).",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "cpu.performance.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What happens on a cache hit?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The data is found in the cache",
+    "correct": true,
+    "rationale": "Correct: no access to main memory is needed."
+   },
+   {
+    "key": "B",
+    "content": "The data is missing and is fetched from main memory",
+    "rationale": "That describes a cache miss."
+   },
+   {
+    "key": "C",
+    "content": "The processor stops until the clock catches up",
+    "rationale": "The processor does not stop on a hit."
+   },
+   {
+    "key": "D",
+    "content": "The data is deleted from main memory",
+    "rationale": "A cache holds copies; main memory is not erased."
+   }
+  ],
+  "explanation": "A hit means the required data is already in the cache.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "cpu.performance.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which is a reason why raising the clock speed beyond a certain point gives diminishing returns?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The processor needs fewer instructions at a higher speed",
+    "rationale": "The number of instructions needed does not change with the clock."
+   },
+   {
+    "key": "B",
+    "content": "The processor gets hotter and may have to slow down",
+    "correct": true,
+    "rationale": "Correct: heat and power limit how fast the clock can go."
+   },
+   {
+    "key": "C",
+    "content": "Main memory becomes faster automatically as well",
+    "rationale": "Memory speed is independent of the processor clock."
+   },
+   {
+    "key": "D",
+    "content": "The cache is switched off at a very high clock speed",
+    "rationale": "The cache is not switched off by a faster clock."
+   }
+  ],
+  "explanation": "Heat, power use and waiting for slower memory all limit the benefit of a faster clock.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "cpu.performance.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which task is most likely to run much faster on a four-core processor than on a single-core processor of the same clock speed?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Adding up a long list in which each step needs the previous result",
+    "rationale": "Each step depends on the one before, so it cannot be shared."
+   },
+   {
+    "key": "B",
+    "content": "Waiting for a user to type a password",
+    "rationale": "The delay is caused by the user, not the processor."
+   },
+   {
+    "key": "C",
+    "content": "Reading one value from a slow USB drive",
+    "rationale": "The speed is limited by the drive."
+   },
+   {
+    "key": "D",
+    "content": "Converting four separate video files at the same time",
+    "correct": true,
+    "rationale": "Correct: the four jobs are independent and can run on different cores."
+   }
+  ],
+  "explanation": "Independent tasks can run on different cores. Tasks where each step depends on the last cannot be split.",
+  "hints": [
+   "Look for work that can be divided into independent parts."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "cpu.performance.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program is written to run as one sequence of dependent steps. It is run on a processor with eight cores instead of two. What is the most likely effect?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It runs four times faster because there are four times as many cores",
+    "rationale": "Extra cores do not help a single sequence."
+   },
+   {
+    "key": "B",
+    "content": "It runs slower because the extra cores slow the clock",
+    "rationale": "The clock is not automatically slowed by extra cores."
+   },
+   {
+    "key": "C",
+    "content": "It runs correctly only if the cache is removed",
+    "rationale": "The cache is not related to this."
+   },
+   {
+    "key": "D",
+    "content": "Little or no improvement, because only one core can run it",
+    "correct": true,
+    "rationale": "Correct: the steps cannot be shared between cores."
+   }
+  ],
+  "explanation": "Without parallel code, only one core does the work, so more cores make no real difference.",
+  "hints": [
+   "What can a second core do if the next step needs the result of the one before?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "cpu.performance.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How does a larger cache usually affect performance?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The clock speed of the processor rises automatically",
+    "rationale": "Cache size does not change the clock speed."
+   },
+   {
+    "key": "B",
+    "content": "The address bus becomes wider",
+    "rationale": "The width of the address bus is a separate design feature."
+   },
+   {
+    "key": "C",
+    "content": "More data is found without visiting main memory",
+    "correct": true,
+    "rationale": "Correct: the hit rate rises, so the average access time falls."
+   },
+   {
+    "key": "D",
+    "content": "Main memory becomes non-volatile",
+    "rationale": "Cache does not change the nature of main memory."
+   }
+  ],
+  "explanation": "A larger cache holds more frequently used data, so there are more hits.",
+  "hints": [
+   "Think about hits and misses."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.performance.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A user complains that her computer is slow whenever she opens several large spreadsheets, and the system monitor shows that most of the RAM is in use and the disk is working constantly. Which upgrade is the most appropriate?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Fit a faster printer",
+    "rationale": "A printer has no effect on memory use."
+   },
+   {
+    "key": "B",
+    "content": "Fit more RAM",
+    "correct": true,
+    "rationale": "Correct: there is less need to swap data to the slow disk."
+   },
+   {
+    "key": "C",
+    "content": "Fit a second display",
+    "rationale": "A display does not affect memory or disk use."
+   },
+   {
+    "key": "D",
+    "content": "Replace the keyboard with a wireless one",
+    "rationale": "A keyboard has no effect on performance in this case."
+   }
+  ],
+  "explanation": "When RAM is full the system moves data to and from the disk, which is slow. More RAM reduces this.",
+  "hints": [
+   "What happens when the RAM is nearly full?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "cpu.performance.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Cache memory is larger than main memory.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Cache is small and very fast; main memory is much larger and slower.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "cpu.performance.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Doubling the number of cores always doubles the speed of every program.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Only work that can be split between cores speeds up; programs with a serial part gain less.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "cpu.performance.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each factor to its effect on performance.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Higher clock speed"
+    },
+    {
+     "id": "L2",
+     "content": "More cores"
+    },
+    {
+     "id": "L3",
+     "content": "Wider data bus"
+    },
+    {
+     "id": "L4",
+     "content": "Larger cache"
+    },
+    {
+     "id": "L5",
+     "content": "Wider address bus"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "More bits moved in each transfer"
+    },
+    {
+     "id": "R4",
+     "content": "More data found without using main memory"
+    },
+    {
+     "id": "R5",
+     "content": "More memory can be addressed"
+    },
+    {
+     "id": "R1",
+     "content": "More cycles per second, but more heat"
+    },
+    {
+     "id": "R2",
+     "content": "More tasks at the same time"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each factor improves a different part of the system.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.performance.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the description of a cache.",
+  "payload": {
+   "template": "A cache is made of {{blank:a}} memory, which is faster than main memory. When the data needed is in the cache it is called a {{blank:b}}; when it is not, the data is fetched from {{blank:c}}.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "SRAM",
+      "DRAM",
+      "ROM",
+      "flash"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "hit",
+      "miss",
+      "buffer",
+      "refresh"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "main memory",
+      "the registers",
+      "the keyboard",
+      "the clock"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "SRAM"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "hit"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "main memory"
+     ]
+    }
+   ]
+  },
+  "explanation": "Cache is SRAM; a hit is found in the cache; a miss goes to main memory.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "SRAM"
+    },
+    {
+     "blankId": "b",
+     "text": "hit"
+    },
+    {
+     "blankId": "c",
+     "text": "main memory"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "DRAM"
+     },
+     {
+      "blankId": "b",
+      "text": "miss"
+     },
+     {
+      "blankId": "c",
+      "text": "the registers"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.performance.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A processor runs at 3 GHz (3 000 000 000 cycles per second) and an average instruction needs 3 cycles. How many instructions does it carry out each second?",
+  "answerSpec": {
+   "value": 1000000000
+  },
+  "explanation": "3 000 000 000 ÷ 3 = 1 000 000 000 instructions per second.",
+  "workedSolution": "1. Instructions per second = cycles per second ÷ cycles per instruction.\n2. 3 000 000 000 ÷ 3 = 1 000 000 000.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1000000000"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "9000000000"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "3000000000"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "cpu.performance.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How long does a 3 GHz processor take to complete 6 000 000 000 clock cycles?",
+  "payload": {
+   "unitHint": "s"
+  },
+  "answerSpec": {
+   "value": 2,
+   "units": {
+    "required": false,
+    "accepted": [
+     "s",
+     "seconds",
+     "second",
+     "sec",
+     "secs"
+    ]
+   }
+  },
+  "explanation": "6 × 10^9 ÷ 3 × 10^9 = 2 seconds.",
+  "workedSolution": "1. Time = cycles ÷ cycles per second.\n2. 6 000 000 000 ÷ 3 000 000 000 = 2 s.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "18"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.5"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "cpu.performance.q14",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A cache is read in 5 ns and main memory in 100 ns. The hit rate is 96%. Assume a miss costs the full 100 ns. Calculate the average memory access time in nanoseconds.",
+  "payload": {
+   "unitHint": "ns"
+  },
+  "answerSpec": {
+   "value": 8.8,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "ns",
+     "nanoseconds",
+     "nanosecond"
+    ]
+   }
+  },
+  "explanation": "0.96 × 5 + 0.04 × 100 = 8.8 ns.",
+  "workedSolution": "1. Hits: 0.96 × 5 = 4.8 ns.\n2. Misses: 0.04 × 100 = 4 ns.\n3. Average = 4.8 + 4 = 8.8 ns.",
+  "hints": [
+   "Average = hit rate × cache time + miss rate × memory time."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "8.8"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "5"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "105"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "cpu.performance.q15",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A job takes 12 s on one core. 20% of the job must run in sequence and the other 80% can be shared equally between cores. How long does the job take on 4 cores?",
+  "payload": {
+   "unitHint": "s"
+  },
+  "answerSpec": {
+   "value": 4.8,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "s",
+     "seconds",
+     "second",
+     "sec",
+     "secs"
+    ]
+   }
+  },
+  "explanation": "12 × (0.2 + 0.2) = 4.8 s.",
+  "workedSolution": "1. Serial part: 0.2 × 12 = 2.4 s.\n2. Parallel part on 4 cores: 0.8 × 12 ÷ 4 = 2.4 s.\n3. Total = 2.4 + 2.4 = 4.8 s.",
+  "hints": [
+   "Time = 12 × (serial fraction + parallel fraction ÷ number of cores)."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "4.8"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "3"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "7.2"
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "cpu.performance.q16",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program takes 12 s: 9 s of computing and 3 s of waiting for main memory. The clock speed is doubled and the memory is unchanged. How long does the program now take?",
+  "payload": {
+   "unitHint": "s"
+  },
+  "answerSpec": {
+   "value": 7.5,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "s",
+     "seconds",
+     "second",
+     "sec",
+     "secs"
+    ]
+   }
+  },
+  "explanation": "Only the computing part is faster: 4.5 + 3 = 7.5 s.",
+  "workedSolution": "1. Computing time: 9 ÷ 2 = 4.5 s.\n2. Waiting time stays 3 s.\n3. Total = 4.5 + 3 = 7.5 s.",
+  "hints": [
+   "Only the computing time halves."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "7.5"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "6"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "4.5"
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "cpu.performance.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why doubling the clock speed of a processor does not double the speed of the whole computer. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The processor may spend time waiting for main memory or the bus, which do not get faster",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A higher clock produces more heat, which may force the processor to slow down",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "More power is used, so battery life is shorter / cooling is needed",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The processor still waits for slower main memory and buses. A faster clock also produces more heat and uses more power, so the speed has to be limited."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Waiting, heat, power.",
+  "hints": [
+   "Mention heat or power, and waiting for memory."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "cpu.performance.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Explain how cache memory improves the performance of a computer. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Cache is small, fast memory between the processor and main memory",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "It holds copies of data and instructions that are used often",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "When the data is in the cache (a hit) it is read quickly without using slow main memory",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "If it is not (a miss), it is fetched from main memory and copied to the cache for next time",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Cache is small, fast memory next to the processor that holds frequently used data and instructions. A hit gives data without going to slow main memory. On a miss the data is fetched from main memory and copied into the cache."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Location, content, hit, miss.",
+  "hints": [
+   "Define hit and miss, then the benefit."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.performance.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain when adding more cores to a processor improves performance and when it does not. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "It helps when several programs run at the same time",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "It helps when a program is written so that its work is split into parts that run together",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "It does not help when the program is a single sequence of dependent steps / only one core can be used",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: More cores help when several programs run together or a program splits its work. They do not help a program that is a single sequence of dependent steps."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Two cases that benefit and one that does not.",
+  "hints": [
+   "One situation where it helps and one where it does not."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.performance.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A shop in Gweru sells two laptops. Laptop A has 4 cores, a 2.0 GHz clock and 8 MiB of cache. Laptop B has 2 cores, a 3.2 GHz clock and 2 MiB of cache. On both, an average instruction takes 4 clock cycles.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the number of instructions per second that one core of laptop A can carry out.",
+    "answerSpec": {
+     "value": 500000000
+    },
+    "explanation": "2.0 GHz ÷ 4 cycles = 500 million instructions per second.",
+    "workedSolution": "1. Cycles per second = 2 000 000 000.\n2. Instructions per second = 2 000 000 000 ÷ 4 = 500 000 000."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the number of instructions per second that one core of laptop B can carry out.",
+    "answerSpec": {
+     "value": 800000000
+    },
+    "explanation": "3.2 GHz ÷ 4 cycles = 800 million instructions per second.",
+    "workedSolution": "1. Cycles per second = 3 200 000 000.\n2. Instructions per second = 3 200 000 000 ÷ 4 = 800 000 000."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which laptop is likely to be better at running several programs at once?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Laptop B, with the faster clock",
+      "rationale": "A faster clock helps each program, but B has only two cores."
+     },
+     {
+      "key": "B",
+      "content": "Neither, because they use the same cycles per instruction",
+      "rationale": "The core counts and the cache sizes differ."
+     },
+     {
+      "key": "C",
+      "content": "Laptop A, with 4 cores",
+      "correct": true,
+      "rationale": "Correct: more cores can run more programs together."
+     },
+     {
+      "key": "D",
+      "content": "Laptop B, because it has the smaller cache",
+      "rationale": "A smaller cache does not help."
+     }
+    ],
+    "explanation": "Four cores run more tasks together."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "A student runs a web browser, a word processor and a music player at the same time. Recommend one of the laptops and justify your choice.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Recommends laptop A",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It has 4 cores so the programs can run at the same time",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "It has a larger cache so more data is found without using main memory",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Laptop A, because its four cores let the three programs run at the same time, and its larger cache reduces trips to main memory."
+    },
+    "explanation": "Choice plus two linked reasons."
+   }
+  ],
+  "explanation": "A: 500 million instructions per second; B: 800 million. B is faster on one task but A has more cores and cache, which suits many programs.",
+  "hints": [
+   "Instructions per second = cycles per second ÷ cycles per instruction.",
+   "Think about what a user who runs many programs needs."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "500000000"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "800000000"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "2000000000"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3200000000"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true
+ },
+ {
+  "key": "cpu.performance.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.cpu.performance"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A processor has a cache that takes 3 ns to read and main memory that takes 60 ns to read. The hit rate is 90%. Assume a miss costs the full 60 ns.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 3,
+    "stem": "Calculate the average memory access time in nanoseconds.",
+    "payload": {
+     "unitHint": "ns"
+    },
+    "answerSpec": {
+     "value": 8.7,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "ns",
+       "nanoseconds",
+       "nanosecond"
+      ]
+     }
+    },
+    "explanation": "0.9 × 3 + 0.1 × 60 = 8.7 ns.",
+    "workedSolution": "1. Hits: 0.9 × 3 = 2.7 ns.\n2. Misses: 0.1 × 60 = 6 ns.\n3. Average = 2.7 + 6 = 8.7 ns."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What would a larger cache normally do to the hit rate?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Decrease it",
+      "rationale": "A larger cache holds more, not less."
+     },
+     {
+      "key": "B",
+      "content": "Make it zero",
+      "rationale": "A hit rate of zero would mean the cache is useless."
+     },
+     {
+      "key": "C",
+      "content": "Increase it",
+      "correct": true,
+      "rationale": "Correct: more data fits in the cache."
+     },
+     {
+      "key": "D",
+      "content": "Leave it fixed by law",
+      "rationale": "The hit rate depends on the program and the cache size."
+     }
+    ],
+    "explanation": "More data in the cache gives more hits."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain what happens when the processor needs data that is not in the cache.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The data is fetched from main memory (slower)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A copy is placed in the cache for later use",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The data is fetched from main memory, which is slower, and a copy is put in the cache."
+    },
+    "explanation": "Fetch from RAM and copy to cache."
+   }
+  ],
+  "explanation": "Average = 0.9 × 3 + 0.1 × 60 = 8.7 ns; a larger cache raises the hit rate and lowers the average.",
+  "hints": [
+   "Average = hit rate × cache time + miss rate × memory time."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "8.7"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ }
+]

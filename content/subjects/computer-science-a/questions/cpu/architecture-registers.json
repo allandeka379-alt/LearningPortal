@@ -1,0 +1,1277 @@
+[
+ {
+  "key": "cpu.architecture-registers.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which register holds the address of the next instruction to be fetched?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The program counter",
+    "correct": true,
+    "rationale": "Correct: the PC always points to the next instruction."
+   },
+   {
+    "key": "B",
+    "content": "The accumulator",
+    "rationale": "The accumulator holds the results of ALU operations."
+   },
+   {
+    "key": "C",
+    "content": "The memory data register",
+    "rationale": "The MDR holds data or an instruction that has just been read or is about to be written."
+   },
+   {
+    "key": "D",
+    "content": "The current instruction register",
+    "rationale": "The CIR holds the instruction being executed, not the next one."
+   }
+  ],
+  "explanation": "The program counter holds the address of the next instruction and is increased after each fetch.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "cpu.architecture-registers.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which statement describes the stored-program concept?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Binary instructions are held in memory, like data",
+    "correct": true,
+    "rationale": "Correct: this is the basis of the Von Neumann model."
+   },
+   {
+    "key": "B",
+    "content": "Programs stay on secondary storage and are read one line at a time",
+    "rationale": "Instructions must be in main memory for the processor to fetch them."
+   },
+   {
+    "key": "C",
+    "content": "Each program has its own separate processor",
+    "rationale": "One processor runs many programs, one instruction at a time."
+   },
+   {
+    "key": "D",
+    "content": "Data is held in memory but the instructions are built into the ALU",
+    "rationale": "Instructions are stored in memory, not built into the ALU."
+   }
+  ],
+  "explanation": "In a stored-program computer both the program and its data are binary values in main memory.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "cpu.architecture-registers.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is meant by the Von Neumann bottleneck?",
+  "options": [
+   {
+    "key": "A",
+    "content": "One shared path blocks fetching an instruction and data together",
+    "correct": true,
+    "rationale": "Correct: instructions and data use the same path to memory."
+   },
+   {
+    "key": "B",
+    "content": "The ALU can only add two numbers at one time in each cycle",
+    "rationale": "The ALU limit is not the bottleneck described."
+   },
+   {
+    "key": "C",
+    "content": "The clock cannot run faster than the speed of the memory",
+    "rationale": "That is a speed limit, not the Von Neumann bottleneck."
+   },
+   {
+    "key": "D",
+    "content": "The registers can hold only a few bits of data each",
+    "rationale": "Register size is not the bottleneck."
+   }
+  ],
+  "explanation": "With one memory and one set of buses, the processor cannot fetch the next instruction while it is reading or writing data.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.architecture-registers.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In which architecture are instructions and data stored in separate memories with separate buses?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Von Neumann",
+    "rationale": "Von Neumann uses a single memory and one set of buses."
+   },
+   {
+    "key": "B",
+    "content": "Harvard",
+    "correct": true,
+    "rationale": "Correct: this is the Harvard architecture."
+   },
+   {
+    "key": "C",
+    "content": "Stored program only",
+    "rationale": "The stored-program concept does not require separate memories."
+   },
+   {
+    "key": "D",
+    "content": "Pipelined",
+    "rationale": "Pipelining is a method of overlapping instructions, not a memory layout."
+   }
+  ],
+  "explanation": "Harvard: separate instruction and data memories, each with its own buses.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "cpu.architecture-registers.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An instruction is stored at address 300 and is about to be fetched. What do the program counter (PC) and the memory address register (MAR) hold after the fetch has started and the PC has been increased?",
+  "options": [
+   {
+    "key": "A",
+    "content": "PC = 300 and MAR = 301",
+    "rationale": "The PC moves on after the address is copied to the MAR, not before."
+   },
+   {
+    "key": "B",
+    "content": "PC = 300 and MAR = 300",
+    "rationale": "The PC is increased once the instruction address has been used."
+   },
+   {
+    "key": "C",
+    "content": "PC = 301 and MAR = 301",
+    "rationale": "The MAR keeps the address of the instruction fetched."
+   },
+   {
+    "key": "D",
+    "content": "PC = 301 and MAR = 300",
+    "correct": true,
+    "rationale": "Correct: the MAR holds the address used, and the PC the next address."
+   }
+  ],
+  "explanation": "The PC is copied to the MAR, then the PC is increased by one.",
+  "hints": [
+   "The MAR holds the address of the instruction, the PC the address of the next one."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "cpu.architecture-registers.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "After the ALU adds two numbers, in which register is the result normally held?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The memory address register",
+    "rationale": "The MAR holds an address."
+   },
+   {
+    "key": "B",
+    "content": "The index register",
+    "rationale": "The IX is used to modify addresses."
+   },
+   {
+    "key": "C",
+    "content": "The program counter",
+    "rationale": "The PC holds the address of the next instruction."
+   },
+   {
+    "key": "D",
+    "content": "The accumulator",
+    "correct": true,
+    "rationale": "Correct: the ACC holds the result of ALU operations."
+   }
+  ],
+  "explanation": "ALU results are held in the accumulator.",
+  "hints": [
+   "Which register is used by the ALU for results?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "cpu.architecture-registers.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A programmer jumps to another part of a program. Which register is changed by the jump instruction?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The current instruction register only",
+    "rationale": "The CIR changes with every instruction but does not decide where the program goes next."
+   },
+   {
+    "key": "B",
+    "content": "The program counter",
+    "correct": true,
+    "rationale": "Correct: it is loaded with the address of the new instruction."
+   },
+   {
+    "key": "C",
+    "content": "The status register only",
+    "rationale": "The status register records flags, not the address of the next instruction."
+   },
+   {
+    "key": "D",
+    "content": "The accumulator only",
+    "rationale": "The accumulator holds a data value."
+   }
+  ],
+  "explanation": "A jump writes the target address into the PC, so the next fetch happens from there.",
+  "hints": [
+   "Which register decides where the next instruction comes from?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "cpu.architecture-registers.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A small embedded controller must read sensor data and fetch its next instruction at the same time. Why is a Harvard architecture suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It stores every instruction inside the ALU itself",
+    "rationale": "Instructions are in memory, not inside the ALU."
+   },
+   {
+    "key": "B",
+    "content": "It needs no memory as the registers hold the program",
+    "rationale": "Registers are far too small to hold a program."
+   },
+   {
+    "key": "C",
+    "content": "Separate buses let both accesses happen together",
+    "correct": true,
+    "rationale": "Correct: instruction and data memories are independent."
+   },
+   {
+    "key": "D",
+    "content": "It uses only one bus, which is cheaper",
+    "rationale": "A Harvard design uses separate buses."
+   }
+  ],
+  "explanation": "Separate memories and buses allow an instruction fetch and a data access in the same cycle.",
+  "hints": [
+   "Think about the shared bus in a Von Neumann machine."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION",
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "cpu.architecture-registers.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The arithmetic logic unit fetches and decodes the instructions of a program.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The control unit fetches and decodes instructions. The ALU performs arithmetic, logic and shifts.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "cpu.architecture-registers.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The current instruction register (CIR) holds the instruction that is being decoded and executed.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The instruction is copied from the MDR into the CIR so that it can be decoded and executed.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "cpu.architecture-registers.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each register to what it holds.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Program counter"
+    },
+    {
+     "id": "L2",
+     "content": "Memory address register"
+    },
+    {
+     "id": "L3",
+     "content": "Memory data register"
+    },
+    {
+     "id": "L4",
+     "content": "Accumulator"
+    },
+    {
+     "id": "L5",
+     "content": "Status register"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Data just read or about to be written"
+    },
+    {
+     "id": "R4",
+     "content": "Result of the ALU operation"
+    },
+    {
+     "id": "R5",
+     "content": "Flags such as zero, carry and overflow"
+    },
+    {
+     "id": "R1",
+     "content": "Address of the next instruction"
+    },
+    {
+     "id": "R2",
+     "content": "Address of the location being accessed"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each register has a single purpose in the cycle.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.architecture-registers.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the sentences about the parts of the processor.",
+  "payload": {
+   "template": "The {{blank:a}} fetches and decodes instructions. The {{blank:b}} performs calculations and comparisons. The {{blank:c}} sends pulses that keep every operation in step.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "control unit",
+      "ALU",
+      "clock",
+      "accumulator"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "ALU",
+      "control unit",
+      "clock",
+      "program counter"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "system clock",
+      "ALU",
+      "control unit",
+      "status register"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "control unit"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "ALU"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "system clock"
+     ]
+    }
+   ]
+  },
+  "explanation": "Control unit: fetch, decode, control. ALU: arithmetic and logic. Clock: timing.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "control unit"
+    },
+    {
+     "blankId": "b",
+     "text": "ALU"
+    },
+    {
+     "blankId": "c",
+     "text": "system clock"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "ALU"
+     },
+     {
+      "blankId": "b",
+      "text": "control unit"
+     },
+     {
+      "blankId": "c",
+      "text": "ALU"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "cpu.architecture-registers.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The program counter holds 312 and the instruction at that address is about to be fetched. What value is in the program counter once the fetch has finished?",
+  "answerSpec": {
+   "value": 313
+  },
+  "explanation": "The PC is increased by one during the fetch, so it holds 313.",
+  "workedSolution": "1. The PC is copied to the MAR (312).\n2. The PC is increased by one: 312 + 1 = 313.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "313"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "312"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "311"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "cpu.architecture-registers.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the register that holds the address of the memory location that is about to be read or written.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "memory address register"
+    },
+    {
+     "value": "MAR"
+    },
+    {
+     "value": "the memory address register"
+    },
+    {
+     "value": "the MAR"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "The memory address register (MAR) holds the address being accessed.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "memory address register"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "MDR"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "program counter"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "cpu.architecture-registers.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program is stored from address 400:\n\n```\n400  LDD Price\n401  SUB Discount\n402  STO Cost\n403  END\n404  Price: 75\n405  Discount: 20\n406  Cost: 0\n```\n\n`LDD` loads a value from an address into the accumulator, `SUB` subtracts a value held at an address from the accumulator and `STO` stores the accumulator in an address. What value is stored in `Cost` when the program ends?",
+  "answerSpec": {
+   "value": 55
+  },
+  "explanation": "75 − 20 = 55 is stored in Cost.",
+  "workedSolution": "1. LDD Price: ACC = 75.\n2. SUB Discount: ACC = 75 − 20 = 55.\n3. STO Cost: address 406 holds 55.",
+  "hints": [
+   "Follow the three instructions in order and keep the accumulator value."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "55"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "75"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "95"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "cpu.architecture-registers.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe the stored-program concept. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The program instructions are stored in main memory",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "They are stored as binary numbers, in the same way as the data",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The processor fetches them and executes them one after another",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Program instructions are held in main memory as binary, just as data is. The processor fetches the instructions from memory and executes them in sequence."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Location, form and use.",
+  "hints": [
+   "Where are instructions kept, in what form, and in what order are they used?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.architecture-registers.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Compare the Von Neumann architecture with the Harvard architecture. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Von Neumann uses one memory for instructions and data; Harvard uses separate memories",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Von Neumann uses one set of buses; Harvard has separate buses for each memory",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Harvard can fetch an instruction and access data at the same time; Von Neumann cannot",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Harvard is more complex and costly; Von Neumann is simpler",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Von Neumann has one memory and one set of buses, so instructions and data cannot be accessed together. Harvard has separate memories and buses, so both can be accessed at once, but it is more complex and costly."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Matching points on memory, buses, speed and cost.",
+  "hints": [
+   "Compare memory, buses and speed."
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "cpu.architecture-registers.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain the roles of the program counter, the memory address register and the memory data register when an instruction is fetched. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The PC holds the address of the instruction and this is copied to the MAR",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The MAR is used to find the location in memory, and the instruction is read into the MDR",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The PC is increased by one so that it points to the next instruction",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The address in the PC is copied to the MAR. The instruction at that address is read into the MDR. The PC is then incremented to point to the next instruction."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Address copied, data returned, PC incremented.",
+  "hints": [
+   "Use the order: PC to MAR, memory to MDR, MDR to CIR."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.architecture-registers.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "The program below is stored from address 300 and run on a processor with a program counter (PC), memory address register (MAR), current instruction register (CIR) and accumulator (ACC).\n\n```\n300  LDD Mark\n301  ADD Bonus\n302  STO Total\n303  END\n304  Mark: 41\n305  Bonus: 9\n306  Total: 0\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The instruction at address 301 has just been fetched. State the contents of each register.",
+    "payload": {
+     "template": "PC: {{blank:pc}}\n\nMAR: {{blank:mar}}\n\nCIR: {{blank:cir}}",
+     "blanks": [
+      {
+       "id": "pc",
+       "input": "number"
+      },
+      {
+       "id": "mar",
+       "input": "number"
+      },
+      {
+       "id": "cir",
+       "input": "select",
+       "choices": [
+        "LDD Mark",
+        "ADD Bonus",
+        "STO Total",
+        "END"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "pc",
+       "accepted": [
+        "302"
+       ]
+      },
+      {
+       "id": "mar",
+       "accepted": [
+        "301"
+       ]
+      },
+      {
+       "id": "cir",
+       "accepted": [
+        "ADD Bonus"
+       ]
+      }
+     ]
+    },
+    "explanation": "PC = 302, MAR = 301 (address of the instruction fetched), CIR = ADD Bonus."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value in the accumulator after the instruction at address 300 has been executed.",
+    "answerSpec": {
+     "value": 41
+    },
+    "explanation": "LDD Mark loads 41 into the ACC.",
+    "workedSolution": "1. The instruction at 300 is LDD Mark.\n2. Mark (address 304) holds 41, which is loaded into the ACC."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the address placed in the MAR when `ADD Bonus` reads its operand.",
+    "answerSpec": {
+     "value": 305
+    },
+    "explanation": "Bonus is at address 305.",
+    "workedSolution": "1. ADD Bonus uses direct addressing.\n2. Bonus is the label of address 305, so the MAR holds 305."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value stored in `Total` when the program ends.",
+    "answerSpec": {
+     "value": 50
+    },
+    "explanation": "41 + 9 = 50.",
+    "workedSolution": "1. After LDD Mark: ACC = 41.\n2. After ADD Bonus: ACC = 41 + 9 = 50.\n3. STO Total copies 50 to address 306."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the program counter holds 302, not 301, once the instruction at address 301 has been fetched.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The PC is increased by one as part of the fetch",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So that it points to the address of the next instruction to be fetched",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The PC is incremented during the fetch so that it holds the address of the next instruction, 302."
+    },
+    "explanation": "Increment, pointing to the next instruction."
+   }
+  ],
+  "explanation": "After fetching the instruction at 301: PC 302, MAR 301, CIR ADD Bonus. LDD gives ACC 41; ADD reads 305; the total is 50.",
+  "hints": [
+   "Use the program in the stem: the PC is increased as soon as the fetch has taken place.",
+   "ADD Bonus uses direct addressing."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "pc",
+       "text": "302"
+      },
+      {
+       "blankId": "mar",
+       "text": "301"
+      },
+      {
+       "blankId": "cir",
+       "text": "ADD Bonus"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "41"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "305"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "50"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "pc",
+        "text": "301"
+       },
+       {
+        "blankId": "mar",
+        "text": "302"
+       },
+       {
+        "blankId": "cir",
+        "text": "LDD Mark"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "9"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "301"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "41"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "cpu.architecture-registers.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.cpu.architecture-registers"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A digital signal processor in a mobile phone uses the Harvard architecture.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is stored in the separate data memory of a Harvard machine?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Only the instructions",
+      "rationale": "Instructions are in the other memory."
+     },
+     {
+      "key": "B",
+      "content": "Only the operating system",
+      "rationale": "A Harvard machine stores instructions and data in separate memories whatever the program."
+     },
+     {
+      "key": "C",
+      "content": "The data that the program uses",
+      "correct": true,
+      "rationale": "Correct: instructions are in the instruction memory."
+     },
+     {
+      "key": "D",
+      "content": "The contents of the registers",
+      "rationale": "Registers are inside the processor."
+     }
+    ],
+    "explanation": "Data memory holds the data; instruction memory holds the program."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two benefits of the Harvard architecture compared with the Von Neumann architecture.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "An instruction can be fetched while data is being accessed",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Faster execution because the shared-bus bottleneck is removed",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: An instruction fetch and a data access can happen at the same time, which removes the bottleneck and speeds up execution."
+    },
+    "explanation": "Parallel access and no bottleneck."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State one drawback of the Harvard architecture.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "More complex and costly because it needs extra memory and buses",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It is more complex and more expensive."
+    },
+    "explanation": "Extra hardware."
+   }
+  ],
+  "explanation": "Harvard: separate memories and buses allow an instruction fetch and a data access together; Von Neumann shares one path.",
+  "hints": [
+   "Compare how many accesses can happen in one cycle."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ]
+ }
+]

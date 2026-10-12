@@ -1,0 +1,1307 @@
+[
+ {
+  "key": "prog.declarative-programming.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a Prolog-style program, what does the symbol `:-` mean in a rule?",
+  "options": [
+   {
+    "key": "A",
+    "content": "\"if\": the head is true when the body is true",
+    "correct": true,
+    "rationale": "The head follows from the conditions in the body."
+   },
+   {
+    "key": "B",
+    "content": "\"and\": both sides are always true",
+    "rationale": "A comma means and."
+   },
+   {
+    "key": "C",
+    "content": "\"not\": the head is false",
+    "rationale": "Negation is a different construct."
+   },
+   {
+    "key": "D",
+    "content": "\"equals\": both sides have the same value",
+    "rationale": "Equality is a test, not a rule symbol."
+   }
+  ],
+  "explanation": ":- separates the head of a rule from its conditions and reads as 'if'.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.declarative-programming.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which of these is a variable in a Prolog-style program?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Who`",
+    "correct": true,
+    "rationale": "It starts with a capital letter."
+   },
+   {
+    "key": "B",
+    "content": "`tendai`",
+    "rationale": "An atom starting with a lower-case letter is a constant."
+   },
+   {
+    "key": "C",
+    "content": "`parent`",
+    "rationale": "That is the name of a predicate."
+   },
+   {
+    "key": "D",
+    "content": "`rudo.`",
+    "rationale": "That is a constant with a full stop."
+   }
+  ],
+  "explanation": "Variables begin with a capital letter.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.declarative-programming.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is a fact in a logic program?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A question that the program must answer",
+    "rationale": "That is a goal."
+   },
+   {
+    "key": "B",
+    "content": "A condition that must be satisfied first",
+    "rationale": "That is part of a rule body."
+   },
+   {
+    "key": "C",
+    "content": "A statement that is taken to be true",
+    "correct": true,
+    "rationale": "For example flight(harare, bulawayo)."
+   },
+   {
+    "key": "D",
+    "content": "A loop that repeats until a goal is true",
+    "rationale": "Logic programs do not use loops of this kind."
+   }
+  ],
+  "explanation": "Facts record data that is true without conditions.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.declarative-programming.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The database contains the facts\n\n```\nflight(harare, bulawayo).\nflight(harare, mutare).\nflight(bulawayo, victoria_falls).\nflight(victoria_falls, johannesburg).\nflight(mutare, johannesburg).\nflight(harare, johannesburg).\n```\n\nWhat are the solutions of the goal `flight(harare, X).`, in order?",
+  "options": [
+   {
+    "key": "A",
+    "content": "johannesburg, mutare, bulawayo",
+    "rationale": "Solutions follow the order of the facts, not the reverse."
+   },
+   {
+    "key": "B",
+    "content": "bulawayo, mutare, johannesburg",
+    "correct": true,
+    "rationale": "The facts are matched from top to bottom."
+   },
+   {
+    "key": "C",
+    "content": "bulawayo, johannesburg, mutare",
+    "rationale": "The solutions are not sorted."
+   },
+   {
+    "key": "D",
+    "content": "bulawayo, mutare",
+    "rationale": "The third fact also matches."
+   }
+  ],
+  "explanation": "All matching facts are found, in the order they appear.",
+  "hints": [
+   "Look for the facts whose first argument is harare."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.declarative-programming.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What happens when a goal in the body of a rule cannot be satisfied?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The program stops with an error message",
+    "rationale": "Failing is normal in logic programming."
+   },
+   {
+    "key": "B",
+    "content": "The system backtracks to the last choice and tries the next clause",
+    "correct": true,
+    "rationale": "That is how alternatives are searched."
+   },
+   {
+    "key": "C",
+    "content": "The goal is changed so that it is true",
+    "rationale": "The system never changes the facts to suit a goal."
+   },
+   {
+    "key": "D",
+    "content": "The system starts again from the first clause with the same bindings",
+    "rationale": "The bindings made since the last choice are undone."
+   }
+  ],
+  "explanation": "Backtracking undoes bindings and tries another alternative.",
+  "hints": [
+   "Which choice was made most recently?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.declarative-programming.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the main difference between declarative and imperative programming?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A declarative program is always written in machine code",
+    "rationale": "Machine code is low-level."
+   },
+   {
+    "key": "B",
+    "content": "An imperative program cannot use variables",
+    "rationale": "Imperative programs use variables."
+   },
+   {
+    "key": "C",
+    "content": "Declarative states what is wanted; imperative states how",
+    "correct": true,
+    "rationale": "The system works out the method in a declarative program."
+   },
+   {
+    "key": "D",
+    "content": "A declarative program always runs faster",
+    "rationale": "Speed depends on the problem."
+   }
+  ],
+  "explanation": "What versus how.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.declarative-programming.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why does a recursive rule such as `route(X, Y) :- flight(X, Z), route(Z, Y).` need a base-case clause?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Recursive rules are not allowed to be written without facts",
+    "rationale": "Recursive rules are allowed."
+   },
+   {
+    "key": "B",
+    "content": "The base case makes the whole program run much faster",
+    "rationale": "It is needed for correctness."
+   },
+   {
+    "key": "C",
+    "content": "Variables cannot be used in the recursive clause",
+    "rationale": "Variables are used in both clauses."
+   },
+   {
+    "key": "D",
+    "content": "Without it the search would not stop at a direct flight",
+    "correct": true,
+    "rationale": "The base case route(X, Y) :- flight(X, Y). ends the recursion."
+   }
+  ],
+  "explanation": "The base case is where the recursion stops.",
+  "hints": [
+   "How does the search end when there is a direct flight?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.declarative-programming.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a Prolog-style program, the comma in the body of a rule means \"and\".",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. All the goals separated by commas must be satisfied, from left to right.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.declarative-programming.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The goal `flight(johannesburg, X).` succeeds with the answer `X = harare`, because there is a flight from harare to johannesburg.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The first argument is the starting city. There is no fact with johannesburg as the first argument, so the goal fails.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.declarative-programming.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Use these facts.\n\n```\nflight(harare, bulawayo).\nflight(harare, mutare).\nflight(bulawayo, victoria_falls).\nflight(victoria_falls, johannesburg).\nflight(mutare, johannesburg).\nflight(harare, johannesburg).\n```\nState the three solutions of `flight(harare, X).` in the order the system gives them.",
+  "payload": {
+   "template": "First: {{blank:a}}\n\nSecond: {{blank:b}}\n\nThird: {{blank:c}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "bulawayo",
+      "mutare",
+      "johannesburg",
+      "victoria_falls"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "bulawayo",
+      "mutare",
+      "johannesburg",
+      "victoria_falls"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "bulawayo",
+      "mutare",
+      "johannesburg",
+      "victoria_falls"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "bulawayo"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "mutare"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "johannesburg"
+     ]
+    }
+   ]
+  },
+  "explanation": "The facts with harare first are matched in the order written: bulawayo, mutare, johannesburg.",
+  "hints": [
+   "The solutions come in the order of the facts."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "bulawayo"
+    },
+    {
+     "blankId": "b",
+     "text": "mutare"
+    },
+    {
+     "blankId": "c",
+     "text": "johannesburg"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "mutare"
+     },
+     {
+      "blankId": "b",
+      "text": "bulawayo"
+     },
+     {
+      "blankId": "c",
+      "text": "bulawayo"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.declarative-programming.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Use these facts.\n\n```\nflight(harare, bulawayo).\nflight(harare, mutare).\nflight(bulawayo, victoria_falls).\nflight(victoria_falls, johannesburg).\nflight(mutare, johannesburg).\nflight(harare, johannesburg).\n```\nHow many solutions does the goal `flight(X, johannesburg).` have?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "There are three solutions.",
+  "workedSolution": "Three facts end in johannesburg: from victoria_falls, from mutare and from harare.",
+  "hints": [
+   "Find each fact with johannesburg as the second argument."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.declarative-programming.q12",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the process by which a logic program undoes its latest bindings and tries the next alternative when a goal fails.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "backtracking"
+    },
+    {
+     "value": "back tracking"
+    },
+    {
+     "value": "backtrack"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "The process is backtracking.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "backtracking"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "iteration"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.declarative-programming.q13",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each part of a logic program to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "`parent(tendai, rudo).`"
+    },
+    {
+     "id": "L2",
+     "content": "`grandparent(X, Z) :- parent(X, Y), parent(Y, Z).`"
+    },
+    {
+     "id": "L3",
+     "content": "`grandparent(sipho, W).`"
+    },
+    {
+     "id": "L4",
+     "content": "`W`"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "A goal (query)"
+    },
+    {
+     "id": "R4",
+     "content": "A variable"
+    },
+    {
+     "id": "R1",
+     "content": "A fact"
+    },
+    {
+     "id": "R2",
+     "content": "A rule"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Facts and rules form the program; a goal is the question; capitalised names are variables.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.declarative-programming.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A school has the students Tatenda (form 5), Nyasha (form 6) and Chipo (form 5). Write three facts in the form `student(Name, Form).` [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "student(tatenda, 5).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "student(nyasha, 6).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "student(chipo, 5).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nstudent(tatenda, 5).\nstudent(nyasha, 6).\nstudent(chipo, 5).\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One fact per student, lower-case names and a full stop.",
+  "hints": [
+   "Facts have lower-case atoms and a full stop."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.declarative-programming.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Using the facts `flight(From, To).`, write a rule `connection(X, Z)` that is true when there is a flight from X to some city Y and a flight from Y to Z. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The head connection(X, Z) followed by :-",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The first body goal flight(X, Y) using a shared variable Y",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The second goal flight(Y, Z) separated by a comma and ending with a full stop",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nconnection(X, Z) :- flight(X, Y), flight(Y, Z).\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The shared variable Y links the two flights.",
+  "hints": [
+   "The rule has a head, :- and a body with a comma."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.declarative-programming.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "The rule `connection(X, Z) :- flight(X, Y), flight(Y, Z).` is used with these facts.\n\n```\nflight(harare, bulawayo).\nflight(harare, mutare).\nflight(bulawayo, victoria_falls).\nflight(victoria_falls, johannesburg).\nflight(mutare, johannesburg).\nflight(harare, johannesburg).\n```\nExplain how the system finds the solutions of the goal `connection(harare, Z).`, naming each fact that is tried first and what happens when a goal fails. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The first goal flight(harare, Y) matches the facts for harare in order: bulawayo, mutare, johannesburg",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "For Y = bulawayo the second goal flight(bulawayo, Z) matches and gives Z = victoria_falls",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "For Y = mutare the second goal gives Z = johannesburg",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "For Y = johannesburg there is no flight from there, so the goal fails and the system backtracks; the solutions are victoria_falls and johannesburg",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The system first finds the flights from harare: Y = bulawayo, mutare and johannesburg. For bulawayo it finds the flight to victoria_falls; for mutare it finds johannesburg; for johannesburg there is no flight, so that goal fails and it backtracks. The solutions are victoria_falls and johannesburg."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Match, try the second goal, backtrack on failure.",
+  "hints": [
+   "Use the goal connection(harare, Z)."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.declarative-programming.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Compare writing a program to find all the pairs of connected cities in a logic language with writing it in an imperative language. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "In the logic language the programmer states facts and rules (what is true), and the system finds the answers by matching and backtracking",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "In the imperative language the programmer writes the steps: loops, tests and variables",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The logic version is shorter and easier to extend by adding rules, but the programmer has less control over the search and its efficiency",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: In a logic language the programmer states the facts and rules and the system finds the answers by matching and backtracking. In an imperative language the programmer writes the loops and tests. The logic version is shorter and easier to extend, but the programmer has less control over how the search is done."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Declarative versus imperative.",
+  "hints": [
+   "Compare who decides the method of searching."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "prog.declarative-programming.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 4,
+  "marks": 7,
+  "estimatedSeconds": 560,
+  "stem": "An airline in Harare stores its direct flights as facts in a Prolog-style program.\n\n```\nflight(harare, bulawayo).\nflight(harare, mutare).\nflight(bulawayo, victoria_falls).\nflight(victoria_falls, johannesburg).\nflight(mutare, johannesburg).\nflight(harare, johannesburg).\n```\n\nThe table shows the same facts.\n\n| From | To |\n|:-:|:-:|\n| harare | bulawayo |\n| harare | mutare |\n| bulawayo | victoria_falls |\n| victoria_falls | johannesburg |\n| mutare | johannesburg |\n| harare | johannesburg |\n\nThe program also contains the rule\n\n```\nconnection(X, Z) :- flight(X, Y), flight(Y, Z).\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the two solutions of the goal `connection(harare, Z).` in the order given by the system.",
+    "payload": {
+     "template": "First: {{blank:a}}\n\nSecond: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "bulawayo",
+        "mutare",
+        "johannesburg",
+        "victoria_falls"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "bulawayo",
+        "mutare",
+        "johannesburg",
+        "victoria_falls"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "victoria_falls"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "johannesburg"
+       ]
+      }
+     ]
+    },
+    "explanation": "Y = bulawayo gives victoria_falls; Y = mutare gives johannesburg; Y = johannesburg gives nothing."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the two solutions of the goal `connection(X, johannesburg).` in order.",
+    "payload": {
+     "template": "First: {{blank:a}}\n\nSecond: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "harare",
+        "bulawayo",
+        "mutare",
+        "victoria_falls"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "harare",
+        "bulawayo",
+        "mutare",
+        "victoria_falls"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "harare"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "bulawayo"
+       ]
+      }
+     ]
+    },
+    "explanation": "harare reaches johannesburg through mutare, and bulawayo through victoria_falls; harare comes first because its facts are written first."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "State the result of the goal `flight(johannesburg, X).`",
+    "options": [
+     {
+      "key": "A",
+      "content": "X = harare",
+      "rationale": "That reads the arguments the wrong way round."
+     },
+     {
+      "key": "B",
+      "content": "true, with X unbound",
+      "rationale": "A goal that fails has no solution."
+     },
+     {
+      "key": "C",
+      "content": "X = victoria_falls",
+      "rationale": "That flight arrives at johannesburg, it does not leave it."
+     },
+     {
+      "key": "D",
+      "content": "false: there is no solution",
+      "correct": true,
+      "rationale": "No fact has johannesburg as its first argument."
+     }
+    ],
+    "explanation": "The goal fails because no fact matches."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write a goal that finds every city that has a direct flight to mutare.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The predicate flight with the variable first and mutare second",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "flight(X, mutare). written with a capital-letter variable and a full stop",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: `flight(X, mutare).`"
+    },
+    "explanation": "A variable in the position to be found."
+   }
+  ],
+  "explanation": "Facts, a rule and goals about flights.",
+  "hints": [
+   "List the solutions in the order of the facts.",
+   "For the rule, read the body from left to right."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "victoria_falls"
+      },
+      {
+       "blankId": "b",
+       "text": "johannesburg"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "harare"
+      },
+      {
+       "blankId": "b",
+       "text": "bulawayo"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "bulawayo"
+       },
+       {
+        "blankId": "b",
+        "text": "bulawayo"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "bulawayo"
+       },
+       {
+        "blankId": "b",
+        "text": "harare"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.declarative-programming.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.declarative-programming"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A school keeps its register as facts. `takes(Name, Subject).` shows who studies a subject. In the rule, `X \\= Y` is true when X and Y are different.\n\n```\nstudent(tatenda, 5).\nstudent(nyasha, 6).\nstudent(chipo, 5).\nstudent(farai, 6).\nstudent(sipho, 5).\ntakes(tatenda, computing).\ntakes(chipo, computing).\ntakes(nyasha, history).\ntakes(farai, computing).\nclassmate(X, Y) :- student(X, F), student(Y, F), X \\= Y.\ncomputing_pupil(X) :- takes(X, computing).\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the solutions of the goal `classmate(tatenda, Who).` in order.",
+    "payload": {
+     "template": "First: {{blank:a}}\n\nSecond: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "nyasha",
+        "chipo",
+        "farai",
+        "sipho"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "nyasha",
+        "chipo",
+        "farai",
+        "sipho"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "chipo"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "sipho"
+       ]
+      }
+     ]
+    },
+    "explanation": "The students in form 5 other than tatenda are chipo and sipho."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the one solution of the goal `computing_pupil(X), student(X, 6).`",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "farai"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Both conditions must be true: tatenda, chipo and farai take computing, and only farai is in form 6."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why `X \\= Y` is needed in the rule for `classmate`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Without it a student would be listed as their own classmate",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Because student(X, F) and student(Y, F) can match the same fact with X and Y the same",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Without it every student would be a classmate of themselves, because both student goals can match the same fact."
+    },
+    "explanation": "The test removes the case where X and Y are the same student."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "Write one fact to record that sipho studies history.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "takes(sipho, history).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: `takes(sipho, history).`"
+    },
+    "explanation": "A fact has lower-case atoms and a full stop."
+   }
+  ],
+  "explanation": "Facts, a rule with a test and goals about a school register.",
+  "hints": [
+   "Check the capital letters and full stops in the rule.",
+   "A goal with two conditions must satisfy both."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "chipo"
+      },
+      {
+       "blankId": "b",
+       "text": "sipho"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "farai"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "nyasha"
+       },
+       {
+        "blankId": "b",
+        "text": "nyasha"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "nyasha"
+     }
+    }
+   }
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "calculator": false
+ }
+]

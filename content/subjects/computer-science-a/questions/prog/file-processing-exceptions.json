@@ -1,0 +1,1326 @@
+[
+ {
+  "key": "prog.file-processing-exceptions.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which file mode adds new data to the end of a text file and keeps the existing data?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`APPEND`",
+    "correct": true,
+    "rationale": "New records are added after the last one."
+   },
+   {
+    "key": "B",
+    "content": "`WRITE`",
+    "rationale": "WRITE mode replaces the existing contents."
+   },
+   {
+    "key": "C",
+    "content": "`READ`",
+    "rationale": "READ mode does not allow writing."
+   },
+   {
+    "key": "D",
+    "content": "`RANDOM`",
+    "rationale": "RANDOM allows direct access to any record."
+   }
+  ],
+  "explanation": "Append adds to the end of a file.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.file-processing-exceptions.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program opens an existing file in `WRITE` mode and writes one line. What happens to the old contents?",
+  "options": [
+   {
+    "key": "A",
+    "content": "They are removed and replaced by the new line",
+    "correct": true,
+    "rationale": "Write mode starts with an empty file."
+   },
+   {
+    "key": "B",
+    "content": "They stay, and the new line is added at the end",
+    "rationale": "That is append mode."
+   },
+   {
+    "key": "C",
+    "content": "They stay, and the new line is added at the start",
+    "rationale": "Neither mode inserts at the start."
+   },
+   {
+    "key": "D",
+    "content": "The program stops with an error",
+    "rationale": "Opening an existing file for writing is allowed."
+   }
+  ],
+  "explanation": "WRITE mode overwrites the existing contents.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.file-processing-exceptions.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What does the function `EOF(\"Marks.txt\")` return when the last line has been read?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`FALSE`",
+    "rationale": "That is the value while data remains."
+   },
+   {
+    "key": "B",
+    "content": "The last line of the file",
+    "rationale": "EOF returns a Boolean, not a line."
+   },
+   {
+    "key": "C",
+    "content": "`TRUE`",
+    "correct": true,
+    "rationale": "There is no more data to read."
+   },
+   {
+    "key": "D",
+    "content": "The number of lines",
+    "rationale": "EOF does not count lines."
+   }
+  ],
+  "explanation": "EOF is TRUE at the end of the file.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.file-processing-exceptions.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why can a record in a random file be reached faster than a record in a serial file?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The records of a random file are stored in key order",
+    "rationale": "That describes a sequential file."
+   },
+   {
+    "key": "B",
+    "content": "A random file stores each record in a separate file",
+    "rationale": "All records are in one file."
+   },
+   {
+    "key": "C",
+    "content": "Random files are stored in main memory",
+    "rationale": "They are stored on backing storage."
+   },
+   {
+    "key": "D",
+    "content": "The position of a record is calculated and the program jumps to it",
+    "correct": true,
+    "rationale": "No records before it have to be read."
+   }
+  ],
+  "explanation": "Fixed-length records let the program calculate the position and use SEEK.",
+  "hints": [
+   "How does the program find the start of record number 50?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which is the best use of exception handling?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Testing whether a counter is greater than zero before a division you control",
+    "rationale": "A simple IF test is clearer here."
+   },
+   {
+    "key": "B",
+    "content": "Replacing every IF statement in the program",
+    "rationale": "Exceptions are for unusual events."
+   },
+   {
+    "key": "C",
+    "content": "Reacting to a file that does not exist when the program tries to open it",
+    "correct": true,
+    "rationale": "The file's existence is outside the program's control."
+   },
+   {
+    "key": "D",
+    "content": "Making a loop run one more time",
+    "rationale": "Loops are controlled by conditions."
+   }
+  ],
+  "explanation": "Use exceptions for events outside the program's control.",
+  "hints": [
+   "Which event can the programmer not check beforehand?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the Python statement block `try: ... except ValueError: ... finally: ...`, when does the `finally` block run?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Only when an exception occurred",
+    "rationale": "That is the except block."
+   },
+   {
+    "key": "B",
+    "content": "Only when no exception occurred",
+    "rationale": "It also runs after an exception."
+   },
+   {
+    "key": "C",
+    "content": "Only the first time the program is run",
+    "rationale": "It runs each time the try block is left."
+   },
+   {
+    "key": "D",
+    "content": "Whether or not an exception occurred",
+    "correct": true,
+    "rationale": "It is used for clean-up that must always happen."
+   }
+  ],
+  "explanation": "finally always runs.",
+  "hints": [
+   "What is closing a file an example of?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why should a file always be closed when the program has finished with it?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Closing deletes the file from the disk",
+    "rationale": "A file is not deleted by closing."
+   },
+   {
+    "key": "B",
+    "content": "Data may still be held in a buffer and not yet saved",
+    "correct": true,
+    "rationale": "Closing completes the write."
+   },
+   {
+    "key": "C",
+    "content": "An open file cannot be copied to another computer",
+    "rationale": "The reason is data, not copying."
+   },
+   {
+    "key": "D",
+    "content": "Closing changes the file's mode to random",
+    "rationale": "Closing does not change the mode."
+   }
+  ],
+  "explanation": "Closing a file saves the data and releases the file.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A sequential file stores its records in the order of a key field.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. A serial file is in the order of arrival, a sequential file in key order.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "If a handler for `FileNotFoundError` is written, the program can carry on after the file is found to be missing.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The except block deals with the problem (for example by showing a message), and the program continues after the try statement.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Complete the pseudocode that outputs every line of the file `Stock.txt`.",
+  "payload": {
+   "template": "{{blank:a}} \"Stock.txt\" FOR READ\n\nWHILE NOT {{blank:b}}(\"Stock.txt\") DO\n\n    {{blank:c}} \"Stock.txt\", Line\n\n    OUTPUT Line\n\nENDWHILE\n\n{{blank:d}} \"Stock.txt\"",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "OPENFILE",
+      "CLOSEFILE",
+      "READFILE",
+      "EOF"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "OPENFILE",
+      "CLOSEFILE",
+      "READFILE",
+      "EOF"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "OPENFILE",
+      "CLOSEFILE",
+      "READFILE",
+      "EOF"
+     ]
+    },
+    {
+     "id": "d",
+     "input": "select",
+     "choices": [
+      "OPENFILE",
+      "CLOSEFILE",
+      "READFILE",
+      "EOF"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "OPENFILE"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "EOF"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "READFILE"
+     ]
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "CLOSEFILE"
+     ]
+    }
+   ]
+  },
+  "explanation": "Open the file, loop until EOF, read each line, then close the file.",
+  "hints": [
+   "The loop must stop at the end of the file."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "OPENFILE"
+    },
+    {
+     "blankId": "b",
+     "text": "EOF"
+    },
+    {
+     "blankId": "c",
+     "text": "READFILE"
+    },
+    {
+     "blankId": "d",
+     "text": "CLOSEFILE"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "CLOSEFILE"
+     },
+     {
+      "blankId": "b",
+      "text": "OPENFILE"
+     },
+     {
+      "blankId": "c",
+      "text": "OPENFILE"
+     },
+     {
+      "blankId": "d",
+      "text": "OPENFILE"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A Python program carries out these steps on the file `log.txt`, which does not exist at first.\n\n```python\nwith open(\"log.txt\", \"w\") as f:\n    print(\"a\", file=f)\n    print(\"b\", file=f)\n    print(\"c\", file=f)\nwith open(\"log.txt\", \"a\") as f:\n    print(\"d\", file=f)\n    print(\"e\", file=f)\nwith open(\"log.txt\", \"w\") as f:\n    print(\"f\", file=f)\nwith open(\"log.txt\", \"a\") as f:\n    print(\"g\", file=f)\nwith open(\"log.txt\") as f:\n    print(len(f.readlines()))\n```\nState the number printed by the last statement.",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "The second write removed the first five lines, so 2 lines remain.",
+  "workedSolution": "After the first block the file has 3 lines; appending adds 2 (5 lines). Writing again empties the file and puts in 1 line. Appending adds 1 more: 2 lines.",
+  "hints": [
+   "Write mode removes the old contents; append mode keeps them."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.file-processing-exceptions.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A random file has fixed-length records of 32 bytes. The first record is record number 0. At which byte position does record number 5 start?",
+  "payload": {
+   "unitHint": "bytes"
+  },
+  "answerSpec": {
+   "value": 160,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bytes",
+     "byte",
+     "B"
+    ]
+   }
+  },
+  "explanation": "Record 5 starts at byte 160.",
+  "workedSolution": "5 × 32 = 160.",
+  "hints": [
+   "Position = record number × record size, counting from 0."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "160"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "128"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.file-processing-exceptions.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "State the pseudocode statement that moves to a given record in a random file.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "SEEK"
+    },
+    {
+     "value": "seek"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "SEEK moves to the address of a record.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "SEEK"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "MOVE"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each pseudocode statement to its purpose.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "`OPENFILE`"
+    },
+    {
+     "id": "L2",
+     "content": "`READFILE`"
+    },
+    {
+     "id": "L3",
+     "content": "`WRITEFILE`"
+    },
+    {
+     "id": "L4",
+     "content": "`EOF`"
+    },
+    {
+     "id": "L5",
+     "content": "`CLOSEFILE`"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Writes data to a file"
+    },
+    {
+     "id": "R4",
+     "content": "Tests whether the end of the file has been reached"
+    },
+    {
+     "id": "R5",
+     "content": "Finishes with the file and saves the data"
+    },
+    {
+     "id": "R1",
+     "content": "Prepares a file for reading, writing or appending"
+    },
+    {
+     "id": "R2",
+     "content": "Reads one line or record from a file"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The five basic file statements.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 4,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "A text file `Sales.txt` holds one whole number on each line. Write pseudocode that reads the file and outputs the total of the numbers. [5]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Opens the file for reading with OPENFILE",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A loop that repeats until EOF is true",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Reads each line with READFILE inside the loop",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Converts the line to a number and adds it to a total that was set to 0 before the loop",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Closes the file and outputs the total",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nTotal ← 0\nOPENFILE \"Sales.txt\" FOR READ\nWHILE NOT EOF(\"Sales.txt\") DO\n    READFILE \"Sales.txt\", Line\n    Total ← Total + STR_TO_NUM(Line)\nENDWHILE\nCLOSEFILE \"Sales.txt\"\nOUTPUT \"Total: \", Total\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A standard file-totalling routine.",
+  "hints": [
+   "Open, loop until EOF, convert and add, close, then output."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Write a Python program that reads a whole number from the keyboard and outputs the number doubled. If the user types something that is not a whole number, it outputs `Not a whole number` instead of stopping. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Uses try and except",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Converts the input to an integer inside the try block",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Outputs the doubled number when the conversion works",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Handles ValueError by outputting the message",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```python\ntry:\n    number = int(input())\n    print(number * 2)\nexcept ValueError:\n    print(\"Not a whole number\")\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The try block holds the code that can fail.",
+  "hints": [
+   "Put int(input()) in a try block."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why a program that reads a file should use exception handling. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The file may be missing, locked or contain invalid data",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Without handling, the program would stop with an error and data could be lost",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "With handling, the program can report the problem and continue or close safely",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The file may be missing or contain invalid data. Without handling the program would stop with an error, but with exception handling it can report the problem, close files safely and carry on."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Exceptions give controlled recovery.",
+  "hints": [
+   "Say what the program does when the exception is not handled and when it is."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Compare serial, sequential and random files. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Serial: records in the order they were added, found by reading from the start",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Sequential: records in key order, processed in that order",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Random: fixed-length records, any record reached directly with its calculated position",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Random access is quicker for finding one record; serial and sequential are simpler and suit processing every record",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A serial file stores records in the order they were added and is searched from the start. A sequential file stores them in key order. A random file has fixed-length records so one record can be reached directly. Random access is faster for one record, while serial and sequential files suit processing every record."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Order, access and use.",
+  "hints": [
+   "Compare how a record is stored and how it is found."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.file-processing-exceptions.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A tuck shop in Marondera stores its stock in a text file. This Python program was run.\n\n```python\nlow = 0\nwith open(\"stock.txt\", \"w\") as f:\n    print(\"Soap,12\", file=f)\n    print(\"Bread,5\", file=f)\n    print(\"Milk,0\", file=f)\n    print(\"Eggs,x\", file=f)\nwith open(\"stock.txt\") as f:\n    for line in f:\n        item, qty = line.strip().split(\",\")\n        try:\n            qty = int(qty)\n        except ValueError:\n            print(\"Bad quantity for\", item)\n            continue\n        if qty < 6:\n            print(\"Reorder\", item)\n            low = low + 1\nprint(\"Low items:\", low)\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the first line of output.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Reorder Bread"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "Soap has 12, which is not below 6; Bread has 5, so Reorder Bread comes first."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number printed after `Low items:`.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "Two items are low.",
+    "workedSolution": "Bread (5) and Milk (0) are below 6. Eggs is skipped because its quantity is not a number."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the name of the item for which the quantity cannot be converted.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Eggs"
+      },
+      {
+       "value": "eggs"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "int(\"x\") raises a ValueError for Eggs."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What would happen if the `try` and `except` were removed?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The program would skip Eggs and continue",
+      "rationale": "Python does not skip a failing statement."
+     },
+     {
+      "key": "B",
+      "content": "The program would stop with a ValueError on the line for Eggs",
+      "correct": true,
+      "rationale": "int(\"x\") cannot be converted and the error would not be handled."
+     },
+     {
+      "key": "C",
+      "content": "The program would treat the quantity of Eggs as 0",
+      "rationale": "No automatic conversion takes place."
+     },
+     {
+      "key": "D",
+      "content": "The program would output Low items: 3",
+      "rationale": "It stops before the final output."
+     }
+    ],
+    "explanation": "An unhandled exception stops the program."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain the purpose of the `continue` statement in the `except` block.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It skips the rest of the loop body for this line",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So that the invalid quantity is not compared with 6 or counted as a low item",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It skips the rest of the loop body for this line, so the invalid quantity is not compared with 6 or counted."
+    },
+    "explanation": "Continue moves to the next line of the file."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write the Python statements that add the record `Rice,20` to the end of `stock.txt` without removing the existing records.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Opens stock.txt in append mode (\"a\")",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Writes the line Rice,20 to the file (and the file is closed, for example by using with)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\nwith open(\"stock.txt\", \"a\") as f:\n    print(\"Rice,20\", file=f)\n```"
+    },
+    "explanation": "Append mode keeps the existing records."
+   }
+  ],
+  "explanation": "Reading a stock file with an exception handler.",
+  "hints": [
+   "Dry run the loop for each line.",
+   "Which line makes int() fail?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "Reorder Bread"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "Eggs"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.file-processing-exceptions.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.file-processing-exceptions"
+  ],
+  "difficulty": 4,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A clinic in Gweru stores patient records in a random file. Every record is exactly 24 bytes long. The first record is record number 0.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the byte position at which record number 7 starts.",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 168,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "Record 7 starts at byte 168.",
+    "workedSolution": "7 × 24 = 168."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The file holds 40 records. State its size in bytes.",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 960,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "The file is 960 bytes.",
+    "workedSolution": "40 × 24 = 960."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "A different system numbers its records from 1 instead of 0. State the byte position at which record number 7 starts in that system.",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 144,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "Record 7 is the seventh record, so six records come before it.",
+    "workedSolution": "(7 - 1) × 24 = 144."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that reads record number 7 from the file `Patients.dat` into a variable `Patient` of the record type `PatientRecord` and outputs its field `Name`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "OPENFILE \"Patients.dat\" FOR RANDOM",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "SEEK to the address of record 7, then GETRECORD into Patient",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "OUTPUT Patient.Name and CLOSEFILE",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nDECLARE Patient : PatientRecord\nOPENFILE \"Patients.dat\" FOR RANDOM\nSEEK \"Patients.dat\", 7\nGETRECORD \"Patients.dat\", Patient\nOUTPUT Patient.Name\nCLOSEFILE \"Patients.dat\"\n```"
+    },
+    "explanation": "Open, seek, get, use, close."
+   }
+  ],
+  "explanation": "Positions and sizes in a random file.",
+  "hints": [
+   "Position = (record number - 1) × record size when the first record is number 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "168"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "960"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "144"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "144"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "24"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "168"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ }
+]

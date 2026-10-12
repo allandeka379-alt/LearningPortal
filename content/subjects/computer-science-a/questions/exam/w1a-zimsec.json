@@ -1,0 +1,666 @@
+[
+ {
+  "key": "exam.w1a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.gates-truth-tables",
+   "acs.logic.circuits-expressions",
+   "acs.data.number-bases",
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 4,
+  "marks": 30,
+  "estimatedSeconds": 2700,
+  "stem": "A village near Masvingo uses a controller for its borehole pump. The pump motor R must run only when the water tank is low (T = 1) **and** mains power is available (P = 1), and it must **never** run while the safety cut-out is active (S = 1). The controller is a logic circuit with inputs T, P and S. It also has an 8-bit register that holds the tank level as a hexadecimal value and a temperature reading.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Which logic expression gives R?",
+    "options": [
+     {
+      "key": "A",
+      "content": "R = T OR P OR (NOT S)",
+      "rationale": "The pump would run when only one condition is true."
+     },
+     {
+      "key": "B",
+      "content": "R = (T AND P) OR S",
+      "rationale": "The pump would run whenever the cut-out is active."
+     },
+     {
+      "key": "C",
+      "content": "R = NOT (T AND P AND S)",
+      "rationale": "This is 1 for almost every combination."
+     },
+     {
+      "key": "D",
+      "content": "R = T AND P AND (NOT S)",
+      "correct": true,
+      "rationale": "Correct: all three conditions are needed, with the cut-out inverted."
+     }
+    ],
+    "explanation": "T, P and (NOT S) must all be 1, so they are combined with AND."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the truth table for R with inputs T, P and S.",
+    "payload": {
+     "template": "T = 0, P = 0, S = 0: R = {{blank:r1}}\n\nT = 0, P = 0, S = 1: R = {{blank:r2}}\n\nT = 0, P = 1, S = 0: R = {{blank:r3}}\n\nT = 0, P = 1, S = 1: R = {{blank:r4}}\n\nT = 1, P = 0, S = 0: R = {{blank:r5}}\n\nT = 1, P = 0, S = 1: R = {{blank:r6}}\n\nT = 1, P = 1, S = 0: R = {{blank:r7}}\n\nT = 1, P = 1, S = 1: R = {{blank:r8}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "R is 1 only for T = 1, P = 1 and S = 0."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "In how many of the eight rows does the pump run (R = 1)?",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "Only the row T = 1, P = 1, S = 0.",
+    "workedSolution": "1. Only the row T = 1, P = 1, S = 0."
+   },
+   {
+    "label": "(d)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "The circuit is built from two-input AND gates and a NOT gate. How many gates are needed in total?",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "One NOT gate for S and two AND gates to combine T, P and NOT S: 3 gates.",
+    "workedSolution": "1. One NOT gate for S and two AND gates to combine T, P and NOT S: 3 gates."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe the circuit, saying which signals go into each gate.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A NOT gate with input S.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A first AND gate with inputs T and P.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A second AND gate with inputs the output of the first AND gate and the output of the NOT gate; its output is R.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Input S goes into a NOT gate. Inputs T and P go into an AND gate. The output of that AND gate and the output of the NOT gate go into a second AND gate, whose output is R."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "The register holds the tank level as the hexadecimal number **5E**.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "stem": "Write the contents of the register as an 8-bit binary number.",
+      "payload": {
+       "maxLength": 64
+      },
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "01011110"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "remove_whitespace"
+       ]
+      },
+      "explanation": "5 = 0101 and E (14) = 1110, so 5E = 01011110."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Give the denary value of the register contents.",
+      "answerSpec": {
+       "value": 94
+      },
+      "explanation": "5E = 5 × 16 + 14 = 94.",
+      "workedSolution": "1. 5E = 5 × 16 + 14 = 94."
+     }
+    ]
+   },
+   {
+    "label": "(g)",
+    "type": "STRUCTURED",
+    "marks": 3,
+    "stem": "The service engineer prefers octal.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "stem": "Write the denary value 94 in octal.",
+      "payload": {
+       "maxLength": 64
+      },
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "136"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "remove_whitespace"
+       ]
+      },
+      "explanation": "94 = 001011110 in binary; in threes 001 011 110 = 136."
+     },
+     {
+      "label": "(ii)",
+      "type": "TRUE_FALSE",
+      "marks": 1,
+      "stem": "One octal digit represents four bits.",
+      "answerSpec": {
+       "correct": false
+      },
+      "explanation": "One octal digit represents three bits; one hexadecimal digit represents four."
+     }
+    ]
+   },
+   {
+    "label": "(h)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "The register is also used to store a temperature in 8-bit two's complement.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "stem": "Write the temperature −18 °C in 8-bit two's complement.",
+      "payload": {
+       "maxLength": 64
+      },
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "11101110"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "remove_whitespace"
+       ]
+      },
+      "explanation": "+18 = 00010010; invert and add 1 to give 11101110."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "stem": "A calculation adds the values 01110000 and 00100000. Give the 8-bit result stored in the register.",
+      "payload": {
+       "maxLength": 64
+      },
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "10010000"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "remove_whitespace"
+       ]
+      },
+      "explanation": "01110000 + 00100000 = 10010000."
+     }
+    ]
+   },
+   {
+    "label": "(i)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Both numbers added in (h)(ii) are positive two's complement values. What does the result show?",
+    "options": [
+     {
+      "key": "A",
+      "content": "No error, because the result is a valid 8-bit pattern in the register",
+      "rationale": "Every pattern is valid, but this one has the wrong value."
+     },
+     {
+      "key": "B",
+      "content": "Overflow: two positives gave a negative-looking result",
+      "correct": true,
+      "rationale": "Correct: the true total, 144, is above 127."
+     },
+     {
+      "key": "C",
+      "content": "The result is correct, because the carry out of the register is 0",
+      "rationale": "The carry out is not the test for overflow."
+     },
+     {
+      "key": "D",
+      "content": "Underflow, because the answer shown is a negative number",
+      "rationale": "Underflow applies to real numbers."
+     }
+    ],
+    "explanation": "The sum 144 is outside −128 to 127, so the stored pattern is read as a negative number."
+   },
+   {
+    "label": "(j)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Give three reasons why the engineer's display shows register contents in hexadecimal rather than binary.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It is much shorter (two digits for eight bits).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It is easier to read and compare.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "It is less likely to be mistyped, and converts directly to binary in groups of four bits.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Hexadecimal needs only two digits for an 8-bit value, so it is shorter and easier to read. It is less error-prone to copy, and each digit converts directly to four bits."
+    }
+   },
+   {
+    "label": "(k)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the statement about universal gates.",
+    "payload": {
+     "template": "A NOT gate can be built from a {{blank:g}} gate by joining its {{blank:i}} inputs together.",
+     "blanks": [
+      {
+       "id": "g",
+       "input": "select",
+       "choices": [
+        "NAND",
+        "AND",
+        "XOR",
+        "OR"
+       ]
+      },
+      {
+       "id": "i",
+       "input": "select",
+       "choices": [
+        "two",
+        "output and one",
+        "no"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "g",
+       "accepted": [
+        "NAND"
+       ]
+      },
+      {
+       "id": "i",
+       "accepted": [
+        "two"
+       ]
+      }
+     ]
+    },
+    "explanation": "A NAND gate with both inputs joined to A gives NOT A (a NOR gate would also work)."
+   }
+  ],
+  "explanation": "R = T AND P AND (NOT S), true in one row. The register holds 01011110 = 94 = 136 in octal; 11101110 stores the temperature; 01110000 + 00100000 overflows.",
+  "hints": [
+   "Write the expression before the truth table.",
+   "For two's complement, invert the bits and add 1.",
+   "Octal digits are groups of three bits."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "0"
+      },
+      {
+       "blankId": "r2",
+       "text": "0"
+      },
+      {
+       "blankId": "r3",
+       "text": "0"
+      },
+      {
+       "blankId": "r4",
+       "text": "0"
+      },
+      {
+       "blankId": "r5",
+       "text": "0"
+      },
+      {
+       "blankId": "r6",
+       "text": "0"
+      },
+      {
+       "blankId": "r7",
+       "text": "1"
+      },
+      {
+       "blankId": "r8",
+       "text": "0"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "1"
+    },
+    "(d)": {
+     "type": "CALCULATION",
+     "value": "3"
+    },
+    "(f)(i)": {
+     "type": "SHORT_ANSWER",
+     "text": "01011110"
+    },
+    "(f)(ii)": {
+     "type": "CALCULATION",
+     "value": "94"
+    },
+    "(g)(i)": {
+     "type": "SHORT_ANSWER",
+     "text": "136"
+    },
+    "(g)(ii)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    },
+    "(h)(i)": {
+     "type": "SHORT_ANSWER",
+     "text": "11101110"
+    },
+    "(h)(ii)": {
+     "type": "SHORT_ANSWER",
+     "text": "10010000"
+    },
+    "(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(k)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "g",
+       "text": "NAND"
+      },
+      {
+       "blankId": "i",
+       "text": "two"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "1"
+       },
+       {
+        "blankId": "r2",
+        "text": "1"
+       },
+       {
+        "blankId": "r3",
+        "text": "1"
+       },
+       {
+        "blankId": "r4",
+        "text": "1"
+       },
+       {
+        "blankId": "r5",
+        "text": "1"
+       },
+       {
+        "blankId": "r6",
+        "text": "1"
+       },
+       {
+        "blankId": "r7",
+        "text": "0"
+       },
+       {
+        "blankId": "r8",
+        "text": "1"
+       }
+      ]
+     },
+     "(f)(i)": {
+      "type": "SHORT_ANSWER",
+      "text": "01011111"
+     },
+     "(g)(i)": {
+      "type": "SHORT_ANSWER",
+      "text": "137"
+     },
+     "(g)(ii)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     },
+     "(h)(i)": {
+      "type": "SHORT_ANSWER",
+      "text": "11101111"
+     },
+     "(h)(ii)": {
+      "type": "SHORT_ANSWER",
+      "text": "10010001"
+     },
+     "(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(k)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "g",
+        "text": "AND"
+       },
+       {
+        "blankId": "i",
+        "text": "output and one"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "ZIMSEC Paper 2"
+ }
+]

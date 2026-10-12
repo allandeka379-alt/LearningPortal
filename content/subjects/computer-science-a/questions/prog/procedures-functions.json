@@ -1,0 +1,1250 @@
+[
+ {
+  "key": "prog.procedures-functions.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the main difference between a function and a procedure?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A function returns a value to the place where it is called",
+    "correct": true,
+    "rationale": "A procedure does not return a value."
+   },
+   {
+    "key": "B",
+    "content": "A function can only be called once",
+    "rationale": "Both can be called as many times as needed."
+   },
+   {
+    "key": "C",
+    "content": "A procedure cannot have parameters",
+    "rationale": "Procedures may have parameters."
+   },
+   {
+    "key": "D",
+    "content": "A function cannot contain a selection statement",
+    "rationale": "Functions can contain any statements."
+   }
+  ],
+  "explanation": "A function returns a value and is used in an expression.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.procedures-functions.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the header `FUNCTION Total(Mark1 : INTEGER, Mark2 : INTEGER) RETURNS INTEGER`, what are `Mark1` and `Mark2`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Parameters",
+    "correct": true,
+    "rationale": "They are variables in the header that receive the data."
+   },
+   {
+    "key": "B",
+    "content": "Arguments",
+    "rationale": "Arguments are the actual values given in the call."
+   },
+   {
+    "key": "C",
+    "content": "Return values",
+    "rationale": "The value returned is the INTEGER after RETURNS."
+   },
+   {
+    "key": "D",
+    "content": "Global variables",
+    "rationale": "Parameters are local to the routine."
+   }
+  ],
+  "explanation": "A parameter is named in the header; an argument is supplied in the call.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.procedures-functions.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which statement correctly uses the function `Discount` in an expression?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`CALL Discount(80)`",
+    "rationale": "CALL is used for procedures; the returned value would be lost."
+   },
+   {
+    "key": "B",
+    "content": "`Discount ← 80`",
+    "rationale": "That assigns to a name; it does not call the function."
+   },
+   {
+    "key": "C",
+    "content": "`OUTPUT Discount`",
+    "rationale": "Without brackets and an argument the function is not called."
+   },
+   {
+    "key": "D",
+    "content": "`Saving ← Discount(80)`",
+    "correct": true,
+    "rationale": "A function call produces a value that can be stored."
+   }
+  ],
+  "explanation": "A function is called inside an expression and returns a value.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.procedures-functions.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A procedure `Double(BYREF N : INTEGER)` sets `N ← N * 2`. The main program sets `V ← 7` and then runs `CALL Double(V)`. What is the value of `V` afterwards?",
+  "options": [
+   {
+    "key": "A",
+    "content": "7",
+    "rationale": "That would be true for BYVAL, which changes only a copy."
+   },
+   {
+    "key": "B",
+    "content": "49",
+    "rationale": "The parameter is doubled, not squared."
+   },
+   {
+    "key": "C",
+    "content": "0",
+    "rationale": "The variable is not reset."
+   },
+   {
+    "key": "D",
+    "content": "14",
+    "correct": true,
+    "rationale": "The reference parameter changes the original variable."
+   }
+  ],
+  "explanation": "Changing a BYREF parameter changes the argument variable.",
+  "hints": [
+   "Is N a copy of V or another name for V?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": false
+ },
+ {
+  "key": "prog.procedures-functions.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The same procedure is changed to `Double(BYVAL N : INTEGER)` and called with `CALL Double(V)` where `V` is 7. What is the value of `V` afterwards?",
+  "options": [
+   {
+    "key": "A",
+    "content": "14",
+    "rationale": "That would need BYREF."
+   },
+   {
+    "key": "B",
+    "content": "49",
+    "rationale": "The procedure doubles; it does not square."
+   },
+   {
+    "key": "C",
+    "content": "It is undefined",
+    "rationale": "V keeps its value."
+   },
+   {
+    "key": "D",
+    "content": "7",
+    "correct": true,
+    "rationale": "A copy of V is doubled and then discarded."
+   }
+  ],
+  "explanation": "A BYVAL parameter is a copy, so the original variable does not change.",
+  "hints": [
+   "What does the procedure change: V or a copy of V?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.procedures-functions.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which is a benefit of dividing a large program into procedures and functions?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The program always runs faster",
+    "rationale": "Routines make a program clearer but not necessarily faster."
+   },
+   {
+    "key": "B",
+    "content": "Variables no longer need data types",
+    "rationale": "Every variable still has a type."
+   },
+   {
+    "key": "C",
+    "content": "Each routine can be tested separately and reused",
+    "correct": true,
+    "rationale": "Smaller parts are easier to check and may be used again."
+   },
+   {
+    "key": "D",
+    "content": "The program no longer needs a main program",
+    "rationale": "Something must still call the routines."
+   }
+  ],
+  "explanation": "Routines support testing, reuse, maintenance and teamwork.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.procedures-functions.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What happens when this Python program is run?\n\n```python\ndef total(a, b):\n    return a + b\n\nprint(total(5))\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "It prints 5 because the second value defaults to zero",
+    "rationale": "The second parameter has no default value."
+   },
+   {
+    "key": "B",
+    "content": "It stops with an error: an argument is missing",
+    "correct": true,
+    "rationale": "The function needs two arguments."
+   },
+   {
+    "key": "C",
+    "content": "It prints 10 because the single value is used for both parameters",
+    "rationale": "Python does not repeat a single argument."
+   },
+   {
+    "key": "D",
+    "content": "It prints None because the function returns nothing",
+    "rationale": "The call fails before returning anything."
+   }
+  ],
+  "explanation": "The number of arguments must match the number of parameters.",
+  "hints": [
+   "How many parameters does the function have, and how many arguments are given?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "prog.procedures-functions.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A variable `Count` is declared inside the procedure `Reset`. Where can it be used?",
+  "options": [
+   {
+    "key": "A",
+    "content": "In the whole program",
+    "rationale": "That describes a global variable."
+   },
+   {
+    "key": "B",
+    "content": "Only inside `Reset`",
+    "correct": true,
+    "rationale": "It is a local variable."
+   },
+   {
+    "key": "C",
+    "content": "In every procedure that is called by `Reset`",
+    "rationale": "A called routine has its own scope."
+   },
+   {
+    "key": "D",
+    "content": "Only in the main program",
+    "rationale": "The main program cannot see a local variable of a routine."
+   }
+  ],
+  "explanation": "A local variable is visible only inside the routine that declares it.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.procedures-functions.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The values supplied in a call to a routine are called arguments, and they are matched to the parameters by position.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. The first argument goes to the first parameter, the second to the second, and so on.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.procedures-functions.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A function must contain an `OUTPUT` statement to give its result to the calling program.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. A function gives its result back with RETURN. Output is a separate action that the caller may do with the value.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.procedures-functions.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Trace this algorithm.\n\n```\nFUNCTION Discount(Price : REAL) RETURNS REAL\n    IF Price >= 50 THEN\n        RETURN Price * 0.1\n    ELSE\n        RETURN 0\n    ENDIF\nENDFUNCTION\n\nPROCEDURE AddBill(BYVAL Price : REAL, BYREF Total : REAL)\n    Total ← Total + Price - Discount(Price)\nENDPROCEDURE\n\nTotal ← 0\nCALL AddBill(80, Total)\nCALL AddBill(30, Total)\nOUTPUT Total\n```\nState the value returned by `Discount(80)` and the value of `Total` at the end.",
+  "payload": {
+   "template": "Discount(80) = {{blank:a}}\n\nFinal Total = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "8"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "102"
+     ]
+    }
+   ]
+  },
+  "explanation": "Discount(80) = 8. After the first call Total = 80 - 8 = 72. The second bill of 30 has no discount, so Total = 72 + 30 = 102.",
+  "hints": [
+   "Work out the value of Total after each call."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "8"
+    },
+    {
+     "blankId": "b",
+     "text": "102"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "80"
+     },
+     {
+      "blankId": "b",
+      "text": "110"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.procedures-functions.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A function `Max(A, B)` returns the larger of two numbers. What value does `Max(Max(4, 9), 6)` return?",
+  "answerSpec": {
+   "value": 9
+  },
+  "explanation": "The inner call is evaluated first: the result is 9.",
+  "workedSolution": "Max(4, 9) returns 9, and then Max(9, 6) returns 9.",
+  "hints": [
+   "Start with the inner call."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "9"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.procedures-functions.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "State the pseudocode keyword used to call a procedure.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "CALL"
+    },
+    {
+     "value": "call"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "A procedure is called with CALL.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "CALL"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "RUN"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.procedures-functions.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each term to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Parameter"
+    },
+    {
+     "id": "L2",
+     "content": "Argument"
+    },
+    {
+     "id": "L3",
+     "content": "`BYREF`"
+    },
+    {
+     "id": "L4",
+     "content": "`RETURN`"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The routine can change the original variable"
+    },
+    {
+     "id": "R4",
+     "content": "Sends a value back from a function"
+    },
+    {
+     "id": "R1",
+     "content": "A variable named in the header of a routine"
+    },
+    {
+     "id": "R2",
+     "content": "A value or variable supplied when the routine is called"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The four terms describe the interface between a routine and its caller.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.procedures-functions.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Write a pseudocode function `IsPass` that takes a mark (INTEGER) and returns TRUE if the mark is 50 or more and FALSE otherwise. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Correct function header with a parameter and RETURNS BOOLEAN",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A selection or Boolean expression testing Mark >= 50",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Returns TRUE and FALSE correctly (or returns the Boolean expression)",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Ends with ENDFUNCTION",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nFUNCTION IsPass(Mark : INTEGER) RETURNS BOOLEAN\n    RETURN Mark >= 50\nENDFUNCTION\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A comparison already has a Boolean value, so it can be returned directly.",
+  "hints": [
+   "The header needs the parameter type and the RETURNS type."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.procedures-functions.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Write a Python procedure `show_total` that takes a name and a list of three marks and outputs the name and the total of the marks, and a call that uses it. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A def statement with two parameters",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Adds up the three marks (sum or +)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Outputs the name and the total",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A correct call with a name and a list",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```python\ndef show_total(name, marks):\n    print(name, \"total:\", sum(marks))\n\nshow_total(\"Chipo\", [56, 71, 64])\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A procedure carries out an action and returns nothing.",
+  "hints": [
+   "A procedure does not use RETURN."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.procedures-functions.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain the difference between passing a parameter by value and passing it by reference. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "By value: the routine receives a copy of the argument",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "So changes made to the parameter do not affect the original variable",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "By reference: the routine works on the original variable (its address), so changes made inside the routine change the original",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: By value, the routine gets a copy, so changes do not affect the original. By reference, the routine works on the original variable, so changes made in the routine change it."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "BYVAL copies; BYREF shares.",
+  "hints": [
+   "Think about what the routine receives."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.procedures-functions.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Write a pseudocode procedure `Swap` that exchanges the values of two integer variables, and a call that swaps `X` and `Y`. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Header with two BYREF integer parameters",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Uses a temporary variable to hold one value",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Assigns the two values correctly",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "A correct CALL Swap(X, Y)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nPROCEDURE Swap(BYREF A : INTEGER, BYREF B : INTEGER)\n    DECLARE Temp : INTEGER\n    Temp ← A\n    A ← B\n    B ← Temp\nENDPROCEDURE\n\nCALL Swap(X, Y)\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Both parameters must be BYREF so that the change reaches the caller.",
+  "hints": [
+   "Both values must be given back, so which kind of parameter?"
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.procedures-functions.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A shop in Kwekwe gives a discount of 10 percent on a bill of 50 or more. This pseudocode keeps a running total of the bills.\n\n```\nFUNCTION Discount(Price : REAL) RETURNS REAL\n    IF Price >= 50 THEN\n        RETURN Price * 0.1\n    ELSE\n        RETURN 0\n    ENDIF\nENDFUNCTION\n\nPROCEDURE AddBill(BYVAL Price : REAL, BYREF Total : REAL)\n    Total ← Total + Price - Discount(Price)\nENDPROCEDURE\n\nTotal ← 0\nCALL AddBill(80, Total)\nCALL AddBill(30, Total)\nOUTPUT Total\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which routine in the algorithm is a function?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`AddBill`",
+      "rationale": "AddBill is called with CALL and returns nothing."
+     },
+     {
+      "key": "B",
+      "content": "`Discount`",
+      "correct": true,
+      "rationale": "It has a RETURNS clause and returns a value."
+     },
+     {
+      "key": "C",
+      "content": "`Total`",
+      "rationale": "Total is a variable, not a routine."
+     },
+     {
+      "key": "D",
+      "content": "`Price`",
+      "rationale": "Price is a parameter."
+     }
+    ],
+    "explanation": "`Discount` returns a value; `AddBill` is a procedure."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value returned by `Discount(80)`.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "The discount is 8.",
+    "workedSolution": "80 is at least 50, so the discount is 80 × 0.1 = 8."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "State the value output at the end of the algorithm.",
+    "answerSpec": {
+     "value": 102
+    },
+    "explanation": "Total is 102.",
+    "workedSolution": "After the first call Total = 0 + 80 - 8 = 72. The second call adds 30 with no discount: 72 + 30 = 102."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why `Total` is passed to `AddBill` by reference.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "AddBill must change the value of Total in the main program",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A BYVAL parameter would be a copy, so the main program's Total would stay at 0",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: AddBill has to update Total in the main program. A value parameter is a copy, so Total would still be 0 after the calls."
+    },
+    "explanation": "BYREF is needed for the change to reach the caller."
+   }
+  ],
+  "explanation": "A function used inside a procedure with a reference parameter.",
+  "hints": [
+   "Dry run the two calls in order.",
+   "Total is passed by reference."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "102"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "80"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "110"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.procedures-functions.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A land officer in Masvingo uses this Python program.\n\n```python\ndef area(length, width):\n    return length * width\n\ndef report(name, value):\n    print(name, \"area:\", value)\n\nplot = area(12, 5)\nreport(\"Plot A\", plot)\nreport(\"Plot B\", area(8, 7))\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the first line output.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Plot A area: 60"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "area(12, 5) is 60, and report prints the name, the word area and the value."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the second line output.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Plot B area: 56"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "area(8, 7) is 56."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement is correct?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`area` is a procedure and `report` is a function",
+      "rationale": "It is the other way round."
+     },
+     {
+      "key": "B",
+      "content": "Both `area` and `report` are functions",
+      "rationale": "report has no return statement."
+     },
+     {
+      "key": "C",
+      "content": "`area` is a function and `report` is a procedure",
+      "correct": true,
+      "rationale": "`area` returns a value; `report` only prints."
+     },
+     {
+      "key": "D",
+      "content": "Both `area` and `report` are procedures",
+      "rationale": "area returns a value."
+     }
+    ],
+    "explanation": "`area` has a return statement; `report` does not."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What happens if the statement `report(\"Plot C\")` is added?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It prints Plot C area: 0 using a default value",
+      "rationale": "No default value is given."
+     },
+     {
+      "key": "B",
+      "content": "It prints Plot C and then carries on",
+      "rationale": "The call fails before printing."
+     },
+     {
+      "key": "C",
+      "content": "An error: one argument is missing",
+      "correct": true,
+      "rationale": "report needs two arguments."
+     },
+     {
+      "key": "D",
+      "content": "Nothing happens because the extra call is ignored",
+      "rationale": "Python raises an error."
+     }
+    ],
+    "explanation": "The arguments must match the parameters."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write the pseudocode header for the function `area`, with INTEGER parameters and an INTEGER result.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "FUNCTION Area(Length : INTEGER, Width : INTEGER) with both parameters typed",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "RETURNS INTEGER",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: `FUNCTION Area(Length : INTEGER, Width : INTEGER) RETURNS INTEGER`"
+    },
+    "explanation": "A function header lists typed parameters and the returned type."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two benefits of using the function `area` instead of writing `length * width` each time.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The calculation is written once, so a change (or a correction) is made in one place",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The function can be tested separately and reused in other programs",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The calculation is written once, so a correction is made in one place, and the function can be tested separately and reused."
+    },
+    "explanation": "Reuse and maintainability."
+   }
+  ],
+  "explanation": "Reading a Python program with a function and a procedure.",
+  "hints": [
+   "Work out the value returned by area before report is called.",
+   "Count the parameters of each routine."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "Plot A area: 60"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "Plot B area: 56"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ }
+]

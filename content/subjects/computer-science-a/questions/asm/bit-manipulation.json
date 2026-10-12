@@ -1,0 +1,1362 @@
+[
+ {
+  "key": "asm.bit-manipulation.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which bitwise operation is used with a mask to set a chosen bit to 1 without changing the other bits?",
+  "options": [
+   {
+    "key": "A",
+    "content": "OR",
+    "correct": true,
+    "rationale": "Correct: OR with a 1 in the position sets the bit and leaves the others as they were."
+   },
+   {
+    "key": "B",
+    "content": "AND",
+    "rationale": "AND can keep or clear bits but cannot set a bit that is 0."
+   },
+   {
+    "key": "C",
+    "content": "XOR",
+    "rationale": "XOR toggles; it sets the bit only if it was 0."
+   },
+   {
+    "key": "D",
+    "content": "LSR",
+    "rationale": "A shift moves all the bits and does not set one chosen bit."
+   }
+  ],
+  "explanation": "OR with a mask sets the bits that have a 1 in the mask.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which operation toggles (flips) the bits of a register that are 1 in the mask?",
+  "options": [
+   {
+    "key": "A",
+    "content": "XOR",
+    "correct": true,
+    "rationale": "Correct: a bit XOR 1 changes, a bit XOR 0 stays."
+   },
+   {
+    "key": "B",
+    "content": "AND",
+    "rationale": "AND clears or keeps bits."
+   },
+   {
+    "key": "C",
+    "content": "OR",
+    "rationale": "OR sets bits to 1 and never changes a 1 to 0."
+   },
+   {
+    "key": "D",
+    "content": "LSL",
+    "rationale": "A shift moves the bits to new positions."
+   }
+  ],
+  "explanation": "XOR with a 1 flips the bit.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the effect of a logical left shift of 3 places on an unsigned number, if no 1 bit is shifted out?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The number is divided by 8",
+    "rationale": "That is a right shift."
+   },
+   {
+    "key": "B",
+    "content": "The number is increased by 3",
+    "rationale": "A shift multiplies; it does not add."
+   },
+   {
+    "key": "C",
+    "content": "The number is multiplied by 3",
+    "rationale": "Three places multiply by 2^3, not by 3."
+   },
+   {
+    "key": "D",
+    "content": "The number is multiplied by 8",
+    "correct": true,
+    "rationale": "Correct: each place multiplies by 2, so three places multiply by 2 × 2 × 2."
+   }
+  ],
+  "explanation": "n places multiply by 2^n.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The 8-bit number 150 is shifted left one place. Why is the answer not 300?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A left shift divides the number by 2 instead of doubling it",
+    "rationale": "A left shift multiplies by 2."
+   },
+   {
+    "key": "B",
+    "content": "Only 8 bits are stored, so the left-most 1 is shifted out",
+    "correct": true,
+    "rationale": "Correct: 300 needs 9 bits."
+   },
+   {
+    "key": "C",
+    "content": "The shift changes the sign of the number to negative",
+    "rationale": "An unsigned number has no sign bit."
+   },
+   {
+    "key": "D",
+    "content": "The result is rounded to the nearest hundred by the processor",
+    "rationale": "Rounding is not part of a shift."
+   }
+  ],
+  "explanation": "The overflow bit is lost, leaving 44.",
+  "hints": [
+   "How many bits are needed to store 300?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the difference between a logical shift and a cyclic shift?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A cyclic shift always multiplies by 2 and a logical shift always divides by 2",
+    "rationale": "Both can go either way; the difference is what happens at the ends."
+   },
+   {
+    "key": "B",
+    "content": "A cyclic shift brings the bits that leave one end back in at the other end",
+    "correct": true,
+    "rationale": "Correct: no bit is lost."
+   },
+   {
+    "key": "C",
+    "content": "A logical shift keeps the sign bit and a cyclic shift does not",
+    "rationale": "Keeping the sign bit describes an arithmetic shift."
+   },
+   {
+    "key": "D",
+    "content": "A cyclic shift can only be used on text, not on numbers",
+    "rationale": "It works on any bit pattern."
+   }
+  ],
+  "explanation": "Logical: zeros fill; cyclic: the bits wrap round.",
+  "hints": [
+   "Where do the bits that move out end up?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The 8-bit two's complement number 11101000 (-24) is shifted right one place using a LOGICAL shift. What is the result?",
+  "options": [
+   {
+    "key": "A",
+    "content": "-12, because the sign bit is kept",
+    "rationale": "That needs an arithmetic shift, which copies the sign bit."
+   },
+   {
+    "key": "B",
+    "content": "-116, the same size but negative",
+    "rationale": "The shift does not negate the number."
+   },
+   {
+    "key": "C",
+    "content": "A positive number, 116",
+    "correct": true,
+    "rationale": "Correct: the sign bit becomes 0, giving 01110100."
+   },
+   {
+    "key": "D",
+    "content": "-48, as the number is doubled",
+    "rationale": "That would be a left shift."
+   }
+  ],
+  "explanation": "A logical right shift puts 0 in the sign bit.",
+  "hints": [
+   "Write the shifted bit pattern and read it as a positive number."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A control register holds 10010010. Bit 4 is to be cleared without changing any other bit. Which instruction should be used?",
+  "options": [
+   {
+    "key": "A",
+    "content": "OR B11101111",
+    "rationale": "OR cannot clear a bit and this would set most of them."
+   },
+   {
+    "key": "B",
+    "content": "AND B00010000",
+    "rationale": "That would clear every bit except bit 4."
+   },
+   {
+    "key": "C",
+    "content": "XOR B00010000",
+    "rationale": "That would toggle bit 4; it was 1 so it would become 0, but a 0 would become 1."
+   },
+   {
+    "key": "D",
+    "content": "AND B11101111",
+    "correct": true,
+    "rationale": "Correct: the 0 in bit 4 clears it and the 1s keep the rest."
+   }
+  ],
+  "explanation": "AND with the inverse mask clears only the chosen bit.",
+  "hints": [
+   "Which mask has a 0 only in bit 4?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Doing XOR with the same mask twice returns a register to its original value.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Each bit that is 1 in the mask is flipped twice, so it returns to its original value.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q09",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each task to the operation that does it.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Test whether bit 3 is 1"
+    },
+    {
+     "id": "L2",
+     "content": "Set bit 5 to 1"
+    },
+    {
+     "id": "L3",
+     "content": "Clear the top four bits"
+    },
+    {
+     "id": "L4",
+     "content": "Flip bit 0"
+    },
+    {
+     "id": "L5",
+     "content": "Multiply by 4"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "AND with the mask 00001111"
+    },
+    {
+     "id": "R4",
+     "content": "XOR with the mask 00000001"
+    },
+    {
+     "id": "R5",
+     "content": "Logical left shift by two places"
+    },
+    {
+     "id": "R1",
+     "content": "AND with a mask that has a 1 only in bit 3, then compare with 0"
+    },
+    {
+     "id": "R2",
+     "content": "OR with a mask that has a 1 in bit 5"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Masks select the bits and the operation decides what happens to them.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Complete the instructions that switch on bit 2 and switch off bit 6 of the value in ACC.",
+  "payload": {
+   "template": "{{blank:a}} B00000100\n\n{{blank:b}} B10111111",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "OR",
+      "AND",
+      "XOR",
+      "LSL"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "AND",
+      "OR",
+      "LSR",
+      "CMP"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "OR"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "AND"
+     ]
+    }
+   ]
+  },
+  "explanation": "OR sets bit 2; AND with a 0 in bit 6 clears it.",
+  "hints": [
+   "To set a bit use OR; to clear a bit use AND with 0 in that position."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "OR"
+    },
+    {
+     "blankId": "b",
+     "text": "AND"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "AND"
+     },
+     {
+      "blankId": "b",
+      "text": "OR"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "ACC holds 1110 0110. The instruction `AND B00111100` is executed. Write the 8-bit value in ACC.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "00100100"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "1110 0110 AND 0011 1100 = 0010 0100.",
+  "hints": [
+   "Work column by column: the result is 1 only where both bits are 1."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "00100100"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "00100101"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "asm.bit-manipulation.q12",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "ACC holds 1001 0011. The instruction `XOR B01100101` is executed. Write the 8-bit value in ACC.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "11110110"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "1001 0011 XOR 0110 0101 = 1111 0110.",
+  "hints": [
+   "XOR is 1 where the bits differ."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "11110110"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11110111"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "asm.bit-manipulation.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The 8-bit two's complement number 1011 0100 is shifted two places to the right using an arithmetic shift. Write the 8-bit result.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "11101101"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The sign bit 1 is copied in twice: 1110 1101, which is -19 (the original was -76).",
+  "hints": [
+   "An arithmetic right shift copies the sign bit into the empty places."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "11101101"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11101110"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "asm.bit-manipulation.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The unsigned number 77 is in an 8-bit register. It is shifted two places to the right with a logical shift. What is the denary result?",
+  "answerSpec": {
+   "value": 19
+  },
+  "explanation": "A right shift of two places divides by 4 and drops the remainder: 19.",
+  "workedSolution": "1. 77 = 0100 1101.\n2. Shift right two places: 0001 0011.\n3. 0001 0011 = 19. (77 ÷ 4 = 19 remainder 1; the remainder is lost.)",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "19"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "38"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "20"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "asm.bit-manipulation.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Reading holds B10110101 and this program is run from address 120:\n\n```\n120  LDD Reading\n121  AND B00001111\n122  OR B01000000\n123  STO Result\n124  END\n125  Reading: B10110101\n126  Result: 0\n```\n\nWhat denary value is held in `Result` when the program ends?",
+  "answerSpec": {
+   "value": 69
+  },
+  "explanation": "The result is 0100 0101, which is 69.",
+  "workedSolution": "1. AND B00001111 keeps the low four bits: 1011 0101 gives 0000 0101.\n2. OR B01000000 sets bit 6: 0100 0101.\n3. 0100 0101 = 69.",
+  "hints": [
+   "Which bits survive the AND, and what does the OR add?"
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "69"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "181"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "asm.bit-manipulation.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the type of shift that copies the sign bit into the empty places when a two's complement number is shifted right.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "arithmetic shift"
+    },
+    {
+     "value": "arithmetic"
+    },
+    {
+     "value": "arithmetic right shift"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "An arithmetic shift keeps the sign.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "arithmetic shift"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "logical shift"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "cyclic shift"
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A sensor sets bit 2 of a status register to 1 when a tank is full. Explain how a program can test whether the tank is full. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Use AND with a mask that has a 1 only in bit 2 (00000100)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "All the other bits are cleared so the result is 0 or 00000100",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Compare the result with 0; if it is not 0 the tank is full",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: AND the register with the mask 00000100. This clears all the other bits, so the result is non-zero only if bit 2 was 1. Compare the result with 0: not equal means the tank is full."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Mask, clear the rest, compare with zero.",
+  "hints": [
+   "Say what mask you use, which operation, and what you do with the result."
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "The location `Control` holds a control byte. Write assembly language instructions to switch on bit 5 without changing the other bits, and store the result back in `Control`. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Loads Control into ACC with LDD Control",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Uses OR with the mask B00100000",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Stores ACC at Control with STO Control",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: \n```\nLDD Control\nOR B00100000\nSTO Control\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Load, OR with a mask, store.",
+  "hints": [
+   "Load the register, use a mask that sets only bit 5, then store."
+  ],
+  "skill": "CREATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A programmer uses LSL #1 to double a number held in an 8-bit register. Explain a situation in which the answer is wrong. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The number is 128 or more / the left-most bit is 1",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "That bit is shifted out of the register and lost",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "So the result is smaller than twice the number (and the overflow is not detected)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: If the number is 128 or more, its left-most 1 bit is shifted out of the register and lost, so the result is not twice the number."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Overflow loses the top bit.",
+  "hints": [
+   "Mention the overflow bit."
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q20",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Give two advantages of holding eight on/off settings in the bits of one byte instead of in eight separate memory locations, and one thing the programmer must take care over. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Uses less memory",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "All the settings can be read or written together in one instruction",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Several settings can be changed in one operation",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The programmer must use masks so that changing one bit does not change the others",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: It uses less memory, and all eight settings can be read or written in one instruction. The programmer must use masks so that changing one bit does not change the others."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Compact and fast, but needs masks.",
+  "hints": [
+   "Compare the number of memory locations and the effect on other bits."
+  ],
+  "skill": "EVALUATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A greenhouse controller in Mutare uses one byte, `Ctl`, to control its equipment. Bits are numbered from 0 at the right-hand end. Bit 3 switches the water pump and bit 1 switches the fan. `Ctl` currently holds 10010010.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "The pump is switched on by the instruction `OR B00001000`. Write the 8-bit value in ACC afterwards, if ACC held the value above.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10011010"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "1001 0010 OR 0000 1000 = 1001 1010."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "The fan and pump are both toggled by the instruction `XOR B00001010`. Write the 8-bit value in ACC afterwards, if ACC held the value above.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10011000"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "1001 0010 XOR 0000 1010 = 1001 1000."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write the instruction that switches the fan off (bit 1 to 0) without changing any other bit.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Uses AND",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "With the mask B11111101",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: AND B11111101"
+    },
+    "explanation": "A 0 in bit 1 and 1s elsewhere."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State why LDM B00001000 followed by STO Ctl is not a good way to switch the pump on.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It replaces the whole byte",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "All other settings, such as the fan, are switched off",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It replaces the whole byte, so all the other settings are lost."
+    },
+    "explanation": "Masks change only selected bits."
+   }
+  ],
+  "explanation": "Masks change only the chosen bits of the register.",
+  "hints": [
+   "Bit 0 is the right-hand bit.",
+   "Use OR to set, AND with 0 to clear, XOR to toggle."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "10011010"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "10011000"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "10011011"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "10011001"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "asm.bit-manipulation.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.asm.bit-manipulation"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "An 8-bit register holds 0111 0011.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the contents after a logical shift left of 2 places.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "11001100"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "0111 0011 shifted left two places is 1100 1100; the two left-most bits are lost."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the contents after a logical shift right of 3 places.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "00001110"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "0111 0011 shifted right three places is 0000 1110."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the contents after a cyclic shift left of 3 places.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10011011"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The three left-most bits (011) re-enter at the right: 1001 1011."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the denary value of the original contents.",
+    "answerSpec": {
+     "value": 115
+    },
+    "explanation": "01110011 = 115.",
+    "workedSolution": "64 + 32 + 16 + 2 + 1 = 115."
+   }
+  ],
+  "explanation": "Logical shifts fill with zeros; cyclic shifts wrap round.",
+  "hints": [
+   "Write each bit pattern in groups of four."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "11001100"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "00001110"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "10011011"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "115"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "11001101"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "00001111"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "10011100"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "114"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ }
+]

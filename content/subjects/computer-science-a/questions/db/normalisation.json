@@ -1,0 +1,1248 @@
+[
+ {
+  "key": "db.normalisation.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the main purpose of normalising a database?",
+  "options": [
+   {
+    "key": "A",
+    "content": "To remove redundancy and avoid update anomalies",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "To make the data harder for users to read and understand",
+    "rationale": "Normalisation does not hide data."
+   },
+   {
+    "key": "C",
+    "content": "To compress the data so that it takes fewer bytes",
+    "rationale": "Normalisation is not compression."
+   },
+   {
+    "key": "D",
+    "content": "To encrypt the data so that others cannot read it",
+    "rationale": "Encryption is a security measure."
+   }
+  ],
+  "explanation": "Normalisation reorganises the tables so that each fact is stored once.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "db.normalisation.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which condition is required for a table to be in first normal form?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Every cell holds one value; there are no repeating groups",
+    "correct": true,
+    "rationale": "Correct: the values are atomic."
+   },
+   {
+    "key": "B",
+    "content": "Every non-key attribute depends on the whole of the key",
+    "rationale": "That is the requirement for second normal form."
+   },
+   {
+    "key": "C",
+    "content": "No non-key attribute depends on another non-key attribute",
+    "rationale": "That is the requirement for third normal form."
+   },
+   {
+    "key": "D",
+    "content": "Every table has at least two foreign keys",
+    "rationale": "Foreign keys are not part of the definition of 1NF."
+   }
+  ],
+  "explanation": "1NF: atomic values, no repeating groups and a primary key.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "db.normalisation.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A table is in 1NF and its primary key is a single field. Which normal form is it certainly in as well?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Third normal form",
+    "rationale": "A single-field key does not rule out a transitive dependency."
+   },
+   {
+    "key": "B",
+    "content": "Boyce-Codd normal form only",
+    "rationale": "This is not asked and is not guaranteed."
+   },
+   {
+    "key": "C",
+    "content": "Second normal form",
+    "correct": true,
+    "rationale": "Correct: partial dependency needs a composite key."
+   },
+   {
+    "key": "D",
+    "content": "No further normal form is certain",
+    "rationale": "A table in 1NF with a single-field key is in 2NF."
+   }
+  ],
+  "explanation": "Without a composite key there can be no partial dependency, so the table is in 2NF.",
+  "hints": [
+   "What must a table have for a partial dependency to exist?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.normalisation.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the table `Order(OrderNo, CustomerID, CustomerName)` the primary key is `OrderNo` and `CustomerID` determines `CustomerName`. Which problem does this table have?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A partial dependency, so it is not in 2NF",
+    "rationale": "The key is a single field, so there is no partial dependency."
+   },
+   {
+    "key": "B",
+    "content": "A transitive dependency, so it is not in 3NF",
+    "correct": true,
+    "rationale": "Correct: CustomerName depends on a non-key attribute."
+   },
+   {
+    "key": "C",
+    "content": "A repeating group, so it is not in 1NF",
+    "rationale": "Each cell holds one value."
+   },
+   {
+    "key": "D",
+    "content": "No problem, because the table has a primary key",
+    "rationale": "A primary key is not enough for 3NF."
+   }
+  ],
+  "explanation": "CustomerName depends on CustomerID, which is not the key: a transitive dependency.",
+  "hints": [
+   "Does CustomerName depend on the key directly or through another attribute?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.normalisation.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A table of clubs and members has the key (`ClubID`, `MemberID`) and the attribute `ClubName`, which depends only on `ClubID`. What is this called?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A transitive dependency",
+    "rationale": "The attribute depends on part of the key, not on a non-key attribute."
+   },
+   {
+    "key": "B",
+    "content": "A foreign key",
+    "rationale": "A foreign key links two tables."
+   },
+   {
+    "key": "C",
+    "content": "A repeating group",
+    "rationale": "Nothing is repeated within a cell."
+   },
+   {
+    "key": "D",
+    "content": "A partial dependency",
+    "correct": true,
+    "rationale": "Correct: the attribute depends on part of the key."
+   }
+  ],
+  "explanation": "ClubName depends only on ClubID, which is part of the composite key.",
+  "hints": [
+   "Does ClubName depend on the whole key or only on part of it?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.normalisation.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A school table holds `Pupil`, `Form` and `FormTeacher`. A new form cannot be recorded until a pupil joins it. What type of anomaly is this?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Update anomaly",
+    "rationale": "An update anomaly arises when a repeated fact is changed in only some rows."
+   },
+   {
+    "key": "B",
+    "content": "Insertion anomaly",
+    "correct": true,
+    "rationale": "Correct: one fact cannot be stored without another."
+   },
+   {
+    "key": "C",
+    "content": "Deletion anomaly",
+    "rationale": "A deletion anomaly loses a fact when a row is deleted."
+   },
+   {
+    "key": "D",
+    "content": "Referential anomaly",
+    "rationale": "This is not one of the three standard anomalies."
+   }
+  ],
+  "explanation": "Recording a form needs a pupil in it, which is an insertion anomaly.",
+  "hints": [
+   "Which action is being blocked?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "db.normalisation.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The table `Bus(BusNo, DriverID, DriverName, DriverPhone)` has the primary key `BusNo`. Which sentence describes the best normalisation?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Move `BusNo` to a new table and drop DriverID from Bus",
+    "rationale": "The key is already correct."
+   },
+   {
+    "key": "B",
+    "content": "Copy `DriverName` and `DriverPhone` into every table",
+    "rationale": "That adds redundancy."
+   },
+   {
+    "key": "C",
+    "content": "Make `DriverName` the primary key of the `Bus` table",
+    "rationale": "Names are not unique."
+   },
+   {
+    "key": "D",
+    "content": "Create a `Driver` table keyed on `DriverID`",
+    "correct": true,
+    "rationale": "Correct: this removes the transitive dependency."
+   }
+  ],
+  "explanation": "The driver details depend on DriverID, so they move to their own table with DriverID as the key and a foreign key left behind.",
+  "hints": [
+   "Which attribute determines the driver's name and phone number?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "db.normalisation.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which statement about a correct normalisation is true?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Each table gets a copy of every field in the original table",
+    "rationale": "That would keep all the redundancy."
+   },
+   {
+    "key": "B",
+    "content": "Foreign keys are removed once the tables are separated",
+    "rationale": "Without foreign keys the tables cannot be joined."
+   },
+   {
+    "key": "C",
+    "content": "The original rows can be rebuilt by joining on foreign keys",
+    "correct": true,
+    "rationale": "Correct: no information is lost."
+   },
+   {
+    "key": "D",
+    "content": "The number of records in every table stays the same",
+    "rationale": "Normalised tables usually have different numbers of rows."
+   }
+  ],
+  "explanation": "Foreign keys keep the link between the tables, so the original rows can be rebuilt.",
+  "hints": [
+   "What keeps the tables linked after the split?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "db.normalisation.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A partial dependency can occur in a table whose primary key is a single field.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. A partial dependency means dependence on part of a composite key, so the key must have at least two fields.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.normalisation.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A table in third normal form must also be in second normal form.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Each normal form includes the earlier ones.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "db.normalisation.q11",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the Enrolment table (key `StudentID` with `CourseCode`), `Grade` depends on the whole key, so it can stay in the Enrolment table when the table is normalised.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. A grade belongs to one student on one course, so it depends on both parts of the key.",
+  "hints": [
+   "Look at what determines Grade."
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "db.normalisation.q12",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Match each normal form to the problem that it removes.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "First normal form (1NF)"
+    },
+    {
+     "id": "L2",
+     "content": "Second normal form (2NF)"
+    },
+    {
+     "id": "L3",
+     "content": "Third normal form (3NF)"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Dependence of one non-key attribute on another"
+    },
+    {
+     "id": "X1",
+     "content": "Dependence of the foreign key on the primary key"
+    },
+    {
+     "id": "R1",
+     "content": "Repeating groups and cells with several values"
+    },
+    {
+     "id": "R2",
+     "content": "Dependence on part of a composite key"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "1NF removes repeating groups, 2NF partial dependencies and 3NF transitive dependencies.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.normalisation.q13",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the description of the three anomalies.",
+  "payload": {
+   "template": "An {{blank:a}} anomaly means a fact cannot be stored until another fact exists. A {{blank:b}} anomaly means deleting a row also loses a fact. An {{blank:c}} anomaly means a repeated fact is changed in only some rows.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "insertion",
+      "deletion",
+      "update"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "insertion",
+      "deletion",
+      "update"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "insertion",
+      "deletion",
+      "update"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "insertion"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "deletion"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "update"
+     ]
+    }
+   ]
+  },
+  "explanation": "Insertion, deletion and update anomalies.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "insertion"
+    },
+    {
+     "blankId": "b",
+     "text": "deletion"
+    },
+    {
+     "blankId": "c",
+     "text": "update"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "deletion"
+     },
+     {
+      "blankId": "b",
+      "text": "insertion"
+     },
+     {
+      "blankId": "c",
+      "text": "insertion"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.normalisation.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The table `Enrolment(StudentID, CourseCode, StudentName, CourseTitle, Grade)` has the composite key (StudentID, CourseCode). Name the one attribute that depends on both fields of the key.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "Grade"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "StudentName depends on StudentID alone, CourseTitle on CourseCode alone, and Grade on both.",
+  "hints": [
+   "Which attributes depend on one field of the composite key only?"
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "Grade"
+  },
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.normalisation.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A clinic file has 40 appointment rows, and each row stores the doctor's name. There are 8 doctors. After normalisation the names are stored once in a `Doctor` table. How many fewer doctor names are stored?",
+  "answerSpec": {
+   "value": 32
+  },
+  "explanation": "40 − 8 = 32.",
+  "workedSolution": "1. Before: 40 names.\n2. After: 8 names.\n3. Fewer = 40 − 8 = 32.",
+  "hints": [
+   "Before: one name in each row. After: one name for each doctor."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "32"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "40"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "db.normalisation.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the timetable table below, every row stores `TeacherName` and `RoomSeats`. After moving them to separate tables keyed on `TeacherID` and `Room`, each teacher and each room is stored once.\n\n| ClassCode | Period | TeacherID | TeacherName | Room | RoomSeats |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| 4A | 1 | T05 | Mrs Chuma | R2 | 40 |\n| 4A | 2 | T07 | Mr Gumbo | R5 | 32 |\n| 4B | 1 | T07 | Mr Gumbo | R5 | 32 |\n| 4B | 2 | T05 | Mrs Chuma | R2 | 40 |\n| 4C | 1 | T09 | Ms Banda | R2 | 40 |\n| 4C | 2 | T09 | Ms Banda | R8 | 25 |\n\nHow many fewer `TeacherName` and `RoomSeats` values are stored altogether?",
+  "answerSpec": {
+   "value": 6
+  },
+  "explanation": "Six rows store two values each: 12 values. After the split, 3 teachers and 3 rooms give 6 values. The difference is 6.",
+  "workedSolution": "1. Before: 6 rows × 2 values = 12.\n2. After: 3 teacher names + 3 room sizes = 6.\n3. Fewer = 12 − 6 = 6.",
+  "hints": [
+   "Count the values in the two repeated columns for all rows, before and after."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "6"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "12"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "db.normalisation.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A shop stores customer details in every one of its order rows. Describe three problems that this can cause. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Update anomaly: a change of address must be made in every row of that customer, and if one is missed the data is inconsistent",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Insertion anomaly: a new customer cannot be stored until they place an order",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Deletion anomaly: deleting a customer's only order also deletes the customer's details",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A change of address must be made in every row of that customer, or the data becomes inconsistent. A new customer cannot be stored until they place an order. Deleting the only order of a customer also deletes the customer's details."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The three anomalies, each with an example.",
+  "hints": [
+   "Name each anomaly and give an example."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.normalisation.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe the differences between first, second and third normal form. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "1NF: every cell holds one value and there are no repeating groups",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "2NF: in 1NF and every non-key attribute depends on the whole of the key (no partial dependency)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "3NF: in 2NF and no non-key attribute depends on another non-key attribute (no transitive dependency)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: 1NF means every cell holds one value with no repeating groups. 2NF means 1NF with no partial dependency on part of a composite key. 3NF means 2NF with no non-key attribute depending on another non-key attribute."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Each form builds on the one before.",
+  "hints": [
+   "State what each normal form removes."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "db.normalisation.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "The table `Enrolment(StudentID, CourseCode, StudentName, CourseTitle, Grade)` has the composite key (StudentID, CourseCode). Write the tables that put it into second normal form. Mark the primary key of each. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Student(StudentID, StudentName) with StudentID as the primary key",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Course(CourseCode, CourseTitle) with CourseCode as the primary key",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Enrolment(StudentID, CourseCode, Grade) with the composite primary key",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "StudentID and CourseCode in Enrolment identified as foreign keys",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Student(StudentID, StudentName); Course(CourseCode, CourseTitle); Enrolment(StudentID, CourseCode, Grade) with the primary key (StudentID, CourseCode), where StudentID and CourseCode are also foreign keys."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Each partially dependent attribute moves with its determinant.",
+  "hints": [
+   "Which attributes depend on StudentID only, and which on CourseCode only?"
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "db.normalisation.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A college stores the following table. The primary key is the composite (`StudentID`, `CourseCode`).\n\n| StudentID | CourseCode | StudentName | CourseTitle | Grade |\n|:-:|:-:|:-:|:-:|:-:|\n| S31 | CS1 | Tatenda Moyo | Programming | B |\n| S31 | MA1 | Tatenda Moyo | Statistics | A |\n| S32 | CS1 | Nyasha Dube | Programming | C |\n| S33 | MA1 | Sipho Ncube | Statistics | B |\n| S33 | CS1 | Sipho Ncube | Programming | A |\n| S33 | EN1 | Sipho Ncube | Communication | B |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Select the two attributes that depend on only part of the primary key.",
+    "payload": {
+     "selectMode": "multiple"
+    },
+    "options": [
+     {
+      "key": "A",
+      "content": "StudentID",
+      "rationale": "StudentID is part of the key."
+     },
+     {
+      "key": "B",
+      "content": "CourseCode",
+      "rationale": "CourseCode is part of the key."
+     },
+     {
+      "key": "C",
+      "content": "CourseTitle",
+      "correct": true,
+      "rationale": "Correct: depends on CourseCode alone."
+     },
+     {
+      "key": "D",
+      "content": "StudentName",
+      "correct": true,
+      "rationale": "Correct: depends on StudentID alone."
+     },
+     {
+      "key": "E",
+      "content": "Grade",
+      "rationale": "Grade depends on both fields: a student's grade on one course."
+     }
+    ],
+    "explanation": "StudentName and CourseTitle are partially dependent."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the highest normal form that the table is in. Give your answer as 1NF, 2NF or 3NF.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "1NF"
+      },
+      {
+       "value": "first normal form"
+      },
+      {
+       "value": "1"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "It is in 1NF but has partial dependencies, so it is not in 2NF."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the tables that put the data into second normal form, marking the primary keys.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Student(StudentID, StudentName) with StudentID as the primary key",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Course(CourseCode, CourseTitle) with CourseCode as the primary key",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Enrolment(StudentID, CourseCode, Grade) with the composite primary key",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Student(StudentID, StudentName); Course(CourseCode, CourseTitle); Enrolment(StudentID, CourseCode, Grade)."
+    },
+    "explanation": "Remove the partial dependencies."
+   }
+  ],
+  "explanation": "StudentName depends on StudentID and CourseTitle on CourseCode, so both are partial dependencies; the table is in 1NF but not 2NF.",
+  "hints": [
+   "Look at which field determines each attribute.",
+   "A partial dependency is on part of the composite key."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D",
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "1NF"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "E"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "db.normalisation.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.db.normalisation"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A school timetable table has the composite primary key (`ClassCode`, `Period`). A teacher has one ID and one name, and each room has a fixed number of seats.\n\n| ClassCode | Period | TeacherID | TeacherName | Room | RoomSeats |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| 4A | 1 | T05 | Mrs Chuma | R2 | 40 |\n| 4A | 2 | T07 | Mr Gumbo | R5 | 32 |\n| 4B | 1 | T07 | Mr Gumbo | R5 | 32 |\n| 4B | 2 | T05 | Mrs Chuma | R2 | 40 |\n| 4C | 1 | T09 | Ms Banda | R2 | 40 |\n| 4C | 2 | T09 | Ms Banda | R8 | 25 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the highest normal form that the table is in. Give your answer as 1NF, 2NF or 3NF.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2NF"
+      },
+      {
+       "value": "second normal form"
+      },
+      {
+       "value": "2"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "Every non-key attribute depends on the whole key, so there is no partial dependency, but there are transitive dependencies."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Select the two attributes that depend on a non-key attribute.",
+    "payload": {
+     "selectMode": "multiple"
+    },
+    "options": [
+     {
+      "key": "A",
+      "content": "ClassCode",
+      "rationale": "ClassCode is part of the key."
+     },
+     {
+      "key": "B",
+      "content": "Room",
+      "rationale": "The room used depends on the class and period."
+     },
+     {
+      "key": "C",
+      "content": "Period",
+      "rationale": "Period is part of the key."
+     },
+     {
+      "key": "D",
+      "content": "RoomSeats",
+      "correct": true,
+      "rationale": "Correct: depends on Room."
+     },
+     {
+      "key": "E",
+      "content": "TeacherName",
+      "correct": true,
+      "rationale": "Correct: depends on TeacherID."
+     }
+    ],
+    "explanation": "TeacherName depends on TeacherID and RoomSeats on Room."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the tables that put the data into third normal form. Mark the primary keys and foreign keys.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Timetable(ClassCode, Period, TeacherID, Room) with the composite primary key",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Teacher(TeacherID, TeacherName) with TeacherID as the primary key",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Room(Room, RoomSeats) with Room as the primary key, and TeacherID and Room in Timetable identified as foreign keys",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Timetable(ClassCode, Period, TeacherID, Room); Teacher(TeacherID, TeacherName); Room(Room, RoomSeats). TeacherID and Room in Timetable are foreign keys."
+    },
+    "explanation": "Move each transitively dependent attribute to a table keyed on its determinant."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give one anomaly that the original table allows and describe how the new design avoids it.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "For example a deletion anomaly: deleting the only timetable row that uses room R8 also deletes the fact that R8 has 25 seats (or an update anomaly: changing the number of seats of R2 must be done in several rows)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "In the new design the room and its seats are stored once in the Room table, so deleting a timetable row does not lose them",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Deleting the only row that uses room R8 would also delete the fact that R8 has 25 seats. In the new design the room is stored once in the Room table, so it is kept."
+    },
+    "explanation": "Anomaly and the way the new design removes it."
+   }
+  ],
+  "explanation": "The key is (ClassCode, Period). TeacherName depends on TeacherID and RoomSeats on Room, which are non-key attributes: transitive dependencies; the table is in 2NF but not 3NF.",
+  "hints": [
+   "Test each non-key attribute: does it depend on the whole key, or on another non-key attribute?",
+   "Room determines RoomSeats."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "2NF"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "E",
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ }
+]

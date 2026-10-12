@@ -1,0 +1,1421 @@
+[
+ {
+  "key": "exam.w2a-theory.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.asm.bit-manipulation",
+   "acs.asm.assembly-programs"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "The controller of a tank near Kadoma reads a status byte. Bits are numbered from 0 at the right-hand end: bit 1 and bit 2 together give the water level (0 to 3). The program below starts at address 640. `LSR #1` shifts ACC one place right, filling with zero. The byte `Status` holds `10010111`.\n\n```\n640  LDD Status\n641  AND B00000110\n642  LSR #1\n643  STO Level\n644  CMP #3\n645  JPE Full\n646  LDM #0\n647  JMP Done\n648  Full: LDM #1\n649  Done: STO Alarm\n650  END\n651  Status: B10010111\n652  Level: 0\n653  Alarm: 0\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the effect of the instruction `AND B00000110`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It keeps bits 1 and 2 and clears the other bits",
+      "correct": true,
+      "rationale": "Correct: a 1 in the mask keeps the bit."
+     },
+     {
+      "key": "B",
+      "content": "It sets bits 1 and 2 to 1 and keeps the other bits",
+      "rationale": "That needs OR."
+     },
+     {
+      "key": "C",
+      "content": "It toggles bits 1 and 2 and clears the other bits",
+      "rationale": "That needs XOR."
+     },
+     {
+      "key": "D",
+      "content": "It clears bits 1 and 2 and keeps all the other bits",
+      "rationale": "The 1s keep those bits."
+     }
+    ],
+    "explanation": "AND with a mask keeps the bits that are 1 in the mask."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "State the 8-bit value in ACC after `LSR #1` is executed.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "00000011"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "10010111 AND 00000110 = 00000110; one shift right gives 00000011."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value held in `Alarm` when the program ends.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "Alarm = 1.",
+    "workedSolution": "ACC = 3 equals 3 in the comparison, so JPE jumps to Full and 1 is stored."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The program is run again with `Status` holding `10010101`. State the value held in `Alarm` when it ends.",
+    "answerSpec": {
+     "value": 0
+    },
+    "explanation": "Alarm = 0.",
+    "workedSolution": "AND gives 00000100; LSR gives 00000010 = 2, not equal to 3, so 0 is stored."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe how the program uses a mask, a shift and a comparison to decide the value for `Alarm`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The mask B00000110 isolates the two water-level bits",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The shift moves the level bits to bits 0 and 1 so that they form the number 0 to 3",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The level is compared with 3 and Alarm is set to 1 if they are equal, otherwise 0",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: AND with B00000110 isolates the two level bits. LSR #1 moves them to the right so they form a number from 0 to 3. The number is compared with 3 and Alarm is 1 if it is equal, otherwise 0."
+    },
+    "explanation": "Mask, shift, compare."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State the purpose of the instruction `JMP Done` and what would happen to `Alarm` if it were left out.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It skips the Full section so that LDM #1 is not executed after LDM #0",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Without it Alarm would always be set to 1 (the value 0 would be overwritten)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It jumps over the Full section. Without it, LDM #1 would be executed after LDM #0, so Alarm would always become 1."
+    },
+    "explanation": "Jump over the alternative section."
+   }
+  ],
+  "explanation": "The mask keeps bits 1 and 2 (00000110), the shift gives 3, which equals 3, so Alarm = 1; with 10010101 the level is 2 and Alarm = 0.",
+  "hints": [
+   "Work out the byte after each instruction in groups of four bits."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "00000011"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "0"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "00000100"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 1"
+ },
+ {
+  "key": "exam.w2a-theory.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.os.process-scheduling",
+   "acs.os.memory-management"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A computer at a clinic runs three processes. The table gives their arrival times and burst times (in ms).\n\n| Process | Arrival time | Burst time |\n|:-:|:-:|:-:|\n| X | 0 | 5 |\n| Y | 1 | 3 |\n| Z | 2 | 2 |\nThe operating system uses shortest job first scheduling (without pre-emption). Pages of a program are requested in this order: 3, 1, 4, 1, 5, 3, 2, 5, 1, 4. Three frames of memory are empty at the start.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the order in which the processes run.",
+    "payload": {
+     "template": "X, {{blank:a}}, {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Y",
+        "Z"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Y",
+        "Z"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Z"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Y"
+       ]
+      }
+     ]
+    },
+    "explanation": "At time 5 Y and Z are ready; Z has the shorter burst (2), so it runs first."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the waiting time of process Y.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "Waiting time = 6 ms.",
+    "workedSolution": "1. Y completes at 10 and arrived at 1: turnaround 9.\n2. Waiting = 9 - 3 = 6 ms."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Calculate the mean waiting time of the three processes, in ms.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Mean waiting time = 3 ms.",
+    "workedSolution": "Waiting times: X 0, Y 6, Z 3. Mean = 9 ÷ 3 = 3."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "The pages are replaced using first in first out. State the number of page faults.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "FIFO gives 8 faults.",
+    "workedSolution": "Trace of the frames (oldest first):\n\n| Page | Frames | Fault? |\n|:-:|:-:|:-:|\n| 3 | 3 | yes |\n| 1 | 3 1 | yes |\n| 4 | 3 1 4 | yes |\n| 1 | 3 1 4 | no |\n| 5 | 1 4 5 | yes |\n| 3 | 4 5 3 | yes |\n| 2 | 5 3 2 | yes |\n| 5 | 5 3 2 | no |\n| 1 | 3 2 1 | yes |\n| 4 | 2 1 4 | yes |\n\nThere are 8 faults."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give one disadvantage of shortest job first scheduling.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Long processes may be kept waiting (starved) while shorter ones keep arriving",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The burst time must be known or estimated in advance",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A long process may wait for a very long time if shorter processes keep arriving, and the burst times have to be known or estimated."
+    },
+    "explanation": "Starvation, and the need to know burst times."
+   },
+   {
+    "label": "(f)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Process Y has to wait for a disk read to finish. In which state is it?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Blocked",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "Running",
+      "rationale": "It cannot use the processor."
+     },
+     {
+      "key": "C",
+      "content": "Ready",
+      "rationale": "It cannot run until the read finishes."
+     },
+     {
+      "key": "D",
+      "content": "Terminated",
+      "rationale": "It has not finished."
+     }
+    ],
+    "explanation": "Waiting for input or output is the blocked state."
+   }
+  ],
+  "explanation": "SJF order X, Z, Y; Y waits 6 ms; mean 3 ms; FIFO gives 8 page faults.",
+  "hints": [
+   "At time 5, which ready process has the shorter burst?",
+   "Waiting time = completion - arrival - burst."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Z"
+      },
+      {
+       "blankId": "b",
+       "text": "Y"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "6"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    },
+    "(f)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Y"
+       },
+       {
+        "blankId": "b",
+        "text": "Z"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "10"
+     },
+     "(f)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 3"
+ },
+ {
+  "key": "exam.w2a-theory.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.translation.compilation-stages",
+   "acs.translation.bnf-syntax-diagrams",
+   "acs.translation.rpn"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A compiler translates the statement\n\n```\nFee ← (Base + 15) * Rate\n```\nThe grammar of a ticket code is given in Backus-Naur Form:\n\n```\n<digit> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9\n<ticket> ::= T <digit> <digit>\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which stage of compilation breaks the statement into tokens?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Syntax analysis",
+      "rationale": "That checks the grammar using the tokens."
+     },
+     {
+      "key": "B",
+      "content": "Code generation",
+      "rationale": "That produces the object code."
+     },
+     {
+      "key": "C",
+      "content": "Lexical analysis",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "Optimisation",
+      "rationale": "That improves the generated code."
+     }
+    ],
+    "explanation": "Lexical analysis produces the tokens."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of tokens in the statement (the brackets are tokens).",
+    "answerSpec": {
+     "value": 9
+    },
+    "explanation": "9 tokens.",
+    "workedSolution": "Fee, ←, (, Base, +, 15, ), *, Rate = 9."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The expression `(6 + 4) * 5 - 12` is converted to Reverse Polish Notation. Complete the postfix expression.",
+    "payload": {
+     "template": "6 4 {{blank:a}} 5 {{blank:b}} 12 {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "+",
+        "-",
+        "*",
+        "/"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "+",
+        "-",
+        "*",
+        "/"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "+",
+        "-",
+        "*",
+        "/"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "+"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "*"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "-"
+       ]
+      }
+     ]
+    },
+    "explanation": "6 4 + 5 * 12 -"
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Evaluate the postfix expression `6 4 + 5 * 12 -`.",
+    "answerSpec": {
+     "value": 38
+    },
+    "explanation": "38.",
+    "workedSolution": "6 + 4 = 10; 10 × 5 = 50; 50 - 12 = 38."
+   },
+   {
+    "label": "(e)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Decide whether each string is a valid `<ticket>`.",
+    "payload": {
+     "template": "T47 is {{blank:a}}.\n\n47T is {{blank:b}}.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "valid",
+        "not valid"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "valid",
+        "not valid"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "valid"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "not valid"
+       ]
+      }
+     ]
+    },
+    "explanation": "A ticket is the letter T followed by two digits."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain one reason why a compiler converts expressions to Reverse Polish Notation.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "No brackets or precedence rules are needed to evaluate it",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It can be evaluated in one left-to-right pass using a stack",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It needs no brackets or precedence rules, and it can be evaluated in one pass from left to right using a stack."
+    },
+    "explanation": "Simple evaluation with a stack."
+   }
+  ],
+  "explanation": "9 tokens; postfix 6 4 + 5 * 12 - = 38; T47 is valid, 47T is not.",
+  "hints": [
+   "Operators come after their operands in postfix.",
+   "Brackets are tokens too."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "9"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "+"
+      },
+      {
+       "blankId": "b",
+       "text": "*"
+      },
+      {
+       "blankId": "c",
+       "text": "-"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "38"
+    },
+    "(e)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "valid"
+      },
+      {
+       "blankId": "b",
+       "text": "not valid"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "-"
+       },
+       {
+        "blankId": "b",
+        "text": "+"
+       },
+       {
+        "blankId": "c",
+        "text": "*"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "50"
+     },
+     "(e)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "not valid"
+       },
+       {
+        "blankId": "b",
+        "text": "valid"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 3"
+ },
+ {
+  "key": "exam.w2a-theory.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ai.graphs-search"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A weighted graph joins five villages A to E. The weights are distances in km:\n\n| Edge | Weight |\n|:-:|:-:|\n| A – B | 3 |\n| A – C | 6 |\n| B – C | 2 |\n| B – D | 5 |\n| C – D | 1 |\n| C – E | 4 |\n| D – E | 2 |\nDijkstra's algorithm is used from A. The distances after A and B have been visited are:\n\n| Village | A | B | C | D | E |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| Distance | 0 | 3 | 5 | 8 | ∞ |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "The next village to be visited is C. State the new distance for D and for E after C has been visited.",
+    "payload": {
+     "template": "D = {{blank:d}}\n\nE = {{blank:e}}",
+     "blanks": [
+      {
+       "id": "d",
+       "input": "number"
+      },
+      {
+       "id": "e",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "d",
+       "accepted": [
+        "6"
+       ]
+      },
+      {
+       "id": "e",
+       "accepted": [
+        "9"
+       ]
+      }
+     ]
+    },
+    "explanation": "Through C: D = 5 + 1 = 6 and E = 5 + 4 = 9."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the shortest distance from A to E, in km.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "8 km.",
+    "workedSolution": "A to B 3, B to C 2, C to D 1, D to E 2: 8 km."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which route from A to E is the shortest?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A, C, E",
+      "rationale": "That is 6 + 4 = 10."
+     },
+     {
+      "key": "B",
+      "content": "A, B, D, E",
+      "rationale": "That is 3 + 5 + 2 = 10."
+     },
+     {
+      "key": "C",
+      "content": "A, B, C, D, E",
+      "correct": true,
+      "rationale": "Correct: 3 + 2 + 1 + 2 = 8."
+     },
+     {
+      "key": "D",
+      "content": "A, C, D, E",
+      "rationale": "That is 6 + 1 + 2 = 9."
+     }
+    ],
+    "explanation": "The shortest route is A, B, C, D, E at 8 km."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The A* algorithm is used from A to E with these heuristic estimates h: A 6, B 4, C 2, D 1, E 0. State the value of f for village C when its best distance g has been found.",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "f = 5 + 2 = 7.",
+    "workedSolution": "g(C) = 5 and h(C) = 2, so f = 7."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the heuristic used in A* must not overestimate the remaining distance.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "If h is too large the f value of a village on the shortest route may be too high",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So that route may not be chosen, and A* could return a route that is not the shortest",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: If h is too large, a village on the shortest route can get an f value that is too high, so that route might not be chosen and A* could return a longer route."
+    },
+    "explanation": "Overestimates can hide the best route."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Compare Dijkstra's algorithm with the A* algorithm.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Dijkstra finds the shortest distance to every village; A* finds a route to one goal",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A* uses a heuristic estimate to guide the search, Dijkstra does not",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A* usually examines fewer villages, but needs a suitable heuristic",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Dijkstra finds the shortest distance to every village, while A* finds a route to one goal. A* uses a heuristic estimate to guide the search, so it usually examines fewer villages, but it needs a suitable heuristic."
+    },
+    "explanation": "Scope, heuristic, efficiency."
+   }
+  ],
+  "explanation": "Through C: D = 6, E = 9; the shortest distance A to E is 8 km (A, B, C, D, E); f(C) = 7.",
+  "hints": [
+   "Through C the distance to D is 5 + 1.",
+   "f = g + h."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "d",
+       "text": "6"
+      },
+      {
+       "blankId": "e",
+       "text": "9"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "d",
+        "text": "8"
+       },
+       {
+        "blankId": "e",
+        "text": "99"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "9"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 3"
+ },
+ {
+  "key": "exam.w2a-theory.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.os.functions-utilities"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A school in Masvingo has a computer laboratory. The operating system requires every student to log in with a password.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which management task of the operating system controls who may log in and which files they may open?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Process management",
+      "rationale": "That shares the processor."
+     },
+     {
+      "key": "B",
+      "content": "Memory management",
+      "rationale": "That allocates main memory."
+     },
+     {
+      "key": "C",
+      "content": "File management",
+      "rationale": "That records where files are stored."
+     },
+     {
+      "key": "D",
+      "content": "Security management",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "Passwords and access rights are security management."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "Complete the sentences about utility software.",
+    "payload": {
+     "template": "{{blank:a}} software makes copies of files so that they can be restored. {{blank:b}} software joins the pieces of each file together on a magnetic disk.",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Back-up",
+        "Defragmentation",
+        "Virus checker",
+        "Formatter"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Back-up",
+        "Defragmentation",
+        "Virus checker",
+        "Formatter"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Back-up"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Defragmentation"
+       ]
+      }
+     ]
+    },
+    "explanation": "Back-up copies files; defragmentation rejoins fragments."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Several programs in the laboratory use the same DLL file. Give two benefits of using a DLL.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "One copy is loaded and shared, so less memory is used",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A correction to the DLL reaches every program that uses it / less code to write",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: One copy is shared by the programs, so less memory is used, and a correction to the DLL benefits every program that uses it."
+    },
+    "explanation": "Shared copy and easy updates."
+   }
+  ],
+  "explanation": "Passwords belong to security management; back-up copies files; defragmentation rejoins them; a DLL is shared.",
+  "hints": [
+   "Think about which of the five management tasks deals with passwords."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Back-up"
+      },
+      {
+       "blankId": "b",
+       "text": "Defragmentation"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Formatter"
+       },
+       {
+        "blankId": "b",
+        "text": "Back-up"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 1"
+ },
+ {
+  "key": "exam.w2a-theory.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.translation.translators-ide"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A student writes a program in a high-level language using an integrated development environment (IDE).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why must the program be translated before it can be run?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The IDE cannot store high-level code",
+      "rationale": "An IDE stores source code."
+     },
+     {
+      "key": "B",
+      "content": "The processor can execute only machine code",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "High-level code uses too much memory to store",
+      "rationale": "Size is not the reason."
+     },
+     {
+      "key": "D",
+      "content": "Machine code is easier for people to read",
+      "rationale": "Machine code is harder to read."
+     }
+    ],
+    "explanation": "Only machine code can be executed directly."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the IDE feature that stops the program at a chosen line so that the values of variables can be examined.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "breakpoint"
+      },
+      {
+       "value": "a breakpoint"
+      },
+      {
+       "value": "breakpoints"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "A breakpoint."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Compare the use of a compiler with the use of an interpreter.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A compiler translates the whole program before it is run; an interpreter translates and executes one statement at a time",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Compiled programs run faster and the object code can be given out without the source code",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "An interpreter reports an error at the statement where it occurs, which suits testing",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A compiler translates the whole program before it is run, while an interpreter translates and executes one statement at a time. Compiled programs run faster and can be distributed without the source code. An interpreter stops at the statement with the error, which suits testing."
+    },
+    "explanation": "Three contrasts."
+   }
+  ],
+  "explanation": "The processor runs machine code; a breakpoint pauses the program; compiler and interpreter differ in when and how they translate.",
+  "hints": [
+   "Think about what the processor can run."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "breakpoint"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "pretty-print"
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 1"
+ },
+ {
+  "key": "exam.w2a-theory.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ethics.ai-impact"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A clinic in Hwange tests a chatbot that answers patients' questions. It answers 40 of 50 test questions correctly. Almost all the questions used for its training were in one language.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the most likely effect of training the chatbot on questions in one language only?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It will be more accurate for every patient who uses it",
+      "rationale": "The training data does not cover other languages."
+     },
+     {
+      "key": "B",
+      "content": "It will be less accurate for patients who speak other languages",
+      "correct": true,
+      "rationale": "Correct: this is bias from unrepresentative data."
+     },
+     {
+      "key": "C",
+      "content": "It will no longer need any data to give answers",
+      "rationale": "It still depends on data."
+     },
+     {
+      "key": "D",
+      "content": "It will refuse to answer any question it is asked",
+      "rationale": "It will answer, but less accurately."
+     }
+    ],
+    "explanation": "Unrepresentative training data causes bias."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Calculate the accuracy of the chatbot on the test questions, as a percentage.",
+    "answerSpec": {
+     "value": 80
+    },
+    "explanation": "80%.",
+    "workedSolution": "40 ÷ 50 × 100 = 80%."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Discuss whether the clinic should use the chatbot to answer patients' questions about their health.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A benefit: it can answer at any time and reduce the load on staff",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A concern: wrong answers about health could harm patients / it is less accurate for some languages",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A reasoned conclusion, such as using it for simple information with a member of staff available for health advice",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The chatbot can answer questions at any time and reduce the load on staff, but a wrong answer about health could harm a patient and it may be less accurate for patients who speak other languages. The clinic should use it for simple information only, with a member of staff available for health advice."
+    },
+    "explanation": "Benefit, concern, conclusion."
+   }
+  ],
+  "explanation": "One-language training data gives bias; 40 of 50 is 80%; a discussion needs a benefit, a concern and a conclusion.",
+  "hints": [
+   "Think about who is missing from the training data."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "80"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "40"
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 1"
+ }
+]

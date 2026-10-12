@@ -1,0 +1,1226 @@
+[
+ {
+  "key": "prog.iteration.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which loop construct always runs its body at least once?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`REPEAT ... UNTIL`",
+    "correct": true,
+    "rationale": "The condition is tested after the body."
+   },
+   {
+    "key": "B",
+    "content": "`WHILE ... ENDWHILE`",
+    "rationale": "The condition is tested before the body, so it may never run."
+   },
+   {
+    "key": "C",
+    "content": "`FOR ... NEXT` with a start value larger than the end value",
+    "rationale": "The loop body is skipped."
+   },
+   {
+    "key": "D",
+    "content": "`CASE OF ... ENDCASE`",
+    "rationale": "That is selection, not iteration."
+   }
+  ],
+  "explanation": "A post-condition loop tests at the end, so the body runs once before the first test.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.iteration.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which list of values does the Python loop `for n in range(2, 11, 4):` produce for `n`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "2, 6, 10",
+    "correct": true,
+    "rationale": "Start at 2, add 4 each time, and stop before 11."
+   },
+   {
+    "key": "B",
+    "content": "2, 6, 10, 14",
+    "rationale": "The stop value 11 is not reached by 14."
+   },
+   {
+    "key": "C",
+    "content": "2, 3, 4, 5, 6, 7, 8, 9, 10",
+    "rationale": "The step is 4, not 1."
+   },
+   {
+    "key": "D",
+    "content": "6, 10",
+    "rationale": "The loop starts at 2."
+   }
+  ],
+  "explanation": "range(start, stop, step) excludes the stop value.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A `REPEAT ... UNTIL Answer = \"Y\"` loop stops when which of these is true?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Answer` has any value other than \"Y\"",
+    "rationale": "That is when the loop continues."
+   },
+   {
+    "key": "B",
+    "content": "`Answer` has the value \"Y\"",
+    "correct": true,
+    "rationale": "UNTIL stops the loop when its condition becomes true."
+   },
+   {
+    "key": "C",
+    "content": "`Answer` has been entered at least twice",
+    "rationale": "The number of passes does not decide it."
+   },
+   {
+    "key": "D",
+    "content": "`Answer` is empty",
+    "rationale": "An empty answer does not satisfy the condition."
+   }
+  ],
+  "explanation": "A REPEAT loop ends when the UNTIL condition is true.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.iteration.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "This pseudocode never ends. Which is the reason?\n\n```\nNumber ← 1\nWHILE Number <= 10 DO\n    OUTPUT Number * 2\nENDWHILE\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Number` is declared as an integer variable and so cannot change",
+    "rationale": "The type of the variable does not cause a loop to repeat."
+   },
+   {
+    "key": "B",
+    "content": "The `OUTPUT` statement is placed inside the loop body",
+    "rationale": "Output statements do not stop or start a loop."
+   },
+   {
+    "key": "C",
+    "content": "`WHILE` loops always run for ever",
+    "rationale": "A WHILE loop stops when its condition is false."
+   },
+   {
+    "key": "D",
+    "content": "`Number` is never changed in the loop",
+    "correct": true,
+    "rationale": "The condition stays true for ever."
+   }
+  ],
+  "explanation": "A loop needs a statement that changes the variable in the condition, for example `Number ← Number + 1`.",
+  "hints": [
+   "What would make `Number <= 10` become false?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.iteration.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program asks for a password and repeats until the correct password is typed. The first request must always be made. Which loop is the most suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`FOR` loop from 1 to 3",
+    "rationale": "That limits the attempts and does not wait for a correct answer."
+   },
+   {
+    "key": "B",
+    "content": "`REPEAT ... UNTIL`",
+    "correct": true,
+    "rationale": "The password must be requested before it can be tested."
+   },
+   {
+    "key": "C",
+    "content": "`CASE OF`",
+    "rationale": "That is not a loop."
+   },
+   {
+    "key": "D",
+    "content": "`WHILE` loop that tests a variable not yet set",
+    "rationale": "That relies on a trick to run once; REPEAT does this directly."
+   }
+  ],
+  "explanation": "A post-condition loop gives at least one pass.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "prog.iteration.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is output by this Python code?\n\n```python\ntotal = 0\nfor n in range(1, 11):\n    if n % 2 == 0:\n        total = total + n\nprint(total)\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "55",
+    "rationale": "That adds every number from 1 to 10."
+   },
+   {
+    "key": "B",
+    "content": "25",
+    "rationale": "That adds the odd numbers."
+   },
+   {
+    "key": "C",
+    "content": "30",
+    "correct": true,
+    "rationale": "2 + 4 + 6 + 8 + 10."
+   },
+   {
+    "key": "D",
+    "content": "10",
+    "rationale": "That is the last even number."
+   }
+  ],
+  "explanation": "Only the even values of n are added.",
+  "hints": [
+   "Which values of n pass the test n % 2 == 0?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How many times is `c ← c + 1` executed?\n\n```\nc ← 0\nFOR Row ← 1 TO 3\n    FOR Col ← 1 TO Row\n        c ← c + 1\n    NEXT Col\nNEXT Row\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "9",
+    "rationale": "That is 3 × 3; the inner limit is Row, not 3."
+   },
+   {
+    "key": "B",
+    "content": "3",
+    "rationale": "That is the outer loop only."
+   },
+   {
+    "key": "C",
+    "content": "6",
+    "correct": true,
+    "rationale": "1 + 2 + 3 passes."
+   },
+   {
+    "key": "D",
+    "content": "4",
+    "rationale": "That counts 1 + 3."
+   }
+  ],
+  "explanation": "The inner loop runs Row times for each value of Row.",
+  "hints": [
+   "How many passes does the inner loop make when Row is 1, 2 and 3?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The value `-1`, typed to show that there is no more data, is called a sentinel and must not be added to the total.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. A sentinel is a special value that ends the input and is not part of the data.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.iteration.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In Python, `range(1, 6)` includes the number 6.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The stop value of range() is not included, so range(1, 6) gives 1, 2, 3, 4, 5.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.iteration.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Dry run this algorithm.\n\n```\nN ← 100\nPasses ← 0\nWHILE N > 5 DO\n    N ← DIV(N, 2)\n    Passes ← Passes + 1\nENDWHILE\n```\nState the values of `N` after the 3rd pass and of `Passes` at the end.",
+  "payload": {
+   "template": "N after the 3rd pass = {{blank:a}}\n\nPasses at the end = {{blank:b}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "12"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "5"
+     ]
+    }
+   ]
+  },
+  "explanation": "N becomes 50, 25, 12, 6, 3. After the 3rd pass N is 12 and the loop ends after 5 passes, when N is 3.",
+  "hints": [
+   "Halve the value with DIV 2 on every pass and count the passes."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "12"
+    },
+    {
+     "blankId": "b",
+     "text": "5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "25"
+     },
+     {
+      "blankId": "b",
+      "text": "4"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "State the value of `Total` after this algorithm has run.\n\n```\nTotal ← 0\nFOR K ← 3 TO 12 STEP 3\n    Total ← Total + K\nNEXT K\n```",
+  "answerSpec": {
+   "value": 30
+  },
+  "explanation": "Total is 30.",
+  "workedSolution": "K takes the values 3, 6, 9 and 12, and 3 + 6 + 9 + 12 = 30.",
+  "hints": [
+   "List the values of the loop variable, then add them."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "30"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "18"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "78"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program has three nested loops. The outer loop runs 4 times, the middle loop 3 times and the inner loop 2 times. How many times does the innermost statement run?",
+  "answerSpec": {
+   "value": 24
+  },
+  "explanation": "Passes multiply: 24.",
+  "workedSolution": "4 × 3 × 2 = 24.",
+  "hints": [
+   "Multiply the number of passes of the three loops."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "24"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "9"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "12"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the type of loop that tests its condition before the body is run and may therefore not run at all.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "pre-condition loop"
+    },
+    {
+     "value": "pre condition loop"
+    },
+    {
+     "value": "precondition loop"
+    },
+    {
+     "value": "while loop"
+    },
+    {
+     "value": "WHILE"
+    },
+    {
+     "value": "a pre-condition loop"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "A pre-condition loop such as WHILE.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "pre-condition loop"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "post-condition loop"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "prog.iteration.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Match each loop to the situation for which it is the most suitable.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "`FOR`"
+    },
+    {
+     "id": "L2",
+     "content": "`WHILE`"
+    },
+    {
+     "id": "L3",
+     "content": "`REPEAT ... UNTIL`"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Ask for a PIN and repeat until it is valid"
+    },
+    {
+     "id": "X1",
+     "content": "Choose between 5 menu options"
+    },
+    {
+     "id": "R1",
+     "content": "Output the 12 monthly totals of a year"
+    },
+    {
+     "id": "R2",
+     "content": "Add numbers until -1 is entered, where the first number may already be -1"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "FOR for a known count, WHILE when the loop may run zero times and REPEAT when it must run once.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "prog.iteration.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Write pseudocode that inputs 30 marks and outputs how many of them are 50 or more. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A counter set to 0 before the loop",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A FOR loop that repeats 30 times with an INPUT inside it",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A selection testing Mark >= 50 that adds 1 to the counter",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Outputs the counter after the loop",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nPasses ← 0\nFOR Learner ← 1 TO 30\n    INPUT Mark\n    IF Mark >= 50 THEN\n        Passes ← Passes + 1\n    ENDIF\nNEXT Learner\nOUTPUT \"Number of passes: \", Passes\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A counter, a loop and a selection.",
+  "hints": [
+   "Use a counter that starts at 0 and a FOR loop for 30 inputs."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.iteration.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Write a Python program that keeps asking for a whole-number age until the user enters a value from 5 to 18, and then outputs the age. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A loop that repeats until a valid value is entered",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Reads input and converts it to an integer inside the loop",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A correct range test (5 to 18, both limits)",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Outputs the accepted age after the loop",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```python\nage = 0\nwhile age < 5 or age > 18:\n    age = int(input(\"Enter your age (5 to 18): \"))\nprint(\"Age accepted:\", age)\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The loop continues while the age is outside the range.",
+  "hints": [
+   "Use while True and break, or a flag."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "prog.iteration.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain the difference between a pre-condition loop and a post-condition loop and give an example of a use for the post-condition loop. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A pre-condition loop tests the condition before the body, so it may run zero times",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A post-condition loop tests the condition after the body, so it always runs at least once",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Example: validating an input where the user must be asked at least once",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A pre-condition loop tests before the body and may not run at all; a post-condition loop tests after the body and runs at least once, for example when validating an input."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The position of the test decides the minimum number of passes.",
+  "hints": [
+   "Think about when each condition is tested."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "prog.iteration.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "This algorithm should output the average of numbers entered, ending with -1.\n\n```\nTotal ← 0\nCount ← 0\nREPEAT\n    INPUT Number\n    Total ← Total + Number\n    Count ← Count + 1\nUNTIL Number = -1\nOUTPUT Total / Count\n```\nIdentify the error and write a corrected version of the loop. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The sentinel -1 is added to Total and counted before the test",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "So the output is wrong (for 5, 8, -1 it gives 4 / 3 instead of 6.5)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Correct: only add and count when Number <> -1 (or read first and use a WHILE loop)",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nINPUT Number\nWHILE Number <> -1 DO\n    Total ← Total + Number\n    Count ← Count + 1\n    INPUT Number\nENDWHILE\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The sentinel must be tested before it is processed.",
+  "hints": [
+   "Dry run with the data 5, 8 and -1."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "prog.iteration.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A vegetable seller at a market in Gweru enters her sales (in USD) at the end of each day, and enters 0 when there are no more sales.\n\n```\nTotal ← 0\nCount ← 0\nREPEAT\n    INPUT Sales\n    IF Sales > 0 THEN\n        Total ← Total + Sales\n        Count ← Count + 1\n    ENDIF\nUNTIL Sales = 0\nOUTPUT Total / Count\n```\n\nThe values entered are 18, 32, 40 and 0.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the final values of `Total` and `Count`.",
+    "payload": {
+     "template": "Total = {{blank:a}}\n\nCount = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "90"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "3"
+       ]
+      }
+     ]
+    },
+    "explanation": "18 + 32 + 40 = 90 and three sales were counted."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value output.",
+    "answerSpec": {
+     "value": 30
+    },
+    "explanation": "The average sale is 30.",
+    "workedSolution": "90 / 3 = 30."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why is a `REPEAT ... UNTIL` loop suitable here?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It runs a fixed number of times, whatever is entered",
+      "rationale": "The number of sales is not known."
+     },
+     {
+      "key": "B",
+      "content": "It does not need a condition to decide when to stop",
+      "rationale": "Every loop needs a condition to end."
+     },
+     {
+      "key": "C",
+      "content": "It can only be used when the data is whole numbers",
+      "rationale": "Any data type can be used."
+     },
+     {
+      "key": "D",
+      "content": "One value must be entered before the test",
+      "correct": true,
+      "rationale": "The body runs once before the test."
+     }
+    ],
+    "explanation": "The input is requested before the sentinel can be tested."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the test `IF Sales > 0` is needed inside the loop.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The final value 0 is the sentinel and is not a sale",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Without the test Count would be one too high, giving a wrong average",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The 0 that ends the input is not a sale. Without the test it would be counted and the average would be divided by too large a number."
+    },
+    "explanation": "The sentinel must not be counted."
+   }
+  ],
+  "explanation": "A post-condition loop with a total, a counter and a selection.",
+  "hints": [
+   "Sales of 0 ends the input and is not counted.",
+   "Average = Total / Count."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "90"
+      },
+      {
+       "blankId": "b",
+       "text": "3"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "30"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "90"
+       },
+       {
+        "blankId": "b",
+        "text": "4"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "22.5"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "prog.iteration.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.iteration"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "This pseudocode uses `&` to join strings and `NUM_TO_STR` to convert a number into a string.\n\n```\nFOR Row ← 1 TO 3\n    Line ← \"\"\n    FOR Col ← Row TO 3\n        Line ← Line & NUM_TO_STR(Row + Col) & \" \"\n    NEXT Col\n    OUTPUT Line\nNEXT Row\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State how many times the statement inside the inner loop is executed.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "Six passes in total.",
+    "workedSolution": "The inner loop runs 3, 2 and 1 times: 3 + 2 + 1 = 6."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the first line output, with the numbers separated by single spaces.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "2 3 4"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "For Row = 1, Col = 1, 2, 3 gives 2, 3, 4."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the second line output, with the numbers separated by single spaces.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "4 5"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "collapse_whitespace"
+     ]
+    },
+    "explanation": "For Row = 2, Col = 2 and 3 gives 4 and 5."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number output on the third line.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "The last line is 6.",
+    "workedSolution": "For Row = 3 the inner loop runs once, with Col = 3: 3 + 3 = 6."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the change needed to the inner loop so that every line has three numbers.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Change the start of the inner loop from Row to 1",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So that Col runs from 1 to 3 for every value of Row",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Change `FOR Col ← Row TO 3` to `FOR Col ← 1 TO 3`."
+    },
+    "explanation": "The inner loop must start at 1."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two reasons why the variable `Line` is set to the empty string inside the outer loop but before the inner loop.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "So that each line starts empty and the previous line is not repeated",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So that the line is built up by the inner loop and then output once per row",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each row must start with an empty string so the previous row is not repeated, and the inner loop then builds the row to be output once."
+    },
+    "explanation": "Initialise at the right level of the nest."
+   }
+  ],
+  "explanation": "Tracing nested loops with a changing inner start value.",
+  "hints": [
+   "The inner loop starts at Row.",
+   "Count the passes of the inner loop for each value of Row."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "2 3 4"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "4 5"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "9"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ }
+]

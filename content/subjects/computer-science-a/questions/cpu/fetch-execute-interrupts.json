@@ -1,0 +1,1310 @@
+[
+ {
+  "key": "cpu.fetch-execute-interrupts.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which register transfer is the first step of the fetch stage?",
+  "options": [
+   {
+    "key": "A",
+    "content": "MAR ← [PC]",
+    "correct": true,
+    "rationale": "Correct: the address of the next instruction is copied from the PC to the MAR."
+   },
+   {
+    "key": "B",
+    "content": "PC ← [MDR]",
+    "rationale": "The PC does not take its value from the MDR in a normal fetch."
+   },
+   {
+    "key": "C",
+    "content": "CIR ← [MAR]",
+    "rationale": "The CIR receives the instruction from the MDR, after it has been read."
+   },
+   {
+    "key": "D",
+    "content": "MDR ← [PC]",
+    "rationale": "The MDR holds data read from memory, not the address in the PC."
+   }
+  ],
+  "explanation": "Fetch begins by copying the PC into the MAR.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What happens to the program counter during the fetch stage?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It is increased by one to point to the next instruction",
+    "correct": true,
+    "rationale": "Correct: this happens before the instruction is executed."
+   },
+   {
+    "key": "B",
+    "content": "It is set to zero so the program starts again",
+    "rationale": "It is reset only by a jump or by starting a program."
+   },
+   {
+    "key": "C",
+    "content": "It is copied to the accumulator",
+    "rationale": "The accumulator holds data, not the PC."
+   },
+   {
+    "key": "D",
+    "content": "It is not changed until the instruction has been executed",
+    "rationale": "The PC is increased in the fetch stage."
+   }
+  ],
+  "explanation": "PC ← [PC] + 1 is the second step of the fetch.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the purpose of an interrupt?",
+  "options": [
+   {
+    "key": "A",
+    "content": "To make the processor run faster for a short period",
+    "rationale": "An interrupt does not increase the speed of the processor."
+   },
+   {
+    "key": "B",
+    "content": "To copy data from the hard disk into the cache",
+    "rationale": "That is a data transfer, not the purpose of an interrupt."
+   },
+   {
+    "key": "C",
+    "content": "To make the processor pause and deal with an event",
+    "correct": true,
+    "rationale": "Correct: urgent events are handled by a special routine."
+   },
+   {
+    "key": "D",
+    "content": "To remove errors from a program before it is run",
+    "rationale": "Errors are found by testing and translators, not by interrupts."
+   }
+  ],
+  "explanation": "An interrupt signals that something needs attention, so the processor runs an interrupt service routine.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "At which point does the processor check for interrupts?",
+  "options": [
+   {
+    "key": "A",
+    "content": "At the start of the program only, never later",
+    "rationale": "Interrupts can occur at any time and are checked all the time."
+   },
+   {
+    "key": "B",
+    "content": "Halfway through each of the instructions",
+    "rationale": "The current instruction is always completed first."
+   },
+   {
+    "key": "C",
+    "content": "Only at the moment when the program ends",
+    "rationale": "The program may need to be interrupted before it ends."
+   },
+   {
+    "key": "D",
+    "content": "After each instruction is done",
+    "correct": true,
+    "rationale": "Correct: it never stops in the middle of an instruction."
+   }
+  ],
+  "explanation": "The control unit checks for pending interrupts after each instruction is complete.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why are the contents of the PC and the other registers saved before an interrupt service routine runs?",
+  "options": [
+   {
+    "key": "A",
+    "content": "So the ISR can run without using any registers at all",
+    "rationale": "The ISR does use registers; that is why the old values are saved."
+   },
+   {
+    "key": "B",
+    "content": "So the old program can carry on correctly",
+    "correct": true,
+    "rationale": "Correct: the registers are restored when the ISR finishes."
+   },
+   {
+    "key": "C",
+    "content": "So the interrupt can be ignored later",
+    "rationale": "The interrupt is handled, not ignored."
+   },
+   {
+    "key": "D",
+    "content": "So the main program can be copied to the hard disk",
+    "rationale": "Saving registers does not copy the program."
+   }
+  ],
+  "explanation": "The ISR will overwrite registers and the PC, so their values are saved and later restored.",
+  "hints": [
+   "What would be lost if the PC were overwritten by the ISR address?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program divides a number by zero and the processor signals an error. How does ZIMSEC classify this interrupt?",
+  "options": [
+   {
+    "key": "A",
+    "content": "External",
+    "rationale": "External interrupts come from hardware outside the processor."
+   },
+   {
+    "key": "B",
+    "content": "Software, requested on purpose by a system call",
+    "rationale": "A software interrupt is a deliberate request by a program."
+   },
+   {
+    "key": "C",
+    "content": "Timer",
+    "rationale": "Nothing here involves the timer."
+   },
+   {
+    "key": "D",
+    "content": "Internal",
+    "correct": true,
+    "rationale": "Correct: it is caused by the running program inside the processor."
+   }
+  ],
+  "explanation": "Division by zero and overflow are internal interrupts.",
+  "hints": [
+   "Where does the cause of the interrupt come from?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In register transfer notation, what does MDR ← [[MAR]] mean?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The address held in the MAR is copied to the MDR register",
+    "rationale": "That would be written MDR ← [MAR] when [MAR] means the register contents."
+   },
+   {
+    "key": "B",
+    "content": "The value in the MDR is copied into the MAR register",
+    "rationale": "The arrow points to the MDR, so it is the destination."
+   },
+   {
+    "key": "C",
+    "content": "The contents of the addressed location go to the MDR",
+    "correct": true,
+    "rationale": "Correct: the double brackets mean the contents of the addressed location."
+   },
+   {
+    "key": "D",
+    "content": "The program counter is copied into the MDR register",
+    "rationale": "The PC is not mentioned."
+   }
+  ],
+  "explanation": "[MAR] is the address; [[MAR]] is the contents of memory at that address.",
+  "hints": [
+   "One pair of brackets takes the contents of a register; two pairs take the contents of the location it points to."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An interrupt service routine for a keyboard is running when a power failure interrupt of higher priority arrives. What should happen?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The power failure interrupt is ignored until the keyboard ISR ends",
+    "rationale": "That would treat a lower-priority task as more important."
+   },
+   {
+    "key": "B",
+    "content": "The processor stops and waits for the user to restart it",
+    "rationale": "The processor deals with the interrupts itself."
+   },
+   {
+    "key": "C",
+    "content": "The keyboard ISR is suspended and the power failure is done first",
+    "correct": true,
+    "rationale": "Correct: higher-priority interrupts are dealt with first."
+   },
+   {
+    "key": "D",
+    "content": "Both ISRs run together on the same registers",
+    "rationale": "One processor core runs one routine at a time."
+   }
+  ],
+  "explanation": "Priorities decide the order. The state of the keyboard ISR is saved and restored once the more urgent interrupt is complete.",
+  "hints": [
+   "Which of the two events is more urgent?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "When an interrupt occurs, the processor stops in the middle of the current instruction.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The current instruction is completed. The interrupt is detected at the end of the fetch-execute cycle.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "After an interrupt service routine has finished, the saved register values are restored.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Restoring the PC and the other registers lets the interrupted program continue exactly where it left off.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each register transfer to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "MAR ← [PC]"
+    },
+    {
+     "id": "L2",
+     "content": "PC ← [PC] + 1"
+    },
+    {
+     "id": "L3",
+     "content": "MDR ← [[MAR]]"
+    },
+    {
+     "id": "L4",
+     "content": "CIR ← [MDR]"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The contents of the addressed location are read into the MDR"
+    },
+    {
+     "id": "R4",
+     "content": "The instruction is placed in the current instruction register"
+    },
+    {
+     "id": "R1",
+     "content": "The address of the next instruction is copied to the MAR"
+    },
+    {
+     "id": "R2",
+     "content": "The PC is moved on to the next instruction"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "These four transfers are the fetch stage of the cycle.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the steps of handling an interrupt.",
+  "payload": {
+   "template": "The current instruction is {{blank:a}}. The contents of the registers are {{blank:b}}. The PC is loaded with the address of the {{blank:c}}. When it finishes, the registers are restored.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "completed",
+      "deleted",
+      "repeated",
+      "ignored"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "saved",
+      "erased",
+      "printed",
+      "compressed"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "interrupt service routine",
+      "main program",
+      "bootstrap",
+      "next file"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "completed"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "saved"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "interrupt service routine"
+     ]
+    }
+   ]
+  },
+  "explanation": "Complete, save, run the ISR, restore.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "completed"
+    },
+    {
+     "blankId": "b",
+     "text": "saved"
+    },
+    {
+     "blankId": "c",
+     "text": "interrupt service routine"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "deleted"
+     },
+     {
+      "blankId": "b",
+      "text": "erased"
+     },
+     {
+      "blankId": "c",
+      "text": "main program"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program is stored from address 600:\n\n```\n600  LDM #6\n601  ADD Rate\n602  STO Pay\n603  END\n604  Rate: 4\n605  Pay: 0\n```\n\n`LDM #6` loads the number 6 into the accumulator, `ADD Rate` adds the value stored at `Rate` to the accumulator and `STO Pay` stores the accumulator at `Pay`. What value is stored at `Pay` when the program ends?",
+  "answerSpec": {
+   "value": 10
+  },
+  "explanation": "6 + 4 = 10 is stored at Pay.",
+  "workedSolution": "1. LDM #6: ACC = 6.\n2. ADD Rate: ACC = 6 + 4 = 10.\n3. STO Pay: address 605 holds 10.",
+  "hints": [
+   "Follow the three instructions and keep the value in the accumulator."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the routine that is run to deal with a particular interrupt.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "interrupt service routine"
+    },
+    {
+     "value": "ISR"
+    },
+    {
+     "value": "interrupt handler"
+    },
+    {
+     "value": "the interrupt service routine"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "The interrupt service routine (ISR) or interrupt handler deals with the interrupt.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "interrupt service routine"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "bootstrap"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "buffer"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Write the four register transfers that make up the fetch stage of the fetch-execute cycle. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "MAR ← [PC]",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "PC ← [PC] + 1",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "MDR ← [[MAR]] (or MDR ← [MAR])",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "CIR ← [MDR]",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: MAR ← [PC]\nPC ← [PC] + 1\nMDR ← [[MAR]]\nCIR ← [MDR]"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One mark for each transfer in the correct order.",
+  "hints": [
+   "Four lines: MAR, PC, MDR, CIR."
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Describe how the processor handles an interrupt that occurs while a program is running. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The current instruction is completed and the interrupt is detected at the end of the cycle",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The contents of the PC and the registers are saved (for example on a stack)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The PC is loaded with the address of the interrupt service routine, which then runs",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The saved values are restored and the interrupted program continues",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The current instruction is finished and the interrupt is detected at the end of the cycle. The PC and registers are saved on a stack, then the PC is loaded with the address of the ISR. When the ISR has finished, the saved values are restored and the program carries on."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Detect, save, run the ISR, restore.",
+  "hints": [
+   "Complete, check, save, ISR, restore."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Explain why the contents of the registers are saved before the interrupt service routine runs. [2]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The ISR will use the same registers and overwrite their contents",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The saved values are restored afterwards so the interrupted program can continue correctly",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The ISR uses the registers and would overwrite their contents. Restoring the saved values lets the interrupted program continue as if nothing had happened."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Overwriting, then continuing correctly.",
+  "hints": [
+   "What would the ISR overwrite?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Give three different causes of an interrupt. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A hardware fault, such as a power failure",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "An input or output event, such as a key being pressed or a printer ready for data",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A software error or request, such as division by zero, or a timer signal",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A power failure, a key being pressed, and a division by zero."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Any three different valid causes.",
+  "hints": [
+   "Give three different causes."
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "The program below is stored from address 500. The instruction at address 501 has just been fetched.\n\n```\n500  LDM #8\n501  SUB Used\n502  STO Left\n503  END\n504  Used: 3\n505  Left: 0\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "State the contents of the PC, the MAR and the CIR after the fetch.",
+    "payload": {
+     "template": "PC: {{blank:pc}}\n\nMAR: {{blank:mar}}\n\nCIR: {{blank:cir}}",
+     "blanks": [
+      {
+       "id": "pc",
+       "input": "number"
+      },
+      {
+       "id": "mar",
+       "input": "number"
+      },
+      {
+       "id": "cir",
+       "input": "select",
+       "choices": [
+        "LDM #8",
+        "SUB Used",
+        "STO Left",
+        "END"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "pc",
+       "accepted": [
+        "502"
+       ]
+      },
+      {
+       "id": "mar",
+       "accepted": [
+        "501"
+       ]
+      },
+      {
+       "id": "cir",
+       "accepted": [
+        "SUB Used"
+       ]
+      }
+     ]
+    },
+    "explanation": "PC = 502, MAR = 501, CIR = SUB Used."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value in the accumulator after the instruction at address 501 has been executed.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "8 − 3 = 5.",
+    "workedSolution": "1. ACC was 8 after LDM #8.\n2. SUB Used subtracts 3: 8 − 3 = 5."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value in the MAR when `STO Left` writes to memory.",
+    "answerSpec": {
+     "value": 505
+    },
+    "explanation": "Left is at address 505.",
+    "workedSolution": "1. Left is at address 505.\n2. The MAR holds the address being written: 505."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the register that holds the instruction while it is being decoded.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "current instruction register"
+      },
+      {
+       "value": "CIR"
+      },
+      {
+       "value": "the CIR"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The CIR holds the instruction being decoded."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "An interrupt arrives while `SUB Used` is being executed. Explain why it is not handled until `SUB Used` is complete.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The processor completes the current instruction",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Interrupts are checked at the end of each fetch-execute cycle",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The current instruction is always completed, and the check for interrupts takes place at the end of each fetch-execute cycle."
+    },
+    "explanation": "Complete the instruction; check at the end."
+   }
+  ],
+  "explanation": "After the fetch of the instruction at 501: PC 502, MAR 501, CIR SUB Used. ACC becomes 5, the MAR holds 505 when STO writes.",
+  "hints": [
+   "The PC is increased during the fetch.",
+   "SUB uses direct addressing, so the MAR holds the address of Used."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "pc",
+       "text": "502"
+      },
+      {
+       "blankId": "mar",
+       "text": "501"
+      },
+      {
+       "blankId": "cir",
+       "text": "SUB Used"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "505"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "current instruction register"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "pc",
+        "text": "501"
+       },
+       {
+        "blankId": "mar",
+        "text": "502"
+       },
+       {
+        "blankId": "cir",
+        "text": "LDM #8"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "502"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "MAR"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A school computer is running a spreadsheet when the user presses a key. The key press generates an interrupt.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "When does the processor check whether an interrupt has been signalled?",
+    "options": [
+     {
+      "key": "A",
+      "content": "In the middle of every instruction",
+      "rationale": "Instructions are completed first."
+     },
+     {
+      "key": "B",
+      "content": "At the end of each fetch-execute cycle",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "Only when the user switches off the computer",
+      "rationale": "Interrupts are checked all the time the processor is running."
+     },
+     {
+      "key": "D",
+      "content": "Only after the program has ended",
+      "rationale": "The program must be able to be interrupted while it runs."
+     }
+    ],
+    "explanation": "The check takes place after each instruction is complete."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the program that is run to deal with the key press.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "interrupt service routine"
+      },
+      {
+       "value": "ISR"
+      },
+      {
+       "value": "interrupt handler"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The interrupt service routine."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State what must be saved before the routine runs, and where it may be saved.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The contents of the PC and the registers in use",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "On a stack (or in a reserved area of memory)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The program counter and the registers, saved on a stack."
+    },
+    "explanation": "Contents and place."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "While the keyboard routine is running, a power failure interrupt of higher priority occurs. Describe what the processor does.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It suspends the keyboard routine and saves its state",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It handles the power failure first, then returns to the keyboard routine",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The keyboard routine is suspended and its state saved. The power failure routine runs first, and afterwards the keyboard routine resumes."
+    },
+    "explanation": "Higher priority runs first."
+   }
+  ],
+  "explanation": "Interrupts are checked at the end of the cycle; the PC and registers are saved and restored; priority decides which interrupt is handled first.",
+  "hints": [
+   "Think about what has to be restored afterwards."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "interrupt service routine"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "spreadsheet"
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true
+ }
+]

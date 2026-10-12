@@ -1,0 +1,1208 @@
+[
+ {
+  "key": "data.binary-arithmetic.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What range of denary integers can be stored in an 8-bit two's complement register?",
+  "options": [
+   {
+    "key": "A",
+    "content": "−128 to 127",
+    "correct": true,
+    "rationale": "Correct: the leftmost bit is worth −128, so the range is −128 to +127."
+   },
+   {
+    "key": "B",
+    "content": "−127 to 127",
+    "rationale": "That is the range for sign-and-magnitude, which wastes a pattern on −0."
+   },
+   {
+    "key": "C",
+    "content": "0 to 255",
+    "rationale": "That is the range for unsigned binary."
+   },
+   {
+    "key": "D",
+    "content": "−128 to 128",
+    "rationale": "There are only 256 patterns; if −128 is included the top value is 127."
+   }
+  ],
+  "explanation": "With n bits, two's complement covers −2^(n−1) to 2^(n−1) − 1. For n = 8 this is −128 to 127.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.binary-arithmetic.q02",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Write the denary number **−37** as an 8-bit two's complement binary number.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "11011011"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "+37 = 00100101. Invert: 11011010. Add 1: 11011011.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "11011011"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11011100"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.binary-arithmetic.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the denary value of the 8-bit two's complement number **11001110**?",
+  "answerSpec": {
+   "value": -50
+  },
+  "explanation": "The leftmost bit is worth −128. The other 1s are 64 + 8 + 4 + 2 = 78. So −128 + 78 = −50.",
+  "workedSolution": "1. The leftmost bit is 1, so it is worth −128.\n2. The other 1s are worth 64, 8, 4 and 2, which add to 78.\n3. −128 + 78 = −50.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-50"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.binary-arithmetic.q04",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Write the one's complement of the 8-bit binary number **01101001**.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "10010110"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "Change every bit: 01101001 becomes 10010110.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "10010110"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "10010111"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.binary-arithmetic.q05",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In two's complement there are two different bit patterns for zero, so +0 and −0 are stored differently.",
+  "answerSpec": {
+   "correct": false,
+   "feedbackTrue": "That describes sign-and-magnitude and one's complement. Two's complement has a single zero.",
+   "feedbackFalse": "Correct: all zeros is the only zero, which is one of the reasons two's complement is used."
+  },
+  "explanation": "Inverting 00000000 gives 11111111 and adding 1 gives 100000000; the carry out of the register is lost, leaving 00000000 again.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-arithmetic.q06",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Using 8-bit two's complement, add **85** and **−34**. Give the 8-bit result.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "00110011"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "85 = 01010101 and −34 = 11011110. Their sum is 00110011 (carry out discarded), which is 51 = 85 − 34.",
+  "hints": [
+   "Write both numbers as 8-bit patterns first.",
+   "Discard any carry out of the leftmost column."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "00110011"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "00110100"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-arithmetic.q07",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Work out **40 − 75** in 8-bit two's complement by adding the two's complement of 75. Give the 8-bit result.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "11011101"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "75 = 01001011; its two's complement is 10110101. 00101000 + 10110101 = 11011101, which is −35.",
+  "hints": [
+   "Negate the second number first: invert and add 1.",
+   "The answer is negative, so it starts with 1."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "11011101"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "11011110"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-arithmetic.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which of these additions causes overflow in an 8-bit two's complement register?",
+  "options": [
+   {
+    "key": "A",
+    "content": "90 + (−50)",
+    "rationale": "The true answer 40 is inside the range, so no overflow."
+   },
+   {
+    "key": "B",
+    "content": "90 + 50",
+    "correct": true,
+    "rationale": "Correct: the true answer 140 is outside −128 to 127."
+   },
+   {
+    "key": "C",
+    "content": "−90 + 50",
+    "rationale": "The true answer −40 is inside the range, so no overflow."
+   },
+   {
+    "key": "D",
+    "content": "−60 + (−60)",
+    "rationale": "The true answer −120 is inside the range, so no overflow."
+   }
+  ],
+  "explanation": "Two positive numbers 90 and 50 give 140, which is more than 127, so the result would wrongly appear negative. The others are inside the range (−120 is within −128 to 127).",
+  "hints": [
+   "Overflow needs two numbers of the same sign.",
+   "Check whether the true answer lies between −128 and 127."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.binary-arithmetic.q09",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the smallest (most negative) integer that can be stored in a 6-bit two's complement register?",
+  "answerSpec": {
+   "value": -32
+  },
+  "explanation": "The leftmost bit is worth −2^5 = −32 and all other bits are 0 for the smallest value: 100000 = −32.",
+  "workedSolution": "1. The leftmost bit is worth −2^5 = −32 and all other bits are 0 for the smallest value: 100000 = −32.",
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "-32"
+  },
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-arithmetic.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Complete the working to find the 8-bit two's complement of **−52**. The positive number 52 is 00110100 in 8 bits.",
+  "payload": {
+   "template": "Invert every bit: {{blank:inv}}\n\nAdd 1: {{blank:neg}}",
+   "blanks": [
+    {
+     "id": "inv"
+    },
+    {
+     "id": "neg"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "inv",
+     "accepted": [
+      "11001011"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "neg",
+     "accepted": [
+      "11001100"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "00110100 inverted is 11001011; adding 1 gives 11001100. Check: −128 + 76 = -52.",
+  "hints": [
+   "Change every 0 to 1 and every 1 to 0, then add binary 1."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "inv",
+     "text": "11001011"
+    },
+    {
+     "blankId": "neg",
+     "text": "11001100"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "inv",
+      "text": "xyz"
+     },
+     {
+      "blankId": "neg",
+      "text": "xyz"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-arithmetic.q11",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How many different integers can a 10-bit two's complement register store?",
+  "answerSpec": {
+   "value": 1024
+  },
+  "explanation": "Ten bits give 2^10 = 1024 patterns and every pattern is a different integer in two's complement (−512 to 511).",
+  "workedSolution": "1. Ten bits give 2^10 = 1024 patterns and every pattern is a different integer in two's complement (−512 to 511).",
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "1024"
+  },
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-arithmetic.q12",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each representation to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Sign and magnitude"
+    },
+    {
+     "id": "L2",
+     "content": "One's complement"
+    },
+    {
+     "id": "L3",
+     "content": "Two's complement"
+    },
+    {
+     "id": "L4",
+     "content": "Unsigned binary"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Invert the bits and add 1; one pattern for zero"
+    },
+    {
+     "id": "R4",
+     "content": "No negative numbers; 8 bits give 0 to 255"
+    },
+    {
+     "id": "R1",
+     "content": "First bit is a sign, the rest give the size; two patterns for zero"
+    },
+    {
+     "id": "R2",
+     "content": "Negative numbers are the inverted bits of the positive number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Only two's complement has a single zero and lets the same adder handle addition and subtraction.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-arithmetic.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why do computers use two's complement for signed integers?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It needs fewer bits than sign and magnitude for the same range",
+    "rationale": "Both use the same number of bits for the same count of patterns."
+   },
+   {
+    "key": "B",
+    "content": "It can store fractions exactly as well as whole numbers",
+    "rationale": "Two's complement integers cannot hold fractions."
+   },
+   {
+    "key": "C",
+    "content": "One adder circuit can add and subtract, and zero has one pattern",
+    "correct": true,
+    "rationale": "Correct: subtraction becomes addition of the negation, and −0 does not exist."
+   },
+   {
+    "key": "D",
+    "content": "It guarantees that no addition can ever overflow",
+    "rationale": "Overflow is still possible if the result is outside the range."
+   }
+  ],
+  "explanation": "Two's complement removes the need for a separate subtraction circuit and wastes no pattern on a second zero.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-arithmetic.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Multiply the binary numbers **1011** and **101**. Give the product in binary.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "110111"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The multiplier 101 has 1s in the 1s and 4s places, so add 1011 + 101100 = 110111. Check: 11 × 5 = 55.",
+  "hints": [
+   "Write the multiplicand shifted left once for each 1 in the multiplier, then add.",
+   "Check by converting to denary."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "110111"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "111000"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "data.binary-arithmetic.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Divide the binary number **110101** by **101**. Give the quotient (the whole-number part of the answer) in binary.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "1010"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "53 ÷ 5 = 10 remainder 3, so the quotient is 1010 and the remainder is 11.",
+  "hints": [
+   "Use long division: subtract the divisor wherever it fits.",
+   "Convert to denary to check: the divisor is 5."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "1010"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1011"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "data.binary-arithmetic.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain what is meant by overflow when two numbers are added in a fixed-width register, and how it can be detected for two's complement numbers.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The result is too large (or too small) to be stored in the number of bits available.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The stored result is wrong (for example, it has the wrong sign).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "It is detected when two numbers of the same sign give a result of the opposite sign.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Overflow happens when the true result lies outside the range the register can hold, so the stored bits represent a wrong value. For two's complement addition it is detected when adding two positive numbers gives a negative-looking result, or two negative numbers give a positive-looking result."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Overflow is about range, not about the carry out of the leftmost column.",
+  "hints": [
+   "Think about the range of an 8-bit register and the sign bit of the answer."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-arithmetic.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Compare sign-and-magnitude with two's complement for storing negative integers.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Sign-and-magnitude uses the first bit as the sign and the rest as the size; two's complement gives the first bit a negative place value.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Sign-and-magnitude has two zeros (+0 and −0); two's complement has one.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Two's complement lets the same adder do addition and subtraction; sign-and-magnitude needs extra logic.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: In sign-and-magnitude the first bit is only a sign and the other bits give the size, so there are two patterns for zero and addition needs the signs to be checked. In two's complement the leftmost bit is worth a negative power of two, there is one zero, and the same addition circuit handles negative numbers."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "These are the reasons sign-and-magnitude is rejected in modern processors.",
+  "hints": [
+   "Compare the number of patterns for zero and the circuits needed."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.binary-arithmetic.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Explain how a processor with no subtraction circuit can work out A − B using only addition.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "It finds the two's complement of B (invert the bits and add 1) to get −B.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "It adds A and −B, discarding any carry out of the leftmost column.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: It converts B to −B by inverting every bit and adding 1, then adds this to A in the normal adder and ignores any carry out."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Because A − B = A + (−B).",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.binary-arithmetic.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A counter in a stock program for a Kariba fishing co-operative is held as an 8-bit two's complement integer. A negative value shows fish owed to customers.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Show the counter value **−66** as an 8-bit two's complement number.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10111110"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "+66 = 01000010; invert and add 1 to get 10111110."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "The counter holds 90 and 50 more are added. Give the 8-bit pattern stored after the addition.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10001100"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "01011010 + 00110010 = 10001100."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Which statement about the result in part (b) is correct?",
+    "options": [
+     {
+      "key": "A",
+      "content": "No overflow: a sum of 140 fits in 8 bits",
+      "rationale": "That is true for unsigned 8 bits but not for two's complement."
+     },
+     {
+      "key": "B",
+      "content": "Overflow has occurred because the true total, 140, is more than 127",
+      "correct": true,
+      "rationale": "Correct: two positive numbers gave a result that looks negative."
+     },
+     {
+      "key": "C",
+      "content": "Overflow has occurred because a carry came out of the leftmost column",
+      "rationale": "Carry out is not the test for overflow."
+     },
+     {
+      "key": "D",
+      "content": "Underflow has occurred because the total is negative",
+      "rationale": "The true total is positive; the stored pattern only looks negative."
+     }
+    ],
+    "explanation": "Two positive numbers gave a result that appears negative, so overflow occurred."
+   }
+  ],
+  "explanation": "−66 = 10111110. 90 + 50 = 140 is above 127, so the stored pattern 10001100 is read as −116: overflow.",
+  "hints": [
+   "Part (b) uses the two patterns added column by column.",
+   "The largest 8-bit two's complement value is 127."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "10111110"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "10001100"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "10111111"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "10001101"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "data.binary-arithmetic.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A register in a prototype electricity-meter chip is an 8-bit two's complement integer that starts at −100 (10011100). The chip adds 30, then adds 45, then subtracts 120.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Give the 8-bit register contents after adding 30.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10111010"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "10011100 + 00011110 = 10111010 (−70)."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Give the 8-bit register contents after adding 45 to the result of part (a).",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "11100111"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "10111010 + 00101101 = 11100111 (−25)."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "The chip now subtracts 120 by adding the two's complement of 120. Give the 8-bit pattern of −120.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10001000"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "120 = 01111000; invert 10000111; add 1: 10001000."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "What happens in the final subtraction?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The answer is 95 and it fits in 8 bits",
+      "rationale": "That adds 120 instead of subtracting it."
+     },
+     {
+      "key": "B",
+      "content": "The answer is a positive 145 in 8 bits",
+      "rationale": "Subtracting 120 from a negative number cannot give a positive number."
+     },
+     {
+      "key": "C",
+      "content": "The answer −145 is below −128: overflow",
+      "correct": true,
+      "rationale": "Correct: the stored pattern would be read as a large positive number."
+     },
+     {
+      "key": "D",
+      "content": "Subtraction in a register can never overflow",
+      "rationale": "Overflow can occur in subtraction as well as addition."
+     }
+    ],
+    "explanation": "The register holds −25 before the last step; −25 − 120 = −145, which is below −128."
+   }
+  ],
+  "explanation": "The register goes −100 → −70 → −25; subtracting 120 would give −145, which is below −128 so negative overflow occurs.",
+  "hints": [
+   "Track the value in denary as well as in binary to check each step.",
+   "Work out the true result of the last step before deciding about overflow."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "10111010"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "11100111"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "10001000"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "10111011"
+     },
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "11101000"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "10001001"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "data.binary-arithmetic.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the two's complement of the 8-bit binary number **00010100** (which represents 20)?",
+  "options": [
+   {
+    "key": "A",
+    "content": "11101011",
+    "rationale": "That is only the one's complement; 1 has not been added."
+   },
+   {
+    "key": "B",
+    "content": "00010101",
+    "rationale": "This just adds 1 to the original number without inverting."
+   },
+   {
+    "key": "C",
+    "content": "10010100",
+    "rationale": "Only the sign bit has been changed: that is sign and magnitude."
+   },
+   {
+    "key": "D",
+    "content": "11101100",
+    "correct": true,
+    "rationale": "Correct: invert to 11101011, then add 1."
+   }
+  ],
+  "explanation": "00010100 inverted is 11101011; adding 1 gives 11101100, which represents −20.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.binary-arithmetic.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What denary value does the 8-bit two's complement pattern 10000000 represent?",
+  "options": [
+   {
+    "key": "A",
+    "content": "−0",
+    "rationale": "Two's complement has no negative zero."
+   },
+   {
+    "key": "B",
+    "content": "−127",
+    "rationale": "That is the value of 10000001."
+   },
+   {
+    "key": "C",
+    "content": "128",
+    "rationale": "128 needs nine bits in two's complement; the leftmost bit is negative."
+   },
+   {
+    "key": "D",
+    "content": "−128",
+    "correct": true,
+    "rationale": "Correct: the leftmost bit is worth −128 and all other bits are 0."
+   }
+  ],
+  "explanation": "The sign bit is worth −128 and the other bits add nothing, so the value is −128, the smallest 8-bit two's complement value.",
+  "hints": [
+   "The leftmost bit has a negative place value."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ }
+]

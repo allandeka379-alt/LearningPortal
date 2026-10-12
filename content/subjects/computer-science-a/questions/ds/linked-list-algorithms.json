@@ -1,0 +1,1455 @@
+[
+ {
+  "key": "ds.linked-list-algorithms.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a linked list stored in arrays, what does a pointer value of 0 in the `Next` array mean?",
+  "options": [
+   {
+    "key": "A",
+    "content": "There is no next node",
+    "correct": true,
+    "rationale": "Correct: it is the null pointer."
+   },
+   {
+    "key": "B",
+    "content": "The next node is node 0",
+    "rationale": "Nodes are numbered from 1."
+   },
+   {
+    "key": "C",
+    "content": "The node is the start of the list",
+    "rationale": "The start is held in the start pointer."
+   },
+   {
+    "key": "D",
+    "content": "The node has been erased from the array",
+    "rationale": "Its data is still there."
+   }
+  ],
+  "explanation": "0 marks the end of the list (or of the free list).",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the purpose of the free list pointer?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It identifies the first unused node",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "It identifies the last node of the whole list",
+    "rationale": "The last node is the one whose pointer is null."
+   },
+   {
+    "key": "C",
+    "content": "It counts the nodes in the list",
+    "rationale": "A separate count does that."
+   },
+   {
+    "key": "D",
+    "content": "It identifies the largest item in the list so far",
+    "rationale": "The list is not ordered by size of the pointer."
+   }
+  ],
+  "explanation": "A new item is stored in the node the free list pointer identifies.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A new item is smaller than every item in an alphabetical linked list. Which pointer must change to include it?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The pointer of the last node",
+    "rationale": "The new item is not at the end."
+   },
+   {
+    "key": "B",
+    "content": "The free list pointer only",
+    "rationale": "The free list pointer moves, but the list also needs a new start."
+   },
+   {
+    "key": "C",
+    "content": "No pointer needs to change",
+    "rationale": "Without a change the new node is not in the list."
+   },
+   {
+    "key": "D",
+    "content": "The start pointer",
+    "correct": true,
+    "rationale": "Correct: the new node becomes the first node."
+   }
+  ],
+  "explanation": "With no previous node, the start pointer is updated.",
+  "hints": [
+   "Which node comes before the new node?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "When deleting a node from the middle of a linked list, which statement is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "All the later items are moved one place back in the array",
+    "rationale": "That is what an array needs; a linked list does not move items."
+   },
+   {
+    "key": "B",
+    "content": "The pointers of every node in the list are changed",
+    "rationale": "Only one pointer changes."
+   },
+   {
+    "key": "C",
+    "content": "The deleted node's data must be set to null first",
+    "rationale": "The data may stay; the node is just returned to the free list."
+   },
+   {
+    "key": "D",
+    "content": "The previous node's pointer skips the deleted node",
+    "correct": true,
+    "rationale": "Correct."
+   }
+  ],
+  "explanation": "One pointer change removes the node from the list.",
+  "hints": [
+   "How many nodes need a new pointer?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why must the new node's pointer be set before the previous node's pointer is changed when inserting?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The order makes the list sort itself automatically",
+    "rationale": "The position is found by comparing items."
+   },
+   {
+    "key": "B",
+    "content": "Otherwise the rest of the list is lost",
+    "correct": true,
+    "rationale": "Correct: the link to it would be lost."
+   },
+   {
+    "key": "C",
+    "content": "The previous node's pointer is not needed at all",
+    "rationale": "It must point to the new node."
+   },
+   {
+    "key": "D",
+    "content": "The program would not translate",
+    "rationale": "The order does not cause a translation error."
+   }
+  ],
+  "explanation": "The previous node's old pointer is the new node's next pointer.",
+  "hints": [
+   "What value does the previous node's pointer hold before it changes?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A list of 10 000 names in order is searched with a binary search many times and rarely changed. Which structure is more suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A linked list, because it can use a binary search easily",
+    "rationale": "A linked list cannot be accessed by index, so a binary search is not possible."
+   },
+   {
+    "key": "B",
+    "content": "An array, as items can be reached by index",
+    "correct": true,
+    "rationale": "Correct: a binary search needs direct access."
+   },
+   {
+    "key": "C",
+    "content": "A linked list, because it needs no pointers",
+    "rationale": "A linked list needs a pointer for every node."
+   },
+   {
+    "key": "D",
+    "content": "Either one, because they search at the same speed",
+    "rationale": "A binary search needs direct access."
+   }
+  ],
+  "explanation": "A binary search needs the middle item to be reached directly.",
+  "hints": [
+   "How does a binary search find the middle item?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a Python linked list, which value plays the part of the null pointer?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`0`",
+    "rationale": "That would be a number, which is legal data."
+   },
+   {
+    "key": "B",
+    "content": "`\"\"`",
+    "rationale": "That is an empty string."
+   },
+   {
+    "key": "C",
+    "content": "`None`",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "D",
+    "content": "`False`",
+    "rationale": "That is a Boolean value."
+   }
+  ],
+  "explanation": "The last node's next attribute is None.",
+  "hints": [
+   "What does Python use to mean no object?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A linked list has no free nodes (`FreePointer` = 0). What should the insert function do?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Overwrite the first node",
+    "rationale": "That would lose an item."
+   },
+   {
+    "key": "B",
+    "content": "Set `FreePointer` to the start of the list",
+    "rationale": "That would corrupt the list."
+   },
+   {
+    "key": "C",
+    "content": "Return FALSE without changing the list",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "D",
+    "content": "Delete the last item and use its node",
+    "rationale": "Items must not be lost without being asked."
+   }
+  ],
+  "explanation": "The list is full, so the item cannot be stored.",
+  "hints": [
+   "What does a null free list pointer show?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The order of the items in a linked list is given by the order of the nodes in the array.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The order is given by the pointers, starting at the start pointer.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A binary search can be used on a linked list in the same way as on a sorted array.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The middle node cannot be reached directly; the pointers have to be followed from the start.",
+  "hints": [
+   "Does a linked list let you jump to the middle?"
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each term to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Start pointer"
+    },
+    {
+     "id": "L2",
+     "content": "Free list pointer"
+    },
+    {
+     "id": "L3",
+     "content": "Null pointer"
+    },
+    {
+     "id": "L4",
+     "content": "Node"
+    },
+    {
+     "id": "L5",
+     "content": "Previous node"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "A pointer that points to no node"
+    },
+    {
+     "id": "R4",
+     "content": "A data item together with its pointer"
+    },
+    {
+     "id": "R5",
+     "content": "The node whose pointer is changed when inserting or deleting"
+    },
+    {
+     "id": "R1",
+     "content": "The index of the first node in the list"
+    },
+    {
+     "id": "R2",
+     "content": "The index of the first unused node"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Terms for the array implementation.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the lines of the delete algorithm that remove the node `Current` from the list, where `Previous` is the node before it (0 if `Current` is the first node).",
+  "payload": {
+   "template": "IF Previous = 0 THEN\n\nStartPointer ← {{blank:a}}\n\nELSE\n\nNext[Previous] ← {{blank:b}}\n\nENDIF\n\nNext[Current] ← {{blank:c}}\n\nFreePointer ← Current",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "Next[Current]",
+      "Current",
+      "Previous",
+      "FreePointer"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "Next[Current]",
+      "Current",
+      "Previous",
+      "StartPointer"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "FreePointer",
+      "StartPointer",
+      "0",
+      "Previous"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "Next[Current]"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "Next[Current]"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "FreePointer"
+     ]
+    }
+   ]
+  },
+  "explanation": "Skip the node by copying its pointer, then link the node in front of the old free list.",
+  "hints": [
+   "The previous node must skip the deleted one and the deleted node joins the free list."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "Next[Current]"
+    },
+    {
+     "blankId": "b",
+     "text": "Next[Current]"
+    },
+    {
+     "blankId": "c",
+     "text": "FreePointer"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "Current"
+     },
+     {
+      "blankId": "b",
+      "text": "Current"
+     },
+     {
+      "blankId": "c",
+      "text": "StartPointer"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A linked list of 5 nodes is empty with `FreePointer` = 1 and the free list 1 → 2 → 3 → 4 → 5. After four items have been inserted, state the value of `FreePointer`.",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "FreePointer = 5.",
+  "workedSolution": "Each insert takes the first free node: after 1, 2, 3 and 4 are used, node 5 is first on the free list.",
+  "hints": [
+   "The first node comes from the free list."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "ds.linked-list-algorithms.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The list below is stored in arrays.\n\n| Index | Data | Next |\n|:-:|:-:|:-:|\n| 1 | Mutare | 0 |\n| 2 | Gweru | 4 |\n| 3 | Kariba | 1 |\n| 4 | Hwange | 3 |\n| 5 | (unused) | 0 |\n\nStart = 2, Free = 5\n\nHow many comparisons does a search for Mutare make?",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "4 comparisons.",
+  "workedSolution": "The order is Gweru (2), Hwange (4), Kariba (3), Mutare (1): four nodes are compared.",
+  "hints": [
+   "Follow the pointers from the start pointer."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "ds.linked-list-algorithms.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A linked list of towns in alphabetical order is stored in arrays; 0 is the null pointer. `StartPointer` = 2 and `FreePointer` = 5.\n\n| Index | Data | Next |\n|:-:|:-:|:-:|\n| 1 | Mutare | 0 |\n| 2 | Gweru | 4 |\n| 3 | Kariba | 1 |\n| 4 | Hwange | 3 |\n| 5 | (unused) | 0 |\n\nStart = 2, Free = 5\n\nThe town Gweru is deleted. State the new value of `StartPointer`.",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "StartPointer = 4.",
+  "workedSolution": "Gweru is node 2 and its Next is 4, so the start pointer becomes 4.",
+  "hints": [
+   "The node before Gweru is none, since Gweru is first."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "ds.linked-list-algorithms.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A linked list of towns in alphabetical order is stored in arrays; 0 is the null pointer. `StartPointer` = 2 and `FreePointer` = 5.\n\n| Index | Data | Next |\n|:-:|:-:|:-:|\n| 1 | Mutare | 0 |\n| 2 | Gweru | 4 |\n| 3 | Kariba | 1 |\n| 4 | Hwange | 3 |\n| 5 | (unused) | 0 |\n\nStart = 2, Free = 5\n\nThe town Gweru is deleted. State the new value of `FreePointer`.",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "FreePointer = 2.",
+  "workedSolution": "The deleted node, 2, becomes the first free node, so FreePointer = 2.",
+  "hints": [
+   "The deleted node goes to the front of the free list."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "ds.linked-list-algorithms.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Compare a linked list with an array. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Insertion and deletion in a linked list only change pointers; in an array items must be shifted",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Items in an array can be reached directly by index; a linked list must be followed from the start",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A linked list needs extra memory for the pointers",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: In a linked list insertion and deletion only change pointers, whereas an array needs items to be shifted. An array item can be reached directly by its index, but a linked list has to be followed from the start, and it also uses extra memory for the pointers."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Insertion, access and memory.",
+  "hints": [
+   "Think about insertion, access and memory."
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 5,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "The linked list is stored in `Data` and `Next` with `StartPointer`. Write a function `Find(Item)` that returns the index of the node holding `Item`, or 0 if the item is not in the list. [5]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Function header with the Item parameter and RETURNS INTEGER",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Current is set to StartPointer",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A loop that continues while Current <> 0 and Data[Current] <> Item",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Moves on with Current ← Next[Current] inside the loop",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Returns Current after the loop",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nFUNCTION Find(Item : STRING) RETURNS INTEGER\n    DECLARE Current : INTEGER\n    Current ← StartPointer\n    WHILE Current <> 0 AND Data[Current] <> Item DO\n        Current ← Next[Current]\n    ENDWHILE\n    RETURN Current\nENDFUNCTION\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Follow the pointers until found or null.",
+  "hints": [
+   "Use Current to walk the list.",
+   "Return 0 when the pointer becomes null."
+  ],
+  "skill": "CREATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Describe the steps needed to insert a new item between two nodes of a linked list stored in arrays. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Take the first node from the free list and move the free list pointer to the next free node",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Store the new item in the Data of that node",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Set the Next pointer of the new node to the node that follows it",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Change the Next pointer of the previous node to the new node",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Take the first free node and move the free list pointer on. Store the item in that node's data, set its Next pointer to the node that follows, then change the previous node's Next pointer to the new node."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Take, store, link forward, link back.",
+  "hints": [
+   "Four pointer or data changes are needed."
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q20",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A club keeps its members' names in alphabetical order. Names are added and removed every week. Justify the use of a linked list rather than an array. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Names are inserted and deleted often",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "In a linked list this changes only pointers, so no names have to be moved",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "In an array the names after the position would have to be shifted each time",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Names are added and removed often. In a linked list only pointers change, so no names are moved, whereas an array would need the later names shifted each time."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Frequent changes favour pointers.",
+  "hints": [
+   "Consider which operations are common."
+  ],
+  "skill": "EVALUATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 720,
+  "stem": "A linked list of towns in alphabetical order is stored in arrays. A pointer of 0 is null.\n\n| Index | Data | Next |\n|:-:|:-:|:-:|\n| 1 | Mutare | 0 |\n| 2 | Gweru | 4 |\n| 3 | Kariba | 1 |\n| 4 | Hwange | 3 |\n| 5 | (unused) | 0 |\n\nStart = 2, Free = 5\n\nThe town Gweru is deleted. Then the town Bulawayo is inserted using the first node of the free list.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the first two towns in the list before the changes.",
+    "payload": {
+     "template": "First: {{blank:a}}, second: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Gweru",
+        "Hwange",
+        "Kariba",
+        "Mutare"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Gweru",
+        "Hwange",
+        "Kariba",
+        "Mutare"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Gweru"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Hwange"
+       ]
+      }
+     ]
+    },
+    "explanation": "Start = 2 (Gweru), whose Next is 4 (Hwange)."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `StartPointer` after Gweru is deleted.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "StartPointer = 4.",
+    "workedSolution": "Gweru is first, so the start pointer takes Gweru's Next value, 4."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `FreePointer` after Gweru is deleted.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "FreePointer = 2.",
+    "workedSolution": "Node 2 joins the front of the free list."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the index of the node used to store Bulawayo.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "Node 2.",
+    "workedSolution": "The first free node is node 2, the one freed by Gweru."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the new value of `StartPointer` after Bulawayo is inserted.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "StartPointer = 2.",
+    "workedSolution": "Bulawayo comes before Hwange, so it becomes the first node: 2."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why no town has to be moved in the arrays when Gweru is deleted.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The order of the list is held in the pointers",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Only the start pointer (and the deleted node's pointer) change",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The deleted node is added to the free list",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The order is held in the pointers, so deleting only changes the start pointer and the deleted node's own pointer, and the node is added to the free list. No town needs to move."
+    },
+    "explanation": "Pointers, not positions."
+   }
+  ],
+  "explanation": "A deletion and an insertion in a linked list of towns.",
+  "hints": [
+   "Follow Start, then each Next pointer.",
+   "The deleted node goes to the front of the free list."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Gweru"
+      },
+      {
+       "blankId": "b",
+       "text": "Hwange"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Mutare"
+       },
+       {
+        "blankId": "b",
+        "text": "Kariba"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "ds.linked-list-algorithms.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A linked list of towns in alphabetical order holds Bulawayo, Hwange, Kariba and Mutare with `StartPointer` = 2. The nodes are: node 1 Mutare (Next 0), node 2 Bulawayo (Next 4), node 3 Kariba (Next 1) and node 4 Hwange (Next 3).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of comparisons made by `Find(\"Kariba\")`.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "3 comparisons.",
+    "workedSolution": "The nodes visited are 2 (Bulawayo), 4 (Hwange) and 3 (Kariba)."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value returned by `Find(\"Kariba\")`.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "3.",
+    "workedSolution": "Kariba is stored in node 3."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is returned by `Find(\"Rudo\")`, which is not in the list?",
+    "options": [
+     {
+      "key": "A",
+      "content": "1",
+      "rationale": "Node 1 holds Mutare."
+     },
+     {
+      "key": "B",
+      "content": "-1",
+      "rationale": "The function returns the pointer value 0."
+     },
+     {
+      "key": "C",
+      "content": "0",
+      "correct": true,
+      "rationale": "Correct: the loop ends when Current is the null pointer."
+     },
+     {
+      "key": "D",
+      "content": "4",
+      "rationale": "Node 4 holds Hwange."
+     }
+    ],
+    "explanation": "A null Current means the end was reached."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the pseudocode for the function `Find(Item)`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Starts at StartPointer",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Loop continues while Current <> 0 AND Data[Current] <> Item, moving Current ← Next[Current]",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Returns Current",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nFUNCTION Find(Item : STRING) RETURNS INTEGER\n    DECLARE Current : INTEGER\n    Current ← StartPointer\n    WHILE Current <> 0 AND Data[Current] <> Item DO\n        Current ← Next[Current]\n    ENDWHILE\n    RETURN Current\nENDFUNCTION\n```"
+    },
+    "explanation": "Follow the pointers."
+   }
+  ],
+  "explanation": "Searching a linked list.",
+  "hints": [
+   "Follow the pointers from the start pointer.",
+   "The function returns 0 when the item is not found."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ }
+]

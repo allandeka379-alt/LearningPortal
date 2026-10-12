@@ -1,0 +1,1384 @@
+[
+ {
+  "key": "ds.text-files.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why do programs store data in files?",
+  "options": [
+   {
+    "key": "A",
+    "content": "So that the data is kept after the program ends",
+    "correct": true,
+    "rationale": "Correct: it persists on secondary storage."
+   },
+   {
+    "key": "B",
+    "content": "So that the data can be processed faster than in memory",
+    "rationale": "Files on a disk are slower than memory."
+   },
+   {
+    "key": "C",
+    "content": "So that the program needs no variables",
+    "rationale": "Variables are still needed to process the data."
+   },
+   {
+    "key": "D",
+    "content": "So that the data is automatically sorted",
+    "rationale": "A file does not sort its contents."
+   }
+  ],
+  "explanation": "Data in variables is lost when the program ends.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "ds.text-files.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A file already holds 20 lines. What happens when it is opened for writing and one line is written?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The old lines are erased, leaving only the new line",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "The new line is added after the 20 lines that are there",
+    "rationale": "That is the effect of append mode."
+   },
+   {
+    "key": "C",
+    "content": "The new line is inserted at the start and the others stay as they were",
+    "rationale": "Write mode does not insert."
+   },
+   {
+    "key": "D",
+    "content": "An error occurs because the file exists",
+    "rationale": "Opening an existing file for write is allowed."
+   }
+  ],
+  "explanation": "Write mode starts with an empty file.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "ds.text-files.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which file mode adds new lines to the end of a file and keeps the existing lines?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Read",
+    "rationale": "Read mode cannot add anything."
+   },
+   {
+    "key": "B",
+    "content": "Append",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "C",
+    "content": "Write",
+    "rationale": "Write mode erases the existing lines."
+   },
+   {
+    "key": "D",
+    "content": "Close",
+    "rationale": "Close is not a mode."
+   }
+  ],
+  "explanation": "Append keeps the contents and adds to the end.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "ds.text-files.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What does the function `EOF(\"marks.txt\")` return when every line of the file has been read?",
+  "options": [
+   {
+    "key": "A",
+    "content": "FALSE",
+    "rationale": "FALSE means that there are still lines to read."
+   },
+   {
+    "key": "B",
+    "content": "0",
+    "rationale": "EOF returns a Boolean value."
+   },
+   {
+    "key": "C",
+    "content": "The last line of the file",
+    "rationale": "EOF tests for the end; it does not return data."
+   },
+   {
+    "key": "D",
+    "content": "TRUE",
+    "correct": true,
+    "rationale": "Correct: the end of the file has been reached."
+   }
+  ],
+  "explanation": "EOF is TRUE at the end of the file.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "ds.text-files.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A line read from a text file holds the characters `58`. Which statement adds it to `Total`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Total ← Total + Line`",
+    "rationale": "A string cannot be added to a number."
+   },
+   {
+    "key": "B",
+    "content": "`Total ← Total + NUM_TO_STR(Line)`",
+    "rationale": "This converts in the wrong direction."
+   },
+   {
+    "key": "C",
+    "content": "`Total ← Total + STR_TO_NUM(Line)`",
+    "correct": true,
+    "rationale": "Correct: the string is converted to a number first."
+   },
+   {
+    "key": "D",
+    "content": "`Total ← Line`",
+    "rationale": "This would replace the total."
+   }
+  ],
+  "explanation": "Everything read from a text file is a string.",
+  "hints": [
+   "What is the data type of a line read from a file?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "ds.text-files.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program writes results to a file but does not close the file. Which problem may occur?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The program will not translate into machine code",
+    "rationale": "A missing close does not cause a translation error."
+   },
+   {
+    "key": "B",
+    "content": "Some data may not be saved",
+    "correct": true,
+    "rationale": "Correct: it may still be in a buffer."
+   },
+   {
+    "key": "C",
+    "content": "The data in the file will be sorted into order",
+    "rationale": "Closing does not sort data."
+   },
+   {
+    "key": "D",
+    "content": "The file will be deleted from the disk at once",
+    "rationale": "The file is not deleted."
+   }
+  ],
+  "explanation": "Closing writes any buffered data and releases the file.",
+  "hints": [
+   "Where is the data held before it reaches the disk?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "ds.text-files.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which Python statement opens `log.txt` so that a new line can be added to the end without losing the existing lines?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`open(\"log.txt\", \"r\")`",
+    "rationale": "\"r\" opens the file for reading only."
+   },
+   {
+    "key": "B",
+    "content": "`open(\"log.txt\", \"w\")`",
+    "rationale": "\"w\" erases the existing contents."
+   },
+   {
+    "key": "C",
+    "content": "`open(\"log.txt\", \"a\")`",
+    "correct": true,
+    "rationale": "Correct: \"a\" is append mode."
+   },
+   {
+    "key": "D",
+    "content": "`open(\"log.txt\")`",
+    "rationale": "With no mode the file is opened for reading."
+   }
+  ],
+  "explanation": "Append mode is \"a\".",
+  "hints": [
+   "Which mode keeps the contents?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "ds.text-files.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A file of unknown length is to be read line by line. Which loop is most suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A FOR loop from 1 to 100 with a fixed count",
+    "rationale": "The file may hold more or fewer lines."
+   },
+   {
+    "key": "B",
+    "content": "A loop that repeats exactly once and then stops",
+    "rationale": "Only one line would be read."
+   },
+   {
+    "key": "C",
+    "content": "A loop that never reads any lines from the file",
+    "rationale": "The loop must read the data."
+   },
+   {
+    "key": "D",
+    "content": "A loop that runs until the end of the file",
+    "correct": true,
+    "rationale": "Correct."
+   }
+  ],
+  "explanation": "Use WHILE NOT EOF(…).",
+  "hints": [
+   "How does the program know the file has ended?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "ds.text-files.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Data stored in an array is still available after the computer is switched off and on again.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. An array is in memory and is lost; data in a file on a disk persists.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "ds.text-files.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Opening a file for reading when the file does not exist causes an error.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. There is nothing to read, so the program should check that the file exists first.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "ds.text-files.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each pseudocode statement to its purpose.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "`OPENFILE`"
+    },
+    {
+     "id": "L2",
+     "content": "`READFILE`"
+    },
+    {
+     "id": "L3",
+     "content": "`WRITEFILE`"
+    },
+    {
+     "id": "L4",
+     "content": "`CLOSEFILE`"
+    },
+    {
+     "id": "L5",
+     "content": "`EOF`"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Writes a line of text to the file"
+    },
+    {
+     "id": "R4",
+     "content": "Finishes with the file and saves the data"
+    },
+    {
+     "id": "R5",
+     "content": "Tests whether all the lines have been read"
+    },
+    {
+     "id": "R1",
+     "content": "Prepares a file for reading, writing or appending"
+    },
+    {
+     "id": "R2",
+     "content": "Reads the next line of the file into a variable"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The five file statements of the pseudocode guide.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "ds.text-files.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Complete the pseudocode that outputs every line of `names.txt`.",
+  "payload": {
+   "template": "OPENFILE \"names.txt\" FOR {{blank:a}}\n\nWHILE NOT {{blank:b}}(\"names.txt\") DO\n\n{{blank:c}} \"names.txt\", Name\n\nOUTPUT Name\n\nENDWHILE\n\n{{blank:d}} \"names.txt\"",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "READ",
+      "WRITE",
+      "APPEND",
+      "CLOSE"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "EOF",
+      "READFILE",
+      "LENGTH",
+      "END"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "READFILE",
+      "WRITEFILE",
+      "OPENFILE",
+      "INPUT"
+     ]
+    },
+    {
+     "id": "d",
+     "input": "select",
+     "choices": [
+      "CLOSEFILE",
+      "OPENFILE",
+      "ENDFILE",
+      "EOF"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "READ"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "EOF"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "READFILE"
+     ]
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "CLOSEFILE"
+     ]
+    }
+   ]
+  },
+  "explanation": "Open for read, loop while not EOF, READFILE each line, CLOSEFILE.",
+  "hints": [
+   "Open, loop until the end, read, then finish with the matching close."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "READ"
+    },
+    {
+     "blankId": "b",
+     "text": "EOF"
+    },
+    {
+     "blankId": "c",
+     "text": "READFILE"
+    },
+    {
+     "blankId": "d",
+     "text": "CLOSEFILE"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "WRITE"
+     },
+     {
+      "blankId": "b",
+      "text": "READFILE"
+     },
+     {
+      "blankId": "c",
+      "text": "WRITEFILE"
+     },
+     {
+      "blankId": "d",
+      "text": "OPENFILE"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "ds.text-files.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A file contains the lines below. How many times does a loop `WHILE NOT EOF` that reads one line each time execute its body?\n\n```\n7\n12\n9\n15\n```",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "4 passes.",
+  "workedSolution": "There is one pass for each of the 4 lines.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "ds.text-files.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The file `temps.txt` contains these lines:\n\n```\n21\n25\n19\n30\n24\n```\nA program reads every line and adds the numbers. State the total.",
+  "answerSpec": {
+   "value": 119
+  },
+  "explanation": "119.",
+  "workedSolution": "21 + 25 + 19 + 30 + 24 = 119.",
+  "hints": [
+   "Add the five numbers."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "119"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "24"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "95"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "ds.text-files.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The file `readings.txt` contains these lines:\n\n```\n16\n28\n17\n31\n26\n23\n```\nHow many of the numbers are greater than 22?",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "4 numbers.",
+  "workedSolution": "28, 31, 26 and 23 are greater than 22.",
+  "hints": [
+   "Count the numbers greater than 22."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "ds.text-files.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The file `log.txt` holds 4 lines. A program opens it for append and writes 2 lines, then closes it. State the number of lines in the file.",
+  "answerSpec": {
+   "value": 6
+  },
+  "explanation": "6 lines.",
+  "workedSolution": "Append keeps the 4 lines and adds 2: 6.",
+  "hints": [
+   "Write mode erased the file, so count what was written after that."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "6"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "ds.text-files.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why a program that records pupils' marks should store them in a file. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Variables and arrays are held in memory, which is cleared when the program ends or the power is off",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A file on secondary storage keeps the data permanently (persistence)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The data can be used again later or by another program",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Data in variables and arrays is lost when the program ends or the power goes off. A file on a disk keeps the data, so it can be used again later or by another program."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Persistence.",
+  "hints": [
+   "Think about memory and power loss."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "ds.text-files.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Describe the difference between opening a file for write and opening it for append. [2]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Write erases any existing contents before writing",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Append keeps the existing contents and adds new data at the end",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Write erases the existing contents and starts again. Append keeps the existing contents and adds the new data at the end."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Erase against keep.",
+  "hints": [
+   "What happens to the existing lines?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "ds.text-files.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 5,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "The file `sales.txt` holds one whole-number amount on each line. Write pseudocode that reads all the lines and outputs the number of lines and the total of the amounts. [5]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Opens the file for reading",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Sets the count and total to 0 before the loop",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A loop that continues while NOT EOF, reading a line each time",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Converts the line to a number, adds it to the total and adds 1 to the count",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Closes the file and outputs the count and total",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nCount ← 0\nTotal ← 0\nOPENFILE \"sales.txt\" FOR READ\nWHILE NOT EOF(\"sales.txt\") DO\n    READFILE \"sales.txt\", Line\n    Total ← Total + STR_TO_NUM(Line)\n    Count ← Count + 1\nENDWHILE\nCLOSEFILE \"sales.txt\"\nOUTPUT Count, Total\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Open, loop to EOF, convert and add, close, output.",
+  "hints": [
+   "Read until EOF and keep a counter and a total.",
+   "Convert each line with STR_TO_NUM."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "ds.text-files.q20",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A program must add the name stored in `NewName` to the end of the file `visitors.txt` without losing the names already in it. Write the pseudocode. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Opens visitors.txt for APPEND",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Uses WRITEFILE with the file name and NewName",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Closes the file with CLOSEFILE",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Statements are in the order open, write, close",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nOPENFILE \"visitors.txt\" FOR APPEND\nWRITEFILE \"visitors.txt\", NewName\nCLOSEFILE \"visitors.txt\"\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Append keeps the old lines.",
+  "hints": [
+   "Open for APPEND so the old lines are kept."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "ds.text-files.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 720,
+  "stem": "A museum in Bulawayo stores the age of each visitor on a separate line of `visitors.txt`. The file contains the lines 34, 12, 51, 8, 27 and 45. The pseudocode below reads the file.\n\n```\nDECLARE Line : STRING\nDECLARE Age, Adults, Total : INTEGER\nAdults ← 0\nTotal ← 0\nOPENFILE \"visitors.txt\" FOR READ\nWHILE NOT EOF(\"visitors.txt\") DO\n    READFILE \"visitors.txt\", Line\n    Age ← STR_TO_NUM(Line)\n    IF Age >= 18 THEN\n        Adults ← Adults + 1\n        Total ← Total + Age\n    ENDIF\nENDWHILE\nCLOSEFILE \"visitors.txt\"\nOUTPUT Adults, Total\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which file mode is used by the `OPENFILE` statement?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Write",
+      "rationale": "Write would erase the visitors."
+     },
+     {
+      "key": "B",
+      "content": "Read",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "Append",
+      "rationale": "Append would add to the file."
+     },
+     {
+      "key": "D",
+      "content": "Close",
+      "rationale": "Close is not a file mode."
+     }
+    ],
+    "explanation": "The program only reads the file."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State how many lines are read.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "6 lines.",
+    "workedSolution": "The loop runs until EOF, once per line: 6."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Adults` that is output.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "4 adults.",
+    "workedSolution": "34, 51, 27 and 45 are at least 18."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Total` that is output.",
+    "answerSpec": {
+     "value": 157
+    },
+    "explanation": "157.",
+    "workedSolution": "34 + 51 + 27 + 45 = 157."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why `STR_TO_NUM` is used on each line.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each line read from a text file is a string",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It must be converted to a number before it can be compared with 18 or added to Total",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A line read from a text file is a string, so it must be converted into a number before it can be compared with 18 or added to `Total`."
+    },
+    "explanation": "Text must be converted."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode to write the ages of the adults, one per line, to a new file `adults.txt` (as the adults are found).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Opens adults.txt for WRITE before the loop",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Uses WRITEFILE with NUM_TO_STR(Age) inside the IF",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Closes adults.txt after the loop",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nOPENFILE \"adults.txt\" FOR WRITE\n// inside the IF Age >= 18 THEN\nWRITEFILE \"adults.txt\", NUM_TO_STR(Age)\n// after the loop\nCLOSEFILE \"adults.txt\"\n```"
+    },
+    "explanation": "A second file written inside the loop."
+   }
+  ],
+  "explanation": "Reading a file of ages and counting the adults.",
+  "hints": [
+   "Only ages of 18 or more are counted.",
+   "The file contains six lines."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "157"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "177"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "ds.text-files.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ds.text-files"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "The Python program below was run in an empty folder.\n\n```python\nwith open(\"scores.txt\", \"w\") as f:\n    print(12, file=f)\n    print(15, file=f)\nwith open(\"scores.txt\", \"a\") as f:\n    print(9, file=f)\nwith open(\"scores.txt\", \"r\") as f:\n    total = 0\n    for line in f:\n        total = total + int(line)\nprint(total)\nwith open(\"scores.txt\", \"w\") as f:\n    print(20, file=f)\nwith open(\"scores.txt\", \"r\") as f:\n    print(f.read().strip())\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of lines in `scores.txt` just before it is read for the first time.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "3 lines.",
+    "workedSolution": "Write gives 2 lines and append adds 1."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the first value printed.",
+    "answerSpec": {
+     "value": 36
+    },
+    "explanation": "36.",
+    "workedSolution": "12 + 15 + 9 = 36."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the second value printed.",
+    "answerSpec": {
+     "value": 20
+    },
+    "explanation": "20.",
+    "workedSolution": "Opening for write erased the file, leaving only 20."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why does the file contain only one line at the end?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The file was not closed after the append had finished",
+      "rationale": "The `with` statement closes the file."
+     },
+     {
+      "key": "B",
+      "content": "The line 20 replaced the line 9 only, and the rest stayed",
+      "rationale": "The whole file was erased."
+     },
+     {
+      "key": "C",
+      "content": "Python only keeps the last line that was ever written",
+      "rationale": "All lines written in one session are kept."
+     },
+     {
+      "key": "D",
+      "content": "Mode \"w\" erased the old contents",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "Write mode starts with an empty file."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State the change that would keep the earlier lines and add the line 20 to the file.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Change the mode of the last write from \"w\" to \"a\" (append)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So that the line 20 is added after the existing three lines",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Open the file with mode \"a\" instead of \"w\", so that 20 is added after the three existing lines."
+    },
+    "explanation": "Append instead of write."
+   }
+  ],
+  "explanation": "Tracing the effect of write and append on a file.",
+  "hints": [
+   "Trace the file contents after each block.",
+   "Write mode erases the file."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "36"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "20"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "27"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "56"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ }
+]

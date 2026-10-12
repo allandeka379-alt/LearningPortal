@@ -1,0 +1,1372 @@
+[
+ {
+  "key": "data.file-organisation.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which file organisation stores the records in order of their key field?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Sequential",
+    "correct": true,
+    "rationale": "Correct: a sequential file is ordered on the key field."
+   },
+   {
+    "key": "B",
+    "content": "Serial",
+    "rationale": "A serial file is stored in the order in which the records arrived."
+   },
+   {
+    "key": "C",
+    "content": "Random",
+    "rationale": "A random file places records at addresses calculated from the key."
+   },
+   {
+    "key": "D",
+    "content": "Indexed hash",
+    "rationale": "This is not one of the three organisations in the syllabus."
+   }
+  ],
+  "explanation": "Serial: order of arrival. Sequential: ordered on the key field. Random: placed by a calculation on the key.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.file-organisation.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A shop in Chinhoyi appends each till transaction to a file during the day. The file is read through once, from start to finish, at closing time. Which organisation and access method are most suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Serial file with sequential access",
+    "correct": true,
+    "rationale": "Correct: records are added at the end as they arrive and every record is read in turn."
+   },
+   {
+    "key": "B",
+    "content": "Random file with direct access",
+    "rationale": "Direct access is for finding single records quickly; here every record is read."
+   },
+   {
+    "key": "C",
+    "content": "Sequential file with direct access",
+    "rationale": "Keeping the file ordered on a key would slow the adding of each transaction."
+   },
+   {
+    "key": "D",
+    "content": "Random file with sequential access",
+    "rationale": "A random file is arranged for direct access, not for being read in order."
+   }
+  ],
+  "explanation": "Appending records as they arrive is the simplest with a serial file, and reading every record in turn is what sequential access is for.",
+  "hints": [
+   "Are records looked up one at a time, or are they all processed?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.file-organisation.q03",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A random file can be searched for a single record without reading the records before it.",
+  "answerSpec": {
+   "correct": true,
+   "feedbackTrue": "Correct: the address is calculated from the key, so the record is reached directly.",
+   "feedbackFalse": "In a random file the address of a record is calculated, so access is direct, not by reading through the file."
+  },
+  "explanation": "Direct access using the calculated address is the advantage of a random file.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.file-organisation.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A random file has 7 slots numbered 0 to 6. The hashing algorithm is key MOD 7. In which slot is the record with key **5836** stored (if there is no collision)?",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "5836 MOD 7 = 5.",
+  "workedSolution": "1. Divide 5836 by 7: 833 × 7 = 5831.\n2. The remainder is 5836 − 5831 = 5.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.file-organisation.q05",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A hashing algorithm adds the ASCII codes of the characters of a text key and finds the remainder after dividing by 10. The codes for the key **RUDO** are 82, 85, 68, 79. Calculate the slot number for RUDO.",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "82 + 85 + 68 + 79 = 314. 314 MOD 10 = 4.",
+  "workedSolution": "1. 82 + 85 + 68 + 79 = 314. 314 MOD 10 = 4.",
+  "hints": [
+   "Add the four codes first.",
+   "The slot number is the remainder when the total is divided by 10, i.e. the last digit."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "4"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.file-organisation.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which file application is best suited to a random file organisation?",
+  "options": [
+   {
+    "key": "A",
+    "content": "An airline booking system that must fetch one booking at once",
+    "correct": true,
+    "rationale": "Correct: single records are needed quickly, which is what direct access gives."
+   },
+   {
+    "key": "B",
+    "content": "Monthly payroll that processes every employee in order",
+    "rationale": "Every record is processed in turn, so a sequential file is more suitable."
+   },
+   {
+    "key": "C",
+    "content": "A backup copy of every customer record",
+    "rationale": "A backup copies every record in sequence, so a serial file is enough."
+   },
+   {
+    "key": "D",
+    "content": "A log that records events as they happen",
+    "rationale": "A log is appended to in order, so a serial file suits it."
+   }
+  ],
+  "explanation": "Random files give direct access, so they suit systems that look up individual records at once. Applications that process every record suit serial or sequential files.",
+  "hints": [
+   "Which application needs to find one record at a time?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "data.file-organisation.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A random file has 8 slots (0 to 7). The hash is key MOD 8. A collision is resolved by using the next free slot, going back to slot 0 after slot 7. The keys are stored in this order: 3125, 4871, 2093, 5917, 6244. Give the key held in each slot below (write the key, or \"empty\").",
+  "payload": {
+   "template": "Slot 0: {{blank:s0}}\n\nSlot 1: {{blank:s1}}\n\nSlot 2: {{blank:s2}}\n\nSlot 3: {{blank:s3}}\n\nSlot 4: {{blank:s4}}\n\nSlot 5: {{blank:s5}}\n\nSlot 6: {{blank:s6}}\n\nSlot 7: {{blank:s7}}",
+   "blanks": [
+    {
+     "id": "s0"
+    },
+    {
+     "id": "s1"
+    },
+    {
+     "id": "s2"
+    },
+    {
+     "id": "s3"
+    },
+    {
+     "id": "s4"
+    },
+    {
+     "id": "s5"
+    },
+    {
+     "id": "s6"
+    },
+    {
+     "id": "s7"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "s0",
+     "accepted": [
+      "5917"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "s1",
+     "accepted": [
+      "empty"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "s2",
+     "accepted": [
+      "empty"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "s3",
+     "accepted": [
+      "empty"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "s4",
+     "accepted": [
+      "6244"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "s5",
+     "accepted": [
+      "3125"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "s6",
+     "accepted": [
+      "2093"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "s7",
+     "accepted": [
+      "4871"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "3125 MOD 8 = 5; 4871 MOD 8 = 7; 2093 MOD 8 = 5, taken, so slot 6; 5917 MOD 8 = 5, taken, so slot 0; 6244 MOD 8 = 4.",
+  "hints": [
+   "Work through the keys in the order given.",
+   "Remember that the search for a free slot wraps from the last slot to slot 0."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "s0",
+     "text": "5917"
+    },
+    {
+     "blankId": "s1",
+     "text": "empty"
+    },
+    {
+     "blankId": "s2",
+     "text": "empty"
+    },
+    {
+     "blankId": "s3",
+     "text": "empty"
+    },
+    {
+     "blankId": "s4",
+     "text": "6244"
+    },
+    {
+     "blankId": "s5",
+     "text": "3125"
+    },
+    {
+     "blankId": "s6",
+     "text": "2093"
+    },
+    {
+     "blankId": "s7",
+     "text": "4871"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "s0",
+      "text": "xyz"
+     },
+     {
+      "blankId": "s1",
+      "text": "xyz"
+     },
+     {
+      "blankId": "s2",
+      "text": "xyz"
+     },
+     {
+      "blankId": "s3",
+      "text": "xyz"
+     },
+     {
+      "blankId": "s4",
+      "text": "xyz"
+     },
+     {
+      "blankId": "s5",
+      "text": "xyz"
+     },
+     {
+      "blankId": "s6",
+      "text": "xyz"
+     },
+     {
+      "blankId": "s7",
+      "text": "xyz"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.file-organisation.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Records with keys 6215, 8329, 1457, 9035, 3719 are stored, in that order, in a random file of 6 slots (0 to 5) using key MOD 6 and the next free slot (wrapping round). How many slots must be read to find the record with key **3719**, including the last slot read?",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "The home slot is 5, but collisions moved the record on, so 5 reads are needed.",
+  "workedSolution": "1. Slots after storing all the records: 0: 1457; 1: 8329; 2: 9035; 3: 3719; 4: empty; 5: 6215.\n2. 3719 MOD 6 = 5, so the search starts at slot 5.\n3. It steps on until the key is found: 5 reads.",
+  "hints": [
+   "Fill the slots in the order given, then follow the search steps for the key."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.file-organisation.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A sequential file is kept in order of student number. Which statement about adding a new student record is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It can always be written straight on to the end of the file",
+    "rationale": "That would break the ordering on the key field."
+   },
+   {
+    "key": "B",
+    "content": "It is placed at a slot calculated from its key by hashing",
+    "rationale": "Calculating the slot is how a random file works."
+   },
+   {
+    "key": "C",
+    "content": "It needs no key field because the whole file is ordered",
+    "rationale": "The ordering is on the key field, so every record needs one."
+   },
+   {
+    "key": "D",
+    "content": "It must go in the correct position, so the file is usually rewritten",
+    "correct": true,
+    "rationale": "Correct: to keep the order the file is usually rewritten with the record in place."
+   }
+  ],
+  "explanation": "A sequential file must stay ordered on the key. Adding a record therefore means inserting it at the right place, which usually means rewriting or merging the file.",
+  "hints": [
+   "What property must a sequential file keep?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.file-organisation.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each term to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Serial file"
+    },
+    {
+     "id": "L2",
+     "content": "Sequential file"
+    },
+    {
+     "id": "L3",
+     "content": "Random file"
+    },
+    {
+     "id": "L4",
+     "content": "Collision"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Each record placed at an address calculated from its key"
+    },
+    {
+     "id": "R4",
+     "content": "Two keys that give the same hash value"
+    },
+    {
+     "id": "R1",
+     "content": "Records stored in the order in which they were added"
+    },
+    {
+     "id": "R2",
+     "content": "Records stored in order of the key field"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "These are the basic terms of file organisation.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.file-organisation.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is a collision in a hashed (random) file?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A record is deleted by mistake",
+    "rationale": "That is data loss, not a collision."
+   },
+   {
+    "key": "B",
+    "content": "Two different keys produce the same hash value",
+    "correct": true,
+    "rationale": "Correct: both records are directed to the same address."
+   },
+   {
+    "key": "C",
+    "content": "The file is too large to open",
+    "rationale": "A collision concerns two keys, not the size of the file."
+   },
+   {
+    "key": "D",
+    "content": "Two programs open the file at the same time",
+    "rationale": "That is a file-sharing conflict, not a collision."
+   }
+  ],
+  "explanation": "A hash function maps many possible keys to fewer addresses, so two keys can map to the same address.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.file-organisation.q12",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the calculation that turns the key field of a record into the address at which it is stored in a random file.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "hashing"
+    },
+    {
+     "value": "hash"
+    },
+    {
+     "value": "hashing algorithm"
+    },
+    {
+     "value": "hash function"
+    },
+    {
+     "value": "hash algorithm"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "A hashing algorithm, for example the remainder of a division, calculates the address from the key.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "hashing"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "sorting"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.file-organisation.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A hashed file uses an overflow area. What is stored there?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A second copy of every record, for backup",
+    "rationale": "Backups are separate files and are not the overflow area."
+   },
+   {
+    "key": "B",
+    "content": "Records that have been deleted from the file",
+    "rationale": "Deleted records are not kept in the overflow area."
+   },
+   {
+    "key": "C",
+    "content": "Records whose calculated address was already taken",
+    "correct": true,
+    "rationale": "Correct: colliding records go to the next free place in the overflow area."
+   },
+   {
+    "key": "D",
+    "content": "The index that lists every key and address",
+    "rationale": "An index is a separate structure used for sequential files."
+   }
+  ],
+  "explanation": "An overflow area is a separate part of the file that holds records that collided.",
+  "hints": [
+   "What happens to a record when its calculated slot is full?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.file-organisation.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A bank in Harare must be able to find a customer's account record immediately when the customer reaches a teller. Justify the choice of a random file with direct access.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Direct access goes straight to the account record without reading other records.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The address is calculated from the account number by a hashing algorithm, so it is quick.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A sequential or serial file would have to be read from the start, which is too slow for a large number of accounts.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A random file lets the system calculate the address of a customer's record from the account number and read it directly, so the teller gets the record at once. With a sequential or serial file the program would have to read through many records one by one, which would be too slow for a large bank."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Justification needs the link between the scenario (single records needed quickly) and direct access.",
+  "hints": [
+   "Explain both how the record is found and why other methods are slower."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "data.file-organisation.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Compare serial and sequential file organisation.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Serial files hold records in the order they arrived; sequential files hold them in order of the key field.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Adding a record to a serial file is quick (add at the end); adding to a sequential file needs the order to be kept.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A sequential file is more efficient to search or merge because it is ordered; a serial file has to be read in full.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A serial file stores records in the order they were added, so adding is quick but there is no order to help searching. A sequential file is ordered on the key, which makes processing and searching for a key easier but means adding a record needs the order to be maintained."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The key difference is whether the records are ordered on the key field.",
+  "hints": [
+   "Compare the order of records, adding a record and searching."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.file-organisation.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe how a new record is added to a random file when its calculated address is already in use (using the next free slot method).",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Calculate the address by hashing the key.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "If the slot is already occupied, move on to the next slot (wrapping round at the end) until an empty slot is found.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Write the record in the empty slot.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Hash the key to get the address. If a record is already stored there, check the next slot, and the next, going back to the start of the file if the end is reached, until an empty slot is found. Write the new record in that slot."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A search for the record later repeats the same steps.",
+  "hints": [
+   "Think about what must be checked when the calculated slot is already full."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.file-organisation.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Explain why a random file is usually made larger than the number of records it must hold.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "A larger file has more slots, so fewer different keys hash to the same address.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Fewer collisions means records are found more quickly.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: If the file is nearly full, many keys will collide and records will be moved to other slots. A bigger file has more slots, so there are fewer collisions and searches are faster."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The more crowded the file, the more collisions occur.",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.file-organisation.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A clinic in Mutare stores patient records in a random file with 9 slots (0 to 8). The hashing algorithm is the patient number MOD 9.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Calculate the slot for patient number 4618.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "4618 MOD 9 = 1.",
+    "workedSolution": "1. 4618 MOD 9 = 1."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Calculate the slot for patient number 3952.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "3952 MOD 9 = 1.",
+    "workedSolution": "1. 3952 MOD 9 = 1."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the name of the problem shown by your answers to (a) and (b)?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Underflow",
+      "rationale": "Underflow is a floating-point error."
+     },
+     {
+      "key": "B",
+      "content": "A parity error",
+      "rationale": "Parity is used to detect transmission errors."
+     },
+     {
+      "key": "C",
+      "content": "A collision",
+      "correct": true,
+      "rationale": "Correct: two keys give the same slot."
+     },
+     {
+      "key": "D",
+      "content": "Fragmentation",
+      "rationale": "Fragmentation is about files on a disk."
+     }
+    ],
+    "explanation": "Two different patient numbers hashed to the same slot."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Describe one method the clinic could use to store both records.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Store the second record in the next free slot.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Wrap round to slot 0 if the end of the file is reached.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "When searching, check each following slot until the key matches (or an empty slot is found).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Use the next free slot method: the second record is stored in the next empty slot after the calculated one, wrapping to slot 0 at the end. When searching, check the calculated slot and then each following slot until the key is found or an empty slot shows it is not there."
+    }
+   }
+  ],
+  "explanation": "Both 4618 and 3952 give slot 1. This is a collision, resolved by the next free slot.",
+  "hints": [
+   "Divide by 9 and find the remainder.",
+   "Think about what happens when a slot is already full."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "1"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "1"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "data.file-organisation.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A school library in Gweru uses a random file of 6 slots (0 to 5), hashing the member number with key MOD 6 and resolving collisions with the next free slot (wrapping round). Four member records are stored in this order: 7203, 1546, 8890, 3317.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Give the slot in which each record is stored.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "CALCULATION",
+      "marks": 1,
+      "stem": "Member 7203",
+      "answerSpec": {
+       "value": 3
+      },
+      "explanation": "7203 MOD 6 = 3.",
+      "workedSolution": "1. 7203 MOD 6 = 3."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 1,
+      "stem": "Member 1546",
+      "answerSpec": {
+       "value": 4
+      },
+      "explanation": "1546 MOD 6 = 4.",
+      "workedSolution": "1. 1546 MOD 6 = 4."
+     },
+     {
+      "label": "(iii)",
+      "type": "CALCULATION",
+      "marks": 1,
+      "stem": "Member 8890",
+      "answerSpec": {
+       "value": 5
+      },
+      "explanation": "8890 MOD 6 = 4; that slot is taken, so slot 5.",
+      "workedSolution": "1. 8890 MOD 6 = 4; that slot is taken, so slot 5."
+     },
+     {
+      "label": "(iv)",
+      "type": "CALCULATION",
+      "marks": 1,
+      "stem": "Member 3317",
+      "answerSpec": {
+       "value": 0
+      },
+      "explanation": "3317 MOD 6 = 5; that slot is taken, so slot 0.",
+      "workedSolution": "1. 3317 MOD 6 = 5; that slot is taken, so slot 0."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "How many slots are read to find member 3317?",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "3317 MOD 6 = 5; the record is at slot 0, after 2 reads.",
+    "workedSolution": "1. 3317 MOD 6 = 5; the record is at slot 0, after 2 reads."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two ways in which the librarian could reduce the number of collisions.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Make the file larger (more slots) so there is more space for each key.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Use a different hashing algorithm that spreads the keys more evenly.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Increase the number of slots in the file, or use a better hashing algorithm that spreads the member numbers evenly across the slots."
+    }
+   }
+  ],
+  "explanation": "Slots: 7203 → 3, 1546 → 4, 8890 → 5, 3317 → 0. Member 3317 needs 2 reads.",
+  "hints": [
+   "Fill the slots one record at a time, in order.",
+   "Count the first slot you read as read number 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "CALCULATION",
+     "value": "3"
+    },
+    "(a)(ii)": {
+     "type": "CALCULATION",
+     "value": "4"
+    },
+    "(a)(iii)": {
+     "type": "CALCULATION",
+     "value": "5"
+    },
+    "(a)(iv)": {
+     "type": "CALCULATION",
+     "value": "0"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "2"
+    }
+   }
+  },
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "data.file-organisation.q20",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which method resolves a collision in a hashed file by keeping colliding records in a separate part of the file?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Next free slot",
+    "rationale": "This stores the record in the main file, in the following empty slot."
+   },
+   {
+    "key": "B",
+    "content": "Folding",
+    "rationale": "Folding is a way of calculating the hash, not of resolving collisions."
+   },
+   {
+    "key": "C",
+    "content": "Sequential access",
+    "rationale": "This is a way of reading a file, not of storing records."
+   },
+   {
+    "key": "D",
+    "content": "An overflow area",
+    "correct": true,
+    "rationale": "Correct: colliding records are placed in the next free position of the overflow area."
+   }
+  ],
+  "explanation": "An overflow area holds records whose calculated address was already in use.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.file-organisation.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is an advantage of a serial file?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Any record can be found directly from its key",
+    "rationale": "Direct access needs a random file or an index."
+   },
+   {
+    "key": "B",
+    "content": "New records can be added quickly at the end of the file",
+    "correct": true,
+    "rationale": "Correct: no ordering has to be maintained."
+   },
+   {
+    "key": "C",
+    "content": "The records are always in order of the key field",
+    "rationale": "That describes a sequential file."
+   },
+   {
+    "key": "D",
+    "content": "Collisions can never happen",
+    "rationale": "Collisions only apply to hashed (random) files; this is not a particular advantage."
+   }
+  ],
+  "explanation": "A serial file stores records in order of arrival, so adding a record is just appending it.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.file-organisation.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.file-organisation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A hashed file has 20 slots (0 to 19). The hash is key MOD 20. In which slot is the record with key 453 stored, if there is no collision?",
+  "options": [
+   {
+    "key": "A",
+    "content": "22",
+    "rationale": "This is the quotient, not the remainder."
+   },
+   {
+    "key": "B",
+    "content": "14",
+    "rationale": "The remainder is not increased by one."
+   },
+   {
+    "key": "C",
+    "content": "3",
+    "rationale": "This uses 10 slots instead of 20."
+   },
+   {
+    "key": "D",
+    "content": "13",
+    "correct": true,
+    "rationale": "Correct: 453 = 22 × 20 + 13."
+   }
+  ],
+  "explanation": "453 MOD 20 = 13.",
+  "hints": [
+   "Divide by the number of slots and keep the remainder."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ }
+]

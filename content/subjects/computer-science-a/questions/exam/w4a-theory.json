@@ -1,0 +1,1414 @@
+[
+ {
+  "key": "exam.w4a-theory.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.trace-tables",
+   "acs.algo.algorithm-design"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A weather station in Kariba stores the highest temperature (in °C) of six days in the array `Temp`, indexes 1 to 6.\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Temp | 24 | 31 | 19 | 28 | 35 | 22 |\n\nThe algorithm below processes the array.\n\n```\nTotal ← 0\nHot ← 0\nFOR Day ← 1 TO 6\n    Total ← Total + Temp[Day]\nNEXT Day\nMean ← Total / 6\nFOR Day ← 1 TO 6\n    IF Temp[Day] > Mean THEN\n        Hot ← Hot + 1\n    ENDIF\nNEXT Day\nOUTPUT Mean, Hot\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Total` after the pass of the first loop with `Day` = 3.",
+    "answerSpec": {
+     "value": 74
+    },
+    "explanation": "Total = 74.",
+    "workedSolution": "24 + 31 + 19 = 74."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "State the value of `Mean` that is output.",
+    "answerSpec": {
+     "value": 26.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.001
+     }
+    },
+    "explanation": "Mean = 26.5.",
+    "workedSolution": "Total = 159, and 159 ÷ 6 = 26.5."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Hot` that is output.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Hot = 3.",
+    "workedSolution": "31, 28 and 35 are greater than 26.5."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which data type is most suitable for the variable `Mean`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "REAL",
+      "correct": true,
+      "rationale": "Correct: the mean can have a fractional part."
+     },
+     {
+      "key": "B",
+      "content": "INTEGER",
+      "rationale": "An integer would lose the fractional part."
+     },
+     {
+      "key": "C",
+      "content": "STRING",
+      "rationale": "A string cannot be used in arithmetic."
+     },
+     {
+      "key": "D",
+      "content": "BOOLEAN",
+      "rationale": "A Boolean holds only TRUE or FALSE."
+     }
+    ],
+    "explanation": "The mean 26.5 is not a whole number."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The second loop is changed to `FOR Day ← 1 TO 4`. State the value of `Hot` that is now output.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "Hot = 2.",
+    "workedSolution": "Only 24, 31, 19 and 28 are tested; 31 and 28 are greater than 26.5."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State the purpose of the algorithm.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It calculates (and outputs) the mean temperature",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It counts (and outputs) the number of days on which the temperature is above the mean",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It outputs the mean of the six temperatures and the number of days hotter than the mean."
+    },
+    "explanation": "Mean and count above the mean."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The statement `Total ← 0` is moved inside the first loop, as the first statement of the loop body. State the value of `Mean` now output, and explain your answer.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Total is reset to 0 on every pass of the loop",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So at the end Total holds only the last temperature, 22",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Mean = 22 ÷ 6 = 3.67 (about 3.7)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: `Total` is reset to 0 on every pass, so at the end it holds only the last temperature, 22. The mean output is 22 ÷ 6 = 3.67."
+    },
+    "explanation": "A total must be set to zero before the loop."
+   }
+  ],
+  "explanation": "Total 159, mean 26.5, three days above the mean; the algorithm outputs the mean and the count of days above it.",
+  "hints": [
+   "Add the temperatures one at a time for the first loop.",
+   "Compare each temperature with the mean in the second loop."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "74"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "26.5"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "59"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "159"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w4a-theory.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.linear-search-bubble-sort",
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A school in Chinhoyi stores the scores of seven learners in the array `Score`.\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 | 7 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Score | 46 | 13 | 31 | 7 | 39 | 11 | 26 |\n\nThe scores are sorted into ascending order using a bubble sort that stops after a pass in which no swap is made. In each pass, only the items not yet in their final place are compared. Afterwards, the sorted array is searched using a binary search, where `Mid` is the whole-number part of (Low + High) ÷ 2.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of swaps made in the first pass.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "6 swaps.",
+    "workedSolution": "Pass 1: 13, 31, 7, 39, 11, 26, 46 (six of the six comparisons cause a swap)."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value in `Score[7]` after the first pass.",
+    "answerSpec": {
+     "value": 46
+    },
+    "explanation": "46.",
+    "workedSolution": "The largest value, 46, is carried to the end in the first pass."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the total number of passes made, including the last pass in which no swap occurs.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "5 passes.",
+    "workedSolution": "Passes: 13 31 7 39 11 26 46; 13 7 31 11 26 39 46; 7 13 11 26 31 39 46; 7 11 13 26 31 39 46; 7 11 13 26 31 39 46. The fifth pass has no swaps."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the total number of comparisons made by the sort.",
+    "answerSpec": {
+     "value": 20
+    },
+    "explanation": "20 comparisons.",
+    "workedSolution": "6 + 5 + 4 + 3 + 2 = 20."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "A linear search for the score 39 is made in the original, unsorted array. State the number of comparisons.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "5 comparisons.",
+    "workedSolution": "39 is the fifth item."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "A binary search for the score 39 is made in the sorted array. State the number of comparisons.",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "2 comparisons.",
+    "workedSolution": "The sorted array is 7, 11, 13, 26, 31, 39, 46. Mid = 4 (26), then Low = 5, Mid = 6 (39)."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a binary search could not be used on the original array.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A binary search needs the items to be in order",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "In the original array discarding half of the items could discard the one being searched for",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A binary search only works if the items are in order. In the unsorted array, discarding half of the items after one comparison could throw away the item being searched for."
+    },
+    "explanation": "Order is essential."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give one situation in which a linear search is a better choice than sorting the array and then using a binary search.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The data is searched only once (or only a few times)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Because sorting costs more than the saving, or the list is short",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: When the array is searched only once or is short, because sorting it first takes more work than the search saves."
+    },
+    "explanation": "Sorting has a cost."
+   }
+  ],
+  "explanation": "Bubble sort: 6 swaps in pass 1, 5 passes, 20 comparisons; linear search 5; binary search 2.",
+  "hints": [
+   "Write the array after each pass of the bubble sort.",
+   "For the binary search, work out Mid for each pass."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "46"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "20"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "26"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "21"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P3"
+ },
+ {
+  "key": "exam.w4a-theory.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ds.adt-introduction",
+   "acs.ds.stack-queue-algorithms",
+   "acs.ds.linked-list-algorithms"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "**Queue.** A clinic in Masvingo uses a circular queue with 5 places, numbered 1 to 5, to store the codes of waiting patients. `FrontPointer` is 1, `RearPointer` is 0 and `Count` is 0 when the queue is empty. The operations are, in order: enqueue P1, enqueue P2, enqueue P3, enqueue P4, dequeue, dequeue, enqueue P5, enqueue P6, enqueue P7, enqueue P8.\n\n**Linked list.** The clinic also keeps the names of its staff in alphabetical order in a linked list stored in arrays. A pointer of 0 is null.\n\n| Index | Data | Next |\n|:-:|:-:|:-:|\n| 1 | Kudzi | 2 |\n| 2 | Sipho | 0 |\n| 3 | Anesu | 4 |\n| 4 | Blessing | 1 |\n| 5 | (unused) | 0 |\n\nStart = 3, Free = 5\n\nThe name Anesu is deleted from the list.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `RearPointer` after P6 is enqueued.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "RearPointer = 1.",
+    "workedSolution": "After P5, Rear = 5; for P6, MOD(5, 5) + 1 = 1."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `FrontPointer` after all the operations.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "FrontPointer = 3.",
+    "workedSolution": "Two dequeues move the front from 1 to 3."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Count` after all the operations.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "Count = 5.",
+    "workedSolution": "Seven items were stored, two left, and P8 was not stored: 4 + 3 - 2 = 5."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why is P8 not stored?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The queue is full",
+      "correct": true,
+      "rationale": "Correct: Count equals the number of places."
+     },
+     {
+      "key": "B",
+      "content": "The queue is empty",
+      "rationale": "Five items are in the queue."
+     },
+     {
+      "key": "C",
+      "content": "P8 is not a valid code",
+      "rationale": "The code is not the problem."
+     },
+     {
+      "key": "D",
+      "content": "The front pointer is at place 1",
+      "rationale": "The front pointer is at place 3."
+     }
+    ],
+    "explanation": "Count = 5 shows that all the places are used."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `StartPointer` after Anesu is deleted.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "StartPointer = 4.",
+    "workedSolution": "Anesu is node 3, and its Next is 4 (Blessing), so the start pointer becomes 4."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `FreePointer` after Anesu is deleted.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "FreePointer = 3.",
+    "workedSolution": "The deleted node, 3, becomes the first free node."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a circular queue is better than a linear queue in an array.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "In a circular queue the rear pointer wraps to the first place after the last",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So places freed at the front can be reused and the queue is not reported full while places are free",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The rear pointer wraps round to place 1 after the last place, so places freed at the front are reused and the queue is not full while there are free places."
+    },
+    "explanation": "Places are reused."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two reasons why a linked list is a suitable structure for the staff names.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Names are added and removed from the middle by changing pointers only, so no names are moved",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The list is kept in alphabetical order through the pointers",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Names can be added or removed by changing pointers only, so no names have to be moved, and the pointers keep the names in alphabetical order."
+    },
+    "explanation": "Pointer changes only."
+   }
+  ],
+  "explanation": "Rear wraps to 1; Front is 3; Count is 5 and P8 fails; Start becomes 4 and Free 3 after the deletion.",
+  "hints": [
+   "Update Front, Rear and Count after each operation.",
+   "Follow the Next pointers from Start."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "1"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 3"
+ },
+ {
+  "key": "exam.w4a-theory.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.recursion",
+   "acs.ds.binary-tree-algorithms"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "**Recursion.** The function below is called with `Sequence(4)`.\n\n```\nFUNCTION Sequence(N : INTEGER) RETURNS INTEGER\n    IF N <= 2 THEN\n        RETURN 1\n    ELSE\n        RETURN Sequence(N - 1) + Sequence(N - 2)\n    ENDIF\nENDFUNCTION\n```\n**Binary tree.** The marks 55, 30, 70, 20, 45 and 65 are inserted, in that order, into an empty binary search tree.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value returned by `Sequence(5)`.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "5.",
+    "workedSolution": "Sequence(1) = 1, (2) = 1, (3) = 2, (4) = 3, (5) = 5."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of calls of `Sequence` (including the first) made by `Sequence(4)`.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "5 calls.",
+    "workedSolution": "Sequence(4) calls Sequence(3) and Sequence(2); Sequence(3) calls Sequence(2) and Sequence(1): 5 calls."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which condition is the base case of the function?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`N = 5`",
+      "rationale": "N = 5 is not tested."
+     },
+     {
+      "key": "B",
+      "content": "`Sequence(N - 1)`",
+      "rationale": "That is a recursive call."
+     },
+     {
+      "key": "C",
+      "content": "`N - 2`",
+      "rationale": "That is an argument of a call."
+     },
+     {
+      "key": "D",
+      "content": "`N <= 2`",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "The recursion stops when N is 1 or 2."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a recursive function uses more memory than a loop for the same task.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each call places a stack frame (return address, parameters, local variables) on the call stack",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "All the frames stay on the stack until the base case is reached and the calls return",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each call places a stack frame holding its return address, parameters and local variables on the call stack, and all the frames stay there until the base case is reached."
+    },
+    "explanation": "Memory grows with the depth of the calls."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the key at the root of the tree.",
+    "answerSpec": {
+     "value": 55
+    },
+    "explanation": "55.",
+    "workedSolution": "The first key inserted is the root."
+   },
+   {
+    "label": "(f)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "State the first three keys output by a post-order traversal.",
+    "payload": {
+     "template": "{{blank:a}}, {{blank:b}}, {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "20"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "45"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "30"
+       ]
+      }
+     ]
+    },
+    "explanation": "Post-order visits left, right, node: 20, 45, 30, 65, 70, 55."
+   },
+   {
+    "label": "(g)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which traversal outputs the keys in ascending order?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Pre-order",
+      "rationale": "Pre-order visits the node first."
+     },
+     {
+      "key": "B",
+      "content": "Post-order",
+      "rationale": "Post-order visits the node last."
+     },
+     {
+      "key": "C",
+      "content": "Breadth-first",
+      "rationale": "That visits level by level, not in key order."
+     },
+     {
+      "key": "D",
+      "content": "In-order",
+      "correct": true,
+      "rationale": "Correct: left sub-tree, node, right sub-tree."
+     }
+    ],
+    "explanation": "In-order gives sorted keys for a binary search tree."
+   }
+  ],
+  "explanation": "Sequence(5) = 5; Sequence(4) makes 5 calls; the root is 55 and post-order begins 20, 45, 30.",
+  "hints": [
+   "Work out the values of Sequence from the base case upwards.",
+   "For post-order: left, right, then the node."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "55"
+    },
+    "(f)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "20"
+      },
+      {
+       "blankId": "b",
+       "text": "45"
+      },
+      {
+       "blankId": "c",
+       "text": "30"
+      }
+     ]
+    },
+    "(g)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "20"
+     },
+     "(f)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "55"
+       },
+       {
+        "blankId": "b",
+        "text": "30"
+       },
+       {
+        "blankId": "c",
+        "text": "20"
+       }
+      ]
+     },
+     "(g)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P3"
+ },
+ {
+  "key": "exam.w4a-theory.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ds.data-types-records"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A clinic in Gweru stores for each appointment the patient's name, telephone number, the fee charged (such as 12.50) and whether the patient attended. The data of each appointment is held in a record.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which is the most suitable data type for the telephone number?",
+    "options": [
+     {
+      "key": "A",
+      "content": "INTEGER",
+      "rationale": "The leading zero would be lost."
+     },
+     {
+      "key": "B",
+      "content": "STRING",
+      "correct": true,
+      "rationale": "Correct: it keeps the leading zero."
+     },
+     {
+      "key": "C",
+      "content": "REAL",
+      "rationale": "A telephone number has no fractional part."
+     },
+     {
+      "key": "D",
+      "content": "BOOLEAN",
+      "rationale": "A Boolean holds only TRUE or FALSE."
+     }
+    ],
+    "explanation": "A telephone number is not used for arithmetic."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State a suitable data type for each of these fields.",
+    "payload": {
+     "template": "Fee: {{blank:a}}\n\nAttended: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "INTEGER",
+        "REAL",
+        "STRING",
+        "BOOLEAN"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "INTEGER",
+        "REAL",
+        "STRING",
+        "BOOLEAN"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "REAL"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "BOOLEAN"
+       ]
+      }
+     ]
+    },
+    "explanation": "A fee has cents, and attended is yes or no."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain one benefit of storing the appointments as an array of records rather than as a separate array for each field.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "All the fields of one appointment are kept together",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So they stay linked, for example when the appointments are sorted or passed to a subroutine",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The fields of one appointment are kept together, so they stay linked when the data is sorted or passed to a subroutine."
+    },
+    "explanation": "Grouping keeps the data consistent."
+   }
+  ],
+  "explanation": "Telephone number: STRING; fee: REAL; attended: BOOLEAN; a record keeps related fields together.",
+  "hints": [
+   "Think about whether each field is text, a number with cents or yes/no."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "REAL"
+      },
+      {
+       "blankId": "b",
+       "text": "BOOLEAN"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "INTEGER"
+       },
+       {
+        "blankId": "b",
+        "text": "STRING"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w4a-theory.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ds.text-files",
+   "acs.ds.arrays"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "The text file `rain.txt` holds the rainfall in mm for four days, one number on each line: 14, 0, 22 and 9. The pseudocode below reads the file.\n\n```\nTotal ← 0\nOPENFILE \"rain.txt\" FOR READ\nWHILE NOT EOF(\"rain.txt\") DO\n    READFILE \"rain.txt\", Line\n    Total ← Total + STR_TO_NUM(Line)\nENDWHILE\nCLOSEFILE \"rain.txt\"\nOUTPUT Total\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value output.",
+    "answerSpec": {
+     "value": 45
+    },
+    "explanation": "45.",
+    "workedSolution": "14 + 0 + 22 + 9 = 45."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why is `STR_TO_NUM` used on `Line`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "To make the file load faster than before",
+      "rationale": "The conversion does not change the file speed."
+     },
+     {
+      "key": "B",
+      "content": "Each line read is a string and must become a number",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "To remove the end of the file marker",
+      "rationale": "EOF is tested by the loop."
+     },
+     {
+      "key": "D",
+      "content": "To store the number back in the file again",
+      "rationale": "Nothing is written to the file."
+     }
+    ],
+    "explanation": "Strings cannot be added to a number."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement stops the program from reading past the end of the file?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`OPENFILE \"rain.txt\" FOR READ`",
+      "rationale": "That only opens the file."
+     },
+     {
+      "key": "B",
+      "content": "`CLOSEFILE \"rain.txt\"`",
+      "rationale": "That is done after the loop."
+     },
+     {
+      "key": "C",
+      "content": "`WHILE NOT EOF(\"rain.txt\") DO`",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "`Total ← 0`",
+      "rationale": "That initialises the total."
+     }
+    ],
+    "explanation": "The loop ends when the end of the file is reached."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two reasons why a program stores data in a file rather than only in an array.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The data is kept after the program ends or the power is switched off",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The data can be used again later or by another program",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The data is kept after the program ends or the power is off, and it can be used again later or by another program."
+    },
+    "explanation": "Persistence and sharing."
+   }
+  ],
+  "explanation": "The total is 45; each line is a string and is converted; the loop tests EOF; files keep data permanently.",
+  "hints": [
+   "Add the four numbers read from the file."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "45"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w4a-theory.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.complexity-big-o"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "An algorithm compares every item of a list of n names with every other item, using a loop inside a loop. Each loop runs n times.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which is the time complexity of the algorithm?",
+    "options": [
+     {
+      "key": "A",
+      "content": "O(n)",
+      "rationale": "That would be one loop."
+     },
+     {
+      "key": "B",
+      "content": "O(log n)",
+      "rationale": "No halving takes place."
+     },
+     {
+      "key": "C",
+      "content": "O(n²)",
+      "correct": true,
+      "rationale": "Correct: n × n comparisons."
+     },
+     {
+      "key": "D",
+      "content": "O(1)",
+      "rationale": "The work grows with n."
+     }
+    ],
+    "explanation": "Nested loops multiply."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of comparisons made when n is 12.",
+    "answerSpec": {
+     "value": 144
+    },
+    "explanation": "144.",
+    "workedSolution": "12 × 12 = 144."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "A second algorithm for the same task is O(n log n). Which statement about the two algorithms is correct for a large value of n?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The O(n²) algorithm takes fewer steps",
+      "rationale": "n² grows faster than n log n."
+     },
+     {
+      "key": "B",
+      "content": "The O(n log n) algorithm takes fewer steps",
+      "correct": true,
+      "rationale": "Correct: n log n grows more slowly than n²."
+     },
+     {
+      "key": "C",
+      "content": "Both take the same number of steps",
+      "rationale": "Their growth is different."
+     },
+     {
+      "key": "D",
+      "content": "The number of steps cannot be compared",
+      "rationale": "Big O is used to compare growth."
+     }
+    ],
+    "explanation": "For large n, n log n is far smaller than n²."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why an algorithm that takes 3n + 2 steps is described as O(n).",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Big O keeps only the fastest-growing term",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The constant factor (3) and the constant 2 are ignored because they do not change the way the work grows with n",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Big O keeps only the fastest-growing term and ignores constants, so 3n + 2 becomes O(n): the work still grows in proportion to n."
+    },
+    "explanation": "Constants are dropped."
+   }
+  ],
+  "explanation": "Nested loops give O(n²); 12 × 12 = 144; O(n log n) is better for large n; constants are ignored in Big O.",
+  "hints": [
+   "Multiply the number of passes of the two loops."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "144"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "24"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false,
+  "paper": "Cambridge Paper 3"
+ }
+]

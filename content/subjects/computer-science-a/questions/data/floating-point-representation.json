@@ -1,0 +1,1140 @@
+[
+ {
+  "key": "data.floating-point-representation.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the floating-point format used in this course, where is the binary point in the mantissa?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Immediately after the sign bit",
+    "correct": true,
+    "rationale": "Correct: a positive mantissa is written 0.… and a negative mantissa 1.…."
+   },
+   {
+    "key": "B",
+    "content": "At the right-hand end of the mantissa",
+    "rationale": "That would make the mantissa a whole number."
+   },
+   {
+    "key": "C",
+    "content": "Immediately before the sign bit",
+    "rationale": "The sign bit is the leftmost bit; the point cannot be before it."
+   },
+   {
+    "key": "D",
+    "content": "In the exponent",
+    "rationale": "The exponent is a separate integer that moves the point."
+   }
+  ],
+  "explanation": "The mantissa is a two's complement fraction with the binary point after the sign bit, so its value lies from −1 up to just below 1.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.floating-point-representation.q02",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A 4-bit exponent is stored in two's complement as **1101**. What is its denary value?",
+  "answerSpec": {
+   "value": -3
+  },
+  "explanation": "1101 = −8 + 4 + 1 = −3.",
+  "workedSolution": "1. The leftmost bit of 1101 is worth −8.\n2. The other 1s are worth 4 and 1.\n3. −8 + 4 + 1 = −3.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "-3"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.floating-point-representation.q03",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A floating-point number has an 8-bit mantissa **01010000** and a 4-bit exponent **0011**, both in two's complement. What is its denary value?",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "The mantissa is ½ + ⅛ = 0.625; the exponent is 3; so the value is 0.625 × 8 = 5.",
+  "workedSolution": "1. Mantissa: 0.1010000 = 0.625.\n2. Exponent: 0011 = 3.\n3. Value = 0.625 × 2^3 = 0.625 × 8 = 5.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "data.floating-point-representation.q04",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Convert the floating-point number with 8-bit mantissa **10110000** and 4-bit exponent **0100** (both two's complement) to denary.",
+  "answerSpec": {
+   "value": -10
+  },
+  "explanation": "Mantissa: −1 + ¼ + ⅛ = -0.625. Exponent 0100 = 4. Value = −0.625 × 16 = −10.",
+  "workedSolution": "1. Mantissa: −1 + ¼ + ⅛ = -0.625. Exponent 0100 = 4. Value = −0.625 × 16 = −10.",
+  "hints": [
+   "The mantissa starts with 1, so it is negative: the leftmost bit is worth −1.",
+   "Multiply the mantissa value by 2 to the power of the exponent."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "-10"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.floating-point-representation.q05",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A floating-point number uses an 8-bit two's complement mantissa and a 4-bit two's complement exponent. Write the normalised **mantissa** for the denary number **10.5**.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "01010100"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "10.5 = 1010.1 in binary = 0.10101 × 2^4. The mantissa padded to 8 bits is 01010100. The exponent is 0100.",
+  "hints": [
+   "Write 10.5 in binary: 1010.1.",
+   "Move the point to just after the sign bit: 0.10101 × 2 to the power 4."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "01010100"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "01010101"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-representation.q06",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "For the same format (8-bit mantissa, 4-bit exponent), write the **exponent** for the number **10.5** when its mantissa is normalised.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "0100"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "The point moves four places left, so the exponent is +4 = 0100 in 4-bit two's complement.",
+  "hints": [
+   "How many places must the binary point move to sit after the sign bit?"
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "0100"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "0101"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-representation.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Complete the steps to store **−2.5** with an 8-bit mantissa and a 4-bit exponent. The positive number 2.5 is stored with mantissa 01010000 and exponent 0010.",
+  "payload": {
+   "template": "Mantissa of −2.5: {{blank:m}}\n\nExponent of −2.5: {{blank:e}}",
+   "blanks": [
+    {
+     "id": "m"
+    },
+    {
+     "id": "e"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "m",
+     "accepted": [
+      "10110000"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "e",
+     "accepted": [
+      "0010"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    }
+   ]
+  },
+  "explanation": "Invert 01010000 to 10101111 and add 1 to give 10110000. The exponent stays 0010. Check: −0.625 × 4 = −2.5.",
+  "hints": [
+   "For a negative number take the two's complement of the mantissa only.",
+   "The exponent does not change."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "m",
+     "text": "10110000"
+    },
+    {
+     "blankId": "e",
+     "text": "0010"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "m",
+      "text": "xyz"
+     },
+     {
+      "blankId": "e",
+      "text": "xyz"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-representation.q08",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The floating-point number with mantissa **00101100** and exponent **0110** is not normalised. Write its normalised 8-bit mantissa.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "01011000"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "One shift left gives 01011000, which starts 01. The exponent falls from 6 to 5 (0101). Value unchanged: 22.",
+  "hints": [
+   "Shift the mantissa left until the first two bits are different.",
+   "The value must not change, so lower the exponent for each shift."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "01011000"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "01011001"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-representation.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How many places must the mantissa **00001010** (exponent 0111) be shifted left to normalise it?",
+  "answerSpec": {
+   "value": 3
+  },
+  "explanation": "Shifting left 3 places gives 01010000, which begins 01.",
+  "workedSolution": "1. 00001010 starts 0000, so shift left until it starts 01.\n2. Three shifts give 01010000.\n3. The exponent falls by 3, from 7 to 4.",
+  "hints": [
+   "Count the leading digits that are equal to the sign bit before the first different bit."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "3"
+  },
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-representation.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why are floating-point numbers normalised?",
+  "options": [
+   {
+    "key": "A",
+    "content": "To give the maximum precision and a single representation for each value",
+    "correct": true,
+    "rationale": "Correct: all the mantissa bits carry significant digits, and each number has one pattern."
+   },
+   {
+    "key": "B",
+    "content": "To make the exponent as large as possible so that the range is bigger",
+    "rationale": "Normalising lowers the exponent when it shifts the mantissa; it does not enlarge the range."
+   },
+   {
+    "key": "C",
+    "content": "To make the number occupy fewer bits in memory",
+    "rationale": "The number of bits stays the same."
+   },
+   {
+    "key": "D",
+    "content": "To avoid the need to store a sign for the number",
+    "rationale": "The sign is still stored as the first mantissa bit."
+   }
+  ],
+  "explanation": "Normalisation removes wasted leading bits from the mantissa. This increases precision and means each number has only one representation.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-representation.q11",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which of these 8-bit mantissas is in normalised form?",
+  "options": [
+   {
+    "key": "A",
+    "content": "00110100 (exponent 0001)",
+    "rationale": "It starts 00, so the first two bits are the same and it is not normalised."
+   },
+   {
+    "key": "B",
+    "content": "11011000 (exponent 0010)",
+    "rationale": "It starts 11, so the first two bits are the same and it is not normalised."
+   },
+   {
+    "key": "C",
+    "content": "01001100 (exponent 0010)",
+    "correct": true,
+    "rationale": "Correct: it starts 01, so the first two bits differ."
+   },
+   {
+    "key": "D",
+    "content": "00010110 (exponent 0011)",
+    "rationale": "It starts 00, so the first two bits are the same and it is not normalised."
+   }
+  ],
+  "explanation": "A normalised mantissa starts 01 (positive) or 10 (negative). Patterns starting 00 or 11 can still be shifted left.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-representation.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A system stores each real number in 12 bits. A designer moves 2 bits from the mantissa to the exponent. What is the effect?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The range decreases and the precision increases",
+    "rationale": "That is the effect of moving bits from the exponent to the mantissa."
+   },
+   {
+    "key": "B",
+    "content": "Both the range and the precision increase",
+    "rationale": "The total number of bits is fixed, so one gain costs the other."
+   },
+   {
+    "key": "C",
+    "content": "The range increases and the precision decreases",
+    "correct": true,
+    "rationale": "Correct: more exponent bits allow bigger and smaller numbers, but fewer mantissa bits means fewer significant digits."
+   },
+   {
+    "key": "D",
+    "content": "Neither the range nor the precision changes",
+    "rationale": "The split between the two parts decides both."
+   }
+  ],
+  "explanation": "The exponent controls the range and the mantissa controls the precision. With a fixed total, moving bits to the exponent widens the range at the cost of precision.",
+  "hints": [
+   "Which part of the number controls the size of the biggest value?",
+   "Which part controls the number of significant digits?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.floating-point-representation.q13",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A normalised negative mantissa starts with the bits 10.",
+  "answerSpec": {
+   "correct": true,
+   "feedbackTrue": "Correct: for negative numbers, normalised means the first two bits differ, and the sign bit is 1.",
+   "feedbackFalse": "A negative mantissa has sign bit 1, and normalised means the second bit differs from it, so it starts 10."
+  },
+  "explanation": "Normalised positive mantissas start 01; normalised negative mantissas start 10.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-representation.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each term to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Mantissa"
+    },
+    {
+     "id": "L2",
+     "content": "Exponent"
+    },
+    {
+     "id": "L3",
+     "content": "Normalisation"
+    },
+    {
+     "id": "L4",
+     "content": "Precision"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Shifting the mantissa so its first two bits differ"
+    },
+    {
+     "id": "R4",
+     "content": "The number of significant bits available to represent a value"
+    },
+    {
+     "id": "R1",
+     "content": "The part that holds the significant digits"
+    },
+    {
+     "id": "R2",
+     "content": "The power of two by which the mantissa is multiplied"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "A floating-point value is mantissa × 2^exponent; normalising maximises precision.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.floating-point-representation.q15",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A format has a 6-bit mantissa and a 3-bit exponent, both two's complement. What is the largest positive value that it can store?",
+  "answerSpec": {
+   "value": 7.75,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "Largest mantissa 011111 = 31/32 = 0.96875; largest exponent 011 = 3; 31/32 × 2^3 = 7.75.",
+  "workedSolution": "1. Largest mantissa 011111 = 31/32 = 0.96875; largest exponent 011 = 3; 31/32 × 2^3 = 7.75.",
+  "hints": [
+   "The largest mantissa is 011111, which is just under 1.",
+   "The largest exponent in 3-bit two's complement is 3."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "7.75"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.floating-point-representation.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain what happens to the range and the precision of numbers when one bit is moved from the mantissa to the exponent in a fixed-length floating-point format.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The range increases because a larger exponent can be stored.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The precision decreases because there are fewer bits in the mantissa for significant digits.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The total number of bits does not change, so there is a trade-off.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: With one more exponent bit, larger and smaller numbers can be stored, so the range increases. With one fewer mantissa bit, each number has one fewer significant binary digit, so the precision decreases. The total length is fixed, so range is gained at the cost of precision."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Range depends on the exponent; precision depends on the mantissa.",
+  "hints": [
+   "Think about what each part of the number controls."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-representation.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe how an unnormalised positive floating-point number is normalised.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Shift the mantissa left until the first two bits are 01 (different).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Reduce the exponent by 1 for each place the mantissa is shifted.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The value of the number is unchanged by the process.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Shift the mantissa left, filling with zeros on the right, until it starts 01. For each shift, subtract one from the exponent so that the number keeps the same value."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A shift left doubles the mantissa, so the exponent must fall by 1 to compensate.",
+  "hints": [
+   "What must be done to the exponent each time the mantissa moves?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-representation.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Give two benefits of storing floating-point numbers in normalised form.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Maximum precision (all mantissa bits are significant digits).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Each value has a single representation, which makes comparison easier.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A normalised number has no wasted leading bits, so its precision is the greatest possible. Each number also has one unique representation."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "These two reasons are what examiners look for.",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-representation.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A weather logger at a Mutare school stores readings as floating-point numbers with an 8-bit two's complement mantissa and a 4-bit two's complement exponent.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "One reading is stored with mantissa **01011000** and exponent **0010**. Calculate its denary value.",
+    "answerSpec": {
+     "value": 2.75,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "Mantissa 0.6875, exponent 2: 0.6875 × 4 = 2.75.",
+    "workedSolution": "1. Mantissa 0.6875, exponent 2: 0.6875 × 4 = 2.75."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "The reading **6.75** must be stored. Write its normalised 8-bit mantissa.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01101100"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "6.75 = 110.11 in binary = 0.11011 × 2^3, so the mantissa is 01101100."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Write the 4-bit exponent for 6.75.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "0011"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The exponent is +3 = 0011."
+   }
+  ],
+  "explanation": "(a) 2.75. (b) and (c): 6.75 is stored as 01101100 and 0011.",
+  "hints": [
+   "For (b), convert the whole and fractional parts to binary and move the point after the sign bit.",
+   "The exponent is the number of places the point moved."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "2.75"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "01101100"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "0011"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "01101101"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "0100"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "data.floating-point-representation.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A designer is choosing between two formats for storing real numbers in 12 bits: Format X with a 10-bit mantissa and a 2-bit exponent, and Format Y with a 6-bit mantissa and a 6-bit exponent. Both use two's complement for the mantissa and the exponent.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Find the largest positive exponent value that Format X can store.",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "A 2-bit two's complement number ranges from −2 to +1, so the largest exponent is 1.",
+    "workedSolution": "1. A 2-bit two's complement number ranges from −2 to +1, so the largest exponent is 1."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Find the largest positive exponent value that Format Y can store.",
+    "answerSpec": {
+     "value": 31
+    },
+    "explanation": "A 6-bit two's complement number ranges from −32 to +31, so the largest exponent is 31.",
+    "workedSolution": "1. A 6-bit two's complement number ranges from −32 to +31, so the largest exponent is 31."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which format can store numbers with the greater precision?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Format Y, because it has more exponent bits",
+      "rationale": "More exponent bits increase the range, not the precision."
+     },
+     {
+      "key": "B",
+      "content": "Format X, because it has more mantissa bits",
+      "correct": true,
+      "rationale": "Correct: more mantissa bits mean more significant digits."
+     },
+     {
+      "key": "C",
+      "content": "Both have the same precision because they use 12 bits",
+      "rationale": "The split of the bits matters, not only the total."
+     },
+     {
+      "key": "D",
+      "content": "Neither, because precision does not depend on the mantissa",
+      "rationale": "Precision depends on the number of mantissa bits."
+     }
+    ],
+    "explanation": "The mantissa holds the significant digits."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "A scientific program must store very large and very small measurements. Explain which format the designer should choose.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Format Y should be chosen.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It has more exponent bits so the range of values is much larger.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The cost is lower precision because it has fewer mantissa bits.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Format Y, because the 6-bit exponent allows exponents up to 31 and down to −32, so a vast range of large and small values can be stored. The disadvantage is that the 6-bit mantissa gives fewer significant digits."
+    }
+   }
+  ],
+  "explanation": "Format X has exponents up to 1 and 10 mantissa bits (precise, small range); Format Y has exponents up to 31 and 6 mantissa bits (wide range, less precise).",
+  "hints": [
+   "A 2-bit two's complement number has the values −2, −1, 0 and 1.",
+   "More exponent bits increase range; more mantissa bits increase precision."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "1"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "31"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "data.floating-point-representation.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which bit pattern does the mantissa of a normalised positive floating-point number always begin with?",
+  "options": [
+   {
+    "key": "A",
+    "content": "00",
+    "rationale": "A mantissa starting 00 can still be shifted left."
+   },
+   {
+    "key": "B",
+    "content": "11",
+    "rationale": "A mantissa starting 11 is negative and not normalised."
+   },
+   {
+    "key": "C",
+    "content": "10",
+    "rationale": "A mantissa starting 10 is a normalised negative number."
+   },
+   {
+    "key": "D",
+    "content": "01",
+    "correct": true,
+    "rationale": "Correct: the sign bit is 0 and the first bit after the point is 1, so the first two bits differ."
+   }
+  ],
+  "explanation": "A normalised positive mantissa starts 01 and a normalised negative one starts 10.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.floating-point-representation.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-representation"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A floating-point number has the exponent 1110 in 4-bit two's complement. How is the binary point of the mantissa moved to give the value?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Fourteen places to the right",
+    "rationale": "1110 is 14 only if read as an unsigned number."
+   },
+   {
+    "key": "B",
+    "content": "Two places to the left",
+    "correct": true,
+    "rationale": "Correct: 1110 is −2, so the point moves 2 places left."
+   },
+   {
+    "key": "C",
+    "content": "Two places to the right",
+    "rationale": "A negative exponent moves the point left."
+   },
+   {
+    "key": "D",
+    "content": "It is not moved",
+    "rationale": "An exponent of zero would leave the point where it is."
+   }
+  ],
+  "explanation": "In 4-bit two's complement, 1110 = −8 + 4 + 2 = −2, so the mantissa is multiplied by 2^−2: the point moves two places to the left.",
+  "hints": [
+   "Read the exponent as a two's complement number first."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ }
+]

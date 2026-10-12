@@ -1,0 +1,1167 @@
+[
+ {
+  "key": "data.character-sets.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How many different characters can be represented by standard 7-bit ASCII?",
+  "options": [
+   {
+    "key": "A",
+    "content": "128",
+    "correct": true,
+    "rationale": "Correct: 7 bits give 2^7 = 128 different codes."
+   },
+   {
+    "key": "B",
+    "content": "256",
+    "rationale": "That is the number of codes in extended 8-bit ASCII."
+   },
+   {
+    "key": "C",
+    "content": "127",
+    "rationale": "Codes run from 0 to 127, but that is 128 codes in total."
+   },
+   {
+    "key": "D",
+    "content": "64",
+    "rationale": "64 codes would need only 6 bits."
+   }
+  ],
+  "explanation": "Seven bits give 2^7 = 128 codes (0 to 127). Extended ASCII uses 8 bits for 256.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.character-sets.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How many bits does each character use in extended ASCII?",
+  "options": [
+   {
+    "key": "A",
+    "content": "7",
+    "rationale": "That is standard ASCII."
+   },
+   {
+    "key": "B",
+    "content": "8",
+    "correct": true,
+    "rationale": "Correct: extended ASCII uses one byte (8 bits), giving 256 codes."
+   },
+   {
+    "key": "C",
+    "content": "16",
+    "rationale": "That is the usual size of a UTF-16 character."
+   },
+   {
+    "key": "D",
+    "content": "32",
+    "rationale": "UTF-32 uses 32 bits, but that is not extended ASCII."
+   }
+  ],
+  "explanation": "Extended ASCII keeps the 128 ASCII codes and uses the eighth bit to add 128 more, so every character is one byte.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.character-sets.q03",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In UTF-8, a character from the original ASCII set is stored in one byte.",
+  "answerSpec": {
+   "correct": true,
+   "feedbackTrue": "Correct: the first 128 code points are the same as ASCII and use a single byte.",
+   "feedbackFalse": "UTF-8 is variable width and keeps ASCII characters at one byte, which makes it compatible with ASCII."
+  },
+  "explanation": "UTF-8 uses one byte for U+0000 to U+007F and two to four bytes for other code points.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.character-sets.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How many bits are needed to store the word **HARARE** in 7-bit ASCII?",
+  "payload": {
+   "unitHint": "bits"
+  },
+  "answerSpec": {
+   "value": 42,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bits",
+     "bit",
+     "b"
+    ]
+   }
+  },
+  "explanation": "6 characters × 7 bits = 42 bits.",
+  "workedSolution": "1. The word has 6 characters.\n2. Each uses 7 bits: 6 × 7 = 42 bits.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "42"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.character-sets.q05",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A text message of 250 characters, all stored in two bytes each (UTF-16), is sent from Mutare. How many bytes does it use?",
+  "payload": {
+   "unitHint": "bytes"
+  },
+  "answerSpec": {
+   "value": 500,
+   "units": {
+    "required": false,
+    "accepted": [
+     "bytes",
+     "byte",
+     "B"
+    ]
+   }
+  },
+  "explanation": "250 × 2 bytes = 500 bytes.",
+  "workedSolution": "1. 250 × 2 bytes = 500 bytes.",
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "500"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.character-sets.q06",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A file holds 3072 characters in UTF-16, with two bytes for each character. How many KiB does the file use? (1 KiB = 1024 bytes.)",
+  "payload": {
+   "unitHint": "KiB"
+  },
+  "answerSpec": {
+   "value": 6,
+   "units": {
+    "required": false,
+    "accepted": [
+     "KiB",
+     "kibibytes",
+     "kibibyte"
+    ]
+   }
+  },
+  "explanation": "3072 × 2 = 6144 bytes; 6144 ÷ 1024 = 6 KiB.",
+  "workedSolution": "1. 3072 × 2 = 6144 bytes; 6144 ÷ 1024 = 6 KiB.",
+  "hints": [
+   "First find the number of bytes.",
+   "Divide by 1024 to change bytes to KiB."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "6"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "data.character-sets.q07",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In ASCII the capital letter **A** has the denary code 65 and the letters follow in alphabetical order. Write the 7-bit binary ASCII code for the capital letter **F**.",
+  "payload": {
+   "maxLength": 64
+  },
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "1000110"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "remove_whitespace"
+   ]
+  },
+  "explanation": "F is five letters after A, so its code is 65 + 5 = 70. In 7 bits that is 1000110.",
+  "hints": [
+   "Count how many letters F is after A.",
+   "Add that number to 65, then convert to 7-bit binary."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "1000110"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "1000111"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.character-sets.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In ASCII the lower-case letter **a** has the denary code 97 and the letters follow in alphabetical order. What is the denary code of the lower-case letter **e**?",
+  "answerSpec": {
+   "value": 101
+  },
+  "explanation": "a, b, c, d, e: e is four places after a, so its code is 97 + 4 = 101.",
+  "workedSolution": "1. e is four letters after a.\n2. 97 + 4 = 101.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "101"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.character-sets.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In ASCII the code for an upper-case letter is 32 less than the code for the same lower-case letter. What change to the binary code turns the upper-case letter into lower case?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Set the bit worth 64 to 1",
+    "rationale": "The 64s bit is already 1 in all the letters."
+   },
+   {
+    "key": "B",
+    "content": "Invert all seven bits",
+    "rationale": "Inverting every bit gives an unrelated character."
+   },
+   {
+    "key": "C",
+    "content": "Shift every bit one place to the left",
+    "rationale": "A left shift doubles the code and gives a different character."
+   },
+   {
+    "key": "D",
+    "content": "Set the bit worth 32 to 1",
+    "correct": true,
+    "rationale": "Correct: adding 32 changes only the 32s bit from 0 to 1."
+   }
+  ],
+  "explanation": "Upper-case letters have codes 65 to 90 and lower-case letters 97 to 122. The difference of 32 is a single bit, so only that bit changes.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.character-sets.q10",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A school in Masvingo stores learners' names in a database that uses extended ASCII. One name contains a character that is not among its 256 codes. What is the best solution?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Change the database to 7-bit ASCII, which holds more characters",
+    "rationale": "7-bit ASCII holds fewer characters (128) than extended ASCII."
+   },
+   {
+    "key": "B",
+    "content": "Change the database to Unicode, which has far more characters",
+    "correct": true,
+    "rationale": "Correct: Unicode has a code point for the character and keeps plain letters compact in UTF-8."
+   },
+   {
+    "key": "C",
+    "content": "Store the name as a picture of the letters instead of as text",
+    "rationale": "That prevents searching and sorting and wastes space."
+   },
+   {
+    "key": "D",
+    "content": "Remove the unusual character from the name",
+    "rationale": "Changing a person's name loses information and is not acceptable."
+   }
+  ],
+  "explanation": "Unicode gives every character a code point, so no name has to be altered. UTF-8 still stores ordinary English letters in one byte.",
+  "hints": [
+   "Which character set has a very large number of code points?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.character-sets.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each character set to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "ASCII"
+    },
+    {
+     "id": "L2",
+     "content": "Extended ASCII"
+    },
+    {
+     "id": "L3",
+     "content": "UTF-8"
+    },
+    {
+     "id": "L4",
+     "content": "UTF-16"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Unicode encoding using 1 to 4 bytes per character"
+    },
+    {
+     "id": "R4",
+     "content": "Unicode encoding using 2 or 4 bytes per character"
+    },
+    {
+     "id": "R1",
+     "content": "7-bit code with 128 characters"
+    },
+    {
+     "id": "R2",
+     "content": "8-bit code with 256 characters, whose extra codes vary between versions"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each set differs in the number of bits per character and in the number of characters it can represent.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.character-sets.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Where is the EBCDIC character set mostly found today?",
+  "options": [
+   {
+    "key": "A",
+    "content": "On mobile phones sold in Zimbabwe",
+    "rationale": "Phones use Unicode, usually UTF-8 or UTF-16."
+   },
+   {
+    "key": "B",
+    "content": "On all personal computers, in place of ASCII",
+    "rationale": "Personal computers use ASCII-based sets and Unicode."
+   },
+   {
+    "key": "C",
+    "content": "On older IBM mainframe systems",
+    "correct": true,
+    "rationale": "Correct: EBCDIC was developed by IBM and is still used on some mainframes."
+   },
+   {
+    "key": "D",
+    "content": "In web pages, as the standard web encoding",
+    "rationale": "Web pages normally use UTF-8."
+   }
+  ],
+  "explanation": "EBCDIC is an 8-bit code used by IBM mainframes. It is not compatible with ASCII, so data moved to a PC must be converted.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "data.character-sets.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The following 7-bit ASCII codes were received: **1001011 1000001 1010010 1001001 1000010 1000001**. The code for the capital letter A is 1000001 and the capital letters follow in alphabetical order. What word was sent?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "KARIBA"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "The codes are 75, 65, 82, 73, 66, 65, which are the letters K, A, R, I, B, A: KARIBA.",
+  "hints": [
+   "Convert each code to denary and compare it with 65 for A.",
+   "Take each letter in turn."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "KARIBA"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "KARIBU"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.character-sets.q14",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the character set that gives every character from all the world's languages its own unique code point.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "Unicode"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "Unicode assigns a code point to every character and is stored using encodings such as UTF-8 and UTF-16.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "Unicode"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "ASCII"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.character-sets.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why Unicode was introduced when ASCII and extended ASCII already existed.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "ASCII and extended ASCII can represent only 128 or 256 characters, too few for the world's languages and symbols.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Different versions of extended ASCII used the extra codes differently, so text could display incorrectly on another system.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Unicode gives every character one unique code point, so text can be shared and displayed correctly everywhere.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ASCII has only 128 codes and extended ASCII 256, which cannot cover all alphabets, symbols and emoji. Different countries used the extra 128 codes differently, so a file could show wrong characters on another machine. Unicode gives each character a unique code point, so it is a single standard for all languages."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The reasons are number of characters and compatibility between systems.",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.character-sets.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A Harare company stores English emails in extended ASCII and is considering UTF-16. Compare the two character sets.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Extended ASCII uses one byte per character, but UTF-16 uses at least two bytes, so UTF-16 files are about twice as large for plain English text.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Extended ASCII is limited to 256 characters; UTF-16 can represent every Unicode character.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "UTF-16 avoids the clashes between different extended ASCII versions, so text shows correctly on other systems.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Extended ASCII stores each character in one byte, so English emails are small, but it can show only 256 characters and its extra codes differ between systems. UTF-16 uses two or four bytes per character, so the same emails take about twice the space, but it can represent all Unicode characters and is a single standard."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "UTF-16 trades storage for range and compatibility.",
+  "hints": [
+   "Compare the number of characters and the storage used for plain English text."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.character-sets.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "A bank in Harare moves customer records from an old mainframe that uses EBCDIC to a PC database that uses ASCII. Explain why the data must be converted.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "EBCDIC and ASCII give the same characters different binary codes.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Without conversion, the PC would show the wrong characters.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The two codes assign different bit patterns to the same characters, so unconverted data would display as the wrong characters on the PC. The records must be translated code by code."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "EBCDIC is not compatible with ASCII.",
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "zimsec"
+  ]
+ },
+ {
+  "key": "data.character-sets.q18",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A school in Gweru keeps a list of 640 learner names. Each name is stored in a field of 24 characters.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the number of bytes needed for the names if each character uses one byte (extended ASCII).",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 15360,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "640 × 24 = 15360 bytes.",
+    "workedSolution": "1. 640 × 24 = 15360 bytes."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "The school changes to Unicode with two bytes for every character. Calculate the storage in KiB. (1 KiB = 1024 bytes.)",
+    "payload": {
+     "unitHint": "KiB"
+    },
+    "answerSpec": {
+     "value": 30,
+     "units": {
+      "required": false,
+      "accepted": [
+       "KiB",
+       "kibibytes",
+       "kibibyte"
+      ]
+     }
+    },
+    "explanation": "640 × 24 × 2 = 30720 bytes; ÷ 1024 = 30 KiB.",
+    "workedSolution": "1. 640 × 24 × 2 = 30720 bytes; ÷ 1024 = 30 KiB."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Give two reasons why the school might accept the larger file size.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Unicode can represent names with any characters.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It is a standard, so names display correctly on other systems.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: UTF-16 can store any character, including names from other languages, and it gives the same display on all systems."
+    }
+   }
+  ],
+  "explanation": "Extended ASCII: 15360 bytes. UTF-16: 30720 bytes = 30 KiB.",
+  "hints": [
+   "Multiply the number of names by the characters per name, then by the bytes per character.",
+   "Divide by 1024 for KiB."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "15360"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "30"
+    }
+   }
+  },
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "data.character-sets.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A mobile-money app sends receipts as text. The developers compare three character sets: 7-bit ASCII, extended ASCII (8 bits) and Unicode in UTF-8.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "How many different characters can 7-bit ASCII represent?",
+    "answerSpec": {
+     "value": 128
+    },
+    "explanation": "2^7 = 128.",
+    "workedSolution": "1. 2^7 = 128."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "How many different characters can extended ASCII represent?",
+    "answerSpec": {
+     "value": 256
+    },
+    "explanation": "2^8 = 256.",
+    "workedSolution": "1. 2^8 = 256."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "A receipt contains 90 characters. Calculate the number of bits needed in 7-bit ASCII.",
+    "payload": {
+     "unitHint": "bits"
+    },
+    "answerSpec": {
+     "value": 630,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bits",
+       "bit",
+       "b"
+      ]
+     }
+    },
+    "explanation": "90 × 7 = 630 bits.",
+    "workedSolution": "1. 90 × 7 = 630 bits."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "In UTF-8, how many bytes does a plain English letter use?",
+    "options": [
+     {
+      "key": "A",
+      "content": "1 byte",
+      "correct": true,
+      "rationale": "Correct: ASCII characters use one byte in UTF-8."
+     },
+     {
+      "key": "B",
+      "content": "2 bytes",
+      "rationale": "Two bytes is typical for UTF-16."
+     },
+     {
+      "key": "C",
+      "content": "3 bytes",
+      "rationale": "Three bytes are for some other characters."
+     },
+     {
+      "key": "D",
+      "content": "4 bytes",
+      "rationale": "Four bytes are for the rarest code points."
+     }
+    ],
+    "explanation": "UTF-8 is backward compatible with ASCII."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The app must also show names with accented letters from other languages. Explain which character set the developers should choose.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Unicode (UTF-8) should be chosen.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It has code points for accented letters and other scripts that 7-bit ASCII lacks.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "It keeps plain English text at one byte per character, so receipts stay small.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: They should choose Unicode, stored as UTF-8. It has code points for accented characters and other scripts, which 7-bit ASCII cannot hold, and plain English letters still need only one byte so receipts stay small."
+    }
+   }
+  ],
+  "explanation": "7-bit ASCII gives 128 characters, extended ASCII 256, and 90 characters need 630 bits. Unicode in UTF-8 is the best choice for range with compact English text.",
+  "hints": [
+   "Consider both the range of characters and the size of the receipts.",
+   "Remember that UTF-8 is variable width."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "128"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "256"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "630"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "data.character-sets.q20",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A text file contains 1000 characters, each stored in extended ASCII. How many bytes does the file use?",
+  "options": [
+   {
+    "key": "A",
+    "content": "125 bytes",
+    "rationale": "This divides the number of characters by 8, as if each used one bit."
+   },
+   {
+    "key": "B",
+    "content": "2000 bytes",
+    "rationale": "That would be two bytes per character, as in UTF-16."
+   },
+   {
+    "key": "C",
+    "content": "8000 bytes",
+    "rationale": "That is the number of bits, not bytes."
+   },
+   {
+    "key": "D",
+    "content": "1000 bytes",
+    "correct": true,
+    "rationale": "Correct: extended ASCII uses one byte for each character."
+   }
+  ],
+  "explanation": "Extended ASCII uses 8 bits (1 byte) per character, so 1000 characters need 1000 bytes.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.character-sets.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which statement about UTF-8 is correct?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It uses exactly two bytes for every character",
+    "rationale": "Two bytes for every character describes a fixed-width encoding."
+   },
+   {
+    "key": "B",
+    "content": "It can represent only the 128 ASCII characters",
+    "rationale": "UTF-8 can encode every Unicode character."
+   },
+   {
+    "key": "C",
+    "content": "It uses from one to four bytes for each character",
+    "correct": true,
+    "rationale": "Correct: UTF-8 is a variable-width encoding of Unicode."
+   },
+   {
+    "key": "D",
+    "content": "It is the same as EBCDIC on a mainframe",
+    "rationale": "EBCDIC is a different, unrelated code."
+   }
+  ],
+  "explanation": "UTF-8 stores ASCII characters in one byte and other characters in two to four bytes.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.character-sets.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.character-sets"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A file written on one computer in extended ASCII shows some wrong symbols when opened on a computer in another country. What is the most likely cause?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The file was saved as 7-bit ASCII, which has fewer codes",
+    "rationale": "The first 128 codes are the same in all versions."
+   },
+   {
+    "key": "B",
+    "content": "The file is too large to be displayed correctly on the screen",
+    "rationale": "File size does not change which character a code displays."
+   },
+   {
+    "key": "C",
+    "content": "The computers use different versions of the extra codes",
+    "correct": true,
+    "rationale": "Correct: extended ASCII versions assign different characters to the codes 128 to 255."
+   },
+   {
+    "key": "D",
+    "content": "The second computer is using too little memory",
+    "rationale": "Memory size does not affect the character set."
+   }
+  ],
+  "explanation": "The first 128 codes are the same in every version, but the extra 128 codes of extended ASCII differ, so accented letters and symbols may be shown wrongly.",
+  "hints": [
+   "Which codes are the same everywhere, and which differ between versions?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ }
+]

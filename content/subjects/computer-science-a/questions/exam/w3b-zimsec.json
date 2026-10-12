@@ -1,0 +1,686 @@
+[
+ {
+  "key": "exam.w3b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.db.normalisation",
+   "acs.db.sql-ddl",
+   "acs.db.sql-dml",
+   "acs.db.application-interfaces"
+  ],
+  "difficulty": 4,
+  "marks": 40,
+  "estimatedSeconds": 3600,
+  "stem": "A secondary school in Kwekwe keeps learners' marks in a database. At first the data was held in one table. This is part of it (the first three learners).\n\n| LearnerID | SubjectCode | Surname | Form | SubjectTitle | Mark |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| L1 | CS | Moyo | 5A | Computer Science | 68 |\n| L1 | MA | Moyo | 5A | Mathematics | 61 |\n| L2 | CS | Ncube | 5A | Computer Science | 53 |\n| L2 | PH | Ncube | 5A | Physics | 47 |\n| L3 | CS | Banda | 5B | Computer Science | 79 |\n| L3 | MA | Banda | 5B | Mathematics | 56 |\n\nThe primary key of this table is the combination of `LearnerID` and `SubjectCode`.\n\nThe data was then reorganised into the three tables below. `Result` has a composite primary key (`LearnerID`, `SubjectCode`).\n\n**Learner**\n\n| LearnerID | Surname | Form |\n|:-:|:-:|:-:|\n| L1 | Moyo | 5A |\n| L2 | Ncube | 5A |\n| L3 | Banda | 5B |\n| L4 | Chuma | 5B |\n| L5 | Dube | 5A |\n\n**Subject**\n\n| SubjectCode | SubjectTitle |\n|:-:|:-:|\n| CS | Computer Science |\n| MA | Mathematics |\n| PH | Physics |\n\n**Result**\n\n| LearnerID | SubjectCode | Mark |\n|:-:|:-:|:-:|\n| L1 | CS | 68 |\n| L1 | MA | 61 |\n| L2 | CS | 53 |\n| L2 | PH | 47 |\n| L3 | CS | 79 |\n| L3 | MA | 56 |\n| L4 | CS | 42 |\n| L4 | PH | 63 |\n| L5 | CS | 74 |\n| L5 | MA | 69 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Study the single table.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "How many fields make up the primary key?",
+      "options": [
+       {
+        "key": "A",
+        "content": "One",
+        "rationale": "No single field is unique."
+       },
+       {
+        "key": "B",
+        "content": "Two",
+        "correct": true,
+        "rationale": "Correct: LearnerID and SubjectCode."
+       },
+       {
+        "key": "C",
+        "content": "Three",
+        "rationale": "Only two fields are needed."
+       },
+       {
+        "key": "D",
+        "content": "Six",
+        "rationale": "A key does not include every field."
+       }
+      ],
+      "explanation": "The key is (LearnerID, SubjectCode)."
+     },
+     {
+      "label": "(ii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 2,
+      "stem": "Select the three fields that depend on only part of the primary key.",
+      "payload": {
+       "selectMode": "multiple"
+      },
+      "options": [
+       {
+        "key": "A",
+        "content": "Mark",
+        "rationale": "Mark depends on both fields: a learner's mark in one subject."
+       },
+       {
+        "key": "B",
+        "content": "Surname",
+        "correct": true,
+        "rationale": "Correct: depends on LearnerID alone."
+       },
+       {
+        "key": "C",
+        "content": "Form",
+        "correct": true,
+        "rationale": "Correct: depends on LearnerID alone."
+       },
+       {
+        "key": "D",
+        "content": "SubjectTitle",
+        "correct": true,
+        "rationale": "Correct: depends on SubjectCode alone."
+       },
+       {
+        "key": "E",
+        "content": "LearnerID",
+        "rationale": "LearnerID is part of the primary key."
+       },
+       {
+        "key": "F",
+        "content": "SubjectCode",
+        "rationale": "SubjectCode is part of the primary key."
+       }
+      ],
+      "explanation": "Surname, Form and SubjectTitle are partially dependent."
+     },
+     {
+      "label": "(iii)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "State the highest normal form that the single table is in. Give your answer as 1NF, 2NF or 3NF.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "1NF"
+        },
+        {
+         "value": "first normal form"
+        },
+        {
+         "value": "1"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      "explanation": "It is in 1NF but has partial dependencies."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Explain how the single table was normalised into the three tables. Write each table with its primary key and the foreign keys, and say which dependency caused each table to be made.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Learner(LearnerID, Surname, Form) with LearnerID as the primary key",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Surname and Form depend on LearnerID alone, so they were moved out (partial dependency)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Subject(SubjectCode, SubjectTitle) with SubjectCode as the primary key",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "SubjectTitle depends on SubjectCode alone, so it was moved out (partial dependency)",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Result(LearnerID, SubjectCode, Mark) with the composite primary key (LearnerID, SubjectCode)",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "LearnerID and SubjectCode in Result are foreign keys that link to Learner and Subject",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Learner(LearnerID, Surname, Form): Surname and Form depend on LearnerID alone, so they were moved out. Subject(SubjectCode, SubjectTitle): SubjectTitle depends on SubjectCode alone, so it was moved out. Result(LearnerID, SubjectCode, Mark) keeps what depends on the whole key, with the composite primary key (LearnerID, SubjectCode); LearnerID and SubjectCode are foreign keys to Learner and Subject."
+    },
+    "explanation": "Each partial dependency moves its attributes to a table keyed on its determinant."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "Write SQL statements to create the three tables. Show the data types, the primary keys and the foreign keys. The tables must be created in the correct order.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Learner and Subject are created before Result",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Learner: LearnerID CHARACTER(2) as primary key, Surname VARCHAR and Form CHARACTER(2)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Subject: SubjectCode CHARACTER(2) as primary key and SubjectTitle VARCHAR",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Result: LearnerID, SubjectCode and Mark INTEGER with suitable types",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "PRIMARY KEY (LearnerID, SubjectCode) in Result",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "FOREIGN KEY ... REFERENCES for both LearnerID and SubjectCode",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: \n```\nCREATE TABLE Learner (\n    LearnerID CHARACTER(2) PRIMARY KEY,\n    Surname VARCHAR(20) NOT NULL,\n    Form CHARACTER(2)\n);\n\nCREATE TABLE Subject (\n    SubjectCode CHARACTER(2) PRIMARY KEY,\n    SubjectTitle VARCHAR(25) NOT NULL\n);\n\nCREATE TABLE Result (\n    LearnerID CHARACTER(2),\n    SubjectCode CHARACTER(2),\n    Mark INTEGER,\n    PRIMARY KEY (LearnerID, SubjectCode),\n    FOREIGN KEY (LearnerID) REFERENCES Learner(LearnerID),\n    FOREIGN KEY (SubjectCode) REFERENCES Subject(SubjectCode)\n);\n```"
+    },
+    "explanation": "Types, keys and the order of creation."
+   },
+   {
+    "label": "(d)",
+    "type": "STRUCTURED",
+    "marks": 8,
+    "stem": "Use the three tables to answer these questions about SQL queries.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the number returned by:\n\n```\nSELECT COUNT(*)\nFROM Result\nWHERE Mark >= 50;\n```",
+      "answerSpec": {
+       "value": 8
+      },
+      "explanation": "Eight results are 50 or more (the marks 47 and 42 are below 50).",
+      "workedSolution": "1. Eight results are 50 or more (the marks 47 and 42 are below 50)."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "State the number returned by:\n\n```\nSELECT AVG(Mark)\nFROM Result\nWHERE SubjectCode = 'CS';\n```",
+      "answerSpec": {
+       "value": 63.2,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.001
+       }
+      },
+      "explanation": "316 ÷ 5 = 63.2.",
+      "workedSolution": "1. The Computer Science marks are 68, 53, 79, 42 and 74.\n2. Total = 316, divided by 5 = 63.2."
+     },
+     {
+      "label": "(iii)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "State the surname of the learner with the highest Computer Science mark.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "Banda"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      "explanation": "Banda scored 79 in Computer Science."
+     },
+     {
+      "label": "(iv)",
+      "type": "SHORT_ANSWER",
+      "marks": 4,
+      "markingMode": "MANUAL",
+      "stem": "Write an SQL query to show the surname and the mark of every learner who scored more than 60 in Computer Science (subject code CS), with the highest mark first.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "SELECT Learner.Surname, Result.Mark FROM Learner",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "INNER JOIN Result ON Learner.LearnerID = Result.LearnerID",
+          "marks": 1
+         },
+         {
+          "id": "p3",
+          "description": "WHERE Result.SubjectCode = 'CS' AND Result.Mark > 60",
+          "marks": 1
+         },
+         {
+          "id": "p4",
+          "description": "ORDER BY Result.Mark DESC",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: \n```\nSELECT Learner.Surname, Result.Mark\nFROM Learner\nINNER JOIN Result ON Learner.LearnerID = Result.LearnerID\nWHERE Result.SubjectCode = 'CS' AND Result.Mark > 60\nORDER BY Result.Mark DESC;\n```"
+      },
+      "explanation": "Join, filter on subject and mark, sort descending."
+     }
+    ]
+   },
+   {
+    "label": "(e)",
+    "type": "STRUCTURED",
+    "marks": 8,
+    "stem": "A teacher writes this Python program to read the database `school.db`, which holds the three tables.\n\n```python\nimport sqlite3\n\nconn = sqlite3.connect(\"school.db\")\ncur = conn.cursor()\ncur.execute(\"SELECT Surname, Mark FROM Learner INNER JOIN Result ON Learner.LearnerID = Result.LearnerID WHERE SubjectCode = ? AND Mark < ? ORDER BY Mark\", (\"CS\", 60))\nrows = cur.fetchall()\nfor r in rows:\n    print(r[0], r[1])\nprint(\"Below 60:\", len(rows))\nconn.close()\n```",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 2,
+      "stem": "State the first line of output and the number printed after `Below 60:`.",
+      "payload": {
+       "template": "First line: {{blank:s}} {{blank:m}}\n\nBelow 60: {{blank:n}}",
+       "blanks": [
+        {
+         "id": "s"
+        },
+        {
+         "id": "m",
+         "input": "number"
+        },
+        {
+         "id": "n",
+         "input": "number"
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "s",
+         "accepted": [
+          "Chuma"
+         ],
+         "normalise": [
+          "trim",
+          "lowercase",
+          "collapse_whitespace",
+          "strip_punctuation"
+         ]
+        },
+        {
+         "id": "m",
+         "accepted": [
+          "42"
+         ]
+        },
+        {
+         "id": "n",
+         "accepted": [
+          "2"
+         ]
+        }
+       ]
+      },
+      "explanation": "The CS marks below 60 are Chuma 42 and Ncube 53, in ascending order of mark; there are 2."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 6,
+      "markingMode": "MANUAL",
+      "stem": "Write a Python program that connects to `school.db`, asks the user for a learner ID, uses a parameterised query to find the learner's average mark across all subjects, and outputs it rounded to 1 decimal place. If the learner has no results the program must output a message instead.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Imports sqlite3, connects to school.db and creates a cursor",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "Inputs the learner ID from the user",
+          "marks": 1
+         },
+         {
+          "id": "p3",
+          "description": "Executes a SELECT AVG(Mark) query on Result with a ? placeholder",
+          "marks": 1
+         },
+         {
+          "id": "p4",
+          "description": "Passes the learner ID as a parameter, not joined into the SQL",
+          "marks": 1
+         },
+         {
+          "id": "p5",
+          "description": "Tests whether the result is None and outputs a message if it is",
+          "marks": 1
+         },
+         {
+          "id": "p6",
+          "description": "Otherwise outputs the average rounded to 1 decimal place",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: \n```python\nimport sqlite3\n\nconn = sqlite3.connect(\"school.db\")\ncur = conn.cursor()\nlearner_id = input(\"Enter the learner ID: \")\ncur.execute(\"SELECT AVG(Mark) FROM Result WHERE LearnerID = ?\", (learner_id,))\naverage = cur.fetchone()[0]\nif average is None:\n    print(\"No results for that learner\")\nelse:\n    print(\"Average mark:\", round(average, 1))\nconn.close()\n```"
+      },
+      "explanation": "A tested program: for L1 it prints Average mark: 64.5; for L9 it prints the message."
+     }
+    ]
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Explain what is meant by SQL injection and how the use of a parameterised query in part (e) prevents it.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "SQL injection is when a user types SQL code into an input box",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "If the input is joined into the text of the query, it can change the meaning of the statement (for example make a condition always true)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "In a parameterised query the SQL contains a placeholder and the input is sent separately",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "The input is therefore treated only as data and never as SQL",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: SQL injection is when a user types SQL code into an input box. If the input is joined into the text of the query it can change the meaning of the statement. In a parameterised query the input is sent separately from the SQL, so it is treated only as data."
+    },
+    "explanation": "Injection and the parameter defence."
+   },
+   {
+    "label": "(g)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "The database has a rule that a mark must be a whole number from 0 to 100 inclusive.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "FILL_IN_THE_BLANK",
+      "marks": 3,
+      "stem": "State the type of test data for each value.",
+      "payload": {
+       "template": "55: {{blank:a}}\n\n0: {{blank:b}}\n\n101: {{blank:c}}",
+       "blanks": [
+        {
+         "id": "a",
+         "input": "select",
+         "choices": [
+          "Normal",
+          "Extreme",
+          "Abnormal"
+         ]
+        },
+        {
+         "id": "b",
+         "input": "select",
+         "choices": [
+          "Normal",
+          "Extreme",
+          "Abnormal"
+         ]
+        },
+        {
+         "id": "c",
+         "input": "select",
+         "choices": [
+          "Normal",
+          "Extreme",
+          "Abnormal"
+         ]
+        }
+       ]
+      },
+      "answerSpec": {
+       "blanks": [
+        {
+         "id": "a",
+         "accepted": [
+          "Normal"
+         ]
+        },
+        {
+         "id": "b",
+         "accepted": [
+          "Extreme"
+         ]
+        },
+        {
+         "id": "c",
+         "accepted": [
+          "Abnormal"
+         ]
+        }
+       ]
+      },
+      "explanation": "55 is typical, 0 is at the limit and 101 is outside the range."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 1,
+      "stem": "Name the type of validation check that tests whether a mark is between 0 and 100.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "range check"
+        },
+        {
+         "value": "range"
+        },
+        {
+         "value": "a range check"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      "explanation": "A range check."
+     }
+    ]
+   }
+  ],
+  "explanation": "The single table is in 1NF with three partial dependencies; the queries give 8, 63.2 and Banda; the program outputs Chuma 42, Ncube 53 and Below 60: 2.",
+  "hints": [
+   "In (a), ask whether each field depends on both parts of the key.",
+   "In (d), run each query by hand on the tables.",
+   "In (e)(ii), pass the learner ID as a parameter."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(a)(ii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B",
+      "C",
+      "D"
+     ]
+    },
+    "(a)(iii)": {
+     "type": "SHORT_ANSWER",
+     "text": "1NF"
+    },
+    "(d)(i)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    },
+    "(d)(ii)": {
+     "type": "CALCULATION",
+     "value": "63.2"
+    },
+    "(d)(iii)": {
+     "type": "SHORT_ANSWER",
+     "text": "Banda"
+    },
+    "(e)(i)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "s",
+       "text": "Chuma"
+      },
+      {
+       "blankId": "m",
+       "text": "42"
+      },
+      {
+       "blankId": "n",
+       "text": "2"
+      }
+     ]
+    },
+    "(g)(i)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Normal"
+      },
+      {
+       "blankId": "b",
+       "text": "Extreme"
+      },
+      {
+       "blankId": "c",
+       "text": "Abnormal"
+      }
+     ]
+    },
+    "(g)(ii)": {
+     "type": "SHORT_ANSWER",
+     "text": "range check"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(a)(ii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(d)(i)": {
+      "type": "NUMERICAL",
+      "value": "10"
+     },
+     "(d)(ii)": {
+      "type": "CALCULATION",
+      "value": "316"
+     },
+     "(e)(i)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "s",
+        "text": "xyz"
+       },
+       {
+        "blankId": "m",
+        "text": "999"
+       },
+       {
+        "blankId": "n",
+        "text": "999"
+       }
+      ]
+     },
+     "(g)(i)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Extreme"
+       },
+       {
+        "blankId": "b",
+        "text": "Normal"
+       },
+       {
+        "blankId": "c",
+        "text": "Normal"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "ZIMSEC Paper 2 Section B"
+ }
+]

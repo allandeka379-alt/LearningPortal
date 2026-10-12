@@ -1,0 +1,1124 @@
+[
+ {
+  "key": "exam.w4b-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.iteration",
+   "acs.prog.selection"
+  ],
+  "difficulty": 3,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A weather station in Kariba records daily rainfall readings in millimetres. A technician writes this pseudocode. The readings 14, -5, 30, 8 and -1 are entered in that order. The value -1 ends the input.\n\n```\nDECLARE Reading, Count, Total, High : INTEGER\nCount ← 0\nTotal ← 0\nHigh ← 0\nREPEAT\n    INPUT Reading\n    IF Reading >= 0 THEN\n        Count ← Count + 1\n        Total ← Total + Reading\n        IF Reading > High THEN\n            High ← Reading\n        ENDIF\n    ENDIF\nUNTIL Reading = -1\nOUTPUT Count, \" \", Total, \" \", High\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "State the final values of the variables.",
+    "payload": {
+     "template": "Count = {{blank:a}}\n\nTotal = {{blank:b}}\n\nHigh = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "3"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "52"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "30"
+       ]
+      }
+     ]
+    },
+    "explanation": "-5 and -1 fail the test Reading >= 0, so only 14, 30 and 8 are counted: Count 3, Total 52, High 30."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of times the statement `INPUT Reading` is executed.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "The loop body runs 5 times.",
+    "workedSolution": "One input for each of the values 14, -5, 30, 8 and -1."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which statement describes the type of loop used?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A pre-condition loop, because the test is made before the body runs",
+      "rationale": "That describes WHILE."
+     },
+     {
+      "key": "B",
+      "content": "A count-controlled loop, because it runs a fixed number of times",
+      "rationale": "The number of passes depends on the data."
+     },
+     {
+      "key": "C",
+      "content": "A post-condition loop, because the test is made after the body has run",
+      "correct": true,
+      "rationale": "REPEAT ... UNTIL tests at the end."
+     },
+     {
+      "key": "D",
+      "content": "A nested loop, because it contains an IF statement",
+      "rationale": "A selection inside a loop is not a nested loop."
+     }
+    ],
+    "explanation": "REPEAT ... UNTIL is a post-condition loop."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The value -5 was ignored silently. Describe a change that would tell the technician that an invalid reading was entered.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Add an ELSE branch (or a separate test) for readings below 0 that are not -1",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Output an error message in that branch (and optionally ask again)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Test for a reading below 0 that is not -1 and output a message such as \"Invalid reading\" in an ELSE branch."
+    },
+    "explanation": "Report invalid data."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write the pseudocode that should be added after the loop to output the average of the readings, or the message `No readings` if none were counted.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Tests Count > 0 (or Count <> 0) before the division",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Outputs Total / Count in one branch and \"No readings\" in the other",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nIF Count > 0 THEN\n    OUTPUT Total / Count\nELSE\n    OUTPUT \"No readings\"\nENDIF\n```"
+    },
+    "explanation": "Avoid division by zero."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Rewrite the loop using a `WHILE ... ENDWHILE` loop, so that it gives the same results.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Reads the first value before the loop",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "WHILE Reading <> -1 DO with the same IF statements inside",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Reads the next value at the end of the loop body",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nINPUT Reading\nWHILE Reading <> -1 DO\n    IF Reading >= 0 THEN\n        Count ← Count + 1\n        Total ← Total + Reading\n        IF Reading > High THEN\n            High ← Reading\n        ENDIF\n    ENDIF\n    INPUT Reading\nENDWHILE\n```"
+    },
+    "explanation": "A WHILE loop needs a first read before the loop and a read at the end."
+   }
+  ],
+  "explanation": "Count 3, Total 52 and High 30 after 5 passes; REPEAT is a post-condition loop.",
+  "hints": [
+   "Follow the readings one at a time and decide whether each passes the test Reading >= 0.",
+   "A WHILE loop tests before the first pass."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "3"
+      },
+      {
+       "blankId": "b",
+       "text": "52"
+      },
+      {
+       "blankId": "c",
+       "text": "30"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "4"
+       },
+       {
+        "blankId": "b",
+        "text": "52"
+       },
+       {
+        "blankId": "c",
+        "text": "30"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false,
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4b-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A car park in Mutare charges for the time a car stays. The time in seconds is split into hours and minutes, and the cost in USD is calculated. This pseudocode is used.\n\n```\nPROCEDURE Split(BYVAL Total : INTEGER, BYREF Hours : INTEGER, BYREF Minutes : INTEGER)\n    Hours ← DIV(Total, 3600)\n    Total ← MOD(Total, 3600)\n    Minutes ← DIV(Total, 60)\nENDPROCEDURE\n\nFUNCTION Rate(Hours : INTEGER) RETURNS REAL\n    IF Hours >= 2 THEN\n        RETURN 3.0\n    ELSE\n        RETURN 1.5\n    ENDIF\nENDFUNCTION\n\nSeconds ← 9000\nCALL Split(Seconds, H, M)\nCost ← H * Rate(H) + M * 0.05\nOUTPUT Cost\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "State the values of `H`, `M` and `Seconds` after the statement `CALL Split(Seconds, H, M)` has been executed.",
+    "payload": {
+     "template": "H = {{blank:a}}\n\nM = {{blank:b}}\n\nSeconds = {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "30"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "9000"
+       ]
+      }
+     ]
+    },
+    "explanation": "9000 DIV 3600 = 2 hours, the remainder is 1800, and 1800 DIV 60 = 30 minutes. Total is passed by value, so Seconds is unchanged."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "State the value output.",
+    "answerSpec": {
+     "value": 7.5,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "The cost is 7.5.",
+    "workedSolution": "Rate(2) is 3.0, so 2 × 3.0 = 6.0; 30 × 0.05 = 1.5; 6.0 + 1.5 = 7.5."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why is the parameter `Total` declared `BYVAL`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "So that the procedure can return a value to the main program as well",
+      "rationale": "That is the purpose of BYREF."
+     },
+     {
+      "key": "B",
+      "content": "So that the procedure can be called more than once in a program",
+      "rationale": "Any procedure can be called many times."
+     },
+     {
+      "key": "C",
+      "content": "So that Total can store a much larger number than other variables",
+      "rationale": "BYVAL does not affect the size of a value."
+     },
+     {
+      "key": "D",
+      "content": "So that `Seconds` is not changed by the procedure",
+      "correct": true,
+      "rationale": "The procedure changes its copy of Total."
+     }
+    ],
+    "explanation": "The procedure assigns a new value to Total, and BYVAL stops this reaching the caller."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the pseudocode for a procedure `ShowTime` that takes the hours and minutes by value and outputs them in the form `2 h 30 min`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "PROCEDURE header with two BYVAL INTEGER parameters and ENDPROCEDURE",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Outputs the hours and the text h",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Outputs the minutes and the text min",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nPROCEDURE ShowTime(BYVAL Hours : INTEGER, BYVAL Minutes : INTEGER)\n    OUTPUT Hours, \" h \", Minutes, \" min\"\nENDPROCEDURE\n```"
+    },
+    "explanation": "A procedure with value parameters and an output."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "The header is changed to `BYREF Total : INTEGER`. State the value of `Seconds` after `CALL Split(Seconds, H, M)`.",
+    "answerSpec": {
+     "value": 1800
+    },
+    "explanation": "The caller's variable is changed to 1800.",
+    "workedSolution": "Total ← MOD(Total, 3600) now changes Seconds itself: 9000 MOD 3600 = 1800."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two reasons why the calculation is divided into the routines `Split` and `Rate`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each routine has one job and can be tested on its own",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The routines can be reused (for example Rate in another program) and changed without altering the rest",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each routine has one job and can be tested on its own, and a routine such as Rate can be reused or changed without altering the rest of the program."
+    },
+    "explanation": "Modular design."
+   }
+  ],
+  "explanation": "H is 2 and M is 30, Seconds is unchanged because Total is by value, and the cost is 7.5.",
+  "hints": [
+   "A BYVAL parameter is a copy; a BYREF parameter is the caller's variable.",
+   "Work out Hours and the remainder first."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "2"
+      },
+      {
+       "blankId": "b",
+       "text": "30"
+      },
+      {
+       "blankId": "c",
+       "text": "9000"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "7.5"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "1800"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "2"
+       },
+       {
+        "blankId": "b",
+        "text": "30"
+       },
+       {
+        "blankId": "c",
+        "text": "1800"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "9000"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false,
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4b-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.prog.programming-basics",
+   "acs.prog.iteration"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A school in Chipinge creates a user name for each learner from the full name. The functions used are: `LENGTH(S)` returns the number of characters in `S`; `MID(S, X, N)` returns `N` characters of `S` starting at position `X` (the first character is position 1); `LEFT(S, N)` returns the first `N` characters; `TO_LOWER(S)` returns `S` in lower case; `&` joins two strings.\n\n```\nDECLARE Name, Surname, User : STRING\nDECLARE Space, Index : INTEGER\nName ← \"Tendai Moyo\"\nSpace ← 0\nFOR Index ← 1 TO LENGTH(Name)\n    IF MID(Name, Index, 1) = \" \" THEN\n        Space ← Index\n    ENDIF\nNEXT Index\nSurname ← MID(Name, Space + 1, LENGTH(Name) - Space)\nUser ← TO_LOWER(LEFT(Name, 1)) & TO_LOWER(Surname)\nOUTPUT User\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Space` when the loop ends.",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "Space is 7.",
+    "workedSolution": "The space is the 7th character of \"Tendai Moyo\"."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the value of `Surname`.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Moyo"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "MID(Name, 8, 4) is the 4 characters from position 8: Moyo."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the value output.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "tmoyo"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The lower-case first letter t followed by moyo."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the value of `MID(Name, 3, 4)`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "enda",
+      "rationale": "That starts at position 2."
+     },
+     {
+      "key": "B",
+      "content": "ndai",
+      "correct": true,
+      "rationale": "The 4 characters from position 3 are n, d, a, i."
+     },
+     {
+      "key": "C",
+      "content": "dai M",
+      "rationale": "That starts at position 4 and has 5 characters."
+     },
+     {
+      "key": "D",
+      "content": "Tend",
+      "rationale": "That starts at position 1."
+     }
+    ],
+    "explanation": "MID(S, 3, 4) starts at the 3rd character."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The name `Rudo` has no space. Describe what the algorithm does for this name and the problem it causes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Space stays 0, because the test for a space is never true",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "MID(Name, 1, 4) gives the whole name, so Surname is Rudo (and LENGTH - 0 = 4)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The user name is rudo with the first letter repeated: rr... (the first letter + the whole name = rrudo), which is wrong",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Space stays 0. Surname becomes the whole name Rudo, and the user name is the first letter r followed by rudo, giving rrudo, which is wrong. The algorithm should test for Space = 0."
+    },
+    "explanation": "No space is a case the algorithm does not handle."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write a pseudocode function `Initials` that takes a full name containing exactly one space and returns the first letter of the first name and the first letter of the surname, in upper case, for example `TM`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "FUNCTION header with a STRING parameter and RETURNS STRING, ended by ENDFUNCTION",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Finds the position of the space (loop or a function) and uses MID or LEFT to take the first letters",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Joins the two letters with & after TO_UPPER, and returns the result",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nFUNCTION Initials(FullName : STRING) RETURNS STRING\n    DECLARE Space, Index : INTEGER\n    Space ← 0\n    FOR Index ← 1 TO LENGTH(FullName)\n        IF MID(FullName, Index, 1) = \" \" THEN\n            Space ← Index\n        ENDIF\n    NEXT Index\n    RETURN TO_UPPER(LEFT(FullName, 1)) & TO_UPPER(MID(FullName, Space + 1, 1))\nENDFUNCTION\n```"
+    },
+    "explanation": "Find the space, then take the two letters."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State one test, other than the name `Tendai Moyo`, that should be used on the algorithm, and the expected result.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A name that tests an unhandled case, such as a name with no space (Rudo) or with two spaces",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The expected result stated: a sensible user name or message (not rrudo), or the surname after the last space",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The name Rudo, which has no space. The expected result is a sensible message or user name, not rrudo."
+    },
+    "explanation": "Test the case that is not handled."
+   }
+  ],
+  "explanation": "Space is 7, Surname is Moyo, and the user name is tmoyo.",
+  "hints": [
+   "Find the position of the space first.",
+   "MID takes the start position and the number of characters."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "Moyo"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "tmoyo"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false,
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4b-cambridge.q04",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "acs.prog.procedures-functions",
+   "acs.prog.iteration"
+  ],
+  "difficulty": 4,
+  "marks": 15,
+  "estimatedSeconds": 2700,
+  "stem": "A bus company in Harare stores details of eight routes in three arrays that have already been filled with data:\n\n- `Route`, a one-dimensional array of 8 STRING values (indexes 1 to 8)\n- `Km`, a one-dimensional array of 8 INTEGER values: the distance of the route in kilometres\n- `Riders`, a one-dimensional array of 8 INTEGER values: the number of passengers on the route in one day\n\nThe first three elements of the arrays are `Harare`, 30, 38; `Mutare`, 263, 12; and `Gweru`, 275, 25.\n\nThe fare for a passenger is USD 0.10 for each kilometre, but never less than USD 1.00.\n\nWrite pseudocode for:\n\n- a function `Fare(Distance : INTEGER)` that returns the fare for a route of that distance\n- a procedure `ShowIncome(Index, Total)` where `Index` is passed by value and `Total` by reference. It works out the income of the route at `Index` (fare multiplied by riders), outputs the route name and the income, and adds the income to `Total`\n- a main program that calls the procedure for every route, then outputs the total income and the name of the route with the highest income.\n\nYou do not need to validate the data. [15]",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The function Fare has a header with an INTEGER parameter and RETURNS REAL, and ends with ENDFUNCTION",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Calculates the fare as Distance * 0.1",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Tests whether the fare is less than 1.00 and sets or returns 1.00 in that case",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Returns the fare with RETURN",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "The procedure header has Index BYVAL and Total BYREF, with the correct types, and ends with ENDPROCEDURE",
+      "marks": 2
+     },
+     {
+      "id": "p6",
+      "description": "Calculates the income as Fare(Km[Index]) * Riders[Index] using the function and the given arrays",
+      "marks": 2
+     },
+     {
+      "id": "p7",
+      "description": "Outputs the route name and the income",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Adds the income to Total",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Sets Total (and the highest income) to 0 before the loop in the main program",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "A loop from 1 to 8 that calls the procedure with CALL, passing the index and Total",
+      "marks": 2
+     },
+     {
+      "id": "p11",
+      "description": "Finds the highest income and the index of that route, with a comparison inside the loop",
+      "marks": 1
+     },
+     {
+      "id": "p12",
+      "description": "Outputs the total income and the name of the route with the highest income after the loop",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm or program: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nFUNCTION Fare(Distance : INTEGER) RETURNS REAL\n    DECLARE Amount : REAL\n    Amount ← Distance * 0.1\n    IF Amount < 1.00 THEN\n        Amount ← 1.00\n    ENDIF\n    RETURN Amount\nENDFUNCTION\n\nPROCEDURE ShowIncome(BYVAL Index : INTEGER, BYREF Total : REAL)\n    DECLARE Income : REAL\n    Income ← Fare(Km[Index]) * Riders[Index]\n    OUTPUT Route[Index], \" \", Income\n    Total ← Total + Income\nENDPROCEDURE\n\nDECLARE Total, Income, Highest : REAL\nDECLARE Index, Best : INTEGER\nTotal ← 0\nHighest ← 0\nFOR Index ← 1 TO 8\n    CALL ShowIncome(Index, Total)\n    Income ← Fare(Km[Index]) * Riders[Index]\n    IF Income > Highest THEN\n        Highest ← Income\n        Best ← Index\n    ENDIF\nNEXT Index\nOUTPUT \"Total income: \", Total\nOUTPUT \"Highest income: \", Route[Best]\n```\n\nFor the given data the total income is 2094.2 and the route with the highest income is Gweru (checked by a mirror of this algorithm). Other correct algorithms also score the marks."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A complete answer defines the function with the minimum fare, the procedure with a value and a reference parameter, and a main loop that calls the procedure and tracks the highest income.",
+  "hints": [
+   "Write the function first, then the procedure that uses it.",
+   "The procedure needs one BYVAL and one BYREF parameter."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4b-cambridge.q05",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "acs.prog.procedures-functions",
+   "acs.prog.iteration",
+   "acs.prog.selection"
+  ],
+  "difficulty": 4,
+  "marks": 15,
+  "estimatedSeconds": 2700,
+  "stem": "A weather station in Gweru stores the monthly rainfall for one year in two arrays that have already been filled with data:\n\n- `Month`, a one-dimensional array of 12 STRING values (indexes 1 to 12), for example `\"Jan\"`\n- `Rain`, a one-dimensional array of 12 REAL values (indexes 1 to 12): the rainfall in millimetres in the month in `Month` at the same index.\n\nWrite pseudocode for:\n\n- a function `AverageRain()` that returns the mean of the 12 rainfall values\n- a function `CountAbove(Limit : REAL)` that returns the number of months whose rainfall is greater than `Limit`\n- a procedure `ShowWet(Limit : REAL)` that outputs the name and rainfall of every month whose rainfall is greater than `Limit`\n- a main program that inputs a limit, repeating the input until it is from 0 to 1000 inclusive, outputs the average rainfall, outputs the number of months above the limit and calls the procedure to show those months. [15]",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "AverageRain: function header with RETURNS REAL and no parameters",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "AverageRain: totals the 12 values with a loop and returns the total divided by 12",
+      "marks": 2
+     },
+     {
+      "id": "p3",
+      "description": "CountAbove: function header with a REAL parameter and RETURNS INTEGER",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "CountAbove: loop through the 12 months comparing each rainfall with the limit (greater than)",
+      "marks": 2
+     },
+     {
+      "id": "p5",
+      "description": "CountAbove: counter initialised to 0, incremented when the test is true, and returned",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "ShowWet: procedure header with the Limit parameter and ENDPROCEDURE",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "ShowWet: loop through the 12 months with the correct comparison",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "ShowWet: outputs the month name and rainfall at the same index",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Main: input inside a loop that repeats until the limit is from 0 to 1000 (both limits tested)",
+      "marks": 2
+     },
+     {
+      "id": "p10",
+      "description": "Main: outputs the average rainfall from the function",
+      "marks": 1
+     },
+     {
+      "id": "p11",
+      "description": "Main: outputs the number of months above the limit from the function",
+      "marks": 1
+     },
+     {
+      "id": "p12",
+      "description": "Main: calls the procedure with CALL and the limit",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm or program: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nFUNCTION AverageRain() RETURNS REAL\n    DECLARE Total : REAL\n    DECLARE Index : INTEGER\n    Total ← 0\n    FOR Index ← 1 TO 12\n        Total ← Total + Rain[Index]\n    NEXT Index\n    RETURN Total / 12\nENDFUNCTION\n\nFUNCTION CountAbove(Limit : REAL) RETURNS INTEGER\n    DECLARE Count, Index : INTEGER\n    Count ← 0\n    FOR Index ← 1 TO 12\n        IF Rain[Index] > Limit THEN\n            Count ← Count + 1\n        ENDIF\n    NEXT Index\n    RETURN Count\nENDFUNCTION\n\nPROCEDURE ShowWet(BYVAL Limit : REAL)\n    DECLARE Index : INTEGER\n    FOR Index ← 1 TO 12\n        IF Rain[Index] > Limit THEN\n            OUTPUT Month[Index], \" \", Rain[Index]\n        ENDIF\n    NEXT Index\nENDPROCEDURE\n\nDECLARE Limit : REAL\nREPEAT\n    OUTPUT \"Enter a limit in mm (0 to 1000)\"\n    INPUT Limit\nUNTIL Limit >= 0 AND Limit <= 1000\nOUTPUT \"Average rainfall: \", AverageRain()\nOUTPUT \"Months above the limit: \", CountAbove(Limit)\nCALL ShowWet(Limit)\n```\n\nFor the data 180, 150, 120, 45, 10, 3, 2, 4, 15, 40, 110, 170 and a limit of 100 the program outputs 5 months (Jan, Feb, Mar, Nov and Dec) (checked by a mirror). Other correct algorithms also score the marks."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A complete answer defines two functions and a procedure that loop through the 12 values, and a main program that validates the limit and uses them.",
+  "hints": [
+   "Write the two functions and the procedure first; each uses a loop from 1 to 12.",
+   "The input limit needs a loop that repeats until it is in range."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4b-cambridge.q06",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "acs.prog.file-processing-exceptions",
+   "acs.prog.procedures-functions"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 2700,
+  "stem": "A mobile-money agent in Kwekwe saves the amount of each transaction of the day as a line of text in the file `Trans.txt`. There is one amount on each line, and the file holds at least 1 and at most 100 lines. The one-dimensional array `Amount` of 100 REAL values (indexes 1 to 100) has been declared.\n\nWrite pseudocode for:\n\n- a procedure `LoadAmounts(Count)`, where `Count` is passed by reference, that reads every line of `Trans.txt` into the array `Amount` and sets `Count` to the number of lines read\n- a function `Largest(Count)`, where `Count` is passed by value, that returns the largest amount in the first `Count` elements of `Amount`\n- a main program that calls the procedure, calculates the total of the amounts, and writes three lines to a new file `Summary.txt`: the number of transactions, the total and the largest amount. It then outputs `Summary saved`.\n\nYou may assume that every line of the file holds a valid number. [15]",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "LoadAmounts: procedure header with Count passed BYREF, and ENDPROCEDURE",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "LoadAmounts: opens Trans.txt for reading and closes it after the loop",
+      "marks": 2
+     },
+     {
+      "id": "p3",
+      "description": "LoadAmounts: loop that tests EOF before each read",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "LoadAmounts: reads a line with READFILE and converts it with STR_TO_NUM into Amount at the next index",
+      "marks": 2
+     },
+     {
+      "id": "p5",
+      "description": "LoadAmounts: Count set to 0 before the loop and increased once for each line",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Largest: function header with a BYVAL INTEGER parameter and RETURNS REAL",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Largest: starts from the first element and compares the others in a loop that uses Count as the limit",
+      "marks": 2
+     },
+     {
+      "id": "p8",
+      "description": "Largest: updates the maximum when a larger value is found and returns it",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Main: calls LoadAmounts with Count and totals the Count amounts in a loop",
+      "marks": 2
+     },
+     {
+      "id": "p10",
+      "description": "Main: opens Summary.txt for writing, writes the three values with WRITEFILE and closes the file",
+      "marks": 2
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm or program: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nPROCEDURE LoadAmounts(BYREF Count : INTEGER)\n    DECLARE Line : STRING\n    Count ← 0\n    OPENFILE \"Trans.txt\" FOR READ\n    WHILE NOT EOF(\"Trans.txt\") DO\n        READFILE \"Trans.txt\", Line\n        Count ← Count + 1\n        Amount[Count] ← STR_TO_NUM(Line)\n    ENDWHILE\n    CLOSEFILE \"Trans.txt\"\nENDPROCEDURE\n\nFUNCTION Largest(BYVAL Count : INTEGER) RETURNS REAL\n    DECLARE Max : REAL\n    DECLARE Index : INTEGER\n    Max ← Amount[1]\n    FOR Index ← 2 TO Count\n        IF Amount[Index] > Max THEN\n            Max ← Amount[Index]\n        ENDIF\n    NEXT Index\n    RETURN Max\nENDFUNCTION\n\nDECLARE Count, Index : INTEGER\nDECLARE Total : REAL\nCALL LoadAmounts(Count)\nTotal ← 0\nFOR Index ← 1 TO Count\n    Total ← Total + Amount[Index]\nNEXT Index\nOPENFILE \"Summary.txt\" FOR WRITE\nWRITEFILE \"Summary.txt\", NUM_TO_STR(Count)\nWRITEFILE \"Summary.txt\", NUM_TO_STR(Total)\nWRITEFILE \"Summary.txt\", NUM_TO_STR(Largest(Count))\nCLOSEFILE \"Summary.txt\"\nOUTPUT \"Summary saved\"\n```\n\nFor the five amounts 25.5, 100, 12, 60.25 and 8 the file holds 5, 205.75 and 100.0 (checked by a mirror). Other correct algorithms also score the marks."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A complete answer reads the file into the array with an EOF loop, finds the largest value, totals the amounts and writes three lines to the new file.",
+  "hints": [
+   "Reading the file into the array comes first; everything else uses the array.",
+   "Remember to open, use and close each file."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ }
+]

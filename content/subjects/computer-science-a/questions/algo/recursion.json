@@ -1,0 +1,1405 @@
+[
+ {
+  "key": "algo.recursion.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the base case of a recursive subroutine?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The case solved without another call",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "The first call that is made by the main program",
+    "rationale": "That is the initial call, not the base case."
+   },
+   {
+    "key": "C",
+    "content": "The case in which the subroutine calls itself again",
+    "rationale": "That is the general case."
+   },
+   {
+    "key": "D",
+    "content": "The case that causes an error in the program",
+    "rationale": "A correct recursive subroutine reaches its base case without an error."
+   }
+  ],
+  "explanation": "The base case ends the recursion.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "algo.recursion.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What happens if a recursive function has no base case?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The calls go on until the stack is full",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "The function returns 0 automatically at the end",
+    "rationale": "No value is returned automatically."
+   },
+   {
+    "key": "C",
+    "content": "The function runs once and then stops by itself",
+    "rationale": "It keeps calling itself."
+   },
+   {
+    "key": "D",
+    "content": "The compiler adds a base case when it translates",
+    "rationale": "A compiler does not change the logic of a program."
+   }
+  ],
+  "explanation": "Each call adds a frame and none is removed, so the stack overflows.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "algo.recursion.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is stored in a stack frame when a subroutine is called?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The source code of the whole subroutine",
+    "rationale": "The code is stored elsewhere and is not copied for each call."
+   },
+   {
+    "key": "B",
+    "content": "Only the value that the subroutine will return later",
+    "rationale": "The result is known only when the call finishes."
+   },
+   {
+    "key": "C",
+    "content": "The return address, parameters and local variables",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "D",
+    "content": "The names of all the global variables in the program",
+    "rationale": "Global variables are not stored in the frame."
+   }
+  ],
+  "explanation": "Each call has its own frame so that it keeps its own values.",
+  "hints": [
+   "What must be remembered so that the call can return?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algo.recursion.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which is a disadvantage of a recursive solution compared with a loop?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It cannot be used to solve problems that suit a loop",
+    "rationale": "Loop problems can usually be solved recursively."
+   },
+   {
+    "key": "B",
+    "content": "It cannot return a value",
+    "rationale": "A recursive function can return values."
+   },
+   {
+    "key": "C",
+    "content": "It always needs many more lines of code",
+    "rationale": "It is often shorter."
+   },
+   {
+    "key": "D",
+    "content": "It uses more memory, as each call needs a frame",
+    "correct": true,
+    "rationale": "Correct."
+   }
+  ],
+  "explanation": "Memory use grows with the depth of the calls.",
+  "hints": [
+   "What does each call add to the stack?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "algo.recursion.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A recursive procedure `Show(N)` outputs `N` first and then calls `Show(N - 1)` while `N > 0`. What is the output of `CALL Show(3)`?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1, 2, 3",
+    "rationale": "That order would need the output after the recursive call."
+   },
+   {
+    "key": "B",
+    "content": "3, 2, 1",
+    "correct": true,
+    "rationale": "Correct: the output comes before the recursive call."
+   },
+   {
+    "key": "C",
+    "content": "3, 2, 1, 0",
+    "rationale": "The output happens only when N is greater than 0."
+   },
+   {
+    "key": "D",
+    "content": "3",
+    "rationale": "The procedure calls itself with N − 1."
+   }
+  ],
+  "explanation": "Statements before the recursive call run in the order of the calls.",
+  "hints": [
+   "Where is the OUTPUT statement in relation to the call?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algo.recursion.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which line is the general case in this function?\n\n```\nFUNCTION Total(N : INTEGER) RETURNS INTEGER\n    IF N = 0 THEN\n        RETURN 0\n    ELSE\n        RETURN N + Total(N - 1)\n    ENDIF\nENDFUNCTION\n```",
+  "options": [
+   {
+    "key": "A",
+    "content": "`RETURN 0` in the first branch",
+    "rationale": "That is the base case."
+   },
+   {
+    "key": "B",
+    "content": "`IF N = 0 THEN` at the top",
+    "rationale": "That tests for the base case."
+   },
+   {
+    "key": "C",
+    "content": "`ENDFUNCTION` at the end",
+    "rationale": "That ends the definition."
+   },
+   {
+    "key": "D",
+    "content": "`RETURN N + Total(N - 1)`",
+    "correct": true,
+    "rationale": "Correct: it calls the function with a smaller argument."
+   }
+  ],
+  "explanation": "The general case makes the recursive call.",
+  "hints": [
+   "Which line calls Total again?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algo.recursion.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How does a compiler make recursive calls possible?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It copies the whole subroutine into memory for each call it makes",
+    "rationale": "Only the data of each call is stored, not the code."
+   },
+   {
+    "key": "B",
+    "content": "It converts recursion into a loop with the same machine code every time",
+    "rationale": "It uses the normal call and return mechanism."
+   },
+   {
+    "key": "C",
+    "content": "It uses a stack to store the details of each call",
+    "correct": true,
+    "rationale": "Correct: return address, parameters and local variables."
+   },
+   {
+    "key": "D",
+    "content": "It prevents a subroutine from calling itself",
+    "rationale": "Recursive calls are allowed."
+   }
+  ],
+  "explanation": "Each call pushes a frame and each return pops it.",
+  "hints": [
+   "How does the computer remember where to return to?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algo.recursion.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "For which problem is recursion a natural choice?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Adding up the first 5 numbers in an array",
+    "rationale": "A simple loop is clearer here."
+   },
+   {
+    "key": "B",
+    "content": "Reading a file one line at a time until the end",
+    "rationale": "A loop is simpler for this."
+   },
+   {
+    "key": "C",
+    "content": "Displaying a menu until the user chooses Quit",
+    "rationale": "A loop is the natural method."
+   },
+   {
+    "key": "D",
+    "content": "Visiting every node of a binary tree",
+    "correct": true,
+    "rationale": "Correct: each sub-tree is a smaller tree."
+   }
+  ],
+  "explanation": "Trees have a recursive structure.",
+  "hints": [
+   "Which structure is made of smaller copies of itself?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "algo.recursion.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a recursive function, each call moves closer to the base case.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. If it did not, the base case would never be reached and the calls would not stop.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "algo.recursion.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In the call `Factorial(4)`, the first multiplication is completed before the call `Factorial(1)` has returned.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. No multiplication can be completed until the base case has returned; the products are then worked out as the calls unwind.",
+  "hints": [
+   "Think about the value returned by the deepest call."
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algo.recursion.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each term to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Base case"
+    },
+    {
+     "id": "L2",
+     "content": "General case"
+    },
+    {
+     "id": "L3",
+     "content": "Stack frame"
+    },
+    {
+     "id": "L4",
+     "content": "Unwinding"
+    },
+    {
+     "id": "L5",
+     "content": "Stack overflow"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The return address, parameters and local variables of one call"
+    },
+    {
+     "id": "R4",
+     "content": "The returns that follow once the base case is reached"
+    },
+    {
+     "id": "R5",
+     "content": "The stack runs out of memory because calls never stop"
+    },
+    {
+     "id": "R1",
+     "content": "Solved directly, ending the recursion"
+    },
+    {
+     "id": "R2",
+     "content": "Calls the subroutine again with a smaller problem"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Terms used in recursion.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algo.recursion.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A function is defined as follows.\n\n```\nFUNCTION Total(N : INTEGER) RETURNS INTEGER\n    IF N = 0 THEN\n        RETURN 0\n    ELSE\n        RETURN N + Total(N - 1)\n    ENDIF\nENDFUNCTION\n```\nState the value returned by each call during the call `Total(3)`.",
+  "payload": {
+   "template": "Total(0) returns {{blank:a}}\n\nTotal(1) returns {{blank:b}}\n\nTotal(2) returns {{blank:c}}\n\nTotal(3) returns {{blank:d}}",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    },
+    {
+     "id": "d",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "3"
+     ]
+    },
+    {
+     "id": "d",
+     "accepted": [
+      "6"
+     ]
+    }
+   ]
+  },
+  "explanation": "Total(0) = 0, Total(1) = 1 + 0 = 1, Total(2) = 2 + 1 = 3, Total(3) = 3 + 3 = 6.",
+  "hints": [
+   "Start from the base case and work back."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "0"
+    },
+    {
+     "blankId": "b",
+     "text": "1"
+    },
+    {
+     "blankId": "c",
+     "text": "3"
+    },
+    {
+     "blankId": "d",
+     "text": "6"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "0"
+     },
+     {
+      "blankId": "b",
+      "text": "1"
+     },
+     {
+      "blankId": "c",
+      "text": "2"
+     },
+     {
+      "blankId": "d",
+      "text": "3"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algo.recursion.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "State the value returned by `Mystery(5)`.\n\n```\nFUNCTION Mystery(N : INTEGER) RETURNS INTEGER\n    IF N = 0 THEN\n        RETURN 0\n    ELSE\n        RETURN N + Mystery(N - 1)\n    ENDIF\nENDFUNCTION\n```",
+  "answerSpec": {
+   "value": 15
+  },
+  "explanation": "The function adds the numbers from N down to 1: 15.",
+  "workedSolution": "Mystery(5) = 5 + 4 + 3 + 2 + 1 + 0 = 15.",
+  "hints": [
+   "Work from the base case back up."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "15"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "120"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algo.recursion.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A function `Factorial(N)` has the base case `N <= 1`. How many calls of `Factorial` are made altogether (including the first) by `Factorial(6)`?",
+  "answerSpec": {
+   "value": 6
+  },
+  "explanation": "6 calls.",
+  "workedSolution": "The calls are for N = 6, 5, 4, 3, 2 and 1: six calls.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "6"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algo.recursion.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The function `Power(Base, Exponent)` returns 1 when `Exponent = 0` and otherwise returns `Base * Power(Base, Exponent - 1)`. What is the greatest number of frames on the call stack during `Power(2, 6)`?",
+  "answerSpec": {
+   "value": 7
+  },
+  "explanation": "7 frames.",
+  "workedSolution": "Calls are made for exponents 6, 5, 4, 3, 2, 1 and 0, so 7 frames are on the stack when the base case is reached.",
+  "hints": [
+   "The deepest point is when the base case is called."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "7"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "64"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algo.recursion.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A function `Gcd(A, B)` returns `A` when `B = 0` and otherwise returns `Gcd(B, MOD(A, B))`. State the value of `Gcd(84, 36)`.",
+  "answerSpec": {
+   "value": 12
+  },
+  "explanation": "12.",
+  "workedSolution": "Gcd(84, 36) → Gcd(36, 12) → Gcd(12, 0) = 12.",
+  "hints": [
+   "Take the remainder each time: Gcd(B, MOD(A, B))."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "12"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "36"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algo.recursion.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain the purpose of the base case and the general case in a recursive function. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The base case is solved directly, without a further recursive call",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "It stops the recursion",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The general case calls the function with a smaller or simpler argument, moving closer to the base case",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The base case is answered directly without another call, so it stops the recursion. The general case calls the function again with a smaller argument, moving towards the base case."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Stop and move towards stopping.",
+  "hints": [
+   "Define each case and say what each is for."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algo.recursion.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Write a recursive function `CountDigits(N)` in pseudocode that returns the number of digits in the positive whole number `N`. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Function header with an INTEGER parameter and RETURNS INTEGER",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Base case: if N < 10 then return 1",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "General case: calls CountDigits(DIV(N, 10))",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Adds 1 to the value returned by the recursive call and returns it",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nFUNCTION CountDigits(N : INTEGER) RETURNS INTEGER\n    IF N < 10 THEN\n        RETURN 1\n    ELSE\n        RETURN 1 + CountDigits(DIV(N, 10))\n    ENDIF\nENDFUNCTION\n```\nFor 48213 this returns 5 (checked by running the Python equivalent)."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One digit is removed each call.",
+  "hints": [
+   "The base case is a number with one digit.",
+   "Remove the last digit with DIV 10."
+  ],
+  "skill": "CREATION"
+ },
+ {
+  "key": "algo.recursion.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why a recursive function that makes 10 000 nested calls may fail where a loop would not. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Each call places a stack frame (return address, parameters, local variables) on the call stack",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "10 000 frames use a large amount of memory, more than the loop which uses a fixed amount",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The stack can run out of space (stack overflow), which stops the program",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Every call adds a stack frame holding its return address, parameters and local variables. With 10 000 nested calls the stack may run out of space (a stack overflow), whereas a loop uses a fixed amount of memory."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Memory grows with depth.",
+  "hints": [
+   "Think about what is stored for each call."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "algo.recursion.q20",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Give two advantages and two disadvantages of using recursion rather than iteration. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Advantage: the code is often shorter and clearer for problems that are naturally recursive (such as trees)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Advantage: the solution follows the definition of the problem, so it is easier to prove and maintain",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Disadvantage: each call uses a stack frame, so it needs more memory and may overflow the stack",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Disadvantage: calls have an overhead, so it is usually slower than a loop",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Advantages: the code is short and clear for naturally recursive problems such as trees, and follows the definition of the problem. Disadvantages: every call uses a stack frame, so it needs more memory and may overflow, and the call overhead makes it slower than a loop."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Clarity against memory and speed.",
+  "hints": [
+   "Give two points for each."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "algo.recursion.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 5,
+  "marks": 9,
+  "estimatedSeconds": 720,
+  "stem": "A recursive function finds the greatest common divisor of two positive whole numbers.\n\n```\nFUNCTION Gcd(A : INTEGER, B : INTEGER) RETURNS INTEGER\n    IF B = 0 THEN\n        RETURN A\n    ELSE\n        RETURN Gcd(B, MOD(A, B))\n    ENDIF\nENDFUNCTION\n```\nThe function is called with `Gcd(48, 18)`.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value returned by `Gcd(48, 18)`.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "6.",
+    "workedSolution": "The calls are (48, 18), (18, 12), (12, 6) and (6, 0); the last returns 6."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the total number of calls of `Gcd`, including the first.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "4 calls.",
+    "workedSolution": "The four calls have arguments (48, 18), (18, 12), (12, 6) and (6, 0)."
+   },
+   {
+    "label": "(c)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the arguments of the third call.",
+    "payload": {
+     "template": "A = {{blank:a}}, B = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "12"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "6"
+       ]
+      }
+     ]
+    },
+    "explanation": "The second call is Gcd(18, 12); the third is Gcd(12, MOD(18, 12)) = Gcd(12, 6)."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which condition is the base case?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`A = 0`",
+      "rationale": "A is not tested."
+     },
+     {
+      "key": "B",
+      "content": "`B = 0`",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "`MOD(A, B) = 0`",
+      "rationale": "This is the remainder used by the general case."
+     },
+     {
+      "key": "D",
+      "content": "`A = B`",
+      "rationale": "The function does not test for equal values."
+     }
+    ],
+    "explanation": "The recursion stops when B is 0."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the greatest number of stack frames in use at the same time.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "4 frames.",
+    "workedSolution": "All four calls are on the stack when the base case is reached."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the recursion must eventually stop for any positive whole numbers.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "MOD(A, B) is always less than B",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the second argument gets smaller with every call",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "It must reach 0, which is the base case",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: MOD(A, B) is always less than B, so the second argument gets smaller each call. It cannot decrease for ever, so it reaches 0, the base case."
+    },
+    "explanation": "The argument moves towards the base case."
+   }
+  ],
+  "explanation": "A recursive greatest common divisor function.",
+  "hints": [
+   "Replace A and B by B and MOD(A, B) at each call.",
+   "Stop when B is 0."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "12"
+      },
+      {
+       "blankId": "b",
+       "text": "6"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "18"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "18"
+       },
+       {
+        "blankId": "b",
+        "text": "12"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "algo.recursion.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.recursion"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "The Python program below was run.\n\n```python\ndef show(n):\n    if n > 0:\n        print(n)\n        show(n - 1)\n        print(n * 10)\n\nshow(3)\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State how many times the function `show` is called, including the first call.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "4 calls.",
+    "workedSolution": "The calls are for n = 3, 2, 1 and 0."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of lines output.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "6 lines.",
+    "workedSolution": "Each of the calls with n = 3, 2 and 1 prints two lines; the call with n = 0 prints nothing."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the fourth value output.",
+    "answerSpec": {
+     "value": 10
+    },
+    "explanation": "10.",
+    "workedSolution": "The output is 3, 2, 1, 10, 20, 30."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which is the last value output?",
+    "options": [
+     {
+      "key": "A",
+      "content": "3",
+      "rationale": "That is the first value."
+     },
+     {
+      "key": "B",
+      "content": "10",
+      "rationale": "That is printed by the call with n = 1."
+     },
+     {
+      "key": "C",
+      "content": "30",
+      "correct": true,
+      "rationale": "Correct: the call with n = 3 is the last to finish."
+     },
+     {
+      "key": "D",
+      "content": "0",
+      "rationale": "Nothing is printed when n is 0."
+     }
+    ],
+    "explanation": "The first call finishes last."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the values 10, 20 and 30 are output in that order.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The second print comes after the recursive call, so it runs as the calls return (unwind)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The innermost call (n = 1) returns first, so its value 10 is output first, then 20 and then 30",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The second print is after the recursive call, so it runs during unwinding. The call with n = 1 returns first and prints 10, then n = 2 prints 20 and n = 3 prints 30."
+    },
+    "explanation": "Unwinding reverses the order."
+   }
+  ],
+  "explanation": "Output order of a recursive procedure with statements before and after the call.",
+  "hints": [
+   "The first print happens on the way down, the second on the way back up."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "10"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ }
+]

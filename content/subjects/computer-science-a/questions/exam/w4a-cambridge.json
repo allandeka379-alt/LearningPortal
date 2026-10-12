@@ -1,0 +1,1924 @@
+[
+ {
+  "key": "exam.w4a-cambridge.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.trace-tables",
+   "acs.algo.algorithm-design"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A teacher in Gweru wants to know how many of eight learners passed a test (a pass is a mark of **50 or more**) and the mean mark of the learners who passed. The marks are stored in the array `Mark`, indexes 1 to 8.\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Mark | 64 | 50 | 45 | 73 | 38 | 50 | 82 | 57 |\n\nThe teacher's algorithm is:\n\n```\nPassMark ← 50\nPasses ← 0\nTotal ← 0\nFOR Index ← 1 TO 8\n    IF Mark[Index] > PassMark THEN\n        Passes ← Passes + 1\n        Total ← Total + Mark[Index]\n    ENDIF\nNEXT Index\nAverage ← Total / Passes\nOUTPUT Passes, Average\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the values of `Passes` and `Total` after the pass of the loop with `Index` = 4.",
+    "payload": {
+     "template": "Passes = {{blank:p}}, Total = {{blank:t}}",
+     "blanks": [
+      {
+       "id": "p",
+       "input": "number"
+      },
+      {
+       "id": "t",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "p",
+       "accepted": [
+        "2"
+       ]
+      },
+      {
+       "id": "t",
+       "accepted": [
+        "137"
+       ]
+      }
+     ]
+    },
+    "explanation": "Only 64 and 73 are greater than 50 in the first four marks: Passes = 2 and Total = 137."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Passes` output when the algorithm is run with the marks above.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "Passes = 4.",
+    "workedSolution": "The marks greater than 50 are 64, 73, 82 and 57."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Average` output.",
+    "answerSpec": {
+     "value": 69
+    },
+    "explanation": "Average = 69.",
+    "workedSolution": "Total = 276 and Passes = 4, so 276 ÷ 4 = 69."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The output does not agree with the aim of the teacher. Identify the error and write the correct line.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The condition > PassMark does not count marks equal to 50 (two learners scored exactly 50)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Correct line: IF Mark[Index] >= PassMark THEN",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The condition `>` leaves out learners who scored exactly 50. The line should be `IF Mark[Index] >= PassMark THEN`."
+    },
+    "explanation": "A boundary error."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Passes` output by the corrected algorithm.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "Passes = 6.",
+    "workedSolution": "64, 50, 73, 50, 82 and 57 are at least 50."
+   },
+   {
+    "label": "(f)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "State the value of `Average` output by the corrected algorithm, to 2 decimal places.",
+    "answerSpec": {
+     "value": 62.67,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "Average = 62.67.",
+    "workedSolution": "Total = 376 and Passes = 6, so 376 ÷ 6 = 62.67."
+   },
+   {
+    "label": "(g)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The algorithm is run for a class in which no learner scores 50 or more. Describe what happens.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Passes is 0 at the end of the loop",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The calculation Total / Passes is a division by zero, which causes a run-time error",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: `Passes` stays 0, so `Total / Passes` is a division by zero, which causes an error and stops the program."
+    },
+    "explanation": "An abnormal case."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Write the last two lines of the algorithm again so that this problem cannot occur.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "An IF statement that tests Passes > 0 (or Passes <> 0) before dividing",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Outputs the average in one branch and a suitable message (such as no passes) in the other",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nIF Passes > 0 THEN\n    Average ← Total / Passes\n    OUTPUT Passes, Average\nELSE\n    OUTPUT \"No learner passed\"\nENDIF\n```"
+    },
+    "explanation": "Test the divisor before dividing."
+   }
+  ],
+  "explanation": "The condition > should be >=; the faulty algorithm outputs 4 and 69, the corrected one 6 and 62.67; a class with no passes causes a division by zero.",
+  "hints": [
+   "Work through the first four marks, adding only those greater than 50.",
+   "Two learners scored exactly 50."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "p",
+       "text": "2"
+      },
+      {
+       "blankId": "t",
+       "text": "137"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "69"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(f)": {
+     "type": "CALCULATION",
+     "value": "62.67"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "p",
+        "text": "4"
+       },
+       {
+        "blankId": "t",
+        "text": "276"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "62"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(f)": {
+      "type": "CALCULATION",
+      "value": "69"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4a-cambridge.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.linear-search-bubble-sort",
+   "acs.ds.arrays"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A netball club in Kwekwe stores the names and scores of five players in the parallel arrays `Name` and `Score`, indexes 1 to 5.\n\n| Index | 1 | 2 | 3 | 4 | 5 |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| Name | Tendai | Rudo | Farai | Chipo | Sipho |\n| Score | 58 | 73 | 64 | 91 | 47 |\n\nThe algorithm below sorts both arrays into descending order of score.\n\n```\nFOR Pass ← 1 TO 4\n    FOR Index ← 1 TO 5 - Pass\n        IF Score[Index] < Score[Index + 1] THEN\n            TempScore ← Score[Index]\n            Score[Index] ← Score[Index + 1]\n            Score[Index + 1] ← TempScore\n            TempName ← Name[Index]\n            Name[Index] ← Name[Index + 1]\n            Name[Index + 1] ← TempName\n        ENDIF\n    NEXT Index\nNEXT Pass\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of swaps made during the first pass (`Pass` = 1).",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "3 swaps.",
+    "workedSolution": "Pass 1: 58 and 73 swap, 58 and 64 swap, 58 and 91 swap, and 58 and 47 do not swap: 3 swaps."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State the contents of `Name[3]` and `Name[4]` after the first pass.",
+    "payload": {
+     "template": "Name[3] = {{blank:a}}, Name[4] = {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Tendai",
+        "Rudo",
+        "Farai",
+        "Chipo",
+        "Sipho"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Tendai",
+        "Rudo",
+        "Farai",
+        "Chipo",
+        "Sipho"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Chipo"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Tendai"
+       ]
+      }
+     ]
+    },
+    "explanation": "After pass 1 the names are Rudo, Farai, Chipo, Tendai, Sipho."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the total number of times the condition in the `IF` statement is tested during the whole algorithm.",
+    "answerSpec": {
+     "value": 10
+    },
+    "explanation": "10 tests.",
+    "workedSolution": "4 + 3 + 2 + 1 = 10."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why does the algorithm swap the names as well as the scores?",
+    "options": [
+     {
+      "key": "A",
+      "content": "So that each name stays with its own score",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "B",
+      "content": "So that the names are put in alphabetical order",
+      "rationale": "The names follow the scores, not the alphabet."
+     },
+     {
+      "key": "C",
+      "content": "So that the loop stops sooner",
+      "rationale": "The swap does not change the number of passes."
+     },
+     {
+      "key": "D",
+      "content": "So that the scores are not lost",
+      "rationale": "The scores are swapped using TempScore."
+     }
+    ],
+    "explanation": "Parallel arrays must be moved together."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that inputs a name and uses a linear search of `Name` to output the player's score, or the message \"Not found\".",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Inputs the name and uses a loop through the array positions (up to 5) with a found indicator",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Compares Name[Index] with the input name and records the position when equal",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Outputs Score at that position if found, otherwise \"Not found\"",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nINPUT Target\nFound ← FALSE\nIndex ← 1\nWHILE Found = FALSE AND Index <= 5 DO\n    IF Name[Index] = Target THEN\n        Found ← TRUE\n    ELSE\n        Index ← Index + 1\n    ENDIF\nENDWHILE\nIF Found = TRUE THEN\n    OUTPUT Score[Index]\nELSE\n    OUTPUT \"Not found\"\nENDIF\n```"
+    },
+    "explanation": "A search with a found flag."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "The algorithm always makes four passes. Describe how it can be changed so that it stops as soon as the arrays are in order.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Use a Boolean variable (a flag) such as Swapped",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Set it to FALSE at the start of each pass",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Set it to TRUE when a swap is made inside the IF",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Repeat the passes until a pass is completed with the flag still FALSE (using REPEAT … UNTIL or WHILE)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Use a Boolean flag `Swapped`. Set it to FALSE at the start of each pass and to TRUE whenever a swap is made. Replace the outer FOR loop by a loop that repeats until a whole pass is completed with `Swapped` still FALSE."
+    },
+    "explanation": "Stop when a pass makes no swap."
+   }
+  ],
+  "explanation": "Pass 1 makes 3 swaps and leaves the names Rudo, Farai, Chipo, Tendai, Sipho; the sort tests the condition 10 times; the names are swapped with the scores to stay linked.",
+  "hints": [
+   "Compare each score with the next one and swap if the first is smaller.",
+   "The names move with the scores."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Chipo"
+      },
+      {
+       "blankId": "b",
+       "text": "Tendai"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "10"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Farai"
+       },
+       {
+        "blankId": "b",
+        "text": "Sipho"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4a-cambridge.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.ds.data-types-records",
+   "acs.ds.text-files"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 1080,
+  "stem": "A netball club in Mutare stores each player's name and the number of goals scored in a record of type `TPlayer`. The array `Team` holds the records of four players.\n\n| Index | Name | Goals |\n|:-:|:-:|:-:|\n| 1 | Tendai | 12 |\n| 2 | Rudo | 7 |\n| 3 | Farai | 15 |\n| 4 | Chipo | 9 |\n\nThe pseudocode below writes the data to a text file.\n\n```\nOPENFILE \"goals.txt\" FOR WRITE\nFOR Index ← 1 TO 4\n    WRITEFILE \"goals.txt\", Team[Index].Name\n    WRITEFILE \"goals.txt\", NUM_TO_STR(Team[Index].Goals)\nNEXT Index\nCLOSEFILE \"goals.txt\"\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 2,
+    "stem": "State a suitable data type for each field of the record.",
+    "payload": {
+     "template": "Name: {{blank:a}}\n\nGoals: {{blank:b}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "STRING",
+        "INTEGER",
+        "REAL",
+        "BOOLEAN"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "STRING",
+        "INTEGER",
+        "REAL",
+        "BOOLEAN"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "STRING"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "INTEGER"
+       ]
+      }
+     ]
+    },
+    "explanation": "A name is text and the goals are a whole number."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of lines in the file `goals.txt` after the algorithm has run.",
+    "answerSpec": {
+     "value": 8
+    },
+    "explanation": "8 lines.",
+    "workedSolution": "Two lines are written for each of the four players."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number in the sixth line of the file.",
+    "answerSpec": {
+     "value": 15
+    },
+    "explanation": "15.",
+    "workedSolution": "Line 5 is Farai and line 6 is Farai's goals, 15."
+   },
+   {
+    "label": "(d)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "What is the effect of opening `goals.txt` for WRITE if the file already exists?",
+    "options": [
+     {
+      "key": "A",
+      "content": "The new lines are added at the end",
+      "rationale": "That is the effect of APPEND."
+     },
+     {
+      "key": "B",
+      "content": "An error occurs",
+      "rationale": "An existing file can be opened for writing."
+     },
+     {
+      "key": "C",
+      "content": "The file is opened for reading too",
+      "rationale": "A file is opened in one mode."
+     },
+     {
+      "key": "D",
+      "content": "The old contents are erased",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "Write mode starts with an empty file."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write the pseudocode to define the record type `TPlayer` and to declare the array `Team` of four records.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "TYPE TPlayer ... ENDTYPE with DECLARE statements",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Name declared as STRING and Goals declared as INTEGER",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "DECLARE Team : ARRAY[1:4] OF TPlayer",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nTYPE TPlayer\n    DECLARE Name : STRING\n    DECLARE Goals : INTEGER\nENDTYPE\n\nDECLARE Team : ARRAY[1:4] OF TPlayer\n```"
+    },
+    "explanation": "A record type then an array of that type."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write pseudocode that reads the file `goals.txt` back into the array `Team`, so that each name and its goals are stored in the same record.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Opens the file for READ and uses a counter starting at 1 (or a FOR loop to 4)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Uses READFILE to read the name line into Team[Index].Name",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Uses READFILE to read the next line and STR_TO_NUM to store it in Team[Index].Goals",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Closes the file with CLOSEFILE",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```\nOPENFILE \"goals.txt\" FOR READ\nFOR Index ← 1 TO 4\n    READFILE \"goals.txt\", Team[Index].Name\n    READFILE \"goals.txt\", Line\n    Team[Index].Goals ← STR_TO_NUM(Line)\nNEXT Index\nCLOSEFILE \"goals.txt\"\n```"
+    },
+    "explanation": "Two lines are read for each record."
+   }
+  ],
+  "explanation": "Eight lines are written; line 6 is 15; WRITE erases old contents; the file is read back two lines per record.",
+  "hints": [
+   "Each player uses two lines of the file.",
+   "Everything read from a text file is a string."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "STRING"
+      },
+      {
+       "blankId": "b",
+       "text": "INTEGER"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "8"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "15"
+    },
+    "(d)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "INTEGER"
+       },
+       {
+        "blankId": "b",
+        "text": "STRING"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "7"
+     },
+     "(d)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4a-cambridge.q04",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "acs.algo.algorithm-design",
+   "acs.ds.arrays"
+  ],
+  "difficulty": 4,
+  "marks": 15,
+  "estimatedSeconds": 2700,
+  "stem": "A secondary school in Bulawayo stores the results of a test for 30 learners in two arrays that have already been filled with data:\n\n- `StudentName`, a one-dimensional array of 30 STRING values (indexes 1 to 30)\n- `Mark`, a one-dimensional array of 30 INTEGER values (indexes 1 to 30), where `Mark[n]` is the mark of the learner whose name is `StudentName[n]`.\n\nWrite pseudocode for a program that:\n\n- inputs a pass mark and repeats the input until it is between 1 and 100 inclusive\n- counts the learners whose mark is at least the pass mark and outputs the count\n- calculates and outputs the mean mark of all 30 learners\n- finds and outputs the highest mark and the name of the learner who scored it\n- outputs the name of every learner whose mark is below the pass mark.\n\nYou do not need to declare the two arrays. [15]",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Inputs the pass mark inside a loop that repeats until it is between 1 and 100 (both limits tested)",
+      "marks": 2
+     },
+     {
+      "id": "p2",
+      "description": "Initialises the count and the total to 0 before the main loop, and the highest mark from Mark[1] (or a very low value)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A loop from 1 to 30 that uses the loop variable as the index of both arrays",
+      "marks": 2
+     },
+     {
+      "id": "p4",
+      "description": "Adds each mark to a running total",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Compares each mark with the pass mark (at least) and counts those that pass",
+      "marks": 2
+     },
+     {
+      "id": "p6",
+      "description": "Outputs the name of each learner whose mark is below the pass mark",
+      "marks": 2
+     },
+     {
+      "id": "p7",
+      "description": "Compares each mark with the highest so far and updates the highest mark and its index",
+      "marks": 2
+     },
+     {
+      "id": "p8",
+      "description": "Outputs the number of passes with a message after the loop",
+      "marks": 1
+     },
+     {
+      "id": "p9",
+      "description": "Calculates the mean by dividing the total by 30 and outputs it",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "Outputs the highest mark together with the name from the same index",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm or program: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nREPEAT\n    OUTPUT \"Enter the pass mark (1 to 100)\"\n    INPUT PassMark\nUNTIL PassMark >= 1 AND PassMark <= 100\nPasses ← 0\nTotal ← 0\nHighest ← Mark[1]\nHighIndex ← 1\nFOR Index ← 1 TO 30\n    Total ← Total + Mark[Index]\n    IF Mark[Index] >= PassMark THEN\n        Passes ← Passes + 1\n    ELSE\n        OUTPUT StudentName[Index], \" is below the pass mark\"\n    ENDIF\n    IF Mark[Index] > Highest THEN\n        Highest ← Mark[Index]\n        HighIndex ← Index\n    ENDIF\nNEXT Index\nOUTPUT \"Number of passes: \", Passes\nOUTPUT \"Mean mark: \", Total / 30\nOUTPUT \"Highest mark: \", Highest, \" by \", StudentName[HighIndex]\n```\n\nOther correct algorithms (for example a separate loop for each requirement) also score the marks."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A complete answer validates the pass mark, then uses one loop over the 30 learners to total the marks, count the passes, track the highest mark and output the names below the pass mark.",
+  "hints": [
+   "Use one loop for the totals, the count, the highest mark and the names.",
+   "Validate the pass mark with a loop before the main loop."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4a-cambridge.q05",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "acs.algo.linear-search-bubble-sort",
+   "acs.ds.arrays"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 2700,
+  "stem": "A hardware shop in Harare stores its stock in three one-dimensional arrays, each with 40 elements (indexes 1 to 40), that have already been filled with data:\n\n- `ItemName`, STRING: the name of each product\n- `Quantity`, INTEGER: the number of that product in stock\n- `ReorderLevel`, INTEGER: the quantity below which the product must be reordered.\n\nWrite pseudocode for a program that repeats the following until the user enters the item name \"STOP\":\n\n- input an item name\n- search `ItemName` for the item and, if it is not found, output a suitable message\n- if it is found, output its quantity in stock, then input the number sold, repeating the input until it is between 0 and the quantity in stock\n- subtract the number sold from `Quantity`, and output a message if the new quantity is below the reorder level.\n\nWhen the user enters \"STOP\" the program outputs the number of sales recorded and then the name of every product whose quantity is below its reorder level. You do not need to declare the arrays. [15]",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Inputs the item name before the loop and again at the end of the loop body, and the loop ends when it is \"STOP\"",
+      "marks": 2
+     },
+     {
+      "id": "p2",
+      "description": "Initialises the sales counter to 0 before the loop",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A linear search of ItemName using a loop through the positions 1 to 40 and a found flag (or the position)",
+      "marks": 2
+     },
+     {
+      "id": "p4",
+      "description": "The search stops when the item is found (early exit) and the not found case is detected",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Outputs a message when the item is not found",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Outputs the quantity of the item found",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Inputs the number sold with a loop that repeats until it is between 0 and the quantity in stock",
+      "marks": 2
+     },
+     {
+      "id": "p8",
+      "description": "Subtracts the number sold from Quantity at the correct index and adds 1 to the sales counter",
+      "marks": 2
+     },
+     {
+      "id": "p9",
+      "description": "Tests whether the new quantity is below ReorderLevel at the same index and outputs a message",
+      "marks": 1
+     },
+     {
+      "id": "p10",
+      "description": "After STOP, outputs the number of sales recorded, then loops through all 40 products outputting those below their reorder level",
+      "marks": 2
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm or program: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nSales ← 0\nOUTPUT \"Enter the item name (STOP to finish)\"\nINPUT Item\nWHILE Item <> \"STOP\" DO\n    Found ← FALSE\n    Index ← 1\n    WHILE Found = FALSE AND Index <= 40 DO\n        IF ItemName[Index] = Item THEN\n            Found ← TRUE\n        ELSE\n            Index ← Index + 1\n        ENDIF\n    ENDWHILE\n    IF Found = FALSE THEN\n        OUTPUT \"Item not found\"\n    ELSE\n        OUTPUT \"In stock: \", Quantity[Index]\n        REPEAT\n            OUTPUT \"Enter the number sold\"\n            INPUT Sold\n        UNTIL Sold >= 0 AND Sold <= Quantity[Index]\n        Quantity[Index] ← Quantity[Index] - Sold\n        Sales ← Sales + 1\n        IF Quantity[Index] < ReorderLevel[Index] THEN\n            OUTPUT \"Reorder \", ItemName[Index]\n        ENDIF\n    ENDIF\n    OUTPUT \"Enter the item name (STOP to finish)\"\n    INPUT Item\nENDWHILE\nOUTPUT \"Sales recorded: \", Sales\nFOR Index ← 1 TO 40\n    IF Quantity[Index] < ReorderLevel[Index] THEN\n        OUTPUT ItemName[Index]\n    ENDIF\nNEXT Index\n```\n\nTested with the script: Paint (sell 4), Cement (an invalid 40, then 5), Hammer, STOP, which gives: In stock: 8, Reorder Paint, In stock: 30, Item not found, Sales recorded: 2, then Nails, Paint and Brush."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A complete answer is a sentinel-controlled loop containing a linear search with a found flag, a validated input, an update of Quantity with a reorder test, and a final report loop.",
+  "hints": [
+   "The first INPUT goes before the WHILE loop and the next one at the end of its body.",
+   "Search with a found flag so that the search stops as soon as the item is found."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4a-cambridge.q06",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "acs.ds.adt-introduction",
+   "acs.ds.stack-queue-algorithms"
+  ],
+  "difficulty": 4,
+  "marks": 15,
+  "estimatedSeconds": 2700,
+  "stem": "A clinic in Gweru manages the patients waiting to be seen using a circular queue. The queue is stored in a one-dimensional array `Queue` of 20 STRING values (indexes 1 to 20). The integer variables `FrontPointer`, `RearPointer` and `Count` are used with the queue.\n\nWrite pseudocode for a program that sets up the queue as empty and then repeatedly displays a menu and inputs the user's choice until the user chooses to quit:\n\n- 1: add a patient. Input the patient's name and add it to the queue. If the queue is full, output a suitable message instead.\n- 2: call the next patient. Output the name of the patient at the front and remove that patient from the queue. If the queue is empty, output a suitable message instead.\n- 3: output the number of patients waiting.\n- 4: quit.\n\nAny other choice produces an error message. You do not need to declare the array. [15]",
+  "payload": {
+   "wordLimit": {
+    "max": 600
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Sets FrontPointer to 1, RearPointer to 0 and Count to 0 before the menu loop",
+      "marks": 2
+     },
+     {
+      "id": "p2",
+      "description": "A loop that displays the menu and inputs the choice, repeating until the choice is 4",
+      "marks": 2
+     },
+     {
+      "id": "p3",
+      "description": "Selection (CASE or IF) of the four options, with an error message for any other choice",
+      "marks": 2
+     },
+     {
+      "id": "p4",
+      "description": "Option 1: tests whether the queue is full (Count equals 20) and outputs a message",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Option 1: moves RearPointer on by one, wrapping from 20 to 1 (MOD or an IF)",
+      "marks": 2
+     },
+     {
+      "id": "p6",
+      "description": "Option 1: inputs the name, stores it in Queue[RearPointer] and adds 1 to Count",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Option 2: tests whether the queue is empty (Count equals 0) and outputs a message",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Option 2: outputs Queue[FrontPointer], moves FrontPointer on by one with wrap-around and subtracts 1 from Count",
+      "marks": 3
+     },
+     {
+      "id": "p9",
+      "description": "Option 3: outputs Count",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 13,
+      "maxMarks": 15,
+      "descriptor": "A complete, well-structured algorithm or program: every requirement is met, data structures are used correctly, loops and selection are correct, input is validated where asked, and output is clear and in the requested format."
+     },
+     {
+      "level": 3,
+      "minMarks": 9,
+      "maxMarks": 12,
+      "descriptor": "Most requirements met with a clear structure; one or two minor logic errors or omissions."
+     },
+     {
+      "level": 2,
+      "minMarks": 5,
+      "maxMarks": 8,
+      "descriptor": "Some requirements met; an attempt at the main loop or processing, but with logic errors or missing parts."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 4,
+      "descriptor": "A few relevant statements (declarations, inputs or outputs) without a working overall algorithm."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "No creditable response."
+     }
+    ]
+   },
+   "modelAnswer": "```\nCONSTANT QueueSize ← 20\nFrontPointer ← 1\nRearPointer ← 0\nCount ← 0\nREPEAT\n    OUTPUT \"1 Add patient  2 Call next patient  3 Number waiting  4 Quit\"\n    INPUT Choice\n    CASE OF Choice\n        1 : IF Count = QueueSize THEN\n                OUTPUT \"Queue is full\"\n            ELSE\n                INPUT PatientName\n                RearPointer ← MOD(RearPointer, QueueSize) + 1\n                Queue[RearPointer] ← PatientName\n                Count ← Count + 1\n            ENDIF\n        2 : IF Count = 0 THEN\n                OUTPUT \"No patients waiting\"\n            ELSE\n                OUTPUT Queue[FrontPointer]\n                FrontPointer ← MOD(FrontPointer, QueueSize) + 1\n                Count ← Count - 1\n            ENDIF\n        3 : OUTPUT Count\n        4 : OUTPUT \"Goodbye\"\n        OTHERWISE OUTPUT \"Invalid choice\"\n    ENDCASE\nUNTIL Choice = 4\n```\n\nTested with the choices 1 (Anesu), 1 (Blessing), 3, 2, 2, 2, 7, 4, which output 2, Anesu, Blessing, No patients waiting, Invalid choice and Goodbye; a run that adds 21 patients outputs Queue is full."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "A complete answer initialises the pointers and count, loops until 4, and implements each option with the full and empty tests, the wrapping pointers and the count.",
+  "hints": [
+   "Use Count to decide whether the queue is full or empty.",
+   "Both pointers wrap round with MOD(Pointer, QueueSize) + 1."
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 2"
+ },
+ {
+  "key": "exam.w4a-cambridge.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.recursion",
+   "acs.ds.binary-tree-algorithms"
+  ],
+  "difficulty": 5,
+  "marks": 25,
+  "estimatedSeconds": 2250,
+  "stem": "A school in Chitungwiza records the times (in seconds) of the athletes in a 100 m race. The times are stored in a binary search tree made of `Node` objects. The Python program below builds the tree by inserting the times 14, 9, 17, 12, 8, 15 and 20, in that order. Smaller times go to the left of a node and other times to the right.\n\n```python\nclass Node:\n    def __init__(self, time):\n        self.time = time\n        self.left = None\n        self.right = None\n\ndef insert(node, time):\n    if node is None:\n        return Node(time)\n    if time < node.time:\n        node.left = insert(node.left, time)\n    else:\n        node.right = insert(node.right, time)\n    return node\n\ndef in_order(node, result):\n    if node is not None:\n        in_order(node.left, result)\n        result.append(node.time)\n        in_order(node.right, result)\n\nroot = None\nfor time in (14, 9, 17, 12, 8, 15, 20):\n    root = insert(root, time)\n```\n\nYou will write further functions for this program. Assume that the code above is already in your program.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write a recursive function `count_nodes(node)` that returns the number of nodes in the tree whose root is `node`. An empty tree (`None`) has no nodes.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A function header with the parameter node",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A base case: returns 0 when node is None",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Makes recursive calls on node.left and node.right",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Returns 1 plus the two counts",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\ndef count_nodes(node):\n    if node is None:\n        return 0\n    return 1 + count_nodes(node.left) + count_nodes(node.right)\n```"
+    },
+    "explanation": "The count of a tree is one for the node plus the counts of its sub-trees."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 3,
+    "stem": "The statements `result = []`, `in_order(root, result)` and `print(result)` are run. State the first three values in the list that is printed.",
+    "payload": {
+     "template": "{{blank:a}}, {{blank:b}}, {{blank:c}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "number"
+      },
+      {
+       "id": "b",
+       "input": "number"
+      },
+      {
+       "id": "c",
+       "input": "number"
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "8"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "9"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "12"
+       ]
+      }
+     ]
+    },
+    "explanation": "An in-order traversal gives the times in ascending order: 8, 9, 12, 14, 15, 17, 20."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Your function from part (a) is called with `count_nodes(root)` and the result is printed. State the value printed.",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "7.",
+    "workedSolution": "There are seven nodes."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write a recursive function `height(node)` that returns the number of levels of the tree, so that an empty tree has height 0, a tree with only a root has height 1, and so on.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A base case returning 0 when node is None",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Recursive calls on both sub-trees",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Returns 1 plus the larger of the two heights",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\ndef height(node):\n    if node is None:\n        return 0\n    return 1 + max(height(node.left), height(node.right))\n```"
+    },
+    "explanation": "The height is one more than the taller sub-tree."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Write a recursive function `contains(node, target)` that returns True if the time `target` is in the tree and False otherwise, using the order of the tree to avoid searching both sub-trees.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Base case: returns False when node is None, and returns True when the target equals node.time",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Searches only the left sub-tree when the target is smaller",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Searches only the right sub-tree otherwise, returning the result of the recursive call",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\ndef contains(node, target):\n    if node is None:\n        return False\n    if target == node.time:\n        return True\n    if target < node.time:\n        return contains(node.left, target)\n    return contains(node.right, target)\n```"
+    },
+    "explanation": "A binary search tree is searched down one path."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Your function `height` is called with `height(root)`. State the value returned.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "3.",
+    "workedSolution": "The longest path is 14, 9, 12 (or 14, 17, 15): three levels."
+   },
+   {
+    "label": "(g)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "A second tree `flat` is built by inserting the times 8, 9, 12, 14, 15, 17 and 20, in that order. State the value returned by `height(flat)`.",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "7.",
+    "workedSolution": "Each time is larger than the last, so each goes to the right and the tree is a chain of seven nodes."
+   },
+   {
+    "label": "(h)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "State the value returned by `contains(root, 13)`.",
+    "options": [
+     {
+      "key": "A",
+      "content": "True",
+      "rationale": "13 was never inserted."
+     },
+     {
+      "key": "B",
+      "content": "None",
+      "rationale": "The function returns a Boolean."
+     },
+     {
+      "key": "C",
+      "content": "False",
+      "correct": true,
+      "rationale": "Correct: 13 is not among the times."
+     },
+     {
+      "key": "D",
+      "content": "13",
+      "rationale": "The function does not return the time."
+     }
+    ],
+    "explanation": "The search goes 14, 9, 12 and then reaches None."
+   },
+   {
+    "label": "(i)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value returned by `count_nodes(None)`.",
+    "answerSpec": {
+     "value": 0
+    },
+    "explanation": "0.",
+    "workedSolution": "An empty tree has no nodes: the base case."
+   },
+   {
+    "label": "(j)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the recursion in `count_nodes` always terminates.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Each recursive call is made on a child of the current node, which is a smaller tree",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Eventually a call reaches a node with no child, where the child is None",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "None is the base case, which returns 0 without another recursive call",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each call is on a child of the current node, so the tree is smaller each time. Eventually a child is None, which is the base case and returns 0 without calling the function again."
+    },
+    "explanation": "The argument moves towards the base case."
+   },
+   {
+    "label": "(k)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write a recursive function `descending(node, result)` that appends the times to the list `result` in descending order (largest first), in the same style as `in_order`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Base case: does nothing when node is None (the statements are inside if node is not None)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Visits the right sub-tree first",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Appends node.time to result after the right sub-tree",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Then visits the left sub-tree",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\ndef descending(node, result):\n    if node is not None:\n        descending(node.right, result)\n        result.append(node.time)\n        descending(node.left, result)\n```"
+    },
+    "explanation": "A reverse in-order traversal."
+   }
+  ],
+  "explanation": "The functions count_nodes, height, contains and descending are recursive with the base case None; the model program prints [8, 9, 12, 14, 15, 17, 20], 7, 3, False, True, 0, 7 and [20, 17, 15, 14, 12, 9, 8].",
+  "hints": [
+   "The base case of each function is an empty tree.",
+   "Make the recursive calls on node.left and node.right."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "8"
+      },
+      {
+       "blankId": "b",
+       "text": "9"
+      },
+      {
+       "blankId": "c",
+       "text": "12"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(g)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    },
+    "(h)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(i)": {
+     "type": "NUMERICAL",
+     "value": "0"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "14"
+       },
+       {
+        "blankId": "b",
+        "text": "9"
+       },
+       {
+        "blankId": "c",
+        "text": "17"
+       }
+      ]
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(g)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(h)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(i)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     }
+    }
+   }
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 4"
+ },
+ {
+  "key": "exam.w4a-cambridge.q08",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort",
+   "acs.ds.data-types-records"
+  ],
+  "difficulty": 5,
+  "marks": 25,
+  "estimatedSeconds": 2250,
+  "stem": "A school in Mutare stores the name and mark of each learner in objects of the class `Learner`. The Python code below creates the list `learners`.\n\n```python\nclass Learner:\n    def __init__(self, name, mark):\n        self.name = name\n        self.mark = mark\n\nlearners = [\n    Learner(\"Tendai\", 58),\n    Learner(\"Rudo\", 73),\n    Learner(\"Farai\", 64),\n    Learner(\"Chipo\", 91),\n    Learner(\"Sipho\", 47),\n    Learner(\"Nyasha\", 73),\n    Learner(\"Thandeka\", 69),\n]\n```\n\nYou will write functions that sort and search the list. Assume that the code above is already in your program.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Write a function `insertion_sort(items)` that uses an insertion sort to sort the list of `Learner` objects in place into descending order of `mark`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A loop through the list starting at the second item",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Stores the item being inserted in a variable (the key)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A loop that shifts items with a smaller mark one place to the right",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Places the key in the gap that is left",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\ndef insertion_sort(items):\n    for index in range(1, len(items)):\n        key = items[index]\n        position = index - 1\n        while position >= 0 and items[position].mark < key.mark:\n            items[position + 1] = items[position]\n            position = position - 1\n        items[position + 1] = key\n```"
+    },
+    "explanation": "Shift smaller marks right, then insert the key."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "The function from part (a) is called with `insertion_sort(learners)` and then the name of each learner in the list is printed in order. State the first four names printed. (Learners with equal marks stay in their original order.)",
+    "payload": {
+     "template": "{{blank:a}}, {{blank:b}}, {{blank:c}}, {{blank:d}}",
+     "blanks": [
+      {
+       "id": "a",
+       "input": "select",
+       "choices": [
+        "Tendai",
+        "Rudo",
+        "Farai",
+        "Chipo",
+        "Sipho",
+        "Nyasha",
+        "Thandeka"
+       ]
+      },
+      {
+       "id": "b",
+       "input": "select",
+       "choices": [
+        "Tendai",
+        "Rudo",
+        "Farai",
+        "Chipo",
+        "Sipho",
+        "Nyasha",
+        "Thandeka"
+       ]
+      },
+      {
+       "id": "c",
+       "input": "select",
+       "choices": [
+        "Tendai",
+        "Rudo",
+        "Farai",
+        "Chipo",
+        "Sipho",
+        "Nyasha",
+        "Thandeka"
+       ]
+      },
+      {
+       "id": "d",
+       "input": "select",
+       "choices": [
+        "Tendai",
+        "Rudo",
+        "Farai",
+        "Chipo",
+        "Sipho",
+        "Nyasha",
+        "Thandeka"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "a",
+       "accepted": [
+        "Chipo"
+       ]
+      },
+      {
+       "id": "b",
+       "accepted": [
+        "Rudo"
+       ]
+      },
+      {
+       "id": "c",
+       "accepted": [
+        "Nyasha"
+       ]
+      },
+      {
+       "id": "d",
+       "accepted": [
+        "Thandeka"
+       ]
+      }
+     ]
+    },
+    "explanation": "In descending order of mark: Chipo 91, Rudo 73, Nyasha 73, Thandeka 69, Farai 64, Tendai 58, Sipho 47."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 5,
+    "markingMode": "MANUAL",
+    "stem": "A second list, `by_name`, holds the same objects sorted into ascending alphabetical order of `name`. Write a function `binary_search(items, target)` that uses a binary search to return the index of the learner whose name is `target`, or -1 if there is no such learner.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Sets low to 0 and high to len(items) - 1",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A loop that continues while low <= high",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Calculates the middle index with integer division",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Returns mid when the name matches, otherwise moves low to mid + 1 or high to mid - 1 by comparing the names",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Returns -1 after the loop",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: ```python\ndef binary_search(items, target):\n    low = 0\n    high = len(items) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if items[mid].name == target:\n            return mid\n        if items[mid].name < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```"
+    },
+    "explanation": "A standard binary search on the name attribute."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "`by_name` holds the names in the order Chipo, Farai, Nyasha, Rudo, Sipho, Tendai, Thandeka. State the value returned by `binary_search(by_name, \"Tendai\")`.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "5.",
+    "workedSolution": "Tendai is the sixth name, at index 5 (counting from 0)."
+   },
+   {
+    "label": "(e)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "State the number of comparisons of `items[mid].name` with `target` (counting an equality test and an order test together as one comparison) made when searching for \"Tendai\".",
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "2 comparisons.",
+    "workedSolution": "Mid = 3 (Rudo) is before Tendai, so low = 4; then mid = 5 is Tendai."
+   },
+   {
+    "label": "(f)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value returned by `binary_search(by_name, \"Peter\")`, which is not in the list.",
+    "answerSpec": {
+     "value": -1
+    },
+    "explanation": "-1.",
+    "workedSolution": "The search ends with low > high, so -1 is returned."
+   },
+   {
+    "label": "(g)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which name makes a good extreme test of `binary_search` because it is the first item in `by_name`?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Tendai",
+      "rationale": "Tendai is near the end."
+     },
+     {
+      "key": "B",
+      "content": "Chipo",
+      "correct": true,
+      "rationale": "Correct: it is at index 0."
+     },
+     {
+      "key": "C",
+      "content": "Rudo",
+      "rationale": "Rudo is in the middle."
+     },
+     {
+      "key": "D",
+      "content": "Peter",
+      "rationale": "Peter is not in the list."
+     }
+    ],
+    "explanation": "Testing both ends checks that low and high are set correctly."
+   },
+   {
+    "label": "(h)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the list must be sorted by name before `binary_search` is used, and why sorting by mark would not be enough.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A binary search only works if the list is in order of the value being searched",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Otherwise discarding half the list might discard the learner searched for",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The marks order does not put the names in alphabetical order, so the comparison of names would give wrong results",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A binary search needs the items to be in order of the value being compared. A list sorted by mark is not in alphabetical order, so discarding half of it after comparing names could discard the learner being searched for."
+    },
+    "explanation": "The search key must be the sort key."
+   },
+   {
+    "label": "(i)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "The programmer used a class `Learner` rather than two lists, `names` and `marks`. Explain two benefits of using the class in this program.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The name and mark of a learner are kept together in one object",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So sorting the list moves each name with its own mark (no risk of the lists getting out of step)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The code is easier to read, for example items[mid].name",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "A learner object can be passed to a function or stored as one item",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The name and mark are kept together in one object, so sorting moves a name with its own mark and the two cannot get out of step. The code is also easier to read, for example `items[mid].name`, and a learner can be passed to a function as one item."
+    },
+    "explanation": "Related data stays together."
+   }
+  ],
+  "explanation": "After the sort the order is Chipo, Rudo, Nyasha, Thandeka, Farai, Tendai, Sipho; the search for Tendai returns 5, for Peter -1 and for Chipo 0.",
+  "hints": [
+   "The sort compares the mark attribute; the search compares the name attribute.",
+   "A binary search needs sorted data."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "a",
+       "text": "Chipo"
+      },
+      {
+       "blankId": "b",
+       "text": "Rudo"
+      },
+      {
+       "blankId": "c",
+       "text": "Nyasha"
+      },
+      {
+       "blankId": "d",
+       "text": "Thandeka"
+      }
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(e)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    },
+    "(f)": {
+     "type": "NUMERICAL",
+     "value": "-1"
+    },
+    "(g)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "a",
+        "text": "Tendai"
+       },
+       {
+        "blankId": "b",
+        "text": "Rudo"
+       },
+       {
+        "blankId": "c",
+        "text": "Farai"
+       },
+       {
+        "blankId": "d",
+        "text": "Chipo"
+       }
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "6"
+     },
+     "(e)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(f)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     },
+     "(g)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "CREATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 4"
+ }
+]

@@ -1,0 +1,1193 @@
+[
+ {
+  "key": "data.floating-point-errors.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the main cause of a rounding error when a real number is stored in floating point?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The mantissa has a limited number of bits",
+    "correct": true,
+    "rationale": "Correct: the binary expansion is cut off, so only an approximation is stored."
+   },
+   {
+    "key": "B",
+    "content": "The processor makes arithmetic mistakes",
+    "rationale": "The arithmetic is correct for the stored values; the stored values are the problem."
+   },
+   {
+    "key": "C",
+    "content": "The exponent is stored in the wrong order",
+    "rationale": "The order of the exponent does not cause rounding errors."
+   },
+   {
+    "key": "D",
+    "content": "The number has too many digits before the point",
+    "rationale": "A large integer part causes overflow, not rounding errors in the fraction."
+   }
+  ],
+  "explanation": "A finite mantissa cannot hold every digit of numbers with a long or never-ending binary expansion, so the stored value is the nearest approximation.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.floating-point-errors.q02",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The number 0.625 (five eighths) can be stored exactly in a binary floating-point format with enough mantissa bits.",
+  "answerSpec": {
+   "correct": true,
+   "feedbackTrue": "Correct: 0.625 = 0.101 in binary, a short expansion that ends.",
+   "feedbackFalse": "0.625 = ½ + ⅛ = 0.101 in binary, which ends after three places, so it can be stored exactly."
+  },
+  "explanation": "Fractions whose denominators are powers of 2 have finite binary expansions.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-errors.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which of these numbers can **not** be stored exactly with a finite number of mantissa bits?",
+  "options": [
+   {
+    "key": "A",
+    "content": "0.6",
+    "correct": true,
+    "rationale": "Correct: 0.6 is 0.1001 1001 … in binary, which recurs and is cut off."
+   },
+   {
+    "key": "B",
+    "content": "0.75",
+    "rationale": "0.75 is a sum of powers of 2, so its binary expansion ends and it is stored exactly."
+   },
+   {
+    "key": "C",
+    "content": "0.375",
+    "rationale": "0.375 is a sum of powers of 2, so its binary expansion ends and it is stored exactly."
+   },
+   {
+    "key": "D",
+    "content": "2.25",
+    "rationale": "2.25 is a sum of powers of 2, so its binary expansion ends and it is stored exactly."
+   }
+  ],
+  "explanation": "Only fractions that are sums of powers of 2 (halves, quarters, eighths …) end in binary. 0.6 recurs, like 1/3 in denary.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-errors.q04",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The number 0.35 is stored in a computer as 0.34375. What is the absolute error?",
+  "answerSpec": {
+   "value": 0.00625,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.0001
+   }
+  },
+  "explanation": "The absolute error is the size of the difference: 0.35 − 0.34375 = 0.00625.",
+  "workedSolution": "1. Absolute error = |true value − stored value|.\n2. |0.35 − 0.34375| = 0.00625.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "0.00625"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.floating-point-errors.q05",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The number 0.7 is stored as 0.6875. Calculate the relative error as a percentage, to 2 significant figures.",
+  "payload": {
+   "unitHint": "%"
+  },
+  "answerSpec": {
+   "value": 1.8,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "%",
+     "percent",
+     "per cent"
+    ]
+   }
+  },
+  "explanation": "Absolute error = 0.0125. Relative error = 0.0125 ÷ 0.7 = 0.0179, which is 1.8%.",
+  "workedSolution": "1. Absolute error = 0.0125. Relative error = 0.0125 ÷ 0.7 = 0.0179, which is 1.8%.",
+  "hints": [
+   "First find the absolute error.",
+   "Divide the absolute error by the true value, then multiply by 100."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "1.8"
+  },
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-errors.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program multiplies two very small positive real numbers and the result is stored as zero, because it is smaller than the smallest value the format can hold. What is this called?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Overflow",
+    "rationale": "Overflow is when the result is too large."
+   },
+   {
+    "key": "B",
+    "content": "Truncation error in the exponent",
+    "rationale": "The exponent could not hold the value; that is underflow, not truncation."
+   },
+   {
+    "key": "C",
+    "content": "Rounding up",
+    "rationale": "Rounding up would give a larger number, not zero."
+   },
+   {
+    "key": "D",
+    "content": "Underflow",
+    "correct": true,
+    "rationale": "Correct: the result is too small to be represented."
+   }
+  ],
+  "explanation": "Underflow occurs when the exponent would have to be smaller than the format allows. The number is replaced by zero (or a less precise number).",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-errors.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A format with a 6-bit mantissa and a 3-bit exponent (both two's complement) stores positive values from 0.03125 up to 7.75. Say what happens in each calculation.",
+  "payload": {
+   "template": "A result of 40 gives {{blank:a}}. A result of 0.01 gives {{blank:b}}. The number 0.45 stored as 0.4375 is {{blank:c}}.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "overflow",
+      "underflow",
+      "a rounding error"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "overflow",
+      "underflow",
+      "a rounding error"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "overflow",
+      "underflow",
+      "a rounding error"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "overflow"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "underflow"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "a rounding error"
+     ]
+    }
+   ]
+  },
+  "explanation": "40 is above the largest value 7.75 (overflow); 0.01 is below the smallest normalised value 0.03125 (underflow); 0.4375 is close to but not equal to 0.45, a rounding error.",
+  "hints": [
+   "Compare each result with the largest and smallest values the format can store."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "overflow"
+    },
+    {
+     "blankId": "b",
+     "text": "underflow"
+    },
+    {
+     "blankId": "c",
+     "text": "a rounding error"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "underflow"
+     },
+     {
+      "blankId": "b",
+      "text": "overflow"
+     },
+     {
+      "blankId": "c",
+      "text": "overflow"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-errors.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program for a Chipinge cooperative stores prices and balances. Which method avoids rounding errors in the amounts?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Store each amount as a real number with more decimal places",
+    "rationale": "More digits reduce but do not remove errors like 0.1."
+   },
+   {
+    "key": "B",
+    "content": "Store each amount as a real number and compare using =",
+    "rationale": "Equality tests on reals can fail because of the stored approximation."
+   },
+   {
+    "key": "C",
+    "content": "Store each amount as a whole number of cents and convert for display",
+    "correct": true,
+    "rationale": "Correct: integers are exact, so additions and subtractions give exact results."
+   },
+   {
+    "key": "D",
+    "content": "Store each amount as a real number and round only at the end of the year",
+    "rationale": "Errors accumulate in the meantime."
+   }
+  ],
+  "explanation": "Money has a fixed smallest unit (the cent), so whole-number arithmetic in cents is exact. Conversion to dollars and cents is only for display.",
+  "hints": [
+   "Which data type holds whole numbers exactly?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.floating-point-errors.q09",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A Python program contains the statement `print(0.1 + 0.7 == 0.8)`. State the output (True or False).",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "False"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "The output is False: 0.1 + 0.7 is stored as 0.7999999999999999, which is not equal to the stored value of 0.8.",
+  "hints": [
+   "Think about whether 0.1 and 0.7 can be stored exactly in binary."
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "False"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "True"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-errors.q10",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program starts a total at 1.5, adds 0.5 to it three times, and then outputs `total == 3.0`. State the output (True or False) and give a reason.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "True"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "The output is True. 0.5 is ½ = 0.1 in binary and 1.5 is 1.1, so they are stored exactly, and so are all the sums. There is no rounding error.",
+  "hints": [
+   "Can 0.25 be stored exactly in binary?"
+  ],
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "True"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "False"
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.floating-point-errors.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each term to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Overflow"
+    },
+    {
+     "id": "L2",
+     "content": "Underflow"
+    },
+    {
+     "id": "L3",
+     "content": "Absolute error"
+    },
+    {
+     "id": "L4",
+     "content": "Relative error"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The size of the difference between the true and stored values"
+    },
+    {
+     "id": "R4",
+     "content": "The absolute error divided by the true value"
+    },
+    {
+     "id": "R1",
+     "content": "The result is larger than the largest value that can be stored"
+    },
+    {
+     "id": "R2",
+     "content": "The result is smaller than the smallest non-zero value that can be stored"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Overflow and underflow concern the size of a result; absolute and relative error measure how far the stored value is from the true value.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "data.floating-point-errors.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An 8-bit unsigned register holds 250. A program adds 20 to it and the carry out of the register is lost. What denary value is now stored?",
+  "answerSpec": {
+   "value": 14
+  },
+  "explanation": "The true sum 270 needs nine bits. The register keeps the low eight bits, giving 14.",
+  "workedSolution": "1. 250 + 20 = 270, which is more than 255.\n2. The register keeps the remainder after dividing by 256: 270 − 256 = 14.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "14"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "data.floating-point-errors.q13",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A mantissa of 8 bits is cut so that the extra bits are simply dropped. Another system instead chooses the nearest representable value. How do the two methods compare?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Truncation gives a smaller error because no bits are changed",
+    "rationale": "Dropping bits always makes the value smaller in size, so errors are larger on average."
+   },
+   {
+    "key": "B",
+    "content": "The two methods always give the same stored value",
+    "rationale": "They differ whenever the dropped bits are 1 in the first place."
+   },
+   {
+    "key": "C",
+    "content": "Rounding removes the error completely",
+    "rationale": "Rounding reduces the error but cannot remove it."
+   },
+   {
+    "key": "D",
+    "content": "Rounding gives a smaller average error than truncation",
+    "correct": true,
+    "rationale": "Correct: truncation always moves the value towards zero, while rounding can go either way."
+   }
+  ],
+  "explanation": "Truncation always rounds towards zero in size, so its error is always in one direction and is larger on average. Rounding to nearest picks the closer of two stored values.",
+  "hints": [
+   "Which method always moves the stored value in the same direction?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.floating-point-errors.q14",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Overflow in floating-point arithmetic happens when the result is too close to zero to be stored.",
+  "answerSpec": {
+   "correct": false,
+   "feedbackTrue": "That describes underflow. Overflow is when the result is too large in size.",
+   "feedbackFalse": "Correct: results too close to zero cause underflow; overflow is when the size of the result is too great for the exponent."
+  },
+  "explanation": "Overflow: too large. Underflow: too small and close to zero.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-errors.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why the denary number 0.1 cannot be stored exactly in a binary floating-point number.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "0.1 is a recurring fraction in binary (0.0001100110011…).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The mantissa has a finite number of bits, so the recurring pattern must be cut off.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The stored value is therefore only the nearest approximation to 0.1.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: In binary 0.1 is 0.00011001100…, a recurring pattern that never ends. A mantissa has only a fixed number of bits, so the pattern is cut off and the stored value is a close approximation, not exactly 0.1."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Only fractions with denominators that are powers of 2 have finite binary expansions.",
+  "hints": [
+   "Compare with writing 1/3 in denary."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-errors.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A programmer wants a loop to stop when a real-number variable `Balance` becomes equal to `Target`. Explain why testing `Balance = Target` may not work, and describe a better test.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Real numbers are stored as approximations, so Balance may differ very slightly from Target.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The equality test can then never become true (the loop may run for ever or end at the wrong time).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Better: test whether the absolute difference between them is smaller than a small tolerance, or use <= / >= comparisons, or use integers.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Because of rounding errors, Balance may become 9.999999999 instead of 10, so the equality is never true. A safer test is IF ABS(Balance - Target) < 0.000001 THEN, or to use >= so the loop stops once the target is reached. Integer cents would avoid the error altogether."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Comparing reals with = is unreliable; compare with a tolerance or use integers.",
+  "hints": [
+   "Think about the stored value of a number like 0.1."
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "data.floating-point-errors.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A loop adds 0.01 to a total one million times. Explain why the final total may differ from 10 000.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "0.01 cannot be stored exactly in binary, so each addition adds a value with a tiny error.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The small error is repeated every time round the loop.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The errors accumulate, so the total can drift away from the exact value.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: 0.01 is stored as an approximation. Each addition also rounds the running total. Over a million additions, the tiny errors add up so that the result differs from 10 000. Using integers (counting hundredths) would give an exact result."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Accumulating rounding errors is a common source of wrong totals in loops.",
+  "hints": [
+   "Think about what happens to a tiny error that is repeated many times."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "data.floating-point-errors.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Distinguish between overflow and underflow in floating-point arithmetic.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Overflow: the result is too large (the exponent is too big) to be stored.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Underflow: the result is too close to zero (the exponent is too small) to be stored, so it becomes zero or a less precise value.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Overflow is when the size of the result exceeds the largest value the exponent allows. Underflow is when a non-zero result is smaller than the smallest value that can be stored, so it is stored as zero."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Both are about the exponent range of the format.",
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-errors.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A Python program is run on a computer that stores real numbers in binary floating point.\n\n```python\na = 0.6\nb = 0.3\ntotal = a + b\nprint(total)\nif total == 0.9:\n    print(\"Equal\")\nelse:\n    print(\"Not equal\")\nif abs(total - 0.9) < 0.000001:\n    print(\"Close enough\")\n```",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "State the first line of output.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "0.8999999999999999"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "0.6 and 0.3 are stored as approximations; their sum prints as 0.8999999999999999."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the second line of output.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Not equal"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The stored sum is not equal to the stored value of 0.9."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "State the third line of output.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "Close enough"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The difference is about 1.1 × 10^-16, which is less than 0.000001."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the second line is not \"Equal\".",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "0.6, 0.3 and 0.9 cannot be stored exactly in binary.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The stored sum differs very slightly from the stored 0.9, so the = test is false.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: These decimal fractions recur in binary so are stored as approximations. The sum of the approximations is not exactly the approximation of 0.9."
+    }
+   }
+  ],
+  "explanation": "The outputs are 0.8999999999999999, Not equal, Close enough: the equality test fails because of rounding errors, while the tolerance test succeeds.",
+  "hints": [
+   "The first output is not exactly 0.9.",
+   "Which test uses a tolerance?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "0.8999999999999999"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "Not equal"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "Close enough"
+    }
+   }
+  },
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "data.floating-point-errors.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A sensor reading of **5.3** is to be stored using a floating-point format with an 8-bit two's complement mantissa and a 4-bit two's complement exponent. In this format 5.3 = 101.0100110011… in binary, so it cannot be stored exactly. The exponent used is 3 (0011).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "The mantissa is rounded to the nearest 8-bit value. Write it.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01010101"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "5.3 ÷ 8 × 128 = 84.8, which rounds to 85 = 01010101."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the value actually stored.",
+    "answerSpec": {
+     "value": 5.3125,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "01010101 = 85/128; × 8 = 5.3125.",
+    "workedSolution": "1. 01010101 = 85/128; × 8 = 5.3125."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the absolute error.",
+    "answerSpec": {
+     "value": 0.0125,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "|5.3 − 5.3125| = 0.0125.",
+    "workedSolution": "1. |5.3 − 5.3125| = 0.0125."
+   },
+   {
+    "label": "(d)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "If the mantissa had been truncated instead of rounded, the absolute error would be different. Calculate it.",
+    "answerSpec": {
+     "value": 0.05,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.0005
+     }
+    },
+    "explanation": "Truncating gives 84/128 × 8 = 5.25; |5.3 − 5.25| = 0.05.",
+    "workedSolution": "1. Truncating gives 84/128 × 8 = 5.25; |5.3 − 5.25| = 0.05."
+   }
+  ],
+  "explanation": "Rounded: 01010101, value 5.3125, error 0.0125. Truncated: error 0.05 (larger).",
+  "hints": [
+   "Scale ×128 after dividing by 2 to the power of the exponent to find the integer mantissa.",
+   "Compare the rounded and truncated integers."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "01010101"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "5.31"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "0.0125"
+    },
+    "(d)": {
+     "type": "CALCULATION",
+     "value": "0.05"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "01010110"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true
+ },
+ {
+  "key": "data.floating-point-errors.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which statement describes overflow in floating-point arithmetic?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The result is too small to store and is replaced by zero",
+    "rationale": "That describes underflow."
+   },
+   {
+    "key": "B",
+    "content": "The result is larger than the exponent can represent",
+    "correct": true,
+    "rationale": "Correct: the size of the result exceeds the largest storable value."
+   },
+   {
+    "key": "C",
+    "content": "The mantissa has more bits than the exponent",
+    "rationale": "The sizes of the two parts do not decide overflow."
+   },
+   {
+    "key": "D",
+    "content": "The last digit of the result is rounded up",
+    "rationale": "That is a rounding error."
+   }
+  ],
+  "explanation": "Overflow occurs when a result is too large in size for the exponent to cover.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "data.floating-point-errors.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A program must test whether two real numbers, X and Y, are equal. Which approach is most reliable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Test whether X = Y directly",
+    "rationale": "Rounding errors can make equal values differ in the last digit."
+   },
+   {
+    "key": "B",
+    "content": "Check whether the absolute difference is smaller than a small tolerance",
+    "correct": true,
+    "rationale": "Correct: this allows for the tiny rounding errors in stored real numbers."
+   },
+   {
+    "key": "C",
+    "content": "Round X and Y to one decimal place and never compare them again",
+    "rationale": "Rounding too far changes the values being compared."
+   },
+   {
+    "key": "D",
+    "content": "Convert both numbers to binary text and compare the text",
+    "rationale": "The binary patterns are subject to the same rounding errors."
+   }
+  ],
+  "explanation": "Stored reals are approximations, so compare with a tolerance rather than with =.",
+  "hints": [
+   "Remember that 0.1 + 0.2 is not stored exactly as 0.3."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ }
+]

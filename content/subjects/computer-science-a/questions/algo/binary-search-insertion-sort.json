@@ -1,0 +1,1363 @@
+[
+ {
+  "key": "algo.binary-search-insertion-sort.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What must be true of a list before a binary search can be used on it?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The items must be in order",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "The items must all be different lengths",
+    "rationale": "Length of items does not matter to the method."
+   },
+   {
+    "key": "C",
+    "content": "The list must contain at least a thousand items",
+    "rationale": "A binary search works on a list of any size."
+   },
+   {
+    "key": "D",
+    "content": "The list must be stored in a file",
+    "rationale": "A binary search can be used on an array in memory."
+   }
+  ],
+  "explanation": "The method discards half of the list by comparing with the middle item, so the list must be sorted.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL",
+  "dailyEligible": true
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a binary search of an ascending list, `Data[Mid]` is less than the target. What is done next?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Low` is set to `Mid + 1`",
+    "correct": true,
+    "rationale": "Correct: the target can only be in the upper half."
+   },
+   {
+    "key": "B",
+    "content": "`High` is set to `Mid - 1`",
+    "rationale": "That discards the upper half, where the target must be."
+   },
+   {
+    "key": "C",
+    "content": "`Low` is set to `Mid - 1`",
+    "rationale": "That would search items already rejected."
+   },
+   {
+    "key": "D",
+    "content": "The search stops and outputs \"Not found\"",
+    "rationale": "One comparison cannot show that an item is missing."
+   }
+  ],
+  "explanation": "A smaller middle value means the target lies above Mid.",
+  "hints": [
+   "In which half can a larger value be?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How does a binary search discover that the target is not in the list?",
+  "options": [
+   {
+    "key": "A",
+    "content": "`Low` becomes greater than `High`",
+    "correct": true,
+    "rationale": "Correct: no items remain to be searched."
+   },
+   {
+    "key": "B",
+    "content": "`Mid` becomes 0",
+    "rationale": "Mid is not set to 0 by the algorithm."
+   },
+   {
+    "key": "C",
+    "content": "The first comparison is not equal",
+    "rationale": "A single comparison cannot prove the item is missing."
+   },
+   {
+    "key": "D",
+    "content": "`Found` becomes TRUE",
+    "rationale": "That means the item was found."
+   }
+  ],
+  "explanation": "When Low > High the part left to search is empty.",
+  "hints": [
+   "What does it mean when the low end passes the high end?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A programmer must search an unsorted list of 20 names once. Which method is more suitable?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A binary search, because it is always faster",
+    "rationale": "It needs a sorted list; sorting 20 names first would cost more than one linear search."
+   },
+   {
+    "key": "B",
+    "content": "A binary search after a bubble sort of the names",
+    "rationale": "The sort costs more than searching once."
+   },
+   {
+    "key": "C",
+    "content": "No search is possible without sorting",
+    "rationale": "A linear search works on any order."
+   },
+   {
+    "key": "D",
+    "content": "A linear search",
+    "correct": true,
+    "rationale": "Correct: it works without sorting."
+   }
+  ],
+  "explanation": "For a short unsorted list used once, a linear search is simplest.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What does an insertion sort do with each item?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Swaps it with the item next to it in every pass",
+    "rationale": "That describes a bubble sort."
+   },
+   {
+    "key": "B",
+    "content": "Inserts it into its place among the earlier items, which are already in order",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "C",
+    "content": "Splits the list in half and searches the half that may contain it",
+    "rationale": "That describes a binary search."
+   },
+   {
+    "key": "D",
+    "content": "Compares it with the largest item and moves it to the end",
+    "rationale": "That describes one pass of a bubble sort."
+   }
+  ],
+  "explanation": "Items before the key are kept sorted and the key is slotted in.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which starting order gives an insertion sort the least work?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Data in descending order",
+    "rationale": "Every key is shifted past all earlier items: the worst case."
+   },
+   {
+    "key": "B",
+    "content": "Data in a random order",
+    "rationale": "The work is between the best and the worst."
+   },
+   {
+    "key": "C",
+    "content": "Data already in ascending order",
+    "correct": true,
+    "rationale": "Correct: each key needs one comparison and no shift."
+   },
+   {
+    "key": "D",
+    "content": "Data with the smallest item last",
+    "rationale": "That item is shifted past every other item."
+   }
+  ],
+  "explanation": "Sorted data needs n − 1 comparisons and no shifts.",
+  "hints": [
+   "When is no item ever shifted?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why is the key copied into a variable at the start of each pass of an insertion sort?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It makes the sort stop earlier",
+    "rationale": "The key does not change how many passes are made."
+   },
+   {
+    "key": "B",
+    "content": "It counts the number of comparisons",
+    "rationale": "A separate counter would do that."
+   },
+   {
+    "key": "C",
+    "content": "It marks the end of the sorted part",
+    "rationale": "The index marks that."
+   },
+   {
+    "key": "D",
+    "content": "The first shift would overwrite it",
+    "correct": true,
+    "rationale": "Correct: its place is taken by the item shifted right."
+   }
+  ],
+  "explanation": "Shifting an item into the key's position loses the key unless it is saved.",
+  "hints": [
+   "Which array place does the first shifted item move into?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q08",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A list of 1 000 000 sorted items is searched by a binary search. Which is the best estimate of the greatest number of comparisons needed?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1 000",
+    "rationale": "That is about the square root of a million."
+   },
+   {
+    "key": "B",
+    "content": "20",
+    "correct": true,
+    "rationale": "Correct: 2 to the power 20 is just over a million."
+   },
+   {
+    "key": "C",
+    "content": "500 000",
+    "rationale": "That is about half of the items, as in a linear search."
+   },
+   {
+    "key": "D",
+    "content": "1 000 000",
+    "rationale": "That is the worst case for a linear search."
+   }
+  ],
+  "explanation": "Each comparison halves the list: ⌊log₂ 1 000 000⌋ + 1 = 20.",
+  "hints": [
+   "How many times can a million be halved before one is left?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A binary search can be used on a list whose items are in no particular order.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The list must be sorted so that half of it can be discarded after each comparison.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An insertion sort does the most work when the data is in reverse order.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Each key is smaller than every earlier item, so all of them are shifted: n(n − 1)/2 comparisons and shifts.",
+  "hints": [
+   "Which data needs every key to be moved past all earlier items?"
+  ],
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 400,
+  "stem": "Match each term to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Low"
+    },
+    {
+     "id": "L2",
+     "content": "High"
+    },
+    {
+     "id": "L3",
+     "content": "Mid"
+    },
+    {
+     "id": "L4",
+     "content": "Shift"
+    },
+    {
+     "id": "L5",
+     "content": "Key"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The position of the item compared with the target"
+    },
+    {
+     "id": "R4",
+     "content": "Moving an item one place along to make room"
+    },
+    {
+     "id": "R5",
+     "content": "The item being inserted in an insertion sort"
+    },
+    {
+     "id": "R1",
+     "content": "The position of the first item still being searched"
+    },
+    {
+     "id": "R2",
+     "content": "The position of the last item still being searched"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Terms from the two algorithms.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    },
+    {
+     "leftId": "L5",
+     "rightId": "R5"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R5"
+     },
+     {
+      "leftId": "L5",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q12",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A binary search looks for 57 in this array of ten values (positions 1 to 10).\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Data | 6 | 17 | 24 | 29 | 35 | 48 | 57 | 63 | 74 | 92 |",
+  "payload": {
+   "template": "First value of Mid = {{blank:a}}. After the first comparison, Low = {{blank:b}} and High = {{blank:c}}.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "number"
+    },
+    {
+     "id": "b",
+     "input": "number"
+    },
+    {
+     "id": "c",
+     "input": "number"
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "5"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "6"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "10"
+     ]
+    }
+   ]
+  },
+  "explanation": "Mid = DIV(1 + 10, 2) = 5. Data[5] = 35 is less than 57, so Low becomes 6; High stays 10.",
+  "hints": [
+   "The first Mid is 5; compare Data[5] with 57."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "5"
+    },
+    {
+     "blankId": "b",
+     "text": "6"
+    },
+    {
+     "blankId": "c",
+     "text": "10"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "1"
+     },
+     {
+      "blankId": "b",
+      "text": "1"
+     },
+     {
+      "blankId": "c",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a binary search, `Low` is 1 and `High` is 10. State the value of `Mid ← DIV(Low + High, 2)`.",
+  "answerSpec": {
+   "value": 5
+  },
+  "explanation": "Mid = 5.",
+  "workedSolution": "(1 + 10) = 11, and DIV(11, 2) = 5.",
+  "hints": [
+   "Add Low and High and use whole-number division by 2."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "5"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "5.5"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The array below holds ten values in ascending order.\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Data | 2 | 10 | 16 | 25 | 33 | 41 | 49 | 58 | 67 | 85 |\n\nHow many comparisons does a binary search make to find 10?",
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "2 comparisons.",
+  "workedSolution": "Mid = 5 (value 33, too large) so High = 4; Mid = DIV(1 + 4, 2) = 2 (value 10): found.",
+  "hints": [
+   "Mid is 5 first, then work with the half that remains."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "State the greatest number of comparisons a binary search needs for a sorted list of 255 items.",
+  "answerSpec": {
+   "value": 8
+  },
+  "explanation": "8 comparisons.",
+  "workedSolution": "Each comparison leaves at most half the items: 255, 127, 63, 31, 15, 7, 3, 1, so 8 comparisons.",
+  "hints": [
+   "Halve the number of items remaining: 255, 127, 63, ..."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "8"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "255"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q16",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "An insertion sort is applied to `Data` = 6, 2, 9, 4, 7. State the total number of shifts made.",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "4 shifts.",
+  "workedSolution": "Pass 1 shifts 1 (the 6), pass 2 none, pass 3 shifts 2 (9 and 6), pass 4 shifts 1 (9).",
+  "hints": [
+   "Count the items shifted right in each pass."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe how a binary search finds a target in a sorted array. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Finds the middle item and compares it with the target",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "If it is not equal, discards the half that cannot contain the target (lower half if the target is smaller, upper half if larger)",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Repeats on the remaining half until the item is found or no items remain",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Compare the target with the middle item. If they are not equal, discard the half that cannot contain the target, then repeat on the remaining half until the item is found or no items are left."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Compare, discard half, repeat.",
+  "hints": [
+   "Use the idea of halving."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A school keeps 5 000 student numbers in ascending order. Explain why a binary search is more suitable than a linear search for finding a number. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The list is already sorted so a binary search can be used",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A binary search needs at most about 13 comparisons, whereas a linear search may need 5 000",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The saving is large when many searches are made",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The list is sorted, so a binary search can be used. It needs at most about 13 comparisons for 5 000 items, whereas a linear search may need 5 000, which matters when many searches are made."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Sorted data and many fewer comparisons.",
+  "hints": [
+   "Think about sorting cost and the number of searches."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Write pseudocode for the inner part of an insertion sort that inserts `Data[Index]` into the items `Data[1]` to `Data[Index - 1]`, which are already in ascending order. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Copies Data[Index] into Key and sets Position to Index - 1",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A WHILE loop that continues while Position >= 1 AND Data[Position] > Key",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Shifts Data[Position] to Data[Position + 1] and reduces Position by 1 inside the loop",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Writes Key into Data[Position + 1] after the loop",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: ```\nKey ← Data[Index]\nPosition ← Index - 1\nWHILE Position >= 1 AND Data[Position] > Key DO\n    Data[Position + 1] ← Data[Position]\n    Position ← Position - 1\nENDWHILE\nData[Position + 1] ← Key\n```"
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Save, shift, insert.",
+  "hints": [
+   "Save the key, shift while larger, then insert."
+  ],
+  "skill": "CREATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q20",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 4,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "A list is almost in order, with just two items out of place. Explain why an insertion sort is a better choice than the simple bubble sort without a flag. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "An insertion sort needs only one comparison for each item that is already in place",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Only the two misplaced items are shifted",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "The simple bubble sort always makes every pass and every comparison, however well ordered the data is",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Items already in place need only one comparison each and only the two misplaced items are shifted. The simple bubble sort always makes the full set of passes and comparisons."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Insertion sort is quick on nearly sorted data.",
+  "hints": [
+   "Compare how each sort treats data that is nearly in order."
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 5,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A Harare bank keeps ten account numbers in ascending order in the array `Account`.\n\n| Index | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n| Account | 3 | 8 | 13 | 21 | 34 | 40 | 55 | 62 | 79 | 90 |\n\nA binary search uses `Low`, `High` and `Mid ← DIV(Low + High, 2)`. It is used to look for 79 and, separately, for 50.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the first value of `Mid` when searching for 79.",
+    "answerSpec": {
+     "value": 5
+    },
+    "explanation": "Mid = 5.",
+    "workedSolution": "DIV(1 + 10, 2) = 5."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Low` after the first comparison when searching for 79.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "Low = 6.",
+    "workedSolution": "Account[5] = 34 is less than 79, so Low ← Mid + 1 = 6."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the number of comparisons needed to find 79.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "3 comparisons.",
+    "workedSolution": "Mid is 5 (34), then 8 (62), then 9 (79)."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "50 is not in the array. State the number of comparisons made before the algorithm decides this.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "4 comparisons.",
+    "workedSolution": "Mid is 5 (34), 8 (62), 6 (40), 7 (55); then Low = 7 and High = 6, so the loop ends."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which condition makes the loop end when the target is not in the array?",
+    "options": [
+     {
+      "key": "A",
+      "content": "`Mid = 0`",
+      "rationale": "Mid is never set to 0."
+     },
+     {
+      "key": "B",
+      "content": "`Account[Mid] > Target`",
+      "rationale": "That decides which half to discard."
+     },
+     {
+      "key": "C",
+      "content": "`Low > High`",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "D",
+      "content": "`High = 10`",
+      "rationale": "High starts at 10."
+     }
+    ],
+    "explanation": "When Low exceeds High there are no items left to search."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a binary search is faster than a linear search when the bank has 10 000 account numbers in order.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A binary search halves the number of items left after every comparison",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So it needs at most about 14 comparisons for 10 000 items",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A linear search may have to compare with all 10 000 items",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Each comparison halves the number of items left, so at most about 14 comparisons are needed for 10 000 items, whereas a linear search may need to examine all 10 000."
+    },
+    "explanation": "Halving against one by one."
+   }
+  ],
+  "explanation": "Binary search on ten sorted account numbers.",
+  "hints": [
+   "Mid ← DIV(Low + High, 2).",
+   "A smaller middle value means Low ← Mid + 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "5"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "3"
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "10"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "5"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "2"
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "algo.binary-search-insertion-sort.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.algo.binary-search-insertion-sort"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "The array `Data` holds 6, 2, 9, 4, 7 and is sorted into ascending order by an insertion sort. The first item is treated as a sorted list of one, and the passes start with the second item.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the value of `Data[3]` after the third pass.",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "Data[3] = 6.",
+    "workedSolution": "After pass 3 the array is 2, 4, 6, 9, 7."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the total number of shifts made.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "4 shifts.",
+    "workedSolution": "1 + 0 + 2 + 1 = 4."
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "State the total number of comparisons of `Data[Position]` with `Key`.",
+    "answerSpec": {
+     "value": 7
+    },
+    "explanation": "7 comparisons.",
+    "workedSolution": "1 + 1 + 3 + 2 = 7."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the value of `Data[Index]` is first copied into the variable `Key`.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The first shift writes over the position that Data[Index] occupies",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the value would be lost unless it is saved, to be written into the gap at the end",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The first shift overwrites the position of `Data[Index]`, so its value is saved in `Key` and written into the gap after the shifts."
+    },
+    "explanation": "Avoid losing the key."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which list of 5 values would be sorted with the fewest comparisons?",
+    "options": [
+     {
+      "key": "A",
+      "content": "9, 7, 6, 4, 2",
+      "rationale": "Reverse order is the worst case."
+     },
+     {
+      "key": "B",
+      "content": "6, 2, 9, 4, 7",
+      "rationale": "This needs more comparisons than a sorted list."
+     },
+     {
+      "key": "C",
+      "content": "2, 4, 6, 7, 9",
+      "correct": true,
+      "rationale": "Correct: it needs one comparison per item."
+     },
+     {
+      "key": "D",
+      "content": "7, 9, 2, 6, 4",
+      "rationale": "A random order needs more than a sorted list."
+     }
+    ],
+    "explanation": "Sorted data is the best case."
+   }
+  ],
+  "explanation": "An insertion sort of five values.",
+  "hints": [
+   "Write the array after each pass.",
+   "Count the items moved right in each pass."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "7"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "9"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ }
+]

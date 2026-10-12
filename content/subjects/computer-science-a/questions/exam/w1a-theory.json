@@ -1,0 +1,1413 @@
+[
+ {
+  "key": "exam.w1a-theory.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.number-bases",
+   "acs.data.binary-arithmetic"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "An 8-bit register in a till at a shop in Gweru holds the value P, written in hexadecimal as **9C**. Two other 8-bit registers hold Q = 01101110 and R = 00110111, both in binary.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Write P as an 8-bit binary number.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10011100"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "9 = 1001 and C (12) = 1100, so 9C = 10011100."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "P is an unsigned binary number. Give its denary value.",
+    "answerSpec": {
+     "value": 156
+    },
+    "explanation": "9C = 9 × 16 + 12 = 156.",
+    "workedSolution": "1. 9C = 9 × 16 + 12 = 156."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "P is now read as an 8-bit two's complement number. Give its denary value.",
+    "answerSpec": {
+     "value": -100
+    },
+    "explanation": "The leftmost bit is worth −128 and the other 1s are worth 16, 8 and 4: −128 + 28 = −100.",
+    "workedSolution": "1. The leftmost bit of 10011100 is 1, so it is worth −128.\n2. The other 1s are worth 16, 8 and 4, which total 28.\n3. −128 + 28 = −100."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Add Q and R in an 8-bit register. Give the 8-bit result stored.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "10100101"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "01101110 + 00110111 = 10100101."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Q and R are two's complement numbers. Which statement about the result in (d) is correct?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It is correct because the carry out of the register is zero",
+      "rationale": "The carry out is not the test for overflow."
+     },
+     {
+      "key": "B",
+      "content": "Overflow: two positive numbers gave a negative result",
+      "correct": true,
+      "rationale": "Correct: Q = 110 and R = 55 are positive, but the stored result is negative."
+     },
+     {
+      "key": "C",
+      "content": "It is correct because the result is a valid 8-bit pattern",
+      "rationale": "Every 8-bit pattern is valid; the test is whether the value is right."
+     },
+     {
+      "key": "D",
+      "content": "Underflow has occurred because the result is too small",
+      "rationale": "Underflow concerns real numbers; this is integer overflow."
+     }
+    ],
+    "explanation": "A negative-looking result from two positive numbers shows overflow."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain what is meant by overflow.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The result of the calculation is too large (outside the range) for the number of bits available.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the value stored is incorrect.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Overflow is when the true result lies outside the range that the register can store, so the pattern stored represents a wrong value."
+    }
+   }
+  ],
+  "explanation": "P = 10011100; unsigned 156, two's complement −100. Q + R = 10100101: the true sum 165 exceeds 127, so overflow.",
+  "hints": [
+   "Convert each hexadecimal digit to four bits.",
+   "For two's complement, the leftmost bit is worth −128."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "10011100"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "156"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "-100"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "10100101"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "10011101"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "10100110"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w1a-theory.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.floating-point-representation",
+   "acs.data.floating-point-errors"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A weather logger at a school in Chipinge stores real numbers in floating point. The mantissa has 8 bits and the exponent has 4 bits; both are two's complement, and the binary point of the mantissa is after the sign bit.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "A reading is stored with mantissa **01010100** and exponent **0010**. Calculate its denary value.",
+    "answerSpec": {
+     "value": 2.625,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.05
+     }
+    },
+    "explanation": "Mantissa 0.65625, exponent 2: 0.65625 × 4 = 2.625.",
+    "workedSolution": "1. Mantissa 0.65625, exponent 2: 0.65625 × 4 = 2.625."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "The temperature **9.5** is to be stored as a normalised number. Write its 8-bit mantissa.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01001100"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "9.5 = 1001.1 in binary = 0.10011 × 2^4, so the mantissa is 01001100."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the 4-bit exponent for 9.5.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "0100"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The point moves four places, so the exponent is +4 = 0100."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "A calculation leaves an unnormalised mantissa **00010110** with exponent **0101**. Write the normalised 8-bit mantissa.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "01011000"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "Shift left 2 places to 01011000; the exponent falls to 0011."
+   },
+   {
+    "label": "(e)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which of these is a reason for normalising floating-point numbers?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It makes the exponent larger so that bigger values fit",
+      "rationale": "Normalising lowers the exponent when it shifts the mantissa."
+     },
+     {
+      "key": "B",
+      "content": "It gives maximum precision for the bits used",
+      "correct": true,
+      "rationale": "Correct: no mantissa bits are wasted on leading digits."
+     },
+     {
+      "key": "C",
+      "content": "It removes all rounding errors from the stored numbers",
+      "rationale": "Rounding errors remain whenever a value is not exactly representable."
+     },
+     {
+      "key": "D",
+      "content": "It stores the same number in fewer bits than before",
+      "rationale": "The number of bits is the same."
+     }
+    ],
+    "explanation": "Normalisation gives the greatest precision and a single representation."
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The logger cannot store 0.1 exactly. Explain why.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "0.1 is a recurring fraction in binary.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The mantissa has a limited number of bits, so only an approximation can be stored.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 0.1 is 0.000110011… in binary, which never ends, and the 8-bit mantissa can hold only a limited number of digits, so a rounded value is stored."
+    }
+   }
+  ],
+  "explanation": "(a) 2.625. (b)-(c) 9.5 is stored as 01001100 and 0100. (d) 01011000. Limited mantissa bits cause rounding errors.",
+  "hints": [
+   "The exponent is a two's complement integer that moves the binary point.",
+   "Normalised means the first two mantissa bits differ."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "2.63"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "01001100"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "0100"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "01011000"
+    },
+    "(e)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(b)": {
+      "type": "SHORT_ANSWER",
+      "text": "01001101"
+     },
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "0101"
+     },
+     "(d)": {
+      "type": "SHORT_ANSWER",
+      "text": "01011001"
+     },
+     "(e)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P3"
+ },
+ {
+  "key": "exam.w1a-theory.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.gates-truth-tables",
+   "acs.logic.circuits-expressions"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A greenhouse controller in Marondera uses a logic circuit with three inputs A, B and C. Inputs A and B go into a NOR gate (output P). Inputs B and C go into an AND gate (output Q). The outputs P and Q go into an OR gate whose output is X.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which expression describes X?",
+    "options": [
+     {
+      "key": "A",
+      "content": "X = (A NOR B) OR (B AND C)",
+      "correct": true,
+      "rationale": "Correct: P = A NOR B, Q = B AND C and X = P OR Q."
+     },
+     {
+      "key": "B",
+      "content": "X = (A OR B) AND (B OR C)",
+      "rationale": "This does not use a NOR gate."
+     },
+     {
+      "key": "C",
+      "content": "X = (A NOR B) AND (B AND C)",
+      "rationale": "The final gate is OR, not AND."
+     },
+     {
+      "key": "D",
+      "content": "X = NOT (A OR B OR C)",
+      "rationale": "This ignores the AND gate."
+     }
+    ],
+    "explanation": "Follow the signals through the three gates."
+   },
+   {
+    "label": "(b)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the truth table for X.",
+    "payload": {
+     "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r8",
+       "accepted": [
+        "1"
+       ]
+      }
+     ]
+    },
+    "explanation": "P is 1 only when A = 0 and B = 0; Q is 1 only when B = 1 and C = 1; X is 1 if either is 1."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "In how many of the eight rows is X = 1?",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "X is 1 in 4 rows.",
+    "workedSolution": "1. X is 1 in 4 rows."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the gate whose output is 1 only when both of its inputs are 0.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "NOR"
+      },
+      {
+       "value": "NOR gate"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "NOR is OR followed by NOT."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "A second circuit has an output Y that must be 1 when switch S is on AND either the door sensor D or the window sensor W is on. Write the logic expression for Y and state the two kinds of gate needed.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Y = S AND (D OR W).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "An OR gate for D and W.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "An AND gate combining S with the output of the OR gate.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Y = S AND (D OR W). An OR gate takes D and W; an AND gate takes S and the output of the OR gate."
+    }
+   }
+  ],
+  "explanation": "X = (A NOR B) OR (B AND C); it is 1 in 4 rows.",
+  "hints": [
+   "Label the output of each gate P and Q first.",
+   "Fill the table column by column."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "1"
+      },
+      {
+       "blankId": "r2",
+       "text": "1"
+      },
+      {
+       "blankId": "r3",
+       "text": "0"
+      },
+      {
+       "blankId": "r4",
+       "text": "1"
+      },
+      {
+       "blankId": "r5",
+       "text": "0"
+      },
+      {
+       "blankId": "r6",
+       "text": "0"
+      },
+      {
+       "blankId": "r7",
+       "text": "0"
+      },
+      {
+       "blankId": "r8",
+       "text": "1"
+      }
+     ]
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "4"
+    },
+    "(d)": {
+     "type": "SHORT_ANSWER",
+     "text": "NOR"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "0"
+       },
+       {
+        "blankId": "r2",
+        "text": "0"
+       },
+       {
+        "blankId": "r3",
+        "text": "1"
+       },
+       {
+        "blankId": "r4",
+        "text": "0"
+       },
+       {
+        "blankId": "r5",
+        "text": "1"
+       },
+       {
+        "blankId": "r6",
+        "text": "1"
+       },
+       {
+        "blankId": "r7",
+        "text": "1"
+       },
+       {
+        "blankId": "r8",
+        "text": "0"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w1a-theory.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.boolean-algebra",
+   "acs.logic.karnaugh-maps"
+  ],
+  "difficulty": 4,
+  "marks": 10,
+  "estimatedSeconds": 900,
+  "stem": "A logic circuit has inputs A, B and C. Its output is given by `X = (NOT A AND NOT B AND C) OR (NOT A AND B AND C) OR (A AND NOT B AND NOT C) OR (A AND B AND NOT C)`.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "FILL_IN_THE_BLANK",
+    "marks": 4,
+    "stem": "Complete the truth table for X.",
+    "payload": {
+     "template": "A = 0, B = 0, C = 0: X = {{blank:r1}}\n\nA = 0, B = 0, C = 1: X = {{blank:r2}}\n\nA = 0, B = 1, C = 0: X = {{blank:r3}}\n\nA = 0, B = 1, C = 1: X = {{blank:r4}}\n\nA = 1, B = 0, C = 0: X = {{blank:r5}}\n\nA = 1, B = 0, C = 1: X = {{blank:r6}}\n\nA = 1, B = 1, C = 0: X = {{blank:r7}}\n\nA = 1, B = 1, C = 1: X = {{blank:r8}}",
+     "blanks": [
+      {
+       "id": "r1",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r2",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r4",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r7",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "input": "select",
+       "choices": [
+        "0",
+        "1"
+       ]
+      }
+     ]
+    },
+    "answerSpec": {
+     "blanks": [
+      {
+       "id": "r1",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r2",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r3",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r4",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r5",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r6",
+       "accepted": [
+        "0"
+       ]
+      },
+      {
+       "id": "r7",
+       "accepted": [
+        "1"
+       ]
+      },
+      {
+       "id": "r8",
+       "accepted": [
+        "0"
+       ]
+      }
+     ]
+    },
+    "explanation": "Each term is 1 for exactly one row: 001, 011, 100 and 110."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Which expression is the simplified form of X?",
+    "options": [
+     {
+      "key": "A",
+      "content": "(NOT A AND C) OR (A AND NOT C)",
+      "correct": true,
+      "rationale": "Correct: it is 1 when A and C differ, whatever B is."
+     },
+     {
+      "key": "B",
+      "content": "(A AND C) OR (NOT A AND NOT C)",
+      "rationale": "This is 1 when A and C are the same."
+     },
+     {
+      "key": "C",
+      "content": "(NOT B AND C) OR (B AND NOT C)",
+      "rationale": "This depends on B and C, but X does not depend on B."
+     },
+     {
+      "key": "D",
+      "content": "A OR C",
+      "rationale": "This is also 1 when A and C are both 1."
+     }
+    ],
+    "explanation": "The simplified expression is (A AND NOT C) OR (NOT A AND C)."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe the groups that would be drawn on a Karnaugh map of X.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A group of two cells 001 and 011, where A = 0 and C = 1 and B changes (term NOT A AND C).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "A group of two cells 100 and 110, where A = 1 and C = 0 and B changes (term A AND NOT C).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: One group covers the cells 001 and 011, where A = 0 and C = 1 (B changes), giving NOT A AND C. The other covers 100 and 110, where A = 1 and C = 0, giving A AND NOT C."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show using Boolean algebra that the first two terms of X simplify to `NOT A AND C`. Name the laws.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Factorise: (NOT A AND C) AND (NOT B OR B) (distributive law).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "NOT B OR B = 1, so the result is NOT A AND C (complement and identity laws).",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: (NOT A AND NOT B AND C) OR (NOT A AND B AND C) = (NOT A AND C) AND (NOT B OR B) by the distributive law = (NOT A AND C) AND 1 by the complement law = NOT A AND C by the identity law."
+    }
+   }
+  ],
+  "explanation": "X = (A AND NOT C) OR (NOT A AND C), which is 1 when A and C are different.",
+  "hints": [
+   "The terms in B and NOT B pair up.",
+   "X depends on only two of the three inputs."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "FILL_IN_THE_BLANK",
+     "blanks": [
+      {
+       "blankId": "r1",
+       "text": "0"
+      },
+      {
+       "blankId": "r2",
+       "text": "1"
+      },
+      {
+       "blankId": "r3",
+       "text": "0"
+      },
+      {
+       "blankId": "r4",
+       "text": "1"
+      },
+      {
+       "blankId": "r5",
+       "text": "1"
+      },
+      {
+       "blankId": "r6",
+       "text": "0"
+      },
+      {
+       "blankId": "r7",
+       "text": "1"
+      },
+      {
+       "blankId": "r8",
+       "text": "0"
+      }
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "FILL_IN_THE_BLANK",
+      "blanks": [
+       {
+        "blankId": "r1",
+        "text": "1"
+       },
+       {
+        "blankId": "r2",
+        "text": "0"
+       },
+       {
+        "blankId": "r3",
+        "text": "1"
+       },
+       {
+        "blankId": "r4",
+        "text": "0"
+       },
+       {
+        "blankId": "r5",
+        "text": "0"
+       },
+       {
+        "blankId": "r6",
+        "text": "1"
+       },
+       {
+        "blankId": "r7",
+        "text": "0"
+       },
+       {
+        "blankId": "r8",
+        "text": "1"
+       }
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 3"
+ },
+ {
+  "key": "exam.w1a-theory.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.data.character-sets",
+   "acs.data.number-bases"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A clinic in Hwange stores a patient's name and a three-digit ward code in a computer.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "The name **CHIPO** is stored in 7-bit ASCII. Calculate the number of bits used.",
+    "payload": {
+     "unitHint": "bits"
+    },
+    "answerSpec": {
+     "value": 35,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bits",
+       "bit",
+       "b"
+      ]
+     }
+    },
+    "explanation": "5 characters × 7 bits = 35 bits.",
+    "workedSolution": "1. 5 characters × 7 bits = 35 bits."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "The ward code **906** is stored in Binary Coded Decimal using four bits for each digit. Write the BCD.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "1001 0000 0110"
+      },
+      {
+       "value": "100100000110"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "9 = 1001, 0 = 0000, 6 = 0110: 1001 0000 0110."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two ways in which Unicode differs from 7-bit ASCII.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Unicode can represent many more characters (many languages and symbols).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Unicode characters use more bits (for example 8 to 32 bits in UTF-8 and UTF-16) and have code points.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Unicode represents the characters of many languages and symbols, while 7-bit ASCII has only 128. Unicode uses more bits per character (up to 32 bits) than ASCII's 7."
+    }
+   }
+  ],
+  "explanation": "(a) 35 bits. (b) 1001 0000 0110. (c) Unicode has far more characters and uses more bits.",
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "35"
+    },
+    "(b)": {
+     "type": "SHORT_ANSWER",
+     "text": "1001 0000 0110"
+    }
+   }
+  },
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "paper": "ZIMSEC P1 / Cambridge P1"
+ },
+ {
+  "key": "exam.w1a-theory.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.media.graphics",
+   "acs.media.sound"
+  ],
+  "difficulty": 3,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A museum in Bulawayo digitises a picture and an oral history recording. The picture is a bitmap of 256 × 128 pixels with a colour depth of 4 bits. The recording is mono and lasts 10 seconds, sampled at 4000 Hz with 8 bits per sample.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the size of the bitmap in bytes (ignore the header).",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 16384,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "256 × 128 × 4 = 131072 bits; ÷ 8 = 16384 bytes.",
+    "workedSolution": "1. 256 × 128 × 4 = 131072 bits; ÷ 8 = 16384 bytes."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the size of the sound file in bytes.",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 40000,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "4000 × 8 × 10 = 320000 bits; ÷ 8 = 40000 bytes.",
+    "workedSolution": "1. 4000 × 8 × 10 = 320000 bits; ÷ 8 = 40000 bytes."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The sampling rate of the recording is doubled. What happens to the file size?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It is halved",
+      "rationale": "More samples mean a larger file."
+     },
+     {
+      "key": "B",
+      "content": "It stays the same",
+      "rationale": "The number of samples changes."
+     },
+     {
+      "key": "C",
+      "content": "It is doubled",
+      "correct": true,
+      "rationale": "Correct: the size is proportional to the sampling rate."
+     },
+     {
+      "key": "D",
+      "content": "It is quadrupled",
+      "rationale": "Only the rate has changed, so the size doubles."
+     }
+    ],
+    "explanation": "File size is proportional to the sampling rate."
+   }
+  ],
+  "explanation": "Bitmap: 16384 bytes. Sound: 40000 bytes. Doubling the rate doubles the sound file.",
+  "hints": [
+   "File size in bits = width × height × colour depth.",
+   "Sound size in bits = rate × resolution × time."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "16384"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "40000"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false,
+  "paper": "Cambridge Paper 1"
+ },
+ {
+  "key": "exam.w1a-theory.q07",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.media.compression"
+  ],
+  "difficulty": 2,
+  "marks": 5,
+  "estimatedSeconds": 420,
+  "stem": "A map file in Mutare stores a row of pixels as the text below, where M is the colour of the map background and N is a road.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "stem": "Write the run-length encoding of the row **MMMMMMMNNNMMMMMM**, as the count followed by the character for each run.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "7M3N6M"
+      },
+      {
+       "value": "7M 3N 6M"
+      },
+      {
+       "value": "7M,3N,6M"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "The runs are MMMMMMM, NNN, MMMMMM: 7M3N6M."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Each count and each character uses one byte. How many bytes does the encoded row use?",
+    "payload": {
+     "unitHint": "bytes"
+    },
+    "answerSpec": {
+     "value": 6,
+     "units": {
+      "required": false,
+      "accepted": [
+       "bytes",
+       "byte",
+       "B"
+      ]
+     }
+    },
+    "explanation": "3 pairs × 2 bytes = 6 bytes.",
+    "workedSolution": "1. 3 pairs × 2 bytes = 6 bytes."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State whether run-length encoding is lossless or lossy, and give a reason.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Lossless.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The original row can be restored exactly by repeating each character by its count.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: It is lossless, because the original data can be rebuilt exactly from the counts and characters."
+    }
+   }
+  ],
+  "explanation": "7M3N6M uses 6 bytes; the method is lossless.",
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "7M3N6M"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "6"
+    }
+   }
+  },
+  "skill": "UNDERSTANDING",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "paper": "Cambridge Paper 1"
+ }
+]

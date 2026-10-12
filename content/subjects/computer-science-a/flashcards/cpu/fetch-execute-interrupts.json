@@ -1,0 +1,88 @@
+[
+ {
+  "key": "cpu.fetch-execute-interrupts.c01",
+  "cardType": "DEFINITION",
+  "front": "Fetch-execute cycle",
+  "back": "The repeated sequence of fetching an instruction, decoding it and executing it.",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ]
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.c02",
+  "cardType": "FORMULA",
+  "front": "Fetch in register transfer notation",
+  "back": "MAR ← [PC]; PC ← [PC] + 1; MDR ← [[MAR]]; CIR ← [MDR].",
+  "notes": "Square brackets mean 'contents of'.",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ]
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.c03",
+  "cardType": "CONCEPT",
+  "front": "Decode and execute",
+  "back": "The CU decodes the opcode and operand in the CIR; the instruction is then carried out by the ALU or the CU.",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ]
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.c04",
+  "cardType": "DEFINITION",
+  "front": "Interrupt",
+  "back": "A signal asking the processor to pause the current program and run a routine to deal with an event.",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ]
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.c05",
+  "cardType": "FACT",
+  "front": "Causes of interrupts",
+  "back": "Hardware faults, I/O events, software errors and traps, timers and user action.",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ]
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.c06",
+  "cardType": "CONCEPT",
+  "front": "Handling an interrupt",
+  "back": "Finish the instruction, save the registers, load the PC with the ISR address, run the ISR, restore the registers.",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ]
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.c07",
+  "cardType": "CONCEPT",
+  "front": "When interrupts are detected",
+  "back": "At the end of each fetch-execute cycle.",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ]
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.c08",
+  "cardType": "CONCEPT",
+  "front": "Interrupt priority",
+  "back": "A higher-priority interrupt is handled first; lower priority interrupts wait.",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ]
+ },
+ {
+  "key": "cpu.fetch-execute-interrupts.c09",
+  "cardType": "FACT",
+  "front": "ZIMSEC interrupt types",
+  "back": "Internal (from the running program), external (from hardware) and software (requested by a program).",
+  "notes": "ZIMSEC wording.",
+  "concepts": [
+   "acs.cpu.fetch-execute-interrupts"
+  ],
+  "applies": [
+   "zimsec"
+  ]
+ }
+]

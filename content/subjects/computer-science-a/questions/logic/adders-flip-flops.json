@@ -1,0 +1,1526 @@
+[
+ {
+  "key": "logic.adders-flip-flops.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which logic gate produces the sum bit of a half adder?",
+  "options": [
+   {
+    "key": "A",
+    "content": "XOR",
+    "correct": true,
+    "rationale": "Correct: the sum of two bits is 1 only when exactly one of them is 1."
+   },
+   {
+    "key": "B",
+    "content": "AND",
+    "rationale": "AND produces the carry bit."
+   },
+   {
+    "key": "C",
+    "content": "OR",
+    "rationale": "OR would give a sum of 1 for 1 + 1, which should be 0 with a carry."
+   },
+   {
+    "key": "D",
+    "content": "NOR",
+    "rationale": "NOR is 1 only when both inputs are 0."
+   }
+  ],
+  "explanation": "A half adder has an XOR gate for the sum and an AND gate for the carry.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.adders-flip-flops.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which logic gate produces the carry bit of a half adder?",
+  "options": [
+   {
+    "key": "A",
+    "content": "XOR",
+    "rationale": "XOR produces the sum bit."
+   },
+   {
+    "key": "B",
+    "content": "AND",
+    "correct": true,
+    "rationale": "Correct: a carry is generated only when both bits are 1."
+   },
+   {
+    "key": "C",
+    "content": "NAND",
+    "rationale": "NAND is 0 when both inputs are 1, the opposite of the carry."
+   },
+   {
+    "key": "D",
+    "content": "OR",
+    "rationale": "OR would give a carry for 0 + 1."
+   }
+  ],
+  "explanation": "1 + 1 = 10 in binary: the carry bit is 1 only when both inputs are 1, which is AND.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.adders-flip-flops.q03",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Complete the truth table for the **sum** output S of a half adder with inputs A and B.",
+  "payload": {
+   "template": "A = 0, B = 0: S = {{blank:r1}}\n\nA = 0, B = 1: S = {{blank:r2}}\n\nA = 1, B = 0: S = {{blank:r3}}\n\nA = 1, B = 1: S = {{blank:r4}}",
+   "blanks": [
+    {
+     "id": "r1",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r2",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r4",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "r1",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r2",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r4",
+     "accepted": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "explanation": "The sum is 1 when exactly one input is 1: S = A XOR B.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "r1",
+     "text": "0"
+    },
+    {
+     "blankId": "r2",
+     "text": "1"
+    },
+    {
+     "blankId": "r3",
+     "text": "1"
+    },
+    {
+     "blankId": "r4",
+     "text": "0"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "r1",
+      "text": "1"
+     },
+     {
+      "blankId": "r2",
+      "text": "0"
+     },
+     {
+      "blankId": "r3",
+      "text": "0"
+     },
+     {
+      "blankId": "r4",
+      "text": "1"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.adders-flip-flops.q04",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A full adder has inputs A, B and Cin. Complete the truth table for the carry out, Cout.",
+  "payload": {
+   "template": "A = 0, B = 0, Cin = 0: Cout = {{blank:r1}}\n\nA = 0, B = 0, Cin = 1: Cout = {{blank:r2}}\n\nA = 0, B = 1, Cin = 0: Cout = {{blank:r3}}\n\nA = 0, B = 1, Cin = 1: Cout = {{blank:r4}}\n\nA = 1, B = 0, Cin = 0: Cout = {{blank:r5}}\n\nA = 1, B = 0, Cin = 1: Cout = {{blank:r6}}\n\nA = 1, B = 1, Cin = 0: Cout = {{blank:r7}}\n\nA = 1, B = 1, Cin = 1: Cout = {{blank:r8}}",
+   "blanks": [
+    {
+     "id": "r1",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r2",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r3",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r4",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r5",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r6",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r7",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "r8",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "r1",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r2",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r3",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r4",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r5",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "r6",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r7",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "r8",
+     "accepted": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "explanation": "Cout is the carry of A + B + Cin: it is 1 when two or three of the inputs are 1.",
+  "hints": [
+   "Cout is 1 when at least two of the three inputs are 1.",
+   "Check each row by adding the three bits."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "r1",
+     "text": "0"
+    },
+    {
+     "blankId": "r2",
+     "text": "0"
+    },
+    {
+     "blankId": "r3",
+     "text": "0"
+    },
+    {
+     "blankId": "r4",
+     "text": "1"
+    },
+    {
+     "blankId": "r5",
+     "text": "0"
+    },
+    {
+     "blankId": "r6",
+     "text": "1"
+    },
+    {
+     "blankId": "r7",
+     "text": "1"
+    },
+    {
+     "blankId": "r8",
+     "text": "1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "r1",
+      "text": "1"
+     },
+     {
+      "blankId": "r2",
+      "text": "1"
+     },
+     {
+      "blankId": "r3",
+      "text": "1"
+     },
+     {
+      "blankId": "r4",
+      "text": "0"
+     },
+     {
+      "blankId": "r5",
+      "text": "1"
+     },
+     {
+      "blankId": "r6",
+      "text": "0"
+     },
+     {
+      "blankId": "r7",
+      "text": "0"
+     },
+     {
+      "blankId": "r8",
+      "text": "0"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.adders-flip-flops.q05",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A full adder has inputs A = 1, B = 1 and carry in = 1. What is the sum output S?",
+  "answerSpec": {
+   "value": 1
+  },
+  "explanation": "1 + 1 + 1 = 11 in binary. The sum bit is 1.",
+  "workedSolution": "1. 1 + 1 + 1 = 3, which is 11 in binary.\n2. The right-hand digit is the sum bit: S = 1, and the carry out is 1.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "1"
+  },
+  "skill": "APPLICATION",
+  "dailyEligible": true,
+  "calculator": false
+ },
+ {
+  "key": "logic.adders-flip-flops.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A full adder can be built from which components?",
+  "options": [
+   {
+    "key": "A",
+    "content": "One half adder and a NOT gate",
+    "rationale": "A half adder with a NOT gate cannot add three inputs."
+   },
+   {
+    "key": "B",
+    "content": "Two half adders and an OR gate",
+    "correct": true,
+    "rationale": "Correct: the OR gate combines the carries from the two half adders."
+   },
+   {
+    "key": "C",
+    "content": "Two AND gates and one NOR gate",
+    "rationale": "This does not produce a sum bit."
+   },
+   {
+    "key": "D",
+    "content": "Two flip-flops and an AND gate",
+    "rationale": "Flip-flops store bits; they are not used to build an adder."
+   }
+  ],
+  "explanation": "The first half adder adds A and B, the second adds the result to Cin, and an OR gate combines the two carry outputs.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "logic.adders-flip-flops.q07",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "A 4-bit ripple-carry adder adds **1011** and **0110**. The least significant stage has carry in 0. Give the 4-bit sum and the carry out of the last stage.",
+  "payload": {
+   "template": "Sum: {{blank:sum}}\n\nCarry out of the last stage: {{blank:c}}",
+   "blanks": [
+    {
+     "id": "sum"
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "sum",
+     "accepted": [
+      "0001"
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "explanation": "1011 = 11 and 0110 = 6; the total 17 = 10001. The 4-bit sum is 0001 with carry out 1.",
+  "hints": [
+   "Add from the right and carry the bit to the next stage.",
+   "A carry out of the last stage means the result needs a fifth bit."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "sum",
+     "text": "0001"
+    },
+    {
+     "blankId": "c",
+     "text": "1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "sum",
+      "text": "xyz"
+     },
+     {
+      "blankId": "c",
+      "text": "0"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "logic.adders-flip-flops.q08",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "An SR flip-flop made from NOR gates starts with Q = 0. The pairs (S, R) are applied in order: (1, 0), (0, 0), (0, 1), (0, 0), (1, 0), (0, 0). Give the value of Q after the 2nd, 4th and 6th pairs.",
+  "payload": {
+   "template": "After the 2nd pair Q = {{blank:q2}}\n\nAfter the 4th pair Q = {{blank:q4}}\n\nAfter the 6th pair Q = {{blank:q6}}",
+   "blanks": [
+    {
+     "id": "q2",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "q4",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    },
+    {
+     "id": "q6",
+     "input": "select",
+     "choices": [
+      "0",
+      "1"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "q2",
+     "accepted": [
+      "1"
+     ]
+    },
+    {
+     "id": "q4",
+     "accepted": [
+      "0"
+     ]
+    },
+    {
+     "id": "q6",
+     "accepted": [
+      "1"
+     ]
+    }
+   ]
+  },
+  "explanation": "Q after each pair is 1, 1, 0, 0, 1, 1. The pair (0, 0) keeps the previous value.",
+  "hints": [
+   "S = 1 sets Q to 1, R = 1 resets it to 0, and (0, 0) holds the value."
+  ],
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "q2",
+     "text": "1"
+    },
+    {
+     "blankId": "q4",
+     "text": "0"
+    },
+    {
+     "blankId": "q6",
+     "text": "1"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "q2",
+      "text": "0"
+     },
+     {
+      "blankId": "q4",
+      "text": "1"
+     },
+     {
+      "blankId": "q6",
+      "text": "0"
+     }
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "logic.adders-flip-flops.q09",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Why is the input combination S = 1, R = 1 not allowed on an SR flip-flop built from NOR gates?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It makes the flip-flop toggle at each clock pulse of the circuit",
+    "rationale": "Toggling is the behaviour of a JK flip-flop with J = K = 1."
+   },
+   {
+    "key": "B",
+    "content": "It permanently erases the stored bit from the memory chip",
+    "rationale": "The bit is not erased permanently; it is just undefined."
+   },
+   {
+    "key": "C",
+    "content": "Both outputs go to 0, and the state afterwards is unpredictable",
+    "correct": true,
+    "rationale": "Correct: the outputs are no longer opposites, and the result depends on which gate is faster."
+   },
+   {
+    "key": "D",
+    "content": "It sets Q to 1 and then resets it to 0 in turn",
+    "rationale": "The outputs are both 0 while the inputs are held."
+   }
+  ],
+  "explanation": "With S = R = 1, both NOR gates output 0, so Q and NOT Q are the same. When the inputs go back to 0 the circuit settles into a state that depends on tiny timing differences.",
+  "hints": [
+   "Work out the output of each NOR gate when one of its inputs is 1."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "logic.adders-flip-flops.q10",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a JK flip-flop, the output changes to the opposite value when J = 1 and K = 1.",
+  "answerSpec": {
+   "correct": true,
+   "feedbackTrue": "Correct: J = K = 1 makes the JK flip-flop toggle.",
+   "feedbackFalse": "J = K = 1 is the toggle input for a JK flip-flop; it is not an invalid input as in the SR flip-flop."
+  },
+  "explanation": "The JK flip-flop uses the SR's invalid combination to toggle.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.adders-flip-flops.q11",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each pair of JK flip-flop inputs to its effect on Q.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "J = 0, K = 0"
+    },
+    {
+     "id": "L2",
+     "content": "J = 1, K = 0"
+    },
+    {
+     "id": "L3",
+     "content": "J = 0, K = 1"
+    },
+    {
+     "id": "L4",
+     "content": "J = 1, K = 1"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Q becomes 0 (reset)"
+    },
+    {
+     "id": "R4",
+     "content": "Q changes to the opposite value (toggle)"
+    },
+    {
+     "id": "R1",
+     "content": "Q is unchanged (hold)"
+    },
+    {
+     "id": "R2",
+     "content": "Q becomes 1 (set)"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The JK flip-flop holds, sets, resets or toggles depending on its two inputs.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "logic.adders-flip-flops.q12",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the main use of a flip-flop in a computer?",
+  "options": [
+   {
+    "key": "A",
+    "content": "To add two binary numbers",
+    "rationale": "Adding is done by adder circuits."
+   },
+   {
+    "key": "B",
+    "content": "To convert analogue signals to digital",
+    "rationale": "That is done by an analogue-to-digital converter."
+   },
+   {
+    "key": "C",
+    "content": "To invert a signal",
+    "rationale": "A NOT gate inverts a signal."
+   },
+   {
+    "key": "D",
+    "content": "To store one bit",
+    "correct": true,
+    "rationale": "Correct: registers and static memory are made of flip-flops."
+   }
+  ],
+  "explanation": "A flip-flop holds its output until it is changed, so it can store one bit.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.adders-flip-flops.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A 12-bit ripple-carry adder uses a half adder for the least significant stage (no carry in) and full adders for all the other stages. How many full adders are used?",
+  "answerSpec": {
+   "value": 11
+  },
+  "explanation": "12 stages minus the one half adder leaves 11 full adders.",
+  "workedSolution": "1. There are 12 stages.\n2. One uses a half adder, so 12 − 1 = 11 use full adders.",
+  "hints": [
+   "Count the stages, then take away the stage that uses a half adder."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "11"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "logic.adders-flip-flops.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A full adder is built from two half adders and one OR gate. Each half adder has one XOR gate and one AND gate. How many gates are in a 4-stage ripple-carry adder that uses a full adder for every stage?",
+  "answerSpec": {
+   "value": 20
+  },
+  "explanation": "One full adder has 2 × 2 + 1 = 5 gates, so four stages have 20 gates.",
+  "workedSolution": "1. One half adder = 2 gates, so two half adders = 4 gates.\n2. Add the OR gate: 5 gates in one full adder.\n3. Four stages: 4 × 5 = 20 gates.",
+  "hints": [
+   "First count the gates in one full adder."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "20"
+  },
+  "skill": "APPLICATION",
+  "calculator": false
+ },
+ {
+  "key": "logic.adders-flip-flops.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe how a full adder is built from half adders and other gates.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The first half adder adds inputs A and B, giving a sum and a carry.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The second half adder adds the sum of the first to the carry in (Cin), giving the final sum S and a second carry.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "An OR gate combines the two carry outputs to give the carry out (Cout).",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The first half adder adds A and B. Its sum goes into a second half adder together with Cin, and the sum output of the second half adder is S. The carry outputs of both half adders go into an OR gate, whose output is Cout."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Two half adders and an OR gate make a full adder.",
+  "hints": [
+   "Name the inputs of the second half adder and say where the OR gate gets its inputs."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.adders-flip-flops.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain how an SR flip-flop stores a bit when both S and R are 0.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The two gates have their outputs connected back to the inputs of each other (feedback).",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "With S = R = 0 each gate passes on the output of the other, so the outputs stay as they were.",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "So the value of Q set earlier is kept (stored) until S or R is made 1.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The output of each NOR gate is fed back to an input of the other gate. When S and R are both 0 the feedback keeps both outputs in the same state, so Q holds the last value that was set or reset until another input changes."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Feedback keeps the circuit in its current state.",
+  "hints": [
+   "The key idea is feedback between the two gates."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.adders-flip-flops.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "State one disadvantage of a ripple-carry adder and explain why it occurs.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "It is slow for numbers with many bits.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Each stage must wait for the carry out of the previous stage before it can produce its output.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: It is slow because each full adder has to wait for the carry from the stage before it, so the delay grows with the number of bits."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The carry has to ripple through all the stages.",
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "logic.adders-flip-flops.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Compare an SR flip-flop with a JK flip-flop.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Both can be set (output 1), reset (output 0) or hold their value.",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "The SR flip-flop has an invalid input (S = R = 1).",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "In the JK flip-flop the input J = K = 1 is valid and toggles the output.",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Both flip-flops can set, reset and hold a bit. An SR flip-flop must never be given S = 1 and R = 1 because the state is unpredictable. A JK flip-flop uses J = K = 1 to toggle its output, so it has no invalid state."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "The JK flip-flop removes the problem of the SR flip-flop.",
+  "hints": [
+   "Think about what happens when both inputs are 1."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "logic.adders-flip-flops.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 6,
+  "estimatedSeconds": 480,
+  "stem": "A full adder is made from two half adders and an OR gate. The first half adder has inputs A and B and outputs S1 (sum) and C1 (carry). The second half adder has inputs S1 and the carry in Cin and outputs S (sum) and C2 (carry). The OR gate has inputs C1 and C2 and its output is Cout.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "For A = 0, B = 1 and Cin = 1, what is S1?",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "S1 = 0 XOR 1 = 1.",
+    "workedSolution": "1. S1 = 0 XOR 1 = 1."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "For the same inputs, what is C1?",
+    "answerSpec": {
+     "value": 0
+    },
+    "explanation": "C1 = 0 AND 1 = 0.",
+    "workedSolution": "1. C1 = 0 AND 1 = 0."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "What is the final sum S?",
+    "answerSpec": {
+     "value": 0
+    },
+    "explanation": "S = S1 XOR Cin = 1 XOR 1 = 0.",
+    "workedSolution": "1. S = S1 XOR Cin = 1 XOR 1 = 0."
+   },
+   {
+    "label": "(d)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "What is Cout?",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "C2 = S1 AND Cin = 1; Cout = C1 OR C2 = 1.",
+    "workedSolution": "1. C2 = S1 AND Cin = 1; Cout = C1 OR C2 = 1."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Show that your answers to (c) and (d) agree with the sum of the three input bits.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "0 + 1 + 1 = 2, which is 10 in binary.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The carry is 1 and the sum bit is 0, matching Cout and S.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: 0 + 1 + 1 = 2 = 10 in binary, so the sum bit is 0 and the carry is 1, which agrees with S = 0 and Cout = 1."
+    }
+   }
+  ],
+  "explanation": "S1 = 1, C1 = 0, S = 0, C2 = 1, so Cout = 1: 0 + 1 + 1 = 10 in binary.",
+  "hints": [
+   "XOR gives the sum of two bits; AND gives the carry.",
+   "Check by adding the three bits in denary."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "1"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "0"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "0"
+    },
+    "(d)": {
+     "type": "CALCULATION",
+     "value": "1"
+    }
+   }
+  },
+  "skill": "APPLICATION",
+  "examStyle": true
+ },
+ {
+  "key": "logic.adders-flip-flops.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 600,
+  "stem": "A 4-bit ripple-carry adder adds 0111 and 1001. Stage 0 handles the right-hand bits and has carry in 0.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Give the sum bit produced by each stage.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "CALCULATION",
+      "marks": 1,
+      "stem": "Stage 0",
+      "answerSpec": {
+       "value": 0
+      },
+      "explanation": "Stage 0: 1 + 1 + 0 gives sum bit 0 and carry out 1.",
+      "workedSolution": "1. Stage 0: 1 + 1 + 0 gives sum bit 0 and carry out 1."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 1,
+      "stem": "Stage 1",
+      "answerSpec": {
+       "value": 0
+      },
+      "explanation": "Stage 1: 1 + 0 + 1 gives sum bit 0 and carry out 1.",
+      "workedSolution": "1. Stage 1: 1 + 0 + 1 gives sum bit 0 and carry out 1."
+     },
+     {
+      "label": "(iii)",
+      "type": "CALCULATION",
+      "marks": 1,
+      "stem": "Stage 2",
+      "answerSpec": {
+       "value": 0
+      },
+      "explanation": "Stage 2: 1 + 0 + 1 gives sum bit 0 and carry out 1.",
+      "workedSolution": "1. Stage 2: 1 + 0 + 1 gives sum bit 0 and carry out 1."
+     },
+     {
+      "label": "(iv)",
+      "type": "CALCULATION",
+      "marks": 1,
+      "stem": "Stage 3",
+      "answerSpec": {
+       "value": 0
+      },
+      "explanation": "Stage 3: 0 + 1 + 1 gives sum bit 0 and carry out 1.",
+      "workedSolution": "1. Stage 3: 0 + 1 + 1 gives sum bit 0 and carry out 1."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "What is the carry out of the last stage (stage 3)?",
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "The carry out of stage 3 is 1.",
+    "workedSolution": "1. The carry out of stage 3 is 1."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Write the 4-bit sum.",
+    "payload": {
+     "maxLength": 64
+    },
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "0000"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "remove_whitespace"
+     ]
+    },
+    "explanation": "Reading stage 3 down to stage 0 gives 0000."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Explain what the carry out of the last stage shows about the result of this addition in a 4-bit register.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The true sum needs five bits, so the 4-bit result is too small to hold it.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "This is an overflow (for unsigned numbers); the stored sum is wrong.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The carry out means the total is 16 or more and does not fit in four bits, so the 4-bit sum is incorrect: an overflow has occurred."
+    }
+   }
+  ],
+  "explanation": "0111 + 1001 = 16. The adder gives 0000 with carry out 1.",
+  "hints": [
+   "Use the carry out of each stage as the carry in of the next.",
+   "Convert to denary to check."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "CALCULATION",
+     "value": "0"
+    },
+    "(a)(ii)": {
+     "type": "CALCULATION",
+     "value": "0"
+    },
+    "(a)(iii)": {
+     "type": "CALCULATION",
+     "value": "0"
+    },
+    "(a)(iv)": {
+     "type": "CALCULATION",
+     "value": "0"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "1"
+    },
+    "(c)": {
+     "type": "SHORT_ANSWER",
+     "text": "0000"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(c)": {
+      "type": "SHORT_ANSWER",
+      "text": "0001"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "calculator": false
+ },
+ {
+  "key": "logic.adders-flip-flops.q21",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In a ripple-carry adder, what is the carry in to the least significant stage?",
+  "options": [
+   {
+    "key": "A",
+    "content": "1",
+    "rationale": "A carry in of 1 would add an extra 1 to the sum."
+   },
+   {
+    "key": "B",
+    "content": "The carry out of the last stage",
+    "rationale": "The carry out of the last stage is the overflow or the extra bit; it is not fed back."
+   },
+   {
+    "key": "C",
+    "content": "It is not defined",
+    "rationale": "The first stage is given a carry in of 0 (or uses a half adder)."
+   },
+   {
+    "key": "D",
+    "content": "0",
+    "correct": true,
+    "rationale": "Correct: nothing is carried into the first column of an addition."
+   }
+  ],
+  "explanation": "The first stage adds only the two least significant bits, so its carry in is 0.",
+  "hints": [
+   "Think of adding the right-hand column of two binary numbers."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "logic.adders-flip-flops.q22",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.logic.adders-flip-flops"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How many flip-flops are needed to hold a 16-bit value in a register?",
+  "options": [
+   {
+    "key": "A",
+    "content": "8",
+    "rationale": "Eight flip-flops would hold only one byte."
+   },
+   {
+    "key": "B",
+    "content": "2",
+    "rationale": "Two flip-flops store only two bits."
+   },
+   {
+    "key": "C",
+    "content": "16",
+    "correct": true,
+    "rationale": "Correct: one flip-flop stores one bit."
+   },
+   {
+    "key": "D",
+    "content": "32",
+    "rationale": "That would hold a 32-bit value."
+   }
+  ],
+  "explanation": "Each flip-flop stores one bit, so a 16-bit register needs 16 flip-flops.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ }
+]

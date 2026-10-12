@@ -1,0 +1,1292 @@
+[
+ {
+  "key": "os.process-scheduling.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A running process asks to read a file from the disk and cannot continue until the data arrives. Into which state does the OS move it?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Blocked",
+    "correct": true,
+    "rationale": "Correct: it is waiting for an event."
+   },
+   {
+    "key": "B",
+    "content": "Ready",
+    "rationale": "Ready processes could run if given the processor."
+   },
+   {
+    "key": "C",
+    "content": "Running",
+    "rationale": "It cannot use the processor while it waits."
+   },
+   {
+    "key": "D",
+    "content": "Terminated",
+    "rationale": "The process has not finished."
+   }
+  ],
+  "explanation": "Waiting for input or output puts a process into the blocked state.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In round robin scheduling, what happens when a process has used up its time slice but has not finished?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It goes to the back of the ready queue",
+    "correct": true,
+    "rationale": "Correct: the next process then runs."
+   },
+   {
+    "key": "B",
+    "content": "It is deleted from memory",
+    "rationale": "It still has work to do."
+   },
+   {
+    "key": "C",
+    "content": "It goes to the blocked state until the user types",
+    "rationale": "It is not waiting for an event."
+   },
+   {
+    "key": "D",
+    "content": "It continues until it finishes",
+    "rationale": "That would be non-pre-emptive."
+   }
+  ],
+  "explanation": "The process moves from running to ready, at the back of the queue.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which statement describes a pre-emptive scheduling routine?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The OS may take the processor from a process before it has finished",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "B",
+    "content": "Every process runs to the end before the next one is allowed to start",
+    "rationale": "That is non-pre-emptive."
+   },
+   {
+    "key": "C",
+    "content": "Only one process can ever be in the ready state",
+    "rationale": "Many processes can be ready."
+   },
+   {
+    "key": "D",
+    "content": "The processor is shared only when a process blocks",
+    "rationale": "That is also non-pre-emptive."
+   }
+  ],
+  "explanation": "Pre-emption means taking the processor away, for example at the end of a time slice.",
+  "hints": [
+   "Think about what the word pre-empt means."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is a weakness of shortest job first scheduling?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It cannot be used when there is more than one process in the system",
+    "rationale": "It is designed for several processes."
+   },
+   {
+    "key": "B",
+    "content": "A long process may wait if shorter ones keep arriving",
+    "correct": true,
+    "rationale": "Correct."
+   },
+   {
+    "key": "C",
+    "content": "It always has the highest mean waiting time of all four routines",
+    "rationale": "It usually gives a low mean waiting time."
+   },
+   {
+    "key": "D",
+    "content": "It needs every process to have exactly the same burst time",
+    "rationale": "It is the differences in burst time that it uses."
+   }
+  ],
+  "explanation": "Long jobs can be starved; SJF also needs the burst times to be known.",
+  "hints": [
+   "What happens to a long job if shorter ones keep arriving?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A process arrives at time 3, has a burst time of 4 and completes at time 12. What is its waiting time?",
+  "options": [
+   {
+    "key": "A",
+    "content": "9",
+    "rationale": "That is the turnaround time."
+   },
+   {
+    "key": "B",
+    "content": "8",
+    "rationale": "That is the completion time minus the burst time, forgetting the arrival."
+   },
+   {
+    "key": "C",
+    "content": "5",
+    "correct": true,
+    "rationale": "Correct: turnaround = 12 - 3 = 9, and waiting = 9 - 4."
+   },
+   {
+    "key": "D",
+    "content": "4",
+    "rationale": "That is the burst time."
+   }
+  ],
+  "explanation": "Waiting time = turnaround - burst = (12 - 3) - 4 = 5.",
+  "hints": [
+   "Turnaround time is completion minus arrival."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "os.process-scheduling.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What does the kernel do when a timer interrupt shows that the time slice of the running process has ended?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It terminates the running process",
+    "rationale": "The process is only moved back to ready."
+   },
+   {
+    "key": "B",
+    "content": "It sends the process to secondary storage permanently",
+    "rationale": "A time slice end does not do that."
+   },
+   {
+    "key": "C",
+    "content": "It saves the process's registers and starts the scheduler",
+    "correct": true,
+    "rationale": "Correct: this is a context switch."
+   },
+   {
+    "key": "D",
+    "content": "It ignores the interrupt until the process ends",
+    "rationale": "A timer interrupt is acted on at once."
+   }
+  ],
+  "explanation": "The kernel acts as the interrupt handler, saving the state and calling the scheduler.",
+  "hints": [
+   "The registers must be kept so that the process can resume."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which is a reason for using multi-tasking?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Each process is given a separate processor of its own to use",
+    "rationale": "A single processor is shared."
+   },
+   {
+    "key": "B",
+    "content": "Processes no longer need any main memory while they run",
+    "rationale": "Each process still needs memory."
+   },
+   {
+    "key": "C",
+    "content": "Programs run faster than the processor is able to execute them",
+    "rationale": "The processor speed is unchanged."
+   },
+   {
+    "key": "D",
+    "content": "Another process can use the processor while one waits for I/O",
+    "correct": true,
+    "rationale": "Correct."
+   }
+  ],
+  "explanation": "Sharing the processor stops it sitting idle while a process waits.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A process in the blocked state can move directly to the running state when the event it was waiting for occurs.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. It moves to the ready state and must wait to be chosen by the scheduler.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q09",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Shortest remaining time scheduling is the pre-emptive version of shortest job first.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. SRT can interrupt the running process when a process with a shorter remaining time arrives.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q10",
+  "type": "MATCHING",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each scheduling routine to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "First come first served"
+    },
+    {
+     "id": "L2",
+     "content": "Shortest job first"
+    },
+    {
+     "id": "L3",
+     "content": "Shortest remaining time"
+    },
+    {
+     "id": "L4",
+     "content": "Round robin"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "A newly arrived process with less time left takes the processor"
+    },
+    {
+     "id": "R4",
+     "content": "Each process runs for a fixed time slice in turn"
+    },
+    {
+     "id": "R1",
+     "content": "Processes run in the order in which they arrive"
+    },
+    {
+     "id": "R2",
+     "content": "The ready process with the shortest burst runs next, without pre-emption"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "The four routines differ in how the next process is chosen and whether it can be pre-empted.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q11",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Complete the statements about the process states.",
+  "payload": {
+   "template": "A process that is using the processor is {{blank:a}}. A process that can run but is waiting for the processor is {{blank:b}}. A process that is waiting for an input or output operation is {{blank:c}}.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "running",
+      "ready",
+      "blocked",
+      "stopped"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "ready",
+      "running",
+      "blocked",
+      "stopped"
+     ]
+    },
+    {
+     "id": "c",
+     "input": "select",
+     "choices": [
+      "blocked",
+      "ready",
+      "running",
+      "stopped"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "running"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "ready"
+     ]
+    },
+    {
+     "id": "c",
+     "accepted": [
+      "blocked"
+     ]
+    }
+   ]
+  },
+  "explanation": "Running, ready and blocked.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "running"
+    },
+    {
+     "blankId": "b",
+     "text": "ready"
+    },
+    {
+     "blankId": "c",
+     "text": "blocked"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "ready"
+     },
+     {
+      "blankId": "b",
+      "text": "running"
+     },
+     {
+      "blankId": "c",
+      "text": "ready"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q12",
+  "type": "CALCULATION",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Four processes are scheduled by first come first served:\n\n| Process | Arrival time | Burst time |\n|:-:|:-:|:-:|\n| P1 | 0 | 5 |\n| P2 | 1 | 3 |\n| P3 | 3 | 2 |\n| P4 | 4 | 4 |\n\nCalculate the mean waiting time.",
+  "answerSpec": {
+   "value": 3.75,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   }
+  },
+  "explanation": "Mean waiting time = 15 ÷ 4 = 3.75.",
+  "workedSolution": "1. Order: P1 (0-5), P2 (5-8), P3 (8-10), P4 (10-14).\n2. Waiting times: P1 0, P2 4, P3 5, P4 6.\n3. Mean = (0 + 4 + 5 + 6) ÷ 4 = 3.75.",
+  "hints": [
+   "Run the processes in order of arrival and use waiting = completion - arrival - burst."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "3.75"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "7.25"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "os.process-scheduling.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Using the processes in the previous question and shortest job first (non-pre-emptive), at what time does P3 complete?",
+  "answerSpec": {
+   "value": 7
+  },
+  "explanation": "P3 is chosen first at time 5 and completes at 7.",
+  "workedSolution": "1. P1 runs 0-5 (the only process until time 1; non-pre-emptive).\n2. At time 5, P2 (3), P3 (2) and P4 (4) are ready; P3 has the shortest burst.\n3. P3 runs 5-7 and completes at 7.",
+  "hints": [
+   "At time 5 the ready processes are P2, P3 and P4. Which has the shortest burst?"
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "7"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "10"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "os.process-scheduling.q14",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The same processes are scheduled by round robin with a time slice of 2. A process that arrives during a slice joins the ready queue before the process that has just used its slice. What is the turnaround time of P2?",
+  "answerSpec": {
+   "value": 10
+  },
+  "explanation": "P2 completes at 11 and arrived at 1: 10.",
+  "workedSolution": "1. P1 0-2, P2 2-4, P1 4-6, P3 6-8, P4 8-10, P2 10-11, P1 11-12, P4 12-14.\n2. P2 completes at 11.\n3. Turnaround = 11 - 1 = 10.",
+  "hints": [
+   "Build the queue carefully at each time: new arrivals join before the process that has just been pre-empted."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "10"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "11"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "7"
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "os.process-scheduling.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "With shortest remaining time scheduling the processes above run in this order: P1, P2, P3, P1, P4. How many times does the processor switch from one process to a different process?",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "5 pieces give 4 switches.",
+  "workedSolution": "1. The order has 5 pieces.\n2. Between them there are 4 switches.",
+  "hints": [
+   "Count the number of separate pieces in the shortest remaining time Gantt chart."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "3"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "5"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ],
+  "calculator": false
+ },
+ {
+  "key": "os.process-scheduling.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Name the scheduling routine that gives each process a fixed time slice in turn.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "round robin"
+    },
+    {
+     "value": "RR"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "Round robin.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "round robin"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "first come first served"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "shortest job first"
+   }
+  ],
+  "skill": "RECALL",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why an operating system uses scheduling. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "To keep the processor busy / make best use of it, for example when a process is waiting for input or output",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "To share the processor fairly between processes",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "To keep the response time for the user acceptable",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Scheduling keeps the processor busy by running another process when one is waiting for input or output, shares the processor fairly between processes, and keeps response times acceptable for the user."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Utilisation, fairness, responsiveness.",
+  "hints": [
+   "Think about what the processor does while a process waits for the disk."
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe the three states of a process and one transition between two of them. [3]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Running: the process is using the processor",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Ready: able to run, waiting for the processor; blocked: waiting for an event such as an input or output operation",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A transition with its cause, for example running to ready at the end of the time slice",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A running process is using the processor. A ready process can run but is waiting for the processor, and a blocked process is waiting for an event such as the completion of input or output. For example, a running process moves to ready when its time slice ends."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Three states and a transition.",
+  "hints": [
+   "Name the state and the event that causes each move."
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A school computer is used by many students at once, each running programs and expecting quick responses. Explain why round robin scheduling is suitable. [4]",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Each process is given a turn in a fixed time slice",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "No student's program waits a long time before getting the processor",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Short jobs are not held up by a long job",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "The response seems quick to every user, although switching costs some processing time",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Each process gets a short turn in a fixed time slice, so no student's program waits a long time and a short job is not held up by a long one. Every user sees a quick response, although each switch costs some processing time."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Fairness and response, with the overhead acknowledged.",
+  "hints": [
+   "Compare fairness, response time and the cost of switching."
+  ],
+  "skill": "EVALUATION",
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "Three processes arrive at a computer in a school office:\n\n| Process | Arrival time | Burst time |\n|:-:|:-:|:-:|\n| X | 0 | 4 |\n| Y | 2 | 6 |\n| Z | 3 | 2 |\n\nThey are scheduled by round robin with a time slice of 3. A process that arrives during a slice joins the queue before the process that has just used its slice.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "At what time does process Z first start running?",
+    "answerSpec": {
+     "value": 6
+    },
+    "explanation": "Z starts at 6.",
+    "workedSolution": "1. X runs 0-3, then Y 3-6 (Y and Z have both arrived; Y joined first).\n2. Z starts at 6."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "At what time does process X complete?",
+    "answerSpec": {
+     "value": 9
+    },
+    "explanation": "X completes at 9.",
+    "workedSolution": "1. X needs 4 and runs 3 in its first slice, then goes to the back.\n2. The order is X 0-3, Y 3-6, Z 6-8, X 8-9, Y 9-12.\n3. X completes at 9."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the waiting time of process Z.",
+    "answerSpec": {
+     "value": 3
+    },
+    "explanation": "Waiting time is 3.",
+    "workedSolution": "1. Z completes at 8, arrived at 3, burst 2.\n2. Turnaround = 8 - 3 = 5.\n3. Waiting = 5 - 2 = 3."
+   },
+   {
+    "label": "(d)",
+    "type": "CALCULATION",
+    "marks": 1,
+    "stem": "Calculate the mean waiting time of the three processes.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "Mean waiting time = 4.",
+    "workedSolution": "1. Waiting times: X 5, Y 4, Z 3.\n2. Mean = (5 + 4 + 3) ÷ 3 = 4."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "The mean waiting time with first come first served is 3. Compare this with round robin for these processes and give one advantage of round robin.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "FCFS has the lower mean waiting time here (3 compared with 4)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Round robin gives each process a turn soon after it arrives / more even response",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Short processes are not held behind long ones",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: FCFS gives the lower mean waiting time (3 against 4), but round robin gives every process a turn soon after it arrives, so short processes are not held behind long ones."
+    },
+    "explanation": "Compare the numbers, then name an advantage."
+   }
+  ],
+  "explanation": "Round robin with a time slice of 3 on three processes.",
+  "hints": [
+   "Round robin: the process whose slice ends goes to the back of the queue.",
+   "Waiting time = completion - arrival - burst."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "6"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "9"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "3"
+    },
+    "(d)": {
+     "type": "CALCULATION",
+     "value": "4"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "3"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "4"
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "5"
+     },
+     "(d)": {
+      "type": "CALCULATION",
+      "value": "3"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ },
+ {
+  "key": "os.process-scheduling.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "acs.os.process-scheduling"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A word processor, a music player and a print job are running on a computer in a shop in Hwange. Each is a process.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The print job is waiting for the printer to finish a page. Which state is it in?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Running",
+      "rationale": "It is not using the processor."
+     },
+     {
+      "key": "B",
+      "content": "Ready",
+      "rationale": "It cannot run until the printer finishes."
+     },
+     {
+      "key": "C",
+      "content": "Complete",
+      "rationale": "It has not finished."
+     },
+     {
+      "key": "D",
+      "content": "Blocked",
+      "correct": true,
+      "rationale": "Correct."
+     }
+    ],
+    "explanation": "Waiting for a device is the blocked state."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "The printer finishes the page and sends an interrupt. What happens to the print job?",
+    "options": [
+     {
+      "key": "A",
+      "content": "It moves directly to the running state",
+      "rationale": "It must wait for the scheduler."
+     },
+     {
+      "key": "B",
+      "content": "It moves to the ready state",
+      "correct": true,
+      "rationale": "Correct."
+     },
+     {
+      "key": "C",
+      "content": "It is deleted",
+      "rationale": "It has more to print."
+     },
+     {
+      "key": "D",
+      "content": "It moves back to the blocked state",
+      "rationale": "The event has occurred."
+     }
+    ],
+    "explanation": "Blocked to ready."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "The music player's time slice ends. Describe what the kernel does.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It saves the music player's registers / state and moves it to the ready queue",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It runs the scheduler and loads the registers of the next process",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The kernel saves the registers of the music player and puts it in the ready queue, then runs the scheduler and loads the registers of the next process."
+    },
+    "explanation": "Save, schedule, load."
+   }
+  ],
+  "explanation": "Transitions follow from the events.",
+  "hints": [
+   "Match each event to a transition."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "cambridge/a-level/computer-science"
+  ]
+ }
+]
