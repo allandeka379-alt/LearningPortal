@@ -4,8 +4,9 @@ import { NO_ENTITLEMENTS } from "../../../src/lib/billing/entitlements";
 /**
  * Platform configuration seed: plans + their DEFAULT entitlements, achievement definitions and settings.
  *
- * Pricing model (owner decision 2026-10-07): a FREE preview and ONE paid plan, FULL_ACCESS, bought with a single
- * one-off payment (USD 1.00, no renewal, "pay once, keep it"). That price is an owner decision for EVERY environment,
+ * Pricing model (owner decisions 2026-10-07 and 2026-10-12): ONE plan, FULL_ACCESS, bought with a single one-off
+ * payment (USD 1.00, no renewal, "pay once, keep it"). There is NO free tier (2026-10-12): the FREE plan stays as the
+ * default (fallback for users without a paid source) but grants nothing and is hidden from /pricing. That price is an owner decision for EVERY environment,
  * so it is seeded (`oneOffPrice`, create-only: admins change it in /admin/plans by adding a new price row). AI features
  * are switched off for now (cost), so no plan includes them; their keys stay in the contract for later.
  * STUDENT / PREMIUM / SCHOOL are retired: kept (inactive, not public) so history and running subscriptions stay valid.
@@ -40,13 +41,15 @@ export const FULL_ACCESS_PLAN_CODE = "FULL_ACCESS";
 export const RETIRED_PLAN_CODES: readonly string[] = ["STUDENT", "PREMIUM", "SCHOOL"];
 
 /**
- * The free preview (§46, §52): enough to try the platform for real (the free lessons of every topic, a daily question,
- * the diagnostic test, the exam countdown, 15 practice questions a day and 2 topic tests a week, leaderboards); mock
- * exams, flashcards, the study plan, detailed analytics and parent reports come with Full access.
+ * The default plan of users without a paid source. No free tier (owner decision 2026-10-12): it grants NOTHING in
+ * the app (no lessons, not even free-preview ones, no practice, no daily question, no diagnostic). It stays the default
+ * plan (fallback) and hidden from /pricing; the public marketing samples (/daily, SEO excerpts) need no plan.
  */
-export const FREE: Entitlements = {
+export const FREE: Entitlements = { ...NO_ENTITLEMENTS };
+
+/** The free preview sold from 2026-10-07 to 2026-10-12: only the base of the retired plans below (history). */
+const LEGACY_FREE_PREVIEW: Entitlements = {
   ...NO_ENTITLEMENTS,
-  lessonAccess: "FREE_ONLY",
   practiceQuestionsPerDay: 15,
   dailyQuestion: true,
   diagnosticTest: true,
@@ -57,10 +60,14 @@ export const FREE: Entitlements = {
 
 /** Everything that is built and not AI: every lesson, unlimited practice and tests, mock exams, flashcards, … */
 export const FULL_ACCESS: Entitlements = {
-  ...FREE,
+  ...NO_ENTITLEMENTS,
   lessonAccess: "ALL",
   practiceQuestionsPerDay: null,
+  dailyQuestion: true,
+  diagnosticTest: true,
   topicTestsPerWeek: null,
+  examCountdown: true,
+  leaderboards: true,
   mockExams: true,
   mockExamsPerMonth: null,
   flashcards: true,
@@ -71,7 +78,7 @@ export const FULL_ACCESS: Entitlements = {
 
 // Retired plans (history only). Their AI keys are what was sold; AI is off platform-wide by the feature flag anyway.
 const STUDENT: Entitlements = {
-  ...FREE,
+  ...LEGACY_FREE_PREVIEW,
   aiTutor: true,
   lessonAccess: "ALL",
   practiceQuestionsPerDay: null,
@@ -110,12 +117,12 @@ const SCHOOL: Entitlements = {
 export const PLANS: SeedPlan[] = [
   {
     code: "FREE",
-    name: "Free preview",
-    tagline: "Try it before you pay",
-    description: "The free lessons of every topic, a daily question, the diagnostic test, the exam countdown and some practice every day.",
+    name: "No access",
+    tagline: "Default for accounts without Full access",
+    description: "Default plan of accounts that have not bought Full access. It includes nothing; it is never sold or shown on /pricing.",
     audience: "INDIVIDUAL",
     sortOrder: 1,
-    isPublic: true,
+    isPublic: false,
     entitlements: FREE,
     devSamplePrices: [],
   },

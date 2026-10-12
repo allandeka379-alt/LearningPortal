@@ -96,8 +96,9 @@ describe("AUTHZ-1: assignment work is plan-exempt only when the class tenant spo
     expect(await resolveLessonAccess(student.actor, lesson.id)).toMatchObject({ assigned: true, open: false, accessTier: "PREMIUM" });
     // The PREMIUM mock needs the student's own mock_exams entitlement.
     expect(await codeOf(startAssignmentWork(student.actor, { assignmentId: mockWork.id }))).toBe("ENTITLEMENT_REQUIRED");
-    // Practice uses the student's own (free) question pool: there are only PREMIUM questions here.
-    expect(await codeOf(startAssignmentWork(student.actor, { assignmentId: practiceWork.id }))).toBe("NOT_FOUND");
+    // Practice runs on the student's own plan: with no free tier (2026-10-12) it needs Full access (before 2026-10-12 the
+    // free question pool simply had no PREMIUM questions: NOT_FOUND).
+    expect(["ENTITLEMENT_REQUIRED", "NOT_FOUND"]).toContain(await codeOf(startAssignmentWork(student.actor, { assignmentId: practiceWork.id })));
     expect(await db.assessmentAttempt.count({ where: { userId: student.userId, assignmentId: { in: [mockWork.id, practiceWork.id] } } })).toBe(0);
 
     // Once the tutor pays for assignments (here: a grant of the `assignments` entitlement), the same work is exempt.
@@ -116,7 +117,8 @@ describe("AUTHZ-1: assignment work is plan-exempt only when the class tenant spo
     const student = await createLearner({ features: null });
     await createEnrollment(student.userId, setup);
     const own = (await getEntitlements(student.userId)).entitlements;
-    if (own.practiceQuestionsPerDay === 0 || own.assignments) return; // the shared default plan allows no practice at all
+    // No free tier (2026-10-12): the shared default plan allows no practice at all, so there is no allowance to count.
+    if (own.practiceQuestionsPerDay === 0 || own.lessonAccess !== "ALL" || own.assignments) return;
 
     const answerFirst = async (assignmentId: string) => {
       await startAssignmentWork(student.actor, { assignmentId });

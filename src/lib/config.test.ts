@@ -30,7 +30,7 @@ describe("public config", () => {
 
   it("exposes the regional defaults", async () => {
     const config = await loadConfig();
-    expect(config.APP_TAGLINE).toBe("Master Your Exams.");
+    expect(config.APP_TAGLINE).toBe("Learn every topic. Be ready for every paper.");
     expect(config.DEFAULT_TIMEZONE).toBe("Africa/Harare");
     expect(config.DEFAULT_LOCALE).toBe("en-ZW");
     expect(config.DEFAULT_COUNTRY_CODE).toBe("ZW");

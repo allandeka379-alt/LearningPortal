@@ -1,4 +1,5 @@
 import { LogOut, Settings } from "lucide-react";
+import { Fragment } from "react";
 import { logoutAction } from "@/app/(auth)/actions";
 import { NavIcon } from "@/components/layout/nav-icons";
 import type { NavItem } from "@/components/layout/nav-types";
@@ -42,11 +43,23 @@ export function StudentHeaderActions({ displayName, streak, countdown, menuNav }
         trigger={<Avatar name={displayName} size="sm" decorative />}
       >
         <DropdownMenuLabel>{displayName}</DropdownMenuLabel>
-        {menuNav.map((item) => (
-          <DropdownMenuItem key={item.href} href={item.href} icon={<NavIcon name={item.icon} />}>
-            {item.label}
-          </DropdownMenuItem>
-        ))}
+        {menuNav.map((item, index) => {
+          // A group heading ("Study tools") where the group changes; the items stay one flat list of menu items.
+          const startsGroup = item.group !== undefined && item.group !== menuNav[index - 1]?.group;
+          return (
+            <Fragment key={item.href}>
+              {startsGroup && (
+                <>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuLabel>{item.group}</DropdownMenuLabel>
+                </>
+              )}
+              <DropdownMenuItem href={item.href} icon={<NavIcon name={item.icon} />}>
+                {item.label}
+              </DropdownMenuItem>
+            </Fragment>
+          );
+        })}
         <DropdownMenuItem href="/app/settings" icon={<Settings aria-hidden="true" />}>
           Settings
         </DropdownMenuItem>

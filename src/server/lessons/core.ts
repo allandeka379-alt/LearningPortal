@@ -11,19 +11,24 @@ import { localDateFromDateColumn, type LocalDate } from "@/lib/dates";
 // Access (§31)
 // =====================================================================================================================
 
-/** A free-preview lesson (`isFreePreview == accessTier != PREMIUM`, schema doc of ContentAccessTier). */
+/**
+ * A lesson flagged as a free preview (`isFreePreview == accessTier != PREMIUM`, schema doc of ContentAccessTier). Since
+ * 2026-10-12 this is only a CLASSIFICATION (public marketing samples and SEO excerpts use it); it opens nothing in the
+ * app (no free tier, see {@link isLessonOpen}).
+ */
 export function isFreePreview(tier: ContentAccessTier): boolean {
   return tier !== "PREMIUM";
 }
 
 /**
- * Whether a student may open a lesson: free-preview lessons always; PREMIUM lessons only with full lesson access
- * (`lessonAccess: "ALL"` from a plan, a school seat or a study pack covering the subject) or when the lesson is
- * assigned by a class whose tenant SPONSORS assignment work (`assignmentWorkSponsored`; like attempts, an unsponsored
- * assignment, e.g. from a free tutor's class, needs the student's own entitlement).
+ * Whether a student may open a lesson: only with full lesson access (`lessonAccess: "ALL"` from a paid plan, a school
+ * seat or a study pack covering the subject) or when the lesson is assigned by a class whose tenant SPONSORS
+ * assignment work (`assignmentWorkSponsored`; like attempts, an unsponsored assignment needs the student's own
+ * entitlement). The access tier no longer matters (owner decision 2026-10-12: no free tier, free-preview lessons are
+ * locked too); the parameter stays so call sites keep passing the row's tier.
  */
 export function isLessonOpen(tier: ContentAccessTier, lessonAccess: Entitlements["lessonAccess"], sponsoredAssignment = false): boolean {
-  return isFreePreview(tier) || lessonAccess === "ALL" || sponsoredAssignment;
+  return lessonAccess === "ALL" || sponsoredAssignment;
 }
 
 // =====================================================================================================================

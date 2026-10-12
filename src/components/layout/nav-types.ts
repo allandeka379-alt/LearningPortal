@@ -13,6 +13,11 @@ export interface NavItem {
   match?: "exact" | "prefix";
   /** Small count next to the label (e.g. flashcards due). Real computed values only — omit when unknown. */
   badge?: number;
+  /**
+   * Sidebar group heading ("Study tools"). Consecutive items with the same group render under one heading; items
+   * without a group come first, without a heading. The mobile tab bar ignores groups.
+   */
+  group?: string;
 }
 
 export interface NavSection {
@@ -34,4 +39,5 @@ export interface ResolvedNavItem {
   icon: ReactNode;
   match?: "exact" | "prefix";
   badge?: number;
+  group?: string;
 }

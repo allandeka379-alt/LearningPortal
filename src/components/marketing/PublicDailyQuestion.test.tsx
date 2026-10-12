@@ -64,7 +64,7 @@ describe("PublicDailyQuestion", () => {
     const alert = await screen.findByRole("alert");
     expect(alert.textContent).toContain("Take a short break");
     expect(alert.textContent).toContain("Please wait a while.");
-    expect(screen.getByRole("link", { name: "Create a free account" })).toBeTruthy();
+    expect(screen.getByRole("link", { name: "Join to keep practising" })).toBeTruthy();
   });
 
   it("takes a custom sign-up label (topic-page samples)", async () => {

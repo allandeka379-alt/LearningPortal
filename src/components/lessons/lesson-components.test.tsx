@@ -240,7 +240,7 @@ describe("StartLessonCheckForm", () => {
     });
     expect(await screen.findByRole("alert")).toBeTruthy();
     expect(screen.getByText("Your current plan doesn't include full lessons.")).toBeTruthy();
-    expect(screen.getByRole("link", { name: "See plans" }).getAttribute("href")).toBe("/pricing");
+    expect(screen.getByRole("link", { name: "Get full access" }).getAttribute("href")).toBe("/app/unlock");
   });
 
   it("shows the first field error of a validation failure", async () => {

@@ -79,6 +79,11 @@ vi.mock("@/server/marketing/catalogue", async (importOriginal) => ({
   ...(await importOriginal<typeof import("@/server/marketing/catalogue")>()),
   getMarketingCatalogue: async () => ({ boards: [], levels: [], subjectsByCategory: [], subjectsByQualification: [] }),
 }));
+vi.mock("@/server/marketing/learning", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@/server/marketing/learning")>()),
+  getMarketingForms: async () => [],
+  getContentStats: async () => ({ subjects: 0, lessons: 0, questions: 0, flashcards: 0, tests: 0 }),
+}));
 vi.mock("@/server/marketing/testimonials", async (importOriginal) => ({
   ...(await importOriginal<typeof import("@/server/marketing/testimonials")>()),
   listPublishedTestimonials: async () => [],
@@ -109,8 +114,8 @@ beforeEach(() => {
 describe("no AI claims while AI is switched off", () => {
   it("home page: no AI tutor section, hero and steps without AI, plan features without AI", async () => {
     const out = await html(HomePage());
-    expect(out).toContain("Master Your Exams.");
-    expect(out).toContain("Complete ZIMSEC and Cambridge O-Level &amp; A-Level study resources, practice questions and mock exams.");
+    expect(out).toContain("Learn every topic. Be ready for every paper.");
+    expect(out).toContain("Complete courses for Form 3 to Form 6, ZIMSEC and Cambridge, O-Level and A-Level: clear lessons in syllabus order, instantly marked practice, flashcards and timed mock exams.");
     expect(out).toContain("Full Access");
     expect(claims(out)).toEqual([]);
     const metadata = await homeMetadata();

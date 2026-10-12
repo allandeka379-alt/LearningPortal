@@ -118,6 +118,17 @@ describe("FinishForm (§52 diagnostic offer)", () => {
     expect(calls[0]?.get("choice")).toBe("diagnostic");
   });
 
+  it("continues to full access when the student has not paid yet (no free tier)", async () => {
+    const { action, calls } = recordingAction(null);
+    render(<FinishForm action={action} diagnosticIncluded={false} unlockNext subjectsHref="/onboarding/subjects" />);
+    expect(screen.queryByRole("button", { name: "Start the diagnostic" })).toBeNull();
+    await act(async () => {
+      fireEvent.click(screen.getByRole("button", { name: "Continue to full access" }));
+    });
+    await waitFor(() => expect(calls).toHaveLength(1));
+    expect(calls[0]?.get("choice")).toBe("dashboard");
+  });
+
   it("only offers the dashboard when the plan has no diagnostic, and links back to subjects on a subject problem", async () => {
     const { action, calls } = recordingAction({
       ok: false,
@@ -165,7 +176,7 @@ describe("DiagnosticStartForm (§52 choose subjects)", () => {
     await act(async () => {
       fireEvent.click(screen.getByRole("button", { name: "Start the diagnostic" }));
     });
-    expect(await screen.findByText("Not included in your plan")).toBeTruthy();
-    expect(screen.getByRole("link", { name: "See plans" }).getAttribute("href")).toBe("/pricing");
+    expect(await screen.findByText("Needs full access")).toBeTruthy();
+    expect(screen.getByRole("link", { name: "Get full access" }).getAttribute("href")).toBe("/app/unlock");
   });
 });

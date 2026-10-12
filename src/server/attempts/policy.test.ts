@@ -102,16 +102,24 @@ describe("feedback timing (§10 vs §13)", () => {
 
 describe("gates (rule 9)", () => {
   it("maps modes to features and limits", () => {
-    expect(gatesFor("PRACTICE", { accessTier: null, planExempt: false })).toEqual({ features: [], limit: "practiceQuestionsPerDay", needsSubjectContent: false });
+    expect(gatesFor("PRACTICE", { accessTier: null, planExempt: false })).toEqual({ features: [], limit: "practiceQuestionsPerDay", needsSubjectContent: true });
     expect(gatesFor("MOCK_EXAM", { accessTier: "PREMIUM", planExempt: false })).toEqual({
       features: ["mock_exams"],
       limit: "mockExamsPerMonth",
-      needsSubjectContent: false,
+      needsSubjectContent: true,
     });
-    expect(gatesFor("TOPIC_TEST", { accessTier: "FREE", planExempt: false })).toEqual({ features: [], limit: "topicTestsPerWeek", needsSubjectContent: false });
-    expect(gatesFor("TOPIC_TEST", { accessTier: "PREMIUM", planExempt: false }).needsSubjectContent).toBe(true);
+    expect(gatesFor("TOPIC_TEST", { accessTier: "PREMIUM", planExempt: false })).toEqual({ features: [], limit: "topicTestsPerWeek", needsSubjectContent: true });
     expect(gatesFor("DIAGNOSTIC", { accessTier: null, planExempt: false }).features).toEqual(["diagnostic_test"]);
     expect(gatesFor("DAILY_QUESTION", { accessTier: null, planExempt: false }).features).toEqual(["daily_question"]);
+  });
+
+  it("needs full subject access in every mode, whatever the content's access tier (no free tier, 2026-10-12)", () => {
+    const modes = ["PRACTICE", "RETEST", "LESSON_CHECK", "DAILY_QUESTION", "QUIZ", "TOPIC_TEST", "CHAPTER_TEST", "SUBJECT_TEST", "TIMED_EXAM", "MOCK_EXAM", "DIAGNOSTIC"] as const;
+    for (const mode of modes) {
+      for (const accessTier of [null, "PUBLIC", "FREE", "PREMIUM"] as const) {
+        expect(gatesFor(mode, { accessTier, planExempt: false }).needsSubjectContent, `${mode} / ${accessTier}`).toBe(true);
+      }
+    }
   });
 
   it("exempts sponsored assignment work only", () => {

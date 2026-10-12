@@ -77,7 +77,7 @@ export function SubjectView({ data, site }: { data: SubjectPageData; site: SiteC
               <EmptyState
                 titleAs="p"
                 title={syllabus ? "The topic list is being prepared" : "The syllabus for this subject is being prepared"}
-                description="Create a free account to be ready when it is published."
+                description="Join now to be ready when it is published."
               />
             )}
           </Section>
@@ -119,7 +119,7 @@ export function SubjectView({ data, site }: { data: SubjectPageData; site: SiteC
                 <p className="text-sm text-muted">
                   Want more?{" "}
                   <Link href={PUBLIC_ROUTES.register} className="font-medium text-primary underline underline-offset-4">
-                    Create a free account
+                    Start learning
                   </Link>{" "}
                   to practise {subject.name} with instant marking.
                 </p>

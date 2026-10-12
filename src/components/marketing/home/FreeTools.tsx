@@ -1,39 +1,38 @@
-import { CalendarCheck, CalendarClock, ClipboardCheck } from "lucide-react";
+import { CalendarCheck, CalendarClock } from "lucide-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Container } from "@/components/layout/Container";
-import { DIAGNOSTIC_SIGN_UP_HREF } from "../site-nav";
 
 const TOOLS: readonly { href: string; title: string; body: string; icon: ReactNode }[] = [
   {
     href: "/daily",
     title: "Today's question",
-    body: "Answer today's question and see the marking straight away. No account needed.",
+    body: "Answer one question from today's set and see how it is marked, with the explanation. No account needed.",
     icon: <CalendarCheck aria-hidden="true" />,
   },
   {
     href: "/exam-countdown",
     title: "Exam countdown",
-    body: "Pick your board and exam session and see how many days you have left.",
+    body: "Pick your board and exam session and see exactly how many days you have left.",
     icon: <CalendarClock aria-hidden="true" />,
-  },
-  {
-    href: DIAGNOSTIC_SIGN_UP_HREF,
-    title: "Free diagnostic test",
-    body: "Find your strong and weak topics, topic by topic, before you decide what to study next.",
-    icon: <ClipboardCheck aria-hidden="true" />,
   },
 ];
 
-/** Free acquisition tools (§46): daily question, exam countdown, free diagnostic. */
+/**
+ * Public samples (§46): the daily question and the exam countdown. They are a taste of the platform, not a free tier
+ * (owner decision 2026-10-12: everything inside the app needs Full access).
+ */
 export function FreeTools() {
   return (
-    <section aria-labelledby="free-tools-heading" className="border-b border-border bg-surface py-10 sm:py-12">
-      <Container>
-        <h2 id="free-tools-heading" className="text-sm font-semibold tracking-wide text-primary uppercase">
-          Free tools
-        </h2>
-        <ul className="mt-5 grid gap-4 md:grid-cols-3">
+    <section aria-labelledby="try-heading" className="border-b border-border bg-surface py-10 sm:py-12">
+      <Container className="grid gap-6 lg:grid-cols-[0.6fr_1.4fr] lg:items-center">
+        <div>
+          <h2 id="try-heading" className="text-sm font-semibold tracking-wide text-primary uppercase">
+            Try it now
+          </h2>
+          <p className="mt-2 text-lg font-semibold text-text">See how questions are marked before you join.</p>
+        </div>
+        <ul className="grid gap-4 md:grid-cols-2">
           {TOOLS.map((tool) => (
             <li
               key={tool.href}

@@ -54,7 +54,7 @@ describe("featureCell", () => {
     expect(featureCell("flashcards", FREE)).toEqual({ included: false, text: "Not included" });
     expect(featureCell("practiceQuestionsPerDay", FREE)).toEqual({ included: true, text: "20 a day" });
     expect(featureCell("practiceQuestionsPerDay", STUDENT)).toEqual({ included: true, text: "Unlimited" });
-    expect(featureCell("lessonAccess", FREE)).toEqual({ included: true, text: "Free lessons" });
+    expect(featureCell("lessonAccess", FREE)).toEqual({ included: false, text: "Not included" }); // no free tier (2026-10-12)
     expect(featureCell("lessonAccess", STUDENT)).toEqual({ included: true, text: "Every lesson" });
   });
 
@@ -146,7 +146,7 @@ describe("keyFeatures", () => {
   it("lists what a plan includes in display order, capped", () => {
     expect(keyFeatures(STUDENT, { max: 4 })).toEqual(["Every lesson", "Practice questions: unlimited", "Daily question", "Diagnostic test"]);
     expect(keyFeatures(FREE, { groups: ["AI help"] })).toEqual(["AI tutor messages: 3 a day", "AI question solver: 1 a day", "AI reasoning level: fast"]);
-    expect(keyFeatures(NO_ENTITLEMENTS)).toEqual(["Free lessons"]);
+    expect(keyFeatures(NO_ENTITLEMENTS)).toEqual([]);
     const school = { ...STUDENT, teacherDashboard: true, assignments: true };
     expect(keyFeatures(school, { max: 3, groups: ["For schools", "Learning"] })).toEqual(["Teacher dashboard", "Assignments", "Every lesson"]);
   });

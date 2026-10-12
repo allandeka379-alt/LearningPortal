@@ -54,7 +54,7 @@ export function selectFullAccessOffer(plans: readonly PlanView[]): FullAccessOff
 
 /**
  * The current one-off offer for a buyer in `countryId` (country prices replace global ones), or `null` when no
- * one-off price is on sale (surfaces then fall back to "See plans" / "Pricing coming soon").
+ * one-off price is on sale (surfaces then fall back to "Get full access" on the unlock page / "Pricing coming soon").
  */
 export async function getFullAccessOffer(options: { countryId?: string | null; now?: Date } = {}): Promise<FullAccessOffer | null> {
   const plans = await listPublicPlans(undefined, {

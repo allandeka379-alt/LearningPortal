@@ -2,44 +2,44 @@ import { describe, expect, it } from "vitest";
 import { DEFAULT_FEATURE_FLAGS } from "@/lib/features";
 import { STUDENT_NAV, STUDENT_TAB_LIMIT, studentMenuNav, studentNavFor, studentTabNav, visibleStudentNav, type StudentNavItem } from "./nav";
 
-/** The intended student navigation (sidebar order). Tabs: Home, Subjects, Practice, Exams, Study plan. */
+/** The intended student navigation (sidebar order). Tabs: Home, Learn, Practice, Exams, Plan; then the groups. */
 const ALL_HREFS = [
   "/app",
   "/app/subjects",
   "/app/practice",
-  "/app/daily",
   "/app/exams",
+  "/app/plan",
+  "/app/flashcards",
+  "/app/daily",
   "/app/diagnostic",
+  "/app/progress",
   "/app/tutor",
   "/app/solver",
-  "/app/flashcards",
-  "/app/plan",
-  "/app/progress",
-  "/app/study-packs",
-  "/app/achievements",
-  "/app/leaderboard",
   "/app/classes",
+  "/app/leaderboard",
+  "/app/achievements",
   "/app/invite",
   "/app/notifications",
   "/app/family",
+  "/app/billing",
   "/app/settings",
 ];
 
 /** Everything that is not a tab, in order; the account menu lists Settings on its own. */
 const MENU_HREFS = [
+  "/app/flashcards",
   "/app/daily",
   "/app/diagnostic",
+  "/app/progress",
   "/app/tutor",
   "/app/solver",
-  "/app/flashcards",
-  "/app/progress",
-  "/app/study-packs",
-  "/app/achievements",
-  "/app/leaderboard",
   "/app/classes",
+  "/app/leaderboard",
+  "/app/achievements",
   "/app/invite",
   "/app/notifications",
   "/app/family",
+  "/app/billing",
 ];
 
 describe("student navigation", () => {
@@ -48,13 +48,26 @@ describe("student navigation", () => {
     expect(new Set(hrefs).size).toBe(hrefs.length);
     expect(hrefs).toEqual(ALL_HREFS);
     expect(hrefs.at(-1)).toBe("/app/settings");
-    expect(hrefs.indexOf("/app/family")).toBe(hrefs.indexOf("/app/settings") - 1);
+    expect(hrefs.indexOf("/app/billing")).toBe(hrefs.indexOf("/app/settings") - 1);
+  });
+
+  it("names the learning tabs and groups the rest: Study tools, Community, Account", () => {
+    expect(studentTabNav().map((item) => item.label)).toEqual(["Home", "Learn", "Practice", "Exams", "Plan"]);
+    expect(studentTabNav().every((item) => item.group === undefined)).toBe(true);
+    const groupOf = new Map(visibleStudentNav().map((item) => [item.href, item.group]));
+    for (const href of ["/app/flashcards", "/app/daily", "/app/diagnostic", "/app/progress", "/app/tutor", "/app/solver"]) expect(groupOf.get(href)).toBe("Study tools");
+    for (const href of ["/app/classes", "/app/leaderboard", "/app/achievements", "/app/invite"]) expect(groupOf.get(href)).toBe("Community");
+    for (const href of ["/app/notifications", "/app/family", "/app/billing", "/app/settings"]) expect(groupOf.get(href)).toBe("Account");
+    // Every group is one consecutive block (the sidebar renders one heading per block).
+    const groups = visibleStudentNav().map((item) => item.group).filter((group) => group !== undefined);
+    expect(groups.filter((group, index) => group !== groups[index - 1])).toEqual(["Study tools", "Community", "Account"]);
   });
 
   it("only shows routes that exist", () => {
     const visible = visibleStudentNav().map((item) => item.href);
     expect(visible).toEqual(ALL_HREFS);
     expect(visibleStudentNav().every((item) => !("available" in item) && !("tab" in item))).toBe(true);
+    expect(visibleStudentNav().map((item) => item.href)).not.toContain("/app/study-packs");
   });
 
   it("labels the engagement, classes and family entries", () => {

@@ -336,7 +336,7 @@ describe("toErrorEvent", () => {
       retryAfterSeconds: 60,
     });
     const entitlement = toErrorEvent(new EntitlementRequiredError("aiTutor"), "/fallback");
-    expect(entitlement).toMatchObject({ code: "ENTITLEMENT_REQUIRED", upgradeHref: "/pricing" });
+    expect(entitlement).toMatchObject({ code: "ENTITLEMENT_REQUIRED", upgradeHref: "/app/unlock" });
     expect(toErrorEvent(AppError.rateLimited(30, "Slow down."), "/pricing")).toEqual({
       type: "error",
       code: "RATE_LIMITED",

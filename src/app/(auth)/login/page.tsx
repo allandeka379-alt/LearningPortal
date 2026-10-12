@@ -40,7 +40,7 @@ export default async function LoginPage({ searchParams }: { searchParams: PageSe
         <p>
           New here?{" "}
           <Link href={registerHref} className={authLinkClassName}>
-            Create a free account
+            Create an account
           </Link>
         </p>
       }

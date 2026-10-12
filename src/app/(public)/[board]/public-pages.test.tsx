@@ -224,15 +224,15 @@ describe("/[board]/[qualification]/[subject]/[topic]", () => {
     expect(html).toContain(fx.topic.name);
     expect(html).toContain(`href="/${fx.slugs.board}/${fx.slugs.qualification}/${fx.slugs.subject}/${fx.slugs.subtopic}"`);
     expect(html).toContain("3 practice questions");
-    // Free preview: the PUBLIC lesson's summary excerpt and its guide link.
-    expect(html).toContain("Free preview");
+    // Open sample: the PUBLIC lesson's summary excerpt and its guide link.
+    expect(html).toContain("Open to read");
     expect(html).toContain(`Summary of Free guide ${fx.marker}`);
     expect(html).toContain(`/guides/${fx.lessons.public.slug}"`);
-    // Locked lessons: title and lock reason only.
+    // Locked lessons: title only, behind Full access (no free tier since 2026-10-12).
     expect(html).toContain(`Account lesson ${fx.marker}`);
-    expect(html).toContain("Free with an account");
     expect(html).toContain(`Premium lesson ${fx.marker}`);
-    expect(html).toContain("Premium");
+    expect(html).toContain("Full access");
+    expect(html).not.toContain("Free with an account");
     // The PUBLIC sample (tagged to a subtopic) is answerable on the page; its explanation only comes back from marking.
     expect(html).toContain(fx.publicTexts.questionStem);
     expect(html).not.toContain(fx.publicTexts.questionExplanation);

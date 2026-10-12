@@ -113,7 +113,7 @@ export function SubjectDirectory({ categories, headingLevel = 3 }: { categories:
       <EmptyState
         titleAs={headingLevel === 2 ? "h2" : "h3"}
         title="Subjects are being prepared"
-        description="Subjects appear here as soon as their syllabus and content have been reviewed and published."
+        description="Subjects appear here as soon as their courses are published."
       />
     );
   }
@@ -160,8 +160,8 @@ export function SubjectsSection({ categories }: { categories: readonly SubjectCa
       id="subjects"
       tone="surface"
       eyebrow="Subjects"
-      title="Subjects you can study now"
-      description="Every subject follows its own board's syllabus. More subjects open as their content is reviewed."
+      title="Courses you can start today"
+      description="Every subject is a full course that follows its own board's syllabus. New subjects and lessons are added as they are written."
       action={
         <Link href="/subjects" className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-primary underline-offset-4 hover:underline">
           All subjects

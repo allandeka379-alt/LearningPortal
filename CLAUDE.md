@@ -18,8 +18,13 @@ use `APP_NAME` from `src/lib/config.ts`.
   (`EMAIL_PROVIDER=resend`); console in dev/test.
 - **Switched off for now (dormant, reversible via the `features` setting):** all AI (tutor, solver, AI marking, AI
   drafts), the WhatsApp channel, Stripe, SMS.
-- **Pricing:** FREE preview + Full Access for a one-off USD 1 (lifetime) via Paynow (EcoCash, OneMoney, cards via
-  Paynow web). Price is DB-configured.
+- **Pricing (updated 2026-10-12):** NO free tier. Full Access for a one-off USD 1 (lifetime) via Paynow (EcoCash,
+  OneMoney, cards via Paynow web) is required for every learning feature; an account alone opens nothing. Price is
+  DB-configured. Public marketing samples (daily question page, exam countdown, SEO syllabus pages) stay public.
+- **Positioning (2026-10-12):** a LEARNING platform for Form 3 to Form 6 (courses in syllabus order) that also serves
+  exam candidates; never "Start free". Brief: `.scratch/website/DESIGN-BRIEF.md`.
+- **No human content review (2026-10-12):** imported content is published straight to production by the deploy's
+  migrate step (`content:publish` with an ADMIN approver; DB four-eyes still holds because the importer is the creator).
 - **Priority:** comprehensive, real, reviewed curriculum content across all major subjects (content pipeline in
   `content/` + `docs/CONTENT_PIPELINE.md`).
 

@@ -67,7 +67,7 @@ function heading(view: StepView): { title: string; description: ReactNode } {
     case "finish":
       return {
         title: "You're nearly done",
-        description: "Check your answers. Then take the free diagnostic test to see where you stand, topic by topic.",
+        description: "Check your answers, then finish to start learning. A diagnostic test can show where you stand, topic by topic.",
       };
   }
 }
@@ -305,7 +305,7 @@ export function StepScreen({ view, saveAction, finishAction, next = null }: Step
                 </span>
                 <div className="min-w-0 space-y-1.5">
                   <h2 id="diagnostic-heading" className="flex flex-wrap items-center gap-2 text-lg font-semibold text-text">
-                    Take the free diagnostic test
+                    {view.fullAccess ? "Take the diagnostic test" : "Next: unlock full access"}
                     {view.diagnosticIncluded && (
                       <Badge tone="primary" size="sm">
                         Recommended
@@ -317,12 +317,23 @@ export function StepScreen({ view, saveAction, finishAction, next = null }: Step
                       About {DIAGNOSTIC_MINUTES_PER_SUBJECT} minutes per subject. It checks what you already know across your topics, so your study
                       plan starts in the right place. There&rsquo;s no penalty for wrong answers, and you can skip a question you don&rsquo;t know.
                     </p>
-                  ) : (
+                  ) : view.fullAccess ? (
                     <p className="text-sm text-muted">The diagnostic test isn&rsquo;t included in your current plan. You can still start studying straight away.</p>
+                  ) : (
+                    <p className="text-sm text-muted">
+                      Your account is ready. Full access opens every lesson, practice question, test and the diagnostic in your subjects: one
+                      payment through Paynow, and nothing renews.
+                    </p>
                   )}
                 </div>
               </div>
-              <FinishForm action={finishAction} diagnosticIncluded={view.diagnosticIncluded} subjectsHref={hrefOf("subjects")} next={next} />
+              <FinishForm
+                action={finishAction}
+                diagnosticIncluded={view.diagnosticIncluded}
+                unlockNext={!view.fullAccess}
+                subjectsHref={hrefOf("subjects")}
+                next={next}
+              />
             </CardBody>
           </Card>
 

@@ -22,7 +22,7 @@ describe("UpgradeButton / UpgradeLink", () => {
     for (const link of links) expect(link.getAttribute("href")).toBe("/app/billing/checkout?price=p-1");
   });
 
-  it("fall back to the honest See plans link without an offer (or outside the student area)", () => {
+  it("fall back to the in-app unlock page without an offer (or outside the provider)", () => {
     render(
       <>
         <UpgradeOfferProvider offer={null}>
@@ -31,16 +31,19 @@ describe("UpgradeButton / UpgradeLink", () => {
         <UpgradeLink />
       </>,
     );
-    const links = screen.getAllByRole("link", { name: "See plans" });
-    expect(links.map((link) => link.getAttribute("href"))).toEqual(["/pricing", "/pricing"]);
+    const links = screen.getAllByRole("link", { name: "Get full access" });
+    expect(links.map((link) => link.getAttribute("href"))).toEqual(["/app/unlock", "/app/unlock"]);
   });
 
   it("keep a prompt's own destination when it is not the general upgrade path (e.g. school tools)", () => {
     render(
       <UpgradeOfferProvider offer={OFFER}>
         <UpgradeButton fallbackHref="/schools" />
+        <UpgradeLink fallbackHref="/app/unlock" />
       </UpgradeOfferProvider>,
     );
-    expect(screen.getByRole("link", { name: "See plans" }).getAttribute("href")).toBe("/schools");
+    expect(screen.getByRole("link", { name: "Learn more" }).getAttribute("href")).toBe("/schools");
+    // The unlock page (UPGRADE_PATH) is the general offer: replaced by the one-off checkout.
+    expect(screen.getByRole("link", { name: "Unlock everything for US$1" }).getAttribute("href")).toBe("/app/billing/checkout?price=p-1");
   });
 });

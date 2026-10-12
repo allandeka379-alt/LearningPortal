@@ -1,6 +1,8 @@
 import "server-only";
 import { getMarketingCatalogue, type MarketingCatalogue } from "./catalogue";
 import { listPublishedFaqs, type PublicFaqItem } from "./faq";
+import { getContentStats, getMarketingForms } from "./learning";
+import type { ContentStats, MarketingForm } from "./learning-core";
 import { getPricingData, type PricingData } from "./pricing";
 import { listPublishedTestimonials, type PublicTestimonial } from "./testimonials";
 
@@ -15,17 +17,25 @@ export interface HomePageData {
   testimonials: PublicTestimonial[];
   /** Published FAQ entries (general first); empty → the section is omitted. */
   faqs: PublicFaqItem[];
+  /** School years (Form 3 to Upper Sixth) with their level and stage. */
+  forms: MarketingForm[];
+  /** Real published-content counts (hidden on the page while there is no content). */
+  stats: ContentStats;
 }
 
 /** Everything the home page (§45) renders, loaded in parallel. Runs at build / revalidation time, not per visitor. */
 export async function getHomePageData(now: Date = new Date()): Promise<HomePageData> {
-  const [catalogue, pricing, testimonials, generalFaqs] = await Promise.all([
+  const [catalogue, pricing, testimonials, generalFaqs, stats] = await Promise.all([
     getMarketingCatalogue(),
     getPricingData(now),
     listPublishedTestimonials(6),
     listPublishedFaqs({ categories: HOME_FAQ_CATEGORIES, limit: HOME_FAQ_LIMIT }),
+    getContentStats(),
   ]);
   // No "general" entries yet: fall back to whatever is published, so real FAQ content is never hidden.
-  const faqs = generalFaqs.length > 0 ? generalFaqs : await listPublishedFaqs({ limit: HOME_FAQ_LIMIT });
-  return { catalogue, pricing, testimonials, faqs };
+  const [faqs, forms] = await Promise.all([
+    generalFaqs.length > 0 ? generalFaqs : listPublishedFaqs({ limit: HOME_FAQ_LIMIT }),
+    getMarketingForms(catalogue.levels),
+  ]);
+  return { catalogue, pricing, testimonials, faqs, forms, stats };
 }

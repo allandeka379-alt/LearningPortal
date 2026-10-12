@@ -48,7 +48,7 @@ export function StartLessonCheckForm({ lessonId, topicId, idempotencyKey, action
         <Alert
           role="alert"
           tone={error.code === "ENTITLEMENT_REQUIRED" ? "accent" : "danger"}
-          title={error.code === "ENTITLEMENT_REQUIRED" ? "Not included in your plan" : "The questions couldn't start"}
+          title={error.code === "ENTITLEMENT_REQUIRED" ? "Needs full access" : "The questions couldn't start"}
           action={
             error.code === "ENTITLEMENT_REQUIRED" ? (
               <UpgradeButton fallbackHref={upgradeHref} variant="accent" />

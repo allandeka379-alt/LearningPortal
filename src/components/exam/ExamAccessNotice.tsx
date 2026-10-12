@@ -30,7 +30,7 @@ export function ExamAccessNotice({ access }: { access: ExamAccess }) {
         <Alert
           tone="accent"
           icon={<Lock aria-hidden="true" />}
-          title={access.status === "UPGRADE" ? "Not included in your plan" : "You've used this period's allowance"}
+          title={access.status === "UPGRADE" ? "Unlock full access to take this test" : "You've used this period's allowance"}
           action={
             <UpgradeButton fallbackHref={access.upgradeHref} variant="outline" />
           }

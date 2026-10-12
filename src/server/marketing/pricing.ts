@@ -17,6 +17,8 @@ import { currenciesOf, groupPricesByCurrency, type PriceOption } from "./pricing
  * active plans; current prices only). Nothing is hard-coded: names, taglines, highlights, descriptions, entitlements
  * and prices are all admin-managed data. Only offered currencies are shown (USD for now, owner decision 2026-10-07:
  * other price rows stay in the database, hidden), and `offer` is the one-off "Full access" offer (billing/offer.ts).
+ * There is no free tier (owner decision 2026-10-12): the default plan (FREE, grants nothing) is never listed, even if
+ * an admin marks it public, so `plans` is just the plans on sale (Full access).
  * While AI features are switched off (`features.ai`, owner decision 2026-10-07) the AI entitlements are left out of
  * every feature list and comparison.
  */
@@ -31,7 +33,7 @@ export interface PricingPlan {
   /** Admin bullet points. */
   highlights: string[];
   audience: PlanAudience;
-  /** The fallback plan for users without a paid source (FREE). */
+  /** The fallback plan for users without a paid source. Always `false` here: the default plan is never listed. */
   isDefault: boolean;
   trialDays: number;
   entitlements: Entitlements;
@@ -44,7 +46,7 @@ export interface PricingPlan {
 export interface PricingData {
   /** Currencies with at least one price (USD and ZWG first). Empty when no price is configured at all. */
   currencies: string[];
-  /** INDIVIDUAL plans (students and parents), display order. */
+  /** INDIVIDUAL plans on sale (students and parents; Full access), display order. Never the default (FREE) plan. */
   plans: PricingPlan[];
   /** SCHOOL plans (B2B / B2B2C seats), display order. */
   schoolPlans: PricingPlan[];
@@ -90,7 +92,7 @@ async function anyDemoPrice(priceIds: readonly string[]): Promise<boolean> {
 export async function getPricingData(now: Date = new Date()): Promise<PricingData> {
   const [listed, { ai }] = await Promise.all([listPublicPlans(undefined, { now }), getFeatures()]);
   const plans = listed.map((plan) => ({ ...plan, prices: plan.prices.filter((price) => isOfferedCurrency(price.currency)) }));
-  const individual = plans.filter((plan) => plan.audience === "INDIVIDUAL");
+  const individual = plans.filter((plan) => plan.audience === "INDIVIDUAL" && !plan.isDefault);
   const school = plans.filter((plan) => plan.audience === "SCHOOL");
   const pricingPlans = individual.map((plan) => toPricingPlan(plan, ai));
   return {

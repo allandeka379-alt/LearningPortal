@@ -132,7 +132,7 @@ export function LessonEditorForm({
 
       <Section title="Access and reading time">
         <div className="grid gap-4 md:grid-cols-3">
-          <AdminField name="accessTier" label="Access" type="select" options={ACCESS_TIER_OPTIONS} defaultValue={lesson.accessTier} hint="Free preview lets students without a plan read it." />
+          <AdminField name="accessTier" label="Access" type="select" options={ACCESS_TIER_OPTIONS} defaultValue={lesson.accessTier} hint="Public = also shown on the public SEO pages. Every other tier needs Full access (no free tier)." />
           <AdminField name="estimatedMinutes" label="Estimated minutes" type="number" min={1} max={600} step={1} defaultValue={lesson.estimatedMinutes} />
           <AdminField name="languageCode" label="Language" defaultValue={lesson.languageCode} maxLength={10} mono hint="en, sn (Shona), nd (Ndebele)…" />
         </div>

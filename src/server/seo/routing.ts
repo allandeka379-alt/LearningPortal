@@ -33,6 +33,8 @@ export const PUBLIC_RESERVED_SLUGS: ReadonlySet<string> = new Set([
   "r",
   "billing",
   "exam-countdown",
+  "how-it-works",
+  "exam-candidates",
   GUIDES_SEGMENT,
   "search",
   "subjects",

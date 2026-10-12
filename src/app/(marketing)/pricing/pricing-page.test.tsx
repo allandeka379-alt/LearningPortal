@@ -112,18 +112,17 @@ beforeEach(() => {
 });
 
 describe("/pricing (one-off Full access)", () => {
-  it("shows the free preview and Full access at the database price: pay once, keep it, through Paynow", async () => {
+  it("shows Full access at the database price, no free tier: pay once, keep it, through Paynow", async () => {
     catalogue.plans = [FREE, fullAccess(100)];
     const out = await html(PricingPage());
 
-    expect(out).toContain("Full access for US$1. Pay once, keep it.");
-    expect(out).toContain("Free preview");
-    expect(out).toContain("pay once, keep it");
+    expect(out).toContain("Everything for US$1. Pay once, keep it.");
+    expect(out).toContain("Get full access for US$1");
     expect(out).toContain("Paynow");
     expect(out).toContain("EcoCash");
-    expect(out).toContain("What each option includes");
-    // Sign-up continues straight to the one-off checkout of that price.
-    expect(out).toContain(`/register?next=${encodeURIComponent("/app/billing/checkout?price=0190d000-0000-7000-8000-00000000f001")}`);
+    expect(out).not.toMatch(/free preview|start free|free plan/i);
+    // Sign-up first; the paywall then takes the new student to the one-off checkout.
+    expect(out).toContain('href="/register"');
     // USD only (ZWG rows hidden), no Stripe, no AI claims while AI is off.
     expect(out).not.toMatch(/ZWG|ZiG|Zimbabwe Gold/);
     expect(out).not.toMatch(/Stripe/i);
@@ -133,14 +132,14 @@ describe("/pricing (one-off Full access)", () => {
   it("follows an admin price change (never a hard-coded amount)", async () => {
     catalogue.plans = [FREE, fullAccess(250)];
     const out = await html(PricingPage());
-    expect(out).toContain("Full access for US$2.50. Pay once, keep it.");
+    expect(out).toContain("Everything for US$2.50. Pay once, keep it.");
     expect(out).not.toContain("US$1.");
   });
 
   it("says so honestly when nothing is on sale", async () => {
     catalogue.plans = [FREE, { ...fullAccess(100), prices: [] }];
     const out = await html(PricingPage());
-    expect(out).toContain("Plans and pricing");
+    expect(out).toContain("Pricing");
     expect(out).toContain("Pricing coming soon");
     expect(out).not.toContain("Paynow");
   });

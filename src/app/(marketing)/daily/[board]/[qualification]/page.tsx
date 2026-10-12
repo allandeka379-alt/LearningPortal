@@ -64,8 +64,8 @@ export default async function DailyQualificationPage({ params }: { params: Param
         <EmptyState
           icon={<CalendarCheck aria-hidden="true" />}
           title={`No ${page.qualification.label} question today`}
-          description="Try another qualification above, or create a free account to practise your own subjects."
-          action={<ButtonLink href={DAILY_SIGN_UP_HREF}>Create a free account</ButtonLink>}
+          description="Try another qualification above, or join to learn and practise your own subjects."
+          action={<ButtonLink href={DAILY_SIGN_UP_HREF}>Join now</ButtonLink>}
         />
       ) : (
         <div className="space-y-12">

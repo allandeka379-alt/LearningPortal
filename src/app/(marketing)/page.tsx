@@ -4,11 +4,12 @@ import Link from "next/link";
 import { heroSupportingLine } from "@/components/marketing/copy";
 import { FaqList } from "@/components/marketing/FaqList";
 import { FinalCta } from "@/components/marketing/FinalCta";
-import { BoardsSection, joinNames, LevelsSection, SubjectsSection } from "@/components/marketing/home/Curriculum";
-import { AiTutorSection, MockExamsSection, PracticeSection, SchoolsBand } from "@/components/marketing/home/Features";
+import { BoardsSection, joinNames, SubjectsSection } from "@/components/marketing/home/Curriculum";
+import { AiTutorSection, SchoolsBand } from "@/components/marketing/home/Features";
 import { FreeTools } from "@/components/marketing/home/FreeTools";
 import { Hero } from "@/components/marketing/home/Hero";
 import { HowItWorks } from "@/components/marketing/home/HowItWorks";
+import { ExamCandidatesBand, FormsSection, LearningLoop } from "@/components/marketing/home/Learning";
 import { PricingTeaser } from "@/components/marketing/home/PricingTeaser";
 import { Section } from "@/components/marketing/Section";
 import { Testimonials } from "@/components/marketing/Testimonials";
@@ -17,7 +18,7 @@ import { getFeatures } from "@/server/features";
 import { getHomePageData } from "@/server/marketing/home";
 import { marketingMetadata } from "@/server/marketing/metadata";
 
-/** Static, revalidated hourly (ARCHITECTURE §3.4): catalogue, plans, testimonials and FAQs change rarely. */
+/** Static, revalidated hourly (ARCHITECTURE §3.4): catalogue, plans, content counts and FAQs change rarely. */
 export const revalidate = 3600;
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -26,31 +27,34 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 /**
- * Home page (§45): hero, free tools (§46), how it works, boards, levels, subjects, AI tutor, practice, mock exams,
- * schools, pricing, testimonials, FAQ and a closing call to action. Everything variable comes from the database; the
- * testimonial and FAQ sections disappear when there is nothing real to show. While AI features are switched off
- * (`features.ai`, the default since 2026-10-07) the page makes no AI claim: no AI tutor section, and the hero, steps
- * and plan features leave AI out.
+ * Home page (§45; owner brief 2026-10-12: a learning platform for Form 3 to Form 6 that also prepares exam candidates,
+ * with no free tier). Hero with the one paid offer and real content counts, public samples, the school years, the
+ * learning loop, the exam-candidate band, subjects, the journey, boards, schools, pricing, testimonials, FAQ and a
+ * closing call to action. Everything variable comes from the database; testimonials and FAQ disappear when there is
+ * nothing real to show. While AI features are switched off (the default) the page makes no AI claim.
  */
 export default async function HomePage() {
-  const [{ catalogue, pricing, testimonials, faqs }, features] = await Promise.all([getHomePageData(), getFeatures()]);
+  const [{ catalogue, pricing, testimonials, faqs, forms, stats }, features] = await Promise.all([getHomePageData(), getFeatures()]);
   const boardNames = catalogue.boards.map((board) => board.shortName);
   const levelNames = catalogue.levels.map((level) => level.name);
   const eyebrow = boardNames.length > 0 ? [joinNames(boardNames), joinNames(levelNames)].filter(Boolean).join(" · ") : null;
+  const offer = pricing.offer;
+  const priceLabel = offer?.price.amountLabel ?? null;
+  const offerPlan = offer ? (pricing.plans.find((plan) => plan.id === offer.plan.id) ?? null) : null;
 
   return (
     <>
-      <Hero eyebrow={eyebrow} hasFreePlan={pricing.plans.some((plan) => plan.isDefault)} aiEnabled={features.ai} />
+      <Hero eyebrow={eyebrow} priceLabel={priceLabel} forms={forms} stats={stats} aiEnabled={features.ai} />
       <FreeTools />
-      <HowItWorks aiEnabled={features.ai} />
-      <BoardsSection boards={catalogue.boards} />
-      <LevelsSection levels={catalogue.levels} />
+      <FormsSection forms={forms} />
+      <LearningLoop />
+      <ExamCandidatesBand />
       <SubjectsSection categories={catalogue.subjectsByCategory} />
       {features.ai && <AiTutorSection />}
-      <PracticeSection />
-      <MockExamsSection />
+      <HowItWorks aiEnabled={features.ai} priceLabel={priceLabel} />
+      <BoardsSection boards={catalogue.boards} />
       <SchoolsBand />
-      <PricingTeaser plans={pricing.plans} currency={pricing.currencies[0] ?? null} demoPrices={pricing.hasDemoPrices} />
+      <PricingTeaser offer={offer} plan={offerPlan} demoPrices={pricing.hasDemoPrices} />
       <Testimonials testimonials={testimonials} />
       {faqs.length > 0 && (
         <Section
@@ -67,7 +71,7 @@ export default async function HomePage() {
           <FaqList items={faqs} className="max-w-3xl" />
         </Section>
       )}
-      <FinalCta />
+      <FinalCta priceLabel={priceLabel} />
     </>
   );
 }

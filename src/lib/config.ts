@@ -22,8 +22,11 @@ export const APP_NAME: string = nonEmpty(process.env.NEXT_PUBLIC_APP_NAME) ?? "B
  */
 export const TITLE_SEPARATOR = " · ";
 
-/** Homepage headline (§45). */
-export const APP_TAGLINE = "Master Your Exams.";
+/**
+ * Homepage headline (§45). Owner brief 2026-10-12: a learning platform for Forms 3-6 first, exam preparation second
+ * (was "Master Your Exams.").
+ */
+export const APP_TAGLINE = "Learn every topic. Be ready for every paper.";
 
 /**
  * Support contact address from `NEXT_PUBLIC_SUPPORT_EMAIL`. Falls back to an RFC 2606 `example.com` placeholder so UI

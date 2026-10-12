@@ -1,11 +1,12 @@
 import { randomUUID } from "node:crypto";
-import { Check, CircleCheck, Clock, Target } from "lucide-react";
+import { Check, CircleCheck, Clock } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound, unstable_rethrow } from "next/navigation";
 import { cache } from "react";
 import { z } from "zod";
 import { RichContent } from "@/components/content/RichContent";
 import { practiceHref } from "@/components/dashboard/links";
+import { LessonNextSteps } from "@/components/learn/LessonNextSteps";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { codedName, lessonKindLabel, topicHref } from "@/components/lessons/labels";
@@ -22,12 +23,12 @@ import { formatInstantDate } from "@/components/student/format";
 import { Alert } from "@/components/ui/Alert";
 import { Badge } from "@/components/ui/Badge";
 import { AskTutorLink } from "@/components/tutor/AskTutorLink";
-import { ButtonLink } from "@/components/ui/Button";
 import { formatDuration } from "@/lib/format";
 import { requireOnboardedStudent } from "@/server/auth/guards";
 import { isFeatureEnabled } from "@/server/features";
 import { isAppError } from "@/server/lib/errors";
 import { getLessonCheck, getLessonForStudent } from "@/server/lessons";
+import { getLessonCourseContext } from "@/server/lessons/course";
 import {
   answerLessonQuestionAction,
   completeLessonAction,
@@ -87,15 +88,31 @@ export default async function LessonPage({ params, searchParams }: { params: Par
   const { lessonId } = parsed.data;
   const { actor, lesson } = await loadLesson(lessonId, topicParam(await searchParams));
 
-  const [check, askTutor] = await Promise.all([
+  const [check, askTutor, course] = await Promise.all([
     !lesson.locked && lesson.practiceQuestionCount > 0 ? getLessonCheck(actor, lesson.id, { topicId: lesson.topic.id }) : Promise.resolve(null),
     // The AI tutor link only while AI is switched on (`features.ai`, owner decision 2026-10-07).
     isFeatureEnabled("ai"),
+    // Where the lesson sits in the student's course (null for a lesson read only through a teacher assignment).
+    getLessonCourseContext(actor, lesson.subject.id, lesson.id),
   ]);
   const toc = lesson.content ? tocItems(lesson.content.headings) : [];
   const topicPage = topicHref(lesson.subject.id, lesson.topic.id);
   const practise = practiceHref({ subjectId: lesson.subject.id, topicId: lesson.topic.id, count: 10 });
   const completed = lesson.progress?.status === "COMPLETED";
+  // Next steps: the next lesson in the COURSE (it may start the next topic); the topic's own order otherwise.
+  const nextLesson = course
+    ? course.next
+    : lesson.next
+      ? { id: lesson.next.id, title: lesson.next.title, topicId: lesson.topic.id, locked: lesson.next.locked }
+      : null;
+  const quickCheck =
+    check && check.status !== "UNAVAILABLE"
+      ? check.status === "COMPLETED"
+        ? { status: check.status, questionCount: check.questionCount, answeredCount: check.answeredCount, percentage: check.percentage }
+        : check.status === "IN_PROGRESS"
+          ? { status: check.status, questionCount: check.questionCount, answeredCount: check.answeredCount }
+          : { status: check.status, questionCount: check.questionCount }
+      : null;
   const completedLabel = completed && lesson.progress?.completedAt ? `Completed on ${formatInstantDate(lesson.progress.completedAt, actor.timeZone)}` : null;
 
   return (
@@ -104,7 +121,7 @@ export default async function LessonPage({ params, searchParams }: { params: Par
         <article className="mx-auto max-w-reading min-w-0 lg:mx-0 [&_[id]]:scroll-mt-32 lg:[&_[id]]:scroll-mt-24">
           <PageHeader
             breadcrumbs={[
-              { label: "Subjects", href: "/app/subjects" },
+              { label: "Learn", href: "/app/subjects" },
               { label: lesson.subject.name, href: `/app/subjects/${lesson.subject.id}` },
               { label: lesson.topic.name, href: topicPage },
               { label: lesson.title },
@@ -215,25 +232,18 @@ export default async function LessonPage({ params, searchParams }: { params: Par
             </>
           )}
 
-          <section
-            aria-labelledby="lesson-practise-title"
-            className="mt-6 flex flex-col gap-4 rounded-card bg-primary-soft p-4 sm:flex-row sm:items-center sm:justify-between sm:p-6 print:hidden"
-          >
-            <div className="min-w-0">
-              <h2 id="lesson-practise-title" className="font-semibold text-on-primary-soft">
-                Practise {lesson.topic.name}
-              </h2>
-              <p className="mt-0.5 text-sm text-on-primary-soft">Questions adapt to your level, with instant feedback on every answer.</p>
-            </div>
-            <div className="flex flex-col gap-2 sm:shrink-0 sm:flex-row sm:items-center">
-              <ButtonLink href={practise} iconStart={<Target aria-hidden="true" />}>
-                Practise this topic
-              </ButtonLink>
-              <AskTutorLink enabled={askTutor} subjectId={lesson.subject.id} topicId={lesson.topic.id} label="Ask the tutor about this topic" />
-            </div>
-          </section>
+          <LessonNextSteps
+            className="mt-8"
+            check={quickCheck}
+            practise={{ href: practise, topicName: lesson.topic.name }}
+            next={nextLesson}
+            unit={course?.unit ?? null}
+            courseHref={`/app/subjects/${lesson.subject.id}`}
+            extra={<AskTutorLink enabled={askTutor} subjectId={lesson.subject.id} topicId={lesson.topic.id} label="Ask the tutor about this topic" />}
+          />
 
-          <LessonPager previous={lesson.previous} next={lesson.next} topicId={lesson.topic.id} className="mt-8" />
+          {/* The next lesson is the last of the next steps; the pager keeps "previous" (and "next" when the steps lack one). */}
+          <LessonPager previous={lesson.previous} next={nextLesson ? null : lesson.next} topicId={lesson.topic.id} className="mt-6" />
 
           {lesson.attribution && <LessonAttributionFooter attribution={lesson.attribution} className="mt-10" />}
 

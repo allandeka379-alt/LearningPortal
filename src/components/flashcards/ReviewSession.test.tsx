@@ -193,7 +193,7 @@ describe("ReviewSession", () => {
     await user.keyboard(" ");
     await user.keyboard("3");
     expect(await screen.findByText("Your current plan doesn't include flashcards.")).toBeTruthy();
-    expect(screen.getByRole("link", { name: "See plans" }).getAttribute("href")).toBe("/pricing");
+    expect(screen.getByRole("link", { name: "Get full access" }).getAttribute("href")).toBe("/app/unlock");
     expect(screen.queryByText("Front b")).toBeNull();
   });
 

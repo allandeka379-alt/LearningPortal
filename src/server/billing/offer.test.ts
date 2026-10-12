@@ -83,7 +83,7 @@ describe("selectFullAccessOffer", () => {
 });
 
 describe("upgradeOfferFor", () => {
-  it("goes straight to the one-off checkout with the database price, or falls back to See plans", () => {
+  it("goes straight to the one-off checkout with the database price, or falls back to the unlock page", () => {
     const offer = selectFullAccessOffer([plan()]);
     expect(upgradeOfferFor(offer)).toEqual({ href: "/app/billing/checkout?price=price-lifetime", label: "Unlock everything for US$1" });
     expect(upgradeOfferFor(null)).toEqual(FALLBACK_UPGRADE_OFFER);

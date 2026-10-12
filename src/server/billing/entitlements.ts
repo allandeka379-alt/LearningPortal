@@ -12,6 +12,7 @@ import {
   type Entitlements,
   type LimitFeature,
 } from "@/lib/billing/entitlements";
+import { UNLOCK_PATH } from "@/lib/billing/paywall";
 import { db } from "@/server/db";
 import { createCache, memoizeAsync } from "@/server/lib/cache";
 import { AppError } from "@/server/lib/errors";
@@ -31,7 +32,9 @@ import { getSetting } from "@/server/lib/settings";
  *       automatically on first resolution, first come first served, see {@link allocateSchoolSeat});
  *   (c) live EntitlementGrants (study packs, promos, referral rewards, staff grants, compensation). A grant with a
  *       content scope (study packs always) applies only inside that scope: see {@link getSubjectEntitlements};
- *   (d) the default plan (`Plan.isDefault`, i.e. FREE; falls back to code "FREE"), loaded from the database.
+ *   (d) the default plan (`Plan.isDefault`, i.e. FREE; falls back to code "FREE"), loaded from the database. Since the
+ *       owner decision of 2026-10-12 (no free tier) it is seeded with NO entitlements and hidden from /pricing; it stays
+ *       the default so a missing paid source still resolves to "nothing", and an admin could re-open a tier from data.
  *
  * Caching: memoised per request (React `cache`) and per instance for {@link ENTITLEMENT_CACHE_TTL_MS} (bounded by the
  * earliest source expiry). Writers call {@link invalidateEntitlements} on the writing instance; other instances catch
@@ -50,8 +53,11 @@ export const DEFAULT_GRACE_DAYS = 3;
 export const GRACE_DAYS_SETTING_KEY = "billing.graceDays";
 /** Fallback plan code when no plan is flagged `isDefault`. */
 export const FREE_PLAN_CODE = "FREE";
-/** Where individual users upgrade / where schools learn about school plans (UI routes, ARCHITECTURE §3.3). */
-export const UPGRADE_PATH = "/pricing";
+/**
+ * Where individual users upgrade: the in-app unlock page (Full access through Paynow; signed-out visitors are sent
+ * through /login by the proxy) / where schools learn about school plans (UI routes, ARCHITECTURE §3.3).
+ */
+export const UPGRADE_PATH = UNLOCK_PATH;
 export const SCHOOL_UPGRADE_PATH = "/schools";
 
 /** Subscription statuses that may grant access (subject to the period/grace check). */
@@ -582,6 +588,18 @@ export function entitlementsForSubject(resolution: Pick<EntitlementResolution, "
 }
 
 /**
+ * Whether a student may use the student area at all (the /app paywall, src/lib/billing/paywall.ts; owner decision
+ * 2026-10-12: no free tier). True with full lesson access from any unscoped source (Full access, a school seat, a plan
+ * grant), with a study pack or scoped grant unlocking some content, or with ANY live source other than the default
+ * plan (a promo, staff credit or referral grant): students who got access another way keep it. Pure.
+ */
+export function hasFullAppAccess(resolution: Pick<EntitlementResolution, "entitlements" | "scoped" | "sources">): boolean {
+  if (resolution.entitlements.lessonAccess === "ALL") return true;
+  if (resolution.scoped.some((grant) => grant.entitlements.lessonAccess === "ALL")) return true;
+  return resolution.sources.some((source) => source.kind !== "FREE_PLAN");
+}
+
+/**
  * Live school subscriptions where the user is an ACTIVE student without a live seat: candidates for automatic seat
  * allocation (pure).
  */
@@ -712,7 +730,7 @@ export class EntitlementRequiredError extends AppError {
     const message =
       upgradePath === SCHOOL_UPGRADE_PATH
         ? `Your current plan doesn't include ${label}. It comes with a school subscription.`
-        : `Your current plan doesn't include ${label}. Unlock full access to get it.`;
+        : `You need Full access for ${label}. Pay once to unlock everything.`;
     super("ENTITLEMENT_REQUIRED", message, { details: { feature, upgradePath } });
     this.name = "EntitlementRequiredError";
     this.feature = feature;
@@ -732,7 +750,7 @@ export class LimitReachedError extends AppError {
     const noun = check.limit === 1 ? copy.one : copy.many;
     const message =
       `You've reached your plan's limit of ${check.limit} ${noun} ${copy.period}. ` +
-      `Unlock full access for more, or come back ${copy.reset}.`;
+      `Come back ${copy.reset}.`;
     const retryAfterSeconds =
       resetsAt === undefined ? undefined : Math.max(1, Math.ceil((resetsAt.getTime() - now.getTime()) / 1000));
     super("QUOTA_EXCEEDED", message, {
@@ -1089,8 +1107,8 @@ async function effectiveEntitlements(userId: string, context: SubjectContext | u
 }
 
 /**
- * True when `userId` may open the full (premium) content of a subject: an unscoped source with full lesson access, or
- * a study pack / scoped grant covering the subject. Free-preview lessons are always open and do not need this check.
+ * True when `userId` may open the content of a subject: an unscoped source with full lesson access, or a study pack /
+ * scoped grant covering the subject. Since 2026-10-12 (no free tier) free-preview content needs this too.
  */
 export async function canAccessSubjectContent(
   userId: string,
@@ -1115,6 +1133,11 @@ export async function assertEntitlement(
   const entitlements = await effectiveEntitlements(actor.userId, context);
   if (!hasFeature(entitlements, feature)) throw new EntitlementRequiredError(feature);
   return entitlements;
+}
+
+/** {@link hasFullAppAccess} for a user (resolved and cached like {@link getEntitlements}). */
+export async function hasStudentAppAccess(userId: string): Promise<boolean> {
+  return hasFullAppAccess(await getEntitlements(userId));
 }
 
 /** Non-throwing variant of {@link assertEntitlement}. */

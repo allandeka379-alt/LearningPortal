@@ -29,7 +29,7 @@ export function StartDailyForm({ subjectId, subjectName, upgradeHref, action }: 
         <Alert
           role="alert"
           tone={upgrade ? "accent" : "danger"}
-          title={upgrade ? "Not included in your plan" : "Today's question couldn't open"}
+          title={upgrade ? "Needs full access" : "Today's question couldn't open"}
           action={
             upgrade ? (
               <UpgradeButton fallbackHref={upgradeHref} variant="accent" />

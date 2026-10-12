@@ -22,22 +22,29 @@ describe("examAccess", () => {
       status: "AVAILABLE",
       allowance: { limit: 3, remaining: 2, label: "topic tests left this week" },
     });
-    expect(examAccess({ ...base, kind: "SUBJECT_TEST", entitlements: NO_ENTITLEMENTS })).toEqual({ status: "AVAILABLE", allowance: null });
+    expect(examAccess({ ...base, kind: "SUBJECT_TEST", entitlements: FULL })).toEqual({ status: "AVAILABLE", allowance: null });
   });
 
   it("asks to upgrade when the plan lacks the feature or the premium content", () => {
     const mock = examAccess({ ...base, kind: "MOCK_EXAM", entitlements: { ...FULL, mockExams: false } });
-    expect(mock).toMatchObject({ status: "UPGRADE", upgradeHref: "/pricing" });
+    expect(mock).toMatchObject({ status: "UPGRADE", upgradeHref: "/app/unlock" });
     expect(mock.status === "UPGRADE" && mock.message).toMatch(/mock exams/);
     expect(examAccess({ ...base, kind: "CHAPTER_TEST", accessTier: "PREMIUM", entitlements: { ...FULL, lessonAccess: "FREE_ONLY" } })).toMatchObject({
       status: "UPGRADE",
     });
     expect(examAccess({ ...base, kind: "TOPIC_TEST", entitlements: { ...FULL, topicTestsPerWeek: 0 } })).toMatchObject({ status: "UPGRADE" });
+    // No free tier (2026-10-12): FREE / PUBLIC tests need full access too.
+    for (const kind of ["SUBJECT_TEST", "TOPIC_TEST", "QUIZ", "DIAGNOSTIC"] as const) {
+      expect(examAccess({ ...base, kind, entitlements: { ...NO_ENTITLEMENTS, diagnosticTest: true, topicTestsPerWeek: 2, practiceQuestionsPerDay: 15 } })).toMatchObject({
+        status: "UPGRADE",
+        upgradeHref: "/app/unlock",
+      });
+    }
   });
 
   it("reports a used-up allowance, used-up attempts and an attempt to continue", () => {
     const limited = examAccess({ ...base, kind: "MOCK_EXAM", entitlements: { ...FULL, mockExamsPerMonth: 2 }, usage: { mockExamsPerMonth: 2 } });
-    expect(limited).toMatchObject({ status: "LIMIT_REACHED", upgradeHref: "/pricing" });
+    expect(limited).toMatchObject({ status: "LIMIT_REACHED", upgradeHref: "/app/unlock" });
     expect(limited.status === "LIMIT_REACHED" && limited.message).toMatch(/limit of 2 mock exams this month/);
     expect(examAccess({ ...base, kind: "SUBJECT_TEST", entitlements: FULL, maxAttempts: 1, attemptsUsed: 1 })).toEqual({
       status: "NO_ATTEMPTS_LEFT",

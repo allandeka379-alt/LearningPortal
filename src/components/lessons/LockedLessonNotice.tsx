@@ -5,7 +5,7 @@ import { cn } from "@/lib/cn";
 
 export interface LockedLessonNoticeProps {
   upgradeHref: string;
-  /** Where to continue for free (e.g. the topic page). */
+  /** Where to go back to (e.g. the topic page). */
   backHref: string;
   backLabel: string;
   className?: string;
@@ -22,11 +22,11 @@ export function LockedLessonNotice({ upgradeHref, backHref, backLabel, className
         <Lock aria-hidden="true" />
       </div>
       <h2 id="locked-lesson-title" className="text-lg font-semibold text-text">
-        This lesson is part of the full course
+        Unlock full access to read this lesson
       </h2>
       <p className="mx-auto mt-2 max-w-md text-sm text-muted">
-        The free preview includes the free lessons of each topic. Unlock full access to read this lesson and the rest of the
-        course. Practice questions and free lessons stay available either way.
+        Full access opens every lesson in every subject, with practice, topic tests, mock exams and flashcards. One payment
+        through Paynow, and nothing renews.
       </p>
       <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
         <UpgradeButton fallbackHref={upgradeHref} variant="accent" />

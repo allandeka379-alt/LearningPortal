@@ -38,7 +38,7 @@ export function summariseEntitlements(e: Entitlements, options: SummaryOptions =
   lines.push(
     e.lessonAccess === "ALL"
       ? { key: "lessons", label: "Full lessons for every topic", included: true }
-      : { key: "lessons", label: "Free preview lessons", included: true },
+      : { key: "lessons", label: "Every lesson in every subject", included: false },
   );
   lines.push(
     limitLine("practice", e.practiceQuestionsPerDay, {

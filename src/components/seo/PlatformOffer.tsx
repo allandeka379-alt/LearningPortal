@@ -58,7 +58,7 @@ export function PlatformOffer({ subjectName, counts, isEnrollable, signUpHref, p
         Study {subjectName} on {APP_NAME}
       </h2>
       {!isEnrollable ? (
-        <p className="mt-1 text-sm text-muted">This subject is coming soon. Create a free account now and add it as soon as it opens.</p>
+        <p className="mt-1 text-sm text-muted">This course is coming soon. Join now and add it to your subjects as soon as it opens.</p>
       ) : !hasContent ? (
         <p className="mt-1 text-sm text-muted">Lessons and practice questions for this subject are being prepared.</p>
       ) : null}
@@ -91,10 +91,10 @@ export function PlatformOffer({ subjectName, counts, isEnrollable, signUpHref, p
 
       <div className="mt-5 flex flex-col gap-2">
         <ButtonLink href={signUpHref} variant="primary" fullWidth>
-          Create a free account
+          Join to start learning
         </ButtonLink>
         <ButtonLink href={pricingHref} variant="outline" fullWidth>
-          See plans and pricing
+          See pricing
         </ButtonLink>
       </div>
     </section>

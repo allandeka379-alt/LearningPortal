@@ -1,6 +1,8 @@
 import { randomUUID } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { createParent, createStudent } from "../../../tests/factories/identity";
+import { grantLearnerFeatures, UNLIMITED_LEARNING_FEATURES } from "../../../tests/factories/learning";
+import { invalidateEntitlements } from "@/server/billing/entitlements";
 import { db } from "@/server/db";
 import { isAppError } from "@/server/lib/errors";
 import { completeOnboarding, getOnboardingState, loadOnboardingStep, saveOnboardingStep, type OnboardingActor } from "./service";
@@ -26,6 +28,13 @@ async function expectAppError(promise: Promise<unknown>, code: string): Promise<
 async function newStudent(): Promise<OnboardingActor> {
   const { user } = await createStudent({ student: { isMinor: false } });
   return { userId: user.id, roles: ["STUDENT"], timeZone: "Africa/Harare" };
+}
+
+/** Gives the student full access (a promo grant), as a purchase, school seat or parent payment would. */
+async function withFullAccess(actor: OnboardingActor): Promise<OnboardingActor> {
+  await grantLearnerFeatures(actor.userId, { ...UNLIMITED_LEARNING_FEATURES });
+  invalidateEntitlements(actor.userId);
+  return actor;
 }
 
 /** Answers every screen up to (not including) `finish` with the catalogue's main choices. */
@@ -158,7 +167,7 @@ describe("onboarding wizard service", () => {
   it("completes onboarding by enrolling the chosen subjects with their syllabus version pinned by the target exam", async () => {
     const catalogue = await createOnboardingCatalogue();
     const { chain } = catalogue;
-    const actor = await newStudent();
+    const actor = await withFullAccess(await newStudent());
     await answerAll(actor, catalogue);
 
     await expectAppError(completeOnboarding(actor, { choice: "later" }), "VALIDATION");
@@ -206,7 +215,7 @@ describe("onboarding wizard service", () => {
   it("pins the CURRENT version without a target exam and records a skipped diagnostic", async () => {
     const catalogue = await createOnboardingCatalogue();
     const { chain } = catalogue;
-    const actor = await newStudent();
+    const actor = await withFullAccess(await newStudent());
     await answerAll(actor, catalogue);
     await saveOnboardingStep(actor, "exam", { targetExamSessionId: "" });
     await saveOnboardingStep(actor, "grade", { targetGrade: "" });
@@ -218,6 +227,19 @@ describe("onboarding wizard service", () => {
     const student = await db.student.findUniqueOrThrow({ where: { userId: actor.userId } });
     expect(student.diagnosticSkippedAt).not.toBeNull();
     expect(student.onboardingData).toMatchObject({ wantsDiagnostic: false });
+  });
+
+  it("sends a student without full access to the unlock page, whatever they chose (no free tier, 2026-10-12)", async () => {
+    const catalogue = await createOnboardingCatalogue();
+    const actor = await newStudent();
+    await answerAll(actor, catalogue);
+    const finish = await loadOnboardingStep(actor, "finish");
+    if (finish.kind !== "STEP" || finish.view.step !== "finish") throw new Error("expected the finish screen");
+    // Only meaningful while the shared default plan opens nothing (the seeded state).
+    if (finish.view.fullAccess) return;
+    expect(finish.view.diagnosticIncluded).toBe(false);
+    expect((await completeOnboarding(actor, { choice: "diagnostic" })).href).toBe("/app/unlock");
+    expect((await db.student.findUniqueOrThrow({ where: { userId: actor.userId } })).onboardingStep).toBe("COMPLETED");
   });
 
   it("clears answers that no longer fit when the level changes, and sends the student forward again from there", async () => {

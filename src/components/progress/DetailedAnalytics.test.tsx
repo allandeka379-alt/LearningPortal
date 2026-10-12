@@ -42,8 +42,8 @@ describe("DetailedAnalytics", () => {
     expect(screen.getByText("No marked answers in the last few weeks")).toBeTruthy();
     cleanup();
     render(<DetailedAnalyticsLocked />);
-    // Outside the student layout (no offer provided) the prompt is the neutral "See plans" link.
-    expect(screen.getByRole("link", { name: "See plans" }).getAttribute("href")).toBe("/pricing");
+    // Outside the student layout (no offer provided) the prompt is "Get full access" on the unlock page.
+    expect(screen.getByRole("link", { name: "Get full access" }).getAttribute("href")).toBe("/app/unlock");
   });
 
   it("formats seconds per question", () => {

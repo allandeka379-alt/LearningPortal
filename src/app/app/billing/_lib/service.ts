@@ -271,7 +271,7 @@ export async function getBillingOverview(actor: Actor, options: { paymentsCursor
   ]);
 
   return {
-    planName: (resolution.planCode ? names.get(resolution.planCode) : undefined) ?? "Free",
+    planName: (resolution.planCode ? names.get(resolution.planCode) : undefined) ?? "No access yet",
     // A purchase is shown on its own ("Full access since …, receipt …"), not again in the list of sources.
     sources: describeAccessSources({ sources: resolution.sources, userId: actor.userId, ownSubscription: own, planNames: names, now }).filter(
       (source) => source.grantSource !== "PURCHASE",

@@ -30,6 +30,11 @@ write files ──► npm run content:validate ──► npm run content:import 
 Rules that never bend:
 
 - **Students only ever see PUBLISHED content.** Import never publishes; publishing always names a human approver.
+- **Production publishes automatically (owner decision 2026-10-12: no human review step before production).** The
+  Railway migrate service imports `IMPORT_FAMILIES` and then runs `content:publish` for the same families with
+  `--approver "$CONTENT_PUBLISH_APPROVER"` (an ADMIN account; `scripts/railway-migrate.sh`). Unchanged families are a
+  fast no-op; changed files (draft copies) are merged as a new revision. Quality rests on `content:validate --strict`,
+  `content:check` and the smoke tests before a commit.
 - **Four-eyes:** the importer records the pipeline account (or `--author`) as the author; the approver must be a
   different person (the database refuses otherwise when `app.four_eyes = 'on'`, as in production).
 - **Published content is immutable.** Changing a file of a published item creates a *draft copy* for review
@@ -1091,7 +1096,7 @@ item, the renderer and KaTeX versions), so re-validating tens of thousands of un
   job per item, so new content appears in search only once the worker has run. Lessons, practice and tests are visible
   as soon as they are published.
 - Development: `npm run content:publish -- --approver demo.admin@example.test` publishes for a local preview only.
-  Production publishing always requires a real reviewer. The demo students' enrolments start on the seeded
+  Production publishing runs on deploy under the configured ADMIN approver (see section 1). The demo students' enrolments start on the seeded
   `demo-development` syllabus versions (dated 2000-01-01, so every pipeline version counts as newer): once a pipeline
   version is CURRENT they are offered the move to it on the subject page (progress does not carry over, there is no topic
   lineage between the two), or enrol a fresh student on the pipeline version to preview it.

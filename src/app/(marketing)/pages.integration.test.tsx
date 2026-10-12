@@ -55,13 +55,14 @@ describe("public pages render statically", () => {
     });
   });
 
-  it("home: hero copy from the spec, free tools and the closing call to action", async () => {
+  it("home: learning-first hero, public samples, school years and the closing call to action", async () => {
     const out = await html(HomePage());
-    expect(out).toContain("Master Your Exams.");
-    expect(out).toContain("Complete ZIMSEC and Cambridge O-Level &amp; A-Level study resources, practice questions and mock exams.");
+    expect(out).toContain("Learn every topic. Be ready for every paper.");
+    expect(out).toContain("Complete courses for Form 3 to Form 6");
     expect(out).not.toContain('id="ai-tutor"');
     expect(out).toContain('href="/register"');
-    expect(out).toContain('href="/register?next=/app/diagnostic"');
+    expect(out).not.toMatch(/start free|free account|free preview|free diagnostic/i);
+    expect(out).toContain('id="learning"');
     expect(out).toContain('href="/daily"');
     expect(out).toContain('href="/exam-countdown"');
     expect(out).toContain('id="how-it-works"');
@@ -69,7 +70,7 @@ describe("public pages render statically", () => {
   }, 60_000);
 
   it("pricing, schools, subjects, faq, about and the countdown", async () => {
-    expect(await html(PricingPage())).toContain("Plans and pricing");
+    expect(await html(PricingPage())).toContain("Pricing");
     const schools = await html(SchoolsPage());
     expect(schools).toContain('id="contact"');
     expect(schools).toContain('name="schoolName"');

@@ -93,7 +93,7 @@ describe("PracticeBuilder", () => {
     await user.click(screen.getByRole("button", { name: "Start practising" }));
     const alert = await screen.findByRole("alert");
     expect(alert.textContent).toContain("You've reached today's practice limit");
-    expect(screen.getByRole("link", { name: "See plans" }).getAttribute("href")).toBe("/pricing");
+    expect(screen.getByRole("link", { name: "Get full access" }).getAttribute("href")).toBe("/app/unlock");
     expect(router.push).not.toHaveBeenCalled();
   });
 

@@ -236,7 +236,7 @@ export async function assertAnonymousAnswerAllowed(response: unknown, ip: string
   if (size > MAX_RESPONSE_BYTES) throw AppError.validation({ response: ["That answer is too long."] });
   await assertRateLimit(
     rateLimits.dailyQuestionAnon(ip),
-    "You've checked a lot of answers in a short time. Please wait a while, or create a free account to keep practising.",
+    "You've checked a lot of answers in a short time. Please wait a while, or join to keep practising.",
   );
 }
 

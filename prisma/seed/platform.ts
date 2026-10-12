@@ -10,7 +10,8 @@ import type { SeedLog, SeedTally } from "./util";
  * ALWAYS-seeded platform configuration (all environments): plans with their default entitlements (§31: prices are set
  * by admins, except the owner-decided one-off Full access price, USD 1.00, seeded everywhere), achievement definitions,
  * settings and the "Original content" ContentSource. Create-only: existing rows are never modified (admin edits survive
- * re-seeding), apart from the one-time move to the one-off pricing model ({@link applyOneOffPricingModel}).
+ * re-seeding), apart from the one-time move to the one-off pricing model ({@link applyOneOffPricingModel}) and the
+ * no-free-tier rule enforced on every run ({@link applyNoFreeTier}).
  */
 
 export interface PlatformIds {
@@ -56,11 +57,11 @@ export function validateSettingValue(key: string, value: unknown): void {
 }
 
 /**
- * One-time move of an EXISTING database to the 2026-10-07 pricing model (one-off Full access + free preview). It runs
+ * One-time move of an EXISTING database to the 2026-10-07 pricing model (one-off Full access). It runs
  * in the seed run that first creates the FULL_ACCESS plan, so it happens exactly once per database and later admin
  * edits survive re-seeding: the retired plans leave sale and /pricing (rows kept; running subscriptions keep their
- * access until they end) and the FREE plan becomes the free preview (entitlements and its public copy, which still
- * promised the AI tutor). A fresh database gets the same result from PLANS directly (the updates are then no-ops).
+ * access until they end) and the FREE plan takes its seeded copy and entitlements (since 2026-10-12: nothing, see
+ * {@link applyNoFreeTier}, which also runs on every later seed). A fresh database gets the same result from PLANS directly (the updates are then no-ops).
  */
 export async function applyOneOffPricingModel(db: PrismaClient, log: SeedLog): Promise<void> {
   const retired = await db.plan.updateMany({
@@ -97,7 +98,46 @@ export async function applyOneOffPricingModel(db: PrismaClient, log: SeedLog): P
     }
     if (changed) await db.setting.update({ where: { key: "referrals.rules" }, data: { value: next as Prisma.InputJsonObject } });
   }
-  log.info(`platform: one-off pricing model applied (${retired.count} subscription plans retired, free preview updated)`);
+  log.info(`platform: one-off pricing model applied (${retired.count} subscription plans retired, default plan updated)`);
+}
+
+/**
+ * No free tier (owner decision 2026-10-12): the FREE plan (the default for users without a paid source) grants nothing
+ * and is not public. Enforced on EVERY seed run, unlike the create-only rows above, because existing databases
+ * (production) still hold the 2026-10-07 free preview; idempotent: a database that already matches is not written.
+ * Users with a school seat or any other grant keep their access (it never came from this plan).
+ */
+export async function applyNoFreeTier(db: PrismaClient, log: SeedLog): Promise<boolean> {
+  const seeded = PLANS.find((plan) => plan.code === "FREE");
+  if (!seeded) return false;
+  const row = await db.plan.findUnique({
+    where: { code: "FREE" },
+    select: { id: true, name: true, tagline: true, description: true, isPublic: true, entitlements: true },
+  });
+  if (!row) return false;
+  const entitlements = entitlementsSchema.parse(seeded.entitlements);
+  const stored = entitlementsSchema.safeParse(row.entitlements);
+  const matches =
+    !row.isPublic &&
+    row.name === seeded.name &&
+    row.tagline === (seeded.tagline ?? null) &&
+    row.description === seeded.description &&
+    stored.success &&
+    JSON.stringify(stored.data) === JSON.stringify(entitlements);
+  if (matches) return false;
+  await db.plan.update({
+    where: { id: row.id },
+    data: {
+      name: seeded.name,
+      tagline: seeded.tagline ?? null,
+      description: seeded.description,
+      highlights: [],
+      isPublic: false,
+      entitlements: entitlements as unknown as Prisma.InputJsonObject,
+    },
+  });
+  log.info("platform: no free tier applied (the default FREE plan now grants nothing and is hidden from /pricing)");
+  return true;
 }
 
 /**
@@ -165,6 +205,7 @@ export async function seedPlatform(db: PrismaClient, tally: SeedTally, log: Seed
     }
   }
   if (!pricingModelApplied) await applyOneOffPricingModel(db, log);
+  await applyNoFreeTier(db, log);
 
   for (const [index, achievement] of ACHIEVEMENTS.entries()) {
     const code = achievementCode(achievement.code);

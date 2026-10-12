@@ -56,7 +56,14 @@ export type FeatureCopy = FlagCopy | LimitCopy | ChoiceCopy;
 
 /** Display copy per entitlement key, in display order within each group. UI copy, not product data. */
 export const PLAN_FEATURE_COPY: { readonly [K in EntitlementKey]: FeatureCopy } = {
-  lessonAccess: { kind: "choice", label: "Lessons", group: "Learning", options: { FREE_ONLY: "Free lessons", ALL: "Every lesson" } },
+  // No free tier (owner decision 2026-10-12): lessons count as included only with every lesson (`ALL`).
+  lessonAccess: {
+    kind: "choice",
+    label: "Lessons",
+    group: "Learning",
+    options: { FREE_ONLY: "No lessons", ALL: "Every lesson" },
+    relevantWhen: (e) => e.lessonAccess === "ALL",
+  },
   practiceQuestionsPerDay: { kind: "limit", label: "Practice questions", group: "Learning", unit: "a day" },
   dailyQuestion: { kind: "flag", label: "Daily question", group: "Learning" },
   personalisedLearning: { kind: "flag", label: "Personalised question selection", group: "Learning" },
@@ -99,7 +106,7 @@ export const UNBUILT_FEATURES = {
   pdfExport: "PDF export is not built (§24): no download exists, so nothing checks the flag.",
   personalisedLearning:
     "Adaptive question selection, adaptive difficulty and study-plan adaptation are the core engine (§11, §16) for every " +
-    "plan, FREE included (§52); no premium-only personalisation exists to gate.",
+    "student with access (§52); no premium-only personalisation exists to gate.",
 } as const satisfies Partial<Record<EntitlementKey, string>>;
 
 export type UnbuiltFeature = keyof typeof UNBUILT_FEATURES;

@@ -44,7 +44,7 @@ export default async function ManageSubjectsPage() {
       <PageHeader
         title="Manage subjects"
         eyebrow={trackLabel || undefined}
-        breadcrumbs={[{ label: "Subjects", href: "/app/subjects" }, { label: "Manage" }]}
+        breadcrumbs={[{ label: "Learn", href: "/app/subjects" }, { label: "Manage" }]}
         description="Add or remove subjects and set the examination you are preparing for."
         className="pb-0"
       />

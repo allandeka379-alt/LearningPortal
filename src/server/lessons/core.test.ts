@@ -14,15 +14,17 @@ import {
 } from "./core";
 
 describe("lesson access (§31)", () => {
-  it("opens free-preview lessons for every plan and premium lessons only with full access or an assignment", () => {
+  it("opens lessons only with full access or a sponsored assignment, free-preview lessons included (no free tier)", () => {
     expect(isFreePreview("PUBLIC")).toBe(true);
     expect(isFreePreview("FREE")).toBe(true);
     expect(isFreePreview("PREMIUM")).toBe(false);
-    expect(isLessonOpen("FREE", "FREE_ONLY")).toBe(true);
-    expect(isLessonOpen("PUBLIC", "FREE_ONLY")).toBe(true);
+    expect(isLessonOpen("FREE", "FREE_ONLY")).toBe(false);
+    expect(isLessonOpen("PUBLIC", "FREE_ONLY")).toBe(false);
     expect(isLessonOpen("PREMIUM", "FREE_ONLY")).toBe(false);
+    expect(isLessonOpen("FREE", "ALL")).toBe(true);
     expect(isLessonOpen("PREMIUM", "ALL")).toBe(true);
     expect(isLessonOpen("PREMIUM", "FREE_ONLY", true)).toBe(true);
+    expect(isLessonOpen("FREE", "FREE_ONLY", true)).toBe(true);
   });
 });
 

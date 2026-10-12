@@ -74,8 +74,8 @@ function FullAccessOffer({ offer }: { offer: BillingOfferView }) {
 }
 
 /**
- * Plan & billing (§31, §32; ARCHITECTURE §3.3 `/app/billing`; owner decision 2026-10-07): the student's access (the
- * free preview, or "Full access since <date>" bought once with its receipt, or access through a school / a grant /
+ * Plan & billing (§31, §32; ARCHITECTURE §3.3 `/app/billing`; owner decisions 2026-10-07 and 2026-10-12): the student's
+ * access (none yet: there is no free tier, or "Full access since <date>" bought once with its receipt, or access through a school / a grant /
  * an older subscription), what it includes in plain words, the one-off Buy button (price from the database), study
  * packs and their payments with receipt numbers. One-off access never renews, so there is nothing to cancel or resume.
  */
@@ -87,14 +87,17 @@ export default async function BillingPage({ searchParams }: { searchParams: Sear
   const { subscription, purchase, offer } = overview;
   const date = (value: Date | null) => (value ? formatInstantDate(value, actor.timeZone) : null);
   const paidSources = overview.sources.filter((source) => source.kind !== "FREE");
-  const free = purchase === null && paidSources.length === 0;
+  const noAccess = purchase === null && paidSources.length === 0;
 
   return (
     <Container className="space-y-8 pb-10">
       <PageHeader title="Plan & billing" description="Your access, what it includes and your payments." className="pb-0" />
 
       <Card as="section" aria-labelledby="current-plan-heading">
-        <CardHeader titleAs="h2" title={<span id="current-plan-heading">Your plan: {purchase ? purchase.planName : overview.planName}</span>} />
+        <CardHeader
+          titleAs="h2"
+          title={<span id="current-plan-heading">{noAccess ? "Your access" : `Your plan: ${purchase ? purchase.planName : overview.planName}`}</span>}
+        />
         <CardBody className="space-y-5">
           {purchase && (
             <div className="space-y-1 rounded-card border border-border p-4 text-sm">
@@ -135,9 +138,9 @@ export default async function BillingPage({ searchParams }: { searchParams: Sear
               ))}
             </ul>
           )}
-          {free && (
+          {noAccess && (
             <p className="text-sm text-muted">
-              You&rsquo;re on the free preview: the free lessons of every topic, the daily question, the diagnostic test and some practice every day.
+              You don&rsquo;t have full access yet. Full access opens every lesson, practice question, topic test and mock exam in your subjects.
             </p>
           )}
 
@@ -153,7 +156,7 @@ export default async function BillingPage({ searchParams }: { searchParams: Sear
           )}
 
           {offer && <FullAccessOffer offer={offer} />}
-          {!offer && free && <p className="text-sm text-muted">Full access isn&rsquo;t on sale right now. Please check back soon.</p>}
+          {!offer && noAccess && <p className="text-sm text-muted">Full access isn&rsquo;t on sale right now. Please check back soon.</p>}
 
           {/* AI entitlements are listed only while AI features are switched on (`features.ai`). */}
           <EntitlementList lines={summariseEntitlements(overview.entitlements, { ai: features.ai })} showExcluded />

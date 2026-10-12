@@ -166,7 +166,7 @@ describe("decks and the due queue", () => {
     expect(after.nextDueAt).not.toBeNull();
   });
 
-  it("hides PREMIUM cards without full access and everything without the flashcards entitlement", async () => {
+  it("hides platform cards (FREE ones too, no free tier) without full access and everything without the flashcards entitlement", async () => {
     const learning = await createLearningSetup({ topics: 1, subtopicsPerTopic: 1, questionsPerLeaf: 0, lessonsPerTopic: 0, gradeScheme: false });
     const { userId } = await createLearner({ features: { flashcards: true } });
     await createEnrollment(userId, learning);
@@ -176,12 +176,17 @@ describe("decks and the due queue", () => {
 
     const queue = await getDueQueue(actor, {});
     const ids = queue.cards.map((c) => c.flashcardId);
-    expect(ids).toContain(free);
-    // The shared default plan may open full content; only assert the PREMIUM rule when it does not.
+    // The shared default plan may open full content; only assert the full-access rule when it does not.
     if (!(await hasEntitlement(actor, "lessons.full"))) {
+      expect(ids).not.toContain(free);
       expect(ids).not.toContain(premium);
+      expect(await codeOf(reviewCard(actor, { flashcardId: free, rating: "GOOD" }))).toBe("ENTITLEMENT_REQUIRED");
       expect(await codeOf(reviewCard(actor, { flashcardId: premium, rating: "GOOD" }))).toBe("ENTITLEMENT_REQUIRED");
     }
+    const full = await createLearner({ features: { flashcards: true, lessonAccess: "ALL" } });
+    await createEnrollment(full.userId, learning);
+    const fullIds = (await getDueQueue({ userId: full.userId, roles: ["STUDENT" as const] }, {})).cards.map((c) => c.flashcardId);
+    expect(fullIds).toEqual(expect.arrayContaining([free, premium]));
 
     const plain = await createLearner({ features: null });
     await createEnrollment(plain.userId, learning);

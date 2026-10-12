@@ -71,7 +71,7 @@ export default async function TopicPage({ params }: { params: Params }) {
     <Container className="space-y-6 pb-10">
       <PageHeader
         breadcrumbs={[
-          { label: "Subjects", href: "/app/subjects" },
+          { label: "Learn", href: "/app/subjects" },
           { label: subject.name, href: `/app/subjects/${subject.id}` },
           ...view.ancestors.map((a) => ({ label: a.name, href: topicHref(subject.id, a.id) })),
           { label: topic.name },
@@ -169,7 +169,7 @@ export default async function TopicPage({ params }: { params: Params }) {
                         <UpgradeButton fallbackHref={view.upgradePath} variant="accent" />
                       }
                     >
-                      The free preview includes the free lessons. Unlock full access to open every lesson in this topic.
+                      Unlock full access to open every lesson in this topic.
                     </Alert>
                   )}
                 </>

@@ -5,7 +5,7 @@ describe("Open Graph image", () => {
   it("renders a 1200×630 PNG with the headline as alt text", async () => {
     expect(size).toEqual({ width: 1200, height: 630 });
     expect(contentType).toBe("image/png");
-    expect(alt).toContain("Master Your Exams.");
+    expect(alt).toContain("Learn every topic. Be ready for every paper.");
     const response = OpenGraphImage();
     const bytes = new Uint8Array(await response.arrayBuffer());
     expect(response.headers.get("content-type")).toBe("image/png");

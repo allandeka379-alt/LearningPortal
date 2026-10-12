@@ -9,8 +9,10 @@ import { formMessages, type OnboardingFormAction } from "./form-state";
 
 export interface FinishFormProps {
   action: OnboardingFormAction;
-  /** The student's plan includes the free diagnostic (§46). */
+  /** The student's plan includes the diagnostic (§46). */
   diagnosticIncluded: boolean;
+  /** The student has no full access yet: finishing continues to the unlock page (no free tier, 2026-10-12). */
+  unlockNext?: boolean;
   /** The subjects screen, offered when a chosen subject can no longer be added. */
   subjectsHref: string;
   /** Validated page to open instead of the dashboard once set up (hidden `next` field). */
@@ -32,7 +34,7 @@ function ChoiceButton({ value, variant, icon, children }: { value: string; varia
  * Both submit the same form (the pressed button's `choice` is posted), so it works without JavaScript; the server
  * enrols the chosen subjects, completes onboarding and redirects.
  */
-export function FinishForm({ action, diagnosticIncluded, subjectsHref, next = null }: FinishFormProps) {
+export function FinishForm({ action, diagnosticIncluded, unlockNext = false, subjectsHref, next = null }: FinishFormProps) {
   const [state, formAction] = useActionState(action, null);
   const messages = formMessages(state);
   const subjectProblem = state !== null && !state.ok && (state.error.fieldErrors?.subjectIds?.length ?? 0) > 0;
@@ -46,7 +48,7 @@ export function FinishForm({ action, diagnosticIncluded, subjectsHref, next = nu
           </ChoiceButton>
         )}
         <ChoiceButton value="dashboard" variant={diagnosticIncluded ? "outline" : "primary"} icon={<ArrowRight aria-hidden="true" />}>
-          {diagnosticIncluded ? "Skip for now, go to my dashboard" : "Go to my dashboard"}
+          {unlockNext ? "Continue to full access" : diagnosticIncluded ? "Skip for now, go to my dashboard" : "Go to my dashboard"}
         </ChoiceButton>
       </div>
       {messages.length > 0 && (

@@ -61,8 +61,8 @@ describe("DeckList", () => {
   it("is honest about locked and empty subjects", () => {
     render(<DeckList subjects={SUBJECTS} newRemainingToday={10} upgradeHref="/pricing" />);
     const history = screen.getByRole("region", { name: "History" });
-    expect(within(history).getByText("Not included in your plan")).toBeTruthy();
-    expect(within(history).getByRole("link", { name: "See plans" }).getAttribute("href")).toBe("/pricing");
+    expect(within(history).getByText("Needs full access")).toBeTruthy();
+    expect(within(history).getByRole("link", { name: "Get full access" }).getAttribute("href")).toBe("/app/unlock");
     expect(within(history).queryByRole("link", { name: /Review/ })).toBeNull();
     const biology = screen.getByRole("region", { name: "Biology" });
     expect(within(biology).getByText("No flashcards yet")).toBeTruthy();

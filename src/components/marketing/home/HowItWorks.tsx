@@ -1,17 +1,26 @@
 import { howItWorksSteps } from "../copy";
 import { Section } from "../Section";
 
-/** "How it works" (§45): the §52 journey from sign-up to daily practice, as numbered steps (AI tutor only when on). */
-export function HowItWorks({ aiEnabled = false }: { aiEnabled?: boolean }) {
+export interface HowItWorksProps {
+  aiEnabled?: boolean;
+  /** The one-off Full access price from the database ("US$1"), or null when nothing is on sale. */
+  priceLabel?: string | null;
+  id?: string;
+  tone?: "plain" | "surface" | "subtle";
+}
+
+/** "How it works" (§45, §52): the journey from sign-up to exam day as numbered steps (AI tutor only when on). */
+export function HowItWorks({ aiEnabled = false, priceLabel = null, id = "how-it-works", tone = "plain" }: HowItWorksProps) {
   return (
     <Section
-      id="how-it-works"
-      eyebrow="How it works"
-      title="From sign-up to knowing where you stand in minutes"
-      description="Tell us what you are studying, find out where you stand, and practise what matters most."
+      id={id}
+      tone={tone}
+      eyebrow="Getting started"
+      title="From sign-up to your first lesson in minutes"
+      description="Tell us your form and subjects, unlock everything with one payment, and start where your class is."
     >
       <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {howItWorksSteps(aiEnabled).map((step, index) => (
+        {howItWorksSteps(aiEnabled, priceLabel).map((step, index) => (
           <li key={step.title} className="flex gap-4 rounded-card border border-border bg-surface p-5">
             <span
               aria-hidden="true"

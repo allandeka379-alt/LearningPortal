@@ -139,7 +139,7 @@ export default async function SchoolOverviewPage({ searchParams }: { searchParam
             </div>
           ) : (
             <p className="text-sm text-muted">
-              Your school has no subscription yet, so students use the free plan.{" "}
+              Your school has no subscription yet, so students need their own Full access.{" "}
               <Link href="/school/billing" className="font-semibold text-primary underline-offset-4 hover:underline">
                 Request a school plan
               </Link>

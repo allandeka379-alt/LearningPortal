@@ -52,7 +52,8 @@ import { DEFAULT_SRS_CONFIG, newCardState, previewIntervals, schedule, type Card
  * queue, reviews, personal cards and suspension. Wires the pure cores (./decks, ./srs) to the database.
  *
  * - **Entitlement** `flashcards` (CLAUDE.md rule 9), resolved per subject so study packs count; PREMIUM platform cards
- *   additionally need full content access in that subject (`lessons.full`). Personal cards are the student's own.
+ *   additionally need full content access in that subject (`lessons.full`): every platform card, whatever its access
+ *   tier (owner decision 2026-10-12: no free tier). Personal cards are the student's own.
  * - **Decks** come from the enrolment's PINNED syllabus version (§26): PUBLISHED platform cards tagged to in-scope
  *   topics (route papers, chosen options, exam year — the same scope rules as progress) plus personal cards.
  * - **Privacy**: personal cards are visible only to their owner; every read filters `ownerUserId = actor`. Another
@@ -392,7 +393,7 @@ async function loadStudyMaterial(userId: string, scopes: SubjectScope[]): Promis
   for (const tag of tags) {
     const scope = topicScope.get(tag.topicId);
     if (!scope || !scope.inScope.has(tag.topicId)) continue;
-    if (tag.flashcard.accessTier === "PREMIUM" && !scope.premiumOpen) continue;
+    if (!scope.premiumOpen) continue;
     const order = scope.structure.byId.get(tag.topicId)?.order ?? Infinity;
     const subjectCards = offers.get(scope.subjectId);
     const existing = subjectCards?.get(tag.flashcardId);
@@ -763,7 +764,7 @@ async function resolveCardAccess(userId: string, flashcardId: string, hintSubjec
   const enrollment = await db.subjectEnrollment.findUnique({ where: { userId_subjectId: { userId, subjectId } }, select: { syllabusId: true } });
   const entitlements = await getSubjectEntitlements(userId, subjectId, { syllabusId: enrollment?.syllabusId ?? null });
   if (!hasFeature(entitlements, "flashcards")) throw new EntitlementRequiredError("flashcards");
-  if (card.ownerUserId === null && card.accessTier === "PREMIUM" && !hasFeature(entitlements, "lessons.full")) {
+  if (card.ownerUserId === null && !hasFeature(entitlements, "lessons.full")) {
     throw new EntitlementRequiredError("lessons.full");
   }
   return { flashcardId, isPersonal: card.ownerUserId !== null, subjectId };

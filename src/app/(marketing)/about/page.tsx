@@ -14,7 +14,7 @@ export const revalidate = 86400;
 export function generateMetadata(): Metadata {
   return marketingMetadata({
     title: "About us",
-    description: `Why ${APP_NAME} exists, what we believe about learning, and how we build a study platform for Zimbabwean O-Level and A-Level students.`,
+    description: `Why ${APP_NAME} exists, what we believe about learning, and how we build a learning platform for Form 3 to Form 6 students in Zimbabwe.`,
     path: "/about",
   });
 }
@@ -33,12 +33,13 @@ export default async function AboutPage() {
         <Container size="reading" className="relative py-14 sm:py-20">
           <p className="text-sm font-semibold text-primary">About {APP_NAME}</p>
           <h1 id="about-heading" className="mt-3 text-3xl font-bold tracking-tight text-text sm:text-4xl">
-            Serious exam preparation, within reach of every student
+            Real learning, from Form 3 to the exam hall, within reach of every student
           </h1>
           <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
             <p>
-              {APP_NAME} is a study platform for students preparing for ZIMSEC and Cambridge examinations: structured lessons, practice questions with instant marking, timed mock
-              exams{ai ? ", a personal study plan and an AI tutor that explains rather than simply answers." : " and a personal study plan."}
+              {APP_NAME} is a learning platform for Form 3 to Form 6 students following ZIMSEC and Cambridge syllabuses: complete courses of structured lessons,
+              practice questions with instant marking, flashcards, a personal study plan and timed mock exams
+              {ai ? ", with an AI tutor that explains rather than simply answers." : "."} It is built for learning through the year, not only for the weeks before an exam.
             </p>
             <p>
               It is designed for the way students in Zimbabwe actually study: mostly on phones, often on slow or
@@ -51,7 +52,7 @@ export default async function AboutPage() {
       <Section id="principles" title="What we believe" description="These principles shape every feature we build.">
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <FeatureItem icon={<Target />} title="Follow the syllabus you will sit">
-            ZIMSEC and Cambridge are set up separately, each with its own syllabus versions, so revision matches your papers.
+            ZIMSEC and Cambridge are set up separately, each with its own syllabus versions, so what you learn matches your papers.
           </FeatureItem>
           <FeatureItem icon={<Lightbulb />} title="Teach, don't just tell">
             Explanations, hints and worked solutions come first.{" "}

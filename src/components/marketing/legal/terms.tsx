@@ -3,16 +3,16 @@ import { APP_NAME, SUPPORT_EMAIL, SUPPORT_EMAIL_CONFIGURED } from "@/lib/config"
 import type { LegalSection } from "./LegalDocument";
 
 /**
- * DRAFT terms of use (template). Describes how the product actually works (a free preview and one-off lifetime Full
- * access since 2026-10-07, entitlements, AI features while switched off, school accounts) so counsel can review it; every commercial term in [square brackets] is a placeholder. Legal review
+ * DRAFT terms of use (template). Describes how the product actually works (one-off lifetime Full access since 2026-10-07, no free
+ * tier since 2026-10-12, entitlements, AI features while switched off, school accounts) so counsel can review it; every commercial term in [square brackets] is a placeholder. Legal review
  * required before launch.
  */
 
 const contact = SUPPORT_EMAIL_CONFIGURED ? SUPPORT_EMAIL : "[support contact email]";
 
-export const TERMS_VERSION = "Draft 0.2 (October 2026)";
+export const TERMS_VERSION = "Draft 0.3 (October 2026)";
 
-export const TERMS_SUMMARY = <>The rules for using {APP_NAME}: accounts, the free preview and Full access, payments, content and acceptable use.</>;
+export const TERMS_SUMMARY = <>The rules for using {APP_NAME}: accounts, Full access and payments, content and acceptable use.</>;
 
 export const TERMS_SECTIONS: readonly LegalSection[] = [
   {
@@ -45,11 +45,12 @@ export const TERMS_SECTIONS: readonly LegalSection[] = [
   },
   {
     id: "plans",
-    heading: "Free preview, Full access and payments",
+    heading: "Full access and payments",
     content: (
       <>
         <p>
-          What the free preview and Full access include, and the price of Full access, are shown on the{" "}
+          An account on its own does not include access to lessons, practice or tests: these need Full access. What Full
+          access includes and its price are shown on the{" "}
           <Link href="/pricing">pricing page</Link>. Prices are set per currency and may change; a change never affects
           access you have already bought.
         </p>
@@ -139,7 +140,9 @@ export const TERMS_SECTIONS: readonly LegalSection[] = [
     content: (
       <p>
         We work hard to make {APP_NAME} accurate and useful, but we cannot guarantee any examination result. Grade estimates
-        and study plans are guidance based on your activity on the platform.
+        and study plans are guidance based on your activity on the platform. Lessons and questions are written and
+        checked with care and keep improving; if you find a mistake, please tell us{SUPPORT_EMAIL_CONFIGURED ? ` at ${contact}` : ""} so
+        we can correct it, and check anything important against your syllabus or with your teacher.
       </p>
     ),
   },

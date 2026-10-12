@@ -263,7 +263,9 @@ describe("drafts, scheduling, closing", () => {
     const open = await createAssignment(world.teacher, { classId: cls.id, type: "PRACTICE", title: "Open", topicIds: [world.setup.topicIds[0]], questionCount: "1", dueAt: inDays(1) });
     await updateAssignmentSchedule(world.teacher, { assignmentId: open.id, dueAt: inDays(5), closesAt: inDays(6), allowLateSubmission: "on" });
     expect(await db.assignment.findUniqueOrThrow({ where: { id: open.id } })).toMatchObject({ closesAt: expect.any(Date) });
-    await closeDueAssignments();
+    // The sweep works in batches of the oldest due work across the whole (shared, parallel) test database: run it until
+    // nothing is left to close, so other files' overdue rows cannot crowd this one out of a batch.
+    for (let round = 0; round < 50 && (await closeDueAssignments({ limit: 500 })).closed > 0; round += 1);
     expect((await db.assignment.findUniqueOrThrow({ where: { id: strict.id } })).status).toBe("CLOSED");
     expect((await db.assignment.findUniqueOrThrow({ where: { id: open.id } })).status).toBe("PUBLISHED");
     await expectCode(updateAssignmentSchedule(world.teacher, { assignmentId: strict.id, dueAt: inDays(2), closesAt: "", allowLateSubmission: "on" }), "CONFLICT");

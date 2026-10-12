@@ -47,7 +47,7 @@ export function GuideView({ data, site }: { data: GuidePage; site: SiteContext }
       <CtaBand
         title="Keep going: practise what you just read."
         description="Practice questions with instant marking, mock exams and a study plan built around your exam date."
-        primary={{ href: PUBLIC_ROUTES.register, label: "Create a free account" }}
+        primary={{ href: PUBLIC_ROUTES.register, label: "Start learning" }}
         secondary={{ href: PUBLIC_ROUTES.pricing, label: "See plans" }}
       />
     </>

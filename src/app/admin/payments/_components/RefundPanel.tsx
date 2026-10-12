@@ -89,7 +89,7 @@ export function RefundPanel({ paymentId, currency, refundableMinor, support, pur
           <li>This cannot be undone.</li>
           <li>{full ? "The payment becomes Refunded." : "The payment stays Successful with a partial refund."}</li>
           {full && purpose === "STUDY_PACK" && <li>The study pack access bought with it ends now.</li>}
-          {full && purpose === "PLAN_PURCHASE" && <li>The full access bought with it ends now (the student returns to the free preview).</li>}
+          {full && purpose === "PLAN_PURCHASE" && <li>The full access bought with it ends now (the student loses access to the learning pages).</li>}
           {full && (purpose === "SUBSCRIPTION" || purpose === "SEATS") && (
             <li>It is flagged for review: decide on the subscription page whether access should end.</li>
           )}

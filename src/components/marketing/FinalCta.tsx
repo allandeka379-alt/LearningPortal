@@ -2,17 +2,21 @@ import { ArrowRight } from "lucide-react";
 import { ChevronPattern } from "@/components/brand/ChevronPattern";
 import { Container } from "@/components/layout/Container";
 import { ButtonLink } from "@/components/ui/Button";
-import { DIAGNOSTIC_SIGN_UP_HREF, SIGN_UP_HREF } from "./site-nav";
+import { joinLabel } from "./copy";
+import { HOW_IT_WORKS_HREF, SIGN_UP_HREF } from "./site-nav";
 
 export interface FinalCtaProps {
   title?: string;
   description?: string;
+  /** The one-off Full access price from the database ("US$1"), or null when nothing is on sale. */
+  priceLabel?: string | null;
 }
 
-/** Closing call to action (§45): create an account or start with the free diagnostic. */
+/** Closing call to action (§45): join with the one payment, or read how it works first. */
 export function FinalCta({
-  title = "Start studying today",
-  description = "Create a free account, choose your subjects and take the free diagnostic to see where you stand.",
+  title = "Start learning today",
+  description = "Create your account, tell us your form and subjects, and pick up your first lesson in minutes.",
+  priceLabel = null,
 }: FinalCtaProps) {
   return (
     <section aria-labelledby="final-cta-heading" className="relative overflow-hidden bg-primary-soft">
@@ -26,10 +30,10 @@ export function FinalCta({
         </div>
         <div className="flex w-full flex-col gap-3 min-[420px]:w-auto min-[420px]:flex-row">
           <ButtonLink href={SIGN_UP_HREF} size="lg" iconEnd={<ArrowRight aria-hidden="true" />}>
-            Start free
+            {joinLabel(priceLabel)}
           </ButtonLink>
-          <ButtonLink href={DIAGNOSTIC_SIGN_UP_HREF} size="lg" variant="outline" className="bg-surface">
-            Take the free diagnostic
+          <ButtonLink href={HOW_IT_WORKS_HREF} size="lg" variant="outline" className="bg-surface">
+            How it works
           </ButtonLink>
         </div>
       </Container>

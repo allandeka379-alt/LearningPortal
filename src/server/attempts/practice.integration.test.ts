@@ -179,10 +179,15 @@ describe("practice sessions (§10, §11)", () => {
     expect(view.answeredCount).toBe(0);
   });
 
-  it("enforces the plan's daily practice allowance (§31 FREE: limited questions)", async () => {
+  it("refuses practice without full access and enforces a plan's daily practice allowance (§31)", async () => {
     const setup = await createLearningSetup({ topics: 1, subtopicsPerTopic: 1, questionsPerLeaf: 3 });
-    // Default plan only (whatever the shared FREE plan allows): read the effective limit first.
-    const { userId, actor } = await createLearner({ features: null });
+    // No free tier (owner decision 2026-10-12): the default plan alone never starts practice, whatever its allowance.
+    const unpaid = await createLearner({ features: null });
+    if (!(await hasEntitlement(unpaid.actor, "lessons.full", { subjectId: setup.subjectId }))) {
+      await expectAppError(startAttempt(unpaid.actor, { mode: "PRACTICE", subjectId: setup.subjectId }), "ENTITLEMENT_REQUIRED");
+    }
+    // Full access with a small allowance (grants only raise the shared default plan's value): read the effective limit.
+    const { userId, actor } = await createLearner({ features: { lessonAccess: "ALL", practiceQuestionsPerDay: 3 } });
     const check = await checkLimit(actor, "practiceQuestionsPerDay", 0, { subjectId: setup.subjectId });
     const question = setup.questions[0];
     if (!question) throw new Error("no question");

@@ -249,7 +249,7 @@ describe("sendTutorMessage", () => {
 
     const events = await send(learner, id, { text: "One more question?" }, { gateway });
     expect(events).toHaveLength(1);
-    expect(errorOf(events)).toMatchObject({ code: "QUOTA_EXCEEDED", upgradeHref: "/pricing" });
+    expect(errorOf(events)).toMatchObject({ code: "QUOTA_EXCEEDED", upgradeHref: "/app/unlock" });
     expect(transport.calls).toHaveLength(0);
     expect(await messagesOf(learner.userId, id)).toHaveLength(0);
     const status = await getTutorStatus(learner.actor, { gateway, isConfigured: () => true });

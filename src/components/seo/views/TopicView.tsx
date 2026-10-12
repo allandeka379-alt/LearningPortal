@@ -120,7 +120,7 @@ export function TopicView({ data, site, answerSample }: { data: TopicPageData; s
           </Section>
 
           {data.sample && (
-            <Section id="sample" title="Sample question" description="A free question on this topic. Answer it, check it, then read the worked answer.">
+            <Section id="sample" title="Sample question" description="A sample question on this topic. Answer it, check it, then read the worked answer.">
               <div className="rounded-card border border-border bg-surface p-4 shadow-xs sm:p-6">
                 {data.sample.isExamStyle && (
                   <Badge tone="primary" size="sm" className="mb-3">
@@ -154,7 +154,7 @@ export function TopicView({ data, site, answerSample }: { data: TopicPageData; s
             </p>
             <div className="mt-4 flex flex-col gap-2">
               <ButtonLink href={PUBLIC_ROUTES.register} fullWidth>
-                Create a free account
+                Start learning
               </ButtonLink>
               <ButtonLink href={PUBLIC_ROUTES.pricing} variant="outline" fullWidth>
                 See plans and pricing
@@ -175,7 +175,7 @@ export function TopicView({ data, site, answerSample }: { data: TopicPageData; s
       <CtaBand
         title={`Turn ${topic.name} into a strength.`}
         description="Practise with instant marking, see your mastery grow and get a study plan built around your exam date."
-        primary={{ href: PUBLIC_ROUTES.register, label: "Get started free" }}
+        primary={{ href: PUBLIC_ROUTES.register, label: "Start learning" }}
         secondary={{ href: data.subjectHref, label: `${subject.name} topics` }}
       />
     </>

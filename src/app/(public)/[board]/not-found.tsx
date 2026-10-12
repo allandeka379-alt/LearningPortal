@@ -14,7 +14,7 @@ export default function PublicCurriculumNotFound() {
       <div className="mt-8 flex flex-col gap-3 min-[420px]:flex-row">
         <ButtonLink href="/">Go to the home page</ButtonLink>
         <ButtonLink href="/register" variant="outline">
-          Create a free account
+          Create an account
         </ButtonLink>
       </div>
     </Container>

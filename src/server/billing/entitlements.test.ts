@@ -9,6 +9,7 @@ import {
   featureLabel,
   grantEntitlements,
   hasFeature,
+  hasFullAppAccess,
   isSubscriptionLive,
   normalizeEntitlementDocument,
   parseGrantScope,
@@ -323,6 +324,32 @@ describe("resolveEntitlements", () => {
     expect(biology).toEqual(FREE);
   });
 
+  it("hasFullAppAccess: the default plan alone never opens the student area (no free tier, 2026-10-12)", () => {
+    expect(hasFullAppAccess(resolveEntitlements(inputs()))).toBe(false);
+    expect(hasFullAppAccess(resolveEntitlements(inputs({ freePlan: { code: "FREE", entitlements: NO_ENTITLEMENTS } })))).toBe(false);
+    expect(hasFullAppAccess(resolveEntitlements(inputs({ freePlan: null })))).toBe(false);
+    // A default plan an admin re-opened with every lesson would open it again (data, not code).
+    expect(hasFullAppAccess(resolveEntitlements(inputs({ freePlan: { code: "FREE", entitlements: STUDENT } })))).toBe(true);
+
+    const purchase = grant({ source: "PURCHASE", plan: { code: "FULL_ACCESS", entitlements: STUDENT } });
+    expect(hasFullAppAccess(resolveEntitlements(inputs({ grants: [purchase] })))).toBe(true);
+    const school = schoolSub();
+    const seat = grant({ source: "SCHOOL_SEAT", subscriptionId: school.id });
+    expect(
+      hasFullAppAccess(resolveEntitlements(inputs({ memberships: [{ schoolId: ids.school, role: "STUDENT" }], schoolSubscriptions: [school], grants: [seat] }))),
+    ).toBe(true);
+    // Students who got access another way keep it: a study pack (scoped) or any other live grant.
+    const pack = grant({
+      source: "STUDY_PACK",
+      studyPack: { id: "pack-1", entitlements: {}, scopes: [{ subjectId: ids.maths, qualificationId: null, syllabusId: null, syllabusSubjectId: null }] },
+    });
+    expect(hasFullAppAccess(resolveEntitlements(inputs({ grants: [pack] })))).toBe(true);
+    const promo = grant({ source: "PROMO", features: { features: { flashcards: true } } });
+    expect(hasFullAppAccess(resolveEntitlements(inputs({ grants: [promo] })))).toBe(true);
+    // Ended or revoked access does not count.
+    expect(hasFullAppAccess(resolveEntitlements(inputs({ grants: [{ ...purchase, revokedAt: now }] })))).toBe(false);
+  });
+
   it("a study pack without any scope unlocks nothing", () => {
     const pack = grant({ source: "STUDY_PACK", studyPack: { id: "pack-x", entitlements: STUDENT, scopes: [] } });
     const resolved = grantEntitlements(pack);
@@ -391,8 +418,8 @@ describe("feature and limit checks", () => {
 
   it("EntitlementRequiredError is a client-safe ENTITLEMENT_REQUIRED with an upgrade path", () => {
     const error = new EntitlementRequiredError("mock_exams");
-    expect(error).toMatchObject({ code: "ENTITLEMENT_REQUIRED", httpStatus: 403, feature: "mock_exams", upgradePath: "/pricing" });
-    expect(error.message).toBe("Your current plan doesn't include mock exams. Unlock full access to get it.");
+    expect(error).toMatchObject({ code: "ENTITLEMENT_REQUIRED", httpStatus: 403, feature: "mock_exams", upgradePath: "/app/unlock" });
+    expect(error.message).toBe("You need Full access for mock exams. Pay once to unlock everything.");
     expect(normalizeError(error)).toMatchObject({ code: "ENTITLEMENT_REQUIRED", message: error.message });
     const school = new EntitlementRequiredError("teacher_dashboard");
     expect(school.upgradePath).toBe("/schools");
@@ -404,7 +431,7 @@ describe("feature and limit checks", () => {
     const error = new LimitReachedError({ ...evaluateLimit("practiceQuestionsPerDay", 15, 15), limit: 15 }, resetsAt, now);
     expect(error).toMatchObject({ code: "QUOTA_EXCEEDED", retryAfterSeconds: 3600, limit: 15, used: 15 });
     expect(error.message).toBe(
-      "You've reached your plan's limit of 15 practice questions today. Unlock full access for more, or come back tomorrow.",
+      "You've reached your plan's limit of 15 practice questions today. Come back tomorrow.",
     );
     const single = new LimitReachedError({ ...evaluateLimit("mockExamsPerMonth", 1, 1), limit: 1 });
     expect(single.message).toContain("limit of 1 mock exam this month");

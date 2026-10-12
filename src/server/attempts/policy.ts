@@ -6,20 +6,23 @@
  * |-----------------|----------------------------------------|-----------------|--------------------|------------------------------------------|
  * | PRACTICE        | adaptive selection over the bank       | immediate       | none               | practiceQuestionsPerDay (per answer)     |
  * | RETEST          | adaptive selection, due topics         | immediate       | none               | practiceQuestionsPerDay                  |
- * | LESSON_CHECK    | the lesson's practice questions        | immediate       | none               | none (lesson access is the lesson's)     |
+ * | LESSON_CHECK    | the lesson's practice questions        | immediate       | none               | none beyond full access                  |
  * | DAILY_QUESTION  | today's DailyQuestion                  | immediate       | none               | daily_question                           |
- * | QUIZ            | Assessment (fixed / blueprint)         | assessment's    | assessment's       | practiceQuestionsPerDay (+ premium tier) |
- * | TOPIC_TEST      | Assessment                             | assessment's    | assessment's       | topicTestsPerWeek (+ premium tier)       |
- * | CHAPTER_TEST    | Assessment                             | assessment's    | assessment's       | premium tier only                        |
- * | SUBJECT_TEST    | Assessment                             | assessment's    | assessment's       | premium tier only                        |
+ * | QUIZ            | Assessment (fixed / blueprint)         | assessment's    | assessment's       | practiceQuestionsPerDay                  |
+ * | TOPIC_TEST      | Assessment                             | assessment's    | assessment's       | topicTestsPerWeek                        |
+ * | CHAPTER_TEST    | Assessment                             | assessment's    | assessment's       | none beyond full access                  |
+ * | SUBJECT_TEST    | Assessment                             | assessment's    | assessment's       | none beyond full access                  |
  * | TIMED_EXAM      | Assessment, or generated timed paper   | on submit       | required           | mock_exams                               |
  * | MOCK_EXAM       | Assessment                             | assessment's    | overall or per paper | mock_exams + mockExamsPerMonth         |
  * | DIAGNOSTIC      | Assessment, or one question per topic  | on submit       | assessment's       | diagnostic_test                          |
  *
+ * Every mode ALSO needs full access to the subject (`lessons.full`: a paid plan, a school seat or a study pack covering
+ * it). There is no free tier (owner decision 2026-10-12): FREE / PUBLIC content opens nothing in the app by itself.
+ *
  * Assignment work (§22) is any mode with `assignmentId`. It is exempt from the student's own plan gates and allowances
  * ONLY when the class's tenant sponsors it (holds the `assignments` entitlement: a school with a live school plan, or a
  * paying tutor; `assignmentWorkSponsored` in src/server/billing/entitlements.ts). Unsponsored assignment work is
- * stored with `config.planGated = true` and is gated and counted exactly like the student's own work, so a free
+ * stored with `config.planGated = true` and is gated and counted exactly like the student's own work, so a
  * self-registered "tutor" cannot hand out paid content ({@link isPlanExemptAttempt}).
  */
 import { z } from "zod";
@@ -431,34 +434,34 @@ export interface ModeGates {
 
 /**
  * What the student's plan must allow to START an attempt. `accessTier` is the assessment's tier (null for generated
- * modes, whose question pool is narrowed to the tiers the student may use instead). `planExempt` is true ONLY for
+ * modes); since 2026-10-12 it no longer opens anything by itself (there is no free tier, every mode needs full subject
+ * access) and is kept for callers and future use. `planExempt` is true ONLY for
  * assignment work the class's tenant sponsors (`assignmentWorkSponsored`); any other assignment work is gated like the
  * student's own.
  */
 export function gatesFor(mode: AttemptMode, options: { accessTier: ContentAccessTier | null; planExempt: boolean }): ModeGates {
   if (options.planExempt) return { features: [], limit: null, needsSubjectContent: false };
-  const premium = options.accessTier === "PREMIUM";
+  // No free tier (owner decision 2026-10-12): every mode needs full access to the subject (a paid plan, a school seat
+  // or a study pack covering it), whatever the access tier of the questions or the assessment.
   switch (mode) {
     case "PRACTICE":
     case "RETEST":
-      return { features: [], limit: "practiceQuestionsPerDay", needsSubjectContent: false };
     case "QUIZ":
-      return { features: [], limit: "practiceQuestionsPerDay", needsSubjectContent: premium };
+      return { features: [], limit: "practiceQuestionsPerDay", needsSubjectContent: true };
     case "TOPIC_TEST":
-      return { features: [], limit: "topicTestsPerWeek", needsSubjectContent: premium };
+      return { features: [], limit: "topicTestsPerWeek", needsSubjectContent: true };
     case "CHAPTER_TEST":
     case "SUBJECT_TEST":
-      return { features: [], limit: null, needsSubjectContent: premium };
-    case "MOCK_EXAM":
-      return { features: ["mock_exams"], limit: "mockExamsPerMonth", needsSubjectContent: false };
-    case "TIMED_EXAM":
-      return { features: ["mock_exams"], limit: null, needsSubjectContent: false };
-    case "DIAGNOSTIC":
-      return { features: ["diagnostic_test"], limit: null, needsSubjectContent: false };
-    case "DAILY_QUESTION":
-      return { features: ["daily_question"], limit: null, needsSubjectContent: false };
     case "LESSON_CHECK":
-      return { features: [], limit: null, needsSubjectContent: false };
+      return { features: [], limit: null, needsSubjectContent: true };
+    case "MOCK_EXAM":
+      return { features: ["mock_exams"], limit: "mockExamsPerMonth", needsSubjectContent: true };
+    case "TIMED_EXAM":
+      return { features: ["mock_exams"], limit: null, needsSubjectContent: true };
+    case "DIAGNOSTIC":
+      return { features: ["diagnostic_test"], limit: null, needsSubjectContent: true };
+    case "DAILY_QUESTION":
+      return { features: ["daily_question"], limit: null, needsSubjectContent: true };
   }
 }
 

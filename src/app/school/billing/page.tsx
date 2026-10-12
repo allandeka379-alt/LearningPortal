@@ -55,15 +55,15 @@ export default async function SchoolBillingPage() {
               {live.cancelAtPeriodEnd && <Alert tone="warning">This subscription ends at the end of the current period.</Alert>}
               {live.seats.studentsWithoutSeat > 0 && (
                 <Alert tone="info">
-                  Students take a free seat automatically the next time they use the platform. When all seats are taken, the rest use the
-                  free plan. To add seats, use the request form below.
+                  Students take an open seat automatically the next time they use the platform. When all seats are taken, the rest need
+                  their own Full access. To add seats, use the request form below.
                 </Alert>
               )}
             </div>
           </AdminSection>
         ) : (
           <Alert tone="info" title="No school plan yet">
-            Your students currently use the free plan. A school plan gives every student on your roster full access (one seat per
+            Your students need their own Full access for now. A school plan gives every student on your roster full access (one seat per
             student) and gives your teachers the class tools.
           </Alert>
         )}

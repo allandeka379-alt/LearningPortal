@@ -26,6 +26,7 @@ import {
   invalidateEntitlements,
   normalizeEntitlementDocument,
   releaseStaleSchoolSeats,
+  hasStudentAppAccess,
 } from "./entitlements";
 
 /**
@@ -128,6 +129,8 @@ describe("getEntitlements: sources", () => {
     expect(resolved.planCode).toBe(free.code);
     expect(resolved.sources.map((s) => s.kind)).toEqual(["FREE_PLAN"]);
     expect(resolved.scoped).toEqual([]);
+    // No free tier (2026-10-12): the default plan alone opens the student area only if an admin gave it every lesson.
+    await expect(hasStudentAppAccess(user.id)).resolves.toBe(free.entitlements.lessonAccess === "ALL");
     if (!free.entitlements.teacherDashboard) {
       await expect(assertEntitlement({ userId: user.id }, "teacher_dashboard")).rejects.toBeInstanceOf(EntitlementRequiredError);
     }
@@ -337,6 +340,7 @@ describe("study packs (subject-scoped grants)", () => {
     const resolved = await getEntitlements(student.id);
     expect(resolved.entitlements).toEqual(free.entitlements); // nothing leaks globally
     expect(resolved.scoped).toHaveLength(1);
+    await expect(hasStudentAppAccess(student.id)).resolves.toBe(true); // a study pack keeps the student area open
 
     await expect(canAccessSubjectContent(student.id, maths.subjectId)).resolves.toBe(true);
     const inMaths = await getSubjectEntitlements(student.id, maths.subjectId);
@@ -350,7 +354,7 @@ describe("study packs (subject-scoped grants)", () => {
     if (!free.entitlements.mockExams) {
       await expect(assertEntitlement({ userId: student.id }, "mock_exams", { subjectId: biology.subjectId })).rejects.toMatchObject({
         code: "ENTITLEMENT_REQUIRED",
-        upgradePath: "/pricing",
+        upgradePath: "/app/unlock",
       });
     }
   });

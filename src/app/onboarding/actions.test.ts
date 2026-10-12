@@ -112,7 +112,8 @@ describe("onboarding Server Actions", () => {
     expect((await db.learnerStats.findUniqueOrThrow({ where: { userId } })).dailyGoalMinutes).toBe(75);
 
     expect(await saveOnboardingStepAction(null, form({ step: "finish" }))).toMatchObject({ ok: false, error: { code: "BAD_REQUEST" } });
-    expect(await redirectOf(finishOnboardingAction(null, form({ choice: "diagnostic" })))).toBe("/app/diagnostic?from=onboarding");
+    // No free tier (2026-10-12): a student without full access finishes on the unlock page, whatever they chose.
+    expect(await redirectOf(finishOnboardingAction(null, form({ choice: "diagnostic" })))).toBe("/app/unlock");
 
     const enrolment = await db.subjectEnrollment.findUniqueOrThrow({ where: { userId_subjectId: { userId, subjectId: chain.subject.id } } });
     expect(enrolment).toMatchObject({ syllabusId: catalogue.upcomingSyllabusId, abilityLevel: "ADVANCED", targetGrade: null, targetExamSessionId: catalogue.session2028Id });

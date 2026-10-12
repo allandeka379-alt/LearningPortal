@@ -67,25 +67,25 @@ describe("getLessonForStudent", () => {
     expect(last).toMatchObject({ position: 3, previous: { id: second.id }, next: null });
   });
 
-  it("locks PREMIUM lessons on a free plan: no body, no licensing, an upgrade path (§31)", async () => {
+  it("locks every lesson without full access, free-preview ones too: no body, no licensing, an upgrade path (§31)", async () => {
     const fixture = await createLessonFixture();
     const [first, second] = fixture.lessons;
     const free = await enrolled(fixture, null);
     if (await freePlanOpensEverything(free, fixture)) return; // the shared default plan grants full lessons
 
     const locked = await getLessonForStudent(free.actor, second.id);
-    expect(locked).toMatchObject({ locked: true, content: null, attribution: null, practiceQuestionCount: 0, upgradePath: "/pricing" });
+    expect(locked).toMatchObject({ locked: true, content: null, attribution: null, practiceQuestionCount: 0, upgradePath: "/app/unlock" });
     expect(JSON.stringify(locked)).not.toContain("quadratic equation has the form");
-    // Free-preview lessons stay open, and they show the locked neighbour as locked.
-    const open = await getLessonForStudent(free.actor, first.id);
-    expect(open.locked).toBe(false);
-    expect(open.next).toMatchObject({ id: second.id, locked: true });
+    // No free tier (owner decision 2026-10-12): a lesson flagged as a free preview is locked too.
+    const preview = await getLessonForStudent(free.actor, first.id);
+    expect(preview).toMatchObject({ locked: true, content: null });
+    expect(preview.next).toMatchObject({ id: second.id, locked: true });
 
     const full = await enrolled(fixture);
     expect((await getLessonForStudent(full.actor, second.id)).locked).toBe(false);
   });
 
-  it("opens a PREMIUM lesson a sponsoring school's teacher assigned, even on a free plan (§22)", async () => {
+  it("opens a PREMIUM lesson a sponsoring school's teacher assigned, even without full access (§22)", async () => {
     const fixture = await createLessonFixture();
     const premium = fixture.lessons[1];
     const free = await enrolled(fixture, null);
@@ -110,8 +110,8 @@ describe("getLessonForStudent", () => {
     const lesson = await getLessonForStudent(free.actor, premium.id);
     expect(lesson).toMatchObject({ locked: false, assigned: true });
     expect(lesson.content?.html).toContain("katex");
-    // Its neighbours are not assigned: they keep their own lock state.
-    expect(lesson.previous).toMatchObject({ id: fixture.lessons[0].id, locked: false });
+    // Its neighbours are not assigned: they keep their own lock state (locked without full access, even free previews).
+    expect(lesson.previous).toMatchObject({ id: fixture.lessons[0].id, locked: true });
 
     // A class member who is not enrolled in the subject reads assigned work too (in the subject's published version),
     // but nothing else of that subject.
@@ -207,8 +207,8 @@ describe("getTopicPageForStudent", () => {
     const free = await enrolled(fixture, null);
     if (await freePlanOpensEverything(free, fixture)) return;
     const page = await getTopicPageForStudent(free.actor, fixture.subjectId, fixture.topicId);
-    expect(page.lessons.map((l) => l.locked)).toEqual([false, true, false]);
-    expect(page.lessonCounts.locked).toBe(1);
+    expect(page.lessons.map((l) => l.locked)).toEqual([true, true, true]);
+    expect(page.lessonCounts.locked).toBe(3);
   });
 
   it("refuses other versions' topics, other subjects and students not enrolled (§26)", async () => {

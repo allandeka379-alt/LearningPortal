@@ -1,37 +1,44 @@
 import type { FooterColumn } from "@/components/layout/MarketingFooter";
 import type { NavLinkItem } from "@/components/layout/nav-types";
+import { APP_NAME } from "@/lib/config";
 
 /**
- * Navigation of the public site (§45). UI copy and routes only (no product data). Shared by the (marketing) layout and
- * any other public group that wants the same chrome (e.g. the SEO curriculum pages).
+ * Navigation of the public site (§45; owner brief 2026-10-12: learning platform for Forms 3-6 plus exam candidates,
+ * no free tier). UI copy and routes only (no product data). Shared by the (marketing) layout and any other public group
+ * that wants the same chrome (e.g. the SEO curriculum pages).
  */
 
 /** Sign-up entry points. `next` targets are validated again by /register (`safeNextPath`). */
 export const SIGN_UP_HREF = "/register";
 export const SIGN_IN_HREF = "/login";
-export const DIAGNOSTIC_SIGN_UP_HREF = "/register?next=/app/diagnostic";
+/** Sign-up that lands on the in-app daily question once access is unlocked. */
 export const DAILY_SIGN_UP_HREF = "/register?next=/app/daily";
 /** Signed-in plan management (link only: public pages never read the session). */
 export const BILLING_HREF = "/app/billing";
 
+export const HOW_IT_WORKS_HREF = "/how-it-works";
+export const EXAM_CANDIDATES_HREF = "/exam-candidates";
+
 export const MARKETING_NAV: readonly NavLinkItem[] = [
+  { href: HOW_IT_WORKS_HREF, label: "How it works" },
   { href: "/subjects", label: "Subjects" },
-  { href: "/pricing", label: "Pricing" },
+  { href: EXAM_CANDIDATES_HREF, label: "Exam candidates" },
   { href: "/schools", label: "Schools" },
-  { href: "/daily", label: "Daily question" },
+  { href: "/pricing", label: "Pricing" },
 ];
 
-export const MARKETING_CTA: NavLinkItem = { href: SIGN_UP_HREF, label: "Start free" };
+export const MARKETING_CTA: NavLinkItem = { href: SIGN_UP_HREF, label: "Get full access" };
 export const MARKETING_SIGN_IN: NavLinkItem = { href: SIGN_IN_HREF, label: "Sign in" };
 
 export const FOOTER_COLUMNS: readonly FooterColumn[] = [
   {
-    title: "Study",
+    title: "Learn",
     links: [
+      { href: HOW_IT_WORKS_HREF, label: "How it works" },
       { href: "/subjects", label: "Subjects" },
-      { href: "/daily", label: "Daily question" },
+      { href: EXAM_CANDIDATES_HREF, label: "For exam candidates" },
+      { href: "/daily", label: "Today's question" },
       { href: "/exam-countdown", label: "Exam countdown" },
-      { href: DIAGNOSTIC_SIGN_UP_HREF, label: "Free diagnostic" },
     ],
   },
   {
@@ -43,7 +50,7 @@ export const FOOTER_COLUMNS: readonly FooterColumn[] = [
     ],
   },
   {
-    title: "About",
+    title: APP_NAME,
     links: [
       { href: "/about", label: "About us" },
       { href: SIGN_IN_HREF, label: "Sign in" },
@@ -59,4 +66,4 @@ export const LEGAL_LINKS: readonly NavLinkItem[] = [
 ];
 
 /** Footer line under the logo: what the platform is for, no claims. */
-export const FOOTER_TAGLINE = "Study for ZIMSEC and Cambridge O-Level and A-Level examinations.";
+export const FOOTER_TAGLINE = "Courses, practice and mock exams for Form 3 to Form 6: ZIMSEC and Cambridge, O-Level and A-Level.";

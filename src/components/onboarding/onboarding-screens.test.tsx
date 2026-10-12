@@ -59,6 +59,7 @@ const VIEWS: StepView[] = [
       dailyGoalMinutes: 45,
     },
     diagnosticIncluded: true,
+    fullAccess: true,
   },
 ];
 

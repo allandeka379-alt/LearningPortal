@@ -16,14 +16,14 @@ import { DiagnosticSummaryCard } from "./DiagnosticSummaryCard";
 describe("DiagnosticOfferCard", () => {
   it("invites a student who has not taken the diagnostic to the diagnostic hub", () => {
     const markup = renderToStaticMarkup(<DiagnosticOfferCard status="OFFER" />);
-    expect(markup).toContain("Take the free diagnostic");
+    expect(markup).toContain("Find your starting point");
     expect(markup).toContain('href="/app/diagnostic"');
     expect(markup).toContain("Start the diagnostic");
   });
 
   it("is a quieter reminder after the student skipped it", () => {
     const markup = renderToStaticMarkup(<DiagnosticOfferCard status="SKIPPED" />);
-    expect(markup).not.toContain("Take the free diagnostic");
+    expect(markup).not.toContain("Find your starting point");
     expect(markup).toContain("still here when you want it");
     expect(markup).toContain('href="/app/diagnostic"');
   });

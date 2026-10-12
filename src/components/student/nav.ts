@@ -20,31 +20,39 @@ export interface StudentNavItem extends NavItem {
   feature?: FeatureName;
 }
 
+/** Sidebar / account-menu group headings (design brief: learning first, then tools, community, account). */
+export const STUDENT_NAV_GROUPS = { tools: "Study tools", community: "Community", account: "Account" } as const;
+
+const { tools, community, account } = STUDENT_NAV_GROUPS;
+
 export const STUDENT_NAV: StudentNavItem[] = [
+  // The five destinations of the mobile tab bar (design brief IA): a learning platform first, exam prep second.
   { href: "/app", label: "Home", icon: "home", match: "exact", available: true, tab: true },
-  { href: "/app/subjects", label: "Subjects", icon: "subjects", available: true, tab: true },
+  // "Learn": the course library. It keeps the /app/subjects URL (course pages, topic pages, breadcrumbs and links in
+  // notifications all live under it); /app/learn redirects here.
+  { href: "/app/subjects", label: "Learn", icon: "subjects", available: true, tab: true },
   { href: "/app/practice", label: "Practice", icon: "practice", available: true, tab: true },
-  // Menu entries (not tabs): the daily question (§46) and the diagnostic (§52) hub.
-  { href: "/app/daily", label: "Daily question", icon: "questions", available: true },
   { href: "/app/exams", label: "Exams", icon: "exams", available: true, tab: true },
-  { href: "/app/diagnostic", label: "Diagnostic", icon: "reports", available: true },
+  { href: "/app/plan", label: "Plan", icon: "plan", available: true, tab: true },
+  // Study tools: flashcards, the daily question (§46), the diagnostic hub (§52) and progress analytics.
+  { href: "/app/flashcards", label: "Flashcards", icon: "flashcards", available: true, group: tools },
+  { href: "/app/daily", label: "Daily question", icon: "questions", available: true, group: tools },
+  { href: "/app/diagnostic", label: "Diagnostic", icon: "reports", available: true, group: tools },
+  { href: "/app/progress", label: "Progress", icon: "progress", available: true, group: tools },
   // AI features (owner decision 2026-10-07: hidden until `features.ai` is switched on).
-  { href: "/app/tutor", label: "Tutor", icon: "tutor", available: true, feature: "ai" },
-  { href: "/app/solver", label: "Question solver", icon: "help", available: true, feature: "ai" },
-  { href: "/app/flashcards", label: "Flashcards", icon: "flashcards", available: true },
-  { href: "/app/plan", label: "Study plan", icon: "plan", available: true, tab: true },
-  { href: "/app/progress", label: "Progress", icon: "progress", available: true },
-  // §24: the study-pack catalogue (packs for the student's qualification, bought through the checkout).
-  { href: "/app/study-packs", label: "Study packs", icon: "packs", available: true },
-  // Engagement (§19-§20, §46): badges and levels, opt-in leaderboards, inviting friends.
-  { href: "/app/achievements", label: "Achievements", icon: "qualifications", available: true },
-  { href: "/app/leaderboard", label: "Leaderboard", icon: "leaderboard", available: true },
-  { href: "/app/classes", label: "Classes", icon: "classes", available: true },
-  { href: "/app/invite", label: "Invite friends", icon: "invite", available: true },
-  { href: "/app/notifications", label: "Notifications", icon: "notifications", available: true },
-  // Parents and guardians (§21): links, requests and codes.
-  { href: "/app/family", label: "Family", icon: "users", available: true },
-  { href: "/app/settings", label: "Settings", icon: "settings", available: true },
+  { href: "/app/tutor", label: "Tutor", icon: "tutor", available: true, feature: "ai", group: tools },
+  { href: "/app/solver", label: "Question solver", icon: "help", available: true, feature: "ai", group: tools },
+  // Community (§19-§22, §46): classes, opt-in leaderboards, badges and levels, inviting friends.
+  { href: "/app/classes", label: "Classes", icon: "classes", available: true, group: community },
+  { href: "/app/leaderboard", label: "Leaderboard", icon: "leaderboard", available: true, group: community },
+  { href: "/app/achievements", label: "Achievements", icon: "qualifications", available: true, group: community },
+  { href: "/app/invite", label: "Invite friends", icon: "invite", available: true, group: community },
+  // Account. Parents and guardians (§21): links, requests and codes. Billing: the one-off full-access payment.
+  // Study packs (§24) are no longer listed: there is one price for everything (design brief); the route stays.
+  { href: "/app/notifications", label: "Notifications", icon: "notifications", available: true, group: account },
+  { href: "/app/family", label: "Family", icon: "users", available: true, group: account },
+  { href: "/app/billing", label: "Billing", icon: "payments", available: true, group: account },
+  { href: "/app/settings", label: "Settings", icon: "settings", available: true, group: account },
 ];
 
 /** Maximum entries in the mobile tab bar (matches AppShell's MAX_TAB_BAR_ITEMS). */
@@ -60,6 +68,7 @@ function toNavItem(item: StudentNavItem): NavItem {
   const nav: NavItem = { href: item.href, label: item.label, icon: item.icon };
   if (item.match !== undefined) nav.match = item.match;
   if (item.badge !== undefined) nav.badge = item.badge;
+  if (item.group !== undefined) nav.group = item.group;
   return nav;
 }
 

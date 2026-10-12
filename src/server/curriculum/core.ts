@@ -209,6 +209,8 @@ export const RESERVED_TOP_LEVEL_SLUGS: ReadonlySet<string> = new Set([
   "r",
   "billing",
   "exam-countdown",
+  "how-it-works",
+  "exam-candidates",
   "subjects",
   "guides",
   "search",

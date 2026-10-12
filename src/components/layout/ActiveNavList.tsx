@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useId } from "react";
 import { cn } from "@/lib/cn";
 import { formatNumber } from "@/lib/format";
 import { getActiveNavHref } from "./nav-active";
@@ -42,8 +43,52 @@ export interface ActiveNavListProps {
 export function ActiveNavList({ items, variant, labelledBy, className }: ActiveNavListProps) {
   // usePathname() can be null outside the App Router (e.g. pages-router fallbacks); treat that as "no match".
   const pathname: string | null = usePathname();
+  const baseId = useId();
+  // One active entry across all groups (the longest match over the whole list).
   const activeHref = pathname === null ? null : getActiveNavHref(pathname, items);
+  const grouped = variant !== "tabbar" && variant !== "inline" && items.some((item) => item.group !== undefined);
 
+  if (!grouped) return <NavLinks items={items} variant={variant} activeHref={activeHref} labelledBy={labelledBy} className={className} />;
+
+  // Consecutive items of one group render under its heading; ungrouped items lead without a heading.
+  const groups: { title: string | undefined; items: ResolvedNavItem[] }[] = [];
+  for (const item of items) {
+    const last = groups.at(-1);
+    if (last && last.title === item.group) last.items.push(item);
+    else groups.push({ title: item.group, items: [item] });
+  }
+  return (
+    <div className={cn("flex flex-col gap-4", className)}>
+      {groups.map((group, index) => {
+        const headingId = group.title ? `${baseId}-group-${index}` : undefined;
+        return (
+          <div key={`${group.title ?? "main"}-${index}`}>
+            {group.title && (
+              <p id={headingId} className="px-3 pb-1 text-xs font-semibold tracking-wide text-muted uppercase">
+                {group.title}
+              </p>
+            )}
+            <NavLinks items={group.items} variant={variant} activeHref={activeHref} labelledBy={headingId ?? labelledBy} />
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function NavLinks({
+  items,
+  variant,
+  activeHref,
+  labelledBy,
+  className,
+}: {
+  items: readonly ResolvedNavItem[];
+  variant: ActiveNavVariant;
+  activeHref: string | null;
+  labelledBy?: string;
+  className?: string;
+}) {
   return (
     <ul aria-labelledby={labelledBy} className={cn(LIST[variant], className)}>
       {items.map((item) => (

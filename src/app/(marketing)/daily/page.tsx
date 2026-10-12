@@ -42,8 +42,8 @@ export default async function DailyIndexPage() {
         <EmptyState
           icon={<CalendarCheck aria-hidden="true" />}
           title="Today's questions are not published yet"
-          description="Check back later today, or create a free account to practise your own subjects now."
-          action={<ButtonLink href={DAILY_SIGN_UP_HREF}>Create a free account</ButtonLink>}
+          description="Check back later today, or join to learn and practise your own subjects now."
+          action={<ButtonLink href={DAILY_SIGN_UP_HREF}>Join now</ButtonLink>}
         />
       ) : (
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

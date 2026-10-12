@@ -193,7 +193,7 @@ export function PracticeBuilder({ subject, topics, defaults, sizes, blocked, upg
             error.code === "QUOTA_EXCEEDED"
               ? "You've reached today's practice limit"
               : error.code === "ENTITLEMENT_REQUIRED"
-                ? "Not included in your plan"
+                ? "Needs full access"
                 : error.code === "NOT_FOUND"
                   ? "No questions match yet"
                   : "The session couldn't start"

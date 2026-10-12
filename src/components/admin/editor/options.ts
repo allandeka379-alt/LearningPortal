@@ -16,7 +16,7 @@ export const LESSON_KIND_OPTIONS: readonly Choice[] = [
 
 export const ACCESS_TIER_OPTIONS: readonly Choice[] = [
   { value: "PREMIUM", label: "Premium (subscribers only)" },
-  { value: "FREE", label: "Free preview (any signed-in student)" },
+  { value: "FREE", label: "Free tier (unused: no free tier since 2026-10-12, needs Full access)" },
   { value: "PUBLIC", label: "Public (no sign-in; SEO pages)" },
 ];
 

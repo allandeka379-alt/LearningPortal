@@ -95,7 +95,7 @@ export function DiagnosticStartForm({ subjects, idempotencyKey, fromOnboarding, 
         <Alert
           role="alert"
           tone={upgrade ? "accent" : "danger"}
-          title={upgrade ? "Not included in your plan" : "The diagnostic couldn't start"}
+          title={upgrade ? "Needs full access" : "The diagnostic couldn't start"}
           action={
             upgrade ? (
               <UpgradeButton fallbackHref={upgradeHref} variant="accent" />

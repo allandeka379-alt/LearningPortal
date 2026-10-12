@@ -226,8 +226,15 @@ export async function publishContentFromPipeline(options: PublishOptions): Promi
   const dryRun = options.dryRun === true;
   const approver = await resolveApprover(db, options.approverEmail);
   const curriculumAdmin = canPublishCurriculum(approver.actor);
-  const tree = loadContentTree(options.repoRoot, {}, options.contentRoot);
-  const families = (options.families && options.families.length > 0 ? [...options.families] : [...new Set([...tree.families, ...tree.registries.keys()])]).sort();
+  // Named families need no scan of the whole content tree (their syllabi are loaded below, for those families only),
+  // which keeps a run with nothing to publish (every production deploy) fast.
+  let families: string[];
+  if (options.families && options.families.length > 0) families = [...options.families];
+  else {
+    const tree = loadContentTree(options.repoRoot, {}, options.contentRoot);
+    families = [...new Set([...tree.families, ...tree.registries.keys()])];
+  }
+  families.sort();
   const report: PublishReport = { approver: approver.email, dryRun, syllabi: [], items: [], catalogue: [] };
   const note = options.note?.trim() || DEFAULT_ATTESTATION;
 

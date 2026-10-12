@@ -74,7 +74,7 @@ describe("describeAccessSources", () => {
       ["OWN", "Your subscription", "Student"],
       ["SCHOOL", "Through your school", "School"],
       ["GRANT", "Referral reward", null],
-      ["FREE", "Free plan", "Free"],
+      ["FREE", "Default plan", "Free"],
     ]);
     expect(views[0]?.endsAt).toEqual(END);
   });

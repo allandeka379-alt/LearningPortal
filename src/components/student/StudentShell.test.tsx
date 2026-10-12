@@ -59,22 +59,32 @@ describe("student shell navigation", () => {
       "/app",
       "/app/subjects",
       "/app/practice",
-      "/app/daily",
       "/app/exams",
+      "/app/plan",
+      "/app/flashcards",
+      "/app/daily",
       "/app/diagnostic",
+      "/app/progress",
       "/app/tutor",
       "/app/solver",
-      "/app/flashcards",
-      "/app/plan",
-      "/app/progress",
-      "/app/study-packs",
-      "/app/achievements",
-      "/app/leaderboard",
       "/app/classes",
+      "/app/leaderboard",
+      "/app/achievements",
       "/app/invite",
       "/app/notifications",
       "/app/family",
+      "/app/billing",
       "/app/settings",
+    ]);
+    // Grouped under headings that label their lists.
+    for (const heading of ["Study tools", "Community", "Account"]) {
+      expect(within(sidebar).getByRole("list", { name: heading })).toBeTruthy();
+    }
+    expect(within(within(sidebar).getByRole("list", { name: "Community" })).getAllByRole("link").map((link) => link.textContent)).toEqual([
+      "Classes",
+      "Leaderboard",
+      "Achievements",
+      "Invite friends",
     ]);
     for (const name of ["Tutor", "Question solver", "Flashcards", "Achievements", "Leaderboard", "Classes", "Invite friends", "Notifications", "Family"]) {
       expect(within(sidebar).getByRole("link", { name })).toBeTruthy();
@@ -101,7 +111,8 @@ describe("student shell navigation", () => {
     renderShell();
     const [sidebar] = screen.getAllByRole("navigation", { name: "Student" });
     if (!sidebar) throw new Error("sidebar missing");
-    expect(within(sidebar).getByRole("link", { name: "Subjects" }).getAttribute("aria-current")).toBe("page");
+    expect(within(sidebar).getByRole("link", { name: "Learn" }).getAttribute("aria-current")).toBe("page");
+    expect(screen.getAllByRole("link", { current: "page" })).toHaveLength(2); // sidebar + tab bar, never two in one list
     expect(within(sidebar).getByRole("link", { name: "Home" }).getAttribute("aria-current")).toBeNull();
   });
 });
@@ -151,22 +162,23 @@ describe("student header actions", () => {
     const menu = screen.getByRole("menu");
     const items = within(menu).getAllByRole("menuitem").map((item) => item.textContent);
     expect(items).toEqual([
+      "Flashcards",
       "Daily question",
       "Diagnostic",
+      "Progress",
       "Tutor",
       "Question solver",
-      "Flashcards",
-      "Progress",
-      "Study packs",
-      "Achievements",
-      "Leaderboard",
       "Classes",
+      "Leaderboard",
+      "Achievements",
       "Invite friends",
       "Notifications",
       "Family",
+      "Billing",
       "Settings",
       "Sign out",
     ]);
+    for (const heading of ["Study tools", "Community", "Account"]) expect(within(menu).getByText(heading)).toBeTruthy();
     expect(within(menu).getByText("Tariro Moyo")).toBeTruthy();
   });
 });

@@ -42,9 +42,10 @@ function tally(results: readonly string[]): Record<string, number> {
 describe("plan allowances under concurrency (PAY-3)", () => {
   it("parallel answers across several open practice sessions never exceed practiceQuestionsPerDay", async () => {
     const setup = await createLearningSetup({ topics: 1, subtopicsPerTopic: 1, questionsPerLeaf: 6 });
-    const { userId, actor } = await createLearner({ features: null });
+    // Full access with a small daily allowance (grants only raise the default plan's value, so read the effective limit).
+    const { userId, actor } = await createLearner({ features: { lessonAccess: "ALL", practiceQuestionsPerDay: 3 } });
     const { limit } = await checkLimit(actor, "practiceQuestionsPerDay", 0, { subjectId: setup.subjectId });
-    if (limit === null || limit === 0) return; // not limit-testable with this default plan (see practice.integration.test.ts)
+    if (limit === null || limit < 2) return; // not limit-testable with this default plan (see practice.integration.test.ts)
     const question = setup.questions[0];
     if (!question) throw new Error("no question");
 
@@ -62,7 +63,7 @@ describe("plan allowances under concurrency (PAY-3)", () => {
   it("parallel starts of different topic tests never exceed topicTestsPerWeek", async () => {
     const setup = await createLearningSetup({ topics: 1, subtopicsPerTopic: 1, questionsPerLeaf: 3 });
     // A small weekly allowance (grants only raise the default plan's value, so read the effective limit).
-    const { userId, actor } = await createLearner({ features: { topicTestsPerWeek: 2 } });
+    const { userId, actor } = await createLearner({ features: { lessonAccess: "ALL", topicTestsPerWeek: 2 } });
     const { limit } = await checkLimit(actor, "topicTestsPerWeek", 0, { subjectId: setup.subjectId });
     if (limit === null || limit === 0 || limit > 5) return;
     const question = setup.questions[0];

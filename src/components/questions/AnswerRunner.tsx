@@ -239,7 +239,7 @@ function RunnerError({ error, answerErrorId, upgradeHref, onReload }: { error: A
       <Alert
         role="alert"
         tone="accent"
-        title={error.code === "QUOTA_EXCEEDED" ? "You've reached today's practice limit" : "Not included in your plan"}
+        title={error.code === "QUOTA_EXCEEDED" ? "You've reached today's practice limit" : "Needs full access"}
         action={
           <UpgradeButton fallbackHref={upgradeHref} variant="accent" />
         }

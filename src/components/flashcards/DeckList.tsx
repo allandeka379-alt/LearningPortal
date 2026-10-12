@@ -68,7 +68,7 @@ export function DeckList({ subjects, newRemainingToday, focusTopicId, upgradeHre
                         subject.counts.mature > 0 ? ` · ${subject.counts.mature} mature` : ""
                       }`
                     : "No flashcards yet"
-                  : "Not included in your plan"
+                  : "Needs full access"
               }
               action={
                 subject.entitled ? (

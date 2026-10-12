@@ -1,10 +1,11 @@
 import "server-only";
 import { z } from "zod";
 import type { AbilityLevel, OnboardingStep, Prisma, Role } from "@/generated/prisma/client";
+import { UNLOCK_PATH } from "@/lib/billing/paywall";
 import { DEFAULT_COUNTRY_CODE } from "@/lib/config";
 import { daysUntil, localDateFromDateColumn, type LocalDate } from "@/lib/dates";
 import { DAILY_GOAL_MAX_MINUTES, DAILY_GOAL_MIN_MINUTES } from "@/server/accounts/student-settings";
-import { hasEntitlement } from "@/server/billing/entitlements";
+import { hasEntitlement, hasStudentAppAccess } from "@/server/billing/entitlements";
 import { ENROLLABLE_SYLLABUS_STATUSES } from "@/server/curriculum/core";
 import { listBoardsForCountry, listCountries, listQualificationsByLevel, listSubjectsForQualification } from "@/server/curriculum/catalogue";
 import { getExamSessions } from "@/server/curriculum/exam-sessions";
@@ -247,7 +248,13 @@ export type StepView =
   | { step: "ability"; selected: AbilityLevel | null }
   | { step: "grade"; qualificationName: string; grades: string[]; selected: string | null; answered: boolean }
   | { step: "goal"; options: number[]; defaultMinutes: number; selected: number | null; min: number; max: number }
-  | { step: "finish"; summary: OnboardingSummary; diagnosticIncluded: boolean };
+  | {
+      step: "finish";
+      summary: OnboardingSummary;
+      diagnosticIncluded: boolean;
+      /** The student already has full access (a school seat, a grant, a parent's purchase); otherwise finishing opens /app/unlock. */
+      fullAccess: boolean;
+    };
 
 /** The `year` screen's optional "your school" picker (§5, §23 join requests). */
 export interface SchoolPickerView {
@@ -520,8 +527,12 @@ async function buildView(actor: OnboardingActor, step: WizardStep, state: Onboar
       };
     }
     case "finish": {
-      const [summary, diagnosticIncluded] = await Promise.all([buildSummary(actor, state), hasEntitlement(actor, "diagnostic_test")]);
-      return { step, summary, diagnosticIncluded };
+      const [summary, diagnosticIncluded, fullAccess] = await Promise.all([
+        buildSummary(actor, state),
+        hasEntitlement(actor, "diagnostic_test"),
+        hasStudentAppAccess(actor.userId),
+      ]);
+      return { step, summary, diagnosticIncluded: diagnosticIncluded && fullAccess, fullAccess };
     }
   }
 }
@@ -796,7 +807,12 @@ export interface CompletedOnboarding {
  */
 export async function completeOnboarding(actor: OnboardingActor, input: unknown, now: Date = new Date()): Promise<CompletedOnboarding> {
   const { choice } = parse(finishSchema, input);
-  const href = choice === "diagnostic" ? `${DIAGNOSTIC_PATH}?from=onboarding` : DASHBOARD_PATH;
+  // No free tier (owner decision 2026-10-12): a student without full access continues to the unlock page.
+  const href = !(await hasStudentAppAccess(actor.userId))
+    ? UNLOCK_PATH
+    : choice === "diagnostic"
+      ? `${DIAGNOSTIC_PATH}?from=onboarding`
+      : DASHBOARD_PATH;
   const state = await getOnboardingState(actor);
   if (state.completed) return { href, enrolments: [] };
   const { answers } = state;

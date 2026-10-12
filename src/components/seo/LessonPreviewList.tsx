@@ -14,9 +14,9 @@ export interface LessonPreviewListProps {
 }
 
 /**
- * Lessons of a topic on its public page (§44). PUBLIC lessons may show a short plain-text excerpt ("free preview")
- * and link to their public guide page; every other lesson shows its TITLE ONLY with why it is locked: FREE lessons
- * need a (free) account, PREMIUM lessons a plan. Lesson bodies of locked lessons never reach this component (the
+ * Lessons of a topic on its public page (§44). PUBLIC lessons may show a short plain-text excerpt (an open sample)
+ * and link to their public guide page; every other lesson shows its TITLE ONLY, locked behind Full access (owner
+ * decision 2026-10-12: no free tier, so FREE and PREMIUM lessons both need the one payment). Lesson bodies of locked lessons never reach this component (the
  * loader does not select them). Server component.
  */
 export function LessonPreviewList({ previews, lessons, total, signUpHref, pricingHref }: LessonPreviewListProps) {
@@ -30,7 +30,7 @@ export function LessonPreviewList({ previews, lessons, total, signUpHref, pricin
             <li key={preview.id} className="flex flex-col rounded-card border border-border bg-surface p-4 sm:p-5">
               <div className="flex items-center gap-2">
                 <Badge tone="primary" size="sm" icon={<BookOpen aria-hidden="true" />}>
-                  Free preview
+                  Open to read
                 </Badge>
                 <span className="inline-flex items-center gap-1 text-xs text-muted">
                   <Clock aria-hidden="true" className="size-3.5" />
@@ -44,7 +44,7 @@ export function LessonPreviewList({ previews, lessons, total, signUpHref, pricin
                   href={preview.href}
                   className="mt-auto inline-flex min-h-11 items-center gap-1.5 pt-3 text-sm font-semibold text-primary underline-offset-4 hover:underline"
                 >
-                  Read the free guide
+                  Read the guide
                   <span className="sr-only">: {preview.title}</span>
                   <ArrowRight aria-hidden="true" className="size-4" />
                 </Link>
@@ -72,13 +72,9 @@ export function LessonPreviewList({ previews, lessons, total, signUpHref, pricin
                 <Badge tone="primary" size="sm">
                   Free to read
                 </Badge>
-              ) : lesson.lockReason === "SIGN_IN" ? (
-                <Badge tone="neutral" appearance="outline" size="sm" icon={<Lock aria-hidden="true" />}>
-                  Free with an account
-                </Badge>
               ) : (
-                <Badge tone="accent" size="sm" icon={<Lock aria-hidden="true" />}>
-                  Premium
+                <Badge tone="neutral" appearance="outline" size="sm" icon={<Lock aria-hidden="true" />}>
+                  Full access
                 </Badge>
               )}
             </li>
@@ -90,13 +86,13 @@ export function LessonPreviewList({ previews, lessons, total, signUpHref, pricin
         <p className="text-sm text-muted">
           {more > 0 && `${formatCount(more, "more lesson", "more lessons")} in this topic. `}
           <Link href={signUpHref} className="font-medium text-primary underline underline-offset-4">
-            Create a free account
+            Join
           </Link>{" "}
-          to start reading, or{" "}
+          to read every lesson, or{" "}
           <Link href={pricingHref} className="font-medium text-primary underline underline-offset-4">
-            compare plans
-          </Link>{" "}
-          for full access.
+            see what one payment includes
+          </Link>
+          .
         </p>
       )}
     </div>

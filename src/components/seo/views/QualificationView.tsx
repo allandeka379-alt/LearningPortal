@@ -43,7 +43,7 @@ export function QualificationView({ data, site }: { data: QualificationPageData;
         actions={
           <>
             <ButtonLink href={PUBLIC_ROUTES.register} size="lg">
-              Create a free account
+              Start learning
             </ButtonLink>
             <ButtonLink href={PUBLIC_ROUTES.daily} variant="outline" size="lg">
               Try today&apos;s question
@@ -55,7 +55,7 @@ export function QualificationView({ data, site }: { data: QualificationPageData;
       <Container className="grid gap-10 py-10 sm:py-12 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-12">
         <div className="min-w-0 space-y-12">
           {data.categories.length === 0 ? (
-            <EmptyState title={`${data.label} subjects are being added`} description="Check back soon, or create a free account to be ready when they open." />
+            <EmptyState title={`${data.label} subjects are being added`} description="Check back soon, or join now to be ready when they open." />
           ) : (
             data.categories.map((group) => (
               <Section key={group.category.id} id={`category-${group.category.id}`} title={group.category.name}>
@@ -110,7 +110,7 @@ export function QualificationView({ data, site }: { data: QualificationPageData;
       <CtaBand
         title={`Prepare for ${data.label} with a plan that fits your exam date.`}
         description="Pick your subjects, practise topic by topic and track what you have mastered."
-        primary={{ href: PUBLIC_ROUTES.register, label: "Get started free" }}
+        primary={{ href: PUBLIC_ROUTES.register, label: "Start learning" }}
         secondary={{ href: PUBLIC_ROUTES.pricing, label: "See plans" }}
       />
     </>

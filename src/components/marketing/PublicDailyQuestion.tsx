@@ -95,7 +95,7 @@ export function PublicDailyQuestion({
                 </Button>
               ) : error.code === "RATE_LIMITED" ? (
                 <ButtonLink href={signUpHref} variant="accent">
-                  Create a free account
+                  Join to keep practising
                 </ButtonLink>
               ) : undefined
             }

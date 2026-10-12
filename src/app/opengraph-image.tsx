@@ -43,7 +43,7 @@ export default function OpenGraphImage() {
           <div style={{ fontSize: 44, fontWeight: 700, letterSpacing: -1 }}>{APP_NAME}</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", marginTop: 72, maxWidth: 960 }}>
-          <div style={{ fontSize: 96, fontWeight: 800, letterSpacing: -3, lineHeight: 1.05 }}>{APP_TAGLINE}</div>
+          <div style={{ fontSize: 80, fontWeight: 800, letterSpacing: -2.5, lineHeight: 1.05 }}>{APP_TAGLINE}</div>
           <div style={{ fontSize: 34, lineHeight: 1.35, marginTop: 28, color: ZAMBEZI_100 }}>{HERO_SUPPORTING_LINE}</div>
         </div>
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 56, display: "flex", background: ZAMBEZI_950 }}>

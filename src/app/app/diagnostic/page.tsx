@@ -44,7 +44,7 @@ function detailText(subject: DiagnosticSubject): string {
 }
 
 /**
- * The free diagnostic (§46, §52 step 5): what it is (about ten minutes per subject, no penalty), subjects to choose,
+ * The diagnostic test (§46, §52 step 5): what it is (about ten minutes per subject, no penalty), subjects to choose,
  * diagnostics in progress to continue and earlier reports. Starting opens the first diagnostic in the exam room;
  * nothing is marked or shown until it is submitted.
  */
@@ -66,7 +66,7 @@ export default async function DiagnosticPage({ searchParams }: { searchParams: S
   return (
     <Container size="reading" className="space-y-6 pb-12">
       <PageHeader
-        eyebrow="Free diagnostic"
+        eyebrow="Diagnostic test"
         title="Find your starting point"
         description={`A short test for each subject, about ${DIAGNOSTIC_MINUTES_PER_SUBJECT} minutes each. It checks what you already know, so your study plan starts in the right place.`}
         className="pb-0"

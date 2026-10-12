@@ -164,6 +164,19 @@ describe("content:import", () => {
     const again = await runImport();
     expect(outcome(again, "linear.q01")).toBe("unchanged");
     expect(again.items.filter((i) => i.outcome !== "unchanged")).toEqual([]);
+
+    // The production deploy step (scripts/railway-migrate.sh: import, then publish): the draft copy is merged into the
+    // live question as revision 2, and nothing else is touched; a further run is a no-op.
+    const merged = await publishContentFromPipeline({ repoRoot: root, approverEmail, families: [family], authorEmail, catalogue: false });
+    expect(merged.items.map((i) => [i.type, i.outcome, i.revision])).toEqual([["QUESTION", "published", 2]]);
+    expect(await db.question.findUniqueOrThrow({ where: { id: live.id }, select: { status: true, revision: true, explanation: true, pendingDraft: { select: { id: true } } } })).toEqual({
+      status: "PUBLISHED",
+      revision: 2,
+      explanation: "Subtract 3 from both sides, then divide both sides by 2: $x = 4$.",
+      pendingDraft: null,
+    });
+    const noop = await publishContentFromPipeline({ repoRoot: root, approverEmail, families: [family], authorEmail, catalogue: false });
+    expect(noop.items).toEqual([]);
   }, 300_000);
 
   it("re-tags published items in place (tags are metadata) and reports frozen syllabus changes as conflicts", async () => {

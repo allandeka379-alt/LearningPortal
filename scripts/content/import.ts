@@ -74,7 +74,7 @@ async function main(): Promise<void> {
       failed
         ? "\nImport finished with errors."
         : changed
-          ? "\nImport finished. New and changed items are IN REVIEW: review them at /admin/review/topics, then publish with npm run content:publish -- --approver <your email>."
+          ? "\nImport finished. New and changed items are IN REVIEW until published: npm run content:publish -- --approver <admin email> (production deploys run it automatically when CONTENT_PUBLISH_APPROVER is set, scripts/railway-migrate.sh)."
           : "\nImport finished: the database already matches the files.",
     );
     process.exitCode = failed ? 1 : 0;

@@ -668,6 +668,13 @@ service.
    (`src/server/accounts/bootstrap-admin.ts`; refused once any active super admin exists; audited).
 5. `scripts/railway-release.ps1 -PublishAs <email>`: dry run, then publish after the reviewer types PUBLISH (§41).
 
+**Automatic content publishing (owner decision 2026-10-12: no human review before production).** The `migrate` service
+(`scripts/railway-migrate.sh`) imports `IMPORT_FAMILIES` and then publishes the same families as
+`CONTENT_PUBLISH_APPROVER` (the email of an existing ADMIN account; unset = import only, items stay IN REVIEW). Four-eyes
+still holds: the importer writes as the pipeline account, the approver is a person. `combined-science-o` must be listed
+together with `mathematics-o,biology-o,physics-o,chemistry-o`. `RUN_SEED=1` also re-applies "no free tier" to the FREE
+plan (it grants nothing and is hidden from /pricing).
+
 Later releases with a new migration: `scripts/railway-release.ps1` (no switch) before the deploy.
 
 `app_build` is read-only: if a prerendered page ever writes during the build, the build fails loudly rather than

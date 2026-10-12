@@ -3,7 +3,7 @@ import { MarketingHeader } from "@/components/layout/MarketingHeader";
 import { FOOTER_COLUMNS, FOOTER_TAGLINE, LEGAL_LINKS, MARKETING_CTA, MARKETING_NAV, MARKETING_SIGN_IN } from "./site-nav";
 
 /**
- * Public site header with the marketing nav (Subjects, Pricing, Schools, Daily question) and the Sign in / Start free
+ * Public site header with the marketing nav (How it works, Subjects, Exam candidates, Schools, Pricing) and the Sign in / Get full access
  * actions. Static: it never reads the session, so public pages stay cacheable (signed-in visitors use "Sign in", which
  * forwards them to their area).
  */

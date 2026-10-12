@@ -144,7 +144,7 @@ describe("ExamSessionList", () => {
 });
 
 describe("LessonPreviewList", () => {
-  it("shows excerpts for free previews and only titles with lock reasons for the rest", () => {
+  it("shows excerpts for open samples and only titles, locked behind Full access, for the rest", () => {
     const out = render(
       <LessonPreviewList
         previews={[{ id: "p", title: "Factorising", kind: "LESSON", excerpt: "Find two numbers…", estimatedMinutes: 8, href: "/b/q/s/guides/factorising" }]}
@@ -157,11 +157,11 @@ describe("LessonPreviewList", () => {
         pricingHref="/pricing"
       />,
     );
-    expect(out).toContain("Free preview");
+    expect(out).toContain("Open to read");
     expect(out).toContain("Find two numbers…");
     expect(out).toContain('href="/b/q/s/guides/factorising"');
-    expect(out).toContain("Free with an account");
-    expect(out).toContain("Premium");
+    expect(out.match(/Full access/g)?.length).toBe(2);
+    expect(out).not.toMatch(/free/i);
     expect(out).toContain("2 more lessons in this topic.");
   });
 });

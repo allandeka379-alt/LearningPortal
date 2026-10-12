@@ -28,7 +28,7 @@ const KIND_ORDER: Readonly<Record<AccessSourceKind, number>> = { OWN: 0, PARENT:
 
 /**
  * Where the student's (unscoped) access comes from: their own subscription (or one a parent pays for), their school,
- * grants (promotions, referral rewards, staff credit) and the free plan. Study packs are scoped to subjects and are
+ * grants (promotions, referral rewards, staff credit) and the default plan (no access since 2026-10-12). Study packs are scoped to subjects and are
  * listed separately, so scoped grants are left out here.
  */
 export function describeAccessSources(input: {
@@ -64,7 +64,7 @@ export function describeAccessSources(input: {
         views.push({ ...base, kind: "GRANT", label: source.grantSource ? GRANT_SOURCE_LABELS[source.grantSource] : "Extra access" });
         break;
       case "FREE_PLAN":
-        views.push({ ...base, kind: "FREE", label: "Free plan" });
+        views.push({ ...base, kind: "FREE", label: "Default plan" });
         break;
     }
   }

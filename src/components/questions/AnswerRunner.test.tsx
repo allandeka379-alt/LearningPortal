@@ -96,7 +96,7 @@ describe("AnswerRunner", () => {
     await user.click(screen.getByRole("button", { name: "Check answer" }));
     const alert = await screen.findByRole("alert");
     expect(alert.textContent).toContain("You've reached today's practice limit");
-    expect(screen.getByRole("link", { name: "See plans" }).getAttribute("href")).toBe("/pricing");
+    expect(screen.getByRole("link", { name: "Get full access" }).getAttribute("href")).toBe("/app/unlock");
     expect((screen.getByRole("radio", { name: /x = -2/ }) as HTMLInputElement).checked).toBe(true);
     expect(await screen.findByRole("button", { name: "Check answer" })).toBeTruthy();
   });

@@ -12,7 +12,7 @@ export interface DiagnosticOfferCardProps {
 }
 
 /**
- * "Take the free diagnostic" on the dashboard (§46, §52): shown until the student's first diagnostic is finished. A
+ * "Find your starting point" (the diagnostic) on the dashboard (§46, §52): shown until the student's first diagnostic is finished. A
  * student who skipped it in onboarding gets a quieter reminder instead of the full invitation. Server component.
  */
 export function DiagnosticOfferCard({ status, href = "/app/diagnostic", className }: DiagnosticOfferCardProps) {
@@ -42,7 +42,7 @@ export function DiagnosticOfferCard({ status, href = "/app/diagnostic", classNam
           </span>
           <div className="min-w-0 space-y-1">
             <h2 id="diagnostic-offer-title" className="text-lg font-semibold text-text">
-              Take the free diagnostic
+              Find your starting point
             </h2>
             <p className="text-sm text-muted">
               A short test of each of your subjects. It finds your strengths and gaps, sets your starting mastery and shapes

@@ -33,7 +33,7 @@ export default async function RegisterPage({ searchParams }: { searchParams: Pag
   return (
     <AuthCard
       title="Create your account"
-      description={`Join ${APP_NAME} for free. It takes about a minute.`}
+      description={`Join ${APP_NAME}. It takes about a minute.`}
       footer={
         <p>
           Already have an account?{" "}

@@ -8,12 +8,12 @@ function line(e: Entitlements, key: string) {
 }
 
 describe("summariseEntitlements", () => {
-  it("describes the free document honestly: previews included, paid features listed as not included", () => {
+  it("describes an empty document honestly: nothing included, paid features listed as not included (no free tier)", () => {
     const lines = summariseEntitlements(NO_ENTITLEMENTS);
-    expect(line(NO_ENTITLEMENTS, "lessons")).toEqual({ key: "lessons", label: "Free preview lessons", included: true });
+    expect(line(NO_ENTITLEMENTS, "lessons")).toEqual({ key: "lessons", label: "Every lesson in every subject", included: false });
     expect(line(NO_ENTITLEMENTS, "mocks")).toEqual({ key: "mocks", label: "Mock exams", included: false });
     expect(line(NO_ENTITLEMENTS, "aiTutor")?.included).toBe(false);
-    expect(lines.filter((candidate) => candidate.included).map((candidate) => candidate.key)).toEqual(["lessons"]);
+    expect(lines.filter((candidate) => candidate.included).map((candidate) => candidate.key)).toEqual([]);
   });
 
   it("words limits from the document (unlimited, N a day / week / month)", () => {
@@ -53,11 +53,11 @@ describe("summariseEntitlements", () => {
     const keys = summariseEntitlements(everything).map((candidate) => candidate.key);
     expect(keys).not.toContain("pdf");
     expect(keys).not.toContain("personalised");
-    expect(includedLines(everything).map((candidate) => candidate.key)).toEqual(["lessons", "analytics", "parentReports"]);
+    expect(includedLines(everything).map((candidate) => candidate.key)).toEqual(["analytics", "parentReports"]);
   });
 
   it("never lists school-only capabilities as student features", () => {
     const school: Entitlements = { ...NO_ENTITLEMENTS, teacherDashboard: true, assignments: true, schoolAnalytics: true, studentManagement: true };
-    expect(includedLines(school).map((candidate) => candidate.key)).toEqual(["lessons"]);
+    expect(includedLines(school).map((candidate) => candidate.key)).toEqual([]);
   });
 });

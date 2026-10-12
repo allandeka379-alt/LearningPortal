@@ -1,8 +1,9 @@
 import type { BillingInterval } from "@/generated/prisma/enums";
+import { UNLOCK_PATH } from "./paywall";
 
 /**
- * The one-off "Full access" offer (owner decision 2026-10-07): a single payment unlocks every non-AI feature for good
- * ("pay once, keep it"), next to a free preview. Pure and isomorphic: shared by /pricing, /app/billing, the parent
+ * The one-off "Full access" offer (owner decisions 2026-10-07 and 2026-10-12): a single payment unlocks every non-AI
+ * feature for good ("pay once, keep it"); there is no free tier. Pure and isomorphic: shared by /pricing, /app/billing, the parent
  * checkout and every upgrade prompt. Amounts are NEVER held here: prices are PlanPrice rows (admin-managed), so the
  * wording is built from whatever price the database offers.
  */
@@ -34,8 +35,17 @@ export interface UpgradeOffer {
   label: string;
 }
 
-/** Used when no one-off price is on sale (or outside the student area): the honest "see plans" prompt. */
-export const FALLBACK_UPGRADE_OFFER: UpgradeOffer = { href: "/pricing", label: "See plans" };
+/**
+ * Used when no one-off price can be linked directly (nothing on sale, the offer could not load, or outside the
+ * provider): the in-app unlock page, which explains Full access and says honestly when it is not on sale.
+ */
+export const FALLBACK_UPGRADE_OFFER: UpgradeOffer = { href: UNLOCK_PATH, label: "Get full access" };
+
+/** Upgrade paths that mean "the general offer" (replaced by the one-off checkout): the unlock page and /pricing. */
+export const GENERAL_UPGRADE_PATHS: readonly string[] = [UNLOCK_PATH, "/pricing"];
+
+/** Label of a prompt that keeps its own destination (e.g. `/schools` for school-only tools). */
+export const OTHER_UPGRADE_LABEL = "Learn more";
 
 /** "Unlock everything for US$1": the upgrade call to action, built from the formatted DATABASE price. */
 export function unlockEverythingLabel(amountLabel: string): string {

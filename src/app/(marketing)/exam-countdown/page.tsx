@@ -33,7 +33,7 @@ export default async function ExamCountdownPage() {
     <>
       <Container size="reading" className="pb-12 sm:pb-16">
         <PageHeader
-          eyebrow="Free tool"
+          eyebrow="Exam tools"
           title="Exam countdown"
           description="Choose your examination board, qualification and session to see how many days you have left to prepare."
         />
@@ -92,7 +92,7 @@ export default async function ExamCountdownPage() {
       </Container>
       <FinalCta
         title="Turn the countdown into a plan"
-        description="Create a free account and choose your exam session to count down every day; full access adds a weekly study plan that fits the days you have left."
+        description="Join, choose your exam session and get a weekly study plan that fits the days you have left, with lessons, practice and timed mock papers."
       />
     </>
   );

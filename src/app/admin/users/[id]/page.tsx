@@ -247,7 +247,7 @@ function SubscriptionSection({ user }: { user: UserDetail }) {
           ]}
         />
       ) : (
-        <p className="text-sm text-muted">No subscription. The user is on the free plan.</p>
+        <p className="text-sm text-muted">No subscription. The user is on the default plan (no access without Full access or another grant).</p>
       )}
     </AdminSection>
   );

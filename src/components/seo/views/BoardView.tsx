@@ -28,7 +28,7 @@ export function BoardView({ data, site }: { data: BoardPageData; site: SiteConte
         breadcrumbs={toBreadcrumbItems(boardCrumbs(data))}
         eyebrow={board.name}
         title={`${board.shortName} qualifications and subjects`}
-        lead={data.summaryText ?? "Choose your qualification to see its subjects, syllabus topics, exam dates and free sample questions."}
+        lead={data.summaryText ?? "Choose your qualification to see its subjects, syllabus topics, exam dates and sample questions."}
         meta={
           <>
             {qualificationCount > 0 && (
@@ -53,7 +53,7 @@ export function BoardView({ data, site }: { data: BoardPageData; site: SiteConte
         actions={
           <>
             <ButtonLink href={PUBLIC_ROUTES.register} size="lg">
-              Create a free account
+              Start learning
             </ButtonLink>
             <ButtonLink href={PUBLIC_ROUTES.daily} variant="outline" size="lg">
               Try today&apos;s question
@@ -66,7 +66,7 @@ export function BoardView({ data, site }: { data: BoardPageData; site: SiteConte
         {data.levels.length === 0 ? (
           <EmptyState
             title={`${board.shortName} qualifications are being added`}
-            description="Check back soon, or create a free account to be ready when they open."
+            description="Check back soon, or join now to be ready when they open."
           />
         ) : (
           data.levels.map((group) => (
@@ -114,7 +114,7 @@ export function BoardView({ data, site }: { data: BoardPageData; site: SiteConte
       <CtaBand
         title="Master your exams, one topic at a time."
         description="Lessons, practice questions with instant marking, mock exams and a study plan built around your exam date."
-        primary={{ href: PUBLIC_ROUTES.register, label: "Get started free" }}
+        primary={{ href: PUBLIC_ROUTES.register, label: "Start learning" }}
         secondary={{ href: PUBLIC_ROUTES.pricing, label: "See plans" }}
       />
     </>
