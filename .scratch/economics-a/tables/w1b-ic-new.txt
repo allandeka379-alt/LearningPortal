@@ -1,0 +1,11 @@
+    const h = hicks({ income: 160, px0: 8, px1: 4, py: 5 });
+    chk(h.x0, 10, 1e-9); chk(h.x1, 20, 1e-9);
+    b.num({ d: 4, skill: "ANALYSIS", calculator: true, kind: "plain", value: h.sub, sf: 3, unit: "units", hints: ["Substitution effect = compensated quantity − original quantity."],
+      stem: "A consumer with income US\$160 always spends half of it on each good. The price of X falls from US\$8 to US\$4 (PY = US\$5). She buys 10 units of X before the fall and 20 after it. The bundle on the original indifference curve at the new price ratio has 14.14 units of X. Calculate the substitution effect on X, to 2 decimal places.",
+      wrong: [10, 5.86, 4],
+      explanation: `Substitution effect = 14.14 − 10 = ${dpStr(h.sub, 2)} units. The income effect is 20 − 14.14 = ${dpStr(h.inc, 2)}; together they make the price effect of +10.` });
+    b.num({ d: 4, skill: "ANALYSIS", calculator: true, kind: "plain", value: h.inc, sf: 3, unit: "units", hints: ["Income effect = new quantity − compensated quantity."],
+      stem: "In the same case (X rises from 10 to 20 units after the price fall, and the compensated bundle contains 14.14 units of X) calculate the income effect on X, to 2 decimal places.",
+      wrong: [4.14, 10, 6],
+      explanation: `Income effect = 20 − 14.14 = ${dpStr(h.inc, 2)} units. The substitution effect is 14.14 − 10 = ${dpStr(h.sub, 2)}.` });
+    chk(h.sub + h.inc, 10, 1e-9);

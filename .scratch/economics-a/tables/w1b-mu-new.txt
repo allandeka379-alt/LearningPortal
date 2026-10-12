@@ -1,0 +1,10 @@
+    const best = utility.bestBundle({ budget: 12, px: 3, py: 2, muX: [27, 21, 15, 9, 3], muY: [16, 13, 11, 7, 4, 1] });
+    chk(best.x, 2, 0); chk(best.y, 3, 0); chk(best.totalUtility, 88, 0); chk(best.left, 0, 0);
+    b.num({ d: 4, skill: "ANALYSIS", kind: "plain", value: best.y, unit: "units", hints: ["Buy the unit with the highest MU per dollar each time, until the budget runs out."],
+      stem: "A consumer has US\$12. Good X costs US\$3 with marginal utilities 27, 21, 15, 9, 3 for units 1 to 5. Good Y costs US\$2 with marginal utilities 16, 13, 11, 7, 4, 1 for units 1 to 6. How many units of Y are in the utility-maximising bundle?",
+      wrong: [2, 4, 5],
+      explanation: `MU per dollar: X = 9, 7, 5, 3, 1; Y = 8, 6.5, 5.5, 3.5, 2, 0.5. Buy in order X1 (9), Y1 (8), X2 (7), Y2 (6.5), Y3 (5.5): total US\$12. Bundle: ${best.x} X and ${best.y} Y.` });
+    b.num({ d: 4, skill: "ANALYSIS", kind: "plain", value: best.totalUtility, hints: ["Add the marginal utilities of the units bought."],
+      stem: "Using the same data (US\$12; X costs US\$3 with MU 27, 21, 15, 9, 3; Y costs US\$2 with MU 16, 13, 11, 7, 4, 1), calculate the total utility of the best bundle of 2 units of X and 3 units of Y.",
+      wrong: [48, 40, 24],
+      explanation: `TU = (27 + 21) + (16 + 13 + 11) = 48 + 40 = ${best.totalUtility}.` });

@@ -1,0 +1,1443 @@
+[
+ {
+  "key": "gis.gps-field-capture.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is the minimum number of satellites needed for a reliable three-dimensional GPS fix?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Four",
+    "correct": true,
+    "rationale": "Correct: three for position plus one to remove receiver clock error."
+   },
+   {
+    "key": "B",
+    "content": "Two",
+    "rationale": "Two ranges leave the position as a circle."
+   },
+   {
+    "key": "C",
+    "content": "Three",
+    "rationale": "Three give a rough two-dimensional position at best."
+   },
+   {
+    "key": "D",
+    "content": "Six",
+    "rationale": "Six is more than the minimum."
+   }
+  ],
+  "explanation": "Four satellites are needed to solve x, y, z and the receiver clock error.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "gis.gps-field-capture.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "How does a GPS receiver calculate its distance from a satellite?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Speed of light multiplied by the signal travel time",
+    "correct": true,
+    "rationale": "Correct: range = c × t."
+   },
+   {
+    "key": "B",
+    "content": "Signal strength multiplied by the satellite's height",
+    "rationale": "Strength is not used to find range."
+   },
+   {
+    "key": "C",
+    "content": "Satellite speed divided by the number of signals",
+    "rationale": "Satellite speed is not the basis of range."
+   },
+   {
+    "key": "D",
+    "content": "The angle of the satellite above the horizon only",
+    "rationale": "Angle alone cannot give a distance."
+   }
+  ],
+  "explanation": "The receiver measures the time a radio signal takes to arrive and multiplies by the speed of light.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "gis.gps-field-capture.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What is multipath error?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The receiver connects to too many satellites together",
+    "rationale": "More satellites normally improve the fix."
+   },
+   {
+    "key": "B",
+    "content": "The satellite travels along several orbits at once",
+    "rationale": "Satellites follow set orbits."
+   },
+   {
+    "key": "C",
+    "content": "Signals reflect off surfaces before arriving",
+    "correct": true,
+    "rationale": "Correct: the longer path makes the range seem too long."
+   },
+   {
+    "key": "D",
+    "content": "Signals travel faster in the upper atmosphere here",
+    "rationale": "Atmosphere slows signals; this is a different error."
+   }
+  ],
+  "explanation": "Multipath happens when a signal reflects off buildings, cliffs or water, so its path is longer than the direct path.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "gis.gps-field-capture.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A receiver can see five satellites, but all are in one small part of the sky. What is likely to happen?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The fix is more accurate because there are five satellites",
+    "rationale": "Spread matters as well as number."
+   },
+   {
+    "key": "B",
+    "content": "The receiver cannot calculate any position at all",
+    "rationale": "A position is calculated, but less accurately."
+   },
+   {
+    "key": "C",
+    "content": "The clock error is removed completely",
+    "rationale": "A clock error remains and is solved with a fourth range."
+   },
+   {
+    "key": "D",
+    "content": "Poor geometry (high DOP) gives a less accurate position",
+    "correct": true,
+    "rationale": "Correct: bunched satellites produce poor intersections."
+   }
+  ],
+  "explanation": "When satellites are clustered, their range spheres intersect at shallow angles, giving a large position error (high dilution of precision).",
+  "hints": [
+   "Does spread matter as well as number?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "gis.gps-field-capture.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which method gives sub-metre accuracy by using corrections from a base station at a known position?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Averaging a phone's location for one second",
+    "rationale": "Short averaging does not remove systematic errors."
+   },
+   {
+    "key": "B",
+    "content": "Differential GPS",
+    "correct": true,
+    "rationale": "Correct: the base station sends corrections for the common errors."
+   },
+   {
+    "key": "C",
+    "content": "Using a larger map scale",
+    "rationale": "Map scale does not affect satellite position errors."
+   },
+   {
+    "key": "D",
+    "content": "Recording a track more slowly",
+    "rationale": "The speed of recording does not correct errors."
+   }
+  ],
+  "explanation": "Differential GPS applies corrections computed at a station whose position is known precisely.",
+  "hints": [
+   "Which method uses a second, fixed receiver?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "gis.gps-field-capture.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A team records a borehole under dense forest and the GPS position seems 20 m off. What is the best action?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Record the position and trust what the screen shows",
+    "rationale": "A weak fix under trees should not be trusted."
+   },
+   {
+    "key": "B",
+    "content": "Move to a clearing and record the offset",
+    "correct": true,
+    "rationale": "Correct: it improves the fix and keeps the real position."
+   },
+   {
+    "key": "C",
+    "content": "Switch off the receiver until noon each day",
+    "rationale": "Timing alone does not solve a canopy problem."
+   },
+   {
+    "key": "D",
+    "content": "Round the coordinates to whole numbers only",
+    "rationale": "Rounding hides, not fixes, the error."
+   }
+  ],
+  "explanation": "Canopy blocks and reflects signals. Taking a fix in the open and recording the offset (distance and bearing) to the feature gives a better result.",
+  "hints": [
+   "Where would more satellites be visible?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "gis.gps-field-capture.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A GPS receiver records a point every 10 seconds as a surveyor walks along a fence. What is this recorded data called?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A waypoint",
+    "rationale": "A waypoint is a single, deliberately recorded point."
+   },
+   {
+    "key": "B",
+    "content": "A raster",
+    "rationale": "A raster is a grid of cells."
+   },
+   {
+    "key": "C",
+    "content": "A datum",
+    "rationale": "A datum is a reference model of the Earth."
+   },
+   {
+    "key": "D",
+    "content": "A track",
+    "correct": true,
+    "rationale": "Correct: positions recorded automatically as the receiver moves."
+   }
+  ],
+  "explanation": "A track is a sequence of automatically recorded positions; a waypoint is a single marked position.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "gis.gps-field-capture.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A signal takes 0.0712 s to reach a GPS receiver. Taking the speed of radio waves as 300 000 km/s, calculate the distance to the satellite, in km.",
+  "payload": {
+   "unitHint": "km"
+  },
+  "answerSpec": {
+   "value": 21360,
+   "units": {
+    "required": false,
+    "accepted": [
+     "km",
+     "kilometres",
+     "kilometre",
+     "kilometers"
+    ]
+   }
+  },
+  "explanation": "Range = speed × time = 300 000 × 0.0712 = 21 360 km. A misplaced decimal point gives much smaller values.",
+  "workedSolution": "1. Range = speed × time = 300 000 × 0.0712 = 21 360 km. A misplaced decimal point gives much smaller values.",
+  "hints": [
+   "Distance = speed × time."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "21360"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "21.4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "4213"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "gis.gps-field-capture.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A receiver clock is 2 microseconds (0.000002 s) fast. Using 300 000 km/s for the speed of radio waves, what error in range does this cause, in metres?",
+  "payload": {
+   "unitHint": "m"
+  },
+  "answerSpec": {
+   "value": 600,
+   "units": {
+    "required": false,
+    "accepted": [
+     "m",
+     "metres",
+     "metre",
+     "meters"
+    ]
+   }
+  },
+  "explanation": "Error = 300 000 km/s × 0.000002 s = 0.6 km = 600 m. This is why a fourth satellite is needed to find the clock error.",
+  "workedSolution": "1. Error = 300 000 km/s × 0.000002 s = 0.6 km = 600 m. This is why a fourth satellite is needed to find the clock error.",
+  "hints": [
+   "Convert your answer from kilometres to metres."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "600"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "0.6"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "60"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "gis.gps-field-capture.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Two waypoints have UTM coordinates (E 421 000, N 7 905 000) and (E 421 480, N 7 905 640). Calculate the straight-line distance between them, in metres.",
+  "payload": {
+   "unitHint": "m"
+  },
+  "answerSpec": {
+   "value": 800,
+   "units": {
+    "required": false,
+    "accepted": [
+     "m",
+     "metres",
+     "metre",
+     "meters"
+    ]
+   }
+  },
+  "explanation": "Change in easting 480 m, in northing 640 m. Distance = √(480² + 640²) = √(230 400 + 409 600) = √640 000 = 800 m. Adding the two changes gives 1 120 m.",
+  "workedSolution": "1. Change in easting 480 m, in northing 640 m. Distance = √(480² + 640²) = √(230 400 + 409 600) = √640 000 = 800 m. Adding the two changes gives 1 120 m.",
+  "hints": [
+   "Use Pythagoras with the changes in easting and northing."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "800"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "1120"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "160"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "gis.gps-field-capture.q11",
+  "type": "NUMERICAL",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A field worker walks a recorded track of 840 m in 12 minutes. Calculate the average walking speed, in km/h.",
+  "payload": {
+   "unitHint": "km/h"
+  },
+  "answerSpec": {
+   "value": 4.199999999999999,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.05
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "km/h",
+     "km h^-1",
+     "kilometres per hour",
+     "kph"
+    ]
+   }
+  },
+  "explanation": "840 m = 0.84 km; 12 min = 0.2 h; speed = 0.84 ÷ 0.2 = 4.2 km/h. Not converting units gives 70 (m per minute).",
+  "workedSolution": "1. 840 m = 0.84 km; 12 min = 0.2 h; speed = 0.84 ÷ 0.2 = 4.2 km/h. Not converting units gives 70 (m per minute).",
+  "hints": [
+   "Convert metres to kilometres and minutes to hours."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4.2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "70"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.07"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "gis.gps-field-capture.q12",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A GPS receiver that displays coordinates to six decimal places must be accurate to within a few centimetres.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. The number of decimal places shows only how the coordinates are displayed; accuracy depends on signal quality, geometry and correction methods.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "gis.gps-field-capture.q13",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe how a field team should record the position of a borehole to get the most reliable GPS fix.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Stand in the open, away from trees and walls, and wait until the receiver shows a good fix from at least four satellites",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Average several readings or wait a few minutes, and note the accuracy shown by the receiver",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Record the datum, the coordinates and attributes (such as the borehole number) in the receiver or a notebook",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Stand in the open, away from trees and walls, and wait until the receiver has a good fix from at least four satellites. Average several readings or wait a few minutes and note the accuracy shown, then record the datum, the coordinates and attributes such as the borehole number."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Open site and good fix, averaging, and recording details.",
+  "hints": [
+   "Think about where to stand, how long to wait and what to write down."
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "gis.gps-field-capture.q14",
+  "type": "MATCHING",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each source of GPS error to a suitable remedy.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Atmospheric delay"
+    },
+    {
+     "id": "L2",
+     "content": "Multipath"
+    },
+    {
+     "id": "L3",
+     "content": "Poor satellite geometry"
+    },
+    {
+     "id": "L4",
+     "content": "Canopy cover"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "Wait for a better arrangement of satellites"
+    },
+    {
+     "id": "R4",
+     "content": "Move to a clearing and record an offset"
+    },
+    {
+     "id": "R1",
+     "content": "Differential correction from a base station"
+    },
+    {
+     "id": "R2",
+     "content": "Observe away from walls and cliffs"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Each error has a practical remedy in the field or in processing.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "gis.gps-field-capture.q15",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Complete the statement.",
+  "payload": {
+   "template": "GPS positions are found by {{blank:a}}: the distances to at least {{blank:b}} satellites are used to solve for position and clock error.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "trilateration",
+      "triangulation of angles",
+      "interpolation"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "two",
+      "three",
+      "four"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "trilateration"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "four"
+     ]
+    }
+   ]
+  },
+  "explanation": "Trilateration uses ranges; four satellites are needed for a 3D fix with the clock error.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "trilateration"
+    },
+    {
+     "blankId": "b",
+     "text": "four"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "triangulation of angles"
+     },
+     {
+      "blankId": "b",
+      "text": "two"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "gis.gps-field-capture.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which term describes the effect of satellite arrangement on the accuracy of a GPS position (abbreviated DOP)?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "dilution of precision"
+    },
+    {
+     "value": "dop"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "**Dilution of precision** is large when satellites are bunched together.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "dilution of precision"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "multipath"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "datum"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "gis.gps-field-capture.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why a fourth satellite is needed for a three-dimensional GPS fix.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The receiver's clock is not accurate enough, so every range contains the same unknown timing error",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Three ranges solve only for position (x, y, z) if time is perfect",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "A fourth range allows the clock error to be solved with the three coordinates",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A receiver's clock is not accurate enough, so each range contains the same unknown timing error. Position (x, y, z) and the clock error are four unknowns, so four satellite ranges are needed to solve them."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Clock error is the fourth unknown.",
+  "hints": [
+   "How many unknowns are there?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "gis.gps-field-capture.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe how GPS could be used to record the boundary of a village's communal grazing area.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Walk the boundary with the receiver recording a track (or waypoints at corners)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Wait for a good fix and check the number of satellites/accuracy reading",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Download the data and load it into a GIS as a polygon layer, then calculate its area",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Walk around the boundary with the receiver recording a track or waypoints at the corners, after checking that it has a good fix. Then download the data into a GIS as a polygon layer and calculate the area."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Collection, quality check and transfer to GIS.",
+  "hints": [
+   "Think of what you do in the field and afterwards."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "gis.gps-field-capture.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Suggest two limitations of using a phone's GPS to map water points in a forested area, and a way to overcome each.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Canopy blocks or weakens signals so fewer satellites are used; record in clearings or note an offset",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Accuracy of several metres is not enough for small features; use a dual-frequency receiver or differential correction",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Poor satellite geometry/multipath from trees; average readings over a longer time or wait for better geometry",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Battery and coverage problems in remote areas; carry spare batteries and record on paper as backup",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Canopy blocks and weakens the signals, so fewer satellites are available and the position is poor; the team can take readings in clearings and record an offset to the water point. A phone's accuracy of several metres may be too poor for small features, which can be improved with a dual-frequency receiver or differential correction."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Two limitations with a solution each.",
+  "hints": [
+   "What does the canopy do to the signal?"
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "gis.gps-field-capture.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 960,
+  "stem": "Nyasha records the corners of a school field with a handheld receiver. The UTM coordinates (metres) are shown below. Some trees overhang the field (illustrative data).\n\n| Waypoint | W1 | W2 | W3 | W4 |\n|---|---|---|---|---|\n| Easting (m) | 421300 | 421380 | 421380 | 421300 |\n| Northing (m) | 7904600 | 7904600 | 7904660 | 7904660 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the straight-line distance between W1 and W3, in metres.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 100,
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "Change in easting 80 m, in northing 60 m; √(80² + 60²) = √10 000 = 100 m.",
+    "workedSolution": "1. Change in easting 80 m, in northing 60 m; √(80² + 60²) = √10 000 = 100 m."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the perimeter of the field, in metres.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 280,
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "The sides are 80 m (W1 to W2), 60 m (W2 to W3), 80 m and 60 m: 280 m.",
+    "workedSolution": "1. The sides are 80 m (W1 to W2), 60 m (W2 to W3), 80 m and 60 m: 280 m."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the area of the field in hectares (1 ha = 10 000 m²), to two decimal places.",
+    "payload": {
+     "unitHint": "ha"
+    },
+    "answerSpec": {
+     "value": 0.48,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "ha",
+       "hectares",
+       "hectare"
+      ]
+     }
+    },
+    "explanation": "Area = 80 × 60 = 4 800 m² = 0.48 ha.",
+    "workedSolution": "1. Area = 80 × 60 = 4 800 m² = 0.48 ha."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain two reasons why the recorded positions beneath the trees may be inaccurate.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Leaves and branches block or weaken signals, so fewer satellites are used",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Signals reflect off trunks and branches (multipath), lengthening the apparent range",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Satellites low in the sky may be the only ones visible, giving poor geometry (a third valid reason can earn the final mark)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The canopy blocks and weakens the signals, so fewer satellites are available. Signals also bounce off trunks and branches before reaching the receiver (multipath), which lengthens the apparent range and shifts the position."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Suggest two ways to improve the accuracy of the field boundary.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Record the corners in clear places or use offsets from open ground",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Average several readings at each corner / use differential GPS or a dual-frequency receiver",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Record the corners where the sky is clear or use offsets measured from open ground, and average several readings at each corner or use differential correction."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "markingMode": "MANUAL",
+    "stem": "State how the data would be used in a GIS.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Loaded as a polygon layer (for example from a GPX file) so that area and position can be analysed",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The waypoints would be loaded as a polygon layer, for example from a GPX file."
+    }
+   }
+  ],
+  "explanation": "Distance, perimeter and area from coordinates, with sources of GPS error and improvements.",
+  "hints": [
+   "Use Pythagoras with the changes in easting and northing."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "100"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "280"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "0.48"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "CALCULATION",
+      "value": "140"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "140"
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "4800"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "gis.gps-field-capture.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A GPS receiver gets a signal from a satellite that takes 0.0698 s to arrive. Take the speed of radio waves as 300 000 km/s.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Why are four satellites used for a 3D fix?",
+    "options": [
+     {
+      "key": "A",
+      "content": "Because each satellite gives just one coordinate",
+      "rationale": "Each range involves all three coordinates."
+     },
+     {
+      "key": "B",
+      "content": "Because three satellites are often all blocked",
+      "rationale": "The number is a mathematical requirement."
+     },
+     {
+      "key": "C",
+      "content": "To solve the clock error too",
+      "correct": true,
+      "rationale": "Correct: x, y, z and time are four unknowns."
+     },
+     {
+      "key": "D",
+      "content": "To measure the temperature of the air",
+      "rationale": "Temperature is not measured in positioning."
+     }
+    ],
+    "explanation": "Four unknowns need four equations."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "Calculate the distance to the satellite, in km.",
+    "payload": {
+     "unitHint": "km"
+    },
+    "answerSpec": {
+     "value": 20940,
+     "units": {
+      "required": false,
+      "accepted": [
+       "km",
+       "kilometres",
+       "kilometre",
+       "kilometers"
+      ]
+     }
+    },
+    "explanation": "300 000 × 0.0698 = 20 940 km.",
+    "workedSolution": "1. 300 000 × 0.0698 = 20 940 km."
+   },
+   {
+    "label": "(c)",
+    "type": "CALCULATION",
+    "marks": 2,
+    "stem": "The receiver clock is 3 microseconds slow. State the range error, in metres.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 900,
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "300 000 km/s × 0.000003 s = 0.9 km = 900 m.",
+    "workedSolution": "1. 300 000 km/s × 0.000003 s = 0.9 km = 900 m."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain how differential GPS reduces position errors.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "A base station at a precisely known position compares its GPS position with the true one",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It calculates the error in each satellite signal (e.g. atmospheric delay)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Corrections are sent to nearby receivers, which apply them to their ranges, giving sub-metre accuracy",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: A base station at a precisely known position compares its GPS position with its true position and works out the errors in the signals, such as atmospheric delay. It sends corrections to nearby receivers, which apply them to their own ranges to give much better accuracy."
+    }
+   }
+  ],
+  "explanation": "Range from travel time, the clock error and differential correction.",
+  "hints": [
+   "Distance = speed × time."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "20940"
+    },
+    "(c)": {
+     "type": "CALCULATION",
+     "value": "900"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "20.9"
+     },
+     "(c)": {
+      "type": "CALCULATION",
+      "value": "9"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "gis.gps-field-capture.q22",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "ageo.gis.gps-field-capture"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "Assess the usefulness of GPS for a conservation team recording the positions of illegal snares and animal sightings in a national park. [8]",
+  "payload": {
+   "wordLimit": {
+    "max": 300
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Gives accurate locations quickly, anywhere and in all weathers, without a map",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Waypoints can be recorded with attributes (type, date, photographs) for each snare or sighting",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Data can be loaded into a GIS to map clusters and patrol routes",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Tracks show the areas patrolled, so effort can be measured and planned",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Accuracy is reduced beneath dense canopy or near cliffs by blocked signals and multipath",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Equipment depends on batteries and may fail in remote places",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Accuracy of a few metres is enough for animals and snares but not for fine boundary surveys without differential correction",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Judgement: very useful for field recording and analysis, provided limitations are understood and checks and backup records are kept",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 7,
+      "maxMarks": 8,
+      "descriptor": "Thorough, accurate and well-developed knowledge applied to the question; detailed located examples or resource evidence used throughout; balanced, reasoned evaluation reaching a supported conclusion; clear logical structure."
+     },
+     {
+      "level": 3,
+      "minMarks": 5,
+      "maxMarks": 6,
+      "descriptor": "Good knowledge and understanding, mostly developed; relevant examples or resource evidence; some evaluation with a conclusion that is partly supported; generally organised."
+     },
+     {
+      "level": 2,
+      "minMarks": 3,
+      "maxMarks": 4,
+      "descriptor": "Some knowledge and understanding with limited development; examples general or thin; evaluation is simple, one-sided or asserted."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 2,
+      "descriptor": "A few simple, partly accurate points or a list; little or no example; no real evaluation."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "Nothing creditworthy."
+     }
+    ]
+   },
+   "modelAnswer": "GPS gives a team a quick, reliable location anywhere in the park and in all weather, without needing a map. Each snare or sighting can be stored as a waypoint with attributes such as type, date and photographs, and tracks show the areas patrolled. Loaded into a GIS, the data show clusters of snares and help plan patrols. However, dense canopy and cliffs weaken signals and cause multipath, batteries may fail in remote areas, and an accuracy of a few metres is not enough for fine surveying without differential correction. Overall GPS is very useful for recording and analysing conservation data provided the limitations are understood and there are backup records."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Benefits, limitations and a judgement.",
+  "hints": [
+   "Say what GPS records, what GIS does with it and what can go wrong."
+  ],
+  "skill": "EVALUATION"
+ }
+]

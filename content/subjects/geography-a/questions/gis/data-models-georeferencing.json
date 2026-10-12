@@ -1,0 +1,1373 @@
+[
+ {
+  "key": "gis.data-models-georeferencing.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which data model stores features as points, lines and polygons?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Vector",
+    "correct": true,
+    "rationale": "Correct: vector features are built from coordinates."
+   },
+   {
+    "key": "B",
+    "content": "Raster",
+    "rationale": "Raster data are grids of cells."
+   },
+   {
+    "key": "C",
+    "content": "Contour",
+    "rationale": "A contour is a type of line, not a data model."
+   },
+   {
+    "key": "D",
+    "content": "Tabular",
+    "rationale": "Tabular data are rows and columns without geometry."
+   }
+  ],
+  "explanation": "The vector model stores discrete features as points, lines and polygons, each linked to an attribute table.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which data are best stored as a raster?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A digital elevation model",
+    "correct": true,
+    "rationale": "Correct: elevation is a continuous surface."
+   },
+   {
+    "key": "B",
+    "content": "The positions of clinics in a district",
+    "rationale": "Clinics are points, best stored as vectors."
+   },
+   {
+    "key": "C",
+    "content": "The boundaries of resettlement farms",
+    "rationale": "Boundaries are polygons, best stored as vectors."
+   },
+   {
+    "key": "D",
+    "content": "The route of the Harare to Mutare road",
+    "rationale": "Roads are lines, best stored as vectors."
+   }
+  ],
+  "explanation": "Continuous surfaces such as elevation and temperature, and images, are stored as rasters.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "gis.data-models-georeferencing.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "In digitising, what is an undershoot?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A line that extends beyond the line it should meet",
+    "rationale": "That is an overshoot."
+   },
+   {
+    "key": "B",
+    "content": "A thin false polygon between two boundaries",
+    "rationale": "That is a sliver polygon."
+   },
+   {
+    "key": "C",
+    "content": "A line that stops short of the line it should meet",
+    "correct": true,
+    "rationale": "Correct: this leaves a gap in the network."
+   },
+   {
+    "key": "D",
+    "content": "A point placed in the wrong layer of the file",
+    "rationale": "This is a different kind of mistake."
+   }
+  ],
+  "explanation": "An undershoot is a gap where a line fails to reach the feature it should connect to.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "Which resampling method should be used on a land-cover raster in which each cell value is a class number such as 3 (forest) or 5 (water)?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Bilinear interpolation",
+    "rationale": "It averages neighbouring cells, creating meaningless class numbers."
+   },
+   {
+    "key": "B",
+    "content": "Cubic convolution",
+    "rationale": "It also blends values, producing invalid classes."
+   },
+   {
+    "key": "C",
+    "content": "Nearest neighbour",
+    "correct": true,
+    "rationale": "Correct: it copies original class values without blending."
+   },
+   {
+    "key": "D",
+    "content": "Any method, because class numbers are identical",
+    "rationale": "Blending creates values such as 4 that are not real classes."
+   }
+  ],
+  "explanation": "Averaging class numbers (for example forest 3 and water 5 gives 4) is meaningless, so nearest neighbour is used for categorical rasters.",
+  "hints": [
+   "Which method keeps the original cell values?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "When georeferencing a scanned map, why should ground control points be spread over the whole map?",
+  "options": [
+   {
+    "key": "A",
+    "content": "The software refuses to run if the points are close together",
+    "rationale": "Software will run but give a poor result."
+   },
+   {
+    "key": "B",
+    "content": "Clustered points give a poor fit elsewhere",
+    "correct": true,
+    "rationale": "Correct: the transformation is poorest away from the control points."
+   },
+   {
+    "key": "C",
+    "content": "Control points must always be at the corners of grid squares",
+    "rationale": "Points need only be identifiable on both map and reference."
+   },
+   {
+    "key": "D",
+    "content": "More points always reduce the RMSE to zero",
+    "rationale": "Residuals remain; RMSE is rarely zero."
+   }
+  ],
+  "explanation": "A transformation fitted to clustered points can be badly wrong in areas without points, so GCPs should cover the map, including near the edges.",
+  "hints": [
+   "Where is the transformation checked?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "The cell size of a raster is halved for the same study area. What happens to the number of cells?",
+  "options": [
+   {
+    "key": "A",
+    "content": "It doubles",
+    "rationale": "Halving the side length quarters the area of a cell, so 4 times as many cells fit."
+   },
+   {
+    "key": "B",
+    "content": "It stays the same",
+    "rationale": "A smaller cell size means more cells for the same area."
+   },
+   {
+    "key": "C",
+    "content": "It increases eight times",
+    "rationale": "Eight times would be for three dimensions; a raster is two-dimensional."
+   },
+   {
+    "key": "D",
+    "content": "It increases four times",
+    "correct": true,
+    "rationale": "Correct: each cell is replaced by 2 × 2 smaller cells."
+   }
+  ],
+  "explanation": "Cell area falls to a quarter, so four times as many cells are needed; file size rises accordingly.",
+  "hints": [
+   "Think of area, not length."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q07",
+  "type": "CALCULATION",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "After georeferencing, four ground control points have residuals (dx, dy), in metres, of (1.0, 2.0), (−2.0, 1.0), (1.5, −1.5), (−0.5, −1.0). Calculate the RMSE, in metres, to two decimal places, using $RMSE = \\sqrt{\\sum (dx^2 + dy^2) \\div n}$.",
+  "payload": {
+   "unitHint": "m"
+  },
+  "answerSpec": {
+   "value": 1.984313483298443,
+   "tolerance": {
+    "kind": "absolute",
+    "amount": 0.005
+   },
+   "units": {
+    "required": false,
+    "accepted": [
+     "m",
+     "metres",
+     "metre",
+     "meters"
+    ]
+   }
+  },
+  "explanation": "1. $dx^2 + dy^2$ for each point: 5, 5, 4.5, 1.25.\n2. Sum $= 15.75$.\n3. Divide by $n = 4$: $3.9375$.\n4. Square root: $1.98$ m.\n5. Forgetting to divide by n gives 3.97; forgetting the square root gives 3.94.",
+  "workedSolution": "1. 1. $dx^2 + dy^2$ for each point: 5, 5, 4.5, 1.25.\n2. Sum $= 15.75$.\n3. Divide by $n = 4$: $3.9375$.\n4. Square root: $1.98$ m.\n5. Forgetting to divide by n gives 3.97; forgetting the square root gives 3.94.",
+  "hints": [
+   "Square both dx and dy for every point.",
+   "Divide by the number of points before the square root."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "1.98"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "3.968626966596886"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "3.94"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "gis.data-models-georeferencing.q08",
+  "type": "NUMERICAL",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A raster of land cover has 250 rows and 400 columns, and each cell is 50 m by 50 m. Calculate the area it covers, in km².",
+  "payload": {
+   "unitHint": "km²"
+  },
+  "answerSpec": {
+   "value": 250,
+   "units": {
+    "required": false,
+    "accepted": [
+     "km²",
+     "km^2",
+     "km2",
+     "square kilometres",
+     "sq km"
+    ]
+   }
+  },
+  "explanation": "Cells = 250 × 400 = 100 000. Each cell = 2 500 m². Total = 250 000 000 m² = 250 km².",
+  "workedSolution": "1. Cells = 250 × 400 = 100 000. Each cell = 2 500 m². Total = 250 000 000 m² = 250 km².",
+  "hints": [
+   "Work out the area of one cell first."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "250"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "100000"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "25"
+   }
+  ],
+  "skill": "APPLICATION",
+  "calculator": true
+ },
+ {
+  "key": "gis.data-models-georeferencing.q09",
+  "type": "NUMERICAL",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A satellite image covers a strip 12 km wide and has 600 pixels across. What is the ground size of one pixel, in metres?",
+  "payload": {
+   "unitHint": "m"
+  },
+  "answerSpec": {
+   "value": 20,
+   "units": {
+    "required": false,
+    "accepted": [
+     "m",
+     "metres",
+     "metre",
+     "meters"
+    ]
+   }
+  },
+  "explanation": "12 km = 12 000 m; 12 000 ÷ 600 = 20 m per pixel.",
+  "workedSolution": "1. 12 km = 12 000 m; 12 000 ÷ 600 = 20 m per pixel.",
+  "hints": [
+   "Convert kilometres to metres first."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "20"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "200"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "0.02"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q10",
+  "type": "NUMERICAL",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A raster has a cell size of 30 m. The cell size is changed to 15 m for the same area. By what factor does the number of cells increase?",
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "Halving the cell side makes each cell one quarter of the area, so 4 times as many cells are needed.",
+  "workedSolution": "1. Halving the cell side makes each cell one quarter of the area, so 4 times as many cells are needed.",
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "2"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "8"
+   }
+  ],
+  "skill": "APPLICATION",
+  "dailyEligible": true
+ },
+ {
+  "key": "gis.data-models-georeferencing.q11",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "A root mean square error of zero can easily be achieved in georeferencing.",
+  "answerSpec": {
+   "correct": false
+  },
+  "explanation": "False. Small errors in picking points and distortion in paper maps mean residuals are never exactly zero; the aim is an RMSE smaller than a cell.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": false
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": true
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q12",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Explain one advantage and one disadvantage of storing a land-cover map as a raster.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Advantage: matches satellite images, and layers can be overlaid and combined simply (map algebra)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Explained: every cell has the same size and a single value, so calculations are fast and easy",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Disadvantage: file sizes become very large as the cell size is reduced",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Explained: boundaries have stair-step edges and mixed cells hide detail smaller than a cell",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: A raster matches satellite images and layers can be overlaid and combined easily, because every cell has the same size and a single value. However, file sizes become very large as the cell size falls, and boundaries have stair-step edges while mixed cells hide detail smaller than a cell."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One advantage and one disadvantage, each explained.",
+  "hints": [
+   "Think of how cells are arranged and what happens when they are made smaller."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q13",
+  "type": "MATCHING",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "Match each digitising error to its description.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Undershoot"
+    },
+    {
+     "id": "L2",
+     "content": "Overshoot"
+    },
+    {
+     "id": "L3",
+     "content": "Sliver polygon"
+    },
+    {
+     "id": "L4",
+     "content": "Duplicate feature"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "A thin false polygon where two boundaries do not match exactly"
+    },
+    {
+     "id": "R4",
+     "content": "The same feature is digitised twice"
+    },
+    {
+     "id": "R1",
+     "content": "A line stops short of the line it should meet"
+    },
+    {
+     "id": "R2",
+     "content": "A line extends beyond the line it should meet"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "Topology checks and snapping help to find and prevent these errors.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q14",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 160,
+  "stem": "Complete the statement.",
+  "payload": {
+   "template": "Georeferencing uses {{blank:a}} control points, and the {{blank:b}} summarises how well the layer fits them.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "ground",
+      "contour",
+      "attribute"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "RMSE",
+      "legend",
+      "scale bar"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "ground"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "RMSE"
+     ]
+    }
+   ]
+  },
+  "explanation": "Ground control points tie the scan to the real world; the RMSE measures the fit.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "ground"
+    },
+    {
+     "blankId": "b",
+     "text": "RMSE"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "contour"
+     },
+     {
+      "blankId": "b",
+      "text": "legend"
+     }
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q15",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 80,
+  "stem": "What name is given to a GIS setting that makes digitised vertices jump to existing nodes or lines, reducing gaps and overlaps?",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "snapping"
+    },
+    {
+     "value": "snap"
+    },
+    {
+     "value": "snapping tool"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "**Snapping** automatically joins new vertices to existing ones.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "snapping"
+  },
+  "wrongResponses": [
+   {
+    "type": "SHORT_ANSWER",
+    "text": "resampling"
+   },
+   {
+    "type": "SHORT_ANSWER",
+    "text": "buffering"
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Describe the main steps in georeferencing a scanned map.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Select ground control points that can be identified on both the scan and a reference, spread over the map",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Enter the real-world coordinates and apply a transformation",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Check the residuals and RMSE, remove or correct poor points, then resample/save the layer",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Select well-spread ground control points that can be identified on both the scan and the reference, enter their real-world coordinates and apply a transformation. Then check the residuals and RMSE, correct or remove poorly fitting points and resample and save the georeferenced layer."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Control points, transformation, checking and output.",
+  "hints": [
+   "Start with the points and end with the check."
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 3,
+  "marks": 3,
+  "estimatedSeconds": 240,
+  "stem": "Explain why a vector layer is better than a raster layer for the boundaries of farms.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Farm boundaries are discrete features with sharp edges",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Vectors store exact boundary coordinates, whereas a raster gives stair-step edges",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Vectors hold attributes (owner, size, crop) for each farm and give accurate area and length",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Farm boundaries are discrete features with sharp edges. A vector layer stores their exact coordinates, while a raster would give stair-step edges unless the cells were very small, and each polygon can hold attributes such as owner, size and crop."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Sharp boundaries, accuracy and attributes.",
+  "hints": [
+   "Think about how each model draws an edge."
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 320,
+  "stem": "A scanned map has an RMSE of 22 m when the raster cell size is 10 m. Suggest two ways of reducing the RMSE.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Check and replace the GCPs with the largest residuals (they may be mis-identified)",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Add more GCPs, spread around the map, including the edges",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Use a more appropriate transformation (for example second-order if the paper is distorted)",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Use a higher-resolution scan or a more accurate reference for the coordinates",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Check the control points with the largest residuals and correct or replace them, since they may have been mis-identified. Add more points spread around the map, including near the edges, or use a different transformation if the paper is distorted."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Any two valid improvements, each explained.",
+  "hints": [
+   "Which points contribute most to the error?"
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q19",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 4,
+  "marks": 12,
+  "estimatedSeconds": 960,
+  "stem": "A student georeferences a scanned map with six ground control points. The residuals (dx, dy), in metres, are shown below. The finished raster has 10 m cells (illustrative data).\n\n| GCP | 1 | 2 | 3 | 4 | 5 | 6 |\n|---|---|---|---|---|---|---|\n| dx (m) | 2.4 | −0.2 | 1.3 | −2.7 | 0.3 | −1.6 |\n| dy (m) | −1.7 | 2.0 | 0.4 | −1.3 | 2.3 | −0.2 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 1,
+    "stem": "Which GCP has the largest residual (combined error)? Give its number.",
+    "answerSpec": {
+     "value": 4
+    },
+    "explanation": "The combined errors $\\sqrt{dx^2 + dy^2}$ are 2.94, 2.01, 1.36, 3.00, 2.32, 1.61; the largest is GCP 4.",
+    "workedSolution": "1. The combined errors $\\sqrt{dx^2 + dy^2}$ are 2.94, 2.01, 1.36, 3.00, 2.32, 1.61; the largest is GCP 4."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 4,
+    "stem": "Calculate the RMSE, in metres, to two decimal places.",
+    "payload": {
+     "unitHint": "m"
+    },
+    "answerSpec": {
+     "value": 2.29128784747792,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     },
+     "units": {
+      "required": false,
+      "accepted": [
+       "m",
+       "metres",
+       "metre",
+       "meters"
+      ]
+     }
+    },
+    "explanation": "1. Sum of $dx^2 + dy^2 = 31.50$.\n2. Divide by 6: 5.250.\n3. Square root: 2.29 m.\n4. Forgetting to divide by n gives 5.61.",
+    "workedSolution": "1. 1. Sum of $dx^2 + dy^2 = 31.50$.\n2. Divide by 6: 5.250.\n3. Square root: 2.29 m.\n4. Forgetting to divide by n gives 5.61."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State whether the RMSE is acceptable for a 10 m cell raster and give a reason.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Yes: the RMSE (about 2 m) is less than one cell (10 m), and even less than half a cell",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So the layer is positioned to well within the cell size",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Yes. The RMSE of about 2 m is smaller than half of a 10 m cell, so the layer is positioned well within the cell size."
+    }
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Suggest two ways to reduce the RMSE further.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Re-check or replace GCP 4, which has the largest error",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Add more control points spread over the map / use a better transformation",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Re-check or replace GCP 4, which has the largest error, and add more control points spread over the map."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why the GCPs should be spread over the whole map and not clustered in one corner.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The transformation is fitted to the points used",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Areas far from the points are not controlled, so errors there are larger",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A spread of points also shows any stretching or distortion of the paper",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The transformation is fitted to the control points, so areas far from them are not controlled and errors there are larger. A good spread also reveals any stretching or distortion of the paper."
+    }
+   }
+  ],
+  "explanation": "Residuals, RMSE calculation, evaluation against cell size and improvements.",
+  "hints": [
+   "RMSE = square root of the mean of dx² + dy²."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "2.29"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "1"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "5.612486080160911"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "calculator": true
+ },
+ {
+  "key": "gis.data-models-georeferencing.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 3,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "A council GIS officer must decide how to store four datasets (data invented for this exercise).",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "MATCHING",
+    "marks": 4,
+    "stem": "Match each dataset to the most suitable data model.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Locations of 120 boreholes"
+      },
+      {
+       "id": "L2",
+       "content": "The route of a pipeline"
+      },
+      {
+       "id": "L3",
+       "content": "Boundaries of wards"
+      },
+      {
+       "id": "L4",
+       "content": "Satellite image of the district"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "Vector polygons"
+      },
+      {
+       "id": "R4",
+       "content": "Raster"
+      },
+      {
+       "id": "R1",
+       "content": "Vector points"
+      },
+      {
+       "id": "R2",
+       "content": "Vector line"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Discrete features suit vectors; images suit rasters."
+   },
+   {
+    "label": "(b)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "State two disadvantages of storing a land-cover map as a raster with very small cells.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Very large file size / slow to process",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Many cells have the same value so storage is inefficient (or stair-step edges remain visible)",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The file size becomes very large and slow to process, and many neighbouring cells hold the same value, so storage is inefficient."
+    }
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 2,
+    "markingMode": "MANUAL",
+    "stem": "Describe one digitising error and how it can be prevented.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Name and describe an error (undershoot, overshoot, sliver polygon, duplicate)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Prevention: snapping, zooming in, or topology rules/checks",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Undershoots leave gaps where a line stops short of another. Using snapping, so vertices jump to existing nodes, and running topology checks prevents them."
+    }
+   }
+  ],
+  "explanation": "Match features to models and consider storage and digitising quality.",
+  "hints": [
+   "Discrete features or continuous surface?"
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R4"
+       },
+       {
+        "leftId": "L4",
+        "rightId": "R1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "gis.data-models-georeferencing.q21",
+  "type": "EXTENDED_RESPONSE",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing"
+  ],
+  "difficulty": 4,
+  "marks": 8,
+  "estimatedSeconds": 640,
+  "stem": "Assess the advantages and disadvantages of vector and raster data models for a GIS used to plan water supply in a district. [8]",
+  "payload": {
+   "wordLimit": {
+    "max": 300
+   }
+  },
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "Vector: exact boundaries, points and lines for boreholes, pipes and wards",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Vector: attributes such as capacity, owner and condition can be linked to each feature",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Vector: network analysis (shortest routes, service areas) is possible",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Vector: poorer for continuous surfaces such as rainfall or slope",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Raster: good for continuous surfaces, elevation, rainfall and satellite imagery",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Raster: map algebra and overlays are simple and fast",
+      "marks": 1
+     },
+     {
+      "id": "p7",
+      "description": "Raster: large files at fine resolution, and stair-step edges for boundaries",
+      "marks": 1
+     },
+     {
+      "id": "p8",
+      "description": "Judgement: use both; vectors for infrastructure and boundaries, rasters for terrain and rainfall, combined in a single GIS",
+      "marks": 1
+     }
+    ],
+    "levels": [
+     {
+      "level": 4,
+      "minMarks": 7,
+      "maxMarks": 8,
+      "descriptor": "Thorough, accurate and well-developed knowledge applied to the question; detailed located examples or resource evidence used throughout; balanced, reasoned evaluation reaching a supported conclusion; clear logical structure."
+     },
+     {
+      "level": 3,
+      "minMarks": 5,
+      "maxMarks": 6,
+      "descriptor": "Good knowledge and understanding, mostly developed; relevant examples or resource evidence; some evaluation with a conclusion that is partly supported; generally organised."
+     },
+     {
+      "level": 2,
+      "minMarks": 3,
+      "maxMarks": 4,
+      "descriptor": "Some knowledge and understanding with limited development; examples general or thin; evaluation is simple, one-sided or asserted."
+     },
+     {
+      "level": 1,
+      "minMarks": 1,
+      "maxMarks": 2,
+      "descriptor": "A few simple, partly accurate points or a list; little or no example; no real evaluation."
+     },
+     {
+      "level": 0,
+      "minMarks": 0,
+      "maxMarks": 0,
+      "descriptor": "Nothing creditworthy."
+     }
+    ]
+   },
+   "modelAnswer": "Vectors suit water supply planning because boreholes, pipes and ward boundaries are discrete features that need exact positions, attributes such as capacity and condition, and network analysis of routes. They are less suited to continuous surfaces such as rainfall or slope. Rasters are good for continuous surfaces and satellite imagery and allow simple overlays, but they give large files at fine resolution and stair-step edges for boundaries. A good GIS would use both: vectors for infrastructure and boundaries, and rasters for terrain and rainfall, combined in one system."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Strengths and weaknesses of each followed by a judgement.",
+  "hints": [
+   "Which data are discrete features and which are continuous surfaces?"
+  ],
+  "skill": "EVALUATION"
+ }
+]

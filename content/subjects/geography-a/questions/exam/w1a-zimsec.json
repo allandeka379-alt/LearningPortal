@@ -1,0 +1,2867 @@
+[
+ {
+  "key": "exam.w1a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.stats.correlation-regression",
+   "ageo.stats.descriptive"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "A researcher investigates whether the number of customers at grocery shops falls with distance from the main road in a rural district of Zimbabwe. Ten shops were surveyed on one weekday (data invented for this exercise).\n\n| Shop | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| Distance from main road (km) | 0.2 | 0.6 | 0.9 | 1.4 | 1.6 | 2.6 | 3.2 | 3.7 | 4.6 | 5.5 |\n| Customers in one day | 148 | 160 | 121 | 133 | 98 | 104 | 70 | 82 | 45 | 52 |\n\nThe researcher uses Spearman's rank correlation coefficient, $r_s = 1 - \\dfrac{6\\sum d^2}{n^3 - n}$. The critical value of $r_s$ at the 5% significance level for 10 pairs is 0.648.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Describe the data on customers.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Calculate the mean number of customers per shop, to one decimal place.",
+      "answerSpec": {
+       "value": 101.3,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       }
+      },
+      "explanation": "Total = 1 013; 1 013 ÷ 10 = 101.3.",
+      "workedSolution": "1. Total = 1 013; 1 013 ÷ 10 = 101.3."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the median number of customers.",
+      "answerSpec": {
+       "value": 101
+      },
+      "explanation": "Ordered: 45, 52, 70, 82, 98, 104, 121, 133, 148, 160. Median = (98 + 104) ÷ 2 = 101.",
+      "workedSolution": "1. Ordered: 45, 52, 70, 82, 98, 104, 121, 133, 148, 160. Median = (98 + 104) ÷ 2 = 101."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "Calculate the range of the number of customers.",
+      "answerSpec": {
+       "value": 115
+      },
+      "explanation": "160 − 45 = 115.",
+      "workedSolution": "1. 160 − 45 = 115."
+     },
+     {
+      "label": "(iv)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "What is the level of measurement of the distance from the main road?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Ratio",
+        "correct": true,
+        "rationale": "Correct: it has equal intervals and a true zero."
+       },
+       {
+        "key": "B",
+        "content": "Nominal",
+        "rationale": "Distance is a measurement, not a set of names."
+       },
+       {
+        "key": "C",
+        "content": "Ordinal",
+        "rationale": "The distances are measured, not merely ranked."
+       },
+       {
+        "key": "D",
+        "content": "Cyclic",
+        "rationale": "Distance does not repeat in a cycle."
+       }
+      ],
+      "explanation": "Distance in km is ratio data."
+     },
+     {
+      "label": "(v)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which measure of spread uses only the middle half of the ordered data?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Inter-quartile range",
+        "correct": true,
+        "rationale": "Correct: Q3 minus Q1."
+       },
+       {
+        "key": "B",
+        "content": "Range",
+        "rationale": "The range uses the two extreme values."
+       },
+       {
+        "key": "C",
+        "content": "Mode",
+        "rationale": "The mode is an average, not a measure of spread."
+       },
+       {
+        "key": "D",
+        "content": "Mean",
+        "rationale": "The mean is an average, not a measure of spread."
+       }
+      ],
+      "explanation": "The IQR covers the middle 50% of the data."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 7,
+    "stem": "Test whether the number of customers falls with distance from the road.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "State the null hypothesis and the alternative hypothesis.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "H₀: there is no relationship between distance from the main road and the number of customers",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "H₁: the number of customers decreases as distance from the main road increases",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: H₀: there is no relationship between distance from the main road and the number of customers. H₁: the number of customers decreases as distance from the road increases."
+      }
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Rank both sets of data (smallest = 1) and calculate Σd².",
+      "answerSpec": {
+       "value": 320
+      },
+      "explanation": "Ranks of customers: 9, 10, 7, 8, 5, 6, 3, 4, 1, 2; ranks of distance 1 to 10. $d$: -8, -8, -4, -4, 0, 0, 4, 4, 8, 8. $d^2$: 64, 64, 16, 16, 0, 0, 16, 16, 64, 64; the sum is 320.",
+      "workedSolution": "1. Ranks of customers: 9, 10, 7, 8, 5, 6, 3, 4, 1, 2; ranks of distance 1 to 10. $d$: -8, -8, -4, -4, 0, 0, 4, 4, 8, 8. $d^2$: 64, 64, 16, 16, 0, 0, 16, 16, 64, 64; the sum is 320."
+     },
+     {
+      "label": "(iii)",
+      "type": "CALCULATION",
+      "marks": 3,
+      "stem": "Calculate r_s, to three decimal places (include the sign).",
+      "answerSpec": {
+       "value": -0.9393939393939394,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "$r_s = 1 - 6 \\times 320 \\div (10^3 - 10) = 1 - 1920 \\div 990 = -0.939$. Forgetting the sign gives +0.939.",
+      "workedSolution": "1. $r_s = 1 - 6 \\times 320 \\div (10^3 - 10) = 1 - 1920 \\div 990 = -0.939$. Forgetting the sign gives +0.939."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Interpret the result.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "What decision should be made about the null hypothesis?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Reject it, because |r_s| is greater than 0.648",
+        "correct": true,
+        "rationale": "Correct."
+       },
+       {
+        "key": "B",
+        "content": "Accept it, because r_s is negative",
+        "rationale": "The sign does not decide the test."
+       },
+       {
+        "key": "C",
+        "content": "Accept it, because |r_s| is greater than 0.648",
+        "rationale": "A value above the critical value leads to rejection."
+       },
+       {
+        "key": "D",
+        "content": "Reject it, because r_s is less than 1",
+        "rationale": "Being less than 1 is not the test."
+       }
+      ],
+      "explanation": "0.939 > 0.648, so H₀ is rejected."
+     },
+     {
+      "label": "(ii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which conclusion is correct?",
+      "options": [
+       {
+        "key": "A",
+        "content": "There is a significant strong negative relationship",
+        "correct": true,
+        "rationale": "Correct."
+       },
+       {
+        "key": "B",
+        "content": "There is a significant strong positive relationship",
+        "rationale": "The sign is negative."
+       },
+       {
+        "key": "C",
+        "content": "There is a weak negative relationship that is not significant",
+        "rationale": "The value is strong and significant."
+       },
+       {
+        "key": "D",
+        "content": "There is no relationship",
+        "rationale": "The null hypothesis was rejected."
+       }
+      ],
+      "explanation": "Strong (−0.94) and significant at the 5% level."
+     },
+     {
+      "label": "(iii)",
+      "type": "TRUE_FALSE",
+      "marks": 1,
+      "stem": "The result proves that distance from the main road causes the fall in customers.",
+      "answerSpec": {
+       "correct": false
+      },
+      "explanation": "False. Correlation shows a relationship, not cause; other factors (shop size, prices, population) may be involved."
+     },
+     {
+      "label": "(iv)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which change would make the result more reliable?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Survey more shops on several different days",
+        "correct": true,
+        "rationale": "Correct: a larger sample and repeats reduce chance effects."
+       },
+       {
+        "key": "B",
+        "content": "Survey only the five nearest shops",
+        "rationale": "A smaller, biased sample is less reliable."
+       },
+       {
+        "key": "C",
+        "content": "Survey on one day only",
+        "rationale": "One day may not be typical."
+       },
+       {
+        "key": "D",
+        "content": "Ignore the shops with unusual results",
+        "rationale": "Removing anomalies without reason biases the results."
+       }
+      ],
+      "explanation": "More shops and repeated counts improve reliability."
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Assess how far the results support the hypothesis, and evaluate the method used in the investigation.",
+    "payload": {
+     "wordLimit": {
+      "max": 350
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "r_s = −0.94, a strong negative correlation: customers fall as distance from the road rises (quote figures)",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The value exceeds the critical value 0.648, so the relationship is significant at the 5% level",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Examples from the table: the shop at 0.2 km has 148 customers and the shop at 5.5 km has 52",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Anomalies: shop 3 (0.9 km) has fewer customers than shops 2 and 4, so the pattern is not perfect",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "A reason for the pattern: passing traffic and public transport stops give roadside shops more trade, while remote shops serve only nearby villages",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Limits of the method: only 10 shops, one weekday, so the sample may not be typical (market days, pay days)",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Other factors (shop size, prices, population density, competition) may affect customers; correlation is not cause",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Judgement: the data strongly support the hypothesis but more shops, repeat counts and other variables are needed before firm conclusions are drawn",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 4,
+        "minMarks": 7,
+        "maxMarks": 8,
+        "descriptor": "Thorough, accurate and well-developed knowledge applied to the question; detailed located examples or resource evidence used throughout; balanced, reasoned evaluation reaching a supported conclusion; clear logical structure."
+       },
+       {
+        "level": 3,
+        "minMarks": 5,
+        "maxMarks": 6,
+        "descriptor": "Good knowledge and understanding, mostly developed; relevant examples or resource evidence; some evaluation with a conclusion that is partly supported; generally organised."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 4,
+        "descriptor": "Some knowledge and understanding with limited development; examples general or thin; evaluation is simple, one-sided or asserted."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "A few simple, partly accurate points or a list; little or no example; no real evaluation."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     },
+     "modelAnswer": "The data support the hypothesis strongly. r_s = −0.94 is far larger in size than the critical value of 0.648, so there is a significant negative relationship: the shop 0.2 km from the road had 148 customers and the one 5.5 km away had 52. Shop 3 is an anomaly, with fewer customers than the shops either side, so the relationship is not perfect. Roadside shops probably benefit from passing traffic and bus stops, while remote shops serve only the nearby villages. However, the method has limits: only ten shops were surveyed on one weekday, which may not be typical, and shop size, prices and population density may also affect customers. Correlation does not prove cause. Overall the results strongly support the hypothesis, but more shops, repeated counts and other variables are needed for firm conclusions."
+    },
+    "explanation": "A balanced answer uses the figures, the critical value, anomalies, causes and limits of the method."
+   }
+  ],
+  "explanation": "Descriptive statistics, Spearman's rank correlation with a printed critical value, interpretation and evaluation of the investigation.",
+  "hints": [
+   "Rank both columns from the smallest value (1) to the largest.",
+   "Compare |r_s| with the printed critical value."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "NUMERICAL",
+     "value": "101.3"
+    },
+    "(a)(ii)": {
+     "type": "NUMERICAL",
+     "value": "101"
+    },
+    "(a)(iii)": {
+     "type": "NUMERICAL",
+     "value": "115"
+    },
+    "(a)(iv)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(a)(v)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)(ii)": {
+     "type": "CALCULATION",
+     "value": "320"
+    },
+    "(b)(iii)": {
+     "type": "CALCULATION",
+     "value": "-0.939"
+    },
+    "(c)(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(c)(ii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(c)(iii)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    },
+    "(c)(iv)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "NUMERICAL",
+      "value": "101"
+     },
+     "(a)(ii)": {
+      "type": "NUMERICAL",
+      "value": "101.3"
+     },
+     "(a)(iii)": {
+      "type": "NUMERICAL",
+      "value": "160"
+     },
+     "(a)(iv)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(a)(v)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)(ii)": {
+      "type": "CALCULATION",
+      "value": "160"
+     },
+     "(b)(iii)": {
+      "type": "CALCULATION",
+      "value": "0.9393939393939394"
+     },
+     "(c)(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(c)(ii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(c)(iii)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     },
+     "(c)(iv)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w1a-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.stats.hypothesis-testing",
+   "ageo.stats.descriptive"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "Students counted retail outlets in three zones of a town in Zimbabwe to find out whether the type of outlet is linked to the zone (data invented for this exercise).\n\n|  | CBD | Inner suburbs | Outer suburbs | Row total |\n|---|---|---|---|---|\n| Formal shops | 66 | 29 | 15 | 110 |\n| Market stalls | 27 | 36 | 43 | 106 |\n| Street vendors | 17 | 35 | 47 | 99 |\n| Column total | 110 | 100 | 105 | 315 |\n\nThe test used is chi-squared, $\\chi^2 = \\sum \\dfrac{(O - E)^2}{E}$. The critical value of $\\chi^2$ at the 5% level for 4 degrees of freedom is 9.49.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Use the table to answer the following.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the total number of outlets counted.",
+      "answerSpec": {
+       "value": 315
+      },
+      "explanation": "The grand total is 315.",
+      "workedSolution": "1. The grand total is 315."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "An outlet is chosen at random. Calculate the probability that it is a formal shop, to three decimal places.",
+      "answerSpec": {
+       "value": 0.3492063492063492,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "110 ÷ 315 = 0.349.",
+      "workedSolution": "1. 110 ÷ 315 = 0.349."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "What percentage of the outlets in the CBD are formal shops? Give your answer to one decimal place.",
+      "payload": {
+       "unitHint": "%"
+      },
+      "answerSpec": {
+       "value": 60,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "%",
+         "percent",
+         "per cent"
+        ]
+       }
+      },
+      "explanation": "66 ÷ 110 × 100 = 60.0%. Dividing by the grand total (315) gives 21.0%.",
+      "workedSolution": "1. 66 ÷ 110 × 100 = 60.0%. Dividing by the grand total (315) gives 21.0%."
+     },
+     {
+      "label": "(iv)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "An outlet is chosen at random. Calculate the probability that it is a street vendor in the outer suburbs, to three decimal places.",
+      "answerSpec": {
+       "value": 0.1492063492063492,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "47 ÷ 315 = 0.149. Using the row total (99) as the base gives 0.475, which is the probability among street vendors only.",
+      "workedSolution": "1. 47 ÷ 315 = 0.149. Using the row total (99) as the base gives 0.475, which is the probability among street vendors only."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 8,
+    "stem": "Carry out the chi-squared test.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which is the null hypothesis?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Formal shops are more common in the CBD",
+        "rationale": "This is a directional alternative hypothesis."
+       },
+       {
+        "key": "B",
+        "content": "Outlet type causes the zone to change",
+        "rationale": "A test of association cannot show cause."
+       },
+       {
+        "key": "C",
+        "content": "There are the same number of outlets in each zone",
+        "rationale": "That is a different (goodness-of-fit) null."
+       },
+       {
+        "key": "D",
+        "content": "There is no association between outlet type and zone",
+        "correct": true,
+        "rationale": "Correct."
+       }
+      ],
+      "explanation": "The null hypothesis states there is no association."
+     },
+     {
+      "label": "(ii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which is the alternative hypothesis?",
+      "options": [
+       {
+        "key": "A",
+        "content": "There is no association between outlet type and zone",
+        "rationale": "That is the null hypothesis."
+       },
+       {
+        "key": "B",
+        "content": "There is an association between outlet type and zone",
+        "correct": true,
+        "rationale": "Correct."
+       },
+       {
+        "key": "C",
+        "content": "The CBD has the most outlets",
+        "rationale": "The test does not concern totals."
+       },
+       {
+        "key": "D",
+        "content": "Outlets are evenly spread",
+        "rationale": "That would be consistent with the null hypothesis."
+       }
+      ],
+      "explanation": "H₁ states there is an association."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "Calculate the expected number of formal shops in the CBD, to one decimal place.",
+      "answerSpec": {
+       "value": 38.41269841269841,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       }
+      },
+      "explanation": "Expected = row total × column total ÷ grand total $= 110 \\times 110 \\div 315 = 38.4$.",
+      "workedSolution": "1. Expected = row total × column total ÷ grand total $= 110 \\times 110 \\div 315 = 38.4$."
+     },
+     {
+      "label": "(iv)",
+      "type": "CALCULATION",
+      "marks": 3,
+      "stem": "Calculate χ² (all expected values are above 5), to two decimal places.",
+      "answerSpec": {
+       "value": 53.43336633920683,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       }
+      },
+      "explanation": "The nine terms $(O-E)^2/E$ are 19.81, 1.00, 12.80, 2.71, 0.16, 1.66, 8.93, 0.41, 5.94; their sum is 53.43.",
+      "workedSolution": "1. The nine terms $(O-E)^2/E$ are 19.81, 1.00, 12.80, 2.71, 0.16, 1.66, 8.93, 0.41, 5.94; their sum is 53.43."
+     },
+     {
+      "label": "(v)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the number of degrees of freedom.",
+      "answerSpec": {
+       "value": 4
+      },
+      "explanation": "(3 − 1) × (3 − 1) = 4.",
+      "workedSolution": "1. (3 − 1) × (3 − 1) = 4."
+     },
+     {
+      "label": "(vi)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "What decision is made about the null hypothesis?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Accept it, because χ² is greater than 9.49",
+        "rationale": "A value above the critical value leads to rejection."
+       },
+       {
+        "key": "B",
+        "content": "Reject it, because χ² is less than 9.49",
+        "rationale": "A smaller value would lead to non-rejection."
+       },
+       {
+        "key": "C",
+        "content": "Reject it, because χ² is greater than 9.49",
+        "correct": true,
+        "rationale": "Correct."
+       },
+       {
+        "key": "D",
+        "content": "Accept it, because χ² is less than 315",
+        "rationale": "315 is not the critical value."
+       }
+      ],
+      "explanation": "53.43 is greater than 9.49, so H₀ is rejected."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 3,
+    "stem": "Interpret the results.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which cell contributes most to the value of χ²?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Formal shops in the outer suburbs",
+        "rationale": "This cell contributes less to χ²."
+       },
+       {
+        "key": "B",
+        "content": "Street vendors in the CBD",
+        "rationale": "This cell contributes less to χ²."
+       },
+       {
+        "key": "C",
+        "content": "Formal shops in the CBD",
+        "correct": true,
+        "rationale": "Correct: it has the largest (O − E)² ÷ E."
+       },
+       {
+        "key": "D",
+        "content": "Street vendors in the outer suburbs",
+        "rationale": "This cell contributes less to χ²."
+       }
+      ],
+      "explanation": "The largest term, 19.81, is for formal shops in the cbd."
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Suggest a reason for the pattern of formal shops and street vendors in the town.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Formal shops are concentrated in the CBD where accessibility and demand are highest and they can afford high rents",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "Street vendors and market stalls are numerous in the outer suburbs where rents are low and customers lack easy access to the CBD",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: Formal shops cluster in the CBD where accessibility and customer numbers are highest and traders can afford high rents, while street vendors and stalls are more common in the outer suburbs where rents are low and residents cannot easily reach the CBD."
+      }
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Assess how useful the chi-squared test is for the town council in deciding where to provide new trading space, and discuss the limitations of the investigation.",
+    "payload": {
+     "wordLimit": {
+      "max": 350
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The test shows a significant association between outlet type and zone (χ² greater than the critical value), so zones differ in the types of outlet",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The council can see where formal and informal trade are concentrated and target space (for example market stalls in outer suburbs)",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The individual cell terms show which zone-type combinations are most unlike the expected pattern",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "The test shows association only, not why: rents, land use zoning and customer incomes may explain it",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Counts were taken on one occasion; trade varies by day and season, and street vendors are mobile so may be under-counted",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Expected values were above 5, so the test is valid, but the zones are broad and hide variation within them",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Council decisions also need data on customer numbers, incomes, safety and services",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Judgement: a useful first step that points to where more detailed surveys should be done, not enough by itself to plan",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 4,
+        "minMarks": 7,
+        "maxMarks": 8,
+        "descriptor": "Thorough, accurate and well-developed knowledge applied to the question; detailed located examples or resource evidence used throughout; balanced, reasoned evaluation reaching a supported conclusion; clear logical structure."
+       },
+       {
+        "level": 3,
+        "minMarks": 5,
+        "maxMarks": 6,
+        "descriptor": "Good knowledge and understanding, mostly developed; relevant examples or resource evidence; some evaluation with a conclusion that is partly supported; generally organised."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 4,
+        "descriptor": "Some knowledge and understanding with limited development; examples general or thin; evaluation is simple, one-sided or asserted."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "A few simple, partly accurate points or a list; little or no example; no real evaluation."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     },
+     "modelAnswer": "The test shows a significant association between outlet type and zone, so the council knows that formal shops are concentrated in the CBD and informal outlets in the outer suburbs; the largest cell terms show where the pattern is most marked. This helps the council to target space, for example by providing serviced market stalls in the outer suburbs. However, the test shows only that an association exists, not why: rents, zoning and incomes may explain it. The counts were made on one occasion, and street vendors are mobile and may have been under-counted. The zones are also broad and hide variation within them. Overall the test is a useful first step that shows where more detailed surveys are needed, but the council would also need data on customer numbers, incomes and services before planning trading space."
+    },
+    "explanation": "Use the result, the cell terms and the limits of the data to reach a judgement."
+   }
+  ],
+  "explanation": "Probability, chi-squared for association with a printed critical value, interpretation and evaluation of the investigation.",
+  "hints": [
+   "Expected = row total × column total ÷ grand total.",
+   "Compare χ² with the printed critical value."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "NUMERICAL",
+     "value": "315"
+    },
+    "(a)(ii)": {
+     "type": "CALCULATION",
+     "value": "0.349"
+    },
+    "(a)(iii)": {
+     "type": "NUMERICAL",
+     "value": "60.0"
+    },
+    "(a)(iv)": {
+     "type": "CALCULATION",
+     "value": "0.149"
+    },
+    "(b)(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)(ii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)(iii)": {
+     "type": "NUMERICAL",
+     "value": "38.4"
+    },
+    "(b)(iv)": {
+     "type": "CALCULATION",
+     "value": "53.43"
+    },
+    "(b)(v)": {
+     "type": "NUMERICAL",
+     "value": "4"
+    },
+    "(b)(vi)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(c)(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "NUMERICAL",
+      "value": "110"
+     },
+     "(a)(ii)": {
+      "type": "CALCULATION",
+      "value": "0.7"
+     },
+     "(a)(iii)": {
+      "type": "NUMERICAL",
+      "value": "21"
+     },
+     "(a)(iv)": {
+      "type": "CALCULATION",
+      "value": "0.47474747474747475"
+     },
+     "(b)(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)(ii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)(iii)": {
+      "type": "NUMERICAL",
+      "value": "66"
+     },
+     "(b)(iv)": {
+      "type": "CALCULATION",
+      "value": "26.716683169603414"
+     },
+     "(b)(v)": {
+      "type": "NUMERICAL",
+      "value": "8"
+     },
+     "(b)(vi)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w1a-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.skills.topographic-maps"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "Table 1 describes part of a 1:50 000 topographic map of the fictional Rukunguwo District in the Zimbabwean midlands (invented for this exercise). Each grid square is 1 km by 1 km, the contour interval is 20 m, and positions given as easting and northing are grid-line values in km.\n\n| Feature | Position | Height and detail |\n|---|---|---|\n| Mbada School | Easting 41.5, northing 17.2 | 1 450 m; beside a gravel road |\n| Clinic | Easting 43.2, northing 19.6 | 1 430 m; at the end of the gravel road |\n| Chikara dwala (granite hill) | Summit at easting 41.2, northing 19.0 | Summit 1 590 m; very steep sides with contours almost touching |\n| Rukunguwo River | Source at 4021; flows south-east to the dam site | 1 510 m at the source and 1 390 m at the dam site; wide flat valley floor (about 400 m across) upstream of 4418 |\n| Proposed dam site | 443181 | Narrow valley between two spurs; contours close together on both sides at 1 400 m, 1 420 m and 1 440 m |\n| Mbada village | 421185 | About 60 houses on the flat valley floor beside the river and the gravel road |\n| Flat farmland with red soils | Squares 4418 and 4517 | Downstream of the dam site; crossed by the gravel road |\n| Hand-pump borehole | 3 tenths of a square east of easting line 41 and 8 tenths north of northing line 17 | Serves the school |\n\nTable 2 gives heights along a straight line X to Y (6 km long) across the district.\n\n| Distance from X (km) | 0 | 1 | 2 | 3 | 4 | 5 | 6 |\n|---|---|---|---|---|---|---|---|\n| Height (m) | 1450 | 1465 | 1505 | 1480 | 1450 | 1425 | 1410 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Use Table 1.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "stem": "Give the six-figure grid reference of the borehole.",
+      "answerSpec": {
+       "accepted": [
+        {
+         "value": "413178"
+        }
+       ],
+       "normalise": [
+        "trim",
+        "lowercase",
+        "collapse_whitespace",
+        "strip_punctuation"
+       ]
+      },
+      "explanation": "Easting 41 + 3 tenths = 413; northing 17 + 8 tenths = 178. Eastings come first: 413178."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Calculate the straight-line distance from the school to the clinic, in km, to one decimal place.",
+      "payload": {
+       "unitHint": "km"
+      },
+      "answerSpec": {
+       "value": 2.941088233970552,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "km",
+         "kilometres",
+         "kilometre",
+         "kilometers"
+        ]
+       }
+      },
+      "explanation": "Eastings differ by 1.7 km and northings by 2.4 km. Distance $= \\sqrt{1.7^2 + 2.4^2} = 2.9$ km. Adding the two differences gives 4.1 km.",
+      "workedSolution": "1. Eastings differ by 1.7 km and northings by 2.4 km. Distance $= \\sqrt{1.7^2 + 2.4^2} = 2.9$ km. Adding the two differences gives 4.1 km."
+     },
+     {
+      "label": "(iii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Calculate the bearing of the clinic from the school, to the nearest degree.",
+      "payload": {
+       "unitHint": "°"
+      },
+      "answerSpec": {
+       "value": 35.311213439633214,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.5
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "°",
+         "degrees",
+         "deg"
+        ]
+       }
+      },
+      "explanation": "$\\tan\\theta = 1.7 \\div 2.4$, so $\\theta = 35.3^\\circ$, east of north, so the bearing is about 035°. An angle of 55° measures from east instead of north.",
+      "workedSolution": "1. $\\tan\\theta = 1.7 \\div 2.4$, so $\\theta = 35.3^\\circ$, east of north, so the bearing is about 035°. An angle of 55° measures from east instead of north."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Gradients and the cross-section.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "CALCULATION",
+      "marks": 3,
+      "stem": "The school is at 1 450 m and Chikara dwala summit at 1 590 m. Use the positions in Table 1 to calculate the average gradient between them as '1 in n', to the nearest whole number.",
+      "answerSpec": {
+       "value": 13.03449113635333,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.5
+       }
+      },
+      "explanation": "Horizontal distance $= \\sqrt{0.3^2 + 1.8^2} = 1.82$ km $= 1825$ m. Vertical interval $= 140$ m. Gradient $= 1$ in $1825 \\div 140 = 13.0$, so 1 in 13.",
+      "workedSolution": "1. Horizontal distance $= \\sqrt{0.3^2 + 1.8^2} = 1.82$ km $= 1825$ m. Vertical interval $= 140$ m. Gradient $= 1$ in $1825 \\div 140 = 13.0$, so 1 in 13."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "State the greatest height along line X to Y, in m.",
+      "payload": {
+       "unitHint": "m"
+      },
+      "answerSpec": {
+       "value": 1505,
+       "units": {
+        "required": false,
+        "accepted": [
+         "m",
+         "metres",
+         "metre",
+         "meters"
+        ]
+       }
+      },
+      "explanation": "The highest value in Table 2 is 1 505 m at 2 km.",
+      "workedSolution": "1. The highest value in Table 2 is 1 505 m at 2 km."
+     },
+     {
+      "label": "(iii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Is point Y (1 410 m) visible from point X (1 450 m)?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Yes, because X is higher than Y",
+        "rationale": "Higher ground between the points can still block the view."
+       },
+       {
+        "key": "B",
+        "content": "Yes, because the line is only 6 km long",
+        "rationale": "Distance alone does not decide visibility."
+       },
+       {
+        "key": "C",
+        "content": "No, because Y is lower than the clinic",
+        "rationale": "The clinic is not on the line."
+       },
+       {
+        "key": "D",
+        "content": "No, because the 2 km ridge is above the line of sight",
+        "correct": true,
+        "rationale": "Correct: the line of sight is only about 1 437 m at 2 km."
+       }
+      ],
+      "explanation": "At 2 km the line of sight is at 1 450 − 40 × (2 ÷ 6) = 1437 m, below the 1 505 m ridge."
+     },
+     {
+      "label": "(iv)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "Calculate the difference between the highest and lowest heights along the section, in m.",
+      "payload": {
+       "unitHint": "m"
+      },
+      "answerSpec": {
+       "value": 95,
+       "units": {
+        "required": false,
+        "accepted": [
+         "m",
+         "metres",
+         "metre",
+         "meters"
+        ]
+       }
+      },
+      "explanation": "1 320 − 1 410 = 90 m.",
+      "workedSolution": "1. 1 320 − 1 410 = 90 m."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "Describe and explain.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 3,
+      "markingMode": "MANUAL",
+      "stem": "Describe the relief and drainage shown in Table 1.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Chikara dwala is a steep-sided hill with a summit of 1 590 m (contours almost touching)",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "The river flows south-east, falling 120 m from 1 510 m at its source to 1 390 m at the dam site",
+          "marks": 1
+         },
+         {
+          "id": "p3",
+          "description": "The valley floor is wide and flat upstream of the dam site (about 400 m across) but narrow and steep-sided at the dam site",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: Chikara dwala is a steep-sided hill whose summit reaches 1 590 m. The river flows south-east, falling 120 m from 1 510 m at its source to 1 390 m at the dam site. The valley floor is wide and flat, about 400 m across, upstream of the dam site, but narrow and steep-sided at the dam site itself."
+      }
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Explain why Mbada village is sited where it is.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "On the flat valley floor, which is suitable for building and farming",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "Beside the river for water supply and the gravel road for access/trade",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: The village is on the flat valley floor, which is suitable for building and farming, beside the river for water and beside the gravel road for access to the school and clinic."
+      }
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Assess the suitability of the proposed dam site (443181) for an irrigation scheme, using evidence from Table 1.",
+    "payload": {
+     "wordLimit": {
+      "max": 350
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The narrow valley between two spurs means a short dam wall, which lowers building costs",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Steep valley sides at 1 400 m, 1 420 m and 1 440 m give a deep reservoir, which reduces evaporation per unit volume",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Upstream there is a wide flat floor, so the reservoir could store a large volume (and the catchment above is the 120 m fall from the source)",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Flat farmland with red soils downstream (squares 4418 and 4517) is close to the dam, so canals can be short and gravity-fed",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Gravel road crosses the farmland and links to the clinic and school, so access for construction and farmers is good",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Disadvantage: Mbada village lies on the flat valley floor upstream and could be flooded or need relocating; settlement upstream risks pollution",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Other doubts: river flow in the dry season is unknown; silting from farmland and evaporation losses reduce capacity; cost and the need for an environmental impact assessment",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Judgement: the topography is favourable but the village, river flow and cost need checking, so suitable provided these are resolved",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 4,
+        "minMarks": 7,
+        "maxMarks": 8,
+        "descriptor": "Thorough, accurate and well-developed knowledge applied to the question; detailed located examples or resource evidence used throughout; balanced, reasoned evaluation reaching a supported conclusion; clear logical structure."
+       },
+       {
+        "level": 3,
+        "minMarks": 5,
+        "maxMarks": 6,
+        "descriptor": "Good knowledge and understanding, mostly developed; relevant examples or resource evidence; some evaluation with a conclusion that is partly supported; generally organised."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 4,
+        "descriptor": "Some knowledge and understanding with limited development; examples general or thin; evaluation is simple, one-sided or asserted."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "A few simple, partly accurate points or a list; little or no example; no real evaluation."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     },
+     "modelAnswer": "The topography is favourable. The narrow valley between two spurs means a short dam wall and so lower costs, and the steep sides at 1 400, 1 420 and 1 440 m give a deep reservoir that loses less water to evaporation. The wide, flat valley floor upstream gives space to store a large volume. The flat farmland with red soils downstream in squares 4418 and 4517 is close, so canals can be short, and the gravel road gives access for construction and farmers. However, Mbada village is on the flat valley floor upstream and could be flooded or need relocating, and settlement upstream could pollute the water. The dry-season flow of the river is not known, silting from farmland and evaporation could reduce capacity, and the dam would be costly and need an environmental impact assessment. Overall the site is suitable provided the village, river flow and cost are resolved."
+    },
+    "explanation": "Use evidence from the table for advantages and disadvantages and reach a conclusion."
+   }
+  ],
+  "explanation": "Grid references, distance, bearing, gradient, cross-section interpretation, description of relief and evaluation of a dam site from a described map extract.",
+  "hints": [
+   "Eastings come before northings.",
+   "Convert the horizontal distance to metres before finding the gradient."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "SHORT_ANSWER",
+     "text": "413178"
+    },
+    "(a)(ii)": {
+     "type": "CALCULATION",
+     "value": "2.9"
+    },
+    "(a)(iii)": {
+     "type": "CALCULATION",
+     "value": "35"
+    },
+    "(b)(i)": {
+     "type": "CALCULATION",
+     "value": "13"
+    },
+    "(b)(ii)": {
+     "type": "NUMERICAL",
+     "value": "1505"
+    },
+    "(b)(iii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(b)(iv)": {
+     "type": "NUMERICAL",
+     "value": "95"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "SHORT_ANSWER",
+      "text": "417138"
+     },
+     "(a)(ii)": {
+      "type": "CALCULATION",
+      "value": "4.1"
+     },
+     "(a)(iii)": {
+      "type": "CALCULATION",
+      "value": "55"
+     },
+     "(b)(i)": {
+      "type": "CALCULATION",
+      "value": "0.077"
+     },
+     "(b)(ii)": {
+      "type": "NUMERICAL",
+      "value": "1590"
+     },
+     "(b)(iii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)(iv)": {
+      "type": "NUMERICAL",
+      "value": "50"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w1a-zimsec.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.skills.topographic-maps"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "Table 1 describes a 1:50 000 map extract of the fictional Zvamano District in southern Africa (invented for this exercise). Each grid square is 1 km by 1 km and positions are grid-line values in km.\n\n| Feature | Position and detail |\n|---|---|\n| Zvamano River | Between the bridge and the ford the channel measures 11.2 cm along the river (measured with thread) and 8.0 cm in a straight line |\n| Msasa plantation | Covers 12 whole grid squares and 9 part squares (each part square to be counted as half) |\n| Village A | Easting 44.0, northing 17.5; 1 100 m; on the main gravel road beside the river |\n| Village B | Easting 41.9, northing 20.9; on a gentle slope near a spring |\n| Houses | Village A: a linear row beside the road; Village B: a cluster; farms: scattered homesteads in the north-east |\n| Proposed road, first section | Climbs from 1 100 m to 1 190 m over 3.6 cm on the map |\n\nA new gravel road is planned between Village A and Village B. Table 2 compares two possible routes.\n\n|  | Route 1 (over the ridge) | Route 2 (along the valley) |\n|---|---|---|\n| Length | 4.3 km | 6.5 km |\n| Steepest gradient | 1 in 9 | 1 in 40 |\n| River crossings (bridges needed) | 0 | 2 |\n| Land affected | Mostly plantation | Mostly farmland |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Measurements from the map.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Calculate the real length of the river channel between the bridge and the ford, in km.",
+      "payload": {
+       "unitHint": "km"
+      },
+      "answerSpec": {
+       "value": 5.6,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "km",
+         "kilometres",
+         "kilometre",
+         "kilometers"
+        ]
+       }
+      },
+      "explanation": "11.2 cm × 50 000 = 560 000 cm = 5.6 km. The straight-line distance is 4.0 km.",
+      "workedSolution": "1. 11.2 cm × 50 000 = 560 000 cm = 5.6 km. The straight-line distance is 4.0 km."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Calculate the sinuosity of the river (channel length ÷ straight-line length), to two decimal places.",
+      "answerSpec": {
+       "value": 1.4,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       }
+      },
+      "explanation": "5.6 ÷ 4.0 = 1.40, a sinuous river.",
+      "workedSolution": "1. 5.6 ÷ 4.0 = 1.40, a sinuous river."
+     },
+     {
+      "label": "(iii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Estimate the area of the plantation, in km², to one decimal place.",
+      "payload": {
+       "unitHint": "km²"
+      },
+      "answerSpec": {
+       "value": 16.5,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "km²",
+         "km^2",
+         "km2",
+         "square kilometres",
+         "sq km"
+        ]
+       }
+      },
+      "explanation": "12 whole squares + 9 × 0.5 = 16.5 km².",
+      "workedSolution": "1. 12 whole squares + 9 × 0.5 = 16.5 km²."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "The proposed road.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "CALCULATION",
+      "marks": 3,
+      "stem": "Calculate the gradient of the first section as '1 in n'.",
+      "answerSpec": {
+       "value": 20
+      },
+      "explanation": "Vertical interval = 90 m; horizontal distance = 3.6 × 50 000 ÷ 100 = 1 800 m; 1 800 ÷ 90 = 20, so 1 in 20.",
+      "workedSolution": "1. Vertical interval = 90 m; horizontal distance = 3.6 × 50 000 ÷ 100 = 1 800 m; 1 800 ÷ 90 = 20, so 1 in 20."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Calculate the bearing of Village B from Village A, to the nearest degree.",
+      "payload": {
+       "unitHint": "°"
+      },
+      "answerSpec": {
+       "value": 328.2985703304943,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.5
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "°",
+         "degrees",
+         "deg"
+        ]
+       }
+      },
+      "explanation": "Village B is 2.1 km west and 3.4 km north of A. $\\tan\\theta = 2.1 \\div 3.4$, so $\\theta = 31.7^\\circ$ west of north: bearing $= 360 - 31.7 = 328.3^\\circ$, so 328° to the nearest degree.",
+      "workedSolution": "1. Village B is 2.1 km west and 3.4 km north of A. $\\tan\\theta = 2.1 \\div 3.4$, so $\\theta = 31.7^\\circ$ west of north: bearing $= 360 - 31.7 = 328.3^\\circ$, so 328° to the nearest degree."
+     },
+     {
+      "label": "(iii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which settlement pattern is shown by Village A?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Nucleated",
+        "rationale": "That is the pattern of Village B."
+       },
+       {
+        "key": "B",
+        "content": "Dispersed",
+        "rationale": "That is the pattern of the farms."
+       },
+       {
+        "key": "C",
+        "content": "Radial",
+        "rationale": "Radial refers to routes or streams spreading from a centre."
+       },
+       {
+        "key": "D",
+        "content": "Linear",
+        "correct": true,
+        "rationale": "Correct: a row of houses along the road."
+       }
+      ],
+      "explanation": "A row of houses along a road is a linear pattern."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "Settlement.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 3,
+      "markingMode": "MANUAL",
+      "stem": "Describe the settlement pattern shown in Table 1.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Village A is linear, a row of houses beside the road and river",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "Village B is nucleated, a cluster of houses near a spring",
+          "marks": 1
+         },
+         {
+          "id": "p3",
+          "description": "Farms in the north-east are dispersed, scattered homesteads",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: Village A is linear, with houses in a row beside the gravel road and river. Village B is nucleated, with its houses in a cluster near a spring. The farms in the north-east are dispersed as scattered homesteads."
+      }
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Explain why Village A has a linear pattern.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Houses locate along the road because it gives access to transport, trade and services",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "The river alongside provides water, so the flat strip between road and river is the favoured site",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: Houses are built along the road because it gives access to transport, trade and services, and the river alongside gives water, so the flat strip between road and river is the favoured site."
+      }
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Evaluate the two routes in Table 2 and recommend which one should be built.",
+    "payload": {
+     "wordLimit": {
+      "max": 350
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Route 1 is shorter (4.3 km against 6.5 km), so it costs less to build and shortens journeys",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Route 1 has a steepest gradient of 1 in 9, which is hard for loaded lorries and buses and could erode in heavy rain",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Route 1 needs no bridges, avoiding the cost and flood risk of river crossings",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Route 1 mostly crosses the plantation, so less farmland is lost but trees must be cleared",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Route 2 is gentle (1 in 40), safer and cheaper to run for heavy vehicles",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Route 2 is 2.2 km longer and needs two bridges, which raise the cost and may be damaged by floods",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Route 2 crosses farmland, serving farmers but removing productive land and requiring compensation",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Judgement: a reasoned choice (for example Route 2 for safety and use by heavy vehicles, or Route 1 if cost is the main concern and the gradient can be engineered)",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 4,
+        "minMarks": 7,
+        "maxMarks": 8,
+        "descriptor": "Thorough, accurate and well-developed knowledge applied to the question; detailed located examples or resource evidence used throughout; balanced, reasoned evaluation reaching a supported conclusion; clear logical structure."
+       },
+       {
+        "level": 3,
+        "minMarks": 5,
+        "maxMarks": 6,
+        "descriptor": "Good knowledge and understanding, mostly developed; relevant examples or resource evidence; some evaluation with a conclusion that is partly supported; generally organised."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 4,
+        "descriptor": "Some knowledge and understanding with limited development; examples general or thin; evaluation is simple, one-sided or asserted."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "A few simple, partly accurate points or a list; little or no example; no real evaluation."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     },
+     "modelAnswer": "Route 1 is shorter at 4.3 km against 6.5 km, so it is cheaper to build and shortens journeys, and it needs no bridges, avoiding their cost and flood risk. It mostly crosses the plantation, so little farmland is lost. However, its steepest gradient of 1 in 9 is hard for loaded lorries and buses and could erode in heavy rain. Route 2 is gentle, with a steepest gradient of 1 in 40, so it is safer and cheaper to run for heavy vehicles, and it serves farmers. But it is 2.2 km longer, needs two bridges that can be damaged by floods, and takes farmland. On balance Route 2 is the better choice if the road is to carry heavy vehicles safely all year, but Route 1 would be preferable if cost is the main concern and the steep section can be engineered."
+    },
+    "explanation": "Weigh length, gradient, bridges and land use, then recommend a route with a reason."
+   }
+  ],
+  "explanation": "Scale, sinuosity, area, gradient, bearing, settlement patterns and evaluation of route options from a described map extract.",
+  "hints": [
+   "Convert map distances to real distances with the 1:50 000 scale.",
+   "Bearings are measured clockwise from north."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "CALCULATION",
+     "value": "5.6"
+    },
+    "(a)(ii)": {
+     "type": "CALCULATION",
+     "value": "1.40"
+    },
+    "(a)(iii)": {
+     "type": "CALCULATION",
+     "value": "16.5"
+    },
+    "(b)(i)": {
+     "type": "CALCULATION",
+     "value": "20"
+    },
+    "(b)(ii)": {
+     "type": "CALCULATION",
+     "value": "328"
+    },
+    "(b)(iii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "CALCULATION",
+      "value": "4"
+     },
+     "(a)(ii)": {
+      "type": "CALCULATION",
+      "value": "0.71"
+     },
+     "(a)(iii)": {
+      "type": "CALCULATION",
+      "value": "21"
+     },
+     "(b)(i)": {
+      "type": "CALCULATION",
+      "value": "0.05"
+     },
+     "(b)(ii)": {
+      "type": "CALCULATION",
+      "value": "32"
+     },
+     "(b)(iii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w1a-zimsec.q05",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.gis.data-models-georeferencing",
+   "ageo.gis.coordinates-projections"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "A district council in Zimbabwe is creating a GIS for planning new boreholes. A technician georeferences a scanned 1:50 000 map sheet using five ground control points. The residuals (dx, dy), in metres, are in the table. The finished raster has 10 m cells (data invented for this exercise).\n\n| GCP | 1 | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|---|\n| dx (m) | 3.1 | −1.8 | 2.6 | −3.4 | 1.9 |\n| dy (m) | −2.5 | 2.9 | 1.5 | −0.4 | −2.2 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Data models and coordinates.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which data model is best for the boundaries of wards?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Raster cells",
+        "rationale": "Cells give stair-step edges."
+       },
+       {
+        "key": "B",
+        "content": "A table of attributes only",
+        "rationale": "A table cannot show shape."
+       },
+       {
+        "key": "C",
+        "content": "Vector points",
+        "rationale": "Points cannot show areas."
+       },
+       {
+        "key": "D",
+        "content": "Vector polygons",
+        "correct": true,
+        "rationale": "Correct: boundaries are discrete areas with exact edges."
+       }
+      ],
+      "explanation": "Discrete areas with sharp boundaries are stored as vector polygons."
+     },
+     {
+      "label": "(ii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which data model is best for a continuous surface of ground elevation?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Vector lines only",
+        "rationale": "Contours can be stored as lines but the surface itself is continuous."
+       },
+       {
+        "key": "B",
+        "content": "Vector points only",
+        "rationale": "Points sample the surface but do not cover it."
+       },
+       {
+        "key": "C",
+        "content": "Vector polygons",
+        "rationale": "Polygons suit discrete areas."
+       },
+       {
+        "key": "D",
+        "content": "Raster",
+        "correct": true,
+        "rationale": "Correct: a grid of height values."
+       }
+      ],
+      "explanation": "Elevation is a continuous variable stored as a raster (digital elevation model)."
+     },
+     {
+      "label": "(iii)",
+      "type": "NUMERICAL",
+      "marks": 1,
+      "stem": "A borehole is at 30.4°E. State its UTM zone number, using zone = floor((longitude + 180) ÷ 6) + 1.",
+      "answerSpec": {
+       "value": 36
+      },
+      "explanation": "(30.4 + 180) ÷ 6 = 35.07; whole number 35; add 1 to get zone 36.",
+      "workedSolution": "1. (30.4 + 180) ÷ 6 = 35.07; whole number 35; add 1 to get zone 36."
+     },
+     {
+      "label": "(iv)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Another borehole is at 18°15′S. Convert its latitude to decimal degrees (south negative), to two decimal places.",
+      "payload": {
+       "unitHint": "°"
+      },
+      "answerSpec": {
+       "value": -18.25,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "°",
+         "degrees",
+         "deg"
+        ]
+       }
+      },
+      "explanation": "15′ ÷ 60 = 0.25°, so the latitude is −18.25°.",
+      "workedSolution": "1. 15′ ÷ 60 = 0.25°, so the latitude is −18.25°."
+     },
+     {
+      "label": "(v)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Why should layers in latitude and longitude be reprojected before distances are measured?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Degrees cannot be stored in a GIS",
+        "rationale": "GIS software stores degrees routinely."
+       },
+       {
+        "key": "B",
+        "content": "A degree of longitude is not a fixed length on the ground",
+        "correct": true,
+        "rationale": "Correct: it shrinks with latitude."
+       },
+       {
+        "key": "C",
+        "content": "Reprojection makes all areas equal",
+        "rationale": "No projection preserves everything."
+       },
+       {
+        "key": "D",
+        "content": "Measurements in degrees are always larger",
+        "rationale": "The error depends on latitude and direction."
+       }
+      ],
+      "explanation": "Degrees are angles; a degree of longitude covers less ground towards the poles."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 7,
+    "stem": "Georeferencing accuracy.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "CALCULATION",
+      "marks": 4,
+      "stem": "Calculate the RMSE, in metres, to two decimal places.",
+      "payload": {
+       "unitHint": "m"
+      },
+      "answerSpec": {
+       "value": 3.367194678066595,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "m",
+         "metres",
+         "metre",
+         "meters"
+        ]
+       }
+      },
+      "explanation": "1. $dx^2 + dy^2$ for each point: 15.86, 11.65, 9.01, 11.72, 8.45.\n2. Sum $= 56.69$.\n3. Divide by 5: 11.338.\n4. Square root: 3.37 m.",
+      "workedSolution": "1. 1. $dx^2 + dy^2$ for each point: 15.86, 11.65, 9.01, 11.72, 8.45.\n2. Sum $= 56.69$.\n3. Divide by 5: 11.338.\n4. Square root: 3.37 m."
+     },
+     {
+      "label": "(ii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Is this RMSE acceptable for a raster with 10 m cells?",
+      "options": [
+       {
+        "key": "A",
+        "content": "No, because it is larger than 1 m",
+        "rationale": "The acceptable error depends on the cell size, not a fixed 1 m."
+       },
+       {
+        "key": "B",
+        "content": "Yes, because it is smaller than half a cell",
+        "correct": true,
+        "rationale": "Correct: the error is within the size of a cell."
+       },
+       {
+        "key": "C",
+        "content": "No, because RMSE must be zero",
+        "rationale": "Zero is not realistic."
+       },
+       {
+        "key": "D",
+        "content": "Yes, because it is a whole number",
+        "rationale": "Being a whole number is irrelevant."
+       }
+      ],
+      "explanation": "3.37 m is less than half of 10 m (5 m), so it is acceptable."
+     },
+     {
+      "label": "(iii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Suggest two ways to reduce the RMSE.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Check or replace the GCP with the largest residual (GCP 1)",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "Add more GCPs spread over the whole sheet / choose a better transformation",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: Check or replace the control point with the largest residual, and add more control points spread over the whole sheet."
+      }
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "MATCHING",
+    "marks": 4,
+    "stem": "The technician then digitises roads and boundaries. Match each digitising error to its description.",
+    "payload": {
+     "left": [
+      {
+       "id": "L1",
+       "content": "Undershoot"
+      },
+      {
+       "id": "L2",
+       "content": "Overshoot"
+      },
+      {
+       "id": "L3",
+       "content": "Sliver polygon"
+      },
+      {
+       "id": "L4",
+       "content": "Duplicate feature"
+      }
+     ],
+     "right": [
+      {
+       "id": "R3",
+       "content": "A thin false polygon where two boundaries do not coincide"
+      },
+      {
+       "id": "R4",
+       "content": "The same feature has been digitised twice"
+      },
+      {
+       "id": "R1",
+       "content": "A line stops short of the line it should meet"
+      },
+      {
+       "id": "R2",
+       "content": "A line extends beyond the line it should meet"
+      }
+     ]
+    },
+    "answerSpec": {
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ],
+     "marksPerPair": 1
+    },
+    "explanation": "Snapping and topology checks reduce these errors."
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Assess the usefulness of a GIS for planning the locations of new boreholes in the district, and discuss the limitations of the data used.",
+    "payload": {
+     "wordLimit": {
+      "max": 350
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Layers (population, existing boreholes, geology, rivers, roads) can be overlaid to find places with high need and suitable geology",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Buffers can show households more than 1 km from the nearest water point, identifying underserved areas",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Raster layers (slope, rainfall, elevation) and vector layers (boundaries, points) can be combined in the analysis",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Results can be shown as clear maps that help officials and communities to agree on priorities",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Accuracy depends on georeferencing (RMSE of about 3 m is acceptable here) and on the age of the map and the data",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Geological layers and groundwater data may be coarse or missing, so GIS cannot show where water actually is without drilling surveys",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "The analysis needs trained staff, software and up-to-date population data",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Judgement: GIS is a very effective tool for narrowing down sites and showing need, but field surveys and community consultation are needed before drilling",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 4,
+        "minMarks": 7,
+        "maxMarks": 8,
+        "descriptor": "Thorough, accurate and well-developed knowledge applied to the question; detailed located examples or resource evidence used throughout; balanced, reasoned evaluation reaching a supported conclusion; clear logical structure."
+       },
+       {
+        "level": 3,
+        "minMarks": 5,
+        "maxMarks": 6,
+        "descriptor": "Good knowledge and understanding, mostly developed; relevant examples or resource evidence; some evaluation with a conclusion that is partly supported; generally organised."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 4,
+        "descriptor": "Some knowledge and understanding with limited development; examples general or thin; evaluation is simple, one-sided or asserted."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "A few simple, partly accurate points or a list; little or no example; no real evaluation."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     },
+     "modelAnswer": "A GIS lets the council overlay layers such as population, existing boreholes, geology, rivers and roads to find places with high need and suitable geology. Buffers can show households more than a kilometre from the nearest water point, so underserved areas are clear, and the result can be shown as maps that help officials and communities to agree priorities. Vector and raster layers can be combined, for example slope and rainfall rasters with boundaries and borehole points. However, accuracy depends on the georeferencing, whose RMSE of about three metres is acceptable here, and on the age of the map and the population data. Geological and groundwater data may be coarse, so the GIS cannot show where water actually is without a drilling survey, and the work needs trained staff and up-to-date data. Overall a GIS is very effective for narrowing down sites and showing need, but field surveys and community consultation are needed before drilling."
+    },
+    "explanation": "Uses of GIS analysis, limitations of the data and a supported judgement."
+   }
+  ],
+  "explanation": "Data models, UTM zones, decimal degrees, RMSE, digitising errors and the use of GIS in planning.",
+  "hints": [
+   "RMSE = square root of the mean of dx² + dy².",
+   "Convert minutes to degrees by dividing by 60."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(a)(ii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(a)(iii)": {
+     "type": "NUMERICAL",
+     "value": "36"
+    },
+    "(a)(iv)": {
+     "type": "CALCULATION",
+     "value": "-18.25"
+    },
+    "(a)(v)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)(i)": {
+     "type": "CALCULATION",
+     "value": "3.37"
+    },
+    "(b)(ii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(c)": {
+     "type": "MATCHING",
+     "pairs": [
+      {
+       "leftId": "L1",
+       "rightId": "R1"
+      },
+      {
+       "leftId": "L2",
+       "rightId": "R2"
+      },
+      {
+       "leftId": "L3",
+       "rightId": "R3"
+      },
+      {
+       "leftId": "L4",
+       "rightId": "R4"
+      }
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(a)(ii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(a)(iii)": {
+      "type": "NUMERICAL",
+      "value": "35"
+     },
+     "(a)(iv)": {
+      "type": "CALCULATION",
+      "value": "18.25"
+     },
+     "(a)(v)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)(i)": {
+      "type": "CALCULATION",
+      "value": "7.529276193632427"
+     },
+     "(b)(ii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)": {
+      "type": "MATCHING",
+      "pairs": [
+       {
+        "leftId": "L1",
+        "rightId": "R2"
+       },
+       {
+        "leftId": "L2",
+        "rightId": "R3"
+       },
+       {
+        "leftId": "L3",
+        "rightId": "R4"
+       },
+       {
+        "leftId": "L4",
+        "rightId": "R1"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w1a-zimsec.q06",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.rs.system-reflectance",
+   "ageo.rs.resolution-interpretation"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "A catchment manager in the Zimbabwe lowveld uses satellite images to manage an irrigation scheme beside a reservoir. The table shows reflectance (%) of four surfaces in four bands (data invented for this exercise).\n\n| Surface | Blue | Green | Red | Near infrared |\n|---|---|---|---|---|\n| Irrigated sugarcane | 2 | 7 | 3 | 58 |\n| Dry grassland | 9 | 14 | 19 | 33 |\n| Reservoir water | 6 | 5 | 2 | 1 |\n| Bare ground | 14 | 18 | 24 | 29 |\n\nNDVI $= \\dfrac{NIR - Red}{NIR + Red}$.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Use the table.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which surface has the highest reflectance in the near infrared?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Dry grassland",
+        "rationale": "Its NIR reflectance is 33%."
+       },
+       {
+        "key": "B",
+        "content": "Reservoir water",
+        "rationale": "Water absorbs NIR."
+       },
+       {
+        "key": "C",
+        "content": "Irrigated sugarcane",
+        "correct": true,
+        "rationale": "Correct: 58%."
+       },
+       {
+        "key": "D",
+        "content": "Bare ground",
+        "rationale": "Its NIR reflectance is 29%."
+       }
+      ],
+      "explanation": "Healthy green leaves reflect NIR strongly."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Calculate the NDVI of dry grassland, to two decimal places.",
+      "answerSpec": {
+       "value": 0.2692307692307692,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       }
+      },
+      "explanation": "$(33 - 19) \\div (33 + 19) = 14 \\div 52 = 0.27$. Forgetting to divide gives 14.",
+      "workedSolution": "1. $(33 - 19) \\div (33 + 19) = 14 \\div 52 = 0.27$. Forgetting to divide gives 14."
+     },
+     {
+      "label": "(iii)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Calculate the NDVI of the reservoir water, to two decimal places (include the sign).",
+      "answerSpec": {
+       "value": -0.3333333333333333,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       }
+      },
+      "explanation": "$(1 - 2) \\div (1 + 2) = -1 \\div 3 = -0.33$. A positive 0.33 forgets that red is higher than NIR.",
+      "workedSolution": "1. $(1 - 2) \\div (1 + 2) = -1 \\div 3 = -0.33$. A positive 0.33 forgets that red is higher than NIR."
+     },
+     {
+      "label": "(iv)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "What does a negative NDVI usually indicate?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Dense healthy crops",
+        "rationale": "Healthy crops have high positive NDVI."
+       },
+       {
+        "key": "B",
+        "content": "Bare soil",
+        "rationale": "Soil has small positive NDVI."
+       },
+       {
+        "key": "C",
+        "content": "Water",
+        "correct": true,
+        "rationale": "Correct: water absorbs more NIR than red."
+       },
+       {
+        "key": "D",
+        "content": "Dry grass",
+        "rationale": "Dry grass has low positive NDVI."
+       }
+      ],
+      "explanation": "Water absorbs near infrared strongly, so NIR is lower than red and NDVI is negative."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Imagery and resolution.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "In a standard false-colour composite (NIR shown as red), how does the sugarcane appear?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Dark blue or black",
+        "rationale": "That is how water appears."
+       },
+       {
+        "key": "B",
+        "content": "Bright red",
+        "correct": true,
+        "rationale": "Correct."
+       },
+       {
+        "key": "C",
+        "content": "Pale green",
+        "rationale": "A natural colour image would show green."
+       },
+       {
+        "key": "D",
+        "content": "White",
+        "rationale": "White would need high values in all three bands."
+       }
+      ],
+      "explanation": "NIR is shown in red and sugarcane has high NIR reflectance."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 3,
+      "stem": "The reservoir covers 3.6 km². How many 20 m by 20 m pixels cover it?",
+      "payload": {
+       "unitHint": "pixels"
+      },
+      "answerSpec": {
+       "value": 9000,
+       "units": {
+        "required": false,
+        "accepted": [
+         "pixels",
+         "pixel",
+         "px"
+        ]
+       }
+      },
+      "explanation": "3.6 km² = 3 600 000 m²; one pixel = 400 m²; 3 600 000 ÷ 400 = 9 000 pixels.",
+      "workedSolution": "1. 3.6 km² = 3 600 000 m²; one pixel = 400 m²; 3 600 000 ÷ 400 = 9 000 pixels."
+     },
+     {
+      "label": "(iii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which type of sensor is best for mapping the reservoir's extent during cloudy rainy-season weeks?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Visible-light camera",
+        "rationale": "Cloud blocks visible light."
+       },
+       {
+        "key": "B",
+        "content": "Radar (active microwave)",
+        "correct": true,
+        "rationale": "Correct: microwaves pass through cloud."
+       },
+       {
+        "key": "C",
+        "content": "Near-infrared scanner",
+        "rationale": "Cloud also blocks NIR."
+       },
+       {
+        "key": "D",
+        "content": "Thermal scanner",
+        "rationale": "Cloud blocks thermal infrared."
+       }
+      ],
+      "explanation": "Radar penetrates cloud and works day and night."
+     },
+     {
+      "label": "(iv)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "The manager wants a weekly map of crop condition for the whole scheme. Which resolution is most important?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Radiometric resolution only",
+        "rationale": "It matters, but weekly coverage is the key need."
+       },
+       {
+        "key": "B",
+        "content": "A very fine spatial resolution of 1 cm",
+        "rationale": "Not needed, and such images would be rare."
+       },
+       {
+        "key": "C",
+        "content": "Temporal resolution",
+        "correct": true,
+        "rationale": "Correct: frequent coverage is needed."
+       },
+       {
+        "key": "D",
+        "content": "Spectral resolution of 500 bands",
+        "rationale": "Not needed for NDVI."
+       }
+      ],
+      "explanation": "Weekly monitoring requires a short revisit time."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 5,
+    "stem": "Explain the reflectance patterns.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 3,
+      "markingMode": "MANUAL",
+      "stem": "Explain why irrigated sugarcane has low reflectance in the red band but high reflectance in the near infrared.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Chlorophyll absorbs red light for photosynthesis",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "The internal leaf structure scatters/reflects near infrared strongly",
+          "marks": 1
+         },
+         {
+          "id": "p3",
+          "description": "Plants do not use NIR, so it is reflected rather than absorbed",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: Chlorophyll in the leaves absorbs red light for photosynthesis, so little red is reflected. The internal structure of the leaves scatters near infrared strongly, and plants do not use it, so it is reflected."
+      }
+     },
+     {
+      "label": "(ii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Explain why water appears dark in the near-infrared band.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Water absorbs almost all NIR radiation",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "So very little is reflected back to the sensor",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: Water absorbs almost all near-infrared radiation, so very little is reflected back to the sensor and the water looks dark."
+      }
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 8,
+    "markingMode": "MANUAL",
+    "stem": "Assess the usefulness of satellite remote sensing for managing an irrigation scheme in Zimbabwe.",
+    "payload": {
+     "wordLimit": {
+      "max": 350
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "NDVI from red and NIR bands shows crop condition across the whole scheme, including fields that are difficult to visit",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Repeated images show change through the season and give early warning of water stress or disease",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Images can map the extent and changes of the reservoir (water is dark in NIR)",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Radar can be used in cloudy weeks, giving continuous monitoring in the rainy season",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Resolution trade-off: fine pixels (10 m) are needed to distinguish small fields, but fine detail may have less frequent coverage",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Optical images are blocked by cloud and need atmospheric correction; processing needs skills, software and sometimes cost/internet access",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "NDVI shows that a crop is stressed but not why (water, disease, nutrients); field checks are needed",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Judgement: very useful for monitoring at scheme scale and early warning, but it complements, not replaces, field observation and flow measurements",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 4,
+        "minMarks": 7,
+        "maxMarks": 8,
+        "descriptor": "Thorough, accurate and well-developed knowledge applied to the question; detailed located examples or resource evidence used throughout; balanced, reasoned evaluation reaching a supported conclusion; clear logical structure."
+       },
+       {
+        "level": 3,
+        "minMarks": 5,
+        "maxMarks": 6,
+        "descriptor": "Good knowledge and understanding, mostly developed; relevant examples or resource evidence; some evaluation with a conclusion that is partly supported; generally organised."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 4,
+        "descriptor": "Some knowledge and understanding with limited development; examples general or thin; evaluation is simple, one-sided or asserted."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "A few simple, partly accurate points or a list; little or no example; no real evaluation."
+       },
+       {
+        "level": 0,
+        "minMarks": 0,
+        "maxMarks": 0,
+        "descriptor": "Nothing creditworthy."
+       }
+      ]
+     },
+     "modelAnswer": "Satellite remote sensing is very useful for an irrigation scheme. NDVI calculated from the red and near-infrared bands shows the condition of crops across the whole scheme, including fields that are difficult to visit, and repeated images show change through the season and warn of water stress early. Images also map the reservoir, which is dark in the near infrared, and radar can be used in cloudy weeks. Fine pixels of about 10 m are needed to separate small fields, though these may be revisited less often. However, optical images are blocked by cloud, need correction, and require skills, software and access to data, and NDVI shows that a crop is stressed but not why, so field checks are needed. Overall remote sensing is very useful for monitoring and early warning, but it complements rather than replaces field observation and flow measurements."
+    },
+    "explanation": "Uses and limits of remote sensing for a scheme, with a supported judgement."
+   }
+  ],
+  "explanation": "Reflectance and NDVI calculations, pixel counts, choice of imagery and evaluation of remote sensing for a scheme.",
+  "hints": [
+   "NDVI = (NIR − Red) ÷ (NIR + Red).",
+   "Convert square kilometres to square metres before dividing by the pixel area."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(a)(ii)": {
+     "type": "CALCULATION",
+     "value": "0.27"
+    },
+    "(a)(iii)": {
+     "type": "CALCULATION",
+     "value": "-0.33"
+    },
+    "(a)(iv)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(b)(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)(ii)": {
+     "type": "CALCULATION",
+     "value": "9000"
+    },
+    "(b)(iii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)(iv)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(a)(ii)": {
+      "type": "CALCULATION",
+      "value": "14"
+     },
+     "(a)(iii)": {
+      "type": "CALCULATION",
+      "value": "0.33"
+     },
+     "(a)(iv)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)(ii)": {
+      "type": "CALCULATION",
+      "value": "180"
+     },
+     "(b)(iii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)(iv)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ }
+]

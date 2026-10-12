@@ -122,7 +122,7 @@ const UNITS = {
   GWh: ["GWh", "gigawatt-hours", "gigawatt hours"],
   hPa: ["hPa", "mb", "millibars", "hectopascals"],
   ppm: ["ppm", "parts per million"],
-  "US$": ["US$", "USD", "$", "US dollars", "dollars"],
+  "US$": ["US$", "USD", "US dollars", "dollars"],
   "US$ million": ["US$ million", "USD million", "$ million", "million US dollars"],
   pixels: ["pixels", "pixel", "px"],
   units: ["units", "unit"],
