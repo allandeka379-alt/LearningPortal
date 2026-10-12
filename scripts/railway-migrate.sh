@@ -39,4 +39,11 @@ if [ -n "${IMPORT_FAMILIES:-}" ]; then
       --note "Published automatically on deploy (owner decision 2026-10-12: no human review step before production)."
   fi
 fi
+
+# Exam sessions (content/exam-sessions.json): created and published while provisional; confirmed ones are left alone.
+if [ "${CONTENT_PUBLISH_APPROVER:-system}" != "none" ]; then
+  echo "[migrate] exam sessions"
+  env -u MIGRATION_DATABASE_URL node_modules/.bin/tsx --conditions=react-server scripts/content/exam-sessions.ts \
+    --approver "${CONTENT_PUBLISH_APPROVER:-system}" || echo "[migrate] exam sessions FAILED (see above); the rest of the deploy is unaffected"
+fi
 echo "[migrate] done"
