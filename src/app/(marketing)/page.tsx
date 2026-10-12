@@ -39,7 +39,7 @@ export default async function HomePage() {
   const levelNames = catalogue.levels.map((level) => level.name);
   const eyebrow = boardNames.length > 0 ? [joinNames(boardNames), joinNames(levelNames)].filter(Boolean).join(" · ") : null;
   const offer = pricing.offer;
-  const priceLabel = offer?.price.amountLabel ?? null;
+  const priceLabel = offer?.price.priceLabel ?? null;
   const offerPlan = offer ? (pricing.plans.find((plan) => plan.id === offer.plan.id) ?? null) : null;
 
   return (

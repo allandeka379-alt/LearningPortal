@@ -10,7 +10,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { isLifetimePrice } from "@/lib/billing/offer";
+import { isLifetimePrice, priceWithPeriod, RENEWAL_NOTE } from "@/lib/billing/offer";
 import { APP_NAME } from "@/lib/config";
 import { requireOnboardedStudent } from "@/server/auth/guards";
 import { hasStudentAppAccess } from "@/server/billing/entitlements";
@@ -60,7 +60,7 @@ export default async function UnlockPage() {
         title={`Unlock ${APP_NAME}`}
         description={
           amount
-            ? `${offer?.name ?? "Full access"} — ${amount}${lifetime ? ", pay once. Nothing renews." : "."}`
+            ? `${offer?.name ?? "Full access"} — ${lifetime ? `${amount}, pay once.` : `${priceWithPeriod(amount, price as NonNullable<typeof price>)}.`}`
             : "Full access to every lesson, practice question and exam in your subjects."
         }
         className="pb-0"
@@ -82,7 +82,7 @@ export default async function UnlockPage() {
             <span>
               {lifetime
                 ? "One payment covers every subject and level on your account, for good. No subscription and no automatic charges."
-                : "One payment through Paynow. Nothing is charged automatically."}
+                : RENEWAL_NOTE}
             </span>
           </p>
         </CardBody>

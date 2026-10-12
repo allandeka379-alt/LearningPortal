@@ -30,13 +30,17 @@ export type SeedPlan = {
    * The plan's one-off price, seeded in EVERY environment (owner decision; a real price, not demo data). Created only
    * when the plan has no price row at all, so an admin's later price change is never undone by re-seeding.
    */
-  oneOffPrice?: { currency: string; amountMinor: number; label: string | null };
+  /** periodDays: null = lifetime; 30 = a month of access per payment (owner decision 2026-10-12: US$1 a month). */
+  oneOffPrice?: { currency: string; amountMinor: number; label: string | null; periodDays: number | null };
   /** DEV ONLY sample prices (minor units). Never seeded in production. */
   devSamplePrices: { currency: string; interval: "MONTH" | "TERM" | "YEAR"; amountMinor: number }[];
 };
 
 /** Code of the one-off "Full access" plan (seed data; the app finds the offer by its one-off price, not by this code). */
 export const FULL_ACCESS_PLAN_CODE = "FULL_ACCESS";
+
+/** Days of Full access one payment buys (owner decision 2026-10-12: US$1 a month, renewed through Paynow). */
+export const MONTHLY_PASS_DAYS = 30;
 /** Plans retired by the 2026-10-07 pricing decision (taken off sale and off /pricing on existing databases). */
 export const RETIRED_PLAN_CODES: readonly string[] = ["STUDENT", "PREMIUM", "SCHOOL"];
 
@@ -145,7 +149,7 @@ export const PLANS: SeedPlan[] = [
     sortOrder: 2,
     isPublic: true,
     entitlements: FULL_ACCESS,
-    oneOffPrice: { currency: "USD", amountMinor: 100, label: null },
+    oneOffPrice: { currency: "USD", amountMinor: 100, label: "per month", periodDays: MONTHLY_PASS_DAYS },
     devSamplePrices: [],
   },
   {

@@ -102,6 +102,39 @@ export async function applyOneOffPricingModel(db: PrismaClient, log: SeedLog): P
 }
 
 /**
+ * Monthly pricing (owner decision 2026-10-12: "a dollar a month"): the lifetime one-off Full access price is retired
+ * (inactive, validTo now; price rows are immutable, so it is never edited) and a ONE_OFF price with a 30-day access
+ * period takes its place: each Paynow payment adds a month (purchases.ts stacks it after a running pass). Runs on every
+ * seed and is idempotent: nothing happens once an active monthly price exists. Lifetime purchases already made keep
+ * their access (the grants are untouched).
+ */
+export async function applyMonthlyPricing(db: PrismaClient, log: SeedLog, now: Date = new Date()): Promise<boolean> {
+  const seeded = PLANS.find((plan) => plan.code === FULL_ACCESS_PLAN_CODE)?.oneOffPrice;
+  if (!seeded || seeded.periodDays === null) return false;
+  const plan = await db.plan.findUnique({ where: { code: FULL_ACCESS_PLAN_CODE }, select: { id: true } });
+  if (!plan) return false;
+  const live = { planId: plan.id, currency: seeded.currency, interval: "ONE_OFF" as const, isActive: true, OR: [{ validTo: null }, { validTo: { gt: now } }] };
+  const monthly = await db.planPrice.findFirst({ where: { ...live, periodDays: seeded.periodDays }, select: { id: true } });
+  if (monthly) return false;
+  const retired = await db.planPrice.updateMany({ where: { ...live, periodDays: null }, data: { isActive: false, validTo: now } });
+  await db.planPrice.create({
+    data: {
+      planId: plan.id,
+      currency: seeded.currency,
+      amountMinor: seeded.amountMinor,
+      interval: "ONE_OFF",
+      intervalCount: 1,
+      periodDays: seeded.periodDays,
+      perSeat: false,
+      label: seeded.label,
+      sortOrder: 1,
+    },
+  });
+  log.info(`platform: monthly pricing applied (${seeded.amountMinor / 100} ${seeded.currency} for ${seeded.periodDays} days; ${retired.count} lifetime price(s) retired)`);
+  return true;
+}
+
+/**
  * No free tier (owner decision 2026-10-12): the FREE plan (the default for users without a paid source) grants nothing
  * and is not public. Enforced on EVERY seed run, unlike the create-only rows above, because existing databases
  * (production) still hold the 2026-10-07 free preview; idempotent: a database that already matches is not written.
@@ -194,7 +227,7 @@ export async function seedPlatform(db: PrismaClient, tally: SeedTally, log: Seed
             amountMinor: plan.oneOffPrice.amountMinor,
             interval: "ONE_OFF",
             intervalCount: 1,
-            periodDays: null,
+            periodDays: plan.oneOffPrice.periodDays,
             perSeat: false,
             label: plan.oneOffPrice.label,
             sortOrder: 1,
@@ -206,6 +239,7 @@ export async function seedPlatform(db: PrismaClient, tally: SeedTally, log: Seed
   }
   if (!pricingModelApplied) await applyOneOffPricingModel(db, log);
   await applyNoFreeTier(db, log);
+  await applyMonthlyPricing(db, log);
 
   for (const [index, achievement] of ACHIEVEMENTS.entries()) {
     const code = achievementCode(achievement.code);

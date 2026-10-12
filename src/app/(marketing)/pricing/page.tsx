@@ -21,23 +21,28 @@ export const revalidate = 3600;
 /** Headline of the page: the one-off offer with its DATABASE price, or a neutral title when nothing is on sale. */
 function pricingTitle(offer: FullAccessOffer | null): string {
   if (!offer) return "Pricing";
-  return offer.price.lifetime ? `Everything for ${offer.price.amountLabel}. Pay once, keep it.` : `Everything for ${offer.price.amountLabel}`;
+  return offer.price.lifetime ? `Everything for ${offer.price.amountLabel}. Pay once, keep it.` : `Everything for ${offer.price.priceLabel}`;
 }
 
 export async function generateMetadata(): Promise<Metadata> {
   return marketingMetadata({
     title: "Pricing",
-    description: `One payment unlocks every ${APP_NAME} course for Form 3 to Form 6: lessons, practice questions, flashcards, topic tests and timed mock exams. No subscription.`,
+    description: `One monthly price unlocks every ${APP_NAME} course for Form 3 to Form 6: lessons, practice questions, flashcards, topic tests and timed mock exams.`,
     path: "/pricing",
   });
 }
 
 /**
- * Answers about the one payment, shown while no pricing FAQ is published in the CMS. Facts about how the product
+ * Answers about the monthly price, shown while no pricing FAQ is published in the CMS. Facts about how the product
  * works (owner decisions 2026-10-07 and 2026-10-12), no claims.
  */
 const PAYMENT_FACTS: readonly { question: string; answer: string }[] = [
-  { question: "Is it really a single payment?", answer: "Yes. You pay once and keep access. There is no subscription and nothing renews." },
+  {
+    question: "How does the monthly price work?",
+    answer:
+      "Each payment gives you a month of full access. Pay again before it ends to keep going: early payments are added on to the end, so you never lose days. Paynow cannot take money from EcoCash, OneMoney or a card by itself, so nothing is ever charged without you.",
+  },
+  { question: "Can I stop?", answer: "Yes. Simply do not renew. Your progress stays on your account, ready for when you come back." },
   {
     question: "What does it cover?",
     answer: "Every course at every level we offer, for both boards: lessons, practice questions, flashcards, topic tests, mock exams, your study plan and progress.",
@@ -123,7 +128,7 @@ export default async function PricingPage() {
         </Container>
       </section>
 
-      <FinalCta priceLabel={offer?.price.amountLabel ?? null} />
+      <FinalCta priceLabel={offer?.price.priceLabel ?? null} />
     </>
   );
 }

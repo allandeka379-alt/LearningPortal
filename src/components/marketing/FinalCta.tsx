@@ -12,7 +12,7 @@ export interface FinalCtaProps {
   priceLabel?: string | null;
 }
 
-/** Closing call to action (§45): join with the one payment, or read how it works first. */
+/** Closing call to action (§45): join for the monthly price, or read how it works first. */
 export function FinalCta({
   title = "Start learning today",
   description = "Create your account, tell us your form and subjects, and pick up your first lesson in minutes.",

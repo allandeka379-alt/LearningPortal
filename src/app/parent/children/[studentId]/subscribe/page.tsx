@@ -35,7 +35,7 @@ export default async function SubscribeForChildPage({ params }: { params: Promis
       <PageHeader
         title={`Pay for ${child.name}`}
         breadcrumbs={[{ label: "Your children", href: "/parent" }, { label: child.name, href: backHref }, { label: "Pay" }]}
-        description={`You pay once; ${child.name}'s account gets full access. Nothing renews and nothing is charged again.`}
+        description={`Your payment gives ${child.name}'s account full access for the period shown. Nothing is charged without you.`}
         className="pb-0"
       />
 

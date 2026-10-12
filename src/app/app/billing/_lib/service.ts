@@ -119,6 +119,8 @@ export interface BillingOfferView {
   highlights: string[];
   /** "US$1". */
   amountLabel: string;
+  /** "US$1 a month" (amount + period). */
+  priceLabel: string;
   lifetime: boolean;
   checkoutHref: string;
 }
@@ -293,6 +295,7 @@ export async function getBillingOverview(actor: Actor, options: { paymentsCursor
             tagline: fullAccess.plan.tagline,
             highlights: fullAccess.plan.highlights,
             amountLabel: fullAccess.price.amountLabel,
+            priceLabel: fullAccess.price.priceLabel,
             lifetime: fullAccess.price.lifetime,
             checkoutHref: studentCheckoutHref(fullAccess.price.id),
           }

@@ -55,8 +55,8 @@ export default async function CheckoutPage({ searchParams }: { searchParams: Sea
       : choices.kind === "pack"
       ? (choices.pack.subtitle ?? "A one-off purchase that unlocks this pack's content.")
       : oneOff
-        ? "One payment through Paynow. Nothing renews and nothing is charged again."
-        : "Pay once for the period you choose. Nothing renews automatically.";
+        ? "Pay through Paynow. Each payment adds its period of full access; nothing is charged without you."
+        : "Pay for the period you choose. Nothing renews automatically.";
 
   return (
     <Container size="reading" className="space-y-6 pb-10">

@@ -90,7 +90,7 @@ export function LessonPreviewList({ previews, lessons, total, signUpHref, pricin
           </Link>{" "}
           to read every lesson, or{" "}
           <Link href={pricingHref} className="font-medium text-primary underline underline-offset-4">
-            see what one payment includes
+            see what Full access includes
           </Link>
           .
         </p>

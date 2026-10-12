@@ -1,6 +1,6 @@
 /**
  * Fixed marketing copy (§45). Owner brief 2026-10-12: BvunzoHub is a learning platform for Form 3 to Form 6 that
- * also prepares exam candidates; there is no free tier (one payment unlocks everything). Everything that varies by
+ * also prepares exam candidates; there is no free tier (US$1 a month unlocks everything, set in the database). Everything that varies by
  * curriculum, plan or price comes from the database: functions here take the price label as an argument.
  */
 
@@ -25,8 +25,8 @@ export function joinLabel(priceLabel: string | null): string {
   return priceLabel ? `Get full access for ${priceLabel}` : "Create your account";
 }
 
-/** How the one payment is made (owner decision: Paynow only). */
-export const PAYMENT_METHODS_LINE = "Pay once through Paynow with EcoCash, OneMoney or a card. No subscription, nothing renews.";
+/** How the monthly price is paid (owner decisions: Paynow only, US$1 a month from 2026-10-12). */
+export const PAYMENT_METHODS_LINE = "Pay through Paynow with EcoCash, OneMoney or a card. Renew each month; nothing is charged without you.";
 
 export interface Step {
   title: string;
@@ -42,8 +42,8 @@ export function howItWorksSteps(aiEnabled: boolean, priceLabel: string | null = 
       body: "Choose your board, your form (Form 3 to Form 6), the subjects you take and when you write your exams.",
     },
     {
-      title: priceLabel ? `Unlock everything for ${priceLabel}` : "Unlock everything with one payment",
-      body: "One Paynow payment by EcoCash, OneMoney or card opens every subject at every level. Nothing renews.",
+      title: priceLabel ? `Unlock everything for ${priceLabel}` : "Unlock everything",
+      body: "Pay through Paynow by EcoCash, OneMoney or card and every subject at every level opens. Renew each month to keep going.",
     },
     {
       title: "Learn topic by topic",

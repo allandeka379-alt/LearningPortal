@@ -53,7 +53,7 @@ const USD_OFFER_PRICE = {
   amountMinor: 100,
   interval: "ONE_OFF" as const,
   intervalCount: 1,
-  periodDays: null,
+  periodDays: null as number | null,
   perSeat: false,
   minSeats: null,
   label: null,
@@ -94,7 +94,7 @@ describe("PricingTeaser", () => {
   const full = plan({ highlights: ["Every lesson in every subject"] });
   const offer = {
     plan: { id: full.id, code: full.code, name: "Full access", tagline: null, highlights: full.highlights, entitlements: full.entitlements },
-    price: { ...USD_OFFER_PRICE, amountLabel: "US$1", lifetime: true },
+    price: { ...USD_OFFER_PRICE, periodDays: 30, amountLabel: "US$1", lifetime: false, periodText: "a month", priceLabel: "US$1 a month" },
   };
 
   it("says pricing is coming soon when nothing is on sale", () => {
@@ -102,13 +102,14 @@ describe("PricingTeaser", () => {
     expect(screen.getByText("Pricing coming soon")).toBeTruthy();
   });
 
-  it("shows the one offer with its database price, what it includes and no free tier", () => {
+  it("shows the monthly offer with its database price, what it includes and no free tier", () => {
     const { container } = render(<PricingTeaser offer={offer} plan={full} demoPrices />);
     expect(screen.getByText("Demo prices")).toBeTruthy();
     expect(screen.getByText("US$1")).toBeTruthy();
-    expect(screen.getByRole("link", { name: "Get full access for US$1" }).getAttribute("href")).toBe("/register");
+    expect(screen.getByRole("link", { name: "Get full access for US$1 a month" }).getAttribute("href")).toBe("/register");
     expect(screen.getByText("Every lesson in every subject")).toBeTruthy();
-    expect(container.textContent).not.toMatch(/free/i);
+    expect(screen.getByText("a month")).toBeTruthy();
+    expect(container.textContent).not.toMatch(/free|nothing renews|no subscription/i);
   });
 });
 

@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import type { PrismaClient } from "@/generated/prisma/client";
 import { NO_ENTITLEMENTS, parseEntitlements } from "@/lib/billing/entitlements";
 import { FREE, FULL_ACCESS, FULL_ACCESS_PLAN_CODE, PLANS, RETIRED_PLAN_CODES } from "../prisma/seed/data/platform";
-import { applyNoFreeTier, applyOneOffPricingModel } from "../prisma/seed/platform";
+import { applyMonthlyPricing, applyNoFreeTier, applyOneOffPricingModel } from "../prisma/seed/platform";
 
 /**
  * Seed data for the one-off pricing model (owner decision 2026-10-07) and the one-time move of an existing database.
@@ -11,7 +11,7 @@ import { applyNoFreeTier, applyOneOffPricingModel } from "../prisma/seed/platfor
  */
 
 describe("seeded plans", () => {
-  it("FREE grants nothing (no free tier, 2026-10-12) and FULL_ACCESS unlocks every built, non-AI feature at USD 1.00, once, for good", () => {
+  it("FREE grants nothing (no free tier, 2026-10-12) and FULL_ACCESS unlocks every built, non-AI feature at USD 1.00 a month", () => {
     expect(parseEntitlements(FREE)).toEqual(NO_ENTITLEMENTS);
     const freePlan = PLANS.find((p) => p.code === "FREE");
     expect(freePlan).toMatchObject({ isPublic: false, devSamplePrices: [] });
@@ -36,7 +36,7 @@ describe("seeded plans", () => {
     expect(full).toMatchObject({ aiTutor: false, aiMessagesPerDay: 0, aiSolverPerDay: 0, aiImageUploads: false });
 
     const plan = PLANS.find((p) => p.code === FULL_ACCESS_PLAN_CODE);
-    expect(plan).toMatchObject({ audience: "INDIVIDUAL", isPublic: true, oneOffPrice: { currency: "USD", amountMinor: 100 } });
+    expect(plan).toMatchObject({ audience: "INDIVIDUAL", isPublic: true, oneOffPrice: { currency: "USD", amountMinor: 100, periodDays: 30 } });
     expect(plan?.isActive ?? true).toBe(true);
   });
 
@@ -139,5 +139,33 @@ describe("applyNoFreeTier", () => {
     const { client, updates } = stub(null);
     expect(await applyNoFreeTier(client, { info: vi.fn(), warn: vi.fn() })).toBe(false);
     expect(updates).toEqual([]);
+  });
+});
+
+describe("applyMonthlyPricing", () => {
+  function stub(prices: { monthly: boolean }) {
+    const updateMany = vi.fn(async () => ({ count: 1 }));
+    const create = vi.fn(async () => ({}));
+    const db = {
+      plan: { findUnique: vi.fn(async () => ({ id: "plan-full" })) },
+      planPrice: { findFirst: vi.fn(async () => (prices.monthly ? { id: "price-monthly" } : null)), updateMany, create },
+    } as unknown as PrismaClient;
+    const log = { info: vi.fn(), warn: vi.fn() } as never;
+    return { db, log, updateMany, create };
+  }
+
+  it("retires the lifetime price (never editing it) and adds US$1 for 30 days", async () => {
+    const now = new Date("2026-10-12T12:00:00Z");
+    const { db, log, updateMany, create } = stub({ monthly: false });
+    expect(await applyMonthlyPricing(db, log, now)).toBe(true);
+    expect(updateMany).toHaveBeenCalledWith(expect.objectContaining({ where: expect.objectContaining({ periodDays: null, interval: "ONE_OFF" }), data: { isActive: false, validTo: now } }));
+    expect(create).toHaveBeenCalledWith({ data: expect.objectContaining({ planId: "plan-full", currency: "USD", amountMinor: 100, interval: "ONE_OFF", periodDays: 30 }) });
+  });
+
+  it("is idempotent: nothing is written once a monthly price is on sale", async () => {
+    const { db, log, updateMany, create } = stub({ monthly: true });
+    expect(await applyMonthlyPricing(db, log)).toBe(false);
+    expect(updateMany).not.toHaveBeenCalled();
+    expect(create).not.toHaveBeenCalled();
   });
 });

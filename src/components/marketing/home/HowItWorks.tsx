@@ -17,7 +17,7 @@ export function HowItWorks({ aiEnabled = false, priceLabel = null, id = "how-it-
       tone={tone}
       eyebrow="Getting started"
       title="From sign-up to your first lesson in minutes"
-      description="Tell us your form and subjects, unlock everything with one payment, and start where your class is."
+      description="Tell us your form and subjects, unlock everything with one monthly price, and start where your class is."
     >
       <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {howItWorksSteps(aiEnabled, priceLabel).map((step, index) => (

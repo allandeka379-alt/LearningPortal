@@ -29,6 +29,34 @@ export function isLifetimePrice(price: { interval: BillingInterval; periodDays: 
 /** Plain-words promise of a lifetime price, used next to the amount. UI copy, not product data. */
 export const LIFETIME_PRICE_NOTE = "pay once, keep it";
 
+/**
+ * How long one payment lasts, in words, from the DATABASE price (owner decision 2026-10-12: US$1 a month): "a month"
+ * for a ONE_OFF pass of 28-31 days, "a week", "a year", "for 90 days", "once" for a lifetime price, and the billing
+ * interval for recurring prices. UI copy built from data, never a hard-coded period.
+ */
+export function pricePeriodText(price: { interval: BillingInterval; periodDays: number | null; intervalCount?: number }): string {
+  if (price.interval === "ONE_OFF") {
+    const days = price.periodDays;
+    if (days === null) return "once";
+    if (days >= 28 && days <= 31) return "a month";
+    if (days === 7) return "a week";
+    if (days >= 365 && days <= 366) return "a year";
+    return `for ${days} days`;
+  }
+  const count = price.intervalCount ?? 1;
+  const unit = price.interval.toLowerCase();
+  return count === 1 ? `a ${unit}` : `every ${count} ${unit}s`;
+}
+
+/** "US$1 a month" / "US$1 once": the amount with its period, for calls to action and headlines. */
+export function priceWithPeriod(amountLabel: string, price: { interval: BillingInterval; periodDays: number | null; intervalCount?: number }): string {
+  const period = pricePeriodText(price);
+  return period === "once" ? amountLabel : `${amountLabel} ${period}`;
+}
+
+/** A timed pass (e.g. a month of access) renewed by paying again: Paynow cannot charge mobile money automatically. */
+export const RENEWAL_NOTE = "Renew each month through Paynow. Nothing is charged without you, and you can stop any time.";
+
 /** Where an upgrade prompt links to and what its button says. */
 export interface UpgradeOffer {
   href: string;

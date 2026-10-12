@@ -25,7 +25,7 @@ export default async function ParentBillingPage() {
 
   return (
     <Container size="reading" className="space-y-6 pb-10">
-      <PageHeader title="Payments" description="Pay once for a child's full access and see what you've paid." className="pb-0" />
+      <PageHeader title="Payments" description="Pay for a child's full access and see what you've paid." className="pb-0" />
 
       <Card as="section" aria-labelledby="billing-children">
         <CardHeader titleAs="h2" title={<span id="billing-children">Pay for a child</span>} />

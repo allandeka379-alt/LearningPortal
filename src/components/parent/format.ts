@@ -41,7 +41,9 @@ export function describeBillingPeriod(price: { interval: BillingInterval; interv
     case "TERM":
       return every("term");
     case "ONE_OFF":
-      return price.periodDays === null ? "one-off" : `for ${formatCount(price.periodDays, "day")}`;
+      if (price.periodDays === null) return "one-off";
+      // A 28-31 day pass is "a month" (owner decision 2026-10-12: US$1 a month, renewed through Paynow).
+      return price.periodDays >= 28 && price.periodDays <= 31 ? "for a month" : `for ${formatCount(price.periodDays, "day")}`;
   }
 }
 

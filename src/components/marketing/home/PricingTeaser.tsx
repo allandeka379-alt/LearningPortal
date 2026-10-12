@@ -18,14 +18,14 @@ export interface PricingTeaserProps {
   demoPrices?: boolean;
 }
 
-/** What one payment includes: the plan's admin highlights, else the features derived from its entitlements. */
+/** What Full access includes: the plan's admin highlights, else the features derived from its entitlements. */
 export function offerBullets(plan: PricingPlan | null, max = 6): string[] {
   if (!plan) return [];
   return (plan.highlights.length > 0 ? plan.highlights : plan.features).slice(0, max);
 }
 
 /**
- * Pricing on the home page (owner decision 2026-10-12: no free tier; one payment unlocks everything). One offer card
+ * Pricing on the home page (owner decisions 2026-10-12: no free tier; one monthly price unlocks everything). One offer card
  * with the database price, what it includes and how to pay, or an honest "Pricing coming soon".
  */
 export function PricingTeaser({ offer, plan, demoPrices = false }: PricingTeaserProps) {
@@ -35,8 +35,8 @@ export function PricingTeaser({ offer, plan, demoPrices = false }: PricingTeaser
       id="pricing"
       tone="surface"
       eyebrow="Pricing"
-      title="One price. Every subject. Yours to keep."
-      description="No subscription and no tiers: one payment opens every course at every level, for as long as you study with us."
+      title="One price. Every subject."
+      description="No tiers: one monthly price opens every course at every level, ZIMSEC and Cambridge, O-Level and A-Level."
       action={
         <Link href="/pricing" className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-primary underline-offset-4 hover:underline">
           Pricing details
@@ -55,12 +55,12 @@ export function PricingTeaser({ offer, plan, demoPrices = false }: PricingTeaser
               {offer.plan.tagline && <p className="mt-1 text-sm">{offer.plan.tagline}</p>}
               <p className="mt-6 flex flex-wrap items-baseline gap-x-2">
                 <span className="text-5xl font-bold tracking-tight tabular-nums">{offer.price.amountLabel}</span>
-                <span className="text-base font-medium">{offer.price.lifetime ? "paid once" : "one payment"}</span>
+                <span className="text-base font-medium">{offer.price.periodText}</span>
               </p>
             </div>
             <div className="space-y-3">
               <ButtonLink href={SIGN_UP_HREF} size="lg" fullWidth iconEnd={<ArrowRight aria-hidden="true" />}>
-                {joinLabel(offer.price.amountLabel)}
+                {joinLabel(offer.price.priceLabel)}
               </ButtonLink>
               <p className="flex items-start gap-2 text-sm">
                 <Smartphone aria-hidden="true" className="mt-0.5 size-4 shrink-0" />

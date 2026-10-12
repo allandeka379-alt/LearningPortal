@@ -33,7 +33,7 @@ export function generateMetadata(): Metadata {
  */
 export default async function HowItWorksPage() {
   const [offer, { ai }] = await Promise.all([getFullAccessOffer(), getFeatures()]);
-  const priceLabel = offer?.price.amountLabel ?? null;
+  const priceLabel = offer?.price.priceLabel ?? null;
 
   return (
     <>

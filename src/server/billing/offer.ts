@@ -3,6 +3,8 @@ import {
   FALLBACK_UPGRADE_OFFER,
   isLifetimePrice,
   isOfferedCurrency,
+  pricePeriodText,
+  priceWithPeriod,
   unlockEverythingLabel,
   type UpgradeOffer,
 } from "@/lib/billing/offer";
@@ -27,6 +29,10 @@ export interface FullAccessOffer {
     amountLabel: string;
     /** No access window: pay once, keep it. */
     lifetime: boolean;
+    /** How long one payment lasts: "a month", "once" (pricePeriodText). */
+    periodText: string;
+    /** "US$1 a month" (amount + period), for calls to action and headlines. */
+    priceLabel: string;
   };
 }
 
@@ -46,7 +52,13 @@ export function selectFullAccessOffer(plans: readonly PlanView[]): FullAccessOff
     if (!price) continue;
     return {
       plan: { id: plan.id, code: plan.code, name: plan.name, tagline: plan.tagline, highlights: plan.highlights, entitlements: plan.entitlements },
-      price: { ...price, amountLabel: formatMoneyMinor(price.amountMinor, price.currency), lifetime: isLifetimePrice(price) },
+      price: {
+        ...price,
+        amountLabel: formatMoneyMinor(price.amountMinor, price.currency),
+        lifetime: isLifetimePrice(price),
+        periodText: pricePeriodText(price),
+        priceLabel: priceWithPeriod(formatMoneyMinor(price.amountMinor, price.currency), price),
+      },
     };
   }
   return null;
@@ -73,7 +85,7 @@ export function studentCheckoutHref(planPriceId: string): string {
 /** Upgrade prompt for an offer: "Unlock everything for US$1" straight to checkout, else the honest fallback. */
 export function upgradeOfferFor(offer: FullAccessOffer | null): UpgradeOffer {
   if (!offer) return FALLBACK_UPGRADE_OFFER;
-  return { href: studentCheckoutHref(offer.price.id), label: unlockEverythingLabel(offer.price.amountLabel) };
+  return { href: studentCheckoutHref(offer.price.id), label: unlockEverythingLabel(offer.price.priceLabel) };
 }
 
 /** The upgrade prompt for a buyer in `countryId` (link + label built from the database price). */

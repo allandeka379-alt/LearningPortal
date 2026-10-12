@@ -56,8 +56,9 @@ export const TERMS_SECTIONS: readonly LegalSection[] = [
         </p>
         <ul>
           <li>
-            Full access is bought with <strong>one payment</strong>. It does not renew and nothing is charged again. It stays
-            on the account it was bought for [for as long as we provide the service, subject to these terms].
+            Full access is bought <strong>by the month</strong>: each payment gives the access period shown at checkout,
+            and a payment made before it ends is added on to the end. We never charge you automatically; access ends when
+            a period runs out and is not renewed. Your progress stays on your account [subject to these terms].
           </li>
           <li>A parent or guardian may pay for a linked child; the access belongs to the child&apos;s account.</li>
           <li>

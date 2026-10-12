@@ -59,7 +59,7 @@ const STAGES: readonly { when: string; title: string; body: string }[] = [
  */
 export default async function ExamCandidatesPage() {
   const [offer, boards] = await Promise.all([getFullAccessOffer(), getCountdownCatalogue()]);
-  const priceLabel = offer?.price.amountLabel ?? null;
+  const priceLabel = offer?.price.priceLabel ?? null;
   const hasSessions = boards.some((board) => board.qualifications.some((qualification) => qualification.sessions.length > 0));
 
   return (

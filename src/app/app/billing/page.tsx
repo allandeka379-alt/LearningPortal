@@ -12,7 +12,7 @@ import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { Pagination } from "@/components/ui/Pagination";
-import { unlockEverythingLabel } from "@/lib/billing/offer";
+import { RENEWAL_NOTE, unlockEverythingLabel } from "@/lib/billing/offer";
 import type { Actor } from "@/server/auth/actor";
 import { requireOnboardedStudent } from "@/server/auth/guards";
 import { getFeatures } from "@/server/features";
@@ -47,7 +47,7 @@ function FullAccessOffer({ offer }: { offer: BillingOfferView }) {
       <div className="space-y-1">
         <p className="flex flex-wrap items-baseline gap-x-2 text-base font-semibold text-text">
           <span>{offer.planName}</span>
-          <span className="tabular-nums">{offer.amountLabel}</span>
+          <span className="tabular-nums">{offer.lifetime ? offer.amountLabel : offer.priceLabel}</span>
           {offer.lifetime && <span className="text-sm font-normal text-muted">pay once, keep it</span>}
         </p>
         {offer.tagline && <p className="text-sm text-muted">{offer.tagline}</p>}
@@ -60,13 +60,13 @@ function FullAccessOffer({ offer }: { offer: BillingOfferView }) {
         </ul>
       )}
       <ButtonLink href={offer.checkoutHref} variant="primary">
-        {unlockEverythingLabel(offer.amountLabel)}
+        {unlockEverythingLabel(offer.priceLabel)}
       </ButtonLink>
       <p className="flex items-start gap-2 text-sm text-muted">
         <Smartphone aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
         <span>
-          Pay through Paynow with EcoCash, OneMoney or a card. One payment: nothing renews and nothing is charged again. A parent or guardian can also
-          pay for you from their own account.
+          Pay through Paynow with EcoCash, OneMoney or a card. {offer.lifetime ? "One payment: nothing renews and nothing is charged again." : RENEWAL_NOTE} A
+          parent or guardian can also pay for you from their own account.
         </span>
       </p>
     </div>
@@ -105,7 +105,7 @@ export default async function BillingPage({ searchParams }: { searchParams: Sear
                 <CheckCircle2 aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-primary" />
                 <span>
                   {purchase.planName} since {date(purchase.since)}
-                  {purchase.endsAt ? `, until ${date(purchase.endsAt)}` : ". Paid once, yours to keep: nothing renews."}
+                  {purchase.endsAt ? `, until ${date(purchase.endsAt)}. Pay again before then to add another month.` : ". Paid once, yours to keep: nothing renews."}
                 </span>
               </p>
               {purchase.paidByParent && <p className="text-muted">Your parent or guardian paid for it.</p>}
