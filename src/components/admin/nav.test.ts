@@ -18,6 +18,7 @@ describe("adminNavFor", () => {
     expect(links).toContain("/admin/questions");
     expect(links).toContain("/admin/review");
     expect(links).not.toContain("/admin/analytics");
+    expect(links).not.toContain("/admin/reports");
     expect(links).not.toContain("/admin/users");
     expect(links).not.toContain("/admin/audit");
     expect(links).not.toContain("/admin/settings");
@@ -25,7 +26,7 @@ describe("adminNavFor", () => {
 
   it("shows ADMIN operations and commerce but not Settings; SUPER_ADMIN sees everything", () => {
     const admin = hrefs(adminNavFor(["ADMIN"]));
-    expect(admin).toEqual(expect.arrayContaining(["/admin/users", "/admin/schools", "/admin/analytics", "/admin/payments", "/admin/notifications", "/admin/audit"]));
+    expect(admin).toEqual(expect.arrayContaining(["/admin/users", "/admin/schools", "/admin/analytics", "/admin/reports", "/admin/payments", "/admin/notifications", "/admin/audit"]));
     expect(admin).not.toContain("/admin/settings");
     expect(hrefs(adminNavFor(["SUPER_ADMIN"], { features: ALL_ON }))).toEqual(adminNavHrefs());
   });
@@ -75,7 +76,7 @@ describe("adminNavFor", () => {
     expect(new Set(all).size).toBe(all.length);
     expect(all.every((href) => href === "/admin" || href.startsWith("/admin/"))).toBe(true);
     const labels = ADMIN_NAV.flatMap((section) => section.items.map((item) => item.label));
-    for (const required of ["Dashboard", "Users", "Schools", "Students", "Teachers", "Boards", "Qualifications", "Subjects", "Syllabuses", "Topics", "Lessons", "Questions", "Exams", "Study packs", "AI", "Subscriptions", "Payments", "Analytics", "Notifications", "Settings"]) {
+    for (const required of ["Dashboard", "Users", "Schools", "Students", "Teachers", "Boards", "Qualifications", "Subjects", "Syllabuses", "Topics", "Lessons", "Questions", "Exams", "Study packs", "AI", "Subscriptions", "Payments", "Analytics", "Reports", "Notifications", "Settings"]) {
       expect(labels).toContain(required);
     }
   });

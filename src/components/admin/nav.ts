@@ -43,6 +43,7 @@ export const ADMIN_NAV: readonly AdminNavSection[] = [
     items: [
       { href: ADMIN_HOME, label: "Dashboard", icon: "dashboard", match: "exact" },
       { href: "/admin/analytics", label: "Analytics", icon: "analytics", permission: "analytics.platform", minScope: "all" },
+      { href: "/admin/reports", label: "Reports", icon: "reports", permission: "analytics.platform", minScope: "all" },
     ],
   },
   {
