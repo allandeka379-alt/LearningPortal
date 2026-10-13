@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import type { ReactNode } from "react";
+import { PublicGrowthTracker } from "@/components/analytics/PublicGrowthTracker";
 import {
   DEFAULT_FONT_SCALE,
   DEFAULT_THEME,
@@ -89,6 +90,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
           <ConnectivityBanner />
           <ServiceWorkerRegistrar />
+          <PublicGrowthTracker />
         </ToastProvider>
       </body>
     </html>

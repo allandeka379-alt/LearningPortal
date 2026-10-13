@@ -1,4 +1,4 @@
-import { Activity, CircleCheck, Flag, Inbox, NotebookPen, Send } from "lucide-react";
+import { Activity, CircleCheck, CreditCard, Flag, Inbox, MousePointerClick, NotebookPen, Send, UserPlus } from "lucide-react";
 import Link from "next/link";
 import { CoverageNotice } from "@/components/admin/analytics/CoverageNotice";
 import { UsdEquivalentNote } from "@/components/admin/analytics/UsdEquivalentNote";
@@ -34,7 +34,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
   const params = await searchParams;
   const range = rangeFromParams(firstParam(params, "from"), firstParam(params, "to"));
   const analytics = await getAdminAnalytics({ from: range.from, to: range.to });
-  const { funnel, totals, today, coverage } = analytics;
+  const { funnel, totals, today, coverage, growth } = analytics;
   const accuracyToday = today.questionsAttempted > 0 ? (today.questionsCorrect / today.questionsAttempted) * 100 : null;
 
   return (
@@ -73,6 +73,18 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
               hint={today.questionsAttempted > 0 ? `${formatNumber(today.questionsCorrect)} of ${formatNumber(today.questionsAttempted)}` : "No answers yet today"}
               icon={<CircleCheck aria-hidden="true" />}
             />
+          </div>
+        </section>
+
+        <section aria-labelledby="growth-heading">
+          <h2 id="growth-heading" className="mb-3 text-lg font-semibold text-text">
+            Growth and conversion
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <StatTile label="Public visits" value={growth.totals.visits} hint="Page views in this range" icon={<Activity aria-hidden="true" />} />
+            <StatTile label="Public clicks" value={growth.totals.clicks} hint={`${formatNumber(growth.totals.signupClicks)} sign-up clicks`} icon={<MousePointerClick aria-hidden="true" />} />
+            <StatTile label="Sign-ups" value={totals.signups} icon={<UserPlus aria-hidden="true" />} />
+            <StatTile label="First-time payers (FTP)" value={totals.conversions} hint="First successful payment per student" icon={<CreditCard aria-hidden="true" />} />
           </div>
         </section>
 

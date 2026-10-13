@@ -8,21 +8,36 @@ import { MockExamsSection } from "@/components/marketing/home/Features";
 import { PageHero } from "@/components/marketing/PageHero";
 import { FeatureItem, Section } from "@/components/marketing/Section";
 import { EXAM_CANDIDATES_HREF, SIGN_UP_HREF } from "@/components/marketing/site-nav";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { ButtonLink } from "@/components/ui/Button";
 import { APP_NAME } from "@/lib/config";
 import { getFullAccessOffer } from "@/server/billing/offer";
+import { absoluteUrl } from "@/server/lib/env";
 import { getCountdownCatalogue } from "@/server/marketing/countdown";
 import { marketingMetadata } from "@/server/marketing/metadata";
+import { breadcrumbListJsonLd, siteOrganization, type JsonLd as JsonLdData } from "@/server/seo/structured-data";
 
 /** Static, revalidated hourly (sessions and the price are data; the day count runs in the browser). */
 export const revalidate = 3600;
 
 export function generateMetadata(): Metadata {
-  return marketingMetadata({
-    title: "For exam candidates",
-    description: `Writing ZIMSEC or Cambridge O-Level or A-Level exams this year? ${APP_NAME} gives you a plan to your exam date, exam-style questions and timed mock papers with a grade estimate.`,
+  const metadata = marketingMetadata({
+    title: "Zimbabwe exam candidates: ZIMSEC and Cambridge revision",
+    description: `For Zimbabwe candidates preparing for ZIMSEC, Cambridge IGCSE, O-Level and A-Level exams: ${APP_NAME} gives you a plan to your exam date, exam-style questions and timed mock papers with a grade estimate.`,
     path: EXAM_CANDIDATES_HREF,
   });
+  return {
+    ...metadata,
+    keywords: [
+      "ZIMSEC revision",
+      "ZIMSEC O-Level revision",
+      "ZIMSEC A-Level revision",
+      "Cambridge IGCSE Zimbabwe",
+      "O-Level exam revision Zimbabwe",
+      "A-Level exam preparation Zimbabwe",
+      "Zimbabwe exam candidates",
+    ],
+  };
 }
 
 const POINT_ICONS: Record<(typeof EXAM_CANDIDATE_POINTS)[number]["key"], ReactNode> = {
@@ -52,6 +67,68 @@ const STAGES: readonly { when: string; title: string; body: string }[] = [
   },
 ];
 
+const EXAM_PATHS: readonly { title: string; body: string }[] = [
+  {
+    title: "ZIMSEC O-Level candidates",
+    body: "Form 4 learners can revise topic by topic, practise exam-style questions and keep the November session in view.",
+  },
+  {
+    title: "ZIMSEC A-Level candidates",
+    body: "Lower Sixth, Upper Sixth and private candidates can organise revision around their subjects and target session.",
+  },
+  {
+    title: "Cambridge IGCSE in Zimbabwe",
+    body: "Candidates following Cambridge IGCSE can use the same countdown, practice and mock-exam workflow.",
+  },
+  {
+    title: "Cambridge AS & A Level",
+    body: "AS and A Level candidates can rehearse timed work, then use results to decide what to fix next.",
+  },
+];
+
+function examCandidatesJsonLd(): JsonLdData[] {
+  const url = absoluteUrl(EXAM_CANDIDATES_HREF);
+  const publisher = siteOrganization(APP_NAME, absoluteUrl("/"));
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Zimbabwe exam candidates: ZIMSEC and Cambridge revision",
+      url,
+      description: `Exam preparation support for Zimbabwe candidates using ${APP_NAME}.`,
+      publisher,
+      audience: [
+        { "@type": "Audience", audienceType: "ZIMSEC O-Level candidates" },
+        { "@type": "Audience", audienceType: "ZIMSEC A-Level candidates" },
+        { "@type": "Audience", audienceType: "Cambridge IGCSE candidates in Zimbabwe" },
+        { "@type": "Audience", audienceType: "Cambridge AS & A Level candidates in Zimbabwe" },
+      ],
+      about: EXAM_PATHS.map((path) => ({ "@type": "Thing", name: path.title })),
+      isAccessibleForFree: true,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Can I use BvunzoHub for ZIMSEC O-Level revision?",
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Choose ZIMSEC, your form, subjects and exam session, then follow lessons, practice and mock exams." },
+        },
+        {
+          "@type": "Question",
+          name: "Can Cambridge IGCSE candidates in Zimbabwe use it?",
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Cambridge IGCSE candidates can choose their subjects and session, practise questions and sit timed mock papers." },
+        },
+      ],
+    },
+    breadcrumbListJsonLd([
+      { name: "Home", url: absoluteUrl("/") },
+      { name: "Exam candidates", url },
+    ]),
+  ];
+}
+
 /**
  * /exam-candidates (owner brief 2026-10-12: target students writing their exams): Form 4, Upper Sixth and private
  * candidates. What changes in the run-in to the exam, the countdown tool (sessions from the database), revision stages
@@ -64,14 +141,15 @@ export default async function ExamCandidatesPage() {
 
   return (
     <>
+      <JsonLd data={examCandidatesJsonLd()} />
       <PageHero
         id="candidates-heading"
-        eyebrow="For exam candidates"
-        title="Writing your exams this year? Make every week count."
+        eyebrow="For Zimbabwe exam candidates"
+        title="ZIMSEC and Cambridge candidates: make every week count."
         description={
           <p>
-            For Form 4 and Upper Sixth students and private candidates sitting ZIMSEC or Cambridge papers: a plan to your exam date, exam-style questions and
-            timed mock papers, with every result pointing to what to fix next.
+            For Form 4, Upper Sixth and private candidates sitting ZIMSEC, Cambridge IGCSE, O-Level or A-Level papers:
+            a plan to your exam date, exam-style questions and timed mock papers, with every result pointing to what to fix next.
           </p>
         }
         actions={
@@ -96,6 +174,16 @@ export default async function ExamCandidatesPage() {
           <FeatureItem icon={<UserRound />} title="Private candidates welcome">
             Studying on your own? Choose your board, subjects and session and follow the same courses and plan.
           </FeatureItem>
+        </ul>
+      </Section>
+
+      <Section id="exam-paths" tone="surface" eyebrow="Zimbabwe exam paths" title="Revision for the candidates searching right now">
+        <ul className="grid gap-6 sm:grid-cols-2">
+          {EXAM_PATHS.map((path) => (
+            <FeatureItem key={path.title} icon={<Target />} title={path.title}>
+              {path.body}
+            </FeatureItem>
+          ))}
         </ul>
       </Section>
 

@@ -27,7 +27,7 @@ export default async function AdminAnalyticsPage({ searchParams }: { searchParam
   const params = await searchParams;
   const range = rangeFromParams(firstParam(params, "from"), firstParam(params, "to"));
   const analytics = await getAdminAnalytics({ from: range.from, to: range.to }, { topN: 15 });
-  const { series, totals, topLists, coverage } = analytics;
+  const { series, totals, topLists, coverage, growth } = analytics;
   const dates = series.map((point) => point.date);
   const hasData = coverage.daysWithData > 0;
   const accuracy = totals.correctRatePct;
@@ -56,6 +56,8 @@ export default async function AdminAnalyticsPage({ searchParams }: { searchParam
             Range totals
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <StatTile label="Visits" value={growth.totals.visits} hint="Public page views" />
+            <StatTile label="Clicks" value={growth.totals.clicks} hint={`${formatNumber(growth.totals.signupClicks)} sign-up · ${formatNumber(growth.totals.checkoutClicks)} checkout`} />
             <StatTile label="Sign-ups" value={totals.signups} />
             <StatTile label="Questions answered" value={totals.questionsAttempted} hint={accuracy === null ? undefined : `${formatPercent(accuracy, { maximumFractionDigits: 1 })} correct`} />
             <StatTile label="Average test score" value={totals.avgScorePct === null ? null : formatPercent(totals.avgScorePct, { maximumFractionDigits: 1 })} />
@@ -65,11 +67,47 @@ export default async function AdminAnalyticsPage({ searchParams }: { searchParam
               value={totals.mockCompleted}
               hint={totals.mockAvgPct === null ? undefined : `Average ${formatPercent(totals.mockAvgPct, { maximumFractionDigits: 1 })}`}
             />
-            <StatTile label="New paid students" value={totals.conversions} />
+            <StatTile label="First-time payers (FTP)" value={totals.conversions} />
             <StatTile label="AI requests" value={totals.aiRequests} />
             <StatTile label="AI spend" value={totals.aiCostMicros === null ? null : formatMicrosUsd(totals.aiCostMicros)} />
           </div>
         </section>
+
+        <div className="grid gap-6 xl:grid-cols-3">
+          <AdminSection title="Top public pages" description="Visits captured from public pages in this range.">
+            {growth.topPages.length === 0 ? (
+              <ChartEmpty>No public visits captured in this range.</ChartEmpty>
+            ) : (
+              <BarList
+                measureLabel="Visits"
+                categoryLabel="Page"
+                items={growth.topPages.map((row) => ({ key: row.path, label: row.path, labelText: row.path, value: row.visits }))}
+              />
+            )}
+          </AdminSection>
+          <AdminSection title="Top click targets" description="Links and CTAs clicked from public pages.">
+            {growth.topClicks.length === 0 ? (
+              <ChartEmpty>No public clicks captured in this range.</ChartEmpty>
+            ) : (
+              <BarList
+                measureLabel="Clicks"
+                categoryLabel="Target"
+                items={growth.topClicks.map((row) => ({ key: row.target, label: row.target, labelText: row.target, value: row.clicks }))}
+              />
+            )}
+          </AdminSection>
+          <AdminSection title="Traffic sources" description="UTM source when present, then external referrer host, then direct.">
+            {growth.sources.length === 0 ? (
+              <ChartEmpty>No public traffic sources captured in this range.</ChartEmpty>
+            ) : (
+              <BarList
+                measureLabel="Visits"
+                categoryLabel="Source"
+                items={growth.sources.map((row) => ({ key: row.source, label: humanizeEnum(row.source), labelText: row.source, value: row.visits }))}
+              />
+            )}
+          </AdminSection>
+        </div>
 
         {!hasData ? (
           <ChartEmpty>No figures have been computed for this range yet, so there is nothing to chart.</ChartEmpty>

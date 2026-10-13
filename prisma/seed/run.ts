@@ -3,6 +3,7 @@ import type { ReindexAllReport } from "@/server/search/indexer";
 import { seedCatalogue } from "./catalogue";
 import { seedDemo } from "./demo";
 import { seedPlatform } from "./platform";
+import { seedTeamAccessAccounts } from "./team-access";
 import { consoleLog, SeedTally, type SeedLog } from "./util";
 
 /**
@@ -61,6 +62,7 @@ export async function seedCounts(db: PrismaClient): Promise<Record<string, numbe
     ["ContentSource", db.contentSource.count()],
     ["ExamSession", db.examSession.count()],
     ["User", db.user.count()],
+    ["MarketingEvent", db.marketingEvent.count()],
     ["School", db.school.count()],
     ["Class", db.class.count()],
     ["ParentStudentLink", db.parentStudentLink.count()],
@@ -109,6 +111,7 @@ export async function runSeed(db: PrismaClient, options: SeedOptions): Promise<S
 
   const catalogue = await seedCatalogue(db, tally, log);
   const platform = await seedPlatform(db, tally, log);
+  await seedTeamAccessAccounts(db, catalogue, now, tally, log);
   if (options.demo) {
     await seedDemo(db, { catalogue, platform, now, ...(options.password ? { password: options.password } : {}) }, tally, log);
     const report = await (options.reindexSearch ?? reindexSearchIndex)(db);
