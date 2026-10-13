@@ -15,6 +15,7 @@ export const CMS_AUDIT = {
   STUDENT_VIEW: AUDIT_ACTIONS.STUDENT_VIEW,
   PASSWORD_RESET_SENT: AUDIT_ACTIONS.USER_PASSWORD_RESET_SENT,
   VERIFICATION_REMINDER_SENT: AUDIT_ACTIONS.USER_VERIFICATION_REMINDER_SENT,
+  USER_CREATE: AUDIT_ACTIONS.USER_CREATE,
   TEMPORARY_PASSWORD_ISSUED: AUDIT_ACTIONS.USER_TEMPORARY_PASSWORD_ISSUED,
   JOB_ENQUEUE: AUDIT_ACTIONS.JOB_ENQUEUE,
   SCHOOL_CREATE: AUDIT_ACTIONS.SCHOOL_CREATE,
@@ -39,6 +40,7 @@ export const CMS_AUDIT = {
 export const CMS_AUDIT_OPERATIONS = {
   passwordResetSent: "user.password_reset_sent",
   verificationReminderSent: "user.verification_reminder_sent",
+  staffCreate: "user.staff_create",
   temporaryPasswordIssued: "user.temporary_password_issued",
   forceSignOut: "user.force_sign_out",
   sessionRevoke: "user.session_revoke",

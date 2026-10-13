@@ -56,6 +56,15 @@ export const revokeSessionSchema = z.object({ userId: uuid, sessionId: uuid });
 export const STAFF_GRANTABLE_ROLES = ["CONTENT_EDITOR", "ADMIN", "SUPER_ADMIN"] as const;
 export type StaffGrantableRole = (typeof STAFF_GRANTABLE_ROLES)[number];
 
+export const createStaffUserSchema = z.object({
+  firstName: z.string({ error: "Enter a first name." }).trim().min(1, { error: "Enter a first name." }).max(100, { error: "Keep the first name under 100 characters." }),
+  lastName: optionalText(100),
+  email: z.string({ error: "Enter an email address." }).trim().pipe(z.email({ error: "Enter a valid email address." })),
+  role: z.enum(STAFF_GRANTABLE_ROLES, { error: "Choose a staff role." }),
+  reason: reasonSchema,
+});
+export type CreateStaffUserInput = z.input<typeof createStaffUserSchema>;
+
 export const roleChangeSchema = z.object({
   userId: uuid,
   role: z.enum(STAFF_GRANTABLE_ROLES, { error: "Choose a staff role." }),

@@ -5,6 +5,7 @@ import { requireAdminAction, requireAdminStepUpAction } from "@/components/admin
 import { adminRequestMeta, formText, runAdminAction } from "@/components/admin/server-action";
 import {
   auditRequestFrom,
+  createStaffUser,
   forceSignOut,
   grantStaffRole,
   reactivateUser,
@@ -29,6 +30,29 @@ async function audit() {
 
 function userPaths(userId: string | undefined): string[] {
   return userId ? [`/admin/users/${userId}`, "/admin/users", "/admin/students", "/admin/teachers"] : ["/admin/users"];
+}
+
+export async function createStaffUserAction(_state: AdminActionState, formData: FormData): Promise<AdminActionState> {
+  return runAdminAction("admin.users.createStaffUser", formData, async () => {
+    await requireAdminAction("users.manage");
+    const actor = await requireAdminStepUpAction("roles.grant", "restricted");
+    const result = await createStaffUser(
+      actor,
+      {
+        firstName: formText(formData, "firstName") ?? "",
+        lastName: formText(formData, "lastName"),
+        email: formText(formData, "email") ?? "",
+        role: formText(formData, "role") ?? "",
+        reason: formText(formData, "reason") ?? "",
+      },
+      await audit(),
+    );
+    return {
+      data: result,
+      message: "Staff account created. Copy the one-time password now; it is shown once.",
+      revalidate: userPaths(result.userId),
+    };
+  });
 }
 
 /** Records the reason for opening a student's record (`student.view`), then shows it. */
