@@ -1,18 +1,21 @@
 import { Users } from "lucide-react";
+import { ActionForm, AdminField } from "@/components/admin/ActionForm";
+import { ActionResultCopyField } from "@/components/admin/CopyValueField";
 import { CursorPagination } from "@/components/admin/CursorPagination";
-import { Timestamp } from "@/components/admin/DetailParts";
+import { AdminSection, Timestamp } from "@/components/admin/DetailParts";
 import { FilterBar } from "@/components/admin/FilterBar";
 import { requireAdminPage } from "@/components/admin/guards";
 import { enumParam, firstParam, type PageSearchParams } from "@/components/admin/search-params";
 import { loadFirstPageOnStaleCursor } from "@/components/admin/list-cursor";
 import { StatusBadge } from "@/components/admin/StatusBadge";
-import { ROLE_OPTIONS, RoleBadges, UserNameCell } from "@/components/admin/users/UserBits";
+import { ROLE_LABELS, ROLE_OPTIONS, RoleBadges, UserNameCell } from "@/components/admin/users/UserBits";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { DataTable } from "@/components/ui/DataTable";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { Role, UserStatus } from "@/generated/prisma/enums";
-import { listUsers } from "@/server/cms/users/service";
+import { listUsers, staffRolesManageableBy } from "@/server/cms/users/service";
+import { createStaffUserAction } from "./actions";
 
 export const metadata = { title: "Users" };
 
@@ -34,10 +37,38 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: P
     cursor: firstParam(params, "cursor"),
   };
   const page = await loadFirstPageOnStaleCursor(filters, (f) => listUsers(actor, f));
+  const staffRoleOptions = staffRolesManageableBy(actor).map((role) => ({ value: role, label: ROLE_LABELS[role] }));
 
   return (
     <Container size="wide">
       <PageHeader title="Users" description="Every account on the platform. Phone numbers are masked in lists; open a user to see their record." />
+      {staffRoleOptions.length > 0 && (
+        <AdminSection
+          title="Create staff account"
+          description="Use this for back-office users only. The one-time password is shown once and must be changed on first sign-in."
+          className="mb-6"
+        >
+          <ActionForm action={createStaffUserAction} submitLabel="Create staff account" pendingLabel="Creating…" columns="two">
+            <AdminField name="firstName" label="First name" required autoComplete="given-name" />
+            <AdminField name="lastName" label="Last name" optional autoComplete="family-name" />
+            <AdminField name="email" label="Email address" type="email" required autoComplete="email" wide />
+            <AdminField name="role" label="Staff role" type="select" options={staffRoleOptions} placeholder="Choose a role" required />
+            <AdminField
+              name="reason"
+              label="Reason"
+              type="textarea"
+              rows={3}
+              maxLength={500}
+              required
+              wide
+              hint="For example: onboarding finance lead or granting owner access. No contact details."
+            />
+            <div className="md:col-span-2">
+              <ActionResultCopyField field="temporaryPassword" label="One-time password" hint="Shown once. Give it privately; do not send it by email." />
+            </div>
+          </ActionForm>
+        </AdminSection>
+      )}
       <FilterBar
         action="/admin/users"
         search={{ label: "Search", placeholder: "Email, phone, name or user id", value: filters.q }}

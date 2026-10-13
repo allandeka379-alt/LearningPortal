@@ -49,6 +49,8 @@ export const AUDIT_ACTIONS = {
   USER_PASSWORD_RESET_SENT: "user.password_reset_sent",
   /** Staff sent a "verify your contact" reminder to a user. */
   USER_VERIFICATION_REMINDER_SENT: "user.verification_reminder_sent",
+  /** Staff created a staff account in the admin console. */
+  USER_CREATE: "user.create",
   /** Staff set a one-time (temporary) password, shown once to them, that the user must change at sign-in. */
   USER_TEMPORARY_PASSWORD_ISSUED: "user.temporary_password_issued",
   /** Admin view of an individual student's record. Requires `reason` (AuditLog_reason_chk). */

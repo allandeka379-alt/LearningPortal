@@ -9,6 +9,7 @@ import { getDevOutbox, latestDevMessage } from "@/server/messaging";
 import { createSchool, createSchoolMember, createStudent, createTeacher, createUser, uniqueEmail, uniquePhone, uniqueSuffix } from "../../../../tests/factories/index";
 import type { CmsActor } from "./access";
 import {
+  createStaffUser,
   forceSignOut,
   getUserDetail,
   grantStaffRole,
@@ -233,6 +234,77 @@ describe("suspend / reactivate / sign out", () => {
 });
 
 describe("staff role grants", () => {
+  it("creates staff accounts from the admin console with a one-time password", async () => {
+    const admin = await staff("ADMIN");
+    const superAdmin = await staff("SUPER_ADMIN");
+
+    await expect(
+      createStaffUser(admin, {
+        firstName: "Finance",
+        email: uniqueEmail("admin-create-refused"),
+        role: "ADMIN",
+        reason: "Operations lead onboarding",
+      }),
+    ).rejects.toMatchObject({ code: "FORBIDDEN" });
+
+    const editorEmail = uniqueEmail("editor-create");
+    const editor = await createStaffUser(admin, {
+      firstName: "Editor",
+      email: editorEmail,
+      role: "CONTENT_EDITOR",
+      reason: "Joined content operations",
+    });
+    expect(editor.roles).toEqual(["CONTENT_EDITOR"]);
+
+    const email = uniqueEmail("staff-create");
+    const result = await createStaffUser(
+      superAdmin,
+      {
+        firstName: "Comfort",
+        lastName: "Vhurudzai",
+        email: email.toUpperCase(),
+        role: "ADMIN",
+        reason: "Owner requested management access",
+      },
+      { requestId: "req-staff-create", ip: "10.2.3.4" },
+    );
+
+    const row = await db.user.findUniqueOrThrow({
+      where: { emailNormalized: email },
+      select: {
+        id: true,
+        roles: true,
+        emailVerifiedAt: true,
+        passwordHash: true,
+        passwordMustChange: true,
+        profile: { select: { firstName: true, lastName: true, termsAcceptedAt: true } },
+      },
+    });
+    expect(row.id).toBe(result.userId);
+    expect(row.roles).toEqual(["ADMIN"]);
+    expect(row.emailVerifiedAt).toBeInstanceOf(Date);
+    expect(row.passwordMustChange).toBe(true);
+    expect(row.profile).toMatchObject({ firstName: "Comfort", lastName: "Vhurudzai", termsAcceptedAt: null });
+    expect((await verifyPassword(row.passwordHash!, result.temporaryPassword)).valid).toBe(true);
+    expect(result.signInWith).toBe(email);
+
+    const [created] = await auditRows(result.userId, "user.create");
+    const [grant] = await auditRows(result.userId, "role.grant");
+    expect(created).toMatchObject({ actorUserId: superAdmin.userId, reason: "Owner requested management access", requestId: "req-staff-create" });
+    expect(grant).toMatchObject({ actorUserId: superAdmin.userId, reason: "Owner requested management access" });
+    expect(JSON.stringify([created, grant])).not.toContain(result.temporaryPassword);
+    expect(latestDevMessage(email, "email")?.tag).toBe("auth.security.temporary_password");
+
+    await expect(
+      createStaffUser(superAdmin, {
+        firstName: "Duplicate",
+        email,
+        role: "ADMIN",
+        reason: "Duplicate check",
+      }),
+    ).rejects.toMatchObject({ code: "CONFLICT" });
+  });
+
   it("lets ADMIN grant CONTENT_EDITOR only; SUPER_ADMIN grants ADMIN; both audited with sessions revoked", async () => {
     const admin = await staff("ADMIN");
     const superAdmin = await staff("SUPER_ADMIN");

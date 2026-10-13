@@ -7,7 +7,7 @@ import { sendSecurityNotice } from "@/server/auth/notices";
 import { grantableRoles } from "@/server/auth/permissions";
 import { listActiveSessions, revokeAllSessions, revokeSession, type RequestMeta, type SessionListItem } from "@/server/auth/sessions";
 import { getCurrentSubscription, type CurrentSubscriptionView } from "@/server/billing/subscriptions";
-import { issueTemporaryPassword } from "@/server/schools/credentials";
+import { allocatePublicHandle, issueTemporaryPassword } from "@/server/schools/credentials";
 import { db } from "@/server/db";
 import { auditActorFields, auditInTx, type AuditRequestInfo } from "@/server/lib/audit";
 import { getEnv } from "@/server/lib/env";
@@ -19,6 +19,7 @@ import { CMS_AUDIT, CMS_AUDIT_OPERATIONS } from "./audit-actions";
 import { afterCursorWhere, decodeCursor, DEFAULT_PAGE_SIZE, pageOf } from "./cursor";
 import {
   contactActionSchema,
+  createStaffUserSchema,
   listStudentsSchema,
   listTeachersSchema,
   listUsersSchema,
@@ -766,6 +767,85 @@ async function loadTarget(userId: string) {
 function parseOrThrow<T>(result: { success: true; data: T } | { success: false; error: Parameters<typeof AppError.fromZod>[0] }): T {
   if (!result.success) throw AppError.fromZod(result.error);
   return result.data;
+}
+
+export interface CreateStaffUserResult {
+  userId: string;
+  roles: Role[];
+  temporaryPassword: string;
+  signInWith: string;
+}
+
+/**
+ * Creates a platform staff account from /admin/users. Staff accounts are not public self-service sign-ups: an admin
+ * creates the email identity, assigns the initial staff role, receives a one-time password once, and the user must
+ * change it on first sign-in. Creating administrator roles follows the same `roles.grant` authority as grantStaffRole.
+ */
+export async function createStaffUser(actor: CmsActor, input: unknown, request?: AuditRequestInfo): Promise<CreateStaffUserResult> {
+  assertCmsPermission(actor, "users.manage");
+  assertCmsPermission(actor, "roles.grant", "restricted");
+  const data = parseOrThrow(createStaffUserSchema.safeParse(input));
+  if (!staffRolesManageableBy(actor).includes(data.role)) {
+    throw AppError.forbidden(data.role === "CONTENT_EDITOR" ? undefined : "Only a super admin can create administrator accounts.");
+  }
+
+  const emailNormalized = normalizeEmail(data.email);
+  if (!emailNormalized) throw AppError.validation({ email: ["Enter a valid email address."] }, "Enter a valid email address.");
+  const existing = await db.user.findUnique({ where: { emailNormalized }, select: { id: true } });
+  if (existing) throw AppError.conflict("An account with this email already exists. Open it from Users and grant the role there.");
+
+  const now = new Date();
+  const { password, passwordHash } = await issueTemporaryPassword();
+  const created = await db.$transaction(async (tx) => {
+    const user = await tx.user.create({
+      data: {
+        emailNormalized,
+        emailVerifiedAt: now,
+        passwordHash,
+        passwordUpdatedAt: now,
+        passwordMustChange: true,
+        roles: [data.role],
+        status: "ACTIVE",
+        signupChannel: "WEB",
+      },
+      select: { id: true, roles: true },
+    });
+    await tx.profile.create({
+      data: {
+        userId: user.id,
+        username: await allocatePublicHandle(tx),
+        firstName: data.firstName,
+        lastName: data.lastName ?? null,
+        displayName: data.firstName,
+      },
+    });
+    await auditInTx(tx, {
+      ...auditActorFields(infraActor(actor)),
+      action: CMS_AUDIT.USER_CREATE,
+      entityType: "User",
+      entityId: user.id,
+      targetUserId: user.id,
+      after: { email: emailNormalized, roles: user.roles, passwordMustChange: true },
+      metadata: { operation: CMS_AUDIT_OPERATIONS.staffCreate },
+      reason: data.reason,
+      request: request ?? null,
+    });
+    await auditInTx(tx, {
+      ...auditActorFields(infraActor(actor)),
+      action: CMS_AUDIT.ROLE_GRANT,
+      entityType: "User",
+      entityId: user.id,
+      targetUserId: user.id,
+      before: { roles: [] },
+      after: { roles: user.roles },
+      metadata: { role: data.role, bootstrap: false, createdAccount: true },
+      reason: data.reason,
+      request: request ?? null,
+    });
+    return user;
+  });
+  sendSecurityNotice({ kind: "temporary_password", to: emailNormalized });
+  return { userId: created.id, roles: created.roles, temporaryPassword: password, signInWith: emailNormalized };
 }
 
 /**
