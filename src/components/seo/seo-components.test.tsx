@@ -160,7 +160,7 @@ describe("LessonPreviewList", () => {
     expect(out).toContain("Open to read");
     expect(out).toContain("Find two numbers…");
     expect(out).toContain('href="/b/q/s/guides/factorising"');
-    expect(out.match(/Full access/g)?.length).toBe(2);
+    expect(out.match(/<span class="truncate">Full access<\/span>/g)?.length).toBe(2);
     expect(out).not.toMatch(/free/i);
     expect(out).toContain("2 more lessons in this topic.");
   });

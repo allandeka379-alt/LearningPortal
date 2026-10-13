@@ -189,6 +189,11 @@ describe("admin page guards (real sessions)", () => {
       expect: { anonymous: "/login?next=%2Fadmin%2Fx", student: "/onboarding", teacher: "/teacher", schoolAdmin: "/school", editor: "/admin", admin: "allowed", superAdmin: "allowed" },
     },
     {
+      name: "/admin/reports (analytics.platform, all)",
+      permission: "analytics.platform",
+      expect: { anonymous: "/login?next=%2Fadmin%2Fx", student: "/onboarding", teacher: "/teacher", schoolAdmin: "/school", editor: "/admin", admin: "allowed", superAdmin: "allowed" },
+    },
+    {
       name: "/admin/settings (settings.manage)",
       permission: "settings.manage",
       expect: { anonymous: "/login?next=%2Fadmin%2Fx", student: "/onboarding", teacher: "/teacher", schoolAdmin: "/school", editor: "/admin", admin: "/admin", superAdmin: "allowed" },
