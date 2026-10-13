@@ -2,7 +2,7 @@
 -- The table intentionally stores no raw IPs, raw user-agent strings, form values or full referrer URLs.
 
 CREATE TABLE "MarketingEvent" (
-  "id" uuid NOT NULL DEFAULT uuidv7(),
+  "id" uuid NOT NULL,
   "type" varchar(32) NOT NULL,
   "path" varchar(300) NOT NULL,
   "target" varchar(300),
