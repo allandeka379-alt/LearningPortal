@@ -20,7 +20,7 @@ import {
 } from "./types";
 
 /**
- * Paynow adapter (Zimbabwe: EcoCash, OneMoney, Innbucks, ZimSwitch, Visa/Mastercard; ARCHITECTURE §7.1).
+ * Paynow adapter (Zimbabwe: EcoCash, OneMoney, InnBucks, ZimSwitch, Visa/Mastercard; ARCHITECTURE §7.1).
  * Plain `fetch`, no SDK.
  *
  * VERIFY AGAINST CURRENT PAYNOW DEVELOPER DOCS BEFORE GO-LIVE: every protocol fact below (endpoints, field names and
@@ -33,10 +33,11 @@ import {
  *   (our Payment id), amount ("5.00", 2 dp), additionalinfo, returnurl, resulturl, authemail (optional), status
  *   "Message", hash. Response (urlencoded): `status=Ok&browserurl=…&pollurl=…&hash=…` (hash verified like any other
  *   message) or `status=Error&error=…` (not hashed). The payer chooses the method on Paynow's page.
- * - Mobile express checkout (EcoCash / OneMoney / Innbucks): POST `remotetransaction` with the same fields plus phone
+ * - Mobile express checkout (EcoCash / OneMoney / InnBucks): POST `remotetransaction` with the same fields plus phone
  *   (local format "07XXXXXXXX") and method ("ecocash" | "onemoney" | "innbucks") before status. Response: pollurl +
- *   instructions; Innbucks may also return an authorization code, expiry and deep link. There is no browser redirect:
- *   the payer approves the prompt/code in the wallet. Paynow requires `authemail` here.
+ *   instructions. EcoCash / OneMoney are phone approval prompts. InnBucks is an authorization-code flow: Paynow returns
+ *   `authorizationcode` and `authorizationexpires`; show the code and optionally deep-link the app with
+ *   `com.innbucks.customer://purchase?paymentToken=<code>`. There is no browser redirect. Paynow requires `authemail`.
  * - HASH = upper-case hex SHA-512 of the concatenation of every field VALUE in the order sent (excluding `hash`), then
  *   the integration key. Values are the decoded (not URL-encoded) strings.
  * - Status updates are POSTed by Paynow to resulturl (reference, paynowreference, amount, status, pollurl, hash): the
@@ -73,7 +74,9 @@ const SUPPORTED_METHODS: ReadonlySet<string> = new Set(["ecocash", "onemoney", "
 const DEFAULT_TIMEOUT_MS = 20_000;
 const MAX_MESSAGE_BYTES = 16_384;
 const DEFAULT_MOBILE_INSTRUCTIONS = "Check your phone and approve the payment prompt to finish.";
-const DEFAULT_INNBUCKS_INSTRUCTIONS = "Open Innbucks and approve the payment with the checkout code to finish.";
+const DEFAULT_INNBUCKS_INSTRUCTIONS =
+  "Paynow generated an InnBucks authorization code. Open the InnBucks app and enter the code to authorize this payment, then return here to check for payment.";
+const INNBUCKS_DEEP_LINK_PREFIX = "com.innbucks.customer://purchase?paymentToken=";
 const uuidSchema = z.uuid();
 
 /** A Paynow protocol or transport failure. The message is safe for logs (no keys, no contact details). */
@@ -246,15 +249,31 @@ function statusPayload(message: PaynowStatusMessage, source: "result_url" | "pol
   };
 }
 
-function innbucksInstructions(map: Map<string, string>, base: string): string {
+interface InnbucksCheckoutDetails {
+  instructions: string;
+  metadata: Record<string, string>;
+}
+
+function innbucksCheckoutDetails(map: Map<string, string>, base: string): InnbucksCheckoutDetails {
   const authorizationCode = map.get("authorizationcode")?.trim();
   const authorizationExpires = map.get("authorizationexpires")?.trim();
-  const deepLinkUrl = map.get("deeplinkurl")?.trim();
+  const returnedDeepLinkUrl = map.get("deeplinkurl")?.trim();
+  const deepLinkUrl =
+    returnedDeepLinkUrl && returnedDeepLinkUrl.startsWith(INNBUCKS_DEEP_LINK_PREFIX)
+      ? returnedDeepLinkUrl
+      : authorizationCode
+        ? `${INNBUCKS_DEEP_LINK_PREFIX}${encodeURIComponent(authorizationCode)}`
+        : null;
   const lines = [base || DEFAULT_INNBUCKS_INSTRUCTIONS];
-  if (authorizationCode) lines.push(`Innbucks authorisation code: ${authorizationCode}.`);
+  if (authorizationCode) lines.push(`InnBucks authorization code: ${authorizationCode}.`);
+  lines.push("Authorize it in the InnBucks app, or dial *569# and enter the code.");
   if (authorizationExpires) lines.push(`Code expires: ${authorizationExpires}.`);
-  if (deepLinkUrl && /^https?:\/\//i.test(deepLinkUrl)) lines.push("If you are on your phone, open the Innbucks payment link from the payment prompt.");
-  return lines.join(" ").slice(0, 500);
+  if (deepLinkUrl) lines.push("If you are on your phone, use the Open InnBucks app button.");
+  const metadata: Record<string, string> = { mobilePromptKind: "innbucks_code" };
+  if (authorizationCode) metadata.innbucksAuthorizationCode = authorizationCode;
+  if (authorizationExpires) metadata.innbucksAuthorizationExpires = authorizationExpires;
+  if (deepLinkUrl) metadata.innbucksDeepLinkUrl = deepLinkUrl;
+  return { instructions: lines.join(" ").slice(0, 500), metadata };
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -291,7 +310,7 @@ interface ResolvedPaynowConfig {
 
 class PaynowProvider implements PaymentProvider {
   readonly id = "paynow" as const;
-  readonly displayName = "Paynow (EcoCash, OneMoney, Innbucks, ZimSwitch, cards)";
+  readonly displayName = "Paynow (EcoCash, OneMoney, InnBucks, ZimSwitch, cards)";
   readonly #config: ResolvedPaynowConfig;
 
   constructor(config: ResolvedPaynowConfig) {
@@ -369,9 +388,19 @@ class PaynowProvider implements PaymentProvider {
     if (mobile) {
       const instructions =
         (map.get("instructions") ?? "").trim().slice(0, 500) || (input.method === "innbucks" ? DEFAULT_INNBUCKS_INSTRUCTIONS : DEFAULT_MOBILE_INSTRUCTIONS);
+      if (input.method === "innbucks") {
+        const details = innbucksCheckoutDetails(map, instructions);
+        return {
+          kind: "mobile_prompt",
+          instructions: details.instructions,
+          providerRef,
+          pollUrl,
+          metadata: details.metadata,
+        };
+      }
       return {
         kind: "mobile_prompt",
-        instructions: input.method === "innbucks" ? innbucksInstructions(map, instructions) : instructions,
+        instructions,
         providerRef,
         pollUrl,
       };

@@ -265,6 +265,34 @@ describe("Paynow checkout (fetch mocked)", () => {
     expect(await codeOf(startCheckout({ ...input, phone: "+27821234567" }, { env }))).toBe("VALIDATION");
   });
 
+  it("InnBucks express checkout stores the authorization code details for the waiting screens", async () => {
+    const { student, input } = await subscriptionInput({ provider: "paynow", paynowMethod: "innbucks", phone: "077 123 4567" });
+    const guid = randomUUID();
+    const fetchMock = stubPaynow(() => [
+      ["status", "Ok"],
+      ["authorizationcode", "111161527"],
+      ["authorizationexpires", "09:50"],
+      ["pollurl", pollUrlFor(guid)],
+    ]);
+    const started = await startCheckout(input, { env });
+    expect(started).toMatchObject({ kind: "mobile", reused: false });
+    expect(started.kind === "mobile" ? started.instructions : "").toContain("111161527");
+    const sent = sentFields(fetchMock);
+    expect(sent).toMatchObject({ phone: "0771234567", method: "innbucks", authemail: student.emailNormalized });
+
+    const payment = await db.payment.findUniqueOrThrow({ where: { id: started.paymentId } });
+    expect(payment.method).toBe("innbucks");
+    expect(payment.metadata).toMatchObject({
+      maskedMsisdn: "+263 77* *** 567",
+      checkoutKind: "mobile_prompt",
+      mobilePromptKind: "innbucks_code",
+      innbucksAuthorizationCode: "111161527",
+      innbucksAuthorizationExpires: "09:50",
+      innbucksDeepLinkUrl: "com.innbucks.customer://purchase?paymentToken=111161527",
+    });
+    expect(JSON.stringify(payment.metadata)).not.toContain("771234567");
+  });
+
   it("a provider failure marks the payment FAILED and returns a client-safe error", async () => {
     const { student, input } = await subscriptionInput({ provider: "paynow" });
     stubPaynow(() => [

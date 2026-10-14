@@ -50,6 +50,28 @@ function setup(answers: Array<ActionResult<PaymentStatusView> | Error>, fallback
   return { check, navigate, onRetry };
 }
 
+function setupInnbucks() {
+  const check = vi.fn<PaymentStatusCheck>(async () => view("PENDING"));
+  const navigate = vi.fn();
+  render(
+    <MobileMoneyPending
+      paymentId={PAYMENT_ID}
+      instructions="Paynow generated an InnBucks authorization code."
+      mobilePromptKind="innbucks_code"
+      innbucksAuthorizationCode="111161527"
+      innbucksAuthorizationExpires="09:50"
+      innbucksDeepLinkUrl="com.innbucks.customer://purchase?paymentToken=111161527"
+      methodLabel="InnBucks"
+      maskedMsisdn="+263 77* *** 567"
+      resultHref={RESULT}
+      check={check}
+      onRetry={vi.fn()}
+      navigate={navigate}
+    />,
+  );
+  return { check, navigate };
+}
+
 beforeEach(() => {
   vi.useFakeTimers();
 });
@@ -68,6 +90,16 @@ describe("MobileMoneyPending", () => {
     expect(screen.getByText(/\+263 77\* \*\*\* 567/)).toBeTruthy();
     expect(screen.getByRole("status").textContent).toMatch(/Waiting for you to approve/);
     expect(screen.getByRole("link", { name: "View payment status" }).getAttribute("href")).toBe(RESULT);
+  });
+
+  it("shows InnBucks as an authorization-code flow, not a phone-push prompt", () => {
+    setupInnbucks();
+    expect(screen.getByRole("heading", { name: "Authorize in InnBucks" })).toBeTruthy();
+    expect(screen.getByText("Authorization code")).toBeTruthy();
+    expect(screen.getByText("111161527")).toBeTruthy();
+    expect(screen.getByText(/dial \*569#/i)).toBeTruthy();
+    expect(screen.getByRole("status").textContent).toMatch(/authorize the InnBucks payment/);
+    expect(screen.getByRole("link", { name: /Open InnBucks app/ }).getAttribute("href")).toBe("com.innbucks.customer://purchase?paymentToken=111161527");
   });
 
   it("polls every few seconds, asks the provider every Nth check, and opens the result page once paid", async () => {

@@ -33,7 +33,7 @@ export type PaymentProviderId = PaymentProviderName;
 export const KNOWN_PAYMENT_METHODS = ["ecocash", "onemoney", "innbucks", "zimswitch", "card", "bank_transfer", "sandbox"] as const;
 export type PaymentMethod = (typeof KNOWN_PAYMENT_METHODS)[number];
 
-/** Mobile-money methods complete with a USSD/push prompt on the payer's phone rather than a browser redirect. */
+/** Wallet methods that complete outside a browser redirect, either as a phone prompt or a provider authorization code. */
 export const MOBILE_MONEY_METHODS: ReadonlySet<PaymentMethod> = new Set<PaymentMethod>(["ecocash", "onemoney", "innbucks"]);
 
 const CURRENCY_PATTERN = /^[A-Z]{3}$/;
@@ -78,7 +78,7 @@ export interface CheckoutRequest {
 
 export type CheckoutResult =
   | { kind: "redirect"; url: string; providerRef: string; pollUrl?: string }
-  | { kind: "mobile_prompt"; instructions: string; providerRef: string; pollUrl?: string };
+  | { kind: "mobile_prompt"; instructions: string; providerRef: string; pollUrl?: string; metadata?: Record<string, string | number | boolean> };
 
 /** What a provider says about a payment, normalised. `PENDING` is informational (no state change). */
 export const PROVIDER_PAYMENT_STATUSES = ["PENDING", "PAID", "FAILED", "CANCELLED", "REFUNDED"] as const;

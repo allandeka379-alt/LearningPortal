@@ -24,7 +24,7 @@ import { requireLinkedChild } from "./queries";
  * the database and talks to the provider. This module only:
  * - lists what can be bought (public INDIVIDUAL plans with a current, non-zero price in an offered currency for the
  *   CHILD's country; a one-off plan the child already owns for good is left out) and the payment methods that are
- *   enabled (EcoCash / OneMoney / Innbucks through Paynow, other Paynow options, dev sandbox; one-off "Full access"
+ *   enabled (EcoCash / OneMoney / InnBucks through Paynow, other Paynow options, dev sandbox; one-off "Full access"
  *   is paid through Paynow only, owner decision 2026-10-07);
  * - maps the parent's method choice to `startCheckout` arguments;
  * - reads the parent's own payments (payer = the parent) and their status.
@@ -81,8 +81,8 @@ const METHOD_DEFINITIONS: readonly MethodDefinition[] = [
     provider: "paynow",
     paynowMethod: "innbucks",
     method: "innbucks",
-    label: "Innbucks",
-    description: "You approve the payment in Innbucks with the checkout code.",
+    label: "InnBucks",
+    description: "Get an InnBucks authorization code, then approve it in the app or with *569#.",
     needsPhone: true,
   },
   {
@@ -297,7 +297,15 @@ const childCheckoutSchema = z.object({
 
 export type ChildCheckoutResult =
   | { kind: "redirect"; url: string; paymentId: string }
-  | { kind: "mobile"; instructions: string; paymentId: string };
+  | {
+      kind: "mobile";
+      instructions: string;
+      paymentId: string;
+      mobilePromptKind: "phone_prompt" | "innbucks_code";
+      innbucksAuthorizationCode: string | null;
+      innbucksAuthorizationExpires: string | null;
+      innbucksDeepLinkUrl: string | null;
+    };
 
 function parentResultPath(paymentId: string): string {
   return `${PARENT_PAYMENT_RESULT_PATH}?paymentId=${encodeURIComponent(paymentId)}`;
@@ -357,7 +365,18 @@ export async function startChildCheckout(
     },
     options,
   );
-  if (result.kind === "mobile") return { kind: "mobile", instructions: result.instructions, paymentId: result.paymentId };
+  if (result.kind === "mobile") {
+    const stored = await db.payment.findUnique({ where: { id: result.paymentId }, select: { metadata: true } });
+    return {
+      kind: "mobile",
+      instructions: result.instructions,
+      paymentId: result.paymentId,
+      mobilePromptKind: metadataString(stored?.metadata, "mobilePromptKind") === "innbucks_code" || definition.paynowMethod === "innbucks" ? "innbucks_code" : "phone_prompt",
+      innbucksAuthorizationCode: metadataString(stored?.metadata, "innbucksAuthorizationCode"),
+      innbucksAuthorizationExpires: metadataString(stored?.metadata, "innbucksAuthorizationExpires"),
+      innbucksDeepLinkUrl: metadataString(stored?.metadata, "innbucksDeepLinkUrl"),
+    };
+  }
   const appUrl = (options.env ?? getEnv()).APP_URL;
   return { kind: "redirect", url: safeCheckoutRedirect(result.url, result.paymentId, appUrl), paymentId: result.paymentId };
 }
@@ -387,6 +406,7 @@ const PAYMENT_SELECT = {
   purpose: true,
   amountMinor: true,
   currency: true,
+  method: true,
   receiptNumber: true,
   createdAt: true,
   paidAt: true,
@@ -403,6 +423,7 @@ type PaymentRowRaw = {
   purpose: PaymentPurpose;
   amountMinor: number;
   currency: string;
+  method: string | null;
   receiptNumber: string | null;
   createdAt: Date;
   paidAt: Date | null;
@@ -445,6 +466,10 @@ export async function listParentPayments(actor: FamilyActor, options: { limit?: 
 export interface ParentPaymentResult extends ParentPaymentRow {
   /** Mobile-money instructions while the payment waits for approval on the phone. */
   instructions: string | null;
+  mobilePromptKind: "phone_prompt" | "innbucks_code" | null;
+  innbucksAuthorizationCode: string | null;
+  innbucksAuthorizationExpires: string | null;
+  innbucksDeepLinkUrl: string | null;
   /** "+263 77* *** 567" for mobile money (never the full number). */
   maskedMsisdn: string | null;
 }
@@ -464,9 +489,20 @@ export async function getParentPayment(actor: FamilyActor, paymentId: unknown): 
   if (!id.success) throw AppError.notFound("We couldn't find that payment.");
   const row = await db.payment.findFirst({ where: { id: id.data, payerUserId: actor.userId }, select: PAYMENT_SELECT });
   if (!row) throw AppError.notFound("We couldn't find that payment.");
+  const mobilePending = row.status === "PENDING" && metadataString(row.metadata, "checkoutKind") === "mobile_prompt";
+  const mobilePromptKind =
+    mobilePending && (metadataString(row.metadata, "mobilePromptKind") === "innbucks_code" || row.method === "innbucks")
+      ? "innbucks_code"
+      : mobilePending
+        ? "phone_prompt"
+        : null;
   return {
     ...toPaymentRow(row),
-    instructions: row.status === "PENDING" && metadataString(row.metadata, "checkoutKind") === "mobile_prompt" ? metadataString(row.metadata, "instructions") : null,
+    instructions: mobilePending ? metadataString(row.metadata, "instructions") : null,
+    mobilePromptKind,
+    innbucksAuthorizationCode: mobilePromptKind === "innbucks_code" ? metadataString(row.metadata, "innbucksAuthorizationCode") : null,
+    innbucksAuthorizationExpires: mobilePromptKind === "innbucks_code" ? metadataString(row.metadata, "innbucksAuthorizationExpires") : null,
+    innbucksDeepLinkUrl: mobilePromptKind === "innbucks_code" ? metadataString(row.metadata, "innbucksDeepLinkUrl") : null,
     maskedMsisdn: metadataString(row.metadata, "maskedMsisdn"),
   };
 }

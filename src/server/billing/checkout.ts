@@ -68,6 +68,8 @@ export const PENDING_PAYMENT_TTL_HOURS = 24;
 export const REDIRECT_CHECKOUT_REUSE_MINUTES = 30;
 /** Mobile-money prompts time out on the phone quickly: after this a retry sends a new prompt. */
 export const MOBILE_CHECKOUT_REUSE_MINUTES = 3;
+/** Innbucks uses a generated authorization code rather than a push prompt; keep it reusable for the usual code window. */
+export const INNBUCKS_CODE_REUSE_MINUTES = 10;
 /** A pending payment whose provider call never completed is treated as abandoned after this. */
 const PREPARING_STALE_MINUTES = 2;
 /** Defaults of the `checkout` rate-limit preset (tunable via the `rateLimits` setting). */
@@ -120,6 +122,7 @@ export function describePeriod(price: { interval: BillingInterval; intervalCount
 
 /** Minutes a pending checkout stays reusable for this method. */
 export function reuseWindowMinutes(method: string | null | undefined): number {
+  if (method === "innbucks") return INNBUCKS_CODE_REUSE_MINUTES;
   return method && MOBILE_MONEY_METHODS.has(method as PaymentMethod) ? MOBILE_CHECKOUT_REUSE_MINUTES : REDIRECT_CHECKOUT_REUSE_MINUTES;
 }
 
@@ -531,7 +534,7 @@ async function saveProviderCheckout(paymentId: string, checkout: CheckoutResult)
       current.metadata,
       checkout.kind === "redirect"
         ? { checkoutKind: "redirect", checkoutUrl: checkout.url }
-        : { checkoutKind: "mobile_prompt", instructions: checkout.instructions },
+        : { checkoutKind: "mobile_prompt", instructions: checkout.instructions, ...(checkout.metadata ?? {}) },
     );
     await tx.payment.update({
       where: { id: paymentId },

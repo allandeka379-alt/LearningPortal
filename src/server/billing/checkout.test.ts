@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   MOBILE_CHECKOUT_REUSE_MINUTES,
+  INNBUCKS_CODE_REUSE_MINUTES,
   REDIRECT_CHECKOUT_REUSE_MINUTES,
   describePeriod,
   maskMsisdn,
@@ -38,6 +39,7 @@ describe("checkout helpers", () => {
   it("reuses mobile prompts only briefly", () => {
     expect(reuseWindowMinutes("ecocash")).toBe(MOBILE_CHECKOUT_REUSE_MINUTES);
     expect(reuseWindowMinutes("onemoney")).toBe(MOBILE_CHECKOUT_REUSE_MINUTES);
+    expect(reuseWindowMinutes("innbucks")).toBe(INNBUCKS_CODE_REUSE_MINUTES);
     expect(reuseWindowMinutes("card")).toBe(REDIRECT_CHECKOUT_REUSE_MINUTES);
     expect(reuseWindowMinutes(null)).toBe(REDIRECT_CHECKOUT_REUSE_MINUTES);
   });

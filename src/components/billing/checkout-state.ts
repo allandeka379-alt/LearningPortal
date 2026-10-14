@@ -57,8 +57,12 @@ export type CheckoutOutcome =
   | {
       kind: "mobile";
       paymentId: string;
-      /** Provider instructions (e.g. "Check your phone and enter your PIN"). */
+      /** Provider instructions. EcoCash / OneMoney are phone prompts; InnBucks is an authorization-code flow. */
       instructions: string;
+      mobilePromptKind: "phone_prompt" | "innbucks_code";
+      innbucksAuthorizationCode: string | null;
+      innbucksAuthorizationExpires: string | null;
+      innbucksDeepLinkUrl: string | null;
       methodLabel: string;
       /** "+263 77* *** 567" (never the full number). */
       maskedMsisdn: string | null;

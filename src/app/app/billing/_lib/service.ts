@@ -501,6 +501,10 @@ export async function startStudentCheckout(
     kind: "mobile",
     paymentId: result.paymentId,
     instructions: result.instructions,
+    mobilePromptKind: metadataString(stored?.metadata, "mobilePromptKind") === "innbucks_code" || definition.paynowMethod === "innbucks" ? "innbucks_code" : "phone_prompt",
+    innbucksAuthorizationCode: metadataString(stored?.metadata, "innbucksAuthorizationCode"),
+    innbucksAuthorizationExpires: metadataString(stored?.metadata, "innbucksAuthorizationExpires"),
+    innbucksDeepLinkUrl: metadataString(stored?.metadata, "innbucksDeepLinkUrl"),
     methodLabel: definition.label,
     maskedMsisdn: metadataString(stored?.metadata, "maskedMsisdn"),
     resultHref: paymentResultHref(result.paymentId),
@@ -596,6 +600,11 @@ export interface StudentPaymentResult {
   paidByYou: boolean;
   /** Mobile money while waiting, for the payer only. */
   instructions: string | null;
+  /** Pending wallet flow: EcoCash / OneMoney phone prompt, or InnBucks authorization code. */
+  mobilePromptKind: "phone_prompt" | "innbucks_code" | null;
+  innbucksAuthorizationCode: string | null;
+  innbucksAuthorizationExpires: string | null;
+  innbucksDeepLinkUrl: string | null;
   /** "+263 77* *** 567", for the payer only. */
   maskedMsisdn: string | null;
   failureMessage: string | null;
@@ -620,6 +629,7 @@ export async function getStudentPaymentResult(actor: Actor, paymentId: unknown):
     }
   }
   const mobilePending = payment.status === "PENDING" && metadataString(payment.metadata, "checkoutKind") === "mobile_prompt";
+  const mobilePromptKind = mobilePending && payment.method === "innbucks" ? "innbucks_code" : mobilePending ? "phone_prompt" : null;
   return {
     id: payment.id,
     status: payment.status,
@@ -635,6 +645,10 @@ export async function getStudentPaymentResult(actor: Actor, paymentId: unknown):
     servicePeriodEnd: payment.servicePeriodEnd,
     paidByYou,
     instructions: paidByYou && mobilePending ? metadataString(payment.metadata, "instructions") : null,
+    mobilePromptKind: paidByYou ? mobilePromptKind : null,
+    innbucksAuthorizationCode: paidByYou && mobilePromptKind === "innbucks_code" ? metadataString(payment.metadata, "innbucksAuthorizationCode") : null,
+    innbucksAuthorizationExpires: paidByYou && mobilePromptKind === "innbucks_code" ? metadataString(payment.metadata, "innbucksAuthorizationExpires") : null,
+    innbucksDeepLinkUrl: paidByYou && mobilePromptKind === "innbucks_code" ? metadataString(payment.metadata, "innbucksDeepLinkUrl") : null,
     maskedMsisdn: paidByYou ? metadataString(payment.metadata, "maskedMsisdn") : null,
     failureMessage:
       payment.status === "FAILED" || payment.status === "CANCELLED" ? paymentFailureMessage(payment.status, payment.failureCode) : null,

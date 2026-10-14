@@ -3,6 +3,7 @@
 import { Smartphone } from "lucide-react";
 import { useActionState, useEffect, useMemo, useRef, useState } from "react";
 import { fieldErrorsOf } from "@/components/family/action-state";
+import { InnbucksAuthorizationPanel } from "@/components/billing/InnbucksAuthorizationPanel";
 import { keepValuesSubmit } from "@/components/family/keep-values-submit";
 import { FormFeedback } from "@/components/student/FormFeedback";
 import { Alert } from "@/components/ui/Alert";
@@ -65,11 +66,20 @@ export function CheckoutForm({ studentUserId, childName, plans, methods, action,
   if (state?.ok && state.data.kind === "mobile") {
     return (
       <div className="space-y-4" role="status">
-        <Alert tone="info" icon={<Smartphone aria-hidden="true" />} title="Approve the payment on your phone">
-          {state.data.instructions}
-        </Alert>
+        {state.data.mobilePromptKind === "innbucks_code" ? (
+          <InnbucksAuthorizationPanel
+            instructions={state.data.instructions}
+            authorizationCode={state.data.innbucksAuthorizationCode}
+            authorizationExpires={state.data.innbucksAuthorizationExpires}
+            deepLinkUrl={state.data.innbucksDeepLinkUrl}
+          />
+        ) : (
+          <Alert tone="info" icon={<Smartphone aria-hidden="true" />} title="Approve the payment on your phone">
+            {state.data.instructions}
+          </Alert>
+        )}
         <p className="text-sm text-muted">
-          Once you approve it, {childName}&rsquo;s plan starts as soon as the payment is confirmed. This can take a minute.
+          Once you {state.data.mobilePromptKind === "innbucks_code" ? "authorize it" : "approve it"}, {childName}&rsquo;s plan starts as soon as the payment is confirmed. This can take a minute.
         </p>
         <ButtonLink href={state.data.resultHref}>Check payment status</ButtonLink>
       </div>
@@ -155,7 +165,7 @@ export function CheckoutForm({ studentUserId, childName, plans, methods, action,
       </fieldset>
 
       {selectedMethod?.needsPhone && (
-        <Field label="Mobile number to charge" hint="The number on the wallet, e.g. 0771234567. We only store it masked." error={phoneErrors} required>
+        <Field label={selectedMethod.id === "paynow_innbucks" ? "InnBucks mobile number" : "Mobile number to charge"} hint="The number on the wallet, e.g. 0771234567. We only store it masked." error={phoneErrors} required>
           <Input name="phone" type="tel" inputMode="tel" autoComplete="tel" maxLength={20} className="sm:max-w-xs" />
         </Field>
       )}

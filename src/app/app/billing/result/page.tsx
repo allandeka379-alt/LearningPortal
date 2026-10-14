@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { EntitlementList } from "@/components/billing/EntitlementList";
 import { formatMoney, PAYMENT_STATUS_LABELS, PAYMENT_STATUS_TONES } from "@/components/billing/format";
+import { InnbucksAuthorizationPanel } from "@/components/billing/InnbucksAuthorizationPanel";
 import { PaymentStatusWatcher } from "@/components/billing/PaymentStatusWatcher";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
@@ -81,13 +82,22 @@ export default async function PaymentResultPage({ searchParams }: { searchParams
 
       {payment.status === "PENDING" && !leftProviderPage && (
         <div className="space-y-3">
-          <Alert
-            tone="info"
-            icon={payment.instructions ? <Smartphone aria-hidden="true" /> : <Clock aria-hidden="true" />}
-            title={payment.instructions ? "Approve the payment on your phone" : "Waiting for the payment to be confirmed"}
-          >
-            {payment.instructions ?? "If you've paid, confirmation usually arrives within a minute or two."}
-          </Alert>
+          {payment.mobilePromptKind === "innbucks_code" ? (
+            <InnbucksAuthorizationPanel
+              instructions={payment.instructions}
+              authorizationCode={payment.innbucksAuthorizationCode}
+              authorizationExpires={payment.innbucksAuthorizationExpires}
+              deepLinkUrl={payment.innbucksDeepLinkUrl}
+            />
+          ) : (
+            <Alert
+              tone="info"
+              icon={payment.instructions ? <Smartphone aria-hidden="true" /> : <Clock aria-hidden="true" />}
+              title={payment.instructions ? "Approve the payment on your phone" : "Waiting for the payment to be confirmed"}
+            >
+              {payment.instructions ?? "If you've paid, confirmation usually arrives within a minute or two."}
+            </Alert>
+          )}
           <PaymentStatusWatcher paymentId={payment.id} check={checkPaymentStatusAction} />
         </div>
       )}

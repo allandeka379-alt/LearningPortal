@@ -25,6 +25,10 @@ export async function startChildCheckoutAction(_state: CheckoutFormState, formDa
           kind: "mobile" as const,
           instructions: result.instructions,
           paymentId: result.paymentId,
+          mobilePromptKind: result.mobilePromptKind,
+          innbucksAuthorizationCode: result.innbucksAuthorizationCode,
+          innbucksAuthorizationExpires: result.innbucksAuthorizationExpires,
+          innbucksDeepLinkUrl: result.innbucksDeepLinkUrl,
           resultHref: `${PARENT_PAYMENT_RESULT_PATH}?paymentId=${encodeURIComponent(result.paymentId)}`,
         };
   });

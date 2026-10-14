@@ -79,7 +79,19 @@ describe("formatting", () => {
 describe("CheckoutForm", () => {
   it("disables methods that can't take the price's currency and asks for a number for mobile money", async () => {
     const { action, calls } = recording<CheckoutFormState>([
-      { ok: true, data: { kind: "mobile", instructions: "Dial *151# to approve.", paymentId: "pay-1", resultHref: "/parent/billing/result?paymentId=pay-1" } },
+      {
+        ok: true,
+        data: {
+          kind: "mobile",
+          instructions: "Dial *151# to approve.",
+          paymentId: "pay-1",
+          resultHref: "/parent/billing/result?paymentId=pay-1",
+          mobilePromptKind: "phone_prompt",
+          innbucksAuthorizationCode: null,
+          innbucksAuthorizationExpires: null,
+          innbucksDeepLinkUrl: null,
+        },
+      },
     ]);
     render(<CheckoutForm studentUserId="kid-1" childName="Tariro" plans={PLANS} methods={METHODS} action={action as CheckoutFormAction} idempotencyKey="0f8fad5b-d9cb-469f-a165-70867728950e" />);
 
@@ -109,6 +121,37 @@ describe("CheckoutForm", () => {
     expect(await screen.findByText("Approve the payment on your phone")).toBeTruthy();
     expect(screen.getByText("Dial *151# to approve.")).toBeTruthy();
     expect(screen.getByRole("link", { name: "Check payment status" }).getAttribute("href")).toBe("/parent/billing/result?paymentId=pay-1");
+  });
+
+  it("shows the InnBucks authorization code flow for parent checkouts", async () => {
+    const methods: CheckoutMethodOption[] = [
+      { id: "paynow_innbucks", label: "InnBucks", description: "Get an InnBucks authorization code.", needsPhone: true, currencies: ["USD"] },
+    ];
+    const { action } = recording<CheckoutFormState>([
+      {
+        ok: true,
+        data: {
+          kind: "mobile",
+          instructions: "Paynow generated an InnBucks authorization code.",
+          paymentId: "pay-1",
+          resultHref: "/parent/billing/result?paymentId=pay-1",
+          mobilePromptKind: "innbucks_code",
+          innbucksAuthorizationCode: "111161527",
+          innbucksAuthorizationExpires: "09:50",
+          innbucksDeepLinkUrl: "com.innbucks.customer://purchase?paymentToken=111161527",
+        },
+      },
+    ]);
+    render(<CheckoutForm studentUserId="kid-1" childName="Tariro" plans={PLANS} methods={methods} action={action as CheckoutFormAction} idempotencyKey="0f8fad5b-d9cb-469f-a165-70867728950e" />);
+    fireEvent.click(screen.getByRole("radio", { name: /InnBucks/ }));
+    fireEvent.change(screen.getByLabelText(/InnBucks mobile number/), { target: { value: "0771234567" } });
+    await act(async () => {
+      fireEvent.click(screen.getByRole("button", { name: /^Pay/ }));
+    });
+    expect(await screen.findByText("Authorization code")).toBeTruthy();
+    expect(screen.getByText("111161527")).toBeTruthy();
+    expect(screen.getByText(/Expires at 09:50/)).toBeTruthy();
+    expect(screen.getByRole("link", { name: /Open InnBucks app/ }).getAttribute("href")).toBe("com.innbucks.customer://purchase?paymentToken=111161527");
   });
 
   it("opens a browser checkout with a GET navigation, never an unsafe URL", async () => {

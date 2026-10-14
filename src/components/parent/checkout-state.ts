@@ -3,7 +3,16 @@ import type { ActionResult } from "@/server/lib/errors";
 /** What the "Subscribe for this child" action returns to the checkout form. */
 export type CheckoutOutcome =
   | { kind: "redirect"; url: string; paymentId: string }
-  | { kind: "mobile"; instructions: string; paymentId: string; resultHref: string };
+  | {
+      kind: "mobile";
+      instructions: string;
+      paymentId: string;
+      resultHref: string;
+      mobilePromptKind: "phone_prompt" | "innbucks_code";
+      innbucksAuthorizationCode: string | null;
+      innbucksAuthorizationExpires: string | null;
+      innbucksDeepLinkUrl: string | null;
+    };
 
 export type CheckoutFormState = ActionResult<CheckoutOutcome> | null;
 export type CheckoutFormAction = (state: CheckoutFormState, formData: FormData) => Promise<CheckoutFormState>;

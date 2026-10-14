@@ -13,8 +13,8 @@ const PACK_FEATURES: readonly { title: string; icon: ReactNode }[] = [
 ];
 
 const TRUST_LOGOS = [
-  { src: "/images/brands/zimsec.png", alt: "ZIMSEC", width: 1910, height: 1909, className: "max-h-12" },
-  { src: "/images/brands/cambridge.png", alt: "Cambridge", width: 452, height: 128, className: "max-h-9" },
+  { src: "/images/brands/zimsec-wordmark.png", alt: "ZIMSEC", width: 1946, height: 546, className: "max-h-16", chipClassName: "min-w-64 h-20" },
+  { src: "/images/brands/cambridge.png", alt: "Cambridge", width: 452, height: 128, className: "max-h-9", chipClassName: "min-w-32 h-16" },
 ] as const;
 
 export function ExamRescuePack() {
@@ -40,7 +40,7 @@ export function ExamRescuePack() {
           <p className="text-sm font-semibold text-text">Built for Zimbabwean exam paths</p>
           <div className="mt-4 flex flex-wrap items-center gap-3">
             {TRUST_LOGOS.map((logo) => (
-              <span key={logo.src} className="inline-flex h-16 min-w-32 items-center justify-center rounded-md border border-border bg-white px-3 py-2 shadow-xs">
+              <span key={logo.src} className={`inline-flex max-w-full items-center justify-center rounded-md border border-border bg-white px-4 py-2 shadow-xs ${logo.chipClassName}`}>
                 {/* eslint-disable-next-line @next/next/no-img-element -- fixed public board logos in small trust chips. */}
                 <img src={logo.src} width={logo.width} height={logo.height} alt={logo.alt} loading="lazy" decoding="async" className={`w-auto object-contain ${logo.className}`} />
               </span>

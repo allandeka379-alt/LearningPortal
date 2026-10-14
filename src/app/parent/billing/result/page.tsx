@@ -1,5 +1,6 @@
 import { CircleCheck, Clock, Smartphone } from "lucide-react";
 import type { Metadata } from "next";
+import { InnbucksAuthorizationPanel } from "@/components/billing/InnbucksAuthorizationPanel";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { formatMoney, PAYMENT_STATUS_LABELS, PAYMENT_STATUS_TONES } from "@/components/parent/format";
@@ -45,9 +46,18 @@ export default async function ParentPaymentResultPage({ searchParams }: { search
         </Alert>
       )}
       {payment.status === "PENDING" && (
-        <Alert tone="info" icon={payment.instructions ? <Smartphone aria-hidden="true" /> : <Clock aria-hidden="true" />} title="Waiting for the payment to be confirmed">
-          {payment.instructions ?? "If you've paid, confirmation usually arrives within a minute or two."}
-        </Alert>
+        payment.mobilePromptKind === "innbucks_code" ? (
+          <InnbucksAuthorizationPanel
+            instructions={payment.instructions}
+            authorizationCode={payment.innbucksAuthorizationCode}
+            authorizationExpires={payment.innbucksAuthorizationExpires}
+            deepLinkUrl={payment.innbucksDeepLinkUrl}
+          />
+        ) : (
+          <Alert tone="info" icon={payment.instructions ? <Smartphone aria-hidden="true" /> : <Clock aria-hidden="true" />} title="Waiting for the payment to be confirmed">
+            {payment.instructions ?? "If you've paid, confirmation usually arrives within a minute or two."}
+          </Alert>
+        )
       )}
       {(payment.status === "FAILED" || payment.status === "CANCELLED") && (
         <Alert tone="neutral" title="This payment didn't go through">

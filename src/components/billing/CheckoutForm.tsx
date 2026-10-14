@@ -89,7 +89,7 @@ function PaymentMethodLabel({ method }: { method: CheckoutMethodView }) {
 
 /**
  * Student checkout (§31, §32): 1. choose a price (admin-set; USD for now), 2. choose how to pay (EcoCash / OneMoney /
- * Innbucks via Paynow with the wallet number, a card on the Paynow page, a test method in development), 3. pay. One-off
+ * InnBucks via Paynow with the wallet number, a card on the Paynow page, a test method in development), 3. pay. One-off
  * "Full access" reads "US$1.00 · pay once, keep it" (owner decision 2026-10-07).
  *
  * - Only ids are sent; the server takes the amount from the price (never from the client).
@@ -143,6 +143,7 @@ export function CheckoutForm({
   const selectedPrice = allPrices.find((price) => price.planPriceId === priceId);
   const usable = (method: CheckoutMethodView) => (selectedPrice ? method.currencies.includes(selectedPrice.currency) : true);
   const selectedMethod = methods.find((method) => method.id === methodId && usable(method));
+  const selectedMethodIsInnbucks = selectedMethod?.id === "paynow_innbucks";
 
   if (showPending && state?.ok && state.data.kind === "mobile") {
     const outcome = state.data;
@@ -151,6 +152,10 @@ export function CheckoutForm({
         key={outcome.paymentId}
         paymentId={outcome.paymentId}
         instructions={outcome.instructions}
+        mobilePromptKind={outcome.mobilePromptKind}
+        innbucksAuthorizationCode={outcome.innbucksAuthorizationCode}
+        innbucksAuthorizationExpires={outcome.innbucksAuthorizationExpires}
+        innbucksDeepLinkUrl={outcome.innbucksDeepLinkUrl}
         methodLabel={outcome.methodLabel}
         maskedMsisdn={outcome.maskedMsisdn}
         resultHref={outcome.resultHref}
@@ -259,7 +264,7 @@ export function CheckoutForm({
       </fieldset>
 
       {selectedMethod?.needsPhone && (
-        <Field label="Mobile money number" hint={`${PHONE_FORMAT_HINT} We only keep it masked.`} error={phoneErrors} required>
+        <Field label={selectedMethodIsInnbucks ? "InnBucks mobile number" : "Mobile money number"} hint={`${PHONE_FORMAT_HINT} We only keep it masked.`} error={phoneErrors} required>
           <Input
             name="phone"
             type="tel"
@@ -290,9 +295,11 @@ export function CheckoutForm({
           <FormFeedback state={formLevel} />
         </div>
         <p className="text-xs text-muted">
-          {selectedMethod?.needsPhone
-            ? "You'll get a prompt on your phone to approve the payment with your PIN."
-            : "You'll pay on the provider's secure page, then come back here."}{" "}
+          {selectedMethodIsInnbucks
+            ? "Paynow will generate an InnBucks authorization code. Authorize it in the InnBucks app or by dialing *569#, then check the payment status."
+            : selectedMethod?.needsPhone
+              ? "You'll get a prompt on your phone to approve the payment with your PIN."
+              : "You'll pay on the provider's secure page, then come back here."}{" "}
           Each payment adds its period of access, and nothing is ever charged without you.
         </p>
       </div>

@@ -101,7 +101,7 @@ export function paymentFailureMessage(status: PaymentStatus, failureCode: string
 const METHOD_LABELS: Readonly<Record<string, string>> = {
   ecocash: "EcoCash",
   onemoney: "OneMoney",
-  innbucks: "Innbucks",
+  innbucks: "InnBucks",
   zimswitch: "ZimSwitch",
   card: "Card",
   bank_transfer: "Bank transfer",

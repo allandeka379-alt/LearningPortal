@@ -212,7 +212,7 @@ describe("createCheckout", () => {
     expect(verifyPaynowFields(fields, KEY)).toBe(true);
   });
 
-  it("mobile express checkout: preserves Innbucks authorisation details", async () => {
+  it("mobile express checkout: preserves InnBucks authorization-code details", async () => {
     const { instance, fetchMock } = provider(async () =>
       reply(signed([["status", "Ok"], ["authorizationcode", "IBK123"], ["authorizationexpires", "2026-10-14 18:00"], ["pollurl", POLL_URL]])),
     );
@@ -223,9 +223,15 @@ describe("createCheckout", () => {
       pollUrl: POLL_URL,
     });
     if (result.kind !== "mobile_prompt") return;
-    expect(result.instructions).toContain("Open Innbucks");
-    expect(result.instructions).toContain("Innbucks authorisation code: IBK123.");
+    expect(result.instructions).toContain("Open the InnBucks app");
+    expect(result.instructions).toContain("InnBucks authorization code: IBK123.");
     expect(result.instructions).toContain("Code expires: 2026-10-14 18:00.");
+    expect(result.metadata).toMatchObject({
+      mobilePromptKind: "innbucks_code",
+      innbucksAuthorizationCode: "IBK123",
+      innbucksAuthorizationExpires: "2026-10-14 18:00",
+      innbucksDeepLinkUrl: "com.innbucks.customer://purchase?paymentToken=IBK123",
+    });
 
     expect(fetchMock.mock.calls[0]?.[0]).toBe(PAYNOW_REMOTE_URL);
     const fields = sentFields(fetchMock);

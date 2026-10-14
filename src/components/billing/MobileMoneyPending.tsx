@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { Alert } from "@/components/ui/Alert";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { Spinner } from "@/components/ui/Spinner";
+import { InnbucksAuthorizationPanel } from "./InnbucksAuthorizationPanel";
 import type { PaymentStatusCheck, PaymentStatusView } from "./checkout-state";
 
 /** How often the waiting screen reads the payment status. */
@@ -18,6 +19,10 @@ export const PROVIDER_POLL_EVERY = 4;
 export interface MobileMoneyPendingProps {
   paymentId: string;
   instructions: string;
+  mobilePromptKind?: "phone_prompt" | "innbucks_code";
+  innbucksAuthorizationCode?: string | null;
+  innbucksAuthorizationExpires?: string | null;
+  innbucksDeepLinkUrl?: string | null;
   methodLabel: string;
   maskedMsisdn: string | null;
   resultHref: string;
@@ -49,6 +54,10 @@ type Phase =
 export function MobileMoneyPending({
   paymentId,
   instructions,
+  mobilePromptKind = "phone_prompt",
+  innbucksAuthorizationCode = null,
+  innbucksAuthorizationExpires = null,
+  innbucksDeepLinkUrl = null,
   methodLabel,
   maskedMsisdn,
   resultHref,
@@ -65,6 +74,7 @@ export function MobileMoneyPending({
   const headingRef = useRef<HTMLHeadingElement>(null);
   const go = navigate ?? ((href: string) => window.location.assign(href));
   const goRef = useRef(go);
+  const isInnbucksCode = mobilePromptKind === "innbucks_code";
 
   useEffect(() => {
     goRef.current = go;
@@ -124,7 +134,9 @@ export function MobileMoneyPending({
 
   const status =
     phase.kind === "waiting"
-      ? `Waiting for you to approve the payment on your phone.`
+      ? isInnbucksCode
+        ? "Waiting for you to authorize the InnBucks payment."
+        : `Waiting for you to approve the payment on your phone.`
       : phase.kind === "success"
         ? "Payment confirmed. Opening your receipt…"
         : phase.kind === "failed"
@@ -144,7 +156,13 @@ export function MobileMoneyPending({
         </span>
         <div className="min-w-0 space-y-1">
           <h2 ref={headingRef} tabIndex={-1} className="text-lg font-semibold text-text focus-visible:outline-offset-4">
-            {phase.kind === "failed" ? "Payment not completed" : phase.kind === "success" ? "Payment received" : "Check your phone to approve"}
+            {phase.kind === "failed"
+              ? "Payment not completed"
+              : phase.kind === "success"
+                ? "Payment received"
+                : isInnbucksCode
+                  ? "Authorize in InnBucks"
+                  : "Check your phone to approve"}
           </h2>
           <p className="text-sm text-muted">
             {methodLabel}
@@ -154,17 +172,26 @@ export function MobileMoneyPending({
       </div>
 
       {(phase.kind === "waiting" || phase.kind === "timeout") && (
-        <div className="rounded-card border border-border bg-subtle p-4 text-sm leading-relaxed text-text">
-          <p>{instructions}</p>
-          <p className="mt-2 text-muted">Enter your PIN on your phone to approve. Don&rsquo;t close this page; it updates by itself.</p>
-          {sandboxHref && (
-            <p className="mt-2">
-              <Link href={sandboxHref} className="font-semibold text-primary underline-offset-2 hover:underline">
-                Open the test payment page to approve or decline
-              </Link>
-            </p>
-          )}
-        </div>
+        isInnbucksCode ? (
+          <InnbucksAuthorizationPanel
+            instructions={instructions}
+            authorizationCode={innbucksAuthorizationCode}
+            authorizationExpires={innbucksAuthorizationExpires}
+            deepLinkUrl={innbucksDeepLinkUrl}
+          />
+        ) : (
+          <div className="rounded-card border border-border bg-subtle p-4 text-sm leading-relaxed text-text">
+            <p>{instructions}</p>
+            <p className="mt-2 text-muted">Enter your PIN on your phone to approve. Don&rsquo;t close this page; it updates by itself.</p>
+            {sandboxHref && (
+              <p className="mt-2">
+                <Link href={sandboxHref} className="font-semibold text-primary underline-offset-2 hover:underline">
+                  Open the test payment page to approve or decline
+                </Link>
+              </p>
+            )}
+          </div>
+        )
       )}
 
       <p role="status" aria-live="polite" className="flex items-center gap-2 text-sm text-muted">
@@ -176,8 +203,8 @@ export function MobileMoneyPending({
         <Alert tone="neutral" title="What to do now">
           <ul className="list-disc space-y-1 pl-5">
             <li>If you approved the payment, confirmation can take a few minutes. Check the payment status page.</li>
-            <li>If no prompt arrived, check the number and that the phone is on, then try again.</li>
-            <li>Nothing is charged unless you approve it on your phone.</li>
+            <li>{isInnbucksCode ? "If the code expired, try again to generate a fresh InnBucks code." : "If no prompt arrived, check the number and that the phone is on, then try again."}</li>
+            <li>{isInnbucksCode ? "Nothing is charged unless you authorize the code in InnBucks." : "Nothing is charged unless you approve it on your phone."}</li>
           </ul>
         </Alert>
       )}
