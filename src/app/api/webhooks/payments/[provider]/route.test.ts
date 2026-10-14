@@ -5,7 +5,7 @@ import { POST } from "./route";
 // Stripe is dormant (owner decision 2026-10-07): `features.stripe` stays off, as by default.
 const testSettings = vi.hoisted(() => ({
   features: { ai: false, whatsapp: false, email: false, sms: false, stripe: false },
-  rateLimits: { webhookReceipt: { limit: 3, windowSeconds: 60 } },
+  rateLimits: { webhookReceipt: { limit: 8, windowSeconds: 60 } },
 }));
 vi.mock("@/server/lib/settings", async (importOriginal) => {
   const actual = await importOriginal<typeof import("@/server/lib/settings")>();

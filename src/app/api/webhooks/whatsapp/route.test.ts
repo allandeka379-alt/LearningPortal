@@ -12,7 +12,7 @@ import { uniquePhone } from "../../../../../tests/factories/index";
 
 const testSettings = vi.hoisted(() => ({
   flags: { ai: false, whatsapp: true, email: false, stripe: false },
-  rateLimits: { webhookReceipt: { limit: 3, windowSeconds: 60 } },
+  rateLimits: { webhookReceipt: { limit: 8, windowSeconds: 60 } },
 }));
 vi.mock("@/server/lib/settings", async (importOriginal) => {
   const actual = await importOriginal<typeof import("@/server/lib/settings")>();
