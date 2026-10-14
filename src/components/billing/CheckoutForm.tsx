@@ -1,6 +1,6 @@
 "use client";
 
-import { CreditCard, FlaskConical, Smartphone } from "lucide-react";
+import { FlaskConical } from "lucide-react";
 import { startTransition, useActionState, useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { FormFeedback } from "@/components/student/FormFeedback";
 import { Badge } from "@/components/ui/Badge";
@@ -9,6 +9,7 @@ import { Field } from "@/components/ui/Field";
 import { Input } from "@/components/ui/Input";
 import { Radio } from "@/components/ui/RadioGroup";
 import { isLifetimePrice, LIFETIME_PRICE_NOTE } from "@/lib/billing/offer";
+import { cn } from "@/lib/cn";
 import {
   fieldErrorsOf,
   isSafeNavigation,
@@ -39,15 +40,56 @@ export interface CheckoutFormProps {
   navigate?: (url: string) => void;
 }
 
-const METHOD_ICONS = {
-  mobile: <Smartphone aria-hidden="true" className="size-4" />,
-  card: <CreditCard aria-hidden="true" className="size-4" />,
-  test: <FlaskConical aria-hidden="true" className="size-4" />,
+type BrandLogo = { src: string; width: number; height: number; className?: string };
+
+const PAYMENT_METHOD_LOGOS: Partial<Record<CheckoutMethodView["id"], readonly BrandLogo[]>> = {
+  paynow_ecocash: [{ src: "/images/brands/ecocash.png", width: 1471, height: 420, className: "max-h-6" }],
+  paynow_onemoney: [{ src: "/images/brands/onemoney.png", width: 797, height: 567, className: "max-h-7" }],
+  paynow_innbucks: [{ src: "/images/brands/innbucks.png", width: 776, height: 312, className: "max-h-6" }],
+  paynow_web: [
+    { src: "/images/brands/visa.svg", width: 1000, height: 325, className: "max-h-5" },
+    { src: "/images/brands/mastercard.svg", width: 999, height: 776, className: "max-h-7" },
+    { src: "/images/brands/zimswitch.jpeg", width: 437, height: 228, className: "max-h-6" },
+  ],
+  stripe_card: [
+    { src: "/images/brands/visa.svg", width: 1000, height: 325, className: "max-h-5" },
+    { src: "/images/brands/mastercard.svg", width: 999, height: 776, className: "max-h-7" },
+  ],
 };
 
+function PaymentMethodLabel({ method }: { method: CheckoutMethodView }) {
+  if (method.test) {
+    return (
+      <span className="inline-flex items-center gap-2">
+        <FlaskConical aria-hidden="true" className="size-4" />
+        {method.label}
+      </span>
+    );
+  }
+  const logos = PAYMENT_METHOD_LOGOS[method.id];
+  if (!logos) return method.label;
+  return (
+    <span className="flex min-w-0 flex-wrap items-center gap-3">
+      <span
+        aria-hidden="true"
+        className={cn(
+          "inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md border border-border bg-white px-2.5 py-1 shadow-xs",
+          logos.length > 2 ? "min-w-44" : "min-w-28",
+        )}
+      >
+        {logos.map((logo) => (
+          // eslint-disable-next-line @next/next/no-img-element -- fixed public brand assets; next/image adds no useful optimisation for these small logos.
+          <img key={logo.src} src={logo.src} width={logo.width} height={logo.height} alt="" loading="lazy" decoding="async" className={cn("w-auto object-contain", logo.className)} />
+        ))}
+      </span>
+      <span className="min-w-0">{method.label}</span>
+    </span>
+  );
+}
+
 /**
- * Student checkout (§31, §32): 1. choose a price (admin-set; USD for now), 2. choose how to pay (EcoCash / OneMoney
- * via Paynow with the wallet number, a card on the Paynow page, a test method in development), 3. pay. One-off
+ * Student checkout (§31, §32): 1. choose a price (admin-set; USD for now), 2. choose how to pay (EcoCash / OneMoney /
+ * Innbucks via Paynow with the wallet number, a card on the Paynow page, a test method in development), 3. pay. One-off
  * "Full access" reads "US$1.00 · pay once, keep it" (owner decision 2026-10-07).
  *
  * - Only ids are sent; the server takes the amount from the price (never from the client).
@@ -202,12 +244,8 @@ export function CheckoutForm({
                 checked={methodId === method.id && !disabled}
                 disabled={disabled}
                 onChange={() => setMethodId(method.id)}
-                label={
-                  <span className="inline-flex items-center gap-2">
-                    {METHOD_ICONS[method.test ? "test" : method.needsPhone ? "mobile" : "card"]}
-                    {method.label}
-                  </span>
-                }
+                className={cn(method.id === "paynow_innbucks" && "sm:row-start-2 sm:col-start-2", method.id === "paynow_web" && "sm:row-start-2 sm:col-start-1")}
+                label={<PaymentMethodLabel method={method} />}
                 description={disabled && selectedPrice ? `Can't take ${selectedPrice.currency} payments.` : method.description}
               />
             );

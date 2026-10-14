@@ -5,13 +5,16 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { formatMoney, PAYMENT_STATUS_LABELS, PAYMENT_STATUS_TONES } from "@/components/parent/format";
 import { orNotFound } from "@/components/parent/not-found";
 import { RefreshPaymentForm } from "@/components/parent/RefreshPaymentForm";
+import { WhatsAppGroupShare } from "@/components/share/WhatsAppGroupShare";
 import { formatInstantDate } from "@/components/student/format";
 import { Alert } from "@/components/ui/Alert";
 import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card, CardBody } from "@/components/ui/Card";
+import { APP_NAME } from "@/lib/config";
 import { requireRole } from "@/server/auth/guards";
 import { getParentPayment } from "@/server/family";
+import { absoluteUrl } from "@/server/lib/env";
 import { refreshPaymentAction } from "../actions";
 
 export const metadata: Metadata = { title: "Payment status" };
@@ -26,6 +29,7 @@ export default async function ParentPaymentResultPage({ searchParams }: { search
   const actor = await requireRole("PARENT", { next: `/parent/billing/result?paymentId=${encodeURIComponent(paymentId)}` });
   const payment = await orNotFound(getParentPayment(actor, paymentId));
   const childHref = payment.beneficiaryUserId ? `/parent/children/${payment.beneficiaryUserId}` : "/parent";
+  const joinUrl = absoluteUrl("/register");
 
   return (
     <Container size="reading" className="space-y-6 pb-10">
@@ -94,6 +98,12 @@ export default async function ParentPaymentResultPage({ searchParams }: { search
 
       <div className="flex flex-wrap items-center gap-3">
         {payment.status === "PENDING" && <RefreshPaymentForm paymentId={payment.id} action={refreshPaymentAction} />}
+        {payment.status === "SUCCESSFUL" && (
+          <WhatsAppGroupShare
+            url={joinUrl}
+            message={`I just unlocked ${payment.childName}'s study access on ${APP_NAME}. Join our class/group here: ${joinUrl}`}
+          />
+        )}
         {(payment.status === "FAILED" || payment.status === "CANCELLED") && payment.beneficiaryUserId && (
           <ButtonLink href={`/parent/children/${payment.beneficiaryUserId}/subscribe`}>Try again</ButtonLink>
         )}

@@ -6,12 +6,15 @@ import { formatMoney, PAYMENT_STATUS_LABELS, PAYMENT_STATUS_TONES } from "@/comp
 import { PaymentStatusWatcher } from "@/components/billing/PaymentStatusWatcher";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
+import { WhatsAppGroupShare } from "@/components/share/WhatsAppGroupShare";
 import { formatInstantDate } from "@/components/student/format";
 import { Alert } from "@/components/ui/Alert";
 import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
+import { APP_NAME } from "@/lib/config";
 import { requireOnboardedStudent } from "@/server/auth/guards";
+import { absoluteUrl } from "@/server/lib/env";
 import { isAppError } from "@/server/lib/errors";
 import { checkPaymentStatusAction } from "../actions";
 import { getStudentPaymentResult } from "../_lib/service";
@@ -47,6 +50,7 @@ export default async function PaymentResultPage({ searchParams }: { searchParams
   const canRetry = payment.paidByYou && (payment.status === "FAILED" || payment.status === "CANCELLED" || leftProviderPage);
   const date = (value: Date) => formatInstantDate(value, actor.timeZone);
   const retryHref = payment.studyPack ? `/app/billing/checkout?pack=${payment.studyPack.id}` : "/app/billing/checkout";
+  const joinUrl = absoluteUrl("/register");
 
   return (
     <Container size="reading" className="space-y-6 pb-10">
@@ -171,6 +175,12 @@ export default async function PaymentResultPage({ searchParams }: { searchParams
 
       <div className="flex flex-wrap items-center gap-3">
         {payment.status === "SUCCESSFUL" && <ButtonLink href="/app">Start studying</ButtonLink>}
+        {payment.status === "SUCCESSFUL" && (
+          <WhatsAppGroupShare
+            url={joinUrl}
+            message={`I just unlocked ${payment.itemName ?? "full access"} on ${APP_NAME}. Join our class/group here: ${joinUrl}`}
+          />
+        )}
         {canRetry && <ButtonLink href={retryHref}>Try again</ButtonLink>}
         <ButtonLink href="/app/billing" variant={payment.status === "SUCCESSFUL" ? "outline" : "ghost"}>
           Plan & billing

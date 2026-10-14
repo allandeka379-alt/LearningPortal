@@ -5,15 +5,18 @@ import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { AnswerRunner } from "@/components/questions/AnswerRunner";
+import { WhatsAppGroupShare } from "@/components/share/WhatsAppGroupShare";
 import { Alert } from "@/components/ui/Alert";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card, CardBody } from "@/components/ui/Card";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { cn } from "@/lib/cn";
+import { APP_NAME } from "@/lib/config";
 import { formatCount } from "@/lib/format";
 import type { Actor } from "@/server/auth/actor";
 import { requireOnboardedStudent } from "@/server/auth/guards";
 import { isFeatureEnabled } from "@/server/features";
+import { absoluteUrl } from "@/server/lib/env";
 import { UPGRADE_PATH } from "@/server/billing/entitlements";
 import { getDailyOverview, getSessionState, type DailySubjectItem } from "@/server/practice";
 import { reportProblemAction } from "../_actions/report-problem";
@@ -153,6 +156,7 @@ async function DailyBody({ actor, item }: { actor: Actor; item: DailySubjectItem
     );
   }
   const answered = state.current === null;
+  const joinUrl = absoluteUrl("/register");
 
   return (
     <div className="space-y-4">
@@ -176,7 +180,15 @@ async function DailyBody({ actor, item }: { actor: Actor; item: DailySubjectItem
         completion={{ href: practiceHref, label: `Practise more ${item.subject.name}` }}
         upgradeHref={UPGRADE_PATH}
       />
-      {answered && <p className="text-sm text-muted">Come back tomorrow for a new question.</p>}
+      {answered && (
+        <div className="flex flex-wrap items-center gap-3">
+          <p className="text-sm text-muted">Come back tomorrow for a new question.</p>
+          <WhatsAppGroupShare
+            url={joinUrl}
+            message={`I just did today's ${item.subject.name} daily question on ${APP_NAME}. Join our class/group here: ${joinUrl}`}
+          />
+        </div>
+      )}
     </div>
   );
 }

@@ -24,8 +24,8 @@ import { requireLinkedChild } from "./queries";
  * the database and talks to the provider. This module only:
  * - lists what can be bought (public INDIVIDUAL plans with a current, non-zero price in an offered currency for the
  *   CHILD's country; a one-off plan the child already owns for good is left out) and the payment methods that are
- *   enabled (EcoCash / OneMoney through Paynow, other Paynow options, dev sandbox; one-off "Full access" is paid
- *   through Paynow only, owner decision 2026-10-07);
+ *   enabled (EcoCash / OneMoney / Innbucks through Paynow, other Paynow options, dev sandbox; one-off "Full access"
+ *   is paid through Paynow only, owner decision 2026-10-07);
  * - maps the parent's method choice to `startCheckout` arguments;
  * - reads the parent's own payments (payer = the parent) and their status.
  *
@@ -37,6 +37,7 @@ export const PARENT_PAYMENT_RESULT_PATH = "/parent/billing/result";
 export const CHECKOUT_METHOD_IDS = [
   "paynow_ecocash",
   "paynow_onemoney",
+  "paynow_innbucks",
   "paynow_web",
   "stripe_card",
   "sandbox_web",
@@ -48,7 +49,7 @@ interface MethodDefinition {
   id: CheckoutMethodId;
   provider: PaymentProviderId;
   /** Paynow mobile express checkout method (also simulated by the sandbox). */
-  paynowMethod: "ecocash" | "onemoney" | null;
+  paynowMethod: "ecocash" | "onemoney" | "innbucks" | null;
   /** Method key used for `provider.supports()`. */
   method: PaymentMethod | undefined;
   label: string;
@@ -73,6 +74,15 @@ const METHOD_DEFINITIONS: readonly MethodDefinition[] = [
     method: "onemoney",
     label: "OneMoney",
     description: "You approve the payment on your phone.",
+    needsPhone: true,
+  },
+  {
+    id: "paynow_innbucks",
+    provider: "paynow",
+    paynowMethod: "innbucks",
+    method: "innbucks",
+    label: "Innbucks",
+    description: "You approve the payment in Innbucks with the checkout code.",
     needsPhone: true,
   },
   {

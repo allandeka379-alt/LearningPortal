@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
 import { BarList, FunnelBars } from "./charts/BarList";
+import { CoverageNotice } from "./analytics/CoverageNotice";
 import { CursorPagination } from "./CursorPagination";
 import { DateRangeFilter, presetRange, rangeFromParams } from "./DateRangeFilter";
 import { ApprovalInfo, KeyValueList } from "./DetailParts";
@@ -104,6 +105,40 @@ describe("charts (server markup)", () => {
     );
     expect(markup).toContain("25% of previous step");
     expect(markup).toContain("No data yet");
+  });
+});
+
+describe("CoverageNotice", () => {
+  it("does not warn about missing days before launch", () => {
+    const markup = html(
+      <CoverageNotice
+        missingDates={["2026-10-07", "2026-10-08", "2026-10-09"]}
+        today="2026-10-14"
+        daysInRange={7}
+        daysWithData={4}
+        lastComputedAt={new Date("2026-10-14T01:00:00Z")}
+        backfillAction={noop}
+        canBackfill
+      />,
+    );
+    expect(markup).not.toContain("no computed figures yet");
+    expect(markup).toContain("Last updated");
+  });
+
+  it("still warns about missing production days", () => {
+    const markup = html(
+      <CoverageNotice
+        missingDates={["2026-10-13"]}
+        today="2026-10-14"
+        daysInRange={2}
+        daysWithData={1}
+        lastComputedAt={new Date("2026-10-14T01:00:00Z")}
+        backfillAction={noop}
+        canBackfill
+      />,
+    );
+    expect(markup).toContain("1 day has no computed figures yet");
+    expect(markup).toContain("missing: 13 Oct, 2026");
   });
 });
 

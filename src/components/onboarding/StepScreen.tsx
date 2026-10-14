@@ -6,6 +6,9 @@ import { Button, ButtonLink } from "@/components/ui/Button";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { Field } from "@/components/ui/Field";
 import { Input } from "@/components/ui/Input";
+import { WhatsAppGroupShare } from "@/components/share/WhatsAppGroupShare";
+import { APP_NAME } from "@/lib/config";
+import { absoluteUrl } from "@/server/lib/env";
 import { DIAGNOSTIC_MINUTES_PER_SUBJECT } from "@/server/onboarding/report";
 import type { ChoiceOption, SchoolPickerView, StepView } from "@/server/onboarding/service";
 import { previousStep, stepHref, withOnboardingNext, type WizardStep } from "@/server/onboarding/steps";
@@ -113,6 +116,22 @@ function schoolFields(picker: SchoolPickerView, errorId: string): ReactNode {
       options={[...options, { value: "", label: "My school isn't listed, or I'd rather not say" }]}
       defaultValue={picker.selected?.id ?? null}
     />
+  );
+}
+
+function ExamBoardTrustLogos() {
+  return (
+    <div className="flex flex-wrap items-center gap-3 rounded-card border border-border bg-surface p-3">
+      <span className="text-sm font-medium text-muted">Exam-board paths included</span>
+      <span className="inline-flex h-14 min-w-28 items-center justify-center rounded-md border border-border bg-white px-3 py-2 shadow-xs">
+        {/* eslint-disable-next-line @next/next/no-img-element -- fixed public board logo in a small trust chip. */}
+        <img src="/images/brands/zimsec.png" width={1910} height={1909} alt="ZIMSEC" loading="lazy" decoding="async" className="max-h-10 w-auto object-contain" />
+      </span>
+      <span className="inline-flex h-14 min-w-36 items-center justify-center rounded-md border border-border bg-white px-3 py-2 shadow-xs">
+        {/* eslint-disable-next-line @next/next/no-img-element -- fixed public board logo in a small trust chip. */}
+        <img src="/images/brands/cambridge.png" width={452} height={128} alt="Cambridge" loading="lazy" decoding="async" className="max-h-8 w-auto object-contain" />
+      </span>
+    </div>
   );
 }
 
@@ -279,6 +298,7 @@ export function StepScreen({ view, saveAction, finishAction, next = null }: Step
   const hrefOf = (target: WizardStep) => withOnboardingNext(stepHref(target), next);
   const { title, description } = heading(view);
   const errorId = `onboarding-${step}-error`;
+  const joinUrl = absoluteUrl("/register");
 
   return (
     <div className="space-y-6">
@@ -287,6 +307,7 @@ export function StepScreen({ view, saveAction, finishAction, next = null }: Step
         <h1 className="text-2xl font-bold tracking-tight text-balance text-text sm:text-3xl">{title}</h1>
         {description && <p className="text-base text-muted">{description}</p>}
       </header>
+      {view.step === "board" && <ExamBoardTrustLogos />}
 
       {view.step === "finish" ? (
         <div className="space-y-6">
@@ -333,6 +354,11 @@ export function StepScreen({ view, saveAction, finishAction, next = null }: Step
                 unlockNext={!view.fullAccess}
                 subjectsHref={hrefOf("subjects")}
                 next={next}
+              />
+              <WhatsAppGroupShare
+                url={joinUrl}
+                message={`I just set up my ${APP_NAME} study account. Join our class/group on ${APP_NAME}: ${joinUrl}`}
+                className="w-full sm:w-auto"
               />
             </CardBody>
           </Card>

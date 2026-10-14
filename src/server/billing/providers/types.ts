@@ -30,11 +30,11 @@ export type PaymentProviderId = PaymentProviderName;
  * Payment method keys within a provider (`Payment.method`, VarChar 32). Free-form in the database so a provider can add
  * methods without a migration; these are the ones the platform knows how to present.
  */
-export const KNOWN_PAYMENT_METHODS = ["ecocash", "onemoney", "zimswitch", "card", "bank_transfer", "sandbox"] as const;
+export const KNOWN_PAYMENT_METHODS = ["ecocash", "onemoney", "innbucks", "zimswitch", "card", "bank_transfer", "sandbox"] as const;
 export type PaymentMethod = (typeof KNOWN_PAYMENT_METHODS)[number];
 
 /** Mobile-money methods complete with a USSD/push prompt on the payer's phone rather than a browser redirect. */
-export const MOBILE_MONEY_METHODS: ReadonlySet<PaymentMethod> = new Set<PaymentMethod>(["ecocash", "onemoney"]);
+export const MOBILE_MONEY_METHODS: ReadonlySet<PaymentMethod> = new Set<PaymentMethod>(["ecocash", "onemoney", "innbucks"]);
 
 const CURRENCY_PATTERN = /^[A-Z]{3}$/;
 

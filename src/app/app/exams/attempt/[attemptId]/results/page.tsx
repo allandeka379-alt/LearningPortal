@@ -10,19 +10,22 @@ import { ShareResultSlot } from "@/components/exam/results/ShareResultSlot";
 import { TopicAreas } from "@/components/exam/results/TopicAreas";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { formatInstantDate } from "@/components/student/format";
 import { ReviewList } from "@/components/questions/ReviewList";
 import { SelfMarkingNotice } from "@/components/questions/SelfMarkingNotice";
+import { WhatsAppGroupShare } from "@/components/share/WhatsAppGroupShare";
+import { formatInstantDate } from "@/components/student/format";
 import { Alert } from "@/components/ui/Alert";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { ProgressBar } from "@/components/ui/ProgressBar";
+import { APP_NAME } from "@/lib/config";
 import { formatCount } from "@/lib/format";
 import { recommendationReason } from "@/lib/recommendations";
 import { requireOnboardedStudent } from "@/server/auth/guards";
 import { isFeatureEnabled } from "@/server/features";
 import { getExamResults } from "@/server/exams/service";
+import { absoluteUrl } from "@/server/lib/env";
 import { isAppError } from "@/server/lib/errors";
 import { reportProblemAction } from "../../../../_actions/report-problem";
 import { selfAssessExamAnswerAction } from "../../../actions";
@@ -82,6 +85,8 @@ export default async function ExamResultsPage({ params }: { params: Params }) {
   const report = { attemptId: results.attemptId, action: reportProblemAction };
   const showSections = results.sections.length > 1;
   const sectionTitle = new Map(results.sections.map((s) => [s.sectionNumber, s.title]));
+  const joinUrl = absoluteUrl("/register");
+  const finalScore = results.score !== null && results.score.percentage !== null && !results.score.isProvisional;
 
   return (
     <Container size="reading" className="space-y-8 pb-12">
@@ -113,7 +118,16 @@ export default async function ExamResultsPage({ params }: { params: Params }) {
           <ScoreSummary
             results={results}
             actions={
-              <ShareResultSlot attemptId={results.attemptId} mode={results.mode} isFinal={results.score !== null && results.score.percentage !== null && !results.score.isProvisional} />
+              <>
+                <ShareResultSlot attemptId={results.attemptId} mode={results.mode} isFinal={finalScore} />
+                {results.mode === "MOCK_EXAM" && finalScore && (
+                  <WhatsAppGroupShare
+                    url={joinUrl}
+                    message={`I just finished a ${results.subject.name} mock exam on ${APP_NAME}. Join our class/group here: ${joinUrl}`}
+                    size="sm"
+                  />
+                )}
+              </>
             }
           />
           <SelfMarkingNotice count={results.selfAssessableCount} />

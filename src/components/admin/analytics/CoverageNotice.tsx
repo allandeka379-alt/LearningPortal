@@ -3,9 +3,11 @@ import type { AdminFormAction } from "../form-state";
 import { ConfirmAction } from "../ConfirmAction";
 import { formatDateTime, formatLocalDate } from "../format";
 
+const ANALYTICS_LIVE_FROM = "2026-10-13";
+
 /**
  * Honest coverage notice for rollup-based analytics (§35, §50): says which days have no computed figures yet (they
- * are gaps, never zeros) and offers to compute the missing past days (enqueues `analytics.backfillMetrics`).
+ * are gaps, never zeros) after launch and offers to compute the missing past days (enqueues `analytics.backfillMetrics`).
  * Today is never rolled up until it ends, so it is not counted as missing.
  */
 export function CoverageNotice({
@@ -16,6 +18,7 @@ export function CoverageNotice({
   lastComputedAt,
   backfillAction,
   canBackfill,
+  liveFrom = ANALYTICS_LIVE_FROM,
 }: {
   missingDates: readonly string[];
   today: string;
@@ -24,12 +27,14 @@ export function CoverageNotice({
   lastComputedAt: Date | null;
   backfillAction: AdminFormAction<unknown>;
   canBackfill: boolean;
+  /** First production day with meaningful analytics. Earlier gaps are pre-launch, not missing business data. */
+  liveFrom?: string;
 }) {
-  const missingPast = missingDates.filter((date) => date < today);
+  const missingPast = missingDates.filter((date) => date >= liveFrom && date < today);
   if (missingPast.length === 0) {
     return lastComputedAt ? (
       <p className="text-sm text-muted">
-        Figures are computed nightly from activity records. Last computed {formatDateTime(lastComputedAt)}.
+        Figures are refreshed nightly from activity records. Last updated {formatDateTime(lastComputedAt)}.
       </p>
     ) : null;
   }

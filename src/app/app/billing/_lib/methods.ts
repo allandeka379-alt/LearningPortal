@@ -7,7 +7,7 @@ import { getEnv, type ServerEnv } from "@/server/lib/env";
 
 /**
  * Payment methods a student can choose (§32, ARCHITECTURE §7.1), mapped onto the provider registry: EcoCash and
- * OneMoney through Paynow mobile express checkout, other Paynow options (Visa / Mastercard / ZimSwitch) on the Paynow
+ * OneMoney and Innbucks through Paynow mobile express checkout, other Paynow options (Visa / Mastercard / ZimSwitch) on the Paynow
  * page, and two sandbox methods that exist only outside production. A method is offered only when its provider is
  * enabled and can take at least one of the offered currencies. The dormant Stripe card method is offered only while
  * `features.stripe` is on (pass `options.features`; without flags it never is).
@@ -20,7 +20,7 @@ export interface MethodDefinition {
   id: CheckoutMethodId;
   provider: PaymentProviderId;
   /** Paynow mobile express checkout method (also simulated by the sandbox). */
-  paynowMethod: "ecocash" | "onemoney" | null;
+  paynowMethod: "ecocash" | "onemoney" | "innbucks" | null;
   /** Method key for `provider.supports()`. */
   method: PaymentMethod | undefined;
   label: string;
@@ -47,6 +47,16 @@ export const METHOD_DEFINITIONS: readonly MethodDefinition[] = [
     method: "onemoney",
     label: "OneMoney",
     description: "Approve the payment on your phone with your OneMoney PIN.",
+    needsPhone: true,
+    test: false,
+  },
+  {
+    id: "paynow_innbucks",
+    provider: "paynow",
+    paynowMethod: "innbucks",
+    method: "innbucks",
+    label: "Innbucks",
+    description: "Approve the payment in Innbucks with the checkout code.",
     needsPhone: true,
     test: false,
   },

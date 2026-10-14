@@ -20,7 +20,8 @@ import {
 } from "./types";
 
 /**
- * Paynow adapter (Zimbabwe: EcoCash, OneMoney, ZimSwitch, Visa/Mastercard; ARCHITECTURE §7.1). Plain `fetch`, no SDK.
+ * Paynow adapter (Zimbabwe: EcoCash, OneMoney, Innbucks, ZimSwitch, Visa/Mastercard; ARCHITECTURE §7.1).
+ * Plain `fetch`, no SDK.
  *
  * VERIFY AGAINST CURRENT PAYNOW DEVELOPER DOCS BEFORE GO-LIVE: every protocol fact below (endpoints, field names and
  * order, hash rule, status strings, test-mode behaviour) was implemented from the integration notes we were given and
@@ -32,9 +33,10 @@ import {
  *   (our Payment id), amount ("5.00", 2 dp), additionalinfo, returnurl, resulturl, authemail (optional), status
  *   "Message", hash. Response (urlencoded): `status=Ok&browserurl=…&pollurl=…&hash=…` (hash verified like any other
  *   message) or `status=Error&error=…` (not hashed). The payer chooses the method on Paynow's page.
- * - Mobile express checkout (EcoCash / OneMoney): POST `remotetransaction` with the same fields plus phone (local
- *   format "07XXXXXXXX") and method ("ecocash" | "onemoney") before status. Response: pollurl + instructions; no
- *   browser redirect, the payer approves a USSD prompt on the phone. Paynow requires `authemail` here.
+ * - Mobile express checkout (EcoCash / OneMoney / Innbucks): POST `remotetransaction` with the same fields plus phone
+ *   (local format "07XXXXXXXX") and method ("ecocash" | "onemoney" | "innbucks") before status. Response: pollurl +
+ *   instructions; Innbucks may also return an authorization code, expiry and deep link. There is no browser redirect:
+ *   the payer approves the prompt/code in the wallet. Paynow requires `authemail` here.
  * - HASH = upper-case hex SHA-512 of the concatenation of every field VALUE in the order sent (excluding `hash`), then
  *   the integration key. Values are the decoded (not URL-encoded) strings.
  * - Status updates are POSTed by Paynow to resulturl (reference, paynowreference, amount, status, pollurl, hash): the
@@ -63,14 +65,15 @@ export const PAYNOW_REMOTE_URL = "https://www.paynow.co.zw/interface/remotetrans
 export const PAYNOW_EVENT_TYPE = "paynow.status_update";
 export const PAYNOW_POLL_EVENT_TYPE = "paynow.poll";
 /** Methods Paynow mobile express checkout accepts. */
-export const PAYNOW_MOBILE_METHODS = ["ecocash", "onemoney"] as const;
+export const PAYNOW_MOBILE_METHODS = ["ecocash", "onemoney", "innbucks"] as const;
 export type PaynowMobileMethod = (typeof PAYNOW_MOBILE_METHODS)[number];
 
 const PAYNOW_HOSTS: ReadonlySet<string> = new Set(["www.paynow.co.zw", "paynow.co.zw"]);
-const SUPPORTED_METHODS: ReadonlySet<string> = new Set(["ecocash", "onemoney", "zimswitch", "card"]);
+const SUPPORTED_METHODS: ReadonlySet<string> = new Set(["ecocash", "onemoney", "innbucks", "zimswitch", "card"]);
 const DEFAULT_TIMEOUT_MS = 20_000;
 const MAX_MESSAGE_BYTES = 16_384;
 const DEFAULT_MOBILE_INSTRUCTIONS = "Check your phone and approve the payment prompt to finish.";
+const DEFAULT_INNBUCKS_INSTRUCTIONS = "Open Innbucks and approve the payment with the checkout code to finish.";
 const uuidSchema = z.uuid();
 
 /** A Paynow protocol or transport failure. The message is safe for logs (no keys, no contact details). */
@@ -243,6 +246,17 @@ function statusPayload(message: PaynowStatusMessage, source: "result_url" | "pol
   };
 }
 
+function innbucksInstructions(map: Map<string, string>, base: string): string {
+  const authorizationCode = map.get("authorizationcode")?.trim();
+  const authorizationExpires = map.get("authorizationexpires")?.trim();
+  const deepLinkUrl = map.get("deeplinkurl")?.trim();
+  const lines = [base || DEFAULT_INNBUCKS_INSTRUCTIONS];
+  if (authorizationCode) lines.push(`Innbucks authorisation code: ${authorizationCode}.`);
+  if (authorizationExpires) lines.push(`Code expires: ${authorizationExpires}.`);
+  if (deepLinkUrl && /^https?:\/\//i.test(deepLinkUrl)) lines.push("If you are on your phone, open the Innbucks payment link from the payment prompt.");
+  return lines.join(" ").slice(0, 500);
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Adapter
 // ---------------------------------------------------------------------------------------------------------------------
@@ -277,7 +291,7 @@ interface ResolvedPaynowConfig {
 
 class PaynowProvider implements PaymentProvider {
   readonly id = "paynow" as const;
-  readonly displayName = "Paynow (EcoCash, OneMoney, ZimSwitch, cards)";
+  readonly displayName = "Paynow (EcoCash, OneMoney, Innbucks, ZimSwitch, cards)";
   readonly #config: ResolvedPaynowConfig;
 
   constructor(config: ResolvedPaynowConfig) {
@@ -353,8 +367,14 @@ class PaynowProvider implements PaymentProvider {
     const providerRef = paynowGuidFromPollUrl(pollUrl) ?? `paynow_${input.paymentId}`;
 
     if (mobile) {
-      const instructions = (map.get("instructions") ?? "").trim().slice(0, 500) || DEFAULT_MOBILE_INSTRUCTIONS;
-      return { kind: "mobile_prompt", instructions, providerRef, pollUrl };
+      const instructions =
+        (map.get("instructions") ?? "").trim().slice(0, 500) || (input.method === "innbucks" ? DEFAULT_INNBUCKS_INSTRUCTIONS : DEFAULT_MOBILE_INSTRUCTIONS);
+      return {
+        kind: "mobile_prompt",
+        instructions: input.method === "innbucks" ? innbucksInstructions(map, instructions) : instructions,
+        providerRef,
+        pollUrl,
+      };
     }
     const browserUrl = validPaynowUrl(map.get("browserurl"));
     if (!browserUrl) throw new PaynowError("Paynow response has no valid browser URL");

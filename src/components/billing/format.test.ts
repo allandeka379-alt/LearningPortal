@@ -48,6 +48,7 @@ describe("paymentMethodLabel", () => {
   it("names wallets and cards, and labels sandbox payments as tests", () => {
     expect(paymentMethodLabel("paynow", "ecocash")).toBe("EcoCash");
     expect(paymentMethodLabel("paynow", "onemoney")).toBe("OneMoney");
+    expect(paymentMethodLabel("paynow", "innbucks")).toBe("Innbucks");
     expect(paymentMethodLabel("paynow", null)).toBe("Paynow");
     expect(paymentMethodLabel("stripe", "card")).toBe("Card");
     expect(paymentMethodLabel("stripe", null)).toBe("Card");

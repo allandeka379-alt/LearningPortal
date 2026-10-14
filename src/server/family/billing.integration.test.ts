@@ -92,7 +92,7 @@ describe("getChildCheckoutOptions", () => {
     expect(options.plans).toHaveLength(1);
     expect(options.plans[0]?.prices.map((p) => p.planPriceId)).toEqual([monthly.id, lifetime.id]);
     const methodIds = options.methods.map((m) => m.id);
-    expect(methodIds).toEqual(expect.arrayContaining(["paynow_ecocash", "paynow_onemoney", "paynow_web", "sandbox_web", "sandbox_ecocash"]));
+    expect(methodIds).toEqual(expect.arrayContaining(["paynow_ecocash", "paynow_onemoney", "paynow_innbucks", "paynow_web", "sandbox_web", "sandbox_ecocash"]));
     expect(options.methods.find((m) => m.id === "paynow_ecocash")).toMatchObject({ needsPhone: true, currencies: ["USD"] });
     expect(options.currentSubscription).toBeNull();
     expect(options.purchase).toBeNull();
@@ -106,7 +106,7 @@ describe("getChildCheckoutOptions", () => {
     expect(before.plans.map((p) => p.planId)).toEqual([plan.id]);
     expect(await childrenWithLifetimeAccess(parentActor, [student.id])).toEqual(new Set());
     // Paynow (+ the sandbox outside production) only: no card provider outside Paynow for a one-off purchase.
-    expect(before.methods.map((m) => m.id).sort()).toEqual(["paynow_ecocash", "paynow_onemoney", "paynow_web", "sandbox_ecocash", "sandbox_web"]);
+    expect(before.methods.map((m) => m.id).sort()).toEqual(["paynow_ecocash", "paynow_innbucks", "paynow_onemoney", "paynow_web", "sandbox_ecocash", "sandbox_web"]);
 
     const started = await startChildCheckout(parentActor, { studentUserId: student.id, planPriceId: lifetime.id, methodId: "sandbox_web" }, { env });
     await simulateSandboxCheckout(parent.id, started.paymentId, "PAID", { env });

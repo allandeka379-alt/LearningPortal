@@ -7,7 +7,15 @@ import type { ActionResult } from "@/server/lib/errors";
  */
 
 /** Payment methods a student can pick (mapped to provider + Paynow mobile method on the server). */
-export const CHECKOUT_METHOD_IDS = ["paynow_ecocash", "paynow_onemoney", "paynow_web", "stripe_card", "sandbox_web", "sandbox_ecocash"] as const;
+export const CHECKOUT_METHOD_IDS = [
+  "paynow_ecocash",
+  "paynow_onemoney",
+  "paynow_innbucks",
+  "paynow_web",
+  "stripe_card",
+  "sandbox_web",
+  "sandbox_ecocash",
+] as const;
 export type CheckoutMethodId = (typeof CHECKOUT_METHOD_IDS)[number];
 
 export interface CheckoutMethodView {

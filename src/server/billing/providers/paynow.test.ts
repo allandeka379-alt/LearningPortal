@@ -212,6 +212,27 @@ describe("createCheckout", () => {
     expect(verifyPaynowFields(fields, KEY)).toBe(true);
   });
 
+  it("mobile express checkout: preserves Innbucks authorisation details", async () => {
+    const { instance, fetchMock } = provider(async () =>
+      reply(signed([["status", "Ok"], ["authorizationcode", "IBK123"], ["authorizationexpires", "2026-10-14 18:00"], ["pollurl", POLL_URL]])),
+    );
+    const result = await instance.createCheckout(checkout({ method: "innbucks", payer: { email: "payer@example.test", phone: "+263771234567" } }));
+    expect(result).toMatchObject({
+      kind: "mobile_prompt",
+      providerRef: GUID,
+      pollUrl: POLL_URL,
+    });
+    if (result.kind !== "mobile_prompt") return;
+    expect(result.instructions).toContain("Open Innbucks");
+    expect(result.instructions).toContain("Innbucks authorisation code: IBK123.");
+    expect(result.instructions).toContain("Code expires: 2026-10-14 18:00.");
+
+    expect(fetchMock.mock.calls[0]?.[0]).toBe(PAYNOW_REMOTE_URL);
+    const fields = sentFields(fetchMock);
+    expect(Object.fromEntries(fields)).toMatchObject({ authemail: "payer@example.test", phone: "0771234567", method: "innbucks" });
+    expect(verifyPaynowFields(fields, KEY)).toBe(true);
+  });
+
   it("test mode always sends the merchant email as authemail", async () => {
     const { instance, fetchMock } = provider(
       async () => reply(signed([["status", "Ok"], ["browserurl", BROWSER_URL], ["pollurl", POLL_URL]])),
@@ -335,6 +356,7 @@ describe("poll and refund", () => {
     });
     expect(instance.supports("USD")).toBe(true);
     expect(instance.supports("USD", "ecocash")).toBe(true);
+    expect(instance.supports("USD", "innbucks")).toBe(true);
     expect(instance.supports("USD", "sandbox")).toBe(false);
     expect(instance.supports("ZWG")).toBe(false);
     expect(createPaynowProvider({ integrationId: "1", integrationKey: "k", currency: "zwg" }).supports("ZWG")).toBe(true);

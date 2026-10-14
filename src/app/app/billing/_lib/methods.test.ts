@@ -4,7 +4,7 @@ import { paymentsTestEnv } from "@/server/billing/testing";
 import { availableCheckoutMethods, methodDefinition, testMethodsAllowed } from "./methods";
 
 describe("availableCheckoutMethods", () => {
-  it("offers EcoCash / OneMoney (with a phone), the Paynow page and, outside production, the sandbox; never Stripe while it is off", () => {
+  it("offers Paynow mobile methods (with a phone), the Paynow page and, outside production, the sandbox; never Stripe while it is off", () => {
     for (const methods of [
       availableCheckoutMethods(["USD"], { env: paymentsTestEnv() }),
       availableCheckoutMethods(["USD"], { env: paymentsTestEnv(), features: DEFAULT_FEATURE_FLAGS }),
@@ -12,6 +12,7 @@ describe("availableCheckoutMethods", () => {
       expect(methods.map((method) => [method.id, method.needsPhone, method.test])).toEqual([
         ["paynow_ecocash", true, false],
         ["paynow_onemoney", true, false],
+        ["paynow_innbucks", true, false],
         ["paynow_web", false, false],
         ["sandbox_web", false, true],
         ["sandbox_ecocash", true, true],
@@ -40,6 +41,7 @@ describe("availableCheckoutMethods", () => {
 describe("methodDefinition / testMethodsAllowed", () => {
   it("maps method ids to providers and Paynow mobile methods; unknown ids are undefined", () => {
     expect(methodDefinition("paynow_onemoney")).toMatchObject({ provider: "paynow", paynowMethod: "onemoney", needsPhone: true });
+    expect(methodDefinition("paynow_innbucks")).toMatchObject({ provider: "paynow", paynowMethod: "innbucks", needsPhone: true });
     expect(methodDefinition("stripe_card")).toMatchObject({ provider: "stripe", paynowMethod: null, needsPhone: false });
     expect(methodDefinition("sandbox_web")?.test).toBe(true);
     expect(methodDefinition("bitcoin")).toBeUndefined();

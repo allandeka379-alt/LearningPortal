@@ -1,9 +1,11 @@
 "use client";
 
-import { Copy, MessageCircle, Share2 } from "lucide-react";
+import { Copy, Share2 } from "lucide-react";
 import { useId, useState, useSyncExternalStore } from "react";
 import { Button, buttonStyles } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import { cn } from "@/lib/cn";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const noSubscription = () => () => {};
 const hasNativeShare = () => typeof navigator !== "undefined" && typeof navigator.share === "function";
@@ -57,8 +59,13 @@ export function ShareLinkActions({ url, message, whatsappHref, linkLabel = "Shar
         <Input id={fieldId} readOnly value={url} onFocus={(event) => event.currentTarget.select()} className="font-mono text-sm" />
       </div>
       <div className="flex flex-wrap gap-2">
-        <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className={buttonStyles({ variant: "primary" })}>
-          <MessageCircle aria-hidden="true" />
+        <a
+          href={whatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={buttonStyles({ variant: "primary", className: cn("bg-[#25D366] text-white not-disabled:hover:bg-[#1ebe5d]") })}
+        >
+          <WhatsAppIcon className="size-5" />
           Share on WhatsApp
         </a>
         {canNativeShare && (

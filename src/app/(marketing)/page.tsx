@@ -10,6 +10,7 @@ import { FreeTools } from "@/components/marketing/home/FreeTools";
 import { Hero } from "@/components/marketing/home/Hero";
 import { HowItWorks } from "@/components/marketing/home/HowItWorks";
 import { ExamCandidatesBand, FormsSection, LearningLoop } from "@/components/marketing/home/Learning";
+import { ExamRescuePack } from "@/components/marketing/home/ExamRescuePack";
 import { PricingTeaser } from "@/components/marketing/home/PricingTeaser";
 import { Section } from "@/components/marketing/Section";
 import { Testimonials } from "@/components/marketing/Testimonials";
@@ -45,6 +46,7 @@ export default async function HomePage() {
   return (
     <>
       <Hero eyebrow={eyebrow} priceLabel={priceLabel} forms={forms} stats={stats} aiEnabled={features.ai} />
+      <ExamRescuePack />
       <FreeTools />
       <FormsSection forms={forms} />
       <LearningLoop />
