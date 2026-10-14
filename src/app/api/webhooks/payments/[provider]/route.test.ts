@@ -13,6 +13,7 @@ vi.mock("@/server/lib/settings", async (importOriginal) => {
   return {
     ...base,
     getKnownSetting: ((key) => (key === "rateLimits" ? Promise.resolve(testSettings.rateLimits) : base.getKnownSetting(key))) as typeof actual.getKnownSetting,
+    getRateLimitOverrides: () => Promise.resolve(testSettings.rateLimits),
   };
 });
 
