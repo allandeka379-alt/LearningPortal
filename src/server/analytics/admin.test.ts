@@ -9,6 +9,7 @@ import {
   createCurriculum,
   createUser,
   enrol,
+  harareTime,
   isolatedDate,
   type CurriculumFixture,
 } from "./testing/fixtures";
@@ -25,10 +26,13 @@ let s2: CurriculumFixture;
 const CURRENCY = "QAA";
 
 async function rangeIsEmpty(from: LocalDate): Promise<boolean> {
-  const count = await db.dailyMetric.count({
-    where: { date: { gte: dateColumnFromLocalDate(addDays(from, -1)), lte: dateColumnFromLocalDate(addDays(from, 3)) } },
-  });
-  return count === 0;
+  const [metrics, growth] = await Promise.all([
+    db.dailyMetric.count({
+      where: { date: { gte: dateColumnFromLocalDate(addDays(from, -1)), lte: dateColumnFromLocalDate(addDays(from, 3)) } },
+    }),
+    db.marketingEvent.count({ where: { createdAt: { gte: harareTime(from, 0), lt: harareTime(addDays(from, 3), 0) } } }),
+  ]);
+  return metrics === 0 && growth === 0;
 }
 
 function rows(date: LocalDate, entries: [string, string, number][]) {
@@ -89,13 +93,26 @@ beforeAll(async () => {
       ]),
     ],
   });
+  await db.marketingEvent.createMany({
+    data: [
+      { type: "PAGE_VIEW", path: "/exam-candidates", utmSource: "google", createdAt: harareTime(A, 9) },
+      { type: "PAGE_VIEW", path: "/exam-candidates", referrerHost: "facebook.com", createdAt: harareTime(A, 10) },
+      { type: "PAGE_VIEW", path: "/pricing", createdAt: harareTime(addDays(A, 2), 10) },
+      { type: "SIGNUP_CLICK", path: "/exam-candidates", target: "/register", createdAt: harareTime(A, 11) },
+      { type: "CHECKOUT_CLICK", path: "/pricing", target: "/app/unlock", createdAt: harareTime(addDays(A, 2), 11) },
+      { type: "CLICK", path: "/exam-candidates", target: "/exam-countdown", createdAt: harareTime(addDays(A, 2), 12) },
+    ],
+  });
 });
 
 afterAll(async () => {
   if (A) {
-    await db.dailyMetric.deleteMany({
-      where: { date: { gte: dateColumnFromLocalDate(A), lte: dateColumnFromLocalDate(addDays(A, 2)) } },
-    });
+    await Promise.all([
+      db.dailyMetric.deleteMany({
+        where: { date: { gte: dateColumnFromLocalDate(A), lte: dateColumnFromLocalDate(addDays(A, 2)) } },
+      }),
+      db.marketingEvent.deleteMany({ where: { createdAt: { gte: harareTime(A, 0), lt: harareTime(addDays(A, 3), 0) } } }),
+    ]);
   }
 });
 
@@ -122,6 +139,23 @@ describe("getAdminAnalytics", () => {
       { days: 7, cohort: 0, retained: 0, rate: null },
       { days: 30, cohort: 0, retained: 0, rate: null },
     ]);
+    expect(result.growth).toMatchObject({
+      totals: { visits: 3, clicks: 3, signupClicks: 1, checkoutClicks: 1 },
+      topPages: [
+        { path: "/exam-candidates", visits: 2 },
+        { path: "/pricing", visits: 1 },
+      ],
+      topClicks: expect.arrayContaining([
+        { target: "/app/unlock", clicks: 1 },
+        { target: "/exam-countdown", clicks: 1 },
+        { target: "/register", clicks: 1 },
+      ]),
+      sources: expect.arrayContaining([
+        { source: "direct", visits: 1 },
+        { source: "facebook.com", visits: 1 },
+        { source: "google", visits: 1 },
+      ]),
+    });
   });
 
   it("aggregates totals exactly (weighted averages, revenue net of refunds)", async () => {

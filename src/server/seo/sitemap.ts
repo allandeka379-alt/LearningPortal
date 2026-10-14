@@ -37,7 +37,7 @@ export const MARKETING_SITEMAP_ENTRIES: readonly SitemapEntry[] = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
   { path: "/how-it-works", changeFrequency: "monthly", priority: 0.9 },
   { path: "/subjects", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/exam-candidates", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/exam-candidates", changeFrequency: "weekly", priority: 0.95 },
   { path: "/pricing", changeFrequency: "monthly", priority: 0.7 },
   { path: "/schools", changeFrequency: "monthly", priority: 0.6 },
   { path: "/daily", changeFrequency: "daily", priority: 0.6 },

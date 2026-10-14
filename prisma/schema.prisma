@@ -4751,6 +4751,7 @@ model User {
   entitlementGrants        EntitlementGrant[] @relation("EntitlementGrantUser")
   entitlementGrantsGranted EntitlementGrant[] @relation("EntitlementGrantGrantedBy")
   entitlementGrantsRevoked EntitlementGrant[] @relation("EntitlementGrantRevokedBy")
+  marketingEvents          MarketingEvent[]   @relation("MarketingEventUser")
   promoCodesCreated        PromoCode[]
   promoRedemptions         PromoRedemption[]
   referralCode             ReferralCode?
@@ -6751,6 +6752,43 @@ model Setting {
 
   /// Covers the FK.
   @@index([updatedById])
+}
+
+/// Privacy-safe public growth events (§35): first-party page views and CTA/link clicks from public pages only. It stores
+/// no raw IP, raw user-agent, form values or full referrer URLs; hashes are keyed HMACs and referrers are reduced to a
+/// host. Used by /admin analytics for visits, clicks, campaign/source hints and funnel context.
+model MarketingEvent {
+  id              String   @id @default(uuid(7)) @db.Uuid
+  /// PAGE_VIEW, CLICK, SIGNUP_CLICK or CHECKOUT_CLICK. Kept as text so event names can be added without a generated enum
+  /// migration, but constrained in raw SQL.
+  type            String   @db.VarChar(32)
+  /// App path only, never query strings or fragments.
+  path            String   @db.VarChar(300)
+  /// Click target as an app path or external host label. NULL for page views.
+  target          String?  @db.VarChar(300)
+  referrerHost    String?  @db.VarChar(160)
+  utmSource       String?  @db.VarChar(80)
+  utmMedium       String?  @db.VarChar(80)
+  utmCampaign     String?  @db.VarChar(120)
+  utmTerm         String?  @db.VarChar(120)
+  utmContent      String?  @db.VarChar(120)
+  userId          String?  @db.Uuid
+  anonymousIdHash String?  @db.Char(64)
+  ipHash          String?  @db.Char(64)
+  userAgentHash   String?  @db.Char(64)
+  createdAt       DateTime @default(now()) @db.Timestamptz(3)
+
+  user User? @relation("MarketingEventUser", fields: [userId], references: [id], onDelete: SetNull)
+
+  /// Time-window scans for /admin analytics.
+  @@index([createdAt], type: Brin)
+  /// Visits/clicks over time.
+  @@index([type, createdAt])
+  /// Top landing pages and clicked destinations.
+  @@index([path, createdAt])
+  @@index([target, createdAt])
+  /// Signed-in public-page events, when present.
+  @@index([userId, createdAt])
 }
 
 /// Daily analytics rollup (§35, §23 school analytics) computed by the `analytics.dailyMetrics` worker job from domain

@@ -12,6 +12,7 @@ const steps = vi.hoisted(() => [] as string[]);
 
 vi.mock("../prisma/seed/catalogue", () => ({ seedCatalogue: vi.fn(async () => (steps.push("catalogue"), {})) }));
 vi.mock("../prisma/seed/platform", () => ({ seedPlatform: vi.fn(async () => (steps.push("platform"), {})) }));
+vi.mock("../prisma/seed/team-access", () => ({ seedTeamAccessAccounts: vi.fn(async () => void steps.push("team-access")) }));
 vi.mock("../prisma/seed/demo", () => ({ seedDemo: vi.fn(async () => void steps.push("demo")) }));
 
 import { describeReindex, runSeed } from "../prisma/seed/run";
@@ -48,7 +49,7 @@ describe("runSeed search reindex", () => {
       return report();
     });
     await runSeed(db, { demo: true, nodeEnv: "development", log, reindexSearch });
-    expect(steps).toEqual(["catalogue", "platform", "demo", "reindex"]);
+    expect(steps).toEqual(["catalogue", "platform", "team-access", "demo", "reindex"]);
     expect(reindexSearch).toHaveBeenCalledTimes(1);
     expect(log.lines).toContainEqual({ level: "info", message: "search index rebuilt in 1.2 s: 11 documents written, 1 removed" });
   });
@@ -57,7 +58,7 @@ describe("runSeed search reindex", () => {
     steps.length = 0;
     const reindexSearch = vi.fn(async () => report());
     await runSeed(fakeDb(), { demo: false, nodeEnv: "development", log: silentLog(), reindexSearch });
-    expect(steps).toEqual(["catalogue", "platform"]);
+    expect(steps).toEqual(["catalogue", "platform", "team-access"]);
     expect(reindexSearch).not.toHaveBeenCalled();
   });
 

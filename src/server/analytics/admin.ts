@@ -19,11 +19,13 @@ import {
 import { dimensionValue, METRIC, RETENTION_DAYS, retentionMetrics, type RetentionDay } from "./metrics";
 import { answeredQuestionTotals, countActiveLearnersOn, fetchDemoUserIds } from "./queries";
 import { DEFAULT_MIN_TOPIC_ATTEMPTS, PLATFORM_TIMEZONE } from "./rollups";
+import { getMarketingGrowthAnalytics, type MarketingGrowthAnalytics } from "./growth";
 
 /**
  * Admin analytics dashboard (§35 funnel, §36 "Analytics" section). Reads the nightly DailyMetric rollups (fast,
- * index `DailyMetric(metric, dimension, date)` / unique `(date, metric, dimension)`) plus a live "today so far" for
- * DAU and questions computed directly from DailyActivity / QuestionAttempt (today is never rolled up until it ends).
+ * index `DailyMetric(metric, dimension, date)` / unique `(date, metric, dimension)`), first-party public growth events
+ * and a live "today so far" for DAU and questions computed directly from DailyActivity / QuestionAttempt (today is
+ * never rolled up until it ends).
  *
  * AUTHORIZATION: platform staff only. Routes must call `requireRole(["ADMIN", "SUPER_ADMIN"])` (or the analytics
  * permission from `src/server/auth/guards.ts`) before calling; this service takes no actor because it exposes no
@@ -145,6 +147,8 @@ export interface AdminAnalytics {
     /** Paid students per plan on `funnel.asOf`. */
     paidByPlan: { planCode: string; students: number }[];
   };
+  /** Live public-site growth data for the range: visits, clicks, signup/checkout intent and top pages/sources. */
+  growth: MarketingGrowthAnalytics;
   series: AdminSeriesPoint[];
   /** Live figures for today (Africa/Harare), computed directly from the source tables. */
   today: { date: LocalDate; dau: number; questionsAttempted: number; questionsCorrect: number; computedAt: Date };
@@ -357,9 +361,10 @@ export async function getAdminAnalytics(input: { from: LocalDate; to: LocalDate 
   // --- Live "today so far" -------------------------------------------------------------------------------------------
   const today = localDateString(now, PLATFORM_TIMEZONE);
   const demoUserIds = await fetchDemoUserIds(db);
-  const [dauToday, questionsToday] = await Promise.all([
+  const [dauToday, questionsToday, growth] = await Promise.all([
     countActiveLearnersOn(db, { date: today, demoUserIds }),
     answeredQuestionTotals(db, { start: startOfLocalDay(today, PLATFORM_TIMEZONE), end: now, demoUserIds }),
+    getMarketingGrowthAnalytics(range, topN),
   ]);
 
   const missingDates = series.filter((point) => point.dau === null).map((point) => point.date);
@@ -415,6 +420,7 @@ export async function getAdminAnalytics(input: { from: LocalDate; to: LocalDate 
       signupsByChannel: channelRows.map((row) => ({ channel: row.dimension.slice("channel:".length), signups: row.total })),
       paidByPlan: paidByPlan.map((row) => ({ planCode: row.dimension.slice("plan:".length), students: row.value })),
     },
+    growth,
     series,
     today: {
       date: today,
