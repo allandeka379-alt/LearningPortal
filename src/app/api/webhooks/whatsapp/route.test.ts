@@ -10,12 +10,20 @@ import { uniquePhone } from "../../../../../tests/factories/index";
  * channel is switched on for this file (`features.whatsapp`); the last block switches it off.
  */
 
-const flags = vi.hoisted(() => ({ ai: false, whatsapp: true, email: false, stripe: false }));
-vi.mock("@/server/lib/settings", async (importOriginal) =>
-  (await import("../../../../../tests/support/feature-flags")).settingsWithFeatureFlags(await importOriginal(), flags),
-);
+const testSettings = vi.hoisted(() => ({
+  flags: { ai: false, whatsapp: true, email: false, stripe: false },
+  rateLimits: { webhookReceipt: { limit: 3, windowSeconds: 60 } },
+}));
+vi.mock("@/server/lib/settings", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("@/server/lib/settings")>();
+  const base = (await import("../../../../../tests/support/feature-flags")).settingsWithFeatureFlags(actual, testSettings.flags);
+  return {
+    ...base,
+    getKnownSetting: ((key) => (key === "rateLimits" ? Promise.resolve(testSettings.rateLimits) : base.getKnownSetting(key))) as typeof actual.getKnownSetting,
+  };
+});
 afterEach(() => {
-  flags.whatsapp = true;
+  testSettings.flags.whatsapp = true;
 });
 
 const VERIFY_TOKEN = "route-verify-token";
@@ -39,7 +47,7 @@ afterAll(() => {
 
 const { GET, POST } = await import("./route");
 const { db } = await import("@/server/db");
-const { RATE_LIMIT_PRESETS, rateLimits } = await import("@/server/lib/rate-limit");
+const { rateLimits } = await import("@/server/lib/rate-limit");
 
 /** A fresh client IP per test, so the per-IP receipt bucket is the test's own. */
 const randomIp = () => `10.${randomInt(0, 256)}.${randomInt(0, 256)}.${randomInt(1, 255)}`;
@@ -113,7 +121,7 @@ describe("POST /api/webhooks/whatsapp", () => {
 describe("per-IP receipt limit", () => {
   it("answers 429 above the limit for GET and POST alike, before the signature is checked or anything stored", async () => {
     const ip = randomIp();
-    const limit = RATE_LIMIT_PRESETS.webhookReceipt.limit;
+    const limit = testSettings.rateLimits.webhookReceipt.limit;
     const handshake = () =>
       GET(new Request(`http://localhost:3000/api/webhooks/whatsapp?hub.mode=subscribe&hub.verify_token=guess&hub.challenge=1`, { headers: { "x-forwarded-for": ip } }));
     for (let i = 0; i < limit; i += 1) expect((await handshake()).status).toBe(403);
@@ -144,7 +152,7 @@ describe("per-IP receipt limit", () => {
 
 describe("switched off (features.whatsapp = false)", () => {
   it("answers 404 to the handshake and to deliveries, before the rate limit, and stores nothing", async () => {
-    flags.whatsapp = false;
+    testSettings.flags.whatsapp = false;
     const ip = randomIp();
     const handshake = await GET(
       new Request(`http://localhost:3000/api/webhooks/whatsapp?hub.mode=subscribe&hub.verify_token=${VERIFY_TOKEN}&hub.challenge=424242`, { headers: { "x-forwarded-for": ip } }),

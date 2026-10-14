@@ -1,13 +1,20 @@
 import { randomInt } from "node:crypto";
 import { describe, expect, it, vi } from "vitest";
-import { RATE_LIMIT_PRESETS } from "@/server/lib/rate-limit";
 import { POST } from "./route";
 
 // Stripe is dormant (owner decision 2026-10-07): `features.stripe` stays off, as by default.
-const featureFlags = vi.hoisted(() => ({ ai: false, whatsapp: false, email: false, sms: false, stripe: false }));
-vi.mock("@/server/lib/settings", async (importOriginal) =>
-  (await import("../../../../../../tests/support/feature-flags")).settingsWithFeatureFlags(await importOriginal(), featureFlags),
-);
+const testSettings = vi.hoisted(() => ({
+  features: { ai: false, whatsapp: false, email: false, sms: false, stripe: false },
+  rateLimits: { webhookReceipt: { limit: 3, windowSeconds: 60 } },
+}));
+vi.mock("@/server/lib/settings", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("@/server/lib/settings")>();
+  const base = (await import("../../../../../../tests/support/feature-flags")).settingsWithFeatureFlags(actual, testSettings.features);
+  return {
+    ...base,
+    getKnownSetting: ((key) => (key === "rateLimits" ? Promise.resolve(testSettings.rateLimits) : base.getKnownSetting(key))) as typeof actual.getKnownSetting,
+  };
+});
 
 function post(provider: string, body: string, ip?: string): [Request, { params: Promise<{ provider: string }> }] {
   const request = new Request(`http://localhost:3000/api/webhooks/payments/${provider}`, {
@@ -31,7 +38,7 @@ describe("POST /api/webhooks/payments/[provider]", () => {
 
   it("limits deliveries per client IP before reading the body or checking any signature (429 + Retry-After)", async () => {
     const ip = randomIp();
-    const limit = RATE_LIMIT_PRESETS.webhookReceipt.limit;
+    const limit = testSettings.rateLimits.webhookReceipt.limit;
     for (let i = 0; i < limit; i += 1) expect((await POST(...post("bitcoin", "status=Paid", ip))).status).toBe(404);
     for (const provider of ["bitcoin", "paynow", "sandbox"]) {
       const limited = await POST(...post(provider, "status=Paid", ip));
