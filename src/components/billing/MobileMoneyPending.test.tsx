@@ -97,6 +97,8 @@ describe("MobileMoneyPending", () => {
     expect(screen.getByRole("heading", { name: "Authorize in InnBucks" })).toBeTruthy();
     expect(screen.getByText("Authorization code")).toBeTruthy();
     expect(screen.getByText("111161527")).toBeTruthy();
+    expect(screen.getByRole("img", { name: "InnBucks payment QR code" })).toBeTruthy();
+    expect(screen.getByText("Scan with InnBucks")).toBeTruthy();
     expect(screen.getByText(/dial \*569#/i)).toBeTruthy();
     expect(screen.getByRole("status").textContent).toMatch(/authorize the InnBucks payment/);
     expect(screen.getByRole("link", { name: /Open InnBucks app/ }).getAttribute("href")).toBe("com.innbucks.customer://purchase?paymentToken=111161527");
