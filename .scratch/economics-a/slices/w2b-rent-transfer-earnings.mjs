@@ -77,8 +77,8 @@ concept("aecon.distribution.rent-transfer-earnings", { file: "distribution/rent-
       explanation: "Total pay = 8 × 150 = US\\$1,200 an hour. Rent is US\\$450, so transfer earnings = US\\$750. 750 ÷ 1,200 × 100 = 62.5%." });
   }
   {
-    const q = 54000 - 39000;
-    chk(q, 15000, 0);
+    const q = 54 - 39;
+    chk(q, 15, 0);
     b.num({ d: 3, skill: "APPLICATION", kind: "plain", value: q, unit: "US$ thousand", applies: ZIM, hints: ["Quasi-rent is revenue minus variable costs."],
       stem: "A fictional machine earns revenue of US\\$54 thousand a year. Variable costs of running it are US\\$39 thousand and the fixed costs are US\\$11 thousand. Calculate its quasi-rent, in US\\$ thousand.",
       wrong: [4, 43, 54],

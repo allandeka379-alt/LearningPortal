@@ -12,14 +12,14 @@ concept("aecon.firms.sme", { file: "firms/sme", keyPrefix: "firms.sme" }, (b) =>
 
   mc(b, [1, "RECALL"], "An informal business is one that is",
     ["not registered or not fully recorded", "Correct: it operates outside the formal system."],
-    [["always selling illegal goods", "Many informal firms sell perfectly legal goods."],
+    [["always selling only illegal goods and services", "Many informal firms sell perfectly legal goods."],
      ["owned only by the government", "State ownership is unrelated."],
      ["always a multinational company", "Informal firms are typically very small."]],
     "Informal does not mean illegal: the business is unregistered or its activity is not fully recorded.");
 
   mc(b, [2, "UNDERSTANDING"], "Which is a reason why small firms survive alongside large ones?",
     ["They can serve niche markets that are too small for large firms", "Correct: specialised local demand suits small firms."],
-    [["They always have lower unit costs than large firms", "Large firms usually enjoy economies of scale."],
+    [["They always have lower unit costs than large firms in every industry", "Large firms usually enjoy economies of scale."],
      ["They never face competition from other firms", "Competition affects firms of all sizes."],
      ["They are guaranteed bank loans on easy terms", "Small firms often find it hard to borrow."]],
     "Niche markets, personal service, flexibility and low barriers help small firms survive.", { daily: true });
@@ -27,7 +27,7 @@ concept("aecon.firms.sme", { file: "firms/sme", keyPrefix: "firms.sme" }, (b) =>
   mc(b, [2, "UNDERSTANDING"], "Which is a common problem for small businesses seeking a bank loan?",
     ["They have little collateral and limited records", "Correct: lenders see them as riskier."],
     [["They earn too much profit to qualify", "Profit does not disqualify a borrower."],
-     ["Banks lend only to the informal sector", "Banks lend mainly to formal firms."],
+     ["Banks lend only to firms in the informal sector of the economy", "Banks lend mainly to formal firms."],
      ["They are never charged interest on loans", "Loans carry interest."]],
     "Little collateral and poor records make lenders reluctant, so credit is scarce and dearer.", { daily: true });
 
@@ -35,21 +35,21 @@ concept("aecon.firms.sme", { file: "firms/sme", keyPrefix: "firms.sme" }, (b) =>
     ["encouraging informal firms to move into the formal sector", "Correct: easier rules reduce the cost of formalising."],
     [["forcing every small firm to close at once", "Simplification lowers, not raises, the barrier."],
      ["ending the need for any taxes on business", "Registration helps taxes to be collected."],
-     ["preventing new firms from entering the market", "It makes entry easier."]],
+     ["preventing new firms from entering the market for many years", "It makes entry easier."]],
     "Lower registration costs encourage formalisation, which can widen the tax base and improve access to finance.", { hints: ["What does an easier rule do to the cost of registering?"] });
 
   mc(b, [3, "APPLICATION"], "A small firm buys its cloth in very small amounts and pays a higher price per metre than a large factory. This is an example of",
     ["a disadvantage of small scale", "Correct: lack of bulk-buying discounts raises unit costs."],
     [["an economy of scale", "Economies of scale come from large output."],
      ["a government subsidy", "Nothing in the example involves a subsidy."],
-     ["a benefit of being informal", "Informality does not reduce input prices."]],
+     ["a benefit of being an informal business", "Informality does not reduce input prices."]],
     "Small buyers cannot get bulk discounts, so their unit costs are higher.", { hints: ["Who gets a discount for buying in bulk?"] });
 
   mc(b, [4, "EVALUATION"], "A government has a limited budget to support small firms. Support is most likely to raise employment if it is aimed at",
     ["firms with a record of growth and a clear plan to expand", "Correct: these are most likely to create jobs."],
     [["every business regardless of its plans", "Untargeted help is spread thin and costly."],
      ["only firms that have recently failed", "Failed firms are unlikely to create jobs soon."],
-     ["firms that have no intention of employing anyone", "No jobs would result."]],
+     ["firms that have no intention of employing anyone in the next few years", "No jobs would result."]],
     "Targeting firms with growth potential gives most jobs per dollar of support.", { hints: ["Where is each dollar of support likely to create most jobs?"] });
 
   {

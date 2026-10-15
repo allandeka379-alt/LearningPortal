@@ -7,7 +7,7 @@ concept("aecon.labour.wage-determination", { file: "labour/wage-determination", 
     ["the quantity of labour demanded equals the quantity supplied", "Correct: there is no shortage or surplus of workers."],
     [["all workers in the market are employed by the government", "That is not what equilibrium means."],
      ["every worker receives the same amount of pay", "Equilibrium does not imply equal pay."],
-     ["firms make the largest possible profit from the workers", "Equilibrium concerns the balance of demand and supply."]],
+     ["firms make the largest possible profit from the workers they employ", "Equilibrium concerns the balance of demand and supply."]],
     "Equilibrium wage: labour demanded = labour supplied.");
 
   mc(b, [2, "UNDERSTANDING"], "A minimum wage set below the equilibrium wage in a competitive labour market will",
@@ -19,7 +19,7 @@ concept("aecon.labour.wage-determination", { file: "labour/wage-determination", 
 
   mc(b, [2, "UNDERSTANDING"], "Collective bargaining by a trade union means that",
     ["workers negotiate pay and conditions together with employers", "Correct: bargaining as a group."],
-    [["employers fix each worker's pay without discussion", "That is not bargaining."],
+    [["employers fix each worker's pay on their own without any discussion", "That is not bargaining."],
      ["the government sets the pay of every worker by law", "That is wages legislation."],
      ["workers set their own pay by choosing their hours", "That describes self-employment."]],
     "Collective bargaining is group negotiation of pay and conditions by union and employer.", { daily: true });
@@ -27,7 +27,7 @@ concept("aecon.labour.wage-determination", { file: "labour/wage-determination", 
   mc(b, [3, "UNDERSTANDING"], "For a monopsony employer, the marginal cost of labour is above the wage because it",
     ["must raise the wage of all workers to hire one more", "Correct: the higher wage applies to existing workers too."],
     [["pays workers more than they produce", "MCL is not about paying above productivity."],
-     ["faces a horizontal supply curve of labour", "That is the case of a wage taker."],
+     ["faces a horizontal supply curve of labour at the going wage rate", "That is the case of a wage taker."],
      ["pays the same wage whatever the number hired", "That describes a competitive buyer."]],
     "With an upward-sloping supply curve, hiring one more worker raises the wage for all workers.", { hints: ["What happens to the wage of existing workers when the firm hires more?"] });
 
@@ -55,8 +55,8 @@ concept("aecon.labour.wage-determination", { file: "labour/wage-determination", 
   mc(b, [4, "EVALUATION"], "A union wins a large wage rise for its members in a competitive market. Which group is most likely to lose?",
     ["Workers who would have been employed at the lower wage but now cannot find jobs", "Correct: the outsiders."],
     [["Union members who keep their jobs", "They gain the higher wage."],
-     ["Consumers who buy the product at a lower price", "Costs rise, so prices do not fall."],
-     ["Workers who were already unemployed before the rise", "They are unaffected by the rise."]],
+     ["Consumers who buy the product at a lower price than before", "Costs rise, so prices do not fall."],
+     ["Workers who were already unemployed and looking for jobs before the wage rise took place", "They are unaffected by the rise."]],
     "Insiders gain; outsiders who lose jobs or cannot get them are worse off.", { hints: ["Who would have had a job at the lower wage?"] });
 
   {
@@ -134,7 +134,7 @@ concept("aecon.labour.wage-determination", { file: "labour/wage-determination", 
           points: ["The higher wage reduces employment by a larger percentage than the wage rises.", "Demand for labour is elastic between US\\$7 and US\\$8: employment falls 22.2% and the wage rises 14.3%.", "So the loss from fewer jobs outweighs the gain from higher pay."],
           modelAnswer: "Between US\\$7 and US\\$8 employment falls by 22.2% (from 360 to 280) while the wage rises by only 14.3%. Demand for labour is elastic here, so the loss of income from the lost jobs is larger than the gain from higher pay, and the wage bill falls." }),
       ],
-      explanation: "Equilibrium US$7, 360 workers; unemployment 200 at US$8; wage bill falls by US$280." });
+      explanation: "Equilibrium US\\$7, 360 workers; unemployment 200 at US\\$8; wage bill falls by US\\$280." });
   }
   {
     const mk = { m: 30, n: 0.05, s: 6, k: 0.025 };

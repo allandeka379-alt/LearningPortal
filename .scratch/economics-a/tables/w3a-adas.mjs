@@ -1,0 +1,12 @@
+import { chk, fmt, table, pctChange } from "../lib.mjs";
+const P=[90,100,110,120,130], AD=[11800,11200,10600,10000,9400], AS=[9200,10000,10600,11100,11500];
+const eq=(ad,as)=>{const i=ad.findIndex((v,k)=>v===as[k]); return i<0?null:{p:P[i],y:ad[i]}};
+console.log("base",eq(AD,AS));
+const sh=(a,d)=>a.map(v=>v+d);
+console.log("AD +1100",eq(sh(AD,1100),AS));
+console.log("SRAS -1100",eq(AD,sh(AS,-1100)));
+console.log("SRAS +1200",eq(AD,sh(AS,1200)));
+console.log("AD -1200",eq(sh(AD,-1200),AS));
+console.log(table(["Price level (index)","AD (US\$ million)","SRAS (US\$ million)","AD − SRAS"],P.map((p,k)=>[p,AD[k],AS[k],AD[k]-AS[k]])));
+console.log(pctChange(10600,11100), pctChange(110,120), 11100/20000*1000, 10600/20000*1000);
+console.log(pctChange(10600,10000), pctChange(10600,11200), pctChange(110,100), (12000-10600)/12000*100);

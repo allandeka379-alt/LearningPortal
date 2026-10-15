@@ -1,6 +1,13 @@
 // W2b helper kit (not a slice: lives in tables/). Compact MCQ builder and shared level descriptors.
-export const mc = (b, [d, skill], stem, key, bad, explanation, extra = {}) =>
-  b.mcq({ d, skill, stem, options: [key, ...bad], answer: "A", explanation, ...extra });
+const mcCount = new WeakMap();
+export const mc = (b, [d, skill], stem, key, bad, explanation, extra = {}) => {
+  const n = mcCount.get(b) ?? 0;
+  mcCount.set(b, n + 1);
+  const pos = (n * 3 + 1) % 4; // rotate the key's position so the answer letter varies
+  const options = [...bad];
+  options.splice(pos, 0, key);
+  return b.mcq({ d, skill, stem, options, answer: "ABCD"[pos], explanation, ...extra });
+};
 export const LV8 = [
   [3, 6, 8, "Two-sided, applied and developed, with a justified conclusion."],
   [2, 3, 5, "Some development of one or both sides, limited application or conclusion."],

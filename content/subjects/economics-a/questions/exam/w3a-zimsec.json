@@ -1,0 +1,942 @@
+[
+ {
+  "key": "exam.w3a-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aecon.macro.national-income-statistics",
+   "aecon.macro.price-indices-real-values"
+  ],
+  "difficulty": 4,
+  "marks": 20,
+  "estimatedSeconds": 1800,
+  "stem": "**The economy of Zandia** (a fictional country)\n\nZandia is a mining-led economy with about 3.0 million people in Year 2. Most export earnings come from platinum-group metals and coal, produced by mines that are mainly owned by foreign companies. A large part of the population works in small-scale farming and informal trading, where many transactions are paid in cash and are not recorded by the statistics office. Prices have been rising in recent years.\n\nThe statistics office publishes Table 1. A newspaper has reported that \"Zandia's economy grew by more than a quarter in Year 2\". The Ministry of Finance says that the figures need careful interpretation, because the national accounts are measured at current prices, and GDP does not show how much of the income stays in the country. The Ministry also points out that GDP does not include food grown and eaten by farming families or unpaid care in the home, and that the informal sector is hard to measure.\n\nEconomists at the university note that the foreign-owned mines send much of their profit abroad, so the income available to Zandians is smaller than GDP. They also point out that many households spend a large share of their income on food, whose price has risen faster than other prices. Some analysts therefore suggest that living standards should be judged by real GDP per head, but add that even this says nothing about how income is shared. The government has announced plans to expand mining and to spend more on roads and schools.\n\n**Table 1: Selected national accounts of Zandia (illustrative data)**\n\n|  | Year 1 | Year 2 |\n| --- | ---: | ---: |\n| Nominal GDP (US\\$ million) | 4,200 | 5,310 |\n| GDP deflator (Year 1 = 100) | 100 | 118 |\n| Net primary income from abroad (US\\$ million) | −350 | −420 |\n| Population (million) | 2.9 | 3.0 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "SHORT_ANSWER",
+    "marks": 1,
+    "stem": "Name the price index used to convert nominal GDP into real GDP.",
+    "answerSpec": {
+     "accepted": [
+      {
+       "value": "GDP deflator"
+      },
+      {
+       "value": "the GDP deflator"
+      },
+      {
+       "value": "deflator"
+      },
+      {
+       "value": "GDP price deflator"
+      }
+     ],
+     "normalise": [
+      "trim",
+      "lowercase",
+      "collapse_whitespace",
+      "strip_punctuation"
+     ]
+    },
+    "explanation": "The GDP deflator is used to turn nominal GDP into real GDP."
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Use Table 1.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Calculate real GDP in Year 2, in US\\$ million (at Year 1 prices).",
+      "payload": {
+       "unitHint": "US$ million"
+      },
+      "answerSpec": {
+       "value": 4500,
+       "units": {
+        "required": false,
+        "accepted": [
+         "US$ million",
+         "US$m",
+         "$m",
+         "million dollars",
+         "USD million",
+         "US$ millions"
+        ]
+       }
+      },
+      "explanation": "Real GDP = nominal GDP ÷ deflator × 100 = 5,310 ÷ 118 × 100 = 4,500.",
+      "workedSolution": "1. Real GDP = nominal GDP ÷ deflator × 100 = 5,310 ÷ 118 × 100 = 4,500."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Calculate the percentage growth of real GDP between Year 1 and Year 2, to one decimal place.",
+      "payload": {
+       "unitHint": "%"
+      },
+      "answerSpec": {
+       "value": 7.142857142857142,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.05
+       }
+      },
+      "explanation": "Real GDP in Year 1 = 4,200. Growth = (4,500 − 4,200) ÷ 4,200 × 100 = 7.1%. The newspaper's 'more than a quarter' (26.4%) is the growth of nominal GDP.",
+      "workedSolution": "1. Real GDP in Year 1 = 4,200. Growth = (4,500 − 4,200) ÷ 4,200 × 100 = 7.1%. The newspaper's 'more than a quarter' (26.4%) is the growth of nominal GDP."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate gross national product (GNP) in Year 2 at current prices, in US\\$ million.",
+    "payload": {
+     "unitHint": "US$ million"
+    },
+    "answerSpec": {
+     "value": 4890,
+     "units": {
+      "required": false,
+      "accepted": [
+       "US$ million",
+       "US$m",
+       "$m",
+       "million dollars",
+       "USD million",
+       "US$ millions"
+      ]
+     }
+    },
+    "explanation": "GNP = GDP + net primary income from abroad = 5,310 + (−420) = 4,890.",
+    "workedSolution": "1. GNP = GDP + net primary income from abroad = 5,310 + (−420) = 4,890."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why GNP is lower than GDP in Zandia.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "GDP measures output produced within Zandia, whoever owns the factors of production.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "GNP adds net primary income from abroad, which is negative (−US\\$420 million) because foreign-owned mines send profits abroad.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "So part of the income earned in Zandia belongs to foreigners and is not available to Zandians, making GNP lower.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: GDP measures the output produced within Zandia, whoever owns the factors of production. GNP adds net primary income from abroad, which is negative at US\\$420 million because the foreign-owned mines send their profits abroad. Part of the income earned in Zandia therefore belongs to foreigners and is not available to Zandians, so GNP is lower than GDP."
+    }
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain two ways in which GDP may understate the real output of Zandia.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Informal trading and small-scale activity is paid in cash and not recorded by the statistics office.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "So it is missing from the statistics and GDP understates the output of Zandia.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Food grown and eaten by farming families (subsistence output), and unpaid care in the home, are not sold in markets, so they are not counted.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Informal trading and small-scale activity is paid in cash and is not recorded by the statistics office, so it is missing from GDP. Food grown and eaten by farming families is not sold in markets, so it is not counted, and unpaid care in the home is also left out. GDP therefore understates real output."
+    }
+   },
+   {
+    "label": "(f)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 7,
+    "markingMode": "MANUAL",
+    "stem": "Discuss whether real GDP per head is a good measure of living standards in Zandia.",
+    "payload": {
+     "wordLimit": {
+      "min": 100,
+      "max": 300
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Real GDP per head removes the effect of price changes and population growth; here it is US\\$1,500 in Year 2.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "It allows comparison over time: real GDP rose by 7.1%, much less than the 26.4% rise in nominal GDP.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "GDP includes output that belongs to foreign owners, so the income of Zandians (GNP) is lower.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "It ignores the informal sector and subsistence output, so output is understated.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "It does not show the distribution of income, so average figures can hide poverty.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Food prices have risen faster than the general price level, so the cost of living of poorer households may have risen more than the deflator shows.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "A justified judgement: a useful starting point, but it should be supplemented by GNP, distribution and other indicators such as health and education.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 5,
+        "maxMarks": 7,
+        "descriptor": "Two-sided, developed and applied to the data, with a justified judgement."
+       },
+       {
+        "level": 2,
+        "minMarks": 3,
+        "maxMarks": 4,
+        "descriptor": "Some development of one side or limited use of the data."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 2,
+        "descriptor": "Simple, undeveloped points."
+       }
+      ]
+     },
+     "modelAnswer": "Real GDP per head is useful because it removes the effect of price changes and population growth: in Year 2 it is US\\$1,500, and real GDP rose by only 7.1%, far below the 26.4% rise in nominal GDP that the newspaper reported. It therefore gives a better picture of changes in output per person. However, GDP includes output that belongs to foreign owners of the mines, so the income of Zandians (GNP) is lower. It also ignores the informal sector and subsistence output, so true output is understated, and it says nothing about the distribution of income, so averages can hide poverty. Food prices have risen faster than other prices, so poorer households may have faced a larger rise in the cost of living than the deflator shows. Overall real GDP per head is a useful starting point but is not a good measure on its own: it should be supplemented by GNP, information on distribution and other indicators such as health and education."
+    }
+   }
+  ],
+  "explanation": "Real GDP Year 2 4,500; real growth 7.1% (nominal 26.4%); GNP 4,890; GNP is lower because profits go abroad; informal and subsistence output missing; real GDP per head is a useful but incomplete indicator.",
+  "hints": [
+   "Real GDP = nominal GDP ÷ deflator × 100.",
+   "GNP = GDP + net primary income from abroad.",
+   "For the last part weigh the usefulness of the measure against its limits."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "SHORT_ANSWER",
+     "text": "GDP deflator"
+    },
+    "(b)(i)": {
+     "type": "NUMERICAL",
+     "value": "4500"
+    },
+    "(b)(ii)": {
+     "type": "NUMERICAL",
+     "value": "7.1"
+    },
+    "(c)": {
+     "type": "NUMERICAL",
+     "value": "4890"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "SHORT_ANSWER",
+      "text": "consumer price index"
+     },
+     "(b)(i)": {
+      "type": "NUMERICAL",
+      "value": "6265.8"
+     },
+     "(b)(ii)": {
+      "type": "NUMERICAL",
+      "value": "26.4"
+     },
+     "(c)": {
+      "type": "NUMERICAL",
+      "value": "5730"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "Paper 2"
+ },
+ {
+  "key": "exam.w3a-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aecon.intervention.direct-provision-information",
+   "aecon.intervention.government-failure"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "A government in a developing economy provides health care and schools free of charge.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 10,
+    "markingMode": "MANUAL",
+    "stem": "Explain why governments provide some goods and services directly.",
+    "payload": {
+     "wordLimit": {
+      "min": 150,
+      "max": 350
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Public goods are non-excludable, so people cannot be prevented from using them.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "They are also non-rival, since one person's use does not reduce another's.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Because people can free ride, firms cannot collect enough revenue, so the market supplies none.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Merit goods such as education and health care are under-consumed in a free market.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Consumers may not fully appreciate the long-term benefits, which is a problem of imperfect information.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Merit goods have external benefits, such as a healthier and more productive workforce.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Low-income households may be unable to afford them, so provision improves equity of access.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Some services (roads, water supply) have high fixed costs and are natural monopolies, so state provision can prevent monopoly pricing.",
+        "marks": 1
+       },
+       {
+        "id": "p9",
+        "description": "The government can finance provision from taxation, making the service available free or cheaply at the point of use.",
+        "marks": 1
+       },
+       {
+        "id": "p10",
+        "description": "Provision allows the quantity to move closer to the social optimum.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "Governments provide some goods directly because the market fails to supply them. Public goods, such as street lighting, are non-excludable and non-rival, so people can free ride and firms cannot collect enough revenue; the market therefore provides none. Merit goods, such as education and health care, are under-consumed in a free market, because consumers may not appreciate the long-term benefits (imperfect information) and because they have external benefits, such as a healthier and more productive workforce. Low-income households may be unable to afford them, so provision improves equity of access. Some services, such as roads and water supply, have high fixed costs and are natural monopolies, so state provision can prevent monopoly pricing. Provision is financed from taxation, so the service can be free or cheap at the point of use and the quantity can move closer to the social optimum."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 15,
+    "markingMode": "MANUAL",
+    "stem": "Discuss whether the government should provide health care and education free of charge in a developing economy.",
+    "payload": {
+     "wordLimit": {
+      "min": 250,
+      "max": 600
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Both have large external benefits, so the market would under-provide them.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Free provision gives access to poor households, improving equity.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A healthier, better-educated population raises productivity and economic growth in the long run.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Free services increase consumption towards the social optimum.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "They reduce the burden of out-of-pocket costs that could push households into poverty.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "There is an opportunity cost: the money could be spent on other priorities.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Taxes or borrowing are needed to pay for the services, and the tax base may be narrow.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "With no price, demand exceeds supply and services are rationed by queues.",
+        "marks": 1
+       },
+       {
+        "id": "p9",
+        "description": "Without competition or a profit motive there may be waste and weak incentives.",
+        "marks": 1
+       },
+       {
+        "id": "p10",
+        "description": "If funds are limited, quality may fall, with overcrowded schools and clinics and shortages of drugs.",
+        "marks": 1
+       },
+       {
+        "id": "p11",
+        "description": "Better-off households may benefit most if free services are used by all, so targeting may be more efficient.",
+        "marks": 1
+       },
+       {
+        "id": "p12",
+        "description": "Alternatives include user charges with exemptions for the poor, vouchers, or public financing of private or church-run providers.",
+        "marks": 1
+       },
+       {
+        "id": "p13",
+        "description": "The government can finance a service without producing it.",
+        "marks": 1
+       },
+       {
+        "id": "p14",
+        "description": "Success depends on management, budgets and the capacity of institutions.",
+        "marks": 1
+       },
+       {
+        "id": "p15",
+        "description": "A justified conclusion, for example that basic services should be free or heavily subsidised, while other services use charges, to protect quality.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 11,
+        "maxMarks": 15,
+        "descriptor": "Two-sided, developed and applied analysis with a justified conclusion that answers the question."
+       },
+       {
+        "level": 2,
+        "minMarks": 6,
+        "maxMarks": 10,
+        "descriptor": "Some analysis of one or both sides, limited application, a partial or unsupported conclusion."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 5,
+        "descriptor": "Simple, undeveloped points with little or no explanation or conclusion."
+       }
+      ]
+     },
+     "modelAnswer": "Both education and health care have large external benefits: a healthier and better-educated population is more productive, so a free market would under-provide them. Free provision gives poor households access, improving equity, and it reduces the burden of out-of-pocket costs that could push families into poverty. In the long run it raises productivity and growth. However, there is an opportunity cost, because the money could be spent on other priorities, and the services must be financed through taxes or borrowing, which may be difficult where the tax base is narrow. With a zero price, demand exceeds supply and services are rationed by queues; without competition or a profit motive, waste is more likely, and if funds are limited the quality may fall, with overcrowded schools, clinics short of drugs and demoralised staff. Free provision may also benefit better-off households that could pay, so targeting might be more efficient. Alternatives include charges with exemptions for the poor, vouchers, or public financing of private or church-run providers, so the government can finance a service without producing it. Overall, basic health care and primary education should be free or heavily subsidised because of their external benefits and equity, but the government should protect quality by funding them properly and by using charges or private providers where appropriate, so that the policy does not become a government failure."
+    }
+   }
+  ],
+  "explanation": "Reasons: public goods, merit goods, imperfect information, equity, natural monopoly. Discussion: external benefits and equity against opportunity cost, queues, waste and quality; targeting and alternatives; judgement.",
+  "hints": [
+   "In (a) give reasons linked to public goods, merit goods and equity.",
+   "In (b) weigh external benefits and equity against opportunity cost and efficiency, then conclude."
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w3a-zimsec.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aecon.intervention.privatisation",
+   "aecon.intervention.government-failure"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "A government is considering selling some of its state-owned enterprises to private owners.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 10,
+    "markingMode": "MANUAL",
+    "stem": "Explain the reasons why a government may privatise state-owned enterprises.",
+    "payload": {
+     "wordLimit": {
+      "min": 150,
+      "max": 350
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Private owners seek profit, which gives managers an incentive to cut costs.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Shareholders and the threat of takeover or bankruptcy discipline managers.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Privatisation may be accompanied by competition, which pushes down prices and improves quality.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "State enterprises may be told to keep surplus staff or charge low prices, which raises costs; privatisation reduces political interference.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Selling an enterprise raises revenue for the government.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "It ends the need to pay subsidies to loss-making enterprises, easing the budget deficit.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "It may reduce government borrowing and the burden of debt.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "It can widen share ownership.",
+        "marks": 1
+       },
+       {
+        "id": "p9",
+        "description": "Private owners may be able to raise capital and bring in new technology and skills.",
+        "marks": 1
+       },
+       {
+        "id": "p10",
+        "description": "Freed from budget limits, the enterprise can invest, which improves service.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "A government may privatise state-owned enterprises mainly to improve efficiency. Private owners seek profit, which gives managers an incentive to cut costs, and shareholders and the threat of takeover or bankruptcy discipline them. If privatisation is accompanied by competition, prices fall and quality improves. State enterprises may be forced to keep surplus staff or charge low prices, which raises costs, and privatisation reduces this political interference. The sale also raises revenue and ends the need for subsidies to loss-making enterprises, which eases the budget deficit and reduces government borrowing. Share ownership can be widened, and private owners may be able to raise capital and bring in new technology and skills, so that the enterprise can invest and improve its service."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 15,
+    "markingMode": "MANUAL",
+    "stem": "Discuss the effects that privatisation might have on a developing economy.",
+    "payload": {
+     "wordLimit": {
+      "min": 250,
+      "max": 600
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Efficiency may improve because of the profit motive, lower costs and better management.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Gains are larger if competition is introduced.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The sale raises revenue and ends subsidies, helping the budget.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "The government loses the future profits of the enterprise, and it may sell too cheaply.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "A private monopoly, such as an electricity or water network, may raise prices unless regulated.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "A regulator is needed, with price caps and quality standards, but regulatory capacity may be weak.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "Jobs may be lost as the new owner cuts costs, which has a social cost.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Unprofitable services, such as rural supply, may be cut, harming low-income and rural consumers.",
+        "marks": 1
+       },
+       {
+        "id": "p9",
+        "description": "Ownership may end with a few wealthy or foreign buyers, which affects equity.",
+        "marks": 1
+       },
+       {
+        "id": "p10",
+        "description": "Investment may increase, raising the quality and coverage of service.",
+        "marks": 1
+       },
+       {
+        "id": "p11",
+        "description": "Prices may fall if competition grows, benefiting consumers.",
+        "marks": 1
+       },
+       {
+        "id": "p12",
+        "description": "Commercialisation is an alternative that improves management while keeping state ownership.",
+        "marks": 1
+       },
+       {
+        "id": "p13",
+        "description": "Success depends on the type of industry (natural monopoly or competitive), the price of the sale and the regulation.",
+        "marks": 1
+       },
+       {
+        "id": "p14",
+        "description": "Effects take time: job losses are immediate, efficiency gains slower.",
+        "marks": 1
+       },
+       {
+        "id": "p15",
+        "description": "A justified conclusion, for example that privatisation works best with competition and regulation, and may not suit natural monopolies without strong safeguards.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 11,
+        "maxMarks": 15,
+        "descriptor": "Two-sided, developed and applied analysis with a justified conclusion that answers the question."
+       },
+       {
+        "level": 2,
+        "minMarks": 6,
+        "maxMarks": 10,
+        "descriptor": "Some analysis of one or both sides, limited application, a partial or unsupported conclusion."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 5,
+        "descriptor": "Simple, undeveloped points with little or no explanation or conclusion."
+       }
+      ]
+     },
+     "modelAnswer": "Privatisation can improve efficiency, because private owners have a profit motive and may reduce costs, and the gains are greater if competition is introduced. The sale raises revenue and ends subsidies, helping the budget, although the government loses the future profits of the enterprise and may sell too cheaply. Investment may increase, raising the quality and coverage of service, and prices may fall if competition grows. On the other hand, a private monopoly such as an electricity or water network may raise prices unless it is regulated, and a regulator with price caps and quality standards needs capacity that a developing economy may lack. Jobs may be lost as the new owner cuts costs, unprofitable rural services may be dropped, and ownership may end up with a few wealthy or foreign buyers, which affects equity. Job losses are immediate while efficiency gains are slower. Commercialisation, which improves management while keeping state ownership, is an alternative. Overall, the effects depend on the type of industry, the price of the sale and the quality of regulation: privatisation is most likely to succeed where competition is possible and regulation is strong, and least likely to succeed for natural monopolies without strong safeguards."
+    }
+   }
+  ],
+  "explanation": "Reasons: incentives, discipline, competition, less interference, revenue and subsidies. Discussion: efficiency and revenue against monopoly, jobs, equity and regulation capacity; conditions for success.",
+  "hints": [
+   "In (a) give reasons: efficiency, revenue, competition, political interference.",
+   "In (b) weigh gains in efficiency and revenue against monopoly power, jobs and equity, and conclude."
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w3a-zimsec.q04",
+  "type": "STRUCTURED",
+  "concepts": [
+   "aecon.macro.aggregate-demand",
+   "aecon.macro.ad-as-equilibrium",
+   "aecon.macro.aggregate-supply"
+  ],
+  "difficulty": 5,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "The government of a country increases its spending on infrastructure and cuts income tax.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 10,
+    "markingMode": "MANUAL",
+    "stem": "Explain the factors that may cause the aggregate demand curve to shift to the right.",
+    "payload": {
+     "wordLimit": {
+      "min": 150,
+      "max": 350
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Aggregate demand is C + I + G + (X − M); a rise in any component, at any price level, shifts AD to the right.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Higher consumer confidence raises consumption.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A rise in real disposable income or a cut in income tax increases consumption.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Lower interest rates reduce the cost of borrowing and raise consumption and investment.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Greater availability of credit encourages spending.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Higher expected profits and business confidence raise investment.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "A rise in government spending, for example on infrastructure, is a direct increase in AD.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Higher incomes in trading partners increase export demand.",
+        "marks": 1
+       },
+       {
+        "id": "p9",
+        "description": "A fall in the exchange rate makes exports cheaper and imports dearer, raising net exports.",
+        "marks": 1
+       },
+       {
+        "id": "p10",
+        "description": "Rising wealth, such as higher asset prices, raises consumption; a change in the price level alone is a movement along AD, not a shift.",
+        "marks": 1
+       }
+      ]
+     },
+     "modelAnswer": "Aggregate demand is C + I + G + (X − M), so a rise in any component at any price level shifts the AD curve to the right. Consumption rises with higher consumer confidence, a rise in real disposable income, a cut in income tax, greater availability of credit and higher wealth. Lower interest rates reduce the cost of borrowing and raise both consumption and investment, while higher expected profits and business confidence also increase investment. A rise in government spending, for example on infrastructure, is a direct increase in AD. Net exports rise if incomes in trading partners increase, or if a fall in the exchange rate makes exports cheaper and imports dearer. A change in the price level alone is only a movement along the AD curve, not a shift."
+    }
+   },
+   {
+    "label": "(b)",
+    "type": "EXTENDED_RESPONSE",
+    "marks": 15,
+    "markingMode": "MANUAL",
+    "stem": "Discuss the likely effects of a rise in aggregate demand on real output, the price level and employment.",
+    "payload": {
+     "wordLimit": {
+      "min": 250,
+      "max": 600
+     }
+    },
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The AD curve shifts to the right along an upward-sloping SRAS curve.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Real output rises as firms respond to higher demand.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The price level rises (demand-pull inflation).",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Employment rises as firms hire more workers to produce the extra output.",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "If there is much spare capacity, SRAS is shallow, so output and jobs rise with little rise in prices.",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "If the economy is close to potential output, SRAS is steep, so most of the rise in AD becomes higher prices.",
+        "marks": 1
+       },
+       {
+        "id": "p7",
+        "description": "A multiplier effect may magnify the effect on output.",
+        "marks": 1
+       },
+       {
+        "id": "p8",
+        "description": "Higher imports may reduce the effect on domestic output.",
+        "marks": 1
+       },
+       {
+        "id": "p9",
+        "description": "If the rise in AD is financed by borrowing, interest rates may rise and crowd out private investment.",
+        "marks": 1
+       },
+       {
+        "id": "p10",
+        "description": "Higher prices may reduce real wages and affect competitiveness.",
+        "marks": 1
+       },
+       {
+        "id": "p11",
+        "description": "If spending is on infrastructure, LRAS may shift right over time, raising capacity and reducing inflation pressure.",
+        "marks": 1
+       },
+       {
+        "id": "p12",
+        "description": "Time lags: output may respond faster than employment.",
+        "marks": 1
+       },
+       {
+        "id": "p13",
+        "description": "Expectations: if firms expect further price rises, they may raise prices faster.",
+        "marks": 1
+       },
+       {
+        "id": "p14",
+        "description": "The effects depend on the size of the increase and the state of the economy.",
+        "marks": 1
+       },
+       {
+        "id": "p15",
+        "description": "A justified conclusion, for example that a rise in AD is beneficial when there is spare capacity but mainly inflationary near full capacity.",
+        "marks": 1
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 11,
+        "maxMarks": 15,
+        "descriptor": "Two-sided, developed and applied analysis with a justified conclusion that answers the question."
+       },
+       {
+        "level": 2,
+        "minMarks": 6,
+        "maxMarks": 10,
+        "descriptor": "Some analysis of one or both sides, limited application, a partial or unsupported conclusion."
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 5,
+        "descriptor": "Simple, undeveloped points with little or no explanation or conclusion."
+       }
+      ]
+     },
+     "modelAnswer": "A rise in aggregate demand shifts the AD curve to the right along an upward-sloping SRAS curve, so real output rises as firms respond to higher demand, the price level rises (demand-pull inflation) and employment rises as firms hire more workers. How much of the effect falls on output and how much on prices depends on spare capacity. If there is much spare capacity, SRAS is shallow, so output and jobs rise with little rise in prices; if the economy is close to potential output, SRAS is steep, so most of the rise in AD becomes higher prices. A multiplier effect may magnify the increase in output, but higher imports will reduce the effect on domestic output. If the rise is financed by borrowing, interest rates may rise and crowd out private investment, and higher prices may reduce real wages and competitiveness. If the spending is on infrastructure, LRAS may shift right over time, which raises capacity and reduces the inflationary pressure. There are time lags, as output may respond faster than employment, and expectations of further price rises can make inflation worse. Overall, a rise in AD is beneficial when there is spare capacity, because it raises output and employment with little inflation, but near full capacity it is mainly inflationary, so the policy should be matched to the state of the economy."
+    }
+   }
+  ],
+  "explanation": "Factors shifting AD: confidence, income and tax, interest rates and credit, investment, G, exports and exchange rate. Effects of a rise in AD: output, prices, employment, depending on spare capacity; multiplier, imports, crowding out, supply effects.",
+  "hints": [
+   "In (a) go through the components of AD: C, I, G and X − M.",
+   "In (b) use the AD/AS model and distinguish spare capacity from near-full capacity."
+  ],
+  "skill": "EVALUATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ }
+]
