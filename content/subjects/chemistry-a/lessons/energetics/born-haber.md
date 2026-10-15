@@ -65,6 +65,8 @@ $$
 
 On paper the cycle is drawn as an energy level diagram: endothermic steps go up, exothermic steps go down, and the elements sit on the zero line.
 
+![Born-Haber cycle for sodium chloride as an energy level diagram: from the elements at 0 the steps go up by +107 (atomisation of sodium), +494 (first ionisation energy of sodium) and +121 (atomisation of chlorine) to +722 kJ per mole, then down by 349 (electron affinity of chlorine) to the gaseous ions at +373, and finally down by 784 (lattice energy) to NaCl at −411, the same as the enthalpy of formation.](media:diagrams/born-haber-nacl.png "Figure: Born-Haber cycle for NaCl (kJ per mole); the lattice energy is the step that completes the loop to ΔHf")
+
 :::worked-solution[Example 1: lattice energy of sodium chloride]
 Data / kJ mol⁻¹: ΔH⦵f(NaCl) −411; ΔH⦵at(Na) +107; IE₁(Na) +494; ΔH⦵at(Cl) +121; EA₁(Cl) −349.
 

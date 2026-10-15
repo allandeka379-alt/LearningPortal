@@ -59,6 +59,8 @@ A lone pair is held only by the central nucleus, so it is closer to it and sprea
 
 Notice how methane, ammonia and water all have four pairs around the central atom, arranged roughly tetrahedrally. The angle falls from 109.5° to 107° to 104.5° as bonding pairs are replaced by lone pairs, which repel more strongly.
 
+![Six molecule shapes with bond angles: CO2 linear 180 degrees; BF3 trigonal planar 120 degrees; CH4 tetrahedral 109.5 degrees; NH3 pyramidal 107 degrees with one lone pair on top; H2O bent 104.5 degrees with two lone pairs; SF6 octahedral 90 degrees. Wedges come towards the viewer and hashed lines go away.](media:diagrams/vsepr-shapes-six.png "Figure: shapes and bond angles from VSEPR; lone pairs are pairs of dots, which squeeze the bond angle")
+
 ## Applying the method to new species
 
 :::worked-solution[Example 1: the ammonium ion, $\ce{NH4+}$]

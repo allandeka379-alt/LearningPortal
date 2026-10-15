@@ -51,6 +51,8 @@ An energy cycle has three corners: the reactants, the products, and a third set 
 
 In both cases multiply each value by the number of moles in the equation, and remember that ΔHf of an element in its standard state is zero.
 
+![Hess cycle for the formation of propane from combustion data: carbon and hydrogen burn directly to 3CO2 and 4H2O with a total of −2326 kJ (3 × −394 plus 4 × −286), while propane burns to the same products with −2219 kJ, so the enthalpy of formation of propane is −2326 − (−2219) = −107 kJ per mole.](media:diagrams/hess-cycle-propane-combustion.png "Figure: energy cycle using combustion data; the enthalpy of formation is the difference between the two routes")
+
 :::worked-solution[Example 1: from enthalpies of formation]
 Find ΔH for $\ce{2NaHCO3(s) -> Na2CO3(s) + CO2(g) + H2O(l)}$.
 Data: ΔH⦵f / kJ mol⁻¹: $\ce{NaHCO3(s)}$ −951; $\ce{Na2CO3(s)}$ −1131; $\ce{CO2(g)}$ −394; $\ce{H2O(l)}$ −286.

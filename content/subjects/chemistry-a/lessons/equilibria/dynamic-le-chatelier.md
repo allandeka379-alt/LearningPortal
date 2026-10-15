@@ -51,6 +51,8 @@ The features of a dynamic equilibrium are:
 4. it can be reached from either direction (starting with reactants or with products);
 5. it needs a **closed system**.
 
+![Two graphs for a reversible reaction starting from reactants only: on the left the forward rate falls and the reverse rate rises until they meet and stay equal (dynamic equilibrium); on the right the reactant concentration falls and the product concentration rises until both become constant, at different values.](media:diagrams/dynamic-equilibrium-graphs.png "Figure: at equilibrium the rates are equal and the concentrations stay constant (they need not be equal)")
+
 ### Why a closed system is needed
 
 A closed system allows energy to move in and out but not matter. If calcium carbonate is heated in an open crucible, the carbon dioxide escapes, so the reverse reaction $\ce{CaO + CO2 -> CaCO3}$ cannot happen and decomposition goes to completion. In a sealed container the carbon dioxide stays, and an equilibrium $\ce{CaCO3(s) <=> CaO(s) + CO2(g)}$ is set up. A fizzy drink bottle with its cap on is a closed system; an open glass is not.

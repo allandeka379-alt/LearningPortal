@@ -65,11 +65,16 @@ Hydrogen bonds are the strongest intermolecular forces, roughly a tenth of the s
 | $\ce{GeH4}$ | −88 | $\ce{AsH3}$ | −62 | $\ce{HBr}$ | −67 |
 
 In Group 14 the boiling point rises steadily with the number of electrons. In Groups 15 and 17 the first member ($\ce{NH3}$, $\ce{HF}$) is far higher than the trend predicts: these molecules form hydrogen bonds. Water, at the top of Group 16, is the most striking case of all.
+
+![Boiling points in degrees Celsius of the hydrides of Groups 14 to 17 for periods 2 to 4: Group 14 rises steadily CH4 −162, SiH4 −112, GeH4 −88; but in Groups 15, 16 and 17 the period-2 hydrides NH3 (−33), H2O (100) and HF (20) are far higher than the next member, because of hydrogen bonding.](media:diagrams/hydride-boiling-points.png "Figure: boiling points of hydrides; NH₃, H₂O and HF stand out because they form hydrogen bonds")
+
 :::
 
 ## The anomalous properties of water
 
 Each water molecule has two δ+ hydrogen atoms and two lone pairs on oxygen, so it can form up to **four** hydrogen bonds, more than $\ce{NH3}$ or $\ce{HF}$ can on average. This explains:
+
+![Hydrogen bonding in water: each water molecule has two partially positive hydrogen atoms and two lone pairs on oxygen; dashed hydrogen bonds join a hydrogen atom of one molecule to a lone pair on the oxygen of a neighbour, so one molecule can form up to four hydrogen bonds.](media:diagrams/hydrogen-bonds-water.png "Figure: hydrogen bonds (dashed) between water molecules")
 
 - **High melting and boiling points** for so small a molecule: many hydrogen bonds must be overcome.
 - **High surface tension**: molecules at the surface are pulled inwards by hydrogen bonds, which lets some insects walk on water.

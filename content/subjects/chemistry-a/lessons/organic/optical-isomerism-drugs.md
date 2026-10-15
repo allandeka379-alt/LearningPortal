@@ -40,6 +40,8 @@ Both boards: chiral centres, enantiomers, optical activity, racemic mixtures and
 
 A carbon atom with four **different** groups is a chiral centre (sometimes marked with an asterisk, C*). Compare whole groups, not just the first atom: in butan-2-ol the groups on C2 are H, OH, CH₃ and CH₂CH₃, which are all different.
 
+![The two enantiomers of lactic acid, CH3CH(OH)COOH: each has a central chiral carbon bonded to COOH, CH3, OH and H; the two molecules are mirror images across a dashed mirror plane, with OH on a wedge and H on a hashed bond, and cannot be superimposed.](media:diagrams/enantiomers-lactic-acid.png "Figure: a chiral carbon with four different groups gives two non-superimposable mirror images")
+
 The four groups point to the corners of a tetrahedron. Arranging them one way gives one enantiomer; its mirror image puts two groups in swapped positions and cannot be turned to match the original. To describe the two forms in words, say: "two tetrahedral arrangements of the same four groups around C*, related as an object and its mirror image".
 
 :::example{title="Example 1: finding chiral centres"}

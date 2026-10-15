@@ -51,6 +51,8 @@ Changes of state (the interconversion of states) involve energy:
 | giant molecular (giant covalent) | atoms | strong covalent bonds throughout | diamond, graphite, silicon(IV) oxide $\ce{SiO2}$, silicon (ZIMSEC detail) |
 | giant metallic | positive ions in delocalised electrons | metallic bonding | copper |
 
+![Four lattice types: a giant ionic layer with alternating Na+ and Cl- ions; a giant metallic lattice of positive ions with delocalised electrons between them; graphite as stacked layers with strong covalent bonds inside each layer and weak forces between layers; and diamond with each carbon bonded tetrahedrally to four others.](media:diagrams/lattice-types.png "Figure: ionic, metallic, graphite and diamond lattices (schematic)")
+
 ### Giant ionic lattices
 
 In sodium chloride each $\ce{Na+}$ is surrounded by six $\ce{Cl-}$ ions and each $\ce{Cl-}$ by six $\ce{Na+}$ ions in a cubic arrangement. Magnesium oxide has the same arrangement but with doubly charged ions, so its forces are much stronger.

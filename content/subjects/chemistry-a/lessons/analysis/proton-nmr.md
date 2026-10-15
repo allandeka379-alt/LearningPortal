@@ -102,6 +102,9 @@ Ethanol, $\ce{CH3CH2OH}$:
 | OH | 0.5-6.0 | 1 | singlet | rapid exchange; disappears with D₂O |
 
 Three signals, areas 3 : 2 : 1.
+
+![Schematic proton NMR spectrum of ethanol: a triplet for CH3 near 1.2 ppm with area 3, a singlet for OH near 2.6 ppm with area 1, and a quartet for CH2 near 3.7 ppm with area 2; the n + 1 rule gives the splitting, and TMS is the reference at 0 ppm.](media:diagrams/proton-nmr-ethanol.png "Figure: schematic proton NMR spectrum of ethanol (areas 3 : 2 : 1)")
+
 :::
 
 ## Deducing a structure: a method

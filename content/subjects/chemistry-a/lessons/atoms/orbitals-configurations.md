@@ -48,6 +48,9 @@ A species with one or more unpaired electrons, such as a chlorine atom, Cl•, o
 | f | 7 | 14 |
 
 Filling order up to krypton: **1s 2s 2p 3s 3p 4s 3d 4p**.
+
+![Sub-shell energy ladder for iron (26 electrons) drawn as orbital boxes with spin arrows: 1s, 2s, 2p, 3s and 3p are full, 4s is full and sits slightly below 3d, and the five 3d boxes hold six electrons, one paired and four unpaired, giving 1s2 2s2 2p6 3s2 3p6 3d6 4s2.](media:diagrams/orbital-boxes-iron.png "Figure: electron configuration of iron in boxes; 4s is below 3d, and singly occupied boxes fill before pairing")
+
 :::
 
 ## Shapes of s and p orbitals

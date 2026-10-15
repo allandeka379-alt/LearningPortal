@@ -54,6 +54,8 @@ A mass spectrum of boron shows peaks at m/e 10 (relative abundance 19.9) and m/e
 
 If the abundances are given as peak heights that do not add up to 100, divide by their total, not by 100.
 
+![Mass spectrum of boron: a short peak at m/e 10 with relative abundance 19.9 and a tall peak at m/e 11 with relative abundance 80.1, giving a relative atomic mass of about 10.8.](media:diagrams/mass-spectrum-boron.png "Figure: mass spectrum of boron; each peak is one isotope and its height is its abundance")
+
 ## Spectra of molecules
 
 ### The molecular ion
@@ -94,6 +96,9 @@ Peaks for butanone, $\ce{CH3COCH2CH3}$ (Mr 72):
 | 29 | 15 | $\ce{CH3CH2+}$ |
 
 The isomer butanal, $\ce{CH3CH2CH2CHO}$, would also give M⁺ at 72 but a strong peak at 29 ($\ce{CHO+}$ and $\ce{C2H5+}$) and no strong peak at 57 from losing CH₃; the fragments help to tell isomers apart.
+
+![Mass spectrum of butanone (Mr 72): peaks at m/e 29 (abundance 15, C2H5+), 43 (100, the base peak, CH3CO+), 57 (8, C2H5CO+) and 72 (20, the molecular ion), so the highest m/e is the relative molecular mass and the tallest peak is not the molecular ion.](media:diagrams/mass-spectrum-butanone.png "Figure: mass spectrum of butanone; the molecular ion is at m/e 72 and the base peak at 43")
+
 :::
 
 ## Counting carbon atoms from the [M+1]⁺ peak
@@ -124,6 +129,8 @@ Chlorine is about 75% ³⁵Cl and 25% ³⁷Cl; bromine is about 50% ⁷⁹Br and
 | two Br | M, M+2, M+4 | 1 : 2 : 1 |
 
 For example, chloroethane, $\ce{C2H5Cl}$, shows molecular ion peaks at m/e 64 ($\ce{C2H5^{35}Cl+}$) and 66 ($\ce{C2H5^{37}Cl+}$) in the ratio 3 : 1. Fragments that keep the halogen show the same pair; fragments that have lost it do not.
+
+![Mass spectrum pattern of chloroethane: molecular ion peaks at m/e 64 (C2H5 with chlorine-35) and 66 (chlorine-37) in the height ratio 3 to 1, the signature of one chlorine atom.](media:diagrams/mass-spectrum-chloroethane.png "Figure: one chlorine atom gives M and M+2 peaks in the ratio 3 : 1")
 
 ## Common mistakes
 

@@ -40,6 +40,8 @@ A single electrode potential cannot be measured on its own, so every half-cell i
 - dipping into a solution with $[\ce{H+(aq)}] = 1.00$ mol dm⁻³, for example 1.00 mol dm⁻³ HCl;
 - at 298 K. The half-equation is $\ce{2H+(aq) + 2e- <=> H2(g)}$.
 
+![Measuring the standard electrode potential of copper: on the left the standard hydrogen electrode (platinum in 1.00 mol per dm³ H+ with hydrogen gas at 101 kPa bubbling over it) is connected through a high-resistance voltmeter and a salt bridge to a copper electrode in 1.00 mol per dm³ Cu2+; the voltmeter reads +0.34 V, the E standard of Cu2+/Cu.](media:diagrams/she-copper-cell.png "Figure: the standard hydrogen electrode (left) joined to a Cu²⁺/Cu half-cell; the reading is E⦵(Cu²⁺/Cu) = +0.34 V")
+
 ## Measuring standard electrode potentials
 
 The half-cell under test is connected to the SHE by:
@@ -80,6 +82,8 @@ Arranging half-equations in order of E⦵ gives the electrochemical (redox) seri
 ## Cell potentials, polarity and electron flow
 
 In any cell the half-cell with the **more positive** E⦵ is the **positive electrode**, where reduction happens. The other is negative, where oxidation happens. Electrons flow through the external wire from the negative electrode to the positive electrode.
+
+![Zinc-copper cell with a high-resistance voltmeter reading 1.10 V: a zinc electrode in 1.00 mol per dm³ zinc ions is the negative electrode where zinc is oxidised, a copper electrode in 1.00 mol per dm³ copper ions is the positive electrode where copper ions are reduced, a salt bridge joins the beakers and electrons flow through the wire from zinc to copper.](media:diagrams/zinc-copper-cell.png "Figure: the zinc-copper cell; electrons flow from the negative zinc electrode to the positive copper electrode")
 
 :::worked-solution[Example 1: the zinc-copper cell]
 Data: $E^\ominus(\ce{Zn^2+/Zn}) = -0.76$ V; $E^\ominus(\ce{Cu^2+/Cu}) = +0.34$ V.

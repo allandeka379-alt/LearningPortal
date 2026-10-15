@@ -73,6 +73,8 @@ A TLC plate is developed until the solvent front is 8.0 cm above the baseline. T
 - **Purity.** A pure substance gives **one** spot. Extra spots show impurities (or that a reaction has not finished).
 - **Following a reaction.** Spot the starting material, the reaction mixture and a co-spot of both; the starting-material spot fades as the product spot grows.
 
+![TLC plate with solvent front 7.5 cm above the baseline: reference dyes P, Q and R have spots at 1.8, 4.2 and 6.0 cm (Rf 0.24, 0.56 and 0.80) and the mixture S has two spots at 1.8 cm and 6.0 cm, matching P and R, so S contains P and R but not Q.](media:diagrams/tlc-plate-dyes.png "Figure: TLC plate for the food-colouring example; spots are compared by Rf on the same plate")
+
 :::example{title="Example 2: which dyes are in a sweet colouring?"}
 A food colouring, S, and three permitted reference dyes P, Q and R were run on the same paper. Solvent front: 7.5 cm.
 

@@ -64,6 +64,8 @@ Transition metal ions are small and carry a high charge, so they strongly attrac
 | 4 | square planar | 90° | $\ce{[Pt(NH3)2Cl2]}$ (cisplatin), $\ce{[Ni(CN)4]^2-}$ |
 | 6 | octahedral | 90° | $\ce{[Cu(H2O)6]^2+}$, $\ce{[Co(NH3)6]^2+}$, $\ce{[Fe(CN)6]^3-}$ |
 
+![Shapes of four complex ions: Ag(NH3)2+ is linear with 180 degrees between the two ligands; CuCl42- is tetrahedral at 109.5 degrees; cisplatin Pt(NH3)2Cl2 is square planar with 90 degrees, the two NH3 next to each other; Cu(H2O)62+ is octahedral with 90 degrees between neighbouring water ligands.](media:diagrams/complex-ion-shapes.png "Figure: linear, tetrahedral, square planar and octahedral complexes")
+
 Large ligands such as Cl⁻ usually give four-coordinate complexes, because only four fit around the metal ion. Small ligands such as H₂O and NH₃ usually give six-coordinate complexes.
 
 ## Formula and charge of a complex

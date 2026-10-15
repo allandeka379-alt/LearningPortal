@@ -58,6 +58,8 @@ Across a period the first ionisation energy generally **increases**: the nuclear
 | First IE / kJ mol⁻¹ | 494 | 736 | 577 | 786 | 1060 | 1000 | 1260 | 1520 |
 | Outer configuration | 3s¹ | 3s² | 3s² 3p¹ | 3s² 3p² | 3s² 3p³ | 3s² 3p⁴ | 3s² 3p⁵ | 3s² 3p⁶ |
 
+![First ionisation energy across Period 3 in kJ per mole: Na 494, Mg 736, Al 577, Si 786, P 1060, S 1000, Cl 1260, Ar 1520. The general rise is interrupted by a dip from Mg to Al (the 3p electron is higher in energy than 3s) and a dip from P to S (the first paired 3p electron is repelled).](media:diagrams/ionisation-energy-period-3.png "Figure: first ionisation energies across Period 3, with the two dips explained")
+
 **Dip 1, Mg to Al (Group 2 to Group 13).** Aluminium's outer electron is in a 3p orbital, which is of higher energy than 3s and slightly further from the nucleus; it is also partly shielded by the 3s² electrons. So, despite the extra proton, less energy is needed.
 
 **Dip 2, P to S (Group 15 to Group 16).** In phosphorus the three 3p electrons are unpaired, one per orbital. In sulfur the fourth 3p electron must pair up. The **spin-pair repulsion** in that orbital makes one electron easier to remove.
@@ -77,6 +79,8 @@ The key evidence for shells is the **big jump** that appears when the next elect
 | IE / kJ mol⁻¹ | 494 | 4560 | 6940 | 9540 | 13 400 | … | 28 900 | 141 000 | 159 000 |
 
 There is one huge jump after the 1st (3s → 2p electrons) and another after the 9th (shell 2 → shell 1). The pattern 1, 8, 2 matches sodium's 2,8,1 arrangement read from the outside inwards. A graph of log₁₀(IE) against the number of electrons removed shows the jumps clearly as steps.
+
+![Graph of log10 of the successive ionisation energies of sodium against the number of electrons removed: one electron is removed easily (494 kJ per mole), then eight electrons with slowly rising values from 4560 to 28 900, then a huge jump to 141 000 and 159 000 for the last two, showing the 2,8,1 shell structure.](media:diagrams/ionisation-energy-sodium-successive.png "Figure: successive ionisation energies of sodium; each step up marks a new shell closer to the nucleus")
 
 :::worked-solution[Example 1: deducing the group from successive ionisation energies]
 The first four ionisation energies of element Q are 590, 1150, 4940 and 6480 kJ mol⁻¹. Deduce the group of Q.

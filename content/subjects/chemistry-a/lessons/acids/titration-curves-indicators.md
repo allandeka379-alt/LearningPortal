@@ -62,6 +62,8 @@ The table shows pH values calculated for 25.0 cm³ of 0.100 mol dm⁻³ acid in 
 
 **Weak acid–weak base.** There is no vertical section at all: the pH changes gradually through the equivalence point. No indicator gives a sharp end-point, so such titrations are followed with a pH meter or by conductivity instead.
 
+![pH against volume of base for 25.0 cm³ of 0.100 mol per dm³ acid and 0.100 mol per dm³ base: hydrochloric acid with sodium hydroxide starts at pH 1 and has equivalence at pH 7; ethanoic acid with sodium hydroxide starts near pH 3 and has equivalence at pH 8.73; hydrochloric acid with ammonia has equivalence at pH 5.28. All three have equivalence at 25.0 cm³.](media:diagrams/titration-curves-three.png "Figure: three titration curves; the equivalence point is at 25.0 cm³ for each but at different pH values")
+
 | Titration | Starting pH (0.1 mol dm⁻³) | Vertical section | pH at equivalence |
 |---|---|---|---|
 | strong acid–strong base | about 1 | about 3–11 | 7 |
@@ -72,6 +74,8 @@ The table shows pH values calculated for 25.0 cm³ of 0.100 mol dm⁻³ acid in 
 ## Choosing an indicator
 
 An indicator is suitable if its **whole colour-change range lies within the vertical section** of the curve. Then a single drop at the equivalence point takes the pH right through the range and the colour changes sharply.
+
+![Titration curve of 25.0 cm³ of 0.100 mol per dm³ ethanoic acid with sodium hydroxide: the half-equivalence point at 12.5 cm³ has pH 4.76, equal to the pKa; the phenolphthalein range 8.3 to 10.0 lies on the steep section near 25.0 cm³, while the methyl orange range 2.9 to 4.6 lies in the buffer region, so only phenolphthalein gives a sharp end-point.](media:diagrams/titration-weak-acid-indicators.png "Figure: weak acid with strong base: pH = pKa at half-equivalence; the shaded bands are two indicator ranges")
 
 | Indicator (data) | pH range | Colour in acid | Colour in alkali |
 |---|---|---|---|

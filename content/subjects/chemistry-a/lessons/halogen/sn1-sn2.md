@@ -65,6 +65,8 @@ The carbocation is **trigonal planar** (sp²), so the nucleophile can attack equ
 | steric hindrance | small H atoms leave the back of the carbon open to attack | three bulky CH₃ groups block backside attack |
 | mechanism | SN2 | SN1 |
 
+![Two reaction profiles for halogenoalkane hydrolysis: SN2 has a single peak at the transition state, with the reactants RX and hydroxide passing directly to products; SN1 has two peaks with a dip between them for the carbocation intermediate, and the first step, forming the carbocation, has the higher peak so it is the slow step.](media:diagrams/sn1-sn2-energy-profiles.png "Figure: SN2 has a transition state; SN1 has a real intermediate and a slow first step")
+
 **Secondary** halogenoalkanes, such as 2-bromopropane, are intermediate: they react by a mixture of both mechanisms.
 
 :::worked-solution[Example 2: deducing the mechanism from rate data]

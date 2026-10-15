@@ -82,6 +82,8 @@ Two conditions are needed:
 
 In the **cis** isomer the two similar groups (here the two $\ce{CH3}$ groups, or the two Cl atoms) are on the same side of the double bond; in the **trans** isomer they are on opposite sides. Cis and trans isomers have the same chemical reactions but can have different physical properties: cis-1,2-dichloroethene is polar (the C–Cl dipoles do not cancel) and boils higher than the non-polar trans isomer.
 
+![Cis and trans but-2-ene: in the cis isomer the two CH3 groups are on the same side of the C=C double bond (and the two H atoms on the other side); in the trans isomer the CH3 groups are on opposite sides. There is no rotation about the double bond, so they are different molecules.](media:diagrams/cis-trans-but-2-ene.png "Figure: cis and trans isomers of but-2-ene; the double bond cannot rotate")
+
 :::example{title="Example 2: all the isomers of C₄H₈"}
 1. $\ce{C4H8}$ fits $\ce{C_nH_{2n}}$: alkenes or cycloalkanes.
 2. Straight-chain alkenes: but-1-ene and but-2-ene (positional isomers).

@@ -40,6 +40,8 @@ Both boards: splitting in octahedral and tetrahedral complexes, absorption and t
 
 In an isolated ion all five 3d orbitals have the same energy. When ligands approach, their lone pairs repel the d electrons, and the orbitals that point towards the ligands are raised in energy more than the others.
 
+![Energy diagram of d orbitals: in a free transition metal ion the five d orbitals have the same energy; in an octahedral complex the ligands split them into three lower and two higher orbitals with an energy gap ΔE. A photon of visible light with energy ΔE is absorbed when an electron moves up, so the complex appears coloured with the remaining wavelengths.](media:diagrams/d-orbital-splitting.png "Figure: d-orbital splitting in a complex; absorption of light across the gap ΔE gives colour")
+
 **Octahedral complexes.** The six ligands lie along the x, y and z axes. The $d_{x^2-y^2}$ and $d_{z^2}$ orbitals point straight at them, so these **two** orbitals are raised. The $d_{xy}$, $d_{xz}$ and $d_{yz}$ orbitals point between the axes, so these **three** are lower.
 
 **Tetrahedral complexes.** The four ligands lie between the axes, so the pattern is reversed: **three** orbitals ($d_{xy}$, $d_{xz}$, $d_{yz}$) are higher and **two** are lower. With fewer ligands, none pointing straight at an orbital, ΔE is **smaller** than in an octahedral complex of the same ion.
