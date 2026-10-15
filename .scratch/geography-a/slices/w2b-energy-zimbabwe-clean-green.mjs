@@ -30,7 +30,7 @@ concept("ageo.energy.zimbabwe-clean-green", { file: "energy/zimbabwe-clean-green
   mc(b, 2, "UNDERSTANDING", "Why does a drought reduce the electricity generated at Kariba?", [
     ["Less water in the lake means less flow through the turbines", "Correct: output depends on water volume and head."],
     ["Coal used at the dam becomes damp and burns poorly", "Kariba is hydroelectric; it does not burn coal."],
-    ["High temperatures melt the wires leaving the station", "Heat does not explain lower generation."],
+    ["High temperatures melt the wires that leave the power station", "Heat does not explain lower generation."],
     ["Drought increases the number of tourists at the dam", "Tourism does not affect generation."],
   ], "Hydro output depends on **water level**.");
   mc(b, 2, "UNDERSTANDING", "Which is a potential, rather than an actual, energy source in Zimbabwe?", [
@@ -41,18 +41,18 @@ concept("ageo.energy.zimbabwe-clean-green", { file: "energy/zimbabwe-clean-green
   ], "**Coal-bed methane** is a potential source.");
   mc(b, 2, "UNDERSTANDING", "How does a household biogas digester reduce wood use?", [
     ["It ferments dung to give gas for cooking and lighting", "Correct: the gas replaces fuelwood."],
-    ["It burns the dung directly to heat water for the day", "A digester ferments dung without burning it."],
+    ["It burns the dung directly to heat water for the whole day", "A digester ferments dung without burning it."],
     ["It produces electricity from sunlight", "That is solar PV."],
     ["It collects rainwater to put out cooking fires", "Biogas production does not involve rainwater collection."],
   ], "Dung and water ferment to produce **methane** for cooking.");
   mc(b, 3, "APPLICATION", "Which site is the best candidate for a solar mini-grid?", [
-    ["A sunny village far from the grid with many households and a clinic", "Correct: high resource, high need and no grid access."],
-    ["A shaded valley next to a large power station", "Shade reduces solar output and the grid is already close."],
-    ["A protected forest reserve with no settlement", "No demand and a protected area."],
-    ["A city centre with reliable mains supply", "Reliable grid supply reduces the need."],
+    ["A sunny village far from the grid, with a clinic", "Correct: high resource, high need and no grid access."],
+    ["A shaded valley close to a large coal power station", "Shade reduces solar output and the grid is already close."],
+    ["A protected forest reserve with no settlement nearby", "No demand and a protected area."],
+    ["A city centre with a reliable mains electricity supply", "Reliable grid supply reduces the need."],
   ], "Solar mini-grids suit **sunny, off-grid communities**.", { hints: ["Look for strong resource, strong need and distance from the grid."] });
   mc(b, 3, "ANALYSIS", "Which is the strongest reason why GIS is useful in locating potential energy sites?", [
-    ["It overlays resource and constraint layers to find the best sites", "Correct: sunshine, slope, roads, grid and land use can be combined."],
+    ["It overlays resource and constraint layers to rank sites", "Correct: sunshine, slope, roads, grid and land use can be combined."],
     ["It replaces the need for any field visit or consultation", "Field work and consultation are still needed."],
     ["It reduces the cost of building any power station", "GIS informs site choice but does not lower construction costs directly."],
     ["It produces energy from digital maps", "Maps do not produce energy."],

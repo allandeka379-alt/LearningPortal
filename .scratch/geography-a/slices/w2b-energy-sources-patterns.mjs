@@ -37,14 +37,14 @@ concept("ageo.energy.sources-patterns", { file: "energy/sources-patterns", keyPr
     ["It produces carbon dioxide only at night", "Wind turbines do not emit carbon dioxide when operating."],
   ], "**Intermittent** means output varies with the weather, so storage or back-up is needed.");
   mc(b, 2, "UNDERSTANDING", "Which is a disadvantage of hydroelectric power?", [
-    ["Dams flood land, displace people and depend on reliable rainfall", "Correct: reservoirs have social and environmental costs."],
+    ["Dams flood land and depend on reliable rainfall", "Correct: reservoirs have social and environmental costs."],
     ["It releases large quantities of sulphur dioxide", "Hydro does not burn fuel."],
-    ["It needs a continuous supply of uranium", "Uranium is for nuclear power."],
-    ["It produces radioactive waste that must be stored", "That is a nuclear problem."],
+    ["It needs a continuous supply of uranium from mines", "Uranium is for nuclear power."],
+    ["It produces radioactive waste that must be stored safely", "That is a nuclear problem."],
   ], "Hydro schemes **flood land and depend on rainfall**, as drought showed at Kariba.");
   mc(b, 2, "UNDERSTANDING", "Why do many households in low-income countries still depend on wood and charcoal?", [
     ["They are cheap and local while cleaner fuels cost more", "Correct: cost and availability drive the choice."],
-    ["Wood is a more efficient fuel than gas or electricity", "Wood burns less efficiently."],
+    ["Wood is a far more efficient fuel than gas or electricity", "Wood burns less efficiently."],
     ["Wood produces no smoke when burnt indoors", "Wood smoke harms health."],
     ["Wood and charcoal are banned in cities", "They are widely used in cities too."],
   ], "People use **cheap, local** fuels when electricity and gas are costly or unavailable.");
@@ -55,10 +55,10 @@ concept("ageo.energy.sources-patterns", { file: "energy/sources-patterns", keyPr
     ["Excess oil in the market lowering all domestic prices", "Dependence on imports exposes it to price rises."],
   ], "Import dependence means **price and supply risks**.", { hints: ["Think about who controls the supply and the price."] });
   mc(b, 3, "ANALYSIS", "Which is the best reason why fossil fuels still supply most of the world's energy although renewables are growing fast?", [
-    ["Demand has grown so quickly that renewables have been added alongside fossil fuels", "Correct: fossil use also rose in absolute terms."],
-    ["Renewables have been banned in most large countries", "Renewables are expanding rapidly in most countries."],
-    ["Fossil fuels are renewable on a human timescale", "Fossil fuels are non-renewable."],
-    ["No country has built a wind farm or solar plant", "Many large installations exist."],
+    ["Demand rose so fast that renewables only added to fossil fuels", "Correct: fossil use also rose in absolute terms."],
+    ["Renewables have been banned in most of the large countries", "Renewables are expanding rapidly in most countries."],
+    ["Fossil fuels are renewable on a human timescale of decades", "Fossil fuels are non-renewable."],
+    ["No country has yet built a large wind farm or solar plant", "Many large installations exist."],
   ], "Growth in demand means that **both** fossil and renewable use are rising.", { hints: ["Think about absolute amounts as well as shares."] });
   b.tf({ d: 1, skill: "RECALL", stem: "Natural gas burns more cleanly than coal because it produces less carbon dioxide per unit of energy.", answer: true,
     feedbackTrue: "Correct: gas has lower emissions per unit of energy than coal.",

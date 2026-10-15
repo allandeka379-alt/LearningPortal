@@ -28,22 +28,22 @@ const WASTE = tbl(["Item", "Quantity", "Unit cost (US\\$)"], waste.map(([n, q, u
 
 concept("ageo.env.eia-projects", { file: "env/eia-projects", keyPrefix: "env.eia-projects" }, (b) => {
   mc(b, 1, "RECALL", "What is the purpose of an **Environmental Impact Assessment**?", [
-    ["To predict and evaluate the effects of a proposed development before it is approved", "Correct: it informs the decision and the mitigation."],
+    ["To predict a development's effects before it is approved", "Correct: it informs the decision and the mitigation."],
     ["To repair damage after a development has been finished", "That is restoration, not assessment."],
-    ["To measure the profit that a development will make", "That is a financial appraisal, not an EIA."],
+    ["To measure the profit that a development will make each year", "That is a financial appraisal, not an EIA."],
     ["To count the people who live near a development", "A census does this; an EIA is broader."],
   ], "An **EIA** predicts and evaluates likely effects before approval.");
   mc(b, 2, "UNDERSTANDING", "Which describes **scoping** in an EIA?", [
     ["Deciding which impacts to study and who is affected", "Correct: it sets terms of reference with community input."],
-    ["Writing the final environmental report", "That is the EIA document stage."],
-    ["Checking that measures work during operation", "That is monitoring."],
+    ["Writing the final report for the authority", "That is the EIA document stage."],
+    ["Checking that measures work while the project operates", "That is monitoring."],
     ["Deciding on the price of the project", "Cost is not the purpose of scoping."],
   ], "**Scoping** focuses the EIA on the important impacts.");
   mc(b, 2, "UNDERSTANDING", "Why is public participation important in an EIA?", [
     ["Local people supply knowledge and are affected by the project", "Correct: it improves decisions and reduces conflict."],
     ["It removes the need for the assessment team to collect data", "Data collection is still necessary."],
     ["It guarantees that every project is approved", "Projects may still be refused or changed."],
-    ["It replaces the role of the environmental authority", "The authority still decides."],
+    ["It replaces the role of the environmental management authority", "The authority still decides."],
   ], "**Public participation** brings local knowledge and legitimacy.");
   mc(b, 2, "UNDERSTANDING", "Which is an example of **mitigation**?", [
     ["Moving a mine's waste dump away from a river", "Correct: it avoids the harm."],
@@ -52,10 +52,10 @@ concept("ageo.env.eia-projects", { file: "env/eia-projects", keyPrefix: "env.eia
     ["Naming the contractor who will build the project", "This does not reduce impact."],
   ], "**Mitigation** avoids, reduces or compensates for harm.");
   mc(b, 3, "APPLICATION", "A school project aims to plant 500 trees. Which objective is the best, because it can be measured?", [
-    ["Plant 500 trees by March and have 400 alive after one year", "Correct: it has a number, a date and a target."],
-    ["Improve the school environment", "This cannot be measured."],
-    ["Make the school greener in the future", "This has no number or date."],
-    ["Try to plant as many trees as possible", "This has no target."],
+    ["Plant 500 trees by March; 400 alive after a year", "Correct: it has a number, a date and a target."],
+    ["Improve the school environment for all pupils", "This cannot be measured."],
+    ["Make the school much greener in the future", "This has no number or date."],
+    ["Try to plant as many trees as possible this year", "This has no target."],
   ], "A good objective is **measurable** and has a **deadline**.", { hints: ["Look for numbers and dates."] });
   mc(b, 3, "ANALYSIS", "A report finds that an EIA was approved with 15 conditions, but there is no one to check them. What is the main weakness?", [
     ["There is no effective monitoring or enforcement", "Correct: measures are only useful if they are checked."],
@@ -153,10 +153,10 @@ concept("ageo.env.eia-projects", { file: "env/eia-projects", keyPrefix: "env.eia
       P.num({ label: "(b)", marks: 2, stem: "A contingency of 10% of the sub-total is added. Calculate the total budget, in US\\$.", value: wTotal, unit: "US$", wrong: [65, 585],
         explanation: "10% of 650 = 65, so total = 650 + 65 = 715." }),
       P.mcq({ label: "(c)", marks: 1, stem: "Which is the best measurable objective for this project?", options: [
-        ["Remove all dumped waste from the market area within four months and keep it clear", "Correct: it has a target, a place and a time limit."],
-        ["Clean up the village", "This cannot be measured."],
-        ["Educate people about waste", "This has no target or date."],
-        ["Make the village a better place", "This is too vague to evaluate."],
+        ["Clear all dumped waste from the market within four months", "Correct: it has a target, a place and a time limit."],
+        ["Clean up the whole village and make it look better", "This cannot be measured."],
+        ["Educate people about waste and why it matters to them", "This has no target or date."],
+        ["Make the village a much better place to live in for everyone", "This is too vague to evaluate."],
       ], answer: "A", explanation: "Good objectives are specific, measurable and have a deadline." }),
       P.manual({ label: "(d)", marks: 3, stem: "Suggest three indicators the committee could use to monitor and evaluate the project.",
         points: [

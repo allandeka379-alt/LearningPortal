@@ -22,7 +22,7 @@ concept("ageo.mining.prospecting-mineralogy", { file: "mining/prospecting-minera
     ["The colour of its powder when rubbed on an unglazed tile", "Correct: streak is more reliable than surface colour."],
     ["The shine of its surface in sunlight", "That is lustre."],
     ["The way it breaks along flat planes", "That is cleavage."],
-    ["Its mass compared with an equal volume of water", "That is specific gravity."],
+    ["Its mass compared with the mass of an equal volume of water", "That is specific gravity."],
   ], "The **streak** is the colour of the powdered mineral.");
   mc(b, 2, "UNDERSTANDING", "Why do prospectors use an ultraviolet lamp in the dark?", [
     ["Some minerals glow under ultraviolet light", "Correct: scheelite, for example, fluoresces."],
@@ -51,7 +51,7 @@ concept("ageo.mining.prospecting-mineralogy", { file: "mining/prospecting-minera
   mc(b, 3, "ANALYSIS", "A geochemical survey shows copper in soil 11 times the background at one station, but the surrounding area is covered by deep soil. What is the best next step?", [
     ["Trench or drill near the station to check the rock beneath", "Correct: the anomaly needs confirming at depth."],
     ["Open a large mine at once", "An anomaly alone does not prove a deposit."],
-    ["Ignore the result because soil samples are unreliable", "Anomalies are valuable clues."],
+    ["Ignore the result because soil samples are always unreliable", "Anomalies are valuable clues."],
     ["Repeat the survey in a different country", "The next step is local follow-up."],
   ], "An anomaly is a **clue**; trenching or drilling tests it.", { hints: ["An anomaly does not prove a deposit."] });
   b.tf({ d: 1, skill: "RECALL", stem: "Gangue is the worthless rock and mineral that occurs with an ore.", answer: true,

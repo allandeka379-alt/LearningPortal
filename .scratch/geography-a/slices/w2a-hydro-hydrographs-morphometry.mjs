@@ -41,7 +41,7 @@ concept("ageo.hydro.hydrographs-morphometry", { file: "hydro/hydrographs-morphom
   ], "The rising limb shows **discharge increasing** as stormflow arrives.", { daily: true });
   mc(b, 2, "UNDERSTANDING", "Which change is most likely to shorten the lag time of a river?", [
     ["Replacing woodland with paved surfaces and drains", "Correct: water reaches the channel faster."],
-    ["Planting woodland across the whole of the basin", "Woodland slows water and lengthens the lag."],
+    ["Planting dense woodland across the whole of the drainage basin", "Woodland slows water and lengthens the lag."],
     ["Draining a wetland into the river by a long bypass", "This lengthens the path or has uncertain effects on the lag."],
     ["Building a reservoir at the head of the main river", "Storage delays and reduces the peak flow."],
   ], "Urbanisation produces **flashier** hydrographs with a short lag time and high peak.", { daily: true });
@@ -53,14 +53,14 @@ concept("ageo.hydro.hydrographs-morphometry", { file: "hydro/hydrographs-morphom
   ], "Two streams of order *n* join to make a stream of order *n* + 1.");
   mc(b, 3, "APPLICATION", "A Zimbabwean river has its highest mean monthly flow in February and its lowest in September. Which explanation fits best?", [
     ["The wet season is November to March; baseflow is lowest in the late dry season", "Correct: runoff follows the rains and groundwater is depleted by September."],
-    ["Snowmelt in the highlands peaks in February and floods the rivers each year", "There is no seasonal snowmelt in Zimbabwe."],
+    ["Snowmelt in the highlands peaks in February and floods the lowland rivers every year", "There is no seasonal snowmelt in Zimbabwe."],
     ["Evapotranspiration is lowest in February, so little water is lost to the air", "Evapotranspiration is high in the hot wet season."],
     ["Rain falls evenly in every month, so flow depends mainly on the tide", "Rainfall is strongly seasonal and rivers are not tidal inland."],
   ], "Zimbabwe has a **summer rainfall** regime; flow peaks in January-March and is lowest at the end of the dry season.", { hints: ["When is the rainy season?"] });
   mc(b, 3, "UNDERSTANDING", "A mean bifurcation ratio of 4 means that, on average:", [
     ["There are four streams of one order for each stream of the next order up", "Correct: Rb = N(u) ÷ N(u+1)."],
-    ["Each stream is four kilometres long on average", "Bifurcation ratio is a ratio of numbers, not a length."],
-    ["There are four tributaries joining each main river", "It compares counts of streams of successive orders."],
+    ["Each stream is four kilometres long on average in the whole basin", "Bifurcation ratio is a ratio of numbers, not a length."],
+    ["There are four tributaries joining each main river along its whole length", "It compares counts of streams of successive orders."],
     ["The basin receives four times the rainfall of its neighbour", "Rainfall is not part of the ratio."],
   ], "The bifurcation ratio compares the **number** of streams in successive orders.", { hints: ["It is a ratio of two numbers of streams."] });
   mc(b, 4, "ANALYSIS", "Two basins receive the same storm. Basin X has a lower peak and a longer lag time than basin Y. Which description of X is most likely?", [

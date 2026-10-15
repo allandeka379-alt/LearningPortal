@@ -29,31 +29,31 @@ concept("ageo.mining.legislation-policy", { file: "mining/legislation-policy", k
   ], "Minerals belong to the **state**; rights are granted under the mining law.");
   mc(b, 2, "UNDERSTANDING", "What is the role of the Minerals Marketing Corporation of Zimbabwe (MMCZ)?", [
     ["It markets and sells most minerals on behalf of producers", "Correct: it handles sales and export documents."],
-    ["It grants prospecting licences to individuals", "Licences are issued under the mining law by the mining authority."],
+    ["It grants prospecting licences to individuals and companies", "Licences are issued under the mining law by the mining authority."],
     ["It pegs claims on behalf of small-scale miners", "Pegging is done by the claim holder."],
     ["It monitors the safety of shaft supports", "Safety is supervised under the mining and safety rules."],
   ], "**MMCZ** markets minerals and handles export documentation.");
   mc(b, 2, "UNDERSTANDING", "What is the purpose of the Kimberley Process?", [
-    ["To stop trade in conflict diamonds by certifying shipments", "Correct: participating countries must certify rough diamonds."],
-    ["To set the price of gold on world markets", "It deals with diamonds, not gold prices."],
-    ["To train miners in safe underground methods", "It is a certification scheme, not a training programme."],
-    ["To grant pegging rights to foreign companies", "It does not grant mining rights."],
+    ["To stop trade in conflict diamonds through certification", "Correct: participating countries must certify rough diamonds."],
+    ["To set the price of gold on all world commodity markets", "It deals with diamonds, not gold prices."],
+    ["To train all miners in safe underground mining methods", "It is a certification scheme, not a training programme."],
+    ["To grant pegging rights to foreign mining companies only", "It does not grant mining rights."],
   ], "The **Kimberley Process** certifies rough diamonds to exclude conflict diamonds.");
   mc(b, 2, "UNDERSTANDING", "Why might a ban on the export of unprocessed minerals be introduced?", [
-    ["To encourage processing in the country so that more value is kept", "Correct: processing adds value and jobs."],
-    ["To make it easier to smuggle minerals across the border", "A ban is meant to control exports."],
+    ["To encourage processing in the country and keep more value", "Correct: processing adds value and jobs."],
+    ["To make it easier to smuggle raw minerals across the border", "A ban is meant to control exports."],
     ["To reduce the number of mines that need an EIA", "It has no such effect."],
     ["To lower the world price of the mineral", "The aim is local value, not lowering prices."],
   ], "Export bans aim to add **local value** through processing.");
   mc(b, 3, "APPLICATION", "A farmer finds a gold-bearing reef on her land. What should she do first if she wants to mine it legally?", [
-    ["Apply for the right to prospect and then peg and register the claim", "Correct: she must follow the licensing and registration steps."],
-    ["Start digging, as the minerals belong to the landholder", "Minerals belong to the state."],
+    ["Apply for prospecting rights, then peg and register the claim", "Correct: she must follow the licensing and registration steps."],
+    ["Start digging at once, as the minerals belong to the landholder", "Minerals belong to the state."],
     ["Sell the ore directly to any buyer without records", "Sales are controlled and must be documented."],
     ["Export the ore on her own to get the best price", "Exports go through approved channels and need documents."],
   ], "She must **apply for rights, peg and register** the claim.", { hints: ["Think about who owns the minerals and what the law requires."] });
   mc(b, 3, "ANALYSIS", "Which is the strongest argument that a policy of tighter control of gold buying may lower output?", [
-    ["If official prices or payment terms are poor, miners may sell illegally or stop mining", "Correct: the effect depends on how attractive the official route is."],
-    ["Tighter control always increases the amount of gold produced", "That is not always true."],
+    ["If official prices or terms are poor, miners may sell illegally", "Correct: the effect depends on how attractive the official route is."],
+    ["Tighter control always increases the total amount of gold produced", "That is not always true."],
     ["Miners are not affected by the price they are paid", "Miners respond to prices and payment terms."],
     ["Control reduces the number of buyers to zero", "Some official buyers remain."],
   ], "Control works only if the **official route is attractive** to miners.", { hints: ["Think about miners' incentives."] });
@@ -130,12 +130,12 @@ concept("ageo.mining.legislation-policy", { file: "mining/legislation-policy", k
     stem: `Illustrative mineral export earnings (data invented for this exercise):\n\n${ETAB}\n\nDescribe the pattern shown.`,
     hints: ["Quote the largest and smallest values and the total."],
     points: [
-      "Platinum group metals earn the most (US\$1 520 million), 38% of the total.",
-      "Gold is second (US\$1 100 million), 27.5%.",
-      "Lithium (US\$640 million) and chrome (US\$340 million) earn less, and other minerals US\$400 million.",
-      "The total is US\$4 000 million, and PGMs and gold together earn about two-thirds (65.5%).",
+      "Platinum group metals earn the most (US\\$1 520 million), 38% of the total.",
+      "Gold is second (US\\$1 100 million), 27.5%.",
+      "Lithium (US\\$640 million) and chrome (US\\$340 million) earn less, and other minerals US\\$400 million.",
+      "The total is US\\$4 000 million, and PGMs and gold together earn about two-thirds (65.5%).",
     ],
-    modelAnswer: "Platinum group metals earn the most (US\$1 520 million, 38% of the total), followed by gold (US\$1 100 million, 27.5%). Lithium (US\$640 million), other minerals (US\$400 million) and chrome (US\$340 million) earn less. The total is US\$4 000 million, and PGMs and gold together earn about two-thirds.",
+    modelAnswer: "Platinum group metals earn the most (US\\$1 520 million, 38% of the total), followed by gold (US\\$1 100 million, 27.5%). Lithium (US\\$640 million), other minerals (US\\$400 million) and chrome (US\\$340 million) earn less. The total is US\\$4 000 million, and PGMs and gold together earn about two-thirds.",
     explanation: "Describe with figures and shares." });
 
   b.struct({ d: 4, skill: "ANALYSIS",

@@ -39,7 +39,7 @@ concept("ageo.bio.plant-succession", { file: "bio/plant-succession", keyPrefix: 
     ["Animals plant the trees immediately after a fire", "Animals help to spread seeds but do not explain the speed."],
   ], "Secondary succession starts with **soil, seeds and roots** already present.");
   mc(b, 2, "UNDERSTANDING", "Which describes a **pioneer species**?", [
-    ["A hardy species that colonises bare ground first", "Correct: pioneers tolerate harsh conditions and prepare the habitat."],
+    ["A hardy species that colonises bare ground", "Correct: pioneers tolerate harsh conditions and prepare the habitat."],
     ["A slow-growing tree that dominates the climax", "That is typical of late stages."],
     ["An animal that grazes the grass in a savanna", "A pioneer species is a plant."],
     ["A plant that grows only in deep shade", "Shade-tolerant plants appear after the canopy forms."],
@@ -53,7 +53,7 @@ concept("ageo.bio.plant-succession", { file: "bio/plant-succession", keyPrefix: 
   mc(b, 3, "APPLICATION", "A veld fire burns all the grass and shrubs on a hillside but leaves the soil. Which statement is correct?", [
     ["Secondary succession will begin from seeds and roots", "Correct: soil survives, so it is secondary succession."],
     ["Primary succession will begin on the bare soil", "Primary succession needs a surface with no soil."],
-    ["No succession is possible without lichens first", "Lichens are needed only on bare rock."],
+    ["No succession is possible on the site without lichens first", "Lichens are needed only on bare rock."],
     ["The area will remain permanent bare ground", "Plants usually recolonise quickly after fire."],
   ], "Because soil remains, the regrowth is **secondary succession**.", { hints: ["Ask whether the soil is still there."] });
   mc(b, 3, "ANALYSIS", "Which trend is typical as succession moves from the pioneer stage towards the climax?", [

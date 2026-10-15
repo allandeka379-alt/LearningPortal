@@ -43,7 +43,7 @@ concept("ageo.bio.vegetation-biomes", { file: "bio/vegetation-biomes", keyPrefix
     ["The angle and direction of a slope", "Slope and aspect belong to relief."],
   ], "Edaphic factors are soil factors: depth, texture, drainage, pH and nutrients.");
   mc(b, 2, "UNDERSTANDING", "Which statement about biomass and net primary productivity (NPP) is correct?", [
-    ["Biomass is a store of living material; NPP is the rate of new growth", "Correct: one is a store and the other a flow."],
+    ["Biomass is a store of living material; NPP is a rate of growth", "Correct: one is a store and the other a flow."],
     ["Biomass is a rate in g per m² per year; NPP is a mass in kg", "The two definitions are reversed."],
     ["Biomass and NPP are two names for the same measurement", "They measure different things, a store and a flow."],
     ["NPP measures the total animal mass in an ecosystem", "NPP concerns plant growth, not animal mass."],
@@ -68,8 +68,8 @@ concept("ageo.bio.vegetation-biomes", { file: "bio/vegetation-biomes", keyPrefix
   ], "High, evenly spread rainfall and constant warmth indicate **tropical rainforest**.", { hints: ["Check for a dry season and a cool season."] });
   mc(b, 3, "ANALYSIS", "Two hillsides have the same climate but different vegetation. One is deep, moist soil and the other thin, stony soil. Which factor best explains the difference?", [
     ["Edaphic factors: soil depth and water retention", "Correct: soil differs while climate is the same."],
-    ["Climatic factors: temperature and rainfall", "The question says the climate is the same."],
-    ["Global position: distance from the equator", "Both hillsides lie at the same latitude."],
+    ["Climatic factors: temperature, sunshine and rainfall", "The question says the climate is the same."],
+    ["Global position: distance from the equator or the sea", "Both hillsides lie at the same latitude."],
     ["Sea currents: warm water offshore", "Ocean currents act at much larger scales."],
   ], "With the same climate, **soil** (an edaphic factor) explains the local difference.", { hints: ["Climate is the same, so look for a local factor."] });
   b.tf({ d: 1, skill: "RECALL", stem: "Tropical rainforest has the highest biomass and productivity of the four biomes in this lesson.", answer: true,

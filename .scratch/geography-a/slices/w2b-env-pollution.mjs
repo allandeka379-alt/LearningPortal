@@ -20,7 +20,7 @@ const pmMax = chk(Math.max(...PM) - Math.min(...PM), 40);
 concept("ageo.env.pollution", { file: "env/pollution", keyPrefix: "env.pollution" }, (b) => {
   mc(b, 1, "RECALL", "What is a **point source** of pollution?", [
     ["A single identifiable outlet, such as a factory pipe", "Correct: the discharge can be traced to one place."],
-    ["Fertiliser washing off many fields into a river", "That is a non-point (diffuse) source."],
+    ["Fertiliser washing off many farm fields into a nearby river", "That is a non-point (diffuse) source."],
     ["Exhaust gases from traffic across a whole city", "That is a non-point source."],
     ["Dust blown from a large dry area", "That is a diffuse source."],
   ], "A **point source** discharges from one identifiable place.");
@@ -40,17 +40,17 @@ concept("ageo.env.pollution", { file: "env/pollution", keyPrefix: "env.pollution
     ["It shows how much suspended material makes the water cloudy", "Correct: soil, waste and algae cloud the water."],
     ["It shows the number of fish in the water", "Turbidity does not count fish."],
     ["It shows how much oxygen the water contains", "Oxygen is measured separately."],
-    ["It shows whether the water is acid or alkaline", "That is measured by pH."],
+    ["It shows whether the water is acid, neutral or alkaline in nature", "That is measured by pH."],
   ], "**Turbidity** measures cloudiness caused by suspended particles.");
   mc(b, 3, "APPLICATION", "A river has an E. coli count of 20 per 100 mL upstream of a town and 4 800 per 100 mL at the town's outfall. What is the best conclusion?", [
     ["Sewage from the town is probably entering the river", "Correct: a large rise in E. coli points to faecal contamination."],
-    ["The town has reduced the pollution in the river", "The count has risen sharply, not fallen."],
+    ["The town has reduced the amount of pollution in the river", "The count has risen sharply, not fallen."],
     ["The river is unpolluted at both sites", "4 800 per 100 mL is far above the drinking-water standard of none."],
     ["The pH must also have risen above 8.5", "E. coli counts say nothing about pH."],
   ], "A rise in E. coli suggests **faecal contamination** from the outfall.", { hints: ["What does E. coli indicate?"] });
   mc(b, 3, "ANALYSIS", "Which is the best reason why fines for pollution may fail to protect a river?", [
     ["Enforcement staff and treatment works are short of funds", "Correct: laws need money and monitoring to work."],
-    ["Fines always increase the amount of effluent discharged", "Fines are intended to reduce effluent."],
+    ["Fines always increase the total amount of effluent discharged", "Fines are intended to reduce effluent."],
     ["Industries never release pollutants when a law exists", "Laws do not stop pollution automatically."],
     ["Sewage contains no harmful bacteria after being fined", "Fines do not treat sewage."],
   ], "Control by law needs **funding, monitoring and enforcement**.", { hints: ["Think about what has to happen after a law is passed."] });
@@ -145,8 +145,8 @@ concept("ageo.env.pollution", { file: "env/pollution", keyPrefix: "env.pollution
         explanation: "(4 800 − 300) ÷ 4 800 × 100 = 94%." }),
       P.mcq({ label: "(c)", marks: 1, stem: "Which statement is supported by the table?", options: [
         ["Water quality improves with distance downstream of the outfall", "Correct: turbidity and E. coli both fall from site 2 to site 4."],
-        ["Water quality is worst upstream of the outfall", "Upstream has the lowest turbidity and E. coli counts."],
-        ["The pH is highest at the outfall", "The outfall has the lowest pH, 6.6."],
+        ["Water quality is at its worst a long way upstream of the outfall", "Upstream has the lowest turbidity and E. coli counts."],
+        ["The pH is highest at the point of the sewage outfall", "The outfall has the lowest pH, 6.6."],
         ["The temperature falls at the outfall", "Temperature rises at the outfall."],
       ], answer: "A", explanation: "Values recover with distance downstream." }),
       P.manual({ label: "(d)", marks: 3, stem: "Explain why water quality recovers with distance downstream of the outfall.",

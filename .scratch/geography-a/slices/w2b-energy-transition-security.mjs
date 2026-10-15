@@ -40,9 +40,9 @@ concept("ageo.energy.transition-security", { file: "energy/transition-security",
   ], "**Efficiency** uses better technology to get the same service from less energy.");
   mc(b, 2, "UNDERSTANDING", "Which best explains why Norway generates most of its electricity from hydropower?", [
     ["It has many rivers, high rainfall and steep mountains", "Correct: ideal natural conditions for hydro."],
-    ["It has the world's largest coal reserves", "Norway does not rely on coal for power."],
+    ["It has the largest reserves of coal in the whole world", "Norway does not rely on coal for power."],
     ["It has no rain and strong sunshine", "Norway is wet and has little strong sunshine."],
-    ["It lies on the equator with a hot climate", "Norway is far from the equator."],
+    ["It lies on the equator and has a hot, humid climate", "Norway is far from the equator."],
   ], "Rivers, relief and rainfall make hydro the natural choice.");
   mc(b, 3, "APPLICATION", "A country imports 60% of its energy from one supplier. Which action would most improve its energy security?", [
     ["Diversifying suppliers and developing domestic sources", "Correct: this reduces dependence on one source."],
@@ -51,10 +51,10 @@ concept("ageo.energy.transition-security", { file: "energy/transition-security",
     ["Closing all its domestic energy projects", "This increases import dependence."],
   ], "Diversifying **reduces dependence** on one supplier.", { hints: ["Which action reduces reliance on one source?"] });
   mc(b, 3, "ANALYSIS", "Which statement best explains why South Africa's transition from coal is slow?", [
-    ["Coal plants already exist, coal provides jobs and the grid needs major upgrading", "Correct: economic and social factors slow change."],
-    ["South Africa has no sunshine or wind to develop", "South Africa has good solar and wind resources."],
-    ["Coal is a renewable resource that cannot run out", "Coal is finite."],
-    ["South Africa has banned all renewable energy", "It has an active renewable programme."],
+    ["Coal plants exist, coal gives jobs and the grid needs upgrading", "Correct: economic and social factors slow change."],
+    ["South Africa has no sunshine or wind that could be developed", "South Africa has good solar and wind resources."],
+    ["Coal is a renewable resource that will never run out in future", "Coal is finite."],
+    ["South Africa has banned all forms of renewable energy projects", "It has an active renewable programme."],
   ], "Existing plant, jobs and grid constraints slow the transition.", { hints: ["Think about economic and social reasons, not only technology."] });
   b.tf({ d: 1, skill: "RECALL", stem: "OPEC coordinates oil production by its members to influence the price of oil.", answer: true,
     feedbackTrue: "Correct: it uses production quotas.",
@@ -147,9 +147,9 @@ concept("ageo.energy.transition-security", { file: "energy/transition-security",
         explanation: "(15 − 10) ÷ 10 × 100 = 50%." }),
       P.mcq({ label: "(c)", marks: 1, stem: "Which statement is supported by the table?", options: [
         ["Coal still supplies more than half of the electricity in 2023", "Correct: 60% is more than half."],
-        ["Wind and solar supply the largest share in 2023", "They supply 20%, less than coal at 60%."],
+        ["Wind and solar together supply the largest single share of power in 2023", "They supply 20%, less than coal at 60%."],
         ["The share of nuclear power has doubled", "Nuclear stayed at 5%."],
-        ["Fossil fuels have been completely replaced", "Coal and gas still supply 75%."],
+        ["Fossil fuels have been completely replaced by renewable sources", "Coal and gas still supply 75%."],
       ], answer: "A", explanation: "Coal is 60% in 2023." }),
       P.manual({ label: "(d)", marks: 3, stem: "Explain why the share of coal has fallen only slowly in Country Y.",
         points: [

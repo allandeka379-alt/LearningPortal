@@ -22,7 +22,7 @@ const svBurnTotal = chk(SV.B + 0 + svSoilAfter, 620);
 
 concept("ageo.bio.nutrient-cycles", { file: "bio/nutrient-cycles", keyPrefix: "bio.nutrient-cycles" }, (b) => {
   mc(b, 1, "RECALL", "In a Gersmehl diagram, what does the **area of a circle** show?", [
-    ["The amount of nutrient stored in that compartment", "Correct: bigger circle, bigger store."],
+    ["The amount of nutrient held in that compartment", "Correct: bigger circle, bigger store."],
     ["The number of plant species in that compartment", "Species numbers are not shown."],
     ["The speed at which nutrients move each year", "That is shown by the width of the arrows."],
     ["The depth of soil beneath the vegetation", "Soil depth is not shown by circle size."],
@@ -47,7 +47,7 @@ concept("ageo.bio.nutrient-cycles", { file: "bio/nutrient-cycles", keyPrefix: "b
   ], "**Nitrification** changes ammonium to nitrate.");
   mc(b, 2, "UNDERSTANDING", "Why do farmers include groundnuts or cowpeas in crop rotations?", [
     ["Root bacteria fix nitrogen that later crops can use", "Correct: legumes add nitrogen to the soil."],
-    ["Their roots release carbon dioxide into the air", "That is not their role in a rotation."],
+    ["Their roots release carbon dioxide into the air above the soil", "That is not their role in a rotation."],
     ["They remove nitrates by denitrification", "Legumes do not remove nitrogen from the soil."],
     ["They convert litter into ash for the next crop", "Litter is not converted to ash by legumes."],
   ], "Legumes host nitrogen-fixing bacteria in root nodules.");

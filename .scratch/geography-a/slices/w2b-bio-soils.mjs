@@ -40,10 +40,10 @@ concept("ageo.bio.soils", { file: "bio/soils", keyPrefix: "bio.soils" }, (b) => 
     ["Population and wealth", "These are human factors outside the formula."],
   ], "Jenny: **climate, organisms, relief, parent material and time**.");
   mc(b, 2, "UNDERSTANDING", "Which describes **eluviation**?", [
-    ["The washing of fine particles and dissolved material out of a horizon", "Correct: material is removed from the layer."],
-    ["The deposition of clay in the subsoil horizon", "That is illuviation."],
-    ["The breakdown of litter by bacteria and fungi", "That is decomposition."],
-    ["The mixing of topsoil by termites and earthworms", "That is biological mixing."],
+    ["The washing of fine particles and solutes out of a horizon", "Correct: material is removed from the layer."],
+    ["The deposition of clay and iron in the subsoil horizon", "That is illuviation."],
+    ["The breakdown of dead litter by soil bacteria and fungi", "That is decomposition."],
+    ["The mixing of topsoil by termites, ants and earthworms", "That is biological mixing."],
   ], "**Eluviation** removes material from a layer; **illuviation** deposits it lower down.");
   mc(b, 2, "UNDERSTANDING", "Why are soils on the crest of a granite slope usually sandy and thin?", [
     ["Fine particles are washed downslope and the soil is eroded", "Correct: clay and silt are carried away, leaving sand."],
@@ -64,9 +64,9 @@ concept("ageo.bio.soils", { file: "bio/soils", keyPrefix: "bio.soils" }, (b) => 
     ["80%", "This subtracts only the clay from 100."],
   ], "The three fractions add to 100%: sand = 100 − 20 − 15 = **65%**.", { hints: ["The sand, silt and clay percentages add to 100."] });
   mc(b, 3, "ANALYSIS", "A pit shows a pale grey layer lying above a reddish layer with much more clay. What is the best explanation?", [
-    ["Clay and iron have been washed out of the upper layer into the lower one", "Correct: eluviation above and illuviation below."],
+    ["Clay and iron have been washed from the upper layer to the lower", "Correct: eluviation above and illuviation below."],
     ["The pale layer is the parent rock and has not been weathered", "Unweathered rock would be solid, not a soil layer."],
-    ["The reddish layer is a surface layer of fresh litter", "Litter is dark and sits at the surface."],
+    ["The reddish layer is a thin surface layer of fresh leaf litter", "Litter is dark and sits at the surface."],
     ["Wind has deposited the clay evenly through the whole profile", "That would not produce a distinct pale and red layering."],
   ], "The pale layer is **eluviated**; the reddish layer is **illuviated**.", { hints: ["Think about the downward movement of water."] });
   b.tf({ d: 1, skill: "RECALL", stem: "The A horizon is the dark topsoil that is rich in humus.", answer: true,

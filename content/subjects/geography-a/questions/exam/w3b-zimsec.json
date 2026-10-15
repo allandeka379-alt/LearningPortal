@@ -1,0 +1,979 @@
+[
+ {
+  "key": "exam.w3b-zimsec.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.skills.research-techniques",
+   "ageo.hydro.hydrographs-morphometry",
+   "ageo.stats.correlation-regression"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "A group of students investigates how a stream in the Eastern Highlands of Zimbabwe changes downstream, in order to understand where floods after heavy rain are likely to be most severe. Their hypothesis is that channel width, depth, velocity and discharge increase with distance from the source. They measured eight sites (data invented for this exercise). Width was measured with a tape, depth at five points across the channel with a ranging pole and the mean taken, and velocity by timing a float over a measured 10 m.\n\n| Site | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |\n|---|---|---|---|---|---|---|---|---|\n| Distance from source (km) | 1 | 3 | 5 | 8 | 11 | 15 | 20 | 26 |\n| Channel width (m) | 1.8 | 2.6 | 3.1 | 4.4 | 5.0 | 6.9 | 7.4 | 9.6 |\n| Mean depth (m) | 0.12 | 0.15 | 0.21 | 0.24 | 0.31 | 0.33 | 0.42 | 0.45 |\n| Mean velocity (m/s) | 0.31 | 0.38 | 0.36 | 0.52 | 0.55 | 0.50 | 0.66 | 0.72 |\n\nDischarge (Q, in m³/s) = width × mean depth × mean velocity. The students use Spearman's rank correlation coefficient, $r_s = 1 - \\dfrac{6\\sum d^2}{n^3 - n}$. The critical value of $r_s$ at the 5% significance level for 8 pairs is 0.738.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Planning and method.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which method gives an estimate of stream velocity when no flow meter is available?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Timing a floating object over a measured distance",
+        "correct": true,
+        "rationale": "Correct: velocity = distance ÷ time, and several runs are averaged."
+       },
+       {
+        "key": "B",
+        "content": "Measuring the width of the channel with a tape measure",
+        "rationale": "Width is not velocity."
+       },
+       {
+        "key": "C",
+        "content": "Counting the number of pebbles on the bed",
+        "rationale": "Pebble counts describe the bed material."
+       },
+       {
+        "key": "D",
+        "content": "Measuring the angle of the valley sides",
+        "rationale": "This describes the valley, not the flow."
+       }
+      ],
+      "explanation": "A float method gives surface velocity, which is then adjusted or averaged."
+     },
+     {
+      "label": "(ii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Why do the students measure depth at five points across the channel and take the mean?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Depth varies across the channel, so one value is not representative",
+        "correct": true,
+        "rationale": "Correct: the cross-section is not uniform."
+       },
+       {
+        "key": "B",
+        "content": "The depth is always the same at every point across a stream channel",
+        "rationale": "Depth varies, usually deepest near the centre."
+       },
+       {
+        "key": "C",
+        "content": "Five measurements make the stream flow faster",
+        "rationale": "Measuring does not change the flow."
+       },
+       {
+        "key": "D",
+        "content": "The mean depth is not needed to calculate discharge",
+        "rationale": "Discharge needs the cross-sectional area, which uses the mean depth."
+       }
+      ],
+      "explanation": "Several measurements give a more reliable mean depth."
+     },
+     {
+      "label": "(iii)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "State the null hypothesis and the alternative hypothesis for the Spearman test of velocity against distance from the source.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "H₀: there is no relationship between distance from the source and mean velocity",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "H₁: mean velocity increases with distance from the source",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: H₀: there is no relationship between distance from the source and mean velocity. H₁: mean velocity increases with distance from the source."
+      },
+      "explanation": "The null hypothesis states no relationship."
+     },
+     {
+      "label": "(iv)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Describe two safety precautions that the students should take when working in the stream.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Work in pairs or groups with a leader, never alone, and tell a teacher where they are going",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "Check water depth and flow before entering, wear sturdy footwear, avoid fast or deep water and do not work after heavy rain (flash flood risk)",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: Work in groups with a leader and tell a teacher where they will be. Check depth and flow before entering, wear sturdy footwear, avoid fast or deep water and do not work after heavy rain."
+      },
+      "explanation": "Group work, supervision and checks of the conditions."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 8,
+    "stem": "Results.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "CALCULATION",
+      "marks": 3,
+      "stem": "Calculate the discharge at site 4, in m³/s, to three decimal places.",
+      "payload": {
+       "unitHint": "m³/s"
+      },
+      "answerSpec": {
+       "value": 0.549,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "m³/s",
+         "m^3/s",
+         "m3/s",
+         "cumecs",
+         "cubic metres per second"
+        ]
+       }
+      },
+      "explanation": "Q = 4.4 × 0.24 × 0.52 = 0.549 m³/s. The value 5.49 comes from a slip in the decimal point.",
+      "workedSolution": "1. Q = 4.4 × 0.24 × 0.52 = 0.549 m³/s. The value 5.49 comes from a slip in the decimal point."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "The discharges at the eight sites are 0.067, 0.148, 0.234, 0.549, 0.853, 1.139, 2.051 and 3.110 m³/s. Calculate the mean discharge, to two decimal places.",
+      "payload": {
+       "unitHint": "m³/s"
+      },
+      "answerSpec": {
+       "value": 1.02,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       },
+       "units": {
+        "required": false,
+        "accepted": [
+         "m³/s",
+         "m^3/s",
+         "m3/s",
+         "cumecs",
+         "cubic metres per second"
+        ]
+       }
+      },
+      "explanation": "The total is 8.151, and 8.151 ÷ 8 = 1.02 m³/s.",
+      "workedSolution": "1. The total is 8.151, and 8.151 ÷ 8 = 1.02 m³/s."
+     },
+     {
+      "label": "(iii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "At which site is the discharge greatest?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Site 1",
+        "rationale": "Site 1 has the smallest discharge (0.067 m³/s)."
+       },
+       {
+        "key": "B",
+        "content": "Site 4",
+        "rationale": "Site 4 has 0.549 m³/s."
+       },
+       {
+        "key": "C",
+        "content": "Site 8",
+        "correct": true,
+        "rationale": "Correct: the discharge of 3.110 m³/s is the largest."
+       },
+       {
+        "key": "D",
+        "content": "Site 5",
+        "rationale": "Site 5 has 0.853 m³/s."
+       }
+      ],
+      "explanation": "Discharge increases downstream and is greatest at site 8."
+     },
+     {
+      "label": "(iv)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "Describe the change in mean velocity downstream.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "Velocity increases overall from 0.31 m/s at site 1 to 0.72 m/s at site 8",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "There are small exceptions: at site 3 (0.36 m/s) and at site 6 (0.50 m/s) the velocity is lower than at the previous site",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: Velocity increases overall from 0.31 m/s at site 1 to 0.72 m/s at site 8. There are small exceptions at site 3, 0.36 m/s, and site 6, 0.50 m/s, which are lower than the previous site."
+      },
+      "explanation": "Quote data and note exceptions."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 7,
+    "stem": "Statistical analysis of velocity against distance from the source.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "CALCULATION",
+      "marks": 2,
+      "stem": "Rank both sets of data (smallest = 1) and calculate Σd².",
+      "answerSpec": {
+       "value": 8
+      },
+      "explanation": "Ranks of distance 1 to 8. Ranks of velocity: 1, 3, 2, 5, 6, 4, 7, 8. $d$: 0, -1, 1, -1, -1, 2, 0, 0. $d^2$: 0, 1, 1, 1, 1, 4, 0, 0; the sum is 8.",
+      "workedSolution": "1. Ranks of distance 1 to 8. Ranks of velocity: 1, 3, 2, 5, 6, 4, 7, 8. $d$: 0, -1, 1, -1, -1, 2, 0, 0. $d^2$: 0, 1, 1, 1, 1, 4, 0, 0; the sum is 8."
+     },
+     {
+      "label": "(ii)",
+      "type": "CALCULATION",
+      "marks": 3,
+      "stem": "Calculate r_s, to three decimal places.",
+      "answerSpec": {
+       "value": 0.905,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.0005
+       }
+      },
+      "explanation": "$r_s = 1 - 6 \\times 8 \\div (8^3 - 8) = 1 - 48 \\div 504 = 0.905$. The value 0.095 is the part 48 ÷ 504, which must be subtracted from 1.",
+      "workedSolution": "1. $r_s = 1 - 6 \\times 8 \\div (8^3 - 8) = 1 - 48 \\div 504 = 0.905$. The value 0.095 is the part 48 ÷ 504, which must be subtracted from 1."
+     },
+     {
+      "label": "(iii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which conclusion is correct?",
+      "options": [
+       {
+        "key": "A",
+        "content": "There is no significant relationship at all; H₀ is accepted",
+        "rationale": "r_s is above the critical value."
+       },
+       {
+        "key": "B",
+        "content": "There is a significant strong negative relationship",
+        "rationale": "The sign is positive."
+       },
+       {
+        "key": "C",
+        "content": "The relationship is positive but not significant",
+        "rationale": "It exceeds the critical value, so it is significant."
+       },
+       {
+        "key": "D",
+        "content": "A significant strong positive relationship; H₀ is rejected",
+        "correct": true,
+        "rationale": "Correct: 0.905 is greater than the critical value of 0.738."
+       }
+      ],
+      "explanation": "0.905 > 0.738, so reject H₀."
+     },
+     {
+      "label": "(iv)",
+      "type": "TRUE_FALSE",
+      "marks": 1,
+      "stem": "The result proves that distance from the source causes velocity to increase.",
+      "answerSpec": {
+       "correct": false
+      },
+      "explanation": "False. A correlation shows a relationship, not cause. Other factors, such as channel gradient, roughness and discharge, also change downstream."
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Evaluate the reliability of the investigation and suggest two improvements.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Only eight sites on one stream on one day may not represent the stream or other seasons; velocity and discharge change with recent rainfall.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The float method measures surface velocity, which is faster than the mean velocity, and wind and timing errors affect it.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Depth and width were measured by hand with limited accuracy, and the sites were not equally spaced.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Improvements: repeat on several days and use a flow meter at several depths; use more sites at equal intervals and measure more points across the channel.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Eight sites on one stream on one day may not be representative, because discharge changes with recent rain. The float method gives surface velocity, which is faster than the mean velocity, and wind and timing errors affect it. Width and depth were measured by hand, and the sites were not equally spaced. Improvements would be to repeat the work on several days with a flow meter at several depths, and to use more sites at equal intervals with more points across the channel."
+    },
+    "explanation": "Judge sample size, instruments and timing, then improve."
+   }
+  ],
+  "explanation": "Plan a stream investigation, calculate discharge, test a relationship with Spearman's coefficient and evaluate the method.",
+  "hints": [
+   "Discharge Q = width × mean depth × mean velocity.",
+   "For Spearman, rank both sets with the smallest value as 1."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(a)(ii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(b)(i)": {
+     "type": "CALCULATION",
+     "value": "0.549"
+    },
+    "(b)(ii)": {
+     "type": "NUMERICAL",
+     "value": "1.02"
+    },
+    "(b)(iii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(c)(i)": {
+     "type": "CALCULATION",
+     "value": "8"
+    },
+    "(c)(ii)": {
+     "type": "CALCULATION",
+     "value": "0.905"
+    },
+    "(c)(iii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(c)(iv)": {
+     "type": "TRUE_FALSE",
+     "value": false
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(a)(ii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(b)(i)": {
+      "type": "CALCULATION",
+      "value": "0.52"
+     },
+     "(b)(ii)": {
+      "type": "NUMERICAL",
+      "value": "8.15"
+     },
+     "(b)(iii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)(i)": {
+      "type": "CALCULATION",
+      "value": "4"
+     },
+     "(c)(ii)": {
+      "type": "CALCULATION",
+      "value": "0.095"
+     },
+     "(c)(iii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)(iv)": {
+      "type": "TRUE_FALSE",
+      "value": true
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ },
+ {
+  "key": "exam.w3b-zimsec.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "ageo.skills.research-techniques",
+   "ageo.hazard.weather-climatic",
+   "ageo.stats.hypothesis-testing"
+  ],
+  "difficulty": 4,
+  "marks": 25,
+  "estimatedSeconds": 2700,
+  "stem": "Households in a ward in the Zambezi valley of northern Zimbabwe are flooded in many wet seasons. A research group studies how households prepare for floods and whether those living near the river are better informed. The ward has three villages: A has 600 households, B has 300 and C has 100. The group plans to interview a stratified sample of 120 households (data invented for this exercise).\n\n**Table 1: what 120 sampled households do (more than one answer allowed)**\n\n| Measure | Households |\n|---|---|\n| Receives a flood warning by radio or phone | 78 |\n| Keeps food and seed in raised stores | 42 |\n| Moves livestock to higher ground before floods | 54 |\n| Plants some crops on higher ground | 36 |\n| Uses no measure | 18 |\n\n**Table 2: awareness of the flood warning, by distance from the river**\n\n| Households | Aware of a flood warning | Not aware |\n|---|---|---|\n| Within 1 km of the river | 48 | 12 |\n| More than 1 km from the river | 30 | 30 |\n\nThe group uses the chi-squared test, $\\chi^2 = \\sum \\dfrac{(O - E)^2}{E}$, with degrees of freedom $= (\\text{rows} - 1)(\\text{columns} - 1)$. The critical value of $\\chi^2$ at the 5% significance level for 1 degree of freedom is 3.84.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "STRUCTURED",
+    "marks": 4,
+    "stem": "Sampling and method.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Calculate the number of households that should be interviewed in village B so that the sample is proportional to the number of households.",
+      "payload": {
+       "unitHint": "people"
+      },
+      "answerSpec": {
+       "value": 36,
+       "units": {
+        "required": false,
+        "accepted": [
+         "people",
+         "persons",
+         "inhabitants"
+        ]
+       }
+      },
+      "explanation": "Village B has 300 of 1 000 households = 30%. 30% of 120 = 36 households.",
+      "workedSolution": "1. Village B has 300 of 1 000 households = 30%. 30% of 120 = 36 households."
+     },
+     {
+      "label": "(ii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Why did the group choose a stratified sample?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Because it needs no list of households",
+        "rationale": "It needs information on the sizes of the groups."
+       },
+       {
+        "key": "B",
+        "content": "Because it always gives a sample of exactly 1 000 households in total",
+        "rationale": "The sample size is 120."
+       },
+       {
+        "key": "C",
+        "content": "Because it removes the need for any questionnaire",
+        "rationale": "A questionnaire is still used."
+       },
+       {
+        "key": "D",
+        "content": "To make sure each village is represented in proportion to its size",
+        "correct": true,
+        "rationale": "Correct: stratification avoids over- or under-representing a village."
+       }
+      ],
+      "explanation": "Stratified sampling represents each group in proportion."
+     },
+     {
+      "label": "(iii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "What is the main advantage of closed questions in a questionnaire for this survey?",
+      "options": [
+       {
+        "key": "A",
+        "content": "They give long personal stories about each flood from every person",
+        "rationale": "Those come from open questions."
+       },
+       {
+        "key": "B",
+        "content": "Answers are easy to count, compare and test statistically",
+        "correct": true,
+        "rationale": "Correct: fixed responses give data that can be tabulated."
+       },
+       {
+        "key": "C",
+        "content": "They need no trained interviewers",
+        "rationale": "Interviewers are still needed."
+       },
+       {
+        "key": "D",
+        "content": "They cannot be misunderstood by anyone",
+        "rationale": "Poorly worded closed questions can still be misunderstood."
+       }
+      ],
+      "explanation": "Closed questions give quantifiable data."
+     }
+    ]
+   },
+   {
+    "label": "(b)",
+    "type": "STRUCTURED",
+    "marks": 6,
+    "stem": "Results.",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Calculate the percentage of the sampled households that receive a flood warning by radio or phone.",
+      "payload": {
+       "unitHint": "%"
+      },
+      "answerSpec": {
+       "value": 65,
+       "units": {
+        "required": false,
+        "accepted": [
+         "%",
+         "percent",
+         "per cent"
+        ]
+       }
+      },
+      "explanation": "78 ÷ 120 × 100 = 65%.",
+      "workedSolution": "1. 78 ÷ 120 × 100 = 65%."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Calculate the percentage of the sampled households that use no measure.",
+      "payload": {
+       "unitHint": "%"
+      },
+      "answerSpec": {
+       "value": 15,
+       "units": {
+        "required": false,
+        "accepted": [
+         "%",
+         "percent",
+         "per cent"
+        ]
+       }
+      },
+      "explanation": "18 ÷ 120 × 100 = 15%.",
+      "workedSolution": "1. 18 ÷ 120 × 100 = 15%."
+     },
+     {
+      "label": "(iii)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which graph is best for showing the number of households using each measure?",
+      "options": [
+       {
+        "key": "A",
+        "content": "A line graph joining the measures in order",
+        "rationale": "A line suggests a continuous trend between categories."
+       },
+       {
+        "key": "B",
+        "content": "A bar chart with one bar for each measure",
+        "correct": true,
+        "rationale": "Correct: it compares separate categories."
+       },
+       {
+        "key": "C",
+        "content": "A scatter graph of measures against households",
+        "rationale": "A scatter graph needs two numerical variables."
+       },
+       {
+        "key": "D",
+        "content": "A pie chart, because answers add to 120",
+        "rationale": "Answers add to more than 120 as households could give more than one answer."
+       }
+      ],
+      "explanation": "Separate categories with multiple responses suit a bar chart."
+     },
+     {
+      "label": "(iv)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which measure in Table 1 is an example of adaptation by households?",
+      "options": [
+       {
+        "key": "A",
+        "content": "Building an embankment along the river bank",
+        "rationale": "This is a structural mitigation measure that reduces the hazard."
+       },
+       {
+        "key": "B",
+        "content": "Constructing a dam upstream to control the river",
+        "rationale": "This is a large structural measure to reduce the hazard."
+       },
+       {
+        "key": "C",
+        "content": "Keeping food and seed in raised stores",
+        "correct": true,
+        "rationale": "Correct: households adjust to the flood risk rather than stop the flood."
+       },
+       {
+        "key": "D",
+        "content": "Straightening the river channel with machinery",
+        "rationale": "This is an engineering measure to change the hazard."
+       }
+      ],
+      "explanation": "Adaptation adjusts to the hazard; mitigation reduces it."
+     }
+    ]
+   },
+   {
+    "label": "(c)",
+    "type": "STRUCTURED",
+    "marks": 8,
+    "stem": "Is awareness of the warning related to distance from the river?",
+    "parts": [
+     {
+      "label": "(i)",
+      "type": "SHORT_ANSWER",
+      "marks": 2,
+      "markingMode": "MANUAL",
+      "stem": "State the null hypothesis and the alternative hypothesis.",
+      "answerSpec": {
+       "markScheme": {
+        "points": [
+         {
+          "id": "p1",
+          "description": "H₀: there is no association between distance from the river and awareness of the flood warning",
+          "marks": 1
+         },
+         {
+          "id": "p2",
+          "description": "H₁: there is an association between distance from the river and awareness of the flood warning",
+          "marks": 1
+         }
+        ]
+       },
+       "markingNotes": "Example answer: H₀: there is no association between distance from the river and awareness of the flood warning. H₁: there is an association between distance from the river and awareness."
+      },
+      "explanation": "The null hypothesis states no association."
+     },
+     {
+      "label": "(ii)",
+      "type": "NUMERICAL",
+      "marks": 2,
+      "stem": "Calculate the expected number of households within 1 km of the river that would be aware of the warning if there were no association.",
+      "payload": {
+       "unitHint": "people"
+      },
+      "answerSpec": {
+       "value": 39,
+       "units": {
+        "required": false,
+        "accepted": [
+         "people",
+         "persons",
+         "inhabitants"
+        ]
+       }
+      },
+      "explanation": "Row total 60 × column total 78 ÷ 120 = 39.",
+      "workedSolution": "1. Row total 60 × column total 78 ÷ 120 = 39."
+     },
+     {
+      "label": "(iii)",
+      "type": "CALCULATION",
+      "marks": 3,
+      "stem": "The expected values are 39 (near, aware), 21 (near, not aware), 39 (far, aware) and 21 (far, not aware). Calculate χ², to two decimal places.",
+      "answerSpec": {
+       "value": 11.87,
+       "tolerance": {
+        "kind": "absolute",
+        "amount": 0.005
+       }
+      },
+      "explanation": "$(48-39)^2/39 + (12-21)^2/21 + (30-39)^2/39 + (30-21)^2/21 = 2.08 + 3.86 + 2.08 + 3.86 = 11.87$ (the terms are 2.077, 3.857, 2.077 and 3.857).",
+      "workedSolution": "1. $(48-39)^2/39 + (12-21)^2/21 + (30-39)^2/39 + (30-21)^2/21 = 2.08 + 3.86 + 2.08 + 3.86 = 11.87$ (the terms are 2.077, 3.857, 2.077 and 3.857)."
+     },
+     {
+      "label": "(iv)",
+      "type": "MULTIPLE_CHOICE",
+      "marks": 1,
+      "stem": "Which conclusion is correct?",
+      "options": [
+       {
+        "key": "A",
+        "content": "There is no significant association between distance and awareness of the warning",
+        "rationale": "χ² is larger than the critical value."
+       },
+       {
+        "key": "B",
+        "content": "There is a significant association; households near the river are more aware",
+        "correct": true,
+        "rationale": "Correct: 11.87 > 3.84, so H₀ is rejected, and the observed values show higher awareness near the river."
+       },
+       {
+        "key": "C",
+        "content": "Households far from the river are significantly more aware",
+        "rationale": "In the table the households near the river are more aware."
+       },
+       {
+        "key": "D",
+        "content": "The test proves that the radio network causes the awareness",
+        "rationale": "The test shows association only."
+       }
+      ],
+      "explanation": "Reject H₀: 80% near the river are aware (48 of 60), compared with 50% far from it (30 of 60)."
+     }
+    ]
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Plan a flood response for the households more than 1 km from the river, who are less aware of the warning.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Extend the warning system: use community volunteers, village leaders and church or school bells or whistles, as well as radio and mobile phones, to pass on warnings.",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Run community meetings and school drills so that people know the warning signs, evacuation routes and meeting points.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Identify safe high ground or raised shelters and keep evacuation paths clear, with transport for older people and the sick.",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Support household adaptation: raised stores for food and seed, early planting on higher ground and moving livestock early, with extension officers and the Civil Protection Department.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Extend the warning system by using community volunteers, village leaders and school bells as well as radio and mobile phones. Run community meetings and school drills so that people know the warning signs, evacuation routes and meeting points. Identify safe high ground or raised shelters and keep paths clear, with transport for older and sick people. Support household adaptation such as raised stores, planting on higher ground and moving livestock early, with extension officers and the Civil Protection Department."
+    },
+    "explanation": "Plan warnings, education, shelter and household adaptation."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Evaluate the survey design and the reliability of the conclusion.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The sample of 120 households is small, and stratifying by village helps, but the villages' circumstances could differ (distance and flood history).",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Answers rely on what households say, which can be biased, and the survey took place at one time, so it may not show how people act during a flood.",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "The test shows an association only; other factors such as age, education and phone ownership may explain awareness, so interviews with local leaders and repeat surveys would improve reliability.",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The sample of 120 is small, and stratifying by village helps, but villages may differ. Answers depend on what households say, which can be biased, and the survey was done once, so it may not show what they do during a flood. The test shows only an association, and other factors such as age, education and phone ownership may explain awareness, so interviews with leaders and repeat surveys would improve reliability."
+    },
+    "explanation": "Sample, bias and cause."
+   }
+  ],
+  "explanation": "Design a sample, present survey results, test an association with chi-squared and plan a flood response.",
+  "hints": [
+   "Stratified sample size = village share of households × 120.",
+   "Expected value = row total × column total ÷ grand total."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)(i)": {
+     "type": "NUMERICAL",
+     "value": "36"
+    },
+    "(a)(ii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    },
+    "(a)(iii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)(i)": {
+     "type": "NUMERICAL",
+     "value": "65"
+    },
+    "(b)(ii)": {
+     "type": "NUMERICAL",
+     "value": "15"
+    },
+    "(b)(iii)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    },
+    "(b)(iv)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "C"
+     ]
+    },
+    "(c)(ii)": {
+     "type": "NUMERICAL",
+     "value": "39"
+    },
+    "(c)(iii)": {
+     "type": "CALCULATION",
+     "value": "11.87"
+    },
+    "(c)(iv)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "B"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)(i)": {
+      "type": "NUMERICAL",
+      "value": "40"
+     },
+     "(a)(ii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(a)(iii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)(i)": {
+      "type": "NUMERICAL",
+      "value": "78"
+     },
+     "(b)(ii)": {
+      "type": "NUMERICAL",
+      "value": "18"
+     },
+     "(b)(iii)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(b)(iv)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     },
+     "(c)(ii)": {
+      "type": "NUMERICAL",
+      "value": "48"
+     },
+     "(c)(iii)": {
+      "type": "CALCULATION",
+      "value": "5.93"
+     },
+     "(c)(iv)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "Paper 3"
+ }
+]

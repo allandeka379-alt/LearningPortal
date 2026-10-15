@@ -1,0 +1,5 @@
+import fs from "node:fs";
+const rep = (n, pairs) => { const f = `.scratch/geography-a/slices/w2b-${n}.mjs`; let s = fs.readFileSync(f, "utf8"); for (const [a, b] of pairs) { if (!s.includes(`"${a}"`)) { console.log("MISSING", a); continue; } s = s.replace(`"${a}"`, `"${b}"`); } fs.writeFileSync(f, s); };
+rep("bio-nutrient-cycles", [["Their roots release carbon dioxide into the air", "Their roots release carbon dioxide into the air above the soil"], ["The amount of nutrient stored in that compartment", "The amount of nutrient held in that compartment"]]);
+rep("bio-plant-succession", [["No succession is possible without lichens first", "No succession is possible on the site without lichens first"], ["A hardy species that colonises bare ground first", "A hardy species that colonises bare ground"]]);
+rep("bio-vegetation-biomes", [["Climatic factors: temperature and rainfall", "Climatic factors: temperature, sunshine and rainfall"], ["Global position: distance from the equator", "Global position: distance from the equator or the sea"]]);

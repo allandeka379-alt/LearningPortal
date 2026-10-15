@@ -17,9 +17,9 @@ const forestRate = chk(forestLoss / 8, 100);
 concept("ageo.env.degradation", { file: "env/degradation", keyPrefix: "env.degradation" }, (b) => {
   mc(b, 1, "RECALL", "What is **siltation**?", [
     ["The build-up of eroded sediment in dams and river beds", "Correct: silt reduces storage and channel capacity."],
-    ["The removal of topsoil by strong wind", "That is wind erosion."],
+    ["The removal of topsoil from open fields by strong wind", "That is wind erosion."],
     ["The enrichment of water with nitrates and phosphates", "That is eutrophication."],
-    ["The spread of desert conditions into farmland", "That is desertification."],
+    ["The spread of desert conditions into nearby farmland and grazing", "That is desertification."],
   ], "**Siltation** is the build-up of sediment in dams, lakes and river beds.");
   mc(b, 2, "UNDERSTANDING", "Why do gullies often start along cattle tracks and footpaths?", [
     ["Run-off concentrates on the bare, compacted surface", "Correct: water cuts channels where vegetation is absent."],
@@ -30,26 +30,26 @@ concept("ageo.env.degradation", { file: "env/degradation", keyPrefix: "env.degra
   mc(b, 2, "UNDERSTANDING", "Which statement about indigenous knowledge systems (IKS) in conservation is correct?", [
     ["They use taboos and sacred places to protect resources", "Correct: they rely on community acceptance."],
     ["They depend entirely on expensive imported technology", "IKS is local and low-cost."],
-    ["They have no effect on forests or water sources", "In many areas they protect forests and springs."],
+    ["They have no effect on forests, rivers or water sources", "In many areas they protect forests and springs."],
     ["They are always stronger than modern laws", "They can be weakened by social and economic change."],
   ], "IKS such as totems, taboos and sacred forests are low-cost controls that depend on **community respect**.");
   mc(b, 2, "UNDERSTANDING", "How does deforestation increase soil erosion?", [
     ["Fewer roots bind the soil and less canopy intercepts rain", "Correct: bare soil is exposed to raindrops and run-off."],
-    ["Trees absorb more water, so the soil becomes too dry", "This does not explain erosion."],
+    ["Trees absorb more water, so the soil becomes much too dry", "This does not explain erosion."],
     ["Leaf litter increases, which washes the soil away", "Litter protects the soil; its loss increases erosion."],
     ["Soil particles become larger when trees are removed", "Particle size does not change."],
   ], "Removing trees **exposes the soil** and removes the roots that hold it.");
   mc(b, 3, "APPLICATION", "A small dam in a communal area loses water storage each year. Which is the most likely cause?", [
     ["Silt from eroding fields and gullies in its catchment", "Correct: sediment settles in the dam."],
-    ["Too much rainfall in the dam catchment", "More rain does not reduce capacity in itself."],
-    ["Growth of the dam walls by natural processes", "Walls do not grow naturally."],
+    ["Too much rainfall falling in the catchment of the dam", "More rain does not reduce capacity in itself."],
+    ["Growth of the dam walls by natural weathering processes", "Walls do not grow naturally."],
     ["Planting of trees on the dam wall", "Trees on the wall do not reduce capacity."],
   ], "Sediment from the catchment gradually fills the dam, **reducing capacity**.", { hints: ["Think about where the soil washed from fields goes."] });
   mc(b, 3, "ANALYSIS", "Which is the best reason why fencing off a degraded gully and planting grass in it may fail?", [
     ["Livestock or people continue to cross it and water is not diverted", "Correct: the causes of run-off remain."],
     ["Grass roots increase the speed of the water", "Roots slow water and bind soil."],
-    ["Fencing causes rain to run into the gully faster", "Fencing does not change run-off."],
-    ["Planted grass always dies because gullies are too fertile", "Gully soils are usually infertile."],
+    ["Fencing causes rain to run into the gully much faster than before", "Fencing does not change run-off."],
+    ["Planted grass always dies because gully soils are far too fertile", "Gully soils are usually infertile."],
   ], "Reclamation fails when the **cause** (run-off and trampling) is not tackled.", { hints: ["Think about causes, not only symptoms."] });
   b.tf({ d: 1, skill: "RECALL", stem: "Deforestation can increase soil erosion and reduce biodiversity.", answer: true,
     feedbackTrue: "Correct: both effects follow from loss of tree cover.",
