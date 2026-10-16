@@ -1,0 +1,10 @@
+import { table, chk } from "../lib.mjs";
+const profit = 48000;
+const p1 = [60, 10, 5, 25], p2 = [40, 25, 10, 25];
+chk(p1.reduce((a, b) => a + b), 100, 0); chk(p2.reduce((a, b) => a + b), 100, 0);
+const amt = (p) => p.map((x) => (profit * x) / 100);
+const a1 = amt(p1), a2 = amt(p2);
+chk(a1.reduce((a, b) => a + b), profit, 1e-6); chk(a2.reduce((a, b) => a + b), profit, 1e-6);
+const names = ["Dividends to shareholders", "Bonus to workers", "Community fund", "Retained for the business"];
+console.log(table(["Use of the US\$48,000 profit", "Plan 1 (%)", "Plan 1 (US\$)", "Plan 2 (%)", "Plan 2 (US\$)"], names.map((n, i) => [n, p1[i], a1[i], p2[i], a2[i]]).concat([["Total", 100, profit, 100, profit]])));
+console.log("diff dividends", a1[0] - a2[0], "diff bonus", a2[1] - a1[1], "bonus per worker (20 workers) p1", a1[1] / 20, "p2", a2[1] / 20);

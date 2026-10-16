@@ -1,0 +1,356 @@
+[
+ {
+  "key": "exam.w4a-struct.q01",
+  "type": "STRUCTURED",
+  "concepts": [
+   "abus.finance.cash-flow-forecast"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 1080,
+  "stem": "Shumba Supplies is a fictional business in Chinhoyi that supplies school tuck shops. It began January with US\\$2,400 in the bank. The owner has listed the cash she expects to receive and pay out in the first three months of the year.\n\n| US\\$ | Jan | Feb | Mar |\n| --- | ---: | ---: | ---: |\n| Cash sales | 3,700 | 4,050 | 4,450 |\n| Receipts from credit customers | 2,350 | 2,850 | 3,250 |\n| Stock purchases | 3,100 | 3,450 | 3,850 |\n| Wages | 1,350 | 1,350 | 1,350 |\n| Rent | 650 | 650 | 650 |\n| New delivery van |  |  | 6,900 |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "Calculate the cash balance expected at the end of February.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 4800
+    },
+    "explanation": "January: receipts 6,050 - payments 5,100 = +950, closing 3,350. February: receipts 6,900 - payments 5,450 = +1,450, closing US\\$4,800.",
+    "workedSolution": "1. January net cash flow = (3,700 + 2,350) - (3,100 + 1,350 + 650) = +950; closing = 2,400 + 950 = 3,350.\n2. February net cash flow = (4,050 + 2,850) - (3,450 + 1,350 + 650) = +1,450.\n3. Closing balance = 3,350 + 1,450 = US\\$4,800."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "Calculate the size of the overdraft expected at the end of March.",
+    "payload": {
+     "answerPrefix": "US$"
+    },
+    "answerSpec": {
+     "value": 250
+    },
+    "explanation": "March: receipts 7,700 - payments 12,750 = -5,050. Closing = 4,800 - 5,050 = -250, an overdraft of US\\$250.",
+    "workedSolution": "1. March receipts = 4,450 + 3,250 = 7,700.\n2. March payments = 3,850 + 1,350 + 650 + 6,900 = 12,750.\n3. Net cash flow = 7,700 - 12,750 = -5,050.\n4. Closing balance = 4,800 - 5,050 = -250: an overdraft of US\\$250."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Outline two ways in which the owner could deal with the overdraft in March.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Arrange an overdraft with the bank before March",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Application: an overdraft of at least US\\$250 would cover the shortage until money arrives from credit customers",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Ask the credit customers to pay sooner, or delay buying the van until April",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Application: moving US\\$250 of receipts or payments from March to April would remove the shortage",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: She could arrange an overdraft of at least US\\$250 with the bank before March, which would cover the shortage until money arrives from credit customers. She could also ask the schools to pay sooner or delay buying the van until April, which would move the shortage out of March."
+    },
+    "explanation": "Two ways, each applied."
+   }
+  ],
+  "explanation": "February closing balance US\\$4,800; March overdraft US\\$250; two ways to deal with it.",
+  "hints": [
+   "Carry each month's closing balance forward.",
+   "Net cash flow = receipts - payments."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "4800"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "250"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "CALCULATION",
+      "value": "1450"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "5050"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC Business Studies Paper 1"
+ },
+ {
+  "key": "exam.w4a-struct.q02",
+  "type": "STRUCTURED",
+  "concepts": [
+   "abus.operations.work-study"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 1080,
+  "stem": "Mhofu Bakery is a fictional business in Mutare. An observer times how long a packer takes to pack a box of rolls. Five timings in minutes were: 1.9, 2.1, 2, 2.2, 1.8. The packer was rated at 110. The bakery allows 15% of the basic time for rest and delay.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "Calculate the basic time for packing one box, in minutes. (Basic time = average observed time × rating ÷ 100.)",
+    "payload": {
+     "unitHint": "minutes"
+    },
+    "answerSpec": {
+     "value": 2.2,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "Average = 10.0 ÷ 5 = 2.0. Basic time = 2.0 × 110 ÷ 100 = 2.2 minutes.",
+    "workedSolution": "1. Total of the timings = 1.9 + 2.1 + 2.0 + 2.2 + 1.8 = 10.0.\n2. Average = 10.0 ÷ 5 = 2.0 minutes.\n3. Basic time = 2.0 × 110 ÷ 100 = 2.2 minutes."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "Calculate the standard time for packing one box, in minutes.",
+    "payload": {
+     "unitHint": "minutes"
+    },
+    "answerSpec": {
+     "value": 2.53,
+     "tolerance": {
+      "kind": "absolute",
+      "amount": 0.005
+     }
+    },
+    "explanation": "Standard time = basic time × (1 + allowance) = 2.2 × 1.15 = 2.53 minutes.",
+    "workedSolution": "1. Basic time = 2.2 minutes.\n2. Allowance = 15% of 2.2 = 0.33.\n3. Standard time = 2.2 + 0.33 = 2.53 minutes."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Outline two ways in which the bakery could use the standard time.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "To set a target number of boxes for each packer in a shift",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Application: in 480 minutes a packer should pack about 189 boxes",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "To plan how many packers are needed for an order",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Application: more packers can be rostered on busy days such as Fridays",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The bakery can use the standard time to set a target for each packer: in 480 minutes a packer should pack about 189 boxes. It can also plan how many packers are needed for an order, for example rostering more on busy days."
+    },
+    "explanation": "Two uses, each applied."
+   }
+  ],
+  "explanation": "Basic time 2.2 minutes; standard time 2.53 minutes; uses for targets and planning.",
+  "hints": [
+   "Average, then rating, then allowance."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "2.20"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "2.53"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "CALCULATION",
+      "value": "2"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "2.2"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "calculator": true,
+  "paper": "ZIMSEC BES Paper 1"
+ },
+ {
+  "key": "exam.w4a-struct.q03",
+  "type": "STRUCTURED",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 3,
+  "marks": 10,
+  "estimatedSeconds": 1080,
+  "stem": "Nkosi Hotel is a fictional hotel in Bulawayo that is refitting its kitchen. The work has been planned as follows.\n\n| Activity | Description | Duration (days) | Follows |\n| --- | --- | ---: | --- |\n| A | Clear the old kitchen | 2 | none |\n| B | Order the new equipment | 4 | none |\n| C | Fit the plumbing | 3 | A |\n| D | Install the ovens | 2 | B, C |\n| E | Tile the floor | 3 | C |\n| F | Health inspection | 1 | D, E |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "Calculate the minimum time in which the refit can be completed.",
+    "payload": {
+     "unitHint": "days"
+    },
+    "answerSpec": {
+     "value": 9
+    },
+    "explanation": "Forward pass: A 0-2, B 0-4, C 2-5, D 5-7 (after B at 4 and C at 5), E 5-8, F 8-9. Minimum duration = 9 days.",
+    "workedSolution": "1. A finishes on day 2 and B on day 4.\n2. C starts on day 2 and finishes on day 5.\n3. D waits for B (day 4) and C (day 5), so it starts on day 5 and finishes on day 7; E starts on day 5 and finishes on day 8.\n4. F waits for D (day 7) and E (day 8), so it starts on day 8 and finishes on day 9.\n5. Minimum duration = 9 days."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "Activity D (installing the ovens) is not on the critical path. By how many days can it be delayed without delaying the whole refit?",
+    "payload": {
+     "unitHint": "days"
+    },
+    "answerSpec": {
+     "value": 1
+    },
+    "explanation": "D must finish by day 8, the latest start of F, so its latest start is 6. It can start on day 5, so it can be delayed by 6 - 5 = 1 day.",
+    "workedSolution": "1. F must start by day 8 to finish on day 9.\n2. So D must finish by day 8 and its latest start is 8 - 2 = 6.\n3. Earliest start of D = 5, so delay possible = 6 - 5 = 1 day."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 4,
+    "markingMode": "MANUAL",
+    "stem": "Outline two benefits to the hotel of using network analysis for this refit.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "It shows the shortest time in which the refit can be done",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Application: the hotel can tell guests when the kitchen will reopen",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "It identifies the critical activities that must not be delayed",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "Application: the manager can watch the plumbing and tiling closely and keep spare workers for the other jobs",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Network analysis shows that the refit can be done in 9 days, so the hotel can tell guests when the kitchen will reopen. It also identifies the critical activities, so the manager can watch the plumbing and tiling closely and use spare workers on the other jobs."
+    },
+    "explanation": "Two benefits, each applied."
+   }
+  ],
+  "explanation": "Minimum duration 9 days; critical path A, C, E, F; activity D has 1 day of float.",
+  "hints": [
+   "In the forward pass take the later finish where two activities lead into one.",
+   "Float = latest start - earliest start."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "9"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "1"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "CALCULATION",
+      "value": "15"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "0"
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION",
+  "examStyle": true,
+  "applies": [
+   "zimsec"
+  ],
+  "paper": "ZIMSEC Business Studies Paper 1"
+ }
+]

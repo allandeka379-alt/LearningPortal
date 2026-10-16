@@ -1,0 +1,1492 @@
+[
+ {
+  "key": "operations.critical-path.q01",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 1,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "In critical path analysis, the **critical path** is",
+  "options": [
+   {
+    "key": "A",
+    "content": "the longest route through the network",
+    "correct": true,
+    "rationale": "Correct: it decides the minimum time in which the project can be finished."
+   },
+   {
+    "key": "B",
+    "content": "the route with the lowest total cost",
+    "rationale": "Cost is not what defines the critical path; time is."
+   },
+   {
+    "key": "C",
+    "content": "the route with the fewest activities",
+    "rationale": "The number of activities does not matter; the total duration does."
+   },
+   {
+    "key": "D",
+    "content": "the route that the workers start first",
+    "rationale": "The order in which routes start does not make a route critical."
+   }
+  ],
+  "explanation": "The critical path is the longest route from start to finish. Its activities have no float, so a delay to any of them delays the whole project.",
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "A"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "B"
+    ]
+   }
+  ],
+  "skill": "RECALL"
+ },
+ {
+  "key": "operations.critical-path.q02",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "Activity X can start only when activity Y (earliest finish day 9) and activity Z (earliest finish day 12) are both complete. What is the earliest start time of X?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Day 9",
+    "rationale": "X cannot start when Y finishes, because Z is still in progress."
+   },
+   {
+    "key": "B",
+    "content": "Day 21",
+    "rationale": "The finish days are not added; the activities run side by side."
+   },
+   {
+    "key": "C",
+    "content": "Day 12",
+    "correct": true,
+    "rationale": "Correct: X must wait for the later of its two predecessors."
+   },
+   {
+    "key": "D",
+    "content": "Day 10.5",
+    "rationale": "The earliest start is not an average of the finishes."
+   }
+  ],
+  "explanation": "In the forward pass the earliest start is the largest earliest finish of the predecessors: day 12.",
+  "hints": [
+   "Both predecessors must be finished first."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "operations.critical-path.q03",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "In a **backward pass**, an activity is followed by two activities with latest start times of day 14 and day 17. What is its latest finish time?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Day 17",
+    "rationale": "Finishing on day 17 would delay the activity that must start on day 14."
+   },
+   {
+    "key": "B",
+    "content": "Day 31",
+    "rationale": "The latest starts are not added together."
+   },
+   {
+    "key": "C",
+    "content": "Day 15.5",
+    "rationale": "The latest finish is not an average."
+   },
+   {
+    "key": "D",
+    "content": "Day 14",
+    "correct": true,
+    "rationale": "Correct: it must finish in time for the earlier of the two latest starts."
+   }
+  ],
+  "explanation": "Latest finish = the smallest latest start of the activities that follow, which is day 14.",
+  "hints": [
+   "Take the smaller latest start."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "dailyEligible": true
+ },
+ {
+  "key": "operations.critical-path.q04",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "Rudo's Bakery is a fictional business in Mutare. Its shop fit-out is planned as follows.\n\n| Activity | Duration (days) | Follows |\n| --- | ---: | --- |\n| A | 2 | none |\n| B | 3 | A |\n| C | 4 | A |\n| D | 5 | B, C |\n| E | 3 | C |\n| F | 4 | D, E |\n| G | 1 | F |\n\nWhich activity has a **total float of one day**?",
+  "options": [
+   {
+    "key": "A",
+    "content": "C",
+    "rationale": "C is on the critical path, so its total float is zero."
+   },
+   {
+    "key": "B",
+    "content": "B",
+    "correct": true,
+    "rationale": "Correct: B can start on day 2 or day 3 and the shop still opens on time."
+   },
+   {
+    "key": "C",
+    "content": "D",
+    "rationale": "D is on the critical path, so its total float is zero."
+   },
+   {
+    "key": "D",
+    "content": "E",
+    "rationale": "E has two days of float, not one."
+   }
+  ],
+  "explanation": "The minimum duration is 16 days and the critical path is A, C, D, F, G. B has earliest start 2 and latest start 3, so its total float is 1 day; E has 2 days.",
+  "hints": [
+   "Find the minimum duration first, then the latest start of each activity."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION",
+  "applies": [
+   "cambridge/a-level/business"
+  ]
+ },
+ {
+  "key": "operations.critical-path.q05",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "Rudo's Bakery is a fictional business in Mutare. Its shop fit-out is planned as follows.\n\n| Activity | Duration (days) | Follows |\n| --- | ---: | --- |\n| A | 2 | none |\n| B | 3 | A |\n| C | 4 | A |\n| D | 5 | B, C |\n| E | 3 | C |\n| F | 4 | D, E |\n| G | 1 | F |\n\nWhat is the **earliest start time** of activity D?",
+  "options": [
+   {
+    "key": "A",
+    "content": "Day 5",
+    "rationale": "That is when B finishes, but D also needs C."
+   },
+   {
+    "key": "B",
+    "content": "Day 6",
+    "correct": true,
+    "rationale": "Correct: D must wait for C, which finishes on day 6, later than B on day 5."
+   },
+   {
+    "key": "C",
+    "content": "Day 11",
+    "rationale": "That is the earliest finish of D, not its start."
+   },
+   {
+    "key": "D",
+    "content": "Day 2",
+    "rationale": "That is when B and C start, not when D can start."
+   }
+  ],
+  "explanation": "A finishes on day 2. B finishes on day 5 and C on day 6, so D starts on day 6 and finishes on day 11.",
+  "hints": [
+   "D follows both B and C; take the later finish."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "B"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "operations.critical-path.q06",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "On the fit-out network of Rudo's Bakery (minimum duration 16 days) the critical path is A, C, D, F, G and E has two days of total float. The owner shortens D from 5 days to 2 days by hiring extra workers. By how many days is the whole project shortened?",
+  "options": [
+   {
+    "key": "A",
+    "content": "3 days",
+    "rationale": "That assumes D is the only long route, but the route through E still takes 14 days."
+   },
+   {
+    "key": "B",
+    "content": "1 day",
+    "rationale": "A saving of one day is the total float of B, which is not relevant to D."
+   },
+   {
+    "key": "C",
+    "content": "2 days",
+    "correct": true,
+    "rationale": "Correct: the route A, C, E, F, G takes 14 days and now limits the project, so only 2 of the 3 days saved on D count."
+   },
+   {
+    "key": "D",
+    "content": "0 days",
+    "rationale": "D is on the critical path, so shortening it does save time."
+   }
+  ],
+  "explanation": "With D at 2 days the route A, C, D, F, G takes 13 days, but A, C, E, F, G still takes 14 days, so the new minimum duration is 14 days against 16: a saving of 2 days, not 3.",
+  "hints": [
+   "Recalculate the longest path after the change. Which other path now takes just as long?"
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "C"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "operations.critical-path.q07",
+  "type": "MULTIPLE_CHOICE",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "A fictional building firm in Bulawayo finds that its network shows a minimum duration of 40 days. Which is the most important reason why the manager should still be cautious about promising completion in 40 days?",
+  "options": [
+   {
+    "key": "A",
+    "content": "A critical path can never be found accurately",
+    "rationale": "The path is found exactly from the data; the data are the problem."
+   },
+   {
+    "key": "B",
+    "content": "Network analysis ignores the order of activities",
+    "rationale": "The order of activities is the basis of the method."
+   },
+   {
+    "key": "C",
+    "content": "The longest route is always the cheapest one",
+    "rationale": "The longest route is not related to cost in this way."
+   },
+   {
+    "key": "D",
+    "content": "Durations are only estimates and may be wrong",
+    "correct": true,
+    "rationale": "Correct: the calculation is only as reliable as the time estimates behind it."
+   }
+  ],
+  "explanation": "The method is exact only for the figures it is given. Bad weather, late deliveries or optimistic estimates can lengthen the activities.",
+  "hints": [
+   "Think about where the numbers in the network come from."
+  ],
+  "modelResponse": {
+   "type": "MULTIPLE_CHOICE",
+   "optionKeys": [
+    "D"
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MULTIPLE_CHOICE",
+    "optionKeys": [
+     "A"
+    ]
+   }
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "operations.critical-path.q08",
+  "type": "TRUE_FALSE",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "An activity's free float can never be larger than its total float.",
+  "answerSpec": {
+   "correct": true
+  },
+  "explanation": "True. Free float is the delay that does not affect the next activity; total float is the delay that does not affect the whole project. Free float is part of total float, so it cannot exceed it.",
+  "modelResponse": {
+   "type": "TRUE_FALSE",
+   "value": true
+  },
+  "wrongResponses": [
+   {
+    "type": "TRUE_FALSE",
+    "value": false
+   }
+  ],
+  "skill": "UNDERSTANDING",
+  "applies": [
+   "cambridge/a-level/business"
+  ]
+ },
+ {
+  "key": "operations.critical-path.q09",
+  "type": "MATCHING",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 2,
+  "marks": 4,
+  "estimatedSeconds": 280,
+  "stem": "Match each term to its meaning.",
+  "payload": {
+   "left": [
+    {
+     "id": "L1",
+     "content": "Dummy activity"
+    },
+    {
+     "id": "L2",
+     "content": "Critical path"
+    },
+    {
+     "id": "L3",
+     "content": "Earliest start time"
+    },
+    {
+     "id": "L4",
+     "content": "Minimum project duration"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "content": "The earliest time an activity can begin"
+    },
+    {
+     "id": "R4",
+     "content": "The shortest time in which the whole project can be completed"
+    },
+    {
+     "id": "R1",
+     "content": "An activity of zero duration that shows a dependence"
+    },
+    {
+     "id": "R2",
+     "content": "The longest route through the network"
+    }
+   ]
+  },
+  "answerSpec": {
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ],
+   "marksPerPair": 1
+  },
+  "explanation": "A dummy shows dependence; the critical path is the longest route and decides the minimum duration; the earliest start is found in the forward pass.",
+  "modelResponse": {
+   "type": "MATCHING",
+   "pairs": [
+    {
+     "leftId": "L1",
+     "rightId": "R1"
+    },
+    {
+     "leftId": "L2",
+     "rightId": "R2"
+    },
+    {
+     "leftId": "L3",
+     "rightId": "R3"
+    },
+    {
+     "leftId": "L4",
+     "rightId": "R4"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "MATCHING",
+    "pairs": [
+     {
+      "leftId": "L1",
+      "rightId": "R2"
+     },
+     {
+      "leftId": "L2",
+      "rightId": "R3"
+     },
+     {
+      "leftId": "L3",
+      "rightId": "R4"
+     },
+     {
+      "leftId": "L4",
+      "rightId": "R1"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "operations.critical-path.q10",
+  "type": "FILL_IN_THE_BLANK",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 2,
+  "marks": 2,
+  "estimatedSeconds": 140,
+  "stem": "Choose the correct word for each gap.",
+  "payload": {
+   "template": "In the forward pass, where two activities lead into one, the {{blank:a}} earliest finish is used. Activities on the critical path have a float of {{blank:b}}.",
+   "blanks": [
+    {
+     "id": "a",
+     "input": "select",
+     "choices": [
+      "larger",
+      "smaller",
+      "average"
+     ]
+    },
+    {
+     "id": "b",
+     "input": "select",
+     "choices": [
+      "zero",
+      "one day",
+      "two days"
+     ]
+    }
+   ]
+  },
+  "answerSpec": {
+   "blanks": [
+    {
+     "id": "a",
+     "accepted": [
+      "larger"
+     ]
+    },
+    {
+     "id": "b",
+     "accepted": [
+      "zero"
+     ]
+    }
+   ]
+  },
+  "explanation": "The next activity cannot start until both predecessors have finished, so the larger finish is used. Critical activities have no spare time.",
+  "modelResponse": {
+   "type": "FILL_IN_THE_BLANK",
+   "blanks": [
+    {
+     "blankId": "a",
+     "text": "larger"
+    },
+    {
+     "blankId": "b",
+     "text": "zero"
+    }
+   ]
+  },
+  "wrongResponses": [
+   {
+    "type": "FILL_IN_THE_BLANK",
+    "blanks": [
+     {
+      "blankId": "a",
+      "text": "smaller"
+     },
+     {
+      "blankId": "b",
+      "text": "one day"
+     }
+    ]
+   }
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "operations.critical-path.q11",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 2,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "State **one** benefit of using critical path analysis.",
+  "answerSpec": {
+   "accepted": [
+    {
+     "value": "shows the minimum time for the project"
+    },
+    {
+     "value": "shows the critical activities"
+    },
+    {
+     "value": "helps to plan resources"
+    },
+    {
+     "value": "helps to schedule resources"
+    },
+    {
+     "value": "identifies the critical path"
+    },
+    {
+     "value": "shows which activities can be delayed"
+    },
+    {
+     "value": "shows the order of activities"
+    },
+    {
+     "value": "helps to control the project"
+    },
+    {
+     "value": "helps to avoid delays"
+    },
+    {
+     "value": "improves planning"
+    },
+    {
+     "value": "identifies delays"
+    },
+    {
+     "value": "helps to save time"
+    },
+    {
+     "value": "shows the earliest completion date"
+    }
+   ],
+   "normalise": [
+    "trim",
+    "lowercase",
+    "collapse_whitespace",
+    "strip_punctuation"
+   ]
+  },
+  "explanation": "Accept any sensible benefit: the minimum duration, identifying activities that cannot be delayed, scheduling resources, showing the order of the work or helping to manage delays.",
+  "modelResponse": {
+   "type": "SHORT_ANSWER",
+   "text": "shows the minimum time for the project"
+  },
+  "skill": "RECALL"
+ },
+ {
+  "key": "operations.critical-path.q12",
+  "type": "NUMERICAL",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 3,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "Using the fit-out network below for Rudo's Bakery, calculate the minimum project duration in days.\n\n| Activity | Duration (days) | Follows |\n| --- | ---: | --- |\n| A | 2 | none |\n| B | 3 | A |\n| C | 4 | A |\n| D | 5 | B, C |\n| E | 3 | C |\n| F | 4 | D, E |\n| G | 1 | F |",
+  "payload": {
+   "unitHint": "days"
+  },
+  "answerSpec": {
+   "value": 16
+  },
+  "explanation": "A (0-2), B (2-5), C (2-6), D (6-11), E (6-9), F (11-15), G (15-16). The minimum duration is 16 days. Adding every duration (22) ignores the activities that run at the same time.",
+  "workedSolution": "1. A (0-2), B (2-5), C (2-6), D (6-11), E (6-9), F (11-15), G (15-16). The minimum duration is 16 days. Adding every duration (22) ignores the activities that run at the same time.",
+  "hints": [
+   "Do a forward pass and take the larger finish where two activities join."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "16"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "22"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "15"
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "operations.critical-path.q13",
+  "type": "NUMERICAL",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "A fictional furniture workshop in Gweru plans a custom order in eight activities.\n\n| Activity | Duration (days) | Follows |\n| --- | ---: | --- |\n| A | 6 | none |\n| B | 4 | none |\n| C | 5 | A |\n| D | 7 | A, B |\n| E | 3 | B |\n| F | 4 | C, D |\n| G | 6 | D, E |\n| H | 2 | F, G |\n\nCalculate the minimum project duration in days.",
+  "payload": {
+   "unitHint": "days"
+  },
+  "answerSpec": {
+   "value": 21
+  },
+  "explanation": "A 0-6, B 0-4, C 6-11, D 6-13, E 4-7, F 13-17, G 13-19, H 19-21. Minimum duration = 21 days along A, D, G, H (6 + 7 + 6 + 2). Adding all durations gives 37.",
+  "workedSolution": "1. A 0-6, B 0-4, C 6-11, D 6-13, E 4-7, F 13-17, G 13-19, H 19-21. Minimum duration = 21 days along A, D, G, H (6 + 7 + 6 + 2). Adding all durations gives 37.",
+  "hints": [
+   "Find the earliest finish of each activity; where two lead into one, take the larger."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "21"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "37"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "19"
+   }
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "operations.critical-path.q14",
+  "type": "CALCULATION",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "Using the furniture workshop network below, calculate the **total float** of activity C.\n\n| Activity | Duration (days) | Follows |\n| --- | ---: | --- |\n| A | 6 | none |\n| B | 4 | none |\n| C | 5 | A |\n| D | 7 | A, B |\n| E | 3 | B |\n| F | 4 | C, D |\n| G | 6 | D, E |\n| H | 2 | F, G |",
+  "payload": {
+   "unitHint": "days"
+  },
+  "answerSpec": {
+   "value": 4
+  },
+  "explanation": "Total float of C = latest start - earliest start = 10 - 6 = 4 days. The free float (2 days) is the delay that does not move the start of F.",
+  "workedSolution": "1. Forward pass: minimum duration = 21 days; C starts on day 6 and finishes on day 11.\n2. Backward pass: F must start by day 15, so C must finish by day 15; its latest start is 15 - 5 = 10.\n3. Total float = 10 - 6 = 4 days.",
+  "hints": [
+   "Total float = latest start - earliest start.",
+   "The minimum duration must be found first."
+  ],
+  "modelResponse": {
+   "type": "CALCULATION",
+   "value": "4"
+  },
+  "wrongResponses": [
+   {
+    "type": "CALCULATION",
+    "value": "2"
+   },
+   {
+    "type": "CALCULATION",
+    "value": "5"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/business"
+  ]
+ },
+ {
+  "key": "operations.critical-path.q15",
+  "type": "NUMERICAL",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 4,
+  "marks": 1,
+  "estimatedSeconds": 70,
+  "stem": "Using the furniture workshop network below, calculate the **free float** of activity C.\n\n| Activity | Duration (days) | Follows |\n| --- | ---: | --- |\n| A | 6 | none |\n| B | 4 | none |\n| C | 5 | A |\n| D | 7 | A, B |\n| E | 3 | B |\n| F | 4 | C, D |\n| G | 6 | D, E |\n| H | 2 | F, G |",
+  "payload": {
+   "unitHint": "days"
+  },
+  "answerSpec": {
+   "value": 2
+  },
+  "explanation": "C finishes on day 11; F, the only activity that follows it, cannot start before day 13, so the free float is 13 - 11 = 2 days. The total float is 4 days.",
+  "workedSolution": "1. C finishes on day 11; F, the only activity that follows it, cannot start before day 13, so the free float is 13 - 11 = 2 days. The total float is 4 days.",
+  "hints": [
+   "Free float = earliest start of the following activity - earliest finish of C."
+  ],
+  "modelResponse": {
+   "type": "NUMERICAL",
+   "value": "2"
+  },
+  "wrongResponses": [
+   {
+    "type": "NUMERICAL",
+    "value": "4"
+   },
+   {
+    "type": "NUMERICAL",
+    "value": "6"
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/business"
+  ]
+ },
+ {
+  "key": "operations.critical-path.q16",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 2,
+  "marks": 3,
+  "estimatedSeconds": 210,
+  "stem": "Explain why activities on the critical path need the closest supervision.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "They have no float, so there is no spare time",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "A delay to any critical activity delays the whole project",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Resources can be moved to them from non-critical activities to keep the project on time",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: Critical activities have no float, so there is no spare time. A delay to any one of them delays the whole project, so the manager watches them closely and may move workers from non-critical activities to them."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One point per mark.",
+  "hints": [
+   "What happens to the finish date if a critical activity is late?"
+  ],
+  "skill": "UNDERSTANDING"
+ },
+ {
+  "key": "operations.critical-path.q17",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 3,
+  "marks": 4,
+  "estimatedSeconds": 280,
+  "stem": "A fictional hotel in Victoria Falls uses a network to plan the repainting of its rooms. Explain two ways in which the manager could use the network.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "To find the minimum time in which the repainting can be completed",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Application: the hotel can tell guests when rooms will be back in use",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "To identify the critical activities that must not be delayed",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Application: the manager can keep the painters on the critical rooms and move spare workers elsewhere",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The manager can use the network to find the minimum time to finish the repainting, so the hotel can tell guests when the rooms will be back in use. It also shows which activities are critical, so the manager can keep the painters on those jobs and move spare workers to jobs with float."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "Two uses, each developed in the context.",
+  "hints": [
+   "Link each use to rooms, guests or painters."
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "operations.critical-path.q18",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 4,
+  "marks": 4,
+  "estimatedSeconds": 280,
+  "stem": "Analyse why the time estimates are the main weakness of critical path analysis.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "The durations are estimates made before the work starts",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Every calculation of float and duration depends on them",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "If estimates are wrong, the critical path itself may change",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Managers may trust the precise-looking answer too much",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: The durations are estimates made before the work starts, and every duration and float is calculated from them. If an estimate is wrong, another route may become the longest, so the critical path changes. Managers may also trust the precise-looking answer more than it deserves."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One point per mark.",
+  "hints": [
+   "Where do the numbers come from, and what happens if one is wrong?"
+  ],
+  "skill": "ANALYSIS"
+ },
+ {
+  "key": "operations.critical-path.q19",
+  "type": "SHORT_ANSWER",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 5,
+  "marks": 6,
+  "estimatedSeconds": 420,
+  "stem": "A fictional construction firm in Gaborone is deciding whether to use critical path analysis for a single building project. Assess whether it is worth the effort.",
+  "answerSpec": {
+   "markScheme": {
+    "points": [
+     {
+      "id": "p1",
+      "description": "It shows the minimum duration and the critical path, so the firm can plan resources",
+      "marks": 1
+     },
+     {
+      "id": "p2",
+      "description": "Large projects have many activities, so the benefit is greater",
+      "marks": 1
+     },
+     {
+      "id": "p3",
+      "description": "Costs of preparing and updating the network, including managers' time",
+      "marks": 1
+     },
+     {
+      "id": "p4",
+      "description": "Estimates of duration may be unreliable on a new type of project",
+      "marks": 1
+     },
+     {
+      "id": "p5",
+      "description": "Counter-argument: the cost is small compared with penalties for late completion",
+      "marks": 1
+     },
+     {
+      "id": "p6",
+      "description": "Judgement with a reason, for example worthwhile for a large project with penalties; not for a small simple job",
+      "marks": 1
+     }
+    ]
+   },
+   "markingNotes": "Example answer: For a large building project the analysis is probably worth the effort. It shows the minimum duration and the critical activities, so resources can be planned and delays managed. The costs are managers' time to prepare and update the network, and its value falls if the estimates are unreliable, as on a new type of building. Against this, the cost is small compared with penalties for late completion on a big contract. The firm should use it for a large project with penalties, but not for a small, simple job."
+  },
+  "markingMode": "MANUAL",
+  "explanation": "One point per mark; the judgement needs a reason.",
+  "hints": [
+   "Give a benefit, a cost, and a condition under which the judgement changes."
+  ],
+  "skill": "EVALUATION"
+ },
+ {
+  "key": "operations.critical-path.q20",
+  "type": "STRUCTURED",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 3,
+  "marks": 9,
+  "estimatedSeconds": 630,
+  "stem": "Rudo's Bakery is a fictional business in Mutare. The fit-out of its new shop is planned as follows.\n\n| Activity | Duration (days) | Follows |\n| --- | ---: | --- |\n| A | 2 | none |\n| B | 3 | A |\n| C | 4 | A |\n| D | 5 | B, C |\n| E | 3 | C |\n| F | 4 | D, E |\n| G | 1 | F |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the minimum project duration.",
+    "payload": {
+     "unitHint": "days"
+    },
+    "answerSpec": {
+     "value": 16
+    },
+    "explanation": "The longest path is A, C, D, F, G: 2 + 4 + 5 + 4 + 1 = 16 days.",
+    "workedSolution": "1. The longest path is A, C, D, F, G: 2 + 4 + 5 + 4 + 1 = 16 days."
+   },
+   {
+    "label": "(b)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 1,
+    "stem": "Which activities form the critical path?",
+    "options": [
+     {
+      "key": "A",
+      "content": "A, B, D, F, G",
+      "rationale": "This route takes 15 days, so it is not the longest."
+     },
+     {
+      "key": "B",
+      "content": "A, C, E, F, G",
+      "rationale": "This route takes 14 days, so it is not the longest."
+     },
+     {
+      "key": "C",
+      "content": "A, B, E, F, G",
+      "rationale": "B and E do not follow each other."
+     },
+     {
+      "key": "D",
+      "content": "A, C, D, F, G",
+      "correct": true,
+      "rationale": "Correct: 2 + 4 + 5 + 4 + 1 = 16 days, the longest route."
+     }
+    ],
+    "explanation": "Only A, C, D, F, G takes the full 16 days."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "Explain why a delay of one day to activity E would not delay the opening of the shop.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "E is not on the critical path",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "E has spare time (float) of 2 days",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A one-day delay uses part of the float, so F can still start on day 11",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: E is not on the critical path and has 2 days of float. A delay of one day uses only part of that float, so F can still start on day 11 and the shop opens on time."
+    },
+    "explanation": "E can finish as late as day 11 without delaying F, and a one-day delay is within that."
+   },
+   {
+    "label": "(d)",
+    "type": "SHORT_ANSWER",
+    "marks": 3,
+    "markingMode": "MANUAL",
+    "stem": "State and explain one limitation of the network for Rudo.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "The durations are estimates and could be wrong",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Application: builders or equipment may arrive late",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "A different path could then become critical",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: The durations are estimates, so they could be wrong. If the oven installer arrives late, a different path could become the longest and the shop would open later than planned."
+    },
+    "explanation": "A limitation with a development."
+   }
+  ],
+  "explanation": "Minimum duration 16 days; critical path A, C, D, F, G; E has 2 days of float.",
+  "hints": [
+   "Do a forward pass and take the larger finish where two activities join.",
+   "Float is the time by which an activity can be delayed without delaying the whole project."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "16"
+    },
+    "(b)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "D"
+     ]
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "15"
+     },
+     "(b)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "A"
+      ]
+     }
+    }
+   }
+  ],
+  "skill": "APPLICATION"
+ },
+ {
+  "key": "operations.critical-path.q21",
+  "type": "STRUCTURED",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 4,
+  "marks": 14,
+  "estimatedSeconds": 980,
+  "stem": "A fictional school in Lusaka is refurbishing its hall. The activities are shown below as an arc table. Activity X is a dummy.\n\n| Activity | From node | To node | Duration (days) |\n| --- | ---: | ---: | ---: |\n| A | 1 | 2 | 5 |\n| B | 1 | 3 | 7 |\n| C | 2 | 4 | 6 |\n| D | 3 | 4 | 4 |\n| Dummy | 2 | 3 | 0 |\n| E | 3 | 5 | 3 |\n| F | 4 | 6 | 5 |\n| G | 5 | 6 | 8 |\n\nThe earliest start time (EST) of each node has been calculated as: node 1 = 0, node 2 = 5, node 3 = 7, node 5 = 10, node 6 = 18.",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the earliest start time of node 4.",
+    "payload": {
+     "unitHint": "days"
+    },
+    "answerSpec": {
+     "value": 11
+    },
+    "explanation": "Node 4 is reached by C (5 + 6 = 11) and by D (7 + 4 = 11), so its EST is 11 days.",
+    "workedSolution": "1. Node 4 is reached by C (5 + 6 = 11) and by D (7 + 4 = 11), so its EST is 11 days."
+   },
+   {
+    "label": "(b)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the latest finish time of node 5, given that the project must be completed in the minimum duration.",
+    "payload": {
+     "unitHint": "days"
+    },
+    "answerSpec": {
+     "value": 10
+    },
+    "explanation": "The latest finish of node 5 is the project duration (18) less the duration of G (8) = 10 days.",
+    "workedSolution": "1. The latest finish of node 5 is the project duration (18) less the duration of G (8) = 10 days."
+   },
+   {
+    "label": "(c)",
+    "type": "MULTIPLE_CHOICE",
+    "marks": 2,
+    "stem": "Which activities are critical?",
+    "options": [
+     {
+      "key": "A",
+      "content": "B, E and G",
+      "correct": true,
+      "rationale": "Correct: 7 + 3 + 8 = 18 days, the longest route."
+     },
+     {
+      "key": "B",
+      "content": "A, C and F",
+      "rationale": "This route takes 16 days, so it has float."
+     },
+     {
+      "key": "C",
+      "content": "A, X, E and G",
+      "rationale": "This route takes 16 days (5 + 0 + 3 + 8), so it has float."
+     },
+     {
+      "key": "D",
+      "content": "B, D and F",
+      "rationale": "This route takes 16 days (7 + 4 + 5), so it has float."
+     }
+    ],
+    "explanation": "Only B, E, G reaches 18 days."
+   },
+   {
+    "label": "(d)",
+    "type": "NUMERICAL",
+    "marks": 2,
+    "stem": "Calculate the total float of activity C.",
+    "payload": {
+     "unitHint": "days"
+    },
+    "answerSpec": {
+     "value": 2
+    },
+    "explanation": "Total float = LFT of node 4 (13) - EST of node 2 (5) - duration (6) = 2 days.",
+    "workedSolution": "1. Total float = LFT of node 4 (13) - EST of node 2 (5) - duration (6) = 2 days."
+   },
+   {
+    "label": "(e)",
+    "type": "SHORT_ANSWER",
+    "marks": 6,
+    "markingMode": "MANUAL",
+    "stem": "The school can finish activity E two days earlier (from 3 days to 1 day) by paying for extra workers. Assess whether it should do so.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "E is on the critical path, so shortening it shortens the project",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "The minimum duration falls from 18 to 16 days, a saving of 2 days",
+        "marks": 1
+       },
+       {
+        "id": "p3",
+        "description": "Other routes (for example A, C, F and B, D, F) now also take 16 days, so any further saving would need more than one activity shortened",
+        "marks": 1
+       },
+       {
+        "id": "p4",
+        "description": "The extra cost of the workers must be weighed against the value of having the hall back 2 days earlier",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Non-financial factors: the hall may be needed for an exam or an event, or pupils may lose lessons while it is closed",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Judgement with a reason: worthwhile if the hall has a fixed date or if the cost is below the value of the two days; otherwise not",
+        "marks": 1
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Shortening E would reduce the project from 18 to 16 days, because E is critical. Other routes then also take 16 days, so no further saving is possible without shortening more activities. Whether it is worthwhile depends on the cost of the extra workers against the value of having the hall back 2 days sooner. If the hall is needed for a fixed event or for exams, it is probably worth it; if not, the school should keep its money."
+    },
+    "explanation": "Weighs the saving, the new critical routes and the cost to a judgement.",
+    "hints": [
+     "Recalculate the minimum duration after the change.",
+     "Compare the cost with the value of two days."
+    ]
+   }
+  ],
+  "explanation": "Node 4 EST 11; node 5 LFT 10; critical activities B, E, G (18 days); C has 2 days of total float.",
+  "hints": [
+   "The EST of a node is the longest route to it.",
+   "LFT = project duration minus the longest route from the node to the end."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "NUMERICAL",
+     "value": "11"
+    },
+    "(b)": {
+     "type": "NUMERICAL",
+     "value": "10"
+    },
+    "(c)": {
+     "type": "MULTIPLE_CHOICE",
+     "optionKeys": [
+      "A"
+     ]
+    },
+    "(d)": {
+     "type": "NUMERICAL",
+     "value": "2"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "NUMERICAL",
+      "value": "9"
+     },
+     "(b)": {
+      "type": "NUMERICAL",
+      "value": "13"
+     },
+     "(c)": {
+      "type": "MULTIPLE_CHOICE",
+      "optionKeys": [
+       "B"
+      ]
+     },
+     "(d)": {
+      "type": "NUMERICAL",
+      "value": "0"
+     }
+    }
+   }
+  ],
+  "skill": "ANALYSIS",
+  "applies": [
+   "cambridge/a-level/business"
+  ]
+ },
+ {
+  "key": "operations.critical-path.q22",
+  "type": "STRUCTURED",
+  "concepts": [
+   "abus.operations.critical-path"
+  ],
+  "difficulty": 5,
+  "marks": 15,
+  "estimatedSeconds": 1050,
+  "stem": "Rudo's Bakery is a fictional business in Mutare. The shop fit-out network is below. Rudo estimates that every day by which the shop opens late loses US\\$180 of profit. She can shorten activity D from 5 days to 3 days by hiring extra workers for US\\$450.\n\n| Activity | Duration (days) | Follows |\n| --- | ---: | --- |\n| A | 2 | none |\n| B | 3 | A |\n| C | 4 | A |\n| D | 5 | B, C |\n| E | 3 | C |\n| F | 4 | D, E |\n| G | 1 | F |",
+  "parts": [
+   {
+    "label": "(a)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "Calculate the minimum project duration.",
+    "payload": {
+     "unitHint": "days"
+    },
+    "answerSpec": {
+     "value": 16
+    },
+    "explanation": "Longest path A, C, D, F, G = 2 + 4 + 5 + 4 + 1 = 16 days.",
+    "workedSolution": "1. Forward pass: A 0-2, B 2-5, C 2-6, D 6-11, E 6-9, F 11-15, G 15-16.\n2. The largest finish is 16 days."
+   },
+   {
+    "label": "(b)",
+    "type": "CALCULATION",
+    "marks": 3,
+    "stem": "Calculate the minimum project duration if D is shortened to 3 days.",
+    "payload": {
+     "unitHint": "days"
+    },
+    "answerSpec": {
+     "value": 14
+    },
+    "explanation": "A, C, D, F, G becomes 2 + 4 + 3 + 4 + 1 = 14 days; A, C, E, F, G is also 2 + 4 + 3 + 4 + 1 = 14 days; B routes are shorter. Minimum duration is 14 days.",
+    "workedSolution": "1. D: 6-9. E: 6-9. F starts on day 9 (both finish on day 9) and ends on day 13.\n2. G ends on day 14.\n3. Minimum duration = 14 days."
+   },
+   {
+    "label": "(c)",
+    "type": "SHORT_ANSWER",
+    "marks": 9,
+    "markingMode": "MANUAL",
+    "stem": "Rudo says: 'The shop's opening date matters more than any other cost.' Evaluate whether she should hire the extra workers.",
+    "answerSpec": {
+     "markScheme": {
+      "points": [
+       {
+        "id": "p1",
+        "description": "Shortening D by 2 days saves 2 days (16 to 14); the route through E now also takes 14 days, so no more can be saved on D",
+        "marks": 1
+       },
+       {
+        "id": "p2",
+        "description": "Saving: 2 days x US\\$180 = US\\$360 of profit",
+        "marks": 2
+       },
+       {
+        "id": "p3",
+        "description": "Cost of US\\$450 is more than the US\\$360 saved, so the change loses US\\$90 on the figures",
+        "marks": 2
+       },
+       {
+        "id": "p4",
+        "description": "The estimate of US\\$180 a day is itself uncertain; benefits such as earlier customer goodwill are not counted",
+        "marks": 1
+       },
+       {
+        "id": "p5",
+        "description": "Risk of other delays (for example late equipment) makes a margin of time valuable, or the opposite if the shop must open for a fixed event",
+        "marks": 1
+       },
+       {
+        "id": "p6",
+        "description": "Judgement with a reason: do not hire on the figures unless a fixed opening date makes the days worth more than US\\$225 each",
+        "marks": 2
+       }
+      ],
+      "levels": [
+       {
+        "level": 3,
+        "minMarks": 7,
+        "maxMarks": 9,
+        "descriptor": "Both durations calculated, the cost and saving compared, uncertainty and a condition considered, and a justified judgement"
+       },
+       {
+        "level": 2,
+        "minMarks": 4,
+        "maxMarks": 6,
+        "descriptor": "Compares cost with saving with some application; judgement weakly supported"
+       },
+       {
+        "level": 1,
+        "minMarks": 1,
+        "maxMarks": 3,
+        "descriptor": "States the cost or the saving without a comparison"
+       }
+      ]
+     },
+     "markingNotes": "Example answer: Shortening D saves 2 days, because the route through E then also takes 14 days. At US\\$180 a day this saves US\\$360 of profit, but the extra workers cost US\\$450, so on the figures Rudo loses US\\$90. The US\\$180 is only an estimate, and earlier opening could win customer goodwill which the figure leaves out. Against that, other delays may eat the time saved. Rudo should not hire the workers unless the shop must open by a fixed date, such as a launch event, when each day is worth more than US\\$225 to her."
+    },
+    "explanation": "Weighs the saving of US\\$360 against the cost of US\\$450, with the reliability of the estimate and the importance of the date.",
+    "hints": [
+     "Compare the saving in days x the daily loss with the cost.",
+     "Check which route becomes critical after the change."
+    ]
+   }
+  ],
+  "explanation": "Duration 16 days falls to 14 days; the saving of US\\$360 is below the cost of US\\$450.",
+  "hints": [
+   "Recalculate the longest path after the change.",
+   "Compare the cost with the profit saved."
+  ],
+  "modelResponse": {
+   "type": "STRUCTURED",
+   "parts": {
+    "(a)": {
+     "type": "CALCULATION",
+     "value": "16"
+    },
+    "(b)": {
+     "type": "CALCULATION",
+     "value": "14"
+    }
+   }
+  },
+  "wrongResponses": [
+   {
+    "type": "STRUCTURED",
+    "parts": {
+     "(a)": {
+      "type": "CALCULATION",
+      "value": "15"
+     },
+     "(b)": {
+      "type": "CALCULATION",
+      "value": "13"
+     }
+    }
+   }
+  ],
+  "skill": "EVALUATION"
+ }
+]

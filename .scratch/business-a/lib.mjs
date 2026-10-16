@@ -1116,6 +1116,6 @@ export function cashFlowDirect({ business, period, receipts, payments, investing
     ["Cash and cash equivalents at the start of the year", null, openingCash],
     ["**Cash and cash equivalents at the end of the year**", null, closingCash],
   ];
-  const md = `**${business}**\n\n**Statement of cash flows for the year ended ${period}** (direct method)\n\n${statement("", rows, { cols: ["US\$", "US\$"] }).split("\n").slice(2).join("\n")}`;
+  const md = `**${business}**\n\n**Statement of cash flows for the year ended ${period}** (direct method)\n\n${statement("", rows, { cols: ["US\\$", "US\\$"] }).split("\n").slice(2).join("\n")}`;
   return { md, operating, investing: inv, financing: fin, net };
 }

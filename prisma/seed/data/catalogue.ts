@@ -211,6 +211,7 @@ const ZIMSEC_A: S[] = [
   ["agriculture", "Agriculture", "sciences", null],
   ["accounting", "Accounting", "commercials", null],
   ["business-studies", "Business Studies", "commercials", null, "Confirm current ZIMSEC title."],
+  ["business-enterprise-skills", "Business Enterprise and Skills", "commercials", null, "Confirm current ZIMSEC title."],
   ["economics", "Economics", "commercials", null],
   ["geography", "Geography", "humanities", null],
   ["history", "History", "humanities", null],

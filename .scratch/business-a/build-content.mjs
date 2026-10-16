@@ -6,6 +6,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { allModules } from "./lib.mjs";
 import { rebalanceQuestions } from "../tools/rebalance-mcq.mjs";
 
+// Round non-integer numbers to 12 significant figures so floating-point noise (93.60000000000001) never reaches the JSON.
+const roundNoise = (_k, v) => (typeof v === "number" && Number.isFinite(v) && !Number.isInteger(v) ? Number(v.toPrecision(12)) : v);
 const SLICES_DIR = fileURLToPath(new URL("./slices/", import.meta.url));
 const only = process.argv.slice(2);
 const files = readdirSync(SLICES_DIR).filter((f) => f.endsWith(".mjs") && (only.length === 0 || only.some((o) => f.startsWith(o)))).sort();
@@ -33,13 +35,13 @@ for (const m of allModules()) {
     balance.reordered += r.reordered;
     for (const [k, v] of Object.entries(r.skipped)) balance.skipped[k] = (balance.skipped[k] ?? 0) + v;
     for (const [k, v] of Object.entries(r.after)) balance.after[k] = (balance.after[k] ?? 0) + v;
-    writeFileSync(path, JSON.stringify(m.questions, null, 1) + "\n");
+    writeFileSync(path, JSON.stringify(m.questions, roundNoise, 1) + "\n");
     qCount += m.questions.length;
   }
   if (m.cards.length) {
     const path = join(ROOT, "flashcards", `${m.file}.json`);
     mkdirSync(dirname(path), { recursive: true });
-    writeFileSync(path, JSON.stringify(m.cards, null, 1) + "\n");
+    writeFileSync(path, JSON.stringify(m.cards, roundNoise, 1) + "\n");
     cCount += m.cards.length;
   }
   console.log(`${m.conceptKey.padEnd(42)} ${String(m.questions.length).padStart(3)} questions ${String(m.cards.length).padStart(3)} cards  -> ${m.file}`);
