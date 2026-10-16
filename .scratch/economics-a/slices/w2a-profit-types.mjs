@@ -168,5 +168,5 @@ concept("aecon.costs.profit-types", { file: "costs/profit-types", keyPrefix: "co
   b.card("FACT", "What is subnormal profit?", "Profit below normal: AR below ATC. The firm earns less than needed to stay in the long run.");
   b.card("CONCEPT", "Why continue producing at a loss in the short run?", "If price covers AVC, the contribution to fixed cost makes the loss smaller than the fixed cost lost by closing.");
   b.card("FACT", "Accounting profit US\\$15,000; owner's next best income US\\$12,000: economic profit?", "US\\$3,000 (supernormal profit).");
-  b.card("CONCEPT", "Profit maximisation versus cost minimisation (ZIMSEC)?", "Profit maximisation chooses the best output (MC = MR); cost minimisation finds the cheapest way to produce a given output.", undefined, { applies: ZIM });
+  b.card("CONCEPT", "Profit maximisation versus cost minimisation?", "Profit maximisation chooses the best output (MC = MR); cost minimisation finds the cheapest way to produce a given output.", undefined, { applies: ZIM });
 });

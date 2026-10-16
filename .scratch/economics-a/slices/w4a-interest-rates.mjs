@@ -172,5 +172,5 @@ concept("aecon.money.interest-rates", { file: "money/interest-rates", keyPrefix:
   b.card("CONCEPT", "What is a liquidity trap?", "At very low interest rates people hold any extra money instead of buying bonds, so a larger money supply cannot lower the rate further.");
   b.card("CONCEPT", "List four other determinants of interest rates.", "The policy rate, risk, the term of the loan and expected inflation.");
   b.card("CONCEPT", "Effect of more government borrowing in the loanable funds model?", "The demand for funds rises, so the interest rate rises and private investment is crowded out.");
-  b.card("CONCEPT", "Name some non-economic factors affecting interest rates (ZIMSEC).", "Political stability, confidence, the legal system, social attitudes to borrowing and saving, and government regulation.", null, { applies: ["zimsec"] });
+  b.card("CONCEPT", "Name some non-economic factors affecting interest rates.", "Political stability, confidence, the legal system, social attitudes to borrowing and saving, and government regulation.", null, { applies: ["zimsec"] });
 });

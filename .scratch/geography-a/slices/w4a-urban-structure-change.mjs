@@ -218,6 +218,6 @@ concept("ageo.urban.structure-change", { file: "urban/structure-change", keyPref
   b.card("CONCEPT", "Why do retail and offices decentralise?", "Transport change, cheaper land with parking, customers in the suburbs, competition, investment and congestion in the centre.");
   b.card("CONCEPT", "Why do factories move to the edge?", "High land cost in the inner city, need for space and single-storey buildings, congestion and better road access at the edge.");
   b.card("CONCEPT", "What decides residential zones?", "Income, supply of housing, ethnicity and culture, planning and history.");
-  b.card("DEFINITION", "Urban morphology (ZIMSEC)?", "The physical form of a city: street pattern, plot sizes, building types and heights.");
+  b.card("DEFINITION", "Urban morphology?", "The physical form of a city: street pattern, plot sizes, building types and heights.");
   b.card("DEFINITION", "Place identity?", "The character of a place as perceived and valued by those who live in or use it; perceptions can differ between groups.");
 });

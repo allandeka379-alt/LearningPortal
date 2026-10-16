@@ -160,9 +160,9 @@ concept("aecon.firms.objectives", { file: "firms/objectives", keyPrefix: "firms.
   b.card("CONCEPT", "Output rule for profit maximisation?", "Produce where MC = MR, with MC rising.");
   b.card("CONCEPT", "Output rule for revenue maximisation?", "Produce where MR = 0.");
   b.card("CONCEPT", "Effect of sales maximisation on price and output?", "Higher output and a lower price than profit maximisation, subject to a minimum acceptable profit.");
-  b.card("DEFINITION", "What is the **principal-agent problem**? (Cambridge)", "Managers (agents) may pursue aims different from those of the owners (principals) because ownership is separated from control and monitoring is costly.", undefined, { applies: CAM });
+  b.card("DEFINITION", "What is the **principal-agent problem**?", "Managers (agents) may pursue aims different from those of the owners (principals) because ownership is separated from control and monitoring is costly.", undefined, { applies: CAM });
   b.card("CONCEPT", "Name five objectives of firms.", "Profit maximisation, survival, growth, revenue or sales maximisation, satisficing (also social and ethical aims).");
   b.card("CONCEPT", "Why might a firm pursue growth?", "Economies of scale, market power, and higher pay or status for managers.");
-  b.card("CONCEPT", "How can the principal-agent problem be reduced? (Cambridge)", "Link pay to profit or share price, monitor managers, use independent directors, threat of takeover.", undefined, { applies: CAM });
+  b.card("CONCEPT", "How can the principal-agent problem be reduced?", "Link pay to profit or share price, monitor managers, use independent directors, threat of takeover.", undefined, { applies: CAM });
   b.card("FACT", "Which firms most nearly maximise profit?", "Owner-managed firms in highly competitive markets, where survival requires efficiency.");
 });

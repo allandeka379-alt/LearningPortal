@@ -197,6 +197,6 @@ concept("ageo.env.degradation", { file: "env/degradation", keyPrefix: "env.degra
   b.card("CONCEPT", "Soil conservation methods", "Contour ridges, terraces, mulching, conservation agriculture (minimum tillage, cover, rotation), vetiver strips.");
   b.card("DEFINITION", "Indigenous knowledge systems (IKS)", "Community knowledge and customs, such as totems, taboos and sacred forests, that protect natural resources.");
   b.card("CONCEPT", "Effects of siltation", "Dams and canals lose storage, irrigation is reduced and aquatic life is harmed.");
-  b.card("CONCEPT", "Restoring extractive landscapes (Cambridge)", "Backfill pits, spread stored topsoil, re-vegetate with local species, treat water and monitor.");
+  b.card("CONCEPT", "Restoring extractive landscapes", "Backfill pits, spread stored topsoil, re-vegetate with local species, treat water and monitor.");
   b.card("CONCEPT", "Root causes of rural degradation", "Population pressure, poverty, lack of alternative fuel and land, and weak enforcement.");
 });

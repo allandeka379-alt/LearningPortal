@@ -171,9 +171,9 @@ concept("aecon.firms.collusion-game-theory", { file: "firms/collusion-game-theor
   b.card("DEFINITION", "Overt versus tacit collusion?", "Overt: formal, open agreement (a cartel). Tacit: coordination without an agreement, for example following a price leader.");
   b.card("CONCEPT", "Conditions for an effective cartel?", "Few firms, homogeneous product, high barriers to entry, inelastic demand, similar costs, ability to monitor and punish cheats.");
   b.card("CONCEPT", "Why do cartels tend to break down?", "Each member gains by cheating (producing above quota); if all cheat, price falls.");
-  b.card("DEFINITION", "Define **dominant strategy**. (Cambridge)", "A strategy that gives a player a higher pay-off than any other, whatever the rival does.", undefined, { applies: CAM });
-  b.card("DEFINITION", "Define **Nash equilibrium**. (Cambridge)", "An outcome in which each player's strategy is the best response to the others' strategies, so no player gains by changing alone.", undefined, { applies: CAM });
-  b.card("CONCEPT", "What is the Prisoner's Dilemma? (Cambridge)", "A game in which each player's dominant strategy leads to an outcome worse for both than cooperation.", undefined, { applies: CAM });
+  b.card("DEFINITION", "Define **dominant strategy**.", "A strategy that gives a player a higher pay-off than any other, whatever the rival does.", undefined, { applies: CAM });
+  b.card("DEFINITION", "Define **Nash equilibrium**.", "An outcome in which each player's strategy is the best response to the others' strategies, so no player gains by changing alone.", undefined, { applies: CAM });
+  b.card("CONCEPT", "What is the Prisoner's Dilemma?", "A game in which each player's dominant strategy leads to an outcome worse for both than cooperation.", undefined, { applies: CAM });
   b.card("FACT", "Effect of collusion on consumers?", "Higher prices, lower output and choice, and a welfare loss.");
   b.card("CONCEPT", "What does competition law do about cartels?", "Prohibits price-fixing and market sharing, fines firms, may offer leniency to members who report; enforcement is difficult.");
 });

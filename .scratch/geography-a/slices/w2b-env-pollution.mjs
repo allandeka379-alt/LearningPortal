@@ -198,7 +198,7 @@ concept("ageo.env.pollution", { file: "env/pollution", keyPrefix: "env.pollution
   b.card("DEFINITION", "Eutrophication", "Nutrient enrichment of water causes algal blooms; decay of the algae uses up oxygen, killing fish.");
   b.card("FACT", "Water quality indicators", "Temperature, pH, turbidity and E. coli; drinking water should contain no E. coli in 100 mL.");
   b.card("FACT", "Types of pollution", "Water, land, air, noise and visual.");
-  b.card("CONCEPT", "Urban pollution sources (Cambridge)", "Domestic, construction, manufacturing and power, transport and waste.");
+  b.card("CONCEPT", "Urban pollution sources", "Domestic, construction, manufacturing and power, transport and waste.");
   b.card("CONCEPT", "Pollution and development", "LICs: untreated sewage, open burning. MICs: rapid industry and traffic, weak controls. HICs: cleaner but high waste and traffic emissions.");
   b.card("FACT", "Environmental Management Act", "Zimbabwe's Environmental Management Act (Chapter 20:27) sets standards for waste and effluent and applies the polluter-pays principle.");
   b.card("CONCEPT", "Evaluating pollution controls", "Judge each measure by cost, ease of enforcement and whether it tackles the cause or only the symptom.");
