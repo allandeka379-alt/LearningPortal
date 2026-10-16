@@ -18,14 +18,17 @@ function exponentToTimesTen(text: string): string {
 
 /**
  * Formats an expected numeric value the way the question asks for it: to `decimalPlaces`, else to the minimum
- * significant figures, else JavaScript's shortest round-trip form. Very large/small values use `×10^n`.
+ * significant figures, else JavaScript's shortest round-trip form of the value rounded to 12 significant figures
+ * (so floating-point noise in authored values, e.g. 93.60000000000001 from 0.72 × 130, shows as 93.6). Very
+ * large/small values use `×10^n`.
  */
 export function formatExpectedNumber(value: number, precision: { sigFigs?: { min?: number; max?: number }; decimalPlaces?: number } = {}): string {
   if (!Number.isFinite(value)) return String(value);
   if (precision.decimalPlaces !== undefined && Math.abs(value) < 1e15) return value.toFixed(precision.decimalPlaces);
   const sf = precision.sigFigs?.min ?? precision.sigFigs?.max;
   if (sf !== undefined) return exponentToTimesTen(value.toPrecision(sf));
-  return exponentToTimesTen(String(value === 0 ? 0 : value));
+  const clean = Number(value.toPrecision(12));
+  return exponentToTimesTen(String(clean === 0 ? 0 : clean));
 }
 
 /** Sorted correct option keys (by sortOrder, then key). */
