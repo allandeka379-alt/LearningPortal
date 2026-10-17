@@ -69,6 +69,8 @@ To test a material, connect it in a circuit with a cell and a lamp (or an ammete
 
 The direction of an electric field at a point is the direction of the force on a small **positive** charge placed there. Field lines show the patterns:
 
+![Electric field lines: they point outwards from a positive point charge, inwards towards a negative point charge, and run in evenly spaced parallel lines from the positive plate to the negative plate between oppositely charged parallel plates, curving slightly at the edges.](media:diagrams/electric-field-lines.png "Figure: electric field lines for point charges and for parallel plates")
+
 - **Point charge or charged sphere**: radial lines. They point **outwards** from a positive charge and **inwards** towards a negative charge.
 - **Two oppositely charged parallel plates**: evenly spaced, parallel lines from the positive plate to the negative plate (a uniform field), curving slightly at the edges.
 

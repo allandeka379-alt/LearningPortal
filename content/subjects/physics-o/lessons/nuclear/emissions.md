@@ -38,6 +38,8 @@ Radioactive emission is **spontaneous**: it is not affected by temperature, pres
 
 The more strongly a radiation ionises, the more quickly it loses its energy and the less penetrating it is.
 
+![Penetration of nuclear radiation: alpha particles are stopped by a sheet of paper, beta particles pass through paper but are stopped by a few millimetres of aluminium, and gamma rays pass through both and are only reduced by thick lead.](media:diagrams/radiation-penetration.png "Figure: alpha, beta and gamma radiation differ in how far they penetrate")
+
 :::example{title="Identifying a radiation"}
 A detector near a source records a high count rate. A sheet of paper placed in front of the source makes no difference, but 5 mm of aluminium reduces the count rate to the background level. The radiation cannot be alpha (paper would have stopped it) or gamma (aluminium would hardly reduce it), so it is **beta** radiation.
 :::
@@ -52,6 +54,8 @@ A detector near a source records a high count rate. A sheet of paper placed in f
 
 - **Electric field** (between charged plates): alpha particles bend towards the **negative** plate; beta particles bend towards the **positive** plate, and **more** strongly, because their mass is so much smaller; gamma rays go **straight on**.
 - **Magnetic field**: alpha and beta particles are deflected in **opposite directions** (they have opposite charges), at right angles to the field, as given by Fleming's left-hand rule. Beta particles curve much more sharply. Gamma rays are **not deflected**, because they are uncharged.
+
+![Deflection in an electric field between a positive and a negative plate: alpha particles bend slightly towards the negative plate, beta particles bend strongly towards the positive plate because their mass is so small, and gamma rays go straight on.](media:diagrams/radiation-deflection-electric.png "Figure: alpha, beta and gamma radiation in an electric field")
 
 ## Common mistakes
 

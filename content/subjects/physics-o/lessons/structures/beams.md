@@ -51,6 +51,8 @@ Beams are described by the shape of their cross-section (the shape you see if yo
 
 When a beam supported at both ends carries a load in the middle, it bends (sags) slightly:
 
+![A beam loaded at the centre sags: the top layers are in compression and the bottom layers in tension, with a neutral axis between that is neither stretched nor squashed. Below are cross-sections: a plank on edge bends much less than flat, and I, box and tube sections put material where the stress is greatest.](media:diagrams/beam-stresses-sections.png "Figure: stresses inside a loaded beam, and common beam cross-sections")
+
 - the **top** layers are squashed: they are in **compression**;
 - the **bottom** layers are stretched: they are in **tension**;
 - a layer in the middle, the **neutral axis** (neutral zone), is neither stretched nor squashed.

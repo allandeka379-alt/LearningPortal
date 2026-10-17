@@ -26,6 +26,8 @@ Sound with a frequency higher than $20\ \text{kHz}$, above the range of human he
 
 In an echo, the sound travels **to** the reflecting surface **and back**, so it covers **twice** the distance to the surface:
 
+![Echo from a cliff: the sound travels out and back, so in 1.2 s at 340 m/s it covers 408 m in total; the cliff is half of that, 204 m, away.](media:diagrams/echo-cliff-204m.png "Figure: an echo travels to the cliff and back, so the cliff is half the total distance away")
+
 $$
 \text{distance to surface} = \frac{\text{speed} \times \text{time for echo}}{2}
 $$
@@ -44,6 +46,8 @@ Echoes can also be used to measure the speed of sound: a learner claps in time w
 ### Sonar (echo sounding)
 
 A ship sends pulses of ultrasound down through the water and detects the echoes from the seabed or a shoal of fish. Knowing the speed of sound in water (about $1500\ \text{m/s}$), the depth is calculated from the echo time. Fishing boats use echo sounders to find shoals of fish, and survey boats use them to map the bed of a dam or lake.
+
+![Sonar: a ship sends an ultrasound pulse down and the echo from the seabed returns 0.80 s later; at 1500 m/s the pulse travels 1200 m in total, so the depth is half of that, 600 m.](media:diagrams/sonar-depth-600m.png "Figure: sonar finds the depth from the echo time, 600 m")
 
 :::worked-solution[Depth by sonar]
 1. An echo returns $0.80\ \text{s}$ after a pulse is sent; sound travels at $1500\ \text{m/s}$ in the water.

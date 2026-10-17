@@ -27,6 +27,8 @@ Temperatures that can be reproduced exactly and are used to mark a thermometer's
 
 To calibrate a liquid-in-glass thermometer, place it in melting ice and mark the liquid level as $0\ ^\circ\text{C}$; place it in steam above boiling water and mark $100\ ^\circ\text{C}$; divide the length between the marks into 100 equal parts.
 
+![Calibration line for an unmarked thermometer: the liquid column is 2.0 cm at the ice point (0 degrees C) and 22.0 cm at the steam point (100 degrees C); a column of 16.5 cm in the tea reads 72.5 degrees C.](media:diagrams/thermometer-calibration-line.png "Figure: calibration line of the unmarked thermometer, with the tea reading")
+
 :::worked-solution[Reading an unmarked thermometer]
 An unmarked thermometer's liquid column is $2.0\ \text{cm}$ long at the ice point and $22.0\ \text{cm}$ at the steam point. In a cup of tea the column is $16.5\ \text{cm}$ long.
 

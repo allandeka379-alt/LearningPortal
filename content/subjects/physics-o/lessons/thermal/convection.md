@@ -31,6 +31,8 @@ The circulating flow set up when warm fluid rises and cooler fluid sinks to repl
 
 Convection cannot happen in solids, because their particles cannot flow.
 
+![Beaker of water with a purple crystal at the bottom near the left side, heated gently under that side: the purple stream rises on the heated side, spreads across the top, sinks on the cool side and returns along the bottom, showing a convection current.](media:diagrams/convection-beaker-crystal.png "Figure: a convection current made visible with a potassium permanganate crystal")
+
 :::example{title="Watching convection in water"}
 Drop a single crystal of potassium permanganate down a straw to the bottom of a beaker of water, near one side. Heat that side gently with a small flame. A purple stream rises above the crystal, spreads across the top, sinks down the far side and returns along the bottom: the convection current made visible.
 :::

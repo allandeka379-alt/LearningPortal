@@ -44,6 +44,8 @@ A metal ball just passes through a metal ring when both are cold. After the ball
 - **Bimetallic strip thermostats**: in an electric iron, kettle or fire alarm, a strip of brass and iron bends when hot (brass expands more), breaking or making an electrical contact.
 - **Fitting tight parts**: a metal tyre or ring is heated so it expands and slips on, then shrinks tightly as it cools; a stuck jar lid is loosened with hot water.
 
+![A bimetallic strip of brass bonded to iron: when cold it is straight; when heated the brass expands more than the iron, so the strip bends with the brass on the outside of the curve. This bending can open or close a contact in a thermostat.](media:diagrams/bimetallic-strip-bending.png "Figure: a bimetallic strip bends when heated because brass expands more than iron")
+
 ## Problems caused by expansion
 
 - **Railway lines and bridges** have **expansion gaps** (or sliding joints) so they do not buckle on hot days.

@@ -31,6 +31,8 @@ A member of a framework that is in tension (being pulled).
 
 A square frame of four sticks pinned at the corners is not rigid: push one corner and it folds into a parallelogram, because its angles can change without any stick changing length. A **triangle** cannot change shape unless one of its sides changes length. Adding a diagonal to the square divides it into two triangles and makes it rigid. This is called **triangulation**, and every truss is made of triangles for this reason.
 
+![A square frame pinned at its corners folds into a parallelogram when pushed, but a triangle cannot change shape unless one of its sides changes length, which is why trusses are built from triangles.](media:diagrams/truss-triangle-rigid.png "Figure: a pinned square folds, a triangle stays rigid")
+
 ## Advantages of trusses over solid beams
 
 - **Strength-to-mass ratio**: a truss can carry a large load with little material, because each member is either pulled or pushed along its length, which is how materials are strongest.
@@ -53,6 +55,8 @@ A simple way to identify them on a model is to replace a member with string: if 
 ## The roof truss
 
 In a typical triangular roof truss:
+
+![Roof truss: the two sloping rafters are struts in compression, the horizontal tie beam is in tension and stops the rafters pushing the walls outwards, and the king post and braces divide the large triangle into smaller triangles; the roof load passes down to the supports at each end.](media:diagrams/roof-truss-struts-ties.png "Figure: a roof truss, rafters in compression and the tie beam in tension")
 
 - the two sloping **rafters** carry the weight of the roof sheets or tiles and are mainly in **compression** (struts);
 - the horizontal **tie beam** at the bottom is in **tension**: it stops the rafters from pushing the tops of the walls outwards;

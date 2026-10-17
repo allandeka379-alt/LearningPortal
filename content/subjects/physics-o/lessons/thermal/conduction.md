@@ -34,6 +34,8 @@ Rods of copper, aluminium, iron and glass of the same length and thickness are f
 
 Metals are good conductors. Non-metals such as wood, plastic and glass are poor conductors, and gases are very poor conductors. Many solids, such as glass and brick, conduct better than true insulators but far worse than metals.
 
+![Four rods of equal length and thickness (copper, aluminium, iron, glass) stick out of a trough of hot water, each with wax on its far end. The wax melts first on copper, then aluminium, then iron, and on glass it may not melt: copper is the best conductor.](media:diagrams/conduction-wax-rods.png "Figure: comparing conductors with wax on the ends of rods")
+
 ## How conduction happens (Cambridge Supplement)
 
 ### In all solids: lattice vibrations

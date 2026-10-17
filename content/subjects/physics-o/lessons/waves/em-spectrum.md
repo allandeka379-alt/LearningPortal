@@ -26,6 +26,8 @@ The family of EM waves arranged in order of wavelength or frequency.
 
 In order of **increasing frequency** (and **decreasing wavelength**):
 
+![The electromagnetic spectrum in order of increasing frequency: radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, gamma rays; wavelength decreases the same way, and all travel at 3.0 times 10 to the 8 metres per second in a vacuum.](media:diagrams/em-spectrum-order.png "Figure: the electromagnetic spectrum, from radio waves to gamma rays")
+
 **radio waves → microwaves → infrared → visible light → ultraviolet → X-rays → gamma rays**
 
 A memory aid for the order: **R**ich **M**en **I**n **V**egas **U**se **X**-ray **G**lasses. Radio waves have the longest wavelength (metres to kilometres); gamma rays the shortest (smaller than an atom). (Neither syllabus asks you to recall actual wavelengths or frequencies; you must know the order.)

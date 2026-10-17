@@ -48,6 +48,8 @@ A lever is a rigid bar that turns about a pivot. A long crowbar with the pivot c
 
 In a single-string pulley system, one rope runs round several pulleys. The **velocity ratio equals the number of strands of rope supporting the lower (moving) block**. For example, a system with 4 supporting strands has $\text{VR} = 4$: to lift the load by $1\ \text{m}$, each of the four strands must shorten by $1\ \text{m}$, so the effort pulls in $4\ \text{m}$ of rope.
 
+![Pulley system with four rope strands supporting the lower block, so the velocity ratio is 4: an effort of 320 N lifts a load of 1000 N, the mechanical advantage is 1000 divided by 320 which is 3.125, and the efficiency is 3.125 divided by 4, about 78 percent.](media:diagrams/pulley-four-strands.png "Figure: a four-strand pulley system, VR = 4, MA = 3.125, efficiency 78%")
+
 :::worked-solution[A pulley block on a building site]
 A pulley system with 4 supporting strands lifts a load of $1000\ \text{N}$ with an effort of $320\ \text{N}$.
 
@@ -59,6 +61,8 @@ A pulley system with 4 supporting strands lifts a load of $1000\ \text{N}$ with 
 ## Inclined planes
 
 Pushing a load up a slope is easier than lifting it straight up, but it must be pushed further. For a slope of length $L$ rising a height $h$, $\text{VR} = \dfrac{L}{h}$.
+
+![Inclined plane: a 600 N drum is pushed up a 3.0 m plank to a truck bed 1.2 m high by a 300 N effort along the slope. VR is 3.0 divided by 1.2, which is 2.5; MA is 600 divided by 300, which is 2.0; the efficiency is 80 percent.](media:diagrams/inclined-plane-drum.png "Figure: loading a drum up a plank, VR = 2.5, MA = 2.0, efficiency 80%")
 
 :::worked-solution[Loading a drum up a plank]
 A drum weighing $600\ \text{N}$ is pushed up a plank $3.0\ \text{m}$ long onto a truck bed $1.2\ \text{m}$ high, with a force of $300\ \text{N}$ along the plank.

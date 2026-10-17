@@ -48,6 +48,8 @@ $$
 
 A graph of $p$ against $V$ is a curve (pressure halves when volume doubles); a graph of $p$ against $\dfrac{1}{V}$ is a straight line through the origin.
 
+![Boyle's law graphs for the syringe air: p against V is a curve passing through (2.0 litres, 120 kPa) and (0.80 litres, 300 kPa); p against 1/V is a straight line through the origin, because pV is constant at 240.](media:diagrams/gas-boyle-graphs.png "Figure: Boyle's law, pressure against volume and against 1/V")
+
 :::worked-solution[Compressing air in a syringe]
 Air in a sealed syringe has a volume of $2.0\ \text{litres}$ at $120\ \text{kPa}$. It is slowly pushed in, at constant temperature, to $0.80\ \text{litres}$.
 
@@ -58,6 +60,8 @@ Air in a sealed syringe has a volume of $2.0\ \text{litres}$ at $120\ \text{kPa}
 ## Charles's law and the equation of state (ZIMSEC)
 
 For a fixed mass of gas at **constant pressure**, the volume is proportional to the **kelvin** temperature: $\dfrac{V}{T} = \text{constant}$ (Charles's law).
+
+![Charles's law graph: for gas at constant pressure the volume is directly proportional to the kelvin temperature, a straight line through the origin; 3.0 litres at 290 K (17 degrees C) rises to 3.6 litres at 350 K (77 degrees C).](media:diagrams/gas-charles-volume-kelvin.png "Figure: Charles's law, volume against kelvin temperature at constant pressure")
 
 Combining Boyle's and Charles's laws gives the **equation of state** for a fixed mass of gas:
 

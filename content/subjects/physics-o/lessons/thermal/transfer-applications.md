@@ -33,6 +33,8 @@ A vacuum flask keeps hot drinks hot and cold drinks cold by reducing all three t
 | **stopper** of cork or plastic, an insulator | conduction, convection and evaporation through the top |
 | insulated supports holding the inner bottle | conduction to the outer case |
 
+![Cross-section of a vacuum flask: a double-walled glass bottle with a vacuum between the walls (stops conduction and convection), silvered surfaces (reduce radiation), an insulating stopper and insulating supports inside an outer case.](media:diagrams/vacuum-flask-section.png "Figure: how a vacuum flask reduces conduction, convection and radiation")
+
 ## The solar water heater (ZIMSEC)
 
 A solar water heater on a roof heats water with sunlight:

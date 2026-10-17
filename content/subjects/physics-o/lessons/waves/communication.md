@@ -51,6 +51,8 @@ An **analogue** signal, such as the voltage from a microphone, rises and falls s
 
 All signals pick up **noise** (random unwanted changes) and get **weaker** as they travel, so they are boosted by **regenerators** (repeaters) along the way.
 
+![Analogue signals: after travelling the signal is weaker and noisy, and amplifying it also amplifies the noise. Digital signals: the weak noisy pulses are recognised as 1s and 0s and the regenerator rebuilds a clean copy, so digital signals can travel further.](media:diagrams/signals-analogue-digital-noise.png "Figure: noise stays in an amplified analogue signal but is removed when a digital signal is regenerated")
+
 - When an analogue signal is amplified, the noise is amplified too, and the signal gets worse at every stage.
 - A digital signal only needs to be recognised as a 1 or a 0, so a regenerator can rebuild a **perfect, clean** copy of it, removing the noise. Digital signals can therefore travel much **further** with accurate regeneration.
 - Digital signals can carry data at a much **higher rate**, and many signals can share one channel.

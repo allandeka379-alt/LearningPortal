@@ -47,6 +47,8 @@ When the beam hits a screen coated with a **fluorescent** material, the screen g
 
 Between two parallel metal plates with a p.d. across them, the negatively charged electrons are attracted towards the **positive plate**. The beam bends towards that plate along a **curved** (parabolic) path, then travels straight once it leaves the plates. A larger p.d. gives a bigger deflection; reversing the p.d. reverses the deflection.
 
+![Electron beam between two horizontal plates, the top one positive: the negatively charged electrons curve upwards towards the positive plate along a parabola, then travel in a straight line to hit the screen higher up. The electric field points from the positive plate to the negative plate.](media:diagrams/electron-beam-deflection.png "Figure: an electron beam bends towards the positive plate")
+
 ### By a magnetic field
 
 A magnetic field at right angles to the beam pushes the electrons sideways, at right angles to both the field and their motion. Use **Fleming's left-hand rule**, remembering that the conventional current is **opposite** to the direction the electrons travel. Inside the field the beam follows a **circular arc**.
@@ -58,6 +60,8 @@ A beam of electrons travels horizontally to the right between two horizontal pla
 ## The cathode-ray oscilloscope (CRO)
 
 A CRO has an electron gun, two pairs of deflecting plates and a fluorescent screen marked with a grid of centimetre squares (**divisions**).
+
+![Oscilloscope screen: with the Y-gain at 2 V per division and the time-base at 5 ms per division, the peaks are 3.0 divisions above the centre line, so the peak p.d. is 6.0 V; one wave spans 4.0 divisions, so the period is 20 ms and the frequency is 50 Hz.](media:diagrams/cro-trace-50hz.png "Figure: reading an oscilloscope trace, peak 6.0 V, frequency 50 Hz")
 
 - The **Y-plates** move the spot up and down in proportion to the input p.d. The **Y-gain** control sets how many volts make the spot move one division (for example $2\ \text{V/div}$).
 - The **X-plates**, driven by the **time-base**, sweep the spot steadily across the screen and then flick it back. The time-base setting gives the time for the spot to cross one division (for example $5\ \text{ms/div}$).

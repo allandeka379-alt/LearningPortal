@@ -48,6 +48,8 @@ $$
 
 You can also rearrange the equation: useful output = efficiency × input.
 
+![Sankey diagram for a coal-fired power station: 2000 MW of power from the coal splits into 700 MW of electrical output and 1300 MW wasted to cooling water and the air, so the efficiency is 700 divided by 2000, which is 35 percent.](media:diagrams/sankey-power-station-35.png "Figure: Sankey diagram of the coal-fired power station, efficiency 35%")
+
 ## Why nothing is 100% efficient
 
 Every real energy transfer wastes some energy:

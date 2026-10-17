@@ -40,6 +40,8 @@ A U-shaped tube of liquid used to measure the pressure of a gas compared with at
 
 A long glass tube is filled with mercury and turned upside down in a dish of mercury. The mercury falls until the column is about $760\ \text{mm}$ high at sea level, leaving a vacuum at the top. The atmosphere pushing on the mercury in the dish holds the column up, so the **vertical height** of the column measures the atmospheric pressure. Tilting the tube or using a wider tube does not change the vertical height.
 
+![Mercury barometer: the atmosphere pushing on the mercury in the dish holds up a column 760 mm high above a vacuum, so the atmospheric pressure is 13 600 times 9.8 times 0.76, about 101 000 Pa.](media:diagrams/barometer-mercury-760.png "Figure: a mercury barometer, column 760 mm high at sea level")
+
 :::worked-solution[Atmospheric pressure from a barometer]
 On a high plateau the mercury column in a barometer is $0.70\ \text{m}$ high. The density of mercury is $13\,600\ \text{kg/m}^3$; take $g = 9.8\ \text{N/kg}$.
 
@@ -52,6 +54,8 @@ An **aneroid barometer** uses a sealed metal box that squashes or expands as the
 ## The manometer
 
 One side of a U-tube containing water is connected to a gas supply; the other is open to the air. The gas pushes the water down on its side and up on the open side. The difference in levels $h$ shows how much the gas pressure exceeds atmospheric pressure: excess pressure $= \rho g h$.
+
+![Water manometer: the gas pushes the water down on its side so the water on the open side stands 12 cm higher; the gas pressure is above atmospheric pressure by 1000 times 9.8 times 0.12, which is 1176 Pa.](media:diagrams/manometer-12cm.png "Figure: a water manometer, level difference 12 cm, excess pressure 1176 Pa")
 
 :::worked-solution[Gas pressure with a manometer]
 1. The water level on the open side stands $12\ \text{cm}$ higher than on the gas side.
@@ -74,6 +78,8 @@ A falling barometer reading warns that rain may be coming.
 ### Hydraulic systems
 
 Pressure applied to an enclosed liquid is passed on equally to every part of it. A small force on a small piston creates a pressure that pushes on a large piston with a much larger force: $\dfrac{F_1}{A_1} = \dfrac{F_2}{A_2}$. Hydraulic jacks, car brakes and the arms of earth-moving machines use this.
+
+![Hydraulic jack: 50 N on a small piston of area 4.0 cm squared gives a pressure of 12.5 N per cm squared in the liquid; the same pressure on a large piston of area 200 cm squared gives a force of 2500 N.](media:diagrams/hydraulic-jack-2500n.png "Figure: a hydraulic jack, 50 N effort lifts 2500 N")
 
 :::worked-solution[A hydraulic jack]
 1. A force of $50\ \text{N}$ acts on a small piston of area $4.0\ \text{cm}^2$, so the pressure is $\dfrac{50}{4.0} = 12.5\ \text{N/cm}^2$.

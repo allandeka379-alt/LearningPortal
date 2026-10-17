@@ -39,6 +39,8 @@ The spreading out of particles from a region of high concentration to a region o
 | motion | vibrate about fixed positions | slide past each other | move fast in all directions |
 | forces between particles | strong | weaker | very weak |
 
+![Particle diagrams for the three states: in a solid the particles are close together in a regular pattern, vibrating about fixed positions; in a liquid they are close but irregular and can slide past each other; in a gas they are far apart and move randomly at high speed.](media:diagrams/states-particle-arrangement.png "Figure: particle arrangement in a solid, a liquid and a gas")
+
 In particle diagrams, solids are drawn as packed rows of circles, liquids as touching circles in no pattern, and gases as a few widely spaced circles.
 
 ## Temperature and particle motion

@@ -31,6 +31,8 @@ A table listing every possible combination of inputs to a gate (or circuit) and 
 
 The symbols below are the shapes used in most textbooks and exam papers.
 
+![Symbols of the five logic gates: NOT is a triangle with a small circle; AND is a D shape; OR is a curved shield shape; NAND is an AND symbol with a small circle on its output; NOR is an OR symbol with a small circle on its output.](media:diagrams/logic-gate-symbols.png "Figure: the five logic gate symbols")
+
 ### NOT gate (inverter)
 
 - **Symbol**: a triangle pointing in the direction of the signal, with a small circle at its tip.

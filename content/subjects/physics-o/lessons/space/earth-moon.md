@@ -45,6 +45,8 @@ The seasons are **not** caused by changes in the Earth's distance from the Sun; 
 
 The Moon orbits the Earth about once a **month**. It gives out no light of its own; we see sunlight **reflected** from it. Half of the Moon is always lit by the Sun, but as it orbits, we see different amounts of that lit half:
 
+![Phases of the Moon: the Sun's light comes from the right and the half of the Moon facing the Sun is always lit. With the Moon between Earth and Sun (right) we see a new moon; a quarter of the way round, first quarter; opposite the Sun, full moon; then last quarter and back to new moon, about 29.5 days.](media:diagrams/moon-phases-orbit.png "Figure: the Moon's phases come from how much of its lit half we can see from Earth")
+
 1. **New moon**: the Moon is between the Earth and the Sun; its lit side faces away, so we see almost nothing.
 2. **Waxing crescent**, then **first quarter** (half the disc lit), then **waxing gibbous**.
 3. **Full moon**: the Earth is between the Sun and the Moon, and we see the whole lit face.

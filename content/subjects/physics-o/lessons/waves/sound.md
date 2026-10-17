@@ -32,6 +32,8 @@ A vibrating object, such as a drum skin or a loudspeaker cone, pushes the air pa
 
 Sound needs a **medium** (a solid, liquid or gas). In the classic experiment, an electric bell rings inside a glass bell jar; as a vacuum pump removes the air, the sound fades away although the hammer can still be seen striking the bell. Sound cannot travel through a vacuum.
 
+![Bell jar experiment: an electric bell rings inside a glass jar joined to a vacuum pump; as the air is pumped out the bell is still seen striking but the sound fades away, showing that sound cannot travel through a vacuum.](media:diagrams/sound-bell-jar-vacuum.png "Figure: the bell jar experiment, sound needs a medium")
+
 ## Range and speed of sound
 
 - Humans can hear frequencies from about **20 Hz to 20 000 Hz** (20 kHz).
@@ -56,6 +58,8 @@ The same idea explains why you see lightning before you hear thunder. Light arri
 - **Quality** (timbre, ZIMSEC) is what makes the same note sound different on a guitar and a flute; it depends on the shape of the waveform.
 
 On a cathode-ray oscilloscope (CRO) a microphone signal shows these clearly: more waves across the screen for a higher pitch, taller waves for a louder sound.
+
+![Three oscilloscope traces on the same settings: a reference note with 2 waves of small height; a higher-pitched note with 4 waves of the same height (higher frequency); a louder note with 2 waves of twice the height (larger amplitude).](media:diagrams/sound-cro-pitch-loudness.png "Figure: pitch changes the number of waves, loudness changes their height")
 
 ## Common mistakes
 

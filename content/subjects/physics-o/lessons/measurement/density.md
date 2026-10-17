@@ -53,6 +53,8 @@ Find the mass of an empty measuring cylinder, pour in a measured volume of the l
 
 Part-fill a measuring cylinder with water and note the level. Lower the object in gently on a thread so that no water splashes out. The rise in level is the volume of the object.
 
+![Density by displacement: water in a measuring cylinder reads 50 cm³; with the 156 g stone lowered in on a thread it reads 110 cm³. The volume of the stone is 110 minus 50, which is 60 cm³, so its density is 156 divided by 60, which is 2.6 g/cm³.](media:diagrams/density-displacement-stone.png "Figure: finding the volume of an irregular stone by displacement")
+
 :::worked-solution[The density of a stone]
 1. A stone has a mass of $156\ \text{g}$.
 2. The water level rises from $50\ \text{cm}^3$ to $110\ \text{cm}^3$ when it is lowered in.

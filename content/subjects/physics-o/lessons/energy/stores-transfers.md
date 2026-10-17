@@ -68,6 +68,8 @@ An electric drill is supplied with $500\ \text{J}$ of energy. It transfers $150\
 
 A **Sankey diagram** shows a transfer with arrows whose widths are proportional to the amounts of energy. The input arrow splits into a useful arrow and one or more wasted arrows, which bend away. The widths of the output arrows add up to the width of the input arrow.
 
+![Sankey diagram for an electric drill: a 500 J input band splits into a 150 J useful band (kinetic energy of the drill bit) and a 350 J wasted band (heat and sound). The band widths are proportional to the energy, and 150 plus 350 equals 500.](media:diagrams/sankey-drill-500j.png "Figure: Sankey diagram of the drill, band widths proportional to energy")
+
 For a multi-stage example such as a hydroelectric station, follow the energy step by step: gravitational potential energy of the water → kinetic energy of the falling water → kinetic energy of the turbine → electrical energy from the generator, with some energy wasted by heating at each stage.
 
 ## Common mistakes

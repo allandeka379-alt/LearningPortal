@@ -65,6 +65,8 @@ If a fault makes the live wire touch the **metal casing** of an appliance, anyon
 
 With the back of the plug removed, the pins are arranged with the **earth** pin at the top:
 
+![Back of a wired three-pin plug: the green and yellow earth wire goes to the top terminal, the brown live wire goes to the right-hand terminal through the fuse, the blue neutral wire goes to the left-hand terminal, and the cable grip clamps the outer sheath.](media:diagrams/three-pin-plug-wiring.png "Figure: wiring a three-pin plug, earth at the top, fuse in the live line")
+
 - **Brown (live)** → the right-hand terminal, through the **fuse**.
 - **Blue (neutral)** → the left-hand terminal.
 - **Green-and-yellow (earth)** → the top terminal, connected to the large earth pin.

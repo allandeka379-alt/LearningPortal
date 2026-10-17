@@ -44,7 +44,11 @@ When you use a rule, put your eye directly above the mark. Looking from the side
 
 A **Vernier calliper** has a main scale in millimetres and a sliding Vernier scale with ten divisions. Read the main scale just before the Vernier zero, then find the Vernier mark that lines up exactly with a main-scale mark: that gives the next decimal place.
 
+![Vernier callipers: the Vernier zero is just past 4.1 cm on the main scale and the 6th Vernier mark lines up with a main-scale mark, so the length is 4.1 plus 0.06, which is 4.16 cm.](media:diagrams/vernier-reading-416.png "Figure: reading Vernier callipers, 4.16 cm")
+
 A **micrometer screw gauge** has a sleeve scale in half-millimetres and a thimble with 50 divisions, each $0.01\ \text{mm}$. Add the sleeve reading to the thimble reading. Close the jaws gently using the ratchet so that the object is not squashed.
+
+![Micrometer screw gauge: the sleeve shows 3.5 mm and the 42nd thimble division is on the datum line, each division being 0.01 mm, so the diameter is 3.5 plus 0.42, which is 3.92 mm.](media:diagrams/micrometer-reading-392.png "Figure: reading a micrometer screw gauge, 3.92 mm")
 
 :::worked-solution[Reading a Vernier and a micrometer]
 1. Vernier: the Vernier zero is just past $4.1\ \text{cm}$ on the main scale, and the 6th Vernier mark lines up with a main-scale mark.
