@@ -251,8 +251,8 @@ concept("abus.operations.critical-path", { file: "operations/critical-path", key
   b.card("DEFINITION", "Dummy activity", "An activity of zero duration, used to show that one activity depends on another.");
   b.card("FORMULA", "Earliest start and finish", "Earliest start = largest earliest finish of the activities that precede it. Earliest finish = earliest start + duration.");
   b.card("FORMULA", "Latest finish and start", "Latest finish = smallest latest start of the activities that follow it. Latest start = latest finish - duration.");
-  b.card("FORMULA", "Total float (Cambridge A Level)", "Total float = latest start - earliest start (the delay possible without delaying the project). Critical activities have zero.");
-  b.card("FORMULA", "Free float (Cambridge A Level)", "Free float = earliest start of the following activity - earliest finish of this one. It cannot exceed total float.");
+  b.card("FORMULA", "Total float", "Total float = latest start - earliest start (the delay possible without delaying the project). Critical activities have zero.");
+  b.card("FORMULA", "Free float", "Free float = earliest start of the following activity - earliest finish of this one. It cannot exceed total float.");
   b.card("FACT", "Minimum project duration", "The largest earliest finish in the network, which is also the length of the critical path.");
   b.card("FACT", "Benefits and limitations", "Benefits: shows the minimum time and critical jobs, helps schedule resources and manage delays. Limits: depends on estimated durations, takes time to update, may give false precision.");
   b.card("CONCEPT", "Shortening a critical activity", "Reducing a critical activity shortens the project only until another route becomes equally long; after that there is no further saving.");
