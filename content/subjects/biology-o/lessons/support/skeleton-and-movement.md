@@ -87,6 +87,8 @@ A muscle can only **pull**: it contracts (shortens) and pulls on the bone it is 
 
 At the elbow, the antagonistic pair is the **biceps** and the **triceps**:
 
+![Antagonistic muscles at the elbow: to bend the arm the biceps on the front of the upper arm contracts and the triceps on the back relaxes, pulling the radius so the forearm rises; to straighten the arm the triceps contracts and the biceps relaxes.](media:diagrams/elbow-antagonistic-muscles.png "Figure: the biceps and triceps work as an antagonistic pair at the elbow")
+
 | Movement | Biceps (flexor) | Triceps (extensor) | Result |
 | --- | --- | --- | --- |
 | Bending the arm (flexion) | Contracts | Relaxes | Pulls the radius up, so the forearm rises |

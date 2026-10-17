@@ -45,6 +45,8 @@ Arteries divide into smaller **arterioles**, which lead into networks of **capil
 | Lumen | Narrow compared with the wall | Wide | Very narrow, about one red blood cell wide |
 | Valves | None | Yes, along its length | None |
 
+![Cross-sections of the three blood vessels: an artery with a thick muscular and elastic wall and a narrow lumen for high-pressure blood, a vein with a thin wall, a wide lumen and valves, and a capillary whose wall is one cell thick with a lumen only wide enough for one red blood cell.](media:diagrams/blood-vessels-sections.png "Figure: cross-sections of an artery, a vein and a capillary")
+
 ### Relating structure to pressure and function (Supplement)
 
 **Arteries** receive blood in surges each time the ventricles contract. Their **thick, strong walls** withstand this high pressure without bursting. The **elastic tissue** stretches as each surge arrives and then recoils, which keeps the blood moving between beats and evens out the flow. The **muscle** in the walls of arterioles can contract or relax to control how much blood flows to each organ.

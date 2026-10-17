@@ -53,11 +53,15 @@ Plant cells have everything an animal cell has (membrane, cytoplasm, nucleus, mi
 
 A typical plant cell, such as a palisade cell from a leaf, has a regular, box-like shape because of its wall. Its large vacuole pushes the cytoplasm and nucleus to the edge. A typical animal cell, such as a cheek cell, has no wall, so its shape is irregular, and its nucleus is usually near the middle. Plant cells store carbohydrate as starch grains; animal cells store it as small granules of glycogen.
 
+![Plant cell and animal cell side by side: both have a cell membrane, cytoplasm, nucleus, mitochondria and ribosomes; only the plant cell also has a cellulose cell wall, a large permanent vacuole full of cell sap and chloroplasts.](media:diagrams/plant-animal-cell.png "Figure: a plant cell and an animal cell with their main structures labelled")
+
 Not every plant cell has chloroplasts. Cells in roots and in the white storage leaves of an onion bulb receive no light, so they have none.
 
 ## Bacterial cells
 
 Bacteria are much smaller than plant and animal cells, usually 1–5 micrometres long, compared with roughly 50 micrometres across for a cheek cell. A bacterial cell has a cell wall (not made of cellulose), a cell membrane, cytoplasm and ribosomes. It has **no nucleus**: its DNA is a single circular chromosome lying in the cytoplasm, and it may also have small rings of DNA called **plasmids**. It has no mitochondria and no chloroplasts.
+
+![Bacterial cell: a cell wall, cell membrane, cytoplasm with ribosomes, a single loop of circular DNA lying free in the cytoplasm and small rings called plasmids; there is no nucleus and no mitochondria.](media:diagrams/bacterial-cell.png "Figure: a bacterial cell has circular DNA and plasmids but no nucleus")
 
 ## Preparing and observing cells
 

@@ -56,7 +56,10 @@ Nitrogen is part of every **amino acid**, and so of every **protein**, including
 
 :::keyfact{title="Four groups of microorganisms"}
 **Decomposers** turn protein into ammonium. **Nitrifying bacteria** turn ammonium into nitrate. **Nitrogen-fixing bacteria** turn nitrogen gas into ammonium compounds. **Denitrifying bacteria** turn nitrate into nitrogen gas.
+
 :::
+
+![Nitrogen cycle: nitrogen-fixing bacteria and lightning turn nitrogen gas into usable compounds, decomposers turn the proteins and urea of dead organisms into ammonium ions, nitrifying bacteria turn ammonium into nitrate, plants absorb nitrate to make protein, animals eat the plants, and denitrifying bacteria return nitrate to nitrogen gas.](media:diagrams/nitrogen-cycle.png "Figure: the nitrogen cycle with the four groups of bacteria and decomposers")
 
 :::example{title="Example 1: following one nitrogen atom"}
 1. A nitrogen molecule in the air enters the soil near the roots of a groundnut plant.

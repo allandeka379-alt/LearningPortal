@@ -76,6 +76,8 @@ On a front-view diagram of the digestive system:
 
 Remember that a diagram shows the person's left on **your** right, as if they were facing you.
 
+![Front view of the digestive system: the mouth and salivary glands, oesophagus, stomach on the reader's right, liver on the reader's left with the gall bladder beneath it, pancreas below the stomach, coiled small intestine framed by the colon, then the rectum and anus.](media:diagrams/digestive-system.png "Figure: the human digestive system in front view, labelled")
+
 ## The five processes
 
 | Process | Where it happens | Example |

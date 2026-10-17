@@ -50,6 +50,8 @@ Picture a graph of the rate of an enzyme reaction (y-axis) against temperature (
 
 The curve is not symmetrical: the fall after the optimum is much steeper than the rise before it.
 
+![Graph of enzyme rate against temperature: the rate is low but not zero at 0 to 10 degrees Celsius, rises to a peak at the optimum of about 37 degrees Celsius, then falls much more steeply to zero by about 60 degrees Celsius as the enzyme is denatured.](media:diagrams/enzyme-temperature-graph.png "Figure: the effect of temperature on the rate of an enzyme reaction")
+
 ### Explaining the graph
 
 **Below the optimum.** As the temperature rises, the enzyme and substrate molecules gain **kinetic energy** and move faster. They collide more often, so there are more **effective collisions** and more enzyme-substrate complexes form each second. The rate increases.
@@ -77,6 +79,8 @@ Each enzyme also has an **optimum pH**, which suits the place where it works.
 | Trypsin (a protease) | Small intestine | 8 |
 
 A graph of rate against pH is a peak shape: the rate is highest at the optimum and falls on **both** sides.
+
+![Graph of enzyme rate against pH for three enzymes: pepsin peaks at about pH 2 in the stomach, salivary amylase at about pH 7 in the mouth and trypsin at about pH 8 in the small intestine; each rate falls on both sides of its optimum pH.](media:diagrams/enzyme-ph-graph.png "Figure: each enzyme has its own optimum pH, and the rate falls on both sides of it")
 
 **Explaining it:** if the pH moves away from the optimum, the shape of the active site changes, so the substrate fits less well and fewer enzyme-substrate complexes form. At extreme pH the enzyme is **denatured**. For example, salivary amylase that is swallowed with food stops working in the stomach, because the acid changes the shape of its active site.
 

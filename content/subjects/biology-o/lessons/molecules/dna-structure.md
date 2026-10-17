@@ -56,6 +56,8 @@ A DNA molecule can be described like a twisted ladder:
 - The bases always pair in the same way: **A with T** and **C with G**.
 - The two strands are **coiled** around each other to make a **double helix**.
 
+![DNA as a twisted ladder: two sugar-phosphate backbone strands coiled into a double helix, joined by rungs of bases held by weak hydrogen bonds, with A always pairing with T and C always pairing with G, so the two strands are complementary.](media:diagrams/dna-double-helix.png "Figure: the structure of DNA, a double helix with base pairs A-T and C-G")
+
 :::keyfact{title="Base-pairing rules"}
 A always pairs with T, and C always pairs with G. You do not need the full names of the bases for Cambridge: the letters are enough.
 :::

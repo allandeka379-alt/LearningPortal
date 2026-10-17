@@ -80,9 +80,12 @@ In peas, the allele for round seeds (**R**) is dominant to the allele for wrinkl
 4. Offspring genotypes: 1 RR : 2 Rr : 1 rr.
 5. Offspring phenotypes: 3 round : 1 wrinkled.
 6. Probability that one F2 seed is wrinkled $= \frac{1}{4}$ (25%); round $= \frac{3}{4}$ (75%).
+
 :::
 
 The recessive feature skipped the F1 and reappeared in the F2. This happens because two heterozygous parents can each pass on the hidden recessive allele.
+
+![Genetic diagram for two heterozygous round-seeded pea plants, Rr crossed with Rr: each parent makes R and r gametes, the Punnett square gives RR, Rr, Rr and rr, so the offspring genotypes are 1 RR to 2 Rr to 1 rr and the phenotypes are 3 round to 1 wrinkled.](media:diagrams/punnett-rr-cross.png "Figure: genetic diagram and Punnett square for Rr x Rr")
 
 ## The 1 : 1 ratio
 
@@ -123,9 +126,12 @@ A family tree, written out in words:
 | II | Nomsa | No | Mr and Mrs Ncube |
 
 Two parents without albinism have a son with albinism, so the allele for albinism must have been **hidden** in both parents: it is **recessive**. Using A (normal pigment) and a (albinism), Sipho is **aa**. He received one a from each parent, so both parents must be **Aa**. Thandeka and Nomsa could be AA or Aa: from Aa × Aa, two of the three genotypes without albinism are Aa, so each sister has a $\frac{2}{3}$ chance of being heterozygous.
+
 :::
 
 People with albinism have little or no melanin, so they need to protect their skin and eyes from strong sunlight. Albinism does not affect intelligence or ability, and it is caused by a gene, not by anything the parents did.
+
+![Pedigree of the Ncube family: Mr and Mrs Ncube (both Aa, no albinism) have three children, Thandeka and Nomsa without albinism and Sipho, shown shaded, who has albinism and is aa; two unaffected parents with an affected child shows the allele for albinism is recessive.](media:diagrams/albinism-pedigree.png "Figure: pedigree diagram of albinism in the Ncube family")
 
 ## The test cross (Supplement)
 

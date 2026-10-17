@@ -43,6 +43,8 @@ A **mammal** has a **double circulation**:
 - **pulmonary circulation:** right side of the heart → lungs → left side of the heart;
 - **systemic circulation:** left side of the heart → body → right side of the heart.
 
+![Double circulation: the right side of the heart pumps deoxygenated blood to the lungs in the pulmonary artery and oxygenated blood returns to the left side in the pulmonary veins; the left side pumps oxygenated blood to the body in the aorta and deoxygenated blood returns to the right side in the vena cava, so blood passes through the heart twice per circuit.](media:diagrams/double-circulation.png "Figure: double circulation, the pulmonary circuit through the lungs and the systemic circuit through the body")
+
 **Advantages of a double circulation:**
 
 - Blood returning from the lungs is pumped again by the heart, so it reaches the body at **high pressure** and flows quickly, delivering oxygen and glucose fast enough for an active, warm-blooded animal.
@@ -65,6 +67,8 @@ Labelled parts:
 - **Coronary arteries**: branch from the aorta and run over the surface of the heart, supplying the heart muscle with oxygen and glucose.
 
 **The path of blood:** vena cava → right atrium → right ventricle → pulmonary artery → lungs → pulmonary veins → left atrium → left ventricle → aorta → body → vena cava.
+
+![Front view of the heart: deoxygenated blood enters the right atrium from the vena cava and leaves the right ventricle by the pulmonary artery; oxygenated blood enters the left atrium from the pulmonary veins and leaves the left ventricle, which has the thickest wall, by the aorta; a septum separates the two sides.](media:diagrams/heart-structure.png "Figure: the structure of the heart seen from the front, with the vessels and valves labelled")
 
 :::keyfact{title="Arteries leave, veins return"}
 Arteries carry blood **away from** the heart; veins carry blood **back to** it. That is why the pulmonary artery carries deoxygenated blood and the pulmonary vein carries oxygenated blood.
@@ -108,7 +112,10 @@ Tatenda's resting pulse was 72 beats per minute. Straight after two minutes of s
 1. Increase $= 126 - 72 = 54$ beats per minute.
 2. Percentage increase $= \dfrac{54}{72} \times 100 = 75\%$.
 3. The rate was back to 72 after 4 minutes, so the recovery time was 4 minutes.
+
 :::
+
+![Graph of Tatenda's pulse after two minutes of skipping: 126 beats per minute straight after exercise, then 108, 90, 78 and 72 over four minutes, back to the resting rate of 72, so the increase was 54 beats per minute (75%) and the recovery time 4 minutes.](media:diagrams/heart-rate-recovery-graph.png "Figure: pulse rate after exercise falls back to the resting rate of 72 beats per minute in 4 minutes")
 
 **Explaining the increase (Supplement):** during exercise the muscles contract more, so they **respire faster**. They need more oxygen and glucose and produce more carbon dioxide. The heart beats faster (and more strongly) so that blood delivers oxygen and glucose to the muscles, and removes carbon dioxide, more quickly. After exercise the rate stays high for a while, then falls back.
 

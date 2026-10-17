@@ -62,6 +62,8 @@ Discontinuous variation is usually caused by **genes alone**, often a single gen
 
 To investigate a feature showing continuous variation, measure it in a large sample, such as 30 or more individuals chosen at random. Record the measurements, sort them into **equal class intervals** that do not overlap, count the number in each class, and draw a **histogram**. The class intervals go on the horizontal axis and the frequency (number of individuals) on the vertical axis. The bars **touch**, because the classes run on from one another.
 
+![Histogram of 20 bean pod lengths in 2 cm classes: frequencies 2, 4, 7, 5 and 2 with touching bars, peaking in the 13.0 to 14.9 cm modal class and falling on both sides, which shows continuous variation.](media:diagrams/bean-pod-histogram.png "Figure: a histogram of bean pod lengths shows continuous variation")
+
 :::worked-solution[Example 1: lengths of bean pods]
 A student in Mutare measured 20 bean pods from one variety, to the nearest 0.1 cm: 9.2, 10.5, 11.8, 12.1, 12.4, 12.9, 13.3, 13.5, 13.8, 14.0, 14.2, 14.6, 14.9, 15.1, 15.4, 15.8, 16.3, 16.9, 17.5 and 18.6 cm.
 1. Range $= 18.6 - 9.2 = 9.4\ \text{cm}$.
@@ -69,17 +71,21 @@ A student in Mutare measured 20 bean pods from one variety, to the nearest 0.1 c
 3. Class intervals of 2 cm: 9.0–10.9, 11.0–12.9, 13.0–14.9, 15.0–16.9 and 17.0–18.9 cm.
 4. Frequencies: 2, 4, 7, 5 and 2 pods (check: $2 + 4 + 7 + 5 + 2 = 20$).
 5. The histogram rises to a peak in the 13.0–14.9 cm class (the modal class) and falls on both sides: continuous variation.
+
 :::
 
 ### Discontinuous data: a bar chart
 
 For a feature with distinct categories, count how many individuals are in each category and draw a **bar chart** with a **gap between the bars**, because there are no values in between.
 
+![Bar chart of tongue rolling in a class of 40 students: 26 (65%) can roll their tongue and 14 (35%) cannot, drawn as two separate bars with a gap because the feature falls into distinct categories with no intermediates, which is discontinuous variation.](media:diagrams/tongue-rolling-bar-chart.png "Figure: a bar chart with a gap between the bars shows discontinuous variation")
+
 :::worked-solution[Example 2: tongue rolling]
 In a class of 40 students, 26 could roll their tongue and 14 could not.
 1. Percentage who could roll $= \dfrac{26}{40} \times 100 = 65\%$.
 2. Percentage who could not $= \dfrac{14}{40} \times 100 = 35\%$.
 3. The data fall into two categories with no intermediates, so this is discontinuous variation, shown as a bar chart with two separate bars.
+
 :::
 
 ## Genes, environment and phenotype

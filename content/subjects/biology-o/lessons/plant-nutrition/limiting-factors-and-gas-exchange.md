@@ -67,6 +67,8 @@ Pondweed such as *Elodea* gives off bubbles of oxygen from its cut stem when it 
 4. Count the bubbles released in one minute. Repeat three times and calculate a mean.
 5. Repeat at other distances. The closer the lamp, the higher the light intensity.
 
+![Pondweed apparatus: a lamp at a measured distance from a boiling tube of water and sodium hydrogencarbonate holding pondweed with its cut end up, inside a beaker of water; oxygen bubbles from the cut end are counted per minute at each lamp distance.](media:diagrams/pondweed-apparatus.png "Figure: apparatus for investigating how light intensity affects the rate of photosynthesis")
+
 | Variable | In this investigation |
 | --- | --- |
 | Independent | Light intensity (changed by moving the lamp) |
@@ -99,6 +101,8 @@ Explaining limiting factors is Supplement content for Cambridge and is part of t
 :::
 
 At any moment, the rate of photosynthesis is held down by **whichever factor is in shortest supply**. To find the limiting factor, ask: "If I increased this factor, would the rate go up?"
+
+![Graph from Example 2: at 0.04% carbon dioxide the rate rises from 10 to 30 and levels off from light intensity 4; at 0.10% carbon dioxide it is the same up to intensity 2, then climbs higher to about 46, showing light limits the rate first and then carbon dioxide.](media:diagrams/limiting-factors-graph.png "Figure: rate of photosynthesis against light intensity at two carbon dioxide concentrations")
 
 :::worked-solution[Example 2: reading a limiting-factor graph]
 The table gives the rate of photosynthesis of a plant at two carbon dioxide concentrations. (These values would form two curves on a graph of rate against light intensity.)

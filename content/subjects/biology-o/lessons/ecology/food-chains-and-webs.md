@@ -93,7 +93,10 @@ Reading the web:
 - The impala, kudu, zebra, giraffe, elephant and termites are all **primary consumers**, because they eat producers.
 - The lion, leopard, wild dog and aardvark are **secondary consumers**.
 - An organism can be at more than one trophic level. A person who eats maize meal is a primary consumer; when the same person eats beef from cattle fed on grass, they are a secondary consumer.
+
 :::
+
+![Food web from the Hwange table: grass and the leaves of trees and shrubs are the producers; termites, zebra, impala, kudu, giraffe and elephant are primary consumers; the aardvark, lion, leopard and wild dog are secondary consumers, and the impala is eaten by lion, leopard and wild dog, so it sits in several food chains.](media:diagrams/hwange-food-web.png "Figure: part of a food web in Hwange, with arrows pointing from food to feeder")
 
 **Decomposers** are not usually drawn in food webs, but every web depends on them. Bacteria and fungi feed on dead organisms, dung and fallen leaves, releasing carbon dioxide and mineral ions that producers use again. Termites and dung beetles help by breaking the material into smaller pieces.
 

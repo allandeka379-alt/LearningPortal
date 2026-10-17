@@ -54,6 +54,8 @@ Labelled parts, in the order urine passes through them:
 - **Bladder**: a muscular bag that stores urine.
 - **Urethra**: carries urine from the bladder out of the body.
 
+![The urinary system: two kidneys, each receiving blood with urea through a renal artery and returning filtered blood by a renal vein, a ureter from each kidney carrying urine to the bladder, and the urethra carrying urine from the bladder out of the body.](media:diagrams/urinary-system.png "Figure: the urinary system with the blood vessels of the kidneys")
+
 A kidney cut lengthways shows an outer **cortex**, an inner **medulla** and (ZIMSEC) the **pelvis**, the funnel-shaped space where urine collects before it enters the ureter.
 
 ## How the kidneys make urine (Supplement)
@@ -63,6 +65,8 @@ Each kidney contains about a million tiny tubules called **nephrons**, which sta
 1. **Filtration.** Blood enters a knot of capillaries, the **glomerulus**, at high pressure. Water, glucose, urea and mineral ions are forced out of the blood into the cup-shaped capsule around it. Blood cells and large proteins are too big and stay in the blood. The liquid that passes through is the **filtrate**.
 2. **Reabsorption.** As the filtrate flows along the tubule, **all of the glucose**, **some of the ions** and **most of the water** are taken back into the blood capillaries that surround the tubule.
 3. **Urine.** What is left (urea, excess water and excess ions) flows into a collecting duct, then to the pelvis, the ureter and the bladder.
+
+![A nephron: filtration at the glomerulus forces water, glucose, urea and ions out of the blood into the capsule while blood cells and protein stay in the blood; reabsorption along the tubule returns all the glucose, most of the water and some ions to the blood capillaries; urea, excess water and ions continue down the collecting duct to the pelvis as urine.](media:diagrams/nephron-structure.png "Figure: a nephron showing filtration, reabsorption and the formation of urine")
 
 :::worked-solution[Example 1: how much water is reabsorbed?]
 A person's kidneys produce 180 dm³ of filtrate a day but only 1.5 dm³ of urine. What percentage of the filtrate is reabsorbed?

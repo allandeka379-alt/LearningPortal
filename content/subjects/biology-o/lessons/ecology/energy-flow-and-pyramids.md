@@ -70,12 +70,15 @@ A **pyramid of biomass** uses the total **dry mass** of the organisms at each le
 
 A **pyramid of energy** shows the energy passing through each level per square metre per year. Because energy is lost at every transfer, each bar is **always** narrower than the one below it: a pyramid of energy is never inverted.
 
+![Pyramid of energy for the grassland example, drawn to scale: grass 24 000 kJ per square metre per year, impala 1800 and lion 216; only 7.5% of the energy passes from grass to impala and 12% from impala to lion, so each bar is narrower than the one below.](media:diagrams/energy-pyramid.png "Figure: a pyramid of energy with bars drawn to scale (kJ per square metre per year)")
+
 :::worked-solution[Example 1: efficiency in a grassland food chain]
 In a grassland, the producers (grass) contain 24 000 kJ of energy per m² per year. The impala receive 1800 kJ per m² per year from the grass, and the lions receive 216 kJ per m² per year from the impala. Calculate the efficiency of each transfer.
 1. Grass → impala: $\dfrac{1800}{24\,000} \times 100 = 7.5\%$.
 2. Impala → lion: $\dfrac{216}{1800} \times 100 = 12\%$.
 3. So 92.5% of the energy in the grass and 88% of the energy in the impala did not reach the next level.
 4. Transfers are often quoted as "about 10%", but this is only a rough rule: real values vary, as here.
+
 :::
 
 ### Why food chains are short

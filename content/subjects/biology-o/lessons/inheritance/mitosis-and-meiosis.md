@@ -109,6 +109,8 @@ A maize plant has 20 chromosomes in each body cell. Its pollen nuclei and egg ce
 | Genetic make-up of the new cells | Identical to each other and to the parent cell | Different from each other and from the parent cell |
 | Used for | Growth, repair, replacement, asexual reproduction | Making gametes for sexual reproduction |
 
+![Mitosis versus meiosis using a cell with 4 chromosomes: in mitosis the chromosomes are copied and the cell divides once into two genetically identical cells with 4 chromosomes each (human 46 to 46 and 46); in meiosis the cell divides twice into four genetically different cells with half the chromosomes, 2 each (human 46 to 23).](media:diagrams/mitosis-meiosis-diagram.png "Figure: mitosis makes two identical cells, meiosis makes four different cells with half the chromosomes (4 chromosomes shown for clarity)")
+
 ## Common mistakes
 
 :::mistake{title="Saying human gametes are made by mitosis"}

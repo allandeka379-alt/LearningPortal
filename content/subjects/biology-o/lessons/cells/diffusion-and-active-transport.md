@@ -62,6 +62,8 @@ Agar jelly is made with an alkali and phenolphthalein indicator, so it is pink. 
 
 The explanation lies in the **surface area to volume ratio**.
 
+![Three agar cubes of side 1 cm, 2 cm and 3 cm: surface area 6, 24 and 54 square centimetres, volume 1, 8 and 27 cubic centimetres, so the surface area to volume ratio falls from 6 to 1, to 3 to 1, to 2 to 1 and the largest cube takes longest to turn colourless.](media:diagrams/agar-cubes-sa-v.png "Figure: the bigger the cube, the smaller its surface area to volume ratio")
+
 :::worked-solution[Surface area to volume ratios of three cubes]
 1. A cube has 6 faces, so surface area $= 6 \times \text{side}^2$ and volume $= \text{side}^3$.
 2. 1 cm cube: surface area $= 6 \times 1 \times 1 = 6\ \text{cm}^2$; volume $= 1\ \text{cm}^3$; ratio $= 6 : 1$.

@@ -46,6 +46,8 @@ A section through the skin shows these labelled parts, from the surface inwards:
 - **Blood vessels**: arterioles supplying networks of capillaries near the surface.
 - **Fatty tissue**: a layer beneath the dermis that insulates the body and stores energy.
 
+![Section through the skin from the surface inwards: epidermis, dermis containing a hair in its follicle with a hair erector muscle, a coiled sweat gland with a duct to a pore, temperature receptors with sensory neurones, and blood vessels with capillaries near the surface, and a layer of fatty tissue beneath.](media:diagrams/skin-section.png "Figure: a section through the skin with the parts that control body temperature")
+
 ## How the body detects and controls its temperature
 
 1. **Temperature receptors in the skin** detect changes in the temperature of the surroundings and send impulses along sensory neurones to the brain.

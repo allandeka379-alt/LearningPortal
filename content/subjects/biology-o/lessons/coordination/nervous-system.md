@@ -100,7 +100,10 @@ Chipo is walking barefoot to the river and steps on an acacia thorn.
 7. **Response**: her foot is lifted off the thorn.
 
 At the same time, other relay neurones carry impulses up the spinal cord to the brain, so Chipo feels the pain a moment **after** her foot has moved. The brain is told about the reflex but is not needed to carry it out.
+
 :::
+
+![Reflex arc for stepping on a thorn: pain receptors in the skin send impulses along a sensory neurone to a relay neurone in the spinal cord, which passes them to a motor neurone that carries them to a leg muscle, the effector, which contracts to lift the foot; other impulses reach the brain a moment later.](media:diagrams/reflex-arc.png "Figure: a reflex arc from receptor to effector, with a separate pathway to the brain")
 
 Other reflexes include blinking when dust flies towards the eye, coughing and sneezing, and the pupil getting smaller in bright light. You were born with these reflexes; you did not have to learn them.
 

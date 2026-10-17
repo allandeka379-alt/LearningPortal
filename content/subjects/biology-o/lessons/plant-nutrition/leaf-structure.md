@@ -56,6 +56,8 @@ Imagine a thin slice cut across a bean leaf and viewed under a microscope. From 
 6. **Lower epidermis**: one layer of cells containing many **stomata**, each between two sausage-shaped **guard cells**.
 7. **Lower cuticle**: usually thinner than the upper one.
 
+![Transverse section of a leaf from top to bottom: waxy cuticle, upper epidermis, tightly packed palisade mesophyll full of chloroplasts, spongy mesophyll with air spaces, a vascular bundle with xylem above and phloem below, and a lower epidermis with a stoma between two guard cells through which carbon dioxide enters.](media:diagrams/leaf-cross-section.png "Figure: a transverse section of a leaf with its layers labelled")
+
 | Structure | How it helps the leaf |
 | --- | --- |
 | Waxy cuticle | Waterproof, so it reduces water loss; transparent, so light passes through |

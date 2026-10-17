@@ -43,6 +43,8 @@ Only **female** *Anopheles* mosquitoes feed on blood: they need its protein to p
 
 ## The life cycle in outline
 
+![Life cycle of the malaria parasite Plasmodium: an infected female Anopheles mosquito injects parasites that multiply in the liver, then in red blood cells which burst causing fever; sexual forms stay in the blood, another mosquito sucks them up, they reproduce in the mosquito and move to its salivary glands, ready to infect the next person.](media:diagrams/malaria-life-cycle.png "Figure: the life cycle of the malaria parasite in a person and in the Anopheles mosquito")
+
 :::example{title="Example 1: from mosquito to person and back"}
 1. An infected female *Anopheles* mosquito bites a person and injects saliva containing *Plasmodium*.
 2. The parasites travel in the blood to the **liver**, where they multiply.

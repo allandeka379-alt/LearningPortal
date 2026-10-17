@@ -96,7 +96,10 @@ A graph of hormone levels over one 28-day cycle shows:
 3. **LH** shooting up to a sharp peak around day 13 to 14: ovulation follows.
 4. **Progesterone** low until ovulation, then rising to a peak around day 21, from the corpus luteum.
 5. Progesterone falling towards day 28, as the corpus luteum breaks down; the lining is then lost.
+
 :::
+
+![Hormone levels over a 28-day menstrual cycle: FSH is high in the first days, oestrogen rises to a peak around day 12, LH surges sharply around day 13 to 14 and ovulation follows, then progesterone rises to a peak around day 21 and falls towards day 28; the uterus lining is lost in days 1 to 5, repaired and thickened in days 6 to 13 and maintained in days 15 to 28.](media:diagrams/menstrual-cycle-hormones.png "Figure: hormone levels and the uterus lining across a 28-day menstrual cycle")
 
 ## Fertile and infertile phases (ZIMSEC)
 

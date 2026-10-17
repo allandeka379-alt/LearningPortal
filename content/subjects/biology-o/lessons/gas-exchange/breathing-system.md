@@ -50,6 +50,8 @@ Following the air from the outside inwards:
 | Intercostal muscles | Muscles between the ribs (internal and external, Supplement) | Move the ribcage |
 | Diaphragm | Dome-shaped sheet of muscle and tissue below the lungs | Contracts to increase the volume of the chest |
 
+![Front view of the breathing system: air passes down the trachea, which is held open by rings of cartilage, into a bronchus for each lung, then along branching bronchioles to the alveoli; the ribs with the intercostal muscles surround the lungs and the dome-shaped diaphragm lies beneath them.](media:diagrams/breathing-system.png "Figure: the human breathing system in front view")
+
 ## The alveoli: an efficient gas exchange surface
 
 Oxygen diffuses from the air in the alveoli into the blood, and carbon dioxide diffuses the other way. Diffusion is fast because the alveoli have all the features of a good gas exchange surface:
@@ -59,6 +61,8 @@ Oxygen diffuses from the air in the alveoli into the blood, and carbon dioxide d
 - **Moist:** gases dissolve in the film of moisture before they diffuse across.
 - **Good blood supply:** a dense network of capillaries carries oxygenated blood away and brings more carbon dioxide, keeping the concentration gradients steep.
 - **Good ventilation:** breathing keeps the air in the alveoli rich in oxygen and low in carbon dioxide.
+
+![An alveolus beside a capillary: oxygen diffuses from the air in the alveolus into the blood and carbon dioxide diffuses the other way, across two walls that are each one cell thick, so the diffusion distance is very short and a dense blood supply keeps the concentration gradients steep.](media:diagrams/alveolus-gas-exchange.png "Figure: gas exchange between an alveolus and a capillary by diffusion")
 
 :::worked-solution[Example 1: how large is the surface of the lungs?]
 Suppose a pair of lungs contains 400 million alveoli, each a sphere 0.25 mm across. The surface area of a sphere is $\pi \times d^2$. Estimate the total surface area in m² ($1\ \text{m}^2 = 1\,000\,000\ \text{mm}^2$).

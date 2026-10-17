@@ -64,6 +64,8 @@ When a few organisms are put into a new environment with plenty of resources, su
 
 In a closed container nothing new is added, so a death phase follows. In natural ecosystems, populations usually rise and fall around the stationary level instead, as the food supply changes with the seasons.
 
+![Yeast growth curve from Example 2: numbers rise slowly from 2 to 3 thousand per cubic millimetre in the lag phase to 2 hours, then steeply through 8, 24 and 52 thousand in the exponential phase, and level off near 74 thousand in the stationary phase after about 10 hours.](media:diagrams/yeast-growth-curve.png "Figure: the sigmoid growth curve of yeast in sugar solution")
+
 :::worked-solution[Example 1: how fast can bacteria multiply?]
 A culture starts with 40 bacteria, and each bacterium divides into two every 30 minutes. How many bacteria are there after 3 hours, if none die?
 1. Number of divisions in 3 hours $= \dfrac{180\ \text{min}}{30\ \text{min}} = 6$.
@@ -77,6 +79,7 @@ The number of yeast cells (thousands per mm³) in a flask of sugar solution was 
 2. Exponential phase: about 2 to 8 h, where numbers rise steeply.
 3. Stationary phase begins after about 10 h, as numbers level off near 74.
 4. Mean rate of increase from 4 h to 8 h $= \dfrac{52 - 8}{8 - 4} = 11$ thousand cells per mm³ per hour.
+
 :::
 
 ## Carrying capacity and limiting factors (ZIMSEC)

@@ -53,6 +53,8 @@ Burning: a fuel reacts with oxygen and releases carbon dioxide and energy.
 
 Of the processes in the table, **photosynthesis** is the only one that removes carbon dioxide from the air (some carbon dioxide also dissolves in lakes and oceans). **Respiration**, **decomposition** (through the respiration of decomposers) and **combustion** all return it.
 
+![Carbon cycle: plants take carbon dioxide from the air by photosynthesis, animals get carbon by feeding, respiration by plants, animals and decomposers returns carbon dioxide to the air, dead remains are broken down by decomposers or fossilised into fossil fuels, and combustion of fossil fuels releases carbon dioxide.](media:diagrams/carbon-cycle.png "Figure: the carbon cycle, showing photosynthesis, feeding, respiration, decomposition, fossilisation and combustion")
+
 Fossil fuels form when dead organisms are buried in places where decomposition cannot happen fully, for example because there is no oxygen, as in waterlogged swamps. Over millions of years, heat and pressure turn the remains into coal, oil or gas. The coal mined at Hwange formed in this way from swamp plants that lived hundreds of millions of years ago.
 
 :::example{title="Example 1: following one carbon atom"}

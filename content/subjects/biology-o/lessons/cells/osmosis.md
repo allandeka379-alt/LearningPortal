@@ -49,6 +49,8 @@ Water has moved by osmosis from the dilute solution (the distilled water) into t
 
 **In water or a dilute solution**, water enters the cell by osmosis, mainly into the vacuole. The cell swells and the cell membrane and cytoplasm press outwards against the cell wall. The strong wall stops the cell from bursting, and the cell becomes firm. Plants that have no wood, such as seedlings and maize leaves, are held up by this pressure of water inside their cells pressing on the cell walls.
 
+![Plant cells in three solutions: in pure water or a dilute solution water enters and the cell is turgid; in a solution as concentrated as the cell sap there is no net movement and the cell is flaccid; in a concentrated solution water leaves and the membrane pulls away from the wall, called plasmolysis.](media:diagrams/plant-cell-osmosis.png "Figure: a plant cell is turgid in water, flaccid in an equal solution and plasmolysed in a concentrated solution")
+
 **In a concentrated solution**, water leaves the cell by osmosis. The vacuole shrinks and the cell becomes soft. If a plant loses more water than it takes in, many of its cells go soft and the plant **wilts**.
 
 ### Turgor and plasmolysis (Supplement)
@@ -83,7 +85,10 @@ Mean results for one sweet potato:
 2. The line crosses 0% between 0.4 mol/dm³ (+1.6%) and 0.6 mol/dm³ (−5.0%).
 3. Reading from your plotted line, it crosses at about 0.45 mol/dm³.
 4. At this concentration there is no net movement of water: the solution is as concentrated as the cell sap. (Supplement: the water potential of the solution equals that of the cells.)
+
 :::
+
+![Graph of the lesson's sweet potato results: mean change in mass falls from +15.0% in pure water to −16.0% in 1.0 mol per dm³ sucrose, crossing 0% at about 0.45 mol per dm³, where there is no net movement of water.](media:diagrams/sweet-potato-osmosis-graph.png "Figure: percentage change in mass of sweet potato against sucrose concentration")
 
 ## Why osmosis matters (Supplement)
 

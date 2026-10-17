@@ -54,6 +54,8 @@ A large Hibiscus flower is a good one to examine with a hand lens. From the outs
 
 The flower is held on a stalk (the **pedicel**), and its parts are attached to the swollen tip of the stalk (the **receptacle**). In Hibiscus the many stamens are joined into a column around the style, with the stigmas sticking out at the top, where a visiting insect brushes against them.
 
+![An insect-pollinated flower cut lengthways: sepals and large petals surround the stamens, each with an anther on a filament, and the carpel, which has a sticky stigma, a style and an ovary containing ovules; a nectary at the base of the petals makes nectar, and the flower sits on the receptacle at the top of the pedicel.](media:diagrams/flower-structure.png "Figure: an insect-pollinated flower cut lengthways, with its parts labelled")
+
 ## A wind-pollinated flower: maize
 
 Maize has **separate male and female flowers** on the same plant:

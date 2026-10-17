@@ -77,6 +77,8 @@ Blood glucose is controlled by **negative feedback** around a **set point**:
 
 If the concentration falls below the set point, the opposite happens: more glucagon is secreted, the liver breaks down glycogen, and the concentration rises again. The response always works **against** the change, which is why it is called negative feedback.
 
+![Negative feedback controlling blood glucose: if glucose rises above the set point the pancreas secretes more insulin, the liver turns glucose into glycogen and cells take up glucose so the level falls back; if it falls below the set point the pancreas secretes glucagon and the liver breaks glycogen down to glucose so the level rises back to the set point.](media:diagrams/blood-glucose-feedback.png "Figure: negative feedback keeps the blood glucose concentration near its set point")
+
 :::example{title="Example 1: after lunch"}
 After Tatenda's sadza, glucose is absorbed from his small intestine and his blood glucose concentration rises. His pancreas secretes **insulin**. His liver cells take up glucose and store it as **glycogen**, and his muscle cells take up more glucose. Within two to three hours his blood glucose is back to normal.
 :::

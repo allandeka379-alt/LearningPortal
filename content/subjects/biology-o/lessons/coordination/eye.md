@@ -65,6 +65,8 @@ Light passes through the cornea, the aqueous humour, the pupil, the lens and the
 | Choroid | Dark layer with blood vessels behind the retina | Supplies the retina; its dark pigment stops light reflecting inside the eye |
 | Aqueous and vitreous humour | Clear watery fluid in front of the lens; clear jelly behind it | Keep the eyeball in shape and let light through |
 
+![Horizontal section of the eye: light enters through the cornea, aqueous humour, pupil in the iris and the lens (held by suspensory ligaments and ciliary muscle), crosses the vitreous humour and is focused on the retina at the fovea; the optic nerve leaves at the blind spot.](media:diagrams/eye-structure.png "Figure: the structure of the human eye in horizontal section")
+
 ## How an image is formed
 
 The **cornea** does most of the refraction and the **lens** does the fine focusing, so that light from each point of an object meets at one point on the retina. The image formed is **inverted** (upside down) and **smaller** than the object. The retina sends impulses along the optic nerve and the **brain** interprets them, so you see the object the right way up.

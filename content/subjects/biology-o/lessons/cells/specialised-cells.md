@@ -47,6 +47,8 @@ A group of organs with related functions that work together to perform a body fu
 
 The ZIMSEC syllabus also names white blood cells (two kinds) and muscle cells:
 
+![Six specialised cells with the feature that suits each job: ciliated cell with cilia that sweep mucus, root hair cell with a long thin extension, red blood cell that is a biconcave disc with no nucleus, sperm cell with a tail and mitochondria, palisade cell packed with chloroplasts and neurone with a long fibre.](media:diagrams/specialised-cells.png "Figure: six specialised cells, each with a structure that suits its function")
+
 | Cell | Function | How its structure helps |
 | --- | --- | --- |
 | White blood cell: phagocyte | Engulfs and digests pathogens | Flexible membrane and cytoplasm allow it to change shape and surround bacteria; contains digestive enzymes; lobed nucleus |
