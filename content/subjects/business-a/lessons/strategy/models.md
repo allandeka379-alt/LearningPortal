@@ -77,6 +77,8 @@ Kurt Lewin's technique for managing change, in which the forces driving a change
 **Judgement.** Thandeka should choose yoghurt for the existing shops, which spreads her risk into a second product while remaining within her core skills. She should delay diversification until profits are more secure.
 :::
 
+![Ansoff matrix with Thandeka's four options: loyalty discount to existing shops is market penetration (lowest risk); yoghurt for the same shops is product development and milk to Gweru is market development (both medium risk); a tourist farm shop selling cheese and crafts is diversification (highest risk).](media:diagrams/ansoff-matrix-milk.png "Figure: Thandeka's four growth options placed on the Ansoff matrix")
+
 ## Blue ocean strategy
 
 In a **red ocean** many firms fight over the same customers, so prices and profits fall. In a **blue ocean** a firm creates a new market space with little competition. Kim and Mauborgne suggest doing this by changing what the product offers: removing features customers do not value, reducing costs, and adding features that existing offerings ignore. The aim is **value innovation**: higher value for buyers at lower cost for the firm.
@@ -110,6 +112,8 @@ A fictional school production unit near Masvingo wants to take orders by mobile 
 3. Raising the drivers (more pressure) tends to increase resistance as well. Reducing a restraint is more effective: for example, offering training to ease staff fears, and using a tablet over the school's wireless network instead of buying phones.
 4. If staff fears fall from 3 to 1 and the cost of phones from 2 to 1, the restraining total falls to 1 + 4 + 1 = 6 against 9 and the change can go ahead.
 :::
+
+![Force field analysis for the school's phone ordering: driving forces score 4, 3 and 2 (total 9) against restraining forces of 3, 4 and 2 (total 9), so the change stalls; cutting staff fears to 1 and phone cost to 1 reduces the restraining total to 6 and the change can go ahead.](media:diagrams/force-field-scores.png "Figure: force field scores before and after reducing two restraining forces")
 
 ## Choosing between the models
 

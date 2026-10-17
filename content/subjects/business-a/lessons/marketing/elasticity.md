@@ -115,6 +115,8 @@ Elasticity helps to set prices, forecast the effect of a price rise or discount,
 3. **Judgement.** The dairy should reverse the rise or, if it wants more revenue, try cutting the price: with the same PED a 5% cut (to US\$1.90) would raise sales by about 10%, to 5,500 bottles, and revenue to US\$10,450. A cut raises revenue, but profit depends on whether the extra bottles cost less to produce than the extra revenue, so costs must be checked.
 :::
 
+![Price rise on elastic demand: the dairy raises the price of milk from US\$2.00 to US\$2.20 and weekly sales fall from 5,000 to 4,000 bottles; it gains US\$800 on the higher price for the 4,000 bottles still sold but loses US\$2,000 on the 1,000 bottles no longer sold, so revenue falls from US\$10,000 to US\$8,800 (PED -2.0).](media:diagrams/elastic-price-rise-revenue.png "Figure: revenue gained and lost when the dairy raises its price (PED of -2.0)")
+
 :::worked-solution[Example 2: income and promotional elasticity, case analysis]
 **Context.** A fictional furniture shop in Mutare finds that when local incomes rise from US\$500 to US\$540 a month its sales rise from 1,000 to 1,120 units a month. The shop also spends US\$2,000 a month on promotion and sells 800 units of its chairs. It raises promotional spending to US\$2,500 and sales rise to 880. Each chair sells for US\$5 and costs US\$3 to make (variable cost).
 

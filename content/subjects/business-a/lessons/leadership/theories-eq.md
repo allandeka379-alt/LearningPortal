@@ -106,6 +106,8 @@ Leaders with high emotional intelligence tend to build trust, handle conflict we
 **Judgement.** Mr Dube's style is most likely to give both output and commitment. The grid is simple, though, and does not tell a manager what to do in an emergency, where Mr Banda's style may be right. Ms Esau needs training or replacement.
 :::
 
+![Blake and Mouton managerial grid with concern for production across and concern for people up: Mr Banda (9,2) is close to authority-compliance, Ms Chikwanha (2,9) close to country club, Mr Dube (8,8) close to team management, and Ms Esau (1,1) is impoverished; only Mr Dube combines high concern for both.](media:diagrams/blake-mouton-grid.png "Figure: the four printing managers placed on the Blake and Mouton grid")
+
 :::worked-solution[Example 2: case analysis, which approach for a turnaround?]
 **Context.** A fictional clothing factory in Bulawayo has lost two large customers and its workers fear redundancies. A new managing director, Rudo, holds meetings in which she sets out a plan to win back customers by making a new range, explains how each department contributes, listens to fears and sets high but achievable targets. She also stays calm when a machine fails.
 

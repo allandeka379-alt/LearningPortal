@@ -174,6 +174,8 @@ The right method depends on **why** the ratio is weak, so diagnose first and the
 **Judgement.** If the owners are judging how well their *money* is used, Rudo's is stronger; if they are judging pricing power and skill, Sipho's is stronger. A lender comparing the return with an interest rate would care most about ROCE. The conclusion holds only for this year; a trend and the industry norm would be needed before a final decision.
 :::
 
+![Profitability of two firms: Sipho's Furniture has the higher gross margin (45.0% against 25.0%) and operating margin (9.0% against 6.0%), but Rudo's Hardware has the higher return on capital employed (18.0% against 10.0%) because it earns a modest profit on a large revenue from US\$400,000 of capital.](media:diagrams/profitability-two-firms.png "Figure: the same two firms ranked differently by margins and by return on capital employed")
+
 ## Common mistakes
 
 :::mistake{title="Using the wrong profit or the wrong capital"}

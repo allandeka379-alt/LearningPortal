@@ -85,6 +85,8 @@ Each stage adds value. In an economy where most output is primary, jobs and inco
 4. Added value is not profit. From each stage's added value the business must pay wages, rent and other costs before profit remains.
 :::
 
+![Added value along the maize meal chain, per kilogram: the farm buys inputs worth US\$0.12 and sells at US\$0.30 (value added US\$0.18); the mill buys at US\$0.30 and sells at US\$0.50 (US\$0.20); packing and the shop buy at US\$0.50 and sell at US\$0.75 (US\$0.25); total value added is US\$0.63.](media:diagrams/added-value-maize-chain.png "Figure: each stage buys inputs and adds value; the three amounts of value added total US\$0.63 a kilogram")
+
 :::worked-solution[Example 2: case analysis, beneficiation of mangoes]
 **Context.** Chipo can sell a tonne of fresh mangoes for US\$150. If she dries them, a tonne gives 120 kg of dried mango which sells for US\$6 a kilogram. Drying costs US\$330 a tonne for energy, packaging and labour.
 

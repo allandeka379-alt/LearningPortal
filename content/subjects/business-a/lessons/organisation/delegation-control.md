@@ -106,6 +106,8 @@ The central dilemma of delegation is the conflict between **control** and **trus
 4. Judgement: if the work is routine and the staff well trained, the wider span saves management cost. If the work is complex or risky, the narrower span is safer.
 :::
 
+![The same 64 operatives organised two ways: with a span of 4 there are 4 levels (1, 4, 16 and 64 people) and 21 managers; with a span of 8 there are 3 levels (1, 8 and 64) and 9 managers, so widening the span removes a level and 12 managers.](media:diagrams/span-levels-comparison.png "Figure: a wider span of control gives fewer levels and fewer managers for the same 64 operatives")
+
 :::worked-solution[Example 2: case analysis, delegation in a hardware chain]
 **Context.** After Rudo delegates order approval up to US\$500 to her shop managers, the Kwekwe manager orders a large quantity of cement worth US\$480 because a supplier discount is offered, and sales do not rise. A month later, the Masvingo manager uses the freedom to negotiate a better price from a supplier and saves US\$300.
 

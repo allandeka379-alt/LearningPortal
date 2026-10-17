@@ -79,6 +79,8 @@ The main message is that removing dissatisfaction is not the same as creating mo
 
 Maslow's lower levels (physiological, safety and, partly, social) resemble Herzberg's hygiene factors. Esteem and self-actualisation resemble the motivators. Both say that a manager must first meet basic needs. They differ: Maslow says each need motivates until it is met, whereas Herzberg says hygiene factors never motivate, however good they are.
 
+![Maslow's five levels of need (physiological, safety, social at the bottom; esteem and self-actualisation above) set beside Herzberg's factors: the lower levels resemble hygiene factors such as pay, security and relations, which prevent dissatisfaction but do not motivate, while esteem and self-actualisation resemble motivators such as achievement, recognition and growth.](media:diagrams/maslow-herzberg-comparison.png "Figure: Maslow's hierarchy compared with Herzberg's hygiene factors and motivators")
+
 :::worked-solution[Example 1: diagnosing a bakery with both theories]
 **Context.** In the opening scenario, Rudo has raised Farai's wages twice, but he finds the job repetitive and gets no feedback.
 

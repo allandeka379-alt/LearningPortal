@@ -117,6 +117,8 @@ Most businesses use more than one method together.
 5. **Judgement.** She should go ahead, subject to risk. The undiscounted total of the inflows is US\$65,000, which is much more than the NPV of US\$5,029.50, showing how discounting reduces later cash. If the true rate were higher the NPV would fall, so she should test her forecasts of water demand.
 :::
 
+![NPV of the pumping system at 10%: the inflows of US\$13,500, 16,500, 18,000 and 17,000 in years 1 to 4 are worth US\$12,272, 13,629, 13,518 and 11,611 in today's money (discount factors 0.909, 0.826, 0.751, 0.683); they total US\$51,029.50, so after the US\$46,000 outlay the NPV is plus US\$5,029.50.](media:diagrams/npv-discounting-pump.png "Figure: discounting shrinks each later cash inflow; the present values total US\$51,029.50 against an outlay of US\$46,000")
+
 :::worked-solution[Example 2: case analysis, two projects and the discount rate]
 **Context.** A fictional transport company in Gweru must choose between two vehicle projects, each costing US\$60,000. Cost of finance is 10%. Discount factors are as in the table above.
 

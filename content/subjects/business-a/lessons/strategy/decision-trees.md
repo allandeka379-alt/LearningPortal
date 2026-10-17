@@ -77,6 +77,8 @@ Tendai, a fictional poultry farmer, estimates a 0.6 chance of strong demand and 
 4. Check the worst case: if demand is weak, A leaves 35,000 − 30,000 = 5,000, while B leaves 22,000 − 10,000 = 12,000. A cautious owner could choose B, because its downside is smaller and the net expected values differ by only US\$3,200.
 :::
 
+![Decision tree for Tendai: build (cost US\$30,000) gives US\$70,000 with probability 0.6 or US\$35,000 with 0.4, expected value US\$56,000 and net US\$26,000; upgrade (cost US\$10,000) gives US\$40,000 or US\$22,000, expected value US\$32,800 and net US\$22,800; doing nothing gives US\$0. Building has the highest net expected value.](media:diagrams/decision-tree-poultry.png "Figure: Tendai's decision tree with probabilities, expected values and net expected values")
+
 ## Multi-stage trees
 
 Some decisions are made in stages: a business tests first and decides later. The later decision depends on the earlier result, so the tree has a second decision node. Always solve the **last** stage first, replace it with its net value, and then work back to the start.
@@ -103,6 +105,8 @@ A fictional mushroom grower in Mutare can pay US\$5,000 for a pilot sale at thre
 3. Expected value of the pilot = 17,700 + 2,000 = 19,700; net of the US\$5,000 cost it is 14,700.
 4. The pilot beats doing nothing, so the tree recommends it. The decision still rests on the 0.6 and the 0.7, which are estimates.
 :::
+
+![Two-stage decision tree for the mushroom grower: after a successful pilot (probability 0.6) rolling out has expected value US\$49,500 and net US\$29,500, better than staying small at US\$12,000; a failed pilot (0.4) gives US\$5,000; the pilot has expected value US\$19,700 and net US\$14,700, which beats doing nothing (US\$0).](media:diagrams/decision-tree-pilot.png "Figure: the pilot-then-roll-out tree, solved from the right-hand decision first")
 
 ## The strengths and limits of decision trees
 

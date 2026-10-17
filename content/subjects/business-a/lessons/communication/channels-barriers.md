@@ -65,6 +65,8 @@ In a tall hierarchy with many levels a message passes through many people, so it
 
 Horizontal communication flows **between people at the same level** or between departments, for example the production manager and the sales manager agreeing a delivery date. It coordinates departments, avoids duplication and speeds decisions, but it can bypass the manager and cause conflict if departments compete.
 
+![Directions of communication in a hierarchy: downward arrows carry instructions, targets and feedback from the managing director through managers to staff; upward arrows carry reports, suggestions and results; a horizontal arrow links the production and sales managers at the same level, for example to agree a delivery date.](media:diagrams/communication-flows.png "Figure: downward, upward and horizontal communication in an organisation")
+
 ### One-way and two-way
 
 | Feature | One-way | Two-way |

@@ -100,6 +100,8 @@ A business may use outsourcing for functions such as payroll, cleaning, transpor
 4. **Interpretation.** If the mugs sell at US\$6.50 the pottery makes a loss at 60% utilisation (cost US\$7.00) and a profit at 80% or more (cost US\$6.00 or less). Break-even is where fixed cost is covered: 24,000 ÷ (6.50 − 3.00) = 6,857 mugs, or about 69% of capacity.
 :::
 
+![Unit cost against capacity used for the pottery (maximum 10,000 mugs, fixed cost US\$24,000, variable cost US\$3): cost per mug falls from US\$9.00 at 40% to US\$7.00 at 60%, US\$6.00 at 80% and US\$5.40 at 100%; against the US\$6.50 price the pottery loses money below about 6,857 mugs (69% of capacity) and profits above it.](media:diagrams/capacity-utilisation-unit-cost.png "Figure: spreading fixed costs over more output lowers the cost per mug as capacity utilisation rises")
+
 :::worked-solution[Example 2: case analysis, outsource the boxes?]
 **Context.** Tendai Foods is a fictional biscuit maker in Harare. It makes its own packaging boxes at a full cost of US\$1.70 a box for 5,000 boxes a month. A specialist packaging firm offers to supply the same boxes for US\$1.60. The company's box workers number four, and part of its fixed costs would continue even if it stopped making boxes.
 

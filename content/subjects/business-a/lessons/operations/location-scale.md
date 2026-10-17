@@ -108,6 +108,8 @@ The link to cost: as output rises, unit cost falls while economies dominate, rea
 **Judgement.** The best scale on these figures is about 40,000 units, where cost per unit is lowest. Before expanding beyond it, the bottler should find ways to manage a larger firm better. If demand exceeds 40,000 units, a second plant might be better than stretching the first.
 :::
 
+![Unit cost against output for the bottler: cost per unit falls from US\$9.00 at 10,000 units to US\$7.50 at 20,000 and US\$6.00 at 40,000 (economies of scale), then rises to US\$6.50 at 80,000 units (diseconomies of scale); the lowest cost, and best scale, is about 40,000 units.](media:diagrams/unit-cost-scale-curve.png "Figure: cost per unit at four outputs, showing economies then diseconomies of scale")
+
 ## Common mistakes
 
 :::mistake{title="Only listing factors"}

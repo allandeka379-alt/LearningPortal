@@ -98,6 +98,8 @@ Masimba Brick Works earned a profit of US\$48,000. Two plans for sharing it are 
 **Interpretation.** The plans transfer money from owners to workers and the community while the amount kept in the business is the same. Plan 1 suits the shareholder view; Plan 2 the stakeholder view. Which is better depends on the effect on workers' effort and on whether shareholders will accept lower dividends.
 :::
 
+![Two ways to share Masimba Brick Works' US\$48,000 profit: Plan 1 pays 60% (US\$28,800) in dividends, 10% (US\$4,800) as a workers' bonus, 5% (US\$2,400) to a community fund and keeps 25% (US\$12,000); Plan 2 pays 40% (US\$19,200), 25% (US\$12,000), 10% (US\$4,800) and keeps the same 25%, so US\$9,600 moves from shareholders to workers and the community.](media:diagrams/profit-sharing-plans.png "Figure: the two plans for sharing the profit between shareholders, workers, the community and the business")
+
 :::worked-solution[Example 2: case analysis, who has most influence?]
 **Context.** Dube Poultry (a fictional business in Chinhoyi) plans to move its processing to a site near a river. The bank that lent for the new equipment, the 40 workers, a group of residents downstream, and the council all have views.
 
@@ -109,6 +111,8 @@ Masimba Brick Works earned a profit of US\$48,000. Two plans for sharing it are 
 
 **Judgement.** Dube Poultry should consult the council and the residents before moving, and invest in waste treatment. Ignoring the residents may save time now but risks delay, fines and damage to its reputation later.
 :::
+
+![Stakeholder map for Dube Poultry's move to a river site: the bank (lender) and the council hold high power and sit in the upper half; the 40 workers have high interest but lower power; the downstream residents have strong interest but the least power until they organise. Quadrants are keep satisfied, manage closely, monitor and keep informed.](media:diagrams/stakeholder-power-interest.png "Figure: where the four stakeholders sit on a power and interest map (a judgement, not a measurement)")
 
 ## Common mistakes
 

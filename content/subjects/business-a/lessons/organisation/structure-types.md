@@ -70,6 +70,8 @@ A **product-based** structure for a larger firm:
 
 A **matrix** structure has the same functional managers as the first list, plus project managers (for example Project A, Project B), and a team member reports to both their functional manager and the project manager.
 
+![Matrix structure: departments (design, engineering, finance) run across the top and projects A, B and C down the side; each team member in a cell has two bosses, the department head for professional standards and pay and the project manager for the schedule, which can cause conflicting instructions.](media:diagrams/matrix-structure.png "Figure: a matrix structure, where every team member sits in a department and on a project")
+
 ## Why and how businesses change structure
 
 | Reason | Example |

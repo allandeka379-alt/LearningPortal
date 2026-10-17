@@ -91,6 +91,8 @@ The supply chain links suppliers, producers, transport and retailers. Managing i
 4. **Interpretation.** If the supplier is late by two days, Chipo uses 60 of the buffer and has none left. If demand rises, the buffer is used up sooner. The buffer is the shop's insurance.
 :::
 
+![Inventory control chart for Chipo's cement: stock falls 30 bags a day from the maximum of 360, reaches the re-order level of 180 on day 6 when the order is placed, and falls to the buffer of 60 bags when the delivery of 300 bags arrives after the 4-day lead time on day 10, lifting stock back to 360.](media:diagrams/inventory-control-chart.png "Figure: the inventory control chart for cement (usage 30 a day, lead time 4 days, buffer 60, order 300)")
+
 :::worked-solution[Example 2: case analysis, how large should the buffer be?]
 **Context.** The shop pays US\$9 a bag. The average stock is (maximum + buffer) ÷ 2 = (360 + 60) ÷ 2 = 210 bags, worth 210 × 9 = US\$1,890. Holding costs (cash tied up, storage, damage) are estimated at 12% of the value of the average stock a year, which is US\$226.80. Chipo is thinking of raising the buffer by 30 bags. Last year, the shop ran out of cement on 5 days. On each of those days, 30 bags (the normal daily sales) would have been sold at a contribution of US\$2.50 a bag.
 

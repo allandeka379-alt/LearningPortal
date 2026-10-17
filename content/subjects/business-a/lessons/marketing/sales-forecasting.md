@@ -89,6 +89,8 @@ With **quarterly** data the four-quarter moving average removes the seasonal pat
 7. **Judgement.** The trend is rising steadily and the seasonal pattern is stable (the two years agree), so the forecast looks reliable for the next year. It assumes that the trend continues at +1.5 and that nothing unusual (a new rival, a price change) occurs.
 :::
 
+![Sales forecast chart for the cold-drinks supplier: quarterly sales swing between 40 and 96 thousand bottles around a centred moving average that rises from 59.75 to 70.25 (+1.5 a quarter); extending the trend and adding the seasonal variations gives year 4 forecasts of 58.25, 80.25, 101.25 and 68.25 thousand bottles.](media:diagrams/sales-forecast-trend.png "Figure: actual sales, the centred moving average and the year 4 forecasts for the cold-drinks supplier")
+
 ## Qualitative methods
 
 Qualitative methods rely on **opinion and judgement** rather than numbers. They are used when there is no past data (a new product), when the market is changing rapidly, or to adjust a statistical forecast.

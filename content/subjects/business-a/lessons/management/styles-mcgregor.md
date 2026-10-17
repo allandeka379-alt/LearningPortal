@@ -56,6 +56,8 @@ A style in which the manager makes the decisions but acts in the interests of em
 
 **Choosing a style.** No style is best everywhere. The right style depends on the **task** (urgent or routine, complex or simple), the **employees** (skilled or unskilled, experienced or new, willing or unwilling), the **time available**, and the manager's own personality. A good manager can use more than one style: autocratic in a safety emergency, consultative when planning a rota.
 
+![Continuum of management styles from autocratic (manager decides alone) through paternalistic (manager decides with care for staff), consultative (manager asks then decides) and participative (group decides together) to laissez-faire (employees decide for themselves): manager control falls and employee freedom rises along the line.](media:diagrams/management-style-continuum.png "Figure: the styles of management as a continuum from manager control to employee freedom")
+
 ## McGregor's Theory X and Theory Y
 
 Douglas McGregor described two sets of assumptions that managers hold about workers.

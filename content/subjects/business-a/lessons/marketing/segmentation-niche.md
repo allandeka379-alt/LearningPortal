@@ -94,6 +94,8 @@ A segment is worth serving if it is **measurable** (its size is known), **reacha
 4. **Judgement.** Revenue is not the only test. Young professionals may already be served by competing gyms and may need late opening hours and expensive equipment. Retired people are the smallest segment but have the highest sign-up rate, so promotion would be cheap. The gym should choose young professionals if it can afford the equipment and the promotion, but could start with retired people to reduce risk.
 :::
 
+![Bar chart of the gym's expected annual revenue by segment: students US\$54,000 (300 members at US\$15 a month), young professionals US\$144,000 (400 members at US\$30) and retired people US\$72,000 (300 members at US\$20); young professionals give the highest revenue.](media:diagrams/segment-revenue-gym.png "Figure: expected annual revenue from each target segment (members x monthly fee x 12)")
+
 :::worked-solution[Example 2: case analysis, niche marketing]
 **Context.** A fictional bakery in Bulawayo bakes only gluten-free and diabetic-friendly bread, sold in four shops and through a delivery service. It charges 40% more than ordinary bread. A large supermarket chain announces its own gluten-free loaf.
 

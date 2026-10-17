@@ -122,6 +122,8 @@ A firm that expects demand to rise may raise output or price; one expecting a ri
 4. New equilibrium: US\$2.50 and 400 crates. Price rises by US\$0.50 and quantity rises by 100 crates. Quantity supplied rises along the supply curve; supply itself has not shifted.
 :::
 
+![Tomato market: supply S and demand D cross at US\$2.00 and 300 crates; a successful advertising campaign shifts demand to D2 (200 crates more at every price), and the new equilibrium is US\$2.50 and 400 crates, so price rises by US\$0.50 and quantity by 100 crates.](media:diagrams/tomato-demand-shift.png "Figure: the tomato market before (E1) and after (E2) demand increases by 200 crates at every price")
+
 :::worked-solution[Example 2: case analysis, a drought]
 **Context.** A drought reduces the tomato harvest. Farmers now supply 200 crates fewer at each price (but no less than zero).
 

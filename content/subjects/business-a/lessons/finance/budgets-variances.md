@@ -89,6 +89,8 @@ Interpretation needs **reasons**, not just labels. An adverse materials variance
 7. **Judgement.** The comparison is not fair, because the workshop made only 3,800 desks, not the budgeted 4,000. A flexed budget is needed before blaming managers.
 :::
 
+![Profit bridge for Sengwa Furniture: budget profit of US\$16,000 falls by US\$1,500 adverse on sales revenue, US\$1,500 adverse on materials and US\$400 adverse on fixed overheads, and rises by US\$600 favourable on labour, giving actual profit of US\$13,200, US\$2,800 adverse overall.](media:diagrams/variance-bridge-desks.png "Figure: from budgeted to actual profit, variance by variance (A adverse, F favourable)")
+
 :::worked-solution[Example 2: case analysis, the flexed budget]
 **Context.** The workshop made 3,800 desks. The budget assumed a selling price of US\$12, materials of US\$3.60 a desk and labour of US\$2.40 a desk, with fixed overheads of US\$8,000.
 
@@ -108,6 +110,8 @@ Interpretation needs **reasons**, not just labels. An adverse materials variance
 
 **Judgement.** The sales shortfall is partly a matter of volume, while the materials overspend needs action: check supplier prices, wastage and the stock records. The causes of the favourable revenue variance should also be checked in case the workshop is losing its low-price customers. The conclusions depend on the budget being realistic in the first place.
 :::
+
+![Flexed budget bridge: the original profit budget of US\$16,000 falls US\$1,200 to US\$14,800 because 200 fewer desks were made; against the flexed budget, revenue is US\$900 favourable, materials US\$2,220 adverse, labour US\$120 favourable and fixed overheads US\$400 adverse, giving actual profit of US\$13,200, so the true profit variance is US\$1,600 adverse and materials are the real problem.](media:diagrams/variance-bridge-flexed.png "Figure: separating the volume effect (US\$1,200) from the cost and price variances once the budget is flexed")
 
 ## Common mistakes
 

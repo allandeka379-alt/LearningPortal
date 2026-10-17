@@ -103,6 +103,8 @@ Rank the projects on each measure and compare with the targets. Where the method
 6. **Judgement.** If Tatenda's bank charges 14% on loans and he wants payback within three years, the project passes both tests. The cash flows in years 4 and 5 are only forecasts, however, and a drop in egg prices would reduce the profit.
 :::
 
+![Cumulative cash flow for the US\$72,000 poultry project: it starts at minus 72,000, is minus 51,000 after year 1, minus 24,000 after year 2, then plus 5,000 after year 3 and plus 52,000 after year 5; it crosses zero at 2.83 years, the payback period (24,000 divided by the year 3 inflow of 29,000 is 0.83).](media:diagrams/payback-cumulative-poultry.png "Figure: payback is the point where the cumulative cash flow reaches zero")
+
 :::worked-solution[Example 2: case analysis, choosing between two projects]
 **Context.** A fictional bakery in Mutare can buy only one of two ovens. Both cost US\$100,000.
 
@@ -126,6 +128,8 @@ Rank the projects on each measure and compare with the targets. Where the method
 
 **Judgement.** If the bakery has limited cash or fears that demand may weaken, Project A is the safer choice. If it has other finance and is confident about growth, Project B gives a higher return. Neither measure considers the time value of money, so the bakery should also use net present value, and consider the risk of the later forecasts.
 :::
+
+![Cumulative cash flow of two US\$100,000 ovens: Project A rises steadily and crosses zero after 2 years 11 months, finishing year 4 at US\$36,000; Project B starts slower, crosses zero after 3 years 3 months, but its large year 4 inflow takes it higher to US\$46,000, so A wins on payback and B on total return.](media:diagrams/payback-two-ovens.png "Figure: Project A pays back sooner but Project B ends year 4 with more cash")
 
 ## Common mistakes
 

@@ -73,6 +73,8 @@ A SWOT is useful only when it leads to a decision. The usual steps are to match 
 4. Judgement: Nyasha should enter wholesale in stages, because the supermarket threat makes the shop front less secure in future, and the lack of cash rules out a fast expansion.
 :::
 
+![SWOT grid for Nyasha's bakery: strengths are loyal customers and a modern oven; the weakness is little cash for expansion; the opportunity is rising demand for wholesale bread from small shops; the threat is a supermarket opening nearby. The strategy matches the oven to wholesale demand and finances expansion in stages.](media:diagrams/swot-bakery.png "Figure: the bakery's SWOT, with internal factors on top and external factors below")
+
 ## PEST and PESTEL analysis
 
 | Factor | Examples of questions to ask |
@@ -113,6 +115,8 @@ Michael Porter's model explains why some industries are more profitable than oth
 
 **Judgement.** The industry is not attractive on price alone. Chipo should compete on reliability, safety and a regular timetable, because these are things rivals cannot copy as quickly as a lower fare, and she should check fuel costs closely before borrowing.
 :::
+
+![Porter's five forces for Chipo's minibus route: rivalry is strong (many operators, the same service), new entrants are a strong threat (a second-hand vehicle is cheap), substitutes are moderate (a slower, cheaper rail service), buyers are weak individually but can switch at no cost, and suppliers are strong (few fuel suppliers), so profit in the industry is likely to be low.](media:diagrams/five-forces-minibus.png "Figure: five forces for the Masvingo to Mutare minibus route")
 
 ## Using the tools, and their limits
 

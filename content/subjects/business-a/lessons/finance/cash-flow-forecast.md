@@ -92,6 +92,8 @@ Tendai's biggest supermarket customer starts to pay after two months instead of 
 3. Slower payment by one customer turns a short shortage into a three-month problem, so the forecast helps Tendai see the risk.
 :::
 
+![Closing cash balances month by month: the original forecast dips to an overdraft of US\$1,250 in March and recovers to US\$4,550 by June; when a major customer pays after two months the overdraft doubles to US\$2,500 in March, is still US\$1,450 in April, reaches nil in May and US\$2,300 in June.](media:diagrams/cash-flow-closing-balances.png "Figure: closing cash balance in the original forecast and when one customer pays a month later")
+
 ## Causes of cash flow problems and ways of improving cash flow
 
 **Causes:** customers who pay late or not at all; over-stocking; heavy spending on equipment or expansion (overtrading); a fall in sales; rising costs; seasonal sales with steady costs; and poor forecasting.

@@ -83,6 +83,8 @@ Chipo's hall is planned as eight activities. Durations are in days.
 5. C has 5 days of float and E has 2: ordering materials can wait until day 5.
 :::
 
+![Network for Chipo's hall: A (3 days), B (4), D (6), F (5), G (4) and H (2) all have zero float and form the critical path of 24 days; C (2 days, earliest start 0, latest start 5) has 5 days of float and E (3 days, earliest start 13, latest start 15) has 2 days of float.](media:diagrams/critical-path-network.png "Figure: the hall project as a network with earliest and latest times and float for each activity")
+
 ## Dummy activities and node times
 
 When activities are drawn on arrows between numbered nodes, each node has an earliest start time (EST, the longest path to it) and a latest finish time (LFT). A dummy is needed when two activities share some, but not all, of their predecessors.

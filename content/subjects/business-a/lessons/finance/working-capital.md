@@ -63,6 +63,8 @@ Nyasha's bakery has these current items at the end of a month.
 4. The figure is positive, but only US\$1,500 of the current assets is cash and US\$3,000 is an overdraft that must be repaid on demand. Working capital that is mostly stock and receivables is not cash: this is why a business with positive working capital can still be unable to pay its bills.
 :::
 
+![Nyasha's bakery: current assets of US\$16,000 (inventory 8,400, receivables 6,100, cash 1,500) less current liabilities of US\$9,200 (payables 5,200, overdraft 3,000, tax 1,000) leave working capital of US\$6,800, but only US\$1,500 of the assets is cash while US\$3,000 is an overdraft repayable on demand.](media:diagrams/working-capital-bakery.png "Figure: working capital is current assets less current liabilities, but most of the assets are not cash")
+
 ## Too little and too much working capital
 
 **Too little** working capital means the business cannot pay its bills on time. Suppliers may refuse credit or demand cash, wages may be late, the business may miss chances to buy stock cheaply or accept big orders, and in the worst case it is forced into liquidation. **Overtrading** (expanding faster than the finance allows) is a common cause.

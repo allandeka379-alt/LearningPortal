@@ -75,6 +75,8 @@ Organisational charts are drawn as boxes joined by lines. In text they can be sh
   - Finance manager
     - Accountant (1 clerk)
 
+![Organisational chart of Nyasha's workshop: the managing director has a span of control of 3 (production, sales and finance managers); the production manager also has a span of 3 supervisors; a cutting carpenter's chain of command is carpenter (level 4), supervisor, production manager, managing director; the workers sit one level below the supervisors.](media:diagrams/org-chart-workshop.png "Figure: the organisational chart of Nyasha's workshop, with spans of control and levels of hierarchy")
+
 From such a chart we read: **who reports to whom** (assembly workers report to the assembly supervisor); the **chain of command** (assembly worker, supervisor, production manager, managing director); the **levels of hierarchy** (the managing director is at the top, then managers, then supervisors or showroom managers, then workers); the **span of control** (the production manager supervises three supervisors, so a span of 3); and the **lines of communication**, which normally follow the chain of command.
 
 ## Features of a formal structure

@@ -97,6 +97,8 @@ The Boston Consulting Group matrix classifies each product by two measures: **ma
 3. **Recommendation.** Use the cash from maize meal to fund the chilli sauce's growth and a decision on peanut butter. Peanut butter needs a clear test: if extra promotion cannot raise its share towards the leader's, the money may be better spent on the star. Dried fruit is a candidate for withdrawal unless it draws customers to the other products.
 :::
 
+![Boston matrix for Mhofu Foods: chilli sauce (relative share 1.20, growth 12%) is a star; maize meal (1.60, 2%) is a cash cow; peanut butter (0.60, 14%) is a question mark; dried fruit (0.25, 3%) is a dog. The dividing lines are relative share 1.0 and growth of 10% a year.](media:diagrams/boston-matrix-mhofu.png "Figure: the four Mhofu Foods products placed on the Boston matrix (bubble area is sales)")
+
 :::worked-solution[Example 2: case analysis, a solar lamp]
 **Context.** Tsitsi Solar, a fictional business in Mutare, launched a rechargeable lamp. Yearly sales were as follows.
 
@@ -119,6 +121,8 @@ The Boston Consulting Group matrix classifies each product by two measures: **ma
 
 **Judgement.** Because the cost of a new model is high, Tsitsi should first test it on a small batch. If sales of the new model do not recover, the product should be withdrawn and the funds moved to a new product.
 :::
+
+![Product life cycle of the solar lamp: sales rise from 2,000 units in year 1 to a peak of 24,000 in year 5 (introduction and growth in years 1 to 4, maturity in year 5), then fall to 23,500, 19,000 and 12,000 in years 6 to 8, the decline stage; year 8 sales are half the year 5 peak.](media:diagrams/product-life-cycle-lamp.png "Figure: the life cycle of the Tsitsi Solar lamp, drawn from the sales table")
 
 ## Common mistakes
 

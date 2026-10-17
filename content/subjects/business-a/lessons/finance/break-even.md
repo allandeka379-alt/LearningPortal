@@ -122,6 +122,8 @@ A price cut helps only if the **extra sales** more than make up for the lower co
 **Judgement.** The machine is the better plan if Chipo is confident of selling 12,500 bottles or more, and she should check how reliable her estimate of demand is. The price cut would work only if demand were highly elastic; at 14,000 bottles it is not. Break-even analysis assumes the numbers are accurate, so she should test them with a lower sales figure.
 :::
 
+![Monthly profit against output for three plans for Mazowe Juice: current (break-even 10,000 bottles, profit US\$3,750 at 12,500), a price cut to US\$2.90 (break-even 12,500, profit only US\$1,800 at 14,000) and a new machine (break-even 10,000, profit US\$4,500 at 12,500, but steeper losses below break-even because fixed costs are US\$18,000).](media:diagrams/break-even-plans-profit.png "Figure: profit lines for the current plan, the price cut and the new machine, with expected profit marked")
+
 ## Common mistakes
 
 :::mistake{title="Dividing fixed costs by the selling price"}
