@@ -83,6 +83,8 @@ A deposit holds 600,000 tonnes of ore at a grade of 3 g/t gold.
 
 ### Underground methods
 
+![Four mining methods in cross-section: open-cast removes the overburden in benches to reach a shallow seam; a shaft mine sinks a vertical shaft with levels to deep ore; an adit is a horizontal tunnel into a hillside; a drift is a sloping tunnel that follows a dipping seam.](media:diagrams/mining-methods-sections.png "Figure: open-cast, shaft, adit and drift mining compared")
+
 :::example{title="A diagram in words: three ways underground"}
 Imagine a cross-section of a hillside with a mineral seam inside.
 

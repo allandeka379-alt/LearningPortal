@@ -50,6 +50,8 @@ Processing a mineral further within the country, beyond its raw state, before it
 6. **Smelting:** the gold is melted into bars of impure bullion.
 7. **Refining:** in Zimbabwe, bullion is refined at Fidelity Gold Refinery in Harare before sale.
 
+![Flow chart of gold processing in seven steps: crushing, milling to a slurry, gravity concentration of coarse gold, cyanide leaching with carbon, recovery by electrowinning, smelting into bullion bars and refining at Fidelity Gold Refinery in Harare.](media:diagrams/gold-processing-flow.png "Figure: from gold ore to refined gold")
+
 ### Platinum group metals
 
 :::example{title="A diagram in words: from Great Dyke ore to platinum"}

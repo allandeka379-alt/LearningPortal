@@ -69,6 +69,8 @@ Imagine looking down on a winding river.
 4. Below **rapids and waterfalls** and where a fast tributary meets a slower river, the sudden drop in speed deposits heavy minerals.
 :::
 
+![Plan view of a winding river showing where heavy alluvial gold collects, because the water slows there: (1) the inside of bends, (2) behind boulders and rock bars, (3) potholes in the bedrock and (4) below rapids or where a tributary joins.](media:diagrams/alluvial-gold-meander-plan.png "Figure: where alluvial gold collects along a river (plan view)")
+
 ## Gold panning
 
 1. Dig gravel from a likely spot, ideally close to the bedrock where gold is concentrated.

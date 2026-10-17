@@ -73,6 +73,8 @@ A large daily range like this is typical of clear, dry weather: the sun heats th
 
 A **rain gauge** is a funnel over a collecting jar inside a metal cylinder. It is sunk into the ground so that the rim stands about 30 cm above the surface: high enough that rain splashing off the ground does not enter, low enough that wind does not blow the rain past it. Each morning the water is poured into a **measuring cylinder** graduated in millimetres and read at eye level. Daily readings are added to give monthly and annual totals.
 
+![Rain gauge: rain enters a funnel set with its rim 30 cm above the ground, collects in the jar inside a can sunk in the ground, and is poured into a measuring cylinder read in millimetres at eye level at the same time each day.](media:diagrams/rain-gauge-and-cylinder.png "Figure: a rain gauge and its measuring cylinder")
+
 ### Humidity
 
 The **wet-and-dry bulb thermometer** has two ordinary thermometers side by side. The bulb of one is wrapped in muslin that dips into a small container of water.
@@ -97,6 +99,8 @@ The **Campbell-Stokes sunshine recorder** is a glass sphere that focuses the sun
 ## The weather station and the Stevenson screen
 
 Thermometers are kept in a **Stevenson screen**, a wooden box designed to measure the true temperature of the air.
+
+![Stevenson screen: a white, louvred wooden box with a double roof on legs so that the thermometers sit 1.2 m above short grass, in shade with free air flow; the door opens to the south so the sun never shines on the thermometers when it is opened.](media:diagrams/stevenson-screen.png "Figure: a Stevenson screen and the reason for each feature")
 
 | Feature | Reason |
 | --- | --- |

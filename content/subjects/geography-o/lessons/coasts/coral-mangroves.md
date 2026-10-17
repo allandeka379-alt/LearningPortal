@@ -52,6 +52,8 @@ So coral reefs lie mainly **between about 30° N and 30° S**, especially on the
 
 There are three main types: **fringing reefs** grow close to the shore; **barrier reefs** are separated from the shore by a lagoon; **atolls** are rings of reef around a lagoon, often where a volcanic island has sunk.
 
+![Side views of the three coral reef types: a fringing reef grows close to the shore, a barrier reef is separated from the land by a lagoon, and an atoll is a ring of reef around a lagoon with no land in the middle.](media:diagrams/coral-reef-types.png "Figure: fringing reef, barrier reef and atoll")
+
 ## Mangroves: where and why
 
 Mangroves grow on **sheltered**, low-energy tropical and subtropical coasts, mainly between about 30° N and 30° S: estuaries, deltas and lagoons where fine mud is deposited. They have special adaptations:
@@ -60,6 +62,8 @@ Mangroves grow on **sheltered**, low-energy tropical and subtropical coasts, mai
 - **Breathing roots (pneumatophores)** stick up out of the mud to take in oxygen, because waterlogged mud has little air;
 - **Salt tolerance**: some species filter salt at the roots, others excrete it through their leaves;
 - **Seedlings** grow while still attached to the parent, then drop into the mud or float to new sites.
+
+![Mangrove tree in tidal mud: prop (stilt) roots anchor it in soft mud, breathing roots (pneumatophores) stick up out of the waterlogged mud to take in air, the tree tolerates salt, and seedlings grow while still attached to the parent.](media:diagrams/mangrove-adaptations.png "Figure: how a mangrove tree is adapted to salty, waterlogged mud")
 
 The largest mangrove forest in the world is the **Sundarbans** in the Ganges delta of Bangladesh and India. In Africa, Mozambique has large areas of mangroves, notably in the Zambezi delta.
 

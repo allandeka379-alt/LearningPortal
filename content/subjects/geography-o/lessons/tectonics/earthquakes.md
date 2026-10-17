@@ -50,6 +50,8 @@ An instrument that detects and records ground movement; the record is a seismogr
 3. When the stress becomes greater than the friction, the rocks **suddenly slip** along the fault.
 4. The stored energy is released as **seismic waves** that spread out from the focus.
 
+![Cross-section of an earthquake: rocks slip along a fault at the focus underground, seismic waves spread out from the focus, and the epicentre is the point on the surface directly above it; the shallower the focus, the more surface damage.](media:diagrams/earthquake-focus-epicentre.png "Figure: focus, epicentre, fault and seismic waves")
+
 Most earthquakes occur at **plate boundaries**. Others happen on old faults within plates, near volcanoes as magma moves, and some are **triggered by people**: the filling of large reservoirs (earthquakes followed the filling of Lake Kariba in the early 1960s) and deep mining (for example in South Africa's gold-mining areas).
 
 **Depth of focus**: shallow earthquakes (less than about 70 km deep) usually cause more surface damage than deep ones, because the waves lose less energy before reaching the surface.
@@ -72,6 +74,8 @@ At a fictional station the S waves arrive 25 seconds after the P waves. Using a 
 
 A circle of radius 200 km drawn round the station passes through the epicentre; circles from two other stations cross at the epicentre.
 :::
+
+![Straight-line graph of distance to an earthquake against the gap between S and P wave arrivals, using 8 km per second: a 25 second gap means the epicentre is 200 km away; a longer gap means a more distant earthquake.](media:diagrams/seismic-gap-distance-graph.png "Figure: distance from the S-P time gap (8 km per second, fictional station)")
 
 ## Measuring earthquakes
 

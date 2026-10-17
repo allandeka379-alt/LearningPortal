@@ -93,6 +93,8 @@ A **pyramid of numbers** shows how many organisms are at each trophic level. Usu
 
 A **pyramid of energy** shows how much energy is stored at each level. It is always pyramid-shaped because energy is lost at every step: organisms use most of the energy they take in for respiration, movement and keeping warm, and some is lost in waste and uneaten parts. As a rough rule, only **about 10%** of the energy at one level is passed to the next.
 
+![Pyramid of energy for the food chain grass, grasshopper, lizard, hawk: the grass stores 30,000 units a year and each level passes on only about 10 %, giving 3,000, 300 and 30 units, which is why food chains are short.](media:diagrams/energy-pyramid-food-chain.png "Figure: a pyramid of energy (fictional data) for a four-level food chain")
+
 :::example
 **Worked example (fictional data).** In a study plot, the grass stores 30,000 units of energy in a year.
 

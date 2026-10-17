@@ -80,6 +80,8 @@ Metamorphic rocks are usually **hard and dense**, and many show **banding** or s
 
 ## The rock cycle in outline
 
+![Rock cycle: igneous rock is weathered and eroded into sediments, which are deposited, compacted and cemented into sedimentary rock; heat and pressure change it to metamorphic rock, which melts to magma and cools to igneous rock again.](media:diagrams/rock-cycle.png "Figure: the rock cycle with the process that links each stage")
+
 :::example{title="Diagram in words: the rock cycle"}
 Draw a circle with three boxes: igneous, sedimentary, metamorphic.
 

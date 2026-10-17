@@ -70,6 +70,8 @@ A river's energy comes from the **mass of water** and the **gradient** it flows 
 
 **Diagram in words**: draw a channel cross-section with the bed at the bottom and show, from the bottom up:
 
+![Channel cross-section showing the four ways a river moves its load: traction rolls boulders along the bed, saltation bounces pebbles and coarse sand, suspension carries silt and clay in the water, and solution carries dissolved minerals.](media:diagrams/river-load-transport.png "Figure: traction, saltation, suspension and solution in a river")
+
 1. **Traction**: the largest boulders and pebbles are rolled and pushed along the bed. This happens mainly in floods.
 2. **Saltation**: smaller pebbles and coarse sand are bounced along the bed in a series of hops.
 3. **Suspension**: fine sand, silt and clay are carried within the flow, making the water look brown. This is usually the largest part of the load.

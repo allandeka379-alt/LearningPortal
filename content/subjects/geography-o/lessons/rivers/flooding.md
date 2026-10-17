@@ -118,6 +118,8 @@ At the **Tokwe-Mukosi dam** in Masvingo Province, very heavy rain in early 2014 
 | **Forecasting and early warning** | Rain and river gauges, radio and mobile phone alerts | Saves lives; cheap | Does not prevent damage; needs good communication |
 | **Preparation** | Raised houses, flood shelters, evacuation plans, drills | Reduces deaths | Depends on community organisation |
 
+![Cross-section of a river and its floodplain: levées raise both banks so the channel holds the flood level, the floodplain is zoned for grazing and parkland, and homes are built on higher ground away from the river.](media:diagrams/flood-defences-levee-zoning.png "Figure: levées (hard engineering) and floodplain zoning (soft engineering)")
+
 **Evaluating management.** Ask: does it reduce **deaths**, reduce **damage**, at what **cost**, who **benefits** and who **loses**, does it **move the problem** elsewhere, and is it **sustainable** (works for a long time without harming the environment or depending on outside money)? In LICs, low-cost soft methods such as warning systems, zoning and catchment conservation are often more sustainable than large engineering, while dams can help if they are well managed and communities are consulted.
 
 :::example{title="Calculating a recurrence interval (fictional data)"}

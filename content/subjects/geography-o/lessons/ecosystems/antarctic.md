@@ -88,6 +88,8 @@ The whole ecosystem depends on the ocean, not the land.
 
 Krill is the **keystone species**: if krill numbers fall, whales, seals, penguins and seabirds all suffer.
 
+![Antarctic marine food web: phytoplankton and ice algae feed krill, and krill feed baleen whales, crabeater seals, Adélie penguins and fish; leopard seals, emperor penguins, Weddell seals and killer whales feed higher up, so krill is the keystone species.](media:diagrams/antarctic-food-web.png "Figure: a simplified Antarctic marine food web with krill at the centre")
+
 ## Links between abiotic and biotic factors
 
 :::example

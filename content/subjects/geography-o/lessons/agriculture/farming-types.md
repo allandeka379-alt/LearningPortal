@@ -92,6 +92,8 @@ Crops and livestock on the same farm, typical of Regions II and III: maize, soya
 Water stored in Lake Mutirikwi and other dams is released into canals that feed the sugar estates around Triangle and Hippo Valley, and the newer Tugwi-Mukosi dam was built partly to expand irrigation in the Lowveld. Irrigation turns a region too dry for rain-fed crops into one of the country's most productive areas. Smallholder schemes, such as Nyanyadzi in Manicaland, let families grow wheat, maize, beans and vegetables in plots supplied by canals, so they can farm in the dry season.
 :::
 
+![Two irrigation layouts: a dam feeds a main canal and secondary canals that water fields, with a drain to prevent waterlogging; and a centre pivot irrigating a circle of 40 ha (radius about 357 m) with 6 mm a day, which is 2,400 cubic metres a day.](media:diagrams/irrigation-canal-pivot.png "Figure: a canal irrigation scheme and a centre pivot (worked example: 40 ha at 6 mm a day)")
+
 **Methods:** surface (flood and furrow) irrigation; sprinklers; centre pivots (a long rotating arm of sprinklers); drip irrigation, which delivers water to each plant and wastes least.
 
 **Benefits:** farming through the dry season and in drought; two or three crops a year; higher, more reliable yields; jobs.

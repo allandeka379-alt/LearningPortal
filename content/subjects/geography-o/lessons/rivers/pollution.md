@@ -64,6 +64,8 @@ Liquid waste discharged from a sewage works, factory or mine.
 4. **Bacteria** decompose the dead plants and algae, using up **dissolved oxygen**.
 5. Oxygen levels fall so low that fish and invertebrates die. Some algae also release toxins.
 
+![Eutrophication in five steps: fertiliser or sewage adds nitrates and phosphates, algae bloom, the surface layer blocks sunlight, bacteria decomposing the dead plants use up the oxygen, and fish die.](media:diagrams/eutrophication-steps.png "Figure: the chain of eutrophication in a river or dam")
+
 Other ecosystem impacts: toxic chemicals kill organisms directly; silt smothers spawning grounds and blocks sunlight; plastic is swallowed by animals; hot water from power stations holds less oxygen.
 
 ## Measuring river pollution

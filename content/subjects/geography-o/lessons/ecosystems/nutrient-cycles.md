@@ -55,6 +55,8 @@ There are also **inputs** and **outputs**:
 
 The size of the circles and arrows changes from one ecosystem to another.
 
+![Three-store nutrient cycle (biomass, litter, soil) for three ecosystems: in the tropical rainforest the biomass store is largest, in the savanna the soil store is largest, and in the hot desert all three stores are small.](media:diagrams/nutrient-cycle-three-stores.png "Figure: the nutrient cycle in a rainforest, a savanna and a hot desert (circle size shows store size)")
+
 | Ecosystem | Largest store | Why |
 | --- | --- | --- |
 | Tropical rainforest | Biomass | Hot, wet climate: litter rots in weeks and nutrients are taken up quickly by the dense vegetation; heavy rain leaches the soil |
@@ -71,6 +73,8 @@ Nitrogen makes up about 78% of the air, yet plants cannot use nitrogen gas direc
 4. **Decomposition (ammonification):** when organisms die or excrete waste, decomposers release the nitrogen as ammonium compounds.
 5. **Nitrification:** nitrifying bacteria change ammonium into nitrites and then into nitrates.
 6. **Denitrification:** in waterlogged soils (such as a vlei), denitrifying bacteria change nitrates back into nitrogen gas, which returns to the air.
+
+![Nitrogen cycle in six steps: fixation turns nitrogen gas into nitrates (legume bacteria, lightning, fertiliser), plants take up nitrates, animals eat plants, decomposers release ammonium from dead matter, nitrification makes nitrates again, and denitrification in waterlogged soil returns nitrogen gas to the air.](media:diagrams/nitrogen-cycle.png "Figure: the nitrogen cycle (steps 1 to 6 as in the lesson)")
 
 :::example
 **Why farmers rotate maize with groundnuts.** Groundnuts carry nitrogen-fixing bacteria in their roots. After the harvest, their roots and leaves decay and add nitrogen to the soil, so the next maize crop needs less fertiliser. This is a practical use of the nitrogen cycle on a communal-area plot.

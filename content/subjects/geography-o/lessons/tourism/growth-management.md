@@ -58,6 +58,8 @@ The largest number of visitors a place can take before its environment, faciliti
 
 The Butler model (1980) describes how the number of visitors to a resort changes over time. Picture an S-shaped curve with time along the bottom and visitor numbers up the side.
 
+![Butler model: visitor numbers follow an S-shaped curve through exploration, involvement, development, consolidation and stagnation, then either rejuvenate, stay stable or decline.](media:diagrams/butler-model-curve.png "Figure: the Butler model of resort development (schematic)")
+
 1. **Exploration:** a few adventurous visitors; no special facilities; tourists use local services.
 2. **Involvement:** local people begin to provide accommodation, food and guides; numbers rise slowly.
 3. **Development:** outside companies invest in hotels and attractions; marketing grows; numbers rise rapidly; local control falls.

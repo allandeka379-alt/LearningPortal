@@ -49,7 +49,11 @@ Most stations work on one principle: something turns a turbine, which turns a ge
 
 **Hydro-electric power (HEP).** A dam stores water in a reservoir. Imagine a cross-section through the dam: water enters intakes near the base of the reservoir, falls through large pipes called penstocks and strikes the blades of turbines in the power house. The turbines drive generators, transformers raise the voltage for the grid, and the water returns to the river. Output depends on the **height the water falls** (the head) and the **volume of water** released.
 
+![Cross-section of a hydro-electric power station: water from the reservoir enters an intake near the base of the dam wall, falls down a penstock to spin a turbine and generator, a transformer raises the voltage for the grid, and the water returns to the river; a greater head gives more power.](media:diagrams/hydro-electric-station-section.png "Figure: how a hydro-electric station such as Kariba South generates electricity")
+
 **Coal-fired thermal power.** Coal is crushed to a fine powder and burned in a boiler. The heat turns water in the boiler tubes into high-pressure steam, which spins the turbines. The steam is then cooled back into water in a condenser, using large amounts of cooling water (often cooled again in cooling towers).
+
+![Flow chart of a coal-fired power station such as Hwange: coal burns in a boiler to make steam, the steam spins a turbine and generator, a transformer raises the voltage for the national grid, and the steam is cooled in a condenser with river water and returned to the boiler.](media:diagrams/coal-thermal-station-flow.png "Figure: from coal to electricity in a thermal power station")
 
 **Gas-fired power.** Burning gas drives a gas turbine directly.
 

@@ -60,6 +60,8 @@ Most of Zimbabwe is a **plateau**. A broad ridge of high ground, the central **w
 
 Heights in the table are approximate; textbooks draw the boundaries slightly differently.
 
+![Schematic relief cross-section from Kariba to Mutare: the Zambezi valley lies below about 500 m, a steep escarpment climbs to the middleveld (900 to 1,200 m), the highveld around Harare is about 1,500 m, the land falls to the middleveld again, then rises to the Eastern Highlands, where Nyangani reaches about 2,590 m.](media:diagrams/relief-cross-section-kariba-mutare.png "Figure: relief cross-section from the Zambezi valley to the Eastern Highlands (horizontal scale not drawn)")
+
 | Relief region | Approximate height | Where | Typical features |
 | --- | --- | --- | --- |
 | Highveld | Above about 1,200 m | The central watershed: Harare (about 1,500 m), Gweru, Bulawayo, Marondera | Gently rolling land, cooler climate, more reliable rain, main towns and commercial farms |

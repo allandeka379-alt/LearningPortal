@@ -83,6 +83,8 @@ A network can be drawn as a **topological diagram**: nodes as dots and links as 
 Six towns, P, Q, R, S, T and U, are joined by seven roads: P–Q, Q–R, R–S, Q–T, T–U, R–T and S–U. (Imagine the dots with straight lines between them.)
 :::
 
+![Topological diagram of six towns P to U joined by seven roads: beta index 7 divided by 6 is 1.17, there are 2 circuits, and the total links needed to reach every other town is 7 for Q, R and T but 11 for P, so P is the least accessible.](media:diagrams/transport-network-six-towns.png "Figure: a topological network of six towns with its beta index and accessibility")
+
 **Beta index** measures connectivity:
 
 $$\beta = \frac{\text{number of links}}{\text{number of nodes}}$$

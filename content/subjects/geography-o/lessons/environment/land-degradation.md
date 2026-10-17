@@ -48,6 +48,8 @@ The degradation of land in dry areas (semi-arid and dry sub-humid) until it beco
 2. **Rill erosion**: water concentrates into many small channels, a few centimetres deep, which a plough can still smooth over.
 3. **Gully erosion**: rills join and deepen into steep-sided channels, sometimes several metres deep, that cannot be ploughed across. Gullies grow headwards (back up the slope) during each rainy season.
 
+![Cross-sections of three forms of water erosion: sheet erosion removes a thin even layer of topsoil, rill erosion cuts many small channels a few centimetres deep that a plough can smooth, and gully erosion cuts a deep steep-sided channel that cannot be ploughed across.](media:diagrams/erosion-sheet-rill-gully.png "Figure: sheet, rill and gully erosion compared")
+
 Wind erosion is most serious on dry, bare, loose soils, especially at the end of the dry season.
 
 ## Causes of land degradation
@@ -100,6 +102,8 @@ A small irrigation dam was built with a capacity of 2,400,000 m³. A survey 20 y
 | Fireguards and fire laws | Cleared strips stop fires spreading; EMA fines for starting veld fires | Effective when guards are cut before the dry season; enforcement is difficult |
 | Gully reclamation | Stone or brushwood check dams, gabions, grass planting slow water and trap silt | Works on small gullies; large gullies are expensive to repair |
 | Stone lines and planting pits (Sahel) | Lines of stones along contours and small pits filled with manure trap water and soil | Low-cost, uses local materials and has helped restore degraded farmland in the Sahel |
+
+![Side views of two soil conservation methods: contour ridges across a gentle slope slow the runoff and trap soil but must be maintained, while terraces cut a steep slope into level steps that are very effective but need much labour to build and repair.](media:diagrams/contour-ridges-terraces.png "Figure: contour ridges and terraces")
 
 A **sustainable** method protects the land for the future, is affordable for local people, uses local materials and labour, and is supported by the community so that it continues after outside funding ends.
 

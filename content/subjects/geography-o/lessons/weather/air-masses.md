@@ -81,6 +81,8 @@ The trade winds of both hemispheres blow towards the equatorial low. Where they 
 
 The ITCZ follows the **overhead sun**, but about a month or so behind it, and swings further over the large land masses than over the oceans.
 
+![Latitude chart: the ITCZ lies about 15° S in January, over Zimbabwe (15.5° to 22.5° S), giving the hot wet season, and about 15° N in July, giving the cool dry season; the shift is 30° of latitude, about 3,330 km.](media:diagrams/itcz-seasonal-shift.png "Figure: the ITCZ follows the overhead sun between January and July")
+
 | | Position of the ITCZ over Africa | Effect on Zimbabwe |
 | --- | --- | --- |
 | January | Well south of the equator, over or near southern Africa (roughly 10-20° S over the interior) | Hot wet season: convergence, rising air, heavy rain |

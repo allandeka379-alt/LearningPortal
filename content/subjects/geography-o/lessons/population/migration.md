@@ -76,6 +76,8 @@ People move because of **push factors** (things that make them want to leave) an
 | Environmental | Drought, floods, cyclones, soil erosion | Reliable water, safer environment |
 | Political | War, violence, persecution | Peace, safety, freedom |
 
+![Lee's model of migration: an origin with mostly minus signs (push factors) and a destination with mostly plus signs (pull factors) are separated by a wall of intervening obstacles such as cost, distance, borders and visas.](media:diagrams/lee-migration-model.png "Figure: Lee's model of migration with push, pull and intervening obstacles")
+
 :::example{title="Diagram in words: Lee's model of migration"}
 Imagine two circles, an **origin** on the left and a **destination** on the right. Each circle contains plus signs (attractions) and minus signs (things people dislike). Between them is a wall of **intervening obstacles**: transport cost, distance, border controls. A person moves only if the pull of the destination and the push of the origin are strong enough to overcome the obstacles.
 :::

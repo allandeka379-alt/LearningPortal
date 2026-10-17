@@ -87,6 +87,8 @@ Imagine waves approaching a coast where a hard-rock **headland** sticks out betw
 4. Wave **energy is concentrated** on the sides and front of the headland, causing erosion.
 5. In the bays, wave energy is **spread out** over a longer shore, so waves are lower and deposition occurs, forming bay-head beaches.
 
+![Plan view of wave refraction: waves slow in the shallow water off a headland and bend round it, so energy is concentrated on the headland, causing erosion, and spread out in the bays, where sand is deposited.](media:diagrams/wave-refraction-headland.png "Figure: wave refraction at a headland between two bays")
+
 Over time refraction tends to straighten the coastline, as headlands are worn back and bays are filled with sand.
 
 ## Processes of marine erosion
@@ -111,6 +113,8 @@ Material on the coast is moved by the same processes as in rivers (traction, sal
 3. The **backwash** returns straight down the beach, at right angles to the shoreline, under gravity.
 4. Each wave moves the material a little further along the beach in a **zigzag** path.
 5. Over time large amounts of sediment move along the coast in the direction of the prevailing wind.
+
+![Plan view of longshore drift: waves arrive at an angle to the beach, swash carries sand and pebbles up the beach at that angle, backwash returns straight down the slope, so each wave moves the material a little further along the coast in a zigzag.](media:diagrams/longshore-drift-plan.png "Figure: longshore drift on a beach (plan view)")
 
 :::example{title="Measuring longshore drift (fictional data)"}
 Students placed a marked float in the sea and recorded how far it moved along the beach.

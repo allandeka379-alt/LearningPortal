@@ -71,6 +71,8 @@ Deliberately allowing the sea to erode or flood an area of low value, often crea
 | **Rock armour (rip-rap)** | Large boulders piled at the foot of a cliff or in front of a wall | Absorbs wave energy; cheaper than a sea wall | Can be moved in big storms; blocks access; looks out of place |
 | **Gabions** | Wire cages filled with rocks | Cheap; absorb energy | Short life; wire rusts and breaks |
 
+![Plan view of groynes built at right angles to a beach: sand carried by longshore drift piles up against the up-drift side of each groyne, widening the beach there, while the beach beyond the last groyne is starved of sand and erodes.](media:diagrams/groynes-trap-sand.png "Figure: how groynes trap sand and starve the beach down-drift")
+
 ### Soft engineering
 
 | Method | How it works | Advantages | Disadvantages |

@@ -65,6 +65,8 @@ Think of a "parcel" of air near the ground.
 5. **Growth of droplets**: tiny droplets collide and join (or ice crystals grow in cold cloud tops) until they are heavy enough to fall against the up-currents.
 6. **Precipitation**: the drops fall as rain, or as hail or snow if they are frozen.
 
+![Graph of height against temperature: air at 28 °C cools at 1 °C per 100 m until it reaches its dew point of 18 °C after rising 1,000 m, where cloud forms; above the cloud base it cools more slowly, about 0.5 °C per 100 m, reaching 15 °C at 1,600 m.](media:diagrams/condensation-level-graph.png "Figure: cooling of rising air and the condensation level (28 °C at the ground, dew point 18 °C)")
+
 :::example{title="Finding the condensation level"}
 Air at the ground is 28 °C and its dew point is 18 °C. It rises and cools at about 1 °C per 100 m.
 
@@ -121,6 +123,8 @@ Elsewhere, the Drakensberg of South Africa and the windward slopes of the Himala
 | Typical cloud | Cumulonimbus | Stratus and cumulus on slopes | Layered (nimbostratus) and cumulonimbus at cold fronts |
 | Rain | Heavy, short, afternoon storms | Steady on windward slopes | Steady (warm front) or short and heavy (cold front) |
 | Example | Zimbabwe in summer; equatorial regions | Eastern Highlands; Drakensberg | Britain; Cape Town in winter |
+
+![Three cross-sections of rainfall: convectional (sun heats the ground, warm air rises to cumulonimbus and afternoon storms), relief (moist air rises over the windward slope, rain falls, air sinks and warms in the rain shadow) and frontal (warm air rises over a wedge of cold air).](media:diagrams/three-rainfall-types.png "Figure: convectional, relief and frontal rainfall compared")
 
 ## Common mistakes
 

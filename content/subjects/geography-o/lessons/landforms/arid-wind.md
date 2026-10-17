@@ -81,6 +81,8 @@ Wind can only move loose material, so it works best where the ground is dry and 
 
 **Deposition** happens when the wind slows down, for example behind a rock or bush, or when it loses energy.
 
+![Wind transport by grain size: fine dust is carried in suspension high above the ground, sand grains bounce in short hops by saltation rarely higher than about 1 to 2 m, and larger grains are pushed along the surface by creep.](media:diagrams/wind-transport-saltation-creep.png "Figure: suspension, saltation and surface creep in wind transport")
+
 ## Desert landforms
 
 ### Landforms of wind deposition
@@ -97,6 +99,8 @@ Barchans form where the wind blows mainly from one direction and sand is limited
 :::
 
 - **Seif dunes**: long, narrow, sharp-crested ridges of sand lying **parallel** to the main wind direction, sometimes tens of kilometres long; they form where winds blow from two main directions. They are common in the Sahara and Namib.
+
+![Barchan dune: a crescent whose horns point downwind; sand is pushed up the gentle windward slope (about 10 to 15 degrees) and avalanches down the steep slip face (about 30 to 35 degrees), so the whole dune creeps downwind.](media:diagrams/barchan-dune-plan-section.png "Figure: a barchan dune in plan view and in cross-section")
 
 ### Landforms of wind erosion
 
