@@ -73,6 +73,8 @@ PROCEDURE InsertNode(NewKey : INTEGER)
 ENDPROCEDURE
 ```
 
+![Binary search tree built by inserting 45, 28, 63, 17, 36, 52, 71, 40: smaller keys go left and larger keys go right, so 40 is the right child of 36; an in-order walk gives 17, 28, 36, 40, 45, 52, 63, 71](media:diagrams/ds-binary-search-tree.png "Figure: the tree built from the keys in the order 45, 28, 63, 17, 36, 52, 71, 40")
+
 :::worked-solution{title="Building a tree from a list of keys"}
 The keys are inserted in this order: 45, 28, 63, 17, 36, 52, 71, 40.
 

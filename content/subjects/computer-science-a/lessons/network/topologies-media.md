@@ -35,6 +35,8 @@ The weakening of a signal as it travels along a medium, which limits how far it 
 - Only one device can send at a time, so collisions occur and performance falls as more devices are added.
 - A break in the backbone splits the network or stops it altogether.
 
+![Four network topologies: bus (devices on one backbone), star (each device cabled to a central switch), full mesh (4 devices need 6 links) and hybrid (two stars whose switches are joined by a backbone)](media:diagrams/network-topologies.png "Figure: bus, star, mesh and hybrid topologies")
+
 **Star.** Each device has its own cable to a central **switch** (or hub). Data goes from the sender to the switch, which forwards it to the receiver.
 - A broken cable affects only one device.
 - Devices are easy to add or remove, and a switch sends data only to the receiver, so performance stays good.

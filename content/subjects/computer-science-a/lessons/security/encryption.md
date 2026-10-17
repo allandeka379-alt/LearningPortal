@@ -65,6 +65,8 @@ Asymmetric encryption is much **slower** than symmetric encryption. So in practi
 | Key distribution | A problem: the key must be shared secretly | Solved: the public key can be shared openly |
 | Typical use | Encrypting large amounts of data | Sharing keys, signatures |
 
+![Symmetric encryption uses the same secret key to encrypt and decrypt; asymmetric encryption for confidentiality encrypts with the receiver's public key and only the receiver's private key can decrypt](media:diagrams/security-symmetric-asymmetric.png "Figure: key use in symmetric and asymmetric encryption")
+
 ## Simple ciphers
 
 **The Caesar cipher** is a substitution cipher. Every letter is replaced by the letter a fixed number of places further along the alphabet (the key). With key 3, A becomes D, B becomes E and so on, wrapping round after Z.

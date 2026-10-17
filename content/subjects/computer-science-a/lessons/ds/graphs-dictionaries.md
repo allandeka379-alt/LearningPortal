@@ -46,6 +46,8 @@ A graph models roads, networks, friendships, links between web pages and many ot
 | C – D | 8 |
 | D – E | 3 |
 
+![Weighted graph with vertices A to E: undirected edges A-B 4, A-C 2, B-D 5, C-D 8 and D-E 3; below, the directed version with one-way edges A to B 4, B to D 5, C to A 2 and D to E 3](media:diagrams/ds-weighted-graph.png "Figure: the undirected weighted graph and the directed graph used in the lesson")
+
 ### Adjacency matrix
 
 An **adjacency matrix** is a two-dimensional array with a row and a column for each vertex. The cell in row X and column Y holds the weight of the edge from X to Y (a dash means there is no edge).

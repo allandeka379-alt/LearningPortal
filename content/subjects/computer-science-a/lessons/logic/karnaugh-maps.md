@@ -74,6 +74,8 @@ Rules for grouping:
 
 For each group, the term has the variables whose value is the same for every cell in the group; a variable that changes inside the group is left out. A variable that is 1 appears as itself and a variable that is 0 appears inverted. The expression is the OR of the terms of all the groups.
 
+![Three-variable Karnaugh map with rows A and columns BC in Gray order: the four 1s in the first and last columns wrap around to give NOT C, the pair at A=1, B=1 gives A AND B, so X = (A AND B) OR (NOT C)](media:diagrams/kmap-three-variable.png "Figure: grouping the 1s on a 3-variable K-map, including a wrap-around group")
+
 :::worked-solution{title="Simplify the 3-variable function in the K-map from the previous example"}
 1. Group 1: the four cells 000, 010, 100, 110. They are in the first and last columns, joined by wrap-around. C is 0 in every cell, and A and B change, so the term is **NOT C**.
 2. Group 2: the pair 110 and 111. A = 1 and B = 1 in both, and C changes, so the term is **A AND B**.
@@ -81,6 +83,8 @@ For each group, the term has the variables whose value is the same for every cel
 4. X = **(A AND B) OR (NOT C)**.
 5. Check with the original table: for 110, A AND B = 1 so X = 1; for 001, both terms are 0 so X = 0.
 :::
+
+![Four-variable Karnaugh map: the four corner cells form one wrap-around group giving NOT B AND NOT D, and the centre four cells give B AND D, so X is 1 when B and D are equal](media:diagrams/kmap-four-variable.png "Figure: a 4-variable K-map with a corner group and a centre group")
 
 :::worked-solution{title="A four-variable map with corner and middle groups"}
 1. The 1s are in cells 0000, 0010, 0101, 0111, 1000, 1010, 1101, 1111:

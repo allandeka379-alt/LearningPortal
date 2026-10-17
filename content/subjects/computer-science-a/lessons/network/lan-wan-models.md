@@ -109,6 +109,8 @@ A thin client suits a school computer room where every machine needs the same so
 
 A host is any computer or device on a network. Data is broken into **packets** and each packet is forwarded from device to device. Inside a LAN a **switch** passes it on to the right port. To leave the LAN it must reach a **router**, which sends it towards the destination network over the WAN link.
 
+![Two bank branches: laptops L1 and L2 join SwitchA (links 1 and 2), SwitchA joins RouterA (3), the WAN link 4 joins RouterA and RouterB, RouterB joins SwitchB (5), and SwitchB joins PC P1 (6) and Server S1 (7); the path from L1 to S1 uses links 1, 3, 4, 5 and 7](media:diagrams/network-bank-path.png "Figure: the bank network with the path from Laptop L1 to Server S1 highlighted")
+
 Consider a bank with two branches. The table lists the links.
 
 | Link | Joins |

@@ -47,6 +47,8 @@ Adding two bits gives 0 + 0 = 0, 0 + 1 = 1, 1 + 0 = 1 and 1 + 1 = 10 (sum 0, car
 
 The half adder is therefore **one XOR gate (sum) and one AND gate (carry)** with the same two inputs.
 
+![Half adder: an XOR gate gives the sum S and an AND gate gives the carry C from the same inputs A and B; 1 + 1 gives sum 0 and carry 1](media:diagrams/logic-half-adder.png "Figure: a half adder is one XOR gate (sum) and one AND gate (carry), with its truth table")
+
 ## The full adder
 
 A column in the middle of a binary addition has three bits to add: the two input bits and the carry from the column to the right. A full adder is made from **two half adders and an OR gate**. The first half adder adds A and B. The second adds its sum to Cin. The OR gate combines the carry outputs of the two half adders to give Cout.
@@ -64,9 +66,13 @@ A column in the middle of a binary addition has three bits to add: the two input
 
 Check any row: A = 1, B = 1, Cin = 1 gives 1 + 1 + 1 = 11 in binary, so S = 1 and Cout = 1.
 
+![Full adder: two half adders and an OR gate; the first half adder adds A and B to give P and Q, the second adds P and the carry in Cin to give the sum S and R, and Cout = Q OR R](media:diagrams/logic-full-adder.png "Figure: a full adder built from two half adders and an OR gate")
+
 ## The ripple-carry adder
 
 To add numbers of several bits, chain full adders: the least significant stage can use a half adder (or a full adder with Cin = 0), and each carry out goes into the next stage.
+
+![Four-stage ripple-carry adder adding 0110 and 0111: the carry out of each full adder is the carry in of the next stage to the left, giving the sum bits 1101 and a final carry out of 0](media:diagrams/logic-ripple-carry-adder.png "Figure: a 4-stage ripple-carry adder working out 0110 + 0111 = 1101")
 
 :::worked-solution{title="Add 0110 and 0111 with a 4-stage ripple-carry adder"}
 1. Stage 0 takes the right-hand bits, stage 1 the next bits, and so on. Pass the carry from each stage to the next:
@@ -87,6 +93,8 @@ The disadvantage of a ripple-carry adder is delay: each stage must wait for the 
 ## The SR flip-flop
 
 A flip-flop is built from gates whose outputs feed back into inputs, so the circuit holds its state. The **SR (set-reset) flip-flop** can be made from two NOR gates. The inputs are S (set) and R (reset); the outputs are Q and NOT Q. The output of each NOR gate is connected to an input of the other.
+
+![SR flip-flop built from two NOR gates whose outputs feed back to each other: S=1 sets Q to 1, R=1 resets Q to 0, S=R=0 holds the stored bit, and S=R=1 is not allowed](media:diagrams/logic-sr-flip-flop.png "Figure: an SR flip-flop from two cross-coupled NOR gates")
 
 - S = 1, R = 0: Q becomes 1 (set).
 - S = 0, R = 1: Q becomes 0 (reset).

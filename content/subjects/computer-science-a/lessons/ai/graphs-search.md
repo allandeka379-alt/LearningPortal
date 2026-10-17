@@ -76,6 +76,8 @@ The edges (the graph is undirected, so each can be travelled either way) are:
 4. Repeat from step 2 until the destination (or every node) has been visited.
 5. Find the path by following the previous nodes back from the destination.
 
+![Weighted graph of ten towns with the twelve road distances from the lesson; Dijkstra's shortest path from Harare to Bulawayo is H, C, K, G, B with total distance 100 + 60 + 140 + 165 = 465](media:diagrams/ai-town-graph-dijkstra.png "Figure: the town graph with the shortest path from Harare to Bulawayo highlighted")
+
 :::worked-solution{title="Dijkstra from Harare (H)"}
 Each row shows the distances after the visit named in the first column. **Bold** marks the node visited in that row, and ✓ marks nodes whose distance is final. Ties are visited in alphabetical order.
 

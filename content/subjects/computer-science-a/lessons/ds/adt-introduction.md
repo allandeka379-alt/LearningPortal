@@ -40,6 +40,9 @@ A queue stored in an array in which the rear pointer wraps round to the first pl
 
 Only the top of a stack is accessible. To push, the stack pointer moves up one place and the item is stored; to pop, the item at the pointer is returned and the pointer moves down. Pushing onto a full stack and popping an empty stack are errors that must be tested for.
 
+![Stack of six places after push 12, push 7, push 20, pop, push 5, pop, pop: the pops return 20, 5 and 7 (last in, first out) and the stack finally holds only 12 with Top = 1](media:diagrams/ds-stack-trace.png "Figure: the stack after each of seven push and pop operations")
+
+
 :::worked-solution{title="Tracing a stack of six places"}
 The operations are push 12, push 7, push 20, pop, push 5, pop, pop. `Top` is the stack pointer (0 when the stack is empty). A removed item is no longer part of the stack, so its place is shown empty.
 
@@ -78,6 +81,9 @@ Uses: the **undo** feature, the back button of a browser, checking brackets in a
 ## Queue
 
 A queue has a front pointer (where the next item leaves) and a rear pointer (where the last item arrived). In a simple array the rear moves along and places before the front are wasted. A **circular queue** avoids this: when the rear passes the last place it wraps to place 1 using `Rear ← MOD(Rear, Size) + 1`, and the front wraps in the same way. A count of the items tells whether the queue is full (`Count = Size`) or empty (`Count = 0`).
+
+![Circular queue of five places after the lesson's operations: places 1 to 5 hold T6, T7, T3, T4 and T5, Front = 3 and Rear = 2, Count = 5 so it is full, and T6 and T7 reused the places emptied by T1 and T2](media:diagrams/ds-circular-queue.png "Figure: the final state of the circular queue, with Front and Rear")
+
 
 :::worked-solution{title="Tracing a circular queue of five places"}
 The queue starts empty with `Front` = 1, `Rear` = 0 and `Count` = 0. The operations are enqueue T1, T2 and T3; dequeue; enqueue T4, T5 and T6; dequeue; enqueue T7.
@@ -135,6 +141,9 @@ Start = 2, Free = 5
 Following the pointers from `Start` = 2 gives Chipo (2) → Farai (4) → Nyasha (1) → Tatenda (3) → null (0).
 
 **Add Rudo.** The first free node is 5. Rudo comes after Nyasha (node 1) and before Tatenda (node 3), so `Data[5]` is set to Rudo, `Next[5]` is set to 3 and `Next[1]` is changed from 3 to 5. `Free` becomes 6.
+
+![Linked list after adding Rudo: following Next from Start = 2 gives Chipo, Farai, Nyasha, Rudo, Tatenda, null; only Next1 changed from 3 to 5 and Rudo's Next is 3, so no items moved](media:diagrams/ds-linked-list-add-rudo.png "Figure: the names in alphabetical order; Nyasha and Rudo (amber) are the nodes whose pointers changed")
+
 
 | Index | Data | Next |
 |:-:|:-:|:-:|

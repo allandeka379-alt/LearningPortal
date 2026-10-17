@@ -42,6 +42,8 @@ The program, also called an interrupt handler, that is run to deal with a partic
 3. The instruction at that address is read into the MDR (the address goes on the address bus, a read signal on the control bus and the instruction returns on the data bus).
 4. The instruction is copied from the MDR to the CIR.
 
+![Fetch stage for the instruction LDM #20 stored at address 100: 1 the address in the PC (100) is copied to the MAR, 2 the PC increases to 101, 3 the instruction at that address travels on the data bus into the MDR, 4 it is copied to the CIR](media:diagrams/cpu-fetch-stage.png "Figure: the four fetch steps, with the register contents for the program stored from address 100")
+
 **Decode**: the control unit examines the opcode in the CIR to find out which instruction it is, and the operand to find out what it works on.
 
 **Execute**: the instruction is carried out, by the ALU for arithmetic and logic, or by the control unit for data movement and jumps. A jump instruction replaces the contents of the PC.

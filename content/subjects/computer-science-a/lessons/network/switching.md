@@ -45,6 +45,8 @@ One step of a packet from one router to the next. The hop count is the number of
 2. Each packet is sent into the network. At each router the destination address is read, and the packet is sent to the next router (the **next hop**) that leads towards the destination. Packets from the same message can take different routes.
 3. At the destination the packets are checked, put in the order of their numbers and reassembled. A missing or damaged packet can be requested again.
 
+![Packet switching: a 4500-byte message becomes 5 packets of payload 1000, 1000, 1000, 1000 and 500 bytes, each with a 20-byte header and 4-byte trailer; they arrive in the order 2, 1, 3, 5, 4 and are put in order by packet number](media:diagrams/network-packet-switching.png "Figure: splitting a message into packets and reassembling them in order")
+
 **Benefits.** Links are shared by many users, so capacity is used efficiently. There is no set-up, and if a link fails the packets are sent by another route. **Drawbacks.** Packets may arrive out of order, with different delays, or be lost, so the receiver must reorder and sometimes ask again. The headers add extra data. The delay is variable, which can affect a live call. **Uses.** The internet, email and web pages, and voice calls over the internet.
 
 | Feature | Circuit switching | Packet switching |

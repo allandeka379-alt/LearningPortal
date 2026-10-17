@@ -54,6 +54,8 @@ Inputs are called A and B and the output is X. List the rows in binary order: 00
 | 1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 1 |
 
+![The seven logic gate symbols with their truth tables: NOT inverts; AND is 1 only for 11; OR is 0 only for 00; NAND is 0 only for 11; NOR is 1 only for 00; XOR is 1 when A and B differ; XNOR is 1 when they are the same](media:diagrams/logic-gate-symbols.png "Figure: the NOT, AND, OR, NAND, NOR, XOR and XNOR symbols, each with its truth table")
+
 :::keyfact{title="Memorise these outputs"}
 AND: 1 only for 11. OR: 0 only for 00. NAND: 0 only for 11. NOR: 1 only for 00. XOR: 1 when the inputs differ (01 and 10). XNOR: 1 when they are the same (00 and 11).
 :::
@@ -80,6 +82,8 @@ Look at the output column and match its pattern. Count the 1s: one 1 in the last
 ## NAND and NOR as universal gates
 
 NAND and NOR can each replace every other gate.
+
+![NAND gates can build every other gate: NOT is a NAND with joined inputs, AND is a NAND followed by a NAND used as NOT, and OR is two NAND-as-NOT gates feeding a third NAND](media:diagrams/logic-nand-universal.png "Figure: NOT, AND and OR built from NAND gates only")
 
 :::worked-solution{title="Build NOT, AND and OR from NAND gates only"}
 1. **NOT**: join both inputs of a NAND gate together. X = A NAND A, which is 1 when A = 0 and 0 when A = 1, so it is NOT A.

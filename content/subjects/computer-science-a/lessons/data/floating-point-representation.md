@@ -65,6 +65,8 @@ The mantissa is a two's complement number with the binary point after the first 
 4. Write the exponent n in two's complement.
 5. For a negative number, find the positive pattern and take the two's complement of the mantissa only.
 
+![Floating-point layout for 13.25: the 8-bit mantissa 01101010 has the binary point after the sign bit and equals 0.828125, the 4-bit exponent 0100 is 4, so the value is 0.828125 times 16 = 13.25](media:diagrams/data-floating-point-layout.png "Figure: 13.25 as mantissa 01101010 and exponent 0100")
+
 :::worked-solution{title="Store 13.25 using 8 bits for the mantissa and 4 bits for the exponent"}
 1. 13.25 = 8 + 4 + 1 + 0.25 = 1101.01 in binary.
 2. Move the point left four places to put it after the sign bit: 0.110101 × 2^4.

@@ -34,11 +34,13 @@ Circuits (or expressions) that give the same output for every combination of the
 Work out brackets first, then NOT, then AND, then OR. Always use brackets in your own expressions so the order cannot be misread.
 :::
 
-Diagrams are not used here: a circuit is described in words, as a list of gates and connections, or as an expression.
+A circuit can be drawn with gate symbols, or described in words as a list of gates and connections, or written as an expression. The figures below show the symbols; in the exam you may be asked to do either.
 
 ## From a circuit to an expression and a truth table
 
 To write the expression, follow the signal from each input to the output and write the gate names around the signals.
+
+![Logic circuit for X = (A AND B) OR (NOT C): A and B feed an AND gate giving P, C feeds a NOT gate giving Q, and P and Q feed an OR gate giving X](media:diagrams/logic-circuit-and-or-not.png "Figure: the circuit for X = (A AND B) OR (NOT C), with the gate outputs P and Q labelled")
 
 :::worked-solution{title="Circuit: A and B go into an AND gate; C goes into a NOT gate; the outputs of these two gates go into an OR gate, whose output is X"}
 1. Describe the gates:
@@ -71,6 +73,8 @@ To find the output for particular inputs, substitute the values and evaluate ste
 ## From a statement to an expression, a circuit and a truth table
 
 Break the sentence into simple conditions, give each an input letter, and join them with the words AND, OR and NOT.
+
+![Logic circuit for M = G AND (S OR R): the start button S and the remote R feed an OR gate, and its output P goes to an AND gate with the guard signal G, so the motor M runs only when G is 1 and S or R is 1](media:diagrams/logic-circuit-motor-guard.png "Figure: the conveyor circuit M = G AND (S OR R)")
 
 :::worked-solution{title="The motor M runs when the guard G is closed AND (the start button S is pressed OR the remote R is pressed)"}
 1. Inputs: G, S, R (1 = true).

@@ -50,6 +50,8 @@ All pages and frames are the same size, for example 1 KiB (1024 bytes). A **logi
 | 3 | 0 |
 | 4 | 9 |
 
+![Paging: logical address 4100 with 1024-byte pages is page 4, offset 4; the page table maps page 4 to frame 9, so the physical address is 9 x 1024 + 4 = 9220](media:diagrams/os-paging-translation.png "Figure: translating logical address 4100 to physical address 9220 through the page table")
+
 :::worked-solution{title="Translating addresses (page size 1024 bytes)"}
 | Logical address | Page (÷ 1024) | Offset (remainder) | Frame (page table) | Physical address |
 |:-:|:-:|:-:|:-:|:-:|

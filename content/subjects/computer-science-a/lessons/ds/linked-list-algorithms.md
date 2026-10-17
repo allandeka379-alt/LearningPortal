@@ -161,6 +161,9 @@ Following the pointers from `Start` = 4: Anesu (4) → Farai (2) → Rudo (3) �
 Start = 4, Free = 6
 
 The list is now Anesu, Farai, Nyasha, Tendai, Zodwa. No item was moved in any operation.
+
+![Linked list after deleting Rudo and inserting Nyasha: from Start = 4 the pointers give Anesu, Farai, Nyasha, Tendai, Zodwa, null; Nyasha reused the freed node 3 and no item moved](media:diagrams/ds-linked-list-nyasha.png "Figure: the six-node list after the last operation; Farai and Nyasha (amber) are the nodes whose pointers changed")
+
 :::
 
 :::worked-solution{title="Finding an item by following the pointers"}

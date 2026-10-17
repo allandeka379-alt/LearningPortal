@@ -41,6 +41,8 @@ At the end, the single value on the stack is the answer. The processor never has
 
 ## Evaluating postfix
 
+![Evaluating 8 4 + 3 * 10 5 / - with a stack: the stack goes 8; 8,4; 12; 12,3; 36; 36,10; 36,10,5; 36,2; and finally 34, because each operator replaces the top two values by their result](media:diagrams/translation-rpn-stack.png "Figure: the stack after each token of the postfix expression")
+
 :::worked-solution{title="Evaluating 8 4 + 3 * 10 5 / -"}
 | Token | Stack after (top on the right) |
 |:-:|:-:|

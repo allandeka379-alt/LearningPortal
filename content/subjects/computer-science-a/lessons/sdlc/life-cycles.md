@@ -65,6 +65,8 @@ ZIMSEC and Cambridge differ only in how finely the stages are divided. Prelimina
 
 In the **waterfall model** the output of each stage flows to the next, like water over a series of steps: analysis, design, coding, testing, maintenance. Each stage is documented and approved before the next starts. Going back is possible but expensive.
 
+![Waterfall model: analysis, design, coding, testing and maintenance follow each other like steps, with the output of each stage flowing to the next](media:diagrams/sdlc-waterfall.png "Figure: the five stages of the waterfall model")
+
 **Benefits:**
 
 - it is simple to understand and to manage, with clear stages and documents;

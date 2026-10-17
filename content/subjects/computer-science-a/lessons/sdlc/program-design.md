@@ -156,6 +156,8 @@ Some systems depend on what has happened before. A mobile money wallet that bloc
 
 In the table, `Start` is the state before any attempt. The state `Menu` is where the user has entered the correct PIN, and `Blocked` is the state after three wrong PINs. Both end states stay in the same state whatever is entered next.
 
+![State-transition diagram for a wallet PIN: from Start, OneWrong and TwoWrong a wrong PIN moves to the next state and three wrong PINs reach Blocked; a correct PIN from any of those three states goes to Menu; Blocked and Menu stay in the same state for any input](media:diagrams/sdlc-state-transition-pin.png "Figure: states and transitions for the three-wrong-PINs rule")
+
 :::worked-solution{title="Tracing two sequences of inputs"}
 Sequence 1: wrong, wrong, correct.
 

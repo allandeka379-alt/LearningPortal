@@ -101,6 +101,8 @@ and with the target 30, which is not in the array:
 Not found
 ```
 
+![Binary search for 45 in the 12 sorted values: the middle items compared are Data6 = 31, Data9 = 52, Data7 = 38 and Data8 = 45, so the range shrinks 12, 6, 2, 1 and 45 is found in 4 comparisons](media:diagrams/algo-binary-search-trace.png "Figure: the range of the search shrinking at each step")
+
 :::worked-solution{title="Tracing a binary search that succeeds and one that fails"}
 Searching for **45**. Each row is one pass of the loop, with one comparison.
 

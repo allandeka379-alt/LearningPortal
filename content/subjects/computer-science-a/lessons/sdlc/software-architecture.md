@@ -38,6 +38,9 @@ A layer of a system that is deployed on its own computer or group of computers.
 
 In a **layered** design the system is divided into layers, and each layer uses only the layer immediately beneath it. The three layers most often used are:
 
+![Three-tier architecture of a results portal: the presentation tier on the user's device talks only to the application tier on the application server, which talks to the data tier on the database server](media:diagrams/sdlc-three-tier.png "Figure: the presentation, application and data tiers with the results-portal example")
+
+
 | Layer (tier) | Responsibility | Runs on | Example in the results portal |
 |:-:|:-:|:-:|:-:|
 | Presentation | Shows information and collects input | The user's device | The web page where a parent types the learner number |

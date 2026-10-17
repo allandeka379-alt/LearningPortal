@@ -50,6 +50,8 @@ The process in which each layer adds its own header (and sometimes a trailer) to
 3. The internet layer adds a header with the source and destination **IP addresses**: a **packet**.
 4. The link layer adds a header with the **MAC addresses** and a trailer for error checking: a **frame**, sent as bits.
 
+![Encapsulation of the first 1460-byte piece of a file: TCP adds a 20-byte header (segment 1480 bytes), IP adds 20 bytes (packet 1500 bytes) and the link layer adds a 14-byte header and 4-byte trailer (frame 1518 bytes)](media:diagrams/network-encapsulation.png "Figure: each layer wraps the data in its own header, giving a segment, a packet and a frame")
+
 At the receiving host the process is reversed (**decapsulation**): each layer strips its header and passes the contents up. A router on the way only goes as far up as the internet layer to read the destination IP address.
 
 Typical minimum header sizes are 20 bytes for TCP, 20 bytes for IPv4 and 14 bytes of header plus a 4-byte trailer for an Ethernet frame.

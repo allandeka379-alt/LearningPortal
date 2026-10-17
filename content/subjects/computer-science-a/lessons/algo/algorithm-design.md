@@ -127,6 +127,8 @@ The total is 275, the average is 55 and the result is Pass, because 55 is at lea
 
 ## Flowcharts and converting between forms
 
+![Flowchart that counts positive numbers: start, Count set to 0, input a number, if it is 0 output Count and end, otherwise if it is greater than 0 add 1 to Count, and loop back to the input; for 4, -2, 7, 0 the output is 2](media:diagrams/algo-flowchart-count-positive.png "Figure: the flowchart for counting the positive numbers entered before 0")
+
 :::worked-solution{title="Converting a flowchart to pseudocode"}
 The flowchart below counts how many positive numbers are entered before the number 0 (the stop value) is entered.
 

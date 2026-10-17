@@ -48,6 +48,8 @@ In **one's complement** a negative number is the inverted pattern of the positiv
 
 **Two's complement** removes both problems. The leftmost bit is worth −128 in an 8-bit number (and −2^(n−1) in general), and the other bits keep their positive place values.
 
+![Two's complement place values for 8 bits: 11010011 is -128 + 64 + 16 + 2 + 1 = -45 and 10110100 is -128 + 32 + 16 + 4 = -76, because the leftmost bit is worth -128](media:diagrams/data-twos-complement-places.png "Figure: reading 11010011 (−45) and 10110100 (−76) with a left-most place value of −128")
+
 :::worked-solution{title="Write −45 as an 8-bit two's complement number"}
 1. Write +45 in 8 bits: 00101101.
 2. Invert every bit (one's complement): 11010010.

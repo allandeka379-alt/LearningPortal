@@ -47,6 +47,8 @@ An interpreter does not translate the whole program. It takes a statement, analy
 | Code generation | Parse tree | Object code (or intermediate code) | – |
 | Optimisation | Generated code | Faster or smaller code | – |
 
+![The four stages of compilation: lexical analysis turns source code into tokens and a symbol table, syntax analysis builds a parse tree, code generation produces intermediate or object code, and optimisation makes it faster or smaller; errors are found in the first two stages](media:diagrams/translation-compilation-stages.png "Figure: the four compilation stages and what each one produces")
+
 ### 1. Lexical analysis
 
 The lexical analyser reads the characters of the source code and groups them into **tokens**. It removes comments and white space (spaces and blank lines), which mean nothing to the processor, and it enters each identifier in the **symbol table**. The statement below has a comment, which is removed.
@@ -80,6 +82,8 @@ Cost ← Price * Qty + 15  // fee added
 ### 2. Syntax analysis
 
 The syntax analyser checks that the tokens follow the **grammar** of the language and builds a **parse tree**. The tree shows the order in which the operators are applied, with operators of higher precedence lower in the tree. If the tokens break the rules, such as a missing bracket or `THEN` left out, the analyser reports a **syntax error** and compilation cannot continue.
+
+![Parse tree of Price * Qty + 15: the root is + with children the * node and 15, and the * node has children Price and Qty, so multiplication (lower in the tree) is carried out before the addition](media:diagrams/translation-parse-tree.png "Figure: the parse tree for Price * Qty + 15")
 
 :::worked-solution{title="Parse tree of Price * Qty + 15"}
 ```

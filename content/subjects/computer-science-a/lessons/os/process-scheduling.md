@@ -72,6 +72,8 @@ Four processes arrive at the times shown. The burst time is the processor time e
 | C | 2 | 4 |
 | D | 5 | 2 |
 
+![Gantt chart for first come first served: A runs 0 to 6, B 6 to 9, C 9 to 13 and D 13 to 15; the waiting times are 0, 5, 7 and 8, so the mean waiting time is 5](media:diagrams/os-fcfs-gantt.png "Figure: the FCFS schedule for processes A, B, C and D")
+
 :::worked-solution{title="First come first served"}
 | A | B | C | D |
 |:-:|:-:|:-:|:-:|

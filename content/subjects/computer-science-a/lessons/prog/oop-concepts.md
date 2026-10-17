@@ -134,6 +134,8 @@ CLASS Book INHERITS Item
 ENDCLASS
 ```
 
+![Class diagram: the superclass Item has private Title and ItemID and methods NEW, GetTitle and Describe; subclasses Book (Pages) and Dvd (Minutes) inherit from Item and each overrides Describe](media:diagrams/prog-oop-class-diagram.png "Figure: Book and Dvd inherit from Item and override Describe")
+
 :::worked-solution{title="Polymorphism in action"}
 A list holds three different kinds of item. The loop calls the same method, `describe`, on every one, and each object responds in the way its own class defines.
 

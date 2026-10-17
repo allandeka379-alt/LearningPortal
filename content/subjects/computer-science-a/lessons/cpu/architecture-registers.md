@@ -47,11 +47,15 @@ A very small, very fast storage location inside the processor that holds one ite
 
 In a Von Neumann machine there is a **single memory** for instructions and data and a **single set of buses**. A program is loaded into memory and the processor fetches instruction after instruction, normally in sequence, changing the sequence only on a jump or an interrupt.
 
+![Von Neumann architecture: the processor (clock, ALU, control unit, registers PC, CIR, MAR, MDR and ACC) is joined to a single main memory holding both instructions and data by one address bus (one-way), one data bus and one control bus (two-way)](media:diagrams/cpu-von-neumann.png "Figure: the Von Neumann model with one memory and one set of buses")
+
 Its advantage is simplicity and flexibility: any part of memory can hold either, so a larger program can use more of it and a loader can place a new program anywhere. Its drawback is the **Von Neumann bottleneck**: because instructions and data share the same buses, the processor cannot fetch the next instruction and read a data value at the same moment, and the processor waits for the slower memory.
 
 ## The Harvard architecture
 
 In the Harvard architecture, instructions are stored in one memory and data in another, and each memory has its own buses. The processor can fetch the next instruction at the same time as it reads or writes a data item, which removes the bottleneck and speeds up execution. The extra memory and buses make it more complex and costly, so it is mostly found in small embedded controllers and signal processors. Many general-purpose processors use a mixture: one main memory, but separate caches for instructions and for data.
+
+![Harvard architecture: separate instruction memory and data memory each have their own buses to the processor, so an instruction can be fetched while data is read or written](media:diagrams/cpu-harvard.png "Figure: the Harvard architecture, with separate memories and buses for instructions and data")
 
 | Feature | Von Neumann | Harvard |
 |---|---|---|

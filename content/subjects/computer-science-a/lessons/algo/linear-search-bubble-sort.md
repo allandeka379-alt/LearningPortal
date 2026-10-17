@@ -131,6 +131,8 @@ REPEAT
 UNTIL Swapped = FALSE OR Pass = 6
 ```
 
+![Bubble sort of 34, 12, 27, 9, 41, 18: after pass 1 the largest value 41 is at the end, passes 2 and 3 fix 34 and then 27, and pass 4 makes two comparisons with no swaps so the sort stops; 14 comparisons and 8 swaps in all](media:diagrams/algo-bubble-sort-passes.png "Figure: the array after each pass of the bubble sort, with comparisons and swaps")
+
 :::worked-solution{title="Bubble sort of six marks"}
 The array starts as 34, 12, 27, 9, 41, 18. The table shows the whole array after each pass, with the comparisons and swaps in that pass.
 

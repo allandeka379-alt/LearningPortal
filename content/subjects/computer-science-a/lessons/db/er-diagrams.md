@@ -40,6 +40,8 @@ In an E-R diagram each **entity** is a box labelled with its name. A line joins 
 
 Because the diagram cannot be reproduced in text here, examination questions in this course describe it in words or in a table, and you can do the same: "Each `Member` makes many `Loan`s; each `Loan` is made by one `Member`".
 
+![E-R diagram of the library in crow's foot notation: one Category has many Books, one Member has many Loans and one Book has many Loans, so Loan is the link table holding the foreign keys MemberID and BookID](media:diagrams/db-er-library.png "Figure: the library E-R diagram with primary and foreign keys")
+
 ## Analysing a scenario
 
 Work through these steps.
