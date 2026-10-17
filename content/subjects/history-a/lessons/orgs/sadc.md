@@ -67,6 +67,9 @@ Several developments in the late 1980s and early 1990s led to change. Namibia be
 
 The Treaty sets objectives that include promoting sustainable and equitable economic growth and socio-economic development; reducing poverty; promoting common political values and democratic institutions; consolidating peace and security; and achieving complementarity between national and regional strategies. The main institutions are:
 
+![Chart of SADC institutions: the Summit of Heads of State or Government above the Council of Ministers, the Organ on Politics, Defence and Security, the Secretariat in Gaborone and the SADC Tribunal, with National Committees and the Parliamentary Forum linking member states.](media:diagrams/sadc-institutions.png "Figure: institutions of SADC")
+
+
 | Institution | Role |
 |---|---|
 | **Summit** of Heads of State or Government | The supreme policy-making body; meets once a year |

@@ -52,6 +52,8 @@ The state rose because of:
 
 ## How the state was organised
 
+![Organisation chart of the Mutapa state: the Mwene Mutapa rules through a court and provincial chiefs over commoners and conquered peoples, orders go down, tribute and soldiers come up, and mhondoro spirit mediums advise the king.](media:diagrams/mutapa-organisation.png "Figure: how the Mutapa state was organised (political structure)")
+
 ### Political organisation
 
 The **Mutapa** was the supreme ruler, believed to be close to the ancestors. He lived in a capital surrounded by a wooden palisade, with a large court of officials: royal relatives, advisers, the queen mother and senior wives, and officers in charge of the army, the treasury and the king's household. **Provincial chiefs**, often relatives or loyal followers, ruled the outlying areas, sent tribute and provided soldiers. The royal fire symbolised the king's authority over all chiefs.
@@ -104,6 +106,8 @@ Gatsi Rusere faced rebellions and turned to the Portuguese for military help, pr
 - **The rise of the Rozvi** under Changamire Dombo in the later seventeenth century, which took over much of the plateau.
 - **Loss of trade income**, as gold production fell and trade moved into Portuguese hands.
 - **Nineteenth-century invasions** by Nguni groups further weakened the remnant state in the Zambezi valley.
+
+![Six causes of the decline of the Mutapa state: succession disputes, Portuguese interference, breakaway provinces, the rise of the Rozvi, loss of trade income and Nguni invasions, all feeding into one outcome.](media:diagrams/mutapa-decline-causes.png "Figure: causes of the decline of the Mutapa state")
 
 :::example{title="Weighing the causes of decline"}
 **Claim:** "The Portuguese were the main cause of the decline of the Mutapa state."

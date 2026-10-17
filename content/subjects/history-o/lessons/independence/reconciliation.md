@@ -49,6 +49,8 @@ Releasing fighters from military service and helping them return to civilian lif
 | 1980-1981 | Integration of the three armies begins |
 | 18 April 1982 | Salisbury renamed Harare |
 
+![Timeline from the Lancaster House Agreement of 21 December 1979 and the common-roll elections of 27-29 February 1980 to independence on 18 April 1980 and the renaming of Salisbury as Harare in 1982.](media:diagrams/road-to-independence-timeline.png "Figure: timeline of the road to independence")
+
 ### The ceasefire and the return
 
 After the agreement, a ceasefire came into force at the end of December 1979. Thousands of ZANLA and ZIPRA fighters moved into **assembly points**, supervised by the **Commonwealth Monitoring Force**, while the Rhodesian forces returned to their bases. Exiled leaders, including Joshua Nkomo and Robert Mugabe, returned home to huge crowds, and refugees began to come back from Mozambique, Zambia and Botswana with help from the United Nations refugee agency.
@@ -62,6 +64,8 @@ Elections were held under British supervision with Commonwealth observers. The c
 | ZANU-PF (Robert Mugabe) | 57 |
 | PF-ZAPU (Joshua Nkomo) | 20 |
 | UANC (Abel Muzorewa) | 3 |
+
+![Bar chart of the 1980 common-roll election: ZANU-PF won 57 of the 80 seats, PF-ZAPU 20 and the UANC 3; the 20 white-roll seats all went to the Rhodesian Front.](media:diagrams/election-1980-seats.png "Figure: common-roll seats won in the February 1980 election (of 80)")
 
 The 20 white-roll seats were all won by Ian Smith's Rhodesian Front. Robert Mugabe became Prime Minister, and the Reverend **Canaan Banana** became the ceremonial President.
 

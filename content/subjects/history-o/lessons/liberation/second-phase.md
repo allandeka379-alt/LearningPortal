@@ -68,6 +68,8 @@ The way into the north-east came through **Tete province of Mozambique**, where 
 | 1978 | ZIPRA shoots down an Air Rhodesia civilian aircraft (September); Freedom Camp raid (October) |
 | 1979 | War at its height; martial law over most of the country; Lancaster House conference |
 
+![Timeline of the second phase of the armed struggle from the Altena Farm attack of 21 December 1972 and Mozambique's independence in 1975 to the Patriotic Front of 1976, the camp raids of 1976-78 and the Lancaster House conference of 1979.](media:diagrams/second-phase-timeline.png "Figure: timeline of the second phase, 1972-1979")
+
 **After 1975**, when Mozambique became independent under FRELIMO, ZANLA could open bases along the whole eastern border, from Tete to Gaza, and the war spread into Manicaland, the Midlands and the south-east. ZIPRA operated mainly from **Zambia**, crossing into the west and north-west, and also through Botswana; in the late 1970s it built up a large, conventionally trained force in Zambia as well as its guerrilla units.
 
 In **October 1976** ZANU and ZAPU formed the **Patriotic Front** to negotiate together, although their armies remained separate.

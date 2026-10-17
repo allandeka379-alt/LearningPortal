@@ -47,6 +47,8 @@ Cambridge key question 3.3 asks "How and why did the Bolsheviks seize power in O
 
 The war began with patriotic enthusiasm, but it soon exposed the regime's weakness. The army lost heavily at Tannenberg in 1914 and retreated from Poland in 1915, with serious shortages of shells and rifles. Historians estimate that Russia suffered millions of casualties by 1917. In September 1915 the Tsar took personal command of the army, which tied his name to its defeats and left the government in the hands of the Empress Alexandra and her adviser Rasputin, who were unpopular. 
 
+![Timeline of Russia from 1914 to 1917 with Western dates and old-style Russian dates: the March 1917 strikes and abdication, Lenin's return in April, the July Days, the Kornilov affair and the Bolshevik seizure of power on 7-8 November 1917.](media:diagrams/russia-revolutions-timeline.png "Figure: timeline of the Russian revolutions, 1914-1917")
+
 The home front suffered too. Millions of peasants had been called up, so farm output fell; the railways, overloaded by military traffic, could not bring enough grain and fuel to the towns; and prices rose faster than wages. In Petrograd (the capital's name from 1914) bread queues grew in the winter of 1916-17. The Duma's Progressive Bloc (1915) asked for a government that the country trusted, but the Tsar refused, which alienated the liberals and even some generals.
 
 ## The February (March) Revolution

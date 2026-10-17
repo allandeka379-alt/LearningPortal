@@ -63,6 +63,8 @@ Article 1 of the Charter sets four purposes: to maintain **international peace a
 | **Secretariat** | Led by the Secretary-General; the administration of the UN |
 | **Trusteeship Council** | Supervised trust territories; its work was suspended in 1994 after the last trust territory became independent |
 
+![Chart of the six main organs of the United Nations: the General Assembly, the Security Council with its five permanent veto-holding members, the International Court of Justice, the Economic and Social Council, the Secretariat and the Trusteeship Council.](media:diagrams/un-organs.png "Figure: the main organs of the United Nations")
+
 Specialised agencies and programmes include WHO, UNESCO, FAO, the International Labour Organization, UNICEF, the UN High Commissioner for Refugees (UNHCR), the World Food Programme and the UN Development Programme.
 
 ## The work of the UN

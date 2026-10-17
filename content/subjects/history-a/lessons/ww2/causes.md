@@ -42,6 +42,8 @@ The causes of the Second World War are a ZIMSEC topic for Paper 2. Cambridge tou
 
 **The Treaty of Versailles.** Germany lost territory, its colonies (including Namibia, then German South West Africa, and Tanganyika), had to limit its army, accepted blame for the war and paid reparations. Many Germans thought the treaty a humiliating diktat and politicians of all parties wished to revise it, which Hitler used. At the same time Italy was disappointed with its gains and Japan felt that it had not been treated as an equal. Some historians argue that the treaty was too harsh to be accepted and too weak to prevent Germany's revival.
 
+![Causes of the Second World War: Versailles grievances, the Depression, fascist and militarist expansion with League failures, and appeasement (long-term, grey), then the Anschluss, Munich, Prague and the Nazi-Soviet Pact (short-term, amber), leading to the invasion of Poland on 1 September 1939.](media:diagrams/ww2-causes-chart.png "Figure: long-term (grey) and short-term (amber) causes of the Second World War")
+
 **The Depression.** The collapse of world trade after 1929 brought mass unemployment and helped the Nazis and the Japanese military to power. It also made democratic governments cautious about spending on arms, and states raised tariffs and looked after themselves, weakening cooperation.
 
 **The dictators and aggression.** Fascism and militarism glorified war and expansion. Mussolini wished to build an empire, Hitler wanted Lebensraum and to undo Versailles, and the Japanese military sought raw materials and territory in Asia.

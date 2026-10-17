@@ -71,6 +71,8 @@ Emperor Haile Selassie of Ethiopia hosted a conference at Addis Ababa in May 196
 | Commission of Mediation, Conciliation and Arbitration | Intended to settle disputes between members peacefully |
 | Specialised commissions | For example economic and social, educational and cultural, health, defence |
 
+![Two lists side by side: the five organs of the OAU (Assembly, Council of Ministers, General Secretariat, Commission of Mediation, specialised commissions) and the seven organs of the African Union, which adds a Pan-African Parliament, Peace and Security Council, Court and civil-society council.](media:diagrams/oau-au-organs.png "Figure: organs of the OAU compared with the African Union")
+
 ## The work of the OAU
 
 - **Political:** the **Liberation Committee** (Co-ordinating Committee for the Liberation of Africa, based in Dar es Salaam) gave money, weapons, training and diplomatic recognition to liberation movements in Rhodesia, Mozambique, Angola, Guinea-Bissau, Namibia and South Africa. The OAU led African pressure for UN sanctions on Rhodesia and South Africa.

@@ -47,6 +47,8 @@ Lancaster House is ZIMSEC only (Paper 1). Cambridge's covered options do not exa
 4. **Pressure from Africa and the Commonwealth.** At the Commonwealth meeting at Lusaka in August 1979, led by Zambia's president Kenneth Kaunda, the leaders persuaded the new British prime minister, Margaret Thatcher, to call a conference of all parties to produce an independence constitution that was acceptable to the world. Many historians note that Thatcher had been expected to recognise the Muzorewa government, and the Lusaka meeting changed her position, a point on which historians debate how much weight to give to Commonwealth, American and African pressure.
 5. **The Frontline States.** Mozambique, Zambia, Tanzania, Botswana and Angola were suffering from Rhodesian attacks and the war's effects, and they pressed the Patriotic Front to negotiate. Mozambique's president Samora Machel was especially important in persuading Robert Mugabe's party to attend and to compromise.
 
+![Timeline from the internal settlement of March 1978 and the Lusaka Commonwealth meeting of August 1979 to the opening of Lancaster House on 10 September, the agreement of 21 December 1979, the February 1980 election and independence on 18 April 1980.](media:diagrams/lancaster-house-timeline.png "Figure: timeline of Lancaster House and independence")
+
 :::example{title="Explaining why the Patriotic Front agreed to negotiate"}
 1. The war was costly for neighbouring states, which hosted the camps and suffered raids.
 2. Machel and the other Frontline leaders told the nationalists that they could not expect unlimited support.

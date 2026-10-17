@@ -43,6 +43,8 @@ The role of chance, accident and unforeseen circumstances in events, as opposed 
 
 Archduke Franz Ferdinand, heir to the Austro-Hungarian throne, visited Sarajevo on 28 June 1914 to inspect army manoeuvres. A group of young Bosnian Serb nationalists was waiting along the route. One of them threw a bomb that missed. Later the Archduke's driver took a wrong turn, and the car stopped almost in front of Gavrilo Princip, who shot the Archduke and his wife Sophie. Historians usually point to the part of chance: with better security, or a driver who knew the route, the attack would have failed.
 
+![Timeline of the July Crisis of 1914 from the Sarajevo assassination on 28 June, the German blank cheque and the Austrian ultimatum to Austria's declaration of war on 28 July, Russian mobilisation, and German and British declarations of war in early August.](media:diagrams/july-crisis-timeline.png "Figure: the July Crisis, 28 June-6 August 1914")
+
 The assassins had been helped by Serbian weapons and contacts. Austrian investigators concluded that the plot had been prepared in Belgrade. Historians agree that officers connected with the secret Black Hand organisation helped, but they disagree about whether the Serbian government knew of the plot and what it did to prevent it.
 
 ## Austria and the blank cheque

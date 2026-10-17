@@ -63,6 +63,8 @@ The Ndebele settled on the high, healthy grasslands of the south-west, good for 
 - **The capital**: Mzilikazi's capitals included Mhlahlandlela; Lobengula built **koBulawayo** in 1870 and later moved it a short distance.
 - **Tributary areas**: many Shona communities outside the core of the state kept their own chiefs but paid tribute in cattle, grain or other goods; others were raided.
 
+![Chart of the Ndebele state: the king rules through izinduna and regiments living in regimental towns, Shona tributary communities pay tribute, and society has three groups, Zansi, Enhla and Hole.](media:diagrams/ndebele-state-structure.png "Figure: organisation of the Ndebele state")
+
 ## Economic organisation
 
 - **Cattle** were the main form of wealth. The king lent cattle to loyal subjects to herd and use (the *ukusisa* system), which built loyalty.

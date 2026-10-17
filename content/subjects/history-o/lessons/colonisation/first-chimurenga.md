@@ -43,6 +43,9 @@ A tax charged on every hut, introduced by the Company in 1894, which forced Afri
 
 ## Causes of the risings
 
+
+![Causes of the 1896-97 risings: long-term grievances (land, cattle, forced labour, hut tax, Native Police), the 1896 triggers (rinderpest, drought, locusts) and the opportunity created by the Jameson Raid, which led to the risings.](media:diagrams/first-chimurenga-causes.png "Figure: grievances (grey), triggers (amber) and opportunity (green) behind the 1896-97 risings")
+
 ### Long-term grievances
 
 - **Land:** settlers took the best land. After 1893 many Ndebele were expected to move to the poor Gwaai and Shangani reserves, and in Mashonaland settler farms spread along the main roads.
@@ -77,6 +80,9 @@ In December 1895 most of the Company's police were taken away by Jameson for the
 | August-October 1896 | Rhodes holds indabas with Ndebele leaders in the Matopo hills |
 | 1897 | Shona communities fight on from fortified hills and caves until they are overcome one by one |
 | April 1898 | Execution of Nehanda and Kaguvi |
+
+![Timeline of the 1896-97 risings: the Jameson Raid, the Matabeleland rising in March 1896, the spread to Mashonaland in June, the Matopo indabas of August to October 1896 and the executions of April 1898.](media:diagrams/first-chimurenga-timeline.png "Figure: timeline of the First Chimurenga/Umvukela")
+
 
 **Matabeleland.** Fighting began in late March 1896. Settlers in outlying farms and mines were killed and the survivors gathered in laagers in Bulawayo, Gwelo and other centres. Ndebele forces besieged Bulawayo but did not take it. Reinforcements from South Africa and Britain relieved the town and drove the Ndebele into the **Matopo hills**, where they could not easily be defeated. Many regiments fought under leaders loyal to the old royal house, and Lobengula's son Nyamanda was proclaimed king by some.
 

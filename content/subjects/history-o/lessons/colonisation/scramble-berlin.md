@@ -114,6 +114,8 @@ The conference did not draw the map of Africa itself; it set the rules by which 
 | 1890 | British Ultimatum forces Portugal to give up claims to the land between Angola and Mozambique |
 | 1891 | Anglo-Portuguese Treaty fixes the border between Mozambique and British territory |
 
+![Timeline of the scramble for southern Africa from the Kimberley diamonds of 1867 and the Berlin Conference of 1884-85 to the British Ultimatum of 1890 and the Anglo-Portuguese Treaty of 1891.](media:diagrams/scramble-timeline.png "Figure: key events in the scramble for southern Africa, 1867-1891")
+
 Portugal's plan to link Angola and Mozambique, shown on the so-called "rose-coloured map", collided with Rhodes's ambition of British territory from the Cape to Cairo. In January 1890 Britain issued an **ultimatum** demanding that Portugal withdraw, and Portugal gave way; the 1891 treaty fixed the eastern border of what became Southern Rhodesia.
 
 ## Effects of partition

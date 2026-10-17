@@ -40,6 +40,8 @@ African police recruited by the Company, under white officers, to keep order and
 
 **1. Loss of land.** After 1893-94 settlers pegged farms on the best Ndebele land, and Africans were moved into reserves such as Gwaai and Shangani, which were poor and dry. In Mashonaland farms and mining claims were pegged around Salisbury, Hartley and Mazowe, and chiefs lost the use of their land and the right to say who might settle.
 
+![Five groups of causes of the 1896-97 risings: long-term grievances (loss of land, cattle and independence; forced labour, taxes and the Native Police), the 1895-96 disasters, the opportunity of the Jameson Raid and religious leadership, all leading to the risings.](media:diagrams/risings-causes-chart.png "Figure: grievances (grey), disasters (amber), opportunity (green) and leadership (blue) behind the 1896-97 risings")
+
 **2. Loss of cattle.** Cattle were wealth, the means of paying bridewealth and the link between families and ancestors. The Company and settlers took most of the Ndebele herds after the war. The Shona lost cattle through fines, seizures and disease.
 
 **3. Forced labour.** The Company and settlers needed labourers for mines, farms and roads. Chiefs were pressed to provide workers, and men who refused were punished. Women and children also had to work. Conditions were harsh and pay was low.

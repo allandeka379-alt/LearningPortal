@@ -44,6 +44,8 @@ This lesson gives the context for Paper 3 Topic 3 (A Level only): "Who or what w
 
 The United States, Britain and the Soviet Union fought together because of a common enemy, not common beliefs. Britain and the USA were capitalist democracies; the USSR was a communist dictatorship under Stalin, and its leaders had been suspicious of the West since the Russian Revolution. Even during the war there were tensions.
 
+![Timeline of the origins of the Cold War: Yalta in February 1945, Potsdam, Churchill's Iron Curtain speech in March 1946, the Truman Doctrine and Marshall Plan of 1947, the Berlin Blockade from June 1948 and NATO in April 1949.](media:diagrams/cold-war-origins-timeline.png "Figure: timeline of the origins of the Cold War, 1945-1949")
+
 - **The second front.** Stalin asked the Western Allies from 1941 to invade France, to relieve the pressure on the Red Army, which suffered the heaviest losses. They landed in Italy in 1943 and in Normandy only in June 1944, and Soviet leaders suspected that the delay was meant to weaken the USSR.
 - **Poland.** The Soviet Union kept the eastern part of Poland that it had taken in 1939. In 1943 the Germans found the graves at Katyn of Polish officers killed by the Soviet secret police in 1940, and the USSR broke off relations with the Polish government in exile in London. During the Warsaw Uprising of 1944 the Red Army halted on the river and the Home Army was defeated.
 - **The atomic bomb.** The Americans and British developed it in secret and did not share the secret fully with Stalin, who learned of it through spies and whom Truman told only briefly at Potsdam.

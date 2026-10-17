@@ -58,6 +58,8 @@ A final demand with a deadline, after which the sender will take action, such as
 | 1 September 1939 | Germany invades Poland |
 | 3 September 1939 | Britain and France declare war |
 
+![Timeline of the steps to the Second World War: Germany leaves the League in 1933, the Rhineland in 1936, the Anschluss in March 1938, Munich in September 1938, Prague in March 1939, the Nazi-Soviet Pact of 23 August and the invasion of Poland on 1 September 1939.](media:diagrams/road-to-war-timeline.png "Figure: timeline of the steps to war, 1933-1939")
+
 On **15 March 1939** German troops entered Prague. For the first time Hitler had seized land where few Germans lived, so he could no longer claim to be uniting German speakers. Chamberlain now accepted that Hitler could not be trusted. On **31 March** Britain and France guaranteed Poland, which Hitler was now pressing over **Danzig** and a German road and railway across the **Polish Corridor**. Britain introduced conscription for young men in spring 1939 and speeded up rearmament.
 
 ## The Nazi-Soviet Pact, 23 August 1939

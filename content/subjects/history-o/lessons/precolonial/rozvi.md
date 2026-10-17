@@ -100,6 +100,8 @@ The Rozvi rulers were closely linked with the **Mwari cult** at the shrines in t
 | 1830s | Nguni groups cross and raid the Rozvi state; the state collapses |
 | c. 1838–1840 | The Ndebele settle in the south-west |
 
+![Timeline from the Torwa state of about 1450, through Changamire Dombo's victories at Maungwe in 1684 and Dambarare in 1693, to the Nguni invasions of the 1830s and the Ndebele settlement of about 1838 to 1840.](media:diagrams/rozvi-timeline.png "Figure: timeline of the Torwa and Rozvi states")
+
 ## Why the Rozvi state declined
 
 - **Succession disputes** among the Changamire family after Dombo's death weakened central power.

@@ -72,6 +72,8 @@ The founders tried to avoid the League's weaknesses: the great powers, including
 | Economic and Social Council (ECOSOC) | 54 members | Co-ordinates economic and social work and the specialised agencies |
 | Trusteeship Council | The permanent members | Supervised trust territories until independence; suspended its work in 1994 |
 
+![Chart of the main organs of the United Nations: the General Assembly and the Security Council (five permanent members with a veto), with the Secretariat, International Court of Justice, Economic and Social Council and Trusteeship Council, and the specialised agencies WHO, UNICEF, UNESCO, FAO and ILO.](media:diagrams/un-organs.png "Figure: main organs of the United Nations")
+
 ### Specialised agencies and programmes
 
 - **WHO** (World Health Organization): health; led the campaign that eradicated smallpox (declared in 1980).

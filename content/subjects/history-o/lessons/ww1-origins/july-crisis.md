@@ -56,6 +56,8 @@ Responsibility for causing a war. Article 231 of the Treaty of Versailles (1919)
 | 3 August | Germany declares war on France |
 | 4 August | German troops enter Belgium; Britain declares war on Germany |
 
+![Timeline of the July Crisis of 1914: the Sarajevo assassination on 28 June, the blank cheque on 5-6 July, the ultimatum on 23 July, Austria-Hungary's declaration of war on 28 July, Russian mobilisation on 30 July and Britain's entry on 4 August.](media:diagrams/july-crisis-timeline.png "Figure: from Sarajevo to world war, 28 June-4 August 1914")
+
 ### The assassination
 
 Archduke **Franz Ferdinand** visited Sarajevo on 28 June 1914. A group of young Bosnian Serbs, armed with the help of a secret Serbian nationalist society known as the **Black Hand**, planned to kill him. After a bomb attack failed that morning, the Archduke's car later took a wrong turn, and **Gavrilo Princip** shot the Archduke and his wife.
@@ -90,6 +92,8 @@ Each step was a decision by political leaders, made under the pressure of allian
 ## Who was responsible? A historians' debate
 
 The question has been argued about for more than a century, and historians still disagree.
+
+![Five factors behind the First World War: the alliance system, the arms race, colonial rivalry, Balkan nationalism (long-term, grey) and the Sarajevo assassination of 28 June 1914 (trigger, amber), all leading to war in August 1914.](media:diagrams/ww1-causes.png "Figure: long-term causes (grey) and the trigger (amber) of the First World War")
 
 - **The Versailles view (1919):** Article 231 of the Treaty of Versailles placed responsibility on Germany and its allies. Germans resented this deeply, and in the 1920s and 1930s many writers argued that all the powers shared the blame.
 - **The Fischer view (1960s):** the German historian **Fritz Fischer** argued from German government records that Germany's leaders had aims of expansion and deliberately risked, or even sought, a major war in 1914. His work caused a fierce debate in Germany.

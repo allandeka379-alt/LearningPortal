@@ -57,6 +57,8 @@ An easing of tension between the superpowers, especially in the 1970s.
 | SEATO | 1954 | USA, Britain, France, Australia and others in South-East Asia |
 | Warsaw Pact | 1955 | USSR and the communist states of eastern Europe |
 
+![Chart of the two Cold War blocs divided by the Iron Curtain: NATO (1949), SEATO (1954), Marshall Aid and West Germany against the Warsaw Pact (1955), Comecon (1949), the Cominform and East Germany.](media:diagrams/cold-war-blocs.png "Figure: the western and eastern blocs and the Iron Curtain")
+
 ### The arms race
 
 The USA used atomic bombs in 1945; the USSR tested its own in **1949**. Both then developed hydrogen bombs in the early 1950s and intercontinental ballistic missiles later in the decade. By the 1960s each side could destroy the other many times over. Fear of nuclear war led to arms-control agreements: the **Partial Test Ban Treaty** (1963), the **Nuclear Non-Proliferation Treaty** (1968) and **SALT I** (1972).

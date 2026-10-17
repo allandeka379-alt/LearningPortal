@@ -71,6 +71,8 @@ Why was it so weak? The terror made open protest deadly; many Germans approved o
 
 **Aims.** Hitler's aims were to destroy the Treaty of Versailles, to unite all Germans in one state (including Austria and the German-speaking parts of Czechoslovakia and Poland), to win *Lebensraum* in the east, and to destroy what he called Jewish Bolshevism. Historians disagree whether he followed a plan or was an opportunist. The "intentionalist" view is that he followed a programme set out in *Mein Kampf*; in 1961 A.J.P. Taylor argued that he was an opportunist who took advantage of other states' mistakes. Most historians today accept that the aims were consistent but the methods and timing responded to chances.
 
+![Timeline of Nazi foreign policy: leaving the League in October 1933, conscription in 1935, the Rhineland in 1936, the Anschluss and Munich in 1938, the Nazi-Soviet Pact and the invasion of Poland in 1939 and Barbarossa on 22 June 1941.](media:diagrams/nazi-foreign-policy-timeline.png "Figure: timeline of Nazi foreign policy, 1933-1941")
+
 **Methods.** Hitler combined demands for equality with threats, quick surprises and the divisions among Britain, France and Italy.
 
 | Date | Event |

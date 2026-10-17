@@ -66,6 +66,8 @@ These stories come from oral tradition and need care. The movement north is supp
 
 Before the Portuguese came, Muslim and Swahili merchants had traded with the Mutapa for gold. After the Portuguese took Sofala (1505) and entered the Zambezi (Sena and Tete) they tried to control the gold trade and win influence at the Mutapa's court. The relationship moved through stages.
 
+![Timeline of the Mutapa state: Mutota's move north in about 1430-1450, Portuguese at Sofala in 1505, the treaty of 1607, Mavura's vassal status in 1629 and the Rozvi expulsion of the Portuguese in the late 1600s.](media:diagrams/mutapa-timeline.png "Figure: timeline of the Mutapa state and the Portuguese")
+
 1. **Trade and diplomacy (sixteenth century).** The Portuguese were allowed to trade at fairs, and missionaries were received. In 1561 Gonçalo da Silveira baptised the Mutapa, but Muslim merchants and court advisers, afraid of Portuguese power, persuaded the king that Silveira was dangerous, and he was killed. The Portuguese used his death as a reason to intervene.
 2. **Military intervention (1569-72).** The expedition of Francisco Barreto aimed to seize the gold mines but was ruined by disease and by the difficulty of the terrain, and failed.
 3. **Growing influence (seventeenth century).** Portuguese settlers took advantage of disputes among the Mutapa's rivals. In 1607 Gatsi Rusere made a treaty with them that gave them certain rights, including over mines, in return for help against his enemies. In 1629 the Portuguese helped to put Mavura Mhande on the throne, and he accepted vassal status. Portuguese prazeros and traders became powerful in the valley.

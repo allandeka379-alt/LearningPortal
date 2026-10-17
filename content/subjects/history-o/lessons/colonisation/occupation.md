@@ -113,6 +113,8 @@ For Britain, the Charter was empire **on the cheap**: a company, not the British
 
 To avoid a direct clash with the Ndebele regiments, the Company decided to occupy **Mashonaland**, which Lobengula claimed as tributary land, rather than Matabeleland.
 
+![Schematic map of the Pioneer Column of 1890: from Macloutsie in Bechuanaland past Fort Tuli, Fort Victoria and Fort Charter to Fort Salisbury, keeping to the east of Matabeleland and avoiding the Ndebele heartland.](media:diagrams/pioneer-column-route.png "Figure: route of the Pioneer Column to Fort Salisbury (schematic, not to scale)")
+
 - The **Pioneer Column** was organised by the contractor **Frank Johnson**, guided by the hunter **Frederick Selous** and commanded by Lieutenant-Colonel **Edward Pennefather**. It had about 200 pioneers and about 500 Company police, with African workers (numbers given in sources vary slightly).
 - Each pioneer was promised a **farm of about 3,000 acres** and **15 gold claims**.
 - The column left the Macloutsie area in Bechuanaland in June 1890, crossed into the territory near the Tuli River, and followed a route to the east of Matabeleland, building forts at **Tuli, Victoria and Charter** on the way.
@@ -129,6 +131,8 @@ To avoid a direct clash with the Ndebele regiments, the Company decided to occup
 | 29 October 1889 | Royal Charter granted to the British South Africa Company |
 | June–September 1890 | The Pioneer Column marches to Mashonaland |
 | 12 September 1890 | Flag raised at Fort Salisbury |
+
+![Timeline of colonisation: Grobler Treaty (July 1887), Moffat Treaty (February 1888), Rudd Concession (30 October 1888), Royal Charter (29 October 1889) and the flag raised at Fort Salisbury on 12 September 1890.](media:diagrams/treaties-to-occupation-timeline.png "Figure: treaties, concession and occupation, 1887-1890")
 
 :::example{title="Explaining why Lobengula did not attack the Pioneer Column"}
 1. **Military reality:** he knew the Company had machine guns and modern rifles, and that war would bring British troops.

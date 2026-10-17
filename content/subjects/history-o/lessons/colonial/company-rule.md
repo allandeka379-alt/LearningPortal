@@ -47,6 +47,9 @@ Forced or contract labour, especially recruited labour on mines and farms at low
 
 At first the Administrator ruled with a small council of officials. After the risings of 1896-97 the British government insisted on closer control. The **Southern Rhodesia Order in Council of 1898** created:
 
+![Chart of Company government after the 1898 Order in Council: the British government's Royal Charter gave the BSAC power, the Resident Commissioner supervised it, and the Company governed through an Administrator, a Legislative Council and a Native Affairs Department with Native Commissioners.](media:diagrams/bsac-administration.png "Figure: how the BSAC governed Southern Rhodesia after 1898")
+
+
 - a **Legislative Council** with members nominated by the Company and members elected by settlers (Africans had almost no votes because of income and property qualifications);
 - a **Resident Commissioner**, a British official who watched over the Company, especially its treatment of Africans;
 - a **Native Affairs Department**, with Native Commissioners in each district who collected tax, recruited labour, heard cases and controlled chiefs.

@@ -12,6 +12,7 @@
 
 The execution of Louis XVI on 21 January 1793 made reconciliation impossible. The Republic now faced war against much of Europe, revolt in the west, hunger in the towns and a quarrel at the heart of its own government. In response, the Convention built a system of emergency government that is called the Terror. A year after it reached its height, Robespierre was arrested and executed, and France spent the next five years under a cautious Directory that could neither end the war nor win lasting loyalty. This lesson explains how the Republic was governed in 1793-99, why the Terror was used, and why both the Convention and the Directory proved unstable.
 
+![Timeline of the French Revolution from the opening of the Estates-General on 5 May 1789 and the Bastille, through the republic of September 1792 and the king's execution on 21 January 1793, to Robespierre's fall in July 1794 and the coup of 18 Brumaire on 9 November 1799.](media:diagrams/french-revolution-timeline.png "Figure: key events of the French Revolution, 1789-1799")
 
 ## Key definitions
 

@@ -52,6 +52,8 @@ The **southern states** were a problem for Bismarck. They had military alliances
 
 In 1868 Queen Isabella II of Spain was overthrown, and the Spanish government looked for a new king. It offered the throne to **Prince Leopold of Hohenzollern-Sigmaringen**. Bismarck secretly encouraged the candidature, and in July 1870 news of Leopold's acceptance became public.
 
+![Timeline from the Luxembourg crisis of 1867 and the Ems telegram of 13 July 1870 through France's declaration of war, the defeat at Sedan and the Republic of 4 September 1870 to the proclamation of the German Empire at Versailles on 18 January 1871.](media:diagrams/unification-france-timeline.png "Figure: timeline of the war with France and the Empire, 1867-1871")
+
 France reacted furiously: a Hohenzollern on the throne of Spain would place Prussian influence on two of France's borders. Under heavy pressure, Leopold's father withdrew the candidature on **12 July 1870**. France had won a diplomatic victory, but its government wanted more. The French ambassador, **Benedetti**, met King Wilhelm at the spa town of **Ems** on 13 July and demanded a promise that the candidature would never be renewed. Wilhelm politely refused and sent Bismarck a telegram describing the meeting.
 
 Bismarck, with the generals Moltke and Roon, **edited the telegram** to make it shorter and sharper, so that it seemed the king had snubbed the ambassador, and released it to the press. French opinion was outraged, and on **19 July 1870** France declared war on Prussia.

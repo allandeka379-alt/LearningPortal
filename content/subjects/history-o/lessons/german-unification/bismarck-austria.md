@@ -47,6 +47,8 @@ The union of the German states north of the River Main, led by Prussia, created 
 
 Wilhelm I, who became regent in 1858 and king in 1861, was a soldier who believed Prussia's army was too small and badly organised. With his War Minister, **Roon**, he planned to enlarge the regular army, extend military service to three years and reduce the role of the part-time reserve.
 
+![Timeline of Prussia's rise: Bismarck becomes Minister-President in 1862, Austria and Prussia defeat Denmark in 1864, Prussia wins at Königgrätz on 3 July 1866, the Treaty of Prague follows and the North German Confederation is formed in 1867.](media:diagrams/unification-austria-timeline.png "Figure: timeline of Prussia and Austria, 1861-1867")
+
 The liberals who controlled the Prussian parliament supported a strong Prussia but did not trust an army controlled by the king. In 1862 they refused to approve the budget. Wilhelm even thought of abdicating. Instead, on Roon's advice, he appointed Bismarck as Minister-President in **September 1862**.
 
 Bismarck told a committee of the parliament that the great questions of the day would not be decided by speeches and majority votes, which he said had been the mistake of 1848-49, but by "iron and blood". He then **collected taxes and carried out the army reforms without parliament's approval** for four years, arguing that the constitution did not say what should happen when king and parliament disagreed.

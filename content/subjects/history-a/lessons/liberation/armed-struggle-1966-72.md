@@ -45,6 +45,8 @@ The armed struggle is ZIMSEC only (Paper 1). Cambridge's covered options do not 
 
 After the bans of 1964 the nationalist leaders in detention or exile organised military training. ZAPU sent recruits to the Soviet Union, Egypt, Algeria and other countries. ZANU sent them to China, and later to Tanzania. Both parties used bases in Zambia and Tanzania, whose governments supported them, and received money and weapons from African states and from the communist powers. Between 1963 and 1966 there were scattered acts of sabotage inside the country, such as petrol bombs, and a few attacks on farms, but these were small and did not threaten the state. The Rhodesian police and army arrested the groups quickly.
 
+![Timeline of the first phase of the armed struggle: bans and detentions in 1964, the Battle of Chinhoyi on 28 April 1966, the Wankie and Sipolilo campaigns of 1967-68 and ZANLA's reorganisation in 1970-72.](media:diagrams/armed-struggle-1966-72-timeline.png "Figure: timeline of the first phase, 1964-1972")
+
 ## The Battle of Chinhoyi, 28 April 1966
 
 A group of seven ZANLA fighters, trained abroad and equipped with modern weapons, entered the country from Zambia. Rhodesian police and soldiers tracked them to the Chinhoyi area and, after a fight on 28 April, killed all seven. The fighters had hoped to carry out attacks and to begin a wider rising. The military result favoured Rhodesia, but the battle became a symbol. It showed that the nationalists were willing to fight and its date is commemorated as the beginning of the Second Chimurenga. The Rhodesian government treated it as a criminal and terrorist incident, which reflected its view of the struggle.

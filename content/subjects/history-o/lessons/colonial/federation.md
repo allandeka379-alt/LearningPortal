@@ -71,6 +71,8 @@ Britain hoped federation would make the region economically stronger, reduce the
 | 1962-1963 | Britain accepts the right of Nyasaland and Northern Rhodesia to secede |
 | 31 December 1963 | Federation dissolved |
 
+![Timeline of the Federation of Rhodesia and Nyasaland: conferences from 1949, the Southern Rhodesian referendum of April 1953, Kariba Dam in 1955-59, emergencies in 1959 and dissolution on 31 December 1963.](media:diagrams/federation-timeline.png "Figure: timeline of the Federation, 1949-1963")
+
 Africans in Nyasaland and Northern Rhodesia, and African leaders in Southern Rhodesia, protested strongly. They feared that Southern Rhodesia's racial laws would spread north and that federation would end any hope of majority rule. Their petitions were ignored, and only a tiny number of Africans could vote in the referendum.
 
 ## Policies and developments

@@ -67,6 +67,8 @@ The use of propaganda to present a leader as a heroic, almost god-like figure wh
 | 1972 | US President Nixon visits China |
 | 1976 | Death of Mao (9 September); the "Gang of Four" arrested (October) |
 
+![Timeline of Mao's China from the 1950 Agrarian Reform Law and the First Five-Year Plan of 1953 through the Hundred Flowers campaign, the Great Leap Forward of 1958 and the famine of 1959-1961 to the Cultural Revolution of 1966 and Mao's death in 1976.](media:diagrams/mao-timeline.png "Figure: timeline of Mao's China, 1950-1976")
+
 ### Land reform (1950-1952)
 
 Under the **Agrarian Reform Law (1950)** landlords' land, animals and tools were taken and given to poor peasants. Work teams held village "speak bitterness" meetings where peasants accused landlords. Many landlords were beaten or killed; historians' estimates of the number killed vary widely, commonly from about one million to two million or more. Some 300 million peasants gained land.

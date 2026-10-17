@@ -99,6 +99,8 @@ When President **Hindenburg** died on **2 August 1934**, Hitler combined the pos
 
 ## Methods of control
 
+![Chart of how the Nazi state controlled Germany after Hitler became Führer in 1934: terror and repression (SS, Gestapo, camps, courts), propaganda and culture (Goebbels, radio, press, rallies) and pressure on the churches.](media:diagrams/nazi-control-methods.png "Figure: methods of Nazi control")
+
 ### Terror and repression
 
 - **The SS**, led by Himmler, became a huge organisation controlling the police and the camps.

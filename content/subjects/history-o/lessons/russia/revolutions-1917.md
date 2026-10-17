@@ -44,6 +44,8 @@ They are the same events. This lesson gives new-style dates first, old-style in 
 
 Russia entered the war in August 1914 with a wave of patriotism, but the war exposed every weakness of the Tsarist state.
 
+![Timeline of Russia from 1915 to 1917: the Tsar takes command, Rasputin is murdered, the February (March) Revolution brings abdication, Lenin returns in April, and the Bolsheviks take power in the October (November) Revolution on 7 November 1917.](media:diagrams/russia-1917-timeline.png "Figure: timeline of Russia, 1915-1917")
+
 - **Military defeat:** the army was defeated at **Tannenberg** in 1914 and lost huge areas in 1915. It was short of rifles, shells and boots, and by early 1917 millions of soldiers had been killed, wounded or captured.
 - **The Tsar took command:** in September 1915 Nicholas II made himself Commander-in-Chief. From then on he was personally blamed for defeats.
 - **Government at home:** the Tsarina, Alexandra, who was German-born, ran the government in Petrograd and was influenced by **Rasputin**. Ministers were changed again and again. Rasputin was murdered by nobles in December 1916, but the damage to the monarchy's reputation was done.

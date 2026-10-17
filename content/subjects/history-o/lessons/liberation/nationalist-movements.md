@@ -52,6 +52,8 @@ Detention is imprisonment without trial; restriction is confining a person to a 
 | 1963 | ZANU formed (8 August); ZAPU supporters form the People's Caretaker Council |
 | 1964 | ZANU and PCC banned (August); leaders detained or restricted |
 
+![Chart of the nationalist parties: SRANC (1957, banned 1959), NDP (1960, banned 1961), ZAPU (1961, banned 1962), then ZANU (1963) and the People's Caretaker Council, both banned in August 1964.](media:diagrams/nationalist-parties-chain.png "Figure: each nationalist party was banned and replaced, 1957-1964")
+
 ### The City Youth League (1955)
 
 Young activists in Salisbury, including **James Chikerema** and **George Nyandoro**, formed the City Youth League. It was more radical than earlier associations and used direct action, most famously a **bus boycott** in Salisbury in 1956 against higher fares. It showed that ordinary township residents could be mobilised.

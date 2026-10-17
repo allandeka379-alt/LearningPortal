@@ -13,6 +13,8 @@
 
 On 18 January 1871, in the Hall of Mirrors at Versailles, the palace of the French kings, the princes of Germany proclaimed the King of Prussia as German Emperor. The choice of place was deliberate: Germany had just defeated France and wished the world to see it. The empire created that day was a new great power in the centre of Europe, and the man who had arranged it, Otto von Bismarck, became its Chancellor. Fourteen years later, in 1884-85, he would host the Berlin Conference at which the European powers drew the rules for the partition of Africa, so the unification of Germany belongs also to the history of Africa and Zimbabwe.
 
+![Timeline of German unification: Bismarck becomes Minister-President in 1862, Prussia wins at Königgrätz on 3 July 1866, the Ems Telegram of 13 July 1870 leads to war and Sedan, and the Empire is proclaimed at Versailles on 18 January 1871.](media:diagrams/german-unification-timeline.png "Figure: timeline of German unification, 1861-1871")
+
 This lesson explains how unification was completed after the victory over Austria in 1866: the difficulty of the south German states, the attitude of Napoleon III, the crises over Luxemburg and Spain, the war of 1870-71, and the constitution of the new empire. You should know the events of 1862-66 and the creation of the North German Confederation.
 
 ## Key definitions

@@ -45,6 +45,8 @@ The absorption of conquered peoples into the state, giving them a place in its s
 
 Mzilikazi was the leader of the Khumalo, a small Nguni clan that was a vassal of Shaka. According to tradition he quarrelled with Shaka over the cattle captured in a raid and led his followers away, in the early 1820s. They moved north-west into the highveld of the Transvaal, where they raided neighbouring Sotho and Tswana communities, took their cattle and absorbed many people. In 1837 Boer trekkers defeated them and Zulu forces under Dingane attacked from the east, and the Ndebele decided to go farther north. They crossed the Limpopo, and around 1840 settled in south-western Zimbabwe, in the country around the Matobo Hills and the later site of Bulawayo.
 
+![Timeline of the Ndebele state from Mzilikazi's break with Shaka in the 1820s and the crossing of the Limpopo in 1837-1839 to Lobengula's accession in 1870, the Rudd Concession of 1888 and the war of 1893-94.](media:diagrams/ndebele-timeline.png "Figure: timeline of the Ndebele state")
+
 Mzilikazi's new kingdom held the lands of the former Rozvi state. He defeated Rozvi remnants and some Shona chiefs. Many local people became subject to Ndebele rule, and the south-west became known as Matabeleland. He died in 1868.
 
 | Date | Event |

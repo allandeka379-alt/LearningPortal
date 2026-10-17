@@ -63,6 +63,8 @@ The Covenant gave the League four broad aims:
 | International Labour Organisation (ILO) | Government, employer and worker representatives | Improved working conditions (hours, wages, child labour) |
 | Commissions and committees | Specialists | Mandates, refugees, slavery, health, disarmament, drugs |
 
+![Chart of the League of Nations: the Assembly (all members) and the Council (permanent and elected members), with the Secretariat, Permanent Court of International Justice, International Labour Organisation and commissions below.](media:diagrams/league-organs.png "Figure: organs of the League of Nations")
+
 :::example{title="How the League was meant to stop a war: a step-by-step case"}
 Imagine Country X invades Country Y, both League members.
 1. Y appeals to the **Council**, which meets in emergency session.

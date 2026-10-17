@@ -92,6 +92,8 @@ Membership has grown to sixteen states, including South Africa, Mauritius, the D
 | SADC Tribunal | Court set up to settle disputes under the Treaty; suspended in 2010 and its role later reduced |
 | National Committees | Link SADC with each member country |
 
+![Chart of SADC organs: the Summit of Heads of State and Government is the supreme body, with the Organ on Politics, Defence and Security, the Council of Ministers, the Secretariat in Gaborone and the SADC Tribunal, and National Committees in each member state.](media:diagrams/sadc-organs.png "Figure: organs of SADC")
+
 ## SADC's role in socio-economic development
 
 - **Transport:** development corridors such as the Beira, Maputo and Nacala corridors gave landlocked states routes to the sea.

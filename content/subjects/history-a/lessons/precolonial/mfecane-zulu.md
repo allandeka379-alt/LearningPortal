@@ -78,6 +78,8 @@ Historians now generally agree that the Zulu kingdom was one important factor, a
 
 As the Zulu kingdom grew, groups defeated by or opposed to it moved away, spreading its methods and causing new conflicts.
 
+![Schematic map of the consequences of the Mfecane: Mzilikazi's Ndebele to Zimbabwe, Zwangendaba across the Zambezi in 1835 to found Ngoni states, Nxaba north of the Zambezi, Soshangane's Gaza state in southern Mozambique, Sobhuza's Swazi, Sebetwane's Kololo in Barotseland and Moshoeshoe's Basotho in the Drakensberg.](media:diagrams/mfecane-migrations-map.png "Figure: where the main groups went after the Zulu rise (schematic, not to scale)")
+
 | Leader or group | Where they went | Result |
 |---|---|---|
 | Mzilikazi (Khumalo) | Transvaal, then Zimbabwe | Ndebele state |

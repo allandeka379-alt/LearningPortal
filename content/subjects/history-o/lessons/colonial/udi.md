@@ -71,6 +71,8 @@ Getting round sanctions, for example by trading secretly through neighbouring co
 | 1971 | Smith-Home proposals agreed by the two governments |
 | 1972 | Pearce Commission reports that Africans reject the proposals |
 
+![Timeline from the Unilateral Declaration of Independence on 11 November 1965 through sanctions, the failed HMS Tiger and Fearless talks and the 1969 constitution to the 1970 republic and the Pearce Commission of 1972.](media:diagrams/udi-timeline.png "Figure: timeline of UDI, 1965-1972")
+
 ### Britain
 
 The Labour government of Harold Wilson declared UDI illegal but **ruled out the use of force**. Instead it relied on economic sanctions, including an oil embargo; the Royal Navy patrolled off the Mozambican port of Beira to stop oil tankers. Wilson met Smith twice, on HMS *Tiger* (1966) and HMS *Fearless* (1968), but both talks failed because Smith would not accept guarantees of progress to majority rule. In 1971 a later British government agreed new proposals with Smith (the Smith-Home proposals), on condition that they were acceptable to the people as a whole.

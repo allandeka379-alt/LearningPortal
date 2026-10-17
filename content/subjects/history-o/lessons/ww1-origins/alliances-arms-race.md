@@ -63,6 +63,8 @@ Calling up reserve soldiers and moving armies, usually by railway, into position
 | 1912 | Anglo-French naval talks; Britain's attempt to slow the naval race fails |
 | 1913 | Germany and France both enlarge their armies |
 
+![Schematic map of Europe's two camps: the Triple Alliance of Germany, Austria-Hungary and Italy (Dual Alliance 1879, Italy 1882) and the Triple Entente of Britain, France and Russia (Franco-Russian Alliance 1894, Entente Cordiale 1904, Anglo-Russian Entente 1907); the ententes were friendly understandings, not promises to fight.](media:diagrams/alliances-1914-map.png "Figure: the alliance system before 1914 (schematic, not to scale)")
+
 ### Bismarck's system and its collapse
 
 After 1871 the German Chancellor, **Otto von Bismarck**, wanted to keep France isolated so that it could never take revenge for its defeat. He made the **Dual Alliance** with Austria-Hungary (1879), which Italy joined in 1882 to form the **Triple Alliance**, and he kept Russia friendly with a secret Reinsurance Treaty (1887).

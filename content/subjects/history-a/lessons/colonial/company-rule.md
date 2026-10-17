@@ -43,6 +43,8 @@ Self-government by a colony's own settlers, with an elected legislature and mini
 
 **The Charter and the Administrator.** The Charter allowed the Company to administer the territory under the supervision of the British High Commissioner in Cape Town. The Administrator ran the territory day to day with a small staff and the British South Africa Company Police. The Company had to pay for government out of its own funds, which is why it sought revenue from every source.
 
+![Timeline of Company rule: occupation in 1890, the 1898 Order in Council, settlers' elected majority in 1903, the 1918 land ruling, the referendum of 27 October 1922 and responsible government on 1 October 1923.](media:diagrams/company-rule-timeline.png "Figure: timeline of Company rule in Southern Rhodesia")
+
 **The Legislative Council.** The Order in Council of 1898 set up a Legislative Council (first meeting in 1899) with nominated Company members and a few elected settler members. A Resident Commissioner represented the imperial government. Settlers gained an elected majority in 1903. Africans had no part, although the franchise, in law, had no race bar; high property and income qualifications meant that almost no Africans qualified.
 
 **The Native Department.** After the risings of 1896-97 the Native Department was reorganised. Native Commissioners in each district collected taxes, judged cases under African law, supervised chiefs and headmen, who were given small salaries, and helped to recruit labour. They became the face of the government for most Africans.

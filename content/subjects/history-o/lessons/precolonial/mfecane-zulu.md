@@ -112,6 +112,8 @@ The age-regiment system mixed young men from different clans and built a common 
 - Widespread loss of life (numbers are not known with certainty), destruction of homes, crops and herds, famine and refugees.
 - Some areas, such as parts of Natal and the Highveld, were left thinly populated for a time, which white settlers later used to claim that the land was empty.
 
+![Schematic map: groups leaving the Zulu heartland after the Mfecane. Mzilikazi's Ndebele go via the Highveld to south-western Zimbabwe (c. 1838-1840), Zwangendaba crosses the Zambezi in 1835, Soshangane founds Gaza in southern Mozambique and Sebetwane's Kololo reach the upper Zambezi.](media:diagrams/mfecane-migrations-map.png "Figure: main Mfecane migrations (schematic, not to scale)")
+
 **Constructive effects (state-building)**
 - New, larger kingdoms: the Zulu (Shaka), Swazi (Sobhuza), Sotho (Moshoeshoe, who gathered refugees in the mountains), Gaza (Soshangane, in southern Mozambique), Ndebele (Mzilikazi).
 - Spread of Nguni military methods and age regiments.

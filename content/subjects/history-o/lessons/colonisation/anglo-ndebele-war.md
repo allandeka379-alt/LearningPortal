@@ -76,6 +76,9 @@ In July 1893 an Ndebele force entered the Fort Victoria district to punish Shona
 | 4 December 1893 | The Shangani Patrol is wiped out near the Shangani River |
 | Early 1894 | Death of Lobengula in the north |
 
+![Timeline of the Anglo-Ndebele War from the Victoria incident of July 1893, through the battles of Shangani and Bembesi, to the entry into Bulawayo on 4 November 1893 and Lobengula's death in early 1894.](media:diagrams/anglo-ndebele-war-timeline.png "Figure: timeline of the Anglo-Ndebele War, 1893-94")
+
+
 Two columns, from Fort Salisbury and Fort Victoria, joined and marched towards Bulawayo, while a smaller force advanced from Bechuanaland in the south-west. The invaders were few compared with the Ndebele regiments, but they had **Maxim machine guns**, horses and wagons. At night they formed a *laager* (a ring of wagons).
 
 At the **Shangani** and at **Bembesi** the Ndebele regiments made brave frontal attacks on the laagers. Machine-gun and rifle fire cut them down at long range, and the Ndebele lost very heavily. Lobengula ordered his capital burnt and fled north towards the Zambezi. Company troops entered the ruins of Bulawayo on 4 November 1893.
