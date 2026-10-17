@@ -77,6 +77,8 @@ so $a = g(\sin\alpha - \mu\cos\alpha)$, independent of the mass. On a smooth pla
 4. $s = \frac{1}{2}(3.203)(4^2) \approx 25.6$ m.
 :::
 
+![Forces on a 5 kg parcel sliding down a rough plane inclined at 30 degrees with friction coefficient 0.2: weight 49 N, normal reaction about 42.4 N, friction about 8.49 N up the plane, and the weight component 24.5 N down the plane, giving a net 16.0 N and acceleration about 3.20 m/s squared.](media:diagrams/plane-rough-sliding-forces.png "Figure: down the plane 24.5 − 8.49 ≈ 16.0 N is the resultant, so a ≈ 3.20 m s⁻²")
+
 ## Moving up a rough plane
 
 A particle projected **up** a plane slows down because both the weight component and friction act **down** the plane:

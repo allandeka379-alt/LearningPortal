@@ -72,6 +72,8 @@ Notice that the horizontal force pushes the particle **into** the plane as well 
 3. Perpendicular: $R = 19.6\cos 30^\circ \approx 17.0$ N.
 :::
 
+![Forces on a 2 kg particle in equilibrium on a smooth plane inclined at 30 degrees: weight 19.6 N down, normal reaction about 17.0 N perpendicular to the plane, and a string tension of 9.8 N up the plane, which equals 19.6 sin 30 degrees.](media:diagrams/plane-smooth-string-equilibrium.png "Figure: along the plane T = 19.6 sin 30° = 9.8 N; perpendicular to the plane R = 19.6 cos 30° ≈ 17.0 N")
+
 ## Three forces: the triangle of forces
 
 If three forces keep a particle in equilibrium, drawing them nose to tail gives a **closed triangle**. Each force is equal and opposite to the resultant of the other two. With a right angle, Pythagoras and trigonometry give the answer at once.

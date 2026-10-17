@@ -84,6 +84,8 @@ Simplify a logarithm of a product, quotient or power **before** differentiating.
 3. At $x = 0$: $\mathrm{e}^0 = 1$, $\sin 0 = 0$ and $\cos 0 = 1$, so the gradient is $1 \times (0 + 1) = 1$.
 :::
 
+![Graph of y = e^(2x) sin x passing through the origin where its tangent is the line y = x with gradient 1, matching dy/dx = e^(2x)(2 sin x + cos x) = 1 at x = 0.](media:diagrams/trig-exp-product-tangent.png "Figure: y = e^(2x) sin x leaves the origin with gradient 1, as dy/dx = e^(2x)(2 sin x + cos x) predicts")
+
 :::worked-solution[Example 5: show that $\dfrac{d}{dx}\big(\ln(\sin x)\big) = \cot x$ for $0 < x < \pi$, and find the gradient of $y = \ln(\sin x)$ at $x = \frac{\pi}{4}$]
 1. Chain rule with $f(x) = \sin x$: $\dfrac{d}{dx}\ln(\sin x) = \dfrac{f'(x)}{f(x)} = \dfrac{\cos x}{\sin x}$.
 2. $\dfrac{\cos x}{\sin x} = \cot x$, as required.

@@ -54,6 +54,8 @@ where $\alpha$ is the principal value. Then add or subtract the period ($360°$ 
 4. $x = 203.6°$ or $x = 336.4°$.
 :::
 
+![Graph of y = sin x for 0 to 360 degrees with the line y = -0.4: they meet at x = 203.6 degrees and x = 336.4 degrees, the two solutions of sin x = -0.4 in the interval, both in the third and fourth quadrants where sine is negative.](media:diagrams/trig-eq-sin-negative-solutions.png "Figure: the line y = −0.4 meets the sine curve twice in 0° to 360°, at 203.6° and 336.4°")
+
 ## Multiple angles
 
 For an equation in $\sin 2x$, $\cos 3x$ or $\tan\frac{x}{2}$, write $u$ for the angle inside, **change the interval** to an interval for $u$, solve for $u$, then convert back.
@@ -66,6 +68,8 @@ If $0° \leq x \leq 360°$ then $0° \leq 2x \leq 720°$: twice as many solution
 3. $u = 60°, 240°, 420°, 600°$ (the next, $780°$, is too large).
 4. $x = \frac{u}{2} = 30°, 120°, 210°, 300°$.
 :::
+
+![Graph of y = tan 2x for 0 to 360 degrees with the line y = square root of 3: tan 2x has period 90 degrees and meets the line four times, at x = 30, 120, 210 and 300 degrees, with asymptotes at 45, 135, 225 and 315 degrees.](media:diagrams/trig-eq-tan-double-angle.png "Figure: tan 2x repeats every 90°, so tan 2x = √3 has four solutions: 30°, 120°, 210°, 300°")
 
 :::worked-solution[Example 3: solve $\sec 3x = 2$ for $0° \leq x \leq 180°$]
 1. $\cos 3x = \frac{1}{2}$. Let $u = 3x$, with $0° \leq u \leq 540°$.

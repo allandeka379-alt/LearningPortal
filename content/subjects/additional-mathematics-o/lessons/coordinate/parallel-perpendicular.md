@@ -64,6 +64,8 @@ The shortcut in step 2 is worth remembering: lines parallel to $ax + by = c$ hav
 5. Check with a point on it, $(0, 5)$: its distance to $A$ is $\sqrt{1 + 49} = \sqrt{50}$ and to $B$ is $\sqrt{49 + 1} = \sqrt{50}$. Equal, as expected.
 :::
 
+![Segment AB from A(1, -2) to B(7, 6) with its perpendicular bisector 3x + 4y - 20 = 0 through the midpoint M(4, 2) at a right angle; the point (0, 5) on the bisector is the same distance, square root of 50, from A and from B.](media:diagrams/perpendicular-bisector-ab.png "Figure: the perpendicular bisector passes through the midpoint M(4, 2); every point on it, such as (0, 5), is equidistant from A and B")
+
 ## The foot of the perpendicular
 
 The shortest distance from a point $P$ to a line is along the perpendicular from $P$ to the line. The point where the perpendicular meets the line is the **foot** of the perpendicular. To find it: write the equation of the perpendicular through $P$, then solve it simultaneously with the line.

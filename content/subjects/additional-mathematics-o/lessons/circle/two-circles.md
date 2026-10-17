@@ -56,6 +56,8 @@ The method is always:
 5. $T = \left(1 + \frac{3}{10}(6), 2 + \frac{3}{10}(8)\right) = (2.8, 4.4)$.
 :::
 
+![Circles with centres C1(1, 2), radius 3, and C2(7, 10), radius 7, whose centres are 10 apart, equal to 3 + 7, so they touch externally at T(2.8, 4.4) on the line joining the centres.](media:diagrams/two-circles-touch-externally.png "Figure: the centres are 10 apart, equal to the sum of the radii, so the circles touch at one point T on the line of centres")
+
 ## Points of intersection and the common chord
 
 When the circles cross, subtract one equation from the other (both written as $x^2 + y^2 + \ldots = 0$ with coefficient 1 for $x^2$ and $y^2$). The squared terms cancel and leave a **linear** equation: the line of the common chord. Solve it with either circle to get the two points.
@@ -68,6 +70,8 @@ When the circles cross, subtract one equation from the other (both written as $x
 5. In the first circle: $16 + y^2 = 25$, so $y = \pm 3$. The points are $(4, 3)$ and $(4, -3)$.
 6. Check in the second: $(4 - 6)^2 + 3^2 = 4 + 9 = 13$.
 :::
+
+![Circles x^2 + y^2 = 25 (centre origin, radius 5) and (x - 6)^2 + y^2 = 13 (centre (6, 0), radius about 3.61) cross at (4, 3) and (4, -3); the common chord is the vertical line x = 4, at right angles to the line of centres.](media:diagrams/two-circles-common-chord.png "Figure: the circles meet at (4, 3) and (4, −3); the common chord x = 4 is perpendicular to the line of centres")
 
 Notice that the common chord $x = 4$ is vertical while the centres $(0, 0)$ and $(6, 0)$ lie on a horizontal line: the chord is perpendicular to the line of centres, as expected by symmetry.
 

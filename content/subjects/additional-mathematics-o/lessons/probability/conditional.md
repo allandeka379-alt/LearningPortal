@@ -88,6 +88,8 @@ The harder question goes **backwards**: given the second-stage result, what is t
 5. Similarly, given that a seed did **not** germinate: $P(B \mid G') = \frac{0.3 \times 0.2}{1 - 0.87} = \frac{0.06}{0.13} = \frac{6}{13}$.
 :::
 
+![Tree diagram: supplier A 0.7 then germinates 0.9 gives 0.63, not 0.07; supplier B 0.3 then germinates 0.8 gives 0.24, not 0.06; P(G) = 0.63 + 0.24 = 0.87 and P(A given G) = 0.63/0.87, which is 21/29.](media:diagrams/tree-maize-seed-germination.png "Figure: second-stage branches are conditional probabilities; P(A | G) = 0.63 ÷ (0.63 + 0.24)")
+
 The pattern for a reverse probability is always: the **one path** you want, divided by **all the paths** that give the known result.
 
 ## Conditional probability without replacement

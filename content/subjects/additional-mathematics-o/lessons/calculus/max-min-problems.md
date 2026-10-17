@@ -60,6 +60,8 @@ Reject values that make no physical sense, such as a negative length or a box wi
 6. $V = 4 \times 16^2 = 1024$ cm³ when $x = 4$.
 :::
 
+![Graph of V = x(24 - 2x)^2 for 0 < x < 12: the volume of the open box rises to a maximum of 1024 cm cubed at x = 4 cm and falls to zero at x = 12.](media:diagrams/maxmin-open-box-volume.png "Figure: the volume of the box against the cut size x has its maximum, 1024 cm³, at x = 4")
+
 ## Problems with a "show that"
 
 Exam questions usually give you the expression to check the modelling. Your job is to derive it clearly.
@@ -71,6 +73,8 @@ Exam questions usually give you the expression to check the modelling. Your job 
 4. $\dfrac{d^2S}{dr^2} = 4\pi + \dfrac{64\pi}{r^3} = 4\pi + 8\pi = 12\pi > 0$: a minimum.
 5. With $r = 2$ m, $h = \dfrac{16}{4} = 4$ m and $S = 8\pi + 16\pi = 24\pi$ m².
 :::
+
+![Graph of S = 2 pi r^2 + 32 pi / r: the total surface area of the tank falls to a minimum of 24 pi, about 75.4 square metres, at r = 2 m and then rises again.](media:diagrams/maxmin-tank-surface-area.png "Figure: the surface area of the closed tank against its radius is least when r = 2 m")
 
 The tank that uses least metal has height equal to its diameter, a result that holds for every volume.
 

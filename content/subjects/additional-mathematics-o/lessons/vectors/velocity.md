@@ -94,6 +94,8 @@ A canoeist paddles at $2.5$ m/s relative to the water across a river $120$ m wid
 3. To go directly across, paddle with velocity $-1.5\mathbf{i} + q\mathbf{j}$ where $1.5^2 + q^2 = 2.5^2$, so $q = 2$: resultant $2\mathbf{j}$, time 60 s.
 :::
 
+![Velocity triangles for a canoe paddled at 2.5 m/s in a river with a 1.5 m/s current: heading straight across gives a resultant of about 2.92 m/s and 72 m of drift in 48 s; aiming upstream at 36.9 degrees makes the resultant 2 m/s straight across, taking 60 s.](media:diagrams/velocity-river-crossing.png "Figure: paddle velocity plus current velocity equals the resultant; aiming upstream cancels the drift")
+
 :::keyfact{title="ZIMSEC and Cambridge"}
 Velocity vectors are examined as pure vectors in Cambridge 0606 only. ZIMSEC candidates compose and resolve velocities and forces in Mechanics with the same right-angled-triangle methods.
 :::

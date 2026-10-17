@@ -78,6 +78,8 @@ You may **not** simply square here, because $cx + d$ can be negative. Instead:
 5. Solution: $\frac{2}{3} < x < 4$.
 :::
 
+![Graphs of y = |2x - 3| and y = x + 1: the line crosses the V at x = 2/3 and x = 4 and lies above it between them, so |2x - 3| < x + 1 holds for 2/3 < x < 4.](media:diagrams/modulus-ineq-v-and-line.png "Figure: the line is above the V-shaped graph only between the crossing points x = 2/3 and x = 4")
+
 ## Type 4: the modulus of a quadratic
 
 Use the basic results with $X = ax^2 + bx + c$. This gives two quadratic inequalities, and the solution is where both (for $<$) or either (for $>$) hold.
@@ -100,6 +102,8 @@ For $|ax^2 + bx + c| > d$, solve $ax^2 + bx + c > d$ **or** $ax^2 + bx + c < -d$
 4. Combine: $x < 3 - \sqrt{7}$ or $2 < x < 4$ or $x > 3 + \sqrt{7}$ (about $x < 0.354$, $2 < x < 4$, $x > 5.65$).
 5. Picture: the reflected arch of $y = |x^2 - 6x + 5|$ between $x = 1$ and $x = 5$ has height 4, so the line $y = 3$ cuts it, and the arch pokes above the line between $x = 2$ and $x = 4$. The outer branches are above the line beyond $3 \pm \sqrt{7}$.
 :::
+
+![Graph of y = |x^2 - 6x + 5| with the line y = 3: the curve is above the line for x < 3 - sqrt 7 (about 0.35), for 2 < x < 4 where the reflected arch pokes above, and for x > 3 + sqrt 7 (about 5.65), giving three pieces.](media:diagrams/modulus-ineq-quadratic-three-pieces.png "Figure: |x² − 6x + 5| > 3 has three pieces, marked in red on the x-axis")
 
 A three-piece answer like this is unusual but correct. Always draw the graph and the horizontal line: the picture tells you how many pieces to expect before you do any algebra, and it catches a missing piece at once.
 

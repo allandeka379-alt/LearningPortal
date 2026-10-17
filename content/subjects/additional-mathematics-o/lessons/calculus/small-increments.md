@@ -91,6 +91,8 @@ $$
 4. $\sqrt{25.3} \approx 5 + 0.03 = 5.03$. (A calculator gives $5.0299\ldots$)
 :::
 
+![Graph of y = square root of x with its tangent at (25, 5), gradient 1/10: close to x = 25 the tangent and curve almost coincide, so sqrt(25.3) is approximately 5 + 0.1 x 0.3 = 5.03.](media:diagrams/small-increments-sqrt-tangent.png "Figure: near x = 25 the tangent is a good stand-in for the curve, giving √25.3 ≈ 5.03")
+
 :::keyfact{title="ZIMSEC and Cambridge"}
 Both syllabuses examine $\delta y \approx \frac{dy}{dx}\delta x$. Cambridge typically sets it with a letter ("$x$ increases from 2 to $2 + p$; find the approximate change in $y$ in terms of $p$") or as part of a connected-rates question. ZIMSEC more often asks for a numerical approximation, an approximate value or a percentage error.
 :::

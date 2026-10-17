@@ -63,6 +63,8 @@ Write each term as (coefficient) $\times$ (first term)$^{\text{power}}$ $\times$
 3. $= 16 + 32x + 24x^2 + 8x^3 + x^4$.
 :::
 
+![Pascal's triangle for n = 0 to 6: row 4 is 1, 4, 6, 4, 1 (the coefficients of (2 + x)^4) and row 6 is 1, 6, 15, 20, 15, 6, 1 (the first four coefficients used for (1 + 2x)^6); each number is the sum of the two above it.](media:diagrams/pascal-triangle-rows-0-to-6.png "Figure: row n gives the coefficients of (a + b)ⁿ; rows 4 and 6 are used in Examples 1 and 4")
+
 :::worked-solution[Example 2: expand $\left(x + \dfrac{2}{x}\right)^4$ fully, simplifying each term]
 1. Coefficients $1, 4, 6, 4, 1$; first term $x$, second term $\frac{2}{x}$.
 2. $x^4 + 4x^3\left(\frac{2}{x}\right) + 6x^2\left(\frac{2}{x}\right)^2 + 4x\left(\frac{2}{x}\right)^3 + \left(\frac{2}{x}\right)^4$.

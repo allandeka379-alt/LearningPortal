@@ -67,6 +67,8 @@ Write $x^2 + bx$ as $\left(x + \frac{b}{2}\right)^2 - \left(\frac{b}{2}\right)^2
 4. $x = 4 + \sqrt{3}$ or $x = 4 - \sqrt{3}$ (about $5.73$ and $2.27$).
 :::
 
+![Graph of y = x^2 - 8x + 13 with its minimum at (4, -3) and x-intercepts at 4 - sqrt 3, about 2.27, and 4 + sqrt 3, about 5.73, the two solutions found by completing the square: (x - 4)^2 = 3.](media:diagrams/quadratic-solving-roots-graph.png "Figure: the solutions of x² − 8x + 13 = 0 are where the parabola crosses the x-axis, symmetrical about x = 4")
+
 Completing the square is also the method behind turning points and the range of a quadratic function; that is covered in the lesson on completing the square.
 
 ## Method 3: the quadratic formula

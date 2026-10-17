@@ -89,6 +89,8 @@ In limiting equilibrium on a slope with no other forces, $\mu = \tan\alpha$: the
 4. $16.6 < 21.3$, so the block stays at rest with friction 16.6 N. (Equivalently, $\tan 25^\circ = 0.466 < 0.6$.)
 :::
 
+![Forces on a 4 kg block at rest on a rough plane inclined at 25 degrees with friction coefficient 0.6: weight 39.2 N, normal reaction about 35.5 N, and friction up the plane of 16.6 N, which is less than the maximum 21.3 N, so the block does not slip.](media:diagrams/plane-rough-friction-at-rest.png "Figure: friction needed 16.6 N is below its limit μR ≈ 21.3 N, so the block stays at rest")
+
 ### Holding a particle on a slope with a force
 
 When a force $P$ acts up the plane, the direction of friction depends on which way the particle is about to move:

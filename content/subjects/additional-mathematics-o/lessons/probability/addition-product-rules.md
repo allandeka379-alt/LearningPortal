@@ -117,6 +117,8 @@ When objects are chosen one after another, it matters whether the first is put b
 6. $P(\text{at least one red}) = 1 - P(WW) = 1 - \frac{1}{3} = \frac{2}{3}$.
 :::
 
+![Tree diagram for two beads taken without replacement from 4 red and 6 white: after a red the second-stage probabilities are 3/9 and 6/9, after a white 4/9 and 5/9; the paths give RR 2/15, RW 4/15, WR 4/15 and WW 1/3, so P(same colour) = 2/15 + 1/3 = 7/15.](media:diagrams/tree-beads-without-replacement.png "Figure: multiply along each path; the second-stage probabilities change because one bead has been removed")
+
 With replacement the same bag gives $P(\text{same colour}) = \left(\frac{4}{10}\right)^2 + \left(\frac{6}{10}\right)^2 = \frac{13}{25}$, a different answer, so always check which situation the question describes.
 
 :::keyfact{title="ZIMSEC and Cambridge"}

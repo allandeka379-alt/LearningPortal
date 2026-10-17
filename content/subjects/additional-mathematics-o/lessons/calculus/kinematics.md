@@ -52,6 +52,8 @@ $$
 5. Signs of $v$: positive for $0 \leq t < 1$, negative for $1 < t < 3$, positive for $t > 3$. The particle changes direction at both times.
 :::
 
+![Velocity-time graph of v = 3t^2 - 12t + 9: v is zero at t = 1 s and t = 3 s, negative (moving backwards) between them with a minimum of -3 m/s at t = 2, and returns to 9 m/s at t = 0 and t = 4.](media:diagrams/kinematics-velocity-roots.png "Figure: v = 3(t − 1)(t − 3) crosses zero twice, so the particle turns round at t = 1 and t = 3")
+
 ## Distance travelled versus displacement
 
 A single integral (or a single subtraction of displacements) gives the **displacement**: motion forwards and backwards cancels. For the **distance**, find every time the particle turns round, work out the displacement at each, and add the lengths of the separate stages.
@@ -63,6 +65,8 @@ A single integral (or a single subtraction of displacements) gives the **displac
 4. Stage 3 ($3$ to $4$ s): from 0 to 4, distance 4 m.
 5. Distance travelled $= 4 + 4 + 4 = 12$ m, but the displacement at $t = 4$ is only $4$ m.
 :::
+
+![Displacement-time graph of s = t^3 - 6t^2 + 9t: s = 0 at t = 0, rises to 4 m at t = 1, falls back to 0 at t = 3, then rises to 4 m at t = 4, so the distance travelled is 4 + 4 + 4 = 12 m but the displacement is 4 m.](media:diagrams/kinematics-displacement-stages.png "Figure: s rises to 4 m, returns to 0, then rises to 4 m again: distance 12 m, displacement 4 m")
 
 ## Integrating: from acceleration to velocity and displacement
 
@@ -83,6 +87,8 @@ On the calculator paper the velocity is often exponential or trigonometric.
 3. At $t = 5$: $s = 50 + 50e^{-1} - 50 = \dfrac{50}{e} \approx 18.4$ m. Since $v > 0$ for $t > 0$, this is also the distance.
 4. As $t \to \infty$, $e^{-0.2t} \to 0$, so $v \to 10$ m s$^{-1}$: she approaches a steady 10 m s$^{-1}$ but never quite reaches it.
 :::
+
+![Velocity-time graph of v = 10 - 10e^(-0.2t): the cyclist speeds up from rest and approaches but never reaches 10 m/s; the area under the curve for the first 5 s is the distance, 50/e, about 18.4 m.](media:diagrams/kinematics-cyclist-limit.png "Figure: the cyclist's velocity levels off towards 10 m/s; the shaded area is the distance in 5 s")
 
 With trigonometric velocities, use radians. If $v = 6\cos 2t$ and $s = 0$ when $t = 0$, then $s = 3\sin 2t$ and $a = -12\sin 2t$. The particle is first at rest when $\cos 2t = 0$, at $t = \frac{\pi}{4}$, when $s = 3\sin\frac{\pi}{2} = 3$ m: it oscillates between $-3$ m and $3$ m.
 

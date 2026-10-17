@@ -85,6 +85,8 @@ A Venn diagram draws the sample space as a rectangle and each event as a circle 
 6. $P(G \cup H) = \frac{16 + 11 + 7}{40} = \frac{34}{40} = \frac{17}{20}$, which also equals $1 - \frac{3}{20}$.
 :::
 
+![Venn diagram of 40 learners: Geography only 16, both subjects 7, History only 11, neither 6; the circle totals 23 and 18 add to 41 because the 7 in the overlap are counted twice.](media:diagrams/venn-two-sets-geography-history.png "Figure: fill the overlap first (7), then each circle's remainder (16 and 11), then the outside (6)")
+
 Notice that $23 + 18 = 41$ is more than the class: adding the two circle totals counts the 7 learners in the overlap twice.
 
 ## Venn diagrams for three events
@@ -101,6 +103,8 @@ Three overlapping circles make **eight regions**: one in all three circles, thre
 7. $P(\text{exactly one}) = \frac{12 + 9 + 13}{60} = \frac{34}{60} = \frac{17}{30}$.
 8. $P(\text{none}) = \frac{4}{60} = \frac{1}{15}$.
 :::
+
+![Three-circle Venn diagram of 60 households: cattle only 12, goats only 9, chickens only 13, cattle and goats only 7, goats and chickens only 4, cattle and chickens only 6, all three 5, none 4.](media:diagrams/venn-three-sets-livestock.png "Figure: eight regions, filled from the centre (5) outwards; the regions add up to 60")
 
 ## Venn diagrams with probabilities
 

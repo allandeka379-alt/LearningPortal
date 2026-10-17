@@ -89,6 +89,8 @@ A gradient function such as $\dfrac{dy}{dx} = 2x$ describes a whole family of cu
 5. Check another point: at $x = 1$, $y = 1 + 4 - 1 = 4$, and the gradient there is $3 - 4 = -1$.
 :::
 
+![Curves y = x^3 + 4/x + c for c = 5, -1 and -7 are the same shape shifted vertically, all with gradient 3x^2 - 4/x^2; only c = -1 passes through the point (2, 9), which fixes the constant.](media:diagrams/integration-family-of-curves.png "Figure: every constant c gives a curve with the same gradient function; the point (2, 9) picks out c = −1")
+
 Questions often combine this with earlier differentiation work: a gradient function containing an unknown $k$ and a stationary point (where $\frac{dy}{dx} = 0$) give an equation for $k$ first; then the point gives $c$.
 
 ## Using a derivative found earlier ("hence")

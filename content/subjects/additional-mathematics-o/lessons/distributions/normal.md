@@ -72,11 +72,15 @@ To find a probability for $X \sim N(\mu, \sigma^2)$, standardise the boundary va
 3. $P(X > 55) = P(Z > 1.25) = 1 - \Phi(1.25) = 1 - 0.8944 = 0.1056$.
 :::
 
+![Normal curve for bream lengths X ~ N(50, 16), mean 50 cm and standard deviation 4 cm: the shaded upper tail beyond x = 55 cm (z = 1.25) has area 0.1056, the probability that a bream is longer than 55 cm.](media:diagrams/normal-bream-longer-than-55.png "Figure: P(X > 55) is the shaded tail beyond z = 1.25, which is 1 − 0.8944 = 0.1056")
+
 :::worked-solution[Example 3: for the same fish, find P(46 < X < 53).]
 1. $z_1 = \frac{46 - 50}{4} = -1$ and $z_2 = \frac{53 - 50}{4} = 0.75$.
 2. $P(-1 < Z < 0.75) = \Phi(0.75) - [1 - \Phi(1)] = 0.7734 - 0.1587 = 0.6147$.
 3. About 61% of the bream are between 46 cm and 53 cm long.
 :::
+
+![Normal curve for X ~ N(50, 16): the shaded area between x = 46 (z = -1) and x = 53 (z = 0.75) is 0.7734 - 0.1587 = 0.6147, so about 61% of bream are between 46 cm and 53 cm long.](media:diagrams/normal-bream-between-46-and-53.png "Figure: P(46 < X < 53) is the shaded area between z = −1 and z = 0.75, which is 0.6147")
 
 ## Reverse use of the tables
 

@@ -79,6 +79,8 @@ Cone questions need one more step: the radius and the height of the water are li
 4. $\dfrac{dh}{dt} = \dfrac{1}{2\pi} \approx 0.159$ m/min.
 :::
 
+![Conical tank with its vertex at the bottom: at depth h = 4 m the water surface has radius r = h/2 = 2 m; with water entering at 2 cubic metres per minute, V = pi h^3 / 12 gives dh/dt = 1/(2 pi), about 0.159 m per minute.](media:diagrams/rates-cone-tank.png "Figure: because r = h/2, the volume depends on h alone: V = πh³/12")
+
 ## A point moving along a curve
 
 The same idea applies to any function. If a point moves along the curve $y = \ln(2x + 1)$ with its $x$-coordinate increasing at 0.5 units per second, then when $x = 2$:

@@ -90,6 +90,8 @@ Histograms are for **continuous** grouped data. The bars touch (no gaps), the ho
 6. The tallest bar is $15 \leq t < 20$, even though the class $20 \leq t < 30$ has almost the same frequency: it is twice as wide.
 :::
 
+![Histogram of walking times of 75 learners with unequal class widths: frequency densities 0.8, 3, 4.4, 1.8 and 0.6 for the classes 0-10, 10-15, 15-20, 20-30 and 30-50 minutes; the tallest bar is 15-20 minutes and the data are skewed to longer times.](media:diagrams/histogram-walking-times.png "Figure: bar height is frequency density (frequency ÷ class width), so the wide classes do not look too big")
+
 | Time (min) | Frequency | Width | Frequency density | Cumulative frequency |
 | --- | --- | --- | --- | --- |
 | $0 \leq t < 10$ | 8 | 10 | 0.8 | 8 |
@@ -107,6 +109,8 @@ Plot each frequency (or frequency density) at the class **midpoint** and join th
 ## Cumulative frequency curves
 
 The cumulative frequency is the running total. Plot each cumulative frequency at the **upper class boundary**, start at zero at the lower boundary of the first class, and join the points with a smooth curve (an ogive). For Example 2 the points are $(0, 0)$, $(10, 8)$, $(15, 23)$, $(20, 45)$, $(30, 63)$, $(50, 75)$. The curve rises steeply where the data are concentrated and is used to estimate the median and quartiles.
+
+![Cumulative frequency graph of the walking times of 75 learners, plotted at upper class boundaries: (0, 0), (10, 8), (15, 23), (20, 45), (30, 63) and (50, 75); half of the 75 learners, 37.5, is reached between 15 and 20 minutes.](media:diagrams/cumulative-frequency-walking-times.png "Figure: cumulative frequencies at the upper class boundaries rise to 75, the total number of learners")
 
 ## Stem-and-leaf diagrams
 

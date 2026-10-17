@@ -70,6 +70,8 @@ Factorise the quadratic if you can. If not, use the quadratic formula: the roots
 4. The roots are $x = 1$, $x = 1 + \sqrt{5}$ and $x = 1 - \sqrt{5}$.
 :::
 
+![Graph of y = x^3 - 3x^2 - 2x + 4 crossing the x-axis at x = 1 and at the surd roots 1 - sqrt 5 (about -1.24) and 1 + sqrt 5 (about 3.24) from the quadratic factor, and the y-axis at 4.](media:diagrams/cubic-surd-roots-graph.png "Figure: the three roots of the cubic: x = 1 and the surd roots 1 ± √5")
+
 ## Comparing coefficients
 
 This method is neat when one factor is given and you want the other directly.

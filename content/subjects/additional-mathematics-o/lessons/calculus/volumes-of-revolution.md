@@ -64,6 +64,8 @@ The method is always the same:
 4. $V = \tfrac{206\pi}{15}$ cubic units ($\approx 43.1$).
 :::
 
+![Region under y = x^2 + 1 from x = 0 to x = 2 with its reflection below the x-axis: rotating about the x-axis gives a solid whose cross-section at each x is a circle of radius y = x^2 + 1, so V = pi times the integral of y squared.](media:diagrams/revolution-quadratic-slice.png "Figure: each slice is a disc of radius y, so V = π∫ y² dx between x = 0 and x = 2")
+
 ### Roots and exponentials
 
 Square roots disappear when squared, which makes curves such as $y = \sqrt{x}$ pleasant to rotate. For $y = \sqrt{x}$ from $x = 1$ to $x = 4$: $V = \pi\displaystyle\int_1^4 x\,dx = \pi\Big[\tfrac{x^2}{2}\Big]_1^4 = \pi\left(8 - \tfrac{1}{2}\right) = \tfrac{15\pi}{2}$.
@@ -88,6 +90,8 @@ When a curve cuts the $x$-axis at two points, the region between them, rotated, 
 4. At $x = 2$: $32 - \tfrac{64}{3} + \tfrac{32}{5} = \tfrac{256}{15}$. At $x = -2$ the value is $-\tfrac{256}{15}$ (every term is odd).
 5. $V = \pi\left(\tfrac{256}{15} + \tfrac{256}{15}\right) = \tfrac{512\pi}{15}$ cubic units.
 :::
+
+![Region between y = 4 - x^2 and the x-axis from x = -2 to x = 2, with its reflection below: rotated about the x-axis it forms a closed rugby-ball shape of volume 512 pi over 15 cubic units.](media:diagrams/revolution-rugby-ball.png "Figure: the limits x = −2 and x = 2 come from solving y = 0; rotating the arch about the x-axis gives a rugby-ball solid")
 
 ### A "show that": the volume of a sphere
 

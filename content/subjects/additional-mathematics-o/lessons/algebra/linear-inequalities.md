@@ -98,6 +98,8 @@ Draw a line with an **open circle** at an endpoint that is **not** included ($<$
 4. In set notation: $\{x : 3 < x \leq 7\}$. The integers in the set are $4, 5, 6, 7$.
 :::
 
+![Number lines for 2x - 1 > 5 (x > 3, open circle) and 3x + 4 <= 25 (x <= 7, filled circle): the overlap is 3 < x <= 7, which contains the integers 4, 5, 6 and 7.](media:diagrams/linear-ineq-overlap-number-line.png "Figure: two conditions on number lines; the solution is where they overlap, 3 < x ≤ 7")
+
 On a number line, draw both solution sets and read off where they overlap. If they do not overlap (for example $x > 5$ and $x < 2$), there is no solution.
 
 ## Common mistakes
