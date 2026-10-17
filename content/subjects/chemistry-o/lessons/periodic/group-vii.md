@@ -55,6 +55,8 @@ A reaction in which a more reactive element takes the place of a less reactive e
 | Bromine | $\ce{Br2}$ | liquid | red-brown; gives off a red-brown vapour | $-7$ | $59$ |
 | Iodine | $\ce{I2}$ | solid | shiny grey-black; gives a purple vapour when warmed | $114$ | $184$ |
 
+![Group VII melting and boiling points rise down the group: fluorine −220 and −188, chlorine −101 and −34, bromine −7 and 59, iodine 114 and 184 degrees Celsius, so at 25 degrees Celsius fluorine and chlorine are gases, bromine a liquid and iodine a solid.](media:diagrams/group-vii-melting-boiling-points.png "Figure: melting and boiling points of the halogens against 25 °C")
+
 In school you will usually meet them as solutions in water: **chlorine water** is very pale green, **bromine water** is orange (yellow-orange when dilute) and **iodine solution** is brown.
 
 :::keyfact{title="Trends down Group VII (from fluorine to iodine)"}

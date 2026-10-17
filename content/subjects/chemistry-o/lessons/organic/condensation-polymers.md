@@ -57,6 +57,8 @@ The middle part of each monomer is a carbon chain or ring whose details do not m
 
 A $\ce{-COOH}$ group of the acid reacts with an $\ce{-NH2}$ group of the diamine. The $\ce{-OH}$ from the acid and an $\ce{H}$ from the amine leave as water, and an **amide link** forms:
 
+![Block diagrams of two condensation polymers: nylon has amide links (CONH) between the acid block A and the diamine block B, PET has ester links (COO) between the acid block A and the diol block B; one water molecule is lost at every link.](media:diagrams/condensation-polymers-block-diagrams.png "Figure: block diagrams of nylon (amide links) and PET (ester links)")
+
 ```
  HOOC-[A]-COOH  +  H2N-[B]-NH2  +  HOOC-[A]-COOH  + ...
                          |

@@ -66,6 +66,8 @@ Every neutralisation is a proton transfer:
 
 When hydrogen chloride dissolves in water, **every** molecule dissociates:
 
+![Particle pictures: hydrochloric acid, a strong acid, is completely split into H+ and Cl- ions; ethanoic acid, a weak acid, is mostly whole CH3COOH molecules with only a few (about 1 in 100) split into H+ and CH3COO- ions, so it has fewer hydrogen ions and a higher pH.](media:diagrams/strong-weak-acid-particles.png "Figure: a strong acid is fully dissociated, a weak acid only partly")
+
 $$
 \ce{HCl(aq) -> H+(aq) + Cl-(aq)}
 $$

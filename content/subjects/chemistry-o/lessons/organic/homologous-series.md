@@ -97,6 +97,8 @@ H - C - C
     H     O - H
 ```
 
+![Displayed formulae of four organic compounds: ethane (alkane, only single bonds), ethene (alkene, C=C double bond), ethanol (alcohol, -OH group) and ethanoic acid (carboxylic acid, -COOH group), each carbon with four bonds and each hydrogen with one.](media:diagrams/homologous-series-functional-groups.png "Figure: displayed formulae of ethane, ethene, ethanol and ethanoic acid, with the functional group boxed")
+
 ## Characteristics of a homologous series (Supplement)
 
 All the members of a homologous series:
@@ -118,7 +120,10 @@ All the members of a homologous series:
 | hexane | $\ce{C6H14}$ | 69 | liquid |
 
 Each extra $\ce{CH2}$ unit makes the molecules bigger, so the forces between them are stronger and more energy is needed to separate them. Propane and butane are gases at room temperature, but they are easily liquefied under pressure, which is why a lot of LPG fits into a small cylinder.
+
 :::
+
+![Bar chart of alkane boiling points rising with chain length: methane −162, ethane −89, propane −42, butane −1, pentane 36 and hexane 69 degrees Celsius; the first four are gases at 25 degrees Celsius and pentane and hexane are liquids.](media:diagrams/alkane-boiling-points-trend.png "Figure: boiling points of the first six alkanes against 25 °C room temperature")
 
 ## Saturated and unsaturated compounds
 

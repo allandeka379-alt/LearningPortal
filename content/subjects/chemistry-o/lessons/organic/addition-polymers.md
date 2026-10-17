@@ -53,6 +53,8 @@ A material made from synthetic polymers that can be moulded into shape.
 
 When ethene is heated under pressure with a catalyst, the double bond of each molecule opens and the molecules link into long chains:
 
+![Addition polymerisation: n ethene molecules, each with a C=C double bond, join under heat, pressure and a catalyst to form poly(ethene); in the repeat unit the double bond has become a single bond, and the polymer is the only product.](media:diagrams/addition-polymer-ethene-poly-ethene.png "Figure: n ethene molecules form poly(ethene); the repeat unit is in brackets")
+
 ```
       H   H                     H   H
       |   |                     |   |
@@ -85,6 +87,8 @@ To draw the repeat unit of the polymer from any alkene monomer:
 | tetrafluoroethene, $\ce{CF2=CF2}$ | poly(tetrafluoroethene), PTFE | $\ce{-[CF2-CF2]\bond{-}}$ |
 
 Notice that the $\ce{-CH3}$ group of propene becomes a **branch** on the chain: only the two carbon atoms of the double bond are in the main chain.
+
+![Monomers and repeat units: propene gives poly(propene) with a CH3 branch, chloroethene gives PVC with a Cl on every second carbon, and tetrafluoroethene gives PTFE with four F atoms on each repeat unit; in each the C=C becomes C-C.](media:diagrams/addition-polymers-repeat-units.png "Figure: each C=C monomer opens to give a two-carbon repeat unit")
 
 :::worked-solution[Example 1 (Supplement): from polymer to monomer]
 Part of a polymer chain is $\ce{-CF2-CF2-CF2-CF2-CF2-CF2\bond{-}}$. Deduce the repeat unit and the monomer.

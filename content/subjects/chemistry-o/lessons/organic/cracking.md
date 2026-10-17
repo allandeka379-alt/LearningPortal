@@ -68,6 +68,8 @@ Notice that there are never enough hydrogen atoms for **all** the products to be
 
 Liquid paraffin (a mixture of long-chain alkanes) can be cracked in a school laboratory.
 
+![Laboratory cracking: liquid paraffin on mineral wool is vaporised over a strongly heated catalyst in a hard-glass tube; the gas formed, containing alkenes, is collected over water and turns bromine water from orange to colourless.](media:diagrams/cracking-laboratory-apparatus.png "Figure: cracking liquid paraffin over a hot catalyst, collecting the gas over water")
+
 1. Soak some ceramic (mineral) wool in liquid paraffin and push it to the closed end of a hard-glass boiling tube.
 2. Place the catalyst, such as broken porcelain or aluminium oxide granules, in the middle of the tube. Clamp the tube horizontally.
 3. Fit a stopper and delivery tube that leads under water in a trough, with a test tube full of water upside down over its end.

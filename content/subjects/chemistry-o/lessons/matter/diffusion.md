@@ -73,6 +73,8 @@ $$
 
 The white solid is ammonium chloride. The ring forms **closer to the hydrochloric acid end**.
 
+![Diffusion tube: ammonia (Mr 17) from the left travels 59 cm and hydrogen chloride (Mr 36.5) from the right travels 41 cm before they meet and form a white ring of ammonium chloride, so the lighter ammonia diffuses faster, about 1.4 times as far.](media:diagrams/diffusion-ammonia-hydrogen-chloride-tube.png "Figure: the ring of ammonium chloride forms nearer the HCl end, showing ammonia diffuses faster")
+
 :::worked-solution[Example 1: explaining where the ring forms]
 1. Work out the relative molecular masses (Ar: H = 1, N = 14, Cl = 35.5): $M_r(\ce{NH3}) = 14 + 3 = 17$ and $M_r(\ce{HCl}) = 1 + 35.5 = 36.5$.
 2. Ammonia has the lower $M_r$, so at the same temperature its molecules move faster on average.

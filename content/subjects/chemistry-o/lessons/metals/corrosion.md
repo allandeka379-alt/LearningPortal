@@ -53,6 +53,8 @@ Dissolved salt and acidic pollution make rusting faster, which is why cars rust 
 
 Three clean iron nails are set up in test tubes and left for a week.
 
+![The rusting experiment: only tube A, an iron nail in tap water open to air (water and oxygen), rusts; tube B, boiled water under oil (no oxygen), and tube C, dry air over anhydrous calcium chloride (no water), do not rust.](media:diagrams/rusting-experiment-three-nails.png "Figure: iron rusts only when both water and oxygen are present")
+
 | Tube | Conditions | Result after a week |
 | --- | --- | --- |
 | A | nail in tap water, open to the air | rusts |

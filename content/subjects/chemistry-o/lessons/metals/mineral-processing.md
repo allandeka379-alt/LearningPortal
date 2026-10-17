@@ -48,6 +48,8 @@ Processing minerals in the country where they are mined, by concentrating, smelt
 3. **Roasting and smelting.** Sulfide concentrates are heated in air (roasting), which turns sulfides into oxides and releases sulfur dioxide, for example $\ce{2ZnS + 3O2 -> 2ZnO + 2SO2}$. Smelting melts the concentrate in a furnace: the metal, or a molten mixture of metal sulfides called **matte**, sinks below a layer of slag. Platinum-group metal concentrates are smelted to a matte rich in nickel, copper and the PGMs.
 4. **Refining.** The impure metal is purified, often by **electrolysis**.
 
+![Flow chart from copper ore to wire: crushing and grinding, froth flotation to concentrate the mineral, roasting and smelting to impure copper (sulfur dioxide captured for sulfuric acid), electrolytic refining to copper over 99.9% pure, then drawing into wire adds more value.](media:diagrams/mineral-processing-ore-to-copper-flow.png "Figure: the stages in processing a copper ore, each step adding value")
+
 The sulfur dioxide from roasting and smelting must not be released, because it forms acid rain. Modern plants capture it and use it to make sulfuric acid.
 
 ## Electrolytic refining of copper and nickel
@@ -55,6 +57,8 @@ The sulfur dioxide from roasting and smelting must not be released, because it f
 - **Anode** (positive): a block of impure copper.
 - **Cathode** (negative): a thin sheet of pure copper.
 - **Electrolyte**: copper(II) sulfate solution, acidified with sulfuric acid.
+
+![Electrolytic refining of copper: the impure copper anode (+) dissolves as Cu2+ ions, pure copper is deposited on the cathode (-), and unreactive silver, gold and platinum fall to the bottom as anode sludge; the electrolyte is acidified copper(II) sulfate solution.](media:diagrams/copper-refining-electrolytic-cell.png "Figure: the cell for refining copper, with the electrode equations")
 
 At the anode, copper atoms lose electrons and go into solution:
 

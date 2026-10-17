@@ -56,6 +56,8 @@ The tendency of a metal to lose electrons and form positive ions. The more easil
 | | silver, Ag | no reaction with dilute hydrochloric acid |
 | least reactive | gold, Au | found native (as the metal) |
 
+![The reactivity series from potassium to gold with carbon and hydrogen as reference points: K, Na and Ca react with cold water, Mg with steam, Zn and Fe with dilute acid, Cu, Ag and Au do not; metals above carbon are extracted by electrolysis, those below by heating with carbon, and gold is found native.](media:diagrams/reactivity-series-ladder-evidence-extraction.png "Figure: the reactivity series, with the evidence for each position and how each metal is extracted")
+
 One way to remember the order: **K**ind **N**urses **Ca**re **M**ore **A**bout **C**hildren; **Z**ealous **F**armers **H**elp **C**ommunities **A**nd **A**nimals.
 
 :::keyfact{title="What carbon and hydrogen tell you"}

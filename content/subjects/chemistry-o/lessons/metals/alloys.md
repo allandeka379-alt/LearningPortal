@@ -65,6 +65,8 @@ In a diagram of particles drawn as circles:
 - pairs of joined circles spread far apart represent a gas made of molecules, not a metal.
 :::
 
+![Particle diagrams: in pure copper identical atoms sit in neat layers that slide over each other easily, so it is soft; in bronze, larger tin atoms scattered among the copper atoms disturb the layers so they cannot slide easily, making the alloy harder.](media:diagrams/alloy-vs-pure-metal-particles.png "Figure: different-sized atoms in an alloy stop the layers of atoms sliding")
+
 ## Worked examples
 
 :::worked-solution[Example 1: explaining hardness (Supplement)]

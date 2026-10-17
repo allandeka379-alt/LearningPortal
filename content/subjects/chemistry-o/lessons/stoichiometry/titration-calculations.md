@@ -39,6 +39,8 @@ The average of the concordant titres. The rough (trial) titre is never included.
 
 ## A 1 : 1 titration
 
+![Bar chart of four titres: the rough titre of 21.30 cm3 is left out; the three accurate titres 20.85, 20.95 and 20.90 cm3 are all within 0.10 cm3 of each other, so their mean is 20.90 cm3.](media:diagrams/titration-titres-mean-concordant.png "Figure: the rough titre is excluded; the mean of the concordant titres is 20.90 cm³")
+
 :::worked-solution[Example 1: sodium hydroxide with hydrochloric acid]
 25.0 cm³ of sodium hydroxide solution is titrated with 0.100 mol/dm³ hydrochloric acid. The titres are: rough 21.30 cm³, then 20.85, 20.95 and 20.90 cm³. Find the concentration of the sodium hydroxide.
 
@@ -52,6 +54,8 @@ The average of the concordant titres. The rough (trial) titre is never included.
 ## Ratios that are not 1 : 1
 
 Sulfuric acid has two hydrogen ions to give, and a carbonate ion takes two hydrogen ions, so these reactions have $1 : 2$ ratios. Always read the ratio from the equation.
+
+![Mole method for Example 2: 18.40 cm3 of 0.0500 mol/dm3 sulfuric acid contains 0.000920 mol; the 1 : 2 ratio gives 0.00184 mol of sodium hydroxide in 25.0 cm3, so its concentration is 0.0736 mol/dm3.](media:diagrams/titration-mole-method-flow.png "Figure: from burette reading to unknown concentration, using the 1 : 2 mole ratio")
 
 :::worked-solution[Example 2: sulfuric acid with sodium hydroxide]
 25.0 cm³ of sodium hydroxide is neutralised by a mean titre of 18.40 cm³ of 0.0500 mol/dm³ sulfuric acid. Find the concentration of the sodium hydroxide.

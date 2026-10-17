@@ -54,6 +54,8 @@ Adding chlorine to water to kill bacteria and other microbes.
 | carbon (Cambridge) | water passes through activated carbon (charcoal) | substances that cause unpleasant tastes and odours |
 | chlorination | chlorine is added | kills bacteria and other microbes |
 
+![Flow chart of water treatment: screening removes litter, aluminium sulfate makes fine particles clump (flocculation), flocs settle in tanks (sedimentation), sand and gravel filter the rest, activated carbon removes tastes and odours, and chlorine kills microbes, giving safe drinking water.](media:diagrams/water-treatment-works-stages.png "Figure: the stages of treating river water and what each one removes")
+
 Cambridge sums up the process as: **sedimentation and filtration** to remove solids, **carbon** to remove tastes and odours, and **chlorination** to kill microbes.
 
 ### The role of aluminium sulfate (ZIMSEC)

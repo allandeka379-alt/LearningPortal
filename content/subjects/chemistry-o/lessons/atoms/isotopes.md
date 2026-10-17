@@ -61,6 +61,8 @@ Isotopes differ only in mass, so some physical properties, such as density, are 
 
 The relative atomic mass of an element is a **weighted average** of the masses of its isotopes: each isotope counts in proportion to how common it is.
 
+![Bar chart of chlorine isotopes: chlorine-35 is 75% and chlorine-37 is 25% abundant, so the weighted average relative atomic mass is (35 × 75 + 37 × 25) ÷ 100 = 35.5, nearer 35 than 37.](media:diagrams/isotopes-chlorine-relative-atomic-mass.png "Figure: the relative atomic mass of chlorine is the abundance-weighted average, 35.5")
+
 :::formula{name="Relative atomic mass from abundances"}
 $$
 A_r = \frac{(\text{mass}_1 \times \%_1) + (\text{mass}_2 \times \%_2) + \ldots}{100}

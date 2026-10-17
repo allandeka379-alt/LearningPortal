@@ -59,6 +59,8 @@ $$
 
 There are about 20 different amino acids in proteins, with different R groups, and their **order** along the chain makes each protein different.
 
+![Three amino acids H2N-CHR-COOH join in turn, each COOH reacting with the next NH2: the chain H2N-CHR1-CO-NH-CHR2-CO-NH-CHR3-COOH has two amide links and two water molecules are released.](media:diagrams/protein-formation-amide-links.png "Figure: three amino acids join by two amide links, releasing 2 water molecules")
+
 :::worked-solution[Example 1: joining three amino acids]
 Three amino acids, with side chains $\ce{R1}$, $\ce{R2}$ and $\ce{R3}$, join in that order. Draw the section of chain and say how many water molecules are released.
 
@@ -110,6 +112,8 @@ The mixture of amino acids (or sugars) from hydrolysis is spotted on chromatogra
 $$
 R_f = \frac{\text{distance moved by the spot}}{\text{distance moved by the solvent front}}
 $$
+
+![Chromatogram: standards P, Q and S travel 1.88 cm, 3.0 cm and 4.65 cm (Rf 0.25, 0.40, 0.62); the protein hydrolysate spot moved 3.0 cm of 7.5 cm, Rf 0.40, so it matches amino acid Q.](media:diagrams/chromatography-amino-acids-rf-match.png "Figure: identifying an amino acid by its Rf value (3.0 cm ÷ 7.5 cm = 0.40)")
 
 :::worked-solution[Example 3: identifying an amino acid]
 A spot from a hydrolysed protein moved 3.0 cm while the solvent front moved 7.5 cm. On the same paper, standard amino acids gave $R_f$ values of P 0.25, Q 0.40 and S 0.62.

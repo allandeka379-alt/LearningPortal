@@ -39,6 +39,8 @@ $1\ \text{dm}^3 = 1000\ \text{cm}^3$. A cubic decimetre is the same as a litre.
 
 In a gas the particles are very far apart compared with their own size. The volume of a gas therefore depends on how many particles there are, not on how big or heavy each one is. Equal volumes of different gases at the same temperature and pressure contain equal numbers of molecules, so one mole of hydrogen, oxygen, carbon dioxide or methane each occupies 24 dm³ at r.t.p.
 
+![Four equal squares: 1 mole of hydrogen (2 g), oxygen (32 g), carbon dioxide (44 g) and methane (16 g) each occupy the same 24 dm3 at r.t.p., so the volume of a gas depends on the number of particles, not on their mass.](media:diagrams/molar-gas-volume-equal-volumes.png "Figure: equal numbers of gas molecules take the same volume, whatever their mass")
+
 This only applies to **gases**. At r.t.p. water is a liquid: one mole of water (18 g) occupies only about 18 cm³.
 
 ## Converting between volume, amount and mass
@@ -62,6 +64,8 @@ A gas syringe contains $600\ \text{cm}^3$ of carbon dioxide at r.t.p. Find the a
 ## Volumes of gases in reactions
 
 Combine the molar gas volume with the mole ratio from the balanced equation.
+
+![Reacting volumes: 50 cm3 of methane burns in 100 cm3 of oxygen to give 50 cm3 of carbon dioxide, a volume ratio of 1 : 2 : 1 matching the equation; liquid water adds no gas volume.](media:diagrams/molar-gas-volume-reacting-volumes.png "Figure: for gases the equation coefficients are the volume ratio (Example 4)")
 
 :::worked-solution[Example 3: gas made from a known mass]
 Calculate the volume of carbon dioxide, at r.t.p., produced when 10 g of calcium carbonate reacts with excess hydrochloric acid.

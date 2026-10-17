@@ -87,7 +87,10 @@ Lime should be applied a few weeks before planting and **not** at the same time 
 
 :::keyfact{title="The lime cycle"}
 limestone ($\ce{CaCO3}$) → heat → quicklime ($\ce{CaO}$) → add water → slaked lime ($\ce{Ca(OH)2}$) → carbon dioxide from the air → calcium carbonate again.
+
 :::
+
+![The lime cycle: heating 100 t of limestone (CaCO3) in a kiln gives 56 t of quicklime (CaO) and 44 t of carbon dioxide; adding water gives slaked lime Ca(OH)2 exothermically; slaked lime takes in carbon dioxide from the air and turns back into calcium carbonate.](media:diagrams/lime-cycle-limestone-quicklime-slaked-lime.png "Figure: the lime cycle with the reacting masses from the worked example")
 
 ## Calculations
 

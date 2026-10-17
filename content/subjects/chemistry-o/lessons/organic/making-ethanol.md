@@ -44,6 +44,8 @@ $$
 \ce{C6H12O6(aq) -> 2C2H5OH(aq) + 2CO2(g)}
 $$
 
+![Fermentation apparatus: yeast in glucose solution at 25 to 35 degrees Celsius in a flask closed to the air (anaerobic); the carbon dioxide made, 2 mol for each mole of glucose, bubbles through limewater and turns it milky while ethanol stays in the flask.](media:diagrams/fermentation-glucose-apparatus.png "Figure: fermenting glucose with yeast, with the gas tested using limewater")
+
 Conditions:
 
 - **yeast** (its enzymes are the catalyst) added to an aqueous solution of glucose or another sugar;

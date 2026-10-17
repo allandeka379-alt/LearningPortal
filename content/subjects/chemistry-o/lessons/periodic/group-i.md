@@ -77,6 +77,8 @@ The hydroxide dissolves, making an **alkaline** solution: universal indicator tu
 
 Because all Group I elements have one outer electron, they react in the same way. The trends let you predict how rubidium and caesium behave: both react **even more violently** (explosively) with water, forming rubidium hydroxide, RbOH, or caesium hydroxide, CsOH, and hydrogen.
 
+![Bar chart: the melting points of the Group I metals fall down the group, lithium 181, sodium 98, potassium 63, rubidium 39 and caesium 28 degrees Celsius (measured), so the decreases get smaller.](media:diagrams/group-i-melting-points-trend.png "Figure: melting points of lithium, sodium, potassium, rubidium and caesium")
+
 :::worked-solution[Example 2: predicting the melting point of caesium]
 Melting points: lithium $181\ ^\circ\text{C}$, sodium $98\ ^\circ\text{C}$, potassium $63\ ^\circ\text{C}$, rubidium $39\ ^\circ\text{C}$. Predict the melting point of caesium.
 1. Trend: the melting point decreases down the group.

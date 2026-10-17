@@ -41,6 +41,8 @@ A diesel fuel made from plant oils (such as jatropha oil) or animal fats.
 
 Coal is heated to a high temperature (about 1000 °C) in closed ovens with no air. If air were present, the coal would simply burn to carbon dioxide; without air it **decomposes** into four products:
 
+![Destructive distillation of coal: powdered coal is heated strongly without air in a hard-glass tube; coke stays behind, black tar and a watery ammoniacal layer condense in a U-tube in cold water, and coal gas burns at the jet.](media:diagrams/coal-destructive-distillation-apparatus.png "Figure: laboratory destructive distillation of coal, with the four products")
+
 | Product | What it is | Uses |
 | --- | --- | --- |
 | **coke** | a grey, porous solid, nearly pure carbon | smokeless fuel; reducing agent and fuel in the blast furnace for making iron |
@@ -66,6 +68,8 @@ In a traditional earth kiln, wood is stacked, covered with soil and lit with ver
 ## Biogas
 
 Animal dung, crop waste and food waste are mixed with water and fed into a sealed tank called a **digester**. With no oxygen, bacteria break the waste down (**anaerobic digestion**), giving biogas: mainly **methane** (often about 50–70%) with **carbon dioxide** and small amounts of hydrogen sulfide.
+
+![A biogas digester: dung and water are fed into an airtight tank where bacteria break the waste down without oxygen; biogas, about 60% methane, collects at the top and is piped to stoves, and the slurry is drawn off as fertiliser. 2.0 m3 of biogas a day holds 1.2 m3 of methane.](media:diagrams/biogas-digester-anaerobic.png "Figure: an airtight biogas digester, with the gas and the fertiliser slurry as products")
 
 - The digester must be **airtight**: the bacteria that make methane only work without oxygen, and a mixture of methane and air is explosive.
 - It works best when **warm** and fed regularly.

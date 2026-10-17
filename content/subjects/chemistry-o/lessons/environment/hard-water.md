@@ -70,6 +70,8 @@ Hard water also has advantages: its calcium is good for teeth and bones, and man
 
 Hard water needs more soap to form a lasting lather than soft water does.
 
+![Bar chart of soap solution needed for a lasting lather: distilled water 0.5 cm3 before and after boiling; borehole water 11.0 cm3 before boiling and 4.0 cm3 after, so it has temporary hardness (the drop) and permanent hardness (still more than 0.5).](media:diagrams/hard-water-soap-test-results.png "Figure: soap needed for a lasting lather, before and after boiling")
+
 1. Measure a fixed volume of the water sample (for example $10.0\ \text{cm}^3$) into a conical flask.
 2. Add soap solution from a burette, $0.5\ \text{cm}^3$ at a time, stoppering and shaking the flask after each addition.
 3. Stop when a lather forms that lasts for a set time (for example 30 seconds). Record the volume of soap solution.
