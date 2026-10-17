@@ -58,6 +58,8 @@ The same works with $\lg$ instead of $\ln$. Not in MF19.
 4. $k = \mathrm{e}^{1.2} = 3.32$ (3 s.f.). So $y = 3.32x^{1.8}$.
 :::
 
+![Straight-line graph of ln y against ln x through (0.5, 2.1) and (2.0, 4.8): the gradient 2.7 ÷ 1.5 = 1.8 is the power n and the intercept 1.2 on the ln y axis is ln k, so y = kx^n with n = 1.8 and k = e^1.2 = 3.32.](media:diagrams/linear-law-ln-y-against-ln-x.png "Figure: for y = kxⁿ, a graph of ln y against ln x is a line with gradient n and intercept ln k")
+
 ## Exponential laws: y = ka^x
 
 :::worked-solution[Example 2: a line of $\ln y$ against $x$ passes through $(1, 3.2)$ and $(5, 4.4)$. Find $a$ and $k$ in $y = ka^{x}$]
@@ -66,6 +68,8 @@ The same works with $\lg$ instead of $\ln$. Not in MF19.
 3. Intercept: $3.2 = 0.3(1) + \ln k$, so $\ln k = 2.9$ and $k = \mathrm{e}^{2.9} = 18.2$ (3 s.f.).
 4. So $y = 18.2 \times 1.35^{x}$.
 :::
+
+![Straight-line graph of ln y against x through (1, 3.2) and (5, 4.4): the gradient 1.2 ÷ 4 = 0.3 is ln a and the intercept 2.9 is ln k, so y = ka^x with a = e^0.3 = 1.35 and k = e^2.9 = 18.2.](media:diagrams/linear-law-ln-y-against-x.png "Figure: for y = kaˣ, a graph of ln y against x is a line with gradient ln a and intercept ln k")
 
 The key difference between the two forms is the horizontal axis: $\ln x$ for a power law, $x$ for an exponential law.
 

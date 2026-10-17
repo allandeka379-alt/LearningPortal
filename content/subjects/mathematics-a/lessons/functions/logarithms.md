@@ -87,6 +87,8 @@ Logarithms with base greater than 1 are increasing functions, so taking logarith
 4. The least integer is $n = 11$. Check: $0.8^{10} = 0.107 > 0.1$ and $0.8^{11} = 0.0859 < 0.1$.
 :::
 
+![Graph of y = 0.8^n with the line y = 0.1: the curve crosses the line at n = 10.32, so 0.8^10 = 0.107 is still above 0.1 and 0.8^11 = 0.0859 is below, giving least integer n = 11.](media:diagrams/decay-curve-08-to-the-n.png "Figure: the decay curve y = 0.8ⁿ crosses y = 0.1 at n = 10.31, so the least whole n is 11")
+
 This is the typical depreciation question: "a machine loses 20% of its value each year; after how many whole years is it worth less than 10% of its original value?"
 
 ## Logarithmic equations

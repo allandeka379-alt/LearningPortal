@@ -67,6 +67,8 @@ A **lamina** is a flat body with negligible thickness. For a uniform lamina, mas
 6. So $OA$ makes $34.7°$ with the vertical.
 :::
 
+![L-shaped lamina: a 12 cm by 8 cm rectangle OABC with a 4 cm square removed at corner B has its centre of mass G at (5.2, 3.6) cm, below and left of the whole rectangle's centre (6, 4); hung from O, OG is vertical and OA makes 34.7 degrees with it.](media:diagrams/lamina-with-square-removed.png "Figure: removing the corner square moves the centre of mass from (6, 4) to G (5.2, 3.6)")
+
 Always check the answer is sensible: removing the top-right corner moves the centre of mass down and to the left of $(6, 4)$, as found.
 
 ## Bodies suspended from a point
@@ -89,6 +91,8 @@ Whichever critical angle is **smaller** is reached first.
 2. Toppling: $G$ is 0.6 m above the base and 0.2 m from the lower edge. It is above the lower edge when $\tan\theta = \dfrac{0.2}{0.6} = \dfrac{1}{3}$, so $\theta = 18.4°$.
 3. $18.4° < 26.6°$, so the crate **topples first**, when the plank reaches $18.4°$.
 :::
+
+![A uniform crate 0.4 m wide and 1.2 m tall on a plank: it topples when the vertical through its centre of mass G passes through the lower edge, at tan θ = 0.2/0.6, θ = 18.4 degrees, before it would slide at 26.6 degrees (mu = 0.5).](media:diagrams/crate-toppling-on-plank.png "Figure: toppling starts when the vertical through G reaches the lower edge of the base")
 
 A tall, narrow body tends to topple; a low, wide one on a smooth surface tends to slide. Loading a cart high raises $G$ and makes toppling more likely.
 

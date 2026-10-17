@@ -109,6 +109,8 @@ The points $P$ and $Q$ on $y = x^{3} + 2x$ have $x$-coordinates 1 and $1 + h$. S
 4. As $h \to 0$ the gradient tends to 5, so the gradient of the curve at $P$ is 5.
 :::
 
+![Curve y = x³ + 2x with P (1, 3): the chord to Q at x = 2 (h = 1) has gradient 5 + 3 + 1 = 9, the chord to Q at x = 1.5 (h = 0.5) has gradient 5 + 1.5 + 0.25 = 6.75, and as Q moves towards P the chord gradient 5 + 3h + h² tends to 5, the gradient of the tangent at P.](media:diagrams/chords-to-tangent-cubic.png "Figure: as h gets smaller the chord PQ turns into the tangent at P, with gradient 5 + 3h + h² → 5")
+
 ## The second derivative
 
 Once you have the gradient function, you can differentiate it again. For $y = x^{4} - 6x^{2}$, the rules of the next lesson give $\frac{dy}{dx} = 4x^{3} - 12x$ and $\frac{d^{2}y}{dx^{2}} = 12x^{2} - 12$. At $x = 2$ the second derivative is 36: the gradient is increasing rapidly there. The second derivative is used to classify stationary points and, in mechanics, to find acceleration from displacement.

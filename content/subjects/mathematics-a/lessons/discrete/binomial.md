@@ -72,6 +72,8 @@ Translate words into inequalities carefully, then list the values or use the com
 6. $\mathrm{P}(2 \le X \le 4) = 0.167790 + 0.239700 + 0.231140 = 0.639$ (3 s.f.).
 :::
 
+![Bar chart of the binomial distribution B(12, 0.3): probabilities rise to a peak at X = 3 (0.240), the three bars for X = 2, 3 and 4 (0.168, 0.240, 0.231) are highlighted and sum to P(2 ≤ X ≤ 4) = 0.639, and the distribution is skewed to the right.](media:diagrams/binomial-12-03-bar-chart.png "Figure: B(12, 0.3) peaks at 3; the highlighted bars X = 2, 3, 4 give P(2 ≤ X ≤ 4) = 0.639")
+
 Keep at least five or six significant figures in each term before adding; rounding each term to 3 s.f. first can change the final answer.
 
 ## Finding n

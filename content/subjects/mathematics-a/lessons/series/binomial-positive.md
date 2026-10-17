@@ -36,6 +36,8 @@ The **general term** is $\binom{n}{r}a^{n-r}b^r$; it is the $(r + 1)$th term. Th
 
 Each row of Pascal's triangle starts and ends with 1, and every other entry is the sum of the two above it. Row $n$ gives the coefficients of $(a + b)^n$:
 
+![Pascal's triangle for rows 0 to 7, each entry the sum of the two above it, with row 4 (1, 4, 6, 4, 1) highlighted: these are the coefficients used to expand (2 + x)⁴ = 16 + 32x + 24x² + 8x³ + x⁴, and row 7 is 1, 7, 21, 35, 35, 21, 7, 1.](media:diagrams/pascals-triangle-rows-0-7.png "Figure: row n of Pascal's triangle gives the coefficients of (a + b)ⁿ; row 4 expands (2 + x)⁴")
+
 | $n$ | coefficients |
 | --- | --- |
 | 4 | 1, 4, 6, 4, 1 |

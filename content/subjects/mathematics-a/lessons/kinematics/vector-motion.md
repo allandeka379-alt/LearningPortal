@@ -84,6 +84,8 @@ Two particles **collide** only if they are at the same place **at the same time*
 5. $P$ passes through this point at $t = 2$ and $Q$ at $t = 3$, one time unit later.
 :::
 
+![Paths of two particles on an x-y plane: P moves from (1, 5) with velocity (3, 1) and Q from (13, -5) with velocity (-2, 4); the paths cross at (7, 7), but P is there at t = 2 and Q at t = 3, so they do not collide.](media:diagrams/paths-cross-no-collision.png "Figure: the paths cross at (7, 7), but the particles are there at different times (t = 2 and t = 3)")
+
 The same method finds where any two lines meet. For the lines $\mathbf{r} = \mathbf{i} + 2\mathbf{j} + s(\mathbf{i} + 3\mathbf{j})$ and $\mathbf{r} = 7\mathbf{i} + t(-\mathbf{i} + 2\mathbf{j})$: $1 + s = 7 - t$ and $2 + 3s = 2t$ give $s = 2$, $t = 4$, so the lines meet at $3\mathbf{i} + 8\mathbf{j}$.
 
 ## How close do they come?

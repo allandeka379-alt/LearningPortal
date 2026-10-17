@@ -67,6 +67,8 @@ For an angle at a vertex, use the two vectors pointing **away** from that vertex
 4. (b) Area $= \tfrac{1}{2}|\overrightarrow{AB}||\overrightarrow{AC}|\sin BAC = \tfrac{1}{2}(5)(\sqrt{27})\sin 74.4° = 12.5$ square units.
 :::
 
+![Triangle ABC with A (2, 0, 1), B (5, 4, 1), C (3, 1, 6): the vectors AB = 3i + 4j and AC = i + j + 5k both start at A, AB·AC = 7, |AB| = 5 and |AC| = √27, so angle BAC = 74.4 degrees.](media:diagrams/vector-angle-triangle-bac.png "Figure: angle BAC is found from the two vectors that start at A: cos BAC = 7 ÷ (5√27)")
+
 :::worked-solution[Example 4: a cuboid has vertices $O(0, 0, 0)$, $A(4, 0, 0)$, $B(4, 3, 0)$, $C(0, 3, 0)$ and, directly above them, $D(0, 0, 2)$, $E(4, 0, 2)$, $F(4, 3, 2)$, $G(0, 3, 2)$. Find the acute angle between the diagonals $OF$ and $AG$.]
 1. $\overrightarrow{OF} = 4\mathbf{i} + 3\mathbf{j} + 2\mathbf{k}$ and $\overrightarrow{AG} = -4\mathbf{i} + 3\mathbf{j} + 2\mathbf{k}$.
 2. Scalar product: $-16 + 9 + 4 = -3$; both have magnitude $\sqrt{29}$.

@@ -49,6 +49,8 @@ For grouped data, $x$ is the class mid-point and the result is an **estimate**.
 4. Range: $31 - 9 = 22$ dollars. Quartiles (medians of the two halves of 5 values): $Q_1 = 9$, $Q_3 = 22$, so $\text{IQR} = 13$ dollars.
 :::
 
+![Box-and-whisker plot of 11 daily airtime sales: minimum 9, lower quartile 9, median 15, upper quartile 22 and maximum 31 dollars, so the interquartile range is 13; the mean 16.6 (marked with a cross) is slightly above the median, and the dots below show the 11 values with three days at 9.](media:diagrams/box-plot-airtime-sales.png "Figure: the box spans Q₁ = 9 to Q₃ = 22 (IQR 13) with the median at 15 and whiskers to 9 and 31")
+
 For raw data there are several conventions for quartiles. A common one, used here, takes the median of the lower half and the median of the upper half (leaving out the median itself when $n$ is odd). Exam questions accept any sensible method; for $n = 4k + 3$ the usual methods give the same answer.
 
 ## Frequency tables

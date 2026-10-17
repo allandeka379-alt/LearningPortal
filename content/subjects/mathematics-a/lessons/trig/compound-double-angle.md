@@ -64,6 +64,8 @@ Split an angle into two angles with known exact values: $75^\circ = 45^\circ + 3
 4. The negative cosine tells you that $A + B$ is obtuse.
 :::
 
+![Unit circle with a ray at angle A (sin A = 3/5, cos A = 4/5, A = 36.9 degrees) and a ray at A + B where B adds 67.4 degrees: the point at A + B is (−16/65, 63/65), so cos(A + B) = −16/65 is negative (A + B is obtuse, 104.3 degrees) and sin(A + B) = 63/65.](media:diagrams/compound-angle-unit-circle.png "Figure: the coordinates of the point at angle A + B are (cos(A + B), sin(A + B)) = (−16/65, 63/65)")
+
 ## Expanding and simplifying
 
 Expanding compound angles with exact values for one of the angles turns an expression into the form $a\cos x + b\sin x$. This is how equations with two different compound angles are solved.

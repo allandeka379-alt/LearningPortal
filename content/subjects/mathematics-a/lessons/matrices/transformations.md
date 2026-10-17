@@ -53,6 +53,8 @@ To transform a shape, put the coordinates of its vertices as the columns of one 
 3. Both triangles have base 2 and height 2, so both have area 2: a shear preserves area ($\det\mathbf{S} = 1$).
 :::
 
+![A shear with matrix (1 2; 0 1) maps the triangle (1, 0), (3, 0), (1, 2) to (1, 0), (3, 0), (5, 2): points on the x-axis stay fixed, the top vertex slides 4 units parallel to the axis, and both triangles have base 2 and height 2, so the area (2) is unchanged because the determinant is 1.](media:diagrams/shear-triangle-before-after.png "Figure: a shear keeps the base fixed and slides the top vertex, so the area does not change")
+
 For the image of a line, write a general point of the line in terms of one parameter (or of $x$), transform it, and eliminate. For example, under $\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}$ the point $(x, x + 1)$ of the line $y = x + 1$ goes to $(X, Y) = (2x, 3x + 3)$; with $x = \frac{X}{2}$ this gives $Y = \frac{3}{2}X + 3$.
 
 ## Combining transformations

@@ -79,6 +79,8 @@ Many questions describe a shape and ask for vectors along its sides and diagonal
 4. The midpoints coincide, so the diagonals bisect each other.
 :::
 
+![Parallelogram OABC with O the origin, A (1, 2, 4), B (4, 6, 5) and C (3, 4, 1) where OC = AB = b − a: the diagonals OB and AC both have midpoint (2, 3, 2.5), so they bisect each other.](media:diagrams/vector-parallelogram-diagonals.png "Figure: in parallelogram OABC the diagonals OB and AC meet at their common midpoint M (2, 3, 2.5)")
+
 :::worked-solution[Example 3: find the value of $\lambda$ for which $2\mathbf{i} + \lambda\mathbf{j} + 6\mathbf{k}$ is parallel to $3\mathbf{i} - 6\mathbf{j} + 9\mathbf{k}$.]
 1. Parallel means each component is the same multiple: $\dfrac{2}{3} = \dfrac{\lambda}{-6} = \dfrac{6}{9}$.
 2. The first and last ratios agree ($\tfrac{2}{3}$), so the multiple is $\tfrac{2}{3}$.

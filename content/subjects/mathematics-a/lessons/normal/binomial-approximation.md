@@ -56,6 +56,8 @@ Because a continuous normal curve is replacing the bars of a histogram, each who
 5. $\mathrm{P}(Y > 29.5) = 1 - \Phi(1.449) = 1 - 0.9264 = 0.0736$ (tables with $z = 1.45$ give $0.0735$).
 :::
 
+![Bar chart of the binomial distribution B(60, 0.4) with the normal curve N(24, 14.4) drawn over it: the curve follows the bar tops closely, and P(X ≥ 30) is the area of the bars from X = 30, which the normal curve approximates by the area to the right of 29.5 (the continuity correction); exact 0.0746, normal 0.0736.](media:diagrams/binomial-normal-overlay-60-04.png "Figure: the bars are the binomial probabilities, the curve is N(24, 14.4); the tail from 29.5 gives P(X ≥ 30)")
+
 The exact binomial answer is $0.0746$, so the approximation is good to two decimal places. Always state the approximating distribution in full before standardising.
 
 :::worked-solution[Example 2: $X \sim \mathrm{B}(100, 0.35)$. Use a normal approximation to find $\mathrm{P}(30 \le X < 40)$.]

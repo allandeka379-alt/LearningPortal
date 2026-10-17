@@ -52,6 +52,8 @@ For $a \neq 1$: take $a$ out of the $x^{2}$ and $x$ terms first.
 5. The least value of $2x^{2} - 12x + 7$ is $-11$, so for all real $x$ the range is $f(x) \geq -11$.
 :::
 
+![Graph of y = 2x² - 12x + 7 = 2(x - 3)² - 11: a U-shaped parabola with minimum (vertex) at (3, -11), line of symmetry x = 3, y-intercept 7 and x-intercepts 0.65 and 5.35.](media:diagrams/completed-square-vertex-parabola.png "Figure: completing the square gives the vertex (3, −11) and the line of symmetry x = 3")
+
 When $a$ is negative, take out $-1$ (or $-a$) carefully. Many students prefer to write the answer as $q - (x - h)^{2}$.
 
 :::worked-solution[Example 2: find the greatest value of $5 + 4x - x^{2}$]
@@ -93,6 +95,8 @@ To find where the line $y = mx + k$ meets a curve $y = f(x)$, substitute to get 
 3. Tangent when $4k - 8 = 0$: $k = 2$. Then $x^{2} - 4x + 4 = 0$ gives $x = 2$, so the point of contact is $(2, 4)$.
 4. Two points when $4k - 8 > 0$: $k > 2$. No intersection when $k < 2$.
 :::
+
+![The curve y = x² - 3x + 6 with three lines y = x + k: k = 4 cuts it at two points (discriminant 8 > 0), k = 2 touches it at (2, 4) (discriminant 0, tangent), and k = 0 misses it (discriminant -8 < 0).](media:diagrams/line-and-parabola-discriminant.png "Figure: the sign of the discriminant 4k − 8 decides whether the line cuts, touches or misses the curve")
 
 :::worked-solution[Example 5: show that $x^{2} + kx + (k - 1) = 0$ has real roots for all values of $k$]
 1. $b^{2} - 4ac = k^{2} - 4(k - 1) = k^{2} - 4k + 4$.

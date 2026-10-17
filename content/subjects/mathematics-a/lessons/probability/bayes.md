@@ -67,6 +67,8 @@ On a tree diagram with the partition on the first stage and $B$ on the second, t
 5. Similarly $\mathrm{P}(A \mid D) = 0.345$ and $\mathrm{P}(B \mid D) = \frac{0.009}{0.029} = 0.310$. The three posteriors add to 1, a useful check. Machine C makes only 20% of the bolts but is responsible for over a third of the defective ones.
 :::
 
+![Probability tree for three machines A, B, C making 50%, 30% and 20% of bolts with defect rates 0.02, 0.03 and 0.05: the defective branches have probabilities 0.010, 0.009 and 0.010 which total P(D) = 0.029, so P(C | D) = 0.010 ÷ 0.029 = 0.345.](media:diagrams/defective-bolts-tree-diagram.png "Figure: add the three D branches to get P(D) = 0.029; the share of machine C is 0.010 ÷ 0.029")
+
 :::worked-solution[Example 2: 4% of the people tested at a clinic have a disease. The test is positive for 95% of people with the disease and for 8% of people without it. Find the probability that a person who tests positive has the disease]
 1. Let $S$ be "has the disease", $+$ be "tests positive". $\mathrm{P}(S) = 0.04$, $\mathrm{P}(+ \mid S) = 0.95$, $\mathrm{P}(+ \mid S') = 0.08$.
 2. $\mathrm{P}(S \cap +) = 0.04 \times 0.95 = 0.038$; $\mathrm{P}(S' \cap +) = 0.96 \times 0.08 = 0.0768$.

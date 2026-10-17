@@ -84,6 +84,8 @@ When two objects move at the same time, write an equation for each, using the **
 5. Car's speed: $v = 0 + 2 \times 15 = 30$ m s$^{-1}$, twice the truck's speed.
 :::
 
+![Distance-time graphs for a car accelerating from rest at 2 m/s² (s = t², a curve) and a truck at constant 15 m/s (s = 15t, a straight line): the truck is ahead at first and the car overtakes it where the graphs meet, at t = 15 s and 225 m from the robot.](media:diagrams/car-overtakes-truck-distance-time.png "Figure: the car overtakes the truck where the curve s = t² meets the line s = 15t, at t = 15 s")
+
 Notice that motion at constant velocity is a special case with $a = 0$, so $s = ut$.
 
 :::keyfact{title="ZIMSEC and Cambridge"}

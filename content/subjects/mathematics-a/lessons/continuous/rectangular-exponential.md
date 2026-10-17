@@ -57,6 +57,8 @@ $$
 4. $\mathrm{Var}(W) = \dfrac{15^2}{12} = 18.75$, so the standard deviation is $\sqrt{18.75} = 4.33$ minutes.
 :::
 
+![Rectangular distribution U(0, 15) for the waiting time at a kombi rank: a flat density of 1/15 between 0 and 15 minutes; the shaded area from 10 to 15 is P(W > 10) = 5/15 = 1/3, the mean is 7.5 minutes and the standard deviation is 4.33 minutes.](media:diagrams/uniform-waiting-time-0-15.png "Figure: for a rectangular distribution, probability is a rectangle's area: P(W > 10) = 5/15")
+
 Rounding errors are a classic rectangular variable: a length measured to the nearest centimetre has a rounding error uniformly distributed on $[-0.5, 0.5]$ cm, with mean 0 and variance $\frac{1}{12}$.
 
 ## The exponential distribution
@@ -73,6 +75,8 @@ The median $m$ solves $\mathrm{e}^{-\lambda m} = \frac{1}{2}$, so $m = \frac{\ln
 3. $\mathrm{P}(2 < T < 5) = \mathrm{e}^{-0.5} - \mathrm{e}^{-1.25} = 0.6065 - 0.2865 = 0.320$.
 4. Median: $\mathrm{e}^{-0.25m} = 0.5$, so $m = 4\ln 2 = 2.77$ years.
 :::
+
+![Exponential density f(t) = 0.25e^(-0.25t) for a battery lifetime with mean 4 years: the curve falls steadily, the median 2.77 years lies left of the mean 4, and the shaded tail from t = 6 has area e^(-1.5) = 0.223.](media:diagrams/exponential-density-mean-4.png "Figure: the median (2.77 years) is below the mean (4 years) because the long right tail pulls the mean up")
 
 Half the batteries fail before 2.77 years, even though the mean lifetime is 4 years: a few long-lived batteries pull the mean up.
 

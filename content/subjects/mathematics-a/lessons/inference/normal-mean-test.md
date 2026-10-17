@@ -76,6 +76,8 @@ $$
 4. So a sample mean of 77.1 would be significant in the one-tailed test but not in the two-tailed test.
 :::
 
+![Two copies of the distribution of the sample mean N(75, 1.2²): in the one-tailed test the critical region is x̄ > 76.97, in the two-tailed test it is x̄ < 72.65 or x̄ > 77.35; a sample mean of 77.1 (red line) falls in the one-tailed region but not in the two-tailed regions.](media:diagrams/critical-regions-one-and-two-tailed.png "Figure: the same sample mean 77.1 is significant in the one-tailed test but not in the two-tailed test")
+
 Critical regions for $\bar{x}$ are needed later for Type II error calculations, where the true mean differs from $\mu_0$.
 
 ## p-values in two-tailed tests

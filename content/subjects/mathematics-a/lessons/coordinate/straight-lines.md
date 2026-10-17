@@ -81,6 +81,8 @@ To use the gradient of a line given as $ax + by + c = 0$, rearrange it to $y = m
 4. Answer: $3x - 2y - 2 = 0$.
 :::
 
+![The perpendicular bisector of P (1, 7) and Q (7, 3): it passes through the midpoint M (4, 5) with gradient 3/2, the negative reciprocal of the gradient -2/3 of PQ, and has equation 3x - 2y - 2 = 0.](media:diagrams/perpendicular-bisector-pq.png "Figure: the perpendicular bisector passes through the midpoint M (4, 5) at right angles to PQ")
+
 ## Intersections and areas
 
 The intersection of two lines is the solution of their equations as simultaneous equations. In the same way, any intersection of two graphs corresponds to a solution of an equation.
@@ -96,6 +98,8 @@ The lines $L_{1}: y = 2x - 1$ and $L_{2}: x + 3y = 18$ meet at $P$.
 4. The base along the $y$-axis has length $6 - (-1) = 7$; the height is the $x$-coordinate of $P$, which is $3$.
 5. Area $= \frac{1}{2} \times 7 \times 3 = 10.5$ square units.
 :::
+
+![The lines y = 2x - 1 and x + 3y = 18 meet at P (3, 5) and cut the y-axis at (0, -1) and (0, 6); the shaded triangle has base 7 on the y-axis and height 3 (the x-coordinate of P), so its area is 10.5 square units.](media:diagrams/two-lines-triangle-yaxis.png "Figure: the triangle has its base on the y-axis, so the height is the x-coordinate of P")
 
 ## Perpendicular distance from a point to a line (ZIMSEC)
 

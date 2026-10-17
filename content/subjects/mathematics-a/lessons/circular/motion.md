@@ -66,6 +66,8 @@ A particle on a string, moving in a horizontal circle with the string sweeping o
 5. So $\omega^2 = \dfrac{g}{l\cos\theta}$, as required. Check: $\dfrac{9.8}{0.8 \times 0.8660} = 14.145$.
 :::
 
+![Conical pendulum, string 0.8 m at 30 degrees to the vertical, radius 0.4 m, mass 0.3 kg: the vertical component of the tension balances the weight 2.94 N, giving T = 3.39 N, and the horizontal component 1.70 N towards the centre of the circle gives omega² = 14.1.](media:diagrams/conical-pendulum-forces.png "Figure: the horizontal component of the tension is the force towards the centre; the vertical component balances the weight")
+
 The period is $2\pi\sqrt{\frac{l\cos\theta}{g}}$, here $1.67$ s: it depends on the **depth** $l\cos\theta$ of the circle below the fixed point, not on the mass.
 
 ## Banked tracks
@@ -80,6 +82,8 @@ $$
 2. $v^2 = 784\tan 12° = 166.6$.
 3. $v = 12.9$ m s$^{-1}$ (about 46 km h$^{-1}$).
 :::
+
+![Smooth bend banked at 12 degrees, radius 80 m: the normal reaction R leans towards the centre; its vertical component R cos 12° balances the weight mg and its horizontal component R sin 12° supplies the central force, so tan 12° = v²/(rg) and v = 12.9 m/s.](media:diagrams/banked-track-forces.png "Figure: on a banked track the normal reaction supplies the central force")
 
 Faster than this, friction acts down the slope to stop the vehicle sliding outwards; slower, friction acts up the slope. With friction included, resolve vertically and horizontally (not along the slope), with $F = \mu R$ at the limit.
 

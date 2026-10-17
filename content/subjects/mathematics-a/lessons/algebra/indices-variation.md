@@ -105,6 +105,8 @@ The charge $C$ (US dollars) for hiring a kombi is partly constant and partly var
 5. For $d = 200$: $C = 21 + 80 = 101$, so the trip costs US\$101.
 :::
 
+![Partial variation C = 21 + 0.4d for a kombi hire: a straight line with intercept 21 (the fixed charge) and gradient 0.4 US dollars per km through (60, 45) and (130, 73); a 200 km trip costs US\$101.](media:diagrams/partial-variation-kombi-hire.png "Figure: partial variation is a straight line: the intercept 21 is the fixed part, the gradient 0.4 the part that varies with distance")
+
 The constant $a = 21$ has a meaning: a fixed booking charge of US\$21, with US\$0.40 for each kilometre. Interpreting the constants is often asked.
 
 :::worked-solution[Example 5: joint variation and a "show that"]

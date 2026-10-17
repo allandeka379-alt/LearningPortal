@@ -62,6 +62,10 @@ Every graph of a reciprocal function can be drawn from the original: where the o
 
 The range tells you at once that equations such as $\sec x = 0.5$ have no solutions.
 
+![Graph of y = sec x for 0 to 360 degrees drawn from the dashed cosine curve: vertical asymptotes at x = 90 and 270 degrees where cos x = 0, minimum points (0, 1) and (360, 1), a maximum point (180, -1), and no values between -1 and 1.](media:diagrams/sec-graph-with-cos.png "Figure: y = sec x has asymptotes where cos x = 0 and never lies between −1 and 1")
+
+![Graph of y = cosec x for 0 to 360 degrees drawn from the dashed sine curve: vertical asymptotes at x = 0, 180 and 360 degrees where sin x = 0, a minimum point (90, 1) and a maximum point (270, -1), so cosec x never lies between -1 and 1.](media:diagrams/cosec-graph-with-sin.png "Figure: y = cosec x has asymptotes where sin x = 0 and turning points (90°, 1) and (270°, −1)")
+
 ## Proving identities
 
 The same strategy as before works: write everything in terms of $\sin$ and $\cos$, or use the new Pythagorean identities directly.

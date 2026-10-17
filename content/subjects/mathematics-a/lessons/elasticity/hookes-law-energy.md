@@ -48,6 +48,8 @@ W = \int_0^{x} \frac{\lambda s}{l}\,\mathrm{d}s = \left[\frac{\lambda s^2}{2l}\r
 $$
 Graphically, this is the area of the triangle under the tension–extension line. Stretching further, from extension $x_1$ to $x_2$, takes $\frac{\lambda}{2l}\left(x_2^2 - x_1^2\right)$, **not** $\frac{\lambda}{2l}(x_2 - x_1)^2$.
 
+![Tension-extension graph for a string of natural length 0.8 m and modulus 24 N: a straight line of gradient λ/l = 30 N/m, so a load of 4.9 N gives extension 0.163 m and the area under the line, the stored elastic energy, is 0.40 J.](media:diagrams/tension-extension-graph-epe.png "Figure: the area under the tension–extension line is the elastic energy stored")
+
 ## Equilibrium problems
 
 In equilibrium, resolve forces as usual and replace each tension by $\frac{\lambda x}{l}$.

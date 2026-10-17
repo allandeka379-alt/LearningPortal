@@ -69,6 +69,8 @@ Momentum is conserved in every collision; kinetic energy is not, and you must ne
 4. Now $P$ moves at $-1$ m s$^{-1}$ and the combined particle at $+1$ m s$^{-1}$: they move apart, so there are no further collisions.
 :::
 
+![Head-on collision on a smooth line: P (2 kg) moves right at 4 m/s and Q (3 kg) moves left at 2 m/s; momentum before is 2(4) + 3(-2) = 2 N s, and after the collision P moves left at 1 m/s so Q moves right at 4/3 = 1.33 m/s.](media:diagrams/head-on-collision-p-and-q.png "Figure: conservation of momentum gives Q's velocity after the collision: 4/3 m/s in P's original direction")
+
 ## Impulse (ZIMSEC)
 
 When a force $F$ acts for a time $t$, it produces a change in momentum. The **impulse** of the force is

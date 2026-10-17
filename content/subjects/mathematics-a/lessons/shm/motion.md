@@ -56,6 +56,8 @@ $$
 5. $\dfrac{\pi t}{2} = 0.6435$, so $t = 0.410$ s.
 :::
 
+![Displacement-time graph of simple harmonic motion x = 0.5 sin(πt/2): a sine wave of amplitude 0.5 m and period 4 s starting at the centre O; the particle first reaches x = 0.3 m at t = 0.410 s.](media:diagrams/shm-displacement-time-amplitude-05.png "Figure: starting from O, SHM x = 0.5 sin(πt/2) first reaches 0.3 m after 0.410 s")
+
 :::worked-solution[Example 2: A particle moving with SHM has speed 6 m s$^{-1}$ when 1 m from the centre and speed 4 m s$^{-1}$ when 2 m from the centre. Find the amplitude and the period.]
 1. $36 = \omega^2(a^2 - 1)$ and $16 = \omega^2(a^2 - 4)$.
 2. Subtract: $20 = 3\omega^2$, so $\omega^2 = \dfrac{20}{3}$ and $\omega = 2.582$ rad s$^{-1}$.

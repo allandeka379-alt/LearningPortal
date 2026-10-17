@@ -99,6 +99,8 @@ There are exactly $n$ distinct roots, all with modulus $R^{1/n}$, spaced $\frac{
 4. Check one: $(-2\mathrm{i})^3 = -8\mathrm{i}^3 = 8\mathrm{i}$.
 :::
 
+![Argand diagram of the three roots of z^3 = 8i: they lie on the circle of radius 2 at arguments pi/6, 5pi/6 and -pi/2, the points sqrt(3) + i, -sqrt(3) + i and -2i, which are the vertices of an equilateral triangle 120 degrees apart.](media:diagrams/roots-z-cubed-8i-argand.png "Figure: the cube roots of 8i are equally spaced on the circle |z| = 2")
+
 ## Roots of unity
 
 The cube roots of unity are $1$, $\omega = \mathrm{e}^{2\pi\mathrm{i}/3} = -\frac{1}{2} + \frac{\sqrt{3}}{2}\mathrm{i}$ and $\omega^2 = -\frac{1}{2} - \frac{\sqrt{3}}{2}\mathrm{i}$. Because $\omega^3 = 1$ and $\omega \ne 1$, factorising $\omega^3 - 1 = (\omega - 1)(\omega^2 + \omega + 1) = 0$ gives $1 + \omega + \omega^2 = 0$. The same argument shows that the $n$ roots of unity always sum to zero. Geometrically, they are the vertices of a regular polygon centred at the origin, so their vector sum is zero.

@@ -90,6 +90,8 @@ When a question says "exact", keep $\pi$ and surds. The exact values $\sin\frac{
 5. Segment area $= 12\pi - 9\sqrt{3}$ cm$^2$ (about $22.11$ cm$^2$).
 :::
 
+![Sector OAB of a circle of radius 6 cm with angle 2π/3 at O: the arc AB is 4π cm (12.57), the chord AB is 6√3 cm (10.39), and the minor segment between chord and arc has area 12π − 9√3 cm², the sector minus triangle OAB.](media:diagrams/radians-minor-segment-sector.png "Figure: the minor segment is the sector OAB minus triangle OAB; arc 4π cm, chord 6√3 cm")
+
 ## Finding the radius or the angle
 
 Two facts about a sector give two equations. Use $A = \frac{1}{2}r(r\theta) = \frac{1}{2}rs$ to link area and arc length, or substitute $r\theta$ from the perimeter. Always check that an angle found is less than $2\pi$.
@@ -105,6 +107,8 @@ Two facts about a sector give two equations. Use $A = \frac{1}{2}r(r\theta) = \f
 ## Small-angle approximations (ZIMSEC)
 
 For an angle $x$ in radians close to zero, the graph of $y = \sin x$ is very close to the line $y = x$, and similarly for $\tan x$. For cosine, the best simple approximation is the parabola $1 - \frac{x^2}{2}$. These are used to simplify expressions when $x$ is small, typically to find an approximate value or a limit.
+
+![Graphs of y = sin x, y = x and y = tan x for x from 0 to 1.2 radians: near zero all three coincide, at x = 0.5 sin x = 0.479, x = 0.5 and tan x = 0.546, and they separate as x grows, so sin x ≈ x and tan x ≈ x only for small x.](media:diagrams/small-angle-sin-tan-line.png "Figure: sin x and tan x hug the line y = x near 0 and separate as x grows")
 
 :::worked-solution[Example 6: show that, for small $x$, $\dfrac{\sin 3x \tan 2x}{1 - \cos 4x} \approx \dfrac{3}{4}$]
 1. $\sin 3x \approx 3x$ and $\tan 2x \approx 2x$, so the numerator $\approx 6x^2$.

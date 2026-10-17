@@ -45,6 +45,8 @@ Each indefinite integral brings a constant, found from an **initial condition** 
 5. Total distance $= 12$ m, although the displacement after $4$ s is only $6 - 2 = 4$ m.
 :::
 
+![Displacement-time graph of s = t³ − 6t² + 9t + 2: the particle starts at s = 2, is at rest (turning) at t = 1 with s = 6 and at t = 3 with s = 2, and reaches s = 6 at t = 4; each of the three stages is 4 m, so the distance is 12 m but the displacement is 4 m.](media:diagrams/displacement-time-cubic-turns.png "Figure: the turning points t = 1 and t = 3 show why distance (12 m) is more than displacement (4 m)")
+
 The lesson of step 3: **never** find a distance by substituting the end time alone when the particle may have turned round. Find where $v = 0$ inside the interval first.
 
 ## Reading the signs
@@ -73,6 +75,8 @@ The displacement between $t_1$ and $t_2$ is $\int_{t_1}^{t_2} v\,\mathrm{d}t$. I
 4. (c) $v \ge 0$ on $0 \le t \le 15$, so the distance equals the displacement: $\displaystyle\int_0^{15} (0.6t^2 - 0.04t^3)\,\mathrm{d}t = \left[0.2t^3 - 0.01t^4\right]_0^{15}$.
 5. $= 0.2(3375) - 0.01(50625) = 675 - 506.25 = 168.75$ m.
 :::
+
+![Velocity-time graph of v = 0.6t² − 0.04t³ for 0 to 15 s: the particle starts and ends at rest, its greatest speed is 20 m/s at t = 10 (where a = 0), and the shaded area under the curve, the integral from 0 to 15, is the distance 168.75 m.](media:diagrams/velocity-time-cubic-area.png "Figure: the area under the velocity–time curve is the distance travelled, 168.75 m")
 
 ## When the acceleration is constant
 

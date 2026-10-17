@@ -86,6 +86,8 @@ On a rough slope, friction always acts **against the motion**. So the accelerati
 6. $v^2 = 0 + 2(2.414)(11.92)$, so $v = 7.59$ m s$^{-1}$: much less than $12$ m s$^{-1}$, because friction has done work on both journeys.
 :::
 
+![A particle on a rough plane inclined at 25 degrees with mu = 0.2: moving up the slope, friction F = 0.2R acts down the slope and the deceleration is 6.04 m/s²; sliding down, friction acts up the slope and the acceleration is 2.41 m/s². Friction always opposes the motion.](media:diagrams/slope-forces-up-and-down-friction.png "Figure: friction acts against the motion, so the same slope gives different accelerations up and down")
+
 The mass cancelled throughout Example 3. That often happens with a single particle and no applied force, and you may be told to leave $m$ as a letter.
 
 :::keyfact{title="ZIMSEC and Cambridge"}
