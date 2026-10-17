@@ -64,6 +64,8 @@ A maize grain is a one-seeded fruit. Its outer layer is the **fruit wall (perica
 | Protective sheaths | None | Coleoptile over plumule, coleorhiza over radicle |
 | Type of germination | Epigeal | Hypogeal |
 
+![Longitudinal sections of a bean seed and a maize grain: the bean has a testa, hilum, micropyle, two food-storing cotyledons, plumule and radicle and no endosperm; the maize grain has a pericarp fused with the testa, a large starchy endosperm, a scutellum, a plumule in a coleoptile and a radicle in a coleorhiza.](media:diagrams/bean-maize-seed-structure.png "Figure: sections of a bean seed and a maize grain with their parts labelled")
+
 ## Conditions for germination
 
 A seed needs three conditions, plus a living embryo that is not dormant:
@@ -95,6 +97,8 @@ Germination happens inside the soil and is complete when the radicle and plumule
 
 - In the **bean (epigeal)** the hypocotyl grows into a hook that pushes up through the soil and then straightens, pulling the cotyledons above ground, where they turn green for a short time before shrivelling. The hook protects the plumule from damage.
 - In **maize (hypogeal)** the grain stays below ground. The coleoptile, a pointed sheath, pushes straight up through the soil and protects the plumule; when it reaches the light the first leaves break out of it. The radicle is soon followed by other roots that form the fibrous root system.
+
+![Germination in three stages: the bean (epigeal) forms a hypocotyl hook that pulls its cotyledons above the soil surface, while the maize grain (hypogeal) stays below ground and its coleoptile pushes the first leaves up through the soil.](media:diagrams/epigeal-hypogeal-germination.png "Figure: epigeal germination in the bean and hypogeal germination in maize")
 
 Because the bean must drag its large cotyledons through the soil, a crusted soil surface harms bean emergence more than maize emergence.
 

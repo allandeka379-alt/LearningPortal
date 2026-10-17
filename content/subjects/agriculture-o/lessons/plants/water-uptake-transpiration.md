@@ -50,6 +50,8 @@ Root hairs make this efficient because they give a **very large surface area**, 
 Rudo places a handful of fertiliser right against her maize seedlings. Around the roots the soil solution becomes **more concentrated** than the cell sap. Water now moves **out of** the root hairs by osmosis, the seedlings wilt and their leaves look scorched, even though the soil is moist. This is called fertiliser "burn". Banding the fertiliser a few centimetres away from the seed and applying top dressing beside the row avoids it.
 :::
 
+![Two panels showing osmosis at a root hair: in normal dilute soil water, water moves into the root hair cell whose sap is more concentrated; with fertiliser placed against the roots the soil solution becomes more concentrated than the cell sap, so water moves out of the root hair and the seedling wilts and looks scorched.](media:diagrams/root-hair-osmosis-fertiliser.png "Figure: water moves into a root hair from dilute soil water but out of it when fertiliser makes the soil solution stronger")
+
 ## Uptake of mineral salts
 
 Plants need mineral salts such as nitrate, phosphate and potassium ions. These are usually at a **lower concentration in the soil water than inside the root cells**, so diffusion alone would move them the wrong way. Root cells take them in by **active uptake**, using energy from respiration. This is why roots need **oxygen**: in a waterlogged soil the roots cannot respire properly, mineral uptake falls and crops turn yellow. Some ions also enter by diffusion when their concentration in the soil is high. Once inside, the dissolved salts travel up in the xylem with the water.
@@ -98,6 +100,8 @@ Nyasha uses a potometer on a leafy bean shoot and records how far the air bubble
 3. Wind increased it further, from 6 to 11 mm per min: an increase of $\frac{55 - 30}{30} \times 100 = 83.3\%$, because water vapour was blown away from the leaf.
 4. The plastic bag raised the humidity around the leaves, so the gradient for diffusion of water vapour was small and the rate fell to 2 mm per min.
 :::
+
+![Bar chart of potometer rates from the bean shoot: 3 mm per minute in still air and shade, 6 in still air and bright light, 11 with a fan in bright light and 2 with a plastic bag over the shoot; light doubles the rate, wind raises it a further 83.3% and high humidity cuts it.](media:diagrams/potometer-rates-bars.png "Figure: potometer rates (distance moved in 5 minutes divided by 5) under four conditions")
 
 :::worked-solution[Water loss measured by weighing]
 Tatenda covers the soil of a potted tomato plant with plastic and weighs it at 08:00 (1,250 g) and at 14:00 (1,214 g).

@@ -62,6 +62,8 @@ Steps in building a small **earth dam**:
 5. **Build a spillway** round one end of the wall, cut in firm ground, to carry flood water safely past the wall. If flood water flows over an earth wall, it can wash it away.
 6. Leave **freeboard** (extra height above the full water level) and fit an outlet pipe.
 
+![Cross-section of a small earth dam: a wall much wider at the base than the top with a clay core, a cut-off trench of compacted clay down to the impermeable base, stone pitching on the upstream face, grass on the downstream face, freeboard above the full water level, and pressure arrows that get longer with depth because water pressure doubles when the depth doubles.](media:diagrams/earth-dam-cross-section.png "Figure: the parts of a small earth dam and why the wall is thickest at the base")
+
 Concrete and masonry dam walls follow the same rule: they are thicker at the bottom where the pressure is greatest.
 
 ## Storage tanks
@@ -83,6 +85,8 @@ A cylindrical tank has an inside radius of $1.5\ \text{m}$ and a water depth of 
 3. Daily demand $= 30 \times 50 = 1\,500\ \text{L}$.
 4. A full tank lasts $14\,137 \div 1\,500 = 9.4$ days (to one decimal place).
 :::
+
+![Section of a cylindrical storage tank with inside radius 1.5 m and water depth 2 m on a raised stand, showing the screened inlet, cover, overflow pipe, outlet tap above the floor and scour valve at the bottom; its volume is 14.137 cubic metres or 14,137 litres, which lasts 30 cows using 1,500 litres a day for 9.4 days.](media:diagrams/storage-tank-features.png "Figure: the features of a storage tank and the capacity calculation from the worked example")
 
 ## Distributing water
 

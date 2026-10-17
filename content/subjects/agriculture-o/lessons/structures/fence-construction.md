@@ -70,6 +70,8 @@ The tight wires pull every straining post towards the next one. Without an ancho
 | Buried anchor ("dead man") | A heavy stone, log or block buried in the ground behind the post, tied to the post with strong wire | Cheap; little above ground to get in the way | Wire can rust underground; holds poorly in loose or wet soil; hard to inspect |
 | Concrete footing | The straining post is set in a block of concrete | Firm and long-lasting | Costly; awkward on remote sites |
 
+![Side view of a cattle fence: four strands of barbed wire, closer together near the ground, line posts 10 m apart with three droppers in each span, and straining posts at the ends held up by a box brace (left) and a diagonal stay to a block in the ground (right).](media:diagrams/fence-side-view-anchors.png "Figure: a wire fence with line posts, droppers and two kinds of anchor on the straining posts")
+
 ## Maintaining fences
 
 - **Patrol** fences regularly, especially after storms and before animals are moved.
@@ -95,6 +97,8 @@ A rectangular paddock is $200\ \text{m}$ long and $150\ \text{m}$ wide. The fenc
 4. Rolls $= 2\,800 \div 500 = 5.6$, so **6 rolls** (round up).
 5. Droppers $= 70 \text{ spans} \times 3 = 210$ droppers.
 :::
+
+![Plan of the 200 m by 150 m paddock fence with a post every 10 m: 70 posts in a closed loop with four corner straining posts, 2,800 m of wire (700 m times 4 strands, which is 5.6 rolls so 6 are bought), 210 droppers and a materials cost of US\$878.](media:diagrams/paddock-fence-plan-70-posts.png "Figure: the 70 posts of a closed paddock fence, and the quantities and cost worked out in the text")
 
 :::worked-solution[Cost of the paddock fence]
 Assume posts cost US\$5.00 each, a roll of barbed wire US\$60.00 and a dropper US\$0.80.

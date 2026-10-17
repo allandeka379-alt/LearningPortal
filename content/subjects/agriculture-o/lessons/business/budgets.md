@@ -79,6 +79,8 @@ Tatenda expects 4.5 t/ha from 2 ha, so 9 t in total. Assume the grain price is U
 4. Gross margin per hectare $= 1\,560 \div 2 =$ **US\$780 per ha**.
 :::
 
+![Bar split of the 2 ha maize gross output of US\$2,610 (9 t at US\$290): variable costs of US\$1,050 (seed 110, basal fertiliser 330, top dressing 250, chemicals 90, hired labour 160, transport 70, bags 40) leave a gross margin of US\$1,560, which is US\$780 per hectare.](media:diagrams/maize-gross-margin-bar.png "Figure: where the US\$2,610 gross output of 2 ha of maize goes, leaving a gross margin of US\$1,560")
+
 For livestock the gross margin is usually given **per head** (per cow, per ewe, per 100 layers), so herds of different sizes can be compared.
 
 ## Partial budgets
@@ -104,6 +106,8 @@ Assume soya beans would yield 2.2 t/ha at a contract price of US\$480 per tonne 
 5. Gains $= 1\,056 + 525 =$ US\$1,581; losses $= 410 + 1\,305 =$ US\$1,715.
 6. Net change $= 1\,581 - 1\,715 =$ **$-$US\$134**: on these figures the change would lower profit by US\$134.
 :::
+
+![Partial budget for 1 ha of soya beans instead of maize: gains are extra income US\$1,056 plus maize costs saved US\$525, a total of US\$1,581; losses are extra soya costs US\$410 plus maize income lost US\$1,305, a total of US\$1,715; the net change is minus US\$134 so the change would lower profit.](media:diagrams/soya-partial-budget-bars.png "Figure: gains and losses of replacing 1 ha of maize by soya beans (net change minus US\$134)")
 
 The budget is not the whole decision: a soya crop also adds nitrogen to the soil for next season's maize and spreads the risk, benefits that are hard to put into figures.
 

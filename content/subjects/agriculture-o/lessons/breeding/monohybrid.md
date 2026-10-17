@@ -96,6 +96,8 @@ When a heterozygous animal is crossed with a homozygous recessive one:
 
 This is the basis of the **test cross**. An animal showing the dominant phenotype may be homozygous (PP) or heterozygous (Pp); you cannot tell by looking. Mate it with a **homozygous recessive** animal, which can only give recessive gametes, so every offspring's phenotype reveals the allele it received from the unknown parent.
 
+![Two genetic diagrams for polled (P) and horned (p) cattle: Pp crossed with Pp gives PP, Pp, Pp and pp, a 3 polled to 1 horned ratio; a test cross of Pp with pp gives two Pp and two pp, a 1 polled to 1 horned ratio.](media:diagrams/polled-horned-punnett-squares.png "Figure: Punnett squares for the F1 x F1 cross (3:1) and the test cross (1:1) in polled and horned cattle")
+
 | Unknown parent | Cross | Expected offspring |
 | --- | --- | --- |
 | Homozygous dominant (BB) | BB × bb | All Bb: all show the dominant phenotype |

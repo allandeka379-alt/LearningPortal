@@ -77,6 +77,8 @@ Rudo has 60 crates of tomatoes. Assume a trader offers US\$4.00 per crate at the
 4. She must also weigh up her time, the risk of damage on the road and of an over-supplied market that day.
 :::
 
+![Bar chart per crate of tomatoes: the farm gate price is US\$4.00; in Harare the US\$7.00 price is reduced by US\$1.20 transport and a US\$0.30 market fee to a net US\$5.50, which is US\$1.50 more per crate and US\$90 more for 60 crates.](media:diagrams/tomato-farm-gate-vs-town.png "Figure: farm gate against the net town price for a crate of tomatoes")
+
 ## Markets for major crops and livestock in Zimbabwe
 
 | Produce | Formal markets (examples) | Informal markets (examples) |

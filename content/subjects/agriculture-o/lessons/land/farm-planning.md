@@ -81,6 +81,8 @@ Farai's 40 ha plot slopes gently from a ridge in the north down to a stream in t
 On a sketch, each area would be drawn roughly to scale, labelled, and explained in a **key**, with a **north arrow** and the **contours or direction of slope** shown.
 :::
 
+![Plan of Farai's 40 ha farm (800 m by 500 m): a 3 ha woodlot on the northern ridge, four arable fields of 3.75 ha forming a 15 ha block, the homestead beside the main road on the east boundary with the pig and poultry houses to its west (downwind), the garden and orchard near the borehole, four paddocks on the lower slope and a fenced stream and vlei on the south boundary.](media:diagrams/farm-layout-plan-40ha.png "Figure: a farm layout for the 40 ha plot, with the arable block divided into four fields of 3.75 ha")
+
 ## Using measurements in planning
 
 :::worked-solution[Areas on a farm plan]

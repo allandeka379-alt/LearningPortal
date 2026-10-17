@@ -36,6 +36,8 @@ The conversion of nitrate back to nitrogen gas by denitrifying bacteria, mainly 
 
 Think of the cycle as a set of **pools** (air, soil organic matter, ammonium, nitrate, plants, animals) joined by **processes**.
 
+![Nitrogen cycle: nitrogen gas is fixed by lightning, Rhizobium, free-living bacteria and industry; ammonification by decomposers makes ammonium, Nitrosomonas makes nitrite and Nitrobacter makes nitrate, which roots take up into plants and animals; denitrification returns nitrate to nitrogen gas in waterlogged soil.](media:diagrams/nitrogen-cycle.png "Figure: the nitrogen cycle, with the organism or agent at each step and the losses in red")
+
 ### 1. Fixation: getting nitrogen out of the air
 
 - **Lightning** provides the energy to combine nitrogen and oxygen into nitrogen oxides; these dissolve in rain and reach the soil as dilute nitric acid, giving nitrate.

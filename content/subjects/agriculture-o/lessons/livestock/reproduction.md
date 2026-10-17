@@ -49,9 +49,13 @@ Placing semen collected from a selected male into the reproductive tract of a fe
 | Penis | Places semen in the female's vagina; in the bull an S-shaped bend (sigmoid flexure) straightens when it is extended |
 | Sheath | Fold of skin that protects the penis |
 
+![Side view of the bull's reproductive system: testis and epididymis inside the scrotum, the vas deferens carrying sperm up to the urethra near the bladder, accessory glands adding fluid to make semen, and the penis with its S-shaped sigmoid flexure inside the sheath.](media:diagrams/bull-reproductive-system.png "Figure: the reproductive system of the bull (schematic)")
+
 ## The female reproductive system (cow)
 
 Described from the ovaries outward:
+
+![Front view of the cow's reproductive tract: two ovaries, each with an oviduct where fertilisation takes place, leading to two uterine horns that join in the uterine body, then the thick-walled cervix, the vagina and the vulva.](media:diagrams/cow-reproductive-system.png "Figure: the reproductive system of the cow (schematic)")
 
 | Part | Function |
 | --- | --- |
@@ -85,6 +89,8 @@ Chipo sees a Jersey heifer on standing heat on 3 March 2026 but does not serve h
 4. Chipo marks these dates on the breeding calendar and watches the heifer closely for two or three days around each one.
 :::
 
+![Timeline of the Jersey heifer's heats: standing heat seen on 3 March 2026, then expected heats 21 days later on 24 March and again on 14 April, each heat lasting less than a day.](media:diagrams/heifer-heat-dates-timeline.png "Figure: predicting the next heats of the heifer, 21 days apart (3 March, 24 March, 14 April 2026)")
+
 ## Mating: natural service or AI
 
 **Natural service** uses a bull running with the cows or brought to a cow on heat. It needs little skill, and the bull detects heat himself, but the bull must be fed and housed all year, may spread venereal diseases, and limits the farmer to that one bull's genes.
@@ -113,6 +119,8 @@ Tendai's cow is served on 12 January 2026.
 3. If she is served again 85 days after calving, the calving interval = 283 + 85 = **368 days**.
 4. For one calf a year (365 days) she must conceive within 365 − 283 = **82 days** of calving.
 :::
+
+![Bar showing a cow's calving interval of 368 days: 85 days from calving to conception plus a 283-day gestation, which overshoots the 365-day target; to calve every year she must conceive within 82 days of calving (365 minus 283).](media:diagrams/calving-interval-bar.png "Figure: the calving interval of Tendai's cow (85 + 283 = 368 days) against the 365-day target")
 
 ## Common mistakes
 

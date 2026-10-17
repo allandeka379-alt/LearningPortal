@@ -58,6 +58,8 @@ The **ovary** looks like a bunch of grapes: it holds many ova (yolks) at differe
 
 Altogether an egg takes about a day (roughly 24-26 hours) to form, which is why a good layer lays about one egg a day.
 
+![Hen's reproductive tract in order: the left ovary with many yolks, the infundibulum (15 minutes, fertilisation), the magnum (3 hours, albumen), the isthmus (1 1/4 hours, shell membranes), the uterus or shell gland (about 20 hours, shell) and the vagina to the cloaca; the times add to about 24.5 hours, which is why a layer lays about one egg a day.](media:diagrams/hen-oviduct-egg-formation.png "Figure: the hen's oviduct, what each part adds and the time an egg spends in it")
+
 ## Parts of the egg
 
 | Part | Function |
@@ -71,6 +73,8 @@ Altogether an egg takes about a day (roughly 24-26 hours) to form, which is why 
 | Vitelline membrane | Thin membrane around the yolk |
 | Yolk | Food store of fat, protein, vitamins and minerals for the embryo |
 | Germinal disc (blastodisc) | Small pale spot on the yolk that becomes the embryo if the egg is fertile |
+
+![Section through a hen's egg: shell with pores and cuticle, two shell membranes, an air cell at the broad end, thick and thin albumen, chalazae holding the yolk in the centre, the vitelline membrane, the yolk and the germinal disc; for a 60 g egg the shell is 6 g (10%), albumen 36 g (60%) and yolk 18 g (30%).](media:diagrams/egg-structure-proportions.png "Figure: the parts of an egg, and the shell, albumen and yolk shares of a 60 g egg")
 
 :::worked-solution[Proportions of an egg]
 Form 2 pupils broke a 60 g egg and weighed its parts: shell 6 g, albumen 36 g, yolk 18 g.

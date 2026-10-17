@@ -58,6 +58,8 @@ Water passes through a **filter** and along plastic pipes to **drip lines** with
 
 Watering cans, buckets and hosepipes are used in **nurseries**, small gardens and for transplants. Cheap and precise for small areas, but very labour-intensive and impossible on a large scale.
 
+![Three irrigation methods in cross-section: furrow irrigation runs water along furrows between ridges (efficiency about 50 to 70%), a sprinkler sprays water over the crop from a riser on a lateral pipe (about 70 to 80%), and drip irrigation drips water at each plant so only the root zone is wetted (about 90%).](media:diagrams/irrigation-methods-compared.png "Figure: furrow, sprinkler and drip irrigation compared, with typical efficiencies")
+
 ## Effects on yield and quality
 
 Irrigation that keeps the soil between field capacity and the point where the crop is stressed gives **higher yields** and **better quality**: larger, evenly sized fruit and tubers, fewer cracked tomatoes and less blossom-end rot. Uneven watering lowers both. Overhead watering in the evening can increase leaf diseases, and water splashing soil onto fruit can spoil it, while drip keeps produce clean. Over-irrigation leaches nutrients and causes waterlogging.
@@ -84,6 +86,8 @@ A crop on $2\,000\ \text{m}^2$ needs $30\ \text{mm}$ stored in the root zone. As
 3. Drip: water to supply $= 60\,000 \div 0.90 = 66\,667\ \text{L}$ (to the nearest litre).
 4. Drip saves $100\,000 - 66\,667 = 33\,333\ \text{L}$ for every irrigation.
 :::
+
+![Bar chart for 2,000 square metres needing 30 mm in the root zone: the crop needs 60,000 litres, drip irrigation at 90% efficiency must supply 66,667 litres and furrow irrigation at 60% efficiency must supply 100,000 litres, so drip saves 33,333 litres each time.](media:diagrams/irrigation-efficiency-bars.png "Figure: water to supply for a 60,000 L crop need, drip (90%) against furrow (60%)")
 
 For hand watering: a bed $10\ \text{m} \times 1\ \text{m}$ given $10\ \text{mm}$ needs $10 \times 10 = 100\ \text{L}$, or ten $10\ \text{L}$ cans.
 

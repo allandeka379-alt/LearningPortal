@@ -81,6 +81,8 @@ The textural triangle has three sides marked from 0 to 100%: one for sand, one f
 
 Typical classes run from **sand** and **loamy sand** (mostly sand), through **sandy loam**, **loam**, **sandy clay loam** and **clay loam**, to **sandy clay**, **silty clay** and **clay** (40% clay or more). A loam has a balanced mixture, for example about 40% sand, 40% silt and 20% clay.
 
+![Soil textural triangle with the jar-test soil plotted: 60% sand, 25% silt and 15% clay meet inside the sandy loam region; clay is read across on horizontal lines, sand along lines sloping up to the left, silt along lines sloping up to the right.](media:diagrams/soil-textural-triangle.png "Figure: the textural triangle, with Rudo's jar-test soil (60% sand, 25% silt, 15% clay) in the sandy loam region")
+
 :::note{title="Which triangle?"}
 Class boundaries differ slightly between versions of the triangle. In the examination, read the class from the triangle printed on the paper.
 :::

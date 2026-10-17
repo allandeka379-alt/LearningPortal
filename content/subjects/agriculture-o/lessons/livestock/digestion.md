@@ -48,6 +48,8 @@ Follow a mouthful of grass through a cow.
 
 The table shows typical proportions in an adult cow, from a fictional measurement.
 
+![Ruminant stomach of an adult cow drawn with circle areas in proportion to capacity: the rumen holds 160 L (80%), reticulum 10 L (5%), omasum 15 L (7.5%) and abomasum 15 L (7.5%); food passes from oesophagus to rumen, reticulum, omasum, abomasum and then the small intestine, and cud returns to the mouth.](media:diagrams/ruminant-stomach-compartments.png "Figure: the four compartments of a cow's stomach, drawn in proportion to their capacity")
+
 | Compartment | Capacity (L) | Share of stomach (%) |
 | --- | --- | --- |
 | Rumen | 160 | 80 |
@@ -83,6 +85,8 @@ The pig is an omnivore with a **monogastric** (single-stomach) system: mouth wit
 | Cloaca and vent | Common opening for faeces, urine (as white uric acid) and eggs |
 
 Free-range chickens pick up small stones as grit. Birds in houses should be offered insoluble grit if they eat whole grain.
+
+![Flow diagrams of non-ruminant digestion: the pig has mouth, oesophagus, one simple stomach, small intestine, small caecum, colon and rectum; the fowl has beak, oesophagus, crop for storing food, proventriculus with acid, gizzard for grinding, small intestine, two caeca and a cloaca.](media:diagrams/pig-fowl-digestive-flow.png "Figure: the digestive tract of the pig (one stomach) and the fowl (crop, proventriculus and gizzard)")
 
 :::example{title="Diagnosing a problem from the anatomy"}
 A cow on a farm near Chinhoyi stops eating, stands with an arched back and is reluctant to move. The paddock was recently fenced and pieces of wire were left lying in the grass. The most likely cause is a wire swallowed with grass that has collected in the **reticulum** and pierced its wall, because the reticulum traps heavy objects and contracts strongly. The farmer should call the veterinarian and, in future, clear wire and nails from paddocks and feed troughs.

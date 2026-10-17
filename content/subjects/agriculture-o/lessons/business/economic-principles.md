@@ -101,6 +101,8 @@ The schedule for crates of tomatoes at a town market in one week (example figure
 4. At US\$4, demand (700) exceeds supply (300): a **shortage** of 400 crates. Buyers compete and the price rises towards US\$6.
 :::
 
+![Demand and supply graph for crates of tomatoes: demand falls from 900 crates at US\$2 to 100 at US\$10 while supply rises from 100 to 900; they meet at the equilibrium of US\$6 and 500 crates; at US\$8 supply exceeds demand by 400 crates (surplus) and at US\$4 demand exceeds supply by 400 crates (shortage).](media:diagrams/tomato-schedule-supply-demand.png "Figure: the tomato market schedule plotted: equilibrium at US\$6 and 500 crates")
+
 ### Why farm prices change so much
 
 - **Seasonal supply**: at harvest supply floods the market and prices fall; in the off-season prices rise.

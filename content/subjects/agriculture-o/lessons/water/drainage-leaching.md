@@ -48,6 +48,8 @@ A storm drops $60\ \text{mm}$ of rain on a field. Runoff is $12\ \text{mm}$, eva
 4. Check: $12 + 6 + 22 + 20 = 60\ \text{mm}$. On a sandy soil, which stores less, drainage would be larger, and so would leaching.
 :::
 
+![Bar chart of a 60 mm storm: 12 mm runs off, 6 mm evaporates, 22 mm is stored in the soil to field capacity and 20 mm drains below the root zone, and 12 + 6 + 22 + 20 equals the 60 mm of rain.](media:diagrams/storm-water-balance-bars.png "Figure: where the 60 mm of rain goes (12 + 6 + 22 + 20 = 60 mm)")
+
 ## Waterlogging
 
 ### Causes
@@ -80,6 +82,8 @@ Signs of waterlogging include standing water, grey or mottled soil, reeds and se
 | Breaking pans | Subsoiling or ripping breaks impermeable layers | Lets water drain down; needs power |
 
 Field drains are often laid in a **herringbone** pattern, with side drains joining a main drain at an angle, or a **gridiron** pattern of parallel drains. Deep-rooted, high-water-use trees are sometimes planted on wet sites to lower the water table, and **organic matter** improves structure so water moves through the soil more easily. Above all, avoid over-irrigation.
+
+![Plan views of field drainage layouts: a herringbone pattern with side drains joining a central main drain at an angle, and a gridiron pattern of parallel drains running into a main drain that leads to the outlet.](media:diagrams/field-drain-layouts.png "Figure: herringbone and gridiron patterns for field drains (plan view)")
 
 ## Leaching
 

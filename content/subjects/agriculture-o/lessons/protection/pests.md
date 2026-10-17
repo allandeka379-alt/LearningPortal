@@ -65,6 +65,8 @@ The groups overlap: a boring larva also *chews*, but it is grouped by where it f
 | Stage that does most damage | Usually the larva | Nymphs and adults (often the same food) |
 | Examples | Moths (stalk borer, fall armyworm, bollworm), beetles and weevils | Locusts, grasshoppers, aphids, termites |
 
+![Life cycles compared: the fall armyworm has complete metamorphosis (egg mass on a leaf, larva that eats the funnel and does the damage, pupa resting in the soil, adult moth) while the locust has incomplete metamorphosis (egg pod in the soil, wingless nymph or hopper, adult), with no pupa and damage by both nymphs and adults.](media:diagrams/pest-life-cycles-compared.png "Figure: complete metamorphosis (fall armyworm) and incomplete metamorphosis (locust)")
+
 ## Named pests
 
 ### Fall armyworm (Spodoptera frugiperda)

@@ -85,6 +85,8 @@ The class bought 100 day-old chicks at US\$0.90 each. Six birds died. The other 
 4. Feed is by far the largest cost (US\$224 of US\$368), so feeding efficiency matters most for profit.
 :::
 
+![Bar chart of the broiler batch: costs of chicks US\$90, feed US\$224 (the largest), vaccines US\$8, electricity US\$25, transport US\$15 and litter US\$6 add up to US\$368, against income of US\$611 from 94 birds, a profit of US\$243.](media:diagrams/broiler-batch-costs-income.png "Figure: the costs of the broiler batch against its income (profit US\$243)")
+
 ### Including valuations
 
 When stock is held over from one period to the next, it must be valued:

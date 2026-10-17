@@ -78,6 +78,8 @@ The ring of bundles near the outside makes the stem stiff against bending by win
 
 Because the phloem lies on the outside of the xylem, removing a ring of bark from a tree trunk removes the phloem but leaves the xylem. This is the basis of the ring-barking experiment on translocation.
 
+![Cross-sections side by side: a dicotyledonous root with a star of xylem in the centre and phloem between its arms, a dicotyledonous stem with vascular bundles in a ring (phloem outside, xylem inside, pith in the middle), and a maize stem with its bundles scattered.](media:diagrams/root-stem-cross-sections.png "Figure: where xylem and phloem lie in a dicot root, a dicot stem and a maize stem")
+
 ## Internal structure of a leaf
 
 A leaf is thin and flat. Its parts, from the top surface to the bottom, are:
@@ -93,6 +95,8 @@ A leaf is thin and flat. Its parts, from the top surface to the bottom, are:
 | Stomata and guard cells | Pores, each between two guard cells | Let carbon dioxide in and oxygen and water vapour out; close to save water |
 
 In most dicotyledons the stomata are mainly on the lower surface, where it is cooler and shaded, so less water is lost.
+
+![Cross-section of a dicotyledonous leaf from top to bottom: waxy cuticle, upper epidermis, palisade mesophyll full of chloroplasts, spongy mesophyll with air spaces and a vein with xylem above phloem, then the lower epidermis with a stoma between two guard cells that lets carbon dioxide in and oxygen and water vapour out.](media:diagrams/leaf-cross-section.png "Figure: a section through a leaf, from the waxy cuticle to the lower epidermis")
 
 ### How leaf structure suits photosynthesis
 

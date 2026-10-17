@@ -105,6 +105,8 @@ When a pit is dug about one to two metres deep, its side wall shows layers calle
 
 Below the C horizon lies solid **bedrock**. On undisturbed land a thin layer of fallen leaves and decaying litter may cover the topsoil.
 
+![Soil profile of Pit 1: dark crumbly topsoil (A horizon) 25 cm deep over red-brown subsoil (B horizon) down to 120 cm, then weathered rock fragments (C horizon) above bedrock; the topsoil holds the humus and feeding roots and the red-brown subsoil shows good drainage.](media:diagrams/soil-profile-horizons.png "Figure: the soil profile of Pit 1 with its three horizons and their depths")
+
 ### Reading a profile
 
 - **Depth.** A deep profile gives roots more room and stores more water, so crops survive dry spells better.

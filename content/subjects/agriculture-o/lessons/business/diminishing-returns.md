@@ -65,6 +65,8 @@ The land (1 ha) is fixed; the number of workers is varied (example figures).
 
 If total product is plotted against input:
 
+![Graphs from the garden table: total product rises to a maximum of 1,900 kg at 5 workers then falls to 1,850 kg at 6; marginal product peaks at 600 kg for the 2nd worker, falls to 100 kg for the 5th and becomes negative (minus 50 kg) for the 6th; average product peaks at 500 kg per worker at 2 to 3 workers; stages I, II and III are marked.](media:diagrams/returns-tp-mp-ap-graphs.png "Figure: total, marginal and average product for 0 to 6 workers on one hectare")
+
 - The **TP curve** rises steeply at first, then more and more gently, reaches a peak, and finally turns down.
 - The **MP curve** rises at first, reaches a peak, then falls, crossing zero exactly where TP is at its maximum, and becomes negative after that.
 - The **AP curve** rises and falls more gently; MP cuts AP at the highest point of AP.
@@ -99,6 +101,8 @@ On one hectare of maize, extra bags of nitrogen fertiliser give these yields (ex
 2. Value of MP of the 5th bag $= 50 \times 0.30 =$ US\$15, less than US\$35, so the 5th bag **loses** US\$20.
 3. The most profitable rate is **4 bags per hectare**, even though the highest yield comes with 5 bags.
 :::
+
+![Bar chart for maize at US\$0.30 per kg: the value of the extra yield from bags 1 to 5 of fertiliser is US\$180, 150, 105, 45 and 15 against a cost of US\$35 a bag, so the 4th bag still pays but the 5th loses US\$20, making 4 bags per hectare the most profitable rate.](media:diagrams/fertiliser-marginal-value-bars.png "Figure: the value of the extra maize from each bag of fertiliser against the US\$35 cost of a bag")
 
 If the price of maize rises or the price of fertiliser falls, the profitable rate moves **up**; if fertiliser becomes dearer or maize cheaper, it moves **down**.
 

@@ -53,6 +53,8 @@ Divide the arable land into four equal fields (courses). In year 1 each field ca
 | C | Sunflower | Grass ley | Maize (manure + fertiliser) | Soya beans |
 | D | Soya beans | Sunflower | Grass ley | Maize (manure + fertiliser) |
 
+![Four-course rotation on 12 ha: four fields of 3 ha carry maize, soya beans, sunflower and grass ley, shown for year 1 and year 2 as each crop moves one field along; on every field the order is maize, soya beans, sunflower, ley, and the maize field gets 30 t of manure a year.](media:diagrams/four-course-rotation-plan.png "Figure: a four-course rotation on four 3 ha fields, years 1 and 2, and the order of crops on each field")
+
 How this plan follows the principles:
 
 | Course | Family | Roots | Reason for its place |

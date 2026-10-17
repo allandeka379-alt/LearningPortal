@@ -67,6 +67,8 @@ These methods protect the surface from raindrops and wind, slow runoff and bind 
 
 The design figures (channel size, gradient and spacing for each slope) come from AGRITEX design tables; examination questions give the figures you need.
 
+![Cross-section of two contour ridges on a slope: each has a channel dug on the uphill side that catches runoff and a grassed bank of the excavated soil thrown downhill; the ridges are 1.0 m apart in height (vertical interval) and 25 m apart horizontally on a 4% slope.](media:diagrams/contour-ridge-cross-section.png "Figure: a cross-section of two contour ridges, with the vertical interval and horizontal spacing")
+
 <!-- Reviewer: standard Zimbabwean contour ridge dimensions and channel gradients are deliberately not stated; check whether the ZIMSEC syllabus expects specific figures. -->
 
 :::worked-solution[Spacing contour ridges]
@@ -77,6 +79,8 @@ A field rises $2\ \text{m}$ over a horizontal distance of $50\ \text{m}$ and is 
 3. Number of ridges on the field $= \frac{200}{25} = 8$ (the first ridge one spacing below the storm drain).
 4. On a steeper slope, the same vertical interval gives a smaller spacing, so more ridges are needed.
 :::
+
+![Plan of a 200 m field on a 4% slope: a storm drain along the top keeps runoff from higher land out, eight contour ridges 25 m apart (1.0 m vertical interval divided by 4% slope) cross the slope with a very gentle fall to a grass waterway on the right that leads to the stream.](media:diagrams/contour-ridges-field-plan.png "Figure: laying out eight contour ridges 25 m apart below a storm drain, draining to a grass waterway")
 
 :::worked-solution[Fall along a channel]
 Assume a ridge channel $375\ \text{m}$ long is designed with a gradient of 1 in 250 towards the waterway.

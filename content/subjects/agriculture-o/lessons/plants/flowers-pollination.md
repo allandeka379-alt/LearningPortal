@@ -60,6 +60,8 @@ The bean flower is **bisexual** (hermaphrodite): each flower has both male and f
 
 Because the anthers and stigma are enclosed together in the keel, the anthers shed pollen onto the stigma of the same flower, often before the flower opens. Beans are therefore mainly **self-pollinated**, although visiting bees may carry some pollen between plants.
 
+![Flower structure compared: the bean flower has a standard, wings, a keel enclosing the stamens with anthers and a pistil with stigma, style and an ovary of ovules, so it self-pollinates inside the keel; the maize plant has a tassel with anthers at the top and a cob with silks lower down, and wind carries pollen from tassels to the silks of other plants.](media:diagrams/bean-flower-maize-flowers.png "Figure: the bean flower (self-pollinated) and the male and female flowers of maize (wind cross-pollinated)")
+
 ## Self- and cross-pollination in maize and bean
 
 | Feature | Maize | Bean |

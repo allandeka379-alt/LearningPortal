@@ -55,6 +55,8 @@ The upper surface of the saturated zone: below it, all pores are full of water.
 | Soil water | Water held between field capacity and the wilting point |
 | Groundwater | Aquifers below the water table |
 
+![Water cycle on a farm landscape: 1 evaporation from sea and dam, 2 transpiration from crops, 3 condensation into cloud, 4 precipitation, 5 interception on leaves, 6 infiltration and percolation to the water table, 7 surface runoff to the dam, 8 groundwater flow through the aquifer towards the sea.](media:diagrams/water-cycle-landscape.png "Figure: the water cycle, numbered in the same order as the stages in the text")
+
 ## Significance of the water cycle for agriculture
 
 - **Rainfall** supplies almost all the water for rain-fed crops and pastures.
@@ -62,6 +64,8 @@ The upper surface of the saturated zone: below it, all pores are full of water.
 - **Evapotranspiration** is the crop's water use; it decides how much irrigation water is needed and how quickly soils dry out.
 - **Groundwater** keeps springs and some rivers flowing in the dry season and supplies wells and boreholes.
 - **Land use changes the cycle:** forests and grass cover increase interception and infiltration. Clearing trees, overgrazing and bare soil increase runoff, so floods are higher, soil is eroded and less water is stored for the dry season.
+
+![Bar chart of where 250 cubic metres of rain from a 25 mm storm on 1 hectare goes: runoff 50 m3 (20%), infiltration 175 m3 (70%) and evaporation 25 m3 (10%), which add up to 250 m3.](media:diagrams/rain-partition-bar-chart.png "Figure: where the 250 m3 of rain from a 25 mm storm on 1 ha goes")
 
 :::worked-solution[Where does the rain go?]
 A storm drops $25\ \text{mm}$ of rain on a $1\ \text{ha}$ field. Measurements suggest that 20% runs off, 70% infiltrates and 10% evaporates soon after falling.

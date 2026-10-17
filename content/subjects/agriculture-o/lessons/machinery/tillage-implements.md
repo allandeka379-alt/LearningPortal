@@ -50,6 +50,8 @@ The parts below are described from front to back, as a labelled diagram would sh
 | Heel | Rear end of the landside | Wearing part that takes the friction at the bottom of the furrow; replaceable |
 | Handles (stilts) | Rear, joined to the beam | Used by the ploughman to steer, balance and lift the plough at turns |
 
+![Side view of an ox-drawn mouldboard plough from front to back: trek chain, hake on the beam, wheel, coulter, frog carrying the share, mouldboard and landside with its heel, and the handles; the share cuts the furrow slice, the mouldboard turns it and the landside keeps the plough straight.](media:diagrams/mouldboard-plough-parts.png "Figure: the parts of a mouldboard plough, front to back")
+
 ### Adjusting the plough
 
 **Depth.**
