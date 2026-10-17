@@ -173,6 +173,8 @@ The business earns commission and sublets a store room.
 | Total other payables |  | 2,320 |
 :::
 
+![Rent expense for 2025 at Gweru Motor Spares: the opening prepayment of US\$380 plus rent paid of US\$4,940 less the closing prepayment of US\$760 gives the expense of US\$4,560, which is twelve months at US\$380.](media:diagrams/rent-prepayment-expense-build.png "Figure: building the rent expense from cash paid and the prepayments")
+
 ## Effect on profit and on the statements
 
 - Each adjustment is used **twice**: once to correct the expense or income and once in the statement of financial position. A one-sided adjustment is the usual reason a statement of financial position does not balance.

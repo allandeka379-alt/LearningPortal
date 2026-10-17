@@ -77,6 +77,8 @@ Chipo's bank account for May 2025 is shown after balancing.
 5. The balance b/d of US\$3,250 is on the **debit** side on 1 June: Chipo has US\$3,250 in the bank.
 :::
 
+![Chipo's bank account in May: starting from 2,350, receipts of 1,180, 640 and 935 and payments of 860, 420, 275 and 300 in date order leave a closing balance of US\$3,250, the balance carried down and brought down on the debit side.](media:diagrams/bank-account-balance-may.png "Figure: the bank balance moves from 2,350 to 3,250 through May")
+
 ## The three-column running balance format
 
 Many businesses and all accounting software show accounts with a **Debit**, **Credit** and **Balance** column. The balance is updated after every entry and marked Dr or Cr, so the account never needs to be "balanced off". Chipo's bank account in this format is:

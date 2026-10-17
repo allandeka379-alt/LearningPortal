@@ -90,6 +90,10 @@ Bulawayo Metal Works has overheads of US\$120,000. Production: 4,000 standard ga
 Under traditional costing the custom gate seems to make a profit of US\$10 and the standard gate US\$12.50. Under ABC the standard gate earns US\$19.60 but the custom gate makes a loss of US\$46.80 a gate. Custom gates use only 2,000 of the 8,000 labour hours, but cause two thirds of the set-ups and 60% of the inspections. To earn a margin of 20% on the selling price, the custom gate would need to be priced at (120 + 116.80) ÷ 0.80 = US\$296.
 :::
 
+![Profit per gate at Bulawayo Metal Works: traditional costing gives US\$12.50 on a standard gate and US\$10.00 on a custom gate, but activity-based costing gives US\$19.60 on a standard gate and a loss of US\$46.80 on a custom gate, because custom gates cause most of the set-ups and inspections.](media:diagrams/abc-gate-profit-comparison.png "Figure: traditional costing hides a loss on custom gates that ABC reveals")
+
+![Share of each cost driver used by the two gates: custom gates use only 25% of labour hours but 66.7% of set-ups, 60% of inspections and 50% of material movements, so absorbing overhead on labour hours undercharges them.](media:diagrams/abc-driver-shares.png "Figure: custom gates use a quarter of the labour hours but most of the set-ups")
+
 ## Comparison with traditional absorption costing
 
 ABC does not change total overhead; it changes the way the overhead is **shared**. In the example the standard gates were over-costed (US\$22.50 against US\$15.40) and the custom gates under-costed (US\$60 against US\$116.80). The effects on decisions are important: standard gates might have been priced too high and lost sales; custom gates might have been sold at a loss without anyone noticing.

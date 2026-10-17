@@ -52,6 +52,8 @@ This is the **duality** concept, and it also keeps the accounting equation in ba
 | Capital | Credit | Debit | Credit |
 | Income (sales, commission received, rent received) | Credit | Debit | Credit |
 
+![The rule of debit and credit on a T account: debit entries increase assets, expenses and drawings and decrease liabilities, capital and income; credit entries increase liabilities, capital and income and decrease assets, expenses and drawings.](media:diagrams/debit-credit-rules-t-account.png "Figure: which side of a T account increases each type of account")
+
 :::keyfact{title="A memory aid"}
 **DEAD CLIC**: **D**ebit to increase **E**xpenses, **A**ssets and **D**rawings; **C**redit to increase **L**iabilities, **I**ncome and **C**apital.
 :::

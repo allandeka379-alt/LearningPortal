@@ -82,6 +82,8 @@ Nyasha's totals for 2025 are: trade receivables at 1 January 18,400; credit sale
 Closing trade receivables are 20,600 and trade payables 14,400. These are the figures for the statement of financial position, after any corrections.
 :::
 
+![Sales ledger control account for 2025: opening receivables of US\$18,400 rise with credit sales of 96,500 and a returned cheque of 400, and fall with receipts of 88,200, discount allowed 1,950, returns 2,750, bad debts 600 and a contra of 1,200, leaving closing receivables of US\$20,600.](media:diagrams/sales-ledger-control-movement.png "Figure: how the sales ledger control account moves from 18,400 to 20,600")
+
 ## What a control account does and does not detect
 
 **It helps to find** errors in the personal ledgers or in the totals of the books of prime entry: a posting to the wrong amount, an overcast of a journal, a balance omitted from the list, and some fraud.

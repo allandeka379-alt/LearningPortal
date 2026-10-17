@@ -102,6 +102,8 @@ Residual profit is 29,345, shared 17,607 to Tendai and 11,738 to Rudo. The state
 | **Total** | 58,707 | 29,523 | 88,230 |
 :::
 
+![Appropriation of Tendai and Rudo's profit of US\$38,420: add interest on drawings 825, deduct Tendai's salary 6,000 and interest on capital 3,900, leaving residual profit of 29,345, shared 3 to 2 as 17,607 for Tendai and 11,738 for Rudo.](media:diagrams/partnership-appropriation-flow.png "Figure: from profit of 38,420 to the partners' shares of the residual profit")
+
 ## Fixed and fluctuating capital accounts
 
 With **fixed capital**, the capital account is untouched, and the current account shows the partner's profit share, drawings and any balance owed. A debit balance on a current account means the partner has taken out more than he or she has earned, so it is shown as a deduction within the partners' funds. With **fluctuating capital**, all the entries go through the capital account itself. The profit appropriation is exactly the same either way; only the account in which it is recorded differs.

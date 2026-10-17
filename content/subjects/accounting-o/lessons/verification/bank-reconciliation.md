@@ -86,6 +86,8 @@ Tatenda's updated cash book at 31 December 2025 shows a debit balance of US\$2,7
 | **Balance as per bank statement** |  | **3,315** |
 :::
 
+![Tatenda's bank reconciliation: the updated cash book balance of US\$2,777 plus unpresented cheques of 1,468 (412 and 1,056) less the uncredited deposit of 930 equals the bank statement balance of US\$3,315.](media:diagrams/bank-reconciliation-tatenda.png "Figure: reconciling the cash book balance of 2,777 to the bank statement balance of 3,315")
+
 ## Overdrafts
 
 An overdraft is a **negative** amount. Treat it with brackets and the same rules: adding to an overdraft makes it smaller; deducting from it makes it larger. Many candidates find it easier to think in signed numbers: an overdraft of 359 is −359.

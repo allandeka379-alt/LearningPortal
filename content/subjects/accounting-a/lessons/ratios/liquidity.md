@@ -76,6 +76,8 @@ Extracts from the statements of financial position of Zvishavane Millers Ltd are
 Revenue rose by 40.0%, but liquidity worsened. The current ratio fell from 1.82 : 1 to 1.38 : 1 and the acid test ratio from 0.90 : 1 to 0.61 : 1. In 2025 the company held only US\$3,000 in cash against current liabilities of US\$90,000. Inventory, receivables and payables all grew faster than cash. The pattern is typical of **overtrading**: the mill grew by buying meal and selling on credit, and relied on its suppliers for the funding. The acid test ratio of 0.61 : 1 means that without selling inventory the company holds only about 61 cents of liquid assets for every dollar it owes in the short term.
 :::
 
+![Liquidity of Zvishavane Millers: the current ratio fell from 1.82 : 1 in 2024 to 1.38 : 1 in 2025 and the acid test ratio from 0.90 : 1 to 0.61 : 1, so the mill had only 61 cents of liquid assets for each dollar of short-term debt.](media:diagrams/liquidity-ratios-two-years.png "Figure: current and acid test ratios for 2024 and 2025")
+
 ## What changes a liquidity ratio
 
 Examiners like questions on the effect of a transaction. Work with the numbers: change the current assets and the current liabilities and recalculate. The result depends on whether the ratio starts above or below 1.

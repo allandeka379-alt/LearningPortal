@@ -171,6 +171,8 @@ A trial balance prepared for a hardware shop in Bulawayo shows a debit total of 
 4. The columns now agree at US\$96,240.
 :::
 
+![Finding a trial balance difference: debits of US\$96,150 and credits of US\$96,240 differ by US\$90; 90 divides by 9, so a transposition is suspected, and purchases of 18,430 copied as 18,340 explain it, after which both columns agree at US\$96,240.](media:diagrams/trial-balance-find-difference.png "Figure: tracing a US\$90 trial balance difference to a transposed figure")
+
 ## From trial balance to final accounts
 
 The statement of profit or loss takes income and expenses (sales, purchases, returns, wages, rent and so on) and the statement of financial position takes assets, liabilities and capital. Adjustments such as depreciation, accruals and closing inventory are made first, so the trial balance figures are not always the final figures.

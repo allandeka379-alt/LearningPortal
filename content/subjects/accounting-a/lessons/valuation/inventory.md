@@ -113,6 +113,8 @@ Averages are shown to two decimal places; the working uses the exact average (3,
 FIFO gives the same answer in both systems because the oldest cost is always used first. AVCO gives different answers because the average changes through the period in a perpetual system. Goods available (6,050) are split between closing inventory and cost of goods sold in every case.
 :::
 
+![Cement bags under four costing methods: the 6,050 of goods available is split into closing inventory and cost of goods sold as 1,500 and 4,550 for FIFO (perpetual or periodic), 1,383.33 and 4,666.67 for perpetual AVCO, and 1,344.44 and 4,705.56 for periodic AVCO.](media:diagrams/inventory-methods-split.png "Figure: FIFO and AVCO split the same 6,050 of goods differently")
+
 ## Rising and falling prices
 
 When prices are rising, FIFO gives a higher closing inventory, a lower cost of sales and a higher profit than AVCO; when prices are falling, the reverse is true. Over the whole life of a business the total profit is the same, but the timing differs. Both formulas must be applied consistently, and the choice does not change the cash received or paid.

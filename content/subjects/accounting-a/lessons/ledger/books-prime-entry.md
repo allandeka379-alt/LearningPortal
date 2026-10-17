@@ -55,6 +55,8 @@ The book of prime entry for transactions that do not belong in any other book, e
 | Cash book | Receipts, cheque stubs, bank statements | Receipts and payments of cash and bank, with discounts |
 | General journal | Written authority, memo | Items that fit no other book: opening entries, non-current assets on credit, write-offs, corrections |
 
+![Flow from the first record to the final accounts: source documents are entered in the six books of prime entry, posted to the sales, general and purchases ledgers, listed in a trial balance, adjusted, and used to prepare the statement of profit or loss and the statement of financial position.](media:diagrams/books-prime-entry-to-final-accounts.png "Figure: from source documents to the final accounts")
+
 ## Posting the journals
 
 The total of each journal is posted once to the general ledger, and each item is posted to the personal accounts in the subsidiary ledger.

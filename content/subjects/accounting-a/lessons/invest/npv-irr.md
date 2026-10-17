@@ -79,6 +79,8 @@ A Mutare bakery's cost of capital is 12%. The oven costs US\$50,000 and gives ne
 NPV = US\$54,796 - US\$50,000 = **US\$4,796**. The NPV is positive, so the oven earns more than 12% and should be accepted on this method. The interpretation matters: the project adds US\$4,796 of value (in today's money) over and above a 12% return.
 :::
 
+![NPV of the Mutare bakery oven at 12%: the outlay of US\$50,000 is recovered by discounted inflows of 14,288, 15,940, 15,664 and 8,904 (from cash flows of 16,000, 20,000, 22,000 and 14,000 in years 1 to 4), so the net present value is a positive US\$4,796.](media:diagrams/npv-oven-discounted-flows.png "Figure: discounted inflows against the 50,000 outlay give an NPV of 4,796")
+
 ## Internal rate of return
 
 The IRR is the rate where NPV = 0. Examination questions ask you to calculate NPVs at two rates (one giving a positive NPV and one a negative NPV) and then to **interpolate**. This assumes the NPV changes in a straight line between the two rates, so the answer is an estimate. If the rate chosen is too far from the answer, the estimate is less accurate. Compare the IRR with the cost of capital: accept if the IRR exceeds it.
@@ -100,6 +102,8 @@ IRR = 10 + [8,383 ÷ (8,383 + 2,373)] × (20 - 10) = 10 + 0.78 × 10 = **17.8%**
 
 If the firm's cost of capital is 15%, the IRR of 17.8% is higher and the project is acceptable; if its cost of capital is 18% the project is rejected.
 :::
+
+![IRR of the Chinhoyi delivery van by interpolation: the NPV is +8,383 at 10% and −2,373 at 20%, so the straight line between them crosses zero at 17.8%; the van is acceptable if the cost of capital is below that.](media:diagrams/irr-interpolation-van.png "Figure: the NPV line crosses zero at an IRR of 17.8%")
 
 ## Cost of capital and the decision rules
 

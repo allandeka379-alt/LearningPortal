@@ -127,6 +127,8 @@ Many businesses now record purchases and payments in accounting software:
 - Because the software keeps them in agreement, the control account no longer **detects** posting errors in the same way; errors of input (wrong supplier, wrong amount, a missed invoice) still happen and must be found by checking suppliers' statements.
 - Access controls, passwords and audit trails replace part of the fraud protection that came from dividing the work between two clerks.
 
+![Thandeka's purchases ledger control account for December: the amount owed to suppliers of US\$5,380 rises with credit purchases of 22,640 and falls with payments of 20,155, discount received of 497 and returns outwards of 865, leaving US\$6,503 owed.](media:diagrams/purchases-ledger-control-december.png "Figure: how the amount owed to suppliers moves from 5,380 to 6,503")
+
 ## Common mistakes
 
 :::mistake{title="Using the sales ledger sides"}

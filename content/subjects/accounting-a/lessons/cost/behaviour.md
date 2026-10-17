@@ -76,6 +76,10 @@ The business also needs one supervisor (US\$1,200 a month) for every 5,000 bottl
 Supervision is fixed between 5,001 and 10,000 bottles and jumps at 10,001 bottles. Over a wide range of output, a stepped cost is sometimes approximated as fixed or as variable, depending on the size of the steps.
 :::
 
+![Cost behaviour at Harare Spring Water: the fixed cost is a flat US\$12,000; variable cost at US\$0.40 a bottle rises from nil to 12,000 at 30,000 bottles; total cost starts at 12,000 and reaches 16,000 at 10,000 bottles, 20,000 at 20,000 and 24,000 at 30,000.](media:diagrams/cost-behaviour-fixed-variable-total.png "Figure: fixed, variable and total cost for the water bottler")
+
+![Stepped cost of supervision: one supervisor at US\$1,200 covers up to 5,000 bottles, two at 2,400 cover 5,001 to 10,000, and three at 3,600 are needed from 10,001, so the cost is flat within a step and jumps between steps.](media:diagrams/cost-behaviour-stepped-supervision.png "Figure: supervision is a stepped cost, rising by US\$1,200 every 5,000 bottles")
+
 ## Graphs described in words
 
 Examiners describe graphs rather than ask you to draw them. A fixed cost is a horizontal line at the fixed amount. A variable cost is a straight line through zero that slopes upward. A semi-variable cost is a straight upward line that starts on the vertical axis at the fixed element. A stepped cost is a flight of steps. The cost per unit of a fixed cost is a curve that falls as output rises.
@@ -111,6 +115,8 @@ Variable cost per unit = 1,500 ÷ 2,500 = US\$0.60. Fixed cost = 3,400 - (0.60 �
 
 The estimated bill for 3,400 units is 700 + (0.60 × 3,400) = US\$2,740. This is inside the range of 2,000 to 4,500 units, so the estimate is reasonable. An estimate for 9,000 units would be unreliable because costs may have a step at higher activity.
 :::
+
+![High-low method for the Mutare printing shop's electricity: the line through the lowest point (2,000 units, US\$1,900) and the highest (4,500 units, US\$3,400) has slope 0.60 a unit and meets the vertical axis at US\$700, the fixed element; all five months lie on it.](media:diagrams/high-low-electricity-line.png "Figure: the high-low line separates a fixed US\$700 from US\$0.60 a unit")
 
 ## Why cost behaviour matters
 

@@ -93,6 +93,8 @@ Profit for the year ended 31 December 2025: US\$31,620. Capitals: Tatenda US\$40
 | Nyasha | 9,408 | 23,520 |
 :::
 
+![Appropriation of T and N Transport's profit of US\$31,620: add interest on drawings of 600, deduct interest on capital of 3,900 and Nyasha's salary of 4,800, leaving residual profit of 23,520, shared 3 to 2 as 14,112 for Tatenda and 9,408 for Nyasha.](media:diagrams/partnership-appropriation-tn-transport.png "Figure: from profit of 31,620 to the partners' shares of the residual profit")
+
 ## When the agreement takes more than the profit
 
 Interest on capital and salaries are given **in full** even when the profit is too small to cover them. The shortfall becomes a **residual loss**, which is shared in the profit-sharing ratio in exactly the same way as a profit. A share of a loss reduces what each partner receives.

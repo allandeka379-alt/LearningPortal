@@ -147,6 +147,10 @@ Rudo's transport business buys a pick-up for US\$24,000. Compare two policies fo
 The reducing balance method charges more in year 1 and less in year 3. The total over the three years is 13,875 compared with 14,400 under straight line, because the charge is on a shrinking balance.
 :::
 
+![Straight-line depreciation of Chipo's oven: carrying amount falls by the same US\$3,200 every year, from cost of US\$18,500 to 15,300, 12,100, 8,900, 5,700 and finally the residual value of US\$2,500 after five years.](media:diagrams/depreciation-straight-line-oven.png "Figure: straight-line depreciation takes the oven from 18,500 to its residual value of 2,500")
+
+![Annual depreciation on the 24,000 pick-up: straight line at 20% of cost charges 4,800 every year, while reducing balance at 25% charges 6,000, 4,500 and 3,375; over three years that is 14,400 against 13,875, leaving carrying amounts of 9,600 and 10,125.](media:diagrams/depreciation-sl-vs-reducing-balance.png "Figure: annual charge on the pick-up, straight line against reducing balance")
+
 ## Part-year and additions
 
 A question states the rule: for example "a full year in the year of purchase and none in the year of sale", or "on a monthly basis". On a monthly basis an asset bought on 1 April and charged to 31 December attracts nine months of depreciation. Always charge each asset for the time it was owned, using its cost, not the balance on the account.

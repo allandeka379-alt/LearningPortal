@@ -98,6 +98,8 @@ Mutasa Furniture, Mutare, year ended 31 December 2025. Raw materials: opening in
 Cost per chair = 196,600 ÷ 2,000 = US\$98.30.
 :::
 
+![Manufacturing account for Mutasa Furniture: materials consumed 94,500, direct labour 58,000 and royalties 3,500 make prime cost 156,000; adding factory overheads of 42,200 and opening work in progress 7,300 and deducting closing work in progress 8,900 gives cost of production of 196,600.](media:diagrams/manufacturing-cost-build-up.png "Figure: from raw materials to a cost of production of 196,600")
+
 ## Apportioning shared expenses
 
 The office part of a shared expense belongs in the statement of profit or loss (administration expenses); the factory part is a factory overhead. Depreciation is charged on the assets that are used in each place.

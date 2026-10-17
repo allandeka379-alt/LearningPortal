@@ -84,6 +84,8 @@ The table below is what a break-even chart would show.
 Revenue and total cost are equal at 6,000 bricks. Below that output there is a loss; above it a profit that rises by US\$4.50 for each extra brick. The gap between revenue and total cost at 8,000 bricks is the profit of US\$9,000, and the horizontal gap between 6,000 and 8,000 is the margin of safety.
 :::
 
+![Break-even chart for Tendai's bricks: revenue (US\$12 a brick) crosses total cost (US\$27,000 fixed plus US\$7.50 a brick) at 6,000 bricks and US\$72,000; at 8,000 bricks revenue is 96,000 and total cost 87,000, a profit of 9,000, and the margin of safety is 2,000 bricks (25%).](media:diagrams/break-even-chart-bricks.png "Figure: break-even chart for Tendai's bricks, with the margin of safety at 8,000 bricks")
+
 ## Changes in price, cost and mix
 
 A change in the selling price, the variable cost or the fixed costs changes the break-even point. A higher price or a lower variable cost raises the contribution per unit and lowers the break-even point. Higher fixed costs raise it. Always recalculate the contribution per unit and then apply the same formula.

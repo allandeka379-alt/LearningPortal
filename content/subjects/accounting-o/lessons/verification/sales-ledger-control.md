@@ -130,6 +130,8 @@ Farai sells timber in Mutare. His figures for December 2025 were:
 In the statement of financial position, trade receivables are US\$10,517 (a current asset); the US\$212 of credit balances is money Farai owes to customers, so it is a current liability (usually included with trade payables).
 :::
 
+![Nyasha's sales ledger control account for December: trade receivables of US\$6,240 rise with credit sales of 18,750 and a dishonoured cheque of 345, and fall with receipts of 16,385, discount allowed 412, returns inwards 638 and irrecoverable debts 290, leaving US\$7,610.](media:diagrams/sales-ledger-control-december.png "Figure: how the sales ledger control account moves from 6,240 to 7,610")
+
 ## Common mistakes
 
 :::mistake{title="Including cash sales"}

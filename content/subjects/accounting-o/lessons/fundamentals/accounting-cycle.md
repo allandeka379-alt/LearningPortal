@@ -79,6 +79,8 @@ On 12 June 2025 Chipo, who sells school uniforms in Gweru, sells 20 blazers on c
 2. If Chipo had sold for cash, the source document would be a receipt or till roll and the subsidiary book would be the cash book.
 :::
 
+![The six stages of the accounting cycle in order: a transaction, its source document, the subsidiary book, the ledger, the trial balance and the financial statements, after which balances are carried forward and the cycle repeats.](media:diagrams/accounting-cycle-six-stages.png "Figure: the six stages of the accounting cycle")
+
 ## A full month through the cycle
 
 The next example takes five transactions all the way through. Tatenda sells all his goods by the end of the month, so he has no closing inventory.

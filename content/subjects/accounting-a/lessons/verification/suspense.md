@@ -120,6 +120,8 @@ The effect of the errors on the account balances is shown below. The sales balan
 The draft columns agree only because suspense is included. The corrected columns agree without it.
 :::
 
+![Clearing Rudo's suspense account: the debit balance of US\$1,300 falls to 760 after crediting 540 for error 1, rises to 1,500 after debiting 740 for error 2, and falls to nil after crediting 1,500 for error 3, so every error has been found.](media:diagrams/suspense-account-cleared.png "Figure: the suspense balance of 1,300 is cleared to nil by three corrections")
+
 ## Corrected profit and working capital
 
 Start with the draft figure and adjust it for each error. Remember:

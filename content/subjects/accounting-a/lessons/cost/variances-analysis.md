@@ -90,6 +90,8 @@ Proof of the actual profit from the actual data:
 The statement ends at the independently calculated actual profit of US\$5,260, so the variances are complete. Profit was US\$3,740 below budget even though 200 more boxes were sold.
 :::
 
+![Operating statement for Sibanda Biscuits: budgeted profit of US\$9,000 rises by the favourable sales volume variance of 1,800 and falls by adverse variances of 1,920 (sales price), 1,000 and 800 (materials), 670 and 750 (labour) and 400 (fixed costs), leaving actual profit of US\$5,260.](media:diagrams/variances-operating-statement-biscuits.png "Figure: budgeted profit of 9,000 to actual profit of 5,260 through the variances")
+
 ## Reconciling standard cost to actual cost
 
 When no sales are involved, a cost reconciliation starts from the **standard cost of the actual output** and ends at the **actual cost**: adverse variances increase the cost; favourable variances reduce it.

@@ -76,6 +76,8 @@ For the ARR, depreciation is US\$40,000 ÷ 5 = US\$8,000 a year, so the average 
 If the dairy requires a payback of three years or less and an ARR of at least 25%, the cooler is acceptable on both measures: payback 2.72 years is within three, and ARR 29.0% is above 25%.
 :::
 
+![Payback of the Mutare Dairy cooler: cumulative cash flow starts at −40,000, reaches −28,000 after year 1 and −13,000 after year 2, then crosses zero part-way through year 3 (13,000 ÷ 18,000 = 0.72), so payback is 2.72 years; it ends at +29,000 after year 5.](media:diagrams/payback-cumulative-cash-cooler.png "Figure: cumulative cash flow crosses zero at 2.72 years")
+
 ## Accounting rate of return
 
 ARR uses **profits**, not cash flows, so the depreciation of the project is deducted. With no residual value, the total profit over the life is total inflows less the outlay. The average investment is half the outlay, because on average the asset's carrying amount is half its cost. The ARR is therefore higher than the "simple" return on the full outlay. The result is compared with the target ARR: a project is accepted if its ARR is at least the target, and when choosing between projects the one with the highest ARR is preferred.

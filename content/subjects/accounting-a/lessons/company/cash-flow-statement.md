@@ -162,6 +162,8 @@ The statements of financial position of Kadoma Cotton Ltd are below. During the 
 Check: the closing cash and cash equivalents of 26,400 equals the bank balance in the 2025 statement of financial position.
 :::
 
+![Kadoma Cotton statement of cash flows for 2025: cash and cash equivalents start at an overdraft of US\$6,500, operating activities add 82,000, investing activities use 76,100 and financing adds 27,000, so the net increase is 32,900 and the year ends with 26,400.](media:diagrams/cash-flow-three-activities.png "Figure: operating, investing and financing cash flows take cash from −6,500 to 26,400")
+
 ## Sole proprietors and partnerships (ZIMSEC)
 
 The same structure applies to a business with no company features. There is no income tax and no share issue. The starting point is net profit, and drawings are a financing outflow in place of dividends. Introduced capital would be a financing inflow.

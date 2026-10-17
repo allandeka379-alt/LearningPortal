@@ -53,6 +53,8 @@ The division that holds all the other accounts: income and expense accounts (nom
 | Purchases ledger (trade payables ledger) | One account for each credit supplier | Credit (the business owes the supplier) |
 | Nominal ledger (general ledger) | Sales, purchases, returns, expenses, income, non-current assets, inventory, capital, drawings, loans | Debit or credit, depending on the account |
 
+![The ledger is divided into three parts: the sales ledger holds each credit customer's account (normally a debit balance), the purchases ledger holds each credit supplier's account (normally a credit balance), and the general ledger holds all other accounts; all are posted from the books of prime entry.](media:diagrams/ledger-divisions.png "Figure: the three divisions of the ledger")
+
 The **cash book** is a special case. It records cash and bank transactions as a book of prime entry, but its cash and bank columns are also the cash and bank accounts, so it forms part of the double entry. Many businesses treat it as a separate division of the ledger. The petty cash book works the same way for small payments.
 
 Note that the **sales account** and **purchases account** themselves are in the nominal ledger, not in the sales and purchases ledgers. The sales ledger holds only the customers' accounts; the total of credit sales goes to the sales account in the nominal ledger.

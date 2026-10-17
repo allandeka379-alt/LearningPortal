@@ -95,6 +95,8 @@ Budget: 4,500 units at 3 hours each (13,500 hours) and fixed overhead of US\$27,
 Output rose above budget (volume favourable), but the workers needed 300 hours more than the standard for the output (efficiency adverse); the capacity variance is favourable because more hours were worked than budgeted. A favourable capacity variance does not mean the hours were well used: the efficiency variance shows that some of them were wasted.
 :::
 
+![Fixed overhead variance tree for Ncube Furniture: the total under-absorbed overhead of US\$2,700 adverse splits into expenditure 1,100 adverse and volume 1,600 adverse, and the volume variance splits into capacity 1,000 adverse and efficiency 600 adverse.](media:diagrams/fixed-overhead-variance-tree.png "Figure: the fixed overhead variance of 2,700 A broken into expenditure, capacity and efficiency")
+
 ## Interpreting the variances
 
 | Variance | Typical causes of an adverse result | Typical causes of a favourable result |

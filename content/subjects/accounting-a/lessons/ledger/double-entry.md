@@ -162,6 +162,8 @@ Not every transaction is a simple cash movement. Four more, from Rudo's April.
 4. Returning goods to a supplier reduces what Rudo owes, so the supplier account is debited.
 :::
 
+![Accounting equation for Rudo's poultry business at 31 March: assets of US\$11,180 (bank 7,280, equipment 3,600, receivable 300) equal capital of US\$10,930 plus a payable of US\$250; capital is 10,000 invested plus profit 1,230 less drawings 300.](media:diagrams/double-entry-equation-31-march.png "Figure: assets equal capital plus liabilities for Rudo at 31 March")
+
 ## Returns, carriage and discounts
 
 - **Sales returns** (returns inwards) reduce sales: debit Sales returns, credit the customer.

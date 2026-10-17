@@ -123,6 +123,8 @@ $$
 
 A loss is subtracted instead of adding a profit. This form is used again later for incomplete records.
 
+![Tendai's Tuck Shop on 28 December: assets of US\$5,600 (bank 4,000, shop fittings 800, inventory 800) equal capital of 3,100 plus a loan of 2,000 and trade payables of 500, which also total US\$5,600.](media:diagrams/accounting-equation-tuck-shop.png "Figure: assets equal capital plus liabilities at 28 December")
+
 ## From the equation to a statement of financial position
 
 A **statement of financial position** is the accounting equation set out in detail at one date. The top half lists the assets; the bottom half shows where they came from: capital and liabilities. Assets are grouped as **non-current** (kept for more than a year to run the business) and **current** (cash or expected to turn into cash within a year). Liabilities are grouped the same way.

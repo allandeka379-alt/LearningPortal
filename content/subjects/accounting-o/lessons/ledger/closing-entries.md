@@ -119,6 +119,8 @@ There is no balance to bring down: the account starts 2026 empty.
 4. Profit for the year (net profit): $18,300 - 11,550 = 6,750$.
 :::
 
+![Income statement for Tendai's Hardware: revenue of US\$48,600 less cost of sales of 30,300 (opening inventory 4,200 plus purchases 31,250 less closing inventory 5,150) gives gross profit of 18,300; wages 6,800, rent 3,600 and electricity 1,150 leave a profit for the year of 6,750.](media:diagrams/closing-entries-income-statement.png "Figure: closing the accounts to the income statement gives a profit of 6,750")
+
 ## Profit and drawings to capital
 
 The profit belongs to the owner, so the final closing entries move it to the capital account:
@@ -155,6 +157,8 @@ Tendai's capital on 1 January 2025 was US\$22,000. Profit for the year was US\$6
 2. Balance c/d: $28,750 - 7,200 = 21,550$.
 3. Tendai drew out more than the profit, so his capital **fell** by US\$450 ($7,200 - 6,750$). The closing capital of US\$21,550 appears in the statement of financial position as capital US\$22,000, plus profit US\$6,750, less drawings US\$7,200.
 :::
+
+![Tendai's capital: US\$22,000 at 1 January plus profit of 6,750 less drawings of 7,200 gives US\$21,550 at 31 December, so capital fell by 450 because he drew out more than he earned.](media:diagrams/closing-entries-capital-movement.png "Figure: capital rises with profit and falls with drawings")
 
 ## Balances carried down
 

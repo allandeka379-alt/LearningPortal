@@ -79,6 +79,8 @@ Farai bought the cutting machine on 1 January 2022 for US\$18,000. He expects to
 At the end of 2025 the net book value equals the residual value of US\$2,000.
 :::
 
+![Straight-line depreciation of Farai's cutting machine: cost of US\$18,000 is split each year between accumulated depreciation, growing by 4,000 a year to 16,000, and net book value, falling from 14,000 to 10,000, 6,000 and finally the residual value of 2,000.](media:diagrams/depreciation-straight-line-machine.png "Figure: each year 4,000 of the machine's cost moves from net book value to accumulated depreciation")
+
 ## The reducing-balance method
 
 A fixed percentage is applied each year to the **net book value at the start of the year** (cost less depreciation so far), not to the cost. The charge is highest in the first year and falls every year after that, and the net book value never quite reaches zero.
@@ -100,6 +102,8 @@ Rudo bought a delivery van for her wholesale business in Mutare on 1 January 202
 
 Each year's charge is 25% of the previous year's closing net book value, never 25% of the original cost.
 :::
+
+![Reducing-balance depreciation of Rudo's van at 25%: cost of US\$24,000 gives charges of 6,000, 4,500 and 3,375, so accumulated depreciation rises to 6,000, 10,500 and 13,875 while net book value falls to 18,000, 13,500 and 10,125, with smaller falls each year.](media:diagrams/depreciation-reducing-balance-van.png "Figure: the van's depreciation charge shrinks each year under the reducing-balance method")
 
 ## The revaluation method
 

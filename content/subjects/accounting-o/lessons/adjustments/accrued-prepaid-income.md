@@ -129,6 +129,8 @@ Nyasha's gross profit for 2025 was US\$31,800. Both incomes are added to it:
 | Other payables (commission received in advance) |  | 280 |
 :::
 
+![Rent receivable for 2025: Nyasha received US\$6,600 and December's rent of 600 was still owing, so rent earned for the year is US\$7,200 (12 months at 600), and the accrued 600 is an asset at 31 December.](media:diagrams/rent-receivable-accrued-income.png "Figure: rent earned is the cash received plus the accrued income")
+
 ## Why income received in advance is a liability
 
 When the seed company pays commission for January 2026 in December 2025, Nyasha has not yet done the work. If she stopped trading, she would have to repay it. Until the work is done the money is owed back in services, which is why it is a current liability. Treating it as this year's income would break the matching and prudence concepts by overstating profit.
