@@ -81,6 +81,8 @@ The OSI model has seven layers. You need them in outline; a common way to rememb
 
 The TCP/IP application layer covers OSI layers 5 to 7, and the TCP/IP link layer covers OSI layers 1 and 2. Devices can be placed on the model too: a hub works at the physical layer, a switch at the data link layer and a router at the network layer.
 
+![TCP/IP has four layers (application, transport, internet, link) lined up against the seven OSI layers: application covers OSI 5 to 7, transport is layer 4, internet is layer 3 and link covers layers 1 and 2; a hub works at physical, a switch at data link, a router at network](media:diagrams/tcpip-osi-layers.png "Figure: the four TCP/IP layers against the seven OSI layers, with the layer each device works at")
+
 ## Common application protocols
 
 | Protocol | Full name | What it does |

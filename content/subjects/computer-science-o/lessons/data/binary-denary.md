@@ -33,6 +33,8 @@ Binary numbers that use exactly 8 or 16 bits. An 8-bit unsigned number holds 0 t
 
 To convert binary to denary, write the place values above the bits and **add the place values where there is a 1**. Places with a 0 add nothing.
 
+![Place-value grid for the binary number 11010110: the 1s are under 128, 64, 16, 4 and 2, and 128 + 64 + 16 + 4 + 2 = 214; the places holding 0 add nothing](media:diagrams/binary-place-values-11010110.png "Figure: converting 11010110 to denary by adding the place values that hold a 1")
+
 :::worked-solution{title="Convert the binary number 11010110 to denary"}
 1. Write the place values over the bits: 128, 64, 32, 16, 8, 4, 2, 1 over 1, 1, 0, 1, 0, 1, 1, 0.
 2. The 1s are under 128, 64, 16, 4 and 2.

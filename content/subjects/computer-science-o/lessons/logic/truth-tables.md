@@ -49,6 +49,8 @@ Each row is then the binary number 0 to 7. Examination truth tables always print
 
 Brackets show the order: in `X = (A OR B) AND NOT C`, the bracket and the NOT are worked out before the final AND. In 0478 papers brackets are always printed when the order matters, so you never need to guess precedence.
 
+![Logic circuit for X = (A OR B) AND NOT C: A and B enter an OR gate giving P, C enters a NOT gate giving Q, and P and Q enter an AND gate whose output is X](media:diagrams/truth-table-circuit-or-not-and.png "Figure: the circuit for X = (A OR B) AND NOT C, with working signals P and Q")
+
 ## Worked examples
 
 :::worked-solution[Completing the table for X = (A OR B) AND NOT C]
@@ -101,6 +103,8 @@ Tracing one row like this is also the fastest way to check a table you have comp
 ## Reading a circuit description
 
 Because no diagrams are printed in this course, circuits are described gate by gate. Read each sentence and note three things: which gate, which inputs go in, and where its output goes. Then write the expression from the output backwards. For example, "A goes into a NOT gate; its output and B go into an OR gate whose output is X" becomes `X = (NOT A) OR B`. Once you have the expression, the truth-table method is the same.
+
+![Logic circuit for X = (A NAND B) AND (B XOR C): input B feeds both the NAND gate and the XOR gate, and their outputs P and Q enter an AND gate that gives X](media:diagrams/truth-table-circuit-nand-xor-and.png "Figure: the circuit for X = (A NAND B) AND (B XOR C); input B is shared by two gates")
 
 :::keyfact{title="ZIMSEC and Cambridge"}
 Both syllabuses ask for truth tables with up to three inputs. Cambridge tables are printed with the inputs already filled in and a column for X; working columns are allowed and often earn the marks when the final column has a slip. An eight-row table is often worth fewer marks than it has rows (for example 4 marks), so a single wrong row can cost a whole mark.

@@ -78,6 +78,8 @@ Computers work with digital data, but some links (such as an old telephone line)
 
 A **wireless access point** (WAP) lets wireless devices join a wired LAN. It is usually connected to a switch by a cable.
 
+![Path of a web page request from a school computer: the NIC sends packets, the switch uses the MAC address to pass them only to the router, the router uses the IP address to forward them towards the ISP, and a modem converts the signal if the line is analogue](media:diagrams/lan-devices-request-path.png "Figure: the devices a web request passes through, from computer to internet")
+
 :::worked-solution[Following a packet through a school network]
 Rudo, in the school computer room, opens a website. Trace the devices her request passes through.
 

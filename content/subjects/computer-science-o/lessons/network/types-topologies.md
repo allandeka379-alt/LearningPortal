@@ -61,6 +61,8 @@ In a **peer-to-peer** network, every computer has equal status and shares its ow
 
 ## Network topologies
 
+![Four topologies with five computers each: star (5 cables to a central switch), bus (one backbone with a terminator at each end), ring (each computer linked to two neighbours, data in one direction) and full mesh (every pair linked, 10 cables)](media:diagrams/network-topologies-five-computers.png "Figure: star, bus, ring and full mesh topologies for five computers")
+
 ### Star topology
 
 Every node has its own cable to a central device, usually a **switch**.

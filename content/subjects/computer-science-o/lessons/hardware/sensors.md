@@ -46,6 +46,8 @@ Sensors work continuously, day and night, and take readings more often and more 
 
 In a **monitoring** system, the microprocessor compares each reading with stored limits and, if a reading is outside them, warns a person, for example by sounding an alarm or showing a message; a person decides what to do. In a **control** system, the microprocessor also sends a signal to an **actuator** to change the conditions itself, for example by opening a vent or switching on a pump, and then keeps reading the sensor to check the effect. In both, the sensor's only job is to measure: it never makes the decision.
 
+![Monitoring and control: a sensor's reading goes through an ADC to the microprocessor, which compares it with stored limits; in monitoring it only warns a person, in control it also signals an actuator whose effect on the conditions is read again by the sensor, forming a feedback loop](media:diagrams/sensor-control-feedback-loop.png "Figure: sensor, ADC, microprocessor and actuator in a control loop, with the monitoring branch")
+
 ## The fourteen sensors
 
 | Sensor | Data it captures | Example uses |

@@ -54,6 +54,8 @@ It repeats this cycle billions of times a second. Without the CPU, the input fro
 
 The CPU does **not** store your files permanently, and it is **not** the whole box (the system unit or tower) of a desktop computer. People sometimes call the whole case "the CPU", but in computer science the CPU is the processing chip inside.
 
+![Input, process, output and storage: a barcode scanner sends input to the CPU (control unit directs, ALU calculates), which exchanges instructions and data with main memory, sends results to the screen and printer, and main memory loads from and saves to the SSD or hard disk](media:diagrams/input-process-output-storage.png "Figure: input, processing (CPU and main memory), output and storage at a supermarket till")
+
 ## What is a microprocessor?
 
 Early computers used rooms full of separate components to build a processor. Today the entire CPU is made as one **integrated circuit** on a single chip: a **microprocessor**. A modern microprocessor contains billions of transistors on a piece of silicon smaller than a fingernail.

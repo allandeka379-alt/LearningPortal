@@ -78,6 +78,8 @@ For larger numbers, keep dividing the quotient by 16 and read the remainders fro
 
 This is the conversion hexadecimal was made for, and it needs no arithmetic at all.
 
+![Hexadecimal 3F9C converts to binary by replacing each hex digit with its 4-bit nibble: 3 is 0011, F is 1111, 9 is 1001 and C is 1100, giving 0011111110011100](media:diagrams/hex-binary-nibbles-3f9c.png "Figure: 3F9C written as four nibbles of binary")
+
 ### Hexadecimal to binary
 
 Replace **each hex digit with its 4-bit nibble**, keeping every leading zero inside each nibble.

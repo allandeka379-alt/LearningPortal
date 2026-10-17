@@ -57,6 +57,8 @@ A parity check has a weakness: if **two** bits flip, the count is still even (or
 
 To find the wrong bit, data is sent in a block of bytes, each with its own parity bit, followed by a **parity byte**. Each bit of the parity byte is the parity bit for one **column** of the block. A wrong bit then shows up as one row and one column that both fail the check, and the bit where they cross is the error.
 
+![Even-parity block of four bytes and a parity byte: byte 3 has five 1s and column 4 has three 1s, both odd, so the bit where they cross (byte 3, column 4) is the error and should be 0](media:diagrams/parity-block-error-location.png "Figure: the parity block, with the failing row and column crossing at the wrong bit")
+
 :::worked-solution[Finding the error in a parity block (even parity)]
 Four bytes and a parity byte arrive. The table counts the 1s in each row.
 

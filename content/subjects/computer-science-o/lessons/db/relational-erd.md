@@ -60,6 +60,8 @@ The clinic's data is split into two tables. Each has its own primary key, and th
 
 In `Patients`, `DoctorID` is a **foreign key**. It may repeat (three patients see D2), which a primary key never may. To find who treats Farai Zhou, the database reads D3 in his record and looks up D3 in `Doctors`: Dr Gumbo. Dr Sithole's speciality is now stored once, in one record of `Doctors`.
 
+![Two linked tables: Doctors has primary key DoctorID (D1, D2, D3); Patients has primary key PatientID and a foreign key DoctorID, which repeats (D2 appears three times) and leads each patient to one doctor, for example Farai Zhou's D3 leads to Dr Gumbo](media:diagrams/keys-doctors-patients.png "Figure: primary keys and a foreign key linking the Patients table to the Doctors table")
+
 :::worked-solution[Identifying keys and the relationship]
 1. Primary key of `Doctors`: `DoctorID`, unique in every row. Primary key of `Patients`: `PatientID`.
 2. The field that appears in both tables is `DoctorID`. It is the primary key in `Doctors`, so in `Patients` it is the **foreign key**.
@@ -110,6 +112,8 @@ A school stores learners and clubs. Nyasha belongs to Chess and Robotics, Tatend
 ## Describing an entity-relationship diagram
 
 An ERD draws each entity as a rectangle labelled with its name and joins related entities with a line. The cardinality is shown at the ends of the line. In the common "crow's foot" notation, a single plain line end means **one**, and an end that splits into three short prongs, like a bird's foot, means **many**.
+
+![Entity-relationship diagram in crow's foot notation: Borrower and Book each link to Loan with a plain end (one) at Borrower or Book and a crow's foot (many) at Loan; Loan holds BorrowerID and BookID as foreign keys, so it resolves the many-to-many link](media:diagrams/erd-library-borrower-loan-book.png "Figure: an ERD for a school library with Loan as the link table")
 
 :::example{title="An ERD for a school library, in words"}
 A library has three entities: `Borrower`, `Loan` and `Book`.

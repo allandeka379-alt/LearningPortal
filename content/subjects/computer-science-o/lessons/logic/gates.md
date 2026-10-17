@@ -38,6 +38,8 @@ With *n* inputs there are $2^n$ different combinations: 2 for one input, 4 for t
 
 NOT has **one** input. AND, OR, NAND, NOR and XOR each have **two** inputs in the examination. The output is always called X in this course; inputs are A, B and C. In every truth table the inputs are listed in **binary counting order** (00, 01, 10, 11), so that no combination is missed.
 
+![The six logic gate symbols with the output pattern each gives for inputs 00, 01, 10, 11: NOT 10, AND 0001, OR 0111, NAND 1110, NOR 1000, XOR 0110; a bubble at the output means invert](media:diagrams/logic-gate-symbols.png "Figure: the six gate symbols and the output pattern each gives (a bubble means invert)")
+
 ### NOT gate (inverter)
 
 **Symbol:** a triangle pointing in the direction of the signal, with a small circle (a "bubble") at its tip. The bubble always means "invert".

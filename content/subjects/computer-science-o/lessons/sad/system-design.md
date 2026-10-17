@@ -89,6 +89,8 @@ A system flowchart shows the whole system at a high level. Common symbols (descr
 | Display | A shape with a curved right side and a pointed left side | Output shown on a screen |
 | Flow line | An arrow | The direction in which data flows |
 
+![System flowchart for bus bookings: the clerk's manual input goes to Validate and check seat, which reads the Bookings file; if the seat is taken the screen shows Seat already booked, if free the booking is saved to the file and a ticket is printed](media:diagrams/system-flowchart-bus-bookings.png "Figure: a system flowchart using the manual input, process, disk, display and document symbols")
+
 :::example{title="A system flowchart for bus bookings"}
 The system flowchart for the booking system is described as:
 

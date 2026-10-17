@@ -47,6 +47,8 @@ A step that asks a question with two possible answers (Yes/No or True/False), wi
 - **Selection**: a decision box whose Yes and No arrows lead to different boxes; the two paths join up again later.
 - **Iteration (a loop)**: a decision box with one exit leading **back** to an earlier box, so the boxes in between repeat. If the decision comes before the repeated boxes, it behaves like a `WHILE` loop; if it comes after them, it behaves like `REPEAT … UNTIL`.
 
+![Flowchart for the game park fee: input Age; if Age < 12 the fee is 2; otherwise if Age >= 60 the fee is 3; otherwise the fee is 5; then output the fee. Ages 9, 35 and 60 give 2, 5 and 3](media:diagrams/flowchart-park-fee-selection.png "Figure: the game park fee flowchart with two decision boxes")
+
 :::worked-solution[Following a flowchart with selection]
 The game-park flowchart, with the rates in dollars:
 
@@ -90,6 +92,8 @@ OUTPUT Fee
 ## Following a loop
 
 When a flowchart contains a loop, keep track of every variable as you go round, exactly as in a trace table.
+
+![Flowchart of a loop that adds numbers until the rogue value -1: the decision Number = -1 comes straight after each input, so -1 is never added; with inputs 6, 9, 4, -1 the output is 19 3](media:diagrams/flowchart-loop-rogue-value.png "Figure: a flowchart loop that totals numbers until the rogue value -1 is entered")
 
 :::worked-solution[A loop with a rogue value]
 This flowchart adds up numbers until the rogue value -1 is entered.

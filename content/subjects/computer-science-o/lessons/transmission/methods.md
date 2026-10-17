@@ -46,6 +46,8 @@ The bits of one parallel transmission arriving at slightly different times becau
 
 In **serial** transmission a byte such as 01001011 is sent as eight bits one after another on one wire. In **parallel** transmission the same byte is sent on eight wires at once, one bit per wire.
 
+![Serial sends the byte 01001011 as eight bits one after another along one wire; parallel sends the same eight bits at once along eight wires, one bit per wire](media:diagrams/serial-parallel-byte.png "Figure: the byte 01001011 sent serially (one wire) and in parallel (eight wires)")
+
 | | Serial | Parallel |
 |:--|:--|:--|
 | Wires for the data | One (per direction) | Several (for example 8 or more) |
@@ -66,6 +68,8 @@ Over a long cable, small differences in the wires mean parallel bits **arrive at
 | Full-duplex | Both directions at the same time | A phone call; a broadband internet connection that downloads and uploads at once |
 
 Simplex is the simplest and cheapest but allows no reply, so the receiver cannot ask for lost data to be sent again. Half-duplex allows replies but data must wait while the other direction is in use. Full-duplex is the fastest for two-way communication but needs two channels (or a channel that can carry both directions at once), so it is more complex.
+
+![Simplex sends data in one direction only, half-duplex sends both ways but one direction at a time (walkie-talkies), and full-duplex sends both ways at the same moment (a phone call)](media:diagrams/transmission-modes-simplex-duplex.png "Figure: simplex, half-duplex and full-duplex transmission between devices A and B")
 
 ## Worked examples
 

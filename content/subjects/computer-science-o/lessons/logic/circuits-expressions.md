@@ -42,6 +42,8 @@ A description in words of when an output (an alarm, a motor, a lamp) must be on,
 
 The circuit is then built gate by gate from the expression: each operator becomes one gate, and each bracket becomes a gate whose output feeds the next gate. Cambridge 0478 expects the circuit to follow the statement as given, **without simplification**, so do not try to remove gates.
 
+![Grain silo alarm circuit X = (A AND B) OR C: A and B enter an AND gate, its output and C enter an OR gate, so the alarm sounds if temperature is high and the fan has failed, or the button is pressed](media:diagrams/silo-alarm-circuit.png "Figure: the grain silo alarm circuit, X = (A AND B) OR C")
+
 :::worked-solution[The grain silo alarm]
 Statement: the alarm X sounds when the temperature is too high and the fan has failed, or when the emergency button is pressed.
 
@@ -72,6 +74,8 @@ Many statements describe an input being **off**. "The fan is not working" with F
 ## From a circuit to an expression
 
 Start at the **output** and work backwards, or start at the inputs and write the output of each gate in turn, wrapping each gate's output in brackets.
+
+![Circuit for X = ((NOT A) AND B) OR (B NOR C): A goes through NOT then AND with B to give P, B and C enter a NOR gate to give Q, and P and Q enter an OR gate that gives X](media:diagrams/circuit-not-and-nor-or.png "Figure: the circuit for X = ((NOT A) AND B) OR (B NOR C)")
 
 :::worked-solution[Writing the expression for a described circuit]
 Circuit: input A goes into a NOT gate. The output of the NOT gate and input B go into an AND gate (output P). Inputs B and C go into a NOR gate (output Q). P and Q go into an OR gate, whose output is X.

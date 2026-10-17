@@ -57,6 +57,8 @@ A network device that reads the destination address in a packet's header and dec
 
 The addresses in the header are **IP addresses**. The header may also hold the total number of packets in the message, so the receiver knows when the last one has arrived.
 
+![A 3,000-byte file is split into 3 packets of 1,000 bytes; each packet has a header (destination address, originator address, packet number), a payload of data and a trailer (end marker and error check)](media:diagrams/packet-structure-three-packets.png "Figure: three packets from one file, each with a header, a payload and a trailer")
+
 ## Packet switching step by step
 
 1. The sending device breaks the data into packets and gives each a **header** (with the packet number and both addresses) and a **trailer**.
@@ -65,6 +67,8 @@ The addresses in the header are **IP addresses**. The header may also hold the t
 4. Because routes differ in length and traffic, packets **may arrive out of order**, and some may be delayed or lost.
 5. The receiving device checks each packet (using the trailer) and waits for all the packets to arrive.
 6. Once the last packet has arrived, the packets are **reordered using their packet numbers** and the payloads are joined to rebuild the original data. Any missing or damaged packet can be requested again.
+
+![Packet switching: packets 1, 2 and 4 travel via the Masvingo router and packet 3 via Mutare because the Masvingo link is busy, so they arrive in the order 1, 2, 4, 3 and the receiver sorts them by packet number into 1, 2, 3, 4](media:diagrams/packet-switching-out-of-order.png "Figure: packets taking different routes, arriving out of order and being put back in order")
 
 ## Worked examples
 

@@ -47,6 +47,8 @@ A diagram that shows how a system is broken down into sub-systems, level by leve
 
 The stages are a cycle rather than a straight line. If testing shows that a requirement was misunderstood, the developer returns to analysis; if a module will not work, the design is revised. **Iterative testing** during coding means each module is tested, corrected and tested again before the next is added, so errors are found while they are small.
 
+![The four stages of the program development life cycle in a cycle: analysis, design, coding, testing; testing leads back to analysis or design when a fault or a misunderstood requirement is found](media:diagrams/program-development-life-cycle.png "Figure: the program development life cycle as a repeating cycle of four stages")
+
 :::keyfact{title="ZIMSEC and Cambridge"}
 Cambridge 0478 limits the life cycle to four stages: analysis, design, coding and testing. ZIMSEC places the same ideas inside the wider systems development life cycle (which adds feasibility, implementation, evaluation and maintenance) and asks you to use **top-down design**. In a Cambridge answer, name only the four stages.
 :::
@@ -99,6 +101,8 @@ A structure diagram is drawn as boxes in levels: the whole system at the top, it
   - Produce reports
 
 Read from left to right, the sub-systems on each level are usually in the order they are used. Each box at the bottom level should be small enough to become one module (procedure or function) in the code.
+
+![Structure diagram of a library loans system: the top box splits into Manage members (Add member, Remove member), Manage loans (Issue book, Return book, Calculate fine) and Produce reports](media:diagrams/structure-diagram-library-loans.png "Figure: a top-down structure diagram for a library loans system")
 
 :::example{title="A structure diagram for a quiz program"}
 Farai is writing a quiz for Form 1 learners. Decomposing it top-down gives:

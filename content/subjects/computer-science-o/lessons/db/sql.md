@@ -64,6 +64,8 @@ Here is Rudo's table, which the examples below use.
 
 Work through a query in three steps: **filter** the records with WHERE, **sort** them with ORDER BY, then **show** only the fields named after SELECT.
 
+![SQL query stages on Rudo's plants table: WHERE Type = 'Herb' keeps Basil, Rosemary and Mint; ORDER BY Price DESC puts Rosemary (4), Basil (3), Mint (2) in that order; SELECT PlantName, Price shows only those two fields](media:diagrams/sql-query-filter-sort-show.png "Figure: a query filters with WHERE, sorts with ORDER BY, then shows only the SELECT fields")
+
 :::worked-solution[Selecting and sorting]
 ```
 SELECT PlantName, Price

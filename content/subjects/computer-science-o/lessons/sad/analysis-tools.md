@@ -76,6 +76,8 @@ A DFD uses four symbols. You must recognise and name each.
 
 **Rules:** every data flow is labelled; data cannot flow directly between two external entities or two data stores, or between a data store and an entity; it must pass through a process. Every process has at least one input and one output.
 
+![Data flow diagram of a library loan system: the Learner sends Learner ID and book to process 1 Record loan, which reads book details from store D1 Books, saves loan details in D2 Loans and returns a return date; process 2 reads overdue loans from D2 Loans and sends an overdue list to the Librarian](media:diagrams/dfd-library-loan.png "Figure: a data flow diagram with two entities, two processes and two data stores")
+
 :::worked-solution[Reading a DFD of a library loan]
 The DFD of a school library's loan system is described as:
 

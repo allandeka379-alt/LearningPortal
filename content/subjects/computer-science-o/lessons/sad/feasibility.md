@@ -55,6 +55,8 @@ You may see the first five summarised as **TELOS** (technical, economic, legal, 
 
 A simple measure is the **payback period**: how long the yearly net savings take to repay the development cost.
 
+![Payback period graph: cumulative net savings of USD 6,000 a year (7,000 saving less 1,000 running cost) rise to meet the USD 12,000 development cost after 2 years, and reach USD 30,000 by year 5](media:diagrams/payback-period-graph.png "Figure: cumulative net savings against the 12,000 development cost, meeting at 2 years")
+
 :::worked-solution[Payback period]
 A pharmacy in Bulawayo plans a computerised stock system. Development costs USD 12,000. It will save USD 7,000 a year in wasted stock and staff time, but running costs are USD 1,000 a year. How long is the payback period?
 

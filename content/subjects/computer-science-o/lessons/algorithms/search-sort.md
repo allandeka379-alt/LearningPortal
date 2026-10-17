@@ -44,6 +44,8 @@ The linear search works on any list, sorted or not:
 
 A `WHILE` loop with a `Found` flag stops as soon as the item is found, which saves time:
 
+![Linear search of the codes 418, 205, 377, 960, 122, 543, 381, 709: searching for 122 stops at index 5 after 5 comparisons, while searching for 300 compares all 8 codes and reports Not found](media:diagrams/linear-search-codes.png "Figure: a linear search finding 122 at index 5, and failing to find 300 after 8 comparisons")
+
 ```
 OUTPUT "Enter the code to find"
 INPUT SearchCode
@@ -106,6 +108,8 @@ To sort into **ascending** order (smallest first):
 4. Stop when a pass makes **no swaps** (the list is sorted) or when there is nothing left to compare.
 
 Swapping needs a temporary variable, as in any swap: `Temp ← List[Index]`, `List[Index] ← List[Index + 1]`, `List[Index + 1] ← Temp`.
+
+![Bubble sort of 27, 12, 35, 8, 19: pass 1 makes 3 swaps and moves 35 to the end giving 12, 27, 8, 19, 35; pass 2 gives 12, 8, 19, 27, 35; pass 3 gives 8, 12, 19, 27, 35 and pass 4 makes no swaps](media:diagrams/bubble-sort-passes.png "Figure: the first pass of a bubble sort comparison by comparison, then the array after each later pass")
 
 :::worked-solution[One pass in detail]
 Sort 27, 12, 35, 8, 19 into ascending order. The first pass:

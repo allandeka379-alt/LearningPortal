@@ -67,6 +67,8 @@ The URL is `https://www.greenvalleyschool.ac.zw/notes/physics.html` (a fictional
 
 URLs are used because they are easy for people to remember; computers actually locate servers by **IP address**, which is a set of numbers.
 
+![The URL https://www.greenvalleyschool.ac.zw/notes/physics.html split into the protocol https, the domain name www.greenvalleyschool.ac.zw (where .zw is the country code for Zimbabwe) and the path and file name /notes/physics.html](media:diagrams/url-parts-protocol-domain-path.png "Figure: the protocol, domain name and path of a URL")
+
 ## HTTP and HTTPS
 
 HTTP sets the rules for how a browser **requests** a page and how the web server **responds**. With plain HTTP the data travels as plaintext, so anyone who intercepts it can read it.
@@ -94,6 +96,8 @@ The main purpose of a browser is to **render HTML** and display web pages. Its o
 5. The browser sends an **HTTP (or HTTPS) request** to the **web server** at that IP address, asking for the page.
 6. The web server finds the page and sends it back, as **HTML** with any images and other files the page needs.
 7. The browser **renders** the HTML and displays the page.
+
+![How a web page is retrieved: the browser sends the domain name to a DNS server, which returns the IP address; the browser then sends a request to the web server at that IP address, the server returns HTML and images, and the browser renders them](media:diagrams/dns-lookup-page-request.png "Figure: the seven steps from typing a URL to seeing the page")
 
 :::example
 **Following one request.** Farai, in Mutare, clicks a link to `https://www.tafaraweather.co.zw/today.html` (a fictional site). His browser asks a DNS server for the IP address of `www.tafaraweather.co.zw`. The DNS server replies with the server's IP address. Because the URL starts with `https`, the browser first checks the site's certificate, then sends an encrypted request for `today.html`. The web server returns the HTML file and the weather images, and the browser renders them as the page Farai sees.

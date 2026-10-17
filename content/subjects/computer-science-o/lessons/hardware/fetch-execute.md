@@ -38,6 +38,8 @@ The list of all the commands, in machine code, that a particular CPU can process
 
 ## The components of a Von Neumann CPU
 
+![Von Neumann CPU: the PC holds the next address and passes it to the MAR, which sends it on the one-way address bus to RAM; the instruction returns on the two-way data bus into the MDR, then the CIR, where the control unit decodes it; the ALU puts results in the ACC](media:diagrams/von-neumann-cpu-registers-buses.png "Figure: the Von Neumann CPU with its registers, units and the three buses to RAM")
+
 ### Units
 
 - **Arithmetic logic unit (ALU)**: carries out calculations and logical operations. Its results are held in the accumulator.
@@ -80,6 +82,8 @@ A useful memory hook: the PC and MAR hold **addresses**; the MDR, CIR and ACC ho
 **Execute**
 
 7. The instruction is carried out. If it needs data from memory, the data's address goes into the MAR and the data comes back into the MDR. Calculations are done by the **ALU** and the result is stored in the **ACC**. Then the cycle starts again.
+
+![Fetch-decode-execute cycle: fetch copies the PC to the MAR, reads the instruction into the MDR, adds 1 to the PC and copies the instruction to the CIR; decode is done by the control unit; execute fetches any data and the ALU stores its result in the ACC; then the cycle repeats](media:diagrams/fetch-decode-execute-cycle.png "Figure: the fetch-decode-execute cycle as three repeating stages")
 
 :::worked-solution[Register contents for two instructions]
 Memory holds the instruction `LDA 30` (load the value at address 30 into the accumulator) at address 20 and `ADD 31` (add the value at address 31 to the accumulator) at address 21. Address 30 holds 15 and address 31 holds 27. The PC starts at 20.

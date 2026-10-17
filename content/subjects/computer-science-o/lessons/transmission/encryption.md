@@ -90,6 +90,8 @@ Data encrypted with someone's public key can only be decrypted with their **matc
 
 Asymmetric encryption solves the key-distribution problem, but it is slower than symmetric encryption. In practice, secure websites often use asymmetric encryption to exchange a symmetric key safely, then use that symmetric key for the rest of the session.
 
+![Symmetric encryption uses one shared key (MEET AT NOON becomes PHHW DW QRRQ with key 3, and the same key decrypts it); asymmetric encryption uses the receiver's public key to encrypt and the matching private key, which never leaves the receiver, to decrypt](media:diagrams/encryption-symmetric-asymmetric.png "Figure: symmetric encryption with one shared key and asymmetric encryption with a public and private key")
+
 | | Symmetric | Asymmetric |
 |:--|:--|:--|
 | Keys | One shared secret key | Public key and private key (a matching pair) |
