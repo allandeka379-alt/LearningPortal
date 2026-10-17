@@ -90,6 +90,8 @@ Marginal private benefit (demand) is P = 100 − 0.5Q, marginal private cost is 
 6. The total external cost on the 120 units produced is 120 × 15 = US\$1,800, but the net loss to society is only the US\$150: the first 100 units are worth producing, and the extra 20 still give consumers some benefit, so only the excess of cost over benefit on them is lost.
 :::
 
+![Negative externality of production: with MPB = 100 - 0.5Q, MPC = 10 + 0.25Q and an external cost of US\$15 a unit (MSC = 25 + 0.25Q), the market produces 120 units at US\$40 where MPB meets MPC, but the social optimum is 100 units where MSB meets MSC, so over-production of 20 units causes a welfare loss triangle of US\$150.](media:diagrams/negative-externality-welfare-loss.png "Figure: with an external cost the market over-produces (120 against 100); the red triangle is the welfare loss")
+
 ## A linear example (positive externality of consumption)
 
 Demand (MPB) is P = 94 − 0.5Q, supply (MPC = MSC) is P = 10 + 0.25Q, and the marginal external benefit is a constant US\$12 a unit.
@@ -101,6 +103,8 @@ Demand (MPB) is P = 94 − 0.5Q, supply (MPC = MSC) is P = 10 + 0.25Q, and the m
 4. Under-provision = 128 − 112 = **16 units**.
 5. Welfare loss = ½ × 12 × 16 = **US\$96**.
 :::
+
+![Positive externality of consumption: with MPB = 94 - 0.5Q, MPC = 10 + 0.25Q and an external benefit of US\$12 a unit (MSB = 106 - 0.5Q), the market produces 112 units at US\$38 but the social optimum is 128 units at US\$42, so there is under-provision of 16 units and a welfare loss triangle of US\$96.](media:diagrams/positive-externality-under-provision.png "Figure: with an external benefit the market under-provides (112 against 128); the red triangle is the welfare loss")
 
 ## Interpreting the results
 

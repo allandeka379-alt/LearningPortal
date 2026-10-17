@@ -65,6 +65,8 @@ A minimum wage has an effect only if it is set **above** the equilibrium wage. S
 5. Workers gain overall in income, but 50 lose their jobs and 100 more are attracted to the market and cannot find work.
 :::
 
+![Minimum wage in a competitive labour market: demand W = 14 - 0.02L and supply W = 2 + 0.01L meet at US\$6 and 400 workers; a minimum wage of US\$7 cuts the number demanded to 350 while 500 want jobs, so employment falls by 50 and unemployment is 150.](media:diagrams/minimum-wage-competitive.png "Figure: a minimum wage above equilibrium reduces employment and creates unemployment of 150 (the red bar)")
+
 ## Trade unions
 
 A union can bargain for a wage above equilibrium by threatening to stop work. In a competitive market, if it succeeds in raising the wage to US\$7, the outcome is the same as the minimum wage above: higher pay for those still employed, fewer jobs and unemployment. A union may also:
@@ -92,6 +94,8 @@ In our town, with demand (MRP) given by W = 14 − 0.02L and supply by W = 2 + 0
 3. At US\$6 employment is 400, the competitive outcome. Above US\$6, say US\$7, employment falls again (to 350).
 4. A minimum wage set between the monopsony wage and the competitive wage raises both pay and employment, which is why the effect on jobs depends on the type of market.
 :::
+
+![Monopsony: with MRP = 14 - 0.02L, labour supply W = 2 + 0.01L and marginal cost of labour MCL = 2 + 0.02L, the employer hires 300 workers where MRP equals MCL (US\$8) but pays only US\$5 from the supply curve, below the competitive wage of US\$6 and employment of 400.](media:diagrams/monopsony-labour-market.png "Figure: a monopsonist hires where MRP = MCL and pays the lower wage read from the supply curve")
 
 ## Imperfections in labour markets
 

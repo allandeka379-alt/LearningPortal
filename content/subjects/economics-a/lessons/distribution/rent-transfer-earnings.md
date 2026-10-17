@@ -63,6 +63,8 @@ The supply of skilled welders in a fictional town is W = 4 + 0.05L, where W is t
 6. Rent rises from 30% to 33.3% of the payment (360 ÷ 1,200 and 640 ÷ 1,920).
 :::
 
+![Economic rent for welders with supply W = 4 + 0.05L and a market wage of US\$10: 120 welders are employed; the triangle between the wage line and the supply curve (half of 6 times 120 = US\$360 an hour) is economic rent and the area under the supply curve (US\$840) is transfer earnings, out of a total payment of US\$1,200.](media:diagrams/economic-rent-supply-curve.png "Figure: economic rent (blue) is the area above the supply curve and below the wage; transfer earnings (amber) lie under the supply curve")
+
 ## Elasticity of supply decides the split
 
 | Supply of the factor | Shape of the supply curve | Transfer earnings | Economic rent |

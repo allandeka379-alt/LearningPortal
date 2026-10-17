@@ -67,6 +67,8 @@ A fictional maize farm has the following costs (the fixed cost is US\$40; output
 
 **The firm's short-run supply curve** is the part of its MC curve above the minimum AVC. In the table, at prices of US\$20 to US\$54 the firm supplies the output where MC equals price, and below the minimum AVC (US\$20.00) it supplies nothing. The **industry** short-run supply curve is the sum of the supply curves of all firms in the market.
 
+![Short-run equilibrium of a perfectly competitive maize farm at a price of US\$36: MC is US\$30 at the sixth unit and US\$42 at the seventh, so output is 6 units; ATC at 6 units is US\$28.33 and the shaded rectangle (36 - 28.33) x 6 is a supernormal profit of US\$46.](media:diagrams/perfect-competition-short-run.png "Figure: a price-taker maximises profit where MC meets the horizontal price line; the rectangle is supernormal profit")
+
 ## Long-run equilibrium
 
 In the long run firms can enter and leave. 
@@ -76,6 +78,8 @@ In the long run firms can enter and leave.
 3. **Long-run equilibrium** is reached when price equals the minimum of the long-run average cost curve: every firm earns normal profit, and no firm wants to enter or leave. At this point $\text{P} = \text{MR} = \text{MC} = \text{ATC}$ at the minimum point.
 
 In the example, the long-run price is US\$28 (the minimum ATC) and each firm produces 5 units.
+
+![The maize farm at three prices: at US\$28, the minimum of ATC, it produces 5 units and earns normal profit; at US\$24 it also produces 5 units and loses US\$20 but covers its variable cost (minimum AVC is US\$20); at US\$18, below minimum AVC, it shuts down.](media:diagrams/perfect-competition-shutdown.png "Figure: normal profit at P = minimum ATC (US\$28), a loss that is still worth bearing at US\$24, and shutdown below minimum AVC (US\$18)")
 
 :::worked-solution{title="From supernormal profit to long-run equilibrium"}
 Currently the price is US\$36 and each of the 100 firms in the industry makes US\$46 profit. At US\$28 the market would demand 600 units.

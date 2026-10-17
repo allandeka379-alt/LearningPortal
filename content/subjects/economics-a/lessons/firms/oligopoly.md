@@ -66,6 +66,8 @@ A fictional firm sells 100 units a week at US\$10. If it raises the price to US\
 
 If marginal cost lies anywhere in the gap, the profit-maximising output (100 units) and price (US\$10) do not change.
 
+![Kinked demand curve at 100 units and US\$10: demand above the kink is elastic (PED -4) and below it less elastic (PED -1.5); the marginal revenue curve has a vertical gap from US\$3.33 to US\$7.50 at 100 units, so marginal cost of US\$4 or US\$7 still gives the same price and output.](media:diagrams/kinked-demand-mr-gap.png "Figure: the kinked demand curve and the gap in MR; cost changes within the gap leave price at US\$10")
+
 :::worked-solution{title="A rise in costs that does not change the price"}
 Marginal cost is US\$4 at 100 units. It then rises to US\$7 because of higher fuel prices.
 

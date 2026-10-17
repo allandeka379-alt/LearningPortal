@@ -45,6 +45,8 @@ In the short run the firm behaves like a monopolist. It faces a downward-sloping
 
 The same equations can give a loss if demand is weak or costs are high; in that case the firm continues in the short run if price covers average variable cost.
 
+![Short-run equilibrium of the salon with demand P = 34 - 2Q and MC US\$10: MR = MC at 6 customers, price US\$22 against ATC US\$18.33, a supernormal profit rectangle of US\$22 a day.](media:diagrams/monopolistic-competition-short-run.png "Figure: in the short run a monopolistically competitive firm earns supernormal profit (green) at MR = MC")
+
 ## Long-run equilibrium: the tangency solution
 
 Supernormal profit attracts entrants, who offer similar services nearby. Each existing salon loses customers, so its demand curve shifts to the left and becomes more elastic (more close substitutes). Entry continues until supernormal profit is competed away. In the long run the demand curve (AR) just touches (is tangent to) the ATC curve at the output where MC = MR, so that price equals average total cost and each firm makes **normal profit** only.
@@ -59,6 +61,8 @@ Entry shifts the demand curve to $P = 30 - 2Q$, so $\text{MR} = 30 - 4Q$.
 :::
 
 (In this example the demand curve moves in parallel. In reality, entry also makes demand flatter, which does not change the logic: the final position is a tangency.)
+
+![Long-run equilibrium of the salon: entry shifts demand left to P = 30 - 2Q, so MR = MC at 5 customers and price US\$20, which equals ATC (10 + 50/5); the demand curve just touches the ATC curve, so profit is normal, and at that output ATC is still falling.](media:diagrams/monopolistic-competition-long-run.png "Figure: in the long run entry shifts demand left until it is tangent to ATC at the MR = MC output: normal profit only")
 
 ## Non-price competition and advertising
 

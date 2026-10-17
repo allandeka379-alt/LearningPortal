@@ -65,6 +65,8 @@ Households and firms buy foreign goods and services: **imports (M)**, a leakage 
 
 In words, the flow diagram for the full open economy shows: households receive wages and other incomes from firms and the government; they spend on firms' output (C), pay taxes to the government, save in banks and buy imports; firms receive revenue from consumption, from investment funded by banks, from government purchases and from exports; the government receives taxes and spends on goods and services; the financial sector receives saving and lends to firms for investment; and the foreign sector receives import payments and pays for exports.
 
+![Circular flow of an open economy with the worked-example figures (US\$ million): households receive factor incomes from firms and spend on domestic output (C); leakages saving 1,200, taxes 1,800 and imports 900 total 3,900 and flow to banks, government and the rest of the world, while injections investment 1,500, government spending 1,700 and exports 800 total 4,000 flow back to firms, so injections exceed leakages by 100.](media:diagrams/circular-flow-open-economy.png "Figure: the circular flow with leakages (amber) and injections (blue); J exceeds W by 100 so income expands")
+
 ## Injections, leakages and equilibrium
 
 :::worked-solution{title="Equilibrium and disequilibrium (illustrative data)"}

@@ -51,6 +51,8 @@ Suppose a fictional bakery can expand its scale in steps, each step costing US\$
 3. Whenever output rises by a larger percentage than total cost, LRAC falls. The minimum LRAC (US\$32.26) is at scale 4, so the minimum efficient scale is 620 units.
 :::
 
+![Long-run average cost for the bakery's six scales: LRAC falls from US\$50.00 at 100 units to a minimum of US\$32.26 at 620 units (the minimum efficient scale), then rises to US\$35.71 at 700 and US\$41.67 at 720 units because of diseconomies of scale.](media:diagrams/lrac-bakery-scales.png "Figure: the bakery's long-run average cost falls (economies of scale) to 620 units and rises after (diseconomies)")
+
 When input prices are constant, increasing returns to scale mean falling LRAC, constant returns mean unchanged LRAC, and decreasing returns mean rising LRAC. That link is the reason the three terms are often used together; but do not forget that economies of scale can also come from cheaper inputs, such as discounts on bulk purchases, even when physical returns are constant.
 
 ## The shape of the LRAC curve

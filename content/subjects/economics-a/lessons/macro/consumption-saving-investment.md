@@ -56,6 +56,8 @@ In a fictional economy, consumption is C = 40 + 0.8Y (US\$ billion). At zero inc
 5. Now add a government and trade. Suppose households spend 0.8 of each extra dollar of **disposable** income, the marginal tax rate is 20% and imports are 0.10 of each extra dollar of national income. Of an extra US\$1 of national income: tax = **0.20**; disposable income = 0.80; consumption = 0.8 × 0.80 = **0.64**; saving = 0.16; so MPC + MPS + MPT = 0.64 + 0.16 + 0.20 = 1. Imports are 0.10, so spending on home goods = 0.64 − 0.10 = **0.54**. The leakages are saving 0.16 + tax 0.20 + imports 0.10 = 0.46, and 0.54 + 0.46 = 1.
 :::
 
+![Consumption and saving functions for C = 40 + 0.8Y: the consumption line starts at 40 when income is zero and crosses the 45-degree line (C = Y) at the break-even income of 200, below which households dissave; the saving function S = -40 + 0.2Y starts at -40 and crosses zero at Y = 200, with slopes MPC 0.8 and MPS 0.2.](media:diagrams/consumption-saving-functions.png "Figure: the consumption function against the 45-degree line and the matching saving function, both break even at Y = 200")
+
 A change in income causes a **movement along** the consumption function. A change in any other determinant shifts the whole function (a changes).
 
 ### Determinants of consumption and saving
@@ -108,6 +110,8 @@ The principle that net investment depends on the rate of change of national outp
 4. Year 5: output rises by 6, so investment recovers to **18**.
 5. Investment therefore swings more than output, which helps to explain the trade cycle. Limitations: firms may have spare capacity, may be unable to finance or build capital at once, and expectations matter.
 :::
+
+![Accelerator with capital-output ratio 3: induced investment is 30 in year 2 when output rises by 10, falls to 12 in year 3 when output rises by only 4, is zero in year 4 when output is unchanged and recovers to 18 in year 5 when output rises by 6.](media:diagrams/accelerator-investment.png "Figure: investment responds to the change in output, so it falls even while output is still rising (year 3) and is zero when output is flat (year 4)")
 
 ## Other components of aggregate demand
 

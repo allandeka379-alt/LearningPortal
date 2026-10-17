@@ -59,6 +59,8 @@ The table gives illustrative data for a fictional economy (US\$ billion at const
 4. Potential output grew by about 3% a year throughout (1,000 → 1,160 in five years), so the trend of capacity is steady while actual output fluctuates around it.
 :::
 
+![Actual and potential real GDP over six years: potential grows steadily from 1,000 to 1,160 while actual output crosses above it in years 2 and 3 (output gaps +1.5% and +2.6%) then falls below it in year 4 (-3.9%), year 5 (-5.0%) and year 6 (-2.8%), showing a boom followed by a recession and recovery.](media:diagrams/business-cycle-output-gap.png "Figure: actual GDP fluctuates around steadily growing potential GDP; the output gap is positive in the boom and negative in the slump")
+
 ## The trade cycle
 
 The cycle is usually described in four phases.

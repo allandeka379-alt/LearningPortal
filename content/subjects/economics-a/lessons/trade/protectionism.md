@@ -69,6 +69,8 @@ Suppose a small country faces a world price of US\$50 for a good. Demand is P = 
 6. The **net welfare loss** is 50 + 50 = **US\$100**. The tariff gains some groups at the expense of others, and the whole economy loses.
 :::
 
+![Tariff on a small country's imports: world price US\$50, domestic demand P = 120 - Q and supply P = 20 + Q; a US\$10 tariff raises the price to US\$60, cuts quantity demanded from 70 to 60 and raises home supply from 30 to 40, so imports fall from 40 to 20; producers gain 350, the government collects 200, consumers lose 650 and the two triangles are a welfare loss of 50 each.](media:diagrams/tariff-welfare-effects.png "Figure: a tariff raises the domestic price; producer gain (amber), tariff revenue (blue) and two welfare-loss triangles (red) account for the consumers' loss of 650")
+
 | Effect of the tariff | US\$ |
 | --- | ---: |
 | Loss of consumer surplus (price rise on the 60 units still bought, plus the units no longer bought) | 650 |

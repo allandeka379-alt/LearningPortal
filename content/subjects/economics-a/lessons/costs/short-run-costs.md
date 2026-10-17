@@ -60,6 +60,8 @@ A fictional bakery has total fixed costs of US\$60 a day. The table shows its co
 
 **AVC** first falls and then rises. At low output, specialisation and the better use of equipment raise marginal product, so each unit needs less variable input. After diminishing returns set in, each additional worker or batch of inputs adds less to output, so more variable input is needed per unit, and AVC rises. In the table AVC is lowest at 4 units (US\$28.00).
 
+![Short-run cost curves for the bakery with fixed cost US\$60: AFC falls throughout, AVC is lowest at 4 units (US\$28), ATC is lowest at 5 units (US\$40.20), and MC (US\$22 at 4 units, US\$29 at 5, US\$41 at 6) cuts AVC and then ATC from below at their minimum points.](media:diagrams/short-run-cost-curves.png "Figure: AFC, AVC, ATC and MC for the bakery; MC cuts AVC and ATC from below at their lowest points (MC is plotted at each unit)")
+
 **ATC** is the sum of AFC and AVC, so it falls steeply at first (both are falling), reaches its lowest point later than AVC, and then rises once the rise in AVC outweighs the fall in AFC. ATC is lowest at 5 units (US\$40.20), where output is higher than at AVC's minimum. The gap between ATC and AVC is AFC, which narrows as output grows.
 
 **MC** falls briefly and then rises, because it is the mirror image of marginal product: when MP is rising, MC is falling, and when diminishing returns appear MC rises. The same wage buys less extra output, so each extra unit costs more.

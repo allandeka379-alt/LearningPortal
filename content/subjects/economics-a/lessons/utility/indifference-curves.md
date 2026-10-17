@@ -50,6 +50,8 @@ Suppose a consumer has an income of US\$120 and X costs US\$4 and Y costs US\$6.
 
 When the price of X falls to US\$2 with income unchanged, the X intercept becomes $120 \div 2 = 60$ and the slope falls to $2 \div 6 = 0.33$.
 
+![Consumer equilibrium: with income US\$120, X costing US\$4 and Y US\$6, the budget line runs from 30 units of X to 20 units of Y; the highest reachable indifference curve touches it at 15 units of X and 10 of Y, where the slopes are equal (MRS = price ratio 0.67); a dashed line shows the pivot to 60 units of X when the price of X falls to US\$2.](media:diagrams/indifference-budget-equilibrium.png "Figure: the consumer chooses the point where the budget line is tangent to the highest indifference curve (illustrative preferences XY = 150)")
+
 ## Consumer equilibrium
 
 The consumer chooses the affordable bundle on the highest attainable indifference curve. This is where an indifference curve is **tangent** to the budget line, so that the slopes are equal:
@@ -80,6 +82,8 @@ A consumer with income US\$120 always spends half of it on each good. Initially 
 5. **Income effect on X** $= 30 - 21.21 = +8.79$ units (the extra purchasing power, $120 - 84.85 = 35.15$, is spent on both goods).
 6. Check: $6.21 + 8.79 = 15$.
 :::
+
+![Income and substitution effects of a fall in the price of X from US\$4 to US\$2: the consumer moves from A at 15 units of X to the compensated bundle B at 21.21 units on the original indifference curve (substitution effect +6.21), then to C at 30 units on a higher curve (income effect +8.79), a total price effect of +15 units.](media:diagrams/indifference-income-substitution.png "Figure: the dashed line parallel to the new budget line and tangent to the original curve separates the substitution effect (A to B) from the income effect (B to C)")
 
 For these preferences both effects increase X, so X is a normal good.
 

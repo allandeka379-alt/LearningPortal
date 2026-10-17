@@ -72,6 +72,8 @@ AD increases by US\$1,100 million at every price level (for example because the 
 5. Both output and prices rise: a **demand-pull** effect. Because SRAS is upward-sloping, part of the AD increase goes into higher prices rather than output. The closer the economy is to potential output (steeper SRAS), the more of the increase falls on prices.
 :::
 
+![AD/AS with the worked schedule: AD1 and SRAS meet at a price level of 110 and real output 10,600, below potential output 12,000 (vertical LRAS); AD rises by 1,100 at every price to AD2, giving a new equilibrium at price level 120 and output 11,100, so both output and the price level rise (demand-pull).](media:diagrams/ad-as-demand-pull.png "Figure: an increase in AD raises both real output (10,600 to 11,100) and the price level (110 to 120); the economy stays below potential output of 12,000")
+
 **A decrease in AD** (for example higher interest rates, lower confidence, cuts in government spending or a world recession) has the opposite effect: output, employment and the price level fall. In the schedule, a fall in AD of 1,200 at every price level moves equilibrium to a price level of 100 and output of 10,000: output falls by 5.7% and the price level by 9.1%.
 
 ## Shifts in AS
@@ -85,6 +87,8 @@ A rise in oil prices shifts SRAS to the left by US\$1,100 million at every price
 4. Employment falls: 10,000 ÷ 20,000 = 500,000 workers, a fall of **30,000**.
 5. Higher prices with lower output and employment is **stagflation**: the price rise is **cost-push** and arises from the supply side.
 :::
+
+![Stagflation in AD/AS: an oil price rise shifts SRAS left by 1,100 at every price level from SRAS1 to SRAS2; the equilibrium moves from price level 110 and output 10,600 to price level 120 and output 10,000, so the price level rises while real output and employment fall (cost-push).](media:diagrams/ad-as-cost-push.png "Figure: a fall in SRAS raises the price level (110 to 120) and lowers real output (10,600 to 10,000): stagflation")
 
 :::worked-solution{title="A rise in SRAS: lower costs or better technology (illustrative data)"}
 A new technology lowers energy costs and also raises potential output to US\$13,000 million. SRAS shifts to the right by US\$1,200 million at every price level. The new SRAS column is 10,400; 11,200; 11,800; 12,300; 12,700 at price levels 90 to 130.

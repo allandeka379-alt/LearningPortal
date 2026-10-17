@@ -48,6 +48,8 @@ Take a fictional economy, Zandia, which makes consumer goods (food, clothing) an
 - A point **outside** it is unattainable with present resources and technology.
 - Moving along the curve shows the **opportunity cost**: more of one good means less of the other.
 
+![Production possibility curve for Zandia, bowed outwards from capital goods 100 and consumer goods 100 at the axes through points A to F; a point inside the curve at 60 and 70 wastes resources, a point outside at 80 and 70 is unattainable, and a dashed curve shows all maxima rising 25% to 125.](media:diagrams/ppc-zandia.png "Figure: Zandia's production possibility curve (concave, so opportunity cost rises) and an outward shift after a 25% rise in capacity")
+
 ## Opportunity cost and the shape of the curve
 
 :::worked-solution{title="Opportunity cost from the schedule"}

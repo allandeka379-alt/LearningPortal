@@ -46,6 +46,8 @@ Suppose investment rises by US\$100 million and the MPC is 0.8, with no tax or t
 
 The rounds continue, each smaller than the last, and the cumulative total approaches US\$500 million.
 
+![The multiplier process for a US\$100 million injection with MPC 0.8: cumulative income rises 100, 180, 244, 295, 336, 369 and so on, each round adding 80% of the last, approaching the limit of US\$500 million (multiplier 1 / 0.2 = 5).](media:diagrams/multiplier-rounds.png "Figure: each round of spending adds less; cumulative income approaches the multiplier limit of US\$500 million")
+
 :::worked-solution{title="Closed economy"}
 1. MPS = 1 − 0.8 = 0.2. Multiplier k = 1 ÷ 0.2 = **5**.
 2. Change in national income = 5 × US\$100 million = **US\$500 million**.

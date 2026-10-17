@@ -32,6 +32,8 @@ Total (economic) surplus = consumer surplus + producer surplus. In a competitive
 
 Take a fictional market with demand $P = 12 - 0.05Q$ and supply $P = 2 + 0.05Q$, where $P$ is in US\$ and $Q$ in units per week.
 
+![Equilibrium at US\$7 and 100 units with demand P = 12 - 0.05Q and supply P = 2 + 0.05Q: consumer surplus is the triangle between demand and the price line, half of 5 times 100 = 250; producer surplus is the triangle between price line and supply, 250; total surplus 500.](media:diagrams/surplus-equilibrium.png "Figure: consumer surplus (blue) lies below demand and above the price; producer surplus (amber) lies above supply and below the price")
+
 :::worked-solution{title="Surplus at equilibrium"}
 1. Equilibrium: $12 - 0.05Q = 2 + 0.05Q$, so $10 = 0.1Q$, $Q = 100$ and $P = 7$.
 2. The demand curve meets the price axis at US\$12 (the highest price anyone would pay).
@@ -65,6 +67,8 @@ In the same market a government imposes a maximum price of US\$5.
 :::
 
 Several caveats apply. The calculation assumes the 60 units go to the consumers who value them most; if they are allocated by queues or by chance, the consumer surplus will be lower. The units missing (40 units) would have given a gain to buyers and sellers that is lost altogether. Other effects, such as black markets, are beyond this calculation.
+
+![A maximum price of US\$5 on the same market: only 60 units are supplied while 140 are demanded (a shortage of 80); consumer surplus 330 plus producer surplus 90 totals 420 instead of 500, so the triangle of deadweight loss between 60 and 100 units is 80.](media:diagrams/surplus-price-ceiling.png "Figure: a maximum price of US\$5 cuts trade to 60 units and creates a deadweight loss of 80 (red triangle)")
 
 ## Taxes, subsidies and efficiency
 

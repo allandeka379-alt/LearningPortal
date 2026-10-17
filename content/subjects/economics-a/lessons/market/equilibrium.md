@@ -44,6 +44,8 @@ The table shows the market for 10 kg bags of maize meal in a fictional town (qua
 
 At US\$6 the quantity demanded equals the quantity supplied (75 thousand bags). At US\$4 there is a shortage of 60 thousand bags: buyers who cannot find maize meal offer more, and sellers see that they can raise prices and still sell everything, so price rises. At US\$8 there is a surplus of 60 thousand bags: sellers who cannot sell cut prices, and as price falls, buyers want more and sellers offer less until the surplus disappears. The price adjusts through the **price mechanism** without anyone directing it.
 
+![Market for maize meal: demand Qd = 165 - 15P and supply Qs = 15P - 15 cross at US\$6 and 75 thousand bags; at US\$4 demand 105 exceeds supply 45, a shortage of 60, and at US\$8 supply 105 exceeds demand 45, a surplus of 60, so price moves toward US\$6.](media:diagrams/maize-meal-equilibrium.png "Figure: equilibrium at US\$6 and 75 thousand bags; below it there is a shortage, above it a surplus")
+
 ## Finding equilibrium from equations
 
 The schedule above comes from $Q_d = 165 - 15P$ and $Q_s = 15P - 15$.
@@ -66,6 +68,8 @@ Suppose incomes rise and demand increases by 30 thousand bags at every price: $Q
 :::
 
 The demand curve D shifts to the right, from D1 to D2, with price on the vertical axis and quantity on the horizontal axis. At the old price of US\$6 there is now excess demand of 30 thousand bags, so price rises. The rise in price causes an **extension** of quantity supplied (a movement up along the supply curve) and a **contraction** of quantity demanded (a movement up along the new demand curve D2) until the two are equal again at US\$7.
+
+![Shifts in the maize meal market from equilibrium E1 at US\$6 and 75: a demand increase to D2 gives E2 at US\$7 and 90, a supply decrease to S2 gives E3 at US\$7 and 60, so the same price rise comes with a rise in quantity if demand shifts and a fall if supply shifts.](media:diagrams/maize-meal-shifts.png "Figure: a rightward demand shift (E2) and a leftward supply shift (E3) both raise price, but quantity rises in one case and falls in the other")
 
 The general pattern:
 

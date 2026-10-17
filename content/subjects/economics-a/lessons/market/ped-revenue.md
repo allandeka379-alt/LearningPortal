@@ -72,11 +72,15 @@ On a straight-line demand curve the slope is constant, but PED is not. In percen
 
 Reading the schedule:
 
+![Straight-line demand P = 20 - 0.1Q: elasticity falls down the curve, from PED -9 at US\$18 and 20 units, through exactly -1 at US\$10 and 100 units, to -0.11 at US\$2 and 180 units; demand is elastic above US\$10 and inelastic below.](media:diagrams/linear-demand-ped.png "Figure: on a straight-line demand curve PED changes from point to point, equalling -1 at the mid-point")
+
 1. In the **upper half** (prices above US\$10) demand is elastic. A price cut raises revenue: from US\$16 to US\$14 revenue climbs from 640 to 840.
 2. At the **mid-point** (US\$10) PED is exactly −1, and revenue is at its maximum, US\$1,000.
 3. In the **lower half** (below US\$10) demand is inelastic. A price cut now lowers revenue: from US\$8 to US\$6 it falls from 960 to 840.
 
 Two points follow. A firm facing this demand and no costs would charge the price at the mid-point to maximise revenue, but real firms maximise profit and so also look at costs (a topic for A Level cost theory). And the same demand curve is elastic in one range and inelastic in another, so we describe elasticity *at a price* or *over a range* and not for a whole straight line.
+
+![Total revenue for the demand curve P = 20 - 0.1Q is an arch: it rises from US\$360 at 20 units to a maximum of US\$1,000 at 100 units, where PED is -1, then falls to US\$360 at 180 units, so revenue is highest at the elasticity of exactly 1.](media:diagrams/linear-demand-revenue.png "Figure: total revenue peaks where PED = -1 (100 units, US\$10)")
 
 :::keyfact{title="Straight-line demand"}
 At the price halfway up the price axis, PED = −1. Above it demand is elastic; below it demand is inelastic. A straight-line curve is therefore *not* a curve of constant elasticity.

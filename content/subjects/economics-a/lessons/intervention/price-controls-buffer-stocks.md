@@ -38,6 +38,8 @@ Take a fictional market for maize (price in US\$ per tonne, quantity in tonnes) 
 3. **Shortage** $= 300 - 100 = 200$ tonnes. Only 100 tonnes are traded, less than the 200 at equilibrium.
 :::
 
+![A maximum price of US\$30 below the equilibrium of US\$40 and 200 tonnes: quantity demanded is 300 tonnes but only 100 tonnes are supplied, a shortage of 200, and at 100 tonnes buyers would pay up to US\$50, so a black market can exceed the original equilibrium price.](media:diagrams/maximum-price-shortage.png "Figure: a maximum price below equilibrium creates a shortage (red bar) and an incentive for black-market trade")
+
 Consequences:
 
 1. **Shortages** and queues; sellers decide who gets the good.
@@ -58,6 +60,8 @@ Governments may use maximum prices on essentials such as bread, rent or fuel to 
 4. If the government buys the surplus to maintain the price, the cost is $50 \times 200 = 10{,}000$, plus storage.
 5. Farmers' revenue from consumers is $50 \times 100 = 5{,}000$; with the government's purchases, farmers receive $50 \times 300 = 15{,}000$, compared with $40 \times 200 = 8{,}000$ at the equilibrium.
 :::
+
+![A minimum price of US\$50 above the equilibrium of US\$40 and 200 tonnes: quantity demanded falls to 100 tonnes while quantity supplied rises to 300, a surplus of 200 tonnes that the government would have to buy at a cost of US\$10,000 to hold the price.](media:diagrams/minimum-price-surplus.png "Figure: a minimum price above equilibrium creates a surplus (red bar) that must be bought, stored or exported")
 
 Consequences:
 
@@ -90,6 +94,8 @@ In a **poor harvest** supply is $P = 36 + 0.1Q$.
 3. The agency **sells** $150 - 90 = 60$ tonnes from stock for $45 \times 60 = 2{,}700$.
 4. Taken over both years the agency spends 2,100 and receives 2,700, a surplus of US\$600 before storage costs. The scheme pays for itself only if good and bad years balance and storage is cheap.
 :::
+
+![A buffer stock with a floor of US\$35 and a ceiling of US\$45: in a good harvest the market price would be US\$32, so at US\$35 the agency buys the 60 tonnes by which supply of 310 exceeds demand of 250; in a poor harvest the price would be US\$48, so at US\$45 it sells 60 tonnes from stock to meet demand of 150 against supply of 90.](media:diagrams/buffer-stock-scheme.png "Figure: the agency buys 60 tonnes in a good harvest (green) and sells 60 in a poor one (red) to hold price between US\$35 and US\$45")
 
 ### Problems of buffer stocks
 

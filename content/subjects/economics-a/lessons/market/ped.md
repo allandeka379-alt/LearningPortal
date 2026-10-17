@@ -71,6 +71,8 @@ A fictional supermarket in Mutare knows that PED for cooking oil is −0.4. It p
 
 The extremes are limiting cases that help to describe curves, not realistic descriptions of whole markets. A horizontal demand curve is the demand facing one small farmer who sells at the going market price; a vertical one might describe a life-saving medicine for a patient with no alternative. Do not confuse the *slope* of a curve with its elasticity: on a straight-line demand curve the slope is constant but PED changes from point to point, as the next lesson shows.
 
+![Four schematic demand curves: vertical is perfectly inelastic (PED 0), horizontal is perfectly elastic (PED infinity), a steep line is relatively inelastic and a shallow line relatively elastic, drawn for equal axes scales.](media:diagrams/ped-curve-shapes.png "Figure: schematic demand curves showing the range of PED (a straight line's elasticity still changes along it)")
+
 ## What determines PED?
 
 1. **Availability and closeness of substitutes.** The more and the closer the substitutes, the more elastic demand. If the price of one brand of cooking oil rises, shoppers switch to another, so demand for a single brand is elastic; demand for cooking oil in general is much less so.

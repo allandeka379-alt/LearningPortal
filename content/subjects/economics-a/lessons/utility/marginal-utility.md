@@ -48,6 +48,8 @@ The table shows a fictional student's satisfaction from slices of bread eaten at
 
 Marginal utility is the difference between successive totals: MU of the 3rd slice $= 24 - 18 = 6$. Observe three things.
 
+![Total and marginal utility of bread slices: total utility rises 10, 18, 24, 28, 30 and peaks at 30 for the 5th and 6th slices, while marginal utility falls 10, 8, 6, 4, 2, 0 and becomes -2 at the 7th slice, where total utility falls to 28.](media:diagrams/utility-total-marginal.png "Figure: marginal utility diminishes; total utility is greatest when marginal utility reaches zero and falls once it is negative")
+
 1. Total utility rises as long as marginal utility is positive.
 2. Marginal utility **diminishes** with each extra slice.
 3. Total utility is at its **maximum** (30) when marginal utility is zero, at the 6th slice (and equals 30 at 5 as well). A 7th slice gives negative marginal utility (disutility), so total utility falls.

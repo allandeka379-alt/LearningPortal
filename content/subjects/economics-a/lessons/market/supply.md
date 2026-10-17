@@ -86,6 +86,8 @@ Use the schedule above, where S1 is market supply.
 
 **Describing the diagram.** S2 lies to the right of S1: at each price producers supply 6 more crates. S3 lies to the left of S1, with 2 fewer crates supplied at each price.
 
+![Supply of tomatoes: S1 slopes up from 3 crates at US\$1 to 35 at US\$5; lower costs shift supply right to S2 (6 more crates at every price, 24 at US\$3) and higher costs shift it left to S3 (2 fewer at every price, 16 at US\$3).](media:diagrams/tomato-supply-shifts.png "Figure: lower costs shift supply right (S1 to S2), higher costs shift it left (S1 to S3)")
+
 ### Taxes and subsidies as shifts
 
 A tax of US\$1 per crate raises the cost of each crate by US\$1. Producers receive the price minus the tax, so at a market price of US\$3 they receive only US\$2, and will supply the quantity they would previously have supplied at US\$2, which is 10 crates. The curve shifts **vertically upward** by the amount of the tax (and to the left).

@@ -64,6 +64,8 @@ Price (US\$50) is **above** marginal cost (US\$20). Because entry is blocked, su
 
 If the same industry were perfectly competitive, with many firms having the same marginal cost, output would be where price equals MC.
 
+![Monopoly equilibrium for the quarry with demand P = 80 - 2Q and MC US\$20: MR = MC at 15 thousand units, price US\$50, with supernormal profit of US\$200 thousand (ATC 36.67); a competitive industry would produce 30 thousand at US\$20, so the deadweight loss triangle is 225.](media:diagrams/monopoly-welfare-loss.png "Figure: a monopolist sets MR = MC (15, US\$50), earns supernormal profit (green) and causes a deadweight loss (red) against the competitive output of 30")
+
 :::worked-solution{title="Welfare loss"}
 1. Competitive output: $80 - 2Q = 20$, so $Q = 30$ thousand units at a price of US\$20.
 2. The monopolist produces 15 thousand units at US\$50: **half the output and 2.5 times the price**.
@@ -95,6 +97,8 @@ Suppose the fictional quarry is a natural monopoly: its long-run average cost is
 :::
 
 Regulators therefore often choose between marginal-cost pricing with a subsidy and average-cost pricing, and they face problems of information: they know less about the firm's true costs than the firm does. Other tools are **price-cap regulation** (limits on price rises), rate-of-return regulation, performance targets, and franchising (competition for the right to run the monopoly), or public ownership.
+
+![Regulating the natural monopoly quarry: LRAC = 20 + 250/Q falls throughout; unregulated it sells 15 thousand at US\$50, marginal-cost pricing gives 30 thousand at US\$20 but a loss equal to the fixed cost of US\$250 thousand, and average-cost pricing gives 25 thousand at US\$30 where price equals ATC and profit is normal.](media:diagrams/natural-monopoly-regulation.png "Figure: price and output under no regulation, marginal-cost pricing and average-cost pricing for a natural monopoly")
 
 :::example{title="Evaluating the case against monopoly"}
 A fictional power utility is the only supplier of electricity in a region. It charges a price above marginal cost and earns supernormal profit, so consumers pay more and consume less than under competition. But splitting the utility into several firms would duplicate the network and raise cost, so a regulator might instead cap the price. The result depends on how large the economies of scale are and on how well the regulator knows the firm's costs. The case against monopoly is strongest where it is not a natural monopoly and where entry could be opened by removing legal barriers.

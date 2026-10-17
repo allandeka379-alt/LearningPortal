@@ -50,6 +50,8 @@ Two views are used by the boards:
 - **The vertical (classical) view.** In the long run output is determined by supply-side factors only; the price level does not affect real output. LRAS is a **vertical line** at the potential output (full employment level).
 - **The three-section (Keynesian) view.** LRAS has three parts. When there is a lot of spare capacity (a depression), output can rise with no rise in the price level: the curve is **highly elastic** (nearly horizontal). As the economy approaches capacity, bottlenecks appear and the curve **slopes upward**. At full capacity, output cannot rise further, and the curve is **vertical**.
 
+![Two schematic aggregate supply curves: the classical long-run curve is a vertical line at potential output; the Keynesian curve has three sections, flat when there is much spare capacity, rising as the economy nears capacity and vertical at full employment. Drawn for illustration, not from data.](media:diagrams/lras-classical-keynesian.png "Figure: schematic classical (vertical) and Keynesian (three-section) long-run aggregate supply")
+
 :::worked-solution{title="A short-run AS schedule and a shift (illustrative data)"}
 A fictional economy has the following SRAS schedule (real output in US\$ million). Potential output is US\$12,000 million.
 
@@ -67,6 +69,8 @@ A fictional economy has the following SRAS schedule (real output in US\$ million
 4. Real output of 11,900 at a price level of 120 is still below potential output of 12,000, so the economy has a small amount of spare capacity.
 5. LRAS would be a vertical line at **12,000**, irrespective of the price level.
 :::
+
+![SRAS shifts right by 600 at every price level when costs fall: SRAS1 gives 10,500 at a price level of 100 and SRAS2 gives 11,100; both curves steepen as output approaches potential output of 12,000, where the vertical LRAS stands.](media:diagrams/sras-shift-lras.png "Figure: lower costs shift SRAS right (600 more at each price); both curves steepen towards potential output, shown by the vertical LRAS")
 
 ## Causes of shifts in SRAS
 

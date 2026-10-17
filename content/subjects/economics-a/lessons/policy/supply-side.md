@@ -77,6 +77,8 @@ Before the policy, AD equals SRAS at a price level of **120** and real GDP of **
 4. Employment is likely to rise, because firms produce more; structural unemployment falls if the workers gain the skills that firms need.
 :::
 
+![Effect of a successful supply-side policy: SRAS shifts right by 150 at every price level from SRAS1 to SRAS2, moving equilibrium from real GDP 900 at a price level of 120 to real GDP 950 at 110, so output rises 5.6% while the price level falls 8.3%.](media:diagrams/supply-side-sras-shift.png "Figure: a rightward shift of SRAS raises output (900 to 950) and lowers the price level (120 to 110)")
+
 :::worked-solution{title="Training, productivity and unit labour costs"}
 A clothing firm employs 150 workers who together make 12,000 shirts a month. After a training programme the same 150 workers make 13,500 shirts. Each worker is paid US\$600 a month.
 1. Productivity before = 12,000 ÷ 150 = **80** shirts per worker. After = 13,500 ÷ 150 = **90**.

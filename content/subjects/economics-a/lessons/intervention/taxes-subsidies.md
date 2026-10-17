@@ -46,6 +46,8 @@ Take a fictional market where demand is $P = 24 - 0.02Q$ and supply is $P = 4 + 
 5. **Deadweight loss** $= \tfrac{1}{2} \times 4 \times (500 - 400) = 200$: the value of trades that no longer occur.
 :::
 
+![A specific tax of US\$4 per unit shifts supply up from S to S + tax: equilibrium moves from 500 units at US\$14 to 400 units at US\$16; consumers pay US\$2 more and producers keep US\$12, US\$2 less, so the burden is split 800 each of the 1,600 revenue, and the small triangle is a deadweight loss of 200.](media:diagrams/tax-incidence-specific.png "Figure: a US\$4 specific tax shifts supply up by the tax; the revenue rectangle (blue plus amber) is shared equally and the red triangle is the deadweight loss")
+
 The tax reduces quantity from 500 to 400: consumer surplus and producer surplus both fall by more than the revenue raised, and the difference is the deadweight loss.
 
 ## Incidence and elasticity
@@ -84,6 +86,8 @@ A subsidy lowers costs, so supply shifts **downward (to the right) by the amount
 4. **Who receives the payment.** Consumers receive $1.50 \times 575 = 862.50$ of it through the lower price and producers receive $1.50 \times 575 = 862.50$ through the higher net price; the two shares add up to the cost of 1,725.
 5. **Welfare loss** (excess burden) $= \tfrac{1}{2} \times 3 \times (575 - 500) = 112.50$. Consumer plus producer surplus rise by only 1,612.50 (from 5,000 to 6,612.50), which is 112.50 less than the cost to the government.
 :::
+
+![A subsidy of US\$3 per unit shifts supply down to S + subsidy: equilibrium moves from 500 units at US\$14 to 575 units at US\$12.50; consumers pay US\$1.50 less and producers receive US\$15.50, US\$1.50 more, at a cost to government of 1,725 with a welfare loss triangle of 112.50.](media:diagrams/subsidy-effect.png "Figure: a US\$3 subsidy shifts supply down; output rises to 575, consumers and producers share the benefit equally and the red triangle is the welfare loss")
 
 A subsidy on a good with inelastic demand mostly lowers price and raises quantity only a little; on an elastic good quantity expands more. The share of the subsidy benefit follows the elasticities: the more inelastic side gains more.
 

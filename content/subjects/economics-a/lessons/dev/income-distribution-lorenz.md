@@ -59,6 +59,8 @@ Using fractions (0.20 width per quintile):
 7. Gini = 1 − 2 × 0.310 = **0.38**. (Check: the area under the diagonal is 0.5, and the area between is 0.5 − 0.31 = 0.19; 0.19 ÷ 0.5 = 0.38.)
 :::
 
+![Lorenz curves for the quintile data: before, the curve passes through (20, 5), (40, 15), (60, 30) and (80, 55) with the shaded area between it and the line of equality equal to 0.19 so Gini = 0.38; after progressive taxes and transfers the amber curve lies closer to the diagonal at (20, 8), (40, 20), (60, 37), (80, 61) and Gini falls to 0.296.](media:diagrams/lorenz-curves-gini.png "Figure: Lorenz curves before (blue) and after (amber) redistribution; the nearer the diagonal, the lower the Gini coefficient")
+
 ## Comparing distributions
 
 Suppose that after a programme of progressive taxes and transfers the same country's quintile shares change to 8, 12, 17, 24 and 39% (illustrative).

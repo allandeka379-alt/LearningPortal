@@ -55,6 +55,8 @@ The table shows a tomato farm with a fixed amount of land. Each tomato crate sel
 4. The farm hires **4 workers**. MPP falls from the first worker because of diminishing returns, so MRP falls too.
 :::
 
+![The farm's demand for labour is its MRP curve: with crates at US\$4 the MRP falls 64, 56, 48, 40, 32 for the first five workers, so at a wage of US\$36 it hires 4 workers; if the price rises to US\$5 the MRP curve shifts right (MRP 80, 70, 60, 50, 40) and the farm hires 5.](media:diagrams/mrp-demand-for-labour.png "Figure: the firm hires up to the worker whose MRP is at least the wage (4 workers); a higher product price shifts demand right (5 workers)")
+
 MPP falls because of the **law of diminishing returns**: as more workers share a fixed amount of land and equipment, each adds less than the one before. (If MPP first rises, the firm would still only hire on the falling part of the MRP curve.)
 
 ## The MRP curve is the demand curve for labour

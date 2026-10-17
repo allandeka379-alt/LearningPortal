@@ -53,6 +53,8 @@ The equilibrium rate is where demand equals supply (illustrative data):
 5. The percentage appreciation = (6.5 − 6.0) ÷ 6.0 × 100 = **+8.3%** (to one decimal place).
 :::
 
+![Market for South African rand: demand D1 and supply S meet at 6.0 US cents and R400 million; a rise in foreign demand of 125 at every price shifts demand to D2, creating excess demand of 125 at 6.0 cents, so the rand appreciates 8.3% to 6.5 cents with R475 million traded.](media:diagrams/rand-appreciation.png "Figure: higher foreign demand shifts D1 to D2 and the rand appreciates from 6.0 to 6.5 cents")
+
 ## Causes of changes in a floating rate
 
 | Cause | Effect on the currency |

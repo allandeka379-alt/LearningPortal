@@ -73,6 +73,8 @@ A fictional economy has the following AD schedule (US\$ million, real).
 3. At the price level of 100, real AD rises from 11,000 to 12,000: an increase of 1,000, or 9.1% (1,000 ÷ 11,000 × 100).
 :::
 
+![Aggregate demand schedule: on AD1 a rise in the price level from 100 to 110 moves along the curve from 11,000 to 10,400; a non-price cause such as higher confidence shifts the whole curve right by 1,000 to AD2, so real demand at a price level of 100 rises from 11,000 to 12,000.](media:diagrams/ad-movement-and-shift.png "Figure: a change in the price level moves along AD1; any other cause shifts the whole curve to AD2 (1,000 more at each price level)")
+
 ## Calculating AD and its components
 
 :::worked-solution{title="Components and a change in AD (illustrative data)"}

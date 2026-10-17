@@ -51,6 +51,8 @@ A firm with some control over price must lower the price to sell more. Here is t
 
 Three points follow. First, MR is below AR whenever the demand curve slopes downward. Second, TR rises as long as MR is positive and **falls once MR is negative**, so TR is at its maximum where MR is zero (in the table, between 5 and 6 units). Third, with a straight-line demand curve the MR curve is also a straight line, starting at the same price intercept and falling twice as steeply, so it cuts the quantity axis at half the quantity at which the demand curve does. The link between MR and elasticity is that MR is positive where demand is elastic, zero where it is unit elastic and negative where it is inelastic.
 
+![Revenue curves for a firm facing the demand schedule P = 20 - 2Q: average revenue is the downward-sloping demand curve, marginal revenue starts at the same price intercept and falls twice as steeply (US\$6 against AR US\$12 at 4 units), reaching zero between 5 and 6 units where total revenue peaks.](media:diagrams/revenue-curves-ar-mr.png "Figure: AR (the demand curve) and MR; MR lies below AR and cuts the axis where total revenue is greatest")
+
 ## Revenue for a price-taker
 
 A price-taker is a firm so small that it cannot influence the market price. It can sell any quantity at the market price, so the demand curve it faces is horizontal at that price. Each extra unit adds the same amount to revenue.
@@ -93,6 +95,8 @@ The same firm now has a cost schedule (fixed cost US\$10). The table shows reven
 :::
 
 In a discrete table MC and MR are rarely exactly equal, so the rule is to produce every unit for which MR is at least MC and stop when MC exceeds MR. The rule "MC = MR" is the continuous version.
+
+![Profit maximisation for the firm in the revenue-curves lesson: the fourth unit has MR US\$6 above MC US\$5 and the fifth has MC US\$7 above MR US\$2, so output is 4 units at price US\$12; average cost there is US\$8.25, giving a profit rectangle of 3.75 x 4 = US\$15.](media:diagrams/profit-maximisation-mc-mr.png "Figure: the firm produces where MC meets MR from below (4 units); the green rectangle is the profit of US\$15")
 
 :::worked-solution{title="A price-taker with the same costs"}
 The farmer who sells at US\$6 has the same cost schedule, with MR = 6 at every output.

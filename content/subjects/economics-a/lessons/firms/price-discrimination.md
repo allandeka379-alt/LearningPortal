@@ -44,7 +44,11 @@ A fictional bus company has a constant marginal cost of US\$10 per passenger. De
 3. Total output $= 16$ hundred passengers; total revenue $= 432$.
 4. Profit before fixed costs $= (30 - 10) \times 10 + (22 - 10) \times 6 = 200 + 72 =$ US\$272 (hundred).
 5. Price elasticity at these prices: adults $= -30 \div (50 - 30) = -1.50$; students $= -22 \div (34 - 22) = -1.83$. Demand is more elastic in the student market, which gets the lower price.
+
 :::
+
+![Third-degree price discrimination by a bus company with marginal cost US\$10: MR = MC gives adults (less elastic demand) 10 hundred passengers at US\$30, and students (more elastic demand) 6 hundred at US\$22; profit before fixed costs is 200 + 72 = 272 hundred dollars against 256 at a single price.](media:diagrams/price-discrimination-two-markets.png "Figure: the same MR = MC rule applied in each market gives the higher price (US\$30) to adults and the lower price (US\$22) to students")
+
 
 Now compare with charging a single price to everyone.
 

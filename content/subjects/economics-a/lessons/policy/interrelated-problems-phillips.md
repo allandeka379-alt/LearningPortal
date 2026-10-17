@@ -73,6 +73,8 @@ Illustrative data for a fictional economy:
 3. A government must choose a point on the curve: its judgement about which problem is worse determines the policy.
 :::
 
+![Traditional Phillips curve from the data: inflation falls as unemployment rises, from 6.0% at 3% unemployment to 4.5% at 4%, 3.5% at 5%, 2.8% at 6% and 2.0% at 8%; the curve is steeper at low unemployment, so the trade-off worsens.](media:diagrams/phillips-curve-data.png "Figure: the traditional Phillips curve shows lower unemployment going with higher inflation")
+
 **The breakdown of the relationship.** In the 1970s many economies experienced high inflation and high unemployment together (stagflation), as oil price rises raised costs and expectations of inflation rose. The simple curve could not explain this. Two ideas were used to explain it: **supply shocks** (a leftward shift of short-run aggregate supply), and **expectations**.
 
 ## The expectations-augmented Phillips curve
@@ -92,6 +94,8 @@ Natural rate = 5%, a = 0.5, expected inflation starts at 3%, and the government 
 3. Year 3: inflation = **4.5%**, year 4: **5.0%**: inflation rises by 0.5 percentage points every year.
 4. At 5% unemployment (the natural rate), inflation equals expected inflation and does not accelerate. This is why the natural rate is also the **non-accelerating inflation rate of unemployment (NAIRU)**, and the **long-run Phillips curve is vertical** at that rate: in the long run there is no trade-off.
 :::
+
+![Expectations-augmented Phillips curve with natural rate 5%: holding unemployment at 4% gives inflation 3.5% on the first short-run curve (expected inflation 3%), then each year expectations catch up and the curve shifts up by 0.5, giving 4.0%, 4.5% and 5.0%; the long-run curve is vertical at 5% unemployment.](media:diagrams/phillips-expectations-augmented.png "Figure: keeping unemployment at 4%, below the natural rate, shifts the short-run curve up every year; the long-run curve is vertical at 5%")
 
 Describe the diagram in words: unemployment is on the horizontal axis and inflation on the vertical axis; the SRPC slopes downward and cuts the vertical LRPC at the natural rate; a rise in expected inflation shifts the SRPC upward; a fall in the natural rate (through supply-side policy) shifts the LRPC to the left.
 

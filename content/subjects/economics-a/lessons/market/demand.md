@@ -96,6 +96,8 @@ Using the market demand schedule above, suppose the price of maize meal falls fr
 
 **Describing the diagram.** D1 and D2 are parallel downward-sloping lines, with D2 to the right of D1. At each price the quantity demanded is 4 bags higher on D2.
 
+![Demand for maize meal: D1 slopes down from 3 bags at US\$5 to 25 bags at US\$1; a rise in income shifts the whole curve right to D2, 4 bags more at every price, so at US\$3 quantity demanded rises from 12 to 16 bags.](media:diagrams/maize-demand-shift.png "Figure: an increase in demand shifts the curve right from D1 to D2 (4 more bags at every price), unlike a price fall which moves along D1")
+
 ## Normal and inferior goods
 
 If the maize meal in the example is a normal good, rising incomes shift its demand curve to the right. For an inferior good, such as second-hand clothing or low-quality cooking oil, a rise in incomes shifts the curve to the left because consumers move to better products. The same good can be normal at low incomes and inferior at high incomes.

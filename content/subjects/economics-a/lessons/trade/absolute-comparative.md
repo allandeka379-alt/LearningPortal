@@ -80,6 +80,8 @@ Zandia's production possibility curve runs from 60 tonnes of maize on one axis t
 3. This line lies **outside** the production possibility curve (which reaches only 60 tonnes of maize), so trade lets Zandia consume combinations that it could not produce alone.
 :::
 
+![Zandia's production possibility curve joins 60 tonnes of maize to 30 tonnes of cotton; specialising in cotton and trading at 3 maize per cotton gives a trading possibility curve out to 90 tonnes of maize, outside the PPC, so Zandia can consume 15 maize and 25 cotton (point B) instead of 12 and 24 (A); Mbira's flatter PPC runs from 40 maize to 10 cotton.](media:diagrams/trading-possibility-curve.png "Figure: trade lets Zandia consume beyond its PPC; the dashed trading possibility curve lies outside it")
+
 ## Assumptions and limitations
 
 The theory makes simplifying assumptions, and the real gains from trade are smaller and less certain for the following reasons.

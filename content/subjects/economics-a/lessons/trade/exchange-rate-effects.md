@@ -83,6 +83,8 @@ The table shows an illustrative trade balance for a country that depreciated its
 4. The improvement after the dip shows that the Marshall-Lerner condition holds in the long run.
 :::
 
+![J-curve: after a depreciation the trade balance first worsens from a deficit of US\$100 million to US\$140 million in quarter 1, then improves to -120, -60, a surplus of +10 in quarter 4 and +40 in quarter 5, tracing a J shape.](media:diagrams/j-curve-trade-balance.png "Figure: the J-curve, where the trade balance worsens before it improves")
+
 ## Exchange rate policy and competitiveness
 
 Governments may try to manage the exchange rate to improve competitiveness: letting the currency depreciate, or buying foreign currency to prevent it from rising. **Arguments for:** cheaper exports, more output and jobs, a better trade balance. **Arguments against:** imported inflation, higher costs of imported inputs, higher foreign debt burdens, retaliation by other countries (competitive devaluations), and no change in productivity, so any gain may be temporary as inflation erodes it. A depreciation is therefore not a substitute for supply-side improvements.
