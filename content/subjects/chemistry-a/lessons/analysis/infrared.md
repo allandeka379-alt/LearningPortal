@@ -46,6 +46,8 @@ A molecule absorbs infrared radiation of exactly the frequency of one of its vib
 
 A spectrum plots **transmittance** (%) against wavenumber, with wavenumber decreasing from left (about 4000 cm⁻¹) to right (about 500 cm⁻¹). An absorption appears as a downward "trough". In questions without a graph, the spectrum is described as a table of peaks.
 
+![Chart of characteristic infrared absorption ranges in cm-1: O-H alcohol 3200-3600, O-H acid 2500-3000, N-H 3300-3500, C-H 2850-2950, C≡N 2200-2250, C=O ester 1710-1750, carbonyl 1670-1740, amide 1640-1690, C=C 1500-1680 and C-O 1040-1300; the fingerprint region lies below 1500.](media:diagrams/ir-absorption-ranges.png "Figure: characteristic IR absorption ranges from the data table; the C=O ranges overlap, so position is only a hint")
+
 Use the characteristic ranges from the data table:
 
 | Bond | Functional groups containing the bond | Absorption range / cm⁻¹ |
@@ -76,6 +78,8 @@ The **shape** of a peak helps too:
 4. Look at 1640-1750 for C=O, and use the exact position as a hint (amide lower, ester higher).
 5. Look at 1040-1300 for C–O (alcohols and esters).
 6. Combine the evidence with the molecular formula. The **absence** of a peak is as useful as its presence.
+
+![Infrared spectrum of the unknown C4H8O2 from the worked example: a medium C-H trough at 2950 cm-1, a strong sharp C=O trough at 1740 (ester range 1710-1750) and a strong C-O trough at 1240, with no broad O-H absorption between 2500 and 3600, so the compound is an ester, not an acid or alcohol.](media:diagrams/ir-spectrum-ester-unknown.png "Figure: IR spectrum of the ester in Example 1 (peaks at 2950, 1740 and 1240 cm⁻¹; no O–H)")
 
 :::example{title="Example 1: an unknown with formula C₄H₈O₂"}
 Absorptions: 2950 (medium), 1740 (strong, sharp), 1240 (strong). No absorption between 2500 and 3600 apart from C–H.

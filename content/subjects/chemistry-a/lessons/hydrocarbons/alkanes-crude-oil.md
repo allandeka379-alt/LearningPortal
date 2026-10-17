@@ -40,6 +40,8 @@ Both boards: sources, cracking, combustion and engine pollutants. ZIMSEC suggest
 
 Crude oil is heated to vaporise most of it and fed into a column that is hot at the bottom and cooler at the top. Larger molecules condense lower down; small molecules rise further.
 
+![Fractional distillation column: heated crude oil vapour enters near the bottom; the column is hotter at the bottom and cooler at the top, so the fractions leave at different heights, from the top refinery gases (C1-C4), gasoline (C5-C10), naphtha (C7-C10), kerosene (C10-C16), diesel (C14-C20) to the residue above C20 at the bottom; boiling point and molecule size rise down the column.](media:diagrams/fractional-distillation-column.png "Figure: fractional distillation of crude oil, with the carbon range and typical use of each fraction")
+
 | Fraction (approximate carbon range) | Typical use |
 |---|---|
 | refinery gases (C₁–C₄) | LPG for cooking and heating |

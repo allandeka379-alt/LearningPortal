@@ -78,6 +78,8 @@ Explain why magnesium nitrate decomposes at a lower temperature than barium nitr
 
 When an ionic solid dissolves we can imagine two steps:
 
+![Enthalpy of solution from the lesson examples: MgSO4 -150 kJ per mol (exothermic, soluble) but BaSO4 +10 (endothermic, insoluble), so sulfates get less soluble down Group 2; Mg(OH)2 +155 but Ba(OH)2 +40, less endothermic, so hydroxides get more soluble down the group.](media:diagrams/group-2-enthalpy-of-solution.png "Figure: ΔH sol for Mg and Ba sulfates and hydroxides (values from Examples 2 and 3)")
+
 1. Break up the lattice into gaseous ions: this needs energy equal to $-\Delta H_\text{latt}$ (endothermic).
 2. Hydrate the gaseous ions: this releases the hydration enthalpies of the cation and the anions (exothermic).
 

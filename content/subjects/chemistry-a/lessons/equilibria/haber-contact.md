@@ -53,6 +53,8 @@ $$
 
 Only a small fraction of the gases reacts in one pass through the converter. The mixture is cooled so that ammonia liquefies and is removed; the unreacted nitrogen and hydrogen are **recycled**, so overall almost all of the feed is eventually converted.
 
+![Flow diagram of the Haber process: nitrogen and hydrogen are compressed to about 200 atm, passed over an iron catalyst at 400-450 degrees C in the converter, then cooled so ammonia liquefies and is removed; the unreacted nitrogen and hydrogen are recycled back to the compressor.](media:diagrams/haber-process-flow.png "Figure: the Haber process as a flow of conditions, with recycling of unreacted gases")
+
 ## The Contact process
 
 **Step 1: making sulfur dioxide.** Molten sulfur is burned in air: $\ce{S(s) + O2(g) -> SO2(g)}$. Sulfur burns with a blue flame. (Sulfur dioxide is also a by-product of roasting sulfide ores.) The gas is cleaned and dried to protect the catalyst.

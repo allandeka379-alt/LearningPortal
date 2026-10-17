@@ -85,6 +85,8 @@ The steamy fumes from $\ce{PCl5}$ (HCl gas, which turns moist blue litmus red an
 
 The oxidising agent is potassium dichromate(VI) acidified with dilute sulfuric acid (orange $\ce{Cr2O7^2-}$ is reduced to green $\ce{Cr^3+}$), or acidified potassium manganate(VII) (purple to colourless).
 
+![Two set-ups for oxidising ethanol with acidified dichromate: under reflux, a vertical water-cooled condenser sits on the flask so vapour condenses and runs back, giving the carboxylic acid; for distillation, the flask is fitted with a thermometer and a sloping condenser leading to a receiver, so the lower-boiling aldehyde ethanal (bp 21 degrees C) is collected before it is oxidised further.](media:diagrams/reflux-distillation-apparatus.png "Figure: heating under reflux (acid) compared with distilling off the product (aldehyde)")
+
 | Alcohol | Apparatus | Product | Equation |
 |---|---|---|---|
 | primary, e.g. ethanol | warm and **distil** immediately, excess alcohol | aldehyde (ethanal, bp 21 °C) | $\ce{CH3CH2OH + [O] -> CH3CHO + H2O}$ |

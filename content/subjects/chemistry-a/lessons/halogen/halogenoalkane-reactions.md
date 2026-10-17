@@ -51,6 +51,8 @@ Halogenoalkanes are classified like alcohols: **primary** (C–X carbon bonded t
 
 The C–X bond is polar ($\ce{C^{\delta+}-X^{\delta-}}$) because halogens are more electronegative than carbon, so nucleophiles attack the δ+ carbon and the halide ion leaves.
 
+![Bromoethane with hydroxide: in aqueous NaOH, OH minus uses a lone pair to attack the delta-plus carbon while the C-Br bond breaks, giving ethanol and Br minus (substitution); in ethanolic NaOH, OH minus removes an H from the neighbouring carbon, the C-H electrons form C=C and Br minus leaves, giving ethene, water and Br minus (elimination).](media:diagrams/bromoethane-substitution-elimination.png "Figure: substitution and elimination of bromoethane with hydroxide, drawn with curly arrows")
+
 | Reagent and conditions | Type | Product from bromoethane | Equation |
 |---|---|---|---|
 | NaOH(aq), heat under reflux | nucleophilic substitution (hydrolysis) | ethanol | $\ce{CH3CH2Br + OH- -> CH3CH2OH + Br-}$ |

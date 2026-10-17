@@ -48,6 +48,8 @@ Dilution: $c_1V_1 = c_2V_2$ (the amount of solute does not change).
 
 A burette is read to the nearest 0.05 cm³ and every reading is recorded to two decimal places. The first (rough) titre is usually ignored; the mean is taken of the titres that agree within 0.10 cm³.
 
+![Titration apparatus: a burette on a stand holds 0.100 mol per dm3 sulfuric acid above a conical flask containing 25.0 cm3 of sodium hydroxide from a pipette plus indicator, standing on a white tile; acid is added while swirling until the colour changes, and the titre is the final minus the initial burette reading (mean of concordant titres 22.42 cm3).](media:diagrams/titration-apparatus.png "Figure: titration set-up for Example 1 (acid in the burette, 25.0 cm³ of alkali in the flask)")
+
 | Titration | rough | 1 | 2 | 3 |
 |---|---|---|---|---|
 | Final reading / cm³ | 22.85 | 45.20 | 22.95 | 23.65 |

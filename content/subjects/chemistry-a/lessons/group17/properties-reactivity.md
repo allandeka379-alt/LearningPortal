@@ -60,6 +60,9 @@ Volatility **decreases** down the group: chlorine is a gas, bromine a liquid and
 
 Data (bond energies from the data booklet):
 
+![Bar chart of halogen bond energies in kJ per mol: F-F 158, Cl-Cl 242, Br-Br 193, I-I 151; the energy falls from chlorine to iodine as atoms get larger, but fluorine is out of order because repulsion between lone pairs on its small atoms weakens the bond.](media:diagrams/halogen-bond-energies.png "Figure: halogen X–X bond energies; F–F is anomalously weak")
+
+
 | Bond | F–F | Cl–Cl | Br–Br | I–I |
 |---|---|---|---|---|
 | bond energy / kJ mol⁻¹ | 158 | 242 | 193 | 151 |

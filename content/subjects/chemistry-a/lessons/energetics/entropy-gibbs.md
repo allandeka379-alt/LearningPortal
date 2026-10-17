@@ -59,6 +59,8 @@ Multiply each standard entropy by its coefficient. Elements do **not** have zero
 
 ## Gibbs free energy and feasibility
 
+![Gibbs energy change against temperature for two reactions: CaCO3 decomposition (ΔH +178, ΔS +0.1604 kJ per K per mol) falls with temperature, from +130 kJ per mol at 298 K to zero at 1110 K; ammonia synthesis (ΔH −92.2, ΔS −0.1988) rises, from −33.0 kJ per mol at 298 K to zero at 464 K. The gradient is minus ΔS and the intercept is ΔH.](media:diagrams/gibbs-energy-against-temperature.png "Figure: ΔG against T is a straight line with gradient −ΔS and intercept ΔH; it crosses zero at T = ΔH/ΔS")
+
 :::formula{name="Gibbs equation"}
 $$
 \Delta G^\ominus = \Delta H^\ominus - T\Delta S^\ominus

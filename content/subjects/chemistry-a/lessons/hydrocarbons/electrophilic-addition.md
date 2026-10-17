@@ -55,6 +55,8 @@ Step 1 is slower: it disrupts the π bond and forms an unstable carbocation. Ste
 
 HBr is permanently polar, $\ce{H^{\delta+}-Br^{\delta-}}$. With an unsymmetrical alkene the H can add to either carbon of the double bond, giving two different carbocations.
 
+![Electrophilic addition of HBr to propene in two steps: the C=C pi electrons attack the H of H-Br, which breaks to give Br minus, leaving a secondary carbocation CH3-CH+-CH3; the bromide ion then donates a lone pair to the positive carbon, giving 2-bromopropane as the major product.](media:diagrams/electrophilic-addition-hbr-propene.png "Figure: electrophilic addition of HBr to propene, with curly arrows and the secondary carbocation intermediate")
+
 :::example{title="Example 2: predicting the major product"}
 Propene: $\ce{CH3-CH=CH2}$.
 

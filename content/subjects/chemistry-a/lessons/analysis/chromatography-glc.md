@@ -40,6 +40,8 @@ Both boards: GLC, retention times and percentage composition from peak areas (ZI
 4. Each component **partitions** between the gas and the liquid. Components that are more soluble in the stationary liquid, or less volatile, spend more time dissolved in it and move more slowly.
 5. A **detector** at the end produces a signal as each component leaves. The output, the **gas chromatogram**, shows a peak for each component against time.
 
+![Layout of a gas chromatograph: carrier gas sweeps the vaporised sample from the heated injection port into a column in an oven, where components partition between the gas and a liquid stationary phase; each leaves at its own retention time and is sensed by the detector, which sends a signal to the recorder that draws the chromatogram.](media:diagrams/gas-chromatograph-layout.png "Figure: how a gas-liquid chromatograph is arranged, from injection to chromatogram")
+
 ## Retention time
 
 A component's retention time depends on:
@@ -66,6 +68,8 @@ A mixture of hexane (b.p. 69 °C), heptane (b.p. 98 °C) and octane (b.p. 126 °
 ## Percentage composition from peak areas
 
 The **area** under each peak is proportional to the amount of that component (assuming the detector responds equally to each). So
+
+![Gas chromatogram of three alcohols as triangular peaks: ethanol (base 0.6 min, height 52 mm, area 15.6, 56.5 percent), propan-1-ol (0.8 min, 18 mm, 7.2, 26.1 percent) and butan-1-ol (1.0 min, 9.6 mm, 4.8, 17.4 percent); percentages come from peak areas, not heights.](media:diagrams/gc-peak-areas-alcohols.png "Figure: composition from peak areas (half base times height) for the mixture in Example 2")
 
 $$
 \text{percentage of component} = \frac{\text{area of its peak}}{\text{total area of all peaks}} \times 100

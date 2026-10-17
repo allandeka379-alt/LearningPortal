@@ -75,6 +75,8 @@ Adding acid protonates the –COO⁻; adding alkali removes H⁺ from –NH₃�
 
 When the fully protonated form of glycine, $\ce{H3N+CH2COOH}$ (glycine hydrochloride), is titrated with NaOH, the curve has **two** buffer regions and two equivalence points, because two protons are removed in turn: first from –COOH, then from –NH₃⁺.
 
+![Titration curve of 20.0 cm3 of 0.100 mol per dm3 glycine hydrochloride with NaOH: the pH starts near 1.7, has a first buffer region around pH 2.34, rises steeply at the first equivalence point (20.0 cm3, pH 5.97, the isoelectric point), has a second buffer region around pH 9.60, and rises again to about pH 11 at the second equivalence point (40.0 cm3).](media:diagrams/glycine-titration-curve.png "Figure: glycine titration curve with two buffer regions and two equivalence points (pKa 2.34 and 9.60)")
+
 :::worked-solution[Example 1: reading a glycine titration curve]
 20.0 cm³ of 0.100 mol dm⁻³ glycine hydrochloride, $\ce{H3N+CH2COOH}$, is titrated with 0.100 mol dm⁻³ NaOH. Data: pKa(–COOH) = 2.34; pKa(–NH₃⁺) = 9.60. Find the volumes at the two equivalence points, the pH at the isoelectric point and the pH after 10.0 cm³ of NaOH.
 

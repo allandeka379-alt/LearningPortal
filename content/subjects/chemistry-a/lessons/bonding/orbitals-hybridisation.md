@@ -51,6 +51,8 @@ Because the electron density lies on the axis, rotating one end of a σ bond doe
 
 When two atoms are already joined by a σ bond, any p orbitals left over that are parallel to each other (perpendicular to the bond axis) can overlap sideways. The π bond has two lobes, one above and one below the σ bond, and together they hold **one** pair of electrons.
 
+![Ethene bonding: the two carbon atoms are joined by a sigma bond from end-on overlap along the C-C axis, plus a pi bond from sideways overlap of two p orbitals with one lobe above and one below the plane of the molecule; with four C-H sigma bonds, C2H4 has 5 sigma bonds and 1 pi bond.](media:diagrams/ethene-sigma-pi-bonds.png "Figure: the sigma and pi bonds of the C=C double bond in ethene")
+
 Sideways overlap is less effective than end-on overlap, so a π bond is **weaker** than a σ bond. This is why C=C (610 kJ mol⁻¹) has less than twice the bond energy of C–C (350 kJ mol⁻¹). The exposed π electrons are also the reason alkenes attract electrophiles.
 
 **Restricted rotation**: twisting one end of a π bond would move the p orbitals out of line and break the π overlap. So there is no free rotation about a C=C bond, which is why cis-trans (geometric) isomers exist.

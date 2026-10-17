@@ -39,6 +39,8 @@ Hydrogen is supplied to one electrode and oxygen (or air) to the other. The elec
 | negative electrode (anode), hydrogen supplied | $\ce{H2 -> 2H+ + 2e-}$ | oxidation |
 | positive electrode (cathode), oxygen supplied | $\ce{O2 + 4H+ + 4e- -> 2H2O}$ | reduction |
 
+![Hydrogen-oxygen fuel cell with an acidic electrolyte: hydrogen is oxidised at the negative porous platinum-catalysed anode (H2 to 2H+ + 2e-), H+ ions pass through the electrolyte to the positive cathode where oxygen is reduced to water (O2 + 4H+ + 4e- to 2H2O), and electrons travel through the external circuit; the cell potential is 1.23 V.](media:diagrams/hydrogen-fuel-cell.png "Figure: hydrogen-oxygen fuel cell with an acid electrolyte (E°cell = 1.23 V)")
+
 The $\ce{H+}$ ions move through the electrolyte from the anode to the cathode, while the electrons travel through the external circuit, doing useful work.
 
 ### Alkaline electrolyte (potassium hydroxide)

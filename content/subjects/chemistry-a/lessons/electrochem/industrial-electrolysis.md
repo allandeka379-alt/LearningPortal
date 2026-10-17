@@ -45,6 +45,8 @@ Aluminium is too reactive to be extracted by heating its oxide with carbon, so i
 | anode reaction | $\ce{2O^2- -> O2 + 4e-}$; at this temperature the oxygen reacts with the carbon anode: $\ce{C + O2 -> CO2}$ |
 | overall | $\ce{2Al2O3 -> 4Al + 3O2}$ |
 
+![Electrolysis cell for aluminium: carbon anodes dip into alumina dissolved in molten cryolite at about 950 degrees C inside a carbon-lined steel cell that is the cathode; Al3+ ions are reduced to molten aluminium which collects at the bottom and is tapped off, while oxygen formed at the anodes burns the carbon to CO2, so the anodes are replaced.](media:diagrams/aluminium-electrolysis-cell.png "Figure: the aluminium extraction cell (alumina in molten cryolite, carbon electrodes)")
+
 Because the anodes burn away, they must be **replaced regularly**. The process uses a very large amount of electricity, both to keep the electrolyte molten and to drive the electrolysis, so aluminium smelters are usually built where electricity is cheap, often from hydroelectric power. Recycling aluminium uses only a small fraction of the energy needed to extract it.
 
 :::example{title="Example 1: why aluminium is not made from aqueous solution"}
@@ -54,6 +56,8 @@ In water, $\ce{Al^3+}$ ($E^\ominus = -1.66$ V) is far harder to reduce than wate
 ## Chlorine, hydrogen and sodium hydroxide from brine
 
 Concentrated sodium chloride solution (brine) is electrolysed in a **membrane cell**.
+
+![Membrane cell for brine: concentrated sodium chloride enters the anode compartment where chloride ions form chlorine (2Cl- to Cl2 + 2e-); water enters the cathode compartment where hydrogen and hydroxide ions form; sodium ions pass through the ion-exchange membrane to the cathode side to give sodium hydroxide solution, and the membrane keeps chlorine, hydrogen and sodium hydroxide apart.](media:diagrams/membrane-cell-brine.png "Figure: membrane cell producing chlorine, hydrogen and sodium hydroxide from brine")
 
 | Electrode | Material | Half-equation |
 |---|---|---|
@@ -71,6 +75,8 @@ Sodium ions pass through the membrane from the anode side to the cathode side, w
 Older plants used mercury cathodes, which released toxic mercury; membrane cells avoid this and use less energy.
 
 ## Refining copper and nickel
+
+![Copper refining cell: a thick impure copper anode and a thin pure copper cathode in acidified copper(II) sulfate; copper dissolves from the anode as Cu2+ and is deposited as pure copper on the cathode, so the anode loses mass and the cathode gains mass, while unreactive silver, gold and platinum fall below the anode as anode sludge.](media:diagrams/copper-refining-cell.png "Figure: electrolytic refining of copper")
 
 :::example{title="Example 2: purifying copper"}
 - **Anode:** impure copper; **cathode:** a thin sheet of pure copper; **electrolyte:** copper(II) sulfate acidified with sulfuric acid.

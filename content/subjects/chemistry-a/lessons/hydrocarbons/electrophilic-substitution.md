@@ -48,6 +48,8 @@ In nitration, sulfuric acid is the stronger acid and acts as a proton donor; nit
 
 ## Step 2 and 3: the mechanism
 
+![Nitration of benzene in two steps: a curly arrow from the delocalised ring to the N of NO2 plus gives an intermediate with H and NO2 on one carbon and the positive charge delocalised over the other five; a curly arrow from the C-H bond restores the ring, releasing H plus (which regenerates H2SO4) and giving nitrobenzene.](media:diagrams/nitration-benzene-mechanism.png "Figure: electrophilic substitution of benzene by NO₂⁺, showing the intermediate and the restored ring")
+
 :::example{title="Example 1: nitration of benzene"}
 1. **Attack.** A curly arrow from the delocalised π system (the ring) to the nitrogen atom of $\ce{NO2+}$. A new C–N bond forms.
 2. **Intermediate.** The carbon that is attacked becomes sp³, carrying both H and $\ce{NO2}$. The remaining four π electrons are delocalised over the other **five** carbons, which share a positive charge (described as a partial ring, or "horseshoe", with + inside). The full delocalisation, and its stability, has been lost for now.

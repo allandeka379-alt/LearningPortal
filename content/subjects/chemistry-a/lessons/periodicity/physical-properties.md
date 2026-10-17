@@ -62,6 +62,9 @@ Atomic radius **decreases** from sodium to chlorine.
 
 The ionic radii fall into two groups.
 
+![Atomic and ionic radii across Period 3: atomic radius falls steadily from 0.186 nm for Na to 0.099 nm for Cl; the cations Na+ to Si4+ are much smaller (0.095 down to 0.041 nm) while the anions P3-, S2- and Cl- are larger than their atoms (0.212, 0.184, 0.181 nm), so ionic radius jumps up between Si4+ and P3-.](media:diagrams/period-3-atomic-ionic-radii.png "Figure: atomic and ionic radii across Period 3 (data from the table above)")
+
+
 - **Positive ions** Na⁺, Mg²⁺, Al³⁺ (and the hypothetical Si⁴⁺) have lost the whole third shell, so they are much smaller than their atoms. All four have the configuration 1s² 2s² 2p⁶ (isoelectronic), and the radius falls as the nuclear charge rises from 11 to 14.
 - **Negative ions** P³⁻, S²⁻ and Cl⁻ have gained electrons into the third shell, so they are larger than their atoms. They are isoelectronic with argon (1s² 2s² 2p⁶ 3s² 3p⁶), and again the radius falls as the nuclear charge rises from 15 to 17.
 
@@ -77,6 +80,9 @@ The general trend is an **increase** across the period, from 494 kJ mol⁻¹ for
 ## Melting point
 
 The melting point depends on the **structure and bonding**, not on the size of the atoms alone.
+
+![Bar chart of melting points across Period 3 in kelvin: Na 371, Mg 922, Al 933 (giant metallic, rising), Si 1687 (giant covalent, highest), then P4 317, S8 388, Cl2 172 and Ar 84 (simple molecules or atoms, low).](media:diagrams/period-3-melting-points.png "Figure: melting points across Period 3; metals rise to Al, Si (giant covalent) is highest, molecular elements are low")
+
 
 | Elements | Structure | What must be overcome on melting | Result |
 |---|---|---|---|

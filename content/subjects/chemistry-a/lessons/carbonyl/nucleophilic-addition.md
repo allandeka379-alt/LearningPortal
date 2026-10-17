@@ -55,6 +55,8 @@ HCN is a very weak acid and is barely ionised, so on its own it supplies too few
 | 1 | $\ce{CN-}$ and the carbonyl compound | from the lone pair on the carbon of $\ce{CN-}$ to the δ+ carbonyl carbon; from the C=O π bond to the oxygen atom | a new C–C bond forms; an **alkoxide intermediate** with a negative charge on oxygen |
 | 2 | the alkoxide intermediate and HCN (or $\ce{H+}$/water) | from a lone pair on the negative oxygen to the hydrogen of H–CN; from the H–CN bond to the carbon of the cyanide | the oxygen is protonated, giving the hydroxynitrile; $\ce{CN-}$ is regenerated |
 
+![Nucleophilic addition of HCN to ethanal: the carbon lone pair of CN minus attacks the delta-plus carbonyl carbon while the C=O pi bond moves onto oxygen, giving an alkoxide intermediate CH3CH(O minus)CN; the O minus then takes the H of H-CN, giving 2-hydroxypropanenitrile and regenerating CN minus.](media:diagrams/hcn-ethanal-mechanism.png "Figure: nucleophilic addition of HCN to ethanal, in two steps, with cyanide as the catalyst")
+
 :::example{title="Example 1: the mechanism for ethanal"}
 Describe the mechanism of the reaction between ethanal and HCN in the presence of KCN.
 

@@ -58,6 +58,8 @@ The doubly charged ions have hydration enthalpies about four times those of sing
 
 Imagine dissolving in two steps: first break the lattice into gaseous ions (the reverse of lattice energy, so $-\Delta H_\mathrm{latt}$, endothermic), then hydrate each gaseous ion (exothermic). By Hess's law:
 
+![Enthalpy cycles for dissolving: for NaCl the lattice must be broken (+787 kJ per mol) and the ions hydrated (-406 + -364 = -770), so the enthalpy of solution is +17, slightly endothermic; for MgCl2 breaking the lattice costs +2526 and hydration gives -1921 + 2(-364) = -2649, so the enthalpy of solution is -123, exothermic.](media:diagrams/solution-enthalpy-cycles.png "Figure: enthalpy of solution as lattice breaking plus hydration, for NaCl (+17) and MgCl₂ (−123 kJ mol⁻¹)")
+
 $$
 \Delta H_\mathrm{sol} = -\Delta H_\mathrm{latt} + \sum \Delta H_\mathrm{hyd}(\text{ions})
 $$

@@ -47,6 +47,8 @@ In the dark at room temperature there is no reaction. Bromine reacts more slowly
 
 ## The mechanism: methane and chlorine
 
+![Free-radical substitution of methane by chlorine: UV light splits Cl2 into two chlorine radicals (initiation); in propagation Cl radical plus CH4 gives HCl and a methyl radical, and the methyl radical plus Cl2 gives CH3Cl and a new Cl radical, so the chain repeats; termination steps, Cl with Cl, CH3 with Cl or CH3 with CH3, remove two radicals and leave none.](media:diagrams/free-radical-chain-methane-chlorine.png "Figure: the radical chain mechanism for CH₄ + Cl₂, showing the propagation cycle")
+
 :::example{title="Example 1: the three stages"}
 **Initiation.** Ultraviolet light provides the energy to break the Cl–Cl bond (the weakest bond present) homolytically:
 

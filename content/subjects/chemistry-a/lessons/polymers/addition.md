@@ -73,6 +73,8 @@ The industrial reaction usually runs through free radicals or through a metal-ba
 
 Notice that the methyl group in poly(propene) is a **side group**. A common slip is to write the repeat unit of poly(propene) as –CH₂–CH₂–CH₂–, a three-carbon chain; that would be poly(ethene) written differently.
 
+![Two addition polymer chains with an all-carbon backbone: poly(propene) has a methyl side group on every second backbone carbon, repeat unit -CH2-CH(CH3)-; poly(but-2-ene) has a methyl group on every backbone carbon, repeat unit -CH(CH3)-CH(CH3)-, so the two are different polymers although both come from alkenes.](media:diagrams/addition-polymer-repeat-units.png "Figure: repeat units of poly(propene) and poly(but-2-ene); the methyl groups are side groups, not part of the backbone")
+
 :::example{title="Example 1: finding the monomer from a polymer section"}
 A section of a polymer chain is –CH₂–C(CH₃)(COOCH₃)–CH₂–C(CH₃)(COOCH₃)–CH₂–C(CH₃)(COOCH₃)–.
 

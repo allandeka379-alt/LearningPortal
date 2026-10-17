@@ -69,6 +69,8 @@ Data: vapour pressure of water at 96, 97 and 98 °C is 87.7, 90.9 and 94.3 kPa. 
 3. **Condenser and receiver.** The mixed vapour of water and oil passes into a water-cooled condenser, and the distillate is collected.
 4. **Separation.** The distillate is cloudy or forms **two layers**: oil and water. The oil is separated with a **separating funnel** (or extracted with a little organic solvent), dried with an anhydrous drying agent such as anhydrous sodium sulfate, and filtered.
 
+![Steam distillation apparatus: a flask of boiling water with a safety tube makes steam, which is passed through a tube to the bottom of a second flask holding plant material and water; the mixed vapour of oil and water goes through a water-cooled condenser into a receiver as a cloudy distillate that forms two layers, and the oil is separated with a separating funnel.](media:diagrams/steam-distillation-apparatus.png "Figure: steam distillation of an essential oil, from steam generator to distillate")
+
 A simpler version for a school laboratory boils the plant material directly with water in a flask fitted for distillation.
 
 Safety: steam and hot apparatus cause burns; the safety tube prevents pressure build-up; organic solvents used for extraction are flammable.

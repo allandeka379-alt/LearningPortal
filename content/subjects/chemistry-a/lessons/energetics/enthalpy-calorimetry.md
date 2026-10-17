@@ -90,6 +90,8 @@ Here $m$ is the mass of the water or solution being heated (in g, taking 1.00 g 
 | neutralisation, solution, displacement | polystyrene cup with lid, thermometer | total volume of solution (in g) | heat loss; heat capacity of the cup ignored; density and $c$ taken as water |
 | combustion of a liquid fuel | spirit burner under a copper can of water | the water in the can, not the fuel | heat loss to the air and can; incomplete combustion (soot); evaporation of fuel |
 
+![Combustion calorimetry: a spirit burner containing ethanol heats 150.0 g of water in a copper can under a clamp, with a thermometer in the water; the water rises by 24.0 degrees C while 0.92 g (0.0200 mol) of ethanol burns, and heat lost to the air makes the measured enthalpy change too small.](media:diagrams/combustion-calorimeter-apparatus.png "Figure: simple combustion calorimeter (spirit burner and copper can) as in Example 2")
+
 :::worked-solution[Example 1: enthalpy change of neutralisation]
 50.0 cm³ of 1.00 mol dm⁻³ hydrochloric acid was mixed with 50.0 cm³ of 1.00 mol dm⁻³ sodium hydroxide in a polystyrene cup. The temperature rose by 6.7 °C.
 
@@ -111,6 +113,8 @@ Burning 0.92 g of ethanol, $\ce{C2H5OH}$ ($M_\mathrm{r} = 46.0$), heated 150.0 g
 ### Temperature-time graphs and thermometric titrations
 
 In a cup reaction such as zinc displacing copper from copper(II) sulfate, the reaction is not instantaneous, so the solution cools while it is still warming. Record the temperature for a few minutes before mixing, add the reagent at a known time, then keep recording. Extrapolate the cooling line back to the time of mixing: the gap between it and the starting line is the corrected $\Delta T$.
+
+![Temperature against time for zinc displacing copper from copper(II) sulfate: the solution is steady at 21 °C, zinc is added at 4 min, the temperature rises quickly then cools slowly; extrapolating the cooling line back to the time of mixing gives 40.6 °C, so the corrected temperature change is 19.6 °C.](media:diagrams/calorimetry-extrapolated-temperature.png "Figure: extrapolating the cooling line back to the time of mixing gives the corrected ΔT (19.6 °C)")
 
 In a **thermometric titration**, one solution is added in portions from a burette and the temperature is recorded after each addition. The temperature rises while the reaction takes place and falls once excess cold reagent is being added. Two best-fit lines, one through the rising points and one through the falling points, cross at the end point; the volume there gives the concentration, and the maximum temperature rise can give $\Delta H$.
 

@@ -70,6 +70,8 @@ In the first row CO does not appear in the rate equation: it reacts only after t
 
 In acid solution propanone reacts with iodine:
 
+![Reaction profile with an intermediate for the acid-catalysed iodination of propanone: step 1, involving propanone and H+, has the higher activation energy and is the slow rate-determining step; step 2, involving iodine, has a lower peak and is fast, which is why the rate equation is rate = kpropanoneH+ and the reaction is zero order in iodine.](media:diagrams/rate-determining-step-profile.png "Figure: a two-step profile; the slow step with the higher peak sets the rate equation")
+
 $$
 \ce{CH3COCH3(aq) + I2(aq) ->[H+] CH3COCH2I(aq) + H+(aq) + I-(aq)}
 $$

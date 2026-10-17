@@ -70,6 +70,8 @@ With hexanedioyl dichloride, ClOC(CH₂)₄COCl, HCl is eliminated instead. The 
 
 In nylon, the δ+ hydrogen of an N–H group on one chain is attracted to a lone pair on the δ− oxygen of a C=O group on a neighbouring chain. These hydrogen bonds, repeated all along the chains, make polyamides stronger and give them higher melting points than poly(alkene)s of similar chain length, which have only instantaneous dipole–induced dipole forces between chains.
 
+![Nylon-6,6: hexane-1,6-diamine and hexanedioic acid join by condensation, losing water at each amide link CO-NH; in the solid, the delta-plus hydrogen of an N-H group on one chain forms a hydrogen bond (dashed) with the delta-minus oxygen of a C=O group on the neighbouring chain, which makes the polyamide strong with a high melting point.](media:diagrams/nylon-66-amide-links-hydrogen-bonds.png "Figure: nylon-6,6 amide links and the hydrogen bonds between neighbouring chains")
+
 ## Writing repeat units and finding monomers
 
 | Monomer(s) | Link formed | Small molecule lost | Repeat unit |
