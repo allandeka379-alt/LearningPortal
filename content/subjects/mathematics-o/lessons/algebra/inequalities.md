@@ -35,6 +35,8 @@ When you multiply or divide both sides of an inequality by a **negative** number
 
 Draw a circle at the end value and a line or arrow over the values that satisfy the inequality.
 
+![Four number lines: x > 3 has an open circle at 3 and an arrow right; x ≤ −2 has a closed circle at −2 and an arrow left; −2 ≤ x < 5 is closed at −2 and open at 5; −3 < x ≤ 4 is open at −3 and closed at 4, with the integers −2 to 4 marked.](media:diagrams/inequalities-number-lines.png "Figure: open circles exclude the end value, closed circles include it")
+
 | Inequality | Circle at the end value | Line |
 | --- | --- | --- |
 | $x > 3$ | open (empty) circle at 3 | arrow to the right |

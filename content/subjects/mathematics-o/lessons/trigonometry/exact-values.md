@@ -33,6 +33,8 @@ Rewriting a fraction so that there is no surd on the bottom: $\dfrac{1}{\sqrt{3}
 
 ## Where the values come from
 
+![The two special triangles for exact trigonometric values: a right-angled isosceles triangle with legs 1 and hypotenuse √2 (angles 45°), and half an equilateral triangle with sides 1, √3 and 2 (angles 30° and 60°).](media:diagrams/exact-values-special-triangles.png "Figure: the 45° triangle and the 30°–60° triangle give the exact values")
+
 :::example{title="The 45° triangle"}
 Take a right-angled isosceles triangle with the two shorter sides 1 unit long. Its angles are $45^\circ$, $45^\circ$ and $90^\circ$, and by Pythagoras its hypotenuse is $\sqrt{1^2 + 1^2} = \sqrt{2}$. So
 $\sin 45^\circ = \cos 45^\circ = \dfrac{1}{\sqrt{2}} = \dfrac{\sqrt{2}}{2}$ and $\tan 45^\circ = \dfrac{1}{1} = 1$.

@@ -81,6 +81,8 @@ At a maximum or minimum the tangent is horizontal, so $\frac{dy}{dx} = 0$.
 
 **Method 1: the gradient either side.** Work out $\frac{dy}{dx}$ just before and just after the point.
 
+![Graph of y = x³ − 3x² − 9x + 5: the curve rises to a maximum at (−1, 10) and falls to a minimum at (3, −22); the tangents there are horizontal, so dy/dx = 3x² − 6x − 9 = 0 at x = −1 and x = 3.](media:diagrams/differentiation-stationary-points-cubic.png "Figure: stationary points are where the tangent is horizontal (gradient 0)")
+
 - Positive, then zero, then negative: the curve goes up then down, so it is a **maximum**.
 - Negative, then zero, then positive: a **minimum**.
 
@@ -89,6 +91,8 @@ For Example 3, at $x = -2$, $\frac{dy}{dx} = 12 + 12 - 9 = 15 > 0$; at $x = 0$, 
 **Method 2: the second derivative.** Differentiate again to get $\frac{d^2y}{dx^2}$. If it is negative at the point, the point is a maximum; if positive, a minimum. Here $\frac{d^2y}{dx^2} = 6x - 6$, which is $-12$ at $x = -1$ (maximum) and $12$ at $x = 3$ (minimum).
 
 ## Optimisation: the goat pen
+
+![Graph of the pen area A = 40x − 2x² against the width x: the curve peaks at x = 10 m where A = 200 m², where dA/dx = 40 − 4x = 0, so the largest pen is 10 m wide and 20 m long.](media:diagrams/differentiation-goat-pen-area.png "Figure: the area is greatest where the gradient is zero")
 
 :::worked-solution[Example 4: the largest pen]
 Chipo's pen has two sides of width $x$ m and one side of length $40 - 2x$ m (the wall is the fourth side).

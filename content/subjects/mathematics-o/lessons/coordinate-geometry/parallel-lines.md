@@ -77,6 +77,8 @@ The lines $y = (k - 1)x + 4$ and $y = 5x - 2$ are parallel. Find $k$.
 
 Gradients let you decide what kind of quadrilateral you have without drawing it accurately.
 
+![Parallelogram ABCD with A(0, 1), B(4, 3), C(5, 6) and D(1, 4): AB and DC both have gradient 0.5, and AD and BC both have gradient 3, so each pair of opposite sides is parallel.](media:diagrams/parallel-lines-parallelogram-gradients.png "Figure: parallel sides have equal gradients")
+
 :::worked-solution[Example 5: show that $ABCD$ is a parallelogram]
 The vertices are $A(0, 1)$, $B(4, 3)$, $C(5, 6)$ and $D(1, 4)$.
 1. Gradient $AB = \frac{3 - 1}{4 - 0} = \frac{1}{2}$ and gradient $DC = \frac{6 - 4}{5 - 1} = \frac{1}{2}$, so $AB \parallel DC$.

@@ -47,6 +47,8 @@ To read the coordinates of a point, reverse the process: drop a vertical line to
 
 The signs of the coordinates tell you which quadrant a point is in.
 
+![The four quadrants of the Cartesian plane numbered anticlockwise from the top right, with one point in each: (3, 2) in the first, (−3, 2) in the second, (−3, −2) in the third and (3, −2) in the fourth, showing the signs of x and y.](media:diagrams/coordinates-four-quadrants.png "Figure: the four quadrants, numbered anticlockwise from the top right")
+
 | Quadrant | Position | Sign of $x$ | Sign of $y$ | Example |
 | :---: | :---: | :---: | :---: | :---: |
 | First | top right | $+$ | $+$ | $(3, 2)$ |

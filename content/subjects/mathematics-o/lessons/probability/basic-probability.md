@@ -58,6 +58,8 @@ Every probability lies between 0 and 1 inclusive. An **impossible** event has pr
 | between $\frac{1}{2}$ and $1$ | likely | rolling a number greater than 1 |
 | $1$ | certain | rolling a number less than 7 |
 
+![The probability scale from 0 (impossible) through 1/2 (even chance) to 1 (certain), with events marked: a dice showing 7 is 0, a 6 is 1/6, heads is 1/2, a number greater than 1 is 5/6 and a number less than 7 is 1.](media:diagrams/probability-scale-events.png "Figure: events placed on the probability scale")
+
 Probabilities are written as **fractions, decimals or percentages**: $\frac{1}{4}$, $0.25$ and $25\%$ are all correct. Do not write them as ratios ("1 : 4") or in words ("1 in 4"): examiners do not accept those forms.
 
 ## Calculating probabilities

@@ -99,6 +99,8 @@ The time for a journey varies inversely as the average speed. A trip takes 3 hou
 - $y = \frac{k}{x}$ (for $x > 0$): a curve that falls as $x$ increases and gets closer and closer to both axes without touching them.
 - Plotting $y$ against $x^2$ (or against $\frac{1}{x}$) turns the matching variation into a **straight line through the origin**. This is a good way to test data.
 
+![Two graphs of variation: the stone's distance d = 5t² rises ever more steeply through (1, 5), (2, 20), (3, 45) and (4, 80); the journey time t = 240 ÷ v falls as speed rises, passing through (80, 3) and (96, 2.5).](media:diagrams/variation-square-and-inverse-graphs.png "Figure: direct variation with the square (left) and inverse variation (right)")
+
 A table of values can also be tested: if $y \propto x^2$, then $\frac{y}{x^2}$ is the same for every pair. For $x = 1, 2, 3$ and $y = 3, 12, 27$, every ratio $\frac{y}{x^2}$ is 3.
 
 ## Common mistakes

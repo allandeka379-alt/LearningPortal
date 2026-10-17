@@ -72,6 +72,8 @@ Four terms can often be split into two pairs that share a bracket.
 
 Two square terms with a minus sign between them factorise as a difference of two squares: $9a^2 - 16b^2 = (3a - 4b)(3a + 4b)$. Look for a common factor first: $2x^2 - 50 = 2(x^2 - 25) = 2(x - 5)(x + 5)$.
 
+![Difference of two squares as area: a square of side 32.5 m with a 7.5 m square removed has area 32.5² − 7.5²; cutting off the top piece and moving it to the side makes a rectangle 40 m by 25 m, so 32.5² − 7.5² = (32.5 − 7.5)(32.5 + 7.5) = 25 × 40 = 1000 m².](media:diagrams/factorising-difference-of-squares-area.png "Figure: a² − b² cut and rearranged into the rectangle (a − b)(a + b)")
+
 A trinomial whose first and last terms are squares and whose middle term is twice their product is a perfect square: $x^2 - 12x + 36 = (x - 6)^2$.
 
 ## Quadratic trinomials

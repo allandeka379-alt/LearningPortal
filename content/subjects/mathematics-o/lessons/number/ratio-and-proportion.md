@@ -75,6 +75,8 @@ To share a quantity in a ratio:
 
 Sometimes you are told one share, or the **difference** between two shares, instead of the total. Work out how many parts that information represents.
 
+![Bar model for sharing US\$360 in the ratio 2 : 3 : 4: the total is 9 equal parts of US\$40, so Tendai gets 2 parts = US\$80, Rudo 3 parts = US\$120 and Farai 4 parts = US\$160, which add to US\$360.](media:diagrams/ratio-bar-model-share-360.png "Figure: a bar model shows the 9 equal parts behind the ratio 2 : 3 : 4")
+
 :::worked-solution[Example 3: a difference between shares]
 Nyasha and Tatenda share some money in the ratio $5 : 3$. Nyasha receives US\$14 more than Tatenda. How much money was shared?
 

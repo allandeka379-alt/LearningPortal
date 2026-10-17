@@ -41,6 +41,8 @@ A corner: the point where two sides of a shape, or two or more edges of a solid,
 
 An angle measures an amount of turn. A full turn is $360^\circ$.
 
+![Five angle types drawn with their sizes: acute 40°, right 90°, obtuse 130°, straight 180° and reflex 250°, showing acute below 90°, obtuse between 90° and 180°, and reflex between 180° and 360°.](media:diagrams/angle-types-acute-to-reflex.png "Figure: acute, right, obtuse, straight and reflex angles")
+
 | Name | Size |
 | --- | --- |
 | Acute angle | between $0^\circ$ and $90^\circ$ |

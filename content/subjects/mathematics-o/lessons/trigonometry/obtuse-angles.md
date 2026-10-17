@@ -69,6 +69,8 @@ Express $\cos 100^\circ$ and $\sin 100^\circ$ in terms of the acute angle $80^\c
 
 Because $\sin(180^\circ - \theta) = \sin\theta$, a positive sine value belongs to **two** angles between $0^\circ$ and $180^\circ$: an acute angle and its supplement. The calculator only gives the acute one.
 
+![Unit circle (upper half): the horizontal line at height 0.6 meets the circle at two points, at 36.9° and at 180° − 36.9° = 143.1°, so sin x = 0.6 has two solutions between 0° and 180°.](media:diagrams/obtuse-unit-circle-sin-0-6.png "Figure: a positive sine value gives an acute angle and its supplement")
+
 :::worked-solution[Example 3: solve $\sin x = 0.6$ for $0^\circ \leq x \leq 180^\circ$]
 1. Calculator: $x = \sin^{-1}(0.6) = 36.869\ldots^\circ$.
 2. The second solution is $180^\circ - 36.869\ldots^\circ = 143.130\ldots^\circ$.

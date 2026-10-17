@@ -62,6 +62,8 @@ To solve a quadratic equation by factorising:
 5. Check $x = 2$: $4 - 10 + 6 = 0$. Check $x = 3$: $9 - 15 + 6 = 0$. Both are correct.
 :::
 
+![Graph of y = x² − 5x + 6 = (x − 2)(x − 3): the curve crosses the x-axis at x = 2 and x = 3, which are the solutions of x² − 5x + 6 = 0, and meets the y-axis at (0, 6).](media:diagrams/quadratic-roots-factorised-graph.png "Figure: the solutions of x² − 5x + 6 = 0 are where the curve crosses the x-axis")
+
 :::worked-solution[Example 2: solve $x^2 + 4x = 21$]
 1. Subtract 21 from both sides: $x^2 + 4x - 21 = 0$.
 2. Two numbers that multiply to $-21$ and add to $+4$ are $+7$ and $-3$, so $(x + 7)(x - 3) = 0$.

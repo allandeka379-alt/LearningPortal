@@ -90,6 +90,8 @@ $y$ is partly proportional to $x$ and partly proportional to $x^2$. When $x = 1$
 - $z = kxy$ cannot be drawn as a single graph in two dimensions, but if one variable is fixed it becomes simple direct variation.
 - The partial variation $y = c + kx$ has a **straight-line** graph with gradient $k$ that cuts the $y$-axis at $c$. It does **not** pass through the origin (unless $c = 0$), which is how you can tell it apart from direct variation.
 
+![Graph of the hall cost C = 90 + 5n for partial variation: a straight line with gradient 5 (US\$5 per guest) that cuts the vertical axis at US\$90, the fixed fee, so it does not pass through the origin; it passes through (40, 290), (70, 440) and (100, 590).](media:diagrams/partial-variation-hall-cost-graph.png "Figure: partial variation is a straight line that does not start at the origin")
+
 ## Common mistakes
 
 :::mistake{title="Using two constants in a joint variation"}

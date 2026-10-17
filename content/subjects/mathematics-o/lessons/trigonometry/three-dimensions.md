@@ -55,6 +55,8 @@ $ABCDEFGH$ is a cuboid with $AB = 8$ cm, $BC = 6$ cm and $AE = 5$ cm. Find $AC$,
 
 In a **right pyramid**, the apex $V$ is directly above the centre $M$ of the base. For a rectangular or square base, $M$ is where the diagonals cross, so $AM$ is half a diagonal. The triangle $VMA$ has its right angle at $M$.
 
+![A cuboid with AB = 8 cm, BC = 6 cm and AE = 5 cm: the base diagonal AC = 10 cm and the space diagonal AG = √125 = 11.2 cm are the sides of the right-angled triangle ACG (right angle at C), and the angle between AG and the base is 26.6°.](media:diagrams/three-d-cuboid-diagonal-triangle.png "Figure: the right-angled triangle ACG inside the cuboid")
+
 :::worked-solution[Example 2: a square-based pyramid]
 $VABCD$ is a pyramid with a square base of side 10 cm. The apex $V$ is 12 cm vertically above the centre $M$ of the base. Find the length of the edge $VA$ and the angle between $VA$ and the base.
 1. Base diagonal: $AC = \sqrt{10^2 + 10^2} = \sqrt{200} = 14.14\ldots$ cm, so $AM = 7.071\ldots$ cm.

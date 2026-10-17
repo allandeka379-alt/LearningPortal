@@ -85,6 +85,8 @@ If the two factors of a two-way stretch are equal, it is simply an enlargement w
 
 With the $x$-axis invariant, every point moves horizontally. A point 2 units above the axis moves $2k$ units; a point 2 units below it moves $2k$ units the other way.
 
+![Left: the unit-sized square with corners (1, 1) to (2, 2) is stretched with factor 3 and the y-axis invariant, giving the rectangle from (3, 1) to (6, 2) whose area is 3 times larger. Right: rectangle OABC with B(3, 2) is sheared with factor 2 and the x-axis invariant, giving a parallelogram with B′(7, 2) and C′(4, 2) and the same area, 6.](media:diagrams/stretch-and-shear-examples.png "Figure: a stretch changes area by its factor; a shear keeps the area")
+
 :::worked-solution[Example 3: shearing a rectangle]
 Rectangle $OABC$ has vertices $O(0, 0)$, $A(3, 0)$, $B(3, 2)$ and $C(0, 2)$. It is sheared with the $x$-axis invariant and shear factor 2.
 

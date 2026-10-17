@@ -67,6 +67,9 @@ When the coefficient of $x^2$ is not 1, take it out as a factor of the $x^2$ and
 
 :::keyfact{title="Turning points from the completed square"}
 A square is never negative, so $(x + p)^2 + q$ is smallest when $(x + p)^2 = 0$, that is when $x = -p$. The graph of $y = (x + p)^2 + q$ has its **minimum point at $(-p,\ q)$**. For Example 2, $y = 2(x - 2)^2 - 5$ has its minimum point at $(2, -5)$.
+
+![Graph of y = 2(x − 2)² − 5: the completed-square form gives the minimum point (2, −5) on the line of symmetry x = 2, and the curve crosses the x-axis at x ≈ 0.42 and x ≈ 3.58.](media:diagrams/completing-square-vertex-graph.png "Figure: the turning point of y = 2(x − 2)² − 5 is (2, −5)")
+
 :::
 
 ## The quadratic formula

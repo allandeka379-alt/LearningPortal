@@ -90,6 +90,8 @@ The identity matrix behaves like the number 1: $AI = IA = A$. The zero matrix be
 
 Two matrices are equal when every pair of corresponding elements is equal. This turns a matrix equation into ordinary equations.
 
+![Matrix multiplication: in the product of A = (2, −1; 1, 3) and B = (3, 1; 4, −2), row 1 of A (shaded amber) times column 2 of B (shaded blue) gives the top-right element of AB, 2 × 1 + (−1) × (−2) = 4; the whole product is (2, 4; 15, −5).](media:diagrams/matrix-row-times-column.png "Figure: each element of a product is a row of the first matrix times a column of the second")
+
 :::worked-solution[Example 4: find $x$ and $y$ if $\begin{pmatrix} 3 & x \\ 2 & 1 \end{pmatrix}\begin{pmatrix} 1 & 2 \\ y & 4 \end{pmatrix} = \begin{pmatrix} 13 & 14 \\ 7 & 8 \end{pmatrix}$]
 1. Row 1 × column 2: $3(2) + x(4) = 14$, so $4x = 8$ and $x = 2$.
 2. Row 2 × column 1: $2(1) + 1(y) = 7$, so $y = 5$.

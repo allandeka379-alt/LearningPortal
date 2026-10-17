@@ -90,6 +90,8 @@ Let tomatoes cost $t$ and onions $u$ dollars per kg: $\begin{pmatrix} 3 & 1 \\ 2
 
 If the matrix of coefficients is singular, the equations have no unique solution: their graphs are parallel lines, or the same line.
 
+![Two graphs of simultaneous equations: 2x + 3y = 12 and x + 2y = 7 have determinant 1 and cross at the single point (3, 2); x + 2y = 7 and 2x + 4y = 6 have determinant 0 (a singular matrix) and are parallel lines with no solution.](media:diagrams/determinant-lines-unique-or-parallel.png "Figure: a non-zero determinant gives one crossing point, a zero determinant gives parallel lines")
+
 ## Common mistakes
 
 :::mistake{title="Adding instead of subtracting"}

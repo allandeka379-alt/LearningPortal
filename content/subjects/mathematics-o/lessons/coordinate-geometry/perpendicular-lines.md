@@ -84,6 +84,8 @@ Notice the pattern: a line perpendicular to $ax + by = c$ can be written $bx - a
 
 You need two things: a **point** (the midpoint of the segment) and a **gradient** (perpendicular to the segment).
 
+![The perpendicular bisector of A(1, 2) and B(7, 6): it passes through the midpoint M(4, 4) at a right angle to AB (gradient 2/3), has gradient −3/2 and equation 3x + 2y = 20, and passes through (0, 10).](media:diagrams/perpendicular-bisector-ab.png "Figure: the perpendicular bisector 3x + 2y = 20 meets AB at its midpoint")
+
 :::worked-solution[Example 4: perpendicular bisector of $A(1, 2)$ and $B(7, 6)$]
 1. Midpoint $M = \left(\frac{1 + 7}{2}, \frac{2 + 6}{2}\right) = (4, 4)$.
 2. Gradient of $AB = \frac{6 - 2}{7 - 1} = \frac{4}{6} = \frac{2}{3}$.

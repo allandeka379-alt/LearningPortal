@@ -45,6 +45,8 @@ Assume an exchange rate of US\$1 $=$ R18. Draw a conversion graph for up to US\$
 
 The gradient of this graph is $\frac{900}{50} = 18$ rand per dollar: the exchange rate.
 
+![Two conversion graphs: dollars to rand at R18 per dollar is a straight line through the origin (R450 reads as US\$25, gradient 18); Celsius to Fahrenheit is a straight line from (0, 32) to (100, 212) with gradient 1.8, F = 1.8C + 32, so 25°C is 77°F.](media:diagrams/practical-conversion-graphs.png "Figure: the gradient of a conversion graph is the rate; the second line does not pass through the origin")
+
 Not every conversion graph passes through the origin. Temperature scales have different zero points.
 
 :::worked-solution[Example 2: Celsius and Fahrenheit]
@@ -86,6 +88,8 @@ If the points do not lie on a straight line, join them with a smooth curve inste
 ## Filling containers
 
 Water poured at a **constant rate** into a container rises at a speed that depends on the container's width.
+
+![Three containers filled at a constant rate, with the depth-time graph beneath each: a cylinder gives a straight line, a container that widens towards the top gives a curve that gets less steep, and one that narrows towards the top gives a curve that gets steeper.](media:diagrams/practical-filling-containers.png "Figure: the shape of the container decides the shape of the depth-time graph")
 
 - A cylinder (same width all the way up): the depth rises steadily, so the depth-time graph is a straight line.
 - A container that gets **wider** towards the top, such as a bucket: the depth rises more and more slowly, so the graph is a curve that becomes **less steep**.

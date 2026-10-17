@@ -54,6 +54,8 @@ A pyramid has a square base of side 6 cm and a vertical height of 10 cm.
 
 A pyramid (or cone) has exactly one third of the volume of the prism (or cylinder) with the same base and height.
 
+![A cone with radius 6 cm and vertical height 8 cm: the radius, height and slant height form a right-angled triangle, so the slant height is l = √(6² + 8²) = 10 cm.](media:diagrams/cone-slant-height-triangle.png "Figure: the slant height of a cone comes from a right-angled triangle")
+
 :::worked-solution[Example 2: a cone with radius 6 cm and height 8 cm]
 1. Slant height: $l = \sqrt{6^2 + 8^2} = \sqrt{100} = 10$ cm.
 2. Volume $= \frac{1}{3}\pi \times 6^2 \times 8 = 96\pi \approx 302\ \text{cm}^3$.

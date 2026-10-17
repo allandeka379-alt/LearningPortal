@@ -57,6 +57,8 @@ Try to draw a triangle $ABC$ with $AB = 7$ cm, angle $ABC = 35^\circ$ and $AC = 
 
 The RHS condition is the exception that works: when the given angle is a right angle, the arc meets the other arm only once on the correct side, so the triangle is fixed.
 
+![Why SSA does not prove congruence: with AB = 7 cm, angle B = 35° and AC = 5 cm, an arc of radius 5 cm centred on A cuts the line from B twice, giving two different triangles with BC = 2.8 cm and BC = 8.7 cm.](media:diagrams/congruent-ssa-two-triangles.png "Figure: two different triangles fit the same two sides and a non-included angle")
+
 :::worked-solution[Example 1: deciding which condition applies]
 In triangle $ABC$, $AB = 5$ cm, $BC = 7$ cm and angle $ABC = 40^\circ$. In triangle $PQR$, $PQ = 5$ cm, $QR = 7$ cm and angle $PQR = 40^\circ$.
 1. Two pairs of sides are equal: $AB = PQ$ and $BC = QR$.

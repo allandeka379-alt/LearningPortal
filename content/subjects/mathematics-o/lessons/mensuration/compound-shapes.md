@@ -56,6 +56,8 @@ A circle of diameter 10 cm is cut from a square of side 10 cm. The area left is 
 
 ## Compound solids
 
+![Two compound shapes: an athletics track made of a 100 m by 64 m rectangle with a semicircle of radius 32 m on each end (perimeter 100 + 100 + π × 64 ≈ 401 m), and a silo made of a cylinder (radius 3 m, height 8 m) with a cone of height 2 m on top (volume 78π ≈ 245 m³).](media:diagrams/compound-track-and-silo.png "Figure: split a compound shape into rectangles, circles, cylinders and cones")
+
 :::worked-solution[Example 3: a grain silo]
 A silo is a cylinder of radius 3 m and height 8 m with a cone of the same radius and height 2 m on top.
 

@@ -43,6 +43,8 @@ To change to a **smaller** unit, multiply (there will be more of them). To chang
 
 A square 1 m by 1 m is also 100 cm by 100 cm, so
 
+![A square of side 1 m, which is also 100 cm: it splits into 10 × 10 = 100 squares of 10 cm by 10 cm (100 cm² each), so 1 m² = 100 × 100 = 10 000 cm²; area units convert with the length factor squared.](media:diagrams/units-square-metre-in-cm2.png "Figure: 1 m² is 10 000 cm², because the length factor 100 is squared")
+
 $$
 1\ \text{m}^2 = 100 \times 100\ \text{cm}^2 = 10\,000\ \text{cm}^2
 $$

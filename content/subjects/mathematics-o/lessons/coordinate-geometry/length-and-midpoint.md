@@ -47,6 +47,8 @@ $$
 
 Draw the segment $AB$ and complete a right-angled triangle with a horizontal side and a vertical side. The horizontal side is the change in $x$ and the vertical side is the change in $y$. The segment $AB$ is the hypotenuse, so by Pythagoras
 
+![The borehole at (2, 3) and the school at (10, 9) are joined by a pipe that is the hypotenuse of a right-angled triangle with sides 8 and 6, so its length is √(8² + 6²) = 10 km and its midpoint is (6, 6).](media:diagrams/length-midpoint-borehole-school.png "Figure: the length of a segment is the hypotenuse of a right-angled triangle")
+
 $$
 AB^2 = (\text{change in } x)^2 + (\text{change in } y)^2
 $$

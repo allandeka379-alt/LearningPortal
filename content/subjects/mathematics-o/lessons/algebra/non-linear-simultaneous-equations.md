@@ -37,6 +37,8 @@ An equation containing a square, a product of unknowns or a reciprocal, such as 
 
 ## Line and parabola
 
+![The parabola y = x² + x − 5 and the straight line y = 2x + 1 cross at exactly two points, (3, 7) and (−2, −3), which are the two solutions of the simultaneous equations found from x² − x − 6 = 0.](media:diagrams/nonlinear-line-parabola-intersect.png "Figure: the solutions are where the line meets the curve")
+
 :::worked-solution[Example 1: solve $y = x^2 + x - 5$ and $y = 2x + 1$]
 1. Both equal $y$, so $x^2 + x - 5 = 2x + 1$.
 2. Rearrange: $x^2 - x - 6 = 0$.
@@ -90,6 +92,8 @@ The quadratic you form decides how many times the line meets the curve:
 | No real roots | The line and the curve do not meet |
 
 For example, $y = x^2$ and $y = 4x - 4$ give $x^2 - 4x + 4 = (x - 2)^2 = 0$, so the line touches the curve only at $(2, 4)$.
+
+![Three small graphs of a parabola with a line: a line crossing it gives two solutions (two real roots), a line touching it gives one solution (a repeated root, y = 4x − 4 touching y = x² at (2, 4)), and a line below it gives none.](media:diagrams/nonlinear-number-of-solutions.png "Figure: two, one or no solutions depending on how the line meets the curve")
 
 ## Common mistakes
 

@@ -41,6 +41,8 @@ The angle of depression of $B$ from $A$ equals the angle of elevation of $A$ fro
 
 This means you can always put the angle inside the right-angled triangle at the lower point, where it is easier to use.
 
+![A viewing platform 110 m above a river: the angle of depression of the raft from the platform is 38°, equal to the angle of elevation of the platform from the raft (alternate angles), so the raft is 110 ÷ tan 38° = 141 m from the foot of the cliff.](media:diagrams/elevation-depression-platform-raft.png "Figure: angle of depression at the top equals angle of elevation at the bottom")
+
 ## Worked examples
 
 :::worked-solution[Example 1: the height of a cell-phone mast]

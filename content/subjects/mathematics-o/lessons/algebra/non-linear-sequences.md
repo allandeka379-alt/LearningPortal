@@ -62,6 +62,8 @@ Many sequences are close relatives of the square numbers $1, 4, 9, 16, 25$ or th
 4. The $n$th term is $2n^2 + n + 1$. Check $n = 3$: $18 + 3 + 1 = 22$. ✓
 :::
 
+![Difference table for the sequence 4, 11, 22, 37, 56: the first differences are 7, 11, 15, 19 and the second differences are all 4, so the nth term is quadratic with 2n² as its leading part (2n² + n + 1).](media:diagrams/sequence-difference-table-quadratic.png "Figure: a constant second difference means a quadratic nth term")
+
 :::worked-solution[Example 2: find the nth term of $1, 3, 7, 13, 21, \ldots$ and the 20th term]
 1. First differences: $2, 4, 6, 8$. Second differences: 2, so $a = 1$.
 2. Subtract $n^2$ ($1, 4, 9, 16, 25$): $0, -1, -2, -3, -4$.

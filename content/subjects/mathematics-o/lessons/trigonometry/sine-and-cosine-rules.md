@@ -72,6 +72,8 @@ In triangle $ABC$, angle $A = 40^\circ$, angle $B = 65^\circ$ and $a = 8$ cm. Fi
 3. $b = \dfrac{8 \sin 65^\circ}{\sin 40^\circ} = 11.27\ldots = 11.3$ cm (3 s.f.).
 :::
 
+![Triangle ABC with the standard labelling: sides b = 7 cm and c = 10 cm enclose angle A = 115°, so the cosine rule gives the opposite side a = 14.4 cm (the longest side, opposite the obtuse angle); the other angles are 26.1° and 38.9°.](media:diagrams/cosine-rule-triangle-example.png "Figure: side a lies opposite angle A; two sides and the angle between them fix the triangle")
+
 :::worked-solution[Example 2: the cosine rule for a side]
 In triangle $ABC$, $b = 7$ cm, $c = 10$ cm and the included angle $A = 115^\circ$. Find $a$.
 1. $a^2 = 7^2 + 10^2 - 2 \times 7 \times 10 \times \cos 115^\circ$.

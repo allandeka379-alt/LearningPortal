@@ -90,6 +90,8 @@ A survey of 60 learners records how they travel and whether they are in the juni
 
 Put the number of people (or outcomes) in each region of the Venn diagram, starting with the overlap. Then each probability is a region total divided by the total in the universal set $\mathscr{E}$.
 
+![Venn diagram of 30 learners: Geography only 13, both subjects 5, History only 9 and neither 3, so P(Geography only) = 13/30 and P(G or H) = 27/30 = 9/10.](media:diagrams/venn-geography-history-30.png "Figure: fill in the overlap first, then each region and the outside")
+
 :::worked-solution[Example 3: subject choices]
 Of 30 learners, 18 take Geography ($G$), 14 take History ($H$) and 5 take both.
 

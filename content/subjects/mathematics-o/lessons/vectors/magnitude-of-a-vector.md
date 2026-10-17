@@ -85,6 +85,8 @@ The magnitude of a displacement is a **distance**, the magnitude of a velocity i
 A ferry on Lake Kariba has velocity $\begin{pmatrix} 12 \\ 9 \end{pmatrix}$ km/h. Its speed is the magnitude: $\sqrt{12^2 + 9^2} = \sqrt{144 + 81} = \sqrt{225} = 15$ km/h.
 :::
 
+![The ranger's walk from camp O: first (3, 4) km, a distance of 5 km to P, then (−5, 2) km, 5.39 km to Q; her total displacement is (−2, 6) km, so she is √40 = 6.32 km from camp although she walked 10.4 km.](media:diagrams/vector-magnitude-ranger-walk.png "Figure: the magnitude of the total displacement is shorter than the distance walked")
+
 :::worked-solution[Example 6: how far from camp?]
 The ranger walks $\begin{pmatrix} 3 \\ 4 \end{pmatrix}$ km and then $\begin{pmatrix} -5 \\ 2 \end{pmatrix}$ km. How far is she from camp, and how far has she walked?
 1. Her total displacement is $\begin{pmatrix} 3 + (-5) \\ 4 + 2 \end{pmatrix} = \begin{pmatrix} -2 \\ 6 \end{pmatrix}$ km.

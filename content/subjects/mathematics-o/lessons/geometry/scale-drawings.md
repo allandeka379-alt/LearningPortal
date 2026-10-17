@@ -86,6 +86,8 @@ Converting to metres **before** squaring keeps the numbers manageable and avoids
 2. Convert every real length into a drawing length.
 3. Draw with a sharp pencil and ruler (and protractor or compasses for angles), and label the lengths and the scale.
 
+![A classroom 12 m by 8 m drawn at scale 1 : 200, so 1 cm represents 2 m: the plan is a rectangle 6 cm by 4 cm and its diagonal measures about 7.2 cm, which is about 14.4 m in the real room.](media:diagrams/scale-drawing-classroom-1-200.png "Figure: every length on the plan is divided by 200; angles do not change")
+
 :::example{title="Planning a classroom drawing"}
 A classroom is 12 m long and 8 m wide. At a scale of $1 : 200$, 1 cm on the drawing represents 2 m. The drawing is a rectangle $12 \div 2 = 6$ cm long and $8 \div 2 = 4$ cm wide. If you measure the diagonal of your drawing as about 7.2 cm, the real diagonal is about $7.2 \times 2 = 14.4$ m.
 :::

@@ -53,6 +53,8 @@ Notice that "the probability of chess given boarder" and "the probability of boa
 
 ## From a Venn diagram
 
+![Venn diagram of 50 people: tea only 20, both 8, coffee only 12 and neither 10; given that a person drinks coffee, only the circle C (20 people) counts, and 8 of them also drink tea, so the probability is 8/20 = 2/5.](media:diagrams/venn-tea-coffee-given-coffee.png "Figure: given coffee, only the shaded circle C (20 people) is possible")
+
 :::worked-solution[Example 2: tea and coffee]
 50 people were asked what they drink. 28 drink tea ($T$), 20 drink coffee ($C$) and 8 drink both.
 

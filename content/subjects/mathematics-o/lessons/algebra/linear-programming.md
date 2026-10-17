@@ -70,6 +70,8 @@ Constraints: land $x + y \leq 10$; seed budget $2x + y \leq 16$; contract $y \ge
 
 Instead of testing every vertex, draw a line of constant profit, such as $500x + 300y = 1500$ (through $(3, 0)$ and $(0, 5)$). Every line $500x + 300y = k$ is parallel to it. Slide a ruler parallel to this **search line** away from the origin: the last point of the feasible region it touches gives the maximum. (For a minimum, slide towards the origin and take the first point it touches.)
 
+![Linear programming for Mr Moyo: the shaded feasible region is the quadrilateral with vertices (0, 2), (7, 2), (6, 4) and (0, 10), bounded by y = 2, 2x + y = 16, x + y = 10 and the y-axis, with a dashed search line 500x + 300y = 1500; profit is 600, 4100, 4200 and 3000, so the maximum US\$4200 is at (6, 4).](media:diagrams/linear-programming-moyo-region.png "Figure: the feasible region and the profit at each vertex")
+
 ## When the answers must be whole numbers
 
 :::worked-solution[Example 2: hiring transport for a school trip]

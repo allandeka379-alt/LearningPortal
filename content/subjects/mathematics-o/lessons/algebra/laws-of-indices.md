@@ -59,6 +59,8 @@ Any non-zero base to the power 0 is 1, because $x^3 \div x^3 = x^0$ and also equ
 
 A negative index means a **reciprocal**, not a negative number: $x^{-4} = \frac{1}{x^4}$. Again, notice exactly what the index applies to:
 
+![Graph of y = 2ˣ: it passes through (0, 1), showing that any base to the power 0 is 1, and through (−1, 1/2) and (−2, 1/4), showing that a negative index gives a reciprocal; the curve is always above the x-axis and never negative.](media:diagrams/indices-exponential-graph-2-to-x.png "Figure: y = 2ˣ shows that x⁰ = 1 and that a negative index gives a small positive reciprocal")
+
 - $3x^{-2} = \frac{3}{x^2}$ (only $x$ has the negative index);
 - $(3x)^{-2} = \frac{1}{9x^2}$ (the whole bracket does).
 
