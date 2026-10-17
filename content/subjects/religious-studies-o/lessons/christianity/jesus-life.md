@@ -85,6 +85,8 @@ Christians understand the miracles as signs of God's power and compassion. The G
 
 The Gospels give more space to the last week of Jesus than to any other period, and Christians observe it in **Holy Week**.
 
+![The last week of Jesus in order: entry into Jerusalem (Mark 11:1-11), the Last Supper (Mark 14:22-25), Gethsemane and arrest, the trial before the Sanhedrin and Pilate, crucifixion at Golgotha, and on the third day the empty tomb (Mark 16:1-8).](media:diagrams/holy-week-sequence.png "Figure: the events of the last week of Jesus in the Gospels, in order")
+
 1. **Entry into Jerusalem.** Jesus rode into the city on a donkey while crowds spread cloaks and branches before him (**Mark 11:1-11**). Christians remember this on Palm Sunday.
 2. **The Last Supper.** On the night before he died, he shared a meal with his disciples, took bread and wine, and spoke of his body and of a new covenant (**Mark 14:22-25**). This is the origin of the Eucharist.
 3. **Gethsemane and arrest.** He prayed in the garden of Gethsemane, where he was betrayed by **Judas Iscariot** and arrested by the Temple authorities.

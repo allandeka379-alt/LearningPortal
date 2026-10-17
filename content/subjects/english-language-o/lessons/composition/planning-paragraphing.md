@@ -85,6 +85,8 @@ A body paragraph has a **topic sentence**, **development** (explanation, example
 The final sentence prepares the reader for the next paragraph, which will discuss the problems.
 :::
 
+![Anatomy of a body paragraph using the home-gardens example: a topic sentence stating the main idea, development with an explanation and an example, and a linking sentence (However, gardens also bring problems) that prepares the next paragraph.](media:diagrams/body-paragraph-anatomy.png "Figure: the parts of a body paragraph (topic sentence, development, linking sentence)")
+
 ### Unity: stay on the topic
 
 The most common paragraph fault is **drift**: a sentence that belongs to another paragraph or to no paragraph at all.
@@ -121,6 +123,8 @@ A conclusion should **close**, not repeat. In a story it resolves the problem or
 ## Step 4: Check
 
 Leave five minutes to reread. Correct tense slips, missing full stops, spelling of names and words you used often, and any sentence that is unclear. Neat crossings-out are acceptable.
+
+![Routine for every composition: analyse the title, plan five or six paragraphs, write, then check; in a one-hour paper about 5 minutes go on planning, 45 on writing and 10 on checking.](media:diagrams/composition-routine-time-split.png "Figure: analyse, plan, write, check, with a 5, 45 and 10 minute split for one hour")
 
 ## Common mistakes
 

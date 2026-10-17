@@ -40,6 +40,8 @@ A person or business that arranges sales on behalf of a producer, usually for a 
 
 These are usually drawn as arrows; here they are written out as chains.
 
+![Four channels of distribution: producer to consumer directly; producer, retailer, consumer; producer, wholesaler, retailer, consumer; and producer, agent, wholesaler or retailer, consumer. More intermediaries means more mark-ups but wider reach.](media:diagrams/channels-of-distribution.png "Figure: the four main channels of distribution")
+
 | Channel | Route | Typical examples |
 | --- | --- | --- |
 | 1. Direct | Producer → consumer | Farm-gate sales, a tailor making clothes to order, online sales with delivery, a hairdresser |

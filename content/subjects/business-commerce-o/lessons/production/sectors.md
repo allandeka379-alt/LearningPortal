@@ -59,6 +59,8 @@ In ZIMSEC Commerce the tertiary sector is split into two kinds of service:
 
 The chain of production shows how the sectors link together to make one product.
 
+![Chain of production for a loaf of bread: a farmer grows wheat (primary), a miller makes flour and a bakery makes bread (secondary), then transport and a retailer deliver and sell it (tertiary); value is added at every stage and a bank and insurer support the chain.](media:diagrams/sector-chain-of-production.png "Figure: the chain of production for a loaf of bread, from primary to tertiary")
+
 :::example{title="Chain of production for a loaf of bread"}
 1. **Primary:** a farmer grows wheat.
 2. **Secondary:** a miller turns the wheat into flour; a bakery turns the flour into bread.

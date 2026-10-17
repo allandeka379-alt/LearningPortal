@@ -41,6 +41,8 @@ A goal for the marketing department, for example to increase market share, launc
 | Place | Customers must find the product easily, in the right outlets, at the right time |
 | Promotion | Customers must know the product exists and want to buy it; it builds the brand image |
 
+![The marketing mix: product, price, place and promotion must fit together and fit the target market; product must meet needs, price is the only P that earns revenue, place makes the product easy to find and promotion makes customers aware of it.](media:diagrams/marketing-mix-fit.png "Figure: the four Ps of the marketing mix all aimed at the target market")
+
 ## Making the mix consistent
 
 A good mix sends **one consistent message** to the target market:

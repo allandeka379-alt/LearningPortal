@@ -49,6 +49,8 @@ When the Prophet died, the community had to decide who would lead it. The senior
 | Uthman | 644-656 | A standard written text of the Qur'an sent to the main cities |
 | Ali | 656-661 | Cousin and son-in-law of the Prophet; a time of civil conflict |
 
+![Timeline of the four rightly guided caliphs, drawn to scale: Abu Bakr 632-634, Umar 634-644, Uthman 644-656 and Ali 656-661 CE, after which power passed to the Umayyad family ruling from Damascus.](media:diagrams/rightly-guided-caliphs-timeline.png "Figure: the four rightly guided caliphs, drawn to scale (approximate years CE)")
+
 ## How the Sunni and Shi'a division began
 
 Most Muslims accepted that the community should choose its leader from among the senior Companions; they are called **Sunni**, from *ahl al-sunnah*, "people of the Prophet's way". Others held that the Prophet had pointed to his cousin Ali and that leadership belonged to Ali and to his descendants through Fatimah; these are the **Shi'a**, from *shi'at Ali*, "the party of Ali". The disagreement was political at first and developed into differences in religious practice. A painful event for Shi'a Muslims is the death of Ali's son Husayn at Karbala in 680 CE, remembered on Ashura. Both groups share the Qur'an, the Five Pillars and the belief in one God; they are described in a later lesson.

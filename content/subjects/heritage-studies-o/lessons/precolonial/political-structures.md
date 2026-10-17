@@ -44,6 +44,8 @@ The rules and practices of a community, passed down by tradition and applied by 
 
 Leadership in pre-colonial societies was arranged like a ladder. The names differ between languages and between states, but the pattern is similar.
 
+![Hierarchy of indigenous leaders from top to bottom: king or paramount ruler (mambo, inkosi), chief (ishe, inkosi or induna), headman (sadunhu, induna of a smaller area) and village head (sabhuku), each with its own area and roles.](media:diagrams/indigenous-leadership-hierarchy.png "Figure: the hierarchy of indigenous leaders, from king to village head")
+
 | Level | Shona term | Ndebele term (where known) | Main roles |
 |---|---|---|---|
 | King or paramount ruler | Mambo (for example, the Mutapa or Rozvi rulers) | Inkosi (the king) | Ruled the whole state; controlled land, trade and the army; led national ceremonies |

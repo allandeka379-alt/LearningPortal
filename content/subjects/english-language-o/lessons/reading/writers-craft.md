@@ -49,6 +49,8 @@ What a word or technique makes the reader see, feel or think, and why the writer
 **Written answer.** *The word "swallowed" makes the flood sound like a hungry creature that gulped the bridge down, suggesting it vanished completely and suddenly, which makes the reader feel the frightening power of the water.*
 :::
 
+![Writer's craft method applied to the word swallowed in the flood sentence: identify the word, give its meaning in context (covered completely), explain its connotation (hungry, powerful, final) and state the effect on the reader (a greedy animal, danger felt).](media:diagrams/writers-craft-word-chain.png "Figure: identify, meaning, connotation, effect for the word swallowed")
+
 Notice that the answer explains the **literal meaning**, the **association** and the **effect** — not just "it is personification".
 
 ## Word choice and connotation

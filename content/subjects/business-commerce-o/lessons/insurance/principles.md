@@ -82,6 +82,8 @@ A building worth US\$80,000 is insured for only US\$60,000, under a policy with 
 3. The owner bears the remaining $20{,}000 - 15{,}000 = 5{,}000$ dollars, because the building was under-insured by a quarter.
 :::
 
+![Average clause: a building worth US\$80,000 insured for US\$60,000 (three quarters) suffers US\$20,000 of fire damage; the insurer pays three quarters of the loss, US\$15,000, and the under-insured owner bears US\$5,000.](media:diagrams/average-clause-under-insurance.png "Figure: under-insurance, the insurer pays 60,000/80,000 of a US\$20,000 loss")
+
 ## Subrogation
 
 After paying a claim, the insurer steps into the insured's shoes. If a stolen car is recovered after the owner has been paid its full value, the car belongs to the insurer. If another driver caused the accident, the insurer, not the insured, can claim from that driver. This prevents the insured from being paid twice.

@@ -47,6 +47,8 @@ A business that sells goods or services but whose main aims are social or enviro
 3. The franchisee provides the **capital** for the premises and equipment, employs staff and runs the outlet day to day.
 4. The franchisee pays **royalties** (often a percentage of sales) and must follow the franchisor's **rules** on prices, menu, layout and quality.
 
+![A franchise: the franchisor supplies the brand, recipes, training, manual and national advertising; the franchisee supplies capital, staff and day-to-day running and pays an initial fee and royalties, often a percentage of sales, while following the franchisor's rules.](media:diagrams/franchise-relationship.png "Figure: what the franchisor and franchisee give each other")
+
 Franchising is common in fast food, petrol stations, hotels, courier services, printing and educational services.
 
 ### Advantages and disadvantages for the franchisee

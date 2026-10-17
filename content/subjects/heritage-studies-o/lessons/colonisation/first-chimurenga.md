@@ -56,6 +56,8 @@ Rising in **Matabeleland**: from **March 1896**. Rising in **Mashonaland**: from
 
 ## The course of the risings (outline)
 
+![Timeline of the First Chimurenga: rising in Matabeleland from March 1896, in Mashonaland from June 1896, Matabeleland fighting largely ended after the 1896 indabas in the Matobo Hills, Mashonaland resistance continued into 1897 and Nehanda and Kaguvi were executed in April 1898.](media:diagrams/first-chimurenga-timeline.png "Figure: key dates of the First Chimurenga, 1896 to 1898 (not to scale)")
+
 ### Matabeleland (from March 1896)
 
 In late **March 1896** Ndebele fighters attacked settlers, Company police and farms in many parts of Matabeleland. Settlers withdrew to laagers in Bulawayo and other centres. Fighters gathered in the **Matobo Hills**, using the hills' caves and boulders as strongholds. The Company brought in reinforcements from South Africa and British troops. Fighting was fierce, but neither side could win quickly. **Cecil Rhodes** then went into the Matobo Hills to hold **indabas** with Ndebele leaders. Promises of better treatment and land, and the return of some authority to izinduna, ended most of the fighting in Matabeleland in 1896.

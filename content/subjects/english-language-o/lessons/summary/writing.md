@@ -32,6 +32,8 @@ The maximum number of words allowed. Points written after the limit is reached m
 
 Your first sentence should already contain a point. Do not waste words on an introduction.
 
+![Process for writing up a summary: start directly with a point, use your own words, combine points into fluent sentences, link them logically in a paragraph, and check the word count and accuracy.](media:diagrams/summary-writing-process.png "Figure: the five steps for writing a summary")
+
 :::example{title="Openings"}
 - Weak: *In this passage the writer talks about the many different ways in which families in Bulawayo save water.* (18 words, no point)
 - Strong: *Families reuse kitchen water on their gardens and catch the cold water from showers in buckets.* (two points at once)

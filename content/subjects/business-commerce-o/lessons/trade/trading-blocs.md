@@ -45,6 +45,8 @@ A customs union that also allows free movement of labour and capital between mem
 | Common market | Yes | Yes | Yes | No |
 | Economic (and monetary) union | Yes | Yes | Yes | Yes |
 
+![Stages of economic integration, each including the one below it: a free trade area has free trade between members; a customs union adds a common external tariff; a common market adds free movement of labour and capital; an economic union adds common economic policies or currency.](media:diagrams/economic-integration-stages.png "Figure: the four stages of economic integration")
+
 Each stage includes everything in the stage before it. Many African blocs aim to move through these stages over time.
 
 ## Examples of trading blocs

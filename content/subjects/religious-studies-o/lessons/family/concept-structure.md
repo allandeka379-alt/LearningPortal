@@ -44,6 +44,8 @@ The system of relationships by birth and marriage through which people know who 
 | Blended | Two families joined by remarriage, with children from earlier relationships | A man and woman each bringing children into their new marriage |
 | Polygamous | One husband with more than one wife and their children | Found in customary law and in some religious traditions |
 
+![Six types of family and who belongs to each: nuclear (two parents and children), extended (parents, children and other relatives), single-parent, child-headed, blended (two families joined by remarriage) and polygamous (one husband with more than one wife).](media:diagrams/family-types.png "Figure: the six types of family and who belongs to each")
+
 No type is complete in itself, and a family can change type as people marry, move, are born and die. Many Zimbabwean children grow up in different types of family at different times.
 
 ## Roles and relationships

@@ -48,6 +48,8 @@ Before you write, underline three things in the question:
 - Purpose: **to inform and recommend** (facts first, then recommendations).
 :::
 
+![The GAP check applied to a report to the Head: genre is report, audience is the Head so the language is formal and respectful, and purpose is to inform and recommend.](media:diagrams/register-gap-check.png "Figure: reading a task for Genre, Audience and Purpose (GAP)")
+
 ## The three registers compared
 
 | Feature | Formal | Semi-formal | Informal |
@@ -58,6 +60,8 @@ Before you write, underline three things in the question:
 | Sentences | complete, often complex | a mix | short, can include questions and exclamations |
 | Personal feeling | controlled, polite | moderate | open and warm |
 | Slang, text speak | never | never | very little (and never *u*, *gr8*) |
+
+![Register scale from formal to informal: formal for head, officials and editors with precise words and no contractions; semi-formal for club members; informal for friends with everyday words and contractions; slang and text speak are never acceptable in an exam.](media:diagrams/register-scale.png "Figure: formal, semi-formal and informal register compared")
 
 Notice that even informal writing in an examination must be **correct**: spelling, punctuation and grammar still count. Informal means friendly, not careless.
 

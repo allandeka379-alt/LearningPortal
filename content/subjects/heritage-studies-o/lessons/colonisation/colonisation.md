@@ -69,6 +69,8 @@ The conference did not divide all of Africa, but its rules sped up the scramble:
 | 30 October 1888 | Rudd Concession | Gave Rudd, Maguire and Thompson (for Rhodes) exclusive rights to all metals and minerals in the kingdom, and power to do whatever was necessary to win them; in return Lobengula was promised £100 a month, 1,000 rifles, 100,000 rounds of ammunition and a steamboat on the Zambezi (or £500) | Used by Rhodes to obtain the Royal Charter |
 | 29 October 1889 | Royal Charter | Granted to the British South Africa Company (BSAC): the right to govern, make laws, keep a police force, make treaties and develop the territory | Gave the Company power to occupy the land |
 
+![Timeline of the occupation of Zimbabwe: Berlin Conference 1884-85, Grobler Treaty 1887, Moffat Treaty February 1888, Rudd Concession 30 October 1888, Royal Charter to the British South Africa Company 29 October 1889 and the Pioneer Column reaching Fort Salisbury on 12 September 1890.](media:diagrams/colonisation-timeline.png "Figure: key dates from the Berlin Conference to the Pioneer Column (not to scale)")
+
 ### The Rudd Concession and its problems
 
 Lobengula's people were told that only a small number of men would come to dig, and that they would obey the king's laws. These **verbal promises** were not written into the document. When Lobengula learned what the document actually said, he **repudiated** it: he announced that he had been deceived, and he sent two izinduna to London to protest to Queen Victoria. Nevertheless, the British government used the concession as the basis for granting the Royal Charter.

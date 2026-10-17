@@ -63,6 +63,8 @@ Once the protected periods ended, Parliament amended the constitution many times
 | 2000s | Amendments changed the land provisions, and a Senate was brought back in 2005 |
 | 2009 | An amendment gave effect to the inclusive government under the Global Political Agreement |
 
+![Timeline from the Lancaster House constitution to 2013: conference and agreement of 21 December 1979, independence on 18 April 1980, reserved seats abolished and executive presidency in 1987, Senate abolished 1990, draft rejected February 2000, Senate brought back 2005, Global Political Agreement 2008 and COPAC from 2009, referendum approval 16 March 2013 and signing on 22 May 2013.](media:diagrams/constitution-timeline.png "Figure: from Lancaster House to the 2013 Constitution (not to scale)")
+
 Because it was changed so often, critics said the constitution had become a patchwork, and that changes were made to suit governments of the day rather than after wide consultation with citizens.
 
 ## Why a new constitution was needed

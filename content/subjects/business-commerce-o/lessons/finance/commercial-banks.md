@@ -51,6 +51,8 @@ The other financial institutions and the central bank have their own lessons; th
 
 ## Functions and services of commercial banks
 
+![Services of a commercial bank in four groups: accepting deposits (current, savings, fixed deposit), lending (overdrafts, loans, mortgages and asset finance), making payments (cheques, cards, EFT and RTGS, standing and debit orders, POS) and other services such as foreign exchange and letters of credit.](media:diagrams/commercial-bank-services.png "Figure: the main services of a commercial bank")
+
 ### Accepting deposits
 
 | Feature | Current account | Savings account | Fixed deposit |

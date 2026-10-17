@@ -45,6 +45,8 @@ In IR, marriage has four main purposes.
 
 The details differ between families and peoples, but the main steps are widely recognised.
 
+![Main steps of the marriage process in Indigenous Religion in order: courtship, go-between, introduction, bride wealth (roora or lobola), advice from the bride's paternal aunt and uncles, and welcoming the bride at the groom's home; details differ between families and peoples.](media:diagrams/marriage-process-steps.png "Figure: the main steps in the marriage process (details differ between families)")
+
 | Step | What happens | Meaning |
 | --- | --- | --- |
 | Courtship | Young people meet and show interest; families make quiet enquiries about each other | Shows respect and makes sure the families are suitable |

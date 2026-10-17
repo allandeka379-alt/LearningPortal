@@ -77,6 +77,8 @@ Tatenda's sales of freezits (in crates) were March 620, April 655, May 690 and J
 4. Forecast for August = 760 + 35 = **795 crates**, assuming the trend continues.
 :::
 
+![Tatenda's freezit sales rose by 35 crates each month: 620, 655, 690 and 725 from March to June. Extending the trend with the average change of 35 gives forecasts of 760 crates for July and 795 for August. The vertical axis starts at 600.](media:diagrams/sales-forecast-average-change.png "Figure: actual sales (March to June) and the forecast for July and August")
+
 | Month | Sales (crates) | Change on previous month |
 | --- | ---: | ---: |
 | March | 620 | - |

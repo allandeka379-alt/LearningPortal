@@ -46,6 +46,8 @@ A person who owns shares in a limited company and so owns part of it. Shareholde
 | Local community | External | Jobs, little pollution or noise, support for local projects | Provides workers and customers, and accepts the business locally |
 | Competitors | External | Fair competition, information about rivals' plans | Push the business to improve (and may cooperate in trade associations) |
 
+![Stakeholder map: the business sits between internal stakeholders (owners, managers, employees) and external stakeholders (customers, suppliers, lenders, government, local community, competitors), each shown with its main objective, such as profit for owners and prompt payment for suppliers.](media:diagrams/stakeholder-map.png "Figure: internal and external stakeholders and what each wants")
+
 :::example{title="Stakeholders of a bus company in Bulawayo"}
 - **Owners** want profit from fares.
 - **Drivers and conductors** want regular wages and safe vehicles.

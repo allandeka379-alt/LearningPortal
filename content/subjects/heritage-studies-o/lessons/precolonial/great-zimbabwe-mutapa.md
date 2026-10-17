@@ -41,6 +41,8 @@ The title of the ruler of the Mutapa state; the state takes its name from the ti
 Great Zimbabwe grew from the **1100s** and was at its height between about **1300 and 1450 CE**. The Mutapa state was founded in the **fifteenth century** in northern Zimbabwe. Great Zimbabwe became a UNESCO World Heritage Site in **1986**.
 :::
 
+![Timeline of Great Zimbabwe and the Mutapa state: Great Zimbabwe grew from the 1100s and was at its height between about 1300 and 1450 CE, the Mutapa state was founded in the fifteenth century in northern Zimbabwe, and Great Zimbabwe became a World Heritage Site in 1986.](media:diagrams/great-zimbabwe-mutapa-timeline.png "Figure: approximate dates for Great Zimbabwe and the Mutapa state (not to scale)")
+
 ## Great Zimbabwe
 
 ### Rise

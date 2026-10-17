@@ -53,6 +53,8 @@ Writers hint at meanings through:
 **Answer.** *Her results were probably worse than she had hoped: she hid her face and stayed away from the others until the end of break.*
 :::
 
+![Inference method applied to Nyasha reading her results: the clues (read the list twice, hid her face, stayed in the toilets) mean she was upset, so the inference is that her results were probably disappointing, supported by the evidence that she kept her face turned towards the wall.](media:diagrams/inference-clue-chain.png "Figure: clue, meaning, inference, evidence for the Nyasha extract")
+
 ## A good inference is reasonable, not wild
 
 Your inference must be the most likely meaning the clues support. "Nyasha had failed and would leave school" goes much further than the evidence. "Nyasha was upset by her results" is safe and supported. If you cannot point to a clue, the inference is a guess.

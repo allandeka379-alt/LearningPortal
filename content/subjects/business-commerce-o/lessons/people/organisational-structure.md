@@ -68,6 +68,8 @@ Charts are drawn as boxes and lines; here one is written as an indented list. Ea
   - Finance manager
   - Human resources manager
 
+![Organisation chart A of Tendai's Uniforms: managing director with four managers (span 4); the operations manager has three supervisors (span 3) and each supervisor has 8 machinists (span 8); four levels of hierarchy in all.](media:diagrams/org-chart-tendai-uniforms.png "Figure: Chart A, the organisation chart of Tendai's Uniforms (4 levels)")
+
 :::worked-solution[Reading Chart A]
 1. Levels of hierarchy: managing director, managers, supervisors, machinists = **4 levels**.
 2. Span of control of the managing director: four managers report to her, so the span is **4**.
@@ -82,6 +84,8 @@ Charts are drawn as boxes and lines; here one is written as an indented list. Ea
 3. The operations manager's span of control rises from 3 to **24**.
 4. The structure is now flatter: messages pass through fewer people, but the operations manager may struggle to supervise 24 people.
 :::
+
+![Chart A after the three supervisor posts are removed: the 24 machinists report directly to the operations manager, so the hierarchy falls from 4 to 3 levels and the operations manager's span of control rises from 3 to 24.](media:diagrams/org-chart-flatter.png "Figure: the flatter structure after removing the supervisor level (3 levels, span of 24)")
 
 ## Tall and flat structures
 

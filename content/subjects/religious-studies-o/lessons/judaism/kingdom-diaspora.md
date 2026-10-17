@@ -71,6 +71,8 @@ In the twentieth century the Nazi regime in Germany, which came to power in 1933
 | 1941-45 | The Holocaust: about six million murdered | Remembered as a warning; shapes Jewish memory |
 | 1948 | State of Israel proclaimed | A homeland for many Jews |
 
+![Timeline of Jewish history in order: early monarchy under Saul, David and Solomon, the divided kingdom, 586 BCE destruction of Jerusalem and the exile, the Second Temple, 70 CE destruction by the Romans, the diaspora, 1941-45 the Holocaust and 14 May 1948 the State of Israel.](media:diagrams/judaism-timeline.png "Figure: key events in Jewish history from the early monarchy to 1948 (not to scale)")
+
 ## Jews in Zimbabwe
 
 Jews came to Bulawayo and Harare in the early colonial period, and the synagogues in both cities served families who gathered for prayer and festivals, ran schools and took part in the life of the country. The community is small today, but its congregations continue to hold services, including on Shabbat and festivals, and take part in charity and education.

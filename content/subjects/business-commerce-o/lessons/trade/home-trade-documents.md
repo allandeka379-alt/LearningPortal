@@ -48,6 +48,8 @@ A summary sent by the seller, usually monthly, showing the balance owed at the s
 | 10 | Statement of account | Seller | Monthly summary of the account and the balance due |
 | 11 | Payment and receipt | Buyer pays; seller issues receipt | The receipt is proof of payment |
 
+![Sequence of home-trade documents between buyer and seller: the buyer sends the enquiry and order; the seller replies with quotation, pro forma invoice if needed, advice note, delivery note, invoice, debit or credit notes and a statement; the buyer pays and the seller issues a receipt.](media:diagrams/home-trade-document-sequence.png "Figure: who sends each document in home trade, in order")
+
 :::note{title="Debit or credit note?"}
 Think from the **buyer's** point of view: a debit note adds to the debt; a credit note gives the buyer credit (reduces the debt). Credit notes are often printed in red.
 :::
@@ -90,6 +92,8 @@ A wholesaler's list price for an order of cement is US\$2,400. Nyasha receives 1
 3. Cash discount: 5% of US\$2,040 = US\$102.
 4. If she pays within 14 days she pays US\$2,040 − US\$102 = US\$1,938. If she pays later she pays US\$2,040.
 :::
+
+![Trade and cash discount on the cement order: list price US\$2,400, less 15% trade discount of US\$360 gives US\$2,040, less 5% cash discount of US\$102 (taken on US\$2,040, not on US\$2,400) gives US\$1,938 if paid within 14 days.](media:diagrams/discount-waterfall.png "Figure: Example 1, trade discount first, then cash discount on the reduced amount")
 
 :::worked-solution[Example 2: completing an invoice and avoiding the common error]
 An invoice is for 50 cartons of paint brushes at US\$24 a carton, less 20% trade discount; terms 2.5% cash discount within 30 days.

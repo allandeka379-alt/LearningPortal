@@ -43,6 +43,8 @@ Suggested actions, based on the findings, for the reader to take.
 7. **Recommendations**: numbered actions.
 8. **Signature**, name and position.
 
+![Layout of a report in order: title, To/From/Date, introduction or terms of reference, optional procedure, findings under sub-headings (facts only), conclusion, numbered recommendations and the signature with name and position.](media:diagrams/report-layout.png "Figure: the eight parts of a report (schematic page)")
+
 ## Annotated model report
 
 :::example{title="Model report: the Form 3 tree-planting project"}

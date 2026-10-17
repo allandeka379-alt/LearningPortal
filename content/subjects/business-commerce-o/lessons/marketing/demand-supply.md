@@ -86,6 +86,8 @@ The equilibrium price is found where quantity demanded equals quantity supplied.
 
 In a diagram, this is the point where the downward-sloping demand curve **crosses** the upward-sloping supply curve.
 
+![Demand and supply of tomato crates: the curves cross at US\$6 and 80 crates. At US\$4 demand is 120 and supply 40, a shortage of 80; at US\$7 demand is 60 and supply 100, a surplus of 40; so the price moves back to US\$6.](media:diagrams/tomato-demand-supply-equilibrium.png "Figure: equilibrium at US\$6 and 80 crates, with the shortage at US\$4 and the surplus at US\$7")
+
 :::worked-solution[An increase in demand]
 Before a public holiday, demand for tomatoes rises by 40 crates at every price, while supply stays the same.
 
@@ -102,6 +104,8 @@ Before a public holiday, demand for tomatoes rises by 40 crates at every price, 
 3. The new equilibrium is where the new demand equals supply: at US\$7, 100 = 100.
 4. New equilibrium price = **US\$7**; quantity = **100 crates**. Higher demand has raised both price and quantity.
 :::
+
+![An increase in demand before a public holiday shifts the demand curve right by 40 crates at every price (D1 to D2); the equilibrium moves from US\$6 and 80 crates to US\$7 and 100 crates, so both price and quantity rise.](media:diagrams/tomato-demand-increase.png "Figure: demand rises by 40 crates at every price, moving equilibrium to US\$7 and 100 crates")
 
 ### Summary of changes
 

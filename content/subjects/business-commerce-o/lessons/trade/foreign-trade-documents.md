@@ -59,6 +59,8 @@ A fictional Harare firm orders packaging machinery from a foreign supplier who h
 
 A typical import by sea follows these steps:
 
+![Order of documents in a typical import by sea: indent, pro forma invoice with letter of credit arranged, bill of lading with insurance and certificate of origin, shipping documents through the banks with a bill of exchange, then customs declaration and collection of the goods.](media:diagrams/import-documents-order.png "Figure: the order in which documents are used in a typical import by sea")
+
 1. The importer sends an **indent** (often through an indent house or agent).
 2. The exporter may reply with a **pro forma invoice**, which the importer uses to arrange foreign currency or an import licence and, if required, a **letter of credit** with its bank.
 3. The exporter ships the goods and receives a **bill of lading** from the shipping company; it insures the goods and obtains a **certificate of origin** and, where required, a **consular invoice**.

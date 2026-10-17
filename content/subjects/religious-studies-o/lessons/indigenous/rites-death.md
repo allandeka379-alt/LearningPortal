@@ -38,6 +38,8 @@ Families often ask not only *how* a person died but *why*. Old age and illness a
 
 Practices vary between peoples and families, but the following are widely described.
 
+![Stages of funeral and burial customs in Indigenous Religion: announcement, preparing the body, wake, burial, purification and mourning, followed often about a year later by kurova guva or umbuyiso, when the spirit is received as an ancestor; practices vary between peoples and families.](media:diagrams/funeral-stages.png "Figure: funeral stages and the later kurova guva / umbuyiso (practices vary)")
+
 | Stage | What happens | Meaning |
 | --- | --- | --- |
 | Announcement | Relatives and the village headman are informed; the family gathers | The community is told that one of its members has died |

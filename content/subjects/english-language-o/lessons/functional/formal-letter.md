@@ -42,6 +42,8 @@ The phrase before the signature: *Yours faithfully* or *Yours sincerely*.
 6. **Body**: an opening paragraph stating your purpose, one or two paragraphs of details, a closing paragraph stating the action you want.
 7. **Complimentary close**, signature and your full name (and title if relevant).
 
+![Layout of a formal letter in order: writer's address and date at top right, recipient's title and address on the left, salutation, bold subject line, opening paragraph stating the purpose, detail paragraphs, a closing paragraph asking for action, then the close, signature and full name.](media:diagrams/formal-letter-layout.png "Figure: the layout of a formal letter (schematic)")
+
 ### Faithfully or sincerely?
 
 | Salutation | Close |

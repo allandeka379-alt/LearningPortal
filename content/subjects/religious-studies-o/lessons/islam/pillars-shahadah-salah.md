@@ -46,6 +46,8 @@ The ritual washing that Muslims perform before prayer.
 | Sawm | Fasting in the month of Ramadan | Next lesson |
 | Hajj | Pilgrimage to Makkah, once in a lifetime for those who are able | Next lesson |
 
+![The Five Pillars of Islam in outline: Shahadah, declaring faith in one God and in Muhammad as God's messenger; Salah, praying five times a day; Zakat, giving a fixed share of wealth to those in need; Sawm, fasting in Ramadan; Hajj, pilgrimage to Makkah once in a lifetime for those able.](media:diagrams/five-pillars.png "Figure: the Five Pillars of Islam in outline")
+
 Sunni Muslims call these the Five Pillars. Shi'a Muslims also keep these practices, together with some additional duties which are described in a later lesson.
 
 ## Shahadah: the declaration of faith

@@ -64,6 +64,8 @@ A feed mill expands in two stages. As it grows, its fixed costs rise (bigger pre
 3. Average cost falls from US\$6.50 to US\$2.40: purchasing economies cut the variable cost per bag, and technical and managerial economies spread the fixed costs over far more bags.
 :::
 
+![Average cost per bag at the feed mill falls as output grows: US\$6.50 at 1,000 bags a month, US\$3.30 at 5,000 bags and US\$2.40 at 20,000 bags, because bulk buying cuts variable cost and fixed costs are spread over more bags.](media:diagrams/feed-mill-average-cost.png "Figure: average cost per bag at three outputs (Example 1)")
+
 ## Diseconomies of scale
 
 ### Poor communication

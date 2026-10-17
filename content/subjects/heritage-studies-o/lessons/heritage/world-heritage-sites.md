@@ -56,6 +56,8 @@ In Zimbabwe, the cultural sites are managed by National Museums and Monuments of
 | Victoria Falls / Mosi-oa-Tunya | Natural, 1989 | On the Zambezi, on the border with Zambia | One of the world's greatest waterfalls, with its spray, gorges and the rainforest the spray supports; the name means "the smoke that thunders" |
 | Matobo Hills | Cultural, 2003 | South of Bulawayo | Granite hills and balancing rocks with one of the richest collections of rock art in southern Africa, and a living religious landscape with shrines still in use |
 
+![Schematic map of Zimbabwe's five World Heritage Sites, not to scale: Victoria Falls (natural, 1989) on the Zambezi in the north-west, Mana Pools, Sapi and Chewore (natural, 1984) in the Middle Zambezi valley, Khami (cultural, 1986) near Bulawayo, Matobo Hills (cultural, 2003) south of Bulawayo and Great Zimbabwe (cultural, 1986) near Masvingo.](media:diagrams/world-heritage-sites-schematic-map.png "Figure: where Zimbabwe's five World Heritage Sites lie (schematic, not to scale)")
+
 Notice the variety: two natural sites linked to the Zambezi, two ancient stone-built capitals and one landscape where nature, art and religion meet. The Matobo Hills was listed as a cultural site because of the long relationship between people and the hills, shown in the rock paintings and in the shrines that communities still use.
 
 :::example{title="Which type of site?"}

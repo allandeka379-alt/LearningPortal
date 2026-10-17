@@ -88,6 +88,8 @@ Thandeka opens her tuck shop with US\$400 in the bank and puts in US\$500 of her
 4. **Interpretation:** the fridge in August causes a cash shortage of US\$400, and the account is still overdrawn by US\$350 at the end of September. Thandeka should arrange an overdraft of at least US\$400 before August, or buy the fridge on hire purchase, or delay it.
 :::
 
+![Closing bank balances in Thandeka's cash flow forecast: US\$750 in July, then an overdraft of US\$400 in August when the fridge is bought, and still US\$350 overdrawn in September; negative balances are shown in brackets.](media:diagrams/cash-flow-closing-balances.png "Figure: closing balances from Example 1 (brackets mean overdrawn)")
+
 :::worked-solution[Example 2: amending a forecast]
 Thandeka now expects August cash sales to be 20% lower than forecast because schools are closed.
 

@@ -56,6 +56,8 @@ The level of output at which total revenue equals total costs, so the business m
 | **Management and people** | Who will manage, staff needed, their skills, wages and organisation chart |
 | **Financial plan** | Start-up costs, sources of finance, forecast income statement (profit), cash flow forecast (cash budget), break-even |
 
+![The eight main sections of a business plan in order: executive summary, business background, products or services, market research, marketing plan, operations plan, management and people, and the financial plan with start-up costs, forecasts and break-even.](media:diagrams/business-plan-sections.png "Figure: the main sections of a business plan")
+
 Commerce and Business Enterprise and Skills list "strategy and implementation" (how and when the plan will be carried out) as a section; Cambridge groups the same content under marketing and operations.
 
 ## The financial plan: worked examples

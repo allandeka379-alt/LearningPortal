@@ -48,6 +48,8 @@ Chapter 5: **the Executive**. Chapter 6: **the Legislature** (Senate and Nationa
 | Legislature | Parliament: the Senate and the National Assembly | Makes laws; approves the budget and taxes; oversees the Executive; represents the people |
 | Judiciary | Judges of the Constitutional Court, Supreme Court, High Court and other courts, and magistrates; headed by the Chief Justice | Interprets laws; settles disputes; tries criminal cases; protects rights; decides whether laws and actions follow the Constitution |
 
+![The three arms of government under the 2013 Constitution: the Executive (Chapter 5: President, Vice-Presidents, Cabinet and civil service), the Legislature (Chapter 6: Parliament, made up of the Senate and National Assembly) and the Judiciary (Chapter 8: judges and magistrates headed by the Chief Justice); each checks the others.](media:diagrams/three-arms-of-government.png "Figure: the three arms of central government and their main functions")
+
 ## The Executive
 
 The **President** is elected by voters in the harmonised elections every five years. A candidate must win **more than half** of the votes cast; otherwise a run-off election is held between the two leading candidates. Under the 2013 Constitution a person may serve **no more than two terms** as President. The President is helped by **Vice-Presidents** and appoints **ministers**, who together form the **Cabinet**. Each minister heads a ministry, such as the Ministry of Health and Child Care or the Ministry of Primary and Secondary Education, which is run day to day by civil servants.

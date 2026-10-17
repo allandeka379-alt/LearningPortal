@@ -32,6 +32,8 @@ A way of fighting in which small, mobile groups of fighters attack and withdraw,
 UDI **11 November 1965**. Battle of Chinhoyi **28 April 1966**. Attack on Altena Farm **21 December 1972**. Nyadzonia **9 August 1976**. Chimoio **23 November 1977**. Freedom Camp **19 October 1978**. Lancaster House Agreement signed **21 December 1979**. Independence **18 April 1980**.
 :::
 
+![Timeline of the Second Chimurenga: UDI on 11 November 1965, Battle of Chinhoyi 28 April 1966, Altena Farm 21 December 1972, Nyadzonia 9 August 1976, Chimoio 23 November 1977, Freedom Camp 19 October 1978, Lancaster House Agreement signed 21 December 1979 and independence on 18 April 1980.](media:diagrams/second-chimurenga-timeline.png "Figure: key dates of the Second Chimurenga, 1965 to 1980 (not to scale)")
+
 ## Causes of the liberation struggle
 
 | Cause | Explanation |

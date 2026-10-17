@@ -79,6 +79,8 @@ A dispute arose about the nature of Christ. A priest from Alexandria named **Ari
 | 325 CE | Council of Nicaea |
 | 380-381 CE | Christianity becomes the Empire's religion; Council of Constantinople |
 
+![Timeline of the early Church: Pentecost about 30 CE, Paul's journeys in the mid-first century, Nero blames Christians for the fire of Rome in 64 CE, Diocletian's persecution from 303, the Edict of Milan in 313, the Council of Nicaea in 325 and Christianity as the Empire's religion in 380-381.](media:diagrams/early-church-timeline.png "Figure: key dates in the early Church, from Pentecost to 381 CE (not to scale)")
+
 ## Early African Christianity
 
 Africa was part of the early Church from the beginning. **Alexandria** in Egypt was a great centre of learning where teachers such as Clement and Origen worked; tradition links the founding of the Church there with the evangelist Mark. In North Africa, **Carthage** produced writers such as **Tertullian** and **Cyprian**, and **Augustine** of Hippo (354-430) became one of the most influential Christian thinkers. In the fourth century the kingdom of **Aksum** in Ethiopia adopted Christianity under King **Ezana**, helped by a Christian teacher named Frumentius. The Ethiopian Orthodox Church is one of the oldest churches in the world.

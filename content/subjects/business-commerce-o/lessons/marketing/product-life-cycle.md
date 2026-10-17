@@ -32,6 +32,8 @@ The point in maturity when almost every customer who wants the product already h
 
 The life cycle is usually drawn as a curve of **sales against time**. Here it is described as a table: sales rise slowly, then quickly, level off and then fall.
 
+![Schematic product life cycle: sales against time rise slowly in introduction, steeply in growth, level off in maturity and fall in decline; the stages are separated by dashed lines.](media:diagrams/plc-four-stages.png "Figure: the four stages of the product life cycle (schematic, no scale)")
+
 | Stage | Sales | Profit | Typical marketing mix |
 | --- | --- | --- | --- |
 | Development (before launch) | None | Losses: research and design costs | Research and testing |
@@ -58,6 +60,8 @@ Exam questions often give a description or a table of sales over several years a
 :::example{title="Identifying the stage from data"}
 A drinks firm's sales of a flavoured water (in thousands of bottles) were 20, 60, 140, 210, 230 and 232 in six years. The early years show slow then rapid growth; the last two years show only small increases. The product is in **maturity**, close to saturation, so this is the time to plan an extension strategy.
 :::
+
+![Sales of flavoured water in thousands of bottles over six years: 20, 60, 140, 210, 230 and 232. Sales rise steeply and then level off, so the product is in maturity, close to saturation, and an extension strategy should be planned.](media:diagrams/plc-flavoured-water-sales.png "Figure: the flavoured water example, sales rising and then levelling off")
 
 ## Extension strategies
 

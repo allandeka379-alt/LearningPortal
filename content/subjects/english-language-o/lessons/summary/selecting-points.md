@@ -32,6 +32,8 @@ An example, statistic, anecdote, quotation or explanation that illustrates a poi
 
 Underline three things:
 
+![Process for selecting summary points: dissect the question for focus, whose or what and limits; read the whole passage once; underline only what answers the focus; keep one idea per point; then make numbered notes in your own words.](media:diagrams/summary-selecting-process.png "Figure: the five steps for selecting summary points")
+
 1. **The focus**: *advantages*, *problems*, *reasons*, *ways*.
 2. **Whose or what**: *of keeping indigenous trees*, *faced by the farmers*.
 3. **Limits**: which paragraphs, how many words, and whether a time is specified (*now*, *in the past*, *in future*).

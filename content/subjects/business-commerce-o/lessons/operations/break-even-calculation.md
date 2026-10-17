@@ -68,6 +68,8 @@ Chipo's fixed costs are US\$6,000 a month. Each backpack sells for US\$20 and ha
 5. Check: profit at 1,000 = 1,000 × 20 − (6,000 + 1,000 × 12) = 20,000 − 18,000 = US\$2,000, which equals 250 × US\$8 (margin of safety × contribution).
 :::
 
+![Break-even chart for Chipo's backpacks: fixed costs US\$6,000, price US\$20, variable cost US\$12; total cost and revenue cross at 750 backpacks and US\$15,000. Loss to the left, profit to the right; at the expected 1,000 backpacks the margin of safety is 250 backpacks.](media:diagrams/break-even-backpacks.png "Figure: Example 1 drawn as a chart (break-even 750 backpacks, margin of safety 250)")
+
 ### Profit from contribution
 
 Once the break-even output is known, profit at any level of output can be found quickly:
