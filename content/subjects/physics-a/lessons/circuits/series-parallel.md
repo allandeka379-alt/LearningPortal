@@ -69,6 +69,8 @@ Both boards require both laws, their basis in conservation, the derivations of t
 - In series, p.d. is shared in proportion to resistance: $\dfrac{V_1}{V_2} = \dfrac{R_1}{R_2}$.
 - In parallel, current is shared in inverse proportion to resistance: $\dfrac{I_1}{I_2} = \dfrac{R_2}{R_1}$, so the smaller resistance takes the larger current. For two branches, $I_1 = I\dfrac{R_2}{R_1 + R_2}$.
 
+![Series-parallel circuit on a 12 V supply: a 2.0 Ω resistor in series with 6.0 Ω and 12 Ω in parallel (4.0 Ω together); the supply current is 2.0 A, 4.0 V across the 2.0 Ω and 8.0 V across the pair, which carry 1.33 A and 0.667 A.](media:diagrams/series-parallel-network.png "Figure: the worked series-parallel network with currents and p.d.s")
+
 :::worked-solution[A series-parallel network]
 Resistors of $6.0\ \Omega$ and $12\ \Omega$ in parallel are connected in series with a $2.0\ \Omega$ resistor across a $12\ \text{V}$ supply of negligible internal resistance. Find the current from the supply and the current in each parallel branch.
 

@@ -54,6 +54,8 @@ Both boards: ZIMSEC Form 6 and Cambridge A Level (topic 20, Paper 4). Lenz's law
 
 Push the north pole of a magnet towards a coil connected in a closed circuit. The induced current makes the near end of the coil a **north** pole, which **repels** the magnet. You have to do work to keep pushing, and that work becomes the electrical energy in the circuit (and finally heat).
 
+![Lenz's law: as a north pole is pushed into a coil, the induced current makes the near end of the coil a north pole, which repels the magnet; the work done against this repulsion is the energy that appears as electrical energy.](media:diagrams/lenz-law-magnet-coil.png "Figure: the induced current opposes the approaching north pole")
+
 Suppose the opposite were true and the coil made a south pole that attracted the magnet. The magnet would accelerate in, inducing a larger current and a stronger attraction, so it would gain kinetic energy *and* produce electrical energy from nothing. That would break the **conservation of energy**. Lenz's law is therefore not an extra rule: it is energy conservation applied to induction.
 
 ## Finding directions
@@ -97,6 +99,8 @@ For a generator with $E_0 = 113\ \text{V}$:
 | 270 | −113 |
 
 The graph of $E$ against time is a sine curve. Doubling the rotation speed doubles both the frequency and the peak e.m.f.
+
+![Generator e.m.f. against the angle of the coil's normal from the field: a sine curve E = 113 sin θ with peak 113 V at 90° and 270° (coil plane parallel to the field) and zero at 0°, 180° and 360° (coil plane perpendicular to the field); 56.5 V at 30°.](media:diagrams/generator-emf-graph.png "Figure: e.m.f. of the a.c. generator (200 turns, 0.012 m², 50 rev/s, 0.15 T) over one rotation")
 
 ## Back e.m.f. in motors (outline)
 

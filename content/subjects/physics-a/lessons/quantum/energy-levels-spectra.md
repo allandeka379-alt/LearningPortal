@@ -71,6 +71,8 @@ Both boards: ZIMSEC Form 6 (quantum physics) and Cambridge A Level topic 22 (Pap
 
 An energy-level diagram draws these as horizontal lines, spaced to scale, with the ground state at the bottom. The gaps get smaller going up: the energy rises steeply at first and then levels off towards zero. The ionisation energy of hydrogen is 13.6 eV.
 
+![Hydrogen energy-level diagram to scale: levels at −13.60, −3.40, −1.51, −0.85 and −0.54 eV closing up towards 0 eV; the fall from n = 3 to n = 2 emits 1.89 eV (658 nm, red), 4 to 2 emits 2.55 eV (488 nm, blue-green), and raising the electron from n = 1 to infinity takes 13.6 eV (91.4 nm).](media:diagrams/hydrogen-energy-levels.png "Figure: energy levels of hydrogen and three transitions from the worked examples")
+
 ## Emission spectra
 
 In a discharge tube, collisions with fast electrons excite atoms of a low-pressure gas. An excited atom is unstable: within about $10^{-8}\ \text{s}$ an electron drops to a lower level and the atom emits **one photon** carrying exactly the energy difference. Because the levels are discrete, only certain differences are possible, so only certain wavelengths appear: a **line** spectrum.

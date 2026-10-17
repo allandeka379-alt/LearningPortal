@@ -80,6 +80,9 @@ The table shows the same model worked out step by step (a computer model, not me
 
 The velocity-time graph starts with gradient $g$, curves over as the gradient (acceleration) falls, and levels off towards a horizontal line at the terminal velocity. The area under it is the distance fallen.
 
+![Velocity-time graph for an 80 kg skydiver with drag 0.25v²: it starts with gradient 9.81 m/s², curves over as drag grows and levels off at the terminal velocity 56.0 m/s (18.9 m/s at 2 s, 49.6 m/s at 8 s) where drag equals weight.](media:diagrams/terminal-velocity-graph.png "Figure: velocity-time graph of a skydiver reaching terminal velocity")
+
+
 ## Opening a parachute
 
 When the parachute opens at terminal velocity, the cross-sectional area increases enormously, so the drag at that speed becomes much larger than the weight. The resultant force is now **upwards**: the skydiver decelerates. As the speed falls, the drag falls, until it again equals the weight at a new, much lower terminal velocity (about $5\ \text{m s}^{-1}$ for a typical parachute). On the velocity-time graph this appears as a steep drop that curves into a new, lower horizontal line. The skydiver keeps moving **downwards** throughout; only the acceleration changes direction.

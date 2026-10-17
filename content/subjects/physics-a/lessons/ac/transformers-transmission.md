@@ -59,6 +59,8 @@ Transformers and power transmission are ZIMSEC Form 6 (scope to be confirmed aga
 3. The flux linkage of the secondary coil therefore **changes continuously**.
 4. By Faraday's law, an alternating e.m.f. of the same frequency is induced in the secondary.
 
+![Step-down transformer on a laminated soft-iron core: 1150 primary turns on 230 V and 60 secondary turns give 12 V to a 24 W lamp; the secondary current is 2.0 A and the primary current only 0.104 A, so Vs/Vp = Ns/Np = Ip/Is.](media:diagrams/transformer-step-down.png "Figure: an ideal step-down transformer (1150 turns to 60 turns) lighting a 12 V, 24 W lamp")
+
 Because the same changing flux $\Phi$ passes through every turn of both coils, the e.m.f. per turn is the same in each coil ($\mathrm{d}\Phi/\mathrm{d}t$). So the voltages are in the ratio of the turns: $\dfrac{V_s}{V_p} = \dfrac{N_s}{N_p}$.
 
 A transformer **does not work with steady d.c.**: a constant current produces a constant flux, the flux linkage does not change, and no e.m.f. is induced (except briefly when the current is switched on or off).

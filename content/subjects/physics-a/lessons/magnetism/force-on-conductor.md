@@ -40,6 +40,8 @@ Both boards: ZIMSEC Form 6 (electromagnetism) and Cambridge A Level (topic 20, P
 
 Hold the thumb and first two fingers of the **left** hand mutually at right angles:
 
+![Fleming's left-hand rule: the first finger gives the field direction (north to south), the second finger the conventional current and the thumb the motion or force, all three at right angles; reversing either the field or the current reverses the force.](media:diagrams/flemings-left-hand-rule.png "Figure: Fleming's left-hand rule for the motor effect (three mutually perpendicular directions)")
+
 - **F**irst finger: **F**ield (north to south);
 - se**C**ond finger: **C**urrent (conventional, + to −);
 - **Th**u**M**b: **M**otion (the force).
@@ -76,6 +78,8 @@ For a wire $5.0\ \text{cm}$ long between the poles of a magnet:
 | 5.0 | 1.52 |
 
 A graph of $\Delta m$ against $I$ is a straight line through the origin, showing $F \propto I$. Its gradient is about $0.304\ \text{g A}^{-1}$, which is $BL/g$. So $B = \dfrac{0.304 \times 10^{-3} \times 9.81}{0.050} = 0.0596\ \text{T}$, about $0.060\ \text{T}$.
+
+![Current-balance results for a 5.0 cm wire: the change in balance reading rises in proportion to the current (0.32 g at 1.0 A to 1.52 g at 5.0 A), a straight line through the origin of gradient 0.304 g per A, giving B = 0.0596 T.](media:diagrams/current-balance-graph.png "Figure: current balance, balance change against current (points from the lesson table)")
 
 ## Applications
 

@@ -115,6 +115,8 @@ The values are orders of magnitude only. For the same current density, a semicon
 
 When a current changes, $Q = It$ no longer applies directly. The charge is the area under the current-time graph. For example, if a current falls steadily from $4.0\ \text{mA}$ to zero in $10\ \text{s}$, the charge is the triangle's area, $\tfrac{1}{2} \times 4.0 \times 10^{-3} \times 10 = 0.020\ \text{C}$. The same idea is used later for a discharging capacitor.
 
+![Current-time graph: a current falling steadily from 4.0 mA to zero in 10 s; the area under the line, a triangle of ½ × 4.0 × 10⁻³ A × 10 s, is the charge that flowed, 0.020 C.](media:diagrams/current-time-area-charge.png "Figure: charge is the area under a current-time graph")
+
 ## Common mistakes
 
 :::mistake{title="Saying current is used up"}

@@ -54,6 +54,8 @@ When body A pushes on body B, B pushes back on A with an equal and opposite forc
 
 Choose a positive direction and give every velocity a sign.
 
+![Before-and-after pictures: a 2.0 kg trolley at 3.0 m/s sticking to a stationary 1.0 kg trolley moves off at 2.0 m/s (momentum 6.0 kg m/s, kinetic energy 9.0 J to 6.0 J); a 0.40 kg ball at 5.0 m/s hitting a 0.60 kg ball elastically gives -1.0 and 4.0 m/s with total momentum 2.0 kg m/s unchanged.](media:diagrams/collisions-before-after.png "Figure: momentum is the same before and after; kinetic energy is lost only when the trolleys stick")
+
 :::worked-solution[Two trolleys stick together]
 A $2.0\ \text{kg}$ trolley moving at $3.0\ \text{m s}^{-1}$ collides with a stationary $1.0\ \text{kg}$ trolley; they stick together.
 

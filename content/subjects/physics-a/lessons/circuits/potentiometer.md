@@ -44,6 +44,8 @@ Both boards require the potentiometer as a means of comparing p.d.s and the galv
 
 The arrangement is described in words:
 
+![Potentiometer circuit: a driver cell with rheostat across the 100.0 cm wire AB gives 2.00 V (0.0200 V per cm); a test cell in series with a galvanometer and a jockey balances at 72.5 cm so no current flows in the test cell and its e.m.f. is 0.0200 × 72.5 = 1.45 V.](media:diagrams/potentiometer-circuit.png "Figure: a potentiometer balanced at 72.5 cm, giving E = 1.45 V")
+
 1. A **driver cell** (e.m.f. larger than any p.d. to be measured) is connected across the ends A and B of a uniform resistance wire about one metre long, usually in series with a rheostat to set the current.
 2. The **test cell** has its positive terminal joined to A (the same end as the driver cell's positive terminal). Its negative terminal connects through a **galvanometer** and a protective resistor to a **jockey**, a sliding contact touched onto the wire.
 3. The jockey is moved until the galvanometer reads zero. The length AJ is the balance length $l$.

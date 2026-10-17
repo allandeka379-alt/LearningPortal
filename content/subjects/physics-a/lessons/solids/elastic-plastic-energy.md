@@ -62,6 +62,8 @@ The elastic limit is usually just beyond the limit of proportionality, so for me
 
 For a metal wire loaded **within** its elastic limit, the unloading line retraces the loading line back to the origin: all the stored energy is recovered.
 
+![Force-extension graph for a wire stretched past its elastic limit: the line is straight up to the limit of proportionality, then curves in the plastic region; on unloading the line is parallel to the original straight part and meets the extension axis away from zero, leaving a permanent extension.](media:diagrams/plastic-unloading-curve.png "Figure: unloading beyond the elastic limit leaves a permanent extension (sketch)")
+
 For a wire loaded **beyond** its elastic limit, the unloading line is a straight line **parallel to the original straight region** (the bonds relax with the same stiffness), but it meets the extension axis at a positive value: the permanent extension. The area between the loading curve and the unloading line is energy that has been dissipated (as thermal energy) in rearranging the atoms.
 
 ## Work done and the area under the graph
@@ -73,6 +75,8 @@ W = \tfrac{1}{2}Fx, \qquad \text{and with } F = kx,\qquad W = \tfrac{1}{2}kx^2
 $$
 
 For a curved graph, count squares (or split the area into strips) and multiply by the energy that one square represents.
+
+![Force-extension graph for the catapult spring (k = 250 N/m): the straight line reaches 20 N at an extension of 0.080 m, and the area under it, ½ × 20 × 0.080 = 0.80 J, is the elastic potential energy stored.](media:diagrams/spring-energy-area.png "Figure: elastic energy is the area under the force-extension graph (k = 250 N/m, x = 8.0 cm)")
 
 :::worked-solution[Energy stored in a catapult spring]
 A spring with $k = 250\ \text{N m}^{-1}$ is stretched by $8.0\ \text{cm}$ (within its limit of proportionality). It is then released to launch a $20\ \text{g}$ ball.

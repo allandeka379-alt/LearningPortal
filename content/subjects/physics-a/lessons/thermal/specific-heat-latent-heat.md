@@ -67,6 +67,8 @@ When a solid is heated at a constant rate, a graph of temperature against time s
 
 With constant power $P$, the gradient of each sloping section is $\dfrac{\Delta\theta}{\Delta t} = \dfrac{P}{mc}$, so a steeper section means a smaller specific heat capacity. The length of each flat section is $mL/P$. A cooling curve of a liquid such as molten wax shows the same features in reverse, with a flat section while it solidifies and releases latent heat.
 
+![Heating curve for 0.10 kg of ice at −20 °C on a 500 W heater: ice warms for 8.4 s, melts at 0 °C for 67 s, water warms to 100 °C over 84 s and boils at 100 °C for 452 s; the flat sections are the energy mL and the boiling section is longest because Lv is about seven times Lf.](media:diagrams/heating-curve-ice-to-steam.png "Figure: heating curve of 0.10 kg of ice at 500 W (c ice 2100, c water 4200 J/kg/K, Lf 3.34 × 10⁵, Lv 2.26 × 10⁶ J/kg)")
+
 :::worked-solution[Heating and boiling in a kettle]
 A $2.2\ \text{kW}$ kettle contains $1.2\ \text{kg}$ of water at $22\ ^\circ\text{C}$. Assuming no energy losses, find the time to reach $100\ ^\circ\text{C}$, and then the time to boil away $0.10\ \text{kg}$.
 

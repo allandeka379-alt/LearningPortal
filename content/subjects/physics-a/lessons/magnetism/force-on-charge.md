@@ -70,6 +70,8 @@ so each carrier feels a force $BQv$ (at right angles to the field). With the vel
 
 The magnetic force is always **perpendicular to the velocity**. Two consequences follow:
 
+![An electron moving at 3.0 × 10⁷ m/s at right angles to a 2.0 mT field into the page: the magnetic force BQv is always perpendicular to the velocity, towards the centre, so the electron moves in a circle of radius mv/(BQ) = 8.5 cm at constant speed.](media:diagrams/charge-circular-path-b-field.png "Figure: a charged particle moves in a circle in a uniform magnetic field")
+
 1. **No work is done** on the particle, so its speed and kinetic energy stay constant. A magnetic field can change a particle's direction but never its speed.
 2. A force of constant size always at right angles to the velocity produces **uniform circular motion**.
 
@@ -102,6 +104,8 @@ Charged particles pass between two parallel plates (electric field $E$) placed i
 2. A **velocity selector** passes only ions of one speed $v$.
 3. The ions enter a region of uniform field $B_2$ alone, perpendicular to their velocity, and move in semicircles of radius $r = mv/(B_2Q)$.
 4. Since $v$, $B_2$ and $Q$ are the same for all ions, $r \propto m$: heavier isotopes land further away on a detector after half a circle.
+
+![Mass spectrometer: neon ions at 4.0 × 10⁵ m/s enter a 0.50 T field and move in semicircles with r = mv/(BQ) proportional to mass; neon-20 has r = 0.166 m and neon-22 r = 0.183 m, so they land 3.3 cm apart.](media:diagrams/mass-spectrometer-semicircles.png "Figure: heavier isotopes follow larger semicircles in a mass spectrometer")
 
 ## Worked examples
 

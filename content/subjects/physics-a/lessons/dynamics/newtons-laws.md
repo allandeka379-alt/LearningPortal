@@ -66,6 +66,8 @@ Then, for each direction:
 
 ## Lifts
 
+![Free-body diagram of a 70 kg person in a lift accelerating upwards at 1.5 m s⁻²: the contact force R = 792 N upwards is larger than the weight 687 N downwards, and the resultant of 105 N upwards equals ma.](media:diagrams/lift-free-body-diagram.png "Figure: free-body diagram for the lift (arrow lengths drawn to scale)")
+
 :::worked-solution[A person in an accelerating lift]
 A $70\ \text{kg}$ person stands on bathroom scales in a lift. The scales read the normal contact force $R$. Take $g = 9.81\ \text{m s}^{-2}$.
 
@@ -94,6 +96,8 @@ The same method solves a block on a smooth table pulled by a hanging mass over a
 ## Smooth inclined planes
 
 On a frictionless slope at angle $\theta$, the forces are the weight and the normal contact force. Perpendicular to the slope they balance ($R = mg\cos\theta$); along the slope the resultant is $mg\sin\theta$, so
+
+![Free-body diagram of a trolley on a smooth 25° ramp: weight mg straight down and the normal force R = mg cos 25° perpendicular to the slope; the unbalanced component mg sin 25° along the slope gives a = g sin 25° = 4.15 m s⁻².](media:diagrams/smooth-ramp-free-body-diagram.png "Figure: forces on a trolley on a smooth 25° incline")
 
 $$
 a = g\sin\theta

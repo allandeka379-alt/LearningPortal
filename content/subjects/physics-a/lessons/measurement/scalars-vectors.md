@@ -81,6 +81,8 @@ The tractors pull with $40\ \text{kN}$ and $30\ \text{kN}$, with $60^\circ$ betw
 
 A scale drawing gives the same result to within the accuracy of the drawing: choose a large scale (for example $1\ \text{cm}$ to $5\ \text{kN}$), draw carefully with a protractor, and measure the resultant's length and angle.
 
+![Vector triangle for two tractor pulls of 40 kN and 30 kN with 60° between the chains: placed tip to tail the resultant closes the triangle, R = 60.8 kN at 25.3° to the 40 kN chain (angle opposite R is 120°).](media:diagrams/vector-triangle-two-pulls.png "Figure: adding two forces tip to tail (scale drawing, 1 kN = 4.2 px)")
+
 ## Subtracting vectors
 
 To find $\mathbf{A} - \mathbf{B}$, add $\mathbf{A}$ and $-\mathbf{B}$ (the same magnitude as $\mathbf{B}$, reversed). The most common use is a **change in velocity**: $\Delta \mathbf{v} = \mathbf{v}_{\text{final}} - \mathbf{v}_{\text{initial}}$.

@@ -81,6 +81,8 @@ A truck of mass $15\,000\ \text{kg}$ climbs a road that rises $1\ \text{m}$ for 
 
 An engine's maximum useful power is fixed. At low speed, $P = Fv$ allows a large driving force, so the vehicle accelerates. As it speeds up, the driving force available, $F = P/v$, falls while air resistance rises. The top speed is reached when the driving force at full power equals the total resistive force.
 
+![Driving force against speed for a 1000 kg car with maximum power 60 kW: the curve F = P/v gives 3000 N at 20 m/s, where the resistive force is 1200 N, leaving a resultant of 1800 N (a = 1.8 m/s²); at 30 m/s the force is 2000 N, equal to the resistive force, so 30 m/s is the top speed.](media:diagrams/power-force-speed-graph.png "Figure: full-power driving force falls as speed rises until it equals the resistive force")
+
 :::worked-solution[Top speed and acceleration of a car]
 A car of mass $1000\ \text{kg}$ has a maximum useful power of $60\ \text{kW}$.
 

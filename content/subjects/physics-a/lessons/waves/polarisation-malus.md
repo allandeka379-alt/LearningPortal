@@ -70,6 +70,8 @@ The transmitted light is polarised in the plane of the filter's transmission axi
 
 A graph of $I/I_0$ against $\theta$ falls from 1 at $0^\circ$ to 0 at $90^\circ$ along an S-shaped curve, passing through 0.5 at $45^\circ$. As the filter is turned through a full $360^\circ$ there are **two maxima** ($0^\circ$, $180^\circ$) and **two minima** ($90^\circ$, $270^\circ$). A graph of $I$ against $\cos^2\theta$ is a straight line through the origin with gradient $I_0$, which is the best way to test the law in the laboratory.
 
+![Malus's law: transmitted intensity I/I₀ = cos²θ falls from 1.000 at 0° through 0.750 at 30°, 0.500 at 45° and 0.250 at 60° to zero at 90°, then rises again to 1 at 180° as the filter is turned.](media:diagrams/malus-law-graph.png "Figure: transmitted intensity through a polarising filter against angle (points from the lesson table)")
+
 ## Worked examples
 
 :::worked-solution[One analyser]

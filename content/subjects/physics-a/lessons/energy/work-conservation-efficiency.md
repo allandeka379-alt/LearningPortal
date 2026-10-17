@@ -56,6 +56,8 @@ Both boards require work as force × displacement in the direction of the force,
 
 Only the component of the force **along** the displacement does work. The perpendicular component does no work, because there is no displacement in its direction.
 
+![A rope pulls a scotch cart 25 m at 35° above the horizontal with a tension of 120 N: only the horizontal component 98.3 N does work, W = 120 × 25 × cos 35° = 2457 J, and the vertical component 68.8 N does none.](media:diagrams/force-at-angle-work.png "Figure: only the component of the force along the displacement does work")
+
 :::worked-solution[Pulling a loaded cart]
 Farai pulls a scotch cart $25\ \text{m}$ along a level road with a rope at $35^\circ$ above the horizontal. The tension in the rope is $120\ \text{N}$.
 
@@ -75,6 +77,8 @@ Three special cases follow from $\cos\theta$:
 ## Work from a force-displacement graph
 
 When the force varies, the work done is the **area under the force-displacement graph**. For a force that rises steadily from 0 to $60\ \text{N}$ over the first $0.30\ \text{m}$ and then stays at $60\ \text{N}$ for a further $0.20\ \text{m}$, the work done is the triangle plus the rectangle: $\tfrac{1}{2} \times 60 \times 0.30 + 60 \times 0.20 = 9 + 12 = 21\ \text{J}$. The same idea gives the energy stored in a stretched spring or wire.
+
+![Force-displacement graph: the force rises steadily from 0 to 60 N over 0.30 m then stays at 60 N for a further 0.20 m; the work done is the area under the graph, a 9.0 J triangle plus a 12 J rectangle, 21 J in total.](media:diagrams/force-displacement-area-work.png "Figure: work done is the area under a force-displacement graph")
 
 ## Conservation of energy
 

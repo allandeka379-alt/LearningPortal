@@ -55,6 +55,8 @@ Both boards: alpha, beta-minus and gamma, their properties and decay equations (
 | $\beta$ | moderate (about $10^2$ per mm) | a few mm of aluminium | up to about 1 m |
 | $\gamma$ | weak | intensity reduced by several cm of lead or metres of concrete; never stopped completely | very long |
 
+![Penetrating power: alpha particles are stopped by a sheet of paper, beta particles by a few millimetres of aluminium, and gamma rays pass through both and are only reduced in intensity by several centimetres of lead, never stopped completely.](media:diagrams/alpha-beta-gamma-penetration.png "Figure: what stops alpha, beta and gamma radiation")
+
 The two properties are linked: a radiation that ionises strongly loses its energy quickly and so is the least penetrating. Alpha particles are heavy and doubly charged, interact with almost every atom they pass, and lose all their energy within a few centimetres of air. Gamma photons are uncharged and interact rarely.
 
 ## Deflection in electric and magnetic fields
@@ -85,6 +87,8 @@ Beta particles from one nuclide have a **continuous** range of kinetic energies,
 | relative number | 0 | 87 | 100 | 85 | 53 | 21 | 2.4 | 0 |
 
 The curve rises from zero to a peak at low energy and falls to zero at the maximum energy. Since each decay releases the same total energy, a third particle must carry away the difference: the **electron antineutrino** in beta-minus decay and the **electron neutrino** in beta-plus decay. Neutrinos are uncharged, have almost no mass and hardly interact with matter, which is why they were detected only decades after they were predicted.
+
+![Beta energy spectrum: the relative number of beta particles rises to a peak of 100 near 0.10 MeV and falls to zero at the maximum energy of 0.55 MeV, a continuous range, which is why a third particle (the antineutrino) must share the decay energy.](media:diagrams/beta-energy-spectrum.png "Figure: beta particles have a continuous spread of kinetic energies (values from the lesson table)")
 
 ## Safe handling
 

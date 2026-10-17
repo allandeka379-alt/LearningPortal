@@ -50,6 +50,8 @@ Both boards need this topic: ZIMSEC in Form 5 (gravitational fields) and Cambrid
 
 A field line shows the direction of the force on a small test mass. Field lines are drawn so that their closeness shows the field strength.
 
+![Gravitational field lines: around a sphere they run straight inwards to the centre and spread out with distance, so the field weakens; near the ground over a small region they are parallel, vertical and equally spaced, a uniform field.](media:diagrams/gravitational-field-lines.png "Figure: gravitational field lines, radial (left) and nearly uniform near the surface (right)")
+
 - **Point mass or uniform sphere:** straight lines pointing radially inwards to the centre, like the spokes of a wheel. They get further apart with distance, showing a weaker field. The field is **radial**.
 - **Near the Earth's surface:** over a region small compared with the Earth (a classroom, the Victoria Falls gorge) the lines are almost parallel, vertical and equally spaced. The field there is very nearly **uniform**.
 - Gravitational field lines always point **towards** masses (gravity only attracts) and never cross, because the force at any point has only one direction.
@@ -78,6 +80,8 @@ Outside the sphere, $g \propto 1/r^2$: an **inverse-square** relationship. Doubl
 | 6.6 | 42.0 | 0.225 |
 
 A graph of $g$ against $r$ starts at $9.81\ \text{N kg}^{-1}$ at the surface and falls steeply at first, then more gently, approaching zero but never reaching it. A graph of $g$ against $1/r^2$ is a straight line through the origin with gradient $GM$. The last row is roughly the radius of a geostationary orbit, where $g$ is less than a fortieth of its surface value.
+
+![Graph of Earth's gravitational field strength against distance from its centre in Earth radii: it starts at 9.81 N/kg at the surface, falls to 2.45 at 2 radii and 0.613 at 4 radii, an inverse-square curve that approaches zero but never reaches it.](media:diagrams/g-against-distance-graph.png "Figure: g falls as 1/r² (points from the lesson table)")
 
 ### Why g is nearly constant near the surface
 

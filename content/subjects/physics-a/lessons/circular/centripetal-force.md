@@ -86,9 +86,13 @@ A $0.20\ \text{kg}$ bob on a string $0.80\ \text{m}$ long moves in a horizontal 
 
 On a **banked** track the same geometry applies: the normal contact force is tilted, and its horizontal component provides the centripetal force. At the design speed no sideways friction is needed and $\tan\theta = \dfrac{v^2}{rg}$. For a bend of radius $80\ \text{m}$ designed for $20\ \text{m s}^{-1}$, $\tan\theta = \dfrac{400}{80 \times 9.81}$, so $\theta = 27.0^\circ$.
 
+![Conical pendulum, a 0.20 kg bob on a 0.80 m string at 30° to the vertical: radius 0.40 m; the vertical component of tension T cos 30° balances the weight 1.96 N (T = 2.27 N) and the horizontal component T sin 30° is the centripetal force, giving ω = 3.76 rad/s.](media:diagrams/conical-pendulum-forces.png "Figure: forces on a conical pendulum bob")
+
 ## Vertical circles and humps
 
 In a vertical circle, weight acts downwards all the time, so the force needed from the string, track or seat changes around the circle. Always take "towards the centre" as positive.
+
+![Forces on a 0.20 kg mass in a vertical circle of radius 0.60 m: at the top (3.0 m/s) tension 1.04 N and weight 1.96 N both point to the centre; at the bottom (5.0 m/s) tension 10.3 N upwards exceeds the weight, so the string is most likely to break at the bottom.](media:diagrams/vertical-circle-tension.png "Figure: tension at the top and bottom of a vertical circle")
 
 :::worked-solution[A car over a hump-backed bridge]
 A $1000\ \text{kg}$ car crosses the top of a hump of radius $20\ \text{m}$.

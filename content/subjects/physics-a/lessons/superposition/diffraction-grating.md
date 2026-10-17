@@ -68,6 +68,8 @@ These are why a grating measures wavelength more precisely than a double slit.
 
 ## Worked examples
 
+![Diffraction grating with 500 lines per mm (d = 2.00 µm) and 589 nm sodium light at normal incidence: maxima appear at 0° and on each side at 17.1° (first order), 36.1° (second) and 62.1° (third); the fourth order would need sin θ > 1, so seven maxima are seen.](media:diagrams/grating-orders-fan.png "Figure: the seven orders from a 500 lines/mm grating (angles from d sin θ = nλ)")
+
 :::worked-solution[Angles and the highest order]
 Sodium light of wavelength $589\ \text{nm}$ falls normally on a grating with 500 lines per mm. Find the angles of the first two orders and the highest order visible.
 

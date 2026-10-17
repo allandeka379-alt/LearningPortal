@@ -106,6 +106,8 @@ A ball of mass $0.15\ \text{kg}$ is dropped from a balcony $20\ \text{m}$ high a
 
 For a ball falling freely from height $H$, as the height $h$ above the ground decreases:
 
+![Energy against height for a 0.15 kg ball dropped from 20 m: EP falls in a straight line from 29.4 J to zero while EK rises by the same amount in free fall (total constant); with air resistance EK reaches only 23.2 J at the ground, the other 6.2 J being work done against drag.](media:diagrams/energy-against-height-graph.png "Figure: energy against height for a falling ball, with and without air resistance")
+
 | Height above ground | $E_P$ | $E_K$ | Total |
 | --- | --- | --- | --- |
 | $H$ (released) | $mgH$ | 0 | $mgH$ |

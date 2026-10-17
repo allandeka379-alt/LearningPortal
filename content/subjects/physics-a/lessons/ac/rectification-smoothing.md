@@ -82,6 +82,8 @@ A transformer gives $12\ \text{V}$ r.m.s. to a bridge rectifier. Find the peak o
 
 A capacitor is connected **in parallel with the load**. As the rectified voltage rises towards each peak, the capacitor charges to the peak voltage. After the peak, the supply voltage falls faster than the capacitor can discharge, so the diodes become reverse-biased and the capacitor alone supplies the load, discharging through $R$. Its p.d. falls exponentially, but only a little, until the next rising hump exceeds it and recharges it.
 
+![Three output graphs for a 50 Hz supply with peak 17.0 V: (a) half-wave rectification gives one hump every 20 ms with gaps of zero; (b) full-wave gives a hump every 10 ms with no gaps; (c) a 220 µF smoothing capacitor across a 500 Ω load holds the output near 17 V with a ripple of about 1.3 V.](media:diagrams/rectification-smoothing-graphs.png "Figure: half-wave, full-wave and smoothed full-wave output (peak 17.0 V, 50 Hz)")
+
 **Output described in words:** the voltage stays close to the peak value, with a small sawtooth ripple: a gentle exponential fall between peaks and a sharp rise as each hump recharges the capacitor.
 
 The ripple is small when the **time constant $RC$ is much larger than the time between peaks**:

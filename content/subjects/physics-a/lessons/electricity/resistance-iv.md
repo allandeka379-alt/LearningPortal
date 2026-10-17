@@ -49,6 +49,8 @@ Both boards require the definition of resistance, Ohm's law and the $I$-$V$ char
 
 A metal wire kept at constant temperature has an $I$-$V$ graph that is a **straight line through the origin**, in both directions. The ratio $V/I$ is the same at every point, so its resistance is constant: it is an ohmic conductor. Reversing the p.d. simply reverses the current, so the graph passes symmetrically through the third quadrant.
 
+![I-V graph of a metal wire at constant temperature: a straight line through the origin in both directions, so V/I is the same at every point and the wire is ohmic.](media:diagrams/ohmic-conductor-iv-graph.png "Figure: an ohmic conductor at constant temperature (sketch)")
+
 Note that resistance is $V/I$ at a point, **not** the gradient of the graph. For an ohmic conductor the two happen to agree ($R = 1/\text{gradient}$ when $I$ is plotted against $V$), which is why students sometimes confuse them.
 
 ## The filament lamp
@@ -69,6 +71,8 @@ These readings were taken for a $12\ \text{V}$ vehicle lamp:
 
 The graph of $I$ against $V$ curves over towards the $V$-axis; the resistance rises by a factor of more than three across the range because the filament temperature rises by well over a thousand kelvin.
 
+![I-V graph of the 12 V vehicle lamp from the table: the curve through the origin bends towards the V axis, so resistance V/I rises from 1.61 Ω at 1.0 V to 3.80 Ω at 6.0 V and 5.71 Ω at 12.0 V; the dashed chord to the 12 V point has gradient 1/R.](media:diagrams/filament-lamp-iv-graph.png "Figure: I-V characteristic of a filament lamp (points from the lesson table)")
+
 :::worked-solution[Resistance of a lamp, not the gradient]
 Using the table, find the resistance of the lamp at $6.0\ \text{V}$ and at $12.0\ \text{V}$, and show why $1/\text{gradient}$ gives a wrong answer.
 
@@ -80,6 +84,8 @@ Using the table, find the resistance of the lamp at $6.0\ \text{V}$ and at $12.0
 ## The semiconductor diode
 
 A diode lets current flow easily in one direction only. In **forward bias** almost no current flows until the p.d. reaches the threshold (about 0.6 V for silicon), after which the current rises very steeply. In **reverse bias** the current is negligible (a few microamperes at most) until a much larger breakdown p.d. is reached.
+
+![I-V graph of a silicon diode: no current in reverse bias or below about 0.6 V forward, then the current rises very steeply (1.2 mA at 0.60 V, 18 mA at 0.70 V, 55 mA at 0.75 V), so its resistance falls from 500 Ω to 38.9 Ω.](media:diagrams/silicon-diode-iv-graph.png "Figure: I-V characteristic of a silicon diode (points from the lesson table)")
 
 | $V\,/\,\text{V}$ | $I\,/\,\text{mA}$ |
 |---|---|

@@ -72,6 +72,8 @@ The table is a snapshot of a sound wave of amplitude $5.0\ \mu\text{m}$ and wave
 
 The graph of $s$ against $x$ is a sine curve. Particles just left of $x = 0.300\ \text{m}$ are pushed right and those just right of it are pushed left, so they crowd together: **a compression is centred at $x = 0.300\ \text{m}$**, where the curve crosses zero going downwards. At $x = 0$ and $x = 0.600\ \text{m}$ the neighbours move apart: **rarefactions**. Compressions and rarefactions sit at points of **zero** displacement, not at the peaks; the particles at the peaks are displaced most but are at normal spacing.
 
+![Snapshot of a sound wave (amplitude 5.0 µm, wavelength 0.60 m): the displacement-distance graph is a sine curve, and the particles crowd into a compression at x = 0.300 m, where displacement changes from positive (right) to negative (left), and spread into rarefactions at 0 and 0.600 m.](media:diagrams/longitudinal-wave-snapshot.png "Figure: a longitudinal wave, particle positions above the matching displacement graph (points from the lesson table)")
+
 :::worked-solution[Locating compressions from a snapshot]
 Use the table above.
 

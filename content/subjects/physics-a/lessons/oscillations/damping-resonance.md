@@ -74,6 +74,8 @@ A lightly damped pendulum's amplitude falls by 20% every complete oscillation, s
 
 Attach a mass-spring system to a vibration generator whose frequency $f$ can be varied. After any start-up motion dies away, the mass oscillates at the **driving** frequency, not its natural frequency $f_0$. Its amplitude depends on how close $f$ is to $f_0$:
 
+![Light damping: a pendulum starting at 10.0 cm oscillates with the amplitude multiplied by 0.80 every cycle (10.0, 8.0, 6.4, 5.1, 4.1, 3.3 cm), a smooth exponential envelope, while the period stays almost constant; each cycle loses 36% of the energy.](media:diagrams/light-damping-decay.png "Figure: lightly damped oscillation with an exponential decay in amplitude")
+
 - $f \ll f_0$: the mass follows the driver with about the driver's amplitude, in phase.
 - $f = f_0$: the amplitude is a **maximum** (resonance): each push arrives at the right moment to add energy.
 - $f \gg f_0$: the mass hardly moves; it lags the driver by almost half a cycle.
@@ -97,6 +99,8 @@ The table gives the amplitude of a system with natural frequency $2.0\ \text{Hz}
 | 4.0 | 0.33 | 0.32 |
 
 Plotted against driving frequency, both curves start near 1 at low frequency and fall towards zero at high frequency. Increasing the damping:
+
+![Resonance curves for a system with natural frequency 2.0 Hz: with light damping the amplitude ratio peaks at 12.57 at 2.0 Hz; with heavier damping the peak is much lower (about 2.1) and broader and sits slightly below 2.0 Hz; far from resonance both curves agree, falling towards zero above 3 Hz.](media:diagrams/resonance-curves-damping.png "Figure: more damping lowers and broadens the resonance peak (points from the lesson table)")
 
 - **lowers** the peak amplitude (much less energy builds up);
 - **broadens** the peak (the system responds over a wider range of frequencies);

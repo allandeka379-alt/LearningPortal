@@ -91,6 +91,8 @@ The number of alpha particles detected per unit time falls very steeply as the s
 
 The graph of number against angle is a steeply falling curve that flattens at large angles but never reaches zero: a few particles always come back. Only a particle aimed almost directly at a nucleus gets close enough to be turned back, and few particles are aimed that precisely.
 
+![Alpha-particle scattering from gold foil: the relative number detected per unit time falls from 1 000 000 at 10° to 13 000 at 30°, 230 at 90° and 66 at 150°; on a log scale the curve drops steeply then flattens, but a few alpha particles still rebound through large angles.](media:diagrams/alpha-scattering-count-angle.png "Figure: alpha particles scattered by a gold foil, number against angle (log scale, values from the lesson table)")
+
 ## The nuclear model
 
 - The **nucleus** contains protons (charge $+e$) and neutrons (no charge), together called nucleons. It holds over 99.9% of the atom's mass.

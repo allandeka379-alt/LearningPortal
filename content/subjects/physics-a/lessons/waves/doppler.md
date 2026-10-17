@@ -40,6 +40,8 @@ The Doppler effect for sound is **Cambridge only** (AS 7.3); it is not in the ZI
 
 Picture a stationary source emitting sound of frequency $f_s$. The wavefronts spread out as concentric circles centred on the source, all one wavelength $\lambda = v/f_s$ apart. Observers on every side receive wavefronts at the same rate, $f_s$.
 
+![Wavefronts from a source moving to the right: each is a circle centred where it was emitted, so they are bunched together ahead of the source (shorter wavelength, higher pitch) and spread out behind it; for the lesson's 900 Hz siren at 25 m/s the observer ahead hears 971 Hz and the one behind 838 Hz.](media:diagrams/doppler-wavefronts.png "Figure: the Doppler effect for a moving source (speed exaggerated in the drawing)")
+
 Now let the source move to the right at speed $v_s$. Each wavefront still spreads at speed $v$ from the point where it was emitted, but each new wavefront is emitted from a point further to the right. The circles are no longer concentric:
 
 - **Ahead of the source** (to the right) the wavefronts are bunched together. In one period $T = 1/f_s$ the previous wavefront travels $vT$ while the source moves $v_sT$ after it, so the wavelength is shortened to $\lambda' = (v - v_s)/f_s$.

@@ -68,6 +68,8 @@ Ignoring the reversal ($25 - 30$) would give a change of momentum eleven times t
 
 For a given change in momentum, $F = \Delta p / \Delta t$: the **longer** the stopping time, the **smaller** the force.
 
+![Two force-time graphs for a 1200 kg car stopping from 15 m/s: a rigid car stops in 20 ms with a force of 900 kN, a crumple zone stops it in 90 ms with 200 kN; the areas are equal (18 000 N s) so a longer time means a much smaller force.](media:diagrams/crumple-zone-force-time-graph.png "Figure: same impulse, different stopping times (rigid car against crumple zone)")
+
 :::worked-solution[Why crumple zones work]
 A $1200\ \text{kg}$ car travelling at $15\ \text{m s}^{-1}$ hits a wall and stops.
 
@@ -81,6 +83,8 @@ The same idea explains seat belts and airbags (they stretch or deflate, lengthen
 ## Force-time graphs
 
 When the force varies, impulse is the **area under the force-time graph**. A kick, a bat stroke or a collision usually gives a curve that rises to a peak and falls again.
+
+![Force-time graph for the kicked ball: the force rises steadily to 600 N and falls to zero over 12 ms, a triangle whose area, ½ × 600 × 0.012 = 3.6 N s, is the impulse and the ball's change in momentum.](media:diagrams/kicked-ball-force-time-graph.png "Figure: impulse is the area under a force-time graph (kicked ball)")
 
 :::example{title="A kicked ball"}
 A $0.15\ \text{kg}$ ball at rest is kicked. The force rises steadily to $600\ \text{N}$ and falls steadily to zero, the whole contact lasting $0.012\ \text{s}$: a triangular graph. Impulse $= \tfrac{1}{2} \times 600 \times 0.012 = 3.6\ \text{N s}$, so the ball leaves at $v = 3.6/0.15 = 24\ \text{m s}^{-1}$.
