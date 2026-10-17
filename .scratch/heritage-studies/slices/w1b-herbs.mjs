@@ -175,7 +175,7 @@ concept("her.identity.herbs", { file: "identity/herbs", keyPrefix: "identity.her
     parts: [
       P.mcq({
         label: "(a)",
-        stem: "Which claim in the advertisement is **most clearly** false and dangerous?",
+        stem: "Which claim in Source A is **most clearly** false and dangerous?",
         options: [
           ["that it cures diabetes and removes the need for clinics", "Correct: no herb cures diabetes; stopping treatment is dangerous."],
           ["that the price is US\\$10 a packet", "A price may be high, but it is not a health danger."],
@@ -186,7 +186,7 @@ concept("her.identity.herbs", { file: "identity/herbs", keyPrefix: "identity.her
       }),
       P.manual({
         label: "(b)", marks: 2,
-        stem: "Identify **two** risks to health from following the advertisement.",
+        stem: "Identify **two** risks to health from following Source A.",
         points: ["Stopping clinic treatment / medicines for serious illness", "Uncertain or high dose (three big spoons) may cause poisoning or harm"],
         modelAnswer: "People may stop their clinic medicines; the large, uncertain dose may poison them.",
       }),

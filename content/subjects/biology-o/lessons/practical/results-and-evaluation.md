@@ -98,7 +98,7 @@ Other calculations you may meet:
 
 ## Reading values from a graph
 
-To find a value between your points, draw a ruled vertical line up from the x-axis to your plotted line, then a horizontal line across to the y-axis, and read the value. Leave these construction lines on the graph to show your method.
+To find a value between your points, draw a ruled vertical line up from the x-axis to your plotted line, then a horizontal line across to the y-axis, and read the value. Leave these construction lines on your graph to show your method.
 
 :::example{title="Interpolation"}
 On a graph of mean seedling height against time, the points for day 4 (12 mm) and day 6 (28 mm) are joined by a ruled line. Reading up from day 5 to the line and across gives a height of 20 mm, halfway between the two points.

@@ -40,7 +40,7 @@ concept("acs.ai.graphs-search", { file: "ai/graphs-search", keyPrefix: "ai.graph
     "The smallest distance is certain to be final.", { daily: true });
   mc(b, 3, "UNDERSTANDING", "What is the meaning of f = g + h in the A* algorithm?",
     ["The cost so far plus the estimated cost remaining", "Correct."],
-    [["The cost remaining plus the cost of the goal", "g is the cost so far, not the goal's cost."], ["The number of nodes visited plus the number of edges", "f is a cost estimate."], ["The sum of all edge weights in the graph", "f refers to a path through one node."]],
+    [["The cost remaining plus the cost of the goal", "g is the cost so far, not the goal's cost."], ["The number of nodes visited plus the number of edges", "f is a cost estimate."], ["The sum of all edge weights in the entire graph", "f refers to a path through one node."]],
     "A* chooses the node with the lowest estimated total cost.", { hints: ["g is what has been spent; h is what is estimated to remain."] });
   mc(b, 3, "UNDERSTANDING", "What is meant by an admissible heuristic?",
     ["One that never overestimates the true remaining cost", "Correct: this guarantees that A* finds a shortest path."],
@@ -48,7 +48,7 @@ concept("acs.ai.graphs-search", { file: "ai/graphs-search", keyPrefix: "ai.graph
     "An admissible heuristic is a lower bound on the remaining cost.", { hints: ["Think about what could go wrong if h were too large."] });
   mc(b, 3, "ANALYSIS", "Why does A* usually examine fewer nodes than Dijkstra's algorithm when searching for one goal?",
     ["The heuristic guides the search towards the goal", "Correct."],
-    [["It ignores the weights of the edges in the graph", "A* uses the weights as g."], ["It stops after expanding the first node it finds", "It continues until the goal is chosen."], ["It is run on a smaller graph than Dijkstra uses", "The graph is the same."]],
+    [["It ignores the weights of the edges in its graph", "A* uses the weights as g."], ["It stops after expanding the first node it finds", "It continues until the goal is chosen."], ["It is run on a smaller graph than Dijkstra uses", "The graph is the same."]],
     "Nodes that look far from the goal have a high f and are not expanded.", { hints: ["What extra information does A* use?"] });
   mc(b, 2, "UNDERSTANDING", "Which structure does an AI program use to model a set of towns and the roads between them?",
     ["A weighted graph", "Correct."],

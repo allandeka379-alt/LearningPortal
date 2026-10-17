@@ -205,7 +205,7 @@ If a module is named "InputAndAverage" it is doing two tasks. Split it so each m
 ## Exam tips
 
 :::exam-tip
-Appears in Cambridge Paper 1 and Paper 2. "**Complete** the structure chart" asks for the module names and the parameters on each line. "**Write** pseudocode from the chart" needs one procedure or function for each module with the parameters shown. A "**state-transition**" question is answered by following the inputs one at a time and writing the state after each.
+Appears in Cambridge Paper 1 and Paper 2. "**Complete** the structure chart" asks for the module names and the parameters on each line. "**Write** pseudocode for the structure chart" needs one procedure or function for each module with the parameters shown. A "**state-transition**" question is answered by following the inputs one at a time and writing the state after each.
 :::
 
 :::exam-tip
@@ -217,7 +217,7 @@ In a trace of a state machine, write the state before, the input, and the state 
 :::summary
 - Top-down design breaks a problem into modules; a structure chart shows the modules, what calls what and the parameters passed.
 - Arrows down show data passed in; arrows up show data returned; a diamond is selection and a curved arrow is iteration.
-- Each module becomes a procedure (no value) or a function (one value) with the parameters from the chart.
+- Each module becomes a procedure (no value) or a function (one value) with the parameters shown on the structure chart.
 - A state-transition table lists each state and the next state for every input; trace by following the inputs.
 - Modules can be written, tested and reused separately.
 :::

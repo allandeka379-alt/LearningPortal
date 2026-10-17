@@ -79,6 +79,8 @@ Once a sector has a certain land use it tends to keep growing outwards in the sa
 
 The town grows round **several centres (nuclei)**, not just one CBD. Besides the CBD there may be outlying **business districts** and shopping centres, separate **industrial districts**, a university or airport, and **suburban** centres. Similar activities cluster together, while activities that conflict (heavy industry and high-income housing) stay apart. This model fits large, car-using cities better.
 
+![Three urban land-use models: in the concentric model the CBD is at the centre and industry, then low-, medium- and high-income housing lie in rings further out; in the sector model zones run outwards in wedges, with industry and low-income housing in one sector and high-income housing in another; in the multiple-nuclei model several centres grow round separate nuclei.](media:diagrams/urban-land-use-models.png "Figure: the concentric, sector and multiple-nuclei models of a town")
+
 ## Applying the models to Zimbabwean towns
 
 :::example{title="Case study: Harare"}

@@ -118,7 +118,7 @@ The Cambridge formula uses profit for the year **before** interest. Add back loa
 :::
 
 :::mistake{title="Giving a ratio without saying what it means"}
-"The margin is 30%" earns the calculation mark only. Questions that ask you to comment want a sentence: what the figure shows, whether it is better or worse, and a likely reason.
+"The margin is 30%" earns the calculation mark only. Questions that ask you to comment want a sentence: what the result shows, whether it is better or worse, and a likely reason.
 :::
 
 ## Exam tips

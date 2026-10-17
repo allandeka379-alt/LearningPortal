@@ -12,7 +12,7 @@
 
 Ten years ago most people in Gweru bought airtime as scratch cards from vendors on street corners. Today many top up through mobile money or a banking app. Vendors who sold only scratch cards have had to sell other goods or close. Markets are always changing: what customers buy, how they buy it and how many businesses compete to sell it.
 
-Cambridge 0264 (topic 3.1.2) asks why spending patterns change, why markets become more competitive, how businesses can respond, and how to calculate **market share**. Market share is one of the printed formulas, so expect a calculation followed by an explanation of what the figure shows.
+Cambridge 0264 (topic 3.1.2) asks why spending patterns change, why markets become more competitive, how businesses can respond, and how to calculate **market share**. Market share is one of the printed formulas, so expect a calculation followed by an explanation of what the result shows.
 
 ## Key definitions
 

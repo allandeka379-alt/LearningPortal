@@ -77,6 +77,8 @@ If magnetic north lies **west** of grid north, the magnetic bearing is **larger*
 
 Pairs of features that are the same distance east and north of each other always give an intercardinal bearing. In Extract D the church is 3 km east and 3 km north of the dam, so its bearing from the dam is **045°** (north-east).
 
+![Grid with eastings 61 to 64 and northings 45 to 49: the bridge lies 2.4 km east and 3.2 km north of the dam, so its bearing from the dam, measured clockwise from grid north, is 037°, and the bearing of the dam from the bridge (back bearing) is 217°.](media:diagrams/bearing-dam-bridge.png "Figure: the bearing of the bridge from the dam is 037°; the back bearing is 217°")
+
 ## Back bearings
 
 To reverse a bearing, add 180° if it is less than 180°, or subtract 180° if it is 180° or more.

@@ -27,7 +27,7 @@ The number of bits used to store the colour of each pixel. A depth of n bits all
 :::
 
 :::definition{term="Image resolution"}
-The number of pixels in the image, usually given as width × height (for example 1024 × 768). A higher resolution gives a finer, more detailed image.
+The number of pixels in a picture, usually given as width × height (for example 1024 × 768). A higher resolution gives a finer, more detailed image.
 :::
 
 :::definition{term="Screen resolution"}

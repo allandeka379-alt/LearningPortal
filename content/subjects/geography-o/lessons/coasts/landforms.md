@@ -56,6 +56,8 @@ Where bands of hard and soft rock meet the sea at right angles (a discordant coa
 4. The fallen debris is broken down and removed by the sea, and the cliff **retreats** inland.
 5. As it retreats it leaves behind a gently sloping **wave-cut platform**, smoothed by abrasion and exposed at low tide. As the platform widens, waves break further out and lose energy before reaching the cliff, so erosion slows.
 
+![Three cross-sections of a cliff: waves cut a notch at the base, the unsupported rock above collapses, and as the cliff retreats inland a gently sloping wave-cut platform is left behind.](media:diagrams/cliff-notch-platform.png "Figure: how a wave-cut platform forms as a cliff retreats")
+
 :::example{title="Rate of cliff retreat (fictional data)"}
 A fictional clay cliff top was measured at 42 m from a road in 1995 and at 15 m from the road in 2025.
 
@@ -74,6 +76,8 @@ A fictional clay cliff top was measured at 42 m from a road in 1995 and at 15 m 
 3. The cave is eroded right through the headland, often where caves on both sides meet, forming an **arch**.
 4. The arch is widened by waves at its base and weakened by weathering above until the roof **collapses**, leaving an isolated **stack**.
 5. The stack is undercut at its base and eventually collapses into a low **stump**.
+
+![Five side views of a headland being eroded: waves widen a crack in the rock, which becomes a cave, then the cave cuts through to form an arch, the roof of the arch collapses leaving an isolated stack, and the stack is later undercut to a low stump.](media:diagrams/headland-cave-arch-stack-stump.png "Figure: crack, cave, arch, stack and stump on an eroding headland")
 
 :::example{title="Named examples: the Dorset coast, England"}
 The Jurassic Coast of Dorset is a World Heritage Site with classic examples. **Durdle Door** is a limestone arch. **Old Harry Rocks**, at the end of a chalk headland near Studland, are a stack and a stump; a neighbouring stack collapsed in the 1890s. At **Lulworth Cove** the sea broke through a narrow band of resistant limestone running parallel to the coast and then eroded the softer clays behind it into an almost circular cove: a concordant coast. Further east, **Swanage Bay** (soft clays) between the chalk of the Foreland and the limestone of Durlston Head is a discordant coast of bays and headlands.
@@ -95,6 +99,8 @@ Beaches form where waves deposit sand and shingle, especially where **constructi
 4. Changes in wind direction and wave refraction curve the end of the spit, forming a **recurved (hooked) end**.
 5. In the sheltered water behind the spit, mud is deposited and **salt marshes** develop.
 6. A spit across a river mouth cannot close it completely because the river's current keeps the channel open.
+
+![Plan view of a spit: longshore drift carries sand along the coast in the direction of the prevailing wind; where the coastline changes direction the sand is deposited in calmer water and builds a ridge out into the sea, curving at the end, with a salt marsh developing in the sheltered water behind.](media:diagrams/spit-formation.png "Figure: a spit with longshore drift, a recurved end and a salt marsh behind")
 
 **Example**: **Spurn Head**, a curved spit about 5 km long at the mouth of the Humber estuary in eastern England, is built of material eroded from the Holderness cliffs to the north and carried south by longshore drift.
 

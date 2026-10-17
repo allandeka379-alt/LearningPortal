@@ -20,7 +20,7 @@ concept("aecon.skills.diagrams-and-data", { file: "skills/diagrams-and-data", ke
 
   mc({ d: 2, skill: "UNDERSTANDING", stem: "On a diagram of a market, a change in the price of the good itself causes",
     explanation: "A change in the good's own price causes a movement along the curve; a change in a condition shifts the curve." },
-    ["a movement along the demand curve", "Correct: an extension or contraction of demand."], [["a shift of the demand curve", "A shift needs a change in a condition such as income."], ["a shift of the supply curve", "Supply shifts with cost or technology changes."], ["no change in the diagram", "The point on the curve changes."]]);
+    ["a movement along the demand curve", "Correct: an extension or contraction of demand."], [["a shift of the demand curve", "A shift needs a change in a condition such as income."], ["a shift of the supply curve", "Supply shifts with cost or technology changes."], ["no change in the market", "The point on the curve changes."]]);
 
   mc({ d: 2, skill: "UNDERSTANDING", stem: "In a data-response question, the command word 'calculate' requires you to",
     explanation: "Calculate means to work out an answer with working, using the data given." },

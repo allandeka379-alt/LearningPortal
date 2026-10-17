@@ -45,6 +45,9 @@ Agriculture 45%, industry 20%, services 35%.
 2. Industry: 20 × 3.6 = 72°.
 3. Services: 35 × 3.6 = 126°.
 4. Check: 162 + 72 + 126 = 360°. Draw the sectors clockwise from 12 o'clock, largest first, and add a key.
+
+![Pie chart of employment in a fictional town: agriculture 45% is a sector of 162°, industry 20% is 72° and services 35% is 126°, which add up to 360°.](media:diagrams/pie-chart-employment.png "Figure: sector angles of a pie chart are the percentage multiplied by 3.6")
+
 :::
 
 ## Line graphs and histograms
@@ -54,6 +57,8 @@ Agriculture 45%, industry 20%, services 35%.
 ## Scatter graphs
 
 Scatter graphs test whether two variables are related, for example distance from a town centre and land value. Put the **independent** variable (the one thought to cause change) on the x-axis. Draw a line of best fit and describe the correlation, then name any **anomalies** (points far from the line) and suggest reasons for them.
+
+![Scatter graph (fictional survey): land value falls from about US\$900 per square metre at 0.5 km from the CBD to about US\$100 at 5 km, a negative correlation shown by the dashed line of best fit; one site at 3 km is an anomaly at US\$600.](media:diagrams/scatter-land-value-distance.png "Figure: a scatter graph with a negative correlation, a line of best fit and one anomaly")
 
 ## Specialised geographical graphs
 

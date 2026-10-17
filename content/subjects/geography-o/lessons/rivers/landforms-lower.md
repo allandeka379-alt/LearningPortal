@@ -56,6 +56,8 @@ A river channel split into several smaller channels separated by bars or islands
 
 **Cross-section across a meander**: steep river cliff and deep water on one side; shallow water and a gently sloping slip-off slope on the other. The channel is **asymmetrical**.
 
+![A meander in plan view with the fast, deep outside of the bend eroding a steep river cliff and the slow, shallow inside depositing a gentle slip-off slope, and a cross-section A to B across the bend showing the asymmetrical channel: steep cliff and deep water on one side, gentle slope and shallow water on the other.](media:diagrams/meander-plan-cross-section.png "Figure: a meander in plan view and the asymmetrical cross-section A to B")
+
 :::example{title="Measuring how winding a river is (fictional data)"}
 On a map, a river channel between two bridges measures 9.0 km along its course, but the straight-line distance between the bridges is 5.0 km.
 
@@ -72,6 +74,8 @@ On a map, a river channel between two bridges measures 9.0 km along its course, 
 2. During a flood, the river has extra energy and cuts through the narrow neck, taking the shortest route.
 3. The river now flows along the new, straighter channel. Deposition along the edges of the new channel **seals off** the old bend.
 4. The abandoned bend becomes a horseshoe-shaped **oxbow lake**. Over time it fills with silt and vegetation and may become a marsh.
+
+![Four plan views of oxbow lake formation: erosion on the outer banks narrows the neck between two bends; in a flood the river cuts through the neck; deposition seals the old bend off from the new straight channel; the abandoned bend becomes a horseshoe-shaped oxbow lake.](media:diagrams/oxbow-lake-stages.png "Figure: four stages in the formation of an oxbow lake")
 
 :::example{title="Case study: Mana Pools on the middle Zambezi"}
 Mana Pools lies on the Zambezi floodplain below the escarpment in northern Zimbabwe. The name comes from Shona *mana* (four), after four large permanent pools that are remnants of old river channels left as the Zambezi shifted its course across the floodplain. The park shows sandbanks and islands in a wide channel, a flat floodplain of alluvium, and channels abandoned by the river. It is a national park and part of a World Heritage Site, valued for its wildlife.

@@ -64,7 +64,7 @@ Chipo plans to sell school bags at a stall in Bulawayo. She has no past sales, s
 When an enterprise has a sales history, it can look for the **trend** and extend it into the future. The simplest methods are:
 
 1. **Average change**: find how much sales changed each period, take the average, and add it on.
-2. **Percentage growth**: if sales grow by a steady percentage, apply it to the latest figure.
+2. **Percentage growth**: if sales grow by a steady percentage, apply it to the latest sales total.
 3. **Moving average**: smooth out ups and downs by averaging a few periods at a time, to see the underlying trend.
 
 Sales can also be shown on a **line graph**; drawing a line through the points and extending it gives a forecast.

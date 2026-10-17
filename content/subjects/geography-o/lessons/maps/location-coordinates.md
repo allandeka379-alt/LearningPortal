@@ -70,6 +70,8 @@ A six-figure reference pinpoints a feature to the nearest tenth of a square (100
 
 Always give the easting before the northing. A reference such as 137 286 points to a completely different place.
 
+![Extract L grid with eastings 27 to 30 and northings 13 to 15: the school lies in the shaded square 2813 and, at 6 tenths east and 7 tenths north of that square's corner, has the six-figure reference 286 137 (easting first).](media:diagrams/grid-reference-extract-l.png "Figure: four-figure reference 2813 and six-figure reference 286 137 for the school in Extract L")
+
 ## The UTM grid in outline
 
 The grids on Zimbabwe's topographical maps belong to the **Universal Transverse Mercator (UTM)** system. The world is divided into 60 zones, each 6° of longitude wide, and positions within a zone are given in **metres** east and metres north of a fixed origin. Zimbabwe falls in UTM zones 35 and 36. On a map sheet the full figures are shortened: the large grid numbers you see (such as 28) are kilometres, so a full reference in metres would be written with more digits. You only need the idea, not the zone arithmetic.

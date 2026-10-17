@@ -60,7 +60,7 @@ concept("aecon.tools.data-analysis", { file: "tools/data-analysis", keyPrefix: "
     ["Small differences between the bars look much larger than they are", "Correct: the bars are cut off, exaggerating differences."],
     [["Profits in all years appear lower than they really are", "The bar heights change relative to each other, not the figures."],
      ["The bars can no longer be compared with each other at all", "They can be compared, but differences are exaggerated."],
-     ["The chart shows percentage changes rather than amounts", "The type of figure shown does not change."]]);
+     ["The bars then show percentage changes rather than amounts", "The type of figure shown does not change."]]);
 
   mc({ d: 3, skill: "APPLICATION", hints: ["Percentage point difference or percentage change?"],
     stem: "A fictional bank's interest rate on loans rises from 8% to 10%. Which statement is correct?",

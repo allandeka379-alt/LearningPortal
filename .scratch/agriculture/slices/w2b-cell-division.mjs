@@ -181,11 +181,11 @@ concept("agri.breeding.cell-division", { file: "breeding/cell-division", keyPref
   });
   b.struct({
     d: 4, skill: "ANALYSIS", examStyle: true, marks: 8,
-    stem: `Maize body cells have ${MAIZE} chromosomes. A pupil describes four drawings of dividing root-tip cells: (W) chromosomes in a line across the middle of the cell; (X) two groups of chromosomes at opposite ends of the cell; (Y) two new nuclei and a new cell wall forming; (Z) chromosomes shortening and thickening inside the nucleus.`,
+    stem: `Maize body cells have ${MAIZE} chromosomes. A pupil describes four stages seen in dividing root-tip cells: (W) chromosomes in a line across the middle of the cell; (X) two groups of chromosomes at opposite ends of the cell; (Y) two new nuclei and a new cell wall forming; (Z) chromosomes shortening and thickening inside the nucleus.`,
     hints: ["Put the stages in order: prophase, metaphase, anaphase, telophase.", "Root tips grow by mitosis."],
     parts: [
       P.mcq({
-        label: "(a)", stem: "Which order of the drawings shows the stages correctly?",
+        label: "(a)", stem: "Which order of the stages shows the stages correctly?",
         options: [
           ["Z, W, X, Y", "Correct: prophase, metaphase, anaphase, telophase."],
           ["W, Z, X, Y", "The chromosomes become visible (Z) before they line up (W)."],
@@ -195,7 +195,7 @@ concept("agri.breeding.cell-division", { file: "breeding/cell-division", keyPref
         answer: "A",
         explanation: "Z prophase, W metaphase, X anaphase, Y telophase.",
       }),
-      P.short({ label: "(b)", stem: "Name the stage shown in drawing X.", accepted: ["anaphase"], explanation: "Chromatids moving to the poles: anaphase." }),
+      P.short({ label: "(b)", stem: "Name the stage described in X.", accepted: ["anaphase"], explanation: "Chromatids moving to the poles: anaphase." }),
       P.num({
         label: "(c)", stem: "How many chromosomes will each daughter cell have?",
         value: MAIZE, wrong: [maizeGamete],

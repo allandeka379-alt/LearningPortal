@@ -76,6 +76,8 @@ Imagine the contours in words, as you might meet them in a map extract:
 - **Valley**: low land between higher ground, usually with a river. The contours form a **V pointing uphill**, towards higher ground, and the river runs through the point of each V.
 - **Col (saddle)**: a low point on a ridge between two hilltops. You see two sets of closed contours, each round a summit, with lower ground between them.
 
+![Four contour patterns: a conical hill is concentric closed contours (1500, 1520, 1540 m round a 1568 m summit); in a valley the contour Vs point uphill with the river along them; in a spur the Vs point downhill; a col is the low saddle on the 1520 m contour between two summits.](media:diagrams/contour-landform-patterns.png "Figure: contour patterns of a hill, valley, spur and col (fictional heights)")
+
 :::example{title="Valley or spur?"}
 Read the numbers on the contours. If the point of each V lies at the **higher** end (the 1560 m contour bends further upstream than the 1540 m one), the V points uphill, so it is a valley. A river along the V is a strong clue. If the point of the V faces the lower contours, it is a spur.
 :::

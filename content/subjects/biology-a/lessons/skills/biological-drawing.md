@@ -89,8 +89,8 @@ At ×400, 12 stage micrometer divisions (each 10 µm) line up with 40 eyepiece d
 A photomicrograph often carries a **scale bar**: a line labelled with the actual length it represents.
 
 1. Measure the scale bar with a ruler (in mm) and convert to µm.
-2. Magnification $= \dfrac{\text{length of scale bar on the image}}{\text{actual length it represents}}$.
-3. Measure the structure on the image and divide by the magnification to find its actual size.
+2. Magnification $= \dfrac{\text{length of scale bar in the photomicrograph}}{\text{actual length it represents}}$.
+3. Measure the structure in the photomicrograph and divide by the magnification to find its actual size.
 
 :::worked-solution[Using a scale bar]
 A scale bar labelled 50 µm measures 20 mm on a photomicrograph. A cell on the same image is 34 mm long.

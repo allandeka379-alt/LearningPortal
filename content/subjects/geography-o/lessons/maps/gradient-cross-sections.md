@@ -101,6 +101,8 @@ Draw (or imagine) a straight line from the observer to the target on the cross-s
 
 The line of sight falls 50 m over 2.5 km, i.e. 20 m per km. At 1.5 km it is at 1300 − 30 = 1270 m, but the land there is 1320 m, so a ridge **blocks** the view: the two places are not intervisible.
 
+![Cross-section from a lookout tower at 1300 m to a dip tank at 1250 m over 2.5 km: the line of sight falls 20 m per km and is at 1270 m at 1.5 km, but a ridge there is 1320 m high, so the two places are not intervisible.](media:diagrams/intervisibility-cross-section.png "Figure: a 1320 m ridge rises above the line of sight, so the dip tank cannot be seen from the tower")
+
 ## Common mistakes
 
 :::mistake{title="Mixing units"}

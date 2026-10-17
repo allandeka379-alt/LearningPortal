@@ -63,6 +63,8 @@ A uniform maker has fixed costs of US\$4,000 a month. Each uniform sells for US\
 - **Profit or loss at any output:** the vertical gap between the revenue and total cost lines. To the right of break-even the revenue line is higher (profit); to the left the cost line is higher (loss).
 - **Margin of safety:** mark the expected (actual) output on the x-axis; the distance between it and the break-even output is the margin of safety.
 
+![Break-even chart for the uniform maker: fixed costs flat at US\$4,000; total cost rises from US\$4,000 to US\$16,000 and revenue from zero to US\$20,000 at 2,000 uniforms; the lines cross at 1,000 uniforms and US\$10,000. Loss to the left, profit to the right; at 1,500 uniforms the margin of safety is 500 uniforms.](media:diagrams/break-even-chart.png "Figure: break-even chart from Example 1 (fixed costs US\$4,000, price US\$10, variable cost US\$6)")
+
 :::worked-solution[Example 2: reading profit, loss and margin of safety]
 Using the chart from Example 1:
 

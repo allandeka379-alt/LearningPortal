@@ -49,6 +49,8 @@ A map is only useful if the reader can interpret it. Most good maps have the fol
 6. **Grid lines** – numbered lines (eastings and northings) that let us give grid references.
 7. **Source and date** – who made the map and when, so the reader knows how up to date it is.
 
+![A sketch of a map of a school with its seven components numbered: 1 title, 2 frame, 3 key, 4 scale bar, 5 north arrow, 6 numbered grid lines, 7 source and date, so a reader can interpret the symbols, measure distance and find direction.](media:diagrams/good-map-components.png "Figure: the seven components of a good map, labelled on a map of a fictional school")
+
 :::example{title="Checking a map for its components"}
 A Form 1 class draws a map of their school grounds. It shows the classrooms, the sports field and the borehole, and has a title and a key. To make it a *good* map they still need a **north arrow** (so a reader can orient it), a **scale** (so distances can be estimated) and a **frame**. Adding the date tells a future reader when the buildings were mapped.
 :::

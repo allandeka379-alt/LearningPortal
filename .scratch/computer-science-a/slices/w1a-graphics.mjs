@@ -203,7 +203,7 @@ concept("acs.media.graphics", { file: "media/graphics", keyPrefix: "media.graphi
       d: 3, skill: "APPLICATION", examStyle: true, secs: 480, calculator: false,
       stem: `A student at a Gweru school takes a photograph of ${w} × ${h} pixels with a colour depth of ${d} bits for the school magazine.`,
       parts: [
-        P.num({ label: "(a)", marks: 1, type: "CALCULATION", stem: `Calculate the number of pixels in the photograph.`, value: w * h, explanation: `${w} × ${h} = ${w * h}.` }),
+        P.num({ label: "(a)", marks: 1, type: "CALCULATION", stem: `Calculate the number of pixels in this photograph.`, value: w * h, explanation: `${w} × ${h} = ${w * h}.` }),
         P.num({ label: "(b)", marks: 2, type: "CALCULATION", unit: "bytes", stem: "Calculate the file size in bytes, ignoring the header.", value: bytes, explanation: `${w * h} × ${d} = ${w * h * d} bits; ÷ 8 = ${bytes} bytes (${d} bits is 3 bytes per pixel).` }),
         P.num({ label: "(c)", marks: 1, type: "CALCULATION", unit: "KiB", stem: "Convert your answer to part (b) to KiB.", value: bytes / 1024, tol: 0.5, explanation: `${bytes} ÷ 1024 = ${(bytes / 1024).toFixed(2)} KiB.` }),
         P.manual({ label: "(d)", marks: 2, stem: "The student halves the resolution to 300 × 200. State and explain the effect on the file size.", points: ["The file size becomes a quarter of the original.", "There are half as many pixels across and half as many down, so one quarter of the pixels."], modelAnswer: "The file size is divided by four, because the number of pixels across and down are both halved, so there are a quarter as many pixels." }),

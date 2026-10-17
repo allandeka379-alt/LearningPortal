@@ -58,6 +58,8 @@ Magma forms in three main settings:
 | Shield volcano | Very wide with gentle slopes, like a warrior's shield lying on the ground | Runny basalt; frequent, gentle (effusive) eruptions; lava flows travel far | Mauna Loa (Hawaii), volcanoes of Iceland |
 | Cinder cone | Small, steep cone of loose cinders around one vent | Gas-rich bursts throw out fragments that pile up; often erupt only once | Parícutin (Mexico), which grew from a farmer's field in 1943 |
 
+![Cross-sections of two volcano types: a steep strato-volcano built of alternating layers of ash and lava, with a magma chamber, main vent, crater, side vent, lava flow and ash cloud (viscous magma, explosive eruptions), and a wide, gently sloping shield volcano built of runny basalt lava (gentle eruptions).](media:diagrams/volcano-cross-sections.png "Figure: a strato-volcano and a shield volcano in cross-section")
+
 :::example{title="Diagram in words: a cross-section of a strato-volcano"}
 1. Deep below: a **magma chamber**, a reservoir of molten rock.
 2. Rising from it: the **main vent** (pipe), leading to the **crater** at the summit.

@@ -21,7 +21,7 @@ concept("abus.finance.break-even", { file: "finance/break-even", keyPrefix: "fin
     d: 2, skill: "UNDERSTANDING",
     stem: "On a break-even chart, where does the **total revenue** line start?",
     ok: ["At the origin, as no sales means no revenue", "Correct: no sales means no revenue."],
-    bad: [["At the level of the fixed costs on the vertical axis", "That is where the total cost line starts."], ["At the break-even point on the chart", "The lines meet there; revenue does not start there."], ["At the level of variable costs on the vertical axis", "Variable costs are zero at zero output."]],
+    bad: [["At the level of the fixed costs on the vertical axis", "That is where the total cost line starts."], ["At the break-even point", "The lines meet there; revenue does not start there."], ["At the level of variable costs on the vertical axis", "Variable costs are zero at zero output."]],
     explanation: "Revenue is zero when output is zero, so the line starts at the origin; the total cost line starts at the fixed-cost level.",
   });
   mc(b, {

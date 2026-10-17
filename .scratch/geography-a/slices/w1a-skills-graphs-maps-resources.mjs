@@ -30,7 +30,7 @@ concept("ageo.skills.graphs-maps-resources", { file: "skills/graphs-maps-resourc
     stem: "What does an anomaly on a graph mean?",
     options: [
       ["A value that does not fit the general pattern", "Correct: it stands out from the trend."],
-      ["The highest value on the graph", "The highest value may fit the pattern perfectly well."],
+      ["The highest value in the data set", "The highest value may fit the pattern perfectly well."],
       ["The average value of the data", "The average is a summary, not an anomaly."],
       ["A value that has been estimated by the author", "Estimated values are not the same as anomalies."],
     ],
@@ -66,10 +66,10 @@ concept("ageo.skills.graphs-maps-resources", { file: "skills/graphs-maps-resourc
     d: 3, skill: "ANALYSIS",
     stem: "A bar chart of exports has a vertical axis that starts at 300 instead of 0, so a rise from 340 to 362 looks very large. What is the problem?",
     options: [
-      ["The graph exaggerates a small change", "Correct: a truncated axis makes small differences look big."],
-      ["The graph hides the largest value", "The largest value is shown in the bars."],
-      ["The graph has too many categories", "The problem is the axis, not the number of categories."],
-      ["The graph shows secondary data only", "Both primary and secondary data can be graphed."],
+      ["The axis exaggerates a small change", "Correct: a truncated axis makes small differences look big."],
+      ["The bars hide the largest value", "The largest value is shown in the bars."],
+      ["There are too many categories", "The problem is the axis, not the number of categories."],
+      ["The data are secondary data only", "Both primary and secondary data can be graphed."],
     ],
     answer: "A",
     explanation: "Starting the axis at a non-zero value exaggerates the change, which is a source of bias.",

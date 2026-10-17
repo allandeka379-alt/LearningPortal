@@ -237,7 +237,7 @@ concept("geo.maps.map-basics", { file: "maps/map-basics", keyPrefix: "maps.map-b
   });
   b.struct({
     d: 3, skill: "UNDERSTANDING",
-    stem: "A Form 1 learner, Chipo, has drawn a map of her village. It has a frame, a key and a title, *My village*. It shows huts, a borehole, a store and a river. It has no north arrow and no scale.",
+    stem: "A Form 1 learner, Chipo, has drawn a map of her village. It has a frame, a key and a title, *My village*. It shows huts, a borehole, a store and a river. It has no north arrow and no scale.\n\n![Chipo's freehand sketch map titled My village, inside a frame with a key, showing huts, a borehole, a store and a river; it has no north arrow and no scale.](media:diagrams/chipo-village-sketch-map.png \"Figure: Chipo's sketch map of her village (it has no north arrow and no scale)\")",
     hints: ["Which components of a good map are missing?", "How would a stranger know which way to hold it?"],
     parts: [
       P.mcq({

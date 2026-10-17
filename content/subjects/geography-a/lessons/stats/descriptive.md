@@ -76,7 +76,7 @@ The probability of an event is $P = \dfrac{\text{number of favourable outcomes}}
 
 ## Is the distribution normal?
 
-Many tests assume a roughly normal distribution. Check three things: (1) a histogram that is symmetrical and bell-shaped; (2) the mean and median are close; (3) a skew indicator, $\dfrac{\bar{x} - \text{median}}{s}$, near zero. A mean well above the median shows **positive skew** (a long tail of high values); a mean well below it shows negative skew. In a normal distribution about 68% of values lie within one standard deviation of the mean and about 95% within two. The skew indicator is a rough check, not a formal test, so always look at the histogram as well.
+Many tests assume a roughly normal distribution. Check three things: (1) a histogram that is symmetrical and bell-shaped; (2) the mean and median are close; (3) a skew indicator, $\dfrac{\bar{x} - \text{median}}{s}$, near zero. A mean well above the median shows **positive skew** (a long tail of high values); a mean well below it shows negative skew. In a normal distribution about 68% of values lie within one standard deviation of the mean and about 95% within two. The skew indicator is a rough check, not a formal test, so always draw a histogram as well.
 
 ## Worked examples
 

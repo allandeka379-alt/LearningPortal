@@ -52,6 +52,8 @@ A stretch of fast, turbulent water flowing over a steep, uneven bed, often where
 
 Because the river is small and vertical erosion is dominant, it has little energy to cut sideways. It winds around the more resistant ridges of rock rather than through them, leaving **interlocking spurs**.
 
+![A V-shaped valley in cross-section, with steep straight sides and a narrow floor cut by vertical erosion, and in plan view where a small river winds between ridges (interlocking spurs) that project alternately from each side.](media:diagrams/v-valley-interlocking-spurs.png "Figure: a V-shaped valley in cross-section and interlocking spurs in plan view")
+
 :::example{title="Reading a V-shaped valley on a map"}
 On a topographical map, a V-shaped valley appears as contours forming tight V shapes (or U shapes) pointing **upstream**, towards higher ground. Closely spaced contours on both sides show the steep valley sides. Interlocking spurs show as contours bulging alternately from each side of the river.
 :::
@@ -74,6 +76,8 @@ Where a river flows over alternating bands of hard and soft rock, the soft rock 
 4. Spray and swirling water **undercut** the soft rock at the back of the plunge pool, leaving an **overhang** of hard rock.
 5. The overhang has nothing to support it and eventually **collapses** into the plunge pool. The broken blocks are used to erode the pool further.
 6. The process repeats, and the waterfall **retreats upstream**, leaving a steep-sided **gorge** in front of it.
+
+![Long section of a waterfall: a hard rock cap lies over softer rock; the soft rock is eroded faster, a plunge pool is scoured and the hard rock overhangs, then collapses, so the falls retreat upstream and leave a gorge downstream.](media:diagrams/waterfall-retreat-gorge.png "Figure: how a waterfall forms, retreats and leaves a gorge")
 
 :::example{title="How fast does a waterfall retreat? (fictional data)"}
 A fictional waterfall has retreated 450 m upstream in 1,500 years, leaving a gorge.

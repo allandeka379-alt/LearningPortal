@@ -41,6 +41,8 @@ An image in which bands of radiation (often including invisible near-infrared) a
 | Oblique aerial photograph | Taken from the air at an angle | A wide area with recognisable side views of features; **high oblique** views include the horizon, **low oblique** views do not | Scale changes across the photo: near features look larger than far ones |
 | Vertical aerial photograph | Taken from directly overhead | A plan view like a map, with a nearly even scale; used to make and update maps | Features look unfamiliar from above; heights are hard to judge |
 
+![Side view of an aircraft taking three kinds of photograph: a vertical photograph looks straight down and shows no horizon (a plan like a map), a low oblique is angled but shows only ground, and a high oblique looks almost level so the horizon appears in the picture.](media:diagrams/aerial-photograph-types.png "Figure: how the camera angle gives vertical, low oblique and high oblique aerial photographs")
+
 ### Describing a photograph
 
 Ground and oblique photographs are divided into the **foreground** (nearest the camera, at the bottom), the **middle ground** and the **background** (furthest away, near the top). Describe each part in turn: landforms, vegetation, land use, settlement and any human activity. Use the photograph's clues to judge the **season** (green crops or dry grass), the **time of day** (long shadows mean early morning or late afternoon) and the **direction** if the Sun's position is known.

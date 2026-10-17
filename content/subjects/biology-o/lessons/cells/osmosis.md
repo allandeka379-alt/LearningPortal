@@ -81,7 +81,7 @@ Mean results for one sweet potato:
 
 1. Plot percentage change in mass (y-axis) against concentration (x-axis), and join the points.
 2. The line crosses 0% between 0.4 mol/dm³ (+1.6%) and 0.6 mol/dm³ (−5.0%).
-3. Reading from the graph, it crosses at about 0.45 mol/dm³.
+3. Reading from your plotted line, it crosses at about 0.45 mol/dm³.
 4. At this concentration there is no net movement of water: the solution is as concentrated as the cell sap. (Supplement: the water potential of the solution equals that of the cells.)
 :::
 

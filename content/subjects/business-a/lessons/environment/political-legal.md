@@ -92,7 +92,7 @@ Kudzai's bus company (a fictional firm) employs 25 drivers and conductors on the
 
 **Point.** The firm may face action under consumer-protection and competition law, and the effect on decisions is serious.
 
-**Application.** A false description can lead to fines, a ban on the advertisement and refunds. A takeover that would leave one dairy supplying the whole province may be referred to the competition authority, which may block it or set conditions.
+**Application.** A false description can lead to fines, a ban on the advert and refunds. A takeover that would leave one dairy supplying the whole province may be referred to the competition authority, which may block it or set conditions.
 
 **Analysis.** Correcting the advertising costs money and may reduce sales in the short run, but continuing could harm trust and cause a recall. If the takeover is blocked, the firm loses the expected economies of scale and must find growth elsewhere, for example by improving its range or exporting.
 

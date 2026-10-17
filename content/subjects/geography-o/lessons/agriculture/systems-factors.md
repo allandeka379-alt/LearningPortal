@@ -47,6 +47,8 @@ Low inputs per hectare spread over a large area, giving low yields per hectare.
 
 ## The farm as a system
 
+![Systems diagram of a smallholder maize and cattle farm: inputs (physical, human and economic) pass through processes (ploughing, planting, weeding, harvesting, herding) to outputs (crops, milk and meat, manure, income, waste), and feedback arrows return income, seed and manure to the inputs.](media:diagrams/farm-system-diagram.png "Figure: a farm as a system of inputs, processes, outputs and feedback")
+
 :::example{title="A diagram in words: a smallholder maize and cattle farm"}
 Imagine four boxes joined by arrows from left to right, with an arrow looping back from the last box to the first.
 

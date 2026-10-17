@@ -55,6 +55,8 @@ The Earth's radius is about 6,370 km. Imagine cutting it in half like a peach: a
 
 The **lithosphere** (crust plus the rigid top of the mantle, roughly 100 km thick) floats on the **asthenosphere**.
 
+![Cross-section of the Earth drawn to scale in radius (about 6,370 km): a very thin crust of 5 to 70 km, a mantle down to about 2,900 km, a liquid outer core from 2,900 to 5,100 km and a solid inner core from 5,100 km to the centre.](media:diagrams/earth-layers.png "Figure: the layers of the Earth and their depths")
+
 :::example{title="Diagram in words: a cross-section of the Earth"}
 Draw four circles inside each other.
 

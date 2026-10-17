@@ -19,7 +19,7 @@ You should already know the compass points, how to use a ruler and how to read t
 ## Key definitions
 
 :::definition{term="Scale"}
-The relationship between a distance on the map and the same distance on the ground. A representative fraction of 1:50 000 means 1 cm on the map is 50 000 cm (500 m) on the ground.
+The relationship between a distance measured on a map and the same distance on the ground. A representative fraction of 1:50 000 means 1 cm on a map is 50 000 cm (500 m) on the ground.
 :::
 
 :::definition{term="Contour line"}
@@ -35,7 +35,7 @@ Whether one point can be seen from another, without the view being blocked by hi
 :::
 
 :::definition{term="Grid reference"}
-A set of numbers that fixes a place using the map's grid lines. Eastings (vertical lines, numbered across the map) always come before northings (horizontal lines, numbered up the map).
+A set of numbers that fixes a place using a map's grid lines. Eastings (vertical lines, numbered across the map) always come before northings (horizontal lines, numbered up the map).
 :::
 
 ## Location and direction

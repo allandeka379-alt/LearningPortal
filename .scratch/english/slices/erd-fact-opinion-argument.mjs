@@ -84,7 +84,7 @@ concept("eng.reading.fact-opinion-argument", { file: "reading/fact-opinion-argum
   });
   b.mcq({
     d: 3, skill: "ANALYSIS",
-    stem: ADVERT + "\n\nWhich statement from the advertisement is a **checkable fact** rather than persuasion?",
+    stem: ADVERT + "\n\nWhich statement in the SolarGlow advert is a **checkable fact** rather than persuasion?",
     options: [
       ["It has a built-in USB port to charge your phone.", "Correct: you could check whether the lamp has this port."],
       ["Thousands of happy families already trust SolarGlow.", "This is an unsupported claim: no source is given and happy is a judgement."],
@@ -246,7 +246,7 @@ concept("eng.reading.fact-opinion-argument", { file: "reading/fact-opinion-argum
   });
   b.manualShort({
     d: 4, skill: "ANALYSIS", examStyle: true,
-    stem: ADVERT + "\n\nIdentify **two** persuasive techniques in the advertisement and explain how each tries to persuade the reader.",
+    stem: ADVERT + "\n\nIdentify **two** persuasive techniques in the SolarGlow advert and explain how each tries to persuade the reader.",
     marks: 4,
     points: [
       "Technique 1 identified with example (e.g. rhetorical question: Why should your children struggle…?)",

@@ -14,7 +14,7 @@ const EXTRACT = [
 concept("geo.maps.scale-distance", { file: "maps/scale-distance", keyPrefix: "maps.scale-distance" }, (b) => {
   b.mcq({
     d: 1, skill: "RECALL",
-    stem: "On a map with a scale of 1:50 000, what does 1 cm on the map represent on the ground?",
+    stem: "On a map with a scale of 1:50 000, what real distance does a length of 1 cm stand for?",
     options: [
       ["500 m", "Correct: 50 000 cm = 500 m = 0.5 km."],
       ["50 m", "50 000 cm is 500 m, not 50 m; check the conversion (100 cm = 1 m)."],

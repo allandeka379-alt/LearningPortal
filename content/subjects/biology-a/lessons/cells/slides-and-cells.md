@@ -101,7 +101,7 @@ When there is no graticule, you can estimate the size of cells by counting how m
 :::example{title="Interpreting a described photomicrograph"}
 A photomicrograph shows cells from a maize leaf. Each cell has a clear, thick outline shared with its neighbours, many small green oval bodies arranged around the edge, and a nucleus pushed against one side. The centre of each cell is clear and unstained.
 
-Interpretation: the thick shared outline is the cellulose cell wall; the green oval bodies are chloroplasts; the clear centre is the large permanent vacuole, which pushes the cytoplasm, chloroplasts and nucleus to the edge. These features show that the cells are plant cells from a photosynthetic tissue. No centrioles or plasmodesmata can be identified, because they are below the resolution of a light microscope; their absence from the image does not show that they are absent from the cell.
+Interpretation: the thick shared outline is the cellulose cell wall; the green oval bodies are chloroplasts; the clear centre is the large permanent vacuole, which pushes the cytoplasm, chloroplasts and nucleus to the edge. These features show that the cells are plant cells from a photosynthetic tissue. No centrioles or plasmodesmata can be identified, because they are below the resolution of a light microscope; their absence from the photomicrograph does not show that they are absent from the cell.
 :::
 
 ## Common mistakes

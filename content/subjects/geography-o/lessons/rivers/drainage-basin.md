@@ -67,6 +67,8 @@ The global water cycle is a **closed system**: the amount of water on Earth stay
 5. All these flows feed the river, which carries the water to the mouth as **channel flow**.
 6. Throughout, water returns to the air by **evaporation** and **transpiration** from plants.
 
+![Hillside cross-section of a drainage basin: rain (800 mm a year) is intercepted by trees, infiltrates the soil, runs as overland flow or throughflow, percolates to groundwater and reaches the river as channel flow, while 600 mm is lost to evaporation and transpiration, leaving 200 mm of discharge.](media:diagrams/drainage-basin-system.png "Figure: stores and flows in a drainage basin (water balance of the fictional 800 mm basin)")
+
 :::example{title="A simple water balance"}
 A fictional basin receives 800 mm of rain in a year. Evapotranspiration takes 600 mm and there is no change in storage.
 
@@ -129,6 +131,8 @@ A **storm hydrograph** shows how a river's discharge changes after a period of r
 | Falling (recessional) limb | Discharge decreasing after the peak |
 
 A **"flashy"** hydrograph (short lag time, high peak, steep limbs) results from steep slopes, impermeable rock, saturated or baked soils, little vegetation and urban surfaces. A **gentle** hydrograph (long lag time, low peak) results from gentle slopes, permeable rock, deep soils and forest.
+
+![Storm hydrograph from the lesson's example: rainfall peaks at 10:00, discharge rises from a base flow of 3 m³/s to a peak of 18 m³/s at 22:00 (a lag time of 12 hours, a rise of 15 m³/s) and then falls back along the falling limb.](media:diagrams/storm-hydrograph.png "Figure: a storm hydrograph with base flow, rising limb, peak discharge, falling limb and lag time")
 
 :::example{title="Reading a hydrograph from a table"}
 Fictional data: rainfall peaked at 10:00 on day 1 and discharge peaked at 22:00 on day 1, rising from a base flow of 3 m³/s to 18 m³/s.

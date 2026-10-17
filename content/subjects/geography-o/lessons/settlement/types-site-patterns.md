@@ -96,6 +96,9 @@ A fictional 1:50 000 map shows these huts per grid square:
 | 64 | 1 hut | 9 huts along the road from 420 640 to 430 645 | 0 huts |
 
 Square 4165 shows a **nucleated** pattern (huts grouped round the borehole). Square 4264 shows a **linear** pattern along the road. The other squares show a **dispersed** pattern.
+
+![Grid of nine squares (eastings 41 to 43, northings 64 to 66) with a hut in most squares: 14 huts packed around a borehole in square 4165 (nucleated), 9 huts along a road in square 4264 (linear), and single scattered huts elsewhere (dispersed). Total 30 huts.](media:diagrams/settlement-patterns-grid.png "Figure: nucleated, linear and dispersed patterns on a fictional map grid")
+
 :::
 
 ## Laws governing land use in Zimbabwe

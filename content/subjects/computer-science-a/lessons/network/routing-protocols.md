@@ -69,7 +69,7 @@ OSPF is a **link-state** protocol. Each router builds a map of the whole network
 
 - Each router tells **all the routers in its area** about the state and **cost** of its own links (it sends link-state advertisements). Updates are sent only when something changes.
 - Each router stores what it has learnt in its **link-state database**. Every router in the area has the same database, so each has the same map of the network.
-- Each router then runs a shortest-path calculation on the map, using the idea of **Dijkstra's algorithm**, to find the lowest-cost route to every destination.
+- Each router then runs a shortest-path calculation on its map of the network, using the idea of **Dijkstra's algorithm**, to find the lowest-cost route to every destination.
 - Large networks are divided into **areas** to keep each database and each calculation small.
 - Strengths: adjusts quickly to a change; uses link cost, so it picks faster links; scales to large networks. Weaknesses: more complicated to configure, and more memory and processing power are needed in the routers.
 

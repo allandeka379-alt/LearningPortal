@@ -143,7 +143,7 @@ When you use a key, write down your route (for example 1(b), 2(b), 3(a)). It hel
 :::
 
 :::exam-tip
-When asked to construct a key, base every statement on features shown in the drawings or photographs you are given, and check that your key really does lead to every organism.
+When asked to construct a key, base every statement on features you can observe in the specimens or pictures you are given, and check that your key really does lead to every organism.
 :::
 
 :::exam-tip

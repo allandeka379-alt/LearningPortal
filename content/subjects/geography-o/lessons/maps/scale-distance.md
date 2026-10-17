@@ -66,6 +66,8 @@ On a 1:25 000 map, 1 cm represents 250 m and **4 cm represent 1 km**. The grid s
 
 When you know the six-figure references of two points, you can calculate the straight distance without measuring. Grid lines are 1 km apart, so the difference in eastings and northings is already in kilometres.
 
+![Right-angled triangle on a map grid between 312 458 and 336 476: the points are 2.4 km apart eastwards and 1.8 km apart northwards, so the straight-line distance is the square root of (2.4 squared plus 1.8 squared), which is 3.0 km.](media:diagrams/grid-reference-distance-pythagoras.png "Figure: the straight distance from 312 458 to 336 476 by Pythagoras' theorem is 3.0 km")
+
 :::worked-solution[Distance from 312 458 to 336 476]
 1. Difference in eastings: $33.6 - 31.2 = 2.4\ \text{km}$.
 2. Difference in northings: $47.6 - 45.8 = 1.8\ \text{km}$.

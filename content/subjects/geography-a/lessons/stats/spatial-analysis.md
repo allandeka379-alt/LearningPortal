@@ -12,7 +12,7 @@
 ---
 ## Introduction
 
-Rainfall is measured at gauges, soil samples are taken at chosen points and census data are counted for districts. Yet we often need a value at a place where nothing was measured, and we need to know whether similar values are bunched together on the map. **Spatial interpolation** estimates values between sample points; **spatial autocorrelation** describes whether nearby places have similar values. Both are used with GIS software in ZIMSEC Form 6 and in Paper 3.
+Rainfall is measured at gauges, soil samples are taken at chosen points and census data are counted for districts. Yet we often need a value at a place where nothing was measured, and we need to know whether similar values are bunched together on a map. **Spatial interpolation** estimates values between sample points; **spatial autocorrelation** describes whether nearby places have similar values. Both are used with GIS software in ZIMSEC Form 6 and in Paper 3.
 
 Before this lesson you should know how to calculate means and standard deviations and how to measure distances on a grid (see the lessons on descriptive statistics and coordinates).
 

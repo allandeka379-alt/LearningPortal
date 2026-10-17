@@ -125,7 +125,7 @@ concept("geo.maps.thematic-maps", { file: "maps/thematic-maps", keyPrefix: "maps
     stem: "On an isoline map, isolines that are **very close together** show:",
     options: [
       ["A rapid change in value over a short distance", "Correct: as with contours, close spacing means a steep gradient of change."],
-      ["The highest values on the map", "Spacing shows the rate of change, not the size of the value."],
+      ["The highest values of all", "Spacing shows the rate of change, not the size of the value."],
       ["An area where no data was collected by the survey", "Close lines need data; gaps in data give vague, widely spaced lines."],
       ["A gentle, gradual change in value", "Gentle change gives widely spaced isolines."],
     ],

@@ -78,6 +78,8 @@ Imagine two arrows drawn on a page, one long and one short.
 | Market-oriented | Product is bulkier, fragile, perishable or needs customer contact | Bakeries, soft-drink bottling, furniture, printing |
 | Footloose | Light, high-value inputs and products; power from the grid | Electronics assembly, software, call centres |
 
+![Two layouts for a sugar mill, with the same long distance to the market: beside the cane fields only 1 tonne of sugar makes the long journey, but with the mill in Harare all 10 tonnes of cane (the weight lost in processing) must travel, so weight-losing industries locate near their raw materials. Figures are approximate and the distance is illustrative.](media:diagrams/sugar-mill-weight-loss.png "Figure: the weight-loss idea, about 10 t of cane makes about 1 t of sugar (approximate)")
+
 ## Applying the factors to Zimbabwe
 
 :::example{title="Case study: sugar milling in the south-east Lowveld"}

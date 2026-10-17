@@ -39,7 +39,7 @@ Discounts are given only to customers who **pay**. Customers who are expected no
 
 1. Trade receivables at the year end.
 2. **Less** further bad debts written off.
-3. **Less** the provision for doubtful debts (calculated on the figure after step 2).
+3. **Less** the provision for doubtful debts (calculated on the amount after step 2).
 4. Apply the discount percentage to what remains: this is the provision for discounts allowable **needed**.
 
 **Provision for discounts allowable = discount % × (trade receivables − bad debts − provision for doubtful debts)**

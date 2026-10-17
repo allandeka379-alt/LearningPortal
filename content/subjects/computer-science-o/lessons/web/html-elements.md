@@ -148,7 +148,7 @@ A **template** gives a ready-made layout, with places marked for the logo, headi
 :::
 
 :::mistake{title="Leaving out alt text"}
-Without `alt`, visitors using screen readers, or whose images fail to load, do not know what the image shows.
+Without `alt`, visitors using screen readers, or whose images fail to load, do not know what a picture shows.
 :::
 
 ## Exam tips

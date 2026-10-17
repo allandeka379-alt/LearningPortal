@@ -188,7 +188,7 @@ concept("ageo.hydro.flood-management", { file: "hydro/flood-management", keyPref
     parts: [
       P.num({ label: "(a)", marks: 2, stem: "Calculate the percentage of all the houses that are inside the 1-in-100-year flood zone (including the 1-in-10-year zone).", value: pctRisk, unit: "%", wrong: [11.3, 18.7],
         explanation: "340 + 560 = 900 houses; total 3 000; 900 ÷ 3 000 × 100 = 30%. The value 11.3 counts only the inner zone." }),
-      P.manual({ label: "(b)", marks: 2, stem: "Suggest two ways in which the council could use the map to reduce flood risk.",
+      P.manual({ label: "(b)", marks: 2, stem: "Suggest two ways in which the council could use this hazard information to reduce flood risk.",
         points: [
           "Refuse permission for new houses, schools and clinics in the flood zones (zoning).",
           "Plan evacuation routes and shelters, and put warnings and flood-proofing where the risk is highest.",

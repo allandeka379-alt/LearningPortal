@@ -220,7 +220,7 @@ concept("geo.weather.climate-graphs", { file: "weather/climate-graphs", keyPrefi
         ["Exactly on the equator", "Equatorial stations have rain in every month, not a five-month dry season."],
         ["It cannot be told from a climate graph", "The timing of the hot season shows the hemisphere."],
       ], answer: "A", explanation: "The hot season, with the rain, falls between October and April: southern summer." }),
-      P.mcq({ label: "(b)", marks: 1, stem: "Which climate type does the graph show?", options: [
+      P.mcq({ label: "(b)", marks: 1, stem: "Which climate type do these data show?", options: [
         ["Tropical continental (savanna)", "Correct: a hot wet season and a cooler dry season."],
         ["Equatorial (tropical rainforest)", "Equatorial climates have no dry season."],
         ["Hot desert (tropical arid)", "A desert would not have over 100 mm in seven months."],

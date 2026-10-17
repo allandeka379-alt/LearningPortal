@@ -86,6 +86,8 @@ Label the joints, the weathered zone, the corestones and the original ground sur
 - **Balancing rocks**: rounded boulders resting on one another at a small point of contact, left after the rock around them has weathered away. The Epworth balancing rocks are a well-known example.
 - **Dwala (bornhardt)**: a large, bare, smooth dome of granite with very few joints. It loses curved sheets by exfoliation and pressure release. Domboshava is an example.
 
+![Two stages of kopje formation: first, water rots granite along joints below the ground, leaving rounded corestones inside a thick layer of regolith; second, rain and rivers strip the regolith away, lowering the surface and leaving the corestones standing as a pile of boulders called a kopje.](media:diagrams/kopje-formation.png "Figure: how a granite kopje forms by weathering along joints and then stripping of the regolith")
+
 The **Matobo Hills** south of Bulawayo, a World Heritage Site, are a whole landscape of dwalas, kopjes and balancing rocks.
 
 ## Karst features (limestone and dolomite)

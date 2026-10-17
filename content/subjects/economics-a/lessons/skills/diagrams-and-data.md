@@ -44,7 +44,7 @@ Where you cannot draw, or a question asks you to *describe* a diagram, state the
 "A downward-sloping demand curve D1 and an upward-sloping supply curve S1 cross at the equilibrium price P1 and quantity Q1. An indirect tax of US\$4 per unit shifts the supply curve upward (to the left) from S1 to S2 by a vertical distance equal to the tax. The new curve crosses D1 at a higher price P2 and a lower quantity Q2. The tax paid by consumers is the area from P1 to P2 up to Q2; the tax paid by producers is the area between P1 and the price they receive, up to Q2."
 :::
 
-A diagram must be *used*. Refer to it in the text ("As shown in Figure 1, the shift of supply raises the price from P1 to P2") and explain what causes the shift. A diagram that is drawn but not explained gains little credit, and a diagram that contradicts the text loses marks.
+A diagram must be *used*. Refer to it in the text ("The shift of supply raises the price from P1 to P2, as drawn") and explain what causes the shift. A diagram that is drawn but not explained gains little credit, and a diagram that contradicts the text loses marks.
 
 ## Reading tables and graphs
 

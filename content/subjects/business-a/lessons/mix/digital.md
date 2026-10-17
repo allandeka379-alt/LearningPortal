@@ -10,7 +10,7 @@
 ---
 ## Introduction
 
-Thandeka runs a fictional business in Harare that sells hand-woven baskets. For years she sold at roadside stalls and craft markets. Then a visitor photographed a basket, posted it online, and within a week orders arrived from three countries. Thandeka now has a website, a social media page and a mobile payment option. She also faces new problems: parcels arrive late, a customer says the colour in the photograph was wrong, and her page was copied by a stranger. Digital methods change how a business communicates, sells, delivers and collects information, and they bring both opportunities and risks.
+Thandeka runs a fictional business in Harare that sells hand-woven baskets. For years she sold at roadside stalls and craft markets. Then a visitor photographed a basket, posted it online, and within a week orders arrived from three countries. Thandeka now has a website, a social media page and a mobile payment option. She also faces new problems: parcels arrive late, a customer says the colour in the product photo was wrong, and her page was copied by a stranger. Digital methods change how a business communicates, sells, delivers and collects information, and they bring both opportunities and risks.
 
 This lesson applies to ZIMSEC Business Studies and Business Enterprise Skills (Form 6) and Cambridge **AS** (Papers 1 and 2). You should know the main promotion methods and channels of distribution. The wider role of ICT in a firm is a separate lesson; here the focus is **marketing and selling**.
 

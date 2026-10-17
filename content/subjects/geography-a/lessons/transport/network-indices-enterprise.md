@@ -115,7 +115,7 @@ Loan repayments, insurance and licences must be paid even when the vehicle does 
 ## Exam tips
 
 :::exam-tip
-Count nodes and links on the network diagram and state them before calculating. Show the formula, the substitution and the result to the required decimal places, then interpret ("beta is above 1, so the network has circuits"). For business questions, set out revenue, costs and profit in a table, and finish with a risk and a way to reduce it.
+Count nodes and links in the network you are given and state them before calculating. Show the formula, the substitution and the result to the required decimal places, then interpret ("beta is above 1, so the network has circuits"). For business questions, set out revenue, costs and profit in a table, and finish with a risk and a way to reduce it.
 :::
 
 ## Summary

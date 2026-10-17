@@ -105,7 +105,7 @@ The key contrast: **xylem vessel elements are dead, lignified, open tubes** carr
 A plan diagram shows **tissues, not cells**. Draw the outline of each tissue region in its correct position and proportion, using sharp, continuous pencil lines and no shading. Label with ruled lines that do not cross. In a stem bundle, phloem, cambium and xylem are drawn as adjacent regions within one bundle outline; in a root, the endodermis is shown as a single line around the stele with the xylem and phloem regions inside it.
 
 :::worked-solution[Actual width of a xylem vessel from a photomicrograph]
-A photomicrograph of a sunflower stem TS has a magnification of ×600. One xylem vessel measures 24 mm across on the image.
+A photomicrograph of a sunflower stem TS has a magnification of ×600. One xylem vessel measures 24 mm across in the photomicrograph.
 1. Convert the image width to µm: $24\ \text{mm} \times 1000 = 24\,000\ \mu\text{m}$.
 2. Actual size $= \dfrac{\text{image size}}{\text{magnification}} = \dfrac{24\,000}{600}$.
 3. Actual width $= 40\ \mu\text{m}$.

@@ -74,6 +74,8 @@ Imagine a sheet of graph paper with the twelve months, J to D, spaced evenly alo
 
 On the fictional station's graph you would see tall bars from November to March, almost no bars from May to September, and a gentle temperature curve that dips in June and July.
 
+![Climate graph for the fictional plateau station: rainfall bars are tall from November to March (January 190 mm) and almost nil from May to September (0 mm in July), totalling 806 mm; the temperature line stays between 13 °C in June and July and 22 °C in November, an annual range of 9 °C.](media:diagrams/climate-graph-plateau-station.png "Figure: a climate graph, rainfall as bars and temperature as a line, for the fictional plateau station")
+
 ## Describing a climate graph
 
 When an exam asks you to **describe** the climate, use the data and quote figures with units. A useful checklist:

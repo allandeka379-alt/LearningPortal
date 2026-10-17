@@ -202,11 +202,11 @@ concept("hist.road-to-war.outbreak-1939", { file: "road-to-war/outbreak-1939", k
     stem: `Study the source and answer the questions.\n\n${source("Source A", "a cartoon of the kind published in a British newspaper in September 1939, described in words", "Two men in uniform bow politely to each other over the body of a man lying on the ground, labelled \"Poland\". One, with a small moustache, raises his cap; the other, with a large moustache, raises his. Each secretly holds a knife behind his back pointed at the other. A caption reads: \"How long will the friendship last?\"", { described: true })}`,
     hints: ["Identify the two figures and explain the knives."],
     parts: [
-      P.manual({ label: "(a)", marks: 2, stem: "Identify the two leaders shown in the cartoon and the event it refers to.", points: [
+      P.manual({ label: "(a)", marks: 2, stem: "Identify the two leaders described in Source A and the event it refers to.", points: [
         "Hitler and Stalin.",
         "The Nazi-Soviet Pact / the division of Poland in September 1939.",
       ], explanation: "Leaders and event." }),
-      P.manual({ label: "(b)", marks: 4, stem: "What is the message of the cartoonist? Use details of the cartoon.", points: [
+      P.manual({ label: "(b)", marks: 4, stem: "What is the message of the cartoonist? Use details from Source A.", points: [
         "Message: the two dictators had destroyed Poland together.",
         "Detail: the body labelled Poland between them.",
         "Message: their friendship was false / would not last.",

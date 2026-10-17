@@ -328,7 +328,7 @@ concept("geo.maps.photos-remote-sensing", { file: "maps/photos-remote-sensing", 
         answer: "A",
       }),
       P.manual({
-        label: "(d)", marks: 2, stem: "Describe two land uses shown in the photograph.",
+        label: "(d)", marks: 2, stem: "Describe two land uses mentioned in the description.",
         points: [
           "Cultivation / arable farming (maize) in the foreground.",
           "A second land use: settlement (village, school) in the middle ground / forestry or woodland on the hills in the background / transport (road, bridge).",

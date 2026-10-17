@@ -51,7 +51,9 @@ The amount by which actual (or planned) output exceeds the break-even output, in
 - Break-even revenue = break-even output × selling price
 :::
 
-**Reading a break-even chart.** On the chart (described from a table), the **fixed-cost line** is horizontal. The **total-cost line** starts at the fixed-cost level on the vertical axis and slopes upward by the variable cost per unit. The **total-revenue line** starts at the origin and slopes upward more steeply by the selling price. They meet at the **break-even point**. To the left (less output) there is a **loss**; to the right a **profit**. The gap between the lines at the actual output is the profit, and the horizontal gap between actual output and break-even output is the **margin of safety**.
+**Reading a break-even chart.** On a break-even chart, the **fixed-cost line** is horizontal. The **total-cost line** starts at the fixed-cost level on the vertical axis and slopes upward by the variable cost per unit. The **total-revenue line** starts at the origin and slopes upward more steeply by the selling price. They meet at the **break-even point**. To the left (less output) there is a **loss**; to the right a **profit**. The gap between the lines at the actual output is the profit, and the horizontal gap between actual output and break-even output is the **margin of safety**.
+
+![Break-even chart: fixed costs are flat at US\$15,000; the total cost line starts there and rises by US\$1.70 a bottle; the revenue line starts at zero and rises by US\$3.20 a bottle; they cross at 10,000 bottles and US\$32,000. Loss to the left, profit to the right; at 12,500 bottles the margin of safety is 2,500 bottles.](media:diagrams/break-even-chart.png "Figure: break-even chart for the bottle example (fixed costs US\$15,000, price US\$3.20, variable cost US\$1.70)")
 
 | Output (units) | Revenue (US\$) | Total cost (US\$) | Profit / (loss) (US\$) |
 | --- | ---: | ---: | ---: |
@@ -61,7 +63,7 @@ The amount by which actual (or planned) output exceeds the break-even output, in
 | 12,500 | 40,000 | 36,250 | 3,750 |
 | 15,000 | 48,000 | 40,500 | 7,500 |
 
-The shape of the table above is what the chart shows: the profit or loss figure moves from negative to zero at 10,000 bottles and becomes positive after.
+The shape of the table above is what a break-even chart would show: the profit or loss figure moves from negative to zero at 10,000 bottles and becomes positive after.
 
 ## Uses and limitations
 

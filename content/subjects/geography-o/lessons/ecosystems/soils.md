@@ -117,6 +117,8 @@ Imagine the wall of a freshly dug pit:
 
 Not every soil has every horizon, and boundaries may be sharp or gradual.
 
+![Soil profile with six horizons from the surface down: O organic layer, A dark humus-rich topsoil, E pale eluviated layer from which minerals are washed out, B subsoil where minerals are washed in (illuviation), C weathered parent material and R solid bedrock.](media:diagrams/soil-profile-horizons.png "Figure: the horizons of a soil profile, O at the surface to R at the base")
+
 ## Common mistakes
 
 :::mistake{title="Confusing texture and structure"}

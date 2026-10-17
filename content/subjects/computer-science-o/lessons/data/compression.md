@@ -97,7 +97,7 @@ RLE works well when data has **long runs**, such as images with large areas of o
 | Simple logo with large blocks of colour | Lossless (RLE) | Long runs compress well and the logo stays sharp |
 
 :::example{title="An advert for a Gweru bakery"}
-Thandeka designs an advert with a large photo of fresh bread and a short block of text with the bakery's prices and phone number. For the web version she uses **lossy** compression on the photo, so the page loads quickly on phones. The text and prices must stay exact, so the document itself is stored with **lossless** compression. Choosing per item, rather than for the whole job, gets the best of both.
+Thandeka designs an advert with a large photo of fresh bread and a short block of text with the bakery's prices and phone number. For the web version she uses **lossy** compression on the bread photo, so the page loads quickly on phones. The text and prices must stay exact, so the document itself is stored with **lossless** compression. Choosing per item, rather than for the whole job, gets the best of both.
 :::
 
 :::keyfact{title="Cambridge only"}

@@ -31,7 +31,7 @@ An expression made of AND terms joined by OR, for example $A \cdot B + \overline
 :::
 
 :::definition{term="Don't care condition"}
-An input combination that can never occur, or whose output does not matter. It is marked X in the map and may be treated as 0 or 1, whichever helps to make bigger groups.
+An input combination that can never occur, or whose output does not matter. It is marked X in the K-map and may be treated as 0 or 1, whichever helps to make bigger groups.
 :::
 
 ## Drawing the map
@@ -74,7 +74,7 @@ Rules for grouping:
 
 For each group, the term has the variables whose value is the same for every cell in the group; a variable that changes inside the group is left out. A variable that is 1 appears as itself and a variable that is 0 appears inverted. The expression is the OR of the terms of all the groups.
 
-:::worked-solution{title="Simplify the function in the map above (3 variables)"}
+:::worked-solution{title="Simplify the 3-variable function in the K-map from the previous example"}
 1. Group 1: the four cells 000, 010, 100, 110. They are in the first and last columns, joined by wrap-around. C is 0 in every cell, and A and B change, so the term is **NOT C**.
 2. Group 2: the pair 110 and 111. A = 1 and B = 1 in both, and C changes, so the term is **A AND B**.
 3. The 1 in cell 110 is in both groups; overlapping is allowed.

@@ -140,7 +140,7 @@ ZIMSEC Business Studies Paper 1 (read or draw a chart; define terms) and Paper 2
 :::
 
 :::exam-tip{title="Command words"}
-*State/identify*: read a figure from the chart. *Explain/describe*: say what the feature means for the business. *Analyse/examine*: trace the effect of a feature on communication, cost or motivation. *Evaluate/discuss/justify*: weigh a structure against the needs and size of the business and give a reasoned judgement.
+*State/identify*: read a value from an organisation chart. *Explain/describe*: say what the feature means for the business. *Analyse/examine*: trace the effect of a feature on communication, cost or motivation. *Evaluate/discuss/justify*: weigh a structure against the needs and size of the business and give a reasoned judgement.
 :::
 
 ## Summary

@@ -64,6 +64,8 @@ Imagine looking down on the rivers:
 - **Radial**: rivers flow **outwards** in all directions from a central high point, such as a dome or a volcanic cone, like the spokes of a wheel.
 - **Parallel**: rivers run roughly side by side down a uniform slope.
 
+![Four drainage patterns seen from above: dendritic (tree-like, tributaries join the main river at acute angles), trellis (parallel main streams with short tributaries joining at right angles), radial (rivers flow outwards from a central high point), and parallel (streams side by side down a uniform slope).](media:diagrams/drainage-patterns.png "Figure: dendritic, trellis, radial and parallel drainage patterns (rivers in blue)")
+
 When describing drainage also mention density (many or few streams), permanent or seasonal rivers, marshes and dams.
 
 ## Transport networks and relief

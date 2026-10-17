@@ -119,7 +119,7 @@ concept("abio.enzymes.inhibition-kinetics", { file: "enzymes/inhibition-kinetics
   const half = 0.84 / 2;
   b.num({
     d: 2, skill: "APPLICATION", applies: CAM, daily: true,
-    stem: "An enzyme has a Vmax of 0.84 µmol min⁻¹. What rate, in µmol min⁻¹, is used to read Km from the graph?",
+    stem: "An enzyme has a Vmax of 0.84 µmol min⁻¹. What rate, in µmol min⁻¹, is used to read Km from a graph of rate against substrate concentration?",
     value: half,
     wrong: ["0.84", "1.68"],
     explanation: "Km is the substrate concentration at half Vmax: 0.84 ÷ 2 = 0.42 µmol min⁻¹.",

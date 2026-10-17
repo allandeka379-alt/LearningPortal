@@ -65,6 +65,8 @@ Sedimentary rocks are laid down in flat layers. When plates push together, the l
 | Recumbent fold | The fold is pushed over until it lies almost flat |
 | Overthrust fold (nappe) | Pressure is so great that the fold breaks along a low-angle fault and is pushed forward, sometimes many kilometres |
 
+![Cross-section of folded rock layers showing an anticline (arch) and a syncline (trough) with their limbs and axes, and sketches of four fold types as compression increases: simple, asymmetrical, overfold and recumbent.](media:diagrams/fold-parts-types.png "Figure: parts of a fold and the main types of fold")
+
 :::example{title="Diagram in words: how fold mountains form"}
 1. Sediments are laid down in layers on the floor of a sea between two plates.
 2. The plates move together. The sea floor sediments are squeezed between them.
@@ -100,6 +102,8 @@ The vertical distance a block has moved is called the **throw**. A steep slope l
 
 - **Fault-line valley**: rocks shattered along a fault are weaker and erode easily, so rivers often cut valleys along fault lines.
 - **Tilted block**: a block raised on one side, with a steep scarp face and a gentle back slope.
+
+![Four fault structures in cross-section: a normal fault where tension makes one block slip down, a reverse fault where compression pushes one block up and over the other, a rift valley where a central block sinks between two faults, and a block mountain (horst) where a central block stands high between two faults.](media:diagrams/fault-types-rift-horst.png "Figure: normal fault, reverse fault, rift valley and block mountain")
 
 :::example{title="Case study: the East African Rift Valley"}
 The Great Rift Valley runs for thousands of kilometres from the Red Sea and Ethiopia south through Kenya and Tanzania to Lake Malawi and Mozambique. An eastern branch crosses Kenya; a western branch holds Lakes Albert, Edward, Kivu and Tanganyika. It formed as the African plate began to split, stretching the crust so that long blocks sank between faults.

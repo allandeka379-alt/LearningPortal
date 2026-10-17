@@ -63,7 +63,7 @@ concept("ageo.skills.topographic-maps", { file: "skills/topographic-maps", keyPr
   });
   b.mcq({
     d: 2, skill: "UNDERSTANDING",
-    stem: "A map has a scale of 1:50 000. What does 1 cm on the map represent on the ground?",
+    stem: "A map has a scale of 1:50 000. What real distance on the ground does 1 cm of map distance represent?",
     options: [
       ["500 m", "Correct: 50 000 cm = 500 m."],
       ["50 m", "This would be a scale of 1:5 000."],
@@ -214,8 +214,8 @@ concept("ageo.skills.topographic-maps", { file: "skills/topographic-maps", keyPr
     stem: t`The table describes part of a 1:50 000 topographic map of a fictional district in the Zimbabwean midlands. The contour interval is 20 m and each grid square is 1 km by 1 km (data invented for this exercise).\n\n${EXTRACT}`,
     parts: [
       P.short({ label: "(a)", marks: 1, stem: "State the four-figure grid reference of the square that contains the dam.", accepted: ["3345"], explanation: "The dam is at 3345." }),
-      P.num({ label: "(b)", marks: 2, stem: "The clinic is 5.6 cm in a straight line from the village on the map. Calculate the real distance, in km.", value: groundKm(5.6, 50000), unit: "km", wrong: [5.6, 28], explanation: "5.6 cm × 50 000 = 280 000 cm = 2.8 km." }),
-      P.num({ label: "(c)", marks: 3, type: "CALCULATION", stem: "The summit of the hill (1 320 m) and the river at its foot (1 160 m) are 3.2 cm apart on the map. Calculate the gradient as '1 in n'.", value: gr2.oneIn, wrong: [0.1, 20], explanation: "1. Vertical interval = 1 320 − 1 160 = 160 m.\n2. Horizontal distance = 3.2 cm × 50 000 = 1 600 m.\n3. Gradient = 160 ÷ 1 600 = 1/10, so 1 in 10." }),
+      P.num({ label: "(b)", marks: 2, stem: "The clinic is 5.6 cm in a straight line from the village on the 1:50 000 map. Calculate the real distance, in km.", value: groundKm(5.6, 50000), unit: "km", wrong: [5.6, 28], explanation: "5.6 cm × 50 000 = 280 000 cm = 2.8 km." }),
+      P.num({ label: "(c)", marks: 3, type: "CALCULATION", stem: "The summit of the hill (1 320 m) and the river at its foot (1 160 m) are 3.2 cm apart on the 1:50 000 map. Calculate the gradient as '1 in n'.", value: gr2.oneIn, wrong: [0.1, 20], explanation: "1. Vertical interval = 1 320 − 1 160 = 160 m.\n2. Horizontal distance = 3.2 cm × 50 000 = 1 600 m.\n3. Gradient = 160 ÷ 1 600 = 1/10, so 1 in 10." }),
       P.manual({ label: "(d)", marks: 3, stem: "Describe the relief shown in the extract.", points: ["A steep-sided hill (dwala) with a summit at 1 320 m", "The hill rises about 160 m above the river at its foot (quote heights)", "Gentle land/wide valley floor along the river, flowing south-west"], modelAnswer: "A steep granite hill reaches 1 320 m at 3142 with very close contours. The river in the valley at its foot is at 1 160 m, so the hill rises about 160 m above it. The valley floor beside the river is wide and gentle, and the river flows south-west." }),
       P.manual({ label: "(e)", marks: 3, stem: "Explain two reasons for the location of the village.", points: ["Close to the river for water supply", "On the gravel road (accessibility) / the relatively flat valley floor for building and farming", "Developed around services (clinic, school) or near the dam/canal for irrigation (any valid reason, developed)"], modelAnswer: "The village is beside the river, so water is available for homes and crops. It lies on the gravel road, which gives access to the tarred road and to the clinic and school, and it is on the flat valley floor." }),
       P.manual({ label: "(f)", marks: 2, stem: "Give two pieces of evidence that irrigation is practised.", points: ["A dam built across the river", "A canal running south to fields at 3444 and 3446"], modelAnswer: "A dam has been built across the river at 3345, and a canal runs south from it to fields at 3444 and 3446." }),

@@ -146,7 +146,7 @@ concept("abio.skills.biological-drawing", { file: "skills/biological-drawing", k
   chk(sizeFromBar, 115);
   b.num({
     d: 3, skill: "APPLICATION", calculator: true,
-    stem: "A scale bar labelled 40 µm is 16 mm long on a photomicrograph. A xylem vessel element on the image is 46 mm long. Calculate its actual length in µm.",
+    stem: "A scale bar labelled 40 µm is 16 mm long on a photomicrograph. A xylem vessel element measures 46 mm long in the photomicrograph. Calculate its actual length in µm.",
     value: sizeFromBar, unit: "µm", wrong: [sfStr(46 * 16 / 40, 3), 1840],
     explanation: t`Magnification $= 16\,000 \div 40 = \times 400$. Actual length $= 46\,000 \div 400 = 115\ \mu\text{m}$ (or $46 \div 16 \times 40 = 115\ \mu\text{m}$).`,
     hints: ["Find the magnification from the scale bar."],

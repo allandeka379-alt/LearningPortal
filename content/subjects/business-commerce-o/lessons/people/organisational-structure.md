@@ -131,7 +131,7 @@ Instructions travel down the chain of command, but information and feedback trav
 ## Exam tips
 
 :::exam-tip{title="Using organisation charts"}
-Before answering, count the levels and the spans carefully from the chart in the question. When asked about the effect of a change in structure, say what happens to levels, spans, communication, cost and motivation.
+Before answering, count the levels and the spans carefully from the organisation chart in the question. When asked about the effect of a change in structure, say what happens to levels, spans, communication, cost and motivation.
 :::
 
 :::exam-tip{title="Board differences"}

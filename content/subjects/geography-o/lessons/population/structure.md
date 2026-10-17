@@ -45,6 +45,8 @@ The number of dependants (aged 0-14 and 65+) for every 100 people of working age
 
 When you describe a pyramid, comment on:
 
+![Two population pyramids on the same scale: a youthful pyramid (Zimbabwe-type) with a very wide base, about 40% aged under 15 and only about 3% aged 65 and over, and an ageing pyramid (Germany-type) with a narrow base, a bulge in middle age and about 21% aged 65 and over.](media:diagrams/population-pyramids-youthful-ageing.png "Figure: a youthful and an ageing population pyramid (illustrative shapes)")
+
 1. **The base:** wide = high birth rate; narrow = low birth rate.
 2. **The sides:** a steep, concave slope = high death rates at all ages; straight sides = low death rates until old age.
 3. **The top:** narrow = short life expectancy; wide = long life expectancy.

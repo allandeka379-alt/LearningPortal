@@ -58,7 +58,7 @@ Artery and vein walls have three layers: an inner **tunica intima** (endothelium
 In a transverse section (TS) of an artery and vein side by side, the **artery** has a thick wall, a relatively small, round lumen, and an endothelium that often looks folded because the elastic fibres recoil after death. The **vein** has a thin wall, a large lumen and often an irregular or flattened shape. In a longitudinal section (LS) a vein may show a pocket valve.
 
 :::worked-solution[Measurements from a photomicrograph of an artery]
-A photomicrograph of an artery TS is at ×40. The lumen measures 22 mm across and the wall 6 mm thick on the image.
+A photomicrograph of an artery TS is at ×40. The lumen measures 22 mm across and the wall 6 mm thick in the photomicrograph.
 1. Lumen: $22\ \text{mm} = 22\,000\ \mu\text{m}$; actual $= 22\,000 \div 40 = 550\ \mu\text{m}$.
 2. Wall: $6\ \text{mm} = 6000\ \mu\text{m}$; actual $= 6000 \div 40 = 150\ \mu\text{m}$.
 3. Ratio of lumen diameter to wall thickness $= 550 : 150 = 3.7 : 1$ (to 2 s.f.).

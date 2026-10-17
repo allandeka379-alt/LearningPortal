@@ -86,6 +86,8 @@ Imagine a graph with time along the bottom. Two lines start high on the left: th
 | **4 Low fluctuating** | Low | Low | Low | High, stable | Small families by choice; good health care | USA, UK, France |
 | **5 Declining** | Very low | Low but rising slightly (ageing) | Negative | Slowly falling | Careers, cost of children; ageing population | Japan, Germany, Italy |
 
+![Demographic transition model: birth and death rates start high at about 38 per 1,000 in stage 1; the death rate falls first in stage 2 so the gap (natural increase) and population grow fast; in stage 3 the birth rate falls; in stage 4 both rates are low and population is high and stable; in stage 5 the birth rate dips below the death rate and population falls slowly.](media:diagrams/demographic-transition-model.png "Figure: the five stages of the demographic transition model (shape only; values illustrative)")
+
 :::example{title="Worked example: placing countries on the DTM (fictional data)"}
 | Country | Birth rate (per 1,000) | Death rate (per 1,000) |
 |---|---|---|

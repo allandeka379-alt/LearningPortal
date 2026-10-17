@@ -11,7 +11,7 @@
 ---
 ## Introduction
 
-On a Saturday morning in a village near Masvingo, neighbours gather at a field for a work party, a nhimbe, to plough for a widow. After the work there is food and beer, and everyone goes home having helped and been helped. In Bulawayo a young man opens a small tuck shop and gives a share of his profit to his church. In Harare a preacher on the radio promises that those who give generously will be blessed with riches. These pictures show how closely work, money and faith are linked in Zimbabwean life, and how people disagree about how they fit together.
+On a Saturday morning in a village near Masvingo, neighbours gather at a field for a work party, a nhimbe, to plough for a widow. After the work there is food and beer, and everyone goes home having helped and been helped. In Bulawayo a young man opens a small tuck shop and gives a share of his profit to his church. In Harare a preacher on the radio promises that those who give generously will be blessed with riches. These scenes show how closely work, money and faith are linked in Zimbabwean life, and how people disagree about how they fit together.
 
 In this lesson you learn what the four religions in your syllabus teach about work, wealth and poverty, including the debate about the prosperity gospel. You should already know that the religions teach that people are responsible to God and to each other. The lesson describes the range of views and does not tell you what to believe.
 

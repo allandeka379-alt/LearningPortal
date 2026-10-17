@@ -70,6 +70,8 @@ Imagine a cross-section from west to east through a mature depression, with the 
 
 The warm front slopes gently (rain over a wide belt ahead of it); the cold front slopes steeply (narrow band of heavy rain). In the northern hemisphere the wind changes direction clockwise (**veers**) as each front passes.
 
+![Cross-section through a mature depression moving east: the steep cold front with towering cumulonimbus and heavy short downpours, the warm sector with low stratus and drizzle, and the gently sloping warm front with nimbostratus and steady rain over a wide belt, thinning to cirrus far ahead.](media:diagrams/depression-cross-section.png "Figure: cross-section of a mature depression with the cold front, warm sector and warm front")
+
 :::example{title="How long before the front arrives?"}
 A cold front is 450 km west of a town and moving east at 30 km/h.
 

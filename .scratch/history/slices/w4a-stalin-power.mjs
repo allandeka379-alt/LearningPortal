@@ -201,7 +201,7 @@ concept("hist.russia.stalin-power", { file: "russia/stalin-power", keyPrefix: "r
         "Stalin is a kind, loving father figure (cult of personality).",
         "Life in the USSR is happy and prosperous thanks to him (new factories).",
       ], explanation: "Two points of message." }),
-      P.manual({ label: "(b)", marks: 4, stem: "How far does Source B challenge the picture given in Source A?", points: [
+      P.manual({ label: "(b)", marks: 4, stem: "How far does Source B challenge the view given in Source A?", points: [
         "B shows terror and arbitrary arrest, the opposite of A's happiness.",
         "B shows innocent people from all groups imprisoned; A shows a contented people.",
         "B shows forced confessions; A shows love for Stalin.",

@@ -290,7 +290,7 @@ concept("geo.maps.direction-bearings", { file: "maps/direction-bearings", keyPre
         explanation: "Westerly declination: add. 040° + 8° = 048°.",
       }),
       P.num({
-        label: "(b)", stem: "On the second leg a hiker reads a magnetic bearing of 200° to a distant hill. What is the grid bearing to plot on the map?",
+        label: "(b)", stem: "On the second leg a hiker reads a magnetic bearing of 200° to a distant hill. What is the grid bearing to plot?",
         value: 192, unit: "°", wrong: [208],
         explanation: "Magnetic to grid with a westerly declination: subtract. 200° − 8° = 192°.",
       }),

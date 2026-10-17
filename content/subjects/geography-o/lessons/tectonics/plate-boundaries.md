@@ -83,6 +83,8 @@ Two plates **slide past each other**. Crust is neither made nor destroyed. The p
 | Collision | Together, both continental | Fold mountains | Strong | Few or none | Himalayas |
 | Conservative | Sideways past each other | Fault lines | Can be strong | None | San Andreas Fault |
 
+![Four plate boundaries: at a constructive boundary plates move apart and magma rises to make new crust; at a destructive boundary a dense oceanic plate is subducted under a continental plate forming a trench and volcanoes; at a collision boundary two continents crumple into fold mountains; at a conservative boundary plates slide past each other with earthquakes but no volcanoes.](media:diagrams/plate-boundary-types.png "Figure: constructive, destructive, collision and conservative plate boundaries")
+
 ## Why earthquakes and volcanoes occur where they do
 
 - **Earthquakes** occur at all plate boundaries, because plates moving against or away from each other build up and release stress.
