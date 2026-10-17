@@ -1,0 +1,9 @@
+const fs=require('fs');
+function edit(f,pairs){const p='content/subjects/history-a/lessons/'+f+'.md';let s=fs.readFileSync(p,'utf8');for(const [a,b] of pairs){if(!s.includes(a)){console.log('SKIP',a.slice(0,50));continue;}s=s.replace(a,b);}fs.writeFileSync(p,s);}
+edit('holocaust/nazi-policy-1933-45',[
+[' Jews had lived in Europe for centuries, and for much of that time they were targets of religious prejudice and periodic violence, including expulsions and massacres.',' Jews had lived in Europe for centuries, and were often targets of religious prejudice and periodic violence, including expulsions and massacres.'],
+[' In Russia, pogroms followed 1881 and the early 1900s; in France the Dreyfus Affair of the 1890s showed how antisemitism could divide a democracy; and a forgery, *The Protocols of the Elders of Zion*, spread the false idea of a Jewish world conspiracy.',' Pogroms followed 1881 in Russia, the Dreyfus Affair of the 1890s divided France, and a forgery, *The Protocols of the Elders of Zion*, spread the false idea of a Jewish world conspiracy.'],
+[' Many local people in occupied Europe helped the Germans, many did nothing, and a minority sheltered Jews: Denmark\'s people helped to take about 7,000 Jews to safety in Sweden in October 1943. ',' Many local people in occupied Europe helped the Germans, many did nothing, and a minority sheltered Jews; in Denmark about 7,000 Jews were taken to safety in Sweden in October 1943.'],
+['Whether these should be included in the term "Holocaust" is discussed in a later lesson.','Whether they belong within the term "Holocaust" is discussed in a later lesson.'],
+[' Historians argue about when the decision to murder all the Jews was taken (see the next lesson), but all agree that by early 1942 the policy was being carried out.',' Historians argue about when the decision to murder all the Jews was taken (see the next lesson), but agree that by early 1942 it was being carried out.'],
+]);

@@ -1,0 +1,182 @@
+// W1b: ZIMSEC exam-format 25-mark essays (EXAM.ZIM_ESSAY): Paper 1 x4 (early contacts, colonisation and the Anglo-Ndebele
+// War, the First Chimurenga, colonial administration) and Paper 2 x1 (the transition from the slave trade to legitimate trade).
+import { concept, levels, ZIM } from "../lib.mjs";
+
+concept("ahist.contact.portuguese", { file: "exam/w1b-zimsec", keyPrefix: "exam.w1b-zimsec" }, (b) => {
+  b.essay({
+    d: 5, skill: "EVALUATION", examStyle: true, paper: "Paper 1", applies: ZIM, secs: 2700, marks: 25,
+    concepts: ["ahist.contact.portuguese", "ahist.contact.missionaries-hunters-traders", "ahist.contact.european-states-interests"],
+    stem: "Assess the impact of early European contacts on Zimbabwean societies, from the arrival of the Portuguese to the 1880s. [25]",
+    wordLimit: { min: 600, max: 1100 },
+    levels: levels(25),
+    points: [
+      ["Portuguese aims and activities: gold and ivory, Sofala 1505, Sena and Tete, fairs, Silveira in 1561, Barreto 1569-72", 3],
+      ["Effect on the Mutapa state: treaties of 1607 and 1629, interference in succession, vassal status for some rulers, weakening of the state", 3],
+      ["Economic effects: Muslim traders displaced, a share of the gold and ivory trade went to the coast, mining disrupted by wars", 3],
+      ["Limits of Portuguese influence: few converts, no conquest of the plateau, the Rozvi under Changamire Dombo expelled them in the 1690s", 3],
+      ["Nineteenth-century missionaries, hunters and traders: Inyati 1859, Hope Fountain 1870, Jesuits 1879; guns and goods, falling elephant herds, interpreting and reporting", 3],
+      ["Explorers and concession seekers: Mauch 1871, knowledge of the country, the rush of the 1880s after the Witwatersrand gold", 3],
+      ["The rivalry of Britain, the Transvaal and Germany and the treaties of 1887-88 that narrowed Ndebele independence", 3],
+      ["Judgement: influence was real but varied by period and was greatest on politics and trade, with limited social effect until colonisation", 4],
+    ],
+    modelAnswer: `The early European contacts with Zimbabwean societies had a considerable impact on trade and politics, but a limited impact on ordinary social life until the occupation of 1890. Their influence also differed greatly between the Portuguese period and the nineteenth century.
+
+The Portuguese came to the east coast after Vasco da Gama's voyage of 1498, seeking gold and ivory, control of the Indian Ocean trade and the spread of Christianity. They built a fort at Sofala in 1505 and settled at Sena and Tete on the Zambezi from the 1530s. In the interior they traded at fairs under the permission of the Mutapa, who taxed them. Their missionaries had little success. Gonçalo da Silveira baptised a Mutapa ruler in 1560, but was killed in 1561 after Muslim merchants and court advisers persuaded the ruler that he was a danger, and the Portuguese used his death as a pretext to send the army of Francisco Barreto in 1569-72, which failed because of disease.
+
+The Portuguese had their greatest effect on the politics of the Mutapa state. The state was already weakened by quarrels over the succession, and rival claimants asked the Portuguese for help. The treaty of 1607 with Gatsi Rusere gave the Portuguese rights, including mining rights, in return for help against his enemies. In 1629 the Portuguese helped to place Mavura Mhande on the throne, and he accepted terms which the Portuguese described as vassalage. These treaties are known mainly from Portuguese documents and the Mutapa rulers may not have understood them in the same way, but they plainly increased Portuguese power and reduced the independence of the Mutapa.
+
+There were economic effects too. The Muslim and Swahili merchants who had controlled the gold trade were pushed aside, and the Portuguese took a share of the gold and ivory, much of which went to the coast rather than staying in the country. Wars disrupted mining. In the valley the prazo system created estates ruled by prazeiros with armed followers, which brought violence.
+
+However, Portuguese influence had limits, and a balanced answer must say so. They were always few, their expedition failed, and they won very few converts. They never conquered the plateau. In the 1690s the Rozvi under Changamire Dombo defeated the Portuguese and Mutapa forces and drove the Portuguese from the plateau, leaving their influence in the lower Zambezi valley. The long-term effect was to deepen the Mutapa state's divisions rather than to replace it.
+
+In the nineteenth century the visitors were different. Missionaries of the London Missionary Society settled at Inyati in 1859 with Mzilikazi's permission and at Hope Fountain in 1870, and Jesuits arrived in 1879. They taught reading, wrote down Ndebele and Shona and acted as interpreters and letter writers for Lobengula, but won almost no converts, because the king and regiments saw no reason to abandon the beliefs on which the state rested. Their importance was political. When Charles Helm interpreted at the signing of the Rudd Concession in 1888 and John Smith Moffat advised the king, they helped British interests, though they did not intend to bring about the loss of independence.
+
+Hunters and traders such as Frederick Selous brought guns, cloth and wagons and took ivory. Lobengula allowed them in on his terms and charged for hunting, but the herds of elephants fell and the king became dependent on imports. Explorers such as Karl Mauch, who visited Great Zimbabwe in 1871 and wrongly attributed it to a Near Eastern people, published reports on gold and land which attracted investors. After gold was found on the Witwatersrand in 1886, concession seekers crowded Lobengula's court.
+
+Finally, the contacts of the 1880s involved the competing interests of states. Britain feared that the Transvaal and Germany might join up and block the road north, and the Grobler Treaty of 1887 and the Moffat Treaty of February 1888 narrowed Lobengula's choices, since after 1888 he could make no treaty with another power without British approval. This led to the Rudd Concession of October 1888 and to occupation.
+
+In conclusion, the early contacts had the most important effects on politics and trade: the weakening of the Mutapa state in the seventeenth century and, in the nineteenth century, the narrowing of Ndebele independence. Socially, their effect was small, since converts were few and most people's daily lives changed little before 1890. The impact was greater in the second period because the visitors were backed by states and companies that wanted the land itself, whereas the Portuguese never had the power to rule the plateau.`,
+    hints: ["Cover both the Portuguese period and the nineteenth century, and weigh political, economic and social effects."],
+    explanation: "A level 5 answer covers both periods with accurate detail, weighs different kinds of impact and reaches a supported judgement about which was greatest.",
+  });
+
+  b.essay({
+    d: 5, skill: "EVALUATION", examStyle: true, paper: "Paper 1", applies: ZIM, secs: 2700, marks: 25,
+    concepts: ["ahist.colonisation.occupation", "ahist.colonisation.anglo-ndebele-war"],
+    stem: "Assess the importance of the Rudd Concession in the colonisation of Zimbabwe between 1888 and 1894. [25]",
+    wordLimit: { min: 600, max: 1100 },
+    levels: levels(25),
+    points: [
+      ["Background: gold on the Witwatersrand in 1886, Rhodes's ambitions, rivalry of Portugal, the Transvaal and Germany", 3],
+      ["The Moffat Treaty (February 1888) and Grobler Treaty as preparation for the Concession", 3],
+      ["The Rudd Concession of 30 October 1888: exclusive mineral rights, payments, the role of Helm as interpreter", 3],
+      ["Dispute over the Concession: Lobengula's complaint and the Company's reading; Babayane and Mshete in London", 3],
+      ["The Royal Charter of 29 October 1889 as the legal use of the Concession to gain authority", 3],
+      ["The Pioneer Column and Fort Salisbury, 12 September 1890: the role of force and planning rather than the document", 3],
+      ["The Anglo-Ndebele War of 1893-94: Victoria incident, Maxim guns, fall of Bulawayo, Lobengula's death; the Concession was used to claim rights but war ended Ndebele independence", 3],
+      ["Judgement on whether the Concession was a cause, a pretext or one step among several", 4],
+    ],
+    modelAnswer: `The Rudd Concession was important in the colonisation of Zimbabwe because it provided the legal basis on which the Company obtained its Charter and claimed rights in Lobengula's kingdom. But it was one step in a longer process, and it did not by itself bring about occupation or conquest. Force, money and the rivalry of states were at least as important.
+
+By the later 1880s a number of forces were bringing the country to the attention of Europeans. Gold was found on the Witwatersrand in 1886, and many believed that a second Rand lay in Matabeleland and Mashonaland. Cecil Rhodes wished to extend British rule northward and to make money. Britain feared that Portugal, the Transvaal and Germany would reach the interior first. The Grobler Treaty of 1887 between the Transvaal and Lobengula alarmed Britain, which responded with the Moffat Treaty of February 1888. In that treaty Lobengula promised not to make treaties or give land to other powers without British approval. This treaty made the Concession possible by excluding rivals.
+
+In October 1888 Charles Rudd, Rochfort Maguire and Francis Thompson came to Bulawayo, with the missionary Charles Helm as interpreter and the support of British officials. On 30 October Lobengula made his mark on a document giving the party exclusive rights over all metals and minerals in his kingdom and the right to do what was needed to win them. In return he was to receive £100 a month, 1,000 Martini-Henry rifles with ammunition and a gunboat on the Zambezi, or £500 instead. The Concession gave Rhodes a paper claim to the minerals, and this was valuable in dealing with other European interests.
+
+However, the Concession was disputed from the start. Lobengula said that he had been told that only a few white men would dig and that they would obey his laws, and that he had been tricked. He sent two councillors, Babayane and Mshete, to London in 1889 to see Queen Victoria. The Company said that the document was clear. The difference shows that the Concession was a weak foundation: it was a mining grant, not a transfer of land or sovereignty. Its importance lay in how it was used, not in what it said.
+
+It was used to obtain the Royal Charter of 29 October 1889. Rhodes went to London, joined rival interests into the British South Africa Company, and persuaded the government of Lord Salisbury that a chartered company could occupy the north at little cost to the taxpayer. The Charter allowed the Company to make treaties, raise police, hold land and mineral rights and administer the territory north of the Limpopo. Without the Concession there would have been no Charter in this form, so the Concession was a necessary step.
+
+Even so, the occupation of 1890 depended on organisation and force. The Pioneer Column, with about 180 settlers and some 500 police, under Frank Johnson and guided by Frederick Selous, entered Mashonaland in June 1890. It deliberately avoided the Ndebele heartland and raised the flag at Fort Salisbury on 12 September 1890. The Company chose Mashonaland because it wished to avoid a war that it might not win, and it was the column's guns and discipline, together with Lobengula's failure to attack, that made occupation possible. The Concession was the legal pretext, but power was the reality.
+
+The war of 1893-94 completed the conquest of the Ndebele. The Company's wish for Matabeleland's land and wealth, after Mashonaland had not produced the gold expected, was the underlying cause, and the Victoria incident of July 1893 the trigger. The Concession was part of the Company's argument that it had a right to the whole country, and that Lobengula had no right to raid the Shona. But the Victoria Agreement, which promised volunteers farms, gold claims and a share of the cattle, shows that the war was prepared by the Company without regard for the Concession's meaning. At Shangani on 25 October and Bembesi on 1 November 1893 the Maxim guns defeated the Ndebele, Bulawayo was occupied, and Lobengula died in early 1894. The Matabeleland Order in Council of 1894 put the Ndebele under Company rule.
+
+In conclusion, the Rudd Concession was a vital legal document, but it was neither the sole nor the decisive factor. It gave the Company a claim and the means to obtain a Charter, and it helped to justify the later war. But the occupation required the Moffat Treaty to keep rivals out, the Charter to give authority, the Pioneer Column to give possession, and the Maxim gun to defeat the Ndebele. The Concession was a pretext as much as a cause: Rhodes would probably have found another way to take the country, but the paper made it appear lawful.`,
+    hints: ["Treat the Concession as one step: what did it make possible, and what else was needed?"],
+    explanation: "A level 5 answer explains what the Concession did, weighs it against the Moffat Treaty, the Charter, the Column and the war, and judges its importance.",
+  });
+
+  b.essay({
+    d: 5, skill: "EVALUATION", examStyle: true, paper: "Paper 1", applies: ZIM, secs: 2700, marks: 25,
+    concepts: ["ahist.risings.causes", "ahist.risings.spirit-mediums-defeat"],
+    stem: "To what extent was loss of land and cattle the main cause of the Ndebele and Shona risings of 1896-97? [25]",
+    wordLimit: { min: 600, max: 1100 },
+    levels: levels(25),
+    points: [
+      ["Land: settler farms, reserves such as Gwaai and Shangani, loss of control by chiefs", 3],
+      ["Cattle: seizure after 1893-94 and the loss of wealth and ritual ties; the shooting of cattle against rinderpest", 3],
+      ["Forced labour and taxes: hut tax, recruitment of workers, harsh conditions", 3],
+      ["The Native Police and Native Commissioners: abuse and loss of chiefly authority", 3],
+      ["Natural disasters of 1895-96: drought, locusts and rinderpest as triggers", 3],
+      ["Opportunity: the Jameson Raid of December 1895 - January 1896 took police out of the country", 3],
+      ["Religious leaders: Mkwati and the Mwari cult, Kaguvi and Nehanda gave leadership and unity", 3],
+      ["Judgement linking long-term grievances, triggers and leadership, with a view on whether land and cattle were the main cause (and the debate on coordination)", 4],
+    ],
+    modelAnswer: `Loss of land and cattle was one of the main causes of the risings of 1896-97, because it removed the basis of people's wealth, independence and religion. But it cannot be separated from the other grievances, from the disasters of 1895-96, from the opportunity created by the Jameson Raid and from the leadership of the mediums. I will argue that the loss of land and cattle was the deepest cause, but that the risings happened when and as they did because of other factors.
+
+Land was lost quickly. After 1890 the Company sold or granted farms and mining claims in Mashonaland, and after the war of 1893-94 settlers took the best land of the Ndebele around Bulawayo. Africans were moved into reserves such as Gwaai and Shangani, in drier and poorer country. Chiefs in Mashonaland lost the right to decide who should settle and use their land. Since land was the base of farming and the home of the ancestors, the loss was both economic and spiritual.
+
+Cattle were equally important. For the Ndebele, cattle were the main form of wealth and the basis of social standing, and after the war the Company and the settlers seized most of the royal herds and many others. Shona communities also lost cattle through fines and seizures. Cattle paid bridewealth and linked families to their ancestors, so their loss weakened the social order as well as the economy. In 1896 rinderpest reached the country and the Company shot cattle, including healthy herds, to form a barrier against the disease, which Africans saw as a further theft.
+
+Forced labour and taxes added to the pressure. The Company and the settlers needed workers for mines, farms and roads. Chiefs were pressed to supply men, and those who refused were punished. The hut tax had to be paid in cash, so men had to earn wages from settlers. Conditions were harsh and pay was low. This was a grievance because it took labour from African farms at the very time that their land and cattle were being lost.
+
+The Native Police and the Native Commissioners were also resented. The police, recruited by the Company, were accused of cruelty, theft and the abuse of women, and the people had little means of complaint. Native Commissioners could appoint and dismiss chiefs, which undermined the authority of established leaders, especially in Mashonaland, and the Ndebele had lost their king and their state.
+
+These long-term grievances explain why people were ready to fight, but not why they rose in 1896. The short-term causes were the disasters of 1895-96. Drought and locusts destroyed crops, and rinderpest killed cattle. Many people blamed the settlers, and the Company's shooting of cattle made things worse. Religious leaders said that the ancestors were angry and that the whites must be driven out. The opportunity was supplied by the Jameson Raid of December 1895 and January 1896, when Jameson took most of the Company's armed police into the Transvaal, leaving the country weakly defended.
+
+Religious leaders gave the rising shape. In Matabeleland the Mwari cult, with priests such as Mkwati, told people that the whites could be removed; in Mashonaland the mediums Kaguvi, linked with Chaminuka, and Nehanda of Mazowe called chiefs to resist. Mkwati moved into Mashonaland and helped to spread the rising. Historians disagree about how far the risings were planned together. Terence Ranger argued in 1967 for a linked movement led by the religious leaders, while Julian Cobbing and others have stressed local causes and separate decisions. Many now accept some contact but separate risings. Either way, the leaders provided unity and a belief that resistance could succeed, which grievances alone did not.
+
+In conclusion, loss of land and cattle was the deepest and most widely shared cause, because it threatened the means of life, the social order and religion of both peoples. But it was not enough on its own: the risings came when the disasters of 1895-96, the absence of the police and the call of the religious leaders turned long-standing grievance into action. The best explanation is a combination, in which land and cattle were the foundation, the disasters were the trigger and religious leadership provided the organisation.`,
+    hints: ["Group causes as long-term grievances, triggers, opportunity and leadership, then rank them."],
+    explanation: "A level 5 answer explains land and cattle in detail, weighs them against the other causes, and reaches a supported judgement that mentions the debate about coordination.",
+  });
+
+  b.essay({
+    d: 5, skill: "EVALUATION", examStyle: true, paper: "Paper 1", applies: ZIM, secs: 2700, marks: 25,
+    concepts: ["ahist.colonial.company-rule"],
+    stem: "Assess the effects of British South Africa Company rule on Africans in Southern Rhodesia between 1890 and 1923. [25]",
+    wordLimit: { min: 600, max: 1100 },
+    levels: levels(25),
+    points: [
+      ["Administration: Administrator, Native Department and Native Commissioners; chiefs paid and supervised; no African voice in the Legislative Council", 3],
+      ["Land: alienation, reserves on poorer land, Africans as tenants; Privy Council 1918 and the Ndebele petition of 1919", 3],
+      ["Taxes: hut tax and other taxes payable in cash; the effect of forcing men into wage work", 3],
+      ["Labour: demands of mines and farms, chibaro, pass laws, low wages and dangerous work", 3],
+      ["Economic change: railways, mines and white farming, with the benefits going mainly to settlers; limited African cash cropping", 3],
+      ["Social change: mission education, urban growth and migrant labour, with a limited number of schools", 3],
+      ["African responses: petitions, evasion of tax and labour, migration, associations; the memory of 1896-97 and Company force", 3],
+      ["Judgement on the overall balance of the effects", 4],
+    ],
+    modelAnswer: `The effects of Company rule on Africans between 1890 and 1923 were largely harmful. The Company took land, imposed taxes, demanded labour and gave Africans no part in government. There were some limited gains, such as missions and schools and the building of railways, but these were small compared with the losses and mostly benefited settlers.
+
+The Company governed under its Charter of 1889. An Administrator ran the territory, assisted after 1899 by a Legislative Council in which settlers had a growing share and Africans none. After the risings of 1896-97 the Native Department was reorganised. Native Commissioners in each district collected taxes, judged cases, supervised chiefs and helped to recruit labour, and chiefs were given small salaries and tied to the administration. This system allowed the Company to govern a large territory cheaply, but it meant that Africans had a single official acting as tax collector, judge and labour agent, with little means of appeal.
+
+Land was the most important loss. The Company claimed the unalienated land, and sold or granted large areas to settlers, mining companies and itself. From 1894 reserves were set aside for Africans, such as Gwaai and Shangani, often in poorer and drier areas. Many Africans on land that was designated for whites became tenants, paying rent or labour, or were moved. The Company claimed that it owned all unalienated land, but in 1918 the Privy Council ruled that it belonged to the Crown. In 1919 Ndebele leaders petitioned London for land, but the petition did not succeed. The land losses caused overcrowding, erosion and poverty in the reserves.
+
+Taxes and labour were closely linked. A hut tax and other taxes had to be paid in cash, and the easiest way to earn cash was to work for wages for settlers. Pass laws and registration controlled the movement of Africans. Labour agents recruited men for the mines, and work was hard and dangerous, with low wages. Many Africans used the word chibaro for this kind of labour, which they saw as close to forced labour. Chiefs were pressed to supply workers, and men who refused were punished. The effect was to drain men from their villages, leaving women to work the land, and to create a pattern of migrant labour.
+
+The settler economy grew under the Company, with gold and other minerals such as coal at Wankie from 1903, white farming of maize and tobacco, and railways that reached Bulawayo in 1897, Salisbury in 1899 and the Victoria Falls in 1904. These developments created some wages and markets for Africans, and some African farmers sold grain. But the best land, the markets and the capital went to settlers, and the costs were carried largely by Africans through tax and labour.
+
+There were some social changes. Missions opened schools and taught reading and skills, and a small educated class began to appear. Towns grew, bringing new contacts and new forms of organisation. But education was limited in the number of places and in what was taught, and the missions did not challenge the colonial order.
+
+Africans responded in many ways. After the defeat of the risings, open armed resistance was unlikely, since the Company had shown that it would use force. Instead they evaded tax and labour, migrated to find better terms, petitioned the Company and London, formed welfare associations and joined churches. The memory of 1896-97 was kept alive and later inspired nationalists.
+
+In conclusion, the effects of Company rule on Africans were mostly negative. They lost land and cattle, faced heavy taxes and forced labour, and had no political rights, while the benefits of railways, mines and farming went mainly to settlers. The small gains in education and wage income were real but limited and came at a high price. The grievances created in this period became the foundation of the nationalist movements of later decades.`,
+    hints: ["Cover administration, land, tax and labour, economic and social change, and African responses; then weigh gains against losses."],
+    explanation: "A level 5 answer is organised by type of effect, uses specific detail and reaches a supported judgement about the balance of gain and loss.",
+  });
+
+  b.essay({
+    d: 5, skill: "EVALUATION", examStyle: true, paper: "Paper 2", applies: ZIM, secs: 2700, marks: 25,
+    concepts: ["ahist.slavery.legitimate-trade", "ahist.slavery.abolition"],
+    stem: "To what extent was the transition from the slave trade to legitimate trade a success for African states in the nineteenth century? [25]",
+    wordLimit: { min: 600, max: 1100 },
+    levels: levels(25),
+    points: [
+      ["Reasons for the transition: industrial demand for palm oil, groundnuts and rubber; abolition in 1807 and naval patrols; African interests", 3],
+      ["Success of the Niger Delta states as middlemen: wealth, trade houses, growth of towns and ports", 3],
+      ["Opobo under Jaja: founded 1869, recognised 1873, controlled the oil trade and sold directly to Liverpool", 3],
+      ["Limits and fall of Opobo: conflict with free trade at Berlin, Jaja arrested and exiled in 1887", 3],
+      ["Failure or partial change in Dahomey and Asante: dependence on war and slaves, palm oil on royal plantations, loss of revenue, conquest by France and Britain", 3],
+      ["Zanzibar: cloves and ivory with slave labour, closure of the slave market in 1873", 3],
+      ["Costs of the new trade: instability, wars among trade houses, growth of domestic slavery, dependence on world prices", 3],
+      ["Judgement: success for some rulers and merchants in the short term, but the trade invited interference that led to colonisation", 4],
+    ],
+    modelAnswer: `The transition from the slave trade to legitimate trade was a success for some African states and a failure for others, and in the long run its success was limited, because the new trade invited European interference which led to colonisation. Whether it was a success depends on which states are considered and over what period.
+
+The reasons for the transition were both European and African. European industry needed palm oil for soap, candles and the lubrication of machinery, groundnuts for oil and food, and later rubber, and merchants therefore looked for new suppliers. At the same time Britain abolished the slave trade in 1807, and the Royal Navy's West Africa Squadron, from 1808, raised the risks of the older trade. Many African rulers and merchants found that the new goods were profitable and less dangerous, though some tried to continue slave exports to Brazil and Cuba for years.
+
+Some states made the change successfully. The Niger Delta states of Bonny, Brass, Calabar and New Calabar, which had been important slave ports, turned to palm oil brought down by canoe from the Igbo hinterland. They acted as middlemen, controlling access to the markets and taking a profit. Their trade houses, which were family and dependant groups under a head, grew rich and powerful, and their ports and towns grew. This was a real success, since it brought wealth and built new forms of political organisation.
+
+The best example is Opobo. Jaja, who had been born in Igboland and sold into slavery in Bonny, rose to be head of the Anna Pepple House. After conflict with rival houses he left Bonny in 1869 and founded Opobo, near the palm-oil markets. He controlled the supply, built a fleet and sold oil directly to merchants in Liverpool. In 1873 Britain recognised him as king of Opobo. His career shows how an African ruler could use legitimate trade to build a powerful state.
+
+But Opobo's story also shows the limits of success. Jaja refused to allow British traders to go inland to the markets, and this conflicted with British commercial interests and with the principle of free trade in the Niger basin agreed at the Berlin Conference of 1884-85. In 1887 the British consul invited him to talks, then arrested him, and he was tried and exiled to the West Indies, where he died in 1891 on the way home. Opobo lost its independence. Success in trade did not protect a state against a stronger power.
+
+Other states adjusted poorly. Dahomey's kings, such as Gezo, produced palm oil on royal plantations using slave labour, but the state depended on war and the sale of captives, and it kept exporting slaves while it could. As the old revenues shrank, and with rivalry from France, Dahomey was weakened and was conquered by France in 1892-94. Asante lost revenue from the slave trade and found it hard to replace; it traded gold, kola and rubber, but wars with Britain, including that of 1873-74, and competition on the coast hurt it, and it came under British control by 1901. In East Africa, Zanzibar became rich on cloves, grown on plantations with slave labour, and on ivory, but the slave market was closed only in 1873 under British pressure.
+
+The new trade also had costs, even for the successful. Rivalry between trade houses and states led to wars. The need for labour to produce oil and cloves increased domestic slavery in some places, so legitimate trade did not end slavery within Africa. African economies became dependent on world prices for oil and rubber, which they did not control. Most importantly, consuls, merchants and gunboats pressed for free access and security, bombarding towns such as Lagos in 1851, removing rulers such as Kosoko and Jaja, and preparing the way for the Scramble for Africa.
+
+In conclusion, the transition was a success in the short term for rulers and merchants in the Niger Delta and for some others, who gained wealth, towns and power. For states that depended on the sale of captives, it brought loss and decline. In the long term even the successful found that the new trade brought dependence and invited the interference that ended their independence. I therefore judge that the transition was only partly successful: it brought real benefits to some, but it did not secure the future of African states, and the way it unfolded helped to bring about colonisation.`,
+    hints: ["Contrast successful and unsuccessful states, then weigh short-term gains against long-term costs."],
+    explanation: "A level 5 answer contrasts states with examples, weighs benefits and costs, and reaches a supported judgement about the extent of success.",
+  });
+});

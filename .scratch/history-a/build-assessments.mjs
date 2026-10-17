@@ -99,7 +99,7 @@ const camTests = [
 finish(
   S,
   {
-    zim: { tests: tests(S.zim, "zimsec", MERGE.zim), mocks: zimMocks, file: "zimsec" },
+    zim: { tests: tests(S.zim, "zimsec", MERGE.zim, ["assessment-skills"]), mocks: zimMocks, file: "zimsec" },
     cam: { tests: camTests, mocks: camMocks, file: "cambridge" },
   },
   {
