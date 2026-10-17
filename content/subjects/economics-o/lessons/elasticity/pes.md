@@ -40,6 +40,8 @@ Because price and quantity supplied move in the **same** direction (the law of s
 
 A useful test for straight-line supply curves: a line that cuts the **price** axis is elastic, one that cuts the **quantity** axis is inelastic, and one that passes through the **origin** is unitary elastic.
 
+![Three straight supply curves: the line that cuts the quantity axis is price inelastic (PES less than 1), the line through the origin has PES exactly 1, and the line that cuts the price axis is price elastic (PES greater than 1).](media:diagrams/pes-curve-tests.png "Figure: where a straight supply curve meets the axes tells you its elasticity")
+
 :::worked-solution[Worked example 1: tomato farmers (inelastic)]
 The price of a crate of tomatoes rises from US\$4 to US\$5. Within the month, farmers supplying a fictional market increase deliveries from 200 to 230 crates a week.
 

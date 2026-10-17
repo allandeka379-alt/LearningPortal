@@ -59,6 +59,8 @@ The supply curve of labour to an occupation slopes **upwards**: a higher wage at
 
 **Describing the diagram.** Put the wage rate on the vertical axis and the quantity of labour (number of workers) on the horizontal axis. Draw a downward-sloping demand curve for labour (DL) and an upward-sloping supply curve (SL). Where they cross, read off the equilibrium wage (W1) and the level of employment (Q1). Above W1 there is a surplus of labour (more people want the job than there are vacancies); below W1 there is a shortage of labour (unfilled vacancies), and employers raise wages to attract workers.
 
+![Labour market for bricklayers: demand DL slopes down and supply SL slopes up and they cross at a wage of US\$14 a day with 480 workers; at US\$12 there is a shortage of 150 workers (540 wanted, 390 offered) and at US\$16 a surplus of 150 (570 offered, 420 wanted).](media:diagrams/bricklayers-wage-equilibrium.png "Figure: the equilibrium wage is where the demand for and supply of labour cross")
+
 :::worked-solution[Worked example 1: the market for bricklayers]
 The table shows the daily market for bricklayers in a fictional town.
 

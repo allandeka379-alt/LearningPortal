@@ -53,6 +53,8 @@ A currency is **supplied** (sold) by its own residents who want to buy **imports
 
 In a floating system the exchange rate is a price like any other. Draw a diagram with the **price of the currency** (in another currency) on the vertical axis and the **quantity of the currency** on the horizontal axis. The demand curve slopes down and the supply curve slopes up; the exchange rate is set where they cross.
 
+![Foreign exchange market for the kora: higher export demand shifts demand right from D1 to D2, so at 4 US cents there is excess demand of 200 million kora and the price of the kora rises to 5 cents with 800 million traded, an appreciation of 25 percent (US\$1 = 25 kora becomes US\$1 = 20 kora).](media:diagrams/kora-appreciation.png "Figure: a rise in export demand shifts the demand for a currency right and it appreciates")
+
 :::worked-solution[Worked example 1: the market for a fictional currency, the kora]
 The table shows the market for the kora (K), the currency of a fictional country, against the US dollar.
 

@@ -96,6 +96,8 @@ A fictional manufacturer can choose between five sizes of plant.
 
 To describe the diagram: put **average cost** on the vertical axis and **output** on the horizontal axis. The LRAC curve slopes downwards while the firm enjoys economies of scale, reaches a minimum at the most efficient scale, and slopes upwards when diseconomies of scale set in, giving a shallow U shape. In some industries the curve falls and then stays flat over a wide range of output (an L shape), because economies are exhausted but diseconomies do not appear until the firm is very large.
 
+![Long-run average cost curve from the five plant sizes: average cost falls from US\$20 at 1,000 units to US\$10 at 10,000 units (economies of scale), then rises to US\$11 at 12,000 units (diseconomies of scale), so the most efficient scale is 10,000 units.](media:diagrams/lrac-plant-sizes.png "Figure: the long-run average cost curve falls, reaches a minimum, then rises")
+
 External economies and diseconomies are shown differently: they shift the **whole** average cost curve. An external economy (for example, a new railway line serving the industry) shifts the firm's average cost curve **downwards**; an external diseconomy (for example, congestion or rising rents) shifts it **upwards**.
 
 ## Common mistakes

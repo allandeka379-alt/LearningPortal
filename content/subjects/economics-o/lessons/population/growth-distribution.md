@@ -135,6 +135,8 @@ This shows how the working population is divided between the **primary**, **seco
 
 The **age distribution** divides the population into young dependants (usually under 15), the working-age population (usually 15 to 64) and elderly dependants (65 and over). The **sex distribution** compares the numbers of males and females; migration of men or women for work, and differences in life expectancy, can make it unequal in some areas. ZIMSEC students also study the **population pyramid**, a bar chart of the age-sex structure: a wide base and narrow top show a young, fast-growing population; straighter sides show an older, slow-growing one.
 
+![Two illustrative population pyramids: the young population has a wide base, 40 percent aged 0 to 14, narrowing quickly to 5 percent aged 60 and over, while the older population has straighter sides, 17 percent aged 0 to 14 and 16 percent aged 60 and over.](media:diagrams/population-pyramids.png "Figure: a wide base means a young, fast-growing population; straighter sides mean an older, slow-growing one")
+
 ## Common mistakes
 
 :::mistake{title="Using percentages instead of rates per 1,000"}

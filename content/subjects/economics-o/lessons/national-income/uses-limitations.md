@@ -120,7 +120,7 @@ Say **which way** each limitation biases the figure. For example, the informal s
 :::
 
 :::exam-tip
-**Explain limitations:** name the limitation, explain why it happens, and state its effect on the figure (overstates or understates). A Zimbabwean example, such as informal vending or subsistence farming, earns credit.
+**Explain limitations:** name the limitation, explain why it happens, and state its effect on the GDP total (overstates or understates). A Zimbabwean example, such as informal vending or subsistence farming, earns credit.
 :::
 
 :::exam-tip

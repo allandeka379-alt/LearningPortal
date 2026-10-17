@@ -42,6 +42,8 @@ A tax per unit is an extra cost to sellers. At every price they now keep less, s
 
 **Describing the diagram.** Price on the vertical axis, quantity on the horizontal axis. Demand D slopes down; the original supply S1 slopes up; they cross at P1/Q1. The tax shifts supply to S2 = S1 + tax, which lies **above** S1 by the tax per unit. For a specific tax, S2 is **parallel** to S1; for an ad valorem tax, the gap widens as price rises, so S2 is **steeper** and pivots away from S1. The new equilibrium is where D meets S2: a **higher price P2** paid by consumers and a **lower quantity Q2**. The price producers keep is P2 minus the tax. Tax revenue is a rectangle: the tax per unit (vertical gap between S2 and S1) times Q2.
 
+![A tax of US\$0.50 a bottle shifts supply left from S1 to S2: the price paid by consumers rises from US\$2.00 to US\$2.30 and quantity falls from 1,400 to 1,160 bottles; producers keep US\$1.80 and the tax revenue rectangle is 0.50 x 1,160 = US\$580 a day.](media:diagrams/specific-tax-sugary-drink.png "Figure: a specific tax shifts supply up by the tax; price rises and quantity falls")
+
 :::worked-solution[Worked example 1: a specific tax on a sugary drink]
 A fictional government puts a tax of US\$0.50 on each 2-litre bottle of a sugary drink. The daily market in one city:
 
@@ -70,6 +72,8 @@ The burden depends on the **price elasticity of demand**. When demand is **inela
 ## How a subsidy affects the market
 
 A subsidy per unit lowers producers' costs, so they supply more at every price: the **supply curve shifts to the right** (downwards by the subsidy per unit). The new equilibrium has a **lower price** and a **higher quantity**. Producers receive the market price **plus** the subsidy. The cost to the government is the subsidy per unit times the new quantity.
+
+![A subsidy of US\$10 a bag shifts the supply of fertiliser right from S1 to S2: the price farmers pay falls from US\$30 to US\$24 and the quantity rises from 2,800 to 3,280 bags a month; the cost to the government is 10 x 3,280 = US\$32,800.](media:diagrams/fertiliser-subsidy.png "Figure: a subsidy shifts supply right; price falls and quantity rises")
 
 :::worked-solution[Worked example 2: a subsidy on fertiliser]
 A fictional government pays suppliers US\$10 for every bag of fertiliser sold to farmers.

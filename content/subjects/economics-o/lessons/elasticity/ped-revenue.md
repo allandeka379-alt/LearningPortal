@@ -56,6 +56,8 @@ On a demand diagram (price on the vertical axis, quantity on the horizontal axis
 
 On a **flat (elastic)** demand curve a small price cut adds a wide rectangle of extra sales, so the gain is larger than the loss. On a **steep (inelastic)** curve a price cut adds only a thin strip of extra sales, so the loss is larger.
 
+![Demand for screen repairs is elastic: when the price is cut from US\$10 to US\$8, weekly repairs rise from 100 to 150; the revenue lost on existing sales is 200 dollars (2 x 100) but the revenue gained on extra sales is 400 dollars (8 x 50), so total revenue rises from US\$1,000 to US\$1,200.](media:diagrams/ped-revenue-rectangles.png "Figure: revenue gained (green) and lost (amber) when an elastic price is cut")
+
 :::worked-solution[Worked example 1: a price cut when demand is elastic]
 A fictional phone-repair kiosk in Harare cuts its price for a screen repair from US\$10 to US\$8. Repairs per week rise from 100 to 150.
 

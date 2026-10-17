@@ -48,6 +48,8 @@ Economic growth rate (%) = (real GDP this year − real GDP last year) ÷ real G
 
 Suppose a country produces exactly the same quantity of maize, cement and haircuts this year as last year, but every price is 10% higher. Nominal GDP rises by 10%, yet nobody has more goods. That is why growth is measured with **real** GDP, which removes the effect of price changes.
 
+![Country X GDP: nominal GDP rises from US\$48,000 million in 2025 to US\$54,000 million in 2026 (12.5 percent) but real GDP in 2025 prices rises only from 48,000 to 49,090.9 million (2.3 percent), because prices rose 10 percent.](media:diagrams/nominal-real-gdp.png "Figure: most of the rise in nominal GDP is higher prices; real GDP grew far less")
+
 :::worked-solution[Worked example 1: nominal and real GDP in Country X]
 Country X is a fictional economy.
 

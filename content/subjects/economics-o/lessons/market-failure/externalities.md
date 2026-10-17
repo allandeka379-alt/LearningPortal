@@ -93,6 +93,8 @@ The same logic works for each extra unit. The table shows a fictional smelter de
 - Society compares extra revenue with extra **social** cost: only the first two batches are worth more than their full cost, so the best output is **2 batches**.
 - The market over-produces by 2 batches. A tax of US\$250 per batch (equal to the external cost) would make the firm count the smoke as a cost and cut output to 2.
 
+![Smelter example: each extra batch earns US\$900; extra private cost (500, 600, 700, 850, 950) stays below 900 up to the 4th batch, so the firm produces 4, but extra social cost (private plus US\$250 external cost) stays below 900 only up to the 2nd batch, so the best output for society is 2 batches.](media:diagrams/smelter-social-cost.png "Figure: the firm compares revenue with private cost; society should compare it with social cost")
+
 ## Examples to learn
 
 | Activity | External cost or benefit | Market result |

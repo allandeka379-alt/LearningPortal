@@ -64,6 +64,8 @@ On a diagram with price on the vertical axis and quantity on the horizontal axis
 - **Increase in demand:** the whole curve shifts **to the right**, from D1 to D2. At every price a larger quantity is demanded.
 - **Decrease in demand:** the whole curve shifts **to the left**, from D1 to D2. At every price a smaller quantity is demanded.
 
+![Demand for chicken shifts right from D1 to D2 after a pay rise: at every price 150 kg a week more is demanded, for example at US\$5 quantity demanded rises from 300 kg to 450 kg, an increase in demand.](media:diagrams/chicken-demand-shift.png "Figure: a pay rise shifts demand for chicken right, from D1 to D2")
+
 A useful test: ask "did the good's own price cause this?" If yes, it is a movement along the curve. If no, it is a shift.
 
 :::worked-solution[Worked example 1: a pay rise and the demand for chicken]

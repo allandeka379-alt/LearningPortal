@@ -59,6 +59,8 @@ On a diagram with price on the vertical axis and quantity on the horizontal axis
 - **Increase in supply:** the curve shifts **to the right**, from S1 to S2. More is supplied at every price.
 - **Decrease in supply:** the curve shifts **to the left**, from S1 to S2. Less is supplied at every price.
 
+![Supply of maize shifts left from S1 to S2 in a drought: at every price 300 tonnes less is supplied, for example at US\$300 quantity supplied falls from 1,200 to 900 tonnes, a decrease in supply of 25 percent.](media:diagrams/maize-supply-shift.png "Figure: a drought shifts the supply of maize left, from S1 to S2")
+
 Again, ask: "did the good's own price cause this?" If yes, it is a movement along the curve; if no, it is a shift.
 
 :::worked-solution[Worked example 1: a drought and the supply of maize]

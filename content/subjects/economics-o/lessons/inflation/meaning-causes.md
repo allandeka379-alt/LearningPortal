@@ -81,6 +81,8 @@ Causes of a rise in aggregate demand include:
 
 In words, a diagram of demand-pull inflation would show aggregate demand rising while output can increase only a little, so the price level rises.
 
+![Two aggregate demand and supply sketches: in demand-pull inflation the AD curve shifts right near full capacity, so the price level rises a lot while output rises only a little; in cost-push inflation the AS curve shifts left, so the price level rises and output falls.](media:diagrams/demand-pull-cost-push.png "Figure: demand-pull inflation comes from a shift of AD to the right; cost-push from a shift of AS to the left")
+
 ## Cost-push inflation
 
 Cost-push inflation starts on the supply side. When firms' costs rise, they raise prices to protect their profits, and they may also cut output.

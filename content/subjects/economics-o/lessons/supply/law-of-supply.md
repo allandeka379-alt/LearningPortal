@@ -62,6 +62,8 @@ Describe the **supply curve** from such a schedule like this:
 - The curve **slopes upwards from left to right**: higher prices go with larger quantities supplied.
 - A change in the good's own price causes a **movement along** the curve: an **extension** of supply when the price rises and a **contraction** when the price falls.
 
+![Market supply curve for tomatoes: it slopes up from 30 crates a week at US\$4 to 87 crates at US\$10; a price rise from US\$6 (51 crates) to US\$10 (87 crates) is an extension, a movement up along the same curve.](media:diagrams/tomato-supply-curve.png "Figure: the market supply curve for tomatoes; a rise in price is a movement along it")
+
 Notice Farmer Nyasha: at US\$4 she supplies nothing, because that price does not cover her costs. At US\$6 she enters the market. This is the "new producers" reason in action.
 
 ## Individual and market supply

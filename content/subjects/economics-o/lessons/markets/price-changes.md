@@ -55,6 +55,8 @@ For an increase in demand:
 - D2 lies to the right of D1. At P1 there is now a shortage (the gap between S and D2).
 - D2 crosses S at a higher price P2 and a larger quantity Q2. The movement from Q1 to Q2 is an **extension of supply** along S.
 
+![School shoes market: demand rises from D1 to D2 in January; at the old price of US\$25 quantity demanded is 700 but only 500 are supplied, a shortage of 200, so the equilibrium moves to US\$30 and 600 pairs a week.](media:diagrams/shoes-demand-increase.png "Figure: an increase in demand raises both the equilibrium price and quantity")
+
 For a decrease in supply, S2 lies to the left of S1; it crosses D at a higher price P2 and a smaller quantity Q2, and the movement along D is a **contraction of demand**.
 
 :::worked-solution[Worked example 1: school shoes in January]

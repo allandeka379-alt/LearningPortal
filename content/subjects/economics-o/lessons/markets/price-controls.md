@@ -42,6 +42,8 @@ At a price below equilibrium, quantity demanded **extends** (more people can aff
 
 **Describing the diagram.** Price on the vertical axis, quantity on the horizontal axis. A downward-sloping demand curve and an upward-sloping supply curve cross at the equilibrium P1/Q1. Draw a horizontal line labelled "maximum price" **below** P1. Where it meets the supply curve gives the quantity supplied (Qs); where it meets the demand curve, further right, gives the quantity demanded (Qd). The gap Qs to Qd is the shortage. Only Qs is actually bought and sold.
 
+![Maize meal market with a maximum price of US\$7, below the equilibrium of US\$9 and 1,100 bags: at US\$7 only 900 bags are supplied but 1,300 are demanded, a shortage of 400 bags a week.](media:diagrams/maximum-price-maize-meal.png "Figure: a maximum price below equilibrium creates a shortage")
+
 :::worked-solution[Worked example 1: a maximum price on maize meal]
 A fictional town's weekly market for 10 kg bags of maize meal:
 
@@ -83,6 +85,8 @@ A government sets a minimum price to protect producers' incomes, for example a g
 Above equilibrium, quantity supplied **extends** and quantity demanded **contracts**, giving a **surplus**. To keep the price at the floor, the government (or a marketing board) usually has to buy up the surplus and store it, destroy it or sell it abroad.
 
 **Describing the diagram.** The same axes and curves, with a horizontal line labelled "minimum price" **above** the equilibrium P1. It meets the demand curve at Qd (to the left) and the supply curve at Qs (to the right); the gap Qd to Qs is the surplus.
+
+![Wheat market with a minimum price of US\$350 a tonne, above the equilibrium of US\$320 and 640 tonnes: at US\$350 farmers supply 700 tonnes but only 550 tonnes are demanded, a surplus of 150 tonnes a month.](media:diagrams/minimum-price-wheat.png "Figure: a minimum price above equilibrium creates a surplus")
 
 :::worked-solution[Worked example 2: a guaranteed minimum price for wheat]
 A fictional country's monthly wheat market:

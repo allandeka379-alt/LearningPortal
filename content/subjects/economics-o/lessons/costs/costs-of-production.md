@@ -85,6 +85,10 @@ If you are asked to describe the cost curves, put **costs (US\$)** on the vertic
 - **AVC** and **ATC** are usually **U-shaped**: they fall at first, reach a minimum and then rise. In the table ATC falls from US\$4.50 to US\$2.10 and then rises to US\$2.20.
 - Because $ATC = AFC + AVC$, the gap between the ATC and AVC curves is AFC, so the two curves get closer together as output rises.
 
+![Average cost curves from the bakery table: average fixed cost falls from US\$3.00 at 200 loaves to US\$0.60 at 1,000; average variable cost and average total cost are U-shaped, and average total cost is lowest, US\$2.10, at 800 loaves before rising to US\$2.20.](media:diagrams/bakery-average-cost-curves.png "Figure: AFC falls throughout while AVC and ATC are U-shaped")
+
+![Total cost curves of Chipo's bakery: total fixed cost is a horizontal line at US\$600; total variable cost starts at zero and reaches US\$1,600 at 1,000 loaves; total cost starts at US\$600 and reaches US\$2,200, always exactly US\$600 above total variable cost.](media:diagrams/bakery-total-cost-curves.png "Figure: TFC is flat, TVC starts at the origin and TC sits TFC above TVC")
+
 Why does average cost eventually rise? In the short run some factors, such as the size of the bakery and the number of ovens, are fixed. As Chipo adds more workers and ingredients to the same ovens, each extra worker adds less output (diminishing returns), so the cost of each extra loaf rises, and eventually the average rises too.
 
 ## Semi-variable costs (ZIMSEC)

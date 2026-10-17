@@ -91,6 +91,8 @@ Tendai's fictional car wash in Bulawayo finds that it can wash more cars an hour
 
 Described as a diagram, the AR curve slopes downwards (it is the firm's demand curve), and the MR curve lies below it and falls more steeply.
 
+![Revenue per unit for the car wash: the average revenue (price) curve falls from US\$12 for 1 wash to US\$7 for 6, and marginal revenue falls faster, from US\$12 to US\$2, so MR is below AR after the first unit; at 4 washes AR is US\$9 and MR is US\$6.](media:diagrams/car-wash-ar-mr.png "Figure: when a firm must cut its price to sell more, marginal revenue lies below average revenue")
+
 ## How sales affect revenue
 
 Total revenue depends on two things: the price and the quantity sold. A change in either changes revenue.

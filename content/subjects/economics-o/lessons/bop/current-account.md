@@ -97,6 +97,8 @@ A fictional country has a current account deficit of US\$350 million. Its balanc
 
 A **current account deficit** means that more money is flowing out of the country through the current account than is flowing in. It must be financed: by borrowing from abroad, by attracting foreign investment, or by running down the country's reserves of foreign currency. A small deficit that pays for imports of machinery and equipment can be healthy, because the capital goods raise future output and exports. A large deficit that lasts for many years, especially one that pays for consumer goods, may lead to rising foreign debt, pressure on the exchange rate and shortages of foreign currency.
 
+![Current account of a fictional country in US\$ million: goods balance -900, services -250, primary income -550 and secondary income +1,200 add up to a current account deficit of 500; the large remittances in secondary income reduce the deficit but do not remove it.](media:diagrams/current-account-balances.png "Figure: the four balances add up to the current account balance (negative bars are deficits)")
+
 A **current account surplus** means more money is flowing in than out. It allows a country to build reserves, repay debts or invest abroad. But a surplus can also mean that the country's residents are consuming less than they could, and it may cause friction with trading partners.
 
 :::example{title="Why the sections matter"}

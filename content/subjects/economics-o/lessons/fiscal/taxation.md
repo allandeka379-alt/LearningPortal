@@ -90,6 +90,8 @@ A fictional country taxes monthly income as follows: the first US\$300 is tax-fr
 
 A **proportional** (flat) tax charges, say, 10% at every income: US\$20 on US\$200 and US\$120 on US\$1,200. The amount paid rises, but the percentage stays the same.
 
+![Average tax rate against monthly income for a banded income tax (first US\$300 free, 20 percent up to US\$1,000, 30 percent above): it rises from 12.5 percent at US\$800 to 22.0 percent at US\$2,000, so the tax is progressive, whereas a proportional tax stays at a flat rate.](media:diagrams/progressive-tax-average-rate.png "Figure: under a progressive tax the average rate rises with income; a proportional tax stays flat")
+
 A **regressive** tax takes a bigger share of a poor household's income. Indirect taxes on necessities are usually regressive, because poorer households spend a larger share of their income on such goods.
 
 :::worked-solution[Worked example 2: why a tax on cooking oil is regressive]

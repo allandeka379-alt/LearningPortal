@@ -54,6 +54,8 @@ Remember that "steep" and "flat" only give a rough idea: compare curves drawn on
 - **Elastic:** a gently sloping line; a small price cut brings a large rise in quantity (for example one brand among many similar brands).
 - **Perfectly elastic:** a horizontal line at one price; a firm selling at the market price can sell any amount, but nothing at a higher price.
 
+![Five demand curve shapes for price elasticity of demand: PED 0 is a vertical line, between 0 and 1 a steep line, exactly 1 a curve bending to both axes with price times quantity constant, above 1 a gentle line, and infinity a horizontal line.](media:diagrams/ped-curve-shapes.png "Figure: the shape of the demand curve for each value of PED, drawn on the same scale")
+
 ## Calculating PED step by step
 
 1. Calculate the **percentage change in quantity demanded**, using the original quantity as the base.

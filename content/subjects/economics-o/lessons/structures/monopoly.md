@@ -56,6 +56,8 @@ An industry in which one firm can supply the whole market at a lower average cos
 - **Choice:** **less** choice for consumers: one supplier, often one type of product.
 - **Profit:** **abnormal profits** can be earned in the long run, because barriers stop new firms from entering and competing them away.
 
+![Demand for cement from the single supplier slopes down; with a cost of US\$110 a tonne the profit-maximising point is US\$150 and 9,000 tonnes, giving abnormal profit of 40 x 9,000 = US\$360,000 a month, while a competitive market would charge US\$110 and sell 14,000 tonnes.](media:diagrams/monopoly-cement-profit.png "Figure: a monopoly restricts output and charges more than a competitive market would")
+
 :::worked-solution[Worked example 1: why a monopoly restricts output]
 A fictional company is the only supplier of cement in a small country. Its cost per tonne, including a normal return, is US\$110 at every output. The table shows how much cement buyers would demand at different prices.
 

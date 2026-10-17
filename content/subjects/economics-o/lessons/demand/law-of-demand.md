@@ -73,6 +73,8 @@ A **demand curve** is the schedule plotted on a graph. Describe it like this:
 - The curve **slopes downwards from left to right**: high prices go with small quantities, low prices with large quantities.
 - A change in the good's own price causes a **movement along** the curve, not a new curve. A fall in price is an **extension** of demand; a rise in price is a **contraction** of demand.
 
+![Market demand curve for bread in Gweru plotted from the schedule: it slopes down from 8 loaves a week at US\$1.60 to 20 loaves at US\$0.80; a price rise from US\$1.00 (17 loaves) to US\$1.40 (11 loaves) is a contraction, a movement up along the same curve.](media:diagrams/bread-demand-curve.png "Figure: the market demand curve for bread; a rise in price is a movement along it")
+
 In exams you may be asked to "describe the diagram you would draw". Name the axes, label the curve, say which way it slopes and mark the price and quantity you are discussing (for example "at P1 = US\$1.00, Q1 = 17 loaves").
 
 ## Individual and market demand
