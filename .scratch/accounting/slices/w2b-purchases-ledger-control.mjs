@@ -218,5 +218,5 @@ concept("acc.verification.purchases-ledger-control", { file: "verification/purch
   b.card("FACT", "Never in the purchases ledger control account", "Cash purchases and trade discount.");
   b.card("CONCEPT", "Debit balance on a supplier's account", "The supplier owes the business, e.g. after an overpayment or returns of goods already paid for.");
   b.card("CONCEPT", "Digital recording and control accounts", "Software updates the ledger and the control account together: instant totals, few posting errors, but input errors are not revealed.", undefined, { applies: CAM });
-  b.card("FACT", "Names of the account", "Purchases ledger control account (Cambridge); trade payables or creditors control account (ZIMSEC).");
+  b.card("FACT", "Names of the account", "Purchases ledger control account (Cambridge); trade payables or creditors control account.");
 });

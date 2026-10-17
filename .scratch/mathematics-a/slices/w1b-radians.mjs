@@ -289,7 +289,7 @@ $$`,
   b.card("FORMULA", "Segment area", t`$\frac{1}{2}r^2(\theta - \sin\theta)$`, "Sector minus triangle.");
   b.card("FORMULA", "Chord subtending θ", t`$2r\sin\frac{\theta}{2}$`);
   b.card("FACT", "Degrees to radians", t`Multiply by $\frac{\pi}{180}$; radians to degrees: multiply by $\frac{180}{\pi}$.`);
-  b.card("FACT", "Small-angle approximations (ZIMSEC)", t`$\sin x \approx x$, $\tan x \approx x$, $\cos x \approx 1 - \frac{x^2}{2}$, $x$ small and in radians.`, undefined, { applies: ZP });
+  b.card("FACT", "Small-angle approximations", t`$\sin x \approx x$, $\tan x \approx x$, $\cos x \approx 1 - \frac{x^2}{2}$, $x$ small and in radians.`, undefined, { applies: ZP });
   b.card("CONCEPT", "Calculator mode", "Use radian mode whenever the angle is in radians, e.g. sin θ in the segment formula.");
   b.card("CONCEPT", "Two facts about a sector", "Form two equations (perimeter 2r + rθ, area ½r²θ) and solve; reject any θ > 2π.");
 });

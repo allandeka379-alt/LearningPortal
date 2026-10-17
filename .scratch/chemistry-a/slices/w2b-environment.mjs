@@ -274,7 +274,7 @@ concept("achem.nitrogen-sulfur.environment", { file: "nitrogen-sulfur/environmen
   b.card("FACT", "Photochemical smog", "NOₓ + unburnt hydrocarbons + sunlight → ozone and PAN (peroxyacetyl nitrate): eye and lung irritants.");
   b.card("FORMULA", "NO₂ catalysing SO₂ oxidation", "NO₂ + SO₂ → NO + SO₃; NO + ½O₂ → NO₂ (regenerated); SO₃ + H₂O → H₂SO₄.");
   b.card("FACT", "Effects of acid rain", "Dissolves limestone (CaCO₃ + 2H⁺ → Ca²⁺ + H₂O + CO₂), harms lakes and fish, damages trees.");
-  b.card("CONCEPT", "Eutrophication (ZIMSEC)", "Nitrates leached → algal bloom → decay by bacteria uses O₂ → fish die.", undefined, { applies: ZIM });
-  b.card("FACT", "SO₂ as a food preservative (ZIMSEC)", "Kills micro-organisms and acts as an antioxidant (reducing agent); used in dried fruit, juices, wine.", undefined, { applies: ZIM });
+  b.card("CONCEPT", "Eutrophication", "Nitrates leached → algal bloom → decay by bacteria uses O₂ → fish die.", undefined, { applies: ZIM });
+  b.card("FACT", "SO₂ as a food preservative", "Kills micro-organisms and acts as an antioxidant (reducing agent); used in dried fruit, juices, wine.", undefined, { applies: ZIM });
   b.card("DEFINITION", "Acid rain", "Rain with pH below about 5.6, made acidic by dissolved SO₂ and NO₂ (sulfuric and nitric acids).");
 });

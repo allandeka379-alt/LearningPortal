@@ -273,6 +273,6 @@ concept("achem.carboxylic.esters", { file: "carboxylic/esters", keyPrefix: "carb
   b.card("FACT", "Alkaline hydrolysis of an ester", "NaOH(aq), reflux: complete → carboxylate salt + alcohol.");
   b.card("DEFINITION", "Saponification", "Alkaline hydrolysis of a fat or oil, giving soap (fatty-acid salts) and propane-1,2,3-triol.");
   b.card("FACT", "Fats and oils", "Triesters of propane-1,2,3-triol (glycerol) with long-chain fatty acids.");
-  b.card("FACT", "Uses of esters (ZIMSEC)", "Solvents (ethyl ethanoate), flavourings (3-methylbutyl ethanoate: banana), perfumes.", undefined, { applies: ZIM });
+  b.card("FACT", "Uses of esters", "Solvents (ethyl ethanoate), flavourings (3-methylbutyl ethanoate: banana), perfumes.", undefined, { applies: ZIM });
   b.card("CONCEPT", "Kc for esterification", "Kc = [ester][water] ÷ ([acid][alcohol]); no units, volume cancels; about 4 for ethyl ethanoate.");
 });

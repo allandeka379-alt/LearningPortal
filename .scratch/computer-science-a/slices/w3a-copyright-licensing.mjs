@@ -128,5 +128,5 @@ concept("acs.ethics.copyright-licensing", { file: "ethics/copyright-licensing", 
   b.card("DEFINITION", "Plagiarism", "Presenting another person's work or ideas as your own without acknowledging the source.");
   b.card("CONCEPT", "Detecting piracy and plagiarism", "Piracy: activation, licence keys and audits. Plagiarism: similarity-checking software, whose percentage is a guide for a person to judge.");
   b.card("FORMULA", "Break-even number of licences", "Site fee ÷ price of one licence; above this number the site licence is cheaper.");
-  b.card("DEFINITION", "Patent and trademark (ZIMSEC)", "A patent protects a new invention for a limited time; a trademark protects a name or logo that identifies a maker.", undefined, { applies: ZIM });
+  b.card("DEFINITION", "Patent and trademark", "A patent protects a new invention for a limited time; a trademark protects a name or logo that identifies a maker.", undefined, { applies: ZIM });
 });

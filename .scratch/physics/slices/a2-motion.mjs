@@ -549,5 +549,5 @@ concept("phys.motion.free-fall", {
   q.card("CONCEPT", "What is the resultant force at terminal velocity?", "Zero: air resistance balances the weight.");
   q.card("CONCEPT", "What happens when a skydiver opens the parachute?", "Air resistance becomes greater than the weight, so she decelerates to a lower terminal velocity.");
   q.card("CONCEPT", "Shape of the speed-time graph of a falling skydiver?", "A curve starting with gradient ≈ 9.8 m/s² that levels off at terminal velocity.");
-  q.card("CONCEPT", "How can g be measured in the laboratory?", "Time a heavy ball falling a known height with light gates; use g = 2h/t² (ZIMSEC).");
+  q.card("CONCEPT", "How can g be measured in the laboratory?", "Time a heavy ball falling a known height with light gates; use g = 2h/t².");
 });

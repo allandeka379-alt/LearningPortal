@@ -259,6 +259,6 @@ concept("abio.plant-transport.water-uptake", { file: "plant-transport/water-upta
   b.card("CONCEPT", "Why water enters root hairs", "Active ion uptake keeps the root hair's water potential below that of soil water, so water enters by osmosis.");
   b.card("DEFINITION", "Define **root pressure**.", "Positive pressure in root xylem caused by active pumping of ions into the xylem and osmotic entry of water.");
   b.card("FACT", "Evidence for root pressure", "Sap oozes from a cut stem stump; guttation; stops with respiratory inhibitors, low oxygen or cold.", undefined, { applies: ZIM });
-  b.card("FACT", "Vacuolar pathway (ZIMSEC)", "Water passes through cytoplasm and vacuoles of successive cells, crossing membranes by osmosis.", undefined, { applies: ZIM });
+  b.card("FACT", "Vacuolar pathway", "Water passes through cytoplasm and vacuoles of successive cells, crossing membranes by osmosis.", undefined, { applies: ZIM });
   b.card("FORMULA", "Water potential of a cell", "ψ = ψs + ψp (solute potential + pressure potential).");
 });

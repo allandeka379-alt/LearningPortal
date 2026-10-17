@@ -272,6 +272,6 @@ $$`, explanation: "One value of t must fit all three coordinates." }),
   b.card("CONCEPT", "Angle between two lines", "Use the scalar product of the direction vectors; give the acute angle.");
   b.card("CONCEPT", "Foot of the perpendicular", t`Write $F$ with the parameter and solve $\overrightarrow{PF} \cdot \mathbf{b} = 0$.`);
   b.card("FACT", "Point on a line", "One value of the parameter must fit all three coordinates.");
-  b.card("FORMULA", "Cartesian form (ZIMSEC)", t`$\dfrac{x - a_1}{b_1} = \dfrac{y - a_2}{b_2} = \dfrac{z - a_3}{b_3}$`, undefined, { applies: ZP });
-  b.card("FACT", "Perpendicular distance (ZIMSEC)", t`The length $|\overrightarrow{PF}|$, where $F$ is the foot of the perpendicular from $P$.`, undefined, { applies: ZP });
+  b.card("FORMULA", "Cartesian form", t`$\dfrac{x - a_1}{b_1} = \dfrac{y - a_2}{b_2} = \dfrac{z - a_3}{b_3}$`, undefined, { applies: ZP });
+  b.card("FACT", "Perpendicular distance", t`The length $|\overrightarrow{PF}|$, where $F$ is the foot of the perpendicular from $P$.`, undefined, { applies: ZP });
 });

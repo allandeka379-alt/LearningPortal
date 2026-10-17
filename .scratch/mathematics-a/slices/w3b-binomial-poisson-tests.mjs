@@ -246,9 +246,9 @@ concept("amaths.inference.binomial-poisson-tests", { file: "inference/binomial-p
   b.card("CONCEPT", "Binomial test procedure", "State H₀: p = p₀ and H₁; under H₀ X ~ B(n, p₀); find P(X ≤ x) or P(X ≥ x) and compare with the significance level; conclude in context.");
   b.card("CONCEPT", "Critical region for a discrete test", "Lower: largest c with P(X ≤ c) ≤ α. Upper: smallest c with P(X ≥ c) ≤ α. Two-tailed: α/2 in each tail.");
   b.card("DEFINITION", "Actual significance level", "The probability of the critical region when H₀ is true; for discrete tests usually below the nominal level.");
-  b.card("CONCEPT", "Poisson test (Cambridge)", t`$H_0: \lambda = \lambda_0$; scale $\lambda$ to the period observed; find the tail probability of the observed count.`, undefined, { applies: CAM });
+  b.card("CONCEPT", "Poisson test", t`$H_0: \lambda = \lambda_0$; scale $\lambda$ to the period observed; find the tail probability of the observed count.`, undefined, { applies: CAM });
   b.card("CONCEPT", "Normal approximation in a binomial test", t`If $np > 5$ and $nq > 5$: $X \approx \mathrm{N}(np, npq)$ with a continuity correction (e.g. $X \ge 40 \to Y > 39.5$).`);
-  b.card("CONCEPT", "Normal approximation in a Poisson test (Cambridge)", t`If $\lambda > 15$: $X \approx \mathrm{N}(\lambda, \lambda)$ with a continuity correction.`, undefined, { applies: CAM });
+  b.card("CONCEPT", "Normal approximation in a Poisson test", t`If $\lambda > 15$: $X \approx \mathrm{N}(\lambda, \lambda)$ with a continuity correction.`, undefined, { applies: CAM });
   b.card("FACT", "Which tail is the p-value?", "The tail in the direction of H₁, including the observed value: P(X ≥ x) for '>', P(X ≤ x) for '<'.");
   b.card("CONCEPT", "Binomial model assumptions", "Fixed number of independent trials, two outcomes, constant probability of success.");
   b.card("FACT", "Two-tailed discrete test", "Compare each tail probability with half the significance level (0.025 for a 5% test).");

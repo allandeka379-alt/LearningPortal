@@ -281,7 +281,7 @@ concept("achem.group17.chlorine-uses", { file: "group17/chlorine-uses", keyPrefi
   b.card("DEFINITION", "Disproportionation", "Redox reaction in which the same element is simultaneously oxidised and reduced.");
   b.card("FORMULA", "Chlorine in water", "Cl₂ + H₂O ⇌ HCl + HOCl; HOCl ⇌ H⁺ + ClO⁻. HOCl and ClO⁻ kill bacteria.");
   b.card("FACT", "Bleach safety", "Mixing bleach with acid releases toxic Cl₂: ClO⁻ + Cl⁻ + 2H⁺ → Cl₂ + H₂O. Store bleach cool.");
-  b.card("FACT", "Uses of halogen compounds (ZIMSEC)", "NaClO bleach; PVC pipes; halogenated solvents; CFCs (former refrigerants, propellants); fluoride toothpaste.", undefined, { applies: ZIM });
-  b.card("CONCEPT", "Environmental issues of halogen compounds (ZIMSEC)", "Toxicity, persistence (PVC, solvents), ozone depletion by CFCs; use controlled and alternatives found.", undefined, { applies: ZIM });
+  b.card("FACT", "Uses of halogen compounds", "NaClO bleach; PVC pipes; halogenated solvents; CFCs (former refrigerants, propellants); fluoride toothpaste.", undefined, { applies: ZIM });
+  b.card("CONCEPT", "Environmental issues of halogen compounds", "Toxicity, persistence (PVC, solvents), ozone depletion by CFCs; use controlled and alternatives found.", undefined, { applies: ZIM });
   b.card("FACT", "Names and oxidation numbers", "Cl⁻ chloride (−1); ClO⁻ chlorate(I) (+1); ClO₃⁻ chlorate(V) (+5).");
 });

@@ -293,5 +293,5 @@ $$`,
   b.card("FACT", "Vertical motion", t`Acceleration $g$ downwards throughout (Cambridge $g = 10$ m s$^{-2}$); $v = 0$ at the highest point.`);
   b.card("CONCEPT", "Sign convention", "Choose a positive direction first; deceleration, and displacements the other way, are negative.");
   b.card("CONCEPT", "Two moving objects", "Write a position equation for each with the same origin and time variable, then equate positions.");
-  b.card("CONCEPT", "Deriving the formulae (ZIMSEC)", t`From the straight-line $v$–$t$ graph: gradient $a = \frac{v - u}{t}$, area $s = \frac{1}{2}(u + v)t$; eliminate to get the rest.`, undefined, { applies: ZM });
+  b.card("CONCEPT", "Deriving the formulae", t`From the straight-line $v$–$t$ graph: gradient $a = \frac{v - u}{t}$, area $s = \frac{1}{2}(u + v)t$; eliminate to get the rest.`, undefined, { applies: ZM });
 });

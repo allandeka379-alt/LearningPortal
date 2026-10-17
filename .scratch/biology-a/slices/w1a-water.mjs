@@ -219,5 +219,5 @@ concept("abio.molecules.water", { file: "molecules/water", keyPrefix: "molecules
   b.card("CONCEPT", "Why does ice float, and why does it matter?", "Hydrogen bonds form an open lattice, so ice is less dense; it insulates water below so organisms survive.");
   b.card("CONCEPT", "Cohesion in water?", "Hydrogen bonds hold molecules together, allowing water columns in xylem and surface tension.");
   b.card("FACT", "Water as a reactant?", "Hydrolysis reactions and photosynthesis (photolysis).");
-  b.card("CONCEPT", "Water as a habitat (ZIMSEC)?", "Stable temperature, dissolved gases, light in upper layers and support for aquatic organisms.", undefined, { applies: ["zimsec"] });
+  b.card("CONCEPT", "Water as a habitat?", "Stable temperature, dissolved gases, light in upper layers and support for aquatic organisms.", undefined, { applies: ["zimsec"] });
 });

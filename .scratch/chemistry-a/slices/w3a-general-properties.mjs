@@ -273,5 +273,5 @@ concept("achem.transition.general-properties", { file: "transition/general-prope
   b.card("CONCEPT", "Why variable oxidation states?", "3d and 4s electrons have similar energies, so different numbers can be lost or shared without a large jump in ionisation energy.");
   b.card("FACT", "Shapes of 3dxy and 3dz²", "3dxy: four lobes in the xy plane between the axes. 3dz²: two lobes along z plus a ring in the xy plane.");
   b.card("CONCEPT", "Why radius and IE₁ change little from Ti to Cu", "Extra electrons enter the inner 3d sub-shell and shield the 4s electrons, roughly cancelling the extra nuclear charge.");
-  b.card("FACT", "Transition metal compared with calcium (ZIMSEC)", "Higher melting point and density, smaller atoms, higher IE₁, several oxidation states, coloured and often paramagnetic compounds.", undefined, { applies: ZIM });
+  b.card("FACT", "Transition metal compared with calcium", "Higher melting point and density, smaller atoms, higher IE₁, several oxidation states, coloured and often paramagnetic compounds.", undefined, { applies: ZIM });
 });

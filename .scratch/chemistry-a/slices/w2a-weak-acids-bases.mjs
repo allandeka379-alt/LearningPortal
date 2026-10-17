@@ -277,8 +277,8 @@ concept("achem.acids.weak-acids-bases", { file: "acids/weak-acids-bases", keyPre
   b.card("FORMULA", "pH of a weak acid", "[H⁺] = √(Ka × c), assuming [H⁺] = [A⁻] and [HA] ≈ c.");
   b.card("FORMULA", "Ka from pH", "[H⁺] = 10⁻ᵖᴴ; Ka = [H⁺]²/c.");
   b.card("FORMULA", "Percentage dissociation", "[H⁺] ÷ c × 100; increases on dilution.");
-  b.card("FORMULA", "Kb and pKb (ZIMSEC)", "Kb = [BH⁺][OH⁻]/[B]; [OH⁻] = √(Kb c); pKb = −log Kb.", undefined, { applies: ZIM });
-  b.card("FORMULA", "Conjugate pair relation (ZIMSEC)", "Ka × Kb = Kw; pKa + pKb = 14.00 at 298 K.", undefined, { applies: ZIM });
+  b.card("FORMULA", "Kb and pKb", "Kb = [BH⁺][OH⁻]/[B]; [OH⁻] = √(Kb c); pKb = −log Kb.", undefined, { applies: ZIM });
+  b.card("FORMULA", "Conjugate pair relation", "Ka × Kb = Kw; pKa + pKb = 14.00 at 298 K.", undefined, { applies: ZIM });
   b.card("CONCEPT", "Dilution of a weak acid", "Tenfold dilution raises pH by 0.5 ([H⁺] ∝ √c); % dissociation increases; Ka unchanged.");
   b.card("FACT", "Ka of ethanoic acid", "About 1.74 × 10⁻⁵ mol dm⁻³ (pKa 4.76) at 298 K.");
 });

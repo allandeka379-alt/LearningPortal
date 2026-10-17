@@ -186,7 +186,7 @@ concept("aacc.ratios.solvency-gearing", { file: "ratios/solvency-gearing", keyPr
   b.card("FORMULA", "Interest cover", "Profit from operations ÷ interest payable, in times.");
   b.card("FORMULA", "Working capital cycle", "Inventory days + trade receivables days - trade payables days.");
   b.card("FORMULA", "Net working assets to revenue", "(Inventory + trade receivables - trade payables) ÷ revenue × 100.");
-  b.card("FORMULA", "Debt to equity (ZIMSEC)", "Debt ÷ equity; the question defines the debt.", undefined, { applies: ZIM });
+  b.card("FORMULA", "Debt to equity", "Debt ÷ equity; the question defines the debt.", undefined, { applies: ZIM });
   b.card("CONCEPT", "Why does gearing magnify results?", "Interest is fixed, so in a good year extra profit goes to the shareholders, and in a poor year the interest still has to be paid.");
   b.card("FACT", "How to reduce gearing", "Issue shares, retain profit, repay loan notes or convert loan notes to shares.");
   b.card("CONCEPT", "Judging gearing", "Read gearing with interest cover and the stability of profit; a steady business can carry more debt than one with swings in profit.");

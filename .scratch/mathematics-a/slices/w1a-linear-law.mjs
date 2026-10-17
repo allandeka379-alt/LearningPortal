@@ -278,8 +278,8 @@ concept("amaths.functions.linear-law", { file: "functions/linear-law", keyPrefix
   b.card("FORMULA", t`Linear form of $y = ka^{x}$`, t`$\ln y = x\ln a + \ln k$: plot $\ln y$ against $x$; gradient $\ln a$, intercept $\ln k$.`);
   b.card("CONCEPT", "Recovering k from the intercept", t`If the intercept is $c$ on a $\ln y$ axis, $k = \mathrm{e}^{c}$; on a $\lg y$ axis, $k = 10^{c}$.`);
   b.card("CONCEPT", "Recovering a from the gradient (exponential law)", t`$a = \mathrm{e}^{m}$ (or $10^{m}$ with $\lg$), where $m$ is the gradient.`);
-  b.card("FORMULA", t`Linear form of $y = ax^{2} + b$ (ZIMSEC)`, t`Plot $y$ against $x^{2}$: gradient $a$, intercept $b$.`, undefined, { applies: ZP });
-  b.card("FORMULA", t`Linear form of $y = ax + bx^{2}$ (ZIMSEC)`, t`Plot $\frac{y}{x}$ against $x$: gradient $b$, intercept $a$.`, undefined, { applies: ZP });
+  b.card("FORMULA", t`Linear form of $y = ax^{2} + b$`, t`Plot $y$ against $x^{2}$: gradient $a$, intercept $b$.`, undefined, { applies: ZP });
+  b.card("FORMULA", t`Linear form of $y = ax + bx^{2}$`, t`Plot $\frac{y}{x}$ against $x$: gradient $b$, intercept $a$.`, undefined, { applies: ZP });
   b.card("CONCEPT", "How do you tell a power law from an exponential law?", t`Power law: $\ln y$ against $\ln x$ is straight. Exponential law: $\ln y$ against $x$ is straight.`);
   b.card("CONCEPT", "Finding the gradient from a drawn line", "Use two points on the line (not raw data points), far apart, then substitute one point to find the intercept.");
 });

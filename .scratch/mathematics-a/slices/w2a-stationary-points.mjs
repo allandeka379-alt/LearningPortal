@@ -302,7 +302,7 @@ concept("amaths.diff.stationary-points", { file: "diff/stationary-points", keyPr
   b.card("DEFINITION", "Stationary point", t`A point where $\dfrac{dy}{dx} = 0$ (horizontal tangent): a maximum, a minimum or a stationary point of inflexion.`);
   b.card("FORMULA", "Second-derivative test", t`At a stationary point: $\dfrac{d^{2}y}{dx^{2}} < 0$ maximum, $> 0$ minimum, $= 0$ inconclusive.`);
   b.card("CONCEPT", "First-derivative (sign) test", t`Sign of $\frac{dy}{dx}$ either side: $+, -$ maximum; $-, +$ minimum; same sign: stationary inflexion.`);
-  b.card("DEFINITION", "Point of inflexion (ZIMSEC)", t`A point where $\dfrac{d^{2}y}{dx^{2}}$ changes sign (the curve changes from concave to convex).`, undefined, { applies: ZP });
+  b.card("DEFINITION", "Point of inflexion", t`A point where $\dfrac{d^{2}y}{dx^{2}}$ changes sign (the curve changes from concave to convex).`, undefined, { applies: ZP });
   b.card("CONCEPT", "Optimisation method", "Express the quantity in one variable using the constraint; differentiate; set to zero; justify max/min; answer with units.");
   b.card("FACT", t`Example: $y = x^{4}$ at the origin`, t`$y' = y'' = 0$, yet it is a minimum: a zero second derivative does not mean inflexion.`);
   b.card("CONCEPT", "Number of roots of f(x) = k", "Count how often the line y = k meets y = f(x); the maximum and minimum values are the boundaries.");

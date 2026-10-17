@@ -281,7 +281,7 @@ $$`,
   b.card("FORMULA", t`$\mathrm{Var}(X)$ for a continuous random variable`, t`$\int x^2 f(x)\,\mathrm{d}x - [\mathrm{E}(X)]^2$`);
   b.card("FORMULA", "Median m of a continuous random variable", t`$\int_{\text{lowest}}^{m} f(x)\,\mathrm{d}x = 0.5$`, "Use 0.25 and 0.75 for the quartiles.");
   b.card("FACT", t`$\mathrm{P}(X = c)$ for a continuous random variable`, "0, so P(X < c) = P(X ≤ c).");
-  b.card("CONCEPT", "Mode of a continuous distribution (ZIMSEC)", t`The $x$ where $f(x)$ is greatest: solve $f'(x) = 0$ or take an end point if $f$ is monotonic.`, undefined, { applies: ZS });
+  b.card("CONCEPT", "Mode of a continuous distribution", t`The $x$ where $f(x)$ is greatest: solve $f'(x) = 0$ or take an end point if $f$ is monotonic.`, undefined, { applies: ZS });
   b.card("CONCEPT", "Mean greater than median for a pdf", "The distribution is positively skewed (long right-hand tail).");
   b.card("FACT", "Can f(x) exceed 1?", "Yes: f(x) is a density, not a probability. Only areas must be at most 1.");
   b.card("CONCEPT", "Finding an unknown constant k in a pdf", t`Set $\int f(x)\,\mathrm{d}x = 1$ over the whole range and solve for $k$.`);

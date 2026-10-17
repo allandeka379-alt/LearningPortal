@@ -189,7 +189,7 @@ concept("aacc.company.loan-notes", { file: "company/loan-notes", keyPrefix: "com
   b.card("DEFINITION", "What does **secured** mean for loan notes?", "The holders have a charge over named assets that they can claim if the company defaults.");
   b.card("CONCEPT", "Debentures against shares: the company", "Debentures keep control and the interest is deducted before tax, but the interest and repayment are compulsory and gearing rises.");
   b.card("CONCEPT", "Debentures against shares: the investor", "Fixed income and a better claim on closure, but no vote and no share in growth.");
-  b.card("FORMULA", "Shares from conversion (ZIMSEC)", "Loan converted ÷ conversion price per share; credit nominal value to share capital and the rest to share premium.", undefined, { applies: ZIM });
+  b.card("FORMULA", "Shares from conversion", "Loan converted ÷ conversion price per share; credit nominal value to share capital and the rest to share premium.", undefined, { applies: ZIM });
   b.card("CONCEPT", "Effect of redemption on gearing", "Non-current liabilities and capital employed fall, so gearing falls; interest saved raises profit before tax.");
 });
 void table;

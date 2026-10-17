@@ -277,6 +277,6 @@ concept("acs.data.binary-arithmetic", { file: "data/binary-arithmetic", keyPrefi
   b.card("DEFINITION", "Overflow", "The result of an operation is outside the range the register can store, so the stored value is wrong.");
   b.card("FACT", "When does two's complement addition overflow?", "When two numbers of the same sign give a result of the opposite sign. Numbers of different signs never overflow.");
   b.card("FACT", "Why is two's complement used rather than sign and magnitude?", "One pattern for zero, and the same adder works for addition and subtraction.");
-  b.card("CONCEPT", "Binary multiplication by shift and add (ZIMSEC)", "For each 1 in the multiplier write the multiplicand shifted left by that place, then add the rows.", undefined, { applies: ZIM });
+  b.card("CONCEPT", "Binary multiplication by shift and add", "For each 1 in the multiplier write the multiplicand shifted left by that place, then add the rows.", undefined, { applies: ZIM });
   b.card("FACT", `One's complement of ${"10110010"}`, `${onesComp("10110010")} (every bit changed).`);
 });

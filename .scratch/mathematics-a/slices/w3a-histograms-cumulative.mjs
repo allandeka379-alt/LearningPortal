@@ -274,6 +274,6 @@ ${table(["Yield y (t/ha)", ineq("y", [2, 3]), ineq("y", [3, 3.5]), ineq("y", [3.
   b.card("CONCEPT", "Cumulative frequency graph", "Plot running totals at UPPER class boundaries, starting from zero at the lowest boundary.");
   b.card("FORMULA", "Reading positions", t`Median at $\frac{n}{2}$, $Q_1$ at $\frac{n}{4}$, $Q_3$ at $\frac{3n}{4}$, $k$th percentile at $\frac{k}{100}n$.`);
   b.card("FORMULA", "Linear interpolation for the median", t`$L + \dfrac{\frac{n}{2} - F}{f} \times w$: $L$ lower boundary, $F$ cumulative frequency before the class, $f$ class frequency, $w$ width.`);
-  b.card("CONCEPT", "Frequency polygon (ZIMSEC)", "Join (mid-point, frequency) with straight lines; useful for comparing two distributions.", undefined, { applies: ZS });
+  b.card("CONCEPT", "Frequency polygon", "Join (mid-point, frequency) with straight lines; useful for comparing two distributions.", undefined, { applies: ZS });
   b.card("CONCEPT", "Modal class with unequal widths", "The class with the greatest frequency density (tallest bar), not necessarily the greatest frequency.");
 });

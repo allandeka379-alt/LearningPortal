@@ -282,5 +282,5 @@ concept("achem.skills.qualitative-analysis", { file: "skills/qualitative-analysi
   b.card("FACT", "Gas tests", "NH₃: damp red litmus blue. CO₂: limewater milky. Cl₂: bleaches damp litmus. H₂: pops. O₂: relights glowing splint. SO₂: acidified dichromate orange → green.");
   b.card("CONCEPT", "Ca²⁺ and Ba²⁺ with the alkalis", "No ppt with NH₃(aq). NaOH(aq): white ppt with Ca²⁺ (unless very dilute), little or none with Ba²⁺.");
   b.card("CONCEPT", "Observation vs deduction", "Observation: 'effervescence; gas turned limewater milky'. Deduction: 'CO₂, so carbonate present'.");
-  b.card("FACT", "Distinguishing Pb²⁺ from Al³⁺ (ZIMSEC)", "Both: white ppt soluble in excess NaOH, insoluble in NH₃. Pb²⁺ gives white PbCl₂ with Cl⁻ and yellow PbI₂ with I⁻.", undefined, { applies: ZIM });
+  b.card("FACT", "Distinguishing Pb²⁺ from Al³⁺", "Both: white ppt soluble in excess NaOH, insoluble in NH₃. Pb²⁺ gives white PbCl₂ with Cl⁻ and yellow PbI₂ with I⁻.", undefined, { applies: ZIM });
 });

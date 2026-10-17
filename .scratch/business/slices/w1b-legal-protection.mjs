@@ -226,7 +226,7 @@ concept("bus.consumer.legal-protection", { file: "consumer/legal-protection", ke
   });
   b.card("DEFINITION", "What are **legal controls** on business?", "Laws and regulations, enforced by government, that set rules for producing, describing, pricing, promoting and selling goods.");
   b.card("DEFINITION", "What is **misleading promotion**?", "Advertising or promotion that gives a false impression of a product, its price or its benefits.");
-  b.card("FACT", "Two purposes of legal controls on marketing (Cambridge)?", "To protect customers from misleading promotion and from faulty goods.");
+  b.card("FACT", "Two purposes of legal controls on marketing?", "To protect customers from misleading promotion and from faulty goods.");
   b.card("FACT", "Five legal methods of protecting consumers?", "Laws on descriptions and promotion, product safety, weights and measures, labelling, food and drugs, price controls, credit agreements (any five).");
   b.card("FACT", "Roles of government in consumer protection?", "Legislates, enforces (inspectors, police, courts), funds protection bodies, sets standards, controls some prices, educates, licenses businesses.", undefined, { applies: COM });
   b.card("DEFINITION", "What is **self-protection** by consumers?", "Steps consumers take themselves: checking goods and dates, comparing prices, reading labels and contracts, keeping receipts.");

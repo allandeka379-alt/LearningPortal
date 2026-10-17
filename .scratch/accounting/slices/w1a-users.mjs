@@ -254,6 +254,6 @@ concept("acc.fundamentals.users", { file: "fundamentals/users", keyPrefix: "fund
   b.card("FACT", "Why do employees read the accounts?", "To judge job security and whether the business can afford higher wages.");
   b.card("FACT", "Why does ZIMRA use accounts?", "To assess tax on profit (and VAT on sales) and to collect economic statistics.");
   b.card("CONCEPT", "Internal or external user?", "Internal: owners and managers. External: lenders, suppliers, customers, investors, employees' unions, government, the public.");
-  b.card("FACT", "Households as users (ZIMSEC)", "Families record income and spending to budget, save and avoid debt.", undefined, { applies: ["zimsec"] });
+  b.card("FACT", "Households as users", "Families record income and spending to budget, save and avoid debt.", undefined, { applies: ["zimsec"] });
   b.card("CONCEPT", "How to answer a 'users' question", "User → what they look at → the decision they make.");
 });

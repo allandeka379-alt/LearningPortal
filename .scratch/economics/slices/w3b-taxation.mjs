@@ -313,5 +313,5 @@ concept("econ.fiscal.taxation", { file: "fiscal/taxation", keyPrefix: "fiscal.ta
   b.card("FORMULA", "Average tax rate = ?", "Total tax paid ÷ income × 100");
   b.card("CONCEPT", "What is the difference between an **ad valorem** and a **specific** tax?", "Ad valorem: a percentage of the price (e.g. VAT). Specific: a fixed amount per unit (e.g. US\\$0.25 per litre).");
   b.card("CONCEPT", "Give four reasons for taxation.", "Raise revenue; redistribute income; discourage demerit goods and pollution; protect domestic industries; manage aggregate demand.");
-  b.card("CONCEPT", "Name four canons (principles) of a good tax (ZIMSEC).", "Equity (ability to pay), certainty, convenience and economy of collection.", undefined, { applies: ZIM });
+  b.card("CONCEPT", "Name four canons (principles) of a good tax.", "Equity (ability to pay), certainty, convenience and economy of collection.", undefined, { applies: ZIM });
 });

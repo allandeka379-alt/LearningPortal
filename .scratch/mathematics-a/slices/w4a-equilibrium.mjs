@@ -294,5 +294,5 @@ $$`,
   b.card("FORMULA", "Lami's theorem", t`For three forces in equilibrium: $\dfrac{P}{\sin\alpha} = \dfrac{Q}{\sin\beta} = \dfrac{R}{\sin\gamma}$, each angle being the one between the other two forces.`);
   b.card("CONCEPT", "Smooth inclined plane", t`Weight components: $mg\sin\alpha$ down the slope and $mg\cos\alpha$ into the plane.`);
   b.card("FACT", "Normal reaction is not always mg", "On a slope, or when another force has a vertical component, resolve to find R.");
-  b.card("CONCEPT", "Forces as vectors (ZIMSEC)", t`For forces in $\mathbf{i}, \mathbf{j}$ form, equilibrium means the $\mathbf{i}$ and $\mathbf{j}$ components each sum to zero.`, undefined, { applies: ZM });
+  b.card("CONCEPT", "Forces as vectors", t`For forces in $\mathbf{i}, \mathbf{j}$ form, equilibrium means the $\mathbf{i}$ and $\mathbf{j}$ components each sum to zero.`, undefined, { applies: ZM });
 });

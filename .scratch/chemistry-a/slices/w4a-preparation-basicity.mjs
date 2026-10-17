@@ -268,5 +268,5 @@ concept("achem.amines.preparation-basicity", { file: "amines/preparation-basicit
   b.card("FACT", "Order of base strength", "phenylamine < ammonia < ethylamine.");
   b.card("CONCEPT", "Why ethylamine is a stronger base than ammonia", "The ethyl group donates electron density to N, making the lone pair more available.");
   b.card("CONCEPT", "Why phenylamine is a weaker base than ammonia", "The N lone pair is delocalised into the benzene ring, so it is less available.");
-  b.card("FORMULA", "pH of an amine solution (ZIMSEC)", "[OH⁻] = √(Kb c); pOH = −log[OH⁻]; pH = 14.00 − pOH.", undefined, { applies: ZIM });
+  b.card("FORMULA", "pH of an amine solution", "[OH⁻] = √(Kb c); pOH = −log[OH⁻]; pH = 14.00 − pOH.", undefined, { applies: ZIM });
 });

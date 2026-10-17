@@ -206,7 +206,7 @@ concept("acc.adjustments.provision-discounts", { file: "adjustments/provision-di
     explanation: "This item practises both provisions and their effect on profit.",
   });
 
-  b.card("DEFINITION", "Provision for discounts allowable", "Estimate of cash discounts year-end debtors will take when they pay (ZIMSEC).");
+  b.card("DEFINITION", "Provision for discounts allowable", "Estimate of cash discounts year-end debtors will take when they pay.");
   b.card("FORMULA", "Provision for discounts allowable", "Discount % × (trade receivables − bad debts − provision for doubtful debts).");
   b.card("FACT", "Order of the adjustments", "Bad debts → provision for doubtful debts → provision for discounts allowable.");
   b.card("FACT", "Increase in the provision for discounts", "Dr Income statement; Cr Provision for discounts allowable.");

@@ -254,7 +254,7 @@ concept("acs.data.character-sets", { file: "data/character-sets", keyPrefix: "da
   b.card("FACT", "UTF-8 versus UTF-16", "UTF-8 uses 1 to 4 bytes per character (ASCII characters use 1); UTF-16 uses 2 or 4 bytes.");
   b.card("CONCEPT", "Why is Unicode needed?", "To represent the characters of many languages and symbols, and to avoid clashes between different 8-bit character sets.");
   b.card("FACT", "How are upper-case and lower-case letters related in ASCII?", "The code of a lower-case letter is 32 more than the code of the same upper-case letter, so one bit differs.");
-  b.card("FACT", "What is EBCDIC? (ZIMSEC)", "An 8-bit IBM character code used on older mainframes; it is not compatible with ASCII.", undefined, { applies: ZIM });
+  b.card("FACT", "What is EBCDIC?", "An 8-bit IBM character code used on older mainframes; it is not compatible with ASCII.", undefined, { applies: ZIM });
   b.card("CONCEPT", "How do you calculate the storage for a text?", "Multiply the number of characters by the bits (or bytes) per character, then convert to the unit asked for.");
   b.card("FACT", "Do you need to memorise ASCII codes?", "No: a code table is given. You need to know the order (digits, capitals, lower case) and that case differs by 32.");
 });

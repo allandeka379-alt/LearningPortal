@@ -266,7 +266,7 @@ $$`,
   b.card("FACT", "Kinetic energy in collisions", "Not conserved in general; always lost when bodies coalesce.");
   b.card("CONCEPT", "Signs in collision problems", "Choose a positive direction; a body moving the other way has negative velocity; a negative answer means a reversed direction.");
   b.card("CONCEPT", "No further collisions", "Compare final velocities: a body behind must not be moving faster (in the same direction) than the one in front.");
-  b.card("FORMULA", "Impulse (ZIMSEC)", t`$I = Ft = mv - mu$ (N s).`, undefined, { applies: ZM });
-  b.card("CONCEPT", "Impulse in a rebound (ZIMSEC)", t`The change in velocity is $v - (-u) = v + u$: add the two speeds.`, undefined, { applies: ZM });
+  b.card("FORMULA", "Impulse", t`$I = Ft = mv - mu$ (N s).`, undefined, { applies: ZM });
+  b.card("CONCEPT", "Impulse in a rebound", t`The change in velocity is $v - (-u) = v + u$: add the two speeds.`, undefined, { applies: ZM });
   b.card("CONCEPT", "Why momentum is conserved", "In an impact the bodies exert equal and opposite impulses on each other (Newton's third law), so the total momentum is unchanged.");
 });

@@ -291,7 +291,7 @@ concept("amaths.diff.exp-log-trig", { file: "diff/exp-log-trig", keyPrefix: "dif
   b.card("FORMULA", "Exponential of a function", t`$\dfrac{d}{dx}\mathrm{e}^{f(x)} = f'(x)\,\mathrm{e}^{f(x)}$`);
   b.card("FORMULA", "Logarithm of a function", t`$\dfrac{d}{dx}\ln f(x) = \dfrac{f'(x)}{f(x)}$`);
   b.card("FORMULA", "Trigonometric functions of (ax + b)", t`$\dfrac{d}{dx}\sin(ax + b) = a\cos(ax + b)$; similarly $\cos \to -a\sin$, $\tan \to a\sec^{2}$.`);
-  b.card("FORMULA", "Derivative of tan⁻¹x (Cambridge Paper 3)", t`$\dfrac{d}{dx}\tan^{-1}x = \dfrac{1}{1 + x^{2}}$`, undefined, { applies: CAM });
+  b.card("FORMULA", "Derivative of tan⁻¹x", t`$\dfrac{d}{dx}\tan^{-1}x = \dfrac{1}{1 + x^{2}}$`, undefined, { applies: CAM });
   b.card("CONCEPT", "Simplify logs first", t`Use log laws before differentiating: $\ln\sqrt{x^{2} + 1} = \frac{1}{2}\ln(x^{2} + 1)$; $\ln(kx) = \ln k + \ln x$.`);
   b.card("FACT", "Why radians in calculus?", t`$\frac{d}{dx}\sin x = \cos x$ relies on $\frac{\sin h}{h} \to 1$, true only in radians.`);
 });

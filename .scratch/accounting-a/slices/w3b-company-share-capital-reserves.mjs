@@ -189,7 +189,7 @@ concept("aacc.company.share-capital-reserves", { file: "company/share-capital-re
   b.card("FACT", "Final dividend and the year end", "Declared before the year end and unpaid: a current liability. Recommended after the year end: a note only.");
   b.card("FACT", "Effect of a transfer to the general reserve", "Retained earnings fall and the general reserve rises by the same amount; total equity and cash do not change.");
   b.card("FORMULA", "Total equity", "Issued share capital + share premium + other capital reserves + revenue reserves + retained earnings.");
-  b.card("DEFINITION", "What is a **preference share** (ZIMSEC)?", "A share with a fixed rate of dividend paid before any ordinary dividend; cumulative preference shares carry forward unpaid dividends.", undefined, { applies: ZIM });
+  b.card("DEFINITION", "What is a **preference share**?", "A share with a fixed rate of dividend paid before any ordinary dividend; cumulative preference shares carry forward unpaid dividends.", undefined, { applies: ZIM });
   b.card("CONCEPT", "Why are unrealised gains not distributable?", "The gain exists only on paper; paying it out would return capital to the owners and harm the creditors.");
 });
 void statement; void U;

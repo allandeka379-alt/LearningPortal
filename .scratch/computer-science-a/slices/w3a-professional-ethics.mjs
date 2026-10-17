@@ -107,6 +107,6 @@ concept("acs.ethics.professional-ethics", { file: "ethics/professional-ethics", 
   b.card("FACT", "Professional bodies", "British Computer Society (BCS), Institute of Electrical and Electronics Engineers (IEEE) and, in Zimbabwe, the Computer Society of Zimbabwe.");
   b.card("CONCEPT", "Law and ethics", "Law is the minimum standard; some acts are legal but unethical.");
   b.card("CONCEPT", "Judging a situation", "Ask who is affected, who is harmed, which principles apply and what the alternatives are.");
-  b.card("CONCEPT", "Business ethics (ZIMSEC)", "Fairness, firmness, honesty and self-motivation.", undefined, { applies: ZIM });
-  b.card("DEFINITION", "Unhu/ubuntu (ZIMSEC)", "An African ethical principle that judges actions by their effect on the community: respect, honesty, responsibility and care for others.", undefined, { applies: ZIM });
+  b.card("CONCEPT", "Business ethics", "Fairness, firmness, honesty and self-motivation.", undefined, { applies: ZIM });
+  b.card("DEFINITION", "Unhu/ubuntu", "An African ethical principle that judges actions by their effect on the community: respect, honesty, responsibility and care for others.", undefined, { applies: ZIM });
 });

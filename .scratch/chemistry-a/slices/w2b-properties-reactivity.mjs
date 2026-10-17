@@ -284,5 +284,5 @@ concept("achem.group17.properties-reactivity", { file: "group17/properties-react
   b.card("FORMULA", "Displacement reactions", "Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂; Cl₂ + 2I⁻ → 2Cl⁻ + I₂; Br₂ + 2I⁻ → 2Br⁻ + I₂.");
   b.card("FACT", "Halogens with hydrogen", "F₂ explosive in the dark; Cl₂ explosive in sunlight; Br₂ needs heat + Pt; I₂ slow, reversible.");
   b.card("CONCEPT", "Thermal stability of HX", "Decreases HF > HCl > HBr > HI as H–X bond energy falls; HI gives purple iodine with a hot wire.");
-  b.card("FORMULA", "Iodine and thiosulfate (ZIMSEC)", "I₂ + 2S₂O₃²⁻ → 2I⁻ + S₄O₆²⁻; chlorine oxidises thiosulfate to sulfate.", undefined, { applies: ZIM });
+  b.card("FORMULA", "Iodine and thiosulfate", "I₂ + 2S₂O₃²⁻ → 2I⁻ + S₄O₆²⁻; chlorine oxidises thiosulfate to sulfate.", undefined, { applies: ZIM });
 });

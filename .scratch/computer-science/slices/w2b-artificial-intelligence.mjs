@@ -207,7 +207,7 @@ concept("comp.emerging.artificial-intelligence", { file: "emerging/artificial-in
   });
 
   b.card("DEFINITION", "Artificial intelligence", "The branch of computer science dealing with the simulation of intelligent behaviour by computers.");
-  b.card("CONCEPT", "Characteristics of AI (Cambridge)", "A collection of data and rules for using it; the ability to reason; (in some systems) the ability to learn and adapt.");
+  b.card("CONCEPT", "Characteristics of AI", "A collection of data and rules for using it; the ability to reason; (in some systems) the ability to learn and adapt.");
   b.card("DEFINITION", "Expert system", "AI system using expert knowledge (knowledge base + rule base) and an inference engine to give advice in a narrow field, with an explanation.");
   b.card("CONCEPT", "Components of an expert system", "Knowledge base (facts), rule base (IF … THEN rules), inference engine (applies rules), interface (questions in, conclusion and explanation out).");
   b.card("DEFINITION", "Inference engine", "The part of an expert system that applies the rules to the facts and the user's answers to reach a conclusion and choose the next question.");

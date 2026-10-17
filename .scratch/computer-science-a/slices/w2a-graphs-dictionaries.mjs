@@ -97,11 +97,7 @@ print(len(stock))`;
     stem: "The weighted graph of bus stops has these edges (minutes):\n\n" + mdTable(["Edge", "Weight"], edges.map(([a, c, w]) => [`${a} – ${c}`, w])) + "\n\nIt is stored as an adjacency matrix. What value is in row R, column S?",
     value: 7, wrong: [3, 0], workedSolution: "The edge R – S has weight 7, and the graph is undirected, so row R, column S holds 7.", explanation: "7." });
   b.num({ d: 3, skill: "APPLICATION", calculator: false, hints: ["Count the edges that include Q."],
-    stem: "The weighted graph of bus stops has these edges (minutes):
-
-" + mdTable(["Edge", "Weight"], edges.map(([a, c, w]) => [`${a} – ${c}`, w])) + "
-
-How many neighbours does vertex Q have?",
+    stem: "The weighted graph of bus stops has these edges (minutes):\n\n" + mdTable(["Edge", "Weight"], edges.map(([a, c, w]) => [`${a} – ${c}`, w])) + "\n\nHow many neighbours does vertex Q have?",
     value: degreeQ, wrong: [2, 4], workedSolution: "Q is joined to P, S and T.", explanation: "Three neighbours." });
   b.num({ d: 4, skill: "APPLICATION", calculator: false, hints: ["Each undirected edge appears under both of its vertices."],
     stem: "How many entries are there altogether in the adjacency list of a graph with 5 vertices and 6 edges (each undirected edge is listed under both ends)?",

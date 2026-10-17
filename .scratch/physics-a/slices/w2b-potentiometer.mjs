@@ -275,6 +275,6 @@ concept("aphys.circuits.potentiometer", { file: "circuits/potentiometer", keyPre
   b.card("FORMULA", "Internal resistance by potentiometer", t`$r = R\left(\dfrac{l_0}{l} - 1\right)$`);
   b.card("CONCEPT", "Why a potentiometer measures e.m.f.", "At balance no current is drawn from the cell, so there are no lost volts.");
   b.card("CONCEPT", "No balance point found", "Driver p.d. across the wire too small, test cell reversed (like terminals not joined), or a broken connection.");
-  b.card("FORMULA", "Wheatstone bridge balance (ZIMSEC)", t`$\dfrac{P}{Q} = \dfrac{R}{S}$`, undefined, { applies: ZIM });
-  b.card("FORMULA", "Metre bridge (ZIMSEC)", t`$\dfrac{X}{R} = \dfrac{l}{100 - l}$, $l$ in cm from $X$'s end`, undefined, { applies: ZIM });
+  b.card("FORMULA", "Wheatstone bridge balance", t`$\dfrac{P}{Q} = \dfrac{R}{S}$`, undefined, { applies: ZIM });
+  b.card("FORMULA", "Metre bridge", t`$\dfrac{X}{R} = \dfrac{l}{100 - l}$, $l$ in cm from $X$'s end`, undefined, { applies: ZIM });
 });

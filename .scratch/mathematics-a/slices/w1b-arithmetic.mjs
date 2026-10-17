@@ -296,6 +296,6 @@ $$`,
   b.card("FACT", "Number of terms in Σ from r = m to n", t`$n - m + 1$`);
   b.card("CONCEPT", "Recurrence relation", t`A rule giving each term from the previous one, e.g. $u_{n+1} = 2u_n - 1$, with a starting value.`);
   b.card("CONCEPT", "Least n for a sum", "Solve the quadratic equation, round the positive root up, and check S at the neighbouring integers.");
-  b.card("DEFINITION", "Convergent, divergent, oscillating, periodic (ZIMSEC)", "Convergent: terms approach a limit. Divergent: no limit. Oscillating: terms alternate up and down. Periodic: terms repeat in a cycle.", undefined, { applies: ZP });
+  b.card("DEFINITION", "Convergent, divergent, oscillating, periodic", "Convergent: terms approach a limit. Divergent: no limit. Oscillating: terms alternate up and down. Periodic: terms repeat in a cycle.", undefined, { applies: ZP });
   b.card("CONCEPT", "Finding a and d from S_n", t`$u_1 = S_1$ and $u_n = S_n - S_{n-1}$.`);
 });

@@ -203,7 +203,7 @@ concept("aacc.intro.business-entities", { file: "intro/business-entities", keyPr
   b.card("FACT", "Private against public limited company", "Private: shares not offered to the public. Public: may offer shares to the public and have them listed.");
   b.card("FACT", "Who owns and who runs a company?", "Shareholders own it; directors run it.");
   b.card("CONCEPT", "Choosing a form of business", "State the form, give a reason from the description and mention a drawback.");
-  b.card("DEFINITION", "Formal and informal organisations (ZIMSEC)", "Formal: registered, keeps records. Informal: usually unregistered with few or no records.", undefined, { applies: ["zimsec"] });
+  b.card("DEFINITION", "Formal and informal organisations", "Formal: registered, keeps records. Informal: usually unregistered with few or no records.", undefined, { applies: ["zimsec"] });
   b.card("FACT", "Limited liability partnerships", "Not examined by either board.");
 });
 

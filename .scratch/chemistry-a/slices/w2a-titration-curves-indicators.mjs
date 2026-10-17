@@ -277,5 +277,5 @@ concept("achem.acids.titration-curves-indicators", { file: "acids/titration-curv
   b.card("FACT", "Strong acid–weak base curve", "Starts about pH 1; steep about 3–7; equivalence below 7; methyl orange.");
   b.card("FACT", "Weak acid–weak base curve", "No vertical section: no indicator suitable; use a pH meter or conductivity.");
   b.card("FACT", "Phenolphthalein and methyl orange colours", "Phenolphthalein: colourless (acid) → pink (alkali), 8.3–10.0. Methyl orange: red → yellow, 2.9–4.6.");
-  b.card("CONCEPT", "Half-equivalence point (ZIMSEC)", "In a weak acid titration, at half the equivalence volume [HA] = [A⁻], so pH = pKa.", undefined, { applies: ZIM });
+  b.card("CONCEPT", "Half-equivalence point", "In a weak acid titration, at half the equivalence volume [HA] = [A⁻], so pH = pKa.", undefined, { applies: ZIM });
 });

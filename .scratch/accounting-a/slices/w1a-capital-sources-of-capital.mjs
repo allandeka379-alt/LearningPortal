@@ -207,12 +207,12 @@ concept("aacc.capital.sources-of-capital", { file: "capital/sources-of-capital",
   });
 
   b.card("DEFINITION", "What is an **ordinary share**?", "A share giving part ownership, voting rights and a dividend that varies with profit.");
-  b.card("DEFINITION", "What is a **preference share**? (ZIMSEC)", "A share with a fixed dividend paid before ordinary dividends; usually no vote; may be redeemable.", undefined, { applies: ZIM });
+  b.card("DEFINITION", "What is a **preference share**?", "A share with a fixed dividend paid before ordinary dividends; usually no vote; may be redeemable.", undefined, { applies: ZIM });
   b.card("DEFINITION", "What is a **loan note** (debenture)?", "A long-term loan with fixed interest and a repayment date, sometimes secured on assets.");
   b.card("FORMULA", "Gearing ratio", "Non-current liabilities ÷ (share capital + reserves + non-current liabilities) × 100.");
   b.card("CONCEPT", "Bonus issue against rights issue", "Bonus: free shares from reserves, no cash. Rights: shares offered to existing holders for payment, cash raised.");
   b.card("CONCEPT", "Loan notes against ordinary shares", "Loan notes: fixed interest (expense), no vote, raise gearing. Shares: variable dividend, votes, dilute control.");
   b.card("FACT", "Why high gearing is risky", "Interest and repayments are fixed and must be met even when profits are low.");
-  b.card("DEFINITION", "What is **convertible loan stock**? (ZIMSEC)", "Loan notes that can be exchanged for shares at a stated rate, with a lower interest rate.", undefined, { applies: ZIM });
+  b.card("DEFINITION", "What is **convertible loan stock**?", "Loan notes that can be exchanged for shares at a stated rate, with a lower interest rate.", undefined, { applies: ZIM });
   b.card("FACT", "Retained earnings", "Cheapest source; no issue costs or new shareholders; limited by profits.");
 });

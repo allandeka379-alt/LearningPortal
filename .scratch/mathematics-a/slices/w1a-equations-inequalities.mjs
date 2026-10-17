@@ -298,7 +298,7 @@ concept("amaths.quadratics.equations-inequalities", { file: "quadratics/equation
   b.card("FORMULA", t`$a(x - \alpha)(x - \beta) > 0$ with $a > 0$, $\alpha < \beta$`, t`$x < \alpha$ or $x > \beta$ (outside the roots).`);
   b.card("CONCEPT", "Solving one linear and one quadratic equation simultaneously", "Make one variable the subject of the linear equation, substitute into the quadratic, solve, then use the linear equation for the other coordinate. Keep answers in pairs.");
   b.card("CONCEPT", "Hidden quadratics", t`Substitute $u$ for the repeated function ($x^{2}$, $\sqrt{x}$, $a^{x}$, $\tan x$), solve for $u$, then for $x$; reject impossible values such as $\sqrt{x} < 0$.`);
-  b.card("CONCEPT", "Rational inequalities (ZIMSEC)", t`Never multiply by a denominator of unknown sign. Multiply by its square, or rearrange to a single fraction $\le 0$ and use a sign table.`, undefined, { applies: ZP });
-  b.card("CONCEPT", "Sign table for a cubic inequality (ZIMSEC)", "Mark the critical values, record the sign of each factor in each interval, and multiply the signs.", undefined, { applies: ZP });
+  b.card("CONCEPT", "Rational inequalities", t`Never multiply by a denominator of unknown sign. Multiply by its square, or rearrange to a single fraction $\le 0$ and use a sign table.`, undefined, { applies: ZP });
+  b.card("CONCEPT", "Sign table for a cubic inequality", "Mark the critical values, record the sign of each factor in each interval, and multiply the signs.", undefined, { applies: ZP });
   b.card("FACT", "Reversing an inequality", "Multiplying or dividing both sides by a negative number reverses the inequality sign.");
 });

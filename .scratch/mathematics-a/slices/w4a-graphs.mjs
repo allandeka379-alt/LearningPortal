@@ -241,5 +241,5 @@ concept("amaths.kinematics.graphs", { file: "kinematics/graphs", keyPrefix: "kin
   b.card("CONCEPT", "Scalars and vectors", "Distance and speed are scalars; displacement, velocity and acceleration are vectors (signed in one dimension).");
   b.card("FORMULA", "Area of a trapezium-shaped v–t graph", t`$\tfrac{1}{2}(\text{total time} + \text{time at top speed}) \times \text{top speed}$`);
   b.card("CONCEPT", "Unknown speed or time", "Write the total area in terms of the unknown and set it equal to the given distance.");
-  b.card("FACT", "Area under an acceleration–time graph (ZIMSEC)", "Change in velocity.", undefined, { applies: ZM });
+  b.card("FACT", "Area under an acceleration–time graph", "Change in velocity.", undefined, { applies: ZM });
 });

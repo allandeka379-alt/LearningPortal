@@ -292,7 +292,7 @@ concept("achem.group2.reactions-uses", { file: "group2/reactions-uses", keyPrefi
   b.card("FACT", "Solubility trends in Group 2", "Hydroxides: more soluble down the group. Sulfates: less soluble down the group.");
   b.card("FACT", "Group 2 flame colours", "Mg brilliant white; Ca brick-red; Sr crimson; Ba apple-green.");
   b.card("CONCEPT", "Why Ca, Sr, Ba stop reacting with dilute H₂SO₄", "An insoluble sulfate coats the metal (or carbonate) and keeps the acid away.");
-  b.card("FACT", "Uses: MgO, CaO, Ca(OH)₂, CaCO₃ (ZIMSEC)", "MgO furnace linings; CaO, Ca(OH)₂, CaCO₃ neutralise acid soils; CaCO₃ for cement, glass and iron extraction.", undefined, { applies: ZIM });
-  b.card("FACT", "Uses: CaSO₄, BaSO₄, Mg(OH)₂ (ZIMSEC)", "CaSO₄ plaster; BaSO₄ barium meal (insoluble, X-ray opaque); Mg(OH)₂ and magnesium trisilicate antacids.", undefined, { applies: ZIM });
+  b.card("FACT", "Uses: MgO, CaO, Ca(OH)₂, CaCO₃", "MgO furnace linings; CaO, Ca(OH)₂, CaCO₃ neutralise acid soils; CaCO₃ for cement, glass and iron extraction.", undefined, { applies: ZIM });
+  b.card("FACT", "Uses: CaSO₄, BaSO₄, Mg(OH)₂", "CaSO₄ plaster; BaSO₄ barium meal (insoluble, X-ray opaque); Mg(OH)₂ and magnesium trisilicate antacids.", undefined, { applies: ZIM });
   b.card("CONCEPT", "Reactivity trend in Group 2", "Increases down the group: larger atoms, lower ionisation energies, outer electrons lost more easily.");
 });

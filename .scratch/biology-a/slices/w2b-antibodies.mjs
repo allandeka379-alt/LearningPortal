@@ -316,5 +316,5 @@ concept("abio.immunity.antibodies", { file: "immunity/antibodies", keyPrefix: "i
   b.card("DEFINITION", "What is a **hybridoma**?", "A plasma cell fused with a myeloma cell: makes one antibody and divides indefinitely.");
   b.card("FACT", "Steps to make monoclonal antibodies", "Immunise mouse → spleen cells → fuse with myeloma → select → clone and screen → culture.");
   b.card("CONCEPT", "Pregnancy test lines", "Test line: immobilised antibodies trap hCG-coloured antibody complexes. Control line: binds mobile antibodies; shows test worked.");
-  b.card("FACT", "Example of a monoclonal antibody treatment", "Trastuzumab binds HER2 on some breast cancer cells (Cambridge).", null, { applies: CAM });
+  b.card("FACT", "Example of a monoclonal antibody treatment", "Trastuzumab binds HER2 on some breast cancer cells.", null, { applies: CAM });
 });

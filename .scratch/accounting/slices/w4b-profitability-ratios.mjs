@@ -264,7 +264,7 @@ concept("acc.analysis.profitability-ratios", { file: "analysis/profitability-rat
   b.card("FORMULA", "Mark-up", "Gross profit ÷ cost of sales × 100.");
   b.card("FORMULA", "Profit margin (net profit percentage)", "Profit for the year ÷ revenue × 100.");
   b.card("FORMULA", "Return on capital employed (ROCE)", "Profit for the year before interest ÷ capital employed × 100.", null, { applies: CAM });
-  b.card("FORMULA", "Capital employed (Cambridge)", "Issued shares + reserves + non-current liabilities (sole trader: capital + non-current liabilities).", null, { applies: CAM });
+  b.card("FORMULA", "Capital employed", "Issued shares + reserves + non-current liabilities (sole trader: capital + non-current liabilities).", null, { applies: CAM });
   b.card("CONCEPT", "Gross margin steady, profit margin down", "Expenses have risen faster than sales (or other income has fallen).");
   b.card("CONCEPT", "Why mark-up is always bigger than margin", "Both use the same gross profit, but cost of sales is smaller than revenue.");
   b.card("FACT", "Causes of a lower gross profit margin", "Higher buying prices not passed on, lower selling prices or discounts, theft or damage of inventory, a shift to lower-margin goods.");

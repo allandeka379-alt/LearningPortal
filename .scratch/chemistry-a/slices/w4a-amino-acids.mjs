@@ -213,7 +213,7 @@ concept("achem.amines.amino-acids", { file: "amines/amino-acids", keyPrefix: "am
     points: ["H₃N⁺CH₂COOH has two acidic protons, removed one after the other (–COOH first, then –NH₃⁺)", "Each buffer region occurs where a weak acid and its conjugate base are present in similar amounts (pH ≈ pKa = 2.34 and 9.60)"],
     modelAnswer: "Glycine hydrochloride loses two protons in turn, first from –COOH and then from –NH₃⁺. While each is being removed the solution contains a weak acid and its conjugate base, giving buffer regions centred on pH 2.34 and 9.60.",
     hints: ["How many protons can each ion lose?"],
-    explanation: "Two dissociations → two buffer regions (ZIMSEC).",
+    explanation: "Two dissociations → two buffer regions.",
   });
   b.struct({
     d: 4, skill: "ANALYSIS", examStyle: true,
@@ -262,5 +262,5 @@ concept("achem.amines.amino-acids", { file: "amines/amino-acids", keyPrefix: "am
   b.card("CONCEPT", "Number of peptide sequences", "n different amino acids, each used once: n! sequences; with repeats allowed: nᵏ for length k.");
   b.card("FACT", "Hydrolysis of proteins", "6 mol dm⁻³ HCl, reflux for hours; or alkali; or protease enzymes. Products: amino acids (as cations in acid).");
   b.card("CONCEPT", "Electrophoresis", "Direction set by charge at the buffer pH; distance increases with charge and decreases with size.");
-  b.card("FACT", "Glycine titration curve (ZIMSEC)", "Two buffer regions (pH ≈ 2.34 and 9.60) and two equivalence points; pI ≈ 5.97.", undefined, { applies: ZIM });
+  b.card("FACT", "Glycine titration curve", "Two buffer regions (pH ≈ 2.34 and 9.60) and two equivalence points; pI ≈ 5.97.", undefined, { applies: ZIM });
 });

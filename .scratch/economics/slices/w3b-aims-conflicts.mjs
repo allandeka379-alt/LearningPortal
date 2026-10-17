@@ -304,7 +304,7 @@ concept("econ.macro.aims-conflicts", { file: "macro/aims-conflicts", keyPrefix: 
     });
   }
 
-  b.card("CONCEPT", "List the six macroeconomic aims (Cambridge).", "Economic growth; full employment; price stability; balance of payments stability; redistribution of income; environmental sustainability.");
+  b.card("CONCEPT", "List the six macroeconomic aims.", "Economic growth; full employment; price stability; balance of payments stability; redistribution of income; environmental sustainability.");
   b.card("DEFINITION", "Define **price stability**.", "A low and steady rate of inflation (not falling prices).");
   b.card("DEFINITION", "Define **balance of payments stability**.", "A current account close to balance over time, without large or lasting deficits or surpluses.");
   b.card("DEFINITION", "Define **environmental sustainability**.", "Producing and using resources in a way that does not harm future generations' ability to meet their needs.");

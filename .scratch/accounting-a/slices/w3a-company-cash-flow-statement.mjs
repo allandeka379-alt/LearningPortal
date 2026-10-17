@@ -65,7 +65,7 @@ concept("aacc.company.cash-flow-statement", { file: "company/cash-flow-statement
   });
   mc(b, {
     d: 4, skill: "ANALYSIS",
-    stem: "Which statement about the statement of cash flows of a sole proprietor (ZIMSEC) is correct?",
+    stem: "Which statement about the statement of cash flows of a sole proprietor is correct?",
     ok: ["Drawings are shown in financing activities and there is no tax", "Correct: the owner's withdrawals replace dividends."],
     bad: [["Drawings are deducted in operating activities", "Drawings are withdrawals of capital, not operating costs."], ["Income tax paid is shown in operating activities", "A sole proprietor's business pays no income tax."], ["There is no financing section", "Loans and drawings are financing items."]],
     hints: ["What replaces dividends for a sole proprietor?"],

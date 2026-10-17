@@ -308,8 +308,8 @@ concept("amaths.functions.domain-range", { file: "functions/domain-range", keyPr
   b.card("DEFINITION", "Function", "A relation that maps every element of the domain to exactly one output (one-one or many-one, never one-many).");
   b.card("DEFINITION", "Domain and range", "Domain: the set of allowed inputs. Range: the set of outputs actually produced.");
   b.card("DEFINITION", "One-one function", t`Different inputs give different outputs: $f(a) = f(b) \Rightarrow a = b$. Every horizontal line meets the graph at most once.`);
-  b.card("DEFINITION", "Surjective and bijective (ZIMSEC)", "Surjective: the range equals the co-domain. Bijective: both injective (one-one) and surjective.", undefined, { applies: ZP });
-  b.card("DEFINITION", "Co-domain (ZIMSEC)", t`In $f : A \to B$, the set $B$ in which outputs are declared to lie; the range is a subset of $B$.`, undefined, { applies: ZP });
+  b.card("DEFINITION", "Surjective and bijective", "Surjective: the range equals the co-domain. Bijective: both injective (one-one) and surjective.", undefined, { applies: ZP });
+  b.card("DEFINITION", "Co-domain", t`In $f : A \to B$, the set $B$ in which outputs are declared to lie; the range is a subset of $B$.`, undefined, { applies: ZP });
   b.card("CONCEPT", "How do you find the range of a quadratic on a restricted domain?", "Complete the square; if the vertex is in the domain it gives the least (or greatest) value; also evaluate both end points.");
   b.card("CONCEPT", "How do you make a quadratic one-one?", t`Restrict the domain to one side of the vertex: $x \geq h$ or $x \leq h$.`);
   b.card("FACT", t`Range of $\frac{1}{x}$ for $x \geq 2$`, t`$0 < f(x) \leq \frac{1}{2}$: the value 0 is approached but never reached.`);

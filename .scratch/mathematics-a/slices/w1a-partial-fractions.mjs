@@ -266,7 +266,7 @@ concept("amaths.algebra.partial-fractions", { file: "algebra/partial-fractions",
   b.card("FORMULA", "Partial-fraction form for a repeated linear factor", t`$\dfrac{px^{2} + qx + r}{(ax + b)(cx + d)^{2}} \equiv \dfrac{A}{ax + b} + \dfrac{B}{cx + d} + \dfrac{C}{(cx + d)^{2}}$`);
   b.card("FORMULA", "Partial-fraction form with an irreducible quadratic factor", t`$\dfrac{px^{2} + qx + r}{(ax + b)(cx^{2} + d)} \equiv \dfrac{A}{ax + b} + \dfrac{Bx + C}{cx^{2} + d}$`);
   b.card("CONCEPT", "How do you find the constants?", "Multiply through by the denominator to get an identity; substitute the roots of the factors; equate coefficients for any constant left; check at another value.");
-  b.card("CONCEPT", "What do you do with an improper fraction (ZIMSEC)?", "Divide first: polynomial + proper fraction, then split the proper fraction.", undefined, { applies: ZP });
+  b.card("CONCEPT", "What do you do with an improper fraction?", "Divide first: polynomial + proper fraction, then split the proper fraction.", undefined, { applies: ZP });
   b.card("FACT", "Which board examines partial fractions of improper fractions?", "ZIMSEC (Form 5). Cambridge 9709 (Paper 3 only) uses proper fractions only.");
   b.card("FACT", "Why are partial fractions useful?", "Each simple fraction is easy to integrate (giving logarithms), to expand as a binomial series, or to sum by the method of differences.");
 });

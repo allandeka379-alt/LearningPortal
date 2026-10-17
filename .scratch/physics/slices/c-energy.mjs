@@ -328,7 +328,7 @@ concept("phys.energy.power", {
   q.card("DEFINITION", "Define **power**.", "The work done, or energy transferred, per unit time.");
   q.card("FORMULA", "Equation for power?", "P = W/t = ΔE/t.");
   q.card("FACT", "What is 1 watt?", "1 joule per second.");
-  q.card("FORMULA", "Power from force and speed?", "P = Fv (ZIMSEC).", undefined, { applies: Z });
+  q.card("FORMULA", "Power from force and speed?", "P = Fv.", undefined, { applies: Z });
   q.card("CONCEPT", "How do you measure your own power?", "Weight × vertical height of stairs ÷ time to climb them.");
   q.card("CONCEPT", "Energy vs power?", "Energy (J) is how much is transferred; power (W) is how fast.");
 });

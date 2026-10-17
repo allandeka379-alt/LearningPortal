@@ -278,7 +278,7 @@ concept("acs.data.number-bases", { file: "data/number-bases", keyPrefix: "data.n
 
   b.card("DEFINITION", "Binary Coded Decimal (BCD)", "Each denary digit is stored as its own 4-bit binary group (e.g. 59 = 0101 1001).", "Used for displays such as clocks and calculators; groups 1010 to 1111 are never used.");
   b.card("FACT", "How many bits does one hexadecimal digit represent?", "Four bits (a nibble), because 16 = 2^4.");
-  b.card("FACT", "How many bits does one octal digit represent? (ZIMSEC)", "Three bits, because 8 = 2^3.", undefined, { applies: ZIM });
+  b.card("FACT", "How many bits does one octal digit represent?", "Three bits, because 8 = 2^3.", undefined, { applies: ZIM });
   b.card("FACT", "Denary values of the hexadecimal digits A, B, C, D, E and F", "A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.");
   b.card("CONCEPT", "How do you convert denary to binary by repeated division?", "Divide by 2 repeatedly, recording each remainder, until the quotient is 0. Read the remainders from last to first.");
   b.card("CONCEPT", "How do you convert binary to hexadecimal?", "Split the bits into groups of four from the right (pad the left group with zeros) and convert each group to one hexadecimal digit.");

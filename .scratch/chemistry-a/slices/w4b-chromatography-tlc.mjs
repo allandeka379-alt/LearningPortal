@@ -251,5 +251,5 @@ concept("achem.analysis.chromatography-tlc", { file: "analysis/chromatography-tl
   b.card("CONCEPT", "Identifying with Rf", "Match Rf with a reference run on the same plate; confirm with a second solvent.");
   b.card("CONCEPT", "Two-way chromatography", "Run in one solvent, turn 90°, run in a second solvent: separates spots that overlap in the first.");
   b.card("CONCEPT", "Column chromatography", "Silica or alumina packed in a column; liquid eluent; components collected as separate fractions.");
-  b.card("FACT", "Ion-exchange chromatography", "A charged resin holds ions of opposite charge with different strengths; separates by charge (ZIMSEC).", undefined, { applies: ZIM });
+  b.card("FACT", "Ion-exchange chromatography", "A charged resin holds ions of opposite charge with different strengths; separates by charge.", undefined, { applies: ZIM });
 });

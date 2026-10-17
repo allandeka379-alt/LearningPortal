@@ -286,7 +286,7 @@ concept("abio.conservation.threats-strategies", { file: "conservation/threats-st
     calculator: true,
   });
 
-  b.card("FACT", "Four causes of extinction (Cambridge list)", "Climate change; competition (often from introduced species); hunting by humans; degradation and loss of habitats.");
+  b.card("FACT", "Four causes of extinction", "Climate change; competition (often from introduced species); hunting by humans; degradation and loss of habitats.");
   b.card("CONCEPT", "Five reasons for maintaining biodiversity", "Ecological, economic, medicinal, aesthetic and ethical.");
   b.card("DEFINITION", "In situ versus ex situ conservation", "In situ: in the natural habitat (parks, reserves). Ex situ: outside it (zoos, botanic gardens, seed banks, frozen zoos).");
   b.card("FACT", "How are seeds stored in a seed bank?", "Dried to low water content and kept cold (about −20 °C); tested regularly for germination.");

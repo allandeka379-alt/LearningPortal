@@ -275,5 +275,5 @@ $$`,
   b.card("FORMULA", "Smooth slope", t`$a = g\sin\alpha$ down the slope, independent of mass.`);
   b.card("FORMULA", "Rough slope", t`Up: deceleration $g(\sin\alpha + \mu\cos\alpha)$; down: acceleration $g(\sin\alpha - \mu\cos\alpha)$ if $\tan\alpha > \mu$.`);
   b.card("CONCEPT", "ma is not a force", "Draw only real forces; show the acceleration as a separate arrow.");
-  b.card("FORMULA", "Vector form (ZIMSEC)", t`$\mathbf{F} = m\mathbf{a}$: divide the force vector by the mass and find the magnitude.`, undefined, { applies: ZM });
+  b.card("FORMULA", "Vector form", t`$\mathbf{F} = m\mathbf{a}$: divide the force vector by the mass and find the magnitude.`, undefined, { applies: ZM });
 });

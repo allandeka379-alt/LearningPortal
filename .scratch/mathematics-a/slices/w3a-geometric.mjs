@@ -222,7 +222,7 @@ $$` }),
   b.card("FORMULA", "Geometric probability", t`$\mathrm{P}(X = r) = (1 - p)^{r - 1}p$, $r = 1, 2, 3, \ldots$`, "In MF19.");
   b.card("FORMULA", "Geometric tail", t`$\mathrm{P}(X > r) = (1 - p)^r$; $\mathrm{P}(X \le r) = 1 - (1 - p)^r$`);
   b.card("FORMULA", "Geometric mean", t`$\mathrm{E}(X) = \dfrac{1}{p}$`, "In MF19.");
-  b.card("FORMULA", "Geometric variance (ZIMSEC)", t`$\mathrm{Var}(X) = \dfrac{1 - p}{p^2}$`, "Cambridge requires the expectation only.", { applies: ZS });
+  b.card("FORMULA", "Geometric variance", t`$\mathrm{Var}(X) = \dfrac{1 - p}{p^2}$`, "Cambridge requires the expectation only.", { applies: ZS });
   b.card("CONCEPT", "Between two values", t`$\mathrm{P}(a \le X \le b) = (1 - p)^{a - 1} - (1 - p)^b$`);
   b.card("FACT", "Mode", "The mode of every geometric distribution is 1.");
   b.card("CONCEPT", "Geometric vs binomial", "Binomial: fixed number of trials, count successes. Geometric: count trials until the first success.");

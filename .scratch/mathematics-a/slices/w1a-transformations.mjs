@@ -286,7 +286,7 @@ concept("amaths.functions.transformations", { file: "functions/transformations",
   b.card("FACT", t`$y = af(x)$`, t`Stretch, scale factor $a$, parallel to the $y$-axis.`);
   b.card("FACT", t`$y = f(ax)$`, t`Stretch, scale factor $\frac{1}{a}$, parallel to the $x$-axis.`);
   b.card("FACT", t`$y = -f(x)$ and $y = f(-x)$`, t`$-f(x)$: reflection in the $x$-axis. $f(-x)$: reflection in the $y$-axis.`);
-  b.card("CONCEPT", t`How to sketch $y = |f(x)|$ (ZIMSEC)`, t`Sketch $y = f(x)$, then reflect every part below the $x$-axis in the $x$-axis; a minimum below the axis becomes a local maximum.`, undefined, { applies: ZP });
+  b.card("CONCEPT", t`How to sketch $y = |f(x)|$`, t`Sketch $y = f(x)$, then reflect every part below the $x$-axis in the $x$-axis; a minimum below the axis becomes a local maximum.`, undefined, { applies: ZP });
   b.card("CONCEPT", "How do you check a combination of transformations?", "Track one key point (vertex, intercept, maximum) through each step and substitute it into the new equation.");
   b.card("CONCEPT", t`Transformations of $y = f(2x - 6)$`, t`Write $f\big(2(x - 3)\big)$: stretch factor $\frac{1}{2}$ parallel to the $x$-axis, then translation $\begin{pmatrix} 3 \\ 0 \end{pmatrix}$.`);
 });

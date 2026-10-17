@@ -261,6 +261,6 @@ concept("achem.analysis.chromatography-glc", { file: "analysis/chromatography-gl
   b.card("FORMULA", "Percentage composition from GLC", "% of component = peak area ÷ total area of all peaks × 100 (equal detector response assumed).");
   b.card("FACT", "Triangular peak area", "Area ≈ ½ × base width × height.");
   b.card("CONCEPT", "GC-MS", "GC separates; MS identifies each component from its mass spectrum; used in drug testing and contaminant analysis.");
-  b.card("CONCEPT", "HPLC", "Liquid mobile phase pumped at high pressure through fine particles; for non-volatile or heat-sensitive substances (ZIMSEC).", undefined, { applies: ZIM });
+  b.card("CONCEPT", "HPLC", "Liquid mobile phase pumped at high pressure through fine particles; for non-volatile or heat-sensitive substances.", undefined, { applies: ZIM });
   b.card("CONCEPT", "Order on a non-polar column", "Components elute roughly in order of increasing boiling point.");
 });

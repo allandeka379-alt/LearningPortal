@@ -145,7 +145,7 @@ concept("bus.operations.break-even-chart", { file: "operations/break-even-chart"
   const rev2 = f.revenue(P1, Q2), tc2 = f.totalCost(F1, V1 * Q2);
   b.calc({
     d: 3, skill: "APPLICATION", kind: "money", value: rev2 - tc2,
-    stem: `Using the same data (fixed costs ${money(F1)}, price ${money(P1)}, variable cost ${money(V1)}), calculate the profit shown on the chart at ${fmt(Q2)} units.`,
+    stem: `A business has fixed costs of ${money(F1)}, sells each unit for ${money(P1)} and has a variable cost of ${money(V1)} a unit. Calculate its profit at ${fmt(Q2)} units.`,
     wrong: [rev2, rev2 - F1],
     explanation: `Revenue ${fmt(rev2)} − total cost ${fmt(tc2)} = ${money(rev2 - tc2)}.`,
     workedSolution: `1. Revenue = ${fmt(Q2)} × ${P1} = ${fmt(rev2)}.\n2. Total cost = ${fmt(F1)} + ${fmt(Q2)} × ${V1} = ${fmt(tc2)}.\n3. Profit = ${fmt(rev2)} − ${fmt(tc2)} = ${money(rev2 - tc2)}.`,
@@ -187,7 +187,7 @@ concept("bus.operations.break-even-chart", { file: "operations/break-even-chart"
       P.num({ label: "(c)", marks: 2, type: "CALCULATION", kind: "units", value: be, stem: "Calculate the output at which the revenue and total cost lines will cross.", wrong: [fc / p], explanation: `${fmt(fc)} ÷ (${p} − ${vc}) = ${fmt(be)} bags.` }),
       P.num({ label: "(d)", marks: 1, kind: "units", value: f.marginOfSafety(exp, be), stem: "Calculate the margin of safety at expected sales.", wrong: [exp], explanation: `${fmt(exp)} − ${fmt(be)} = ${f.marginOfSafety(exp, be)}.` }),
       P.mcq({ label: "(e)", marks: 1, stem: "Where does the total cost line start on her chart?", options: [[`At ${money(fc)} on the vertical axis`, "Correct: fixed costs at zero output."], ["At the origin", "That is the revenue line."], [`At ${money(f.totalCost(fc, vc * cap))} on the vertical axis`, "That is total cost at full capacity."], ["At the break-even point", "Lines start at zero output."]], answer: "A" }),
-      P.manual({ label: "(f)", marks: 4, stem: "Nyasha will use the chart to apply for a bank loan. Discuss how useful the chart will be to the bank.", points: [`Shows a margin of safety of ${f.marginOfSafety(exp, be)} bags: sales can fall before a loss (1)`, "Shows profit at expected sales; ability to repay (1)", "But relies on forecasts; assumes all bags sold at one price (1)", "Justified conclusion: useful with cash flow forecast and evidence of demand (1)"] }),
+      P.manual({ label: "(f)", marks: 4, stem: "Nyasha will include a break-even chart in her bank loan application. Discuss how useful such a chart will be to the bank.", points: [`Shows a margin of safety of ${f.marginOfSafety(exp, be)} bags: sales can fall before a loss (1)`, "Shows profit at expected sales; ability to repay (1)", "But relies on forecasts; assumes all bags sold at one price (1)", "Justified conclusion: useful with cash flow forecast and evidence of demand (1)"] }),
     ],
     explanation: `At 800 bags total cost ${money(f.totalCost(fc, vc * 800))}, revenue ${money(f.revenue(p, 800))}; break-even ${fmt(be)}; margin of safety ${f.marginOfSafety(exp, be)}.`,
     hints: ["Total cost = fixed costs + variable cost × output.", "Break-even = fixed costs ÷ contribution."],

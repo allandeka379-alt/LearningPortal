@@ -256,6 +256,6 @@ concept("bus.finance.need-for-finance", { file: "finance/need-for-finance", keyP
   b.card("DEFINITION", "Revenue expenditure", "Spending on day-to-day running costs (wages, rent, electricity, materials).");
   b.card("CONCEPT", "Short-term versus long-term needs", "Short-term: stock, wages, seasonal gaps (under a year). Long-term: buildings, machinery, expansion (many years).");
   b.card("CONCEPT", "Matching principle", "Finance long-term needs with long-term sources and short-term needs with short-term sources.");
-  b.card("DEFINITION", "Long-term and short-term capital (ZIMSEC)", "Long-term (fixed) capital is invested in non-current assets; short-term capital finances current assets and daily operations.", undefined, { applies: COM });
+  b.card("DEFINITION", "Long-term and short-term capital", "Long-term (fixed) capital is invested in non-current assets; short-term capital finances current assets and daily operations.", undefined, { applies: COM });
   b.card("FORMULA", "External finance needed", "External finance = total finance needed − funds already available (savings, retained profit).");
 });

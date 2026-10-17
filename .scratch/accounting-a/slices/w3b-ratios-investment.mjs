@@ -201,7 +201,7 @@ concept("aacc.ratios.investment", { file: "ratios/investment", keyPrefix: "ratio
   b.card("FORMULA", "Dividend per share", "Annual ordinary dividend ÷ number of ordinary shares in issue.");
   b.card("FORMULA", "Dividend yield", "Dividend per share ÷ market price per share × 100.");
   b.card("FORMULA", "Dividend cover", "Profit for the year ÷ annual ordinary dividend, in times.");
-  b.card("FORMULA", "Earnings yield (ZIMSEC)", "Earnings per share ÷ market price × 100; the inverse of the P/E expressed as a percentage.", undefined, { applies: ZIM });
+  b.card("FORMULA", "Earnings yield", "Earnings per share ÷ market price × 100; the inverse of the P/E expressed as a percentage.", undefined, { applies: ZIM });
   b.card("CONCEPT", "What does a high P/E show?", "Investors expect growth or low risk and pay a high price for each dollar of current earnings; the shares are also dearer.");
   b.card("CONCEPT", "Dividend cover below 1", "The dividend exceeds the profit for the year, so it is partly paid from past profits and may be cut.");
   b.card("FACT", "Bonus issue and EPS", "A bonus issue increases the number of shares, so EPS falls, but shareholders' wealth does not change; earlier EPS is restated.");

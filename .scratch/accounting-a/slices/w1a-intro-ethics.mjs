@@ -210,6 +210,6 @@ concept("aacc.intro.ethics", { file: "intro/ethics", keyPrefix: "intro.ethics" }
   b.card("CONCEPT", "Threats to the principles", "Self-interest, familiarity, intimidation, pressure to manipulate figures, conflict of interest.");
   b.card("CONCEPT", "Examples of safeguards", "Refusing, independent review, documenting instructions, disclosure, consulting a professional body.");
   b.card("FACT", "Tax evasion and tax avoidance", "Evasion: illegal hiding of income. Avoidance: legal reduction of tax using allowances.");
-  b.card("CONCEPT", "Unhu/Ubuntu in business (ZIMSEC)", "Honesty, respect for people and responsibility to the community in everyday transactions.", undefined, { applies: ["zimsec"] });
+  b.card("CONCEPT", "Unhu/Ubuntu in business", "Honesty, respect for people and responsibility to the community in everyday transactions.", undefined, { applies: ["zimsec"] });
   b.card("FACT", "Effect of overstated profit", "Lenders and investors may be misled and lose money; trust in accounts falls.");
 });

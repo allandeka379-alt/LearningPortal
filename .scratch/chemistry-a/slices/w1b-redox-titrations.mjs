@@ -256,7 +256,7 @@ concept("achem.electrochem.redox-titrations", { file: "electrochem/redox-titrati
   b.card("FORMULA", "Copper(II) and iodide", "2Cu²⁺ + 4I⁻ → 2CuI + I₂; then I₂ + 2S₂O₃²⁻ → 2I⁻ + S₄O₆²⁻; Cu²⁺ : S₂O₃²⁻ = 1 : 1.");
   b.card("CONCEPT", "When to add starch", "Near the end point, when the iodine colour is pale yellow; end point = blue-black disappears.");
   b.card("CONCEPT", "Ethanedioate titration", "Warm to about 60 °C; slow at first, then autocatalysed by Mn²⁺.");
-  b.card("CONCEPT", "Effect of ligands on E⦵", "Ligands change the relative stability of oxidation states: [Fe(CN)₆]³⁻/⁴⁻ is +0.36 V vs +0.77 V for aqueous Fe³⁺/Fe²⁺ (ZIMSEC).", undefined, { applies: ZIM });
+  b.card("CONCEPT", "Effect of ligands on E⦵", "Ligands change the relative stability of oxidation states: [Fe(CN)₆]³⁻/⁴⁻ is +0.36 V vs +0.77 V for aqueous Fe³⁺/Fe²⁺.", undefined, { applies: ZIM });
   b.card("CONCEPT", "Brown precipitate in a MnO₄⁻ titration", "Too little acid: MnO₂ forms instead of Mn²⁺, changing the mole ratio.");
   b.card("CONCEPT", "Titration calculation route", "Moles of titrant → mole ratio → moles in portion → × scaling factor → mass, percentage or Mr.");
 });

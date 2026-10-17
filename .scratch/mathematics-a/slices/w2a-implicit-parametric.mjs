@@ -249,7 +249,7 @@ concept("amaths.diff.implicit-parametric", { file: "diff/implicit-parametric", k
   b.card("FORMULA", "Parametric gradient", t`$\dfrac{dy}{dx} = \dfrac{dy/dt}{dx/dt}$`, "In MF19.");
   b.card("CONCEPT", "Implicit method", t`Differentiate every term with respect to $x$, collect $\frac{dy}{dx}$ terms, factorise, then substitute both coordinates.`);
   b.card("CONCEPT", "Horizontal and vertical tangents", t`Horizontal: numerator of $\frac{dy}{dx}$ is zero. Vertical: denominator is zero. Solve with the curve's equation.`);
-  b.card("CONCEPT", "Parametric to Cartesian (ZIMSEC)", t`Eliminate the parameter: make $t$ the subject, or use $\cos^{2}\theta + \sin^{2}\theta = 1$.`, undefined, { applies: ZP });
+  b.card("CONCEPT", "Parametric to Cartesian", t`Eliminate the parameter: make $t$ the subject, or use $\cos^{2}\theta + \sin^{2}\theta = 1$.`, undefined, { applies: ZP });
   b.card("FACT", t`Gradient of $x^{2} + y^{2} = r^{2}$`, t`$\dfrac{dy}{dx} = -\dfrac{x}{y}$: the tangent is perpendicular to the radius.`);
   b.card("DEFINITION", "Parameter", t`A third variable (often $t$ or $\theta$) in terms of which both $x$ and $y$ are given.`);
 });

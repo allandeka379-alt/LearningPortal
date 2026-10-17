@@ -284,7 +284,7 @@ A → B and C → D are at constant volume; B → C and D → A are at constant 
   }
 
   b.card("DEFINITION", "**Internal energy**", "The sum of the random kinetic and potential energies of the molecules of a system; a function of its state.");
-  b.card("FORMULA", "First law (Cambridge)", t`$\Delta U = q + W$: $q$ = energy supplied by heating, $W$ = work done ON the system`);
+  b.card("FORMULA", "First law", t`$\Delta U = q + W$: $q$ = energy supplied by heating, $W$ = work done ON the system`);
   b.card("FORMULA", "Work done by a gas at constant pressure", t`$W_{\text{by}} = p\Delta V$ (area under the $p$-$V$ graph); $W_{\text{on}} = -p\Delta V$`);
   b.card("CONCEPT", "Ideal gas internal energy", "No intermolecular forces → no potential energy → U is all random kinetic energy and depends only on T.");
   b.card("CONCEPT", "Phase change and internal energy", "Melting or boiling: kinetic energy constant (constant T); potential energy, and so U, increases.");

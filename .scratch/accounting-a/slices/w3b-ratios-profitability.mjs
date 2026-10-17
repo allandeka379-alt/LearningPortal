@@ -194,7 +194,7 @@ concept("aacc.ratios.profitability", { file: "ratios/profitability", keyPrefix: 
   b.card("FORMULA", "Margin from mark-up", "Margin = mark-up ÷ (100 + mark-up) × 100. A 25% mark-up is a 20% margin.");
   b.card("FORMULA", "Expenses to revenue", "Expenses ÷ revenue × 100. Shows how well operating costs are controlled.");
   b.card("CONCEPT", "Why is profit before interest used in ROCE?", "Because capital employed includes the loan notes, whose reward is the interest; profit must be before finance costs and tax.");
-  b.card("FORMULA", "Return on equity (ZIMSEC)", "Profit for the year ÷ equity × 100. Return on assets divides by total assets. State the formula you use.", undefined, { applies: ZIM });
+  b.card("FORMULA", "Return on equity", "Profit for the year ÷ equity × 100. Return on assets divides by total assets. State the formula you use.", undefined, { applies: ZIM });
   b.card("CONCEPT", "Explaining a fall in profit margin", "Check gross margin first, then expenses to revenue, then finance costs and tax. Name the cause and quote the figures.");
 });
 void CAM; void sofpMd; void r2;

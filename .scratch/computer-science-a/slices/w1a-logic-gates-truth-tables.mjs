@@ -240,7 +240,7 @@ concept("acs.logic.gates-truth-tables", { file: "logic/gates-truth-tables", keyP
   b.card("FACT", "OR gate", "Output 1 when at least one input is 1 (0 only for 00).");
   b.card("FACT", "NAND gate and NOR gate", "NAND is AND followed by NOT (0 only for 11). NOR is OR followed by NOT (1 only for 00).");
   b.card("FACT", "XOR gate", "Output 1 when the two inputs are different (01 and 10).");
-  b.card("FACT", "XNOR gate (ZIMSEC)", "XOR followed by NOT: output 1 when the two inputs are the same.", undefined, { applies: ZIM });
+  b.card("FACT", "XNOR gate", "XOR followed by NOT: output 1 when the two inputs are the same.", undefined, { applies: ZIM });
   b.card("DEFINITION", "Universal gate", "A gate that can build every other gate. NAND and NOR are universal.");
   b.card("CONCEPT", "NOT gate from a NAND gate", "Join both inputs together: A NAND A = NOT A.");
   b.card("CONCEPT", "How to complete the truth table of a circuit", "Add a column for the output of each gate, from the inputs towards the final output, and fill it in column by column.");

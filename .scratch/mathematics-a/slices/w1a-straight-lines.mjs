@@ -278,7 +278,7 @@ concept("amaths.coordinate.straight-lines", { file: "coordinate/straight-lines",
   b.card("FACT", "Parallel and perpendicular gradients", t`Parallel: $m_{1} = m_{2}$. Perpendicular: $m_{1}m_{2} = -1$.`);
   b.card("CONCEPT", "Perpendicular bisector of AB", "The line through the midpoint of AB with gradient the negative reciprocal of the gradient of AB; its points are equidistant from A and B.");
   b.card("CONCEPT", "Gradient of ax + by + c = 0", t`Rearrange to $y = -\frac{a}{b}x - \frac{c}{b}$: the gradient is $-\frac{a}{b}$.`);
-  b.card("FORMULA", "Perpendicular distance from a point to a line (ZIMSEC)", t`$d = \dfrac{|ax_{1} + by_{1} + c|}{\sqrt{a^{2} + b^{2}}}$`, undefined, { applies: ZP });
+  b.card("FORMULA", "Perpendicular distance from a point to a line", t`$d = \dfrac{|ax_{1} + by_{1} + c|}{\sqrt{a^{2} + b^{2}}}$`, undefined, { applies: ZP });
   b.card("CONCEPT", "Finding where two lines meet", "Solve their equations simultaneously; the solution (x, y) is the point of intersection.");
   b.card("FACT", "Form ax + by + c = 0 in answers", "Usually expected with integer a, b, c: multiply out any fractions.");
 });

@@ -221,5 +221,5 @@ concept("acc.verification.sales-ledger-control", { file: "verification/sales-led
   b.card("DEFINITION", "Contra (set-off)", "Setting off a customer's balance against the same person's supplier balance: credit sales ledger control, debit purchases ledger control.");
   b.card("FACT", "Source of credit sales in the control account", "The sales journal total.");
   b.card("FACT", "Source of irrecoverable debts, interest and contras", "The general journal.");
-  b.card("FACT", "Names of the account", "Sales ledger control account (Cambridge); trade receivables or debtors control account (ZIMSEC).");
+  b.card("FACT", "Names of the account", "Sales ledger control account (Cambridge); trade receivables or debtors control account.");
 });

@@ -304,6 +304,6 @@ concept("amaths.trig.graphs-exact-values", { file: "trig/graphs-exact-values", k
   b.card("DEFINITION", "Principal values", t`$\sin^{-1}$: $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$; $\cos^{-1}$: $[0, \pi]$; $\tan^{-1}$: $\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$.`);
   b.card("FACT", "Asymptotes of tan x", t`Vertical lines $x = 90^\circ + 180^\circ n$ ($x = \frac{\pi}{2} + n\pi$).`);
   b.card("CONCEPT", "Constants from max and min", t`For $y = a + b\sin x$: $a = \frac{\max + \min}{2}$, $|b| = \frac{\max - \min}{2}$.`);
-  b.card("FACT", "Graph of tan⁻¹x (ZIMSEC)", t`Domain all real $x$; horizontal asymptotes $y = \pm\frac{\pi}{2}$; increasing through the origin.`, undefined, { applies: ZP });
+  b.card("FACT", "Graph of tan⁻¹x", t`Domain all real $x$; horizontal asymptotes $y = \pm\frac{\pi}{2}$; increasing through the origin.`, undefined, { applies: ZP });
   b.card("CONCEPT", "Counting solutions", "The number of solutions of f(x) = k is the number of times the line y = k crosses the graph of y = f(x) in the interval.");
 });

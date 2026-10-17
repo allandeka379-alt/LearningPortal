@@ -247,6 +247,6 @@ concept("amaths.integ.partial-fractions", { file: "integ/partial-fractions", key
   b.card("CONCEPT", "Term over x² + k", t`$\dfrac{Bx + C}{x^{2} + k}$: $Bx$ part gives $\frac{B}{2}\ln(x^{2} + k)$; $C$ part gives an inverse tangent.`);
   b.card("FACT", t`$\displaystyle\int\frac{1}{x(x + 1)}\,dx$`, t`$\ln|x| - \ln|x + 1| + c = \ln\left|\dfrac{x}{x + 1}\right| + c$`);
   b.card("CONCEPT", "Answer in the form ln k", t`Turn coefficients into powers, then combine: $2\ln 3 + \ln 5 - \ln 7 = \ln\frac{45}{7}$.`);
-  b.card("FACT", "Improper fractions in integration (ZIMSEC)", "Divide first; the polynomial part integrates by the power rule.", undefined, { applies: ZP });
+  b.card("FACT", "Improper fractions in integration", "Divide first; the polynomial part integrates by the power rule.", undefined, { applies: ZP });
   b.card("FACT", "Cambridge scope", "Paper 3 only, proper fractions with linear, repeated linear or x² + c factors.");
 });

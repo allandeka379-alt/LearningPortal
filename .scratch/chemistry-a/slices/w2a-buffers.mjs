@@ -275,7 +275,7 @@ Take pKa for $\ce{H2CO3}$ in blood as 6.10 (data).`,
   b.card("FORMULA", "pH of an acidic buffer", "[H⁺] = Ka × [HA]/[A⁻]; pH = pKa + log([A⁻]/[HA]). Amounts may replace concentrations.");
   b.card("FACT", "Buffer with [HA] = [A⁻]", "pH = pKa; a buffer works best within about 1 pH unit of its pKa.");
   b.card("FACT", "Blood buffer", "H₂CO₃ ⇌ H⁺ + HCO₃⁻ keeps blood at about pH 7.4; excess CO₂ is breathed out.");
-  b.card("FORMULA", "Basic buffer pOH (ZIMSEC)", "pOH = pKb + log([NH₄⁺]/[NH₃]); pH = 14.00 − pOH at 298 K.", undefined, { applies: ZIM });
+  b.card("FORMULA", "Basic buffer pOH", "pOH = pKb + log([NH₄⁺]/[NH₃]); pH = 14.00 − pOH at 298 K.", undefined, { applies: ZIM });
   b.card("CONCEPT", "Buffer capacity", "Buffers cope only with small additions; once one reservoir is used up, the pH changes sharply.");
-  b.card("FACT", "Soil buffering (ZIMSEC)", "Humus acids, clay and carbonates buffer soil pH; lime is added when soils become too acidic.", undefined, { applies: ZIM });
+  b.card("FACT", "Soil buffering", "Humus acids, clay and carbonates buffer soil pH; lime is added when soils become too acidic.", undefined, { applies: ZIM });
 });

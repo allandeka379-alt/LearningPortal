@@ -240,6 +240,6 @@ concept("aacc.acquisition.merger-statements", { file: "acquisition/merger-statem
   b.card("FACT", "Opening statement of financial position", "Add the agreed values of assets and liabilities line by line; total assets equal capital plus liabilities.");
   b.card("FACT", "Company absorbs a partnership", "Add assets and liabilities taken over, goodwill, share capital, premium and loan notes to the company's statement.");
   b.card("CONCEPT", "Profit after the acquisition", "Only profit earned after the acquisition date belongs to the buyer.");
-  b.card("CONCEPT", "Advantages of a merger (Cambridge)", "Economies of scale, larger market, combined skills, removal of a competitor.", undefined, { applies: CAM });
-  b.card("CONCEPT", "Disadvantages of a merger (Cambridge)", "Price too high, staff leave or resist, hard to combine, borrowing or dilution.", undefined, { applies: CAM });
+  b.card("CONCEPT", "Advantages of a merger", "Economies of scale, larger market, combined skills, removal of a competitor.", undefined, { applies: CAM });
+  b.card("CONCEPT", "Disadvantages of a merger", "Price too high, staff leave or resist, hard to combine, borrowing or dilution.", undefined, { applies: CAM });
 });

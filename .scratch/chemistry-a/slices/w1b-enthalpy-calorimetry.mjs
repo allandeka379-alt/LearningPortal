@@ -278,5 +278,5 @@ concept("achem.energetics.enthalpy-calorimetry", { file: "energetics/enthalpy-ca
   b.card("CONCEPT", "Exothermic energy profile", "Products below reactants; ΔH arrow down (negative); activation energy from reactants up to the peak.");
   b.card("CONCEPT", "Why weak-acid neutralisation is less exothermic", "Energy is used to ionise the weak acid as it reacts, so less is released overall than for a strong acid.");
   b.card("CONCEPT", "Main errors in a spirit-burner experiment", "Heat lost to air and can, incomplete combustion, evaporation of fuel: measured ΔHc is less exothermic than the data value.");
-  b.card("CONCEPT", "Thermometric titration end point", "Plot temperature against volume added; the rising and falling best-fit lines cross at the end point (ZIMSEC).", undefined, { applies: ZIM });
+  b.card("CONCEPT", "Thermometric titration end point", "Plot temperature against volume added; the rising and falling best-fit lines cross at the end point.", undefined, { applies: ZIM });
 });

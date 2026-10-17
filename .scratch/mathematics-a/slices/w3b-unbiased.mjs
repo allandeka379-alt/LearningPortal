@@ -241,7 +241,7 @@ concept("amaths.estimation.unbiased", { file: "estimation/unbiased", keyPrefix: 
   // ---------------------------------------------------------------- flashcards
   b.card("DEFINITION", "Unbiased estimator", t`A statistic $T$ with $\mathrm{E}(T) = \theta$: correct on average over all samples.`);
   b.card("FORMULA", "Unbiased estimate of the population mean", t`$\bar{x} = \frac{\sum x}{n}$`);
-  b.card("FORMULA", "Unbiased estimate of the population variance", t`$s^2 = \frac{1}{n - 1}\left(\sum x^2 - \frac{(\sum x)^2}{n}\right)$`, "Given in MF19 (Cambridge).");
+  b.card("FORMULA", "Unbiased estimate of the population variance", t`$s^2 = \frac{1}{n - 1}\left(\sum x^2 - \frac{(\sum x)^2}{n}\right)$`, "Given in MF19.");
   b.card("FORMULA", "Unbiased estimate from the sample variance", t`$s^2 = \frac{n}{n - 1} \times \left(\frac{\sum x^2}{n} - \bar{x}^2\right)$`);
   b.card("CONCEPT", "Why divide by n − 1", t`Deviations from $\bar{x}$ are smaller on average than deviations from $\mu$; the divisor $n - 1$ corrects this bias.`);
   b.card("CONCEPT", "Coded data", t`For $y = x - a$: $\bar{x} = \bar{y} + a$ and $s_x^2 = s_y^2$. For $y = \frac{x - a}{c}$: $s_x^2 = c^2 s_y^2$.`);
