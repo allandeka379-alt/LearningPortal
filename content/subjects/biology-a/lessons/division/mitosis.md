@@ -41,6 +41,8 @@ The proportion of cells in a sample that are in mitosis (visible prophase to tel
 
 The cell enters mitosis with 2n chromosomes, each made of two sister chromatids.
 
+![Four stages of mitosis in a cell with 2n = 4: in prophase the double chromosomes condense and the nuclear envelope breaks down; in metaphase they line up on the equator attached to spindle fibres; in anaphase the sister chromatids are pulled apart to opposite poles; in telophase two nuclei reform and the cell divides into two identical cells.](media:diagrams/mitosis-stages.png "Figure: the stages of mitosis (spindle fibres drawn as thin grey lines)")
+
 ### Prophase
 
 1. Chromosomes **condense** (supercoil), becoming shorter and thicker; each is visibly two chromatids joined at a centromere.

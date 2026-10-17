@@ -47,6 +47,8 @@ The rate of photosynthesis of a plant was measured at different light intensitie
 | Rate at 0.04% CO₂ / arbitrary units | 0 | 12 | 20 | 23 | 24 | 24 | 24 |
 | Rate at 0.10% CO₂ / arbitrary units | 0 | 13 | 25 | 36 | 44 | 48 | 48 |
 
+![Rate of photosynthesis against light intensity at two carbon dioxide concentrations: both curves rise together up to about 10 units, so light is limiting; the 0.04% CO2 curve levels off at 24 by about 40 units, where CO2 is limiting, while the 0.10% CO2 curve rises further and levels off at 48.](media:diagrams/limiting-factors-light-co2.png "Figure: limiting factors, from the lesson's table (temperature kept at 25 °C)")
+
 **Describe:** at both CO₂ concentrations the rate rises steeply at low light intensity, then levels off: at 24 units by about 40 units of light for 0.04% CO₂, and at 48 units by about 50 units of light for 0.10% CO₂.
 
 **Explain:** from 0 to 10 units of light, the two curves are almost the same, so **light** is the limiting factor. At high light intensity the rate at 0.04% CO₂ stays at 24 however bright the light, so **CO₂ concentration** is limiting; raising CO₂ to 0.10% doubles the plateau. At 0.10% CO₂ and above 50 units of light, the rate levels off again, so some other factor, such as **temperature** or the amount of rubisco, is now limiting.

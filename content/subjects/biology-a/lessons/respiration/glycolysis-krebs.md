@@ -90,6 +90,8 @@ Multiply each stage by the number of times it runs per glucose (glycolysis once;
 | Krebs cycle (×2) | 4 | 6 | 2 | 2 |
 | Total per glucose | 6 | 10 | 2 | 4 |
 
+![Aerobic respiration in four stages with counts per glucose: glycolysis in the cytoplasm gives 2 pyruvate, 2 net ATP and 2 reduced NAD; the link reaction and Krebs cycle (each twice) in the matrix give 6 CO2, 8 more reduced NAD, 2 reduced FAD and 2 ATP; oxidative phosphorylation on the inner membrane makes 25 + 3 = 28 ATP, so the total is 4 + 28 = 32 ATP.](media:diagrams/aerobic-respiration-overview.png "Figure: the four stages of aerobic respiration and the yield per glucose (values from the worked solutions)")
+
 1. All six carbon atoms of glucose leave as **6 CO₂**: 2 in the link reaction and 4 in the Krebs cycle.
 2. **10 reduced NAD and 2 reduced FAD** carry hydrogen to oxidative phosphorylation, where most ATP is made.
 3. Only **4 ATP** are made directly (2 net from glycolysis, 2 from the Krebs cycle).

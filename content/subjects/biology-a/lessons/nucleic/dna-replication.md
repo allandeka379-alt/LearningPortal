@@ -48,6 +48,8 @@ DNA polymerase can add nucleotides only to the **3' end** of a strand, so new DN
 
 In eukaryotes replication starts at many points (origins) along each chromosome at once, so the very long molecules are copied in a few hours. The two DNA molecules become the sister chromatids of the chromosome.
 
+![Replication fork: the parental double helix on the right is unwound by helicase; on the upper template the leading strand is built continuously towards the fork by DNA polymerase, while on the lower template the lagging strand is built away from the fork as short Okazaki fragments that ligase later joins; DNA polymerase adds nucleotides only in the 5' to 3' direction.](media:diagrams/dna-replication-fork.png "Figure: the replication fork, showing why one new strand is continuous and the other is made in fragments")
+
 :::example{title="Why two different mechanisms on the two strands?"}
 The two template strands are antiparallel. As the fork opens, one template exposes its bases in the direction that lets a new strand grow 5' → 3' towards the fork: this strand is made continuously. On the other template, growing 5' → 3' means moving **away** from the fork, so the enzyme must keep starting again nearer the fork, making short fragments.
 :::
@@ -81,6 +83,8 @@ Three models were possible:
 | Generation 2 | Two bands, equal amounts: intermediate and light | Half the molecules hybrid, half all-¹⁴N: rules out dispersive, which predicts a single band moving gradually towards light |
 
 Only the semi-conservative model predicts both results.
+
+![Meselson and Stahl result: after growth in heavy nitrogen the DNA forms one low heavy band; after one generation in light nitrogen it forms one intermediate hybrid band; after two generations there are equal hybrid and light bands; after three generations 2 of 8 molecules are hybrid and 6 of 8 are light. Only semi-conservative replication predicts all of these.](media:diagrams/meselson-stahl-bands.png "Figure: DNA bands in the Meselson-Stahl experiment (band thickness shows the proportion of molecules)")
 
 :::worked-solution[Predicting band proportions after three generations]
 1. Start with 1 molecule with two ¹⁵N strands.

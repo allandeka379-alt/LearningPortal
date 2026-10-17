@@ -61,6 +61,8 @@ Follow the filtrate through one nephron:
 6. Then the **distal convoluted tubule (DCT)** in the cortex.
 7. Several nephrons drain into a **collecting duct**, which runs down through the medulla to the renal pelvis.
 
+![Nephron and collecting duct: blood enters the glomerulus in the cortex by the wider afferent arteriole and leaves by the narrower efferent arteriole; filtrate passes from Bowman's capsule along the proximal convoluted tubule, down the descending limb and up the ascending limb of the loop of Henle in the medulla, through the distal convoluted tubule and into a collecting duct that runs down to the renal pelvis.](media:diagrams/nephron-structure.png "Figure: one nephron, showing which parts lie in the cortex and which in the medulla")
+
 ## Ultrafiltration
 
 Blood in the glomerulus is at **high hydrostatic pressure** because the efferent arteriole is narrower than the afferent arteriole. This pressure forces fluid out through three layers:

@@ -103,6 +103,8 @@ Two adults drank a standard glucose solution after fasting overnight.
 | Person A / mmol dm⁻³ | 4.8 | 7.6 | 6.5 | 5.5 | 5.0 |
 | Person B / mmol dm⁻³ | 7.2 | 12.4 | 15.1 | 14.0 | 12.6 |
 
+![Glucose tolerance test: person A starts at 4.8 mmol per dm3, peaks at 7.6 at 30 minutes and is back to 5.0 by 120 minutes; person B starts higher at 7.2, peaks at 15.1 at 60 minutes and is still 12.6 at 120 minutes, a pattern consistent with diabetes.](media:diagrams/glucose-tolerance-test.png "Figure: glucose tolerance test for two adults, from the lesson's table")
+
 **Describe:** person A starts at 4.8, peaks at 7.6 at 30 minutes and returns to 5.0 by 120 minutes. Person B starts higher (7.2), rises for longer to a peak of 15.1 at 60 minutes and is still 12.6 at 120 minutes.
 
 **Explain:** in person A, insulin secretion brings glucose back to normal by negative feedback. Person B's pattern is consistent with diabetes: too little insulin is secreted, or cells respond poorly to it, so glucose is taken up into cells and stored as glycogen too slowly.

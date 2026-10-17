@@ -75,6 +75,8 @@ The bases fall into two groups:
 4. The sugar-phosphate backbones are on the outside; the paired bases are stacked in the middle, like the rungs of a ladder.
 5. The ladder is twisted into a **double helix**, with about 10 base pairs per complete turn.
 
+![DNA fragment drawn as a ladder: the top strand 5' ATGCCGTA 3' pairs with the antiparallel bottom strand 3' TACGGCAT 5' by hydrogen bonds, two for each A-T pair and three for each C-G pair, so the four A-T and four C-G pairs give 8 + 12 = 20 hydrogen bonds; sugar-phosphate backbones run along the outside.](media:diagrams/dna-ladder-base-pairing.png "Figure: complementary base pairing in an eight-base-pair fragment (the worked example), with hydrogen bonds counted")
+
 How the structure suits the function:
 
 - The base sequence carries the **genetic code**; any sequence is possible, so the information content is enormous.

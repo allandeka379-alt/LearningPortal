@@ -63,6 +63,8 @@ The result is a sheet with a **hydrophobic core** about 3-4 nm across. Small non
 | Glycolipids | Lipids with carbohydrate chains outside | Cell recognition (antigens, such as the ABO blood group antigens), stability |
 | Extrinsic proteins | Inner or outer surface | Enzymes; links to the cytoskeleton; part of signalling pathways |
 
+![Fluid-mosaic model: a phospholipid bilayer with hydrophilic heads facing the watery outside and inside and hydrophobic tails in the middle, with cholesterol between the tails, a channel protein and a carrier protein spanning the bilayer, extrinsic proteins on the surfaces, and glycoproteins and glycolipids carrying carbohydrate chains on the outer surface.](media:diagrams/fluid-mosaic-membrane.png "Figure: the fluid-mosaic model of the cell surface membrane")
+
 ### Cholesterol and fluidity
 
 Cholesterol molecules fit between the fatty acid tails. They **restrict the movement** of the tails at higher temperatures, so the membrane does not become too fluid and leaky. At low temperatures they **stop the tails packing closely** and solidifying, so the membrane stays fluid. Cholesterol therefore keeps fluidity within a useful range. Its hydrophobic bulk also makes the core less permeable to ions and water.

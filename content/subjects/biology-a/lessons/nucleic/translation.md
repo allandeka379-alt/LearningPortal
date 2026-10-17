@@ -58,6 +58,8 @@ In the cytoplasm, each amino acid is attached to its own tRNA by a specific enzy
 5. **Repeating.** Steps 2-4 repeat, adding one amino acid at a time; the polypeptide grows. This needs energy, supplied by GTP and ATP.
 6. **Termination.** When the ribosome reaches a **stop codon** (UAA, UAG or UGA), no tRNA pairs with it. The polypeptide is released, and the ribosome subunits separate.
 
+![Translation of the worked-example mRNA 5' AUG AAA GCU UGG CAU UAG 3': a ribosome covers two codons, AAA and GCU; tRNAs with anticodons UUU (carrying lysine) and CGA (carrying alanine) pair with them by complementary bases, the growing chain Met-Lys is transferred, and the ribosome moves one codon at a time until the stop codon UAG, giving Met-Lys-Ala-Trp-His.](media:diagrams/translation-ribosome-trna.png "Figure: codon-anticodon pairing at the ribosome during elongation")
+
 After release the polypeptide folds into its secondary and tertiary structure; in the RER and Golgi body it may be modified, for example by adding carbohydrate.
 
 ### Polysomes

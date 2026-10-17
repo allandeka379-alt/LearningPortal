@@ -126,6 +126,9 @@ Look for these features:
 
 :::example{title="Interpreting a family history"}
 In a family, an unaffected couple have two sons, one with haemophilia; the mother's brother also has haemophilia. **Deduce:** the affected son received $X^h$ from his mother (his father gave him a Y). The mother is unaffected, so she is $X^H X^h$, a carrier, and probably inherited $X^h$ from her own carrier mother, who also passed it to her brother. Each of the couple's future sons has a $\frac{1}{2}$ chance of haemophilia.
+
+![Pedigree of the family with haemophilia: the grandmother I-2 is a carrier, her son II-1 is affected, her daughter II-2 is a carrier who has two sons with the unaffected father II-3; one son, III-2, has haemophilia (XhY) and the other is unaffected. The condition passes through carrier females and affects males.](media:diagrams/pedigree-haemophilia.png "Figure: pedigree for an X-linked recessive condition (haemophilia), matching the family history described")
+
 :::
 
 ## Sex linkage with an autosomal gene (outline)

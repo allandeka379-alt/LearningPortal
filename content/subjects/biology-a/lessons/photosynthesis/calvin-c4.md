@@ -47,6 +47,8 @@ The light-independent stage happens in the **stroma**. Light is not used directl
 | Reduction | GP → TP | 3 → 3 | ATP and reduced NADP |
 | Regeneration | 5 TP → 3 RuBP | 15 → 15 | ATP |
 
+![Calvin cycle with the counts for one hexose: 6 CO2 combine with 6 RuBP (5C) to give 12 GP (3C); 12 GP are reduced to 12 TP using 12 ATP and 12 reduced NADP; 10 TP are used with 6 ATP to regenerate 6 RuBP, and the other 2 TP leave to make one hexose; the total cost is 18 ATP and 12 reduced NADP.](media:diagrams/calvin-cycle-counts.png "Figure: the Calvin cycle with the numbers for making one hexose (worked solution)")
+
 :::worked-solution[What it costs to make one hexose]
 Six turns of the cycle fix six CO₂, enough carbon for one hexose (6C).
 1. Fixation: 6 RuBP + 6 CO₂ → $6 \times 2 = 12$ GP.

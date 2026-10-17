@@ -61,6 +61,8 @@ A doublet code ($4^2 = 16$) would be too few for 20 amino acids, which is one ar
 
 The RNA has the same base sequence as the non-transcribed (coding) strand of DNA, except that it has U where the DNA has T.
 
+![Transcription of the worked example: the template strand 3' TACCGGAAGCTTATT 5' is read by RNA polymerase and free RNA nucleotides pair with it, giving mRNA 5' AUGGCCUUCGAAUAA 3' (A pairs with U, T with A, C with G, G with C); the codons AUG GCC UUC GAA UAA specify Met, Ala, Phe, Glu and a stop signal.](media:diagrams/transcription-template-mrna.png "Figure: the mRNA made from a template strand, split into codons (the worked example)")
+
 :::worked-solution[Writing the mRNA from a template strand]
 The template strand of part of a gene reads 3' TACCGGAAGCTTATT 5'.
 1. Pair each base with its RNA partner: T → A, A → U, C → G, G → C.

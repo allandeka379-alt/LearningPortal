@@ -96,6 +96,8 @@ A person was exposed to an antigen on day 0 and again on day 28. The concentrati
 |---|---|---|---|---|---|---|---|---|---|
 | Antibody concentration / arbitrary units | 0 | 4 | 20 | 9 | 3 | 150 | 380 | 300 | 210 |
 
+![Antibody concentration after two exposures to the same antigen: after the first exposure on day 0 it peaks slowly at 20 units on day 14 and falls to 3 by day 28; after the second exposure on day 28 it rises faster to 150 by day 35 and peaks at 380 on day 42, 19 times the first peak, then falls more slowly, showing the effect of memory cells.](media:diagrams/antibody-primary-secondary.png "Figure: primary and secondary immune responses, from the lesson's data (exposures on day 0 and day 28)")
+
 **Describe:** after the first exposure, antibody appears slowly, peaks at 20 units on day 14 and falls to 3 units by day 28. After the second exposure it rises much faster, to 150 units within 7 days, and peaks at 380 units on day 42, 19 times the first peak; it then falls more slowly. **Explain:** the first exposure caused a primary response, in which few lymphocytes matched the antigen and clonal expansion took time. Memory cells formed then responded immediately to the second exposure, producing many plasma cells quickly.
 :::
 

@@ -88,6 +88,8 @@ A potential-against-time trace for one point on an axon has a characteristic sha
 
 The whole event lasts about 2-3 ms.
 
+![Action potential trace from the worked solution: resting potential −70 mV, rising past the −55 mV threshold to a peak of +35 mV at 1.0 ms as sodium ions enter, then falling as potassium ions leave through −65 mV at 2.0 ms to a hyperpolarisation of −80 mV at 2.5 ms and back to −70 mV by 4.0 ms.](media:diagrams/action-potential-trace.png "Figure: an action potential at one point on an axon, with the ion movements that cause each phase")
+
 ### All or nothing
 
 If a stimulus fails to reach the threshold, no action potential occurs. If it reaches the threshold, a full-sized action potential always occurs. A bigger stimulus does not give a bigger action potential. This is the **all-or-nothing principle**.

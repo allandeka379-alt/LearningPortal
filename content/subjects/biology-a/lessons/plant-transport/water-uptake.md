@@ -54,6 +54,8 @@ Water now crosses the cortex towards the stele. It can follow three routes, and 
 2. **Symplast pathway.** Water enters the cytoplasm and moves from cell to cell through **plasmodesmata**, the strands of cytoplasm that pass through the cell walls. It moves down a water potential gradient across the cortex.
 3. **Vacuolar pathway.** Water passes through the cytoplasm **and the vacuoles** of successive cells, crossing tonoplasts and membranes by osmosis. ZIMSEC names this pathway; Cambridge names only the apoplast and symplast pathways.
 
+![Root cross-section from soil to xylem: water enters the root hair cell and crosses the cortex by the apoplast pathway along cell walls, the symplast pathway through cytoplasm and plasmodesmata and the vacuolar pathway through vacuoles; at the endodermis the Casparian strip blocks the apoplast route so water must pass through the cell surface membrane before reaching the xylem.](media:diagrams/root-water-pathways.png "Figure: the three pathways for water across the root cortex, and the Casparian strip in the endodermis")
+
 :::keyfact{title="ZIMSEC and Cambridge"}
 Both boards: apoplast and symplast pathways, the endodermis and Casparian strip, and the role of active ion uptake. ZIMSEC also names the **vacuolar pathway** and asks about **root pressure**; Cambridge describes water moving from the soil to the xylem through the two main pathways.
 :::
@@ -67,6 +69,8 @@ On a sunny day the solute potential and pressure potential of each region were e
 | Root hair cell | −620 | +280 | −340 |
 | Cortex cell | −700 | +300 | −400 |
 | Xylem sap | −150 | −400 | −550 |
+
+![Potentials in kPa from soil to xylem: soil water −30 (solute −30, pressure 0); root hair cell −340 (−620 + 280); cortex cell −400 (−700 + 300); xylem sap −550 (−150 + −400). Water potential falls steadily inwards, so water moves by osmosis down the gradient, and the negative pressure in the xylem shows tension.](media:diagrams/root-water-potential-gradient.png "Figure: solute, pressure and water potential at four places across a root (values from the worked solution)")
 
 1. Root hair cell: $-620 + 280 = -340$ kPa, lower than the soil's $-30$ kPa, so water enters by osmosis.
 2. Cortex cell: $-700 + 300 = -400$ kPa, lower again, so water moves on inwards.

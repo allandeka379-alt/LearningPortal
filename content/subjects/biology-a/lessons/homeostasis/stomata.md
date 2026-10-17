@@ -53,6 +53,8 @@ Farai measured the mean width of stomata on bean leaves on a hot, sunny day.
 |---|---|---|---|---|---|---|---|---|---|
 | Mean stomatal aperture / µm | 0.5 | 2.0 | 6.5 | 8.0 | 7.5 | 4.0 | 5.5 | 2.5 | 0.5 |
 
+![Mean stomatal aperture through a hot sunny day: about 0.5 micrometres at 04:00, opening to a maximum of 8.0 at 10:00, falling to 4.0 at 14:00 as water stress closes some stomata, rising again to 5.5 at 16:00, then closing to 0.5 by 20:00.](media:diagrams/stomatal-aperture-day.png "Figure: stomatal aperture through the day, from the lesson's table")
+
 **Describe:** stomata are almost closed at night (0.5 µm), open rapidly after dawn to a maximum of 8.0 µm at 10:00, partly close to 4.0 µm at 14:00, open again a little to 5.5 µm at 16:00 and close by 20:00.
 
 **Explain:** opening in the morning follows rising light intensity, allowing CO₂ uptake for photosynthesis. The partial closure at 14:00 is likely to be a response to water stress in the hottest part of the day: water loss exceeds uptake, ABA is produced and some stomata close, reducing transpiration at the cost of some photosynthesis. As it becomes cooler, stomata reopen partly, then close as light fades.

@@ -87,6 +87,9 @@ In a population of 6400 snails, 256 have yellow shells, the recessive phenotype 
 4. Heterozygotes: $2pq = 2 \times 0.8 \times 0.2 = 0.32$, so about $0.32 \times 6400 = 2048$ snails are carriers.
 5. Homozygous dominant: $p^2 = 0.64$, about 4096 snails.
 6. Check: $0.64 + 0.32 + 0.04 = 1$.
+
+![Hardy-Weinberg genotype frequencies against the frequency q of the recessive allele: p squared falls from 1 to 0, 2pq peaks at 0.5 when q is 0.5, and q squared rises from 0 to 1; at q = 0.2 (the snails) the frequencies are 0.64, 0.32 and 0.04, and at q = 0.3 (the cattle) 0.49, 0.42 and 0.09.](media:diagrams/hardy-weinberg-genotype-curves.png "Figure: Hardy-Weinberg genotype frequencies, with the snail and cattle populations marked")
+
 :::
 
 When the genotypes **can** be distinguished (codominance), count the alleles directly instead.

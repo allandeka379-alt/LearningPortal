@@ -71,6 +71,8 @@ In negative feedback the response **reverses** the original change:
 4. The effectors bring the factor back towards the set point.
 5. As the factor returns, the stimulus is reduced, so the corrective response is reduced too.
 
+![Negative feedback loop: a change in a factor away from its set point is detected by receptors, passed to a control centre, which triggers effectors, producing a response that reverses the change so the factor returns towards the set point; as it returns the stimulus is reduced and so the response is reduced.](media:diagrams/negative-feedback-loop.png "Figure: the parts of a negative feedback control system")
+
 The factor therefore **fluctuates** around the set point within narrow limits rather than staying perfectly constant. Having separate mechanisms to correct a rise and a fall (for example insulin and glucagon) gives a faster, more precise response.
 
 **Positive feedback** is unusual in homeostasis because it amplifies a change. An example is the release of oxytocin during childbirth: stretching of the cervix causes oxytocin release, which causes stronger contractions and more stretching, until the baby is born. Another is the opening of more voltage-gated sodium channels during the rising phase of an action potential.
@@ -95,6 +97,8 @@ Tendai's blood glucose was measured after a meal.
 | Time after meal / min | 0 | 30 | 60 | 90 | 120 | 150 |
 |---|---|---|---|---|---|---|
 | Blood glucose / mmol dm⁻³ | 5.0 | 7.5 | 6.6 | 5.6 | 5.0 | 4.9 |
+
+![Blood glucose after a meal: 5.0 mmol per dm3 at the start rises 50% to a peak of 7.5 at 30 min, then falls through 6.6 and 5.6 to 5.0 at 120 min and dips slightly to 4.9 at 150 min, fluctuating around the set point as negative feedback corrects it.](media:diagrams/blood-glucose-after-meal.png "Figure: blood glucose after a meal, from the worked solution")
 
 1. Percentage increase from 0 to 30 min $= \dfrac{7.5 - 5.0}{5.0} \times 100 = 50\%$.
 2. Mean rate of fall from 30 to 120 min $= \dfrac{7.5 - 5.0}{120 - 30} = \dfrac{2.5}{90} = 0.028\ \text{mmol dm}^{-3}\ \text{min}^{-1}$.

@@ -85,6 +85,8 @@ When a muscle contracts, the actin filaments slide between the myosin filaments 
 | I band | Shorter | Actin slides further into the A band |
 | H zone | Shorter (may disappear) | More overlap of actin and myosin |
 
+![A sarcomere at three lengths with myosin 1.6 µm and actin 1.0 µm long: at 2.4 µm the I band is 0.8 µm and the H zone 0.4 µm; at 2.2 µm they are 0.6 and 0.2 µm; at 2.0 µm the I band is 0.4 µm and the H zone has gone, while the A band stays 1.6 µm because the filaments slide but do not shorten.](media:diagrams/sarcomere-sliding-filaments.png "Figure: the sliding filament model; the A band stays the same while the I band and H zone shorten")
+
 :::worked-solution[Measuring a sarcomere from an electron micrograph]
 An electron micrograph at a magnification of ×20 000 shows one sarcomere of a relaxed fibre measuring 48 mm from Z line to Z line. After contraction the same sarcomere measures 38 mm.
 1. Actual length $= \dfrac{\text{image length}}{\text{magnification}}$. Convert 48 mm to µm: $48 \times 1000 = 48\,000$ µm.

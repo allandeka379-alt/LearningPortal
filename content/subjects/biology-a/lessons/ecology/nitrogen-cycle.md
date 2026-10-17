@@ -41,6 +41,8 @@ The uptake of nitrate or ammonium ions by plant roots and their use to make amin
 
 ## The stages of the cycle
 
+![Nitrogen cycle: nitrogen gas is fixed to ammonium by Rhizobium, free-living bacteria, lightning and the Haber process; Nitrosomonas turns ammonium into nitrite and Nitrobacter turns nitrite into nitrate; plants take up nitrate and make proteins, animals eat plants, and dead organisms, urea and faeces are ammonified back to ammonium; denitrifying bacteria in waterlogged soil turn nitrate back to nitrogen gas.](media:diagrams/nitrogen-cycle-flow.png "Figure: the nitrogen cycle and the bacteria involved at each stage")
+
 ### 1. Nitrogen fixation
 
 N₂ has a very strong triple bond, so breaking it needs a lot of energy. It happens in four ways:
@@ -81,6 +83,8 @@ Nyasha measured the nitrate in a field soil after it was flooded by heavy rain.
 | Days after flooding | 0 | 2 | 4 | 6 | 8 | 10 |
 |---|---|---|---|---|---|---|
 | Nitrate / mg per kg soil | 24 | 18 | 11 | 6 | 4 | 3 |
+
+![Soil nitrate after flooding: it falls steeply from 24 to 18, 11 and 6 mg per kg over the first six days and then more slowly to 4 and 3 mg per kg by day 10, a total decrease of 87.5%, because waterlogged soil favours denitrifying bacteria.](media:diagrams/soil-nitrate-flooding.png "Figure: soil nitrate after flooding, from the lesson's table")
 
 **Describe.** Nitrate falls steeply from 24 to 6 mg per kg in the first six days, then more slowly to 3 mg per kg at day 10: a decrease of 87.5%.
 

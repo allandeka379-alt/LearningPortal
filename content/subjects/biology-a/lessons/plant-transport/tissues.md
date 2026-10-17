@@ -98,6 +98,8 @@ Phloem contains **sieve tube elements**, **companion cells**, parenchyma and fib
 | Companion cell: nucleus, many mitochondria and ribosomes | Supplies ATP and proteins; actively loads sucrose using ATP |
 | Many plasmodesmata between companion cell and sieve tube element | Assimilates and molecules pass easily between the two cells |
 
+![Two conducting tissues compared: a xylem vessel is a dead empty tube with lignin rings, pits and no end walls, so water flows as a continuous column; phloem has living sieve tube elements joined by sieve plates with no nucleus and little cytoplasm, next to a companion cell with a nucleus and many mitochondria connected by plasmodesmata.](media:diagrams/xylem-phloem-structure.png "Figure: structure of a xylem vessel and of phloem (sieve tube elements with a companion cell)")
+
 The key contrast: **xylem vessel elements are dead, lignified, open tubes** carrying water up by a pull from the leaves; **sieve tube elements are living cells** that depend on companion cells and carry sap in either direction under pressure.
 
 ## Drawing plan diagrams

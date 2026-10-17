@@ -77,6 +77,8 @@ Crossing two F1 plants (Tt × Tt), gametes T, t from each parent:
 
 Offspring genotypes: 1 TT : 2 Tt : 1 tt. Phenotypes: 3 tall : 1 dwarf.
 
+![Monohybrid cross for tall (T) and dwarf (t) peas: pure-breeding TT × tt gives all Tt (tall) in F1; crossing two F1 plants gives a Punnett square with TT, Tt, Tt and tt, so the genotype ratio is 1 TT : 2 Tt : 1 tt and the phenotype ratio is 3 tall : 1 dwarf.](media:diagrams/monohybrid-tall-dwarf-cross.png "Figure: the tall × dwarf cross to F2, with the Punnett square for Tt × Tt")
+
 The 3 : 1 ratio is a **probability**: each F2 plant has a $\frac{3}{4}$ chance of being tall and $\frac{1}{4}$ of being dwarf. Real numbers only approximate it, because fertilisation is random.
 
 ### Codominance: roan cattle

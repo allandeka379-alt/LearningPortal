@@ -34,6 +34,8 @@ Ribosomes in the cytoplasm of eukaryotic cells (free or on rough ER) are 80S, ab
 
 ## Organelles with a double membrane
 
+![Labelled animal cell as seen with an electron microscope: the nucleus has a double envelope with pores and a dark nucleolus; rough ER with ribosomes lies near the nucleus, a Golgi stack and lysosome sit towards the cell surface membrane, mitochondria have folded cristae, and centrioles and free 80S ribosomes lie in the cytoplasm.](media:diagrams/animal-cell-ultrastructure.png "Figure: a generalised animal cell showing the organelles named in the lesson")
+
 ### Nucleus
 
 The nucleus is surrounded by the **nuclear envelope**, two membranes with **nuclear pores** that let mRNA and ribosome subunits out and proteins such as enzymes in. It contains **chromatin** (DNA wound around histone proteins), which condenses into visible chromosomes during division. The dark **nucleolus** makes ribosomal RNA and assembles ribosome subunits. The nucleus controls the cell's activities through the genes it holds.
@@ -45,6 +47,8 @@ Mitochondria are rod-shaped, about 1–5 µm long, with a smooth outer membrane 
 ### Chloroplasts
 
 Found in photosynthetic plant cells, chloroplasts are lens-shaped, about 3–10 µm long, with a double envelope. Inside, membranes called **thylakoids** are stacked into **grana**, which hold chlorophyll and carry out the light-dependent reactions. The fluid **stroma** contains enzymes of the Calvin cycle, starch grains, lipid droplets, small circular DNA and 70S ribosomes.
+
+![Two double-membrane organelles side by side: a mitochondrion with a smooth outer membrane, an inner membrane folded into cristae and a matrix holding Krebs cycle enzymes, and a chloroplast whose thylakoids are stacked in grana inside a stroma where the Calvin cycle occurs.](media:diagrams/mitochondrion-chloroplast-structure.png "Figure: mitochondrion and chloroplast, each with a double membrane and its own 70S ribosomes and circular DNA")
 
 ## Organelles with a single membrane
 

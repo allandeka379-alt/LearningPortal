@@ -70,6 +70,8 @@ Setting up a bubble potometer:
 
 The volume of water taken up is the volume of the capillary tube that the bubble has moved through: $V = \pi r^2 l$, where $r$ is the radius of the capillary bore and $l$ the distance moved.
 
+![Bubble potometer: a leafy shoot cut under water is fixed with an airtight bung into a water-filled tube joined to a horizontal capillary with a scale and an air bubble; as the shoot takes up water the bubble moves along the scale, and with a bore radius of 0.5 mm a movement of 42 mm in 5 minutes means 33.0 mm3 of water, or 6.60 mm3 per minute.](media:diagrams/potometer-apparatus.png "Figure: a bubble potometer and the calculation of the rate of water uptake from the distance moved")
+
 :::worked-solution[Rate of water uptake from bubble movement]
 The capillary tube of a potometer has an internal radius of 0.5 mm. The bubble moved 42 mm in 5 minutes.
 1. Volume $= \pi r^2 l = \pi \times 0.5^2 \times 42$.

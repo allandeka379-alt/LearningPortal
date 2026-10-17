@@ -65,6 +65,8 @@ A replicated chromosome, as seen in prophase and metaphase, looks like an X: two
 
 If we take the DNA content of a cell in G1 as 1 unit, it rises to 2 units during S, stays at 2 through G2 and mitosis, and returns to 1 unit in each daughter cell after cytokinesis. Cells that stop dividing, such as most neurones, leave the cycle in G1 and enter a non-dividing state (often called G0).
 
+![DNA content per cell through a 20-hour cell cycle: it stays at 1 unit through G1 (9 h), doubles to 2 units during S phase (7 h), stays at 2 through G2 (3 h) and mitosis (1 h), then falls back to 1 unit in each daughter cell after cytokinesis.](media:diagrams/cell-cycle-dna-content.png "Figure: DNA content during the cell cycle, with phase lengths from the worked example (9 + 7 + 3 + 1 = 20 h)")
+
 :::worked-solution[Estimating the duration of each phase]
 A culture of mammalian cells has a cell cycle of 20 hours. A sample of 400 cells was classified using a stain that shows how much DNA each cell contains.
 

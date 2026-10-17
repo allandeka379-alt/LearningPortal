@@ -42,6 +42,8 @@ The volume of blood pumped by one ventricle per minute: stroke volume × heart r
 
 **Internal structure:**
 
+![Internal structure of the heart: deoxygenated blood from the venae cavae enters the right atrium and passes through the tricuspid valve to the right ventricle and out by the pulmonary artery; oxygenated blood from the pulmonary veins enters the left atrium, passes through the bicuspid valve to the left ventricle, whose wall is two to three times thicker, and leaves by the aorta; a septum separates the two sides and tendinous cords hold the valve flaps.](media:diagrams/heart-internal-structure.png "Figure: the four chambers, valves and main vessels of the mammalian heart (diagrammatic)")
+
 | Structure | Position and role |
 |---|---|
 | Right atrium | Receives deoxygenated blood from the venae cavae |
@@ -67,6 +69,8 @@ At a rate of 75 beats per minute one cycle lasts $60 \div 75 = 0.8$ s.
 1. **Atrial systole (about 0.1 s).** The atria contract, raising atrial pressure slightly, and push the last blood into the relaxed ventricles through the open atrioventricular (AV) valves. The semilunar valves are closed.
 2. **Ventricular systole (about 0.3 s).** The ventricles contract from the apex (the bottom) upwards. Ventricular pressure rises above atrial pressure, so the **AV valves close** (the first heart sound). For a moment all valves are closed and pressure rises steeply. When ventricular pressure exceeds the pressure in the aorta and pulmonary artery, the **semilunar valves open** and blood is ejected.
 3. **Diastole (about 0.4 s).** The ventricles relax. Ventricular pressure falls below arterial pressure, so the **semilunar valves close** (the second heart sound), seen as a small notch in the aortic pressure trace. When ventricular pressure falls below atrial pressure, the **AV valves open**, and blood flows from the veins through the atria into the ventricles.
+
+![Pressure in the left atrium, left ventricle and aorta over one 0.8 s cardiac cycle: ventricular pressure jumps from 1.2 to 15.0 kPa between 0.1 and 0.2 s and peaks at 16.0 kPa at 0.3 s, above the aortic 14.5 to 15.5 kPa so the semilunar valve opens; by 0.4 s the ventricle (8.0) is below the aorta (13.2) and it shuts, while aortic pressure never falls below 10.7 kPa.](media:diagrams/cardiac-cycle-pressure-graph.png "Figure: pressure changes in the left side of the heart during one cycle (data from the worked solution)")
 
 The rule is simple: **valves open when the pressure behind them is higher than the pressure in front, and close when it reverses.**
 

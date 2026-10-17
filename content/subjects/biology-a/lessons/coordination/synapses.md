@@ -56,6 +56,8 @@ Described from the presynaptic side to the postsynaptic side:
 
 An electron micrograph of a synapse shows the presynaptic knob packed with round vesicles and mitochondria, a narrow cleft, and a dark thickened region on the postsynaptic membrane where receptors are concentrated.
 
+![Cholinergic synapse: an action potential arrives at the presynaptic knob, voltage-gated calcium channels open and Ca2+ enters, vesicles of acetylcholine fuse with the membrane and release ACh into the 20 nm cleft, ACh binds to receptors that are sodium channels in the postsynaptic membrane so Na+ enters and depolarises it, and acetylcholinesterase breaks the ACh down so its products return to the knob.](media:diagrams/cholinergic-synapse.png "Figure: transmission across a cholinergic synapse, in the six numbered steps")
+
 ## How a cholinergic synapse works
 
 1. An **action potential arrives** at the presynaptic knob.

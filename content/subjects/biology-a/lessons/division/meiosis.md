@@ -48,6 +48,8 @@ Sexual reproduction joins two gametes at fertilisation. If each gamete is haploi
 
 Before meiosis, DNA replicates in S phase of interphase, so each chromosome consists of two sister chromatids.
 
+![Meiosis in a cell with 2n = 4: in prophase I homologous chromosomes pair into bivalents and cross over at chiasmata; in metaphase I the bivalents lie on the equator; in anaphase I whole homologues separate, giving two cells with n = 2 and double chromosomes; meiosis II separates the sister chromatids, giving four haploid cells with single chromosomes.](media:diagrams/meiosis-stages.png "Figure: meiosis I separates homologous chromosomes, meiosis II separates sister chromatids")
+
 ### Meiosis I (separates homologous chromosomes)
 
 **Prophase I**

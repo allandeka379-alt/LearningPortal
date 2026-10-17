@@ -36,6 +36,8 @@ Most bacteria are about 1–5 µm long. Most viruses are about 20–300 nm acros
 
 Described from the outside in, a bacterium such as *Escherichia coli* has:
 
+![Labelled bacterium: a capsule and peptidoglycan cell wall outside the cell surface membrane, circular DNA lying free in the cytoplasm with no nuclear envelope, small plasmid rings, 70S ribosomes, pili and a flagellum, and no membrane-bound organelles.](media:diagrams/bacterium-structure.png "Figure: structure of a typical bacterium (a prokaryote), about 1 to 5 micrometres long")
+
 1. **Capsule** (slime layer) in some species: a layer of polysaccharide outside the wall that protects against drying out and against phagocytosis, and helps cells stick to surfaces.
 2. **Cell wall** made of **peptidoglycan** (murein): polysaccharide chains cross-linked by short peptides. It gives shape and prevents the cell bursting by osmosis. It is not cellulose.
 3. **Cell surface membrane**: a phospholipid bilayer controlling entry and exit; in bacteria it also carries respiratory enzymes, since there are no mitochondria.

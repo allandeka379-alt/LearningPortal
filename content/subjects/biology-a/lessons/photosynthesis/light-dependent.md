@@ -54,6 +54,8 @@ This pathway involves both photosystems and produces ATP, reduced NADP and oxyge
 
 The flow of electrons is one-way, from water to NADP, which is why it is called **non-cyclic**.
 
+![Light-dependent stage in the thylakoid membrane: light excites electrons in photosystem II, water is split in the thylakoid space to give protons, electrons and oxygen, electrons pass along carriers to photosystem I and then to NADP in the stroma to make reduced NADP, protons pumped into the thylakoid space flow back through ATP synthase to make ATP.](media:diagrams/light-dependent-thylakoid-membrane.png "Figure: non-cyclic photophosphorylation, with electron flow, proton pumping and chemiosmosis")
+
 ## Cyclic photophosphorylation
 
 Only **photosystem I** is involved. Excited electrons from PSI pass to an acceptor, then along carriers in the membrane and **back to PSI**. As they pass along the carriers, energy is used to pump protons into the thylakoid space, and ATP is made by chemiosmosis.

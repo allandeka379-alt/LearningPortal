@@ -70,6 +70,8 @@ Some inhibitors bind permanently, often by covalent bonds, to the active site or
 
 When initial rate is plotted against substrate concentration, the curve rises steeply, then flattens towards a maximum. **Vmax** is the rate the curve approaches; **Km** is the substrate concentration at half Vmax.
 
+![Rate against substrate concentration for an enzyme: with no inhibitor the curve levels towards a Vmax of 0.80 and reaches half Vmax (0.40) at Km 2 mmol per dm3; competitive inhibitor P reaches the same Vmax but its Km rises to about 5; non-competitive inhibitor Q levels off at only 0.40 with Km still 2.](media:diagrams/enzyme-inhibitors-vmax-km.png "Figure: Michaelis-Menten curves from the worked data; a competitive inhibitor raises Km, a non-competitive one lowers Vmax")
+
 | Inhibitor type | Effect on Vmax | Effect on Km |
 |---|---|---|
 | Competitive | No change (overcome by high substrate) | Increased (more substrate needed to reach half Vmax) |

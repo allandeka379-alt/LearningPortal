@@ -52,6 +52,8 @@ The dissociation curve of adult haemoglobin is **S-shaped (sigmoid)** because of
 2. Binding of the first oxygen **changes the shape** (tertiary and quaternary structure) of haemoglobin, making it easier for the second and third molecules to bind. The curve becomes steep.
 3. Once three are bound, it is harder for the fourth to find a free site, so the curve levels off near 100% saturation.
 
+![Oxygen dissociation curves of adult haemoglobin: both are S-shaped and nearly flat at 97% (low CO2) and 95% (high CO2) at 12 kPa in the lungs; at 4 kPa in a muscle saturation is 60% at low CO2 but only 45% at high CO2, so the Bohr shift to the right unloads more oxygen.](media:diagrams/oxygen-dissociation-bohr.png "Figure: S-shaped oxygen dissociation curves at low and high carbon dioxide (data from the worked solution)")
+
 **Why the shape matters:**
 
 - In the **lungs** (pO₂ about 12-13 kPa) the curve is on its flat top: haemoglobin is almost fully saturated, and a small fall in pO₂ hardly affects loading.

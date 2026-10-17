@@ -78,6 +78,8 @@ The table gives the absorption of light by leaf pigments and the rate of photosy
 | Absorption by leaf pigments / % | 70 | 95 | 40 | 12 | 20 | 80 | 10 |
 | Rate of photosynthesis / % of maximum | 65 | 90 | 50 | 25 | 35 | 85 | 12 |
 
+![Absorption by leaf pigments and rate of photosynthesis against wavelength: both are highest in blue-violet light (95% and 90% at 450 nm) and red light (80% and 85% at 650 nm), and lowest in green light (12% and 25% at 550 nm) and at 700 nm, so the action spectrum follows the absorption spectrum.](media:diagrams/absorption-action-spectra.png "Figure: absorption spectrum and action spectrum from the lesson's table (illustrative values)")
+
 **Describe:** both are highest in blue-violet light (95% and 90% at 450 nm) and red light (80% and 85% at 650 nm), and lowest in green light (12% and 25% at 550 nm) and at 700 nm.
 
 **Explain:** the two patterns are very similar, which is evidence that the light absorbed by these pigments is the light used in photosynthesis. The rate at 500-600 nm is slightly higher than the absorption suggests because accessory pigments absorb some of this light and pass the energy to chlorophyll a.
@@ -102,6 +104,8 @@ Tatenda's chromatogram has a solvent front 80 mm from the origin.
 | Spot 2 (yellow) | 59 | 0.74 |
 | Spot 3 (blue-green) | 51 | 0.64 |
 | Spot 4 (yellow-green) | 36 | 0.45 |
+
+![Chromatogram with a solvent front 80 mm from the origin: carotene moved 76 mm (Rf 0.95), xanthophyll 59 mm (Rf 0.74), chlorophyll a 51 mm (Rf 0.64) and chlorophyll b 36 mm (Rf 0.45); every Rf is below 1 and the most soluble pigment, carotene, travels furthest.](media:diagrams/pigment-chromatogram-rf.png "Figure: separation of leaf pigments by chromatography, with Rf = distance moved by spot ÷ distance moved by solvent")
 
 1. Rf of spot 1 $= 76 \div 80 = 0.95$. Spot 2 $= 59 \div 80 = 0.74$; spot 3 $= 51 \div 80 = 0.64$; spot 4 $= 36 \div 80 = 0.45$.
 2. Every Rf is less than 1, because no spot can move further than the solvent.
