@@ -63,6 +63,8 @@ Sixty traders work along a dark street in a fictional town. Lighting the street 
 
 Some goods are **quasi-public** (partly public): a road is non-rival when it is empty but becomes rival when it is congested, and a toll gate can make it excludable. This is why some roads are tolled.
 
+![Street lighting for 60 traders: it is worth 60 x 55 = US\$3,300 a year to them and costs US\$2,400, so it should be provided, but if only 25 traders pay US\$40 each the firm collects US\$1,000, far below the cost, because the others free ride.](media:diagrams/free-rider-street-lighting.png "Figure: the lighting is worth more than it costs, but free riders leave the firm with less than half the cost")
+
 ## Merit goods and under-consumption
 
 A free market produces merit goods, but **too little** of them. There are two reasons:

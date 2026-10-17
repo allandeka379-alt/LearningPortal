@@ -93,6 +93,8 @@ The table shows estimated unemployment (in thousands) in a fictional farming dis
 5. Policy conclusion: irrigation or off-season work (for example processing crops) would reduce the seasonal part; retraining and new industries are needed for the structural part.
 :::
 
+![Stacked bars of unemployment in a farming district with a labour force of 200 thousand: frictional (6 thousand) and structural (14 thousand) stay the same every quarter, while seasonal unemployment is 4, 2, 15 and 9 thousand, so the total is 24, 22, 35 and 29 thousand, a rate of 12.0, 11.0, 17.5 and 14.5 percent, highest in July to September.](media:diagrams/unemployment-types-district.png "Figure: only the seasonal part of unemployment changes through the year; frictional and structural stay at 20 thousand")
+
 :::example[Worked example 2: identifying the type]
 Classify each case and explain the cause.
 

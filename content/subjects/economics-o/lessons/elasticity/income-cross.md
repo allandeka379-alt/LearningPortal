@@ -44,6 +44,8 @@ $$
 | Between 0 and 1 | Normal good, necessity (income inelastic) | Demand rises, but by a smaller percentage than income |
 | Greater than 1 | Normal good, luxury (income elastic) | Demand rises by a larger percentage than income |
 
+![Number line of income elasticity of demand: negative values (inferior goods) lie below 0, values between 0 and 1 are normal necessities, values above 1 are luxuries; beef at +1.2 is a luxury and the cheapest maize meal at −0.4 is an inferior good.](media:diagrams/yed-scale.png "Figure: where the two worked examples fall on the income elasticity scale (schematic scale, values from the examples)")
+
 All goods with a **positive** YED are **normal** goods. Whether a good is a necessity, a luxury or inferior can differ between households: for a low-income family, a refrigerator may be a luxury; for a high-income family, a necessity.
 
 :::worked-solution[Worked example 1: incomes rise in a fictional town]
@@ -63,6 +65,8 @@ Average weekly household income in a fictional town rises from US\$400 to US\$50
 | Positive | Substitutes | A rise in the price of B increases demand for A (consumers switch) |
 | Negative | Complements | A rise in the price of B decreases demand for A (they are used together) |
 | Zero (or close to zero) | Unrelated goods | A change in the price of B has no effect on demand for A |
+
+![Number line of cross elasticity of demand: negative values mean complements and positive values mean substitutes; kombi and bus rides at +0.5 are weak substitutes and cars and petrol at −0.5 are complements.](media:diagrams/xed-scale.png "Figure: where the two worked examples fall on the cross elasticity scale (schematic scale, values from the examples)")
 
 The **size** shows how closely related the goods are: an XED of +2.0 means very close substitutes; +0.1 means weak substitutes.
 

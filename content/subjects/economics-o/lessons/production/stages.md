@@ -63,6 +63,8 @@ So a drought that cuts the maize harvest (primary) also reduces work for millers
 
 Value is added at each stage when a firm sells its output for more than it paid for its inputs. **Value added = value of output − cost of inputs bought from other firms.** The total value added along a chain equals the price the final consumer pays.
 
+![Value added along a cotton-to-shirt chain: the farmer adds 120, the ginnery 80, the mill 140, the clothing factory 220 and the retailer 140; each bar rises from the cost of inputs to the value of output and the total value added is 700, the price consumers pay for the shirts.](media:diagrams/value-added-cotton-chain.png "Figure: value is added at every stage, and the parts add up to the final price of US\$700")
+
 :::worked-solution[Worked example 1: value added along a cotton chain]
 The table follows one batch of cotton from a fictional farm to the shirts made from it.
 

@@ -131,6 +131,8 @@ This shows how the working population is divided between the **primary**, **seco
 3. With 60% of workers in the primary sector, this is typical of a developing economy. As it develops, workers usually move first into manufacturing and then into services.
 :::
 
+![Occupational distribution of 5,250 thousand workers in a fictional country: 60.0 percent in the primary sector (3,150 thousand), 12.0 percent in the secondary sector (630 thousand) and 28.0 percent in the tertiary sector (1,470 thousand), typical of a developing economy.](media:diagrams/occupational-distribution-sectors.png "Figure: most workers are in the primary sector, as in a typical developing economy")
+
 ### Age and sex distribution
 
 The **age distribution** divides the population into young dependants (usually under 15), the working-age population (usually 15 to 64) and elderly dependants (65 and over). The **sex distribution** compares the numbers of males and females; migration of men or women for work, and differences in life expectancy, can make it unequal in some areas. ZIMSEC students also study the **population pyramid**, a bar chart of the age-sex structure: a wide base and narrow top show a young, fast-growing population; straighter sides show an older, slow-growing one.

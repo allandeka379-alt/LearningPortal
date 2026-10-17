@@ -68,6 +68,8 @@ The table shows price indices for a fictional mineral-exporting country (2023 = 
 4. Notice that the terms of trade can worsen even when export prices rise (2024): it is the **relative** movement that matters.
 :::
 
+![Price indices (2023 = 100): export prices 100, 104, 98, 112 and import prices 100, 108, 112, 105 give terms of trade of 100, 96.3, 87.5, 106.7 for 2023 to 2026; they fall below 100 in 2024 and 2025 (unfavourable) and recover to 106.7 in 2026 (favourable).](media:diagrams/terms-of-trade-indices.png "Figure: the terms of trade are the export price index divided by the import price index, times 100")
+
 ## Why the terms of trade change
 
 - **World demand and supply of the country's exports.** Many developing countries export primary products (minerals, tobacco, cotton) whose prices can swing sharply with world demand, harvests and new sources of supply.

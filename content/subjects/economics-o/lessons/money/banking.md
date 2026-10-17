@@ -76,6 +76,8 @@ Tatenda deposits US\$5,000 of new cash. Every bank keeps 20% of new deposits as 
 4. New loans created at most = $25{,}000 - 5{,}000 = 20{,}000$ dollars. In reality, less is created, because people hold some cash and banks may not find enough safe borrowers.
 :::
 
+![Credit creation with a 20 percent reserve ratio: a US\$5,000 deposit in Bank A is split into 1,000 kept and 4,000 lent; the 4,000 becomes Bank B's deposit (800 kept, 3,200 lent), then Bank C 3,200 (640 and 2,560), then Bank D 2,560 (512 and 2,048); total deposits after four banks are 14,760 and the maximum is 5,000 divided by 0.2, which is US\$25,000.](media:diagrams/credit-creation-rounds.png "Figure: each bank keeps 20% as reserves and lends the rest, so every new deposit is 80% of the last")
+
 ## Importance of commercial banks
 
 - They channel **savings into investment**, which raises output and economic growth.

@@ -75,6 +75,8 @@ The more surprising idea is that trade is still worthwhile when one country is b
 
 To find the opportunity cost, ask: "To make one more unit of this good, how much of the other good must the country give up?" Divide the output of the good given up by the output of the good gained.
 
+![Production possibility lines for the same resources: Country A (maize 60 tonnes or cloth 30 thousand metres) has a flatter line than Country B (maize 20 or cloth 20), so A's opportunity cost of 1 tonne of maize is 0.5 thousand metres of cloth against B's 1; A has the comparative advantage in maize and B in cloth, and specialising lifts total maize from 40 to 50 tonnes with cloth unchanged at 25.](media:diagrams/comparative-advantage-ppc-lines.png "Figure: the flatter line shows the lower opportunity cost of maize, so Country A specialises in maize and Country B in cloth")
+
 :::worked-solution[Worked example 2: comparative advantage]
 Two fictional countries, A and B, use the same quantity of resources. The table shows what each could produce of **either** good.
 

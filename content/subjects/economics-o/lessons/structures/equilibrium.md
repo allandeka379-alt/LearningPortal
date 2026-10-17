@@ -66,6 +66,8 @@ A fictional maker of clay bricks sells in a perfectly competitive market. Its da
 **Short-run loss.** If the price fell to US\$18, the best output would still be 5 batches: TR $= 90$, TC $= 100$, a loss of US\$10. Closing would lose the fixed cost of US\$30, so the firm keeps producing in the short run (AR US\$18 is above average variable cost $(100 - 30) \div 5 = 14$). In the long run some firms would leave, supply would fall and the price would rise back to US\$20.
 :::
 
+![Cost curves for a firm in perfect competition: the price is US\$24 so marginal revenue is 24; marginal cost (20, 14, 11, 11, 14, 26) is below 24 up to the 5th batch and above it for the 6th, so output is 5 batches; average total cost at 5 batches is US\$20, so the firm earns abnormal profit of (24 - 20) x 5 = US\$20 a day.](media:diagrams/perfect-competition-profit.png "Figure: the firm produces where MC meets the price line, and profit is the gap between price and ATC times output")
+
 **Describing the diagrams:** with price and costs on the vertical axis and output on the horizontal axis, the firm's AR = MR line is horizontal at the market price; the MC curve cuts it from below at the profit-maximising output. In the short run, if the price line is above the ATC curve at that output, the rectangle between them shows abnormal profit. In the long run the price line just touches the bottom of the U-shaped ATC curve, where MC also cuts ATC: P = MC = AR = MR = minimum ATC.
 
 ## Monopolistic competition
@@ -99,6 +101,8 @@ A fictional firm is the only supplier of a product. Its daily figures are:
 4. **Long run:** barriers to entry stop new firms from coming in, so the abnormal profit can continue.
 5. Efficiency: the price (US\$34) is far above MC (US\$14), so the monopoly is allocatively inefficient. ATC at 4 units (US\$25) is above the lowest ATC in the table ($118 \div 5 = 23.60$ at 5 units), so it is also productively inefficient.
 :::
+
+![Monopoly cost and revenue curves from the table: marginal revenue (46, 38, 30, 22, 14, 6) is above marginal cost (20, 14, 12, 14, 18, 24) up to the 4th unit, so output is 4 units; the price is read up to the demand curve (AR) at US\$34, average total cost is US\$25, and abnormal profit is (34 - 25) x 4 = US\$36.](media:diagrams/monopoly-profit-table.png "Figure: the monopoly produces where MR = MC (4 units) but charges the price on the demand curve, US\$34")
 
 **Describing the diagram:** the AR curve slopes down, MR lies below it, and MC cuts MR from below at the profit-maximising output. The price is found by going up from that output to the AR curve. The rectangle between price and ATC at that output is the abnormal profit, which remains in the long run.
 

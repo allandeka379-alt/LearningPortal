@@ -57,6 +57,8 @@ Selling goods in a foreign market at a price below their cost of production (or 
 
 Draw a diagram with **price** on the vertical axis and **quantity** on the horizontal axis. The domestic demand curve slopes down and the domestic supply curve slopes up. With free trade, the country can buy as much as it wants at the world price, drawn as a horizontal line below the domestic equilibrium. Imports are the gap between domestic demand and domestic supply at that price. A tariff shifts the world price line **up** by the amount of the tariff: domestic demand falls, domestic supply rises, and the gap (imports) shrinks.
 
+![Cooking oil market: at the world price of US\$1.00 local firms supply 100 and consumers demand 900 thousand litres, so imports are 800; a US\$0.40 tariff lifts the price to US\$1.40, local supply rises to 300, demand falls to 700, imports fall to 400 thousand litres and the government collects US\$160,000 a week.](media:diagrams/tariff-cooking-oil.png "Figure: a tariff raises the price, cuts imports and raises local output and government revenue")
+
 :::worked-solution[Worked example 1: the effect of a tariff]
 The table shows the domestic market for cooking oil in a fictional country. The world price is US\$1.00 a litre. The government then imposes a tariff of US\$0.40 a litre.
 
@@ -82,6 +84,8 @@ Using the same table, the government instead sets an import quota of 200 thousan
 2. At US\$1.60: demand 600 − local supply 400 = **200**. The price settles at **US\$1.60**.
 3. The quota protects local producers even more (output 400) and raises the price more than the tariff did, but the government collects **no revenue**: the extra 60 cents on imported litres goes to whoever holds the right to import.
 :::
+
+![Cooking oil with an import quota of 200 thousand litres: the supply available to the market is local supply plus the quota, which meets demand at US\$1.60, where consumers buy 600, local firms supply 400 and imports fill the 200 gap; the price is higher than with the 0.40 tariff and the government collects no revenue.](media:diagrams/quota-cooking-oil.png "Figure: a quota limits imports to 200 thousand litres and the price rises to US\$1.60")
 
 ## Reasons for protection
 

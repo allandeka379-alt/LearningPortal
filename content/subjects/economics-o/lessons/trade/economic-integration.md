@@ -52,6 +52,8 @@ The forms are often shown as steps on a ladder, each including everything on the
 | Common market | Removed | Yes | Yes | No |
 | Economic (and monetary) union | Removed | Yes | Yes | Yes |
 
+![Ladder of economic integration, each step adding to the one below: preferential trade area (reduced tariffs between members), free trade area (tariffs removed), customs union (plus a common external tariff), common market (plus free movement of labour and capital) and economic and monetary union (plus common economic policies or a common currency).](media:diagrams/integration-ladder.png "Figure: the five forms of economic integration, each adding one feature to the step before (schematic of the lesson's table)")
+
 ## Reasons for economic integration
 
 - **A larger market:** firms can sell to the whole region without tariffs, so they can grow and gain **economies of scale**.

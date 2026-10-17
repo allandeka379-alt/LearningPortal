@@ -118,6 +118,8 @@ A fictional country's budget (US\$ million):
 4. GDP is US\$40,000 million, so the deficit = 600 ÷ 40,000 × 100 = **1.5% of GDP**.
 :::
 
+![Government budget in a worked example: revenue of US\$5,100 million (income tax 2,400, VAT 1,800, customs and excise 600, other 300) against spending of US\$5,700 million (education 1,500, infrastructure 1,100, health 900, social protection 650, other 650, defence 500, interest 400), giving a budget deficit of US\$600 million.](media:diagrams/budget-revenue-spending.png "Figure: spending of US\$5,700 million is above revenue of US\$5,100 million, a deficit of US\$600 million")
+
 :::worked-solution[Worked example 2: a contractionary package]
 The same government raises VAT revenue by 10% and cuts infrastructure spending by US\$200 million.
 

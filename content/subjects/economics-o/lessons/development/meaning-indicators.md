@@ -110,6 +110,8 @@ Both countries are fictional.
 5. Conclusion: GDP per head alone would rank the countries the wrong way round for welfare; a broader indicator such as the HDI gives a fuller picture.
 :::
 
+![Four comparisons of two fictional countries: Country A has the higher real GDP per head (US\$4,200 against US\$2,400) but Country B has longer life expectancy (71 against 58 years), more schooling (9.4 against 5.1 years) and a higher HDI (0.684 against 0.561), so income alone ranks them the wrong way round for welfare.](media:diagrams/development-two-countries.png "Figure: Country A has the higher income per head, but Country B does better on health, education and the HDI")
+
 :::worked-solution[Worked example 2: growth without development]
 Data for fictional Country X:
 

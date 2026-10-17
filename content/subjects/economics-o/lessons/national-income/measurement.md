@@ -58,6 +58,8 @@ If more income flows out to foreign owners than flows in, net income from abroad
 
 Spending by one person is income to another, and income is earned by producing output. So, in principle, the three methods give the **same total**: output = income = expenditure. In practice the figures differ slightly because of errors and missing data, and statisticians record a "statistical discrepancy".
 
+![Circular flow of income as a schematic: firms pay wages, rent, interest and profit to households for the factors of production (income, on one side), and households spend their income on the goods and services firms produce (spending, on the other), so output, income and expenditure measure the same flow and give the same total.](media:diagrams/circular-flow-schematic.png "Figure: schematic of the circular flow; output, income and expenditure are the same flow measured at different points")
+
 ### 1. The output (value added) method
 
 Add up the value of output produced by every sector: agriculture, mining, manufacturing, construction and services. To avoid **double counting**, count only the **value added** at each stage, or only the value of final goods. If the value of a bale of cotton is counted when the farmer sells it and again inside the price of the shirt made from it, output is overstated.

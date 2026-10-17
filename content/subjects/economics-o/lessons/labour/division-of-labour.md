@@ -77,6 +77,8 @@ A fictional furniture workshop in Gweru employs five carpenters. At first each c
 4. With the same five workers and the same wages, the wage cost of each chair falls, because the wages are spread over 24 chairs instead of 15. This is the main reason firms divide work.
 :::
 
+![Output of a furniture workshop with five carpenters: when each makes whole chairs the output is 15 chairs a day (3 per worker), and after dividing the work into cutting, shaping, joining, sanding and finishing it is 24 chairs a day (4.8 per worker), a rise of 60 percent with the same workers.](media:diagrams/division-of-labour-output.png "Figure: dividing the work raised the workshop's output from 15 to 24 chairs a day")
+
 ## Disadvantages of the division of labour
 
 **For workers**

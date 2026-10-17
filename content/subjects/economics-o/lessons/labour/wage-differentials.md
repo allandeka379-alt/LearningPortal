@@ -64,6 +64,8 @@ Custom can keep some groups out of certain jobs, and traditional views of "men's
 
 ## Patterns of differentials
 
+![Average monthly earnings in five jobs: farm hand 150, machine operator 320, electrician 640, bank teller 450 and doctor 1,200 US dollars; the skilled job earns most in each sector, and the doctor earns 8 times the farm hand.](media:diagrams/wage-differentials-earnings.png "Figure: pay rises with skill within each sector, and the doctor earns 8 times as much as the farm hand")
+
 :::worked-solution[Worked example 1: reading a table of earnings]
 The table shows average earnings in a fictional economy.
 

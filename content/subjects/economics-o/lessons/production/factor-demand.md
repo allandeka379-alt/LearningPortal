@@ -73,6 +73,8 @@ A fictional firm can produce 1,000 bags of cement a day by either method. Worker
 4. Now suppose wages fall to US\$8 a day. Labour-intensive: $60 \times 8 + 200 = 680$. Capital-intensive: $15 \times 8 + 680 = 800$. The labour-intensive method becomes cheaper. **Relative factor prices decide the choice.**
 :::
 
+![Total daily cost against the daily wage for two methods: labour-intensive (60 workers plus US\$200 of machinery) costs 60w + 200 and capital-intensive (15 workers plus US\$680) costs 15w + 680; at a wage of US\$12 they cost 920 and 860 so capital is cheaper, at US\$8 they cost 680 and 800 so labour is cheaper, and the costs are equal at about US\$10.67.](media:diagrams/labour-capital-cost-lines.png "Figure: below a wage of about US\$10.67 the labour-intensive method is cheaper; above it the capital-intensive method is")
+
 ## Advantages and disadvantages
 
 ### Labour-intensive production

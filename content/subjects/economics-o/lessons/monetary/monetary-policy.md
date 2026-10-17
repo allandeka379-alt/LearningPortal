@@ -68,6 +68,8 @@ A fictional central bank raises its rate, and banks raise their lending rate fro
 4. With less borrowing and spending, aggregate demand falls and pressure on prices eases.
 :::
 
+![Chain of effects of a rise in interest rates using the lesson's numbers: loan rates rise from 8 to 12 percent so interest on a US\$10,000 loan rises from US\$800 to US\$1,200 a year and savings rates rise from 4 to 7 percent so US\$5,000 earns US\$350 instead of US\$200; firms cut investment and households spend less, aggregate demand falls and pressure on prices eases.](media:diagrams/interest-rate-chain.png "Figure: how a rise in interest rates works through spending to lower inflation pressure (a flow, using the worked example's numbers)")
+
 ### 2. The money supply
 
 The central bank can reduce the growth of the money supply by, for example, selling government bonds (taking money out of the banking system), raising the share of deposits banks must keep in reserve, or limiting bank lending. With less money available for lending, interest rates tend to rise and spending falls. Increasing the money supply has the opposite effect. Creating money to pay for government spending (sometimes called "printing money") when output is not rising leads to inflation; in extreme cases, such as Zimbabwe in 2007-2008, to hyperinflation.
