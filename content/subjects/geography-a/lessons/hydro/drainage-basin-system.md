@@ -54,6 +54,8 @@ The combined loss of water to the atmosphere by evaporation from surfaces and tr
 6. **Percolation.** Water moves down into the underlying rock.
 7. **Groundwater flow.** Water moves very slowly through the saturated rock below the water table. It feeds the river as **baseflow**, which keeps rivers flowing in the dry season.
 
+![Drainage basin as an open system: precipitation of 840 mm is the input; evapotranspiration of 640 mm and runoff of 150 mm leave, so storage rises by 50 mm (P = Q + E + change in storage). Stores and flows (interception, infiltration, overland flow, throughflow, percolation, groundwater flow) are labelled.](media:diagrams/drainage-basin-water-balance.png "Figure: stores, transfers and the water balance of the worked-example catchment (illustrative data)")
+
 Surface flows are fast (minutes to hours), throughflow is moderate (hours to days), and groundwater flow is slow (weeks to years).
 
 ## What affects the movement of water

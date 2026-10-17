@@ -59,6 +59,8 @@ A gently sloping bedrock surface, often covered by a thin layer of debris, that 
 | Seif (linear) dune | A long, narrow ridge, often sinuous, parallel to the wind | Winds from two directions in a narrow range, with plentiful sand |
 | Star dune | A pyramid-shaped dune with several arms | Winds from many directions in turn; builds upwards, and can be very high, as in the Namib sand sea |
 
+![Three dune types in plan: a barchan is a crescent with its horns pointing downwind, formed by a single wind direction and limited sand; a seif is a long ridge parallel to the wind from two close wind directions; a star dune is a pyramid with several arms where winds blow from many directions.](media:diagrams/dune-types-plan.png "Figure: barchan, seif and star dunes and the winds that form them (plan view, schematic)")
+
 ## Water landforms
 
 | Landform | Description | Formation |
@@ -70,6 +72,8 @@ A gently sloping bedrock surface, often covered by a thin layer of debris, that 
 | Alluvial fan | Cone-shaped deposit of gravel and sand | Where a stream leaves a mountain front, the velocity falls, water infiltrates and the load is dropped |
 | Bajada | A broad apron of overlapping alluvial fans | Fans along a mountain front grow and merge |
 | Playa and salt lake | A flat bed of silt and salt in a basin of internal drainage; a playa is dry most of the time | Temporary lakes form after floods and evaporate, leaving fine sediments and salts (Etosha Pan in Namibia and the Makgadikgadi Pans in Botswana are large salt pans) |
+
+![Arid landform sequence from a mountain front: steep bare rock, a sharp break of slope, a gently sloping pediment that falls 14 m in 700 m (2 percent, 1.1 degrees), alluvial fans that merge into a bajada, and a flat playa of salt and silt in the basin of internal drainage.](media:diagrams/arid-mountain-front-landforms.png "Figure: mountain front, pediment, alluvial fans, bajada and playa (schematic, height exaggerated)")
 
 ## Worked examples
 

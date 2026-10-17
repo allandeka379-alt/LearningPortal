@@ -71,6 +71,9 @@ Waves move material in four ways: **traction** (large pebbles rolled along the b
 
 **Deposition** occurs when wave energy falls: in sheltered bays, behind obstacles, in shallow water, or when constructive waves drop more sediment than they remove. The largest particles are deposited first.
 
+![Longshore drift in plan: waves arrive at an angle, swash carries sediment up the beach in the direction of the wave, backwash returns it straight down the slope, and the zig-zag path moves the sediment steadily along the coast in one direction.](media:diagrams/longshore-drift-plan.png "Figure: longshore drift as a zig-zag path of swash and backwash (plan view)")
+
+
 ## Sediment: sources, cells and budgets
 
 **Sources** of sediment include erosion of cliffs, rivers (the largest input in many places), material moved from the sea floor onshore, and glacial deposits. Particle **size, shape and sorting** change along a beach: sediment is often coarser at the top and finer towards the sea, and it becomes smaller and rounder in the direction of drift because of attrition and sorting.
@@ -110,6 +113,9 @@ A destructive wave of height 3 m is compared with a wave of height 1 m on the sa
 
 :::worked-solution[Sediment budget and drift rate]
 A beach receives 40 000 m³ per year from cliff erosion, 15 000 m³ from a river and 10 000 m³ from the sea floor. Longshore drift removes 50 000 m³ and dredging 5 000 m³ (illustrative data). Tracer pebbles on this beach moved 150 m along the shore in 3 days.
+
+![Sediment budget of a beach: inputs of 40 000 m3 from cliff erosion, 15 000 m3 from a river and 10 000 m3 from the sea floor total 65 000 m3 a year, outputs of 50 000 m3 by longshore drift and 5 000 m3 by dredging total 55 000 m3, so the net gain is 10 000 m3 a year and the beach builds out.](media:diagrams/sediment-budget-beach.png "Figure: inputs and outputs of a beach sediment budget (worked-example values; arrow thickness shows size)")
+
 
 1. Inputs $= 40\,000 + 15\,000 + 10\,000 = 65\,000$ m³ per year.
 2. Outputs $= 50\,000 + 5\,000 = 55\,000$ m³ per year.

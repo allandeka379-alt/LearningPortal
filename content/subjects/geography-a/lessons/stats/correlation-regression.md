@@ -100,6 +100,8 @@ Hâ‚€: there is no relationship between distance downstream and pebble length. Hâ
 :::worked-solution[Regression: rainfall and maize yield]
 Illustrative data for 8 seasons: seasonal rainfall $x$ (mm) and maize yield $y$ (t/ha): rainfall 480, 520, 560, 610, 650, 700, 760, 820; yield 1.1, 1.3, 1.2, 1.7, 1.9, 2.0, 2.4, 2.5.
 
+![Scatter graph of maize yield against seasonal rainfall for eight seasons with the least-squares line y = -1.06 + 0.0044x: yield rises with rainfall, the estimate of 1.60 t/ha at 600 mm lies inside the data range (interpolation), but the estimate of 3.37 t/ha at 1000 mm is extrapolation and unreliable.](media:diagrams/scatter-regression-maize-rain.png "Figure: regression line for rainfall and maize yield, showing interpolation and extrapolation (worked-example data, illustrative)")
+
 1. Means: $\bar{x} = 637.50$ mm, $\bar{y} = 1.763$ t/ha.
 2. Gradient (from the least-squares formula): $b = 0.00443$, so each extra 100 mm of rain adds about 0.44 t/ha.
 3. Intercept: $a = 1.763 - 0.00443 \times 637.50 = -1.063$.

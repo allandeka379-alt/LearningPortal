@@ -38,6 +38,8 @@ Near the equator the Sun is high, so insolation is concentrated on a small area 
 
 Illustrative net radiation (approximate pattern, both hemispheres averaged):
 
+![Net radiation by latitude: a surplus of +45, +45, +35 and +10 W/m2 in the bands from 0 to 40 degrees, and a deficit growing from -30 W/m2 at 40 to 50 degrees to -115 W/m2 at 80 to 90 degrees; the balance point is at about 37.5 degrees.](media:diagrams/net-radiation-by-latitude.png "Figure: net radiation by latitude band (illustrative values from the lesson table)")
+
 | Latitude band | Net radiation (W/m²) | Surplus or deficit |
 |---|---|---|
 | 0–10° | +45 | Surplus |
@@ -57,6 +59,8 @@ If nothing moved energy poleward, the tropics would get steadily hotter and the 
 1. **Hadley cell.** Warm air rises at the ITCZ, flows poleward high in the troposphere, cools, and sinks at about 30°, forming the subtropical high-pressure belt. At the surface it returns equatorward as the **trade winds** (from the north-east in the northern hemisphere and the south-east in the southern hemisphere, because of the Coriolis effect).
 2. **Polar cell.** Cold air sinks at the poles (high pressure), flows out at the surface as the **polar easterlies**, and rises at about 60° where it meets warmer air.
 3. **Ferrel cell.** Between the two, surface air flows poleward from the subtropical high as the **westerlies**. It is driven by the other two cells and is less regular.
+
+![Tri-cellular model for one hemisphere: in the Hadley cell air rises at the equatorial low and sinks at about 30 degrees, returning as the trade winds; in the polar cell air sinks at the pole and rises at 60 degrees, flowing out as polar easterlies; the Ferrel cell between them has westerlies at the surface.](media:diagrams/tricellular-circulation.png "Figure: the three cells of the global atmospheric circulation, with pressure belts and surface winds")
 
 Areas of rising air have low pressure and cloud; areas of sinking air have high pressure and clear, dry conditions. Many of the world's hot deserts, including the Kalahari and Namib, lie under the subtropical highs.
 

@@ -63,6 +63,8 @@ Oxygen makes up about 21% of the air. Photosynthesis releases it; respiration an
 
 The three compartments are **biomass (B)**, **litter (L)** and **soil (S)**. The circles show how much nutrient is stored; the arrows show the transfers: uptake from soil to biomass, litterfall from biomass to litter, decomposition from litter to soil, and losses by run-off and leaching.
 
+![Gersmehl diagrams: in the tropical rainforest most nutrients (600 of 735 kg per hectare, 82 percent) are in the large biomass circle, with a tiny litter store and rapid wide flows, while in the savanna most (450 of 660 kg per hectare, 68 percent) are in the soil circle and the flows are smaller.](media:diagrams/gersmehl-rainforest-savanna.png "Figure: Gersmehl nutrient diagrams for rainforest and savanna (store sizes from the worked example; flow widths qualitative)")
+
 ### Comparing the ecosystems
 
 | Feature | Tropical rainforest | Savanna |

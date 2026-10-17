@@ -73,6 +73,8 @@ The underlying energy comes from heat inside the Earth, from the cooling of the 
 | Destructive (collision) | Collision (continental-continental) | Neither plate subducts; crust crumples and thickens | India and Eurasia (Himalaya) |
 | Conservative | Conservative (transform) | Plates slide past each other; crust is neither made nor destroyed | San Andreas Fault |
 
+![Four plate boundary types in cross-section and plan: at a constructive boundary plates move apart and magma forms new crust; at a destructive boundary oceanic crust subducts under continental crust forming a trench and volcanoes; at a collision boundary two continents crumple into fold mountains; at a conservative boundary plates slide past each other with earthquakes.](media:diagrams/plate-boundary-types.png "Figure: the four types of plate boundary (schematic)")
+
 Most earthquakes and volcanoes lie along these boundaries. The **Pacific Ring of Fire**, around the edge of the Pacific plate, contains most of the world's active volcanoes. Zimbabwe lies in the interior of the African (Nubian) plate, far from a boundary, which is why its tremors are few and small.
 
 :::keyfact{title="Learn these values"}
@@ -92,6 +94,8 @@ Basalt dredged 540 km from a ridge axis is dated at 18 million years old. Calcul
 
 :::worked-solution[Reading ocean-floor ages and predicting how long an ocean takes to open]
 Illustrative data for a line of drilling sites across a ridge (data invented for this exercise):
+
+![Age of ocean-floor basalt rises in a straight line from 0 at the ridge axis to 36 million years at 900 km, a steady spreading rate of 25 km per million years, which is 25 mm a year on each side of the ridge.](media:diagrams/seafloor-age-distance.png "Figure: age of basalt against distance from a mid-ocean ridge (illustrative drilling data)")
 
 | Distance from ridge axis (km) | Age of basalt (million years) |
 |---|---|

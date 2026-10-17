@@ -76,6 +76,8 @@ where $\bar{d}_{obs}$ is the mean distance to the nearest neighbour. An $R_n$ ne
 :::worked-solution[Rank-size and primacy]
 Illustrative populations of the five largest towns of a country (in thousands).
 
+![Actual and expected town populations under the rank-size rule: the largest city has 1800 thousand people, but towns of rank 2 to 5 have 520, 410, 210 and 190 thousand, well below the 900, 600, 450 and 360 the rule predicts, giving a primacy index of 3.5, so the country has a primate city.](media:diagrams/rank-size-primate-city.png "Figure: actual populations compared with the rank-size rule for five towns (worked-example data, illustrative)")
+
 | Rank | Population | Expected by rank-size rule (1 800 ÷ rank) | Actual as % of expected |
 |---|---|---|---|
 | 1 | 1 800 | 1 800 | 100% |

@@ -96,6 +96,8 @@ A basin of 25 km² receives 80 mm of rain in a storm. Before urbanisation, 0.4 m
 :::worked-solution[Change in peak discharge]
 The peak discharge of a river in a storm was 38 m³/s before a catchment was cleared of trees and 61 m³/s in a similar storm afterwards (illustrative data). Calculate the percentage increase.
 
+![Flood hydrograph: before the catchment was cleared of trees the peak of 38 m3/s stayed below the bankfull discharge of 45 m3/s, but afterwards the peak of 61 m3/s, 60.5 percent higher, exceeds bankfull by 16 m3/s and the river overflows.](media:diagrams/flood-hydrograph-bankfull.png "Figure: peak discharge before and after clearance against bankfull discharge (peaks and bankfull from the worked example; curve shapes illustrative)")
+
 1. Increase $= 61 - 38 = 23$ m³/s.
 2. Percentage increase $= 23 \div 38 \times 100 = 60.5\%$.
 3. The peak is about 60% higher, so a flood is more likely: if the channel can carry 45 m³/s within its banks (bankfull discharge), the earlier peak stayed in the channel but the new peak exceeds it by 16 m³/s.

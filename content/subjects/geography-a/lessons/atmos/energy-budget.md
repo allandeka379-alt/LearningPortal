@@ -43,6 +43,8 @@ The Sun is very hot, so it emits mainly **shortwave radiation** (ultraviolet, vi
 
 Of every 100 units of incoming solar energy, a simplified and rounded budget shows:
 
+![Global energy budget of 100 units of sunlight: 26 are reflected by clouds and the air and 4 by the surface (albedo 0.30), 20 are absorbed by the atmosphere and 50 by land and oceans, and the 70 absorbed units must leave as longwave radiation so that inputs equal outputs.](media:diagrams/energy-budget-100-units.png "Figure: what happens to 100 units of incoming solar energy (simplified, rounded values)")
+
 | Fate of 100 units of insolation | Units |
 |---|---|
 | Reflected by clouds and scattered by the atmosphere back to space | 26 |
@@ -110,6 +112,8 @@ Using the 100-unit budget above:
 
 :::example{title="Describing and explaining a day and night comparison"}
 Illustrative data for a highveld station on a clear day and on a cloudy day (temperatures in °C every three hours):
+
+![Temperature through a day: on the clear day it falls to 8 degrees C at 06:00 and peaks at 28 degrees C at 15:00, a range of 20 degrees; on the cloudy day it stays between 14 and 22 degrees, a range of 8 degrees, because cloud cuts daytime heating and traps heat at night.](media:diagrams/diurnal-temperature-clear-cloudy.png "Figure: temperature every three hours on a clear day and a cloudy day (illustrative highveld data)")
 
 | Time | Clear sky (°C) | Cloudy (°C) |
 |---|---|---|

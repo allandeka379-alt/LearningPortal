@@ -54,6 +54,8 @@ When you describe a pyramid, give the shape, the share of young and old with fig
 | 4 Low stationary | Low (about 10 to 15) | Low | Low or zero | Stable or slowly rising | Small families, good health care |
 | 5 Declining (optional) | Below death rate | Low but rising with age | Negative | Falling without immigration | Very low fertility and an ageing population |
 
+![Demographic transition model: birth and death rates are both high in stage 1; the death rate falls first in stage 2, so the gap (natural increase) widens; in stage 3 the birth rate falls and the gap narrows; in stage 4 both are low; in stage 5 the birth rate may fall below the death rate.](media:diagrams/demographic-transition-model.png "Figure: birth and death rates through the five stages of the demographic transition model (schematic)")
+
 Stage 5 is not part of the original model and is sometimes called a "possible" stage. Many countries are in stage 4 or beyond (for example Germany and Japan), and low-income countries such as many in sub-Saharan Africa are in stage 2 or 3. Zimbabwe is often placed in the late part of stage 2 or the early part of stage 3, but the exact placement depends on which indicator is used.
 
 **Usefulness of the DTM**

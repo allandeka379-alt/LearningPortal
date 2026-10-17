@@ -82,6 +82,9 @@ A seismometer records the first P wave and the first S wave 12 seconds apart. Ta
 2. The lag grows by $0.2857 - 0.1667 = 0.1190$ s for every kilometre.
 3. Distance $= 12 \div 0.1190 = 100.8 \approx 101$ km. (Equivalent shortcut: 8.4 km for every second of lag, $12 \times 8.4 = 100.8$ km.)
 4. One station gives only a distance, so a circle of this radius is drawn; three stations give the epicentre where the circles meet.
+
+![Travel-time graph for seismic waves: P waves at 6.0 km/s and S waves at 3.5 km/s drift further apart with distance, and a lag of 12 seconds between the first P and S arrival corresponds to a distance of about 101 km from the epicentre.](media:diagrams/seismic-travel-time-lag.png "Figure: P and S wave travel times and the S–P lag method for finding distance to the epicentre (worked-example speeds)")
+
 :::
 
 :::example{title="Describing the effects of an earthquake from a table of Mercalli intensities"}

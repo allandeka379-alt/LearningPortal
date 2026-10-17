@@ -62,6 +62,8 @@ Roots grow into cracks and widen them as they thicken; burrowing animals and ter
 | Cold and moist (mountain or periglacial) | Low, crossing 0 °C | Moderate | Freeze-thaw strong |
 | Polar (cold and dry) | Very low | Very low | Very slow |
 
+![Schematic Peltier diagram of mean annual temperature against rainfall: chemical weathering dominates where it is hot and wet (humid tropical, strongest), freeze-thaw dominates where it is cold and moist, thermal and salt weathering matter in hot deserts, and weathering is very slow in dry polar climates.](media:diagrams/peltier-weathering-climates.png "Figure: schematic Peltier diagram linking climate to the dominant type of weathering (boxes are approximate regions)")
+
 The idea behind the diagram: chemical weathering needs both heat and water, so it is strongest at high temperature and high rainfall. Freeze-thaw needs frequent freezing and thawing with water, so it peaks in cold, moist climates. Where it is dry, whether hot or cold, all weathering is slow. As a rule of thumb, the rate of a chemical reaction roughly doubles for each 10 °C rise in temperature.
 
 ## Non-climatic factors

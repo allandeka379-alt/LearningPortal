@@ -82,6 +82,8 @@ Consumption rises with income and development: richer households have more taps 
 :::worked-solution[Water available per person]
 A country has renewable water resources of 14.25 billion m³ per year and a population of 9.5 million (illustrative data). Calculate the water available per person per year and say whether it is under stress.
 
+![Water per person against stress thresholds: with 14.25 billion cubic metres a year, 1500 m3 per person for 9.5 million people lies in the stress band (1000 to 1700), and falls to 1140 m3 for 12.5 million people, still stressed but closer to the scarcity limit of 1000 m3.](media:diagrams/water-per-person-thresholds.png "Figure: water available per person against the stress and scarcity thresholds (worked-example values, illustrative)")
+
 1. $14.25 \times 10^{9} \div 9.5 \times 10^{6} = 1\,500$ m³ per person per year.
 2. This is below 1 700 m³ (stress) but above 1 000 m³ (scarcity), so the country is **water-stressed**.
 3. If the population grows to 12.5 million with the same resources: $14.25 \times 10^{9} \div 12.5 \times 10^{6} = 1\,140$ m³ per person. The country is still stressed and closer to scarcity.

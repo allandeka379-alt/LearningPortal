@@ -53,6 +53,8 @@ The cross-sectional area of the channel divided by its wetted perimeter (the len
 
 The Hjulström curve links the velocity of water to the size of particles. Three ideas to know: (1) **medium sand** is eroded at the lowest velocity; (2) very fine clay and silt need a *higher* velocity to erode than sand because the particles stick together, and gravel needs more because it is heavy; (3) once a particle is moving it can be carried at lower velocities than were needed to lift it, until it drops below the velocity at which it settles.
 
+![Hjulstrom curve (schematic, log scales): medium sand needs the lowest velocity to be eroded, about 20 cm/s; finer silt and clay need higher velocities because particles stick together, and gravel needs more because it is heavy; transport continues at velocities below the erosion curve until the settling curve is crossed and deposition occurs.](media:diagrams/hjulstrom-curve.png "Figure: schematic Hjulstrom curve (approximate values) linking flow velocity, particle size and erosion, transport and deposition")
+
 ## Flow in the channel
 
 - **Velocity** is lowest near the bed and banks, where friction is greatest, and highest near the middle just below the surface. It increases with gradient and with channel efficiency.
@@ -78,6 +80,10 @@ The Hjulström curve links the velocity of water to the size of particles. Three
 6. **Levee.** In a flood, water overflowing the bank slows suddenly and drops the coarsest part of its load next to the channel. Repeated floods build natural raised banks, **levees**.
 7. **Bluffs.** The steep valley sides at the edge of the floodplain where the river has cut into the valley wall.
 
+![Waterfall formation: where resistant hard rock overlies softer rock the soft rock is undercut, the overhanging hard rock collapses, and the fall retreats upstream, leaving a steep-sided gorge downstream and a plunge pool at its base.](media:diagrams/waterfall-gorge-formation.png "Figure: how a waterfall forms and retreats upstream, leaving a gorge")
+
+![Meander in plan and cross-section: the fastest flow (thalweg) swings to the outer bank of each bend, cutting a steep river cliff, while slow flow on the inside deposits a gently sloping point bar; helicoidal flow carries water to the outer bank at the surface and sediment back along the bed to the inner bank.](media:diagrams/meander-plan-cross-section.png "Figure: a meander in plan view and in cross-section, showing erosion on the outside and deposition on the inside")
+
 ## Changes downstream
 
 Width, depth, discharge, velocity and channel efficiency usually increase downstream, while gradient and the size of the load decrease. The velocity increases downstream even though the gradient falls, because the channel becomes more efficient (larger hydraulic radius) and the bed less rough.
@@ -98,6 +104,8 @@ A cross-section of a river channel is 12 m wide, with a mean depth of 1.4 m. The
 
 :::worked-solution[Comparing channel efficiency]
 Two rectangular channels (illustrative data): the upper course is 3 m wide and 0.5 m deep; the lower course is 20 m wide and 3 m deep.
+
+![Two channels drawn to the same scale: the upper-course channel (3 m wide, 0.5 m deep) has a hydraulic radius of 0.375 m, while the lower-course channel (20 m wide, 3 m deep) has 2.31 m, about six times more efficient because less of the water touches the bed and banks; the wetted perimeter is the thick line.](media:diagrams/channel-efficiency-hydraulic-radius.png "Figure: wetted perimeter and hydraulic radius of an upper and a lower channel (worked-example values)")
 
 1. **Upper:** area $= 3 \times 0.5 = 1.5$ m². Wetted perimeter $= 3 + 2(0.5) = 4$ m. Hydraulic radius $= 1.5 \div 4 = 0.375$ m.
 2. **Lower:** area $= 20 \times 3 = 60$ m². Wetted perimeter $= 20 + 2(3) = 26$ m. Hydraulic radius $= 60 \div 26 = 2.31$ m.

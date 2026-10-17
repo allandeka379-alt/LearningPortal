@@ -66,6 +66,8 @@ Zimbabwe lies inland, between the Indian Ocean and the Kalahari, and several air
 
 A depression has low pressure at the centre. Air converges, rises, cools and condenses, so cloud and rain are typical. In the southern hemisphere the winds spiral **clockwise** and inwards, and in the northern hemisphere anticlockwise. Mid-latitude depressions form along the polar front, where warm air and cold air meet, and have a **warm front** and a **cold front**:
 
+![Cross-section of a depression: a cold front undercuts the warm air steeply, lifting it into tall cloud with heavy showers, while at the warm front warm air rises gently over cold air ahead, giving thickening cloud and steady rain.](media:diagrams/fronts-cross-section.png "Figure: a cold front and a warm front in cross-section (schematic)")
+
 - **Warm front.** Warm air rises gently over the cold air: cloud thickens and lowers, with steady rain, and the temperature rises after it passes.
 - **Cold front.** Cold air undercuts the warm air, which is lifted steeply: tall cumulonimbus clouds, heavy rain or showers, then a sharp drop in temperature, a rise in pressure and clearer skies.
 
@@ -94,6 +96,8 @@ On a weather map the 1 008 hPa isobar is 600 km from the 1 020 hPa isobar over t
 
 :::worked-solution[Passage of a cold front]
 Illustrative readings at a station in the southern hemisphere:
+
+![Passage of a cold front at a station: pressure falls to a minimum of 1004 hPa at 12:00 then rises 10 hPa to 1014 hPa by 18:00, while temperature falls 12 degrees C from 27 at 12:00 to 15 at 18:00, most of it between 12:00 and 15:00 when the front passes.](media:diagrams/cold-front-passage-graph.png "Figure: pressure and temperature readings during the passage of a cold front (data from the worked example)")
 
 | Time | Pressure (hPa) | Temperature (°C) | Wind direction | Weather |
 |---|---|---|---|---|

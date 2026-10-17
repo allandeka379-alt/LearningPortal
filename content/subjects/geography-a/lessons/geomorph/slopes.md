@@ -70,6 +70,8 @@ Errors include different pole heights, vegetation that blocks the sight line, an
 | **Parallel retreat** (King) | Slopes keep the same angle and retreat as a whole, leaving a gentle pediment at the foot | Pediment grows, scarp moves back | Semi-arid and savanna lands with resistant caprock |
 | **Slope replacement** (Penck) | A gentler lower slope grows at the expense of a steeper upper slope | A convex-concave slope in which the steep part shrinks | Lands where the valley is cut down quickly, then slowly |
 
+![Three models of slope development: in slope decline the whole slope becomes gentler and lower; in parallel retreat the scarp keeps the same angle while it moves back and a pediment widens; in slope replacement a gentle lower slope grows at the expense of the steep upper slope.](media:diagrams/slope-development-models.png "Figure: slope decline, parallel retreat and slope replacement compared (schematic profiles at three times)")
+
 ### Planation surfaces
 
 - **Peneplanation** (Davis): long-continued downwearing lowers the whole land to a nearly flat, low plain (a peneplain), with the occasional residual hill.
@@ -82,6 +84,8 @@ The three models are ideas that geographers use to interpret real landscapes. Mo
 
 :::worked-solution[Analysing a surveyed slope profile]
 A group measured ten sections of 10 m (measured along the slope) from the crest to the foot of a granite hill (illustrative data, invented for this exercise):
+
+![Surveyed slope profile from the worked example: angles rise from 3 to 24 degrees over the first five sections (convex, waxing slope), stay at 24 degrees over sections 5 to 7 (constant slope) and fall to 4 degrees over sections 8 to 10 (concave, waning slope); total height 24.1 m over 96.0 m, a mean gradient of 25 percent.](media:diagrams/slope-profile-survey.png "Figure: the surveyed slope profile plotted from the angles in the worked example (calculated from 10 sin and 10 cos of each angle; height scale slightly exaggerated)")
 
 | Section | Angle (°) | Vertical = 10 sin θ (m) | Horizontal = 10 cos θ (m) |
 |---|---|---|---|

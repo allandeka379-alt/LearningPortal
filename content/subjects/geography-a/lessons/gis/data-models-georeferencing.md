@@ -49,6 +49,8 @@ Tracing the features of a map or image on screen (or with a digitising tablet) t
 | Analysis | Network analysis, buffers, attribute queries | Map algebra, surface analysis, overlays of grids |
 | Attributes | Many attributes per feature | Usually one value per cell per layer |
 
+![The same landscape stored two ways: the vector model keeps exact points, lines and polygons (a borehole, a road and a lake), while the raster model records one value per grid cell so the lake and road edges become stair-steps; halving the cell size gives four times as many cells.](media:diagrams/raster-vector-comparison.png "Figure: the same lake, road and borehole as vector features and as a raster grid (schematic)")
+
 Resolution matters for rasters: halving the cell size multiplies the number of cells by four. Rasters of categories (land cover) are best represented with nearest neighbour resampling so classes are not blended.
 
 ## Georeferencing

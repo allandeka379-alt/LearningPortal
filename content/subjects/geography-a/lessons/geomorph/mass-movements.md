@@ -39,6 +39,8 @@ The pressure of water in the spaces between soil particles. When it rises it pus
 | **Slide** (translational slide; rotational slide or slump) | A mass moves along a surface; rotational slides move on a curved surface and leave a scar | Moderate to rapid | Often high | Weak rock, clay, dipping layers, undercut slopes |
 | **Fall** (rock fall, topple) | Rock detaches from a cliff and drops, bounces and rolls | Very rapid | Little | Steep faces with joints |
 
+![Four types of mass movement: heave or creep is a slow movement of damp soil, flow is fast movement of saturated debris like a liquid, a slide moves a block along a surface (curved in a rotational slump), and a fall is rock dropping from a steep jointed cliff.](media:diagrams/mass-movement-types.png "Figure: heave, flow, slide and fall compared (schematic)")
+
 ## Causes
 
 Slopes fail when the downslope force grows or the shear strength falls.
@@ -100,6 +102,8 @@ Fast, wet and loose material flows. Cohesive material on a surface slides. Joint
 
 :::worked-solution[Applying a rainfall threshold]
 An early-warning scheme (illustrative) says that landslides become likely on steep slopes when the total rainfall in any three consecutive days exceeds 300 mm. Daily rainfall at a station was (data invented for this exercise):
+
+![Daily rainfall of 14, 31, 96, 188 and 142 mm: the three-day total for days 1 to 3 is 141 mm, below the 300 mm landslide threshold, but days 2 to 4 total 315 mm, so a warning is issued on day 4, and days 3 to 5 reach 426 mm, 126 mm over the threshold.](media:diagrams/landslide-rainfall-threshold.png "Figure: three-day rainfall totals against the 300 mm landslide-warning threshold (worked-example data)")
 
 | Day | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|

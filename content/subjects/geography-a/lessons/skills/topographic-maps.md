@@ -102,6 +102,8 @@ Bearing: a borehole at easting 21, northing 45 and a clinic at easting 26, north
 :::example{title="Intervisibility along a line"}
 Station A (height 1120 m) and station B (height 1100 m) are 6 km apart. A ridge crest of 1170 m lies 3 km from A.
 
+![Intervisibility profile from station A (1120 m) to station B (1100 m), 6 km apart: the straight line of sight has fallen to 1110 m at 3 km, but the ridge there is 1170 m, 60 m higher, so it blocks the view and B is not visible from A.](media:diagrams/intervisibility-profile.png "Figure: line of sight from A to B and the blocking ridge (values from the worked example; terrain shape schematic)")
+
 A straight line of sight falls by 20 m over 6 km, so at 3 km it is at 1120 − 10 = 1110 m. The ridge (1170 m) is higher than the line of sight (1110 m), so it blocks the view: B is not visible from A. (In practice the tops of trees and masts would also be considered.)
 :::
 

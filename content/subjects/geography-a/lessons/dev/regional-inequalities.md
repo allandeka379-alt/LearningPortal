@@ -82,6 +82,8 @@ Evaluation asks whether the policy reduces the gap, who benefits, what it costs 
 :::worked-solution[Measuring inequality between provinces]
 Illustrative income per person (US\$ a year) in six provinces: A 1 800, B 1 200, C 900, D 700, E 500, F 400.
 
+![Lorenz curve for incomes of 400, 500, 700, 900, 1200 and 1800 US dollars in six provinces: the poorest third of provinces receive about 16 percent of income and the poorest half about 30 percent, so the curve bows below the line of equality and the Gini coefficient is 0.28.](media:diagrams/lorenz-curve-provinces.png "Figure: Lorenz curve and Gini coefficient for six provinces (worked-example incomes, illustrative)")
+
 1. Mean = (1 800 + 1 200 + 900 + 700 + 500 + 400) ÷ 6 = 5 500 ÷ 6 = US\$917.
 2. Ratio of highest to lowest = 1 800 ÷ 400 = 4.5.
 3. Only two provinces (A and B) are above the mean. The Gini coefficient for these six values is 0.28 (0 is equal, 1 is the most unequal), showing moderate inequality between provinces.

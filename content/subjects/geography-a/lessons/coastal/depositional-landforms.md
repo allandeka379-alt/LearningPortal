@@ -55,6 +55,8 @@ A long ridge of sand or shingle that lies roughly parallel to the coast. A **bar
 4. **Recurved end.** Waves from a secondary direction, and wave refraction around the end, curve the tip into a **hook**.
 5. **Stability.** In the sheltered water behind the spit, fine sediment accumulates and plants colonise it, forming **saltmarsh**. Dunes may develop on the top.
 
+![Spit formation in plan: longshore drift carries sediment along the coast and, where the coast changes direction, deposits it beyond the bend as a ridge in sheltered water; waves from a second direction curve the end into a hook and saltmarsh forms in the sheltered water behind.](media:diagrams/spit-formation-plan.png "Figure: how a spit forms and its parts (plan view, schematic)")
+
 Spits can be breached by storms. **Spurn Head**, in the Humber estuary, was breached in the surge of December 2013. The **Walvis Bay** spit in Namibia, which grows north from the coast and encloses a lagoon, is a well-known sand spit on a coast with strong longshore drift.
 
 ## Tombolos and barrier beaches
@@ -73,6 +75,8 @@ Barrier islands migrate landwards by **rollover**: waves overwash the island dur
 
 :::worked-solution[Gradient of a beach (illustrative data)]
 A shingle beach rises 2.7 m over a horizontal distance of 18 m. A sandy beach rises 1.4 m over 70 m.
+
+![Beach profiles compared: the shingle beach rises 2.7 m in 18 m (a gradient of 0.15, 15 percent, 8.5 degrees) while the sandy beach rises only 1.4 m in 70 m (0.02, 2 percent, 1.1 degrees), because swash sinks into permeable shingle and the weak backwash cannot pull it down.](media:diagrams/beach-profiles-shingle-sand.png "Figure: shingle and sandy beach profiles drawn from the worked-example measurements (height scale exaggerated)")
 
 1. Shingle: gradient $= 2.7 \div 18 = 0.15$, which is 15%, and the angle is $\tan^{-1}(0.15) = 8.5°$.
 2. Sand: gradient $= 1.4 \div 70 = 0.02$, which is 2%, and the angle is $\tan^{-1}(0.02) = 1.1°$.

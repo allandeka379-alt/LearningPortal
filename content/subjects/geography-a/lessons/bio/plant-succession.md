@@ -89,6 +89,8 @@ Ecologists describe a **climatic climax** that matches the regional climate. In 
 :::worked-solution[Interpreting a succession data set]
 Illustrative data from four plots on an abandoned maize field, sampled with quadrats (data invented for this exercise):
 
+![Secondary succession on an abandoned maize field: plant cover rises from 35 to 95 percent, species from 9 to 28 per 100 square metres, soil organic matter from 1.1 to 3.5 percent and mean height from 0.4 to 9.0 m over 40 years, with organic matter rising more slowly after year 15.](media:diagrams/succession-field-data.png "Figure: four measures of an abandoned field over 40 years (worked-example data, illustrative)")
+
 | Years since abandonment | 1 | 5 | 15 | 40 |
 |---|---|---|---|---|
 | Plant cover (%) | 35 | 70 | 85 | 95 |

@@ -46,6 +46,8 @@ Rocks react to stress by folding (when they bend) or by breaking (when they are 
 
 A **fault scarp** is the steep face left on the surface where the ground has moved. A **horst** is a block left standing between two faults; a **graben** is the block that has dropped.
 
+![Fault types: under tension a normal fault drops the block above the fault plane (hanging wall), under compression a reverse or thrust fault pushes it up and over, and under shear a strike-slip fault moves the blocks horizontally past each other.](media:diagrams/fault-types-stress.png "Figure: normal, reverse and strike-slip faults and the stress that makes each")
+
 ## Divergent boundaries: rifts and ridges
 
 **Continental rifting.** Where a plate is stretched, the crust thins and cracks along normal faults, and the central block drops to form a rift valley. Magma rises through the thinned crust, so volcanoes occur along the rift. The **East African Rift** runs for thousands of kilometres from the Afar region towards Mozambique. It has an eastern branch (through Kenya and Tanzania) and a western branch (holding deep lakes such as Tanganyika and Malawi). If stretching continues, the rift may widen until it floods and becomes a new ocean.
@@ -83,6 +85,8 @@ Tension gives normal faults and rift valleys. Compression gives folds, thrusts a
 :::worked-solution[Measuring a fault scarp on a profile (ZIMSEC detail: modelling with a digital elevation model)]
 A digital elevation model (DEM) stores the height of the ground in a grid of cells. A profile through it across a fault gives these illustrative heights (data invented for this exercise):
 
+![Height profile across a fault from a digital elevation model: the ground is flat at about 1250 m, drops 76 m over 200 m between 200 and 400 m (gradient 38 percent, angle 20.8 degrees) and is flat again near 1168 m, a throw of 82 m consistent with a normal fault.](media:diagrams/fault-scarp-dem-profile.png "Figure: DEM profile across a fault scarp (data from the worked example; height axis starts at 1150 m)")
+
 | Distance along line (m) | Height (m) |
 |---|---|
 | 0 | 1250 |
@@ -110,6 +114,9 @@ A rift in Africa is widening by about 6 mm a year. How long would it take to wid
 
 :::example{title="Interpreting earthquake foci at a subduction zone"}
 Illustrative data: foci of earthquakes lie at depths of 70, 140, 210 and 280 km at distances of 100, 200, 300 and 400 km from a trench. **Describe:** depth increases steadily with distance from the trench. **Calculate the dip:** $\tan^{-1}(70 \div 100) = 35°$. **Explain:** the earthquakes mark the descending oceanic plate, which dips beneath the continent. The deepest earthquakes occur furthest from the trench. This zone of foci is the Benioff (Wadati-Benioff) zone, and it shows that plate material is being destroyed.
+
+![Subduction zone cross-section: earthquake foci at depths of 70, 140, 210 and 280 km lie 100, 200, 300 and 400 km from the trench along a plate dipping at 35 degrees beneath the continent, marking the Benioff zone, with a composite volcano above the descending slab.](media:diagrams/subduction-benioff-zone.png "Figure: earthquake foci along a subducting plate (Benioff zone); depths and distances from the worked example")
+
 :::
 
 :::keyfact{title="ZIMSEC and Cambridge"}

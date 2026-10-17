@@ -59,6 +59,8 @@ Water moving downwards removes soluble materials (**leaching**) and carries fine
 
 On a granite slope in southern Africa a typical catena shows:
 
+![Soil catena on a granite slope: topsoil depth increases from 20 cm at the crest through 35, 60 and 80 cm to 100 cm in the vlei, while clay rises from 10 to 65 percent and pH from 5.2 to 6.6, because water and fine particles move downslope and collect at the bottom.](media:diagrams/soil-catena-granite.png "Figure: soil depth, clay and pH down a granite catena (worked-example data; slope shape schematic)")
+
 - **Crest and upper slope:** thin, sandy, well-drained soils; the finer particles are washed downslope; low in nutrients and organic matter.
 - **Mid slope:** moderate depth and texture; a transfer zone where water and material move through.
 - **Foot slope:** deeper soils with more clay and nutrients, because material washed from above accumulates and the water table is closer.

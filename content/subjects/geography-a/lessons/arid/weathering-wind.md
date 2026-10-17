@@ -66,6 +66,8 @@ The surface is often reshaped: the weathered **fine material is removed** and th
 | Saltation | Sand (about 0.06–2 mm), mainly fine and medium sand | Grains bounce along the surface in short hops, normally a few centimetres to about a metre high; it carries most of the sand |
 | Suspension | Silt and clay (finer than about 0.06 mm, dust) | Fine particles carried high in the air, over hundreds or thousands of kilometres |
 
+![Wind transports sediment in three ways: fine silt and clay travel in suspension high in the air, sand grains bounce along the surface in saltation (the main process, up to about a metre high), and coarse grains roll along the ground by traction.](media:diagrams/wind-transport-modes.png "Figure: suspension, saltation and traction in wind transport (schematic)")
+
 The amount of sand moved increases rapidly with wind speed. According to Bagnold's relationship, the rate of transport is proportional to the **cube of the wind (shear) speed**, so a doubling of speed gives eight times as much sand movement.
 
 **Deposition.** Wind drops its load when speed falls, when it meets an obstacle (a rock, a plant, a slope), when the surface becomes wet, or when it enters a sheltered place. Sand is deposited as sheets and dunes, and fine dust may be deposited far away (for example, Saharan dust falls on the Caribbean and the Amazon basin) and builds up as loess.

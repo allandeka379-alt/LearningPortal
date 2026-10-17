@@ -50,6 +50,8 @@ Granite is made of crystals of quartz, feldspar and mica and is resistant, but n
 2. **Scarp retreat (pediplanation).** King proposed that scarps retreat parallel to themselves and leave isolated residual hills standing on a widening pediplain. The inselbergs survive because they are made of more massive rock.
 3. **Pressure release.** As overlying rock is removed, a dome expands and cracks open parallel to its surface. Sheets of rock peel away (exfoliation), which helps to maintain and smooth the dome shape.
 
+![Two-stage formation of a granite dwala: in stage 1 chemical weathering rots closely jointed rock deeply beneath the surface while massive unjointed rock remains as a fresh core; in stage 2 the weathered cover is stripped away, exposing a steep dome (a flank of 180 m in 300 m is a 60 percent gradient, 31 degrees) with a sharp break of slope at its foot.](media:diagrams/dwala-two-stage-formation.png "Figure: two-stage deep weathering and stripping explains a dwala (schematic cross-sections)")
+
 Most geomorphologists accept that a combination applies and that the spacing of joints is the underlying control. **Evidence** for the two-stage theory includes deeply weathered granite found beneath the plain next to a dome, and boulders called corestones within the regolith.
 
 ## Duricrust (ZIMSEC detail)
@@ -64,6 +66,8 @@ Duricrust resists erosion, so it can form a cap on a plateau and protect the lay
 ## Tropical karst
 
 **Karst** forms on thick, jointed limestone. Rainwater absorbs carbon dioxide and becomes weak carbonic acid, which dissolves calcium carbonate (carbonation). In the humid tropics:
+
+![Limestone karst in cross-section: rain made slightly acid by carbon dioxide from soil and plants dissolves limestone along joints, widening them into shafts, caves and sinkholes, and water drains underground in caves and streams instead of on the surface.](media:diagrams/karst-solution-features.png "Figure: solution features of a limestone (karst) landscape (schematic cross-section)")
 
 - Heavy rainfall supplies a large volume of water.
 - Dense vegetation and warm, wet soil supply high concentrations of carbon dioxide from respiration and decay.

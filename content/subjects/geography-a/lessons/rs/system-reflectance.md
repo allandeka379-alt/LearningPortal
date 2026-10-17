@@ -68,6 +68,8 @@ The atmosphere absorbs some wavelengths strongly. Sensors use the **atmospheric 
 - **Water:** low reflectance everywhere, highest in blue-green, and almost zero in near infrared, so the NIR band separates water clearly.
 - **Built surfaces:** variable and usually fairly flat across wavelengths; dark tar is low, concrete is higher.
 
+![Spectral signatures from four bands: healthy maize reflects little blue and red but 0.52 in near infrared (NDVI 0.82), dry bare soil rises steadily from 0.12 to 0.28 (NDVI 0.12), a tarred road is low and flat (0.10 to 0.13), and clear water is dark and falls to 0.02 in near infrared (NDVI minus 0.33).](media:diagrams/spectral-signatures-ndvi.png "Figure: reflectance of maize, soil, water and a tarred road in four bands (worked-example values, illustrative)")
+
 A simple index uses the contrast between red and near infrared, the **Normalised Difference Vegetation Index**:
 
 $$

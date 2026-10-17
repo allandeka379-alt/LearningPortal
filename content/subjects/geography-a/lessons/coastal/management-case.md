@@ -46,6 +46,9 @@ A plan that sets out, for each stretch of coast in a sediment cell, a policy for
 | Dune stabilisation | Fencing, planting marram, controlling access | Cheap, natural protection and habitat | Slow, needs constant care, only for sandy coasts |
 | Managed retreat | Defence removed or set back | Creates habitat, cheap in the long term | Land and property are lost; owners need compensation |
 
+![Groynes in plan: they trap sediment moved by longshore drift so the beach builds up on the updrift side and protects the cliff, but little sediment passes them, so the coast further down the drift is starved and erodes faster, as at Mappleton and Cowden on the Holderness coast.](media:diagrams/groynes-downdrift-erosion.png "Figure: groynes trap sediment updrift and starve the coast downdrift (plan view, schematic)")
+
+
 To judge a scheme, ask: Does it address the cause? What does it cost compared with what it protects (a **cost–benefit** comparison)? Does it affect the sediment cell and places downdrift? Is it sustainable in rising sea level? Who gains and who loses?
 
 ## Detailed specific example: the Holderness coast, East Riding of Yorkshire

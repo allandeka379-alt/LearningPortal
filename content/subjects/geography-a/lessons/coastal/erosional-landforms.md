@@ -64,6 +64,8 @@ In **plan** a coast has headlands (hard rock, resistant) and bays (softer rock),
 
 As the cliff retreats, a gently sloping platform is left at its foot. The platform is widened by **abrasion** (debris moved across its surface), by **weathering** of the rock when it is exposed to wetting and drying and salt, and by the retreat of the cliff. The platform slope is mostly about 1–3° and it usually shows small pools and runnels. A wide platform dissipates the energy of waves before they reach the cliff, so the rate of erosion slows, and the platform can limit its own growth. Platforms may be stranded above the present sea level if sea level has fallen relative to the land.
 
+![Cliff and shore platform: waves cut a notch at the foot of a 15 m cliff, the cliff collapses and retreats 36 m in 18 years (2 m a year), and a very gentle platform 160 m wide that falls only 2.8 m (1 in 57, about 1 degree) is left behind; the height scale is exaggerated.](media:diagrams/cliff-notch-shore-platform.png "Figure: cliff retreat, wave-cut notch and shore platform (values from the lesson examples, height exaggerated about four times)")
+
 ## Caves, geos, arches, stacks and stumps
 
 1. Waves exploit a **weakness** (a joint, a fault or a band of softer rock) at the foot of a cliff, using hydraulic action and abrasion, and enlarge it to a **cave**.
@@ -71,6 +73,8 @@ As the cliff retreats, a gently sloping platform is left at its foot. The platfo
 3. On a headland, caves cut from opposite sides, or one cave extending right through, form an **arch**.
 4. Weathering and erosion weaken the roof until it collapses, leaving a **stack** isolated from the cliff.
 5. Further erosion at the base and weathering of the top reduce the stack to a **stump**, which may be visible only at low tide.
+
+![Sequence of headland landforms: waves widen a joint into a cave, a cave cut right through the headland makes an arch, the roof collapses to leave a stack, and further erosion and weathering reduce the stack to a stump.](media:diagrams/cave-arch-stack-stump.png "Figure: cave, arch, stack and stump (schematic sequence)")
 
 Well-known examples include the chalk stacks of Old Harry Rocks in Dorset and the Needles of the Isle of Wight, the limestone arch of Durdle Door (Dorset), and the Hole in the Wall on the Wild Coast of South Africa's Eastern Cape.
 
@@ -82,6 +86,8 @@ Well-known examples include the chalk stacks of Old Harry Rocks in Dorset and th
 | Exposure | One rock type (the outer band) faces the sea | Hard and soft rock alternate along the coast |
 | Landforms | A fairly straight coastline; coves where the outer band is breached | Headlands (hard rock) and bays (soft rock) |
 | Example | Dalmatian coast of Croatia; Lulworth Cove in Dorset | Swanage Bay, Dorset, between the chalk of Ballard Point and the limestone of Peveril Point |
+
+![Concordant and discordant coasts in plan: on a concordant coast the rock bands run parallel to the coast and give a fairly straight shoreline, while on a discordant coast bands of hard and soft rock meet the sea at right angles, so resistant rock forms headlands and soft rock forms bays.](media:diagrams/concordant-discordant-coasts.png "Figure: concordant and discordant coastlines compared (plan view, schematic)")
 
 At **Lulworth Cove** the resistant limestone on the outside has been breached at a narrow gap, after which the waves widened the cove in the softer clays behind. On the **Dalmatian coast** long ridges and valleys lie parallel to the shore, and flooding by the sea has left the ridges as islands.
 

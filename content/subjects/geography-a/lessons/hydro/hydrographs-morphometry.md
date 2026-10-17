@@ -46,6 +46,8 @@ A **river regime** is the pattern of a river's flow through the year. Rainfall s
 
 A storm hydrograph has these parts:
 
+![Storm hydrograph: rainfall peaks at 18 mm/h in hour 3; the urban stream peaks at 26 m3/s in hour 5 (lag 2 hours) and the rural stream at 10 m3/s in hour 7 (lag 4 hours), so urban surfaces give a shorter lag and a peak 2.6 times higher.](media:diagrams/storm-hydrograph-urban-rural.png "Figure: storm hydrographs for a rural and an urban stream (data from the worked example, illustrative)")
+
 1. **Baseflow:** the steady flow before the storm, fed by groundwater.
 2. **Rising limb:** discharge rises as overland flow and throughflow reach the channel.
 3. **Peak discharge:** the highest flow.
@@ -108,6 +110,8 @@ Hourly data for a storm on a rural and an urban stream of similar size (illustra
 
 :::worked-solution[Stream morphometry of a basin]
 A basin of 36 km² has the following streams on a map extract (illustrative data). Total channel length is 57.6 km.
+
+![Number of streams falls steeply with Strahler order: 36 first-order, 9 second-order, 2 third-order and 1 fourth-order stream, giving bifurcation ratios of 4.0, 4.5 and 2.0 and a mean of 3.5.](media:diagrams/stream-order-numbers.png "Figure: number of streams by order and the bifurcation ratios of the worked-example basin (illustrative data)")
 
 | Stream order | 1 | 2 | 3 | 4 |
 |---|---|---|---|---|

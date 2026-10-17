@@ -42,6 +42,8 @@ A tropical cyclone needs:
 
 Stages: (1) warm moist air rises over the ocean, forming low pressure at the surface; (2) air flows in from outside, picks up moisture and begins to rotate because of the Coriolis effect; (3) condensation of the rising air releases latent heat, which warms the air further and strengthens the updraught, so pressure falls and winds increase; (4) a calm **eye** forms with sinking air, surrounded by the **eyewall** of the strongest winds and heaviest rain; (5) the cyclone weakens when it moves over land (no moisture or heat supply, more friction) or over cool water.
 
+![Cross-section of a tropical cyclone: warm sea supplies heat and moisture, air spirals in at the surface, rises in the towering eyewall clouds with the strongest winds and heaviest rain, flows out at the top, and sinks in the calm clear eye at the centre; outer rain bands surround the storm.](media:diagrams/tropical-cyclone-structure.png "Figure: structure of a tropical cyclone (schematic cross-section)")
+
 ## The Saffir-Simpson scale
 
 | Category | Sustained wind (km/h) | Typical damage |
