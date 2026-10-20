@@ -117,7 +117,26 @@ const nextConfig: NextConfig = {
   },
 
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders(process.env.NODE_ENV) }];
+    // Every route except /skills, which is served by the separate BvunzoHub Skills app (rewrite below) and sends its
+    // own security headers; adding ours as well would stack two Content-Security-Policies on its pages.
+    return [{ source: "/((?!skills(?:/|$)).*)", headers: securityHeaders(process.env.NODE_ENV) }];
+  },
+
+  /**
+   * BvunzoHub Skills (separate app and deployment) is published at bvunzohub.com/skills. Requests under /skills are
+   * proxied to it before any route of this app is matched, so nothing here can shadow it and no existing route changes.
+   * SKILLS_ORIGIN overrides the target at build time (for example a staging deployment).
+   */
+  async rewrites() {
+    const origin = (process.env.SKILLS_ORIGIN || "https://bvunzohub-skills.vercel.app").replace(/\/+$/, "");
+    return {
+      beforeFiles: [
+        { source: "/skills", destination: `${origin}/skills` },
+        { source: "/skills/:path*", destination: `${origin}/skills/:path*` },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
   },
 };
 
